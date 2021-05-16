@@ -2,14 +2,13 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-05-16T22:32:38.313Z
+date: 2021-05-16T22:34:58.362Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
 ---
 
-
-![outl1024.png](/assets/radarr/outl1024.png)
+![outl128.png](/assets/radarr/outl128.png)
 
 > This wiki is for Radarr 3.0+
 {.is-info}
