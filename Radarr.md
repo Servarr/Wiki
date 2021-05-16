@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-05-16T15:49:02.202Z
+date: 2021-05-16T21:03:26.625Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -16,33 +16,31 @@ dateCreated: 2021-05-16T13:53:17.360Z
 Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 ## Getting Started
-- Installation Guide
-- Quick Start Guide
+- [Installation Guide](/Radarr/Installation)
+- [Quick Start Guide](/Radarr/Quick-Start-Guide)
 {.links-list}
 
 ## User Guide
-- Movies
-- Calander
-- Activity
-- Settings
+- <i class="fas fa-play"></i>&emsp;Movies
+- <i class="fas fa-calendar-alt"></i>&emsp;Calander
+- <i class="fas fa-clock"></i>&emsp;Activity
+- <i class="fas fa-cogs"></i>&emsp;Settings
 {.links-list}
 
 ## Troubleshooting
-- General Troubleshooting
-- FAQ
+- [General Troubleshooting](/Radarr/Troubleshooting)
+- [FAQ](/Radarr/FAQ)
 {.links-list}
 
 ## Development
-- Contributing
+- [Contributing](/Radarr/Contributing)
 {.links-list}
 
 ## Support
-Still having issues, feel free to stop by one of our support sites for extra help
+Still having issues? feel free to stop by one of our support sites for extra help
 
-
-
-- [<i class="fab fa-discord"></i> Discord *Official Radarr Discord*](https://radarr.video/discord)
-- [<i class="fab fa-reddit"></i> Reddit *Official Radarr Subreddit*](https://reddit.com/r/radarr)
+- [<i class="fab fa-discord"></i>&emsp;Discord *Official Radarr Discord*](https://radarr.video/discord)
+- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Radarr Subreddit*](https://reddit.com/r/radarr)
 {.links-list}
 
 ## Links
