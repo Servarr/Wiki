@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-05-16T20:23:46.192Z
+date: 2021-05-16T20:32:42.480Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -12,7 +12,9 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 **TL; DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume for Sonarr, Radarr and Lidarr so the download folder and library folder are on the same file system which makes hard links and instant moves possible. And most of all, ignore *most* of the Docker image’s path documentation!
 
-**Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.**
+> Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
+{.is-info}
+
 
 ## Introduction
 
@@ -46,7 +48,8 @@ Don’t forget that your `/config` volume will *also* need to have correct owner
 
 ## Consistent and well planned paths
 
-**Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.**
+> Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
+{.is-info}
 
 The easiest and most important detail is to create unified path definitions across all the containers.
 
@@ -142,7 +145,9 @@ If you use the latest version of the abandoned [RadarrSync](https://github.com/S
 
 This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/docker-autocompose](https://old.reddit.com/r/usenet/wiki/docker#wiki_get_docker-compose)to convert `docker run` commands into a single `docker-compose.yml` file.
 
-The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
+> The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
+{.is-warning}
+
 ```
     # sonarr
     Sonarr:
@@ -201,7 +206,9 @@ The below is *not* a complete working example! The containers only have PID, UID
 ```
 ##### Docker Run
 
-Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
+> Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
+{.is-warning}
+
 ```
     # sonarr
     docker run -v /path/to/config/sonarr:/config \
@@ -276,7 +283,9 @@ Getting the `docker run` command from GUI managers can be hard, this docker imag
 ```
 ##### Get docker-compose
 
-Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/Misc/how-to-provide-a-docker-compose/)
+> Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/Misc/how-to-provide-a-docker-compose/)
+{.is-info}
+
 
 Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of \`docker ps\`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
 ```
