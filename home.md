@@ -2,13 +2,13 @@
 title: Servarr
 description: 
 published: true
-date: 2021-05-16T16:48:53.306Z
+date: 2021-05-16T18:47:32.832Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
 ---
 
-# Servarr
+# Wiki Home
 
 > This wiki is home to Radarr, Sonarr, Lidarr, Readarr, and Prowlarr information
 {.is-info}
@@ -17,7 +17,7 @@ Welcome to the consolidated wiki for Lidarr, Radarr, Readarr, and Sonarr. Collec
 
 
 - [Radarr *Movies*](/Radarr)
-- Sonarr
-- Lidarr
-- Readarr
+- [Sonarr *TV*](/Sonarr)
+- [Lidarr *Music*](/Lidarr)
+- [Readarr *Books*](/Readarr)
 {.links-list}
