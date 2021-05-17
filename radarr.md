@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-05-17T02:00:20.909Z
+date: 2021-05-17T02:01:17.278Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -30,7 +30,7 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 
 ## Troubleshooting
 - [General Troubleshooting](/radarr/troubleshooting)
-- [FAQ](/Radarr/FAQ)
+- [FAQ](/radarr/faq)
 {.links-list}
 
 ## Development
