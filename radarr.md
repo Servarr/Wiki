@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-05-17T01:59:01.469Z
+date: 2021-05-17T02:00:20.909Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -17,8 +17,8 @@ dateCreated: 2021-05-16T13:53:17.360Z
 Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 ## Getting Started
-- [Installation Guide](/Radarr/Installation)
-- [Quick Start Guide](/Radarr/Quick-Start-Guide)
+- [Installation Guide](/radarr/installation)
+- [Quick Start Guide](/radarr/quick-start-guide)
 {.links-list}
 
 ## User Guide
@@ -29,12 +29,12 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 {.links-list}
 
 ## Troubleshooting
-- [General Troubleshooting](/Radarr/Troubleshooting)
+- [General Troubleshooting](/radarr/troubleshooting)
 - [FAQ](/Radarr/FAQ)
 {.links-list}
 
 ## Development
-- [Contributing](/Radarr/Contributing)
+- [Contributing](/radarr/contributing)
 {.links-list}
 
 ## Support
