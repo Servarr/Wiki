@@ -1,0 +1,1 @@
+prowlarr search; no template

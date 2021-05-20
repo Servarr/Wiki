@@ -1,0 +1,1 @@
+prowlarr history; no template
