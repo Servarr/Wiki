@@ -4,8 +4,7 @@ this page for easy access to templates
 This page to act as an overall map of the wiki as many templates and
 sections are in use via transclusion.
 
-Stand Alone Templates
----------------------
+## Stand Alone Templates
 
 1.  [Template:Appdata Directory](Template:Appdata_Directory "wikilink")
     1.  [Appdata Directory Misc](Appdata_Directory_Misc "wikilink")
@@ -16,8 +15,7 @@ Stand Alone Templates
 4.  [Template:Contributing](Template:Contributing "wikilink")
 5.  [Template:FAQ](Template:FAQ "wikilink")
 
-Miscellaneous
--------------
+## Miscellaneous
 
 1.  [Sandbox](Sandbox "wikilink") \<- Test code and do any testing here
     before sending it to live
@@ -31,8 +29,7 @@ Miscellaneous
     Storage](Clear_Cache_Cookies_and_Local_Storage "wikilink")
 9.  [Docker on ARM Synology](Docker_on_arm_synology "wikilink")
 
-\* ARR UI Pages
----------------
+## \* ARR UI Pages
 
 Note: This is were most of the editing will take place
 
@@ -45,13 +42,13 @@ page.
 1.  [Library](Library "wikilink")
 2.  [Library Add New](Library_Add_New "wikilink")
 3.  [Library Import](Library_Import "wikilink")
-4.  [Library Discover](Library_Discover "wikilink") \<\-- Radarr
-5.  [Library Mass Editor](Library_Mass_Editor "wikilink") \<\--
+4.  [Library Discover](Library_Discover "wikilink") \<-- Radarr
+5.  [Library Mass Editor](Library_Mass_Editor "wikilink") \<--
     Sonarr/Lidarr
 6.  [Library Bulk Monitoring
-    Editor](Library_Bulk_Monitoring_Editor "wikilink") \<\--Season
+    Editor](Library_Bulk_Monitoring_Editor "wikilink") \<--Season
     Pass/Album Studio/Bookshelf combined
-7.  [Library Unmapped Files](Library_Unmapped_Files "wikilink") \<\--
+7.  [Library Unmapped Files](Library_Unmapped_Files "wikilink") \<--
     Lidarr/Readarr
 8.  [Filters](Filters "wikilink")
 
@@ -108,102 +105,99 @@ page.
 5.  [System Events](System_events "wikilink")
 6.  [System Log Files](System_log_files "wikilink")
 
-Stand Alone Pages
------------------
+## Stand Alone Pages
 
--   [Radarr](Radarr "wikilink")
+  - [Radarr](Radarr "wikilink")
 
-<!-- -->
+<!-- end list -->
 
--   [Sonarr](Sonarr "wikilink")
+  - [Sonarr](Sonarr "wikilink")
 
-<!-- -->
+<!-- end list -->
 
--   [Lidarr](Lidarr "wikilink")
+  - [Lidarr](Lidarr "wikilink")
 
-<!-- -->
+<!-- end list -->
 
--   [Readarr](Readarr "wikilink")
+  - [Readarr](Readarr "wikilink")
 
-API Documentation
------------------
+## API Documentation
 
--   [Radarr](https://radarr.video/docs/api/)
+  - [Radarr](https://radarr.video/docs/api/)
 
-<!-- -->
+<!-- end list -->
 
--   Sonarr
+  - Sonarr
 
-<!-- -->
+<!-- end list -->
 
--   Lidarr
+  - Lidarr
 
-<!-- -->
+<!-- end list -->
 
--   Readarr
+  - Readarr
 
-\*ARR Pages
------------
+## \*ARR Pages
 
 <section begin=radarr_wiki_pages />
 
--   [Radarr](Radarr "wikilink")
-    -   [Radarr Installation](Radarr_Installation "wikilink")
-    -   [Radarr Quick Start Guide](Radarr_Quick_Start_Guide "wikilink")
-    -   [Radarr Library (Movies)](Radarr_Library "wikilink")
-    -   [Radarr Calendar](Radarr_Calendar "wikilink")
-    -   [Radarr Activity](Radarr_Activity "wikilink")
-    -   [Radarr Settings](Radarr_Settings "wikilink")
-    -   [Radarr System](Radarr_System "wikilink")
-    -   [Radarr Troubleshooting](Radarr_Troubleshooting "wikilink")
-    -   [Radarr FAQ](Radarr_FAQ "wikilink")
-    -   [Radarr Tips and Tricks](Radarr_Tips_and_Tricks "wikilink")
-    -   [Radarr Contributing](Radarr_Contributing "wikilink")
+  - [Radarr](Radarr "wikilink")
+      - [Radarr Installation](Radarr_Installation "wikilink")
+      - [Radarr Quick Start Guide](Radarr_Quick_Start_Guide "wikilink")
+      - [Radarr Library (Movies)](Radarr_Library "wikilink")
+      - [Radarr Calendar](Radarr_Calendar "wikilink")
+      - [Radarr Activity](Radarr_Activity "wikilink")
+      - [Radarr Settings](Radarr_Settings "wikilink")
+      - [Radarr System](Radarr_System "wikilink")
+      - [Radarr Troubleshooting](Radarr_Troubleshooting "wikilink")
+      - [Radarr FAQ](Radarr_FAQ "wikilink")
+      - [Radarr Tips and Tricks](Radarr_Tips_and_Tricks "wikilink")
+      - [Radarr Contributing](Radarr_Contributing "wikilink")
         <section end=radarr_wiki_pages />
         <section begin=sonarr_wiki_pages />
--   [Sonarr](Sonarr "wikilink")
-    -   [Sonarr Installation](https://sonarr.tv/#downloads-v3)
-    -   [Sonarr Advanced Installation](Sonarr_Installation "wikilink")
-    -   [Sonarr Quick Start Guide](Sonarr_Quick_Start_Guide "wikilink")
-    -   [Sonarr Library (Series)](Sonarr_Library "wikilink")
-    -   [Sonarr Calendar](Sonarr_Calendar "wikilink")
-    -   [Sonarr Activity](Sonarr_Activity "wikilink")
-    -   [Sonarr Wanted](Sonarr_Wanted "wikilink")
-    -   [Sonarr Settings](Sonarr_Settings "wikilink")
-    -   [Sonarr System](Sonarr_System "wikilink")
-    -   [Sonarr Troubleshooting](Sonarr_Troubleshooting "wikilink")
-    -   [Sonarr FAQ](Sonarr_FAQ "wikilink")
-    -   [Sonarr Tips and Tricks](Sonarr_Tips_and_Tricks "wikilink")
-    -   [Sonarr Contributing](Sonarr_Contributing "wikilink")
+  - [Sonarr](Sonarr "wikilink")
+      - [Sonarr Installation](https://sonarr.tv/#downloads-v3)
+      - [Sonarr Advanced Installation](Sonarr_Installation "wikilink")
+      - [Sonarr Quick Start Guide](Sonarr_Quick_Start_Guide "wikilink")
+      - [Sonarr Library (Series)](Sonarr_Library "wikilink")
+      - [Sonarr Calendar](Sonarr_Calendar "wikilink")
+      - [Sonarr Activity](Sonarr_Activity "wikilink")
+      - [Sonarr Wanted](Sonarr_Wanted "wikilink")
+      - [Sonarr Settings](Sonarr_Settings "wikilink")
+      - [Sonarr System](Sonarr_System "wikilink")
+      - [Sonarr Troubleshooting](Sonarr_Troubleshooting "wikilink")
+      - [Sonarr FAQ](Sonarr_FAQ "wikilink")
+      - [Sonarr Tips and Tricks](Sonarr_Tips_and_Tricks "wikilink")
+      - [Sonarr Contributing](Sonarr_Contributing "wikilink")
         <section end=sonarr_wiki_pages />
         <section begin=lidarr_wiki_pages />
--   [Lidarr](Lidarr "wikilink")
-    -   [Lidarr Installation](Lidarr_Installation "wikilink")
-    -   [Lidarr Quick Start Guide](Lidarr_Quick_Start_Guide "wikilink")
-    -   [Lidarr Library (Artist)](Lidarr_Library "wikilink")
-    -   [Lidarr Calendar](Lidarr_Calendar "wikilink")
-    -   [Lidarr Activity](Lidarr_Activity "wikilink")
-    -   [Lidarr Wanted](Lidarr_Wanted "wikilink")
-    -   [Lidarr Settings](Lidarr_Settings "wikilink")
-    -   [Lidarr System](Lidarr_System "wikilink")
-    -   [Lidarr Troubleshooting](Lidarr_Troubleshooting "wikilink")
-    -   [Lidarr FAQ](Lidarr_FAQ "wikilink")
-    -   [Lidarr Tips and Tricks](Lidarr_Tips_and_Tricks "wikilink")
-    -   [Lidarr Contributing](Lidarr_Contributing "wikilink")
+  - [Lidarr](Lidarr "wikilink")
+      - [Lidarr Installation](Lidarr_Installation "wikilink")
+      - [Lidarr Quick Start Guide](Lidarr_Quick_Start_Guide "wikilink")
+      - [Lidarr Library (Artist)](Lidarr_Library "wikilink")
+      - [Lidarr Calendar](Lidarr_Calendar "wikilink")
+      - [Lidarr Activity](Lidarr_Activity "wikilink")
+      - [Lidarr Wanted](Lidarr_Wanted "wikilink")
+      - [Lidarr Settings](Lidarr_Settings "wikilink")
+      - [Lidarr System](Lidarr_System "wikilink")
+      - [Lidarr Troubleshooting](Lidarr_Troubleshooting "wikilink")
+      - [Lidarr FAQ](Lidarr_FAQ "wikilink")
+      - [Lidarr Tips and Tricks](Lidarr_Tips_and_Tricks "wikilink")
+      - [Lidarr Contributing](Lidarr_Contributing "wikilink")
         <section end=lidarr_wiki_pages />
         <section begin=readarr_wiki_pages />
--   [Readarr](Readarr "wikilink")
-    -   [Readarr Installation](Readarr_Installation "wikilink")
-    -   [Readarr Quick Start
+  - [Readarr](Readarr "wikilink")
+      - [Readarr Installation](Readarr_Installation "wikilink")
+      - [Readarr Quick Start
         Guide](Readarr_Quick_Start_Guide "wikilink")
-    -   [Readarr Library](Readarr_Library "wikilink")
-    -   [Readarr Calendar](Readarr_Calendar "wikilink")
-    -   [Readarr Activity](Readarr_Activity "wikilink")
-    -   [Readarr Wanted](Readarr_Wanted "wikilink")
-    -   [Readarr Settings](Readarr_Settings "wikilink")
-    -   [Readarr System](Readarr_System "wikilink")
-    -   [Readarr Troubleshooting](Readarr_Troubleshooting "wikilink")
-    -   [Readarr FAQ](Readarr_FAQ "wikilink")
-    -   [Readarr Tips and Tricks](Readarr_Tips_and_Tricks "wikilink")
-    -   [Readarr Contributing](Readarr_Contributing "wikilink")
+      - [Readarr Library](Readarr_Library "wikilink")
+      - [Readarr Calendar](Readarr_Calendar "wikilink")
+      - [Readarr Activity](Readarr_Activity "wikilink")
+      - [Readarr Wanted](Readarr_Wanted "wikilink")
+      - [Readarr Settings](Readarr_Settings "wikilink")
+      - [Readarr System](Readarr_System "wikilink")
+      - [Readarr Troubleshooting](Readarr_Troubleshooting "wikilink")
+      - [Readarr FAQ](Readarr_FAQ "wikilink")
+      - [Readarr Tips and Tricks](Readarr_Tips_and_Tricks "wikilink")
+      - [Readarr Contributing](Readarr_Contributing "wikilink")
         <section end=readarr_wiki_pages />

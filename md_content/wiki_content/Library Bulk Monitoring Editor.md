@@ -1,5 +1,4 @@
-Radarr
-------
+## Radarr
 
 <section begin=radarr_library_bulk_monitoring_editor />
 
@@ -8,8 +7,7 @@ about soon(tm)
 
 <section end=radarr_library_bulk_monitoring_editor />
 
-Sonarr
-------
+## Sonarr
 
 <section begin=sonarr_library_bulk_monitoring_editor />
 
@@ -18,8 +16,7 @@ about soon(tm)
 
 <section end=sonarr_library_bulk_monitoring_editor />
 
-Lidarr
-------
+## Lidarr
 
 <section begin=lidarr_library_bulk_monitoring_editor />
 
@@ -28,8 +25,7 @@ about soon(tm)
 
 <section end=lidarr_library_bulk_monitoring_editor />
 
-Readarr
--------
+## Readarr
 
 <section begin=readarr_library_bulk_monitoring_editor />
 

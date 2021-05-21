@@ -1,4 +1,3 @@
-Calendar
---------
+## Calendar
 
-{{\#lst::Calendar\|sonarr\_calendar}}
+{{\#lst::Calendar|sonarr\_calendar}}

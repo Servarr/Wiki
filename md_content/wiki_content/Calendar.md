@@ -1,5 +1,4 @@
-Radarr
-------
+## Radarr
 
 <section begin=radarr_calendar />
 
@@ -7,8 +6,7 @@ Information about the Calendar coming soon(tm)
 
 <section end=radarr_calendar />
 
-Sonarr
-------
+## Sonarr
 
 <section begin=sonarr_calendar />
 
@@ -16,8 +14,7 @@ Information about the Calendar coming soon(tm)
 
 <section end=sonarr_calendar />
 
-Lidarr
-------
+## Lidarr
 
 <section begin=lidarr_calendar />
 
@@ -25,8 +22,7 @@ Information about the Calendar coming soon(tm)
 
 <section end=lidarr_calendar />
 
-Readarr
--------
+## Readarr
 
 <section begin=readarr_calendar />
 

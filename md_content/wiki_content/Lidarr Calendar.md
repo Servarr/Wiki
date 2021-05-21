@@ -1,4 +1,3 @@
-Calendar
---------
+## Calendar
 
-{{\#lst::Calendar\|lidarr\_calendar}}
+{{\#lst::Calendar|lidarr\_calendar}}

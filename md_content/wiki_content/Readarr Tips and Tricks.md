@@ -1,15 +1,21 @@
-Custom Post Processing Scripts
-------------------------------
+## Custom Post Processing Scripts
 
-+-----------------------------------------+
-| WARNING                                 |
-+=========================================+
-| Readarr this page is not yet complete.\ |
-|                                         |
-| **You have been WARNED!**               |
-+-----------------------------------------+
+<table>
+<thead>
+<tr class="header">
+<th><p>WARNING</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Readarr this page is not yet complete.<br />
+</p>
+<p><strong>You have been WARNED!</strong></p></td>
+</tr>
+</tbody>
+</table>
 
-If you're looking to trigger a custom script in your download client to
+If you’re looking to trigger a custom script in your download client to
 tell Readarr when to update, you can find more details here. Scripts are
 added to Readarr via the [Connect
 Settings](Radarr_Settings#Connections "wikilink") page.
@@ -26,136 +32,76 @@ script and in no particular order.
 
 ##### On Grab
 
-+-----------------------------------+-----------------------------------+
-| Environment Variable              | Details                           |
-+===================================+===================================+
-| readarr\_eventtype                | Grab                              |
-+-----------------------------------+-----------------------------------+
-| readarr\_download\_client         | NZB/Torrent downloader client     |
-+-----------------------------------+-----------------------------------+
-| readarr\_download\_id             | The hash of the torrent/NZB file  |
-|                                   | downloaded (used to uniquely      |
-|                                   | identify the download in the      |
-|                                   | download client)                  |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_id                | Internal ID of the movie          |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_imdbid            | IMDb ID for the movie             |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_in\_cinemas\_date | Cinema release date               |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_physical\_release | Physical release date             |
-| \_date                            |                                   |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_title             | Title of the movie                |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_tmdbid            | TMDb ID for the movie             |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_year              | Release year of the movie         |
-+-----------------------------------+-----------------------------------+
-| readarr\_release\_indexer         | Indexer where the release was     |
-|                                   | grabbed                           |
-+-----------------------------------+-----------------------------------+
-| readarr\_release\_quality         | Quality name from Readarr         |
-+-----------------------------------+-----------------------------------+
-| readarr\_release\_qualityversion  | 1 is the default, 2 for proper,   |
-|                                   | 3+ could be used for anime        |
-|                                   | versions                          |
-+-----------------------------------+-----------------------------------+
-| readarr\_release\_releasegroup    | Release Group, will not be set if |
-|                                   | it is unknown                     |
-+-----------------------------------+-----------------------------------+
-| readarr\_release\_size            | Size of the release reported by   |
-|                                   | the indexer                       |
-+-----------------------------------+-----------------------------------+
-| readarr\_release\_title           | NZB/Torrent title                 |
-+-----------------------------------+-----------------------------------+
+| Environment Variable                    | Details                                                                                                     |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| readarr\_eventtype                      | Grab                                                                                                        |
+| readarr\_download\_client               | NZB/Torrent downloader client                                                                               |
+| readarr\_download\_id                   | The hash of the torrent/NZB file downloaded (used to uniquely identify the download in the download client) |
+| readarr\_movie\_id                      | Internal ID of the movie                                                                                    |
+| readarr\_movie\_imdbid                  | IMDb ID for the movie                                                                                       |
+| readarr\_movie\_in\_cinemas\_date       | Cinema release date                                                                                         |
+| readarr\_movie\_physical\_release\_date | Physical release date                                                                                       |
+| readarr\_movie\_title                   | Title of the movie                                                                                          |
+| readarr\_movie\_tmdbid                  | TMDb ID for the movie                                                                                       |
+| readarr\_movie\_year                    | Release year of the movie                                                                                   |
+| readarr\_release\_indexer               | Indexer where the release was grabbed                                                                       |
+| readarr\_release\_quality               | Quality name from Readarr                                                                                   |
+| readarr\_release\_qualityversion        | 1 is the default, 2 for proper, 3+ could be used for anime versions                                         |
+| readarr\_release\_releasegroup          | Release Group, will not be set if it is unknown                                                             |
+| readarr\_release\_size                  | Size of the release reported by the indexer                                                                 |
+| readarr\_release\_title                 | NZB/Torrent title                                                                                           |
 
 ##### On Download/On Upgrade
 
-+-----------------------------------+-----------------------------------+
-| Environment Variable              | Details                           |
-+===================================+===================================+
-| readarr\_eventtype                | Download                          |
-+-----------------------------------+-----------------------------------+
-| readarr\_download\_id             | The hash of the torrent/NZB file  |
-|                                   | downloaded (used to uniquely      |
-|                                   | identify the download in the      |
-|                                   | download client)                  |
-+-----------------------------------+-----------------------------------+
-| readarr\_isupgrade                | `True` when an existing file is   |
-|                                   | upgraded, otherwise `False`       |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_id                | Internal ID of the movie          |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_imdbid            | IMDb ID for the movie             |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_in\_cinemas\_date | Cinema release date               |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_physical\_release | Physical release date             |
-| \_date                            |                                   |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_path              | Full path to the movie ( /Movie   |
-|                                   | (Year)/ )                         |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_title             | Title of the movie                |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_tmdbid            | TMDb ID for the movie             |
-+-----------------------------------+-----------------------------------+
-| readarr\_movie\_year              | Release year of the movie         |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_id            | Internal ID of the movie file     |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_relativepath  | Path to the movie file relative   |
-|                                   | to the movie' path                |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_path          | Full path to the movie file (     |
-|                                   | /Movie (Year)/Movie (Year).mkv )  |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_quality       | Quality name from Readarr         |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_qualityversio | 1 is the default, 2 for proper,   |
-| n                                 | 3+ could be used for anime        |
-|                                   | versions                          |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_releasegroup  | Release group, will not be set if |
-|                                   | it is unknown                     |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_scenename     | Original release name             |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_sourcepath    | Full path to the movie file that  |
-|                                   | was imported                      |
-+-----------------------------------+-----------------------------------+
-| readarr\_moviefile\_sourcefolder  | Full path to the folder the movie |
-|                                   | file was imported from            |
-+-----------------------------------+-----------------------------------+
+| Environment Variable                    | Details                                                                                                     |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| readarr\_eventtype                      | Download                                                                                                    |
+| readarr\_download\_id                   | The hash of the torrent/NZB file downloaded (used to uniquely identify the download in the download client) |
+| readarr\_isupgrade                      | `True` when an existing file is upgraded, otherwise `False`                                                 |
+| readarr\_movie\_id                      | Internal ID of the movie                                                                                    |
+| readarr\_movie\_imdbid                  | IMDb ID for the movie                                                                                       |
+| readarr\_movie\_in\_cinemas\_date       | Cinema release date                                                                                         |
+| readarr\_movie\_physical\_release\_date | Physical release date                                                                                       |
+| readarr\_movie\_path                    | Full path to the movie ( /Movie (Year)/ )                                                                   |
+| readarr\_movie\_title                   | Title of the movie                                                                                          |
+| readarr\_movie\_tmdbid                  | TMDb ID for the movie                                                                                       |
+| readarr\_movie\_year                    | Release year of the movie                                                                                   |
+| readarr\_moviefile\_id                  | Internal ID of the movie file                                                                               |
+| readarr\_moviefile\_relativepath        | Path to the movie file relative to the movie’ path                                                          |
+| readarr\_moviefile\_path                | Full path to the movie file ( /Movie (Year)/Movie (Year).mkv )                                              |
+| readarr\_moviefile\_quality             | Quality name from Readarr                                                                                   |
+| readarr\_moviefile\_qualityversion      | 1 is the default, 2 for proper, 3+ could be used for anime versions                                         |
+| readarr\_moviefile\_releasegroup        | Release group, will not be set if it is unknown                                                             |
+| readarr\_moviefile\_scenename           | Original release name                                                                                       |
+| readarr\_moviefile\_sourcepath          | Full path to the movie file that was imported                                                               |
+| readarr\_moviefile\_sourcefolder        | Full path to the folder the movie file was imported from                                                    |
 
 ##### On Rename
 
-  Environment Variable                      Details
-  ----------------------------------------- ---------------------------
-  readarr\_eventtype                        Rename
-  readarr\_movie\_id                        Internal ID of the movie
-  readarr\_movie\_imdbid                    IMDb ID for the movie
-  readarr\_movie\_in\_cinemas\_date         Cinema release date
-  readarr\_movie\_path                      Full path to the movie
-  readarr\_movie\_physical\_release\_date   Physical release date
-  readarr\_movie\_title                     Title of the movie
-  readarr\_movie\_tmdbid                    TMDb ID for the movie
-  readarr\_movie\_year                      Release year of the movie
+| Environment Variable                    | Details                   |
+| --------------------------------------- | ------------------------- |
+| readarr\_eventtype                      | Rename                    |
+| readarr\_movie\_id                      | Internal ID of the movie  |
+| readarr\_movie\_imdbid                  | IMDb ID for the movie     |
+| readarr\_movie\_in\_cinemas\_date       | Cinema release date       |
+| readarr\_movie\_path                    | Full path to the movie    |
+| readarr\_movie\_physical\_release\_date | Physical release date     |
+| readarr\_movie\_title                   | Title of the movie        |
+| readarr\_movie\_tmdbid                  | TMDb ID for the movie     |
+| readarr\_movie\_year                    | Release year of the movie |
 
 ### Specific usage tips
 
 #### LINUX / UNIX Scripts
 
 Remember to always add a
-[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) and make your
+[shebang](https://en.wikipedia.org/wiki/Shebang_\(Unix\)) and make your
 scripts executable with [chmod](https://en.wikipedia.org/wiki/Chmod).
 
 {{\#spoiler:show=Sample bash script to echo environmental
-variables\|hide=Click to close\|spoiler\_text
+variables|hide=Click to close|spoiler\_text
 
-``` {.bash}
+``` bash
 #!/bin/bash
 RADARRENVLOG=&quot;/pathtoalog.log&quot;
 
@@ -217,7 +163,7 @@ fi
 #### PHP
 
 The information from Readarr will not be added to
-$_ENV as one might expect but should be included in the [$\_SERVER
+\(_ENV as one might expect but should be included in the [\)\_SERVER
 variable\](https://secure.php.net/manual/en/reserved.variables.server.php).
 A sample script to use this information to convert a file can be found
 [here](https://gist.github.com/karbowiak/7fb38d346e368edc9d1a). \#\#\#\#
@@ -225,15 +171,15 @@ PowerShell \#\#\#\# Sample script using the Readarr environment
 variables to create EDL files for all episodes is
 [here](https://gist.github.com/RedsGT/e1b5f28e7b5b81e1e45378151e73ba5c).
 
-Sample script to have Plex scan destination folder only and "analyze
-deeply" the file. PSQLite needed to query the plex DB. Adjust folder
+Sample script to have Plex scan destination folder only and “analyze
+deeply” the file. PSQLite needed to query the plex DB. Adjust folder
 locations to match your setup.
 
 This script will add the movie to plex and scan the destination folder
 (it will not scan the entire library) {{\#spoiler:show=Powershell
-Scriptt\|hide=Click to close\|
+Scriptt|hide=Click to close|
 
-``` {.powershell}
+``` powershell
 # 
 # C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe\PowerShell.exe -ExecutionPolicy Bypass "C:\Users\Server\Desktop\radarrcustom.ps1"
 
@@ -283,9 +229,9 @@ original download location so you can continue to seed.
 
 Symlinking is preferable over hardlinking in some cases as the root
 movie folder can be on a seperate drive or nfs mount, where hardlinks
-are impossible. {{\#spoiler:show=Bash Script\|hide=Click to close\|
+are impossible. {{\#spoiler:show=Bash Script|hide=Click to close|
 
-``` {.bash}
+``` bash
 #!/bin/bash
 
 PERMPATH="$radarr_moviefile_path"
@@ -323,7 +269,7 @@ fi
 ```
 
 }} A quick way to test scripts is to create a testing environment using
-the movie "Test (2013)".
+the movie “Test (2013)”.
 
     mkdir -p ~/test &amp;&amp; cd ~/test &amp;&amp; touch &quot;Test (2013).nfo&quot; &quot;Test (2013).por.srt&quot; &quot;Test (2013).por.forced.srt&quot; &quot;Test (2013).eng.srt&quot; &quot;Test (2013).mkv&quot; &amp;&amp; cp -R ~/test /path/to/folder/to/import
 

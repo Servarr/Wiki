@@ -1,19 +1,15 @@
-Activity
---------
+## Activity
 
-{{\#lst::Activity\|sonarr\_activity}}
+{{\#lst::Activity|sonarr\_activity}}
 
-Queue
------
+## Queue
 
-{{\#lst::Activity Queue\|sonarr\_activity\_queue}}
+{{\#lst::Activity Queue|sonarr\_activity\_queue}}
 
-History
--------
+## History
 
-{{\#lst::Activity History\|sonarr\_activity\_history}}
+{{\#lst::Activity History|sonarr\_activity\_history}}
 
-Blacklist
----------
+## Blacklist
 
-{{\#lst::Activity Blacklist\|sonarr\_activity\_blacklist}}
+{{\#lst::Activity Blacklist|sonarr\_activity\_blacklist}}

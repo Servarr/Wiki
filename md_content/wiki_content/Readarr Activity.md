@@ -1,19 +1,15 @@
-Activity
---------
+## Activity
 
-{{\#lst::Activity\|readarr\_activity}}
+{{\#lst::Activity|readarr\_activity}}
 
-Queue
------
+## Queue
 
-{{\#lst::Activity Queue\|readarr\_activity\_queue}}
+{{\#lst::Activity Queue|readarr\_activity\_queue}}
 
-History
--------
+## History
 
-{{\#lst::Activity History\|readarr\_activity\_history}}
+{{\#lst::Activity History|readarr\_activity\_history}}
 
-Blacklist
----------
+## Blacklist
 
-{{\#lst::Activity Blacklist\|readarr\_activity\_blacklist}}
+{{\#lst::Activity Blacklist|readarr\_activity\_blacklist}}

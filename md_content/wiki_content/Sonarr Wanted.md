@@ -1,9 +1,7 @@
-Wanted
-------
+## Wanted
 
-{{\#lst::Wanted\|sonarr\_wanted}}
+{{\#lst::Wanted|sonarr\_wanted}}
 
-Cutoff Unmet
-------------
+## Cutoff Unmet
 
-{{\#lst::Wanted Cutoff Unmet\|sonarr\_wanted\_cutoff\_unmet}}
+{{\#lst::Wanted Cutoff Unmet|sonarr\_wanted\_cutoff\_unmet}}

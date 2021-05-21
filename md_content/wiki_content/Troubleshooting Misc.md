@@ -1,8 +1,7 @@
 ***This page is used for the misc items needed for the specificity of
 each of the ARRs that do not cross between them***
 
-Testing a search
-----------------
+## Testing a search
 
 ### Radarr
 
@@ -14,17 +13,17 @@ log files. While testing, it is best to use as narrow a search as
 possible. A manual search is good because it is specific *and* you can
 see the results in the UI while examining the logs.
 
-In this test, you'll be looking for obvious errors and running some
+In this test, you’ll be looking for obvious errors and running some
 simple tests. You can see the search used the url
-`"`[`https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou`](https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou),
+`"`<https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou>,
 which you can try yourself in a browser after replacing `(removed)` with
 your apikey for that indexer. Does it work? Do you see the expected
 results? In that URL, you can see that it set specific categories with
-`2000`, so if you're not seeing expected results, this is one likely
-reason. If the movie isn't properly categorized on the indexer, it will
+`2000`, so if you’re not seeing expected results, this is one likely
+reason. If the movie isn’t properly categorized on the indexer, it will
 need to be fixed. Look at Manual Search XML Output below to see an
-example of a working query's output. {{\#spoiler:show=Manual Search XML
-Output\|hide=Click here to Close\|
+example of a working query’s output. {{\#spoiler:show=Manual Search XML
+Output|hide=Click here to Close|
 
     coming soon
 
@@ -40,23 +39,23 @@ log files. While testing, it is best to use as narrow a search as
 possible. A manual search is good because it is specific *and* you can
 see the results in the UI while examining the logs.
 
-In this test, you'll be looking for obvious errors and running some
+In this test, you’ll be looking for obvious errors and running some
 simple tests. You can see the search used the url
-[`https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1`](https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1),
+<https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1>,
 which you can try yourself in a browser after replacing `(removed)` with
 your apikey for that indexer. Does it work? Do you see the expected
 results? [Does this FAQ entry
 apply?](Sonarr_FAQ#why_cant_sonarr_import_episode_files_for_series_x_why_cant_sonarr_find_releases_for_series_x "wikilink")
 In that URL, you can see that it set specific categories with
-`cat=5030,5040,5045,5080`, so if you're not seeing expected results,
+`cat=5030,5040,5045,5080`, so if you’re not seeing expected results,
 this is one likely reason. You can also see that it searched by tvdbid
-with `tvdbid=354629`, so if the episode isn't properly categorized on
+with `tvdbid=354629`, so if the episode isn’t properly categorized on
 the indexer, it will need to be fixed. You can also see that it searches
 by *specific* season and episode with `season=1` and `ep=1`, so if
-*that* isn't correct on the indexer, you won't see those results. Look
-at Manual Search XML Output below to see an example of a working query's
-output. {{\#spoiler:show=Manual Episode XML Output\|hide=Click here to
-Close\|
+*that* isn’t correct on the indexer, you won’t see those results. Look
+at Manual Search XML Output below to see an example of a working query’s
+output. {{\#spoiler:show=Manual Episode XML Output|hide=Click here to
+Close|
 
     <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:newznab="http://www.newznab.com/DTD/2010/feeds/attributes/" version="2.0">
     <channel>
@@ -149,12 +148,12 @@ Coming Soon(tm)
 
 <section ned=readarr_indexers_and_trackers_testing_a_search />
 
-Type
-----
+## Type
 
 ### Radarr
 
 <section begin=radarr_indexers_and_trackers_type />
+
 <section end=radarr_indexers_and_trackers_type />
 
 ### Sonarr
@@ -177,7 +176,7 @@ The show type is another cause of poor search results. Most shows should
 be `Standard`. For daily shows which are typically released with a date,
 `Daily` should be used. Finally, there is anime where using `Anime` is
 *usually* right, but sometimes `Standard` can work better, so try the
-*other* one if you're having issues.
+*other* one if you’re having issues.
 
 Please note that if the series type is set to anime and none of your
 enabled indexers have any anime categories configured then it
@@ -190,22 +189,22 @@ differentiating piece is noted in bold.
 
 **Daily**
 
--   Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
--   A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
--   DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
+  - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
+  - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
+  - DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
 
 **Standard**
 
--   The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
--   Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
--   GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
+  - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
+  - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
+  - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
 
 **Anime**
 
--   Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
--   \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC)
+  - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
+  - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC)
     \[63B8AC67\]
--   \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English
+  - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English
     Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
 <section end=sonarr_indexers_and_trackers_type />
@@ -213,15 +212,16 @@ differentiating piece is noted in bold.
 ### Lidarr
 
 <section begin=lidarr_indexers_and_trackers_type />
+
 <section end=lidarr_indexers_and_trackers_type />
 
 ### Readarr
 
 <section begin=lidarr_indexers_and_trackers_type />
+
 <section end=lidarr_indexers_and_trackers_type />
 
-Code Blocks
------------
+## Code Blocks
 
 ### Radarr
 
@@ -312,7 +312,7 @@ Need to add logs of feed downloaded and parsed (search)
 
 <section begin=radarr_trace_logs_example />
 
-{{\#spoiler:show=Manual Search Trace Log\|hide=Click here to Close\|
+{{\#spoiler:show=Manual Search Trace Log|hide=Click here to Close|
 
     Needs Trace Log Example
 
@@ -324,7 +324,7 @@ Need to add logs of feed downloaded and parsed (search)
 
 <section begin=sonarr_trace_logs_example />
 
-{{\#spoiler:show=Manual Search Trace Log\|hide=Click here to Close\|
+{{\#spoiler:show=Manual Search Trace Log|hide=Click here to Close|
 
     19-11-20 13:15:23.6|Trace|Http|Req: 66 [GET] /api/v3/release?episodeId=1                                                                                                                                                                                                                         [5/3289]
     19-11-20 13:15:23.6|Info|NzbSearchService|Searching 1 indexers for [The Fix : S01E01]
@@ -413,7 +413,7 @@ Need to add logs of feed downloaded and parsed (search)
 
 <section begin=lidarr_trace_logs_example />
 
-{{\#spoiler:show=Manual Search Trace Log\|hide=Click here to Close\|
+{{\#spoiler:show=Manual Search Trace Log|hide=Click here to Close|
 
     Needs Trace Log Example
 
@@ -425,7 +425,7 @@ Need to add logs of feed downloaded and parsed (search)
 
 <section begin=readarr_trace_logs_example />
 
-{{\#spoiler:show=Manual Search Trace Log\|hide=Click here to Close\|
+{{\#spoiler:show=Manual Search Trace Log|hide=Click here to Close|
 
     Needs Trace Log Example
 

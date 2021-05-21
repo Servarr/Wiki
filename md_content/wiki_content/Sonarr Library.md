@@ -1,29 +1,24 @@
-Series
-------
+## Series
 
-{{\#lst::Library\|sonarr\_library}}
+{{\#lst::Library|sonarr\_library}}
 
 ### Filters
 
-{{\#lst::Filters\|sonarr\_filters}}
+{{\#lst::Filters|sonarr\_filters}}
 
-Add New
--------
+## Add New
 
-{{\#lst::Library Add New\|sonarr\_library\_add\_new}}
+{{\#lst::Library Add New|sonarr\_library\_add\_new}}
 
-Library Import
---------------
+## Library Import
 
-{{\#lst::Library Import\|sonarr\_library\_import}}
+{{\#lst::Library Import|sonarr\_library\_import}}
 
-Mass Editor
------------
+## Mass Editor
 
-{{\#lst::Library Mass Editor\|sonarr\_library\_mass\_editor}}
+{{\#lst::Library Mass Editor|sonarr\_library\_mass\_editor}}
 
-Season Pass
------------
+## Season Pass
 
 {{\#lst::Library Bulk Monitoring
-Editor\|sonarr\_library\_bulk\_monitoring\_editor}}
+Editor|sonarr\_library\_bulk\_monitoring\_editor}}

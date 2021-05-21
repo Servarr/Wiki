@@ -1,7 +1,6 @@
 **Misc page for Appdata Directory**
 
-Arguments
----------
+## Arguments
 
 ### Radarr
 

@@ -1,5 +1,4 @@
-Radarr
-------
+## Radarr
 
 <section begin=radarr_activity_blacklist />
 
@@ -7,8 +6,7 @@ Information about the Blacklist section coming soon(tm)
 
 <section end=radarr_activity_blacklist />
 
-Sonarr
-------
+## Sonarr
 
 <section begin=sonarr_activity_blacklist />
 
@@ -16,8 +14,7 @@ Information about the Blacklist section coming soon(tm)
 
 <section end=sonarr_activity_blacklist />
 
-Lidarr
-------
+## Lidarr
 
 <section begin=lidarr_activity_blacklist />
 
@@ -25,8 +22,7 @@ Information about the Blacklist section coming soon(tm)
 
 <section end=lidarr_activity_blacklist />
 
-Readarr
--------
+## Readarr
 
 <section begin=readarr_activity_blacklist />
 

@@ -5,13 +5,12 @@ them. It can also be configured to automatically upgrade the quality of
 existing files in the library when a better quality format becomes
 available.
 
-Links
------
+## Links
 
--   [Lidarr Website](https://lidarr.audio/)
--   [Lidarr Donations](https://opencollective.com/lidarr)
--   [Lidarr Github](https://github.com/Lidarr/Lidarr)
+  - [Lidarr Website](https://lidarr.audio/)
+  - [Lidarr Donations](https://opencollective.com/lidarr)
+  - [Lidarr Github](https://github.com/Lidarr/Lidarr)
 
 ### Wiki Links
 
-{{\#lst::WikiMap\|lidarr\_wiki\_pages}}
+{{\#lst::WikiMap|lidarr\_wiki\_pages}}

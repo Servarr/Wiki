@@ -1,6 +1,5 @@
 words will go here
 
-Calendar
---------
+## Calendar
 
-{{\#lst::Calendar\|readarr\_calendar}}
+{{\#lst::Calendar|readarr\_calendar}}

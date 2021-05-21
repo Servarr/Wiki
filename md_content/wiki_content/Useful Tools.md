@@ -3,8 +3,7 @@ are neither maintained, developed, nor supported by the ARR Dev Teams.
 Please direct any specific support questions to the respective
 application development team.
 
-Common Software
----------------
+## Common Software
 
 ### DB Browser for SQLite
 
@@ -29,7 +28,7 @@ Directory](Sonarr_Troubleshooting#AppData_Directory "wikilink").
 2.  Open your corrupt DB in DB Browser for Sqlite
 3.  File -\> Export -\> Export DB to SQL file
     1.  Select all tables
-    2.  Check/Enable \"Keep column names in INSERT INTO\"
+    2.  Check/Enable "Keep column names in INSERT INTO"
     3.  Export Everything
     4.  Overwrite old schema
     5.  Save
@@ -39,8 +38,7 @@ Directory](Sonarr_Troubleshooting#AppData_Directory "wikilink").
 6.  Run a pragma check on the new DB
 7.  Save the DB and point the application at it
 
-Other Projects and Programs
----------------------------
+## Other Projects and Programs
 
 ### Bazarr
 
@@ -62,20 +60,20 @@ Guide](https://trash-guides.info/Misc/Discord-Notifier-Basic-Setup/)
 
 Highlights
 
--   Application Status
--   Requests and Approvals (\~Ombi, Requesterr)
--   Customizable ARR application notifications
--   Request System with approvals
--   Follow system for users to monitor a series or movie and be notified
-    (via \@mentions)
--   Server Status
--   Frequent New Features
+  - Application Status
+  - Requests and Approvals (\~Ombi, Requesterr)
+  - Customizable ARR application notifications
+  - Request System with approvals
+  - Follow system for users to monitor a series or movie and be notified
+    (via @mentions)
+  - Server Status
+  - Frequent New Features
 
 ### Filebot
 
 [FileBot](https://www.filebot.net/) is the ultimate tool for organizing
 and renaming your Movies, TV Shows and Anime as well as fetching
-subtitles and artwork. It\'s smart and just works.
+subtitles and artwork. It's smart and just works.
 
 ### NZBHydra2
 
@@ -114,10 +112,10 @@ Play](https://play.google.com/store/apps/details?id=easy.radarr)
 can run alongside your Plex Media Server to monitor activity and track
 various statistics. Most importantly, these statistics include what has
 been watched, who watched it, when and where they watched it, and how it
-was watched. The only thing missing is \"why they watched it\", but who
-am I to question your 42 plays of Frozen. All statistics are presented
-in a nice and clean interface with many tables and graphs, which makes
-it easy to brag about your server to everyone else.
+was watched. The only thing missing is "why they watched it", but who am
+I to question your 42 plays of Frozen. All statistics are presented in a
+nice and clean interface with many tables and graphs, which makes it
+easy to brag about your server to everyone else.
 
 ### Tdarr
 
@@ -129,7 +127,7 @@ codecs/streams/containers etc. Designed to work alongside
 the aim of modularisation, parallelisation and scalability, each library
 you add has its own transcode settings, filters and schedule. Workers
 can be fired up and closed down as necessary, and are split into 3 types
-- \'general\', \'transcode\' and \'health check\'. Worker limits can be
+- 'general', 'transcode' and 'health check'. Worker limits can be
 managed by the scheduler as well as manually.
 
 ### Unpackerr
@@ -140,10 +138,10 @@ downloads and extracts them so Radarr and/or Sonarr and/or Lidarr may
 import them.
 
 There are a handful of options out there for extracting and deleting
-files after your client downloads them. I just didn\'t care for any of
+files after your client downloads them. I just didn't care for any of
 them, so I wrote my own. I wanted a small single-binary with reasonable
 logging that can extract downloaded archives and clean up the mess after
-they\'ve been imported.
+they've been imported.
 
 ### AMD
 
@@ -168,16 +166,14 @@ RandomNinjaAtk/amtd is a Radarr companion script to automatically
 download movie trailers and extras for use in other video applications
 (plex/kodi/jellyfin/emby)
 
-Scripts & Things
-----------------
+## Scripts & Things
 
-Twitter Connect
----------------
+## Twitter Connect
 
-Create a Twitter application (if you haven\'t already) at
+Create a Twitter application (if you haven't already) at
 <https://apps.twitter.com/>
 
 Fill in the mandatory fields as well as the callback URL, set it to a
-publicly available URL (not localhost), it doesn\'t need to exist, but
-it does need to be set, using <https://sonarr.tv/twitter> or
+publicly available URL (not localhost), it doesn't need to exist, but it
+does need to be set, using <https://sonarr.tv/twitter> or
 <https://radarr.video> is sufficient.

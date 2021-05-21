@@ -4,13 +4,12 @@ and rename them. It can also be configured to automatically upgrade the
 quality of files already downloaded when a better quality format becomes
 available.
 
-Links
------
+## Links
 
--   [Sonarr Website](https://Sonarr.tv/)
--   [Sonarr Donations](https://sonarr.tv/donate)
--   [Sonarr Github](https://github.com/Sonarr/Sonarr)
+  - [Sonarr Website](https://Sonarr.tv/)
+  - [Sonarr Donations](https://sonarr.tv/donate)
+  - [Sonarr Github](https://github.com/Sonarr/Sonarr)
 
 ### Wiki Links
 
-{{\#lst::WikiMap\|sonarr\_wiki\_pages}}
+{{\#lst::WikiMap|sonarr\_wiki\_pages}}

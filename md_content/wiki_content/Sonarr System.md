@@ -5,69 +5,69 @@ Please note that this information is only for
 
 #### Health
 
-{{\#lst::system status\|sonarr\_system\_status\_health\_overview}}
+{{\#lst::system status|sonarr\_system\_status\_health\_overview}}
 
 ##### System Warnings
 
 {{\#lst::system
-status\|sonarr\_system\_status\_health\_system\_warnings}}
+status|sonarr\_system\_status\_health\_system\_warnings}}
 
 ##### Download Clients
 
 {{\#lst::system
-status\|sonarr\_system\_status\_health\_download\_clients}}
+status|sonarr\_system\_status\_health\_download\_clients}}
 
 ##### Completed/Failed Download Handling
 
 {{\#lst::system
-status\|sonarr\_system\_status\_health\_complete\_failed\_download\_handling}}
+status|sonarr\_system\_status\_health\_complete\_failed\_download\_handling}}
 
 ##### Indexers
 
-{{\#lst::system status\|sonarr\_system\_status\_health\_indexers}}
+{{\#lst::system status|sonarr\_system\_status\_health\_indexers}}
 
 ##### Root Folders
 
-{{\#lst::system status\|sonarr\_system\_status\_health\_folders}}
+{{\#lst::system status|sonarr\_system\_status\_health\_folders}}
 
 ##### Media
 
-{{\#lst::system status\|sonarr\_system\_status\_health\_media}}
+{{\#lst::system status|sonarr\_system\_status\_health\_media}}
 
 #### Disk Space
 
-{{\#lst::system status\|sonarr\_system\_status\_disk\_space}}
+{{\#lst::system status|sonarr\_system\_status\_disk\_space}}
 
 #### About
 
-{{\#lst::system status\|sonarr\_system\_status\_about}}
+{{\#lst::system status|sonarr\_system\_status\_about}}
 
 #### More Info
 
-{{\#lst::system status\|sonarr\_system\_status\_more\_info}}
+{{\#lst::system status|sonarr\_system\_status\_more\_info}}
 
 ### Tasks
 
 #### Scheduled
 
-{{\#lst::system tasks\|sonarr\_system\_tasks\_scheduled}}
+{{\#lst::system tasks|sonarr\_system\_tasks\_scheduled}}
 
 #### Queue
 
-{{\#lst::system tasks\|sonarr\_system\_tasks\_queue}}
+{{\#lst::system tasks|sonarr\_system\_tasks\_queue}}
 
 ### Backup
 
-{{\#lst::system backup\|sonarr\_system\_backup}}
+{{\#lst::system backup|sonarr\_system\_backup}}
 
 ### Updates
 
-{{\#lst::system updates\|sonarr\_system\_updates}}
+{{\#lst::system updates|sonarr\_system\_updates}}
 
 ### Events
 
-{{\#lst::system events\|sonarr\_system\_events}}
+{{\#lst::system events|sonarr\_system\_events}}
 
 ### Log Files
 
-{{\#lst::system log files\|sonarr\_system\_log\_files}}
+{{\#lst::system log files|sonarr\_system\_log\_files}}

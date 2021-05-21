@@ -1,9 +1,7 @@
-Wanted
-------
+## Wanted
 
-{{\#lst::Wanted\|readarr\_wanted}}
+{{\#lst::Wanted|readarr\_wanted}}
 
-Cutoff Unmet
-------------
+## Cutoff Unmet
 
-{{\#lst::Wanted Cutoff Unmet\|readarr\_wanted\_cutoff\_unmet}}
+{{\#lst::Wanted Cutoff Unmet|readarr\_wanted\_cutoff\_unmet}}

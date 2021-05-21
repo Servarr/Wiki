@@ -1,5 +1,4 @@
-Radarr
-------
+## Radarr
 
 <section begin=radarr_library_import />
 
@@ -7,8 +6,7 @@ Information about importing your media coming soon(tm)
 
 <section end=radarr_library_import />
 
-Sonarr
-------
+## Sonarr
 
 <section begin=sonarr_library_import />
 
@@ -16,8 +14,7 @@ Information about importing your media coming soon(tm)
 
 <section end=sonarr_library_import />
 
-Lidarr
-------
+## Lidarr
 
 <section begin=lidarr_library_import />
 
@@ -25,8 +22,7 @@ Information about importing your media coming soon(tm)
 
 <section end=lidarr_library_import />
 
-Readarr
--------
+## Readarr
 
 <section begin=readarr_library_import />
 

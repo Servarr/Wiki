@@ -1,5 +1,4 @@
-Radarr
-------
+## Radarr
 
 <section begin=radarr_library_unmapped_files />
 
@@ -7,8 +6,7 @@ Information about the Unmapped Files section r coming soon(tm)
 
 <section end=radarr_library_unmapped_files />
 
-Sonarr
-------
+## Sonarr
 
 <section begin=sonarr_library_unmapped_files />
 
@@ -16,8 +14,7 @@ Information about the Unmapped Files section r coming soon(tm)
 
 <section end=sonarr_library_unmapped_files />
 
-Lidarr
-------
+## Lidarr
 
 <section begin=lidarr_library_unmapped_files />
 
@@ -25,8 +22,7 @@ Information about the Unmapped Files section r coming soon(tm)
 
 <section end=lidarr_library_unmapped_files />
 
-Readarr
--------
+## Readarr
 
 <section begin=readarr_library_unmapped_files />
 

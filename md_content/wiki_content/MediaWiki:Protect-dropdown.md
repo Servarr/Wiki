@@ -1,0 +1,7 @@
+  - Common protection reasons
+      - Settings Page - Admin Only
+      - Excessive vandalism
+      - Excessive spamming
+      - Counter-productive edit warring
+      - High traffic page
+      - Pages that utilize special transclusions or templates

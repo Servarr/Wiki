@@ -5,69 +5,69 @@ Please note that this information is only for
 
 #### Health
 
-{{\#lst::system status\|readarr\_system\_status\_health\_overview}}
+{{\#lst::system status|readarr\_system\_status\_health\_overview}}
 
 ##### System Warnings
 
 {{\#lst::system
-status\|readarr\_system\_status\_health\_system\_warnings}}
+status|readarr\_system\_status\_health\_system\_warnings}}
 
 ##### Download Clients
 
 {{\#lst::system
-status\|readarr\_system\_status\_health\_download\_clients}}
+status|readarr\_system\_status\_health\_download\_clients}}
 
 ##### Completed/Failed Download Handling
 
 {{\#lst::system
-status\|readarr\_system\_status\_health\_complete\_failed\_download\_handling}}
+status|readarr\_system\_status\_health\_complete\_failed\_download\_handling}}
 
 ##### Indexers
 
-{{\#lst::system status\|readarr\_system\_status\_health\_indexers}}
+{{\#lst::system status|readarr\_system\_status\_health\_indexers}}
 
 ##### Author Folders
 
-{{\#lst::system status\|readarr\_system\_status\_health\_folders}}
+{{\#lst::system status|readarr\_system\_status\_health\_folders}}
 
 ##### Media
 
-{{\#lst::system status\|readarr\_system\_status\_health\_media}}
+{{\#lst::system status|readarr\_system\_status\_health\_media}}
 
 #### Disk Space
 
-{{\#lst::system status\|readarr\_system\_status\_disk\_space}}
+{{\#lst::system status|readarr\_system\_status\_disk\_space}}
 
 #### About
 
-{{\#lst::system status\|readarr\_system\_status\_about}}
+{{\#lst::system status|readarr\_system\_status\_about}}
 
 #### More Info
 
-{{\#lst::system status\|readarr\_system\_status\_more\_info}}
+{{\#lst::system status|readarr\_system\_status\_more\_info}}
 
 ### Tasks
 
 #### Scheduled
 
-{{\#lst::system tasks\|readarr\_system\_tasks\_scheduled}}
+{{\#lst::system tasks|readarr\_system\_tasks\_scheduled}}
 
 #### Queue
 
-{{\#lst::system tasks\|readarr\_system\_tasks\_queue}}
+{{\#lst::system tasks|readarr\_system\_tasks\_queue}}
 
 ### Backup
 
-{{\#lst::system backup\|readarr\_system\_backup}}
+{{\#lst::system backup|readarr\_system\_backup}}
 
 ### Updates
 
-{{\#lst::system updates\|readarr\_system\_updates}}
+{{\#lst::system updates|readarr\_system\_updates}}
 
 ### Events
 
-{{\#lst::system events\|readarr\_system\_events}}
+{{\#lst::system events|readarr\_system\_events}}
 
 ### Log Files
 
-{{\#lst::system log files\|readarr\_system\_log\_files}}
+{{\#lst::system log files|readarr\_system\_log\_files}}

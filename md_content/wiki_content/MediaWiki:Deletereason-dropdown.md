@@ -1,0 +1,8 @@
+  - Common delete reasons
+      - Delete Redirect
+      - Spam
+      - Vandalism
+      - Copyright violation
+      - Author request
+      - Broken redirect
+      - Remove due to consolidation

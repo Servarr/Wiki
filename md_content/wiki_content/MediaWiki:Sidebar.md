@@ -1,0 +1,16 @@
+  - navigation
+      - mainpage|mainpage-description
+      - recentchanges-url|recentchanges
+      - helppage|help-mediawiki
+      - Radarr|Radarr
+      - Sonarr|Sonarr
+      - Lidarr|Lidarr
+      - Readarr|Readarr
+      - Docker\_Guide|Docker Guide
+      - Cloud\_Setup|Cloud Setup (GDrive)
+      - <https://github.com/Servarr/Wiki> |Github for the Wiki
+      - <https://github.com/Servarr/Wiki/issues/> | Report a Wiki Issue
+      - WikiMap| Map of the Wiki
+  - SEARCH
+  - TOOLBOX
+  - LANGUAGES

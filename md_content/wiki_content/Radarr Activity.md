@@ -1,19 +1,15 @@
-Activity
---------
+## Activity
 
-{{\#lst::Activity\|radarr\_activity}}
+{{\#lst::Activity|radarr\_activity}}
 
-Queue
------
+## Queue
 
-{{\#lst::Activity Queue\|radarr\_activity\_queue}}
+{{\#lst::Activity Queue|radarr\_activity\_queue}}
 
-History
--------
+## History
 
-{{\#lst::Activity History\|radarr\_activity\_history}}
+{{\#lst::Activity History|radarr\_activity\_history}}
 
-Blacklist
----------
+## Blacklist
 
-{{\#lst::Activity Blacklist\|radarr\_activity\_blacklist}}
+{{\#lst::Activity Blacklist|radarr\_activity\_blacklist}}

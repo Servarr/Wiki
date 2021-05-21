@@ -1,5 +1,4 @@
-Metadata
---------
+## Metadata
 
 ### Options (Radarr Only)
 
@@ -7,11 +6,11 @@ Metadata
 
 <section begin=radarr_settings_metadata_options />
 
--   Certification Country - Here you can select the country to which the
+  - Certification Country - Here you can select the country to which the
     certifications for the movies in your library are associated to.
-    -   [MPA Film
+      - [MPA Film
         rating](https://en.wikipedia.org/wiki/Motion_Picture_Association_film_rating_system)
-    -   [BBFC](https://en.wikipedia.org/wiki/British_Board_of_Film_Classification)
+      - [BBFC](https://en.wikipedia.org/wiki/British_Board_of_Film_Classification)
 
 <section end=radarr_settings_metadata_options />
 
@@ -48,7 +47,7 @@ N/A
 Here you can select the type of metadata that will be consumed by your
 media player
 
--   Kodi will be one of the most commonly used options here if that is
+  - Kodi will be one of the most commonly used options here if that is
     the software that is being used. This will allow Radarr to create a
     `NFO` file as well as associated movie posters to be scraped into
     your player
@@ -62,7 +61,7 @@ media player
 Here you can select the type of metadata that will be consumed by your
 media player
 
--   Kodi will be one of the most commonly used options here if that is
+  - Kodi will be one of the most commonly used options here if that is
     the software that is being used. This will allow Sonarr to create a
     `NFO` file as well as associated movie posters to be scraped into
     your player
@@ -73,7 +72,7 @@ media player
 
 <section begin=lidarr_settings_metadata_metadata_consumers />
 
--   Metadata Consumers - Kodi will be one of the most commonly used
+  - Metadata Consumers - Kodi will be one of the most commonly used
     options here if that is the software that is being used. This will
     allow Lidarr to create a `NFO` file as well as associated movie
     posters to be scraped into your player
@@ -94,7 +93,7 @@ Text
 
 <section begin=lidarr_settings_metadata_metadata_provider_source />
 
--   Metadata Provider Source - Setting is currently for Dev purposes.
+  - Metadata Provider Source - Setting is currently for Dev purposes.
 
 <section end=lidarr_settings_metadata_metadata_provider_source />
 
@@ -112,11 +111,11 @@ Text
 
 <section begin=lidarr_settings_metadata_write_metadata_to_audio_files />
 
--   -   Tag Audio Files with Metadata - Here you can actually write
+  -   - Tag Audio Files with Metadata - Here you can actually write
         metadata directly into the audio file. This can be useful for
         audio players as all the pertinent information to tell you will
         be hardcoded to the file.
-    -   Scrub Existing Tags - This will remove all existing metadata
+      - Scrub Existing Tags - This will remove all existing metadata
         tags, this may be recommended as some people like to tag their
         name all over files and this will sanitize the files before
         being rewritten by Lidarr.

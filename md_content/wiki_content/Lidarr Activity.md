@@ -1,19 +1,15 @@
-Activity
---------
+## Activity
 
-{{\#lst::Activity\|lidarr\_activity}}
+{{\#lst::Activity|lidarr\_activity}}
 
-Queue
------
+## Queue
 
-{{\#lst::Activity Queue\|lidarr\_activity\_queue}}
+{{\#lst::Activity Queue|lidarr\_activity\_queue}}
 
-History
--------
+## History
 
-{{\#lst::Activity History\|lidarr\_activity\_history}}
+{{\#lst::Activity History|lidarr\_activity\_history}}
 
-Blacklist
----------
+## Blacklist
 
-{{\#lst::Activity Blacklist\|lidarr\_activity\_blacklist}}
+{{\#lst::Activity Blacklist|lidarr\_activity\_blacklist}}

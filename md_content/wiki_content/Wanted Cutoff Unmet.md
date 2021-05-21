@@ -1,5 +1,4 @@
-Radarr
-------
+## Radarr
 
 <section begin=radarr_wanted_cutoff_unmet />
 
@@ -7,8 +6,7 @@ Information about the cutoff unmet section coming soon(tm)
 
 <section end=radarr_wanted_cutoff_unmet />
 
-Sonarr
-------
+## Sonarr
 
 <section begin=sonarr_wanted_cutoff_unmet />
 
@@ -22,8 +20,11 @@ Sonarr to keep searching for better.
 
 :\* There are a couple of options available to you on this page
 
-:   [frameless\|none\|900px\|alt=Sonarr Cut off
+  -   
+    [frameless|none|900px|alt=Sonarr Cut off
     unmet](file:wanted-cut-off-unmet.png "wikilink")
+
+<!-- end list -->
 
 1.  Search Selected - By selecting episodes on your list you can perform
     an **Automatic** search to try to see if there are any upgrades to
@@ -32,16 +33,15 @@ Sonarr to keep searching for better.
     can tell Sonarr to no longer look for any upgrades by
     **Unmonitoring** that episode.
 3.  Seach All - This can be dangerous (depending on how big your list
-    is) as you\'re telling Sonarr to search every file that hasn\'t met
+    is) as you're telling Sonarr to search every file that hasn't met
     the cut off. This can be useful if you do not have a massive list.
 4.  Filter - This will allow you to filter out your results. This is
-    useful if you\'re wanting to search a specific set of episodes or
+    useful if you're wanting to search a specific set of episodes or
     series
 
 <section end=sonarr_wanted_cutoff_unmet />
 
-Lidarr
-------
+## Lidarr
 
 <section begin=lidarr_wanted_cutoff_unmet />
 
@@ -49,8 +49,7 @@ Information about the cutoff unmet section coming soon(tm)
 
 <section end=lidarr_wanted_cutoff_unmet />
 
-Readarr
--------
+## Readarr
 
 <section begin=readarr_wanted_cutoff_unmet />
 

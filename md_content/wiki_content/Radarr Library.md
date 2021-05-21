@@ -1,23 +1,19 @@
-Movies
-------
+## Movies
 
-{{\#lst::Library\|radarr\_library}}
+{{\#lst::Library|radarr\_library}}
 
 ### Filters
 
-{{\#lst::Filters\|radarr\_filters}}
+{{\#lst::Filters|radarr\_filters}}
 
-Add New
--------
+## Add New
 
-{{\#lst::Library Add New\|radarr\_library\_add\_new}}
+{{\#lst::Library Add New|radarr\_library\_add\_new}}
 
-Library Import
---------------
+## Library Import
 
-{{\#lst::Library Import\|radarr\_library\_import}}
+{{\#lst::Library Import|radarr\_library\_import}}
 
-Discover
---------
+## Discover
 
-{{\#lst::Library Discover\|radarr\_library\_discover}}
+{{\#lst::Library Discover|radarr\_library\_discover}}
