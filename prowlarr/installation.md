@@ -2,13 +2,13 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-05-24T05:07:51.882Z
+date: 2021-05-24T05:08:37.636Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
 ---
 
-<kbd># Windows
+# Windows
 
 > Prowlarr does not support Windows XP
 {.is-danger}
