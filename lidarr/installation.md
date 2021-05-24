@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-05-24T05:12:27.036Z
+date: 2021-05-24T05:13:10.368Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -19,7 +19,7 @@ dateCreated: 2021-05-24T05:12:27.036Z
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.
 > Lidarr is in beta testing and does not have a formal stable release.
 {.is-warning}
-1. Download the latest version of Lidarr from https://lidarr.com/#downloads-v3-windows for your architecture
+1. Download the latest version of Lidarr from https://lidarr.com/#downloads-v1-windows for your architecture
 1. Run the installer
 1. Browse to http://localhost:8686 to start using Lidarr
 
@@ -27,7 +27,7 @@ Lidarr is supported natively on Windows. Lidarr can be installed on Windows as W
 > Lidarr is in beta testing and does not have a formal stable release.
 {.is-warning}
   
-1. Download the latest version of Lidarr from https://lidarr.com/#downloads-v3-macos
+1. Download the latest version of Lidarr from https://lidarr.com/#downloads-v1-macos
 1. Open the archive and drag the Lidarr icon to your Application folder.
 1. Browse to http://localhost:8686 to start using Lidarr
 # Linux
