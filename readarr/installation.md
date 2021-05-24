@@ -2,7 +2,7 @@
 title: Installation
 description: 
 published: true
-date: 2021-05-24T23:36:32.403Z
+date: 2021-05-24T23:39:02.449Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T23:34:14.199Z
@@ -14,7 +14,7 @@ dateCreated: 2021-05-24T23:34:14.199Z
 {.is-warning}
 
 > Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
-(.is-warning)
+{.is-warning}
 
 Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
