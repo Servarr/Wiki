@@ -2,64 +2,64 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-24T05:07:41.759Z
+date: 2021-05-24T05:08:14.548Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
 ---
 
-<kbd># Windows
+# Windows
 
-> Prowlarr does not support Windows XP
+> Radarr v3 no longer supports Windows XP
 {.is-danger}
 
-> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run net5 apps on Windows 7
+> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core/net5 apps on Windows 7
 {.is-warning}
 
-Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v3-windows for your architecture
+Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
+
+A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
+
+Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+
+It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+
+1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-windows for your architecture
 1. Run the installer
-1. Browse to http://localhost:9696 to start using Prowlarr
+1. Browse to http://localhost:7878 to start using Radarr
 
 # OSX
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-  
-1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v3-macos
-1. Open the archive and drag the Prowlarr icon to your Application folder.
-1. Browse to http://localhost:9696 to start using Prowlarr
+1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-macos
+1. Open the archive and drag the Radarr icon to your Application folder.
+1. Browse to http://localhost:7878 to start using Radarr
 # Linux
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-  
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `prowlarr` and group `prowlarr`.
-> This will download the `x64` copy of prowlarr and install it into `/opt`
+> Note: This assumes you will run as the user `radarr` and group `media`.
+> This will download the `x64` copy of radarr and install it into `/opt`
 {.is-info}
-- Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
+- Ensure you have the required prequisite packages: `sudo apt install curl mediainfo sqlite3`
 - Download the correct binaries for your architecture.
- ` wget --content-disposition 'http://prowlarr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=x64'`
+ ` wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64` 
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
-- Uncompress the files: `tar -xvzf Prowlarr*.linux*.tar.gz`
-- Move the files to `/opt/` `sudo mv Prowlarr/ /opt`
+- Uncompress the files: `tar -xvzf Radarr*.linux*.tar.gz`
+- Move the files to `/opt/` `sudo mv Radarr/ /opt`
 - Ensure ownership of the binary directory.
-  `sudo chown prowlarr:prowlarr /opt/Prowlarr`
-- Configure systemd so Prowlarr can autostart at boot.
+  `sudo chown radarr:radarr /opt/Radarr`
+- Configure systemd so Radarr can autostart at boot.
 ```
-    cat > /etc/systemd/system/prowlarr.service << EOF
+    cat > /etc/systemd/system/radarr.service << EOF
 [Unit]
-Description=Prowlarr Daemon
+Description=Radarr Daemon
 After=syslog.target network.target
 [Service]
-User=prowlarr
-Group=prowlarr
+User=radarr
+Group=media
 Type=simple
+UMask=002
 
-ExecStart=/opt/Prowlarr/Prowlarr -nobrowser -data=/data/.config/Prowlarr/
+ExecStart=/opt/Radarr/Radarr -nobrowser -data=/data/.config/Radarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
@@ -68,21 +68,36 @@ WantedBy=multi-user.target
 EOF
 ```
 - Reload systemd: `systemctl -q daemon-reload`
-- Enable the Prowlarr service: `systemctl enable --now -q prowlarr`
+- Enable the Radarr service: `systemctl enable --now -q radarr`
 
   
 # Docker
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-  
-The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
+The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
+These instructions provide generic guidance that should apply to any Radarr Docker image.
 
-> For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
+## 1. Avoid Common Pitfalls
+### Volumes and Paths
+There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
+
+The first is a problem because the download client will report a download's path as `/torrents/My.Movie.2018/`, but in the Radarr container that might be at `/downloads/My.Movie.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+
+Most Docker images suggest paths like `/movies` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Radarr container, like /torrents.
+
+The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Radarr web UI (Settings › Download Clients).
+
+### Ownership and Permissions
+Permissions and ownership of files is one of the most common problems for Radarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
+
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
 {.is-info}
 
-## Install Prowlarr
-There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+## Install Radarr
+To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
-- [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
-{.links-list}</kbd>
+- [hotio/radarr](https://hotio.dev/containers/radarr/)
+- [linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
+{.links-list}
