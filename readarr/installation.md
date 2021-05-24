@@ -2,10 +2,110 @@
 title: Installation
 description: 
 published: true
-date: 2021-05-24T23:35:16.966Z
+date: 2021-05-24T23:36:32.403Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T23:34:14.199Z
 ---
 
-placeholder
+# Windows
+
+> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core/net5 apps on Windows 7
+{.is-warning}
+
+> Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
+(.is-warning)
+
+Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.
+> Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
+{.is-info}
+
+A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
+
+Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+
+It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+
+1. Download the latest version of Readarr from https://readarr.com/#downloads-v3-windows for your architecture
+1. Run the installer
+1. Browse to http://localhost:8787 to start using Readarr
+# OSX
+1. Download the latest version of Readarr from https://readarr.com/#downloads-v3-macos
+1. Open the archive and drag the Readarr icon to your Application folder.
+1. Browse to http://localhost:8787 to start using Readarr
+# Linux
+You'll need to install the binaries using the below commands.
+> Note: This assumes you will run as the user `readarr` and group `media`.
+> This will download the `x64` copy of readarr and install it into `/opt`
+{.is-info}
+- Ensure you have the required prequisite packages: `sudo apt install curl mediainfo sqlite3`
+- Download the correct binaries for your architecture.
+ ` wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
+  - AMD64 use `arch=x64` 
+  - ARM use `arch=arm`
+  - ARM64 use `arch=arm64`
+- Uncompress the files: `tar -xvzf Readarr*.linux*.tar.gz`
+- Move the files to `/opt/` `sudo mv Readarr/ /opt`
+- Ensure ownership of the binary directory.
+  `sudo chown readarr:readarr /opt/Readarr`
+- Configure systemd so Readarr can autostart at boot.
+```
+    cat > /etc/systemd/system/readarr.service << EOF
+[Unit]
+Description=Readarr Daemon
+After=syslog.target network.target
+[Service]
+User=readarr
+Group=media
+Type=simple
+UMask=002
+
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/Readarr/
+TimeoutStopSec=20
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+- Reload systemd: `systemctl -q daemon-reload`
+- Enable the Readarr service: `systemctl enable --now -q readarr`
+
+  
+# Docker
+The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
+
+These instructions provide generic guidance that should apply to any Readarr Docker image.
+
+## Avoid Common Pitfalls
+### Volumes and Paths
+There are two common problems with Docker volumes: Paths that differ between the Readarr and download client container and paths that prevent fast moves and hard links.
+
+The first is a problem because the download client will report a download's path as `/torrents/My.Book.2018.epub/`, but in the Readarr container that might be at `/downloads/My.Book.2018.epub/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+
+Most Docker images suggest paths like `/books` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Readarr container, like /torrents.
+
+The best solution is to use a single, common volume inside the containers, such as /data. Your books would be in `/data/Books`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Readarr web UI (Settings › Download Clients).
+
+### Calibre Integration
+When installing Readarr, you can choose to use Calibre integration or not. This choice can only be made during installation, and if you choose not to utilize Calibre you cannot add it later. If you are currently using a Calibre library for your books, you will want to utilize Calibre integration to continue doing that. Calibre will then take over all naming and organization of book files.
+
+If you are running Calibre, you must first start the Calibre Content Server (Preferences / Sharing over the net), and also set up a user and password. This will require a Calibre restart.
+
+Please note that Calibre Content Server, and Calibre, are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these things, and is not required or used by Readarr in any way.
+
+### Ownership and Permissions
+Permissions and ownership of files is one of the most common problems for Readarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Readarr will need read and write to the download folders as well as the final folders.
+
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
+{.is-info}
+
+## Install Readarr
+To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+
+- [hotio/readarr](https://hotio.dev/containers/readarr/)
+- [linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
+{.links-list}
