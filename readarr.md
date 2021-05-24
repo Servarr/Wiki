@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2021-05-24T23:14:31.832Z
+date: 2021-05-24T23:19:35.357Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-16T23:40:17.311Z
@@ -17,7 +17,7 @@ dateCreated: 2021-05-16T23:40:17.311Z
 Readarr is an eBook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 ## Getting Started
-- [Installation Guide](/readarr/installationadarr/installation)
+- [Installation Guide](/readarr/installation)
 - [Quick Start Guide](/readarr/quick-start-guide)
 {.links-list}
 
