@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-24T15:02:47.666Z
+date: 2021-05-24T18:52:02.678Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -74,7 +74,7 @@ The Radarr team does not offer an official Docker image. However, a number of th
 
 These instructions provide generic guidance that should apply to any Radarr Docker image.
 
-## 1. Avoid Common Pitfalls
+## Avoid Common Pitfalls
 ### Volumes and Paths
 There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
 
