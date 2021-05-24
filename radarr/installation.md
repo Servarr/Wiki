@@ -2,11 +2,63 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-17T02:03:41.082Z
+date: 2021-05-24T04:21:46.369Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
 ---
 
-# Header
-Your content here
+# Windows
+
+> Radarr v3 no longer supports Windows XP
+{.is-danger}
+
+> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core/net5 apps on Windows 7
+{.is-warning}
+
+Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
+
+A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
+
+Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+
+It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+
+1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-windows for your architecture
+1. Run the installer
+1. Browse to http://localhost:7878 to start using Radarr
+
+# OSX
+
+# Linux
+
+# Docker
+The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
+
+These instructions provide generic guidance that should apply to any Radarr Docker image.
+
+## 1. Avoid Common Pitfalls
+### Volumes and Paths
+There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
+
+The first is a problem because the download client will report a download's path as `/torrents/My.Movie.2018/`, but in the Radarr container that might be at `/downloads/My.Movie.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+
+Most Docker images suggest paths like `/movies` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Radarr container, like /torrents.
+
+The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Radarr web UI (Settings › Download Clients).
+
+### Ownership and Permissions
+Permissions and ownership of files is one of the most common problems for Radarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
+
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
+{.is-info}
+
+## Install Radarr
+To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+
+- [hotio/radarr](https://hotio.dev/containers/radarr/)
+- [linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
+{.links-list}
