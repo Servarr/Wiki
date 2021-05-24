@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-05-24T05:08:37.636Z
+date: 2021-05-24T05:09:14.862Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -85,4 +85,4 @@ The Prowlarr team does not offer an official Docker image. However, a number of 
 There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
-{.links-list}</kbd>
+{.links-list}
