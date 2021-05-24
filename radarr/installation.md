@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-24T04:21:46.369Z
+date: 2021-05-24T04:57:04.811Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -31,7 +31,44 @@ It's therefore advisable to install Radarr as a system tray application if the u
 # OSX
 
 # Linux
+You'll need to install the binaries using the below commands.
+> Note: This assumes you will run as the user `radarr` and group `media`.
+> This will download the `x64` copy of radarr and install it into `/opt`
+{.is-info}
+- Ensure you have the required prequisite packages: `sudo apt install curl mediainfo sqlite3`
+- Download the correct binaries for your architecture.
+ ` wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
+  - AMD64 use `arch=x64` 
+  - ARM use `arch=arm`
+  - ARM64 use `arch=arm64`
+- Uncompress the files: `tar -xvzf Radarr*.linux*.tar.gz`
+- Move the files to `/opt/` `sudo mv Radarr/ /opt`
+- Ensure ownership of the binary directory.
+  `sudo chown radarr:radarr /opt/Radarr`
+- Configure systemd so Radarr can autostart at boot.
+```
+    cat > /etc/systemd/system/radarr.service << EOF
+[Unit]
+Description=Radarr Daemon
+After=syslog.target network.target
+[Service]
+User=radarr
+Group=media
+Type=simple
+UMask=002
 
+ExecStart=/opt/Radarr/Radarr -nobrowser -data=/data/.config/Radarr/
+TimeoutStopSec=20
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+- Reload systemd: `systemctl -q daemon-reload`
+- Enable the Radarr service: `systemctl enable --now -q radarr`
+
+  
 # Docker
 The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
