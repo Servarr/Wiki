@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-05-24T05:09:14.862Z
+date: 2021-05-24T05:13:00.901Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -19,7 +19,7 @@ dateCreated: 2021-05-24T05:07:51.882Z
 Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
 > Prowlarr is in beta testing and does not have a formal stable release.
 {.is-warning}
-1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v3-windows for your architecture
+1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v1-windows for your architecture
 1. Run the installer
 1. Browse to http://localhost:9696 to start using Prowlarr
 
@@ -27,7 +27,7 @@ Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows 
 > Prowlarr is in beta testing and does not have a formal stable release.
 {.is-warning}
   
-1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v3-macos
+1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v1-macos
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Browse to http://localhost:9696 to start using Prowlarr
 # Linux
