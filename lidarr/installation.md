@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-05-24T05:13:10.368Z
+date: 2021-05-24T05:15:41.024Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -35,7 +35,7 @@ Lidarr is supported natively on Windows. Lidarr can be installed on Windows as W
 {.is-warning}
   
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `lidarr` and group `lidarr`.
+> Note: This assumes you will run as the user `lidarr` and group `media`.
 > This will download the `x64` copy of lidarr and install it into `/opt`
 {.is-info}
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3 libchromaprint-tools`
@@ -56,7 +56,7 @@ Description=Lidarr Daemon
 After=syslog.target network.target
 [Service]
 User=lidarr
-Group=lidarr
+Group=media
 Type=simple
 
 ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/data/.config/Lidarr/
@@ -72,13 +72,28 @@ EOF
 
   
 # Docker
-> Lidarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-  
+# Docker
 The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
+These instructions provide generic guidance that should apply to any Lidarr Docker image.
 
-> For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
+## 1. Avoid Common Pitfalls
+### Volumes and Paths
+There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
+
+The first is a problem because the download client will report a download's path as `/torrents/My.Music.2018/`, but in the Radarr container that might be at `/downloads/My.Music.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+
+Most Docker images suggest paths like `/music` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Radarr container, like /torrents.
+
+The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Lidarr web UI (Settings › Download Clients).
+
+### Ownership and Permissions
+Permissions and ownership of files is one of the most common problems for Lidarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Lidarr will need read and write to the download folders as well as the final folders.
+
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
 {.is-info}
 
 ## Install Lidarr
