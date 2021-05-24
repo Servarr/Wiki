@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-24T05:08:14.548Z
+date: 2021-05-24T15:02:36.715Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -10,13 +10,12 @@ dateCreated: 2021-05-17T01:14:47.863Z
 
 # Windows
 
-> Radarr v3 no longer supports Windows XP
-{.is-danger}
-
 > At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core/net5 apps on Windows 7
 {.is-warning}
 
 Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
+> Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
+{.is-info}
 
 A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
 
@@ -27,7 +26,6 @@ It's therefore advisable to install Radarr as a system tray application if the u
 1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-windows for your architecture
 1. Run the installer
 1. Browse to http://localhost:7878 to start using Radarr
-
 # OSX
 1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-macos
 1. Open the archive and drag the Radarr icon to your Application folder.
