@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2021-05-24T23:19:35.357Z
+date: 2021-05-24T23:30:43.248Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-16T23:40:17.311Z
@@ -10,8 +10,8 @@ dateCreated: 2021-05-16T23:40:17.311Z
 
 ![readarr128.png](/assets/readarr/readarr128.png)
 
-> This wiki is for Readarr
-{.is-info}
+> Readarr is still in a Alpha state and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
+{.is-warning}
 
 
 Readarr is an eBook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
