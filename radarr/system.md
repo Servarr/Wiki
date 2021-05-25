@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-05-25T02:28:35.194Z
+date: 2021-05-25T17:47:35.430Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -23,28 +23,27 @@ Fixing Docker installs
 Re-pull your container
 Fixing Standalone installs
 Back-Up your existing configuration before the next step.
-This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you'll need to adjust /master/ in the URL.
-Delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded.
-DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-YOU MUST DELETE THE OLD ONES FIRST.
-wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64' Download the .net binaries. The example is for a x64 (AMD64) installation.
-For most users, this would be .linux-core-x64.tar.gz selected via arch=x64 in the url. For ARM use arch=arm and for ARM64 use arch=arm64
+This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you'll need to adjust `/master/` in the URL.
+In short you'll need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded.
+> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
+> YOU MUST DELETE THE OLD ONES FIRST.
+{.is-warning}
 
-`sudo systemctl stop radarr` Stop Radarr
-`sudo mv /opt/Radarr /opt/Radarr.old` Backup the old Binaries
-`tar -xvzf Radarr*.linux-core-x64.tar.gz` Extract the Radarr Tarball
-`sudo mv Radarr/ /opt` Move the new Radarr Binaries
-`sudo chown -R radarr:radarr /opt/Radarr` Ensure Radarr has permissions to its directory, this assumes it runs as the user radarr
-`sudo rm -rf /opt/Radarr.old` Remove the old binaries
-`sudo rm -rf Radarr*.linux-core-x64.tar.gz` Remove the Tarball
-
-Update your startup script in your systemd ( sudo nano -e /etc/systemd/system/radarr.service) to call Radarr instead of calling it with mono like mono --debug Radarr.exe. In other words you want, as an example, /opt/Radarr/Radarr and not mono --debug /opt/Radarr/Radarr.
-If Radarr doesn’t start, ensure you have the dependencies listed here installed.
-systemctl daemon-reload Reload the Systemd Files
-sudo systemctl start radarr.service Restart Radarr
+- Download the .net binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'` 
+	- For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM use `arch=arm` and for ARM64 use `arch=arm64`
+- Stop Radarrr `sudo systemctl stop radarr`
+- Backup the old Binaries `sudo mv /opt/Radarr /opt/Radarr.old`
+- Extract the Radarr Tarball `tar -xvzf Radarr*.linux-core-x64.tar.gz` 
+- Move the new Radarr Binaries `sudo mv Radarr/ /opt`
+- Ensure Radarr has permissions to its directory, this assumes it runs as the user radarr `sudo chown -R radarr:radarr /opt/Radarr` 
+- Remove the old binaries `sudo rm -rf /opt/Radarr.old`
+- Remove the Tarball `sudo rm -rf Radarr*.linux-core-x64.tar.gz` 
+- Update your startup script and replace `mono --debug /opt/Radarr/Radarr.exe` with `/opt/Radarr/Radarr`. To edit the script the command is likely: `sudo nano -e /etc/systemd/system/radarr.service`
+- Reload the Systemd Files `systemctl daemon-reload`
+- Restart Radarr `sudo systemctl start radarr.service`
 
 #### Currently installed mono version is old and unsupported
-Radarr is written in .Net and requires Mono to run on very old ARM processors.
+Radarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after 3.2.
 Mono 5.20 is the absolute minimum for Radarr.
 The upgrade procedure for Mono varies per platform.
 
@@ -85,8 +84,11 @@ Nginx requires the following addition to the location block for the app:
  proxy_set_header Connection $http_connection;
 ```
 
-Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
-See https://github.com/aspnet/AspNetCore/issues/17081
+> Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
+> See https://github.com/aspnet/AspNetCore/issues/17081
+{.is-warning}
+
+
 For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 ```
 RewriteEngine On
