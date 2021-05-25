@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-05-25T02:36:03.993Z
+date: 2021-05-25T02:39:45.136Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:03:42.997Z
@@ -129,7 +129,7 @@ Install the update (.exe) or extract (.zip) the contents over your existing inst
 
 Downloading and importing is where *most* people experience issues. From a high level perspective,  needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
-**The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-Log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://paste.ubuntu.com) to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
+**The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://paste.ubuntu.com) to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 When you reach out for help, be sure to read [asking for help](#asking-for-help) so that you can provide us with the details we’ll need.
 
@@ -159,7 +159,7 @@ Ensure SSL encryption is not turned on if you're using both your  instance and y
 
 #### Can’t see share on Windows
 
-The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t  see my files on a remote server](/radarr/raq#Why_can’t_radarr_see_my_files_on_a_remote_server? "wikilink") for details.
+The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t  see my files on a remote server](/radarr/faq#why_can’t_radarr_see_my_files_on_a_remote_server?) for details.
 
 #### Mapped network drives are not reliable
 
