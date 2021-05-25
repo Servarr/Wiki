@@ -2,7 +2,7 @@
 title: Quick Start Guide
 description: 
 published: true
-date: 2021-05-25T14:47:01.038Z
+date: 2021-05-25T14:47:38.608Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -63,7 +63,7 @@ First we’re going to take a look at the <code>Media Management</code> settings
 - `(Advanced Option) Designate a location for deleted files to go to (just in case you want to retrieve them before the bin is taken out).`
 - `(Advanced Option) This is how old a given file can be before it is deleted permanently.`
 
-## Root Folders
+## Root Folders and Calibre Integration
 
 ![rootfolders1.png](/assets/readarr/rootfolders1.png)
 
