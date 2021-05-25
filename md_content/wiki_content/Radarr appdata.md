@@ -1,2 +1,1 @@
-1.  REDIRECT [Radarr Appdata
-    Directory](Radarr_Appdata_Directory "wikilink")
+1.  REDIRECT [Radarr Appdata Directory](Radarr_Appdata_Directory "wikilink")

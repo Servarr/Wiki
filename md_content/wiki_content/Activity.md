@@ -4,9 +4,7 @@
 
 Information about the activity section coming soon(tm)
 
-Activity -\> Options -\> Show Unknown to view all downloads including
-those that could not be matched within the application's category. [See
-TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
+Activity -\> Options -\> Show Unknown to view all downloads including those that could not be matched within the application's category. [See TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 <section end=radarr_activity />
 
@@ -16,9 +14,7 @@ TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 Information about the activity section coming soon(tm)
 
-Activity -\> Options -\> Show Unknown to view all downloads including
-those that could not be matched within the application's category. [See
-TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
+Activity -\> Options -\> Show Unknown to view all downloads including those that could not be matched within the application's category. [See TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 <section end=sonarr_activity />
 
@@ -28,9 +24,7 @@ TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 Information about the activity section coming soon(tm)
 
-Activity -\> Options -\> Show Unknown to view all downloads including
-those that could not be matched within the application's category. [See
-TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
+Activity -\> Options -\> Show Unknown to view all downloads including those that could not be matched within the application's category. [See TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 <section end=lidarr_activity />
 
@@ -40,8 +34,6 @@ TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 Information about the activity section coming soon(tm)
 
-Activity -\> Options -\> Show Unknown to view all downloads including
-those that could not be matched within the application's category. [See
-TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
+Activity -\> Options -\> Show Unknown to view all downloads including those that could not be matched within the application's category. [See TRaSH's Guide](https://trash-guides.info/show-unknown) for more details
 
 <section end=readarr_activity />

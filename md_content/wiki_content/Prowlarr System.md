@@ -1,2 +1,1 @@
-prowlarr system; use transclusion
-<https://wiki.servarr.com/WikiMap#System>
+prowlarr system; use transclusion <https://wiki.servarr.com/WikiMap#System>

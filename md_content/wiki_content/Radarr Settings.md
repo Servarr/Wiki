@@ -1,11 +1,8 @@
 -----
 
-Please note that this information is only for
-<span style="color:#ff0000">Radarr V3</span>.
+Please note that this information is only for <span style="color:#ff0000">Radarr V3</span>.
 
-<span style="color:#008000">''Note: Some of these settings are only
-visible through *<code>show advanced* settings*</code>* which is on the
-top bar under the search bar''</span>
+<span style="color:#008000">''Note: Some of these settings are only visible through *<code>show advanced* settings*</code>* which is on the top bar under the search bar''</span>
 
 ### Media Management
 
@@ -57,18 +54,15 @@ top bar under the search bar''</span>
 
 #### Conditions
 
-{{\#lst::Settings Custom
-Formats|radarr\_settings\_custom\_formats\_conditions}}
+{{\#lst::Settings Custom Formats|radarr\_settings\_custom\_formats\_conditions}}
 
 #### Profiling Settings and Ranking
 
-{{\#lst::Settings Custom
-Formats|radarr\_settings\_custom\_formats\_profiling\_settings\_and\_ranking}}
+{{\#lst::Settings Custom Formats|radarr\_settings\_custom\_formats\_profiling\_settings\_and\_ranking}}
 
 #### Importing/Exporting Custom Formats
 
-{{\#lst:Settings Custom
-Formats|radarr\_settings\_custom\_formats\_import\_export}}
+{{\#lst:Settings Custom Formats|radarr\_settings\_custom\_formats\_import\_export}}
 
 #### Community Custom Formats
 
@@ -82,8 +76,7 @@ Formats|radarr\_settings\_custom\_formats\_import\_export}}
 
 ##### Supported Indexers
 
-{{\#lst::Settings
-Indexers|radarr\_settings\_indexers\_supported\_indexers}}
+{{\#lst::Settings Indexers|radarr\_settings\_indexers\_supported\_indexers}}
 
 #### Indexer Settings
 
@@ -103,22 +96,19 @@ Indexers|radarr\_settings\_indexers\_supported\_indexers}}
 
 #### Overview
 
-{{\#lst::Settings Download
-Clients|settings\_download\_client\_overview}}
+{{\#lst::Settings Download Clients|settings\_download\_client\_overview}}
 
 #### Download Clients
 
 #### Completed Download Handling
 
-{{\#lst::Settings Download
-Clients|radarr\_settings\_download\_clients\_complete\_download\_handling}}
+{{\#lst::Settings Download Clients|radarr\_settings\_download\_clients\_complete\_download\_handling}}
 
 #### Failed Download Handling
 
 #### Remote Path Mappings
 
-{{\#lst::Settings Download
-Clients|radarr\_settings\_download\_clients\_remote\_path\_mapping}}
+{{\#lst::Settings Download Clients|radarr\_settings\_download\_clients\_remote\_path\_mapping}}
 
 ### Lists
 

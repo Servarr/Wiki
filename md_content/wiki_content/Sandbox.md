@@ -1,5 +1,4 @@
-**This is for creating pages and making edits as well as to view changes
-before you push anything to live. Also please CLEAN UP AFTER YOUR SELF**
+**This is for creating pages and making edits as well as to view changes before you push anything to live. Also please CLEAN UP AFTER YOUR SELF**
 
 1.  1.  Section1
 

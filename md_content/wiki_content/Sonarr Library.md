@@ -20,5 +20,4 @@
 
 ## Season Pass
 
-{{\#lst::Library Bulk Monitoring
-Editor|sonarr\_library\_bulk\_monitoring\_editor}}
+{{\#lst::Library Bulk Monitoring Editor|sonarr\_library\_bulk\_monitoring\_editor}}

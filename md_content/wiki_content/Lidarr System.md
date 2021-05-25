@@ -1,5 +1,4 @@
-Please note that this information is only for
-<span style="color:#ff0000">lidarr V0.8</span>.
+Please note that this information is only for <span style="color:#ff0000">lidarr V0.8</span>.
 
 ### Status
 
@@ -9,18 +8,15 @@ Please note that this information is only for
 
 ##### System Warnings
 
-{{\#lst::system
-status|lidarr\_system\_status\_health\_system\_warnings}}
+{{\#lst::system status|lidarr\_system\_status\_health\_system\_warnings}}
 
 ##### Download Clients
 
-{{\#lst::system
-status|lidarr\_system\_status\_health\_download\_clients}}
+{{\#lst::system status|lidarr\_system\_status\_health\_download\_clients}}
 
 ##### Completed/Failed Download Handling
 
-{{\#lst::system
-status|lidarr\_system\_status\_health\_complete\_failed\_download\_handling}}
+{{\#lst::system status|lidarr\_system\_status\_health\_complete\_failed\_download\_handling}}
 
 ##### Indexers
 

@@ -2,11 +2,7 @@
 
 <section begin=radarr_activity_queue />
 
-The queue shows all items the application can recognize that is in the
-specified download client's category (Settings -\> Download Client -\>
-Category). To view all releases Options -\> Show Unknown. This is not
-stored anywhere within the application, but is updated via your Download
-Client's API responses.
+The queue shows all items the application can recognize that is in the specified download client's category (Settings -\> Download Client -\> Category). To view all releases Options -\> Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
 More information about the Queue section coming soon(tm)
 
@@ -16,11 +12,7 @@ More information about the Queue section coming soon(tm)
 
 <section begin=sonarr_activity_queue />
 
-The queue shows all items the application can recognize that is in the
-specified download client's category (Settings -\> Download Client -\>
-Category). To view all releases Options -\> Show Unknown. This is not
-stored anywhere within the application, but is updated via your Download
-Client's API responses.
+The queue shows all items the application can recognize that is in the specified download client's category (Settings -\> Download Client -\> Category). To view all releases Options -\> Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
 More information about the Queue section coming soon(tm)
 
@@ -30,11 +22,7 @@ More information about the Queue section coming soon(tm)
 
 <section begin=lidarr_activity_queue />
 
-The queue shows all items the application can recognize that is in the
-specified download client's category (Settings -\> Download Client -\>
-Category). To view all releases Options -\> Show Unknown. This is not
-stored anywhere within the application, but is updated via your Download
-Client's API responses.
+The queue shows all items the application can recognize that is in the specified download client's category (Settings -\> Download Client -\> Category). To view all releases Options -\> Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
 More information about the Queue section coming soon(tm)
 
@@ -44,11 +32,7 @@ More information about the Queue section coming soon(tm)
 
 <section begin=readarr_activity_queue />
 
-The queue shows all items the application can recognize that is in the
-specified download client's category (Settings -\> Download Client -\>
-Category). To view all releases Options -\> Show Unknown. This is not
-stored anywhere within the application, but is updated via your Download
-Client's API responses.
+The queue shows all items the application can recognize that is in the specified download client's category (Settings -\> Download Client -\> Category). To view all releases Options -\> Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
 More information about the Queue section coming soon(tm)
 

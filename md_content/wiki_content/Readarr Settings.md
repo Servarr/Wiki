@@ -4,8 +4,7 @@
 
 ### Media Management
 
-*Note: Some of these settings are only visible through 'show advanced'
-settings which is on the top bar under the search bar*
+*Note: Some of these settings are only visible through 'show advanced' settings which is on the top bar under the search bar*
 
 -----
 
@@ -55,8 +54,7 @@ settings which is on the top bar under the search bar*
 
 #### Quality Definitions
 
-{{\#lst::Definitions|ebook-qualities}} {{\#lst::Definitions|MP3-320}}
-{{\#lst::Definitions|FLAC}}
+{{\#lst::Definitions|ebook-qualities}} {{\#lst::Definitions|MP3-320}} {{\#lst::Definitions|FLAC}}
 
 ### Indexers
 
@@ -66,8 +64,7 @@ settings which is on the top bar under the search bar*
 
 ##### Supported Indexers
 
-{{\#lst::Settings
-Indexers|readarr\_settings\_indexers\_supported\_indexers}}
+{{\#lst::Settings Indexers|readarr\_settings\_indexers\_supported\_indexers}}
 
 #### Indexer Settings
 
@@ -87,22 +84,19 @@ Indexers|readarr\_settings\_indexers\_supported\_indexers}}
 
 #### Overview
 
-{{\#lst::Settings Download
-Clients|settings\_download\_client\_overview}}
+{{\#lst::Settings Download Clients|settings\_download\_client\_overview}}
 
 #### Download Clients
 
 #### Completed Download Handling
 
-{{\#lst::Settings Download
-Clients|readarr\_settings\_download\_clients\_complete\_download\_handling}}
+{{\#lst::Settings Download Clients|readarr\_settings\_download\_clients\_complete\_download\_handling}}
 
 #### Failed Download Handling
 
 #### Remote Path Mappings
 
-{{\#lst::Settings Download
-Clients|readarr\_settings\_download\_clients\_remote\_path\_mapping}}
+{{\#lst::Settings Download Clients|readarr\_settings\_download\_clients\_remote\_path\_mapping}}
 
 ### Import Lists
 
@@ -130,18 +124,15 @@ Clients|readarr\_settings\_download\_clients\_remote\_path\_mapping}}
 
 #### Metadata Provider Source
 
-{{\#lst::Settings
-Metadata|readarr\_settings\_metadata\_metadata\_provider\_source}}
+{{\#lst::Settings Metadata|readarr\_settings\_metadata\_metadata\_provider\_source}}
 
 #### Write Metadata to Audio Files
 
-{{\#lst::Settings
-Metadata|readarr\_settings\_metadata\_write\_metadata\_to\_audio\_files}}
+{{\#lst::Settings Metadata|readarr\_settings\_metadata\_write\_metadata\_to\_audio\_files}}
 
 #### Metadata Consumers
 
-{{\#lst::Settings
-Metadata|readarr\_settings\_metadata\_metadata\_consumers}}
+{{\#lst::Settings Metadata|readarr\_settings\_metadata\_metadata\_consumers}}
 
 ### Tags
 

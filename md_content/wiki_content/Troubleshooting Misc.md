@@ -1,5 +1,4 @@
-***This page is used for the misc items needed for the specificity of
-each of the ARRs that do not cross between them***
+***This page is used for the misc items needed for the specificity of each of the ARRs that do not cross between them***
 
 ## Testing a search
 
@@ -7,23 +6,9 @@ each of the ARRs that do not cross between them***
 
 <section begin=radarr_indexers_and_trackers_testing_a_search />
 
-Just like the indexer/tracker test above, when you trigger a search
-while at Debug or Trace level logging, you can get the URL used from the
-log files. While testing, it is best to use as narrow a search as
-possible. A manual search is good because it is specific *and* you can
-see the results in the UI while examining the logs.
+Just like the indexer/tracker test above, when you trigger a search while at Debug or Trace level logging, you can get the URL used from the log files. While testing, it is best to use as narrow a search as possible. A manual search is good because it is specific *and* you can see the results in the UI while examining the logs.
 
-In this test, you’ll be looking for obvious errors and running some
-simple tests. You can see the search used the url
-`"`<https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou>,
-which you can try yourself in a browser after replacing `(removed)` with
-your apikey for that indexer. Does it work? Do you see the expected
-results? In that URL, you can see that it set specific categories with
-`2000`, so if you’re not seeing expected results, this is one likely
-reason. If the movie isn’t properly categorized on the indexer, it will
-need to be fixed. Look at Manual Search XML Output below to see an
-example of a working query’s output. {{\#spoiler:show=Manual Search XML
-Output|hide=Click here to Close|
+In this test, you’ll be looking for obvious errors and running some simple tests. You can see the search used the url `"`<https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou>, which you can try yourself in a browser after replacing `(removed)` with your apikey for that indexer. Does it work? Do you see the expected results? In that URL, you can see that it set specific categories with `2000`, so if you’re not seeing expected results, this is one likely reason. If the movie isn’t properly categorized on the indexer, it will need to be fixed. Look at Manual Search XML Output below to see an example of a working query’s output. {{\#spoiler:show=Manual Search XML Output|hide=Click here to Close|
 
     coming soon
 
@@ -33,29 +18,9 @@ Output|hide=Click here to Close|
 
 <section begin=sonarr_indexers_and_trackers_testing_a_search />
 
-Just like the indexer/tracker test above, when you trigger a search
-while at Debug or Trace level logging, you can get the URL used from the
-log files. While testing, it is best to use as narrow a search as
-possible. A manual search is good because it is specific *and* you can
-see the results in the UI while examining the logs.
+Just like the indexer/tracker test above, when you trigger a search while at Debug or Trace level logging, you can get the URL used from the log files. While testing, it is best to use as narrow a search as possible. A manual search is good because it is specific *and* you can see the results in the UI while examining the logs.
 
-In this test, you’ll be looking for obvious errors and running some
-simple tests. You can see the search used the url
-<https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1>,
-which you can try yourself in a browser after replacing `(removed)` with
-your apikey for that indexer. Does it work? Do you see the expected
-results? [Does this FAQ entry
-apply?](Sonarr_FAQ#why_cant_sonarr_import_episode_files_for_series_x_why_cant_sonarr_find_releases_for_series_x "wikilink")
-In that URL, you can see that it set specific categories with
-`cat=5030,5040,5045,5080`, so if you’re not seeing expected results,
-this is one likely reason. You can also see that it searched by tvdbid
-with `tvdbid=354629`, so if the episode isn’t properly categorized on
-the indexer, it will need to be fixed. You can also see that it searches
-by *specific* season and episode with `season=1` and `ep=1`, so if
-*that* isn’t correct on the indexer, you won’t see those results. Look
-at Manual Search XML Output below to see an example of a working query’s
-output. {{\#spoiler:show=Manual Episode XML Output|hide=Click here to
-Close|
+In this test, you’ll be looking for obvious errors and running some simple tests. You can see the search used the url <https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1>, which you can try yourself in a browser after replacing `(removed)` with your apikey for that indexer. Does it work? Do you see the expected results? [Does this FAQ entry apply?](Sonarr_FAQ#why_cant_sonarr_import_episode_files_for_series_x_why_cant_sonarr_find_releases_for_series_x "wikilink") In that URL, you can see that it set specific categories with `cat=5030,5040,5045,5080`, so if you’re not seeing expected results, this is one likely reason. You can also see that it searched by tvdbid with `tvdbid=354629`, so if the episode isn’t properly categorized on the indexer, it will need to be fixed. You can also see that it searches by *specific* season and episode with `season=1` and `ep=1`, so if *that* isn’t correct on the indexer, you won’t see those results. Look at Manual Search XML Output below to see an example of a working query’s output. {{\#spoiler:show=Manual Episode XML Output|hide=Click here to Close|
 
     <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:newznab="http://www.newznab.com/DTD/2010/feeds/attributes/" version="2.0">
     <channel>
@@ -164,28 +129,17 @@ Coming Soon(tm)
 
 ##### Unknown Series
 
-This occurs due to one of two issues: either the series you are
-searching and Sonarr has found results for does not exist within Sonarr
-or more likely a scene (or xem) mapping is required. [Please see this
-FAQ entry for
-details.](Sonarr_FAQ#why_cant_sonarr_import_episode_files_for_series_x_why_cant_sonarr_find_releases_for_series_x "wikilink")
+This occurs due to one of two issues: either the series you are searching and Sonarr has found results for does not exist within Sonarr or more likely a scene (or xem) mapping is required. [Please see this FAQ entry for details.](Sonarr_FAQ#why_cant_sonarr_import_episode_files_for_series_x_why_cant_sonarr_find_releases_for_series_x "wikilink")
 
 ##### Wrong Show Type
 
-The show type is another cause of poor search results. Most shows should
-be `Standard`. For daily shows which are typically released with a date,
-`Daily` should be used. Finally, there is anime where using `Anime` is
-*usually* right, but sometimes `Standard` can work better, so try the
-*other* one if you’re having issues.
+The show type is another cause of poor search results. Most shows should be `Standard`. For daily shows which are typically released with a date, `Daily` should be used. Finally, there is anime where using `Anime` is *usually* right, but sometimes `Standard` can work better, so try the *other* one if you’re having issues.
 
-Please note that if the series type is set to anime and none of your
-enabled indexers have any anime categories configured then it
-effectively skips the indexer and may appear that it is not searching.
+Please note that if the series type is set to anime and none of your enabled indexers have any anime categories configured then it effectively skips the indexer and may appear that it is not searching.
 
 ##### Show Type Examples
 
-Below are some example release names for each show type. The specific
-differentiating piece is noted in bold.
+Below are some example release names for each show type. The specific differentiating piece is noted in bold.
 
 **Daily**
 
@@ -202,10 +156,8 @@ differentiating piece is noted in bold.
 **Anime**
 
   - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
-  - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC)
-    \[63B8AC67\]
-  - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English
-    Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
+  - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
+  - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
 <section end=sonarr_indexers_and_trackers_type />
 

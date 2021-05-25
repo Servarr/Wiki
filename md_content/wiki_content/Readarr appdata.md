@@ -1,2 +1,1 @@
-1.  REDIRECT [Readarr Appdata
-    Directory](Readarr_Appdata_Directory "wikilink")
+1.  REDIRECT [Readarr Appdata Directory](Readarr_Appdata_Directory "wikilink")

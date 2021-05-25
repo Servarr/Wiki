@@ -5,8 +5,7 @@
  | left= float: left; clear: left; margin: 0 0 0.5em 0.5em;
 }} background: #ccff99; padding: 5px 8px; border-radius: 10px; font-size: 85%; text-align: center;">
 
-<translate> }}}}}}\</\>|shortcut|shortcuts}}:</translate> {{\#if:  |
-{{\#if:  |  
+<translate> }}}}}}\</\>|shortcut|shortcuts}}:</translate> {{\#if:  | {{\#if:  |  
 }} [}}}|****]({{{1 "wikilink") }} {{\#if:  |  
 [}}}|****]({{{2 "wikilink") }} {{\#if:  |  
 [}}}|****]({{{3 "wikilink") }} {{\#if:  |  

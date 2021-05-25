@@ -18,6 +18,5 @@
 
 } </templatedata> </noinclude>
 
-  - The tag section is for  is simply used to see what tags you have
-    used and what s have that tag associated to it.
+  - The tag section is for  is simply used to see what tags you have used and what s have that tag associated to it.
   - Tags can be useful to limit certain aspects of  to a specific

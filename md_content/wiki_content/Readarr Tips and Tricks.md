@@ -15,18 +15,11 @@
 </tbody>
 </table>
 
-If you’re looking to trigger a custom script in your download client to
-tell Readarr when to update, you can find more details here. Scripts are
-added to Readarr via the [Connect
-Settings](Radarr_Settings#Connections "wikilink") page.
+If you’re looking to trigger a custom script in your download client to tell Readarr when to update, you can find more details here. Scripts are added to Readarr via the [Connect Settings](Radarr_Settings#Connections "wikilink") page.
 
 ### Overview
 
-Readarr can execute a custom script when new movies are imported or a
-movie is renamed and depending on which action occurred, the parameters
-will be different. They are passed to the script through environment
-variables which allows for more flexibility in what is sent to the
-script and in no particular order.
+Readarr can execute a custom script when new movies are imported or a movie is renamed and depending on which action occurred, the parameters will be different. They are passed to the script through environment variables which allows for more flexibility in what is sent to the script and in no particular order.
 
 ### Environment Variables
 
@@ -94,12 +87,9 @@ script and in no particular order.
 
 #### LINUX / UNIX Scripts
 
-Remember to always add a
-[shebang](https://en.wikipedia.org/wiki/Shebang_\(Unix\)) and make your
-scripts executable with [chmod](https://en.wikipedia.org/wiki/Chmod).
+Remember to always add a [shebang](https://en.wikipedia.org/wiki/Shebang_\(Unix\)) and make your scripts executable with [chmod](https://en.wikipedia.org/wiki/Chmod).
 
-{{\#spoiler:show=Sample bash script to echo environmental
-variables|hide=Click to close|spoiler\_text
+{{\#spoiler:show=Sample bash script to echo environmental variables|hide=Click to close|spoiler\_text
 
 ``` bash
 #!/bin/bash
@@ -162,22 +152,11 @@ fi
 
 #### PHP
 
-The information from Readarr will not be added to
-\(_ENV as one might expect but should be included in the [\)\_SERVER
-variable\](https://secure.php.net/manual/en/reserved.variables.server.php).
-A sample script to use this information to convert a file can be found
-[here](https://gist.github.com/karbowiak/7fb38d346e368edc9d1a). \#\#\#\#
-PowerShell \#\#\#\# Sample script using the Readarr environment
-variables to create EDL files for all episodes is
-[here](https://gist.github.com/RedsGT/e1b5f28e7b5b81e1e45378151e73ba5c).
+The information from Readarr will not be added to \(_ENV as one might expect but should be included in the [\)\_SERVER variable\](https://secure.php.net/manual/en/reserved.variables.server.php). A sample script to use this information to convert a file can be found [here](https://gist.github.com/karbowiak/7fb38d346e368edc9d1a). \#\#\#\# PowerShell \#\#\#\# Sample script using the Readarr environment variables to create EDL files for all episodes is [here](https://gist.github.com/RedsGT/e1b5f28e7b5b81e1e45378151e73ba5c).
 
-Sample script to have Plex scan destination folder only and “analyze
-deeply” the file. PSQLite needed to query the plex DB. Adjust folder
-locations to match your setup.
+Sample script to have Plex scan destination folder only and “analyze deeply” the file. PSQLite needed to query the plex DB. Adjust folder locations to match your setup.
 
-This script will add the movie to plex and scan the destination folder
-(it will not scan the entire library) {{\#spoiler:show=Powershell
-Scriptt|hide=Click to close|
+This script will add the movie to plex and scan the destination folder (it will not scan the entire library) {{\#spoiler:show=Powershell Scriptt|hide=Click to close|
 
 ``` powershell
 # 
@@ -222,14 +201,9 @@ write-output """$plexscanner"" --analyze-deeply --item $itemid" | add-content $l
 
 #### Reverse Symlinking
 
-When using private trackers, it is imperative to continue seeding. By
-using this script `on Download` and `on Upgrade` moves the media to your
-root movie folder as set in Readarr, and will create a symlink in the
-original download location so you can continue to seed.
+When using private trackers, it is imperative to continue seeding. By using this script `on Download` and `on Upgrade` moves the media to your root movie folder as set in Readarr, and will create a symlink in the original download location so you can continue to seed.
 
-Symlinking is preferable over hardlinking in some cases as the root
-movie folder can be on a seperate drive or nfs mount, where hardlinks
-are impossible. {{\#spoiler:show=Bash Script|hide=Click to close|
+Symlinking is preferable over hardlinking in some cases as the root movie folder can be on a seperate drive or nfs mount, where hardlinks are impossible. {{\#spoiler:show=Bash Script|hide=Click to close|
 
 ``` bash
 #!/bin/bash
@@ -268,8 +242,7 @@ if [[ $PERMFILESIZE == $ORIGFILESIZE ]]; then
 fi
 ```
 
-}} A quick way to test scripts is to create a testing environment using
-the movie “Test (2013)”.
+}} A quick way to test scripts is to create a testing environment using the movie “Test (2013)”.
 
     mkdir -p ~/test &amp;&amp; cd ~/test &amp;&amp; touch &quot;Test (2013).nfo&quot; &quot;Test (2013).por.srt&quot; &quot;Test (2013).por.forced.srt&quot; &quot;Test (2013).eng.srt&quot; &quot;Test (2013).mkv&quot; &amp;&amp; cp -R ~/test /path/to/folder/to/import
 
@@ -277,5 +250,4 @@ or in bash:
 
     mkdir -p ~/test &amp;&amp; cd ~/test &amp;&amp; touch &quot;Test (2013).&quot;{nfo,por.srt,por.forced.srt,eng.srt,mkv} &amp;&amp; cp -R ~/test /path/to/folder/to/import
 
-This way you can manually import this movie and trigger the script. You
-can just run it again to repopulate the files.
+This way you can manually import this movie and trigger the script. You can just run it again to repopulate the files.

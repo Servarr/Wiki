@@ -4,162 +4,96 @@
 
 ## Converting DB paths from Windows to Linux with SQL commands
 
-***This document is to provide a guide for users who want to move their
-Sonarr from Windows to Linux, while maintaining all data from the
-Windows setup.***
+***This document is to provide a guide for users who want to move their Sonarr from Windows to Linux, while maintaining all data from the Windows setup.***
 
 ### DISCLAIMER
 
-I am by no means an expert when it comes to SQL or databases. This guide
-is a use at your own risk, and I recommend making a copy of sonarr.db
-with a backup or two.
+I am by no means an expert when it comes to SQL or databases. This guide is a use at your own risk, and I recommend making a copy of sonarr.db with a backup or two.
 
-This process can likely be scripted via Python, or some other language,
-however I do not posses that skill.
+This process can likely be scripted via Python, or some other language, however I do not posses that skill.
 
-This is the process that I went through during my configuration change,
-your mileage may vary.
+This is the process that I went through during my configuration change, your mileage may vary.
 
 ### Conversion guide
 
-Make sure Sonarr is not running on the Linux Machine prior to copying
-the Database over.
+Make sure Sonarr is not running on the Linux Machine prior to copying the Database over.
 
-The first thing that you will need to download is a copy of SQLite here
-is the [link](https://github.com/pawelsalawa/sqlitestudio/releases) to
-the one that I used(SQLiteStudio-3.2.1.zip (portable))
+The first thing that you will need to download is a copy of SQLite here is the [link](https://github.com/pawelsalawa/sqlitestudio/releases) to the one that I used(SQLiteStudio-3.2.1.zip (portable))
 
-Generally the Sonarr DB file is located at: `C:\ProgramData\Sonarr` (Or
-you can find the path in Sonarr by going to System \> Status \> About
+Generally the Sonarr DB file is located at: `C:\ProgramData\Sonarr` (Or you can find the path in Sonarr by going to System \> Status \> About
 
-Once you have SQLite open you will be met with a screen similar to the
-one below. You will click to "Add a Database", and add the \*\*COPY\*\*
-of your `sonarr.db` file. The database should then show up in the list
-as it does in the image below, from there you will need to click on
-"Connect to the Database"
+Once you have SQLite open you will be met with a screen similar to the one below. You will click to "Add a Database", and add the \*\*COPY\*\* of your `sonarr.db` file. The database should then show up in the list as it does in the image below, from there you will need to click on "Connect to the Database"
 
 ![Sqliteopen.PNG](Sqliteopen.PNG "Sqliteopen.PNG")
 
-Now that you have the database added and connected you should see the
-same as the image below. I have highlighted the main areas that I had to
-go through to remove "Windows paths" to make it "Linux compatible"
-(Series, EpisodeFiles, ExtraFiles, SubtitleFiles, and RootFolders)
+Now that you have the database added and connected you should see the same as the image below. I have highlighted the main areas that I had to go through to remove "Windows paths" to make it "Linux compatible" (Series, EpisodeFiles, ExtraFiles, SubtitleFiles, and RootFolders)
 
 ![DatabaseEdit.PNG](DatabaseEdit.PNG "DatabaseEdit.PNG")
 
-If you double click on any of the following Series, EpisodeFiles,
-ExtraFiles, SubtitleFiles, and RootFolders, you can see what is in the
-database for that section (This will be important for later). In the
-example below "Path" is the identifier in the table "Series" this is
-where you will see the path where all of your Sonarr shows are listed,
-and is what we will be modifying.
+If you double click on any of the following Series, EpisodeFiles, ExtraFiles, SubtitleFiles, and RootFolders, you can see what is in the database for that section (This will be important for later). In the example below "Path" is the identifier in the table "Series" this is where you will see the path where all of your Sonarr shows are listed, and is what we will be modifying.
 
 ![SeriesExample.PNG](SeriesExample.PNG "SeriesExample.PNG")
 
-If you go to "Tools" at the top \> "Open SQL editor" (ALT+E shortcut)
-you will see the following screen. The SQL editor is where we will be
-making most of the changes. I'd advise on scrolling through "Series" \>
-"Path" to compare changes and see if anything was missed after running
-the command.
+If you go to "Tools" at the top \> "Open SQL editor" (ALT+E shortcut) you will see the following screen. The SQL editor is where we will be making most of the changes. I'd advise on scrolling through "Series" \> "Path" to compare changes and see if anything was missed after running the command.
 
-The command you will edit and run to change the path of where all shows
-are listed are as follows between START and END (Do not include the
-words START and END).
+The command you will edit and run to change the path of where all shows are listed are as follows between START and END (Do not include the words START and END).
 
-Replace the following sections as follows (the path typed out is case
-sensitve, and you may have to run this command with minor changes to get
-everything updated correctly:
+Replace the following sections as follows (the path typed out is case sensitve, and you may have to run this command with minor changes to get everything updated correctly:
 
-`\\169.254.0.1\Media\Download Complete\TV Shows\` - Both sections as
-listed below will need to be changed to the main location of all of your
-shows. You will edit the section in between the single quotes. Make sure
-you leave the \\ at the end of your path.
+`\\169.254.0.1\Media\Download Complete\TV Shows\` - Both sections as listed below will need to be changed to the main location of all of your shows. You will edit the section in between the single quotes. Make sure you leave the \\ at the end of your path.
 
-`%\\169.254.0.1\Media\Download Complete\TV Shows\%` - You will replace
-all data in between the single quotes and % with your main location of
-all of your shows as you did in the step prior to this (both '' and %%
-are needed in this section.) Make sure you leave the \\ at the end of
-your path.
+`%\\169.254.0.1\Media\Download Complete\TV Shows\%` - You will replace all data in between the single quotes and % with your main location of all of your shows as you did in the step prior to this (both '' and %% are needed in this section.) Make sure you leave the \\ at the end of your path.
 
-`/home/username/mnt/share/media/DownloadComplete/tv/shows/` - This
-section will be the new path where all of your shows will be listed
-after the migration. You will replace everything inside of the single
-quotes, but make sure you leave the / at the end.
+`/home/username/mnt/share/media/DownloadComplete/tv/shows/` - This section will be the new path where all of your shows will be listed after the migration. You will replace everything inside of the single quotes, but make sure you leave the / at the end.
 
 \---START---
 
-`update Series set Path = replace(Path, '\\169.254.0.1\Media\Download
-Complete\TV Shows\',
-'/home/username/mnt/share/media/DownloadComplete/tv/shows/')` `where
-Path like '%\\169.254.0.1\Media\Download Complete\TV Shows\%'`
+`update Series set Path = replace(Path, '\\169.254.0.1\Media\Download Complete\TV Shows\', '/home/username/mnt/share/media/DownloadComplete/tv/shows/')` `where Path like '%\\169.254.0.1\Media\Download Complete\TV Shows\%'`
 
 \---END---
 
-So in this example, my shows were listed on a NAS device but this will
-be wherever your show paths are listed ie.
-`C:\Users\USERNAME\Documents\...` if storage is on the same device as
-Sonarr.
+So in this example, my shows were listed on a NAS device but this will be wherever your show paths are listed ie. `C:\Users\USERNAME\Documents\...` if storage is on the same device as Sonarr.
 
-So in this example my path for shows was `\\169.254.0.1\Media\Download
-Complete\TV Shows\Name Of Show`
+So in this example my path for shows was `\\169.254.0.1\Media\Download Complete\TV Shows\Name Of Show`
 
-So what this command will do will replace `\\169.254.0.1\Media\Download
-Complete\TV Shows\` to
-`/home/username/mnt/share/media/DownloadComplete/tv/shows/`
+So what this command will do will replace `\\169.254.0.1\Media\Download Complete\TV Shows\` to `/home/username/mnt/share/media/DownloadComplete/tv/shows/`
 
-This will only replace up to Name of Show so the end result would be
-`home/username/mnt/share/media/DownloadComplete/tv/shows/Name Of Show`
+This will only replace up to Name of Show so the end result would be `home/username/mnt/share/media/DownloadComplete/tv/shows/Name Of Show`
 
 ![SqlEdit.PNG](SqlEdit.PNG "SqlEdit.PNG")
 
-The hard should be mostly over. Now we just have to clean up any Windows
-file path \\'s to Linux file path /'s
+The hard should be mostly over. Now we just have to clean up any Windows file path \\'s to Linux file path /'s
 
-You will clear out the code where you made the changes in the last step,
-and enter these one by one.
+You will clear out the code where you made the changes in the last step, and enter these one by one.
 
-(NOTE) I did not include screenshots of this process as it is just a
-matter of running the commands one by one, then opening the EpisodeFiles
-Table, selecting Data, and seeing if there are any \\'s listed in the
-data or if they have been changed to /'s (END NOTE)
+(NOTE) I did not include screenshots of this process as it is just a matter of running the commands one by one, then opening the EpisodeFiles Table, selecting Data, and seeing if there are any \\'s listed in the data or if they have been changed to /'s (END NOTE)
 
 \---START---
 
-`update EpisodeFiles set RelativePath = replace(RelativePath, '\',
-'/')`  
+`update EpisodeFiles set RelativePath = replace(RelativePath, '\', '/')`  
   
 `update ExtraFiles set RelativePath = replace(RelativePath, '\', '/')`  
   
-`update SubtitleFiles set RelativePath = replace(RelativePath, '\',
-'/')`
+`update SubtitleFiles set RelativePath = replace(RelativePath, '\', '/')`
 
 \---END---
 
-In my case Episodefiles, ExtraFiles, and SubtitleFiles the only changes
-I had to make was to replace \\'s with /'s.
+In my case Episodefiles, ExtraFiles, and SubtitleFiles the only changes I had to make was to replace \\'s with /'s.
 
-All that is left now is RootFolders which I just edited manually as I
-did not have many RootFolders.
+All that is left now is RootFolders which I just edited manually as I did not have many RootFolders.
 
-To change the Path of RootFolders, you will right click and select "Edit
-value in editor" This you will just enter your new path. (be sure to
-include the / at the end of your path, as this will be needed for future
-shows added to Sonarr.))
+To change the Path of RootFolders, you will right click and select "Edit value in editor" This you will just enter your new path. (be sure to include the / at the end of your path, as this will be needed for future shows added to Sonarr.))
 
-Once you have made all of the changes you will click "Commit Changes"
-(the green checkbox)
+Once you have made all of the changes you will click "Commit Changes" (the green checkbox)
 
 ![RootFolders.png](RootFolders.png "RootFolders.png")
 
   
 Finally the end....
 
-After you have finished your last changes and committed the changes, you
-are done, just click "Disconnect from this Database" (Unplug symbol next
-to where we connected to the Database)
+After you have finished your last changes and committed the changes, you are done, just click "Disconnect from this Database" (Unplug symbol next to where we connected to the Database)
 
-Make sure Sonarr is not running on the Linux Machine prior to copying
-the Database over.
+Make sure Sonarr is not running on the Linux Machine prior to copying the Database over.
 
 Then you just copy Sonarr.db to it's new home, and start Sonarr.
 
@@ -167,22 +101,15 @@ Then you just copy Sonarr.db to it's new home, and start Sonarr.
 
 ### Accreditation
 
-Walkthough Guide created and provided by Justin(BitHawkGaming)
-Update/change as needed
+Walkthough Guide created and provided by Justin(BitHawkGaming) Update/change as needed
 
 ## Custom Post Processing Scripts
 
-If you’re looking to trigger a custom script in your download client to
-tell Sonarr when to update, you can find more details here. Scripts are
-added to Sonarr via the *Connect* Settings page.
+If you’re looking to trigger a custom script in your download client to tell Sonarr when to update, you can find more details here. Scripts are added to Sonarr via the *Connect* Settings page.
 
 ### Overview
 
-Sonarr can execute a custom script when an episode is newly imported or
-renamed and depending on the action, different parameters are supplied.
-They are passed to the script through environment variables which allows
-for more flexibility in what is sent to the script and in no particular
-order.
+Sonarr can execute a custom script when an episode is newly imported or renamed and depending on the action, different parameters are supplied. They are passed to the script through environment variables which allows for more flexibility in what is sent to the script and in no particular order.
 
 ### Environment Variables
 
@@ -312,9 +239,7 @@ order.
 
 #### On Test
 
-When adding the script to Sonarr and run ‘Test’ the script will be
-invoked with the following parameters. The script should be able to
-gracefully ignore any other eventtype
+When adding the script to Sonarr and run ‘Test’ the script will be invoked with the following parameters. The script should be able to gracefully ignore any other eventtype
 
 | Environment Variable | Details |
 | -------------------- | ------- |
@@ -322,20 +247,11 @@ gracefully ignore any other eventtype
 
 ### Arguments
 
-Arguments is no longer supported in Sonarr v3, point to the script
-directly.
+Arguments is no longer supported in Sonarr v3, point to the script directly.
 
 ### Specific usage tips
 
 #### PHP
 
-The information from Sonarr will not be added to
-\(_ENV as one might expect but should be included in the [https://secure.php.net/manual/en/reserved.variables.server.php\)\_SERVER
-variable\]. A sample script to use this information to convert a file
-can be found
-[here](https://gist.github.com/karbowiak/7fb38d346e368edc9d1a).
-**PowerShell** Sample script using the Sonarr environment variables to
-create EDL files for all episodes is
-[here](https://gist.github.com/RedsGT/e1b5f28e7b5b81e1e45378151e73ba5c).  
-**Reverse Symlinking** For those moving from Medusa this [seems to work
-well](https://github.com/Sonarr/Sonarr/wiki/Reverse-symlink-script-for-Connect)
+The information from Sonarr will not be added to \(_ENV as one might expect but should be included in the [https://secure.php.net/manual/en/reserved.variables.server.php\)\_SERVER variable\]. A sample script to use this information to convert a file can be found [here](https://gist.github.com/karbowiak/7fb38d346e368edc9d1a). **PowerShell** Sample script using the Sonarr environment variables to create EDL files for all episodes is [here](https://gist.github.com/RedsGT/e1b5f28e7b5b81e1e45378151e73ba5c).  
+**Reverse Symlinking** For those moving from Medusa this [seems to work well](https://github.com/Sonarr/Sonarr/wiki/Reverse-symlink-script-for-Connect)

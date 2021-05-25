@@ -16,8 +16,7 @@
 
 ## Album Studio
 
-{{\#lst::Library Bulk Monitoring
-Editor|lidarr\_library\_bulk\_monitoring\_editor}}
+{{\#lst::Library Bulk Monitoring Editor|lidarr\_library\_bulk\_monitoring\_editor}}
 
 ## Unmapped Files
 

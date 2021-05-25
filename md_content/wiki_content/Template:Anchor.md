@@ -1,16 +1,6 @@
-{{\#if:|<span id="{{anchorencode:{{{ 1|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 2|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 3|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 4|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 5|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 6|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 7|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 8|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{ 9|}}}}}"></span>
-{{\#if:|<span id="{{anchorencode:{{{10|}}}}}"></span> {{\#if:
+{{\#if:|<span id="{{anchorencode:{{{ 1|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 2|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 3|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 4|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 5|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 6|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 7|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 8|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{ 9|}}}}}"></span> {{\#if:|<span id="{{anchorencode:{{{10|}}}}}"></span> {{\#if:
 
-`   |`<span class="error">[`Template:Anchor`](Template:Anchor "wikilink")` (or Anchors): too many anchors, maximum is ten`</span>` 
-}} }} }} }} }} }} }} }} }} }} }} `<noinclude>
+`   |`<span class="error">[`Template:Anchor`](Template:Anchor "wikilink")` (or Anchors): too many anchors, maximum is ten`</span>`  }} }} }} }} }} }} }} }} }} }} }} `<noinclude>
 
 \]\] <templatedata> {
 

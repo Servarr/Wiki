@@ -16,8 +16,7 @@
 
 ## Book Shelf
 
-{{\#lst::Library Bulk Monitoring
-Editor|readarr\_library\_bulk\_monitoring\_editor}}
+{{\#lst::Library Bulk Monitoring Editor|readarr\_library\_bulk\_monitoring\_editor}}
 
 ## Unmapped Files
 

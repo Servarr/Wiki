@@ -1,8 +1,6 @@
-Please use <https://github.com/Servarr/Wiki> to track issues Please use
-this page for easy access to templates
+Please use <https://github.com/Servarr/Wiki> to track issues Please use this page for easy access to templates
 
-This page to act as an overall map of the wiki as many templates and
-sections are in use via transclusion.
+This page to act as an overall map of the wiki as many templates and sections are in use via transclusion.
 
 ## Stand Alone Templates
 
@@ -17,25 +15,21 @@ sections are in use via transclusion.
 
 ## Miscellaneous
 
-1.  [Sandbox](Sandbox "wikilink") \<- Test code and do any testing here
-    before sending it to live
+1.  [Sandbox](Sandbox "wikilink") \<- Test code and do any testing here before sending it to live
 2.  [Useful Tools](Useful_Tools "wikilink")
 3.  [Rclone/Mergerfs/Gdrive setup & links](Cloud_Setup "wikilink")
 4.  [Docker Guide](Docker_Guide "wikilink")
 5.  [Definitions](Definitions "wikilink")
 6.  [Discord-Notifier-unRAID-Plex](Discord-Notifier-unRAID-Plex "wikilink")
 7.  [Discord-Notifier-unRAID-Network](Discord-Notifier-unRAID-Network "wikilink")
-8.  [Clear Cache Cookies and Local
-    Storage](Clear_Cache_Cookies_and_Local_Storage "wikilink")
+8.  [Clear Cache Cookies and Local Storage](Clear_Cache_Cookies_and_Local_Storage "wikilink")
 9.  [Docker on ARM Synology](Docker_on_arm_synology "wikilink")
 
 ## \* ARR UI Pages
 
 Note: This is were most of the editing will take place
 
-Note: All templates or sections are housed within their respective
-pages. To edit those templates click on the page then to the template
-page.
+Note: All templates or sections are housed within their respective pages. To edit those templates click on the page then to the template page.
 
 ### Movies/Series/Library
 
@@ -43,13 +37,9 @@ page.
 2.  [Library Add New](Library_Add_New "wikilink")
 3.  [Library Import](Library_Import "wikilink")
 4.  [Library Discover](Library_Discover "wikilink") \<-- Radarr
-5.  [Library Mass Editor](Library_Mass_Editor "wikilink") \<--
-    Sonarr/Lidarr
-6.  [Library Bulk Monitoring
-    Editor](Library_Bulk_Monitoring_Editor "wikilink") \<--Season
-    Pass/Album Studio/Bookshelf combined
-7.  [Library Unmapped Files](Library_Unmapped_Files "wikilink") \<--
-    Lidarr/Readarr
+5.  [Library Mass Editor](Library_Mass_Editor "wikilink") \<-- Sonarr/Lidarr
+6.  [Library Bulk Monitoring Editor](Library_Bulk_Monitoring_Editor "wikilink") \<--Season Pass/Album Studio/Bookshelf combined
+7.  [Library Unmapped Files](Library_Unmapped_Files "wikilink") \<-- Lidarr/Readarr
 8.  [Filters](Filters "wikilink")
 
 ### Calendar
@@ -71,24 +61,17 @@ page.
 ### Settings
 
 1.  [Settings Media Management](Settings_Media_Management "wikilink")
-    1.  [Template:Settings Media Management Root
-        Folders](Template:Settings_Media_Management_Root_Folders "wikilink")
-    2.  [Template:Settings Media Management
-        Folders](Template:Settings_Media_Management_Folders "wikilink")
-    3.  [Template:Settings Media Management
-        Permissions](Template:Settings_Media_Management_Permissions "wikilink")
+    1.  [Template:Settings Media Management Root Folders](Template:Settings_Media_Management_Root_Folders "wikilink")
+    2.  [Template:Settings Media Management Folders](Template:Settings_Media_Management_Folders "wikilink")
+    3.  [Template:Settings Media Management Permissions](Template:Settings_Media_Management_Permissions "wikilink")
 2.  [Settings Profiles](Settings_Profiles "wikilink")
-    1.  [Template:Settings Profiles Delay
-        Profiles](Template:Settings_Profiles_Delay_Profiles "wikilink")
-3.  [Settings Quality Profiles
-    (Template)](Template:Settings_Quality_Quality_Table_Meanings "wikilink")
+    1.  [Template:Settings Profiles Delay Profiles](Template:Settings_Profiles_Delay_Profiles "wikilink")
+3.  [Settings Quality Profiles (Template)](Template:Settings_Quality_Quality_Table_Meanings "wikilink")
 4.  [Settings Custom Formats](Settings_Custom_Formats "wikilink")
 5.  [Settings Indexers](Settings_Indexers "wikilink")
 6.  [Settings Download Clients](Settings_Download_Clients "wikilink")
-    1.  [Template:Settings Download Clients Download
-        Clients](Template:Settings_Download_Clients_Download_Clients "wikilink")
-    2.  [Template:Settings Download Clients Failed Download
-        Handling](Template:Settings_Download_Clients_Failed_Download_Handling "wikilink")
+    1.  [Template:Settings Download Clients Download Clients](Template:Settings_Download_Clients_Download_Clients "wikilink")
+    2.  [Template:Settings Download Clients Failed Download Handling](Template:Settings_Download_Clients_Failed_Download_Handling "wikilink")
 7.  [Settings Lists](Settings_Lists "wikilink")
 8.  [Settings Connect](Settings_Connect "wikilink")
 9.  [Settings Metadata](Settings_Metadata "wikilink")
@@ -188,8 +171,7 @@ page.
         <section begin=readarr_wiki_pages />
   - [Readarr](Readarr "wikilink")
       - [Readarr Installation](Readarr_Installation "wikilink")
-      - [Readarr Quick Start
-        Guide](Readarr_Quick_Start_Guide "wikilink")
+      - [Readarr Quick Start Guide](Readarr_Quick_Start_Guide "wikilink")
       - [Readarr Library](Readarr_Library "wikilink")
       - [Readarr Calendar](Readarr_Calendar "wikilink")
       - [Readarr Activity](Readarr_Activity "wikilink")

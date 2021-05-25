@@ -1,14 +1,12 @@
 ## Sonarr Settings
 
-Please note that this information is only for
-<span style="color:#ff0000">Sonarr V3</span>.
+Please note that this information is only for <span style="color:#ff0000">Sonarr V3</span>.
 
 -----
 
 ### Media Management
 
-*Note: Some of these settings are only visible through 'show advanced'
-settings which is on the top bar under the search bar*
+*Note: Some of these settings are only visible through 'show advanced' settings which is on the top bar under the search bar*
 
 -----
 
@@ -56,17 +54,7 @@ settings which is on the top bar under the search bar*
 
 #### Qualities Defined
 
-{{\#lst::Definitions|Unknown}} {{\#lst::Definitions|SDTV}}
-{{\#lst::Definitions|WEBDL-480p}} {{\#lst::Definitions|WEBRip-480p}}
-{{\#lst::Definitions|DVD}} {{\#lst::Definitions|Bluray-480p}}
-{{\#lst::Definitions|HDTV-720p}} {{\#lst::Definitions|HDTV-1080p}}
-{{\#lst::Definitions|Raw-HD}} {{\#lst::Definitions|WEBDL-720p}}
-{{\#lst::Definitions|WEBRip-720p}} {{\#lst::Definitions|Bluray-720p}}
-{{\#lst::Definitions|WEBDL-1080p}} {{\#lst::Definitions|WEBRip-1080p}}
-{{\#lst::Definitions|Bluray-1080p}} {{\#lst::Definitions|1080p Remux}}
-{{\#lst::Definitions|HDTV-2160p}} {{\#lst::Definitions|WEBDL-2160p}}
-{{\#lst::Definitions|WEBRip-2160p}} {{\#lst::Definitions|Bluray-2160p}}
-{{\#lst::Definitions|2160p-Remux}}
+{{\#lst::Definitions|Unknown}} {{\#lst::Definitions|SDTV}} {{\#lst::Definitions|WEBDL-480p}} {{\#lst::Definitions|WEBRip-480p}} {{\#lst::Definitions|DVD}} {{\#lst::Definitions|Bluray-480p}} {{\#lst::Definitions|HDTV-720p}} {{\#lst::Definitions|HDTV-1080p}} {{\#lst::Definitions|Raw-HD}} {{\#lst::Definitions|WEBDL-720p}} {{\#lst::Definitions|WEBRip-720p}} {{\#lst::Definitions|Bluray-720p}} {{\#lst::Definitions|WEBDL-1080p}} {{\#lst::Definitions|WEBRip-1080p}} {{\#lst::Definitions|Bluray-1080p}} {{\#lst::Definitions|1080p Remux}} {{\#lst::Definitions|HDTV-2160p}} {{\#lst::Definitions|WEBDL-2160p}} {{\#lst::Definitions|WEBRip-2160p}} {{\#lst::Definitions|Bluray-2160p}} {{\#lst::Definitions|2160p-Remux}}
 
 ### Indexers
 
@@ -76,8 +64,7 @@ settings which is on the top bar under the search bar*
 
 ##### Supported Indexers
 
-{{\#lst::Settings
-Indexers|sonarr\_settings\_indexers\_supported\_indexers}}
+{{\#lst::Settings Indexers|sonarr\_settings\_indexers\_supported\_indexers}}
 
 #### Indexer Settings
 
@@ -97,22 +84,19 @@ Indexers|sonarr\_settings\_indexers\_supported\_indexers}}
 
 #### Overview
 
-{{\#lst::Settings Download
-Clients|settings\_download\_client\_overview}}
+{{\#lst::Settings Download Clients|settings\_download\_client\_overview}}
 
 #### Download Clients
 
 #### Completed Download Handling
 
-{{\#lst::Settings Download
-Clients|sonarr\_settings\_download\_clients\_complete\_download\_handling}}
+{{\#lst::Settings Download Clients|sonarr\_settings\_download\_clients\_complete\_download\_handling}}
 
 #### Failed Download Handling
 
 #### Remote Path Mappings
 
-{{\#lst::Settings Download
-Clients|sonarr\_settings\_download\_clients\_remote\_path\_mapping}}
+{{\#lst::Settings Download Clients|sonarr\_settings\_download\_clients\_remote\_path\_mapping}}
 
 ### Import Lists
 
