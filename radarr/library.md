@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-05-25T01:24:18.386Z
+date: 2021-05-25T01:26:01.236Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -58,10 +58,10 @@ Discover shows recommended Movies.
     have Radarr suggest any new movies to you you'll need to add
     something in order to give it a direction to suggest. You have
     several options:
-    1.  Click on the [Add New Movie](/radarr/library#Add-New) button to add movies by hand.
-    1.  Click on the [Import Existing Library](/radarr/library#Library-Import) button to import an existing library that you have collected
+    1.  Click on the [Add New Movie](/radarr/library#add-new) button to add movies by hand.
+    1.  Click on the [Import Existing Library](/radarr/library#library-import) button to import an existing library that you have collected
     1.  Click on the [Add Lists](Radarr_Settings#Lists) button to add a list to Radarr
-          - Some additional information about lists found [here](/radarr/faq#What_are_Lists_and_what_can_they_do_for_me?)
+          - Some additional information about lists found [here](/radarr/faq#what_are_Lists_and_what_can_they_do_for_me?)
 
 ![radarr-discover-add-new-movies.png](/assets/radarr/radarr-discover-add-new-movies.png)
 
@@ -71,8 +71,8 @@ Discover shows recommended Movies.
     1.  Here if you're feeling extra crazy you can select all the movies that are on this list
     1.  Select what root path you'd like for these movies to go to once they are imported
     1.  Select what availability you'd like the movie to have before it is grabbed
-    1.  Select any quality profiles you have already built ([More info](Radarr_Settings#Quality_Profiles))
+    1.  Select any quality profiles you have already built ([More info](/radarr/settings#quality-profiles))
     1.  Do you want Radarr to monitor this movie for any upgrades in quality
     1.  Would you like Radarr to go out and Automatically search for this moive after you add it?
-    1.  Do you want Radarr to exclude this/these movies from any lists that would be imported ([More info](Radarr_Settings#List_Exclusion))
+    1.  Do you want Radarr to exclude this/these movies from any lists that would be imported ([More info](/radarr/settings#list-exclusion))
     1.  Finally Add the movie. This will add the entry into your library.
