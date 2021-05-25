@@ -2,10 +2,10 @@
 title: Installation
 description: 
 published: true
-date: 2021-05-24T23:39:02.449Z
+date: 2021-05-25T00:22:15.328Z
 tags: 
 editor: markdown
-dateCreated: 2021-05-24T23:34:14.199Z
+dateCreated: 2021-05-25T00:22:15.328Z
 ---
 
 # Windows
@@ -90,7 +90,7 @@ The best solution is to use a single, common volume inside the containers, such 
 If this advice is not followed, you may have to configure a Remote Path Mapping in the Readarr web UI (Settings › Download Clients).
 
 ### Calibre Integration
-When installing Readarr, you can choose to use Calibre integration or not. This choice can only be made during installation, and if you choose not to utilize Calibre you cannot add it later. If you are currently using a Calibre library for your books, you will want to utilize Calibre integration to continue doing that. Calibre will then take over all naming and organization of book files.
+When installing Readarr, you can choose to use Calibre integration or not. This choice can only be made during installation, and if you choose not to utilize Calibre you cannot add it later. If you currently use Calibre to manage your book library, you should choose this option. If you use it, Calibre will name and organize your book files for you.
 
 If you are running Calibre, you must first start the Calibre Content Server (Preferences / Sharing over the net), and also set up a user and password. This will require a Calibre restart.
 
