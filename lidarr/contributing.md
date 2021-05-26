@@ -2,7 +2,7 @@
 title: Lidarr Contributing
 description: 
 published: true
-date: 2021-05-26T02:28:31.770Z
+date: 2021-05-26T02:28:53.509Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
@@ -52,7 +52,7 @@ Lidarr is written in C# (backend) and JS (frontend). The backend is built on the
 > Ensure startup project is set to `Lidarr.Console` and    framework to `net5.0`
 {.is-info}
 
-7. Next `Debug/Run` the project in Visual Studio to start Readarr
+7. Next `Debug/Run` the project in Visual Studio to start Lidarr
 8. Open http://localhost:8686
 
 ### Contributing Code
