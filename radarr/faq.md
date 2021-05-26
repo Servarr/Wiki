@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-26T02:18:01.123Z
+date: 2021-05-26T02:20:47.408Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -57,21 +57,19 @@ Please see better information [here](Radarr_FAQ#How_do_I_update_Radarr?)
   - No it cannot be changed back. No it will not be changed back.
   - You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
 
-<span id="Where_did_Wanted_and_Cut_off_Unmet_go"></span>
-
 ## Where did Wanted and Cut-off Unmet go?
 
-\* Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` ![This is where wanted and Cut-off Unmet went](radarr-where-did-wanted-and-cutoff-unmet-go.png "This is where wanted and Cut-off Unmet went")
+Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` ![This is where wanted and Cut-off Unmet went](radarr-where-did-wanted-and-cutoff-unmet-go.png "This is where wanted and Cut-off Unmet went")
 
 ## Why can't I add a new movie to Radarr?
-\* Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
+Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
 
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
 ## Can all my movie files be stored in one folder?
-\* Not yet and the reason is that Radarr is a fork of [sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
+Not yet and the reason is that Radarr is a fork of [sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
 
   -   
     If you're looking to moving all your movies from one folder to individual folders check [here](Radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie "wikilink")
@@ -92,7 +90,7 @@ A slight hack-ish solution is noted below. Please note that you mustn't trigger 
 
 ## How can I rename my movie folders?
 
-\# Movies
+Movies
 
 1.  Movie Editor
 2.  Select what movies need their folder renamed
@@ -101,7 +99,7 @@ A slight hack-ish solution is noted below. Please note that you mustn't trigger 
 
 ## Movie File and Folder Naming
 
-\* Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
+Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
@@ -155,22 +153,18 @@ proxy_set_header Connection $http_connection;
   - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This is currently v3. This version will receive updates either weekly or biweekly depending on development. **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
   - <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately. **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 
-<!-- end list -->
-
   - Note: If your install is through Docker append `:release`, `:latest`, or `:testing` to the end of your container tag depending on who makes your builds.
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                  | [Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fradarr%2Frelease%2FVERSION.json) | [Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fradarr%2Ftesting%2FVERSION.json) | [Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fradarr%2Fnightly%2FVERSION.json) |
 
-<center>
 
 | Release Channel Type                                          | Branch: master (stable) (v3.1) | Branch: develop (beta) (v3.1) | Branch: nightly (unstable) (v3.2)            |
 | ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
 | [hotio](https://hub.docker.com/r/hotio/radarr)                | `hotio/radarr:release`         | `hotio/radarr:testing`        | If you have to ask, you should not be on it. |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr) | `linuxserver/radarr:latest`    | `linuxserver/radarr:develop`  | If you have to ask, you should not be on it. |
 
-</center>
 
 ### Installing a newer version
 
@@ -196,8 +190,6 @@ If Docker:
   - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
   - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
       - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-
-<!-- end list -->
 
   - **May 4 2021 Update**
       - `3.1.1` has been released as master/stable
@@ -230,8 +222,6 @@ If Docker:
 \* Sometimes you can get a problem that movies that are imported from your lists, gets imported with the root path set to “C:” or other weird paths.
 
   - This is a known issue for when the root path is either not setup during the creation of the list, or if the root path has been deleted after the list was created. Note that this problem can still occur even if the list is **edited** and the correct root path is set.
-
-<!-- end list -->
 
   - Use the Movie Editor to fix paths of existing movies.
 
@@ -287,7 +277,7 @@ This change was due to not have our server get killed by people updating lists e
 
 ## Why doesn't Radarr work behind an nginx reverse proxy
 
-[See this section](Radarr_FAQ#Why_doesn.27t_Radarr_work_behind_a_reverse_proxy "wikilink")
+[See this section](Radarr_FAQ#Why_doesn.27t_Radarr_work_behind_a_reverse_proxy)
 
 ## Can I disable the refresh movies task
 
