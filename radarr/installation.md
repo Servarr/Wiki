@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-24T18:52:02.678Z
+date: 2021-05-27T16:00:42.004Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -99,3 +99,29 @@ To install and use these Docker images, you'll need to keep the above in mind wh
 - [hotio/radarr](https://hotio.dev/containers/radarr/)
 - [linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
 {.links-list}
+
+# NGINX Configuration
+# NGINX Reverse Proxy Configuration
+> This assumes the default port of `7878` and that you set a baseurl of `radarr`
+{.is-info}
+
+```
+location /radarr {
+  proxy_pass        http://127.0.0.1:7878/radarr;
+  proxy_set_header Host $proxy_host;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_redirect off;
+
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection $http_connection;
+}
+  location /radarr/api { auth_request off;
+  proxy_pass       http://127.0.0.1:7878/radarr/api;
+}
+
+  location /radarr/Content { auth_request off;
+    proxy_pass http://127.0.0.1:7878/radarr/Content;
+ }
+```
