@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-27T16:00:42.004Z
+date: 2021-05-27T16:10:45.309Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -100,7 +100,6 @@ To install and use these Docker images, you'll need to keep the above in mind wh
 - [linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
 {.links-list}
 
-# NGINX Configuration
 # NGINX Reverse Proxy Configuration
 > This assumes the default port of `7878` and that you set a baseurl of `radarr`
 {.is-info}
