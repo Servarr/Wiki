@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-05-27T16:10:41.103Z
+date: 2021-05-27T16:12:14.152Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -10,10 +10,7 @@ dateCreated: 2021-05-24T05:07:51.882Z
 
 # Windows
 
-> Prowlarr does not support Windows XP
-{.is-danger}
-
-> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run net5 apps on Windows 7
+> Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
 Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
