@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-27T16:10:45.309Z
+date: 2021-05-27T16:35:46.992Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -10,12 +10,10 @@ dateCreated: 2021-05-17T01:14:47.863Z
 
 # Windows
 
-> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core/net5 apps on Windows 7
-{.is-warning}
 
 Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
-{.is-info}
+{.is-warning}
 
 A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
 
