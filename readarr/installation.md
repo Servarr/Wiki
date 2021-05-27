@@ -2,7 +2,7 @@
 title: Installation
 description: 
 published: true
-date: 2021-05-25T00:22:15.328Z
+date: 2021-05-27T16:36:48.623Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -10,15 +10,11 @@ dateCreated: 2021-05-25T00:22:15.328Z
 
 # Windows
 
-> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core/net5 apps on Windows 7
-{.is-warning}
 
-> Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
-{.is-warning}
 
 Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
-{.is-info}
+{.is-warning}
 
 A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
 
@@ -26,11 +22,13 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-1. Download the latest version of Readarr from https://readarr.com/#downloads-v3-windows for your architecture
+> Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
+{.is-warning}
+1. Download the latest version of Readarr from https://readarr.com/#downloads-v1-windows for your architecture
 1. Run the installer
 1. Browse to http://localhost:8787 to start using Readarr
 # OSX
-1. Download the latest version of Readarr from https://readarr.com/#downloads-v3-macos
+1. Download the latest version of Readarr from https://readarr.com/#downloads-v1-macos
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to http://localhost:8787 to start using Readarr
 # Linux
