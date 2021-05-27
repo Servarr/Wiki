@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-05-27T16:12:14.152Z
+date: 2021-05-27T16:35:33.598Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -10,10 +10,10 @@ dateCreated: 2021-05-24T05:07:51.882Z
 
 # Windows
 
+Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
-Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
 > Prowlarr is in beta testing and does not have a formal stable release.
 {.is-warning}
 1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v1-windows for your architecture
