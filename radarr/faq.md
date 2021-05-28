@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-28T02:46:00.677Z
+date: 2021-05-28T02:49:40.214Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -25,7 +25,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## What is Minimum Availability?
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
-- **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is recommended and likely should be combined with an Availability Delay of `-14` days.
+- **Released**: Radarr shall consider movies available as soon as the blu-ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` days.
 ## How are possible downloads compared?
 
 **Generally Quality Trumps All**
