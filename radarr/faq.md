@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-28T16:35:45.343Z
+date: 2021-05-28T16:36:05.111Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -545,8 +545,8 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 
 This is expected. This is how the Torrent Process works with .
 
-1.   will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
-2.   will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
+2. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 3.  Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within  under the specific download client). When files are imported to your media folder  will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-      - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then  will fall back and copy the file.
+   - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then  will fall back and copy the file.
 4.  If the "Completed Download Handling - Remove" option is enabled in 's settings,  will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
