@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-28T16:36:05.111Z
+date: 2021-05-28T17:01:11.969Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -174,7 +174,7 @@ proxy_set_header Connection $http_connection;
 If Native:
 
 1.  Go to System and then the Updates tab
-2.  Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
+1.  Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
 
 If Docker:
 
@@ -182,50 +182,49 @@ If Docker:
 
 ## Can I switch from nightly back to develop?
 
-[See this related question](Radarr_FAQ#Can_I_switch_between_branches?)
+- See the entry below
 
 ## Can I switch between branches?
 
-\* You can (almost) always increase your risk.
+> You can (almost) always increase your risk.
 
-  - `master` can go to `develop` or `nightly`
-  - `develop` can go to `nightly`
-  - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
-  - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
-      - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-
-  - **May 28 2021 Update**
-      - `3.2.1` has been released as master/stable
-      - For those on nightly and are still on `3.2.1.5068` or lower you can safely downgrade to master
-          - Same for develop.
+- `master` can go to `develop` or `nightly`
+- `develop` can go to `nightly`
+- Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
+  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+- **May 28 2021 Update**
+  - `3.2.1` has been released as master/stable
+  - For those on nightly and are still on `3.2.1.5068` or lower you can safely downgrade to master
+    - Same for those on develop.
 
 ## How does radarr handle foreign movies or foreign titles?
 
-\* Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
-
-  - To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
-  - Note that this does not include any indexer languages specified as multi.
+- Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
+- To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
+- Note that this does not include any indexer languages specified as multi.
 
 ## How does radarr handle "multi" in names?
 
-\* Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
+- Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
 
-  - Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
+- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
 
 ## Help, Movie Added, But Not Searched
 
   - Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
   - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
 
-![Add and Search for movie](start_search_for_missing_movie.png "Add and Search for movie") ![|thumb|none|750px|altt=Search selected movie|Search selected movie](Search_selected_movie.png "|thumb|none|750px|altt=Search selected movie|Search selected movie")
+"Add and Search for movie" (on add) **IMAGE NEEDED**
+"Add and Search for movie" (on select via index) **IMAGE NEEDED**
 
 ## Root path for movies imported from lists becomes “C:” or other weird paths
   
-\* Sometimes you can get a problem that movies that are imported from your lists, gets imported with the root path set to “C:” or other weird paths.
+- Sometimes you can get a problem that movies that are imported from your lists, gets imported with the root path set to “C:” or other weird paths.
 
-  - This is a known issue for when the root path is either not setup during the creation of the list, or if the root path has been deleted after the list was created. Note that this problem can still occur even if the list is **edited** and the correct root path is set.
+- This is a known issue for when the root path is either not setup during the creation of the list, or if the root path has been deleted after the list was created. Note that this problem can still occur even if the list is **edited** and the correct root path is set.
 
-  - Use the Movie Editor to fix paths of existing movies.
+- Use the Movie Editor to fix paths of existing movies.
 
 ## Movie Imported, But Source File And Torrent Not Deleted
 
@@ -237,7 +236,7 @@ If Docker:
 
 ## My Custom Script stopped working after upgrading from v0.2
  
-You were likely passing arguments in your connection...that is not supported.
+You were likely passing arguments in your connection and that is not supported.
 
 1.  Change your argument to be your path
 2.  Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
@@ -255,179 +254,160 @@ Steps to fix:
 
 First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
-Distributor ID: Raspbian
+> Distributor ID: Raspbian
+> Description: Raspbian GNU/Linux 10 (buster)
+> Release: 10
+> Codename: buster
 
-Description: Raspbian GNU/Linux 10 (buster)
-
-Release: 10
-
-Codename: buster
-
-*If you are using buster:*
-
-<code>`` Add the line `deb http://deb.debian.org/debian buster-backports` main to `/etc/apt/sources.list` ``  
-`Run apt-get update`  
-`apt-get -t buster-backports install libseccomp2`</code>
+- If you are using buster:
+  - Add the line `deb http://deb.debian.org/debian buster-backports main` to `/etc/apt/sources.list`
+  - Run `apt-get update`
+  - Install `apt-get -t buster-backports install libseccomp2`
 
 ## Why are lists sync times so long and can I change it?
 
-Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
+- Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 
-You can trigger a list refresh manually, script it and trigger it via the API, add the movies to radarr, use Ombi, or any similar app that adds them right away
+- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to radarr, use Ombi, or any similar app that adds them right away
 
-This change was due to not have our server get killed by people updating lists every 10 minutes.
-
-## Why doesn't Radarr work behind an nginx reverse proxy
-
-[See this section](Radarr_FAQ#Why_doesn.27t_Radarr_work_behind_a_reverse_proxy)
+- This change was due to not have our server get killed by people updating lists every 10 minutes.
 
 ## Can I disable the refresh movies task
 
-No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
+- No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
 
-A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you don't you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+- A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you don't you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 
 ## Can I update  inside my Docker container?
 
-\* *Technically, yes.* **But you should absolutely not.** It is a primary philosophy of Docker. Database issues can be caused for  if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
+- *Technically, yes.* **But you should absolutely not.** It is a primary philosophy of Docker. Database issues can be caused for  if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
 
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
 \* This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
 
-## Help, My Mac says .app is damaged and can’t be opened
+## Help, My Mac says Radarr.app is damaged and can’t be opened
 
 That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help_my_mac_says_radarr_cannot_be_opened_because_the_developer_cannot_be_verified)
 
-## How do I request a feature for ?
+## How do I request a feature for Radarr?
 
-This is an easy one click \[<https://github.com/>//issues/new?assignees=\&labels=feature+request\&template=feature\_request.md\&title= here\]
+This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
 ## I am getting an error: Database disk image is malformed
 
 \* This means your SQLite database that stores most of the information for  is corrupt.
 
-  -   - [Try restoring from a backup](#how_do_i_backup_restore_my_{{{ARRNAME}}} "wikilink")
+  -   - [Try restoring from a backup](#how_do_i_backup_restore_my_Radarr "wikilink")
       - You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")
       - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 
-<!-- end list -->
 
-  - This error may show if the database file is not writable by the user/group  is running as.
+- This error may show if the database file is not writable by the user/group Radarr is running as.
 
-<!-- end list -->
-
-  - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **'s config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
+- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **'s config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
 
   - If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## I use  on a Mac and it suddenly stopped working. What happened?
+## I use Radarr on a Mac and it suddenly stopped working. What happened?
 
-Most likely this is due to a MacOS bug which caused one of the  databases to be corrupted.
+Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 
-[Follow these steps to resolve](#i_am_getting_an_error_database_disk_image_is_malformed "wikilink")
+See the above database is malformed entry.
 
-Then attempt to launch  and see if it works. If it does not work, you'll need further support. Post in our \[<http://reddit.com/r/> reddit\] or hop on \[ discord\] for help.
+Then attempt to launch  and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
 ## Why can’t  see my files on a remote server?
  
-In short: the user  is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
+- In short: the user  is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
-  -  runs under the LocalService account by default which doesn’t have access to protected remote file shares.
-      - **Solutions:**
-          - Run ’s service as another user that has access to that share
-              - Open the Administrative Tools \> Services window on your Windows server.
-              - Stop the  service.
-              - Open the Properties \> Log On dialog.
-              - Change the service user account to the target user account.
-          - Run .exe using the Startup Folder
+  - Radarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
+      - **Solutions**
+         - Run Radarr’s service as another user that has access to that share
+         - Open the Administrative Tools \> Services window on your Windows server.
+            - Stop the  service.
+            - Open the Properties \> Log On dialog.
+            - Change the service user account to the target user account.
+          - Run Radarr.exe using the Startup Folder
 
   - You’re using a mapped network drive (not a UNC path)
-      - **Solutions:**
+      - **Solutions**
           - Change your paths to UNC paths (`\\server\share`)
-          - Run .exe via the Startup Folder
+          - Run Radarr.exe via the Startup Folder
 
 ## Mapped Network Drives vs UNC Paths
 
-\* Using mapped network drives generally doesn’t work very well, especially when  is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies\`.
+- Using mapped network drives generally doesn’t work very well, especially when  is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies\`.
 
   - A key point to remember is that  gets path information from the downloader, so you’ll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
 ## How do I change from the Windows Service to a Tray App?
  
-\# Shut  down
+1. Shut  down Radarr
+1. Run serviceuninstall.exe that's in the Radarr directory
+1. Run `Radarr.exe` as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
+1. (Optional) Drop a shortcut to .exe in the startup folder to auto-start on boot.
 
-1.  Run serviceuninstall.exe that's in the  directory
-2.  Run .exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
-3.  (Optional) Drop a shortcut to .exe in the startup folder to auto-start on boot.
+## How do I Backup/Restore Radarr ?
 
-## How do I Backup/Restore my ?
+### Backing up
 
-\=== Backing up  ===
-
-  - **Using built-in backup**
+#### Using built-in backup 
 
 1.  Go to System: Backup in the  UI
 2.  Click the Backup button
 3.  Download the zip after the backup is created for safekeeping
 
-![Backup ](how-do-i-backup-restore-my-{{{ARRNAME}}}.gif "Backup ")
 
-
-  - Using file system directly
-
-
-1.  Find the location of the AppData directory for 
-      - Via the  UI go to System: About
-      - [{{{ARRNAME}}} Appdata Directory]({{{ARRNAME}}}_Appdata_Directory "wikilink")
+#### Using file system directly
+1.  Find the location of the AppData directory for Radarr
+      - Via the UI go to System \> About
+      - [Radarr Appdata Directory](/radarr/appdata-directory)
 2.  Stop  - This will prevent the database from being corrupted
 3.  Copy the contents to a safe location
 
 ### Restoring from Backup
 
-*Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported.*
+> Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+{.is-warning}
 
-  - **Using zip backup**
+#### Using zip backup
 
-1.  Re-install 
-2.  Run 
+1.  Re-install Radarr
+2.  Run Radarr
 3.  Navigate to System \> Backup
 4.  Select Restore Backup
 5.  Select Choose File
 6.  Select your backup zip file
 7.  Select Restore
 
+#### Using file system backup
 
-![{{{ARRNAME}}}-restore-using-zip-backup.gif]({{{ARRNAME}}}-restore-using-zip-backup.gif "{{{ARRNAME}}}-restore-using-zip-backup.gif")
-
-  - **Using file system backup**
-
-
-1.  Re-install 
-2.  Run  once to get the AppData directory location
-3.  Stop 
+1.  Re-install Radarr
+2.  Run Radarr once to get the AppData directory location
+3.  Stop Radarr
 4.  Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 5.  Restore from your backup
-6.  Start 
+6.  Start Radarr
 7.  As long as the paths are the same, everything will pick up where it left off
 
   - **Restore for Synology NAS**
 
 **CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
 
-1.  Re-install   
+1.  Re-install Radarr  
 2.  Run  once to get the AppData directory location  
-3.  Stop   
+3.  Stop Radarr
 4.  Connect to the Synology NAS through SSH and log in as root  
 5.  Execute the following commands:
     ```
-        rm -r /usr/local/{{{ARRNAME}}}/var/.config/{{{ARRNAME}}}/{{{ARRNAME}}}.db*
-        cp -f /tmp/{{{ARRNAME}}}_backup/* /usr/local/{{{ARRNAME}}}/var/.config/{{{ARRNAME}}}/
+        rm -r /usr/local/Radarr/var/.config/Radarr/Radarr.db*
+        cp -f /tmp/Radarr_backup/* /usr/local/Radarr/var/.config/Radarr/
     ```
 6.  Update permissions on the files:
     ```
-        cd /usr/local/{{{ARRNAME}}}/var/.config/{{{ARRNAME}}}/
-        chown -R {{{ARRNAME}}}:users *
+        cd /usr/local/Radarr/var/.config/Radarr/
+        chown -R Radarr:users *
         chmod -R 0644 *
     ```
     On some installations, the user is different: `chown -R sc-``:``  * `
@@ -435,35 +415,28 @@ In short: the user  is running as (if service) or under (if tray app) cannot acc
 
 ## Help I have locked my self out
 
-To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [{{{ARRNAME}}} Appdata Directory]({{{ARRNAME}}}_Appdata_Directory "wikilink").
+To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
 1.  Open config.xml in a text editor
 2.  Find the authentication method line will be
+`<AuthenticationMethod>Basic</AuthenticationMethod>` or ` <AuthenticationMethod>Forms</AuthenticationMethod>`
 
-<!-- end list -->
-
-  -   
-    <AuthenticationMethod>`Basic`</AuthenticationMethod>  
-    or
-    <AuthenticationMethod>`Forms`</AuthenticationMethod>
-
-<!-- end list -->
-
-1.  Change the `AuthenticationMethod` line to <AuthenticationMethod>`None`</AuthenticationMethod>
-2.  Restart 
-3.   will now be accessible without a password, you should go the `Settings: General` in the  UI and set your username and password
+1.  Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+2. Restart Radarr
+3. Radarr will now be accessible without a password, you should go the `Settings: General` in the  UI and set your username and password
 
 ## Help I have forgotten my password
 
-\* Please see steps listed in [here](#help_i_have_locked_my_self_out "wikilink").
+\* Please see steps listed above.
 
 ## Jackett shows more results than  when manually searching
   
-This is usually due to  searching Jackett differently than you do. [ See this troubleshooting article for further information](Radarr_Troubleshooting#Searches_Indexers_and_Trackers "wikilink").
+This is usually due to  searching Jackett differently than you do. See our [troubleshooting](/radarr/troubleshooting)Troubleshooting Article for more information.
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](Clear_Cache_Cookies_and_Local_Storage "wikilink") wiki article.
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage] wiki article.
+**Article Needed**
 
 ## Web Interface Only Loads at localhost on Windows
 
@@ -477,18 +450,18 @@ This is usually due to  searching Jackett differently than you do. [ See this tr
 
 ## System & Logs loads forever
 
-It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
+- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
 
 ## Finding Cookies
 
-Some sites cannot be logged into automatically and require you to login manually then give the cookies to  to work. This page describes how you do that.
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to  to work. This page describes how you do that.
 
   - [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
   - [Firefox cookies](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
 
 ## Unpack Torrents
  
-Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
+- Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
 
 ## uTorrent is no longer working 
 
