@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-28T17:01:11.969Z
+date: 2021-05-28T17:07:33.679Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -33,58 +33,55 @@ dateCreated: 2021-05-16T20:44:27.778Z
 The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs). ***As of 5/27/2021 the logic is as follows***
 
 1.  Quality
-2.  Custom Format Score
-3.  Protocol
-4.  Indexer Priority
-5.  Indexer Flags
-6.  Peers (If Torrent)
-7.  Age (If Usenet)
-8.  Size
+1.  Custom Format Score
+1.  Protocol
+1.  Indexer Priority
+1.  Indexer Flags
+1.  Peers (If Torrent)
+1.  Age (If Usenet)
+1.  Size
 
 ## What are Lists and what can they do for me?
 
-\* Lists are a part of Radarr that allow you to follow a given list creator.
+- Lists are a part of Radarr that allow you to follow a given list creator.
 
-  - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you don't have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
-  - **CAUTION:** If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save.
-  - ie. physically look at the list before you even go to Radarr.
+- Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you don't have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
+>  **CAUTION:** If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save.
+{.is-warning}
 
-## With the release of Radarr V3, what release should I download?
+- It's suggested that physically look at the list before you even go to Radarr.
 
-Please see better information [here](Radarr_FAQ#How_do_I_update_Radarr?)
 
 ## Why did the GUI / UI Change? Can it be changed back?
 
-\* Radarr is a fork of [Sonarr](sonarr) which has the new UI.
+- Radarr is a fork of [Sonarr](Sonarr) which has the new UI.
 
-  - No it cannot be changed back. No it will not be changed back.
-  - You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
+- No it cannot be changed back. No it will not be changed back.
+- You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
 
 ## Where did Wanted and Cut-off Unmet go?
 
-Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` ![This is where wanted and Cut-off Unmet went](radarr-where-did-wanted-and-cutoff-unmet-go.png "This is where wanted and Cut-off Unmet went")
+- Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` **IMG NEEDED*
 
 ## Why can't I add a new movie to Radarr?
-Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
-
+- Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
 ## Can all my movie files be stored in one folder?
-Not yet and the reason is that Radarr is a fork of [sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
+- Not yet and the reason is that Radarr is a fork of [sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
 
-  -   
-    If you're looking to moving all your movies from one folder to individual folders check [here](Radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie "wikilink")
+- If you're looking to moving all your movies from one folder to individual folders check Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS**
 
 ## Can I put all my movies in my library into one folder
 
 
-We get asked this a lot. There are no plans to support `\data\Movies\Movie1.mkv`, `\data\Movies\Movie2.mkv`, etc.
+- We get asked this a lot. There are no plans to support `\data\Movies\Movie1.mkv`, `\data\Movies\Movie2.mkv`, etc.
 
-The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
+- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
 
-A slight hack-ish solution is noted below. Please note that you mustn't trigger a rescan or it will show as missing and regardless the movie will never be upgraded.
+- A slight hack-ish solution is noted below. Please note that you mustn't trigger a rescan or it will show as missing and regardless the movie will never be upgraded.
 
   - Use a Custom Script
       - the script should be triggered on import
@@ -93,24 +90,23 @@ A slight hack-ish solution is noted below. Please note that you mustn't trigger 
 
 ## How can I rename my movie folders?
 
-Movies
-
-1.  Movie Editor
-2.  Select what movies need their folder renamed
-3.  Change Root Folder to the same Root Folder that the movies currently exist in
-4.  Select "Yes move files"
+1. Movies
+1. Movie Editor
+1. Select what movies need their folder renamed
+1. Change Root Folder to the same Root Folder that the movies currently exist in
+1. Select "Yes move files"
 
 ## Movie File and Folder Naming
 
-Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
+- Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-See [Create a Folder for Each Movie](Radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie "wikilink") for more details.
+- See Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS** for more details.
 
 ## Movie Folders Named Incorrectly
 
-\* Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
+- Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
 
   - Examples that will work well:
       - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
@@ -126,14 +122,14 @@ See [Create a Folder for Each Movie](Radarr_Tips_and_Tricks#Create_a_Folder_for_
       - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
           - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
           - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Create a Folder for Each Movie](Radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie "wikilink") is a great source for making sure your file and folder structure will work great.
+  - The Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS** is a great source for making sure your file and folder structure will work great.
 
 ## How can I mass delete movies from the wanted list?
 
-\* Use Movie Editor -\> Select movies you want to delete -\> Delete
+- Use Movie Editor -\> Select movies you want to delete -\> Delete
 
 ## Why doesn't Radarr work behind a reverse proxy 
-\* Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
+- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
 ```
 proxy_http_version 1.1;
 proxy_set_header Upgrade $http_upgrade; 
@@ -145,16 +141,22 @@ proxy_set_header Connection $http_connection;
 
 ## How do I update Radarr?
 
-\# Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
+- Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
-1.  Under the Development section change the branch name to `master` or `develop`
-2.  Save
+1.  Under the Updates section change the branch name to `master` or `develop`
+1.  Save
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
   - <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This is currently v3. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
-  - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This is currently v3. This version will receive updates either weekly or biweekly depending on development. **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
-  - <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately. **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
+  - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This is currently v3. This version will receive updates either weekly or biweekly depending on development. 
+>   **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
+{.is-warning}
+
+  - <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately. 
+>   **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
+{.is-warning}
+
 
   - Note: If your install is through Docker append `:release`, `:latest`, or `:testing` to the end of your container tag depending on who makes your builds.
 
