@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-28T02:49:40.214Z
+date: 2021-05-28T16:35:45.343Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -160,10 +160,10 @@ proxy_set_header Connection $http_connection;
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                  | [Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fradarr%2Frelease%2FVERSION.json) | [Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fradarr%2Ftesting%2FVERSION.json) | [Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fradarr%2Fnightly%2FVERSION.json) |
+|                  | [Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | [Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) | [Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) |
 
 
-| Release Channel Type                                          | Branch: master (stable) (v3.1) | Branch: develop (beta) (v3.1) | Branch: nightly (unstable) (v3.2)            |
+| Release Channel Type                                          | Branch: master (stable) (v3.2.1) | Branch: develop (beta) (v3.2.1) | Branch: nightly (unstable) (v3.2)            |
 | ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
 | [hotio](https://hub.docker.com/r/hotio/radarr)                | `hotio/radarr:release`         | `hotio/radarr:testing`        | If you have to ask, you should not be on it. |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr) | `linuxserver/radarr:latest`    | `linuxserver/radarr:develop`  | If you have to ask, you should not be on it. |
@@ -194,11 +194,10 @@ If Docker:
   - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
       - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
-  - **May 4 2021 Update**
-      - `3.1.1` has been released as master/stable
-      - For those on nightly and are still on `3.1.1.4948` or lower you can safely downgrade to master
+  - **May 28 2021 Update**
+      - `3.2.1` has been released as master/stable
+      - For those on nightly and are still on `3.2.1.5068` or lower you can safely downgrade to master
           - Same for develop.
-      - For those who are on nightly and are updated to `3.1.1.4957`, `3.2.0.4960`, or newer; you cannot downgrade as there was a DB migration in `3.1.1.4957` and you'd need to rollback your database to the backup prior to that update in order to jump to master
 
 ## How does radarr handle foreign movies or foreign titles?
 
@@ -460,22 +459,21 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Jackett shows more results than  when manually searching
   
-This is usually due to  searching Jackett differently than you do. [ See this troubleshooting article for further information]({{{ARRNAME}}}_Troubleshooting#Searches_Indexers_and_Trackers "wikilink").
+This is usually due to  searching Jackett differently than you do. [ See this troubleshooting article for further information](Radarr_Troubleshooting#Searches_Indexers_and_Trackers "wikilink").
 
 ## Weird UI Issues
 
-<span id="weird_ui_issues"><small>[anchor](#wweird_ui_issues "wikilink")</small></span>  
-\* If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](Clear_Cache_Cookies_and_Local_Storage "wikilink") wiki article.
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](Clear_Cache_Cookies_and_Local_Storage "wikilink") wiki article.
 
 ## Web Interface Only Loads at localhost on Windows
 
-\* If you can only reach your web interface at <http://localhost>:/ or <http://127.0.0.1>:, you need to run  as administrator at least once, maybe even always.
+- If you can only reach your web interface at http://localhost:7878/ or http://127.0.0.1:7878/, you need to run  as administrator at least once.
 
 ## Permissions
 
-\*  will need to move files away from where the downloader puts them into the final location, so this means that  will need to read/write to both the source and the destination directory and files.
+- Radarr will need to move files away from where the downloader puts them into the final location, so this means that  will need to read/write to both the source and the destination directory and files.
 
-  - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and . In umask notation, that would be `002`.
+- On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and . In umask notation, that would be `002`.
 
 ## System & Logs loads forever
 
@@ -485,8 +483,8 @@ It's the easy-privacy blocklist. They basically block any url with /api/log? in 
 
 Some sites cannot be logged into automatically and require you to login manually then give the cookies to  to work. This page describes how you do that.
 
-  - Chrome ![Chrome cookies](chrome_cookies.png "Chrome cookies")
-  - Firefox ![Firefox cookies](Firefox_cookies.png "Firefox cookies")
+  - [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
+  - [Firefox cookies](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
 
 ## Unpack Torrents
  
@@ -494,42 +492,28 @@ Most torrent clients doesn’t come with the automatic handling of compressed ar
 
 ## uTorrent is no longer working 
 
-1.  Ensure the Web UI is enabled
+- Ensure the Web UI is enabled
 
-![Turn on Web UI](Utorrent-webui-setting.png "Turn on Web UI")
+- Ensure that the Alt Listening Port (Advanced -\> Web UI) is not the same as the Listening Port (Connections)
 
-<li>
+- We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-Ensure that the Alt Listening Port (Advanced -\> Web UI) is not the same as the Listening Port (Connections)
 
-</li>
+## Does Radarr require a SABnzbd post-processing script to import downloaded episodes?
 
-<li>
-
-We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
-
-</li>
-
-![utorrent-webui-settings2.png](utorrent-webui-settings2.png "utorrent-webui-settings2.png")  
-![utorrent-webui-settings3.png](utorrent-webui-settings3.png "utorrent-webui-settings3.png")
-
-</ol>
-
-## Does  require a SABnzbd post-processing script to import downloaded episodes?
-
-No.  will talk to your download client to determine where the files have been downloaded and will import them automatically. If  and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so  knows where to find the files.
+No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If  and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so  knows where to find the files.
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
- was unable to read your config file on start-up as it became corrupted somehow. In order to get  back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start  and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
+ - Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get  back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start  and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-Your download client stopped working and you're getting an error like \`Localhost is an invalid certificate\`?
+- Your download client stopped working and you're getting an error like \`Localhost is an invalid certificate\`?
 
- now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then  will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
+- Radarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then  will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
-If your download client and  are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
+- If your download client and  are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
 ## VPNs, Jackett, and the \* ARRs
 
@@ -561,7 +545,7 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 
 This is expected. This is how the Torrent Process works with .
 
-1.   will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+1.   will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 2.   will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 3.  Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within  under the specific download client). When files are imported to your media folder  will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
       - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then  will fall back and copy the file.
