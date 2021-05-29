@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-28T17:07:33.679Z
+date: 2021-05-29T16:01:29.963Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -22,10 +22,12 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - Put another way, Radarr will only find movies that are newly uploaded to your indexers. It will not actively try to find movies you want that were uploaded in the past.
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
+
 ## What is Minimum Availability?
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
 - **Released**: Radarr shall consider movies available as soon as the blu-ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` days.
+
 ## How are possible downloads compared?
 
 **Generally Quality Trumps All**
@@ -54,7 +56,7 @@ The current logic [can be found here](https://github.com/Radarr/Radarr/blob/deve
 
 ## Why did the GUI / UI Change? Can it be changed back?
 
-- Radarr is a fork of [Sonarr](Sonarr) which has the new UI.
+- Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
 
 - No it cannot be changed back. No it will not be changed back.
 - You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
@@ -70,7 +72,7 @@ The current logic [can be found here](https://github.com/Radarr/Radarr/blob/deve
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
 ## Can all my movie files be stored in one folder?
-- Not yet and the reason is that Radarr is a fork of [sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
+- Not yet and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
 
 - If you're looking to moving all your movies from one folder to individual folders check Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS**
 
