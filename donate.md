@@ -2,7 +2,7 @@
 title: Donate
 description: 
 published: true
-date: 2021-05-30T17:43:32.301Z
+date: 2021-05-30T17:52:47.790Z
 tags: needs-love
 editor: markdown
 dateCreated: 2021-05-30T17:43:32.301Z
@@ -14,4 +14,15 @@ We welcome any and all forms of contribution, but monitary contributions are esp
 
 We currently use OpenCollective to accept donations on all projects, this allows us to provide a tranparent view to our supporters on how we are utilizing funds. 
 
+Benefits
+- Donate Role on Discord, giving you access to dev chat
+- Priority Support. Yes, we have favorites and you are now one!
+- Early release and roadmap announcements through OpenCollective
+
 (links and logos here)
+
+## Lidarr
+## Radarr
+## Readarr
+## Sonarr
+## Prowlarr
