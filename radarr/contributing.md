@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-05-17T02:03:11.827Z
+date: 2021-05-30T13:18:24.801Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -48,7 +48,7 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
    ```
    yarn start
    ``` 
-1. First `Build` the solution in Visual Studio, this will ensure all proects correctly built and dependencies restored
+1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 > Ensure startup project is set to `Radarr.Console` and    framework to `net5.0`
 {.is-info}
 
