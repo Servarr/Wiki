@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-05-30T13:18:24.801Z
+date: 2021-05-30T16:12:12.123Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -75,5 +75,17 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
   - `fix-bug` (Good)
   - `patch` (Bad)
   - `develop` (Bad)
+  
+### Unit Testing
+
+Radarr utilizes nunit for its unit, integration, and automation test suite. 
+
+#### Running Tests
+
+#### Writing Tests
 
 If you have any questions about any of this, please let us know.
+
+## Translation
+
+Radarr uses a self hosted open access [Weblate](https://translate.servarr.com) instance to manage its json translation files.
