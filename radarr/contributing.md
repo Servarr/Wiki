@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-05-30T16:12:12.123Z
+date: 2021-05-30T16:36:29.900Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -88,4 +88,22 @@ If you have any questions about any of this, please let us know.
 
 ## Translation
 
-Radarr uses a self hosted open access [Weblate](https://translate.servarr.com) instance to manage its json translation files.
+Radarr uses a self hosted open access [Weblate](https://translate.servarr.com) instance to manage its json translation files. These files are stored in the repo at `src/NzbDrone.Core/Localization`
+
+### Adding a Language
+
+Adding translations to Radarr requires two steps
+- Adding the Language to weblate
+- Adding the Language to Radarr codebase
+
+### Adding Translation Strings in Code
+
+Backend Strings
+
+Frontend Strings
+
+### Contributing to an Existing Translation
+
+Weblate handles synchronization and translation of strings for all languages other than English. Editing of translated strings and translating existing strings for supported languages should be performed there for the Radarr project.
+
+The English translation, `en.json`, serves as the source for all other translations and is managed on GitHub repo.
