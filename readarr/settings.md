@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-05-30T14:05:00.671Z
+date: 2021-05-30T14:06:41.153Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -113,6 +113,8 @@ Author Folder Format
 > You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points.
   
 - If you would like additional files to be imported, check this box.
+- (Advanced Option, only shown when box is checked) Enter the extensions to move with files, separated by commas. Some good examples are `jpg,nfo,cue`.
+  
 ## Profiles
 ### Quality Profiles
 
