@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-05-27T16:47:28.054Z
+date: 2021-05-30T14:05:00.671Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -13,6 +13,8 @@ dateCreated: 2021-05-27T16:47:28.054Z
 ## Media Management
 
 ### Book File Naming
+
+![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
 
 If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.
 
@@ -94,4 +96,29 @@ Author Folder Format
 
 - (Advanced Option) This is where you will set the naming convention for the author folder name.
 
+### Folders
   
+![mm_folders.png](/assets/readarr/mm_folders.png)
+  
+- (Advanced Option) Select the box to create empty author folders when a new author is added.
+- (Advanced Option) Select the box to delete empty author folders if there are no books in it.
+  
+> One of those boxes can be checked, but they should not BOTH be checked.
+  
+![mm_importing.png](/assets/readarr/mm_importing.png)
+  
+- (Advanced Option) Enter the minimum free space for the drive to have before importing stops.
+- (Advanced Option) Check this box to use Hardlinks instead of Copies (for Torrents).
+  
+> You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points.
+  
+- If you would like additional files to be imported, check this box.
+## Profiles
+### Quality Profiles
+
+![qualityprofile.png](/assets/readarr/qualityprofile.png)
+
+- On a new quality profile, enter a name for it.
+- If you want Readarr to keep grabbing new versions until it hits your favorite format of ebook, check the box.
+- If you checked the box, select your final "best" version of ebooks from the drop-down.
+- 
