@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-05-27T16:35:33.598Z
+date: 2021-05-31T23:12:35.913Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -100,6 +100,7 @@ location /prowlarr {
   proxy_set_header Upgrade $http_upgrade;
   proxy_set_header Connection $http_connection;
 }
+
   location /prowlarr/api { auth_request off;
   proxy_pass       http://127.0.0.1:9696/prowlarr/api;
 }
