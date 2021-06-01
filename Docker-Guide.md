@@ -1,9 +1,9 @@
 ---
 title: Docker Guide
-description: 
+description:
 published: true
 date: 2021-05-16T21:17:20.058Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
 ---
@@ -14,7 +14,6 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
-
 
 ## Introduction
 
@@ -64,7 +63,8 @@ It is also important to remember that you’ll need to setup or re-configure pat
 What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
 
 This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies` and `music` subfolders, this is your library and what you’d pass to Plex, Kodi, or Emby.
-```
+
+```none
     data
     ├── torrents
     │  ├── movies
@@ -79,40 +79,48 @@ This example `data` folder has subfolders for torrents and usenet and each of th
         ├── music
         └── tv
 ```
+
 The path for each Docker container can be as specific as needed while still maintaining the correct structure:
 
 #### Torrents
-```
+
+```none
     data
     └── torrents
         ├── movies
         ├── music
         └── tv
 ```
+
 Torrents only needs access to torrent files, so pass it `-v /host/data/torrents:/data/torrents`. In the torrent software settings, you’ll need to reconfigure paths and you can sort into subfolders like`/data/torrents/{tv|movies|music}`.
 
 #### Usenet
-```
+
+```none
     data
     └── usenet
         ├── movies
         ├── music
         └── tv
 ```
+
 Usenet only needs access to usenet files, so pass it `-v /host/data/usenet:/data/usenet`. In the usenet software settings, you’ll need to reconfigure paths and you can sort into subfolders like`/data/usenet/{tv|movies|music}`.
 
 #### Media Server
-```
+
+```none
     data
     └── media
         ├── movies
         ├── music
         └── tv
 ```
+
 Plex/Emby only needs access to your media library, so pass `-v /host/data/media:/data/media`, which can have any number of subfolders like `movies`, `kids movies`, `tv`, `documentary tv` and/or `music` as sub folders.
 
 #### Sonarr, Radarr and Lidarr
-```
+
+```none
     data
     ├── torrents
     │  ├── movies
@@ -127,6 +135,7 @@ Plex/Emby only needs access to your media library, so pass `-v /host/data/media:
         ├── music
         └── tv
 ```
+
 Sonarr, Radarr and Lidarr get everything using `-v /host/data:/data` because the *download* folder(s) and *media* folder will look like and *be* one file system. Hard links will work and moves will be atomic, instead of copy + delete.
 
 ### Issues
@@ -148,7 +157,7 @@ This is the best option for most users, it lets you control and configure many c
 > The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
 {.is-warning}
 
-```
+```yml
     # sonarr
     Sonarr:
         image: hotio/sonarr
@@ -173,7 +182,7 @@ This is the best option for most users, it lets you control and configure many c
 
     # sabnzbd
     SABnzbd:
-        image: binhex/arch-sabnzbd
+        image: hotio/sabnzbd
         volumes:
             - /path/to/config/sabnzbd:/config
             - /host/data/usenet:/data/usenet
@@ -184,7 +193,7 @@ This is the best option for most users, it lets you control and configure many c
 
     # plex
     Plex:
-        image: binhex/arch-plex
+        image: hotio/plex
         volumes:
             - /path/to/config/plex:/config
             - /host/data/media:/data/media
@@ -194,22 +203,27 @@ This is the best option for most users, it lets you control and configure many c
             - PGID=321
             - UMASK=002
 ```
+
 #### Update all images and containers
-```
+
+```shell
     docker-compose pull
     docker-compose up -d
 ```
+
 #### Update individual image and container
-```
+
+```shell
     docker-compose pull NAME
     docker-compose up -d NAME
 ```
+
 ### Docker Run
 
 > Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
 {.is-warning}
 
-```
+```shell
     # sonarr
     docker run -v /path/to/config/sonarr:/config \
                -v /host/data:/data \
@@ -226,18 +240,20 @@ This is the best option for most users, it lets you control and configure many c
     docker run -v /path/to/config/sabnzbd:/config \
                -v /host/data/usenet:/data/usenet \
                -e PUID=333 -e PGID=321 -e UMASK=002 \
-               binhex/arch-sabnzbd
+               hotio/sabnzbd
 
     # plex
     docker run -v /path/to/config/plex:/config \
                -v /host/data/media:/data/media \
                -e PUID=444 -e PGID=321 -e UMASK=002 \
-               binhex/arch-plex
+               hotio/plex
 ```
+
 ### Systemd
 
 I don’t run a full Docker setup, so I manage my few Docker containers with individual systemd service files. It standardizes control and makes dependencies simpler for both native and docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
-```
+
+```shell
     # /etc/systemd/system/thing.service
     [Unit]
     Description=Thing
@@ -257,64 +273,83 @@ I don’t run a full Docker setup, so I manage my few Docker containers with ind
     [Install]
     WantedBy=default.target
 ```
+
 ## Helpful commands
 
 ### List running containers
-```
+
+```shell
     docker ps
 ```
+
 ### Shell *inside* a container
-```
+
+```shell
     docker exec -it CONTAINER_NAME /bin/bash
 ```
+
 For more information, see the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) documentation.
 
 ### Prune docker
-```
+
+```shell
     docker system prune --all --volumes
 ```
+
 Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
 
 ### Get docker run command
 
 Getting the `docker run` command from GUI managers can be hard, this docker image makes it easy for a running container ([source](https://stackoverflow.com/questions/32758793/how-to-show-the-run-command-of-a-docker-container)).
-```
+
+```shell
     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike CONTAINER_NAME
 ```
+
 ### Get docker-compose
 
 > Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/Misc/how-to-provide-a-docker-compose/)
 {.is-info}
 
-
 Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of \`docker ps\`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
-```
+
+```shell
     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock red5d/docker-autocompose CONTAINER_NAME [ANOTHER_CONTAINER_NAME] ... [ONE_MORE_CONTAINER_NAME]
 ```
+
 ### Troubleshoot networking
 
 Most Docker images don’t have many useful tools in them for troubleshooting, but you can [attach a network troubleshooting type image](https://success.docker.com/article/troubleshooting-container-networking) to an existing container to help with that.
-```
+
+```shell
     docker run -it --rm --network container:CONTAINER_NAME nicolaka/netshoot
 ```
+
 ### Recursively chown user and group
-```
+
+```shell
     chown -R user:group /some/path/here
 ```
+
 ### Recursively chmod to 775/664
-```
+
+```shell
     chmod -R a=,a+rX,u+w,g+w /some/path/here
               ^  ^    ^   ^ adds write to group
               |  |    | adds write to user
               |  | adds read to all and execute to all folders (which controls access)
               | sets all to `000`
 ```
+
 ### Find UID/GID for user
-```
+
+```shell
     id <username>
 ```
+
 ### Examine files for hard links
-```
+
+```shell
     ls -alhi
     42207934 -rw-r--r--  2 user group    0 Sep 11 11:55 hardlink
     42207936 -rw-r--r--  1 user group    0 Sep 11 11:55 nohardlinks
@@ -330,16 +365,17 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
     Change: 2020-09-11 11:55:49.706660476 -0500
      Birth: 2020-09-11 11:55:43.803327144 -0500
 ```
+
 ## Interesting docker images
 
--   [rasmunk/sshfs](https://hub.docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/docker-volume-sshfs](https://github.com/rasmunk/docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.docker.com/p/vieux/sshfs).
--   [hotio’s](https://hub.docker.com/u/hotio) [sonarr](https://hub.docker.com/r/hotio/sonarr), [radarr](https://hub.docker.com/r/hotio/radarr) and [lidarr](https://hub.docker.com/r/hotio/lidarr) images let you run the built in version *or* specify an alternative via environment variable. The documentation and Dockerfile also don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
--   [hotio’s](https://hub.docker.com/u/hotio) [ombi](https://hub.docker.com/r/hotio/ombi), [jackett](https://hub.docker.com/r/hotio/jackett), [nzbhydra2](https://hub.docker.com/r/hotio/nzbhydra2) and [bazarr](https://hub.docker.com/r/hotio/bazarr) are useful too, but don’t really require any special permissions or paths.
--   [hotio’s](https://hub.docker.com/u/hotio) [unpackerr](https://hub.docker.com/r/hotio/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
--   [binhex’s](https://hub.docker.com/u/binhex) [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [sabnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/) and [nzbget](https://hub.docker.com/r/binhex/arch-nzbget/).
--   [binhex’s](https://hub.docker.com/u/binhex) [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/), [radarr](https://hub.docker.com/r/binhex/arch-radarr/) and [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/) images suggest default paths that don’t allow for hard linking, instead follow the process described above and pass in a single volume.
--   [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained.
--   [pyouroboros/ouroboros](https://hub.docker.com/r/pyouroboros/ouroboros) or [containrrr/watchtower](https://hub.docker.com/r/containrrr/watchtower) automatically update your running Docker containers to the latest available image. These are not recommended if you use Docker Compose.
+- [rasmunk/sshfs](https://hub.docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/docker-volume-sshfs](https://github.com/rasmunk/docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.docker.com/p/vieux/sshfs).
+- [hotio’s](https://hub.docker.com/u/hotio) [sonarr](https://hub.docker.com/r/hotio/sonarr), [radarr](https://hub.docker.com/r/hotio/radarr) and [lidarr](https://hub.docker.com/r/hotio/lidarr) images let you run the built in version *or* specify an alternative via environment variable. The documentation and Dockerfile also don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
+- [hotio’s](https://hub.docker.com/u/hotio) [ombi](https://hub.docker.com/r/hotio/ombi), [jackett](https://hub.docker.com/r/hotio/jackett), [nzbhydra2](https://hub.docker.com/r/hotio/nzbhydra2) and [bazarr](https://hub.docker.com/r/hotio/bazarr) are useful too, but don’t really require any special permissions or paths.
+- [hotio’s](https://hub.docker.com/u/hotio) [unpackerr](https://hub.docker.com/r/hotio/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
+- [binhex’s](https://hub.docker.com/u/binhex) [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [sabnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/) and [nzbget](https://hub.docker.com/r/binhex/arch-nzbget/).
+- [binhex’s](https://hub.docker.com/u/binhex) [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/), [radarr](https://hub.docker.com/r/binhex/arch-radarr/) and [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/) images suggest default paths that don’t allow for hard linking, instead follow the process described above and pass in a single volume.
+- [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained.
+- [pyouroboros/ouroboros](https://hub.docker.com/r/pyouroboros/ouroboros) or [containrrr/watchtower](https://hub.docker.com/r/containrrr/watchtower) automatically update your running Docker containers to the latest available image. These are not recommended if you use Docker Compose.
 
 ## Custom Docker Network and DNS
 
