@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-06-05T19:11:58.035Z
+date: 2021-06-05T19:30:28.156Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -10,7 +10,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 
 ![128.png](/assets/prowlarr/128.png)
 
-Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
+Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack, to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per-app Indexer setup required (we do it all).
 
 ## Getting Started
 - [Installation Guide](/prowlarr/installation)
