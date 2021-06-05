@@ -2,7 +2,7 @@
 title: Quick Start Guide
 description: 
 published: true
-date: 2021-05-25T14:47:38.608Z
+date: 2021-06-05T17:21:47.927Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -88,6 +88,8 @@ First, add a user account. The account does not need "make changes" access.
 ![calibreacct.png](/assets/readarr/calibreacct.png)
 
 Then you will need to restart Calibre. Once back in, configure and start up the content server. It should show you that it's running. Set it to run automatically on startup. After saving, you will again need to restart Calibre. Make sure the sever is started when it comes back up, then you can move to the next section.
+
+> You must select "Require username and password to access the content server" in order for Readarr to properly work. If you do not, you will get an error that says "Anonymous users are not allowed to make changes" when Readarr import a book!
 
 ![calibreserver.png](/assets/readarr/calibreserver.png)
 
