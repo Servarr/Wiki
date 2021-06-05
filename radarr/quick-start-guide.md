@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-05-17T01:58:36.390Z
+date: 2021-06-05T21:16:47.933Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:51:10.479Z
@@ -45,7 +45,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 5.  *(Advanced Option) This is where you will set the naming convention for the folder that contains the video file.*
 
   
-> If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Radarr/V3/Radarr-recommended-naming-scheme/).
+> If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/).
 {.is-info}
 
 
@@ -103,7 +103,7 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 Here you’re able to change/fine tune the min and max size of your wanted media files (when using usenet keep in mind the RAR/PAR2 files)
 
-> If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/V3/Radarr-Quality-Settings-File-Size/) for a tested example.
+> If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/) for a tested example.
 {.is-info}
 
 
