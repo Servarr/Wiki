@@ -2,7 +2,7 @@
 title: Quick Start Guide
 description: 
 published: true
-date: 2021-05-30T00:00:33.010Z
+date: 2021-05-30T00:00:37.580Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
