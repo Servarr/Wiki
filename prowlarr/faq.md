@@ -2,7 +2,7 @@
 title: FAQ
 description: 
 published: true
-date: 2021-06-05T13:59:03.261Z
+date: 2021-06-05T17:18:27.140Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -193,36 +193,37 @@ It's the easy-privacy blocklist. They basically block any url with /api/log? in 
 Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. This page describes how you do that.
 
 Chrome
-Chrome cookies
-Chrome cookies
-Firefox
-Firefox cookies
-Firefox cookies
-Unpack Torrents
 
-Most torrent clients don’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend unpackerr.
+![faq_2_cookies.png](/faq_2_cookies.png)
+
+Firefox
+
+![faq_3_cookies.png](/faq_3_cookies.png)
+
+## Unpack Torrents
+
+Most torrent clients don’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
 
 ## uTorrent is no longer working
 
+-  Ensure the Web UI is enabled
 
-Ensure the Web UI is enabled
-Turn on Web UI
-Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
-We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
+![faq_4_utorrent.png](/faq_4_utorrent.png)
 
+- Turn on Web UI
 
-## Does Prowlarr require a SABnzbd post-processing script to import downloaded episodes?
+![faq_5_utorrent.png](/faq_5_utorrent.png)
 
+- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections). We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-No. Prowlarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If Prowlarr and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so Prowlarr knows where to find the files.
+![faq_6_utorrent.png](/faq_6_utorrent.png)
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
 
-Prowlarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Prowlarr back online, you will need to delete .xml in your | AppData Folder, once deleted start Prowlarr and it will start on the default port (9696), you should now re-configure any settings you configured on the General Settings page.
+Prowlarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Prowlarr back online, you will need to delete `.xml` in your AppData Folder, once deleted start Prowlarr and it will start on the default port (9696), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
-
 
 Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
@@ -230,12 +231,11 @@ Prowlarr now validates SSL certificates. If there is no SSL certificate set in t
 
 If your download client and Prowlarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
-## VPNs, Jackett, and the * ARRs
-
+## VPNs, Prowlarr, and the * ARRs
 
 Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-In other words, putting the * Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the * Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too
+In other words, putting the * Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the * Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too.
 
-In addition, some private trackers <b>ban</b> for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.
+In addition, some private trackers <b>ban</b> for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
 
