@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-06T14:13:58.491Z
+date: 2021-06-06T14:34:41.225Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -14,22 +14,17 @@ Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows 
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
 1. Download the latest version of Prowlarr from https://github.com/Prowlarr/Prowlarr/releases for your architecture
 1. Run the installer
 1. Browse to http://localhost:9696 to start using Prowlarr
 
 # OSX
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
   
 1. Download the latest version of Prowlarr from https://github.com/Prowlarr/Prowlarr/releases
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Browse to http://localhost:9696 to start using Prowlarr
+
 # Linux
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
   
 You'll need to install the binaries using the below commands.
 > Note: This assumes you will run as the user `prowlarr` and group `prowlarr`.
@@ -69,17 +64,17 @@ EOF
 
   
 # Docker
-> Prowlarr is in beta testing and does not have a formal stable release.
-{.is-warning}
   
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
-
 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
 {.is-info}
 
 ## Install Prowlarr
 There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+
+> Temporarily, you will need to use the `:nightly` tag with docker images, as there is no `master` branch.
+{.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
 {.links-list}
