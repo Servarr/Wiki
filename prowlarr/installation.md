@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-06T03:33:41.644Z
+date: 2021-06-06T14:13:58.491Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -94,7 +94,7 @@ There are many ways to manage Docker images and containers too, so installation 
 ```
 location /prowlarr {
   proxy_pass        http://127.0.0.1:9696/prowlarr;
-  proxy_set_header Host $proxy_host;
+  proxy_set_header Host $host;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header X-Forwarded-Proto $scheme;
   proxy_redirect off;
