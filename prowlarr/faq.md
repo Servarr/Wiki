@@ -2,7 +2,7 @@
 title: FAQ
 description: 
 published: true
-date: 2021-06-05T17:18:32.887Z
+date: 2021-06-06T11:22:57.973Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -239,3 +239,6 @@ In other words, putting the * Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind 
 
 In addition, some private trackers <b>ban</b> for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
 
+## Can I use flaresolverr indexers?
+
+At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
