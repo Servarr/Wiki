@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-06T16:28:06.932Z
+date: 2021-06-06T16:35:04.772Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -170,7 +170,23 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 ### Analytics
 
+![general_analytics.png](/assets/prowlarr/general_analytics.png)
+
+Check the box to help the Prowlarr dev team gather statistics on install types, version, browser, and other information so that they can prioritize development and fixes properly.
+
 ### Updates
+
+![general_updates.png](/assets/prowlarr/general_updates.png)
+
+Select the development branch you would like to use here. (Advanced Option) Valid options are `master`, `develop`, and `nightly` and possibly other temporary testing branches as the dev group determines.
+
+> In general, you may not move back branches from nightly to develop, or develop to master, or you may break your Prowlarr installation.
 
 ### Backups
 
+![general_backups.png](/assets/prowlarr/general_backups.png)
+
+- (Advanced Option) Folder is the folder where backups are stored.
+- (Advanced Option) Interval is the number of days between automatic backups.
+- (Advanced Option) This is the number of backups that are retained before being cleaned up.
+> Manual backups are retained forever, stored in the same folder, and are named differently. It's always advised to make a backup manually before doing anything like updates or branch changes.
