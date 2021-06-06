@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-06T01:24:48.873Z
+date: 2021-06-06T03:33:41.644Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -16,7 +16,7 @@ Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows 
 
 > Prowlarr is in beta testing and does not have a formal stable release.
 {.is-warning}
-1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v1-windows for your architecture
+1. Download the latest version of Prowlarr from https://github.com/Prowlarr/Prowlarr/releases for your architecture
 1. Run the installer
 1. Browse to http://localhost:9696 to start using Prowlarr
 
@@ -24,7 +24,7 @@ Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows 
 > Prowlarr is in beta testing and does not have a formal stable release.
 {.is-warning}
   
-1. Download the latest version of Prowlarr from https://prowlarr.com/#downloads-v1-macos
+1. Download the latest version of Prowlarr from https://github.com/Prowlarr/Prowlarr/releases
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Browse to http://localhost:9696 to start using Prowlarr
 # Linux
@@ -37,7 +37,7 @@ You'll need to install the binaries using the below commands.
 {.is-info}
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- ` wget --content-disposition 'http://prowlarr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=x64'`
+ ` wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64` 
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
@@ -84,7 +84,7 @@ There are many ways to manage Docker images and containers too, so installation 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
 {.links-list}
 
-- [linuxserver/prowlarr](https://github.com/linuxserver/docker-prowlarr/tree/nightly)
+- [linuxserver/prowlarr](https://github.com/linuxserver/docker-prowlarr/tree/develop)
 {.links-list}
 
 # NGINX Reverse Proxy Configuration
