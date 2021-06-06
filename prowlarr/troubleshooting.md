@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: 
 published: true
-date: 2021-06-05T19:26:30.775Z
+date: 2021-06-06T14:05:33.587Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T17:31:43.983Z
@@ -113,3 +113,11 @@ In the event of a migration issue there is not much you can do immediately, if t
 Grab the latest release from our website.
 
 Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run Prowlarr as you normally would.
+
+## NGINX errors
+
+In your Prowlarr setup, you will need this line:
+
+`proxy_set_header Host $host;`
+
+If you have any different `proxy_set_header` you must replace it with the line above.
