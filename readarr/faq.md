@@ -2,7 +2,7 @@
 title: FAQ
 description: 
 published: true
-date: 2021-05-25T20:01:13.319Z
+date: 2021-06-06T11:06:23.065Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -157,4 +157,11 @@ No, nor should you through any SQL hackery.  The refresh books task queries the 
 
 A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to <code>Manual</code>.  Do not change this to <code>Never</code> unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr.  If you delete book files manually or a third party program, do not set this to <code>Never</code>.
 
+## Can I have BOTH an ebook and an audiobook version of the same book?
+
+No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4k versions of their media).
+
+## Do I need to use Calibre?
+
+No. In general Calibre offers some further enhancement, such as the ability to auto-convert ebooks to another format specific to your e-reader's capabilities, and also to connect to that e-reader. But if you weren't running Calibre prior to installing Readarr, then it's probably going to be of limited added benefit to you to install it, and it's a very large program.
 
