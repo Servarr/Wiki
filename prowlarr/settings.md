@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-06T15:08:17.882Z
+date: 2021-06-06T16:28:06.932Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -58,3 +58,119 @@ All programs you can add are listed. You should only add programs you currently 
 - Enter the API Key of your program here. You can get this from your program in the `Settings` / `General` tab, and copy/paste it here.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
+
+## Download Clients (for In-Prowlarr searches only!)
+
+> If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+
+Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+
+![downloadclients.png](/assets/prowlarr/downloadclients.png)
+
+Prowlarr supports integration with the following Usenet download clients:
+
+![usenetclients.png](/assets/prowlarr/usenetclients.png)
+
+And the following Torrent clients:
+
+![torrentclients.png](/assets/prowlarr/torrentclients.png)
+
+Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+
+![nzbget.png](/assets/prowlarr/nzbget.png)
+
+- Put in a friendly name for the client entry
+- Click to enable or disable this download client
+- Enter the hostname or IP address of the download client
+- Enter the port of the download client
+- Check this box if you use SSL to connect to your client.
+
+> If this is an IP address or localhost, you DO NOT HAVE SSL. DO NOT CHECK THIS BOX.
+
+- (Advanced Option) If you're using a reverse proxy, enter the URL Base for the download client.
+- Enter a username if you have one to connect to your client.
+- Enter a password if you have one to connect to your client.
+- Enter a category to be used with the download client for when you do grabs DIRECTLY from Prowlarr.
+- Enter a priority for when you do grabs DIRECTLY from Prowlarr.
+- Check this box to add downloads in a Paused state.
+- (Advanced Option) Enter the client priority.
+>Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
+
+Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
+
+## Connect
+
+Connections are used for notifications from Prowlarr.
+
+![settings_connect.png](/assets/prowlarr/settings_connect.png)
+
+Click on `Settings` -> `Connect`, and then click the `+` to add a new connection.
+
+There are many notification options available:
+
+![settings_notifications.png](/assets/prowlarr/settings_notifications.png)
+
+Each one has different configuration options. If you're using notifications within any of the Applications, these should be set up the same way.
+
+## Tags
+
+Here is where you can maintain any existing tags you've used.
+
+Click on `Settings` -> `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
+
+## General
+
+Here is where you will change generalized application settings such as port and logging level.
+
+Click on `Settings` -> `General`.
+
+> A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are hidden.
+
+### Host
+
+![general_host.png](/assets/prowlarr/general_host.png)
+
+- (Advanced Option) Bind Address - Leave this as `*` unless you need to change it.
+- Port Number is the port that Prowlarr runs on. It must be unique and defaults to 9696.
+- Enter a URL base here if you are using a reverse proxy.
+- (Advanced Option) Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked.
+- Check this box if you want a (default) browser window to be launched when Prowlarr starts.
+
+### Security
+
+![general_security.png](/assets/prowlarr/general_security.png)
+
+- If you want to require a username/password, change this authentication box and enter them.
+- Your API key is used by outside apps accessing Prowlarr. 
+> This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
+- This changes how certificate validation is performed.
+
+### Proxy
+
+![general_proxy.png](/assets/prowlarr/general_proxy.png)
+
+- If you wish to use a proxy for all calls that Prowlarr makes, cehck the "Use Proxy" box.  When you do that, the next set of options will appear.
+- Proxy Types supported are HTTP(s), Socks4, or Socks5.
+- Hostname is the proxy hostname of your provider.
+- Port is the port to use for proxy connections from your provider.
+- Username is your proxy username from your provider.
+- Password is your proxy password from your provider.
+- If you want to bypass the proxy for some addresses, you can enter that list here.
+- Check the box to bypass the proxy for local addresses.
+
+### Logging
+
+![general_logging.png](/assets/prowlarr/general_logging.png)
+
+The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
+
+- Info logging is the minimum logging level. Good for day-to-day operations, but not sufficient for reporting errors to the dev team.
+- Debug logging is a mid-range logging level. Good for some error resolution, but still not extremely detailed.  Contains all Info level logging as well.
+- Trace logging is extremely detailed, and what the devs want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
+
+### Analytics
+
+### Updates
+
+### Backups
+
