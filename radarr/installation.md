@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-05-27T16:35:51.521Z
+date: 2021-06-07T17:16:29.148Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -28,32 +28,37 @@ It's therefore advisable to install Radarr as a system tray application if the u
 1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-macos
 1. Open the archive and drag the Radarr icon to your Application folder.
 1. Browse to http://localhost:7878 to start using Radarr
-# Linux
+
+## Linux
+  
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `radarr` and group `media`.
+> Note: This assumes you will run as the user `radarr` and group `radarr`.
 > This will download the `x64` copy of radarr and install it into `/opt`
 {.is-info}
-- Ensure you have the required prequisite packages: `sudo apt install curl mediainfo sqlite3`
+
+- Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- ` wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
-  - AMD64 use `arch=x64` 
+ `wget --content-disposition 'http://radarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
+  - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
 - Uncompress the files: `tar -xvzf Radarr*.linux*.tar.gz`
 - Move the files to `/opt/` `sudo mv Radarr/ /opt`
 - Ensure ownership of the binary directory.
-  `sudo chown radarr:radarr /opt/Radarr`
-- Configure systemd so Radarr can autostart at boot.
-```
+  `sudo chown radarr:prowlarr /opt/Prowlarr`
+- Configure systemd so radarr can autostart at boot.
+> The below systemd creation script will use a data directory of `/data/.config/Radarr`.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
+{.is-warning}
+
+```bash
     cat > /etc/systemd/system/radarr.service << EOF
 [Unit]
 Description=Radarr Daemon
 After=syslog.target network.target
 [Service]
 User=radarr
-Group=media
+Group=radarr
 Type=simple
-UMask=002
 
 ExecStart=/opt/Radarr/Radarr -nobrowser -data=/data/.config/Radarr/
 TimeoutStopSec=20
@@ -63,10 +68,10 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 ```
+
 - Reload systemd: `systemctl -q daemon-reload`
 - Enable the Radarr service: `systemctl enable --now -q radarr`
 
-  
 # Docker
 The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
