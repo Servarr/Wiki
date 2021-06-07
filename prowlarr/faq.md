@@ -2,7 +2,7 @@
 title: FAQ
 description: 
 published: true
-date: 2021-06-07T17:56:17.623Z
+date: 2021-06-07T17:58:08.198Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -34,7 +34,7 @@ Yes.
 {.is-warning}
 
 
-  - Note: If your install is through Docker append `:release`, `:latest`, or `:testing` to the end of your container tag depending on who makes your builds.
+  - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
