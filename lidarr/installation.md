@@ -10,14 +10,9 @@ dateCreated: 2021-05-24T05:12:27.036Z
 
 ## Windows
 
-> Lidarr does not support Windows XP
-{.is-danger}
-
-> At this time Windows 7 should still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run net5 apps on Windows 7
-{.is-warning}
 
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.
-> Lidarr is in beta testing and does not have a formal stable release.
+> Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
 1. Download the latest version of Lidarr from <https://lidarr.com/#downloads-v1-windows> for your architecture
@@ -26,18 +21,12 @@ Lidarr is supported natively on Windows. Lidarr can be installed on Windows as W
 
 ## OSX
 
-> Lidarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-  
 1. Download the latest version of Lidarr from <https://lidarr.com/#downloads-v1-macos>
 1. Open the archive and drag the Lidarr icon to your Application folder.
 1. Browse to <http://localhost:8686> to start using Lidarr
 
 ## Linux
 
-> Lidarr is in beta testing and does not have a formal stable release.
-{.is-warning}
-  
 You'll need to install the binaries using the below commands.
 > Note: This assumes you will run as the user `lidarr` and group `media`.
 > This will download the `x64` copy of lidarr and install it into `/opt`
