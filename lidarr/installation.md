@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-06-07T17:18:52.056Z
+date: 2021-06-07T17:26:33.385Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -38,16 +38,14 @@ Lidarr is supported natively on Windows. Lidarr can be installed on Windows as W
 > Lidarr is in beta testing and does not have a formal stable release.
 {.is-warning}
   
-## Linux
-  
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `lidarr` and group `lidarr`.
+> Note: This assumes you will run as the user `lidarr` and group `media`.
 > This will download the `x64` copy of lidarr and install it into `/opt`
 {.is-info}
 
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://lidarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
+ `wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
@@ -66,7 +64,7 @@ Description=Lidarr Daemon
 After=syslog.target network.target
 [Service]
 User=lidarr
-Group=lidarr
+Group=media
 Type=simple
 
 ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/data/.config/Lidarr/
