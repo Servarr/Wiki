@@ -2,7 +2,7 @@
 title: FAQ
 description: 
 published: true
-date: 2021-06-07T17:59:11.926Z
+date: 2021-06-07T20:53:12.004Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -246,3 +246,11 @@ At the moment, indexers that use cloudflare and captchas are not supported with 
 ## Prowlarr won't sync to Sonarr
 
 Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
+
+## How do I stop the browser from launching on startup?
+
+Depending on your OS, there are multiple possible ways.
+
+- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- When invoking Prowlarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
+- Stop Prowlarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
