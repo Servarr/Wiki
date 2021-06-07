@@ -2,7 +2,7 @@
 title: Installation
 description: 
 published: true
-date: 2021-05-27T16:36:52.721Z
+date: 2021-06-07T17:22:07.836Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -31,15 +31,17 @@ It's therefore advisable to install Readarr as a system tray application if the 
 1. Download the latest version of Readarr from https://readarr.com/#downloads-v1-macos
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to http://localhost:8787 to start using Readarr
-# Linux
+## Linux
+  
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `readarr` and group `media`.
+> Note: This assumes you will run as the user `readarr` and group `readarr`.
 > This will download the `x64` copy of readarr and install it into `/opt`
 {.is-info}
-- Ensure you have the required prequisite packages: `sudo apt install curl mediainfo sqlite3`
+
+- Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- ` wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
-  - AMD64 use `arch=x64` 
+ `wget --content-disposition 'http://readarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
+  - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
 - Uncompress the files: `tar -xvzf Readarr*.linux*.tar.gz`
@@ -47,16 +49,18 @@ You'll need to install the binaries using the below commands.
 - Ensure ownership of the binary directory.
   `sudo chown readarr:readarr /opt/Readarr`
 - Configure systemd so Readarr can autostart at boot.
-```
+> The below systemd creation script will use a data directory of `/data/.config/Readarr`.  For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
+{.is-warning}
+
+```bash
     cat > /etc/systemd/system/readarr.service << EOF
 [Unit]
 Description=Readarr Daemon
 After=syslog.target network.target
 [Service]
 User=readarr
-Group=media
+Group=readarr
 Type=simple
-UMask=002
 
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/Readarr/
 TimeoutStopSec=20
@@ -66,10 +70,10 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 ```
+
 - Reload systemd: `systemctl -q daemon-reload`
 - Enable the Readarr service: `systemctl enable --now -q readarr`
 
-  
 # Docker
 The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
