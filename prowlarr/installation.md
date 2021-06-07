@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-07T15:35:25.213Z
+date: 2021-06-07T15:37:10.896Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -74,11 +74,9 @@ The Prowlarr team does not offer an official Docker image. However, a number of 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
 {.is-info}
 
-### Install Prowlarr
-
 There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
-> Temporarily, you will need to use the `:nightly` tag with docker images, as there is no `master` branch.
+> Temporarily, you will need to use the `:nightly` or `:develop` tags with docker images, as there is no `master` branch.
 {.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
