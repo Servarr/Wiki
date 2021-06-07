@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Readarr Installation
 description: 
 published: true
 date: 2021-06-07T17:27:13.477Z
