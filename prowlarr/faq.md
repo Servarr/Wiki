@@ -2,7 +2,7 @@
 title: FAQ
 description: 
 published: true
-date: 2021-06-07T17:58:08.198Z
+date: 2021-06-07T17:59:11.926Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -94,33 +94,6 @@ If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap whi
 
 Most likely this is due to a MacOS bug which caused the Prowlarr database to be corrupted. Please check the FAQ entry for restoring a corrupt database.
 
-## Why can’t Prowlarr see my files on a remote server?
-
-In short: the user Prowlarr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is, Prowlarr is running as a service, which causes one of two things:
-
-Prowlarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
-
-Solutions:
-
-- Run Prowlarr’s service as another user that has access to that share
-- Open the Administrative Tools > Services window on your Windows server.
-- Stop the Prowlarr service.
-- Open the Properties > Log On dialog.
-- Change the service user account to the target user account.
-- Run Prowlarr.exe using the Startup Folder
-
-You’re using a mapped network drive (not a UNC path)
-
-Solutions:
-
-- Change your paths to UNC paths (\\server\share)
-- Run Prowlarr.exe via the Startup Folder
-- Mapped Network Drives vs UNC Paths
-
-Using mapped network drives generally doesn’t work very well, especially when Prowlarr is configured to run as a service. The better way to set shares up is using UNC paths. So instead of X:\Movies use \\Server\Movies\.
-
-A key point to remember is that Prowlarr gets path information from the downloader, so you’ll also need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
-
 ## How do I change from the Windows Service to a Tray App?
 
 - Shut Prowlarr down
@@ -211,10 +184,6 @@ Restart Prowlarr
 
 Prowlarr will now be accessible without a password, and then you can go to `Settings: General` in the Prowlarr UI and set your username and password again.
 
-## Jackett shows more results than Prowlarr when manually searching
-
-This is usually due to Prowlarr searching Jackett differently than you do. See this troubleshooting article for further information.
-
 ## Weird UI Issues
 
 If you experience any weird UI issues like a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain.
@@ -222,14 +191,6 @@ If you experience any weird UI issues like a certain view or sort not working, t
 ## Web Interface Only Loads at localhost on Windows
 
 If you can only reach your web interface at `http://localhost:9696/` or `http://127.0.0.1:9696`, you need to run Prowlarr as Administrator at least once, maybe even always.
-
-## Permissions
-
-Prowlarr will need to move files away from where the downloader puts them into the final location, so this means that Prowlarr will need to read/write to both the source and the destination directory and files.
-On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to 775 and files to 664 both in your downloader and Prowlarr. In umask notation, that would be 002.
-System & Logs loads forever
-
-It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
 
 ## Finding Cookies
 
@@ -243,9 +204,6 @@ Firefox
 
 ![faq_3_cookies.png](/faq_3_cookies.png)
 
-## Unpack Torrents
-
-Most torrent clients don’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
 
 ## uTorrent is no longer working
 
