@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-07T17:16:29.148Z
+date: 2021-06-07T17:19:37.138Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -45,7 +45,7 @@ You'll need to install the binaries using the below commands.
 - Uncompress the files: `tar -xvzf Radarr*.linux*.tar.gz`
 - Move the files to `/opt/` `sudo mv Radarr/ /opt`
 - Ensure ownership of the binary directory.
-  `sudo chown radarr:prowlarr /opt/Prowlarr`
+  `sudo chown radarr:radarr /opt/Radarr`
 - Configure systemd so radarr can autostart at boot.
 > The below systemd creation script will use a data directory of `/data/.config/Radarr`.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-warning}
