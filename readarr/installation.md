@@ -2,7 +2,7 @@
 title: Installation
 description: 
 published: true
-date: 2021-06-07T17:22:07.836Z
+date: 2021-06-07T17:27:13.477Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -34,13 +34,13 @@ It's therefore advisable to install Readarr as a system tray application if the 
 ## Linux
   
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `readarr` and group `readarr`.
+> Note: This assumes you will run as the user `readarr` and group `media`.
 > This will download the `x64` copy of readarr and install it into `/opt`
 {.is-info}
 
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://readarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
+ `wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
@@ -59,7 +59,7 @@ Description=Readarr Daemon
 After=syslog.target network.target
 [Service]
 User=readarr
-Group=readarr
+Group=media
 Type=simple
 
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/Readarr/
