@@ -27,7 +27,7 @@ Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows 
 ## Linux
   
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `prowlarr` and group `media`.
+> Note: This assumes you will run as the user `prowlarr` and group `prowlarr`.
 > This will download the `x64` copy of prowlarr and install it into `/opt`
 {.is-info}
 
@@ -52,7 +52,7 @@ Description=Prowlarr Daemon
 After=syslog.target network.target
 [Service]
 User=prowlarr
-Group=media
+Group=prowlarr
 Type=simple
 
 ExecStart=/opt/Prowlarr/Prowlarr -nobrowser -data=/data/.config/Prowlarr/
