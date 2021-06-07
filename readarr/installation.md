@@ -28,11 +28,14 @@ It's therefore advisable to install Readarr as a system tray application if the 
 1. Run the installer
 1. Browse to http://localhost:8787 to start using Readarr
 # OSX
+> Readarr is in a pre-alpha state and has no binaries currently available for OSX. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
+{.is-warning}
 1. Download the latest version of Readarr from https://readarr.com/#downloads-v1-macos
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to http://localhost:8787 to start using Readarr
 ## Linux
-  
+> Readarr is in a pre-alpha state and has no binaries currently available for Linux. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
+{.is-warning}
 You'll need to install the binaries using the below commands.
 > Note: This assumes you will run as the user `readarr` and group `media`.
 > This will download the `x64` copy of readarr and install it into `/opt`
@@ -40,7 +43,7 @@ You'll need to install the binaries using the below commands.
 
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
+ `wget --content-disposition '{link hidden}'`
   - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
@@ -75,6 +78,8 @@ EOF
 - Enable the Readarr service: `systemctl enable --now -q readarr`
 
 # Docker
+> Readarr is in a pre-alpha state. If you wait a bit, there should be an official release soon.
+{.is-warning}
 The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Readarr Docker image.
