@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-07T04:31:52.398Z
+date: 2021-06-07T15:35:25.213Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -43,7 +43,7 @@ You'll need to install the binaries using the below commands.
   `sudo chown prowlarr:prowlarr /opt/Prowlarr`
 - Configure systemd so Prowlarr can autostart at boot.
 > The below systemd creation script will use a data directory of `/data/.config/Prowlarr`.  For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument
-{.is-info}
+{.is-warning}
 
 ```bash
     cat > /etc/systemd/system/prowlarr.service << EOF
