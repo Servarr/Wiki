@@ -2,7 +2,7 @@
 title: Indexers
 description: 
 published: true
-date: 2021-06-06T11:45:31.974Z
+date: 2021-06-07T01:49:15.898Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -18,7 +18,7 @@ To add an indexer, first click on `Indexers` on the left, then `Add Indexer` (th
 
 ![ind_1_addindexer.png](/assets/prowlarr/ind_1_addindexer.png)
 
-Choose your indexer from the list, or type a partial name in the box to find your indexer. If your indexer is not listed, please use "Generic Newznab" (for usenet) or "Generic Torznab" (for torrents)
+Choose your indexer from the list, or type a partial name in the box to find your indexer. If your indexer is not listed, please use "Generic Newznab" (for usenet) or "Generic Torznab" (for torrents). 
 
 > This assumes your indexer supports standardized *znab formats. If it doesn't, then this will not work.
 
@@ -40,7 +40,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 - If you're adding a torrent indexer, you will need to choose what kind of download link to use.
 
-- You may have to enter an API key from your indexer (usually found in your Profile Page), select search orders, or other options for your specific indexer.
+- You may have to enter an API key, a session id, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
 
 - (Advanced Option) Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
 
