@@ -2,7 +2,7 @@
 title: Quick Start Guide
 description: 
 published: true
-date: 2021-06-06T15:14:40.281Z
+date: 2021-06-07T00:40:35.072Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -61,7 +61,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
-- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
+- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry. Note that tags are not yet functional. This is future use.
 
 - Enter the Prowlarr server URL here.
 
