@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-07T17:19:37.138Z
+date: 2021-06-07T17:25:48.937Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -32,13 +32,13 @@ It's therefore advisable to install Radarr as a system tray application if the u
 ## Linux
   
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `radarr` and group `radarr`.
+> Note: This assumes you will run as the user `radarr` and group `media`.
 > This will download the `x64` copy of radarr and install it into `/opt`
 {.is-info}
 
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://radarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
+ `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
@@ -57,7 +57,7 @@ Description=Radarr Daemon
 After=syslog.target network.target
 [Service]
 User=radarr
-Group=radarr
+Group=media
 Type=simple
 
 ExecStart=/opt/Radarr/Radarr -nobrowser -data=/data/.config/Radarr/
