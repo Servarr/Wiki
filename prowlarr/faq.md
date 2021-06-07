@@ -7,20 +7,15 @@ tags:
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
 ---
-
-# General FAQs
-
 ## Can I add any (generic) Torznab or Newznab indexer?
 
 Yes.
 
 `Indexers` -> `Add Indexer` (Plus Button) -> `Generic Torznab` or `Generic Newznab`
 
-
 ## Can I update Prowlarr inside my Docker container?
 
-
-Technically, yes. <b>But you should absolutely not.</b> It is a primary philosophy of Docker. Database issues can be caused for Prowlarr if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
+Technically, yes. But you should absolutely not. It is a primary philosophy of Docker. Database issues can be caused for Prowlarr if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
@@ -39,13 +34,14 @@ To request a feature for Prowlarr, first search on Github to ensure no similar r
 ## I am getting an error: Database disk image is malformed
 
 This means your SQLite database that stores most of the information for Prowlarr is corrupt.
+
 - Try restoring from a backup
 - You can follow our instructions on [this wiki](https://wiki.servarr.com/Useful_Tools#Recovering_a_Corrupt_DB).
-- Alternatively, [this guide](http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html) tells you how to copy the contents from the corrupt database into a new one. 
+- Alternatively, [this guide](http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html) tells you how to copy the contents from the corrupt database into a new one.
 
 This error may show if the database file is not writable by the user/group Prowlarr is running as.
 
-Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **Prowlarr's config folder must be on a local drive.** 
+Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **Prowlarr's config folder must be on a local drive.**
 
 If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn’t supported by direct_io as explained in the mergerFS docs [here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs).
 
@@ -60,6 +56,7 @@ In short: the user Prowlarr is running as (if service) or under (if tray app) ca
 Prowlarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
 
 Solutions:
+
 - Run Prowlarr’s service as another user that has access to that share
 - Open the Administrative Tools > Services window on your Windows server.
 - Stop the Prowlarr service.
@@ -70,10 +67,10 @@ Solutions:
 You’re using a mapped network drive (not a UNC path)
 
 Solutions:
+
 - Change your paths to UNC paths (\\server\share)
 - Run Prowlarr.exe via the Startup Folder
 - Mapped Network Drives vs UNC Paths
-
 
 Using mapped network drives generally doesn’t work very well, especially when Prowlarr is configured to run as a service. The better way to set shares up is using UNC paths. So instead of X:\Movies use \\Server\Movies\.
 
@@ -88,15 +85,16 @@ A key point to remember is that Prowlarr gets path information from the download
 
 ## How do I Backup/Restore my Prowlarr?
 
-
 Backing up Prowlarr
 
 Using built-in backup
+
 - Go to System: Backup in the Prowlarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
 Using file system directly
+
 - Find the location of the AppData directory for Prowlarr (Via the Prowlarr UI go to System: About)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -145,7 +143,7 @@ Update permissions on the files:
 `chown -R {{{ARRNAME}}}:users *`
 `chmod -R 0644 *`
 
-On some installations, the user is different: 
+On some installations, the user is different:
 
 `chown -R sc-Prowlarr:Prowlarr *`
 
@@ -161,7 +159,7 @@ Open config.xml in a text editor, and find the authentication method. The line w
 or
 `<AuthenticationMethod>Forms</AuthenticationMethod>`
 
-Change the AuthenticationMethod line to 
+Change the AuthenticationMethod line to
 `<AuthenticationMethod>None</AuthenticationMethod>`
 
 Restart Prowlarr
@@ -174,7 +172,7 @@ This is usually due to Prowlarr searching Jackett differently than you do. See t
 
 ## Weird UI Issues
 
-If you experience any weird UI issues like a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. 
+If you experience any weird UI issues like a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain.
 
 ## Web Interface Only Loads at localhost on Windows
 
@@ -206,7 +204,7 @@ Most torrent clients don’t come with the automatic handling of compressed arch
 
 ## uTorrent is no longer working
 
--  Ensure the Web UI is enabled
+- Ensure the Web UI is enabled
 
 ![faq_4_utorrent.png](/faq_4_utorrent.png)
 
@@ -219,7 +217,6 @@ Most torrent clients don’t come with the automatic handling of compressed arch
 ![faq_6_utorrent.png](/faq_6_utorrent.png)
 
 ## I got a pop-up that said config.xml was corrupt, what now?
-
 
 Prowlarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Prowlarr back online, you will need to delete `.xml` in your AppData Folder, once deleted start Prowlarr and it will start on the default port (9696), you should now re-configure any settings you configured on the General Settings page.
 
@@ -235,14 +232,14 @@ If your download client and Prowlarr are on the same machine there is no reason 
 
 Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-In other words, putting the * Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the * Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too.
+In other words, putting the *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the* Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too.
 
-In addition, some private trackers <b>ban</b> for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
+In addition, some private trackers ban for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
 
 ## Can I use flaresolverr indexers?
 
 At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
 
-## Prowlarr won't sync to Sonarr!
+## Prowlarr won't sync to Sonarr
 
 Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.

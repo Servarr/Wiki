@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-06-05T17:31:43.983Z
 ---
 
-# Troubleshooting
-
 ## Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on [Discord](https://prowlarr.com/discord) or [Reddit](https://www.reddit.com/r/prowlarr/).
@@ -34,17 +32,17 @@ What you need to do is:
 
 `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`
 
-If your Appdata Directory is in your home folder then you'd run: 
+If your Appdata Directory is in your home folder then you'd run:
 
 `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 The flags have the following functions:
 
-* -i: ignore case
-* -n: show line number
-* -r: recursively check all files in the path
-* -C: provide # of lines before and after the line it is found on
-* -e: the pattern to search for
+- -i: ignore case
+- -n: show line number
+- -r: recursively check all files in the path
+- -C: provide # of lines before and after the line it is found on
+- -e: the pattern to search for
 
 ## Standard Logs Location
 
@@ -62,7 +60,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 ## Trace/Debug Logs
 
-You can change the log level at `Settings` -> `General` -> `Logging`. Prowlarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named Prowlarr.debug.txt and Prowlarr.trace.txt respectively. 
+You can change the log level at `Settings` -> `General` -> `Logging`. Prowlarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named Prowlarr.debug.txt and Prowlarr.trace.txt respectively.
 
 > Debug logs contain normal log items, and trace logs contain debug log items, so if you're logging at a trace level, you only need to provide trace logs.
 
@@ -73,7 +71,7 @@ If you're unable to access the Prowlarr UI to set the logging level you can do s
   `<LogLevel>debug</LogLevel>`
   `...`
  `</Config>`
- 
+
 ## Clearing Logs
 
 You can clear log files and the logs database directly from the UI, under `System` -> `Logs` -> `Files` and `System` -> `Logs` -> `Delete` (Trash Can Icon).

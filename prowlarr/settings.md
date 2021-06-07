@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
 
-# Settings
-
 This page will go through all the settings available in Prowlarr and how they work.  This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
 ## Menu options
@@ -39,7 +37,7 @@ All programs you can add are listed. You should only add programs you currently 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
 - Enter a name for this indexer.
-- Select your sync level for this indexer. 
+- Select your sync level for this indexer.
 
 `Add and Remove Only` will only add or remove indexers when they are added or removed from Prowlarr, but edits within the indexer itself either in your app or in Prowlarr are not synced.
 
@@ -94,6 +92,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Enter a priority for when you do grabs DIRECTLY from Prowlarr.
 - Check this box to add downloads in a Paused state.
 - (Advanced Option) Enter the client priority.
+
 >Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
@@ -144,8 +143,10 @@ Click on `Settings` -> `General`.
 ![general_security.png](/assets/prowlarr/general_security.png)
 
 - If you want to require a username/password, change this authentication box and enter them.
-- Your API key is used by outside apps accessing Prowlarr. 
+- Your API key is used by outside apps accessing Prowlarr.
+
 > This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
+
 - This changes how certificate validation is performed.
 
 ### Proxy
@@ -192,4 +193,5 @@ Select the development branch you would like to use here. (Advanced Option) Vali
 - (Advanced Option) Folder is the folder where backups are stored.
 - (Advanced Option) Interval is the number of days between automatic backups.
 - (Advanced Option) This is the number of backups that are retained before being cleaned up.
+
 > Manual backups are retained forever, stored in the same folder, and are named differently. It's always advised to make a backup manually before doing anything like updates or branch changes.

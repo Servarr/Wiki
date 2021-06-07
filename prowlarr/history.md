@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-06-06T13:56:30.636Z
 ---
 
-# History
-
 This page will show you how to review and search your history, and the various settings available.
 
 ## Opening History
@@ -50,4 +48,3 @@ Specific query searches will show exactly what was searched, based on the capabi
 If you click on the `i` on any of these searches, you can see the number of results that were returned.
 
 ![hist_5_results.png](/assets/prowlarr/hist_5_results.png)
-
