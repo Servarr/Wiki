@@ -8,8 +8,8 @@ editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
 ---
 
-# Quick Start Guide
-This guide should be used to get configured and running with the basics, and to give you an understanding of how the pieces work together.
+>This guide should be used to get configured and running with the basics, and to give you an understanding of how the pieces work together.
+{is-info}
 
 ## Indexers
 
@@ -53,7 +53,7 @@ All programs you can add are listed. You should only add programs you currently 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
 - Enter a name for this indexer.
-- Select your sync level for this indexer. 
+- Select your sync level for this indexer.
 
 `Add and Remove Only` will only add or remove indexers when they are added or removed from Prowlarr, but edits within the indexer itself either in your app or in Prowlarr are not synced.
 
@@ -116,6 +116,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Enter a priority for when you do grabs DIRECTLY from Prowlarr.
 - Check this box to add downloads in a Paused state.
 - (Advanced Option) Enter the client priority.
+
 >Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).

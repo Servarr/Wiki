@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-06-06T12:04:17.088Z
 ---
 
-# Search
-
 This page will show you how to perform a search from within Prowlarr. In general, your searches would be via app, but it's possible to do them directly in Prowlarr as well.
 
 ## Performing a Search
