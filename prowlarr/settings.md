@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-07T01:50:20.614Z
+date: 2021-06-07T04:41:56.422Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -41,7 +41,9 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Add and Remove Only` will only add or remove indexers when they are added or removed from Prowlarr, but edits within the indexer itself either in your app or in Prowlarr are not synced.
 
-`Full Sync` will keep your app and Prowlarr fully in sync. If you make a change in either program, it is synced to the other program (and to any other program that has full sync selected!).
+`Full Sync` will keep your app and Prowlarr fully in sync. If you make a change in either program, it is synced to the other program (and to any other program that has full sync selected!). 
+>Currently Prowlarr is the true source so any in-app Customizations will be iverridden.
+{.is-warning}
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
