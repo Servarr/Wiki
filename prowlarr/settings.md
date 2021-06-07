@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-07T00:39:23.183Z
+date: 2021-06-07T01:50:20.614Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -119,6 +119,7 @@ Here is where you can maintain any existing tags you've used.
 Click on `Settings` -> `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
 
 > Note that tags are not yet functional in Prowlarr!
+{.is-info}
 
 ## General
 
