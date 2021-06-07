@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-07T17:24:22.591Z
+date: 2021-06-07T17:25:01.458Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -33,7 +33,7 @@ You'll need to install the binaries using the below commands.
 
 - Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
+ `wget --content-disposition 'http://prowlarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
