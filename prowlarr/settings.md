@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-07T04:41:56.422Z
+date: 2021-06-07T23:56:03.550Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -186,7 +186,18 @@ Check the box to help the Prowlarr dev team gather statistics on install types, 
 
 Select the development branch you would like to use here. (Advanced Option) Valid options are `master`, `develop`, and `nightly` and possibly other temporary testing branches as the dev group determines.
 
-> In general, you may not move back branches from nightly to develop, or develop to master, or you may break your Prowlarr installation.
+- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
+  
+  - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
+> On GitHub, this is a snapshot of the `develop` branch at a point in time.
+{.is-warning}
+
+  - <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately. 
+  
+>   **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
+{.is-warning}
+
+  - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
 ### Backups
 
