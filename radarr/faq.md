@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-08T02:18:31.761Z
+date: 2021-06-08T23:50:03.989Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -59,12 +59,15 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
 
-- No it cannot be changed back. No it will not be changed back.
+- No it cannot be changed back to be like v0.2. No it will not be changed back.
 - You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
 
 ## Where did Wanted and Cut-off Unmet go?
 
 - Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` 
+  - Wanted - Movie is missing, monitored, and available
+  - Missing - Movie is missing and monitored
+
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
 
 ## Why can't I add a new movie to Radarr?
@@ -131,7 +134,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How can I mass delete movies from the wanted list?
 
-- Use Movie Editor -> Select movies you want to delete -> Delete
+- Use Movie Editor -\> Select movies you want to delete -\> Delete
 
 ## Why doesn't Radarr work behind a reverse proxy
 
@@ -171,7 +174,7 @@ proxy_set_header Connection $http_connection;
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                  | [Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | [Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) | [Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) |
+|                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) |
 
 | Release Channel Type                                          | Branch: master (stable) (v3.2.1) | Branch: develop (beta) (v3.2.1) | Branch: nightly (unstable) (v3.2)            |
 | ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
@@ -478,7 +481,7 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 - Ensure the Web UI is enabled
 
-- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
+- Ensure that the Alt Listening Port (Advanced -\> Web UI) is not the same as the Listening Port (Connections)
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
