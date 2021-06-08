@@ -23,11 +23,11 @@ Open the `{arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr
 1. Make a copy of your corrupt DB
 1. Open your corrupt DB in DB Browser for Sqlite
 1. File -\> Export -\> Export DB to SQL file
-    2.  Select all tables
-    2.  Check/Enable "Keep column names in INSERT INTO"
-    2.  Export Everything
-    2.  Overwrite old schema
-    2.  Save
+2.  Select all tables
+2.  Check/Enable "Keep column names in INSERT INTO"
+2.  Export Everything
+2.  Overwrite old schema
+2.  Save
 1. New DB -\> File -\> Import -\> import that file
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
 1. Run a pragma check on the new DB
@@ -39,9 +39,9 @@ Open the `{arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr
 
 [Bazarr](https://github.com/morpheus65535/bazarr) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
-### Discord Notifier
+### Notifiarr (fka Discord Notifier)
 
-[Discord Notifier](https://discordnotifier.com/) is a tool created to facilitate more in-depth detailed discord notifications. It provides a configurable way to add notifications (including reactions) based on triggers you pick. Website provides a UI or picking what to show in the notification. Includes support for Grab, Import, Upgrade, Health, & Failed notifications.
+[Notifiarr](https://notifiarr.com/) is a tool created to facilitate more in-depth detailed discord notifications. It provides a configurable way to add notifications (including reactions) based on triggers you pick. Website provides a UI or picking what to show in the notification. Includes support for Grab, Import, Upgrade, Health, & Failed notifications in addition to much more.
 
 [Setup Guide](https://trash-guides.info/Misc/Discord-Notifier-Basic-Setup/)
 
