@@ -23,10 +23,10 @@ Open the `{arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr
 1. Make a copy of your corrupt DB
 1. Open your corrupt DB in DB Browser for Sqlite
 1. File -\> Export -\> Export DB to SQL file
-2.  Select all tables
-2.  Check/Enable "Keep column names in INSERT INTO"
-2.  Export Everything
-2.  Overwrite old schema
+1.  Select all tables
+1.  Check/Enable "Keep column names in INSERT INTO"
+1.  Export Everything
+1.  Overwrite old schema
 2.  Save
 1. New DB -\> File -\> Import -\> import that file
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
