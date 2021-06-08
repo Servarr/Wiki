@@ -1,9 +1,9 @@
 ---
-title: Quick Start Guide
+title: Prowlarr Quick Start Guide
 description: 
 published: true
 date: 2021-06-07T00:40:35.072Z
-tags: 
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
 ---

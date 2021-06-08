@@ -81,12 +81,12 @@ Don’t forget to save your changes
 
 Here you’ll be allowed to set profiles for which you can have for the quality of movie you’re looking to download Here you'll be allowed to set profiles for the quality of movie you're looking to download
 
-More info [Settings -> Profiles](https://wiki.servarr.com/Radarr_Settings#Profiles).
+More info [Settings -> Profiles](https://wikijs.servarr.com/radarr_Settings#Profiles).
 
 We recommend you to create your own profiles and only select the Quality Sources you actually want.
 
-> More info [Settings -> Profiles](https://wiki.servarr.com/Radarr_Settings#Profiles).
-> To see what the difference is between the Quality Sources look [at our Quality Definitions](https://wiki.servarr.com/Radarr_Settings#Qualities_Defined).
+> More info [Settings -> Profiles](https://wikijs.servarr.com/radarr_Settings#Profiles).
+> To see what the difference is between the Quality Sources look [at our Quality Definitions](https://wikijs.servarr.com/radarr_Settings#Qualities_Defined).
 {.is-info}
 
 ### Quality
@@ -160,7 +160,7 @@ Select the root path you added earlier [in the root folders section.](#root-fold
 
 ![Radarr-importing-existing.png](/assets/radarr/Radarr-importing-existing.png)
 
-Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directrly follow this [guide](https://wiki.servarr.com/Radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie)
+Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directrly follow this [guide](https://wikijs.servarr.com/radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie)
 
 1. Your movie folder name.
 1. How you want the movie to be added to Radarr.
@@ -271,5 +271,5 @@ When you see the movie you want click on it.
     >
 4. Select your preferred profile to use.
 5. Here you can add certain tags for advanced uasage.
-6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](https://wiki.servarr.com/Radarr_FAQ#How_does_Radarr_find_movies.3F)
+6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](https://wikijs.servarr.com/radarr_FAQ#How_does_Radarr_find_movies.3F)
 7. Click on `Add Movie` to add the movie to Radarr.

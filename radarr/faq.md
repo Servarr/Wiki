@@ -131,7 +131,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How can I mass delete movies from the wanted list?
 
-- Use Movie Editor -\> Select movies you want to delete -\> Delete
+- Use Movie Editor -> Select movies you want to delete -> Delete
 
 ## Why doesn't Radarr work behind a reverse proxy
 
@@ -478,7 +478,7 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 - Ensure the Web UI is enabled
 
-- Ensure that the Alt Listening Port (Advanced -\> Web UI) is not the same as the Listening Port (Connections)
+- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 

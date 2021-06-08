@@ -3,7 +3,7 @@ title: Prowlarr Contributing
 description: 
 published: true
 date: 2021-05-24T03:35:03.863Z
-tags: prowlarr
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
 ---

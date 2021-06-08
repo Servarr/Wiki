@@ -1,9 +1,9 @@
 ---
-title: Search
+title: Prowlarr Search
 description: 
 published: true
 date: 2021-06-06T12:04:17.088Z
-tags: 
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-06-06T12:04:17.088Z
 ---
