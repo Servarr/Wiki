@@ -2,13 +2,11 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-05-29T15:57:31.351Z
+date: 2021-06-08T02:12:53.005Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:03:42.997Z
 ---
-
-
 
 #  Asking for Help
 
@@ -35,22 +33,28 @@ What you need to do is:
 1. [Hastebin](https://hastebin.com/), [Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/radarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- Unix Only: Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command:
 
-```
-    * The flags have the following functions
-    * -i: ignore case
-    * -n: show line number
-    *  -r: recursively check all files in the path
-    * -C: provide # of lines before and after the line it is found on
-    * -e: the pattern to search for
-```
+`grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`
+
+If your Appdata Directory is in your home folder then you'd run:
+
+`grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+
+The flags have the following functions:
+
+- -i: ignore case
+- -n: show line number
+- -r: recursively check all files in the path
+- -C: provide # of lines before and after the line it is found on
+- -e: the pattern to search for
 
 ## Standard Logs Location
 
 The log files are located in 's [Appdata Directory](/radarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -\> Logs -\> Files.
 
-Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
+> Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
+{.is-info}
 
 ## Update Logs Location
 
@@ -58,7 +62,7 @@ The update log files are located in 's [Appdata Directory](/radarr/appdata-direc
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or \[<https://www.reddit.com/r/> Reddit\] post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 #### Trace/Debug Logs
 
