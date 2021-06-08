@@ -1,9 +1,9 @@
 ---
-title: Prowlarr Settings
+title: Settings
 description: 
 published: true
-date: 2021-06-07T23:57:58.015Z
-tags: Prowlarr
+date: 2021-06-08T23:57:29.340Z
+tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
@@ -47,11 +47,14 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
-- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry. NOTE that tags are NOT YET FUNCTIONAL!
+- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry. 
+> NOTE that tags are NOT YET FUNCTIONAL!
+{.is-warning}
 
 - Enter the Prowlarr server URL here.
 
 > Note that if you're using a reverse proxy, you need to add the URL Base to this! If you don't, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
+{.is-info}
 
 - Enter the URL of your program here. Again, enter the full URL Base if used.
 
@@ -62,6 +65,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 ## Download Clients (for In-Prowlarr searches only!)
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+{.is-info}
 
 Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
@@ -86,6 +90,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Check this box if you use SSL to connect to your client.
 
 > If this is an IP address or localhost, you DO NOT HAVE SSL. DO NOT CHECK THIS BOX.
+{.is-info}
 
 - (Advanced Option) If you're using a reverse proxy, enter the URL Base for the download client.
 - Enter a username if you have one to connect to your client.
@@ -96,6 +101,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - (Advanced Option) Enter the client priority.
 
 >Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
+{.is-info}
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
 
@@ -120,7 +126,7 @@ Here is where you can maintain any existing tags you've used.
 Click on `Settings` -> `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
 
 > Note that tags are not yet functional in Prowlarr!
-{.is-info}
+{.is-warning}
 
 ## General
 
@@ -129,6 +135,7 @@ Here is where you will change generalized application settings such as port and 
 Click on `Settings` -> `General`.
 
 > A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are hidden.
+{.is-info}
 
 ### Host
 
@@ -148,6 +155,7 @@ Click on `Settings` -> `General`.
 - Your API key is used by outside apps accessing Prowlarr.
 
 > This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
+{.is-danger}
 
 - This changes how certificate validation is performed.
 
@@ -170,9 +178,9 @@ Click on `Settings` -> `General`.
 
 The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
 
-- Info logging is the minimum logging level. Good for day-to-day operations, but not sufficient for reporting errors to the dev team.
-- Debug logging is a mid-range logging level. Good for some error resolution, but still not extremely detailed.  Contains all Info level logging as well.
-- Trace logging is extremely detailed, and what the devs want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
+- `Info` logging is the minimum logging level. Good for day-to-day operations, but not sufficient for reporting errors to the dev team.
+- `Debug` logging is a mid-range logging level. Good for some error resolution, but still not extremely detailed.  Contains all Info level logging as well.
+- `Trace` logging is extremely detailed, and what the devs want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
 
 ### Analytics
 
@@ -209,3 +217,4 @@ Select the development branch you would like to use here. (Advanced Option) Vali
 - (Advanced Option) This is the number of backups that are retained before being cleaned up.
 
 > Manual backups are retained forever, stored in the same folder, and are named differently. It's always advised to make a backup manually before doing anything like updates or branch changes.
+{.is-info}
