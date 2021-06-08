@@ -29,7 +29,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![booknaming.png](/assets/readarr/booknaming.png)
 
 - Enable/Disable Renaming of your books (as opposed to leaving the names that are currently there or as they were when you downloaded them).
-- If you want illegal characters replaced or removed (`\ / : * ? &quot; < > | ~ - % &amp; + { }`).
+- If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ - % & + { }`).
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.
 - `(Advanced Option) This is where you will set the naming convention for the Author folder.`
 
@@ -45,7 +45,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![importing.png](/assets/readarr/importing.png)
 
 - `(Advanced Option) Designate the required minimum free space that must be available on your drive in order for books to be imported.`
-- `(Advanced Option) Enable`Use Hardlinks instead of Copy`more info how and why with examples [https://trash-guides.info/hardlinks TRaSH's Hardlinks Guide].`
+- `(Advanced Option) Enable`Use Hardlinks instead of Copy`more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).`
 - `(Advanced Option) Import matching extra files (nfo, etc) after importing a file.`
 
 ## File Management

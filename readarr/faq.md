@@ -72,7 +72,7 @@ As of 1/19/2021 the logic is as follows:
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
 
-- Make sure you `do not` include `proxy_set_header Connection &quot;Upgrade&quot;;` as suggested by the nginx documentation. `THIS WILL NOT WORK`
+- Make sure you `do not` include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. `THIS WILL NOT WORK`
 - [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
 - If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
