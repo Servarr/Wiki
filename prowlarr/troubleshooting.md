@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: 
 published: true
-date: 2021-06-06T14:05:33.587Z
+date: 2021-06-08T02:12:54.318Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T17:31:43.983Z
@@ -10,23 +10,28 @@ dateCreated: 2021-06-05T17:31:43.983Z
 
 ## Asking for Help
 
-Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on [Discord](https://prowlarr.com/discord) or [Reddit](https://www.reddit.com/r/prowlarr/).
+Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
 
-But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono or .Net/.Netcore, version of Prowlarr, download client and its version. If you are using Docker please run through the [Docker Guide](https://wiki.servarr.com/Docker_Guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a docker compose handy Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, paste the logs into a pastebin such as [0bin](https://0bin.net/): the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+- [<i class="fab fa-discord"></i>&emsp;Discord *Official Prowlarr Discord*](https://prowlarr.com/discord)
+- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Prowlarr Subreddit*](https://reddit.com/r/prowlarr)
+{.links-list}
+
+But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono or .Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker-Guide](/Docker-Guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/Docker-Guide#Docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
 ## Logging and Log Files
 
-If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain debug and if you're asked for trace logs your logs will contain trace. If the logs you are providing do not contain either then they are not the logs requested.
+If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
 What you need to do is:
 
-- Turn Logging up to Trace
-- Clear Logs
-- Reproduce the Issue
-- Open the trace log file (Prowlarr.trace.txt) and fine the relevant context
-- Upload the context to Hastebin, Pastebin, 0bin, or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+1. Turn Logging up to Trace
+1. Clear Logs
+1. Reproduce the Issue
+1. Open the trace log file (.trace.txt) and fine the relevant context
+1. [Hastebin](https://hastebin.com/), [Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
 - Unix Only: Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command:
 
@@ -46,17 +51,18 @@ The flags have the following functions:
 
 ## Standard Logs Location
 
-The log files are located in Prowlarr's Appdata Directory, inside the logs/ folder. You can also access the log files from the Prowlarr UI at `System` -> `Logs` -> `Files`.
+The log files are located in 's [Appdata Directory](/prowlarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -\> Logs -\> Files.
 
-> The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
+> Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
+{.is-info}
 
 ## Update Logs Location
 
-If your update fails, you'll need to review your Update Logs instead of the normal logs. The update log files are located in Prowlarr's Appdata Directory, inside the UpdateLogs/ folder.
+The update log files are located in 's [Appdata Directory](/prowlarr/appdata-directory), inside the UpdateLogs/ folder.
 
-## Sharing Logs
+### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use 0bin, Hastebin, or any other similar pastebin site (Pastebin itself cannot usually hold the amount of trace logs we need). The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 ## Trace/Debug Logs
 
@@ -66,11 +72,13 @@ You can change the log level at `Settings` -> `General` -> `Logging`. Prowlarr d
 
 If you're unable to access the Prowlarr UI to set the logging level you can do so by editing `config.xml` in the AppData directory by setting the LogLevel value to `Debug` or `Trace` instead of `Info`.
 
- `<Config>`
-  `...`
-  `<LogLevel>debug</LogLevel>`
-  `...`
- `</Config>`
+```xml
+ <Config>
+  ...
+  <LogLevel>debug</LogLevel>
+  ...
+ </Config>
+```
 
 ### Clearing Logs
 
