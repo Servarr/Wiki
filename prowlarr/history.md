@@ -2,10 +2,10 @@
 title: Prowlarr History
 description: 
 published: true
-date: 2021-06-06T13:56:30.636Z
-tags: Prowlarr
+date: 2021-06-08T23:32:35.055Z
+tags: prowlarr
 editor: markdown
-dateCreated: 2021-06-06T13:56:30.636Z
+dateCreated: 2021-06-08T23:32:35.055Z
 ---
 
 This page will show you how to review and search your history, and the various settings available.
