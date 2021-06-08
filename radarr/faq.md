@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-05-30T17:33:11.121Z
+date: 2021-06-08T02:18:31.761Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -64,7 +64,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Where did Wanted and Cut-off Unmet go?
 
-- Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` **IMG NEEDED*
+- Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` 
+![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
 
 ## Why can't I add a new movie to Radarr?
 
