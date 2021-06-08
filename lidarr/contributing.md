@@ -71,7 +71,7 @@ Lidarr is written in C## (backend) and JS (frontend). The backend is built on th
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
 - Reach out to us on the discord if you have any questions
 - Add tests (unit/integration)
-- Commit with *nix line endings for consistency (We checkout Windows and commit*nix)
+- Commit with \*nix line endings for consistency (We checkout Windows and commit \*nix)
 - One feature/bug fix per pull request to keep things clean and easy to understand
 - Use 4 spaces instead of tabs, this is the default for VS 2019 and WebStorm
 
