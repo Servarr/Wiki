@@ -65,7 +65,7 @@ Technically, yes. But you should absolutely not. It is a primary philosophy of D
 
 This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
 
-![faq_1_mac.png](/faq_1_mac.png)
+![faq_1_mac.png](/assets/general/faq_1_mac.png)
 
 ## Help, my Mac says Prowlarr.app is damaged and can’t be opened
 
@@ -197,25 +197,25 @@ Some sites cannot be logged into automatically and require you to login manually
 
 Chrome
 
-![faq_2_cookies.png](/faq_2_cookies.png)
+![faq_2_cookies.png](/assets/general/faq_2_cookies.png)
 
 Firefox
 
-![faq_3_cookies.png](/faq_3_cookies.png)
+![faq_3_cookies.png](/assets/general/faq_3_cookies.png)
 
 ## uTorrent is no longer working
 
 - Ensure the Web UI is enabled
 
-![faq_4_utorrent.png](/faq_4_utorrent.png)
+![faq_4_utorrent.png](/assets/general/faq_4_utorrent.png)
 
 - Turn on Web UI
 
-![faq_5_utorrent.png](/faq_5_utorrent.png)
+![faq_5_utorrent.png](/assets/general/faq_5_utorrent.png)
 
 - Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections). We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-![faq_6_utorrent.png](/faq_6_utorrent.png)
+![faq_6_utorrent.png](/assets/general/faq_6_utorrent.png)
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 

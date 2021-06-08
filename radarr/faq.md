@@ -307,7 +307,7 @@ This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 \* This means your SQLite database that stores most of the information for  is corrupt.
 
 - [Try restoring from a backup](#how_do_i_backup_restore_my_Radarr "wikilink")
-- You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")
+- You can follow [our instructions on this wiki.](/useful-tools#Recovering_a_Corrupt_DB "wikilink")
 - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 
 - This error may show if the database file is not writable by the user/group Radarr is running as.
