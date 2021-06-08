@@ -3,7 +3,7 @@ title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
 date: 2021-06-06T15:20:48.851Z
-tags: prowlarr
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
 ---
