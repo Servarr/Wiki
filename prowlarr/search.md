@@ -2,10 +2,10 @@
 title: Prowlarr Search
 description: 
 published: true
-date: 2021-06-06T12:04:17.088Z
-tags: Prowlarr
+date: 2021-06-08T23:31:53.221Z
+tags: prowlarr
 editor: markdown
-dateCreated: 2021-06-06T12:04:17.088Z
+dateCreated: 2021-06-08T23:31:53.221Z
 ---
 
 This page will show you how to perform a search from within Prowlarr. In general, your searches would be via app, but it's possible to do them directly in Prowlarr as well.
