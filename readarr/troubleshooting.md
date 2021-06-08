@@ -290,13 +290,13 @@ This is caused by the indexer using a SSL protocol not supported by .net 4.5, to
  seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
 ```
-    System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&amp;apikey=(removed) —> System.Net.WebException: The request timed out
+    System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.Net.WebException: The request timed out
 ```
 
 And you can see the following in the trace log file:
 
 ```
-    <DATE&amp;TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
+    <DATE&TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
 ```
 
 You might fix it by installing libcurl3. On Ubuntu/Debian use;
