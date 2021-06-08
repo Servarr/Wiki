@@ -13,11 +13,13 @@ dateCreated: 2021-05-24T03:32:41.926Z
 Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack, to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per-app Indexer setup required (we do it all).
 
 ## Getting Started
+
 - [Installation Guide](/prowlarr/installation)
 - [Quick Start Guide](/prowlarr/quick-start-guide)
 {.links-list}
 
 ## User Guide
+
 - [<i class="fas fa-play"></i>&emsp;Indexers](/prowlarr/indexers)
 - [<i class="fas fa-search"></i>&emsp;Search](/prowlarr/search)
 - [<i class="fas fa-clock"></i>&emsp;History](/prowlarr/history)
@@ -25,16 +27,19 @@ Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base 
 - [<i class="fas fa-laptop"></i>&emsp;System](/prowlarr/system)
 {.links-list}
 
-## Troubleshooting
+
+
 - [General Troubleshooting](/prowlarr/troubleshooting)
 - [FAQ](/prowlarr/faq)
 {.links-list}
 
 ## Development
+
 - [Contributing](/prowlarr/contributing)
 {.links-list}
 
 ## Support
+
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Prowlarr Discord*](https://prowlarr.com/discord)
@@ -42,6 +47,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 {.links-list}
 
 ## Links
+
 - [Website](https://prowlarr.com)
 - [Donations](https://opencollective.com/prowlarr)
 - [Github](https://github.com/prowlarr/prowlarr)

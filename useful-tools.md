@@ -20,18 +20,18 @@ Open the `{arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr
 
 #### Recovering a Corrupt DB
 
-1.  Make a copy of your corrupt DB
-2.  Open your corrupt DB in DB Browser for Sqlite
-3.  File -\> Export -\> Export DB to SQL file
-    1.  Select all tables
+1. Make a copy of your corrupt DB
+1. Open your corrupt DB in DB Browser for Sqlite
+1. File -\> Export -\> Export DB to SQL file
+    2.  Select all tables
     2.  Check/Enable "Keep column names in INSERT INTO"
-    3.  Export Everything
-    4.  Overwrite old schema
-    5.  Save
-4.  New DB -\> File -\> Import -\> import that file
-5.  Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
-6.  Run a pragma check on the new DB
-7.  Save the DB and point the application at it
+    2.  Export Everything
+    2.  Overwrite old schema
+    2.  Save
+1. New DB -\> File -\> Import -\> import that file
+1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
+1. Run a pragma check on the new DB
+1. Save the DB and point the application at it
 
 ## Other Projects and Programs
 
@@ -47,13 +47,13 @@ Open the `{arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr
 
 Highlights
 
-  - Application Status
-  - Requests and Approvals (\~Ombi, Requesterr)
-  - Customizable ARR application notifications
-  - Request System with approvals
-  - Follow system for users to monitor a series or movie and be notified (via @mentions)
-  - Server Status
-  - Frequent New Features
+- Application Status
+- Requests and Approvals (\~Ombi, Requesterr)
+- Customizable ARR application notifications
+- Request System with approvals
+- Follow system for users to monitor a series or movie and be notified (via @mentions)
+- Server Status
+- Frequent New Features
 
 ### Filebot
 

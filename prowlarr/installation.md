@@ -42,6 +42,7 @@ You'll need to install the binaries using the below commands.
 - Ensure ownership of the binary directory.
   `sudo chown prowlarr:prowlarr /opt/Prowlarr`
 - Configure systemd so Prowlarr can autostart at boot.
+
 > The below systemd creation script will use a data directory of `/data/.config/Prowlarr`.  For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument
 {.is-warning}
 

@@ -8,31 +8,32 @@ editor: markdown
 dateCreated: 2021-05-25T15:29:27.457Z
 ---
 
-# Library
+## Library
 
 This section is for managing your library of authors and books.
 
 ## Authors
-  - Library View
-    - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan author files (if enabled)
-    - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
-    - Options - Change display options
-    - View Toggle View Type
-    - Table - Tabular View
-    - Posters - Display Posters (Similar to Plex)
-    - Overview - Display overview information and the poster; the most detailed view
-    - Sort - Sort the current view
-    - Filter - Filter the current view
-      - Wanted - Author is missing, monitored, and available
-      - Missing - Author is missing and monitored
+
+- Library View
+  - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan author files (if enabled)
+  - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
+  - Options - Change display options
+  - View Toggle View Type
+  - Table - Tabular View
+  - Posters - Display Posters (Similar to Plex)
+  - Overview - Display overview information and the poster; the most detailed view
+  - Sort - Sort the current view
+  - Filter - Filter the current view
+    - Wanted - Author is missing, monitored, and available
+    - Missing - Author is missing and monitored
 
 ## Add New
 
 ![addnew.png](/assets/readarr/addnew.png)
 
-  - You can add new authors by entering the author's name or a book name here, and selecting it from the result list.
-      - You'll find the how-to in our [Quick Start Guide](/readarr/quick-start-guide)
-  - You can also add authors by GoodReads ID, ISBN, or ASIN as needed, using the format shown.
+- You can add new authors by entering the author's name or a book name here, and selecting it from the result list.
+  - You'll find the how-to in our [Quick Start Guide](/readarr/quick-start-guide)
+- You can also add authors by GoodReads ID, ISBN, or ASIN as needed, using the format shown.
 
 ![poe.png](/assets/readarr/poe.png)
 

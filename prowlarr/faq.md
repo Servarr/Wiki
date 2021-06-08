@@ -18,45 +18,44 @@ Yes.
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
-1.  Under the Updates section change the branch name to `develop` or `nightly`
-1.  Save
+1. Under the Updates section change the branch name to `develop` or `nightly`
+1. Save
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-  - <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
+- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
   
-  - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
+- <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
+
 > On GitHub, this is a snapshot of the `develop` branch at a point in time.
 {.is-warning}
 
-  - <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately. 
->   **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
+- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
+
+> **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-
-  - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
+- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                  | [Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) | [Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | [Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
-
 
 | Release Channel Type                                          | Branch: master (stable) (none yet) | Branch: develop (beta) (v0.1) | Branch: nightly (unstable) (v0.1)            |
 | ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
 | [hotio](https://hub.docker.com/r/hotio/prowlarr)                | `no stable release yet`         | `hotio/prowlarr:testing`        | `hotio/prowlarr:nightly` |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/prowlarr) | `no stable release yet`    | `linuxserver/prowlarr:develop`  | `linuxserver/prowlarr:nightly` |
 
-
 ### Installing a newer version
 
 If Native:
 
-1.  Go to System and then the Updates tab
-1.  Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
+1. Go to System and then the Updates tab
+1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
 
 If Docker:
 
-1.  Repull your tag and update your container
+1. Repull your tag and update your container
 
 ## Can I update Prowlarr inside my Docker container?
 
@@ -203,7 +202,6 @@ Chrome
 Firefox
 
 ![faq_3_cookies.png](/faq_3_cookies.png)
-
 
 ## uTorrent is no longer working
 

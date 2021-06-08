@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
 ---
 
-# Wiki Home
-
 > This wiki is home to Lidarr, Prowlarr, Radarr, Readarr, and Sonarr information
 {.is-info}
 
@@ -18,6 +16,7 @@ Welcome to the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sona
 Contributions are welcome.
 
 ## Media Automation
+
 - [Lidarr *Music*](/lidarr)
 - [Radarr *Movies*](/radarr)
 - [Readarr *Books*](/readarr)
@@ -25,5 +24,6 @@ Contributions are welcome.
 {.links-list}
 
 ## Indexer Management
+
 - [Prowlarr *Indexers*](/prowlarr)
 {.links-list}

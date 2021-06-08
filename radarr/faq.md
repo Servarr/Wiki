@@ -24,35 +24,36 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
 
 ## What is Minimum Availability?
+
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
 - **Released**: Radarr shall consider movies available as soon as the blu-ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` days.
 
 ## How are possible downloads compared?
 
-**Generally Quality Trumps All**
+- *Generally Quality Trumps All**
 
-The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs). ***As of 5/27/2021 the logic is as follows***
+- The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs). ***As of 5/27/2021 the logic is as follows***
 
-1.  Quality
-1.  Custom Format Score
-1.  Protocol
-1.  Indexer Priority
-1.  Indexer Flags
-1.  Peers (If Torrent)
-1.  Age (If Usenet)
-1.  Size
+1. Quality
+1. Custom Format Score
+1. Protocol
+1. Indexer Priority
+1. Indexer Flags
+1. Peers (If Torrent)
+1. Age (If Usenet)
+1. Size
 
 ## What are Lists and what can they do for me?
 
 - Lists are a part of Radarr that allow you to follow a given list creator.
 
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you don't have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
->  **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
+
+> **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
 {.is-warning}
 
 - It's suggested that physically look at the list before you even go to Radarr.
-
 
 ## Why did the GUI / UI Change? Can it be changed back?
 
@@ -66,18 +67,19 @@ The current logic [can be found here](https://github.com/Radarr/Radarr/blob/deve
 - Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` **IMG NEEDED*
 
 ## Why can't I add a new movie to Radarr?
+
 - Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
 ## Can all my movie files be stored in one folder?
+
 - Not yet and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
 
 - If you're looking to moving all your movies from one folder to individual folders check Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS**
 
 ## Can I put all my movies in my library into one folder
-
 
 - We get asked this a lot. There are no plans to support `\data\Movies\Movie1.mkv`, `\data\Movies\Movie2.mkv`, etc.
 
@@ -86,9 +88,9 @@ The current logic [can be found here](https://github.com/Radarr/Radarr/blob/deve
 - A slight hack-ish solution is noted below. Please note that you mustn't trigger a rescan or it will show as missing and regardless the movie will never be upgraded.
 
   - Use a Custom Script
-      - the script should be triggered on import
-      - it should be designed to move the file whenever you want it
-      - it then needs to call the Radarr API and change the movie to unmonitored.
+    - the script should be triggered on import
+    - it should be designed to move the file whenever you want it
+    - it then needs to call the Radarr API and change the movie to unmonitored.
 
 ## How can I rename my movie folders?
 
@@ -111,78 +113,80 @@ The current logic [can be found here](https://github.com/Radarr/Radarr/blob/deve
 - Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
 
   - Examples that will work well:
-      - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-      - `/mnt/Kid Movies/Frozen (2013)/Frozen (2013) [Bluray-1080p].mkv`
+    - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - `/mnt/Kid Movies/Frozen (2013)/Frozen (2013) [Bluray-1080p].mkv`
   - Examples that will work, but will require manual management:
-      - By letters: `/mnt/Movies/A-D/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-      - By rating: `/mnt/Movies/R/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-      - By genre: `/mnt/Movies/Crime, Drama, Sci-Fi/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-      - These examples will require manual management when the movie is added. Each of the examples will have many root directories, like `A-D` and `E-G` in the first letter example, `R` and `PG-13` in the rating example and you can guess at the variety of genre folders. When adding a new movie, the correct base folder will need to be selected for this format to work.
+    - By letters: `/mnt/Movies/A-D/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - By rating: `/mnt/Movies/R/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - By genre: `/mnt/Movies/Crime, Drama, Sci-Fi/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - These examples will require manual management when the movie is added. Each of the examples will have many root directories, like `A-D` and `E-G` in the first letter example, `R` and `PG-13` in the rating example and you can guess at the variety of genre folders. When adding a new movie, the correct base folder will need to be selected for this format to work.
   - Examples that won’t work:
-      - Single folder: `/mnt/Kid Movies/Frozen (2013) [Bluray-1080p].mkv`
-          - At this time, movies simply have to be in a folder named after the movie. There is no way around this until development work is done to add this feature.
-      - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
-          - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
-          - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
+    - Single folder: `/mnt/Kid Movies/Frozen (2013) [Bluray-1080p].mkv`
+      - At this time, movies simply have to be in a folder named after the movie. There is no way around this until development work is done to add this feature.
+    - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
+      - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
+      - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
   - The Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS** is a great source for making sure your file and folder structure will work great.
 
 ## How can I mass delete movies from the wanted list?
 
 - Use Movie Editor -\> Select movies you want to delete -\> Delete
 
-## Why doesn't Radarr work behind a reverse proxy 
+## Why doesn't Radarr work behind a reverse proxy
+
 - Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
+
 ```
 proxy_http_version 1.1;
 proxy_set_header Upgrade $http_upgrade; 
 proxy_set_header Connection $http_connection;
 ```
-  - Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
-  - [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
-  - If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
+
+- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
+- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
+- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
 ## How do I update Radarr?
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
-1.  Under the Updates section change the branch name to `master` or `develop`
-1.  Save
+1. Under the Updates section change the branch name to `master` or `develop`
+1. Save
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-  - <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This is currently v3. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
-  - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This is currently v3. This version will receive updates either weekly or biweekly depending on development. 
->   **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
+- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This is currently v3. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
+- <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This is currently v3. This version will receive updates either weekly or biweekly depending on development.
+
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
 {.is-warning}
 
-  - <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately. 
->   **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
+- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately.
+
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-
-  - Note: If your install is through Docker append `:release`, `:latest`, or `:testing` to the end of your container tag depending on who makes your builds.
+- Note: If your install is through Docker append `:release`, `:latest`, or `:testing` to the end of your container tag depending on who makes your builds.
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                  | [Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | [Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) | [Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) |
-
 
 | Release Channel Type                                          | Branch: master (stable) (v3.2.1) | Branch: develop (beta) (v3.2.1) | Branch: nightly (unstable) (v3.2)            |
 | ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
 | [hotio](https://hub.docker.com/r/hotio/radarr)                | `hotio/radarr:release`         | `hotio/radarr:testing`        | If you have to ask, you should not be on it. |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr) | `linuxserver/radarr:latest`    | `linuxserver/radarr:develop`  | If you have to ask, you should not be on it. |
 
-
 ### Installing a newer version
 
 If Native:
 
-1.  Go to System and then the Updates tab
-1.  Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
+1. Go to System and then the Updates tab
+1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
 
 If Docker:
 
-1.  Repull your tag and update your container
+1. Repull your tag and update your container
 
 ## Can I switch from nightly back to develop?
 
@@ -216,8 +220,8 @@ If Docker:
 
 ## Help, Movie Added, But Not Searched
 
-  - Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
-  - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
+- Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
+- If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
 
 "Add and Search for movie" (on add) **IMAGE NEEDED**
 "Add and Search for movie" (on select via index) **IMAGE NEEDED**
@@ -236,15 +240,15 @@ If Docker:
 
 ![Settings \> Download Clients](Remove_turned_on.png "Settings \> Download Clients")
 
-  - If you are using deluge make sure auto-managed is turned on. And that torrents get paused when they reach specified seeding quota.
+- If you are using deluge make sure auto-managed is turned on. And that torrents get paused when they reach specified seeding quota.
 
 ## My Custom Script stopped working after upgrading from v0.2
- 
+
 You were likely passing arguments in your connection and that is not supported.
 
-1.  Change your argument to be your path
-2.  Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
-3.  Make sure the pwsh script is executable
+1. Change your argument to be your path
+2. Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
+3. Make sure the pwsh script is executable
 
 ## I am using a Pi and Raspbian and Radarr will not launch
 
@@ -302,10 +306,9 @@ This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
 \* This means your SQLite database that stores most of the information for  is corrupt.
 
-  -   - [Try restoring from a backup](#how_do_i_backup_restore_my_Radarr "wikilink")
-      - You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")
-      - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
-
+- [Try restoring from a backup](#how_do_i_backup_restore_my_Radarr "wikilink")
+- You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")
+- Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 
 - This error may show if the database file is not writable by the user/group Radarr is running as.
 
@@ -322,22 +325,22 @@ See the above database is malformed entry.
 Then attempt to launch  and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
 ## Why can’t  see my files on a remote server?
- 
+
 - In short: the user  is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
   - Radarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
-      - **Solutions**
-         - Run Radarr’s service as another user that has access to that share
-         - Open the Administrative Tools \> Services window on your Windows server.
-            - Stop the  service.
-            - Open the Properties \> Log On dialog.
-            - Change the service user account to the target user account.
-          - Run Radarr.exe using the Startup Folder
+    - **Solutions**
+      - Run Radarr’s service as another user that has access to that share
+      - Open the Administrative Tools \> Services window on your Windows server.
+        - Stop the  service.
+        - Open the Properties \> Log On dialog.
+        - Change the service user account to the target user account.
+      - Run Radarr.exe using the Startup Folder
 
   - You’re using a mapped network drive (not a UNC path)
-      - **Solutions**
-          - Change your paths to UNC paths (`\\server\share`)
-          - Run Radarr.exe via the Startup Folder
+    - **Solutions**
+      - Change your paths to UNC paths (`\\server\share`)
+      - Run Radarr.exe via the Startup Folder
 
 ## Mapped Network Drives vs UNC Paths
 
@@ -346,7 +349,7 @@ Then attempt to launch  and see if it works. If it does not work, you'll need fu
   - A key point to remember is that  gets path information from the downloader, so you’ll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
 ## How do I change from the Windows Service to a Tray App?
- 
+
 1. Shut  down Radarr
 1. Run serviceuninstall.exe that's in the Radarr directory
 1. Run `Radarr.exe` as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
@@ -356,19 +359,19 @@ Then attempt to launch  and see if it works. If it does not work, you'll need fu
 
 ### Backing up
 
-#### Using built-in backup 
+#### Using built-in backup
 
-1.  Go to System: Backup in the  UI
-2.  Click the Backup button
-3.  Download the zip after the backup is created for safekeeping
-
+1. Go to System: Backup in the  UI
+2. Click the Backup button
+3. Download the zip after the backup is created for safekeeping
 
 #### Using file system directly
-1.  Find the location of the AppData directory for Radarr
+
+1. Find the location of the AppData directory for Radarr
       - Via the UI go to System \> About
       - [Radarr Appdata Directory](/radarr/appdata-directory)
-2.  Stop  - This will prevent the database from being corrupted
-3.  Copy the contents to a safe location
+2. Stop  - This will prevent the database from being corrupted
+3. Copy the contents to a safe location
 
 ### Restoring from Backup
 
@@ -377,57 +380,60 @@ Then attempt to launch  and see if it works. If it does not work, you'll need fu
 
 #### Using zip backup
 
-1.  Re-install Radarr
-2.  Run Radarr
-3.  Navigate to System \> Backup
-4.  Select Restore Backup
-5.  Select Choose File
-6.  Select your backup zip file
-7.  Select Restore
+1. Re-install Radarr
+2. Run Radarr
+3. Navigate to System \> Backup
+4. Select Restore Backup
+5. Select Choose File
+6. Select your backup zip file
+7. Select Restore
 
 #### Using file system backup
 
-1.  Re-install Radarr
-2.  Run Radarr once to get the AppData directory location
-3.  Stop Radarr
-4.  Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
-5.  Restore from your backup
-6.  Start Radarr
-7.  As long as the paths are the same, everything will pick up where it left off
+1. Re-install Radarr
+2. Run Radarr once to get the AppData directory location
+3. Stop Radarr
+4. Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
+5. Restore from your backup
+6. Start Radarr
+7. As long as the paths are the same, everything will pick up where it left off
 
-  - **Restore for Synology NAS**
+- **Restore for Synology NAS**
 
 **CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
 
-1.  Re-install Radarr  
-2.  Run  once to get the AppData directory location  
-3.  Stop Radarr
-4.  Connect to the Synology NAS through SSH and log in as root  
-5.  Execute the following commands:
-    ```
+1. Re-install Radarr  
+2. Run  once to get the AppData directory location  
+3. Stop Radarr
+4. Connect to the Synology NAS through SSH and log in as root  
+5. Execute the following commands:
+
+    ```bash
         rm -r /usr/local/Radarr/var/.config/Radarr/Radarr.db*
         cp -f /tmp/Radarr_backup/* /usr/local/Radarr/var/.config/Radarr/
     ```
-6.  Update permissions on the files:
-    ```
+
+6. Update permissions on the files:
+
+    ```bash
         cd /usr/local/Radarr/var/.config/Radarr/
         chown -R Radarr:users *
         chmod -R 0644 *
     ```
-    On some installations, the user is different: `chown -R sc-``:``  * `
-7.  Start 
+
+    On some installations, the user is different: `chown -R sc-``:``  *`
+7. Start
 
 ## Help I have locked my self out
 
 To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
-1.  Open config.xml in a text editor
-2.  Find the authentication method line will be
-`<AuthenticationMethod>Basic</AuthenticationMethod>` or ` <AuthenticationMethod>Forms</AuthenticationMethod>`
-
-1.  Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
-2. Restart Radarr
-3. Radarr will now be accessible without a password, you should go the `Settings: General` in the  UI and set your username and password
+1. Open config.xml in a text editor
+1. Find the authentication method line will be
+`<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+1. Restart Radarr
+1. Radarr will now be accessible without a password, you should go the `Settings: General` in the  UI and set your username and password
 
 ## Help I have forgotten my password
 
@@ -444,7 +450,7 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 ## Web Interface Only Loads at localhost on Windows
 
-- If you can only reach your web interface at http://localhost:7878/ or http://127.0.0.1:7878/, you need to run  as administrator at least once.
+- If you can only reach your web interface at <http://localhost:7878/> or <http://127.0.0.1:7878/>, you need to run  as administrator at least once.
 
 ## Permissions
 
@@ -464,10 +470,10 @@ This is usually due to  searching Jackett differently than you do. See our [trou
   - [Firefox cookies](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
 
 ## Unpack Torrents
- 
+
 - Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
 
-## uTorrent is no longer working 
+## uTorrent is no longer working
 
 - Ensure the Web UI is enabled
 
@@ -475,14 +481,13 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-
 ## Does Radarr require a SABnzbd post-processing script to import downloaded episodes?
 
 No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If  and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so  knows where to find the files.
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
- - Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get  back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start  and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
+- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get  back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start  and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -510,11 +515,11 @@ The Jackett `/all` endpoint is convenient, but that is its only benefit. Everyth
 
 Using the all endpoint has no advantages (besides reduced management overhead), only disadvantages:
 
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) can't be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
+- you lose control over indexer specific settings (categories, search modes, etc.)
+- mixing search modes (IMDB, query, etc.) might cause low-quality results
+- indexer specific categories (\>= 100000) can't be used.
+- slow indexers will slow down the overall result
+- total results are limited to 1000
 
 Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
 
@@ -523,7 +528,9 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 This is expected. This is how the Torrent Process works with .
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
-2. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-3.  Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within  under the specific download client). When files are imported to your media folder  will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-   - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then  will fall back and copy the file.
-4.  If the "Completed Download Handling - Remove" option is enabled in 's settings,  will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+1. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within  under the specific download client). When files are imported to your media folder  will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then  will fall back and copy the file.
+
+1. If the "Completed Download Handling - Remove" option is enabled in 's settings,  will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.

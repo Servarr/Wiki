@@ -72,7 +72,7 @@ If you're unable to access the Prowlarr UI to set the logging level you can do s
   `...`
  `</Config>`
 
-## Clearing Logs
+### Clearing Logs
 
 You can clear log files and the logs database directly from the UI, under `System` -> `Logs` -> `Files` and `System` -> `Logs` -> `Delete` (Trash Can Icon).
 
@@ -96,7 +96,7 @@ The best place to look when Prowlarr won't start after an update is your log fil
 
 ### Migration Issue
 
-Migration errors won't be identical, but here is an example:
+- Migration errors won't be identical, but here is an example:
 
 `14-2-4 18:56:49.5|Info|MigrationLogger|*** 36: update_with_quality_converters migrating ***`
 `14-2-4 18:56:49.6|Error|MigrationLogger|SQL logic error or missing database duplicate column name: Items`

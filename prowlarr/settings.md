@@ -41,7 +41,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Add and Remove Only` will only add or remove indexers when they are added or removed from Prowlarr, but edits within the indexer itself either in your app or in Prowlarr are not synced.
 
-`Full Sync` will keep your app and Prowlarr fully in sync. If you make a change in either program, it is synced to the other program (and to any other program that has full sync selected!). 
+`Full Sync` will keep your app and Prowlarr fully in sync. If you make a change in either program, it is synced to the other program (and to any other program that has full sync selected!).
 >Currently Prowlarr is the true source so any in-app Customizations will be iverridden.
 {.is-warning}
 
@@ -189,15 +189,16 @@ Select the development branch you would like to use here. (Advanced Option) Vali
 - <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
   
 - <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
->   **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
+
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
 {.is-warning}
 
-- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately. 
+- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
   
->   **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
+> **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-  - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
+- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
 ### Backups
 

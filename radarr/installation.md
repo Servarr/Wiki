@@ -8,8 +8,7 @@ editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
 ---
 
-# Windows
-
+## Windows
 
 Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
@@ -21,15 +20,17 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-windows for your architecture
+1. Download the latest version of Radarr from <https://radarr.video/#downloads-v3-windows> for your architecture
 1. Run the installer
-1. Browse to http://localhost:7878 to start using Radarr
-# OSX
-1. Download the latest version of Radarr from https://radarr.video/#downloads-v3-macos
-1. Open the archive and drag the Radarr icon to your Application folder.
-1. Browse to http://localhost:7878 to start using Radarr
+1. Browse to <http://localhost:7878> to start using Radarr
 
-## Linux
+## OSX
+
+1. Download the latest version of Radarr from <https://radarr.video/#downloads-v3-macos>
+1. Open the archive and drag the Radarr icon to your Application folder.
+1. Browse to <http://localhost:7878> to start using Radarr
+
+### Linux
   
 You'll need to install the binaries using the below commands.
 > Note: This assumes you will run as the user `radarr` and group `media`.
@@ -47,6 +48,7 @@ You'll need to install the binaries using the below commands.
 - Ensure ownership of the binary directory.
   `sudo chown radarr:radarr /opt/Radarr`
 - Configure systemd so radarr can autostart at boot.
+
 > The below systemd creation script will use a data directory of `/data/.config/Radarr`.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-warning}
 
@@ -72,13 +74,16 @@ EOF
 - Reload systemd: `systemctl -q daemon-reload`
 - Enable the Radarr service: `systemctl enable --now -q radarr`
 
-# Docker
+## Docker
+
 The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Radarr Docker image.
 
-## Avoid Common Pitfalls
-### Volumes and Paths
+### Avoid Common Pitfalls
+
+#### Volumes and Paths
+
 There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
 
 The first is a problem because the download client will report a download's path as `/torrents/My.Movie.2018/`, but in the Radarr container that might be at `/downloads/My.Movie.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
@@ -89,25 +94,28 @@ The best solution is to use a single, common volume inside the containers, such 
 
 If this advice is not followed, you may have to configure a Remote Path Mapping in the Radarr web UI (Settings › Download Clients).
 
-### Ownership and Permissions
+#### Ownership and Permissions
+
 Permissions and ownership of files is one of the most common problems for Radarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
 
 > For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
 {.is-info}
 
-## Install Radarr
+### Install Radarr
+
 To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/radarr](https://hotio.dev/containers/radarr/)
 - [linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
 {.links-list}
 
-# NGINX Reverse Proxy Configuration
+## NGINX Reverse Proxy Configuration
+
 > This assumes the default port of `7878` and that you set a baseurl of `radarr`
 {.is-info}
 
-```
+```nginx
 location /radarr {
   proxy_pass        http://127.0.0.1:7878/radarr;
   proxy_set_header Host $proxy_host;
