@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-08T23:58:14.902Z
+date: 2021-06-08T23:58:45.181Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -65,6 +65,9 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 ## Download Clients (Prowlarr Searches)
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+{.is-info}
+
+> Note: Prowlarr does not sync Download Clients to the Applications.
 {.is-info}
 
 Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
