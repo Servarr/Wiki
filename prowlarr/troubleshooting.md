@@ -51,7 +51,7 @@ The flags have the following functions:
 
 ## Standard Logs Location
 
-The log files are located in 's [Appdata Directory](/prowlarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -\> Logs -\> Files.
+The log files are located in 's [Appdata Directory](/prowlarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -> Logs -> Files.
 
 > Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 {.is-info}

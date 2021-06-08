@@ -50,7 +50,7 @@ What you need to do is:
 
 ## Standard Logs Location
 
-The log files are located in 's [Appdata Directory](/readarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -\> Logs -\> Files.
+The log files are located in 's [Appdata Directory](/readarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -> Logs -> Files.
 
 Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
@@ -64,7 +64,7 @@ The logs can be long and hard to read as part of a forum or \[<https://www.reddi
 
 #### Trace/Debug Logs
 
-You can change the log level at Settings -\> General -\> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `.debug.txt` and `r.trace.txt` respectively.
+You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `.debug.txt` and `r.trace.txt` respectively.
 
 If you're unable to access the  UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
@@ -78,7 +78,7 @@ If you're unable to access the  UI to set the logging level you can do so by edi
 
 ### Clearing Logs
 
-You can clear log files and the logs database directly from the UI, under System -\> Logs -\> Files and System -\> Logs -\> Delete (Trash Can Icon)
+You can clear log files and the logs database directly from the UI, under System -> Logs -> Files and System -> Logs -> Delete (Trash Can Icon)
 
 #### Multiple Log Files
 
@@ -211,7 +211,7 @@ For Sabnzbd, this is handled with the History Retention setting.
 
 #### Download cannot be matched to a library item
 
-For various reasons, releases cannot be parsed once's grabbed and sent to the download client. Activity -\> Options -\> Shown Unknown will display all items not otherwise ignored / already imported within 's download client category. These will typically need to be manually mapped and imported.
+For various reasons, releases cannot be parsed once's grabbed and sent to the download client. Activity -> Options -> Shown Unknown will display all items not otherwise ignored / already imported within 's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 
