@@ -8,7 +8,6 @@ editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
 ---
 
-# Quick Start Guide
 In this guide we will try to explain the basic setup you need to do to get started as quickly as possible with Readarr.
 
 There are a lot more settings you may need or want. They can be found at the [settings]( /readarr/settings) page.
@@ -19,9 +18,9 @@ After installation and starting up, you open a browser and go to `http://ip_wher
 
 ## Media Management
 
-First we’re going to take a look at the <code>Media Management</code> settings where we can setup our preferred naming and file management settings.
+First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
-<code>Settings</code> =&gt; <code>Media Management</code>
+`Settings` =\> `Media Management`
 
 ![mediamanagement.png](/assets/readarr/mediamanagement.png)
 
@@ -30,7 +29,7 @@ First we’re going to take a look at the <code>Media Management</code> settings
 ![booknaming.png](/assets/readarr/booknaming.png)
 
 - Enable/Disable Renaming of your books (as opposed to leaving the names that are currently there or as they were when you downloaded them).
-- If you want illegal characters replaced or removed (<code>\ / : * ? &quot; &lt; &gt; | ~ - % &amp; + { }</code>).
+- If you want illegal characters replaced or removed (`\ / : * ? &quot; < > | ~ - % &amp; + { }`).
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.
 - `(Advanced Option) This is where you will set the naming convention for the Author folder.`
 
@@ -41,12 +40,12 @@ First we’re going to take a look at the <code>Media Management</code> settings
 - `(Advanced Option) Enable to create empty author folders when a new author is added to Readarr.`
 - `(Advanced Option) Enable to delete empty author folders when there are no remaining books for that author.`
 
-## Importing 
+## Importing
 
 ![importing.png](/assets/readarr/importing.png)
 
 - `(Advanced Option) Designate the required minimum free space that must be available on your drive in order for books to be imported.`
-- `(Advanced Option) Enable <code>Use Hardlinks instead of Copy</code> more info how and why with examples [https://trash-guides.info/hardlinks TRaSH's Hardlinks Guide].`
+- `(Advanced Option) Enable`Use Hardlinks instead of Copy`more info how and why with examples [https://trash-guides.info/hardlinks TRaSH's Hardlinks Guide].`
 - `(Advanced Option) Import matching extra files (nfo, etc) after importing a file.`
 
 ## File Management
@@ -54,7 +53,9 @@ First we’re going to take a look at the <code>Media Management</code> settings
 ![filemanagement.png](/assets/readarr/filemanagement.png)
 
 - Books deleted from disk are automatically unmonitored in Readarr.
-* You may want to delete a book, and do not want Readarr to re-download the book later. You would use this option.
+
+- You may want to delete a book, and do not want Readarr to re-download the book later. You would use this option.
+
 - How you want Readarr to handle PROPER and REPACK for replacement of your books.
 - Check to watch root folders for file changes and update Readarr appropriately.
 - Change behavior on how Readarr rescans author folders when a change is detected.

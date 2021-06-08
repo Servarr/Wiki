@@ -8,16 +8,15 @@ editor: markdown
 dateCreated: 2021-05-25T19:18:46.628Z
 ---
 
-## Troubleshooting
 
-### Asking for Help
+
+## Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Readarr Subreddit*](https://reddit.com/r/readarr)
 {.links-list}
-
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker-Guide](/Docker-Guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/Docker-Guide#Docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
@@ -29,14 +28,14 @@ If you're linked here for support remember to get them the information from the 
 
 What you need to do is:
 
-1.  Turn Logging up to Trace
-1.  Clear Logs
-1.  Reproduce the Issue
-1.  Open the trace log file (.trace.txt) and fine the relevant context
-1.  [Hastebin](https://hastebin.com/), [Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+1. Turn Logging up to Trace
+1. Clear Logs
+1. Reproduce the Issue
+1. Open the trace log file (.trace.txt) and fine the relevant context
+1. [Hastebin](https://hastebin.com/), [Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
 
-  - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-  - **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/readarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/readarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```
 
@@ -49,19 +48,19 @@ What you need to do is:
 
 ```
 
-#### Standard Logs Location
+## Standard Logs Location
 
 The log files are located in 's [Appdata Directory](/readarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -\> Logs -\> Files.
 
 Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
-#### Update Logs Location
+## Update Logs Location
 
 The update log files are located in 's [Appdata Directory](/readarr/appdata-directory), inside the UpdateLogs/ folder.
 
-#### Sharing Logs
+### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or \[<https://www.reddit.com/r/> Reddit\] post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or \[<https://www.reddit.com/r/> Reddit\] post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 #### Trace/Debug Logs
 
@@ -69,8 +68,7 @@ You can change the log level at Settings -\> General -\> Logging.  does not need
 
 If you're unable to access the  UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
-
-``` 
+```xml
  <Config>
   ...
   <LogLevel>debug</LogLevel>
@@ -78,7 +76,7 @@ If you're unable to access the  UI to set the logging level you can do so by edi
  </Config>
 ```
 
-#### Clearing Logs
+### Clearing Logs
 
 You can clear log files and the logs database directly from the UI, under System -\> Logs -\> Files and System -\> Logs -\> Delete (Trash Can Icon)
 
@@ -94,7 +92,7 @@ When Trace log level is enabled, additional `.trace.txt` rolling log files will 
 
 -----
 
-#### Purpose
+### Purpose
 
 We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
@@ -102,9 +100,9 @@ We do everything we can to prevent issues when upgrading, but they occur, this w
 
 The best place to look when  won't start after an update is your log files, before trying to start  again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
 
-**Migration Issue**
+- **Migration Issue**
 
-Migration errors won't be identical, but here is an example:
+- Migration errors won't be identical, but here is an example:
 
 ```
 14-2-4 18:56:49.5|Info|MigrationLogger|\*\*\* 36: update\_with\_quality\_converters migrating \*\*\*
@@ -121,7 +119,7 @@ In the event of a migration issue there is not much you can do immediately, if t
 
 #### Manually upgrading
 
-Grab the latest release from https://readarr.com
+Grab the latest release from <https://readarr.com>
 
 Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run  as you normally would.
 
@@ -239,7 +237,7 @@ When you test an indexer or tracker, in debug or trace logs you can find the URL
 
 #### Media is Unmonitored
 
-The  is/are not monitored.
+The media is/are not monitored.
 
 #### Wrong categories
 
@@ -267,11 +265,11 @@ The Jackett `/all` endpoint is convenient, but that is its only benefit. Everyth
 
 Using the all endpoint has no advantages (besides reduced management overhead), only disadvantages:
 
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) can't be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
+- you lose control over indexer specific settings (categories, search modes, etc.)
+- mixing search modes (IMDB, query, etc.) might cause low-quality results
+- indexer specific categories (\>= 100000) can't be used.
+- slow indexers will slow down the overall result
+- total results are limited to 1000
 
 Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
 
@@ -283,7 +281,7 @@ Please discuss with the support team on discord. If this is something that may b
 
 These are some of the common errors you may see when adding an indexer
 
-#### The underlying connection was closed: An unexpected error occurred on a send.
+#### The underlying connection was closed: An unexpected error occurred on a send
 
 This is caused by the indexer using a SSL protocol not supported by .net 4.5, to resolve this you will need to install .net 4.5, which is available on Vista/Server 2008 and above (if you’re on XP/Server 2003 its time to upgrade).
 
@@ -292,19 +290,24 @@ This is caused by the indexer using a SSL protocol not supported by .net 4.5, to
  seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
 ```
-    System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&amp;apikey=(removed) —&gt; System.Net.WebException: The request timed out
+    System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&amp;apikey=(removed) —> System.Net.WebException: The request timed out
 ```
+
 And you can see the following in the trace log file:
+
 ```
-    &lt;DATE&amp;TIME&gt;|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
+    <DATE&amp;TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
 ```
+
 You might fix it by installing libcurl3. On Ubuntu/Debian use;
-```
+
+```bash
     apt install libcurl3
 ```
+
 This can also be caused by:
 
-  - improperly configured or use of a VPN
-  - improperly configured or use of a proxy
-  - local DNS issues
-  - local IPv6 issues
+- improperly configured or use of a VPN
+- improperly configured or use of a proxy
+- local DNS issues
+- local IPv6 issues

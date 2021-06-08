@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
 ---
 
-# Settings
-
 ## Media Management
 
 ### Book File Naming
@@ -21,21 +19,23 @@ If you are using Calibre integration, you do not get to name book files. Calibre
 Commonly used naming schema are:
 
 Standard Book Format
-<code>{Book Title}\{Author Name} - {Book Title}</code> which would then output a folder named <code>Cujo</code>, and a subdirectory containing a file with the name <code>Stephen King - Cujo.m4b</code>
+`{Book Title}\{Author Name} - {Book Title}` which would then output a folder named `Cujo`, and a subdirectory containing a file with the name `Stephen King - Cujo.m4b`
 
 Author Folder Format
-- <code>{Author Name}</code> which would then output: <code>Stephen King</code>
+
+- `{Author Name}` which would then output: `Stephen King`
 
 - Rename Books - If this is toggled off (no check in the box) Readarr will use the existing file name if renaming is disabled.
 
 > If you leave Rename Books unchecked, then none of the naming stuff below applies - you have told Readarr you do not want any renaming done at all.
 {.is-info}
 
-- Replace Illegal Characters - If this is toggled off (no check in the box) Readarr will replace illegal characters. Examples include <code>\ # / $ * < ></code> and more.
+- Replace Illegal Characters - If this is toggled off (no check in the box) Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
 
 Dropdown Box (upper right corner)
 
 Left Box - Space Handling
+
 - Space ( ) - Use spaces in naming (Default)
 - Period (.) - Use periods in lieu of spaces in naming
 - Underscore (_) - Use underscores in lieu of spaces in naming
@@ -48,46 +48,55 @@ Right Box - Case Handling
 - Lowercase - Make title all Lowercase
 
 Author
-- {Author Name}	Author Name
-- {Author CleanName}	Author Name
-- {Author NameThe}	Author Name, The
-- {Author Disambiguation}	Author Name (disambiguation used from GoodReads for multiple authors with the same name)
+
+- {Author Name} Author Name
+- {Author CleanName} Author Name
+- {Author NameThe} Author Name, The
+- {Author Disambiguation} Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
 Book
-- {Book Title}	Book Name!
-- {Book CleanTitle}	Book Name
-- {Book TitleThe}	Book Name, The
-- {Book Type}	Book Type
-- {Book Disambiguation}	Book Name! (disambiguation title used from GoodReads)
+
+- {Book Title} Book Name!
+- {Book CleanTitle} Book Name
+- {Book TitleThe} Book Name, The
+- {Book Type} Book Type
+- {Book Disambiguation} Book Name! (disambiguation title used from GoodReads)
 
 Release Date
-- {Release Year}	2001
+
+- {Release Year} 2001
 
 Medium
-- {medium:0}	1
-- {medium:00}	01
+
+- {medium:0} 1
+- {medium:00} 01
 
 Medium Format
-- {Medium Format}	CD
+
+- {Medium Format} CD
 
 Quality
-- {Quality Full}	FLAC Proper
-- {Quality Title}	FLAC
+
+- {Quality Full} FLAC Proper
+- {Quality Title} FLAC
 
 Media Info
-- {MediaInfo AudioCodec}	FLAC
-- {MediaInfo AudioChannels}	2.0
-- {MediaInfo AudioBitRate}	320kbps
-- {MediaInfo AudioBitsPerSample}	24bit
-- {MediaInfo AudioSampleRate}	44.1kHz
+
+- {MediaInfo AudioCodec} FLAC
+- {MediaInfo AudioChannels} 2.0
+- {MediaInfo AudioBitRate} 320kbps
+- {MediaInfo AudioBitsPerSample} 24bit
+- {MediaInfo AudioSampleRate} 44.1kHz
 
 Other
-- {Release Group}	Rls Group
-- {Preferred Words}	iNTERNAL
+
+- {Release Group} Rls Group
+- {Preferred Words} iNTERNAL
 
 Original
-- {Original Title}	Author.Name.Book.Name.2018.FLAC-EVOLVE
-- {Original Filename}	01-book name
+
+- {Original Title} Author.Name.Book.Name.2018.FLAC-EVOLVE
+- {Original Filename} 01-book name
 
 > Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
 {.is-info}
@@ -127,9 +136,11 @@ Author Folder Format
 - (Advanced Option) Choose whether to change the file date stamp.
 - (Advanced Option) Enter a folder here if you want to use a Recycling Bin (things you delete will go here instead of being permanently deleted, so that you can restore them if you made a mistake).
 - (Advanced Option) Enter the number of days to keep files in the Recycling Bin before they are permanently deleted.
+
 > It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
- 
+
 ## Profiles
+
 ### Quality Profiles
 
 Quality profiles are used to determine what formats of books are acceptable for a book in your library.
@@ -153,8 +164,10 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 ![metaprofiles.png](/assets/readarr/metaprofiles.png)
   
 - Enter a name for this profile.
-- Enter the minimum popularity for a book to be added for an author. 
+- Enter the minimum popularity for a book to be added for an author.
+
 > Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
+
 - Enter the minimum number of pages a book must have to be added for an author.
 - Check this box to skip books with a missing release date.
 - Check this box to skip books that don't contain either an ISBN or ASIN number.
@@ -181,6 +194,6 @@ Release profiles are used to determine if indexer release names qualify for down
 - Check this box to include your preferred words in the {Preferred Words} file naming assignment token.
   
 > You should include {Preferred Words} in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
+
 - In this drop-down, you can limit this release profile to a single indexer.
 - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
-  

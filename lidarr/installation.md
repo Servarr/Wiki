@@ -10,7 +10,6 @@ dateCreated: 2021-05-24T05:12:27.036Z
 
 ## Windows
 
-
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
@@ -43,6 +42,7 @@ You'll need to install the binaries using the below commands.
 - Ensure ownership of the binary directory.
   `sudo chown lidarr:lidarr /opt/Lidarr`
 - Configure systemd so Lidarr can autostart at boot.
+
 > The below systemd creation script will use a data directory of `/data/.config/Lidarr`.  For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
 {.is-warning}
 

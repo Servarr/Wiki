@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-05-25T15:51:03.809Z
 ---
 
-# Calendar
-
 ![calendar.png](/assets/readarr/calendar.png)
 
 the Calendar page gives an overview, in the chosen timeframe, of books being released and their status in Readarr.
@@ -50,5 +48,3 @@ Click on *Options* to change the overall settings for this page.
 - You can change the format of the week's column header to your local choice.
 - You can change the time format to your local choice.
 - You can enable color-impaired mode, which changes the green and red stripes to a more visible set of colors to suit color-impaired viewers.
-
-
