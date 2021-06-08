@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-08T23:57:29.340Z
+date: 2021-06-08T23:58:14.902Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -62,7 +62,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
-## Download Clients (for In-Prowlarr searches only!)
+## Download Clients (Prowlarr Searches)
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
 {.is-info}
