@@ -1,9 +1,9 @@
 ---
-title: FAQ
+title: Prowlarr FAQ
 description: 
 published: true
 date: 2021-06-07T20:53:12.004Z
-tags: 
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
 ---

@@ -1,9 +1,9 @@
 ---
-title: Indexers
+title: Prowlarr Indexers
 description: 
 published: true
 date: 2021-06-07T01:49:15.898Z
-tags: 
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
 ---

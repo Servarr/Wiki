@@ -1,9 +1,9 @@
 ---
-title: Troubleshooting
+title: Prowlarr Troubleshooting
 description: 
 published: true
 date: 2021-06-08T02:12:54.318Z
-tags: 
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-06-05T17:31:43.983Z
 ---

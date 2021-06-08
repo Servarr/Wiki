@@ -1,9 +1,9 @@
 ---
-title: Settings
+title: Prowlarr Settings
 description: 
 published: true
 date: 2021-06-07T23:57:58.015Z
-tags: 
+tags: Prowlarr
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
