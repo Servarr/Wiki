@@ -2,7 +2,7 @@
 title: Donate
 description: 
 published: true
-date: 2021-06-08T23:43:54.466Z
+date: 2021-06-08T23:47:03.521Z
 tags: needs-love
 editor: markdown
 dateCreated: 2021-05-30T17:43:32.301Z
@@ -22,9 +22,9 @@ We currently use OpenCollective to accept donations on all projects, this allows
 
 ### Donate at the links below
 
-[Lidarr ![32.png](/assets/lidarr/32.png)](https://opencollective.com/lidarr)
-[Prowlarr ![32.png](/assets/prowlarr/32.png)](https://opencollective.com/prowlarr)
-[Radarr ![32.png](/assets/radarr/32.png)](https://opencollective.com/radarr)
-[Readarr ![32.png](/assets/readarr/32.png)](https://opencollective.com/readarr)
-[Sonarr ![32.png](/assets/sonarr/32.png)](https://opencollective.com/sonarr)
+[![48.png](/assets/lidarr/48.png)](https://opencollective.com/lidarr)
+[![48.png](/assets/prowlarr/48.png)](https://opencollective.com/prowlarr)
+[![48.png](/assets/radarr/48.png)](https://opencollective.com/radarr)
+[![48.png](/assets/readarr/48.png)](https://opencollective.com/readarr)
+[![48.png](/assets/sonarr/48.png)](https://opencollective.com/sonarr)
 {.links-list}
