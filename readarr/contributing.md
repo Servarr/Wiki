@@ -14,7 +14,7 @@ We're always looking for people to help make Readarr even better, there are a nu
 
 ### Documentation
 
-Setup guides, FAQ, the more information we have on the [wiki](https://wiki.servarr.com/Readarr) the better.
+Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.servarr.com/readarr) the better.
 
 ### Development
 
