@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-06-09T22:56:36.666Z
+date: 2021-06-09T23:04:19.147Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -38,11 +38,11 @@ Yes.
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
 | Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|
 |                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
 
 | Release Channel Type                                          | Branch: master (stable) (none yet) | Branch: develop (beta) (v0.1) | Branch: nightly (unstable) (v0.1)            |
-| ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
+|
 | [hotio](https://hub.docker.com/r/hotio/prowlarr)                | `no stable release yet`         | `hotio/prowlarr:testing`        | `hotio/prowlarr:nightly` |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/prowlarr) | `no stable release yet`    | `linuxserver/prowlarr:develop`  | `linuxserver/prowlarr:nightly` |
 
