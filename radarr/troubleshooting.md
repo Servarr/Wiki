@@ -29,7 +29,7 @@ What you need to do is:
 1. Turn Logging up to Trace
 1. Clear Logs
 1. Reproduce the Issue
-1. Open the trace log file (.trace.txt) and fine the relevant context
+1. Open the trace log file (radarr.trace.txt) and fine the relevant context
 1. [Hastebin](https://hastebin.com/), [Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
@@ -62,11 +62,11 @@ The update log files are located in radarr's [Appdata Directory]/radarr/appdata-
 
 #### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 ##### Trace/Debug Logs
 
-You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `.debug.txt` and `r.trace.txt` respectively.
+You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `radarr.debug.txt` and `radarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
@@ -231,7 +231,11 @@ When you test an indexer or tracker, in debug or trace logs you can find the URL
 
 ### Testing a Search
 
+placeholder
+
 #### Common Problems
+
+Below are some common problems.
 
 ##### Media is Unmonitored
 

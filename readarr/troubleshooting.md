@@ -60,7 +60,7 @@ The update log files are located in readarr's [Appdata Directory]/readarr/appdat
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or [Reddit](https://www.reddit.com/r/readarr) post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or [Reddit](https://www.reddit.com/r/readarr) post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 #### Trace/Debug Logs
 
@@ -82,11 +82,11 @@ You can clear log files and the logs database directly from the UI, under System
 
 #### Multiple Log Files
 
- uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
+ Readarr uses rolling log files limited to 1MB each. The current log file is always ,`readarr.txt`, for the the other files `readarr.0.txt` is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
 
-When Debug log level is enabled, additional `.debug.txt` rolling log files will be present. This log files contains fatal, error, warn, info, and debug entries. It usually covers a 40h period.
+When Debug log level is enabled, additional `readarr.debug.txt` rolling log files will be present. This log files contains fatal, error, warn, info, and debug entries. It usually covers a 40h period.
 
-When Trace log level is enabled, additional `.trace.txt` rolling log files will be present. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most.
+When Trace log level is enabled, additional `readarr.trace.txt` rolling log files will be present. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
 
@@ -232,6 +232,8 @@ When you test an indexer or tracker, in debug or trace logs you can find the URL
 ### Testing a Search
 
 ### Common Problems
+
+Below are some common problems.
 
 #### Media is Unmonitored
 

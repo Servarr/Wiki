@@ -58,11 +58,11 @@ The update log files are located in sonarr's [Appdata Directory]/sonarr/appdata-
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or [Reddit](https://www.reddit.com/r/sonarr) post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or [Reddit](https://www.reddit.com/r/sonarr) post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 #### Trace/Debug Logs
 
-You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `.debug.txt` and `r.trace.txt` respectively.
+You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `r.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
@@ -80,11 +80,11 @@ You can clear log files and the logs database directly from the UI, under System
 
 #### Multiple Log Files
 
- uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
+ Sonarr uses rolling log files limited to 1MB each. The current log file is always ,`sonarr.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
 
-When Debug log level is enabled, additional `.debug.txt` rolling log files will be present. This log files contains fatal, error, warn, info, and debug entries. It usually covers a 40h period.
+When Debug log level is enabled, additional `sonarr.debug.txt` rolling log files will be present. This log files contains fatal, error, warn, info, and debug entries. It usually covers a 40h period.
 
-When Trace log level is enabled, additional `.trace.txt` rolling log files will be present. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most.
+When Trace log level is enabled, additional `sonarr.trace.txt` rolling log files will be present. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
 
@@ -144,6 +144,7 @@ Import issues should almost always manifest as an item in Activity with an orang
 Incorrect path issues are possible too, though less common in normal setups. The key to understanding path issues is knowing that gets the path to the download *from* the download client, via its API. This becomes a problem in more unique use cases, like the download client running on a different system (maybe even OS\!). It can also occur in a Docker setup, when volumes are not done well. A remote path map is a good solution where you don’t have control, like a seedbox setup. On a Docker setup, fixing the paths is a better option.
 
 ### Common Problems
+Below are some common problems.
 
 #### Download Client's WebUI is not enabled
 
