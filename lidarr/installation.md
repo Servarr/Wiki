@@ -31,23 +31,36 @@ You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of lidarr and install it into `/opt`
 {.is-info}
 
-- Ensure you have the required prequisite packages: `sudo apt install curl SQLite3`
+- Ensure you have the required perquisite packages: You'll need curl, mediainfo, chromaprint, and sqlite. 
+```bash
+sudo apt install curl mediainfo sqlite3 libchromaprint-tools
+```
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
+```bash
+wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
+```
   - AMD64 use `arch=x64`
   - ARM use `arch=arm`
   - ARM64 use `arch=arm64`
-- Uncompress the files: `tar -xvzf Lidarr*.linux*.tar.gz`
-- Move the files to `/opt/` `sudo mv Lidarr/ /opt`
+- Uncompress the files: 
+```bash
+tar -xvzf Lidarr*.linux*.tar.gz
+```
+- Move the files to `/opt/`
+```bash
+sudo mv Lidarr/ /opt
+```
 - Ensure ownership of the binary directory.
-  `sudo chown lidarr:lidarr /opt/Lidarr`
+```bash
+sudo chown lidarr:lidarr /opt/Lidarr
+```
 - Configure systemd so Lidarr can autostart at boot.
 
 > The below systemd creation script will use a data directory of `/data/.config/Lidarr`.  For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
 {.is-warning}
 
 ```bash
-    cat > /etc/systemd/system/lidarr.service << EOF
+cat > /etc/systemd/system/lidarr.service << EOF
 [Unit]
 Description=Lidarr Daemon
 After=syslog.target network.target
@@ -65,9 +78,14 @@ WantedBy=multi-user.target
 EOF
 ```
 
-- Reload systemd: `systemctl -q daemon-reload`
-- Enable the Lidarr service: `systemctl enable --now -q lidarr`
-
+- Reload systemd: 
+```bash
+systemctl -q daemon-reload
+```
+- Enable the Radarr service: 
+```bash
+systemctl enable --now -q lidarr
+```
 ## Docker
 
 The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
@@ -78,11 +96,11 @@ These instructions provide generic guidance that should apply to any Lidarr Dock
 
 #### Volumes and Paths
 
-There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
+There are two common problems with Docker volumes: Paths that differ between the Lidarr and download client container and paths that prevent fast moves and hard links.
 
-The first is a problem because the download client will report a download's path as `/torrents/My.Music.2018/`, but in the Radarr container that might be at `/downloads/My.Music.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+The first is a problem because the download client will report a download's path as `/torrents/My.Music.2018/`, but in the Lidarr container that might be at `/downloads/My.Music.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
 
-Most Docker images suggest paths like `/music` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Radarr container, like /torrents.
+Most Docker images suggest paths like `/music` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Lidarr container, like /torrents.
 
 The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
 
