@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-06-08T02:12:53.005Z
+date: 2021-06-09T19:01:17.857Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:03:42.997Z
@@ -51,14 +51,14 @@ The flags have the following functions:
 
 ### Standard Logs Location
 
-The log files are located in radarr's [Appdata Directory]/radarr/appdata-directory, inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
+The log files are located in radarr's [Appdata Directory](/radarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
 
 > Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 {.is-info}
 
 ### Update Logs Location
 
-The update log files are located in radarr's [Appdata Directory]/radarr/appdata-directory, inside the UpdateLogs/ folder.
+The update log files are located in radarr's [Appdata Directory](/radarr/appdata-directory), inside the UpdateLogs/ folder.
 
 #### Sharing Logs
 
