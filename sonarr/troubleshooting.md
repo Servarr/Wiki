@@ -2,23 +2,11 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-06-09T14:54:52.553Z
+date: 2021-06-09T14:55:04.766Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-09T14:53:32.575Z
 ---
-
----
-title: Troubleshooting
-description: 
-published: true
-date: 2021-05-27T16:47:33.496Z
-tags: 
-editor: markdown
-dateCreated: 2021-05-25T19:18:46.628Z
----
-
-
 
 ## Asking for Help
 
