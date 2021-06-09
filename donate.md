@@ -22,5 +22,5 @@ We currently use OpenCollective to accept donations on all projects, this allows
 
 ### Donate Below
 
-[![48.png](/assets/lidarr/48.png)](https://opencollective.com/lidarr) [![48.png](/assets/prowlarr/48.png)](https://opencollective.com/prowlarr) [![48.png](/assets/radarr/48.png)](https://opencollective.com/radarr) [![48.png](/assets/readarr/48.png)](https://opencollective.com/readarr) [![48.png](/assets/sonarr/48.png)](https://opencollective.com/sonarr)
+[![48.png](/assets/lidarr/logos/48.png)](https://opencollective.com/lidarr) [![48.png](/assets/prowlarr/logos/48.png)](https://opencollective.com/prowlarr) [![48.png](/assets/radarr/logos/48.png)](https://opencollective.com/radarr) [![48.png](/assets/readarr/logos/48.png)](https://opencollective.com/readarr) [![48.png](/assets/sonarr/logos/48.png)](https://opencollective.com/sonarr)
 {.links-list}

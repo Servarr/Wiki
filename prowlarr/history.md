@@ -43,7 +43,7 @@ If you have the columns selected, you can see the indexer searched, the category
 
 Specific query searches will show exactly what was searched, based on the capabilities of each indexer. As you can see below, the same series/episode was searched on 3 different indexers, and each has different capabilities:
 
-![hisst_4_search.png](/assets/prowlarr/hisst_4_search.png)
+![hist_4_search.png](/assets/prowlarr/hist_4_search.png)
 
 If you click on the `i` on any of these searches, you can see the number of results that were returned.
 
