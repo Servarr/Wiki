@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-06-09T03:19:10.047Z
+date: 2021-06-09T03:19:23.696Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -42,7 +42,7 @@ All programs you can add are listed. You should only add programs you currently 
 `Add and Remove Only` - When it is added or removed from Prowlarr, it will update this remote application.
 
 `Full Sync` - When anything changes in this remote application, Prowlarr will keep it in sync. An example would be to delete from this remote application means Prowlarr will put it back.
->Currently Prowlarr is the true source so any in-app Customizations will be iverridden.
+>Currently Prowlarr is the true source so any in-app Customizations will be overridden.
 {.is-warning}
 
 `Disabled` will keep indexers from syncing with the program entirely.
