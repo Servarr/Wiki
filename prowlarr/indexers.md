@@ -2,12 +2,11 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-06-07T01:49:15.898Z
-tags: Prowlarr
+date: 2021-06-09T22:56:27.289Z
+tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
 ---
-
 
 This page will describe how to add and configure indexers in Prowlarr, and keep them synced with your other programs like Sonarr, Radarr, Lidarr, Readarr, etc.
 
