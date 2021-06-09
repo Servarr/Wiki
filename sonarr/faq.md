@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-06-09T19:32:27.026Z
+date: 2021-06-09T21:44:36.408Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -213,8 +213,7 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ## My Custom Script stopped working after upgrading from v2
 ​​
 ​​
-​​You were likely passing arguments in your connection\...that is not
-​​supported.
+​​You were likely passing arguments in your connection\...that is not ​​supported.
 ​​
 ​​1.  Change your argument to be your path
 ​​2.  Make sure the shebang in your script maps to your pwsh path (if you don\'t have a shebang definition in there, add it)
@@ -223,19 +222,13 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ## What\'s the different Series Types?
 ​​
 ​​
-​​Most shows should be `Standard`. For daily shows which are typically
-​​released with a date, `Daily` should be used. Finally, there is anime
-​​where using `Anime` is *usually* right, but sometimes `Standard` can
-​​work better, so try the *other* one if you're having issues.
+​​Most shows should be `Standard`. For daily shows which are typically ​​released with a date, `Daily` should be used. Finally, there is anime ​​where using `Anime` is *usually* right, but sometimes `Standard` can ​​work better, so try the *other* one if you're having issues. ​​
 ​​
-​​Please note that if the series type is set to anime and none of your
-​​enabled indexers have any anime categories configured then it
-​​effectively skips the indexer and may appear that it is not searching.
-​​
+Please note that if the series type is set to anime and none of your ​​enabled indexers have any anime categories configured then it ​​effectively skips the indexer and may appear that it is not searching. ​​
+
 ### Show Type Examples
 ​​
-​​Below are some example release names for each show type. The specific
-​​differentiating piece is noted in bold.
+​​Below are some example release names for each show type. The specific ​​differentiating piece is noted in bold.
 ​​
 ​​**Daily**
 ​​
@@ -270,37 +263,26 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ## Can I update Sonarr inside my Docker container?
 ​​
 ​​
-​​\* *Technically, yes.* **But you should absolutely not.** It is a
-​​primary philosophy of Docker. Database issues can be caused for Sonarr
-​​if you upgrade your installation inside to the most recent nightly, then
-​​update the docker container itself which might downgrade to an older
-​​version.
+​​\* *Technically, yes.* **But you should absolutely not.** It is a ​​primary philosophy of Docker. Database issues can be caused for Sonarr ​​if you upgrade your installation inside to the most recent nightly, then ​​update the docker container itself which might downgrade to an older ​​version.
 ​​
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 ​​
 ​​
-​​\* This is simple, please see this link for more information
-​​[here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
-​​![Developer Cannot be
-​​verified](developer-cannot-be-verified.png "fig:Developer Cannot be verified"){width="2500"}
+​​\* This is simple, please see this link for more information ​​[here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ​​![Developer Cannot be ​​verified](developer-cannot-be-verified.png "fig:Developer Cannot be verified"){width="2500"}
 ​​
 ​​## Help, my Mac says Sonarr.app is damaged and can't be opened
 ​​
-​​That is either due to a corrupt download so try again or [security
-​​issues, please see this related FAQ
-​​entry.](#help_my_mac_says_Sonarr_cannot_be_opened_because_the_developer_cannot_be_verified "wikilink")
+​​That is either due to a corrupt download so try again or [security ​​issues, please see this related FAQ ​​entry.](#help_my_mac_says_Sonarr_cannot_be_opened_because_the_developer_cannot_be_verified "wikilink")
 ​​
 ## How do I request a feature for Sonarr?
 ​​
 ​​
-​​This is an easy one click
-​​[here](https://github.com/Sonarr/Sonarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
+​​This is an easy one click ​​[here](https://github.com/Sonarr/Sonarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
 ​​
 ## I am getting an error: Database disk image is malformed
 ​​
 ​​
-​​\* This means your SQLite database that stores most of the information
-​​for Sonarr is corrupt.
+​​\* This means your SQLite database that stores most of the information ​​for Sonarr is corrupt.
 ​​
 ​​ -  - [Try restoring from a backup](#how_do_i_backup_restore_my_Sonarr "wikilink")  - You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")  - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 ​​
@@ -322,24 +304,18 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ## I use Sonarr on a Mac and it suddenly stopped working. What happened?
 ​​
 ​​
-​​Most likely this is due to a MacOS bug which caused one of the Sonarr
-​​databases to be corrupted.
+​​Most likely this is due to a MacOS bug which caused one of the Sonarr ​​databases to be corrupted.
 ​​
-​​[Follow these steps to
-​​resolve](#i_am_getting_an_error_database_disk_image_is_malformed "wikilink")
+​​[Follow these steps to ​​resolve](#i_am_getting_an_error_database_disk_image_is_malformed "wikilink")
 ​​
-​​Then attempt to launch Sonarr and see if it works. If it does not work,
-​​you\'ll need further support. Post in our
+​​Then attempt to launch Sonarr and see if it works. If it does not work, ​​you\'ll need further support. Post in our
 ​​[reddit](http://reddit.com/r/Sonarr) or hop on
 ​​[discord](https://discord.gg/M6BvZn5) for help.
 ​​
 ## Why can't Sonarr see my files on a remote server?
 ​​
 ​​
-​​In short: the user Sonarr is running as (if service) or under (if tray
-​​app) cannot access the file path on the remote server. This can be for
-​​various reasons, but the most common is, Sonarr is running as a service,
-​​which causes one of two things:
+​​In short: the user Sonarr is running as (if service) or under (if tray ​​app) cannot access the file path on the remote server. This can be for ​​various reasons, but the most common is, Sonarr is running as a service, ​​which causes one of two things:
 ​​
 ​​ - Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  - **Solutions:**  - Run Sonarr's service as another user that has access to that share  - Open the Administrative Tools \> Services window on your Windows server.  - Stop the Sonarr service.  - Open the Properties \> Log On dialog.  - Change the service user account to the target user account.  - Run Sonarr.exe using the Startup Folder
 ​​
@@ -351,10 +327,7 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ## Mapped Network Drives vs UNC Paths
 ​​
 ​​
-​​\* Using mapped network drives generally doesn't work very well,
-​​especially when Sonarr is configured to run as a service. The better way
-​​to set shares up is using UNC paths. So instead of `X:\Movies` use
-​​`\\Server\Movies\`.
+​​\* Using mapped network drives generally doesn't work very well, ​​especially when Sonarr is configured to run as a service. The better way ​​to set shares up is using UNC paths. So instead of `X:\Movies` use ​​`\\Server\Movies\`.
 ​​
 ​​ - A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 ​​
@@ -386,10 +359,7 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ​​
 ### Restoring from Backup
 ​​
-​​*Restoring to an OS that uses different paths won't work (Windows to
-​​Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving
-​​between OS X and Linux may work, since both use paths containing `/`
-​​instead of `\` that Windows uses, but is not supported.*
+​​*Restoring to an OS that uses different paths won't work (Windows to ​​Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving ​​between OS X and Linux may work, since both use paths containing `/` ​​instead of `\` that Windows uses, but is not supported.*
 ​​
 ​​ - **Using zip backup**
 ​​
@@ -413,8 +383,7 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ​​
 ​​ - **Restore for Synology NAS**
 ​​
-​​**CAUTION: Restoring on a Synology requires knowledge of Linux and Root
-​​SSH access to the Synology Device.**
+​​**CAUTION: Restoring on a Synology requires knowledge of Linux and Root ​​SSH access to the Synology Device.**
 ​​
 ​​1.  Re-install Sonarr\
 ​2.  Run Sonarr once to get the AppData directory location\
@@ -451,12 +420,9 @@ To disable authentication (to reset your username or password) you will need nee
 ## Jackett shows more results than Sonarr when manually searching
 ​​
 ​​
-​​This is usually due to Sonarr searching Jackett differently than you do.
-​​[See this troubleshooting article for further
-​​information](/sonarr/troubleshooting#searches-indexers-and-trackers).
+​​This is usually due to Sonarr searching Jackett differently than you do. ​​[See this troubleshooting article for further ​​information](/sonarr/troubleshooting#searches-indexers-and-trackers).
 ​​
 ## Weird UI Issues
-​​
 ​​
 
 - If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage] wiki article.
@@ -466,35 +432,24 @@ To disable authentication (to reset your username or password) you will need nee
 ## Web Interface Only Loads at localhost on Windows
 ​​
 ​​
-​​\* If you can only reach your web interface at <http://localhost:8989/>
-​​or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at
-​​least once, maybe even always.
+​​\* If you can only reach your web interface at <http://localhost:8989/> ​​or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at ​​least once, maybe even always.
 ​​
 ## Permissions
 ​​
 ​​
-​​\* Sonarr will need to move files away from where the downloader puts
-​​them into the final location, so this means that Sonarr will need to
-​​read/write to both the source and the destination directory and files.
+​​\* Sonarr will need to move files away from where the downloader puts ​​them into the final location, so this means that Sonarr will need to ​​read/write to both the source and the destination directory and files.
 ​​
 ​​ - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
 ​​
 ## System & Logs loads forever
 ​​
 ​​
-​​It\'s the easy-privacy blocklist. They basically block any url with
-​​/api/log? in it. Look over the list and tell me if you think that
-​​blocking all the urls in that list is a sensible idea, there are dozens
-​​of urls in there that potentially break sites. You selected that in your
-​​adblocker. Easy solution is to whitelist the domain Sonarr is running
-​​on. But I still recommend checking the list.
+​​It\'s the easy-privacy blocklist. They basically block any url with ​​/api/log? in it. Look over the list and tell me if you think that ​​blocking all the urls in that list is a sensible idea, there are dozens ​​of urls in there that potentially break sites. You selected that in your ​​adblocker. Easy solution is to whitelist the domain Sonarr is running ​​on. But I still recommend checking the list.
 ​​
 ## Finding Cookies
 ​​
 ​​
-​​Some sites cannot be logged into automatically and require you to login
-​​manually then give the cookies to Sonarr to work. This page describes
-​​how you do that.
+​​Some sites cannot be logged into automatically and require you to login ​​manually then give the cookies to Sonarr to work. This page describes ​​how you do that.
 ​​
 ​​ - Chrome ![Chrome cookies](chrome_cookies.png "fig:Chrome cookies"){width="750"}
 ​​ - Firefox ![Firefox cookies](Firefox_cookies.png "fig:Firefox cookies"){width="750"}
@@ -502,9 +457,7 @@ To disable authentication (to reset your username or password) you will need nee
 ## Unpack Torrents
 ​​
 ​​
-​​Most torrent clients doesn't come with the automatic handling of
-​​compressed archives like their usenet counterparts. We recommend
-​​[unpackerr](https://github.com/davidnewhall/unpackerr).
+​​Most torrent clients doesn't come with the automatic handling of ​​compressed archives like their usenet counterparts. We recommend ​​[unpackerr](https://github.com/davidnewhall/unpackerr).
 ​​
 ## uTorrent is no longer working
 
@@ -517,81 +470,41 @@ To disable authentication (to reset your username or password) you will need nee
 ## Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
 ​​
 ​​
-​​No. Sonarr will talk to your download client to determine where the
-​​files have been downloaded and will import them automatically. If Sonarr
-​​and your download client are on different machines you will need to use
-​​Remote Path Mapping to link the remote path to a local one so Sonarr
-​​knows where to find the files.
+​​No. Sonarr will talk to your download client to determine where the ​​files have been downloaded and will import them automatically. If Sonarr ​​and your download client are on different machines you will need to use ​​Remote Path Mapping to link the remote path to a local one so Sonarr ​​knows where to find the files.
 ​​
 ## I got a pop-up that said config.xml was corrupt, what now?
 ​​
 ​​
-​​Sonarr was unable to read your config file on start-up as it became
-​​corrupted somehow. In order to get Sonarr back online, you will need to
-​​delete `.xml` in your [\| AppData
-​​Folder](Sonarr_Appdata_Directory "wikilink"), once deleted start Sonarr
-​​and it will start on the default port (8989), you should now
-​​re-configure any settings you configured on the General Settings page.
+​​Sonarr was unable to read your config file on start-up as it became ​​corrupted somehow. In order to get Sonarr back online, you will need to ​​delete `.xml` in your [\| AppData ​​Folder](Sonarr_Appdata_Directory "wikilink"), once deleted start Sonarr ​​and it will start on the default port (8989), you should now ​​re-configure any settings you configured on the General Settings page.
 ​​
 ## Invalid Certificate and other HTTPS or SSL issues
 ​​
 ​​
-​​Your download client stopped working and you\'re getting an error like
-​​\`Localhost is an invalid certificate\`?
+​​Your download client stopped working and you\'re getting an error like ​​\`Localhost is an invalid certificate\`?
 ​​
-​​Sonarr now validates SSL certificates. If there is no SSL certificate
-​​set in the download client, or you\'re using a self-signed https
-​​certificate without the CA certificate added to your local certificate
-​​store, then Sonarr will refuse to connect. Free properly signed
-​​certificates are available from [let\'s
-​​encrypt](https://letsencrypt.org/).
+​​Sonarr now validates SSL certificates. If there is no SSL certificate ​​set in the download client, or you\'re using a self-signed https ​​certificate without the CA certificate added to your local certificate ​​store, then Sonarr will refuse to connect. Free properly signed ​​certificates are available from [let\'s ​​encrypt](https://letsencrypt.org/).
 ​​
-​​If your download client and Sonarr are on the same machine there is no
-​​reason to use HTTPS, so the easiest solution is to disable SSL for the
-​​connection. Most would agree it\'s not required on a local network
-​​either. It is possible to disable certificate validation in advanced
-​​settings if you want to keep an insecure SSL setup.
+​​If your download client and Sonarr are on the same machine there is no ​​reason to use HTTPS, so the easiest solution is to disable SSL for the ​​connection. Most would agree it\'s not required on a local network ​​either. It is possible to disable certificate validation in advanced ​​settings if you want to keep an insecure SSL setup.
 ​​
 ## VPNs, Jackett, and the \* ARRs
 ​​
 ​​
-​​Unless you\'re in a repressive country like China, Australia or South
-​​Africa, your torrent client is typically the only thing that needs to be
-​​behind a VPN. Because the VPN endpoint is shared by many users, you can
-​​and will experience rate limiting, DDOS protection, and ip bans from
-​​various services each software uses.
+​​Unless you\'re in a repressive country like China, Australia or South ​​Africa, your torrent client is typically the only thing that needs to be ​​behind a VPN. Because the VPN endpoint is shared by many users, you can ​​and will experience rate limiting, DDOS protection, and ip bans from ​​various services each software uses.
 ​​
-​​In other words, putting the \* Arrs (Lidarr, Radarr, Readarr, and
-​​Sonarr) behind a VPN can and will make the applications unusable in some
-​​cases due to the services not being accessible. **To be clear it is not
-​​a matter if VPNs will cause issues with the \* Arrs, but when: image
-​​providers will block you and cloudflare is in front of most of arr
-​​servers (updates, metadata, etc.) and liable to block you too**
+​​In other words, putting the \* Arrs (Lidarr, Radarr, Readarr, and ​​Sonarr) behind a VPN can and will make the applications unusable in some ​​cases due to the services not being accessible. **To be clear it is not ​​a matter if VPNs will cause issues with the \* Arrs, but when: image ​​providers will block you and cloudflare is in front of most of arr ​​servers (updates, metadata, etc.) and liable to block you too**
 ​​
-​​In addition, some private trackers \* ban\* for browsing from a VPN,
-​​which is how Jackett works. In some cases (i.e. certain UK ISPs) it may
-​​be needed to use a VPN for public trackers, in which case you should
-​​then be putting only Jackett behind the VPN. However, you should not do
-​​that if you have private trackers without checking their rules first.
-​​**Many private trackers will ban you for using or accessing them (i.e.
-​​using Jackett) via a VPN.**
+​​In addition, some private trackers \* ban\* for browsing from a VPN, ​​which is how Jackett works. In some cases (i.e. certain UK ISPs) it may ​​be needed to use a VPN for public trackers, in which case you should ​​then be putting only Jackett behind the VPN. However, you should not do ​​that if you have private trackers without checking their rules first. ​​**Many private trackers will ban you for using or accessing them (i.e. ​​using Jackett) via a VPN.**
 ​​
 ## Jackett\'s /all Endpoint
 ​​
 ​​
-​​The Jackett `/all` endpoint is convenient, but that is its only benefit.
-​​Everything else is potential problems, so adding each tracker
-​​individually is recommended.
+​​The Jackett `/all` endpoint is convenient, but that is its only benefit. ​​Everything else is potential problems, so adding each tracker ​​individually is recommended.
 ​​
-​​**May 2021 Update: It is likely Sonarr support will be phased out for
-​​the jackett \`/all\` endpoint in the future due to the fact it only
-​​causes issues.**
+​​**May 2021 Update: It is likely Sonarr support will be phased out for ​​the jackett \`/all\` endpoint in the future due to the fact it only ​​causes issues.**
 ​​
-​​[Even Jackett says it should be avoided and should not be
-​​used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+​​[Even Jackett says it should be avoided and should not be ​​used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 ​​
-​​Using the all endpoint has no advantages (besides reduced management
-​​overhead), only disadvantages:
+​​Using the all endpoint has no advantages (besides reduced management ​​overhead), only disadvantages:
 ​​
 ​​ - you lose control over indexer specific settings (categories, search modes, etc.)
 ​​ - mixing search modes (IMDB, query, etc.) might cause low-quality results
@@ -599,14 +512,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​ - slow indexers will slow down the overall result
 ​​ - total results are limited to 1000
 ​​
-​​Adding each indexer separately It allows for fine tuning of categories
-​​on a per indexer basis, which can be a problem with the `/all` end point
-​​if using the wrong category causes errors on some trackers. In Sonarr,
-​​each indexer is limited to 1000 results if pagination is supported or
-​​100 if not, which means as you add more and more trackers to Jackett,
-​​you're more and more likely to clip results. Finally, if*one* of the
-​​trackers in `/all` returns an error, Sonarr will disable it and now you
-​​don't get any results.
+​​Adding each indexer separately It allows for fine tuning of categories ​​on a per indexer basis, which can be a problem with the `/all` end point ​​if using the wrong category causes errors on some trackers. In Sonarr, ​​each indexer is limited to 1000 results if pagination is supported or ​​100 if not, which means as you add more and more trackers to Jackett, ​​you're more and more likely to clip results. Finally, if*one* of the ​​trackers in `/all` returns an error, Sonarr will disable it and now you ​​don't get any results.
 ​​
 ## Why are there two files? \| Why is there a file left in downloads?
 ​​
