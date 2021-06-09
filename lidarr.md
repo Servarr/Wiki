@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2021-05-26T02:28:38.938Z
+date: 2021-06-09T02:15:10.204Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -28,7 +28,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 - [System](/lidarr/system)
 {.links-list}
 
-
+## Troubleshooting
 
 - [General Troubleshooting](/lidarr/troubleshooting)
 - [FAQ](/lidarr/faq)
