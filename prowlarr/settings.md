@@ -28,7 +28,7 @@ Also, note that for each individual settings page, there are some options at the
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
-Click on `Settings` -> `Apps`, and then click the `+` to add an arr program.
+Click on `Settings` -> `Apps`, and then click the `+` to add an *arr program.
 
 ![addapps.png](/assets/prowlarr/addapps.png)
 
@@ -39,10 +39,10 @@ All programs you can add are listed. You should only add programs you currently 
 - Enter a name for this indexer.
 - Select your sync level for this indexer.
 
-`Add and Remove Only` - When it is added or removed from Prowlarr, it will update this remote application.
+`Add and Remove Only` - When it is added or removed from Prowlarr, it will update your app.
 
-`Full Sync` - When anything changes in this remote application, Prowlarr will keep it in sync. An example would be to delete from this remote application means Prowlarr will put it back.
->Currently Prowlarr is the true source so any in-app Customizations will be overridden.
+`Full Sync` - Full sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program (and to any other program that has full sync selected!) Any change made remotely will be overridden by Prowlarr on next sync
+>Prowlarr will override any in-app customizations.
 {.is-warning}
 
 `Disabled` will keep indexers from syncing with the program entirely.

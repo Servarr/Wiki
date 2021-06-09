@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-16T23:40:17.311Z
 ---
 
-![readarr128.png](/assets/readarr/readarr128.png)
+![128.png](/assets/readarr/logos/128.png)
 
 > Readarr is still in a Alpha state and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
 {.is-warning}
@@ -54,4 +54,4 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 - [Website](https://readarr.com)
 - [Donations](https://opencollective.com/readarr)
-- [Github](https://github.com/readarr/readarr)
+- [GitHub](https://github.com/readarr/readarr)

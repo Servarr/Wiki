@@ -73,7 +73,7 @@ That is either due to a corrupt download (so try again), or security issues answ
 
 ## How do I request a feature for Prowlarr?
 
-To request a feature for Prowlarr, first search on Github to ensure no similar request exists, then [click here](https://github.com/Prowlarr/Prowlarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) to add your request.
+To request a feature for Prowlarr, first search on GitHub to ensure no similar request exists, then [click here](https://github.com/Prowlarr/Prowlarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) to add your request.
 
 ## I am getting an error: Database disk image is malformed
 
@@ -233,7 +233,7 @@ If your download client and Prowlarr are on the same machine there is no reason 
 
 Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-In other words, putting the *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the* Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too.
+In other words, putting the *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the* Arrs, but when: image providers will block you and cloudflare is in front of most of *arr servers (updates, metadata, etc.) and liable to block you too.
 
 In addition, some private trackers ban for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
 

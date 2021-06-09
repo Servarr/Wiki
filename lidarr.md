@@ -51,4 +51,4 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 - [Website](https://lidarr.audio)
 - [Donations](https://opencollective.com/lidarr)
-- [Github](https://github.com/lidarr/lidarr)
+- [GitHub](https://github.com/lidarr/lidarr)

@@ -45,7 +45,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.gg/M6BvZn5)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
-0 <i class="fab fa-wpforms"></i>&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
+- [<i class="fab fa-wpforms"></i>&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
 {.links-list}
 
 ## Links

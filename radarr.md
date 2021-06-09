@@ -53,4 +53,4 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 - [Website](https://radarr.video)
 - [Donations](https://opencollective.com/radarr)
-- [Github](https://github.com/radarr/radarr)
+- [GitHub](https://github.com/radarr/radarr)

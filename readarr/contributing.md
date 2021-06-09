@@ -65,7 +65,7 @@ Readarr is written in C## (backend) and JS (frontend). The backend is built on t
 
 #### Contributing Code
 
-- If you're adding a new, already requested feature, please comment on [Github Issues](https://github.com/Readarr/Readarr/issues "Github Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
+- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Readarr/Readarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
 - Rebase from Readarr's develop branch, don't merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements

@@ -152,7 +152,7 @@ Reddit: r/prowlarr
 Discord: Join our discord
 Donations: If you're feeling generous and would like to donate click here
 Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all click here
-Source: Github
+Source: GitHub
 Feature Requests: Got a great idea drop it here
 
 ## Tasks
