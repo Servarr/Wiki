@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-06-05T20:51:53.183Z
+date: 2021-06-09T15:50:29.509Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -91,7 +91,7 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ### Tdarr
 
-[Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](Sonarr "wikilink")/[Radarr](Radarr "wikilink") and built with the aim of modularisation, parallelisation and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
+[Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](/sonarr)/[Radarr](/radarr) and built with the aim of modularisation, parallelisation and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
 
 ### Unpackerr
 
