@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-06-09T19:03:04.605Z
+date: 2021-06-09T19:04:59.061Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-05-25T19:18:46.628Z
@@ -58,7 +58,7 @@ The update log files are located in readarr's [Appdata Directory](/readarr/appda
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or [Reddit](https://www.reddit.com/r/readarr) post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 #### Trace/Debug Logs
 
