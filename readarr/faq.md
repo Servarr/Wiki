@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-06-09T23:01:58.989Z
+date: 2021-06-09T23:02:25.815Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -105,7 +105,7 @@ As of 1/19/2021 the logic is as follows:
 |                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
 
 | Release Channel Type                                          | Branch: master (stable) (none yet) | Branch: develop (beta) (v0.1) | Branch: nightly (unstable) (v0.1)            |
-| ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
+| 
 | [hotio](https://hub.docker.com/r/hotio/)                | `no stable release yet`         | `pre-alpha`        | `pre-alpha` |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/) | `no stable release yet`    | `pre-alpha`  | `pre-alpha` |
 
