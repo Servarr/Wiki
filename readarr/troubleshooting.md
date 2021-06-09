@@ -1,9 +1,9 @@
 ---
-title: Troubleshooting
+title: Readarr Troubleshooting
 description: 
 published: true
 date: 2021-05-27T16:47:33.496Z
-tags: 
+tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-05-25T19:18:46.628Z
 ---
@@ -228,8 +228,6 @@ Please discuss with the support team on discord. If this is something that may b
 ### Testing an Indexer or Tracker
 
 When you test an indexer or tracker, in debug or trace logs you can find the URL used. An example of a successful test is below, you can see it query the indexer via a specific URL with specific parameters and then the response. You test this url in your browser like replacing the `apikey=(removed)` with the correct apikey like `apikey=123`. You can experiment with the parameters if you’re getting an error from the indexer or see if you have connectivity issues if it doesn’t even work. After you’ve tested in your own browser, you should test from the system is running on *if* you haven’t already.
-
-
 
 ### Testing a Search
 

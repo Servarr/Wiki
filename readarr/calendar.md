@@ -1,9 +1,9 @@
 ---
-title: Calendar
+title: Readarr Calendar
 description: 
 published: true
 date: 2021-05-25T15:51:07.612Z
-tags: 
+tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T15:51:03.809Z
 ---

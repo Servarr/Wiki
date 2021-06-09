@@ -64,7 +64,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Where did Wanted and Cut-off Unmet go?
 
-- Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet` 
+- Movie Index (AKA 'Movies') -\> Filter (top right corner) -\> `Wanted` and `Cut-off Unmet`
   - Wanted - Movie is missing, monitored, and available
   - Missing - Movie is missing and monitored
 

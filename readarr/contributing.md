@@ -1,9 +1,9 @@
 ---
-title: Contributing
+title: Readarr Contributing
 description: 
 published: true
 date: 2021-05-25T19:22:03.351Z
-tags: 
+tags: readarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-25T19:21:59.324Z
 ---

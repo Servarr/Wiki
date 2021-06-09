@@ -1,9 +1,9 @@
 ---
-title: Library
+title: Readarr Library
 description: 
 published: true
 date: 2021-05-25T15:29:31.114Z
-tags: 
+tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T15:29:27.457Z
 ---

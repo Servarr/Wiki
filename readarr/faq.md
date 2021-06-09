@@ -1,9 +1,9 @@
 ---
-title: FAQ
+title: Readarr FAQ
 description: 
 published: true
 date: 2021-06-06T11:06:23.065Z
-tags: 
+tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
 ---

@@ -3,7 +3,7 @@ title: Radarr Quick Start Guide
 description: 
 published: true
 date: 2021-06-05T21:16:47.933Z
-tags: 
+tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-05-17T01:51:10.479Z
 ---

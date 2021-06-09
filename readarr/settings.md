@@ -1,9 +1,9 @@
 ---
-title: Settings
+title: Readarr Settings
 description: 
 published: true
 date: 2021-06-09T12:43:33.338Z
-tags: 
+tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
 ---
@@ -224,4 +224,3 @@ To add an indexer, click the `+` symbol.
 There are some preconfigured indexers available, but mostly you will be using Custom Newznab (for usenet) or Custom Torznab (for torrents) setups.
 
 ![addindexer.png](/assets/readarr/addindexer.png)
-

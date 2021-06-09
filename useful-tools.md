@@ -3,14 +3,14 @@ title: Useful Tools
 description: 
 published: true
 date: 2021-06-09T16:08:46.759Z
-tags: 
+tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
 ---
 
-The following apps are companions to the *ARR Suite of Applications. They are neither maintained, developed, nor supported by the *ARR Dev Teams. Please direct any specific support questions to the respective application development team.
+The following apps are companions to the *ARR Suite of Applications. They are neither maintained, developed, nor supported by the*ARR Dev Teams. Please direct any specific support questions to the respective application development team.
 
-## Common  Software 
+## Common  Software
 
 ### DB Browser for SQLite
 
@@ -77,7 +77,7 @@ Add new movies/shows to your system easily with your phone. App available at [Go
 
 ### Petio
 
-[Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content. 
+[Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
 

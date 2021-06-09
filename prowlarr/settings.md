@@ -47,7 +47,8 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
-- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry. 
+- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
+
 > NOTE that tags are NOT YET FUNCTIONAL!
 {.is-warning}
 
