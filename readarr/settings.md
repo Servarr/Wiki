@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-05-30T14:56:39.102Z
+date: 2021-06-09T12:43:33.338Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -123,6 +123,8 @@ Author Folder Format
   
 - If you would like additional files to be imported, check this box.
 - (Advanced Option, only shown when box is checked) Enter the extensions to move with files, separated by commas. Some good examples are `jpg,nfo,cue`.
+
+> If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
   
 ### File Management
   
@@ -197,3 +199,29 @@ Release profiles are used to determine if indexer release names qualify for down
 
 - In this drop-down, you can limit this release profile to a single indexer.
 - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
+
+## Quality
+
+![qualitydefinitions.png](/assets/readarr/qualitydefinitions.png)
+
+Here you can adjust your size limits for the various types of books you want. The defaults are probably good, you should not really need to adjust them.
+
+## Indexers
+
+Indexers are how Readarr searches for books. You must have at least one for the program to function. Before we get into how to add them, there are some options at the bottom of the page:
+![indexeroptions.png](/assets/readarr/indexeroptions.png)
+
+- Set the minimum age in minutes for usenet indexers to wait before downloading a book. This allows all articles to propagate to avoid failures for brand new files.
+- Set the HARD LIMIT maximum size for anything Readarr grabs.
+> It is very much recommended that you do NOT set this value. It overrides all size limits you set in Quality!
+- Retention is the maximum number of days old something can be on your indexers. If you set it to 300, and something is 301 days old, it will not be grabbed.
+- (Advanced Option) RSS Sync Interval is the number of minutes between RSS grabs from each of your indexers. Set it higher to reduce API hits, set it lower to grab things quicker. Setting it too low can result in bans from your indexers!
+
+### Adding an indexer
+
+To add an indexer, click the `+` symbol.
+
+There are some preconfigured indexers available, but mostly you will be using Custom Newznab (for usenet) or Custom Torznab (for torrents) setups.
+
+![addindexer.png](/assets/readarr/addindexer.png)
+
