@@ -1,0 +1,41 @@
+---
+title: Sonarr Appdata Directory
+description: 
+published: true
+date: 2021-06-09T15:53:57.860Z
+tags: 
+editor: markdown
+dateCreated: 2021-06-09T15:53:57.860Z
+---
+
+## Windows
+
+`C:\ProgramData\Sonarr`
+
+## Linux
+
+Unless otherwise specified Sonarr will store it's application data in the home folder of the user Sonarr is running under `/home/$USER/.config/Sonarr` (`~/.config/Sonarr`)
+
+`/var/lib/Sonarr`
+
+## OS X
+
+`/Users/$USER/.config/Sonarr (~/.config/Sonarr)`
+
+## Synology
+
+`/usr/local/Sonarr/var/.config/Sonarr`
+
+`/volume1/@appstore/Sonarr/var/.config/Sonarr`
+
+## QNAP
+
+`/share/MD0_DATA/homes/admin/.config/Sonarr`
+
+`/share/CACHEDEV1_DATA/Sonarr_CONFIG`
+
+## Argument
+
+The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On windows this would be `/data=`
+
+The `-nobrowser` argument refrains from launching/opening the browser on startup. On windows this would be `/nobrowser`
