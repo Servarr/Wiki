@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-08T23:50:03.989Z
+date: 2021-06-09T23:02:56.824Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -176,8 +176,7 @@ proxy_set_header Connection $http_connection;
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) |
 
-| Release Channel Type                                          | Branch: master (stable) (v3.2.1) | Branch: develop (beta) (v3.2.1) | Branch: nightly (unstable) (v3.2)            |
-| ------------------------------------------------------------- | ------------------------------ | ----------------------------- | -------------------------------------------- |
+| Release Channel Type                                          | Branch: master (stable) (v3.2.1) | Branch: develop (beta) (v3.2.1) | Branch: nightly (unstable) (v3.2)            | |
 | [hotio](https://hub.docker.com/r/hotio/radarr)                | `hotio/radarr:release`         | `hotio/radarr:testing`        | If you have to ask, you should not be on it. |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr) | `linuxserver/radarr:latest`    | `linuxserver/radarr:develop`  | If you have to ask, you should not be on it. |
 
