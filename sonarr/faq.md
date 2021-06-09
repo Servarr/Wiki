@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-06-09T19:23:45.490Z
+date: 2021-06-09T19:32:27.026Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -66,24 +66,17 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​ - **Sonarr side effects:**  
 - On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well. Example:  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map. If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 ​​
-​​## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
-​​
-​​Sonarr relies on being able to match titles, often the scene posts
-​​episodes using different titles, eg *CSI: Crime Scene Investigation* as
-​​just *CSI* so Sonarr can't match the names without some help. Sonarr
-​​maintains a list of problematic series which lets us solve this issue.
-​​**For anime, it will need to be added to
-​​[thexem.de](https://thexem.de)**, for other series to request a new
-​​mapping see the steps below.
+## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
+
+Sonarr relies on being able to match titles, often the scene posts episodes using different titles, eg *CSI: Crime Scene Investigation* as just *CSI* so Sonarr can't match the names without some help. Sonarr maintains a list of problematic series which lets us solve this issue.
+**For anime, it will need to be added to [thexem.de](https://thexem.de)**, for other series to request a new mapping see the steps below.
 ​​
 ​​1.  Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
 ​​2.  Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
 ​​
 ​​*Typically these are added within 1-2 days.*
 ​​
-​​*Again, do not request a mapping for Anime; use XEM for that.* Further
-​​information can be found with some of the XEM folks that hangout in our
-​​[\#XEM discord channel](https://discord.gg/an9rnEdWs5).
+​​*Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
 ​​
 ​​The series \"Helt Perfekt\" with TVDB ids of `343189` and `252077` is
 ​​difficult to automate due to TVDB having the same name for both shows,
@@ -93,7 +86,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​releases (case sensitive mapping) Helt Perfekt releases containing
 ​​`NORWEGIAN` -> `252077` and containing `SWEDISH` -> `343189`
 ​​
-​​## TVDB is updated why isn\'t Sonarr?
+## TVDB is updated why isn\'t Sonarr?
 ​​
 ​​TVDB has a 24 hour cache on their API. Skyhook has a much smaller few
 ​​hour cache on top of that. Sonarr only runs the Refresh Series task
@@ -103,7 +96,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​If you know a TVDB update was made more than 48 hours ago, then please
 ​​come discuss on our [Discord](https://discord.gg/M6BvZn5).
 ​​
-​​## I see that feature/bug X was fixed, why can't I see it?
+## I see that feature/bug X was fixed, why can't I see it?
 ​​
 ​​
 ​​Sonarr consists of two main branches of code, `main` and `develop`,
@@ -116,7 +109,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​branch, once it has been move to live (in `main`) it is officially
 ​​released.
 ​​
-​​## Episode Progress - How is it calculated?
+## Episode Progress - How is it calculated?
 ​​
 ​​
 ​​There are two parts to the episode count, one being the number of
@@ -133,7 +126,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​episodes for that series, regardless of if the episodes are monitored or
 ​​not, you would have 10/10 episodes.
 ​​
-​​## How do I access Sonarr from another computer?
+## How do I access Sonarr from another computer?
 ​​
 ​​
 ​​By default Sonarr doesn't listen to requests from all systems (when not
@@ -145,7 +138,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​Running as admin only needs to happen once (if you change the port it
 ​​will need to be re-run).
 ​​
-​​## Why doesn't Sonarr automatically search for missing episodes?
+## Why doesn't Sonarr automatically search for missing episodes?
 ​​
 ​​
 ​​There are two times when we would want to have missing episodes searched
@@ -169,7 +162,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​reposted, but if it was reposted, the automatic process that gets new
 ​​episodes would see it was posted and act on it.
 ​​
-​​## Why does Sonarr refresh series information so frequently?
+## Why does Sonarr refresh series information so frequently?
 ​​
 ​​
 ​​
@@ -177,27 +170,27 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​ - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
 ​​ - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
 ​​
-​​## Why is there a number next to Activity?
+## Why is there a number next to Activity?
 ​​
 ​​
 ​​
 ​​ - This number shows the count of episodes in your download client's queue and the last 30 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
 ​​ - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
 ​​
-​​## I see log messages for shows I don't have/don't want
+## I see log messages for shows I don't have/don't want
 ​​
 ​​
 ​​
 ​​ - These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you don't want, in the event it is for a show you want, open up a support thread on the forums.
 ​​
-​​## Seeding torrents aren't deleted automatically
+## Seeding torrents aren't deleted automatically
 ​​
 ​​
 ​​
 ​​ - When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
 ​​ - In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
 ​​
-​​## Why can't I add a new series?
+## Why can't I add a new series?
 ​​
 ​​
 ​​
@@ -206,18 +199,18 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​ - The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
 ​​ - The series must exist on TVDB
 ​​
-​​## Why can't I add a new series when I know the TVDB ID?
+## Why can't I add a new series when I know the TVDB ID?
 ​​
 ​​
 ​​
 ​​ - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 ​​
-​​## Sonarr won\'t work on Big Sur
+## Sonarr won\'t work on Big Sur
 ​​
 ​​
 ​​Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 ​​
-​​## My Custom Script stopped working after upgrading from v2
+## My Custom Script stopped working after upgrading from v2
 ​​
 ​​
 ​​You were likely passing arguments in your connection\...that is not
@@ -227,7 +220,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​2.  Make sure the shebang in your script maps to your pwsh path (if you don\'t have a shebang definition in there, add it)
 ​​3.  Make sure the pwsh script is executable
 ​​
-​​## What\'s the different Series Types?
+## What\'s the different Series Types?
 ​​
 ​​
 ​​Most shows should be `Standard`. For daily shows which are typically
@@ -239,7 +232,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​enabled indexers have any anime categories configured then it
 ​​effectively skips the indexer and may appear that it is not searching.
 ​​
-​​### Show Type Examples
+### Show Type Examples
 ​​
 ​​Below are some example release names for each show type. The specific
 ​​differentiating piece is noted in bold.
@@ -262,19 +255,19 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​ - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
 ​​ - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 ​​
-​​## How can I rename my series folders?
+## How can I rename my series folders?
 ​​
 ​​
-​​\# Series
+​# Series
 ​​
 ​​1.  Mass Editor
 ​​2.  Select what series need their folder renamed
 ​​3.  Change Root Folder to the same Root Folder that the series currently exist in
 ​​4.  Select \"Yes move files\"
 ​​
-​​# General FAQs
+# General FAQs
 ​​
-​​## Can I update Sonarr inside my Docker container?
+## Can I update Sonarr inside my Docker container?
 ​​
 ​​
 ​​\* *Technically, yes.* **But you should absolutely not.** It is a
@@ -283,7 +276,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​update the docker container itself which might downgrade to an older
 ​​version.
 ​​
-​​## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
+## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 ​​
 ​​
 ​​\* This is simple, please see this link for more information
@@ -297,13 +290,13 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​issues, please see this related FAQ
 ​​entry.](#help_my_mac_says_Sonarr_cannot_be_opened_because_the_developer_cannot_be_verified "wikilink")
 ​​
-​​## How do I request a feature for Sonarr?
+## How do I request a feature for Sonarr?
 ​​
 ​​
 ​​This is an easy one click
 ​​[here](https://github.com/Sonarr/Sonarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
 ​​
-​​## I am getting an error: Database disk image is malformed
+## I am getting an error: Database disk image is malformed
 ​​
 ​​
 ​​\* This means your SQLite database that stores most of the information
@@ -326,7 +319,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​```
 ​​ - If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn't supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 ​​
-​​## I use Sonarr on a Mac and it suddenly stopped working. What happened?
+## I use Sonarr on a Mac and it suddenly stopped working. What happened?
 ​​
 ​​
 ​​Most likely this is due to a MacOS bug which caused one of the Sonarr
@@ -340,7 +333,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​[reddit](http://reddit.com/r/Sonarr) or hop on
 ​​[discord](https://discord.gg/M6BvZn5) for help.
 ​​
-​​## Why can't Sonarr see my files on a remote server?
+## Why can't Sonarr see my files on a remote server?
 ​​
 ​​
 ​​In short: the user Sonarr is running as (if service) or under (if tray
@@ -355,7 +348,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​```
 ​​ - You're using a mapped network drive (not a UNC path)  - **Solutions:**  - Change your paths to UNC paths (`\\server\share`)  - Run Sonarr.exe via the Startup Folder
 ​​
-​​## Mapped Network Drives vs UNC Paths
+## Mapped Network Drives vs UNC Paths
 ​​
 ​​
 ​​\* Using mapped network drives generally doesn't work very well,
@@ -365,7 +358,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​
 ​​ - A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 ​​
-​​## How do I change from the Windows Service to a Tray App?
+## How do I change from the Windows Service to a Tray App?
 ​​
 ​​
 ​​\# Shut Sonarr down
@@ -374,7 +367,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​2.  Run Sonarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 ​​3.  (Optional) Drop a shortcut to Sonarr.exe in the startup folder to auto-start on boot.
 ​​
-​​## How do I Backup/Restore my Sonarr?
+## How do I Backup/Restore my Sonarr?
 ​​
 ​​
 ​​=== Backing up Sonarr ===
@@ -391,7 +384,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ​​2.  Stop Sonarr - This will prevent the database from being corrupted
 ​​3.  Copy the contents to a safe location
 ​​
-​​### Restoring from Backup
+### Restoring from Backup
 ​​
 ​​*Restoring to an OS that uses different paths won't work (Windows to
 ​​Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving
@@ -440,7 +433,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
  On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *`
 ​​7.  Start Sonarr
 ​​
-​​## Help I have locked my self out
+## Help I have locked myself out
 
 To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
@@ -455,14 +448,14 @@ To disable authentication (to reset your username or password) you will need nee
 
 \* Please see steps listed above.
 ​​
-​​## Jackett shows more results than Sonarr when manually searching
+## Jackett shows more results than Sonarr when manually searching
 ​​
 ​​
 ​​This is usually due to Sonarr searching Jackett differently than you do.
 ​​[See this troubleshooting article for further
 ​​information](/sonarr/troubleshooting#searches-indexers-and-trackers).
 ​​
-​​## Weird UI Issues
+## Weird UI Issues
 ​​
 ​​
 
@@ -470,14 +463,14 @@ To disable authentication (to reset your username or password) you will need nee
 
 **Article Needed**
 ​​
-​​## Web Interface Only Loads at localhost on Windows
+## Web Interface Only Loads at localhost on Windows
 ​​
 ​​
 ​​\* If you can only reach your web interface at <http://localhost:8989/>
 ​​or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at
 ​​least once, maybe even always.
 ​​
-​​## Permissions
+## Permissions
 ​​
 ​​
 ​​\* Sonarr will need to move files away from where the downloader puts
@@ -486,7 +479,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​
 ​​ - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
 ​​
-​​## System & Logs loads forever
+## System & Logs loads forever
 ​​
 ​​
 ​​It\'s the easy-privacy blocklist. They basically block any url with
@@ -496,7 +489,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​adblocker. Easy solution is to whitelist the domain Sonarr is running
 ​​on. But I still recommend checking the list.
 ​​
-​​## Finding Cookies
+## Finding Cookies
 ​​
 ​​
 ​​Some sites cannot be logged into automatically and require you to login
@@ -506,14 +499,14 @@ To disable authentication (to reset your username or password) you will need nee
 ​​ - Chrome ![Chrome cookies](chrome_cookies.png "fig:Chrome cookies"){width="750"}
 ​​ - Firefox ![Firefox cookies](Firefox_cookies.png "fig:Firefox cookies"){width="750"}
 ​​
-​​## Unpack Torrents
+## Unpack Torrents
 ​​
 ​​
 ​​Most torrent clients doesn't come with the automatic handling of
 ​​compressed archives like their usenet counterparts. We recommend
 ​​[unpackerr](https://github.com/davidnewhall/unpackerr).
 ​​
-​​## uTorrent is no longer working
+## uTorrent is no longer working
 
 - Ensure the Web UI is enabled
 
@@ -521,7 +514,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-​​## Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
+## Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
 ​​
 ​​
 ​​No. Sonarr will talk to your download client to determine where the
@@ -530,7 +523,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​Remote Path Mapping to link the remote path to a local one so Sonarr
 ​​knows where to find the files.
 ​​
-​​## I got a pop-up that said config.xml was corrupt, what now?
+## I got a pop-up that said config.xml was corrupt, what now?
 ​​
 ​​
 ​​Sonarr was unable to read your config file on start-up as it became
@@ -540,7 +533,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​and it will start on the default port (8989), you should now
 ​​re-configure any settings you configured on the General Settings page.
 ​​
-​​## Invalid Certificate and other HTTPS or SSL issues
+## Invalid Certificate and other HTTPS or SSL issues
 ​​
 ​​
 ​​Your download client stopped working and you\'re getting an error like
@@ -559,7 +552,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​either. It is possible to disable certificate validation in advanced
 ​​settings if you want to keep an insecure SSL setup.
 ​​
-​​## VPNs, Jackett, and the \* ARRs
+## VPNs, Jackett, and the \* ARRs
 ​​
 ​​
 ​​Unless you\'re in a repressive country like China, Australia or South
@@ -583,7 +576,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​**Many private trackers will ban you for using or accessing them (i.e.
 ​​using Jackett) via a VPN.**
 ​​
-​​## Jackett\'s /all Endpoint
+## Jackett\'s /all Endpoint
 ​​
 ​​
 ​​The Jackett `/all` endpoint is convenient, but that is its only benefit.
@@ -615,7 +608,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​trackers in `/all` returns an error, Sonarr will disable it and now you
 ​​don't get any results.
 ​​
-​​## Why are there two files? \| Why is there a file left in downloads?
+## Why are there two files? \| Why is there a file left in downloads?
 ​​
 ​​
 ​​This is expected. This is how the Torrent Process works with Sonarr.
