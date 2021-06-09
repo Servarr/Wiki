@@ -1,16 +1,15 @@
 ---
 title: Sonarr FAQ
-description: 
+description:
 published: true
-date: 2021-06-09T21:48:23.745Z
+date: 2021-06-09T18:22:49.248Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
-dateCreated: 2021-06-09T18:39:33.208Z
+dateCreated: 2021-06-09T18:22:32.575Z
 ---
-
 ## How does Sonarr find episodes?
 
-- Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you\'ll realize that it only   covers the *future* though.
+- Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you\'ll realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you\'re adding a show, you\'ll need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn\'t been released yet, you don\'t need to initiate a search.
 - Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
 - If you\'ve already added the show, but now you want to search for it, you have a few choices. You can go to the show\'s page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](sonarr/wanted) tab and search from there.
@@ -18,30 +17,31 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 ## Why didn't Sonarr grab an episode I was expecting?
 
-First, make sure you read and understand the section above called *"How does Sonarr find episodes?"* Second, make sure at least one of your indexers has the episode you were expecting to be grabbed.
+First, make sure you read and understand the section above called ["How does Sonarr find episodes?](#how-does-sonarr-find-episodes) Second, make sure at least one of your indexers has the episode you were expecting to be grabbed.
 
 1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
-2. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
-3. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
-4. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
+1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
+1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
+1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
 
 ## How are possible downloads compared?
 
-**Generally Quality Trumps All**
+>Generally Quality Trumps All
+{-is.info}
 
 The current logic [can be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L40s).
-***As of 3/26/2021 the logic is as follows***
+***As of 2021-06-09 the logic is as follows***
 
 1. Quality
-2. Language
-3. Preferred Word Score
-4. Protocol
-5. Episode Count
-6. Episode Number
-7. Indexer Priority
-8. Seeds/Peers (If Torrent)
-9. Age (If Usenet)
-10. Size
+1. Language
+1. Preferred Word Score
+1. Protocol
+1. Episode Count
+1. Episode Number
+1. Indexer Priority
+1. Seeds/Peers (If Torrent)
+1. Age (If Usenet)
+1. Size
 
 ## Preferred Words FAQs
 
@@ -56,55 +56,75 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 ## How does Sonarr handle scene numbering issues (American Dad!, etc)?
 
 - **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.de/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
-​​ - **Problematic Shows**  - This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are the big ones that come to mind while writing this.  - Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn\'t work. Well enter XEM which creates a map for Sonarr to look at.  - Scene releases double episodes in a single file since that     is how they air but TVDb marks each episode individually.  - Scene uses a year for the season S2010 and TVDb uses S01.  - [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *black sheep* and in this case there is a list of them.  - This is an incomplete list of the known shows and how/why they\'re problematic:  - American Dad  - Arrested Development  - Mythbusters  - Paw Patrol  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles  - Pawn Stars  - Pokémon  - On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking \* dubbed\* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
-​​ - **Possible resolutions:**
-​​
-​​1.  TVDb adds alternate ordering to the API (Current status: They say v4 but don\'t count on it to work or be stable based on the history of v3)
-​​2.  XEM adds a map to allow for alternate orders that sonarr can use (Current status: Unlikely)
-​​3.  Sonarr allows for disabling of XEM maps when doing manual searches (Current status: Unlikely)
-​​
-​​ - **Sonarr side effects:**  
-- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well. Example:  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map. If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
-​​
+- **Problematic Shows**  
+> This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are some common ones.
+{.is-info}
+  - Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn\'t work. Well enter [XEM](http://thexem.de) which creates a map for Sonarr to look at.  
+  - Scene releases double episodes in a single file since that is how they air but TVDb marks each episode individually. 
+  - Scene uses a year for the season S2010 and TVDb uses S01.  
+  - [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *black sheep* and in this case there is a list of them.  
+  - This is an incomplete list of the known shows and how/why they\'re problematic:  
+  - American Dad
+  - Arrested Development
+  - Mythbusters
+  - Paw Patrol 
+  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
+  - Pawn Stars
+  - Pokémon
+  - On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking \* dubbed\* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
+- **Possible resolutions:**
+  1.  TVDb adds alternate ordering to the API (Current status: Unlikely)
+  1.  XEM adds a map to allow for alternate orders that sonarr can use (Current status: Unlikely)
+  1.  Sonarr allows for disabling of XEM maps when doing manual searches (Current status: Unlikely)
+
+- **Sonarr side effects:**  
+- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well. 
+Example:
+  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map. 
+> If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
+{.is-info}
+
 ## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
-Sonarr relies on being able to match titles, often the scene posts episodes using different titles, eg *CSI: Crime Scene Investigation* as just *CSI* so Sonarr can't match the names without some help. Sonarr maintains a list of problematic series which lets us solve this issue.
+Sonarr relies on being able to match titles, often the scene posts episodes using different titles, e.g. `CSI: Crime Scene Investigation` as just `CSI` so Sonarr can't match the names without some help. Sonarr maintains a list of problematic series which lets us solve this issue.
 **For anime, it will need to be added to [thexem.de](https://thexem.de)**, for other series to request a new mapping see the steps below.
-​​
-​​1.  Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-​​2.  Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-​​
-​​*Typically these are added within 1-2 days.*
-​​
-​​*Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
-​​
-​​The series \"Helt Perfekt\" with TVDB ids of `343189` and `252077` is ​​difficult to automate due to TVDB having the same name for both shows, ​​violating TVDB\'s own rules. The first entry for the series gets the ​​name. Any future entries for the series must have the year as part of ​​the series name. However, a scene exception as been added to map ​​releases (case sensitive mapping) Helt Perfekt releases containing ​​`NORWEGIAN` -> `252077` and containing `SWEDISH` -> `343189`
-​​
+
+1.  Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+1.  Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+
+*Typically these are added within 1-2 days.*
+
+*Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
+
+> The series \"Helt Perfekt\" with TVDB ids of `343189` and `252077` is difficult to automate due to TVDB having the same name for both shows, violating TVDB\'s own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
+{.is-info}
+
 ## TVDB is updated why isn\'t Sonarr?
-​​
-​​TVDB has a 24 hour cache on their API. Skyhook has a much smaller few ​​hour cache on top of that. Sonarr only runs the Refresh Series task ​​every 12 hours. Thus it typically takes 24 to 48 hours for a TVDB update ​​to make it into Sonarr.
-​​
-​​If you know a TVDB update was made more than 48 hours ago, then please ​​come discuss on our [Discord](https://discord.gg/M6BvZn5).
-​​
+TVDB has a 24 hour cache on their API. Skyhook has a much smaller few hour cache on top of that. Sonarr only runs the Refresh Series task every 12 hours. Thus it typically takes 24 to 48 hours for a TVDB update to make it into Sonarr.
+
+If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
+
 ## I see that feature/bug X was fixed, why can't I see it?
-​​
-​​
-​​Sonarr consists of two main branches of code, `main` and `develop`, ​​`main`is released periodically, when the `develop` branch is stable and ​​`develop` is for pre-release testing and people willing to live on the ​​edge, if you want to help out testing or want more information on the ​​two branches, please see: [Release ​​Branches](Sonarr_Settings#Updates "wikilink"). When a feature is marked ​​as in `develop` it will only be available to users running the `develop` ​​branch, once it has been move to live (in `main`) it is officially ​​released.
-​​
+
+
+Sonarr consists of two main branches of code, `main` and `develop`.
+
+- `main`is released periodically, when the `develop` branch is stable\
+- `develop` is for pre-release testing and people willing to live on the edge. When a feature is marked as in `develop` it will only be available to users running the `develop` branch, once it has been move to live (in `main`) it is officially released.
+
 ## Episode Progress - How is it calculated?
-​​
-​​
-​​There are two parts to the episode count, one being the number of ​​episodes (Episode Count) and the other being the number of episodes with ​​files (Episode File Count), each one uses slightly different logic to ​​give you the overall progress for a series or season. ​​
-​​
- - Episode Count  - Episode has already aired AND is monitored OR  - Episode has a file
-​​ - Episode File Count  - Episode has a file
-​​
-​​If a series has 10 episodes that have all aired and you don't have any ​​files for them you would have 0/10 episodes, if you unmonitored all the ​​episodes in that series you would have 0/0 and if you got all the ​​episodes for that series, regardless of if the episodes are monitored or ​​not, you would have 10/10 episodes.
-​​
+
+
+There are two parts to the episode count, one being the number of episodes (Episode Count) and the other being the number of episodes with files (Episode File Count), each one uses slightly different logic to give you the overall progress for a series or season. 
+ - Episode Count => Episode has already aired AND is monitored OR - Episode has a file
+ - Episode File Count => Episode has a file
+
+If a series has 10 episodes that have all aired and you don't have any files for them you would have 0/10 episodes, if you unmonitored all the episodes in that series you would have 0/0 and if you got all the episodes for that series, regardless of if the episodes are monitored or not, you would have 10/10 episodes.
+
 ## How do I access Sonarr from another computer?
-​​
-​​
-​​By default Sonarr doesn't listen to requests from all systems (when not ​​run as administrator), it will only listen on localhost, this is due to ​​how the Web Server Sonarr uses integrates with Windows (this also ​​applies for current alternatives). If Sonarr is run as an administrator ​​it will correctly register itself with Windows as well as open the ​​Firewall port so it can be accessed from other systems on your network. ​​Running as admin only needs to happen once (if you change the port it ​​will need to be re-run).
+
+
+​​By default Sonarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Sonarr uses integrates with Windows (this also ​​applies for current alternatives). If Sonarr is run as an administrator ​​it will correctly register itself with Windows as well as open the ​​Firewall port so it can be accessed from other systems on your network. ​​Running as admin only needs to happen once (if you change the port it ​​will need to be re-run).
 ​​
 ## Why doesn't Sonarr automatically search for missing episodes?
 ​​
@@ -344,12 +364,12 @@ Please note that if the series type is set to anime and none of your ​​enabl
 ​​4.  Connect to the Synology NAS through SSH and log in as root\
 ​​5.  Execute the following commands:
 
-```bash   rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
+```bash rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
 ```
 
 ​​6.  Update permissions on the files:
 
-```bash   cd /usr/local/Sonarr/var/.config/Sonarr/   chown -R Sonarr:users *chmod -R 0644*
+```bash cd /usr/local/Sonarr/var/.config/Sonarr/ chown -R Sonarr:users *chmod -R 0644*
 ```
 
  On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *`

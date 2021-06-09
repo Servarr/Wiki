@@ -33,7 +33,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - *Generally Quality Trumps All**
 
-- The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs). ***As of 5/27/2021 the logic is as follows***
+- The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs). 
+***As of 2021-06-09 the logic is as follows***
 
 1. Quality
 1. Custom Format Score
@@ -309,7 +310,7 @@ This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
 \* This means your SQLite database that stores most of the information for is corrupt.
 
-- [Try restoring from a backup](#how_do_i_backup_restore_my_Radarr "wikilink")
+- [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
 - You can follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
 - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/SQLiteexception-database-disk-image-is.html>
 

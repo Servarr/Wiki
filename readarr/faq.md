@@ -27,7 +27,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 The current logic [can be found here](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
-As of 1/19/2021 the logic is as follows:
+As of 2021-06-09 the logic is as follows:
 
 - Quality
 - Custom Format Score
