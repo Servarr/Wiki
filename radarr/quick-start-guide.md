@@ -27,7 +27,7 @@ After installation and starting up, you open a browser and go to `http://{your_i
 
 First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
-`Settings` =\> `Media Management`
+`Settings` => `Media Management`
 
 ![Radarr-settings-mm.png](/assets/radarr/Radarr-settings-mm.png)
 
@@ -75,7 +75,7 @@ Don’t forget to save your changes
 
 ### Profiles
 
-`Settings` =\> `Profiles`
+`Settings` => `Profiles`
 
 ![Radarr-settings-profiles.png](/assets/radarr/Radarr-settings-profiles.png)
 
@@ -91,7 +91,7 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 ### Quality
 
-`Settings` =\> `Quality`
+`Settings` => `Quality`
 
 ![Radarr-settings-quality.png](/assets/radarr/Radarr-settings-quality.png)
 
@@ -102,7 +102,7 @@ Here you’re able to change/fine tune the min and max size of your wanted media
 
 ### Indexers
 
-`Settings` =\> `Indexers`
+`Settings` => `Indexers`
 
 ![Radarr-settings-indexers.png](/assets/radarr/Radarr-settings-indexers.png)
 
@@ -117,7 +117,7 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 ### Download Clients
 
-`Settings` =\> `Download Clients`
+`Settings` => `Download Clients`
 
 ![Radarr-settings-download-clients.png](/assets/radarr/Radarr-settings-download-clients.png)
 
@@ -243,7 +243,7 @@ As you can see the folder has been renamed to the correct year following your na
 
 After you imported your existing well organized media library it’s time to add the movies you want.
 
-`Movies` =\> `Add New`
+`Movies` => `Add New`
 
 ![Radarr-add-new.png](/assets/radarr/Radarr-add-new.png)
 

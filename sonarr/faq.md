@@ -202,7 +202,7 @@ dateCreated: 2021-06-09T18:22:32.575Z
 ​​name. Any future entries for the series must have the year as part of
 ​​the series name. However, a scene exception as been added to map
 ​​releases (case sensitive mapping) Helt Perfekt releases containing
-​​`NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
+​​`NORWEGIAN` -> `252077` and containing `SWEDISH` -> `343189`
 ​​
 ​​## TVDB is updated why isn\'t Sonarr?
 ​​
@@ -729,7 +729,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 - Ensure the Web UI is enabled
 
-- Ensure that the Alt Listening Port (Advanced -\> Web UI) is not the same as the Listening Port (Connections)
+- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 

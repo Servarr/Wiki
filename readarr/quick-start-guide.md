@@ -20,7 +20,7 @@ After installation and starting up, you open a browser and go to `http://ip_wher
 
 First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
-`Settings` =\> `Media Management`
+`Settings` => `Media Management`
 
 ![mediamanagement.png](/assets/readarr/mediamanagement.png)
 
