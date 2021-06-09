@@ -29,8 +29,9 @@ Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base
 
 ## Troubleshooting
 
-- [General Troubleshooting](/prowlarr/troubleshooting)
-- [FAQ](/prowlarr/faq)
+- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/prowlarr/troubleshooting)
+- [<i class="far fa-question-circle"></i>&emsp;FAQ](/prowlarr/faq)
+- [Application Data Directory](/prowlarr/appdata-directory)
 {.links-list}
 
 ## Development

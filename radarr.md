@@ -32,8 +32,9 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 
 ## Troubleshooting
 
-- [General Troubleshooting](/radarr/troubleshooting)
-- [FAQ](/radarr/faq)
+- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/radarr/troubleshooting)
+- [<i class="far fa-question-circle"></i>&emsp;FAQ](/radarr/faq)
+- [Application Data Directory](/radarr/appdata-directory)
 {.links-list}
 
 ## Development

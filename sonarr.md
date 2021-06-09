@@ -20,18 +20,19 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 
 ## User Guide
 
-- [Library](/sonarr/library)
-- [Calendar](/sonarr/calendar)
-- [Activity](/sonarr/activity)
-- [Wanted](/sonarr/wanted)
-- [Settings](/sonarr/settings)
-- [System](/sonarr/system)
+- [<i class="fas fa-play"></i>&emsp;Library](/sonarr/library)
+- [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/sonarr/calendar)
+- [<i class="fas fa-clock"></i>&emsp;Activity](/sonarr/activity)
+- [<i class="far fa-telescope"></i>&emsp;Wanted](/sonarr/wanted)
+- [<i class="fas fa-cogs"></i>&emsp;Settings](/sonarr/settings)
+- [<i class="fas fa-laptop"></i>&emsp;System](/sonarr/system)
 {.links-list}
 
 ## Troubleshooting
 
-- [General Troubleshooting](/sonarr/troubleshooting)
-- [FAQ](/sonarr/faq)
+- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/sonarr/troubleshooting)
+- [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
+- [Application Data Directory](/sonarr/appdata-directory)
 {.links-list}
 
 ## Development
