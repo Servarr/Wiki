@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-06-09T21:44:36.408Z
+date: 2021-06-09T21:48:23.745Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -78,89 +78,42 @@ Sonarr relies on being able to match titles, often the scene posts episodes usin
 ​​
 ​​*Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
 ​​
-​​The series \"Helt Perfekt\" with TVDB ids of `343189` and `252077` is
-​​difficult to automate due to TVDB having the same name for both shows,
-​​violating TVDB\'s own rules. The first entry for the series gets the
-​​name. Any future entries for the series must have the year as part of
-​​the series name. However, a scene exception as been added to map
-​​releases (case sensitive mapping) Helt Perfekt releases containing
-​​`NORWEGIAN` -> `252077` and containing `SWEDISH` -> `343189`
+​​The series \"Helt Perfekt\" with TVDB ids of `343189` and `252077` is ​​difficult to automate due to TVDB having the same name for both shows, ​​violating TVDB\'s own rules. The first entry for the series gets the ​​name. Any future entries for the series must have the year as part of ​​the series name. However, a scene exception as been added to map ​​releases (case sensitive mapping) Helt Perfekt releases containing ​​`NORWEGIAN` -> `252077` and containing `SWEDISH` -> `343189`
 ​​
 ## TVDB is updated why isn\'t Sonarr?
 ​​
-​​TVDB has a 24 hour cache on their API. Skyhook has a much smaller few
-​​hour cache on top of that. Sonarr only runs the Refresh Series task
-​​every 12 hours. Thus it typically takes 24 to 48 hours for a TVDB update
-​​to make it into Sonarr.
+​​TVDB has a 24 hour cache on their API. Skyhook has a much smaller few ​​hour cache on top of that. Sonarr only runs the Refresh Series task ​​every 12 hours. Thus it typically takes 24 to 48 hours for a TVDB update ​​to make it into Sonarr.
 ​​
-​​If you know a TVDB update was made more than 48 hours ago, then please
-​​come discuss on our [Discord](https://discord.gg/M6BvZn5).
+​​If you know a TVDB update was made more than 48 hours ago, then please ​​come discuss on our [Discord](https://discord.gg/M6BvZn5).
 ​​
 ## I see that feature/bug X was fixed, why can't I see it?
 ​​
 ​​
-​​Sonarr consists of two main branches of code, `main` and `develop`,
-​​`main`is released periodically, when the `develop` branch is stable and
-​​`develop` is for pre-release testing and people willing to live on the
-​​edge, if you want to help out testing or want more information on the
-​​two branches, please see: [Release
-​​Branches](Sonarr_Settings#Updates "wikilink"). When a feature is marked
-​​as in `develop` it will only be available to users running the `develop`
-​​branch, once it has been move to live (in `main`) it is officially
-​​released.
+​​Sonarr consists of two main branches of code, `main` and `develop`, ​​`main`is released periodically, when the `develop` branch is stable and ​​`develop` is for pre-release testing and people willing to live on the ​​edge, if you want to help out testing or want more information on the ​​two branches, please see: [Release ​​Branches](Sonarr_Settings#Updates "wikilink"). When a feature is marked ​​as in `develop` it will only be available to users running the `develop` ​​branch, once it has been move to live (in `main`) it is officially ​​released.
 ​​
 ## Episode Progress - How is it calculated?
 ​​
 ​​
-​​There are two parts to the episode count, one being the number of
-​​episodes (Episode Count) and the other being the number of episodes with
-​​files (Episode File Count), each one uses slightly different logic to
-​​give you the overall progress for a series or season.
+​​There are two parts to the episode count, one being the number of ​​episodes (Episode Count) and the other being the number of episodes with ​​files (Episode File Count), each one uses slightly different logic to ​​give you the overall progress for a series or season. ​​
 ​​
-​​ - Episode Count  - Episode has already aired AND is monitored OR  - Episode has a file
+ - Episode Count  - Episode has already aired AND is monitored OR  - Episode has a file
 ​​ - Episode File Count  - Episode has a file
 ​​
-​​If a series has 10 episodes that have all aired and you don't have any
-​​files for them you would have 0/10 episodes, if you unmonitored all the
-​​episodes in that series you would have 0/0 and if you got all the
-​​episodes for that series, regardless of if the episodes are monitored or
-​​not, you would have 10/10 episodes.
+​​If a series has 10 episodes that have all aired and you don't have any ​​files for them you would have 0/10 episodes, if you unmonitored all the ​​episodes in that series you would have 0/0 and if you got all the ​​episodes for that series, regardless of if the episodes are monitored or ​​not, you would have 10/10 episodes.
 ​​
 ## How do I access Sonarr from another computer?
 ​​
 ​​
-​​By default Sonarr doesn't listen to requests from all systems (when not
-​​run as administrator), it will only listen on localhost, this is due to
-​​how the Web Server Sonarr uses integrates with Windows (this also
-​​applies for current alternatives). If Sonarr is run as an administrator
-​​it will correctly register itself with Windows as well as open the
-​​Firewall port so it can be accessed from other systems on your network.
-​​Running as admin only needs to happen once (if you change the port it
-​​will need to be re-run).
+​​By default Sonarr doesn't listen to requests from all systems (when not ​​run as administrator), it will only listen on localhost, this is due to ​​how the Web Server Sonarr uses integrates with Windows (this also ​​applies for current alternatives). If Sonarr is run as an administrator ​​it will correctly register itself with Windows as well as open the ​​Firewall port so it can be accessed from other systems on your network. ​​Running as admin only needs to happen once (if you change the port it ​​will need to be re-run).
 ​​
 ## Why doesn't Sonarr automatically search for missing episodes?
 ​​
 ​​
-​​There are two times when we would want to have missing episodes searched
-​​for, when a new series with existing aired episodes is added and when
-​​Sonarr has been offline and unable to find episodes as it normally
-​​would. Endlessly searching for episodes that have aired that are missing
-​​is a waste of resources, both in terms of local processing power and on
-​​the indexers and in our experience catches users off guard, wasting
-​​bandwidth.
+​​There are two times when we would want to have missing episodes searched ​​for, when a new series with existing aired episodes is added and when ​​Sonarr has been offline and unable to find episodes as it normally ​​would. Endlessly searching for episodes that have aired that are missing ​​is a waste of resources, both in terms of local processing power and on ​​the indexers and in our experience catches users off guard, wasting ​​bandwidth.
 ​​
-​​In v1 of Sonarr we had an opt in backlog search option, often people
-​​would turn it on and then get a bunch of old episodes and ask us why, we
-​​also had indexers ask why they saw an increase in API calls, which was
-​​due to the backlog searching.
+​​In v1 of Sonarr we had an opt in backlog search option, often people ​​would turn it on and then get a bunch of old episodes and ask us why, we ​​also had indexers ask why they saw an increase in API calls, which was ​​due to the backlog searching.
 ​​
-​​In v2 we sat back and thought about it and realized the benefit is not
-​​really there, we could try to throttle the searching, but that just
-​​draws it out and still does the same thing; hammer the indexer with
-​​useless requests. If the episode wasn't there the last time the search
-​​was performed, why would it be there now? It would be if it was
-​​reposted, but if it was reposted, the automatic process that gets new
-​​episodes would see it was posted and act on it.
+​​In v2 we sat back and thought about it and realized the benefit is not ​​really there, we could try to throttle the searching, but that just ​​draws it out and still does the same thing; hammer the indexer with ​​useless requests. If the episode wasn't there the last time the search ​​was performed, why would it be there now? It would be if it was ​​reposted, but if it was reposted, the automatic process that gets new ​​episodes would see it was posted and act on it.
 ​​
 ## Why does Sonarr refresh series information so frequently?
 ​​
