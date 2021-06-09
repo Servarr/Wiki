@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-06-09T15:50:29.509Z
+date: 2021-06-09T15:50:51.478Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -16,7 +16,7 @@ The following apps are companions to the *ARR Suite of Applications. They are ne
 
 [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 
-Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory, [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory).
+Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory).
 
 #### Recovering a Corrupt DB
 
