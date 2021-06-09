@@ -2,13 +2,11 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-05-27T16:47:33.496Z
+date: 2021-06-09T19:03:04.605Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-05-25T19:18:46.628Z
 ---
-
-
 
 ## Asking for Help
 
@@ -50,13 +48,13 @@ What you need to do is:
 
 ## Standard Logs Location
 
-The log files are located in readarr's [Appdata Directory]/readarr/appdata-directory, inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
+The log files are located in readarr's [Appdata Directory](/readarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
 
 Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
-The update log files are located in readarr's [Appdata Directory]/readarr/appdata-directory, inside the UpdateLogs/ folder.
+The update log files are located in readarr's [Appdata Directory](/readarr/appdata-directory), inside the UpdateLogs/ folder.
 
 ### Sharing Logs
 
@@ -64,7 +62,7 @@ The logs can be long and hard to read as part of a forum or [Reddit](https://www
 
 #### Trace/Debug Logs
 
-You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `.debug.txt` and `r.trace.txt` respectively.
+You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `readarr.debug.txt` and `readarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
