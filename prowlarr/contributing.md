@@ -40,7 +40,7 @@ Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.ser
 #### Contributing Code ###
 
 - If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Prowlarr/Prowlarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
-- Rebase from Radarr's develop branch, don't merge
+- Rebase from Prowlarr's develop branch, don't merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
 - Reach out to us on the discord if you have any questions
