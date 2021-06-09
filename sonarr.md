@@ -2,10 +2,10 @@
 title: Sonarr
 description: 
 published: true
-date: 2021-06-08T02:02:30.492Z
+date: 2021-06-09T15:59:54.486Z
 tags: sonarr
 editor: markdown
-dateCreated: 2021-06-08T16:59:52.354Z
+dateCreated: 2021-05-16T16:59:52.354Z
 ---
 
 ![128.png](/assets/sonarr/logos/128.png)
