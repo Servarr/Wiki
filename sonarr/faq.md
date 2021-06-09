@@ -2,43 +2,19 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-06-09T19:15:55.335Z
+date: 2021-06-09T19:18:44.502Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
 
 ## How does Sonarr find episodes?
-
-  
--   Sonarr does *not* regularly search for episode files that are
-    missing or have not met their quality goals. Instead, it fairly
-    frequently queries your indexers and trackers for *all* the newly
-    posted episodes/newly uploaded releases, then compares that with its
-    list of episodes that are missing or need to be upgraded. Any
-    matches are downloaded. This lets Sonarr cover a library of *any
-    size* with just 24-100 queries per day (RSS interval of 15-60
-    minutes). If you understand this, you\'ll realize that it only
-    covers the *future* though.
--   So how do you deal with the present and past? When you\'re adding a
-  show, you\'ll need to set the correct path, profile and monitoring
-  status then use the Start search for missing checkbox. If the show
-  has had no episodes and hasn\'t been released yet, you don\'t need
-  to initiate a search.
-​​-   Put another way, Sonarr will only find releases that are newly
-  uploaded to your indexers. It will not actively try to find releases
-  uploaded in the past.
-​​-   If you\'ve already added the show, but now you want to search for
-  it, you have a few choices. You can go to the show\'s page and use
-  the search button, which will do a search and then automatically
-  pick episode(s). You can search individual episodes or seasons
-  automatically or manually. Or you can go to the [Wanted](sonarr/wanted) tab and search from there.
-​​-   If Sonarr has been offline for an extended period of time, Sonarr
-  will attempt to page back to find the last release it processed in
-  an attempt to avoid missing a release. As long as your indexer
-  supports paging and it hasn\'t been too long Sonarr will be able to
-  process the releases it would have missed and avoid you needing to
-  perform a search for the missed episodes.
+ 
+ - Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you\'ll realize that it only   covers the *future* though.
+ - So how do you deal with the present and past? When you\'re adding a show, you\'ll need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn\'t been released yet, you don\'t need to initiate a search.
+​​ - Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
+​​ - If you\'ve already added the show, but now you want to search for it, you have a few choices. You can go to the show\'s page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](sonarr/wanted) tab and search from there.
+​​ - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn\'t been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
 ​​
 ​​## Why didn't Sonarr grab an episode I was expecting?
 ​​
@@ -46,27 +22,10 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​does Sonarr find episodes?"* Second, make sure at least one of your
 ​​indexers has the episode you were expecting to be grabbed.
 ​​
-​​1.  Click the 'Manual Search' icon next to the episode listing in
-  Sonarr. Are there any results? If no, then either Sonarr is having
-  trouble communicating with your indexers, or your indexers do not
-  have the episode, or the episode is improperly named/categorized on
-  the indexer.
-​​2.  **If there are results from step 1**, check next to them for red
-  exclamation point icon. Hover over the icon to see why that release
-  is not a candidate for automatic downloads. If every result has the
-  icon, then no automatic download will occur.
-​​3.  **If there is at least one valid manual search result from step 2**,
-  then an automatic download should have happened. If it didn't, the
-  most likely reason is a temporary communication problem preventing
-  an RSS Sync from your indexer. It is recommended to have several
-  indexers set up for best results.
-​​4.  **If there is no manual result from a show, but you can find it when
-  you browse your indexer's website** - This is a common problem that
-  is most frequently caused by having an insufficient number of
-  indexers. Different indexers index different content, and not all
-  shows on your indexer may be tagged properly, which would cause
-  Sonarr's search to fail. Having several indexers active is the best
-  solution to this problem.
+​​1.  Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
+​​2.  **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
+​​3.  **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
+​​4.  **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
 ​​
 ​​## How are possible downloads compared?
 ​​
@@ -89,9 +48,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​
 ​​## Preferred Words FAQs
 ​​
-​​For the score of the on disk file: The existing name of the file and the
-​​\"scene name\" of the release are evaluated for preferred words. The
-​​higher score of the two is taken.
+​​For the score of the on disk file: The existing name of the file and the ​​\"scene name\" of the release are evaluated for preferred words. The ​​higher score of the two is taken.
 ​​
 ​​How are preferred words included in renaming?
 ​​
@@ -109,70 +66,16 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​
 ​​## How does Sonarr handle scene numbering issues (American Dad!, etc)?
 ​​
-​​-   **How Sonarr handles scene numbering issues**
-  -   Sonarr relies on [TheXEM](http://thexem.de/), a community driven
-      site that lets users create mappings of shows that the scene
-      (the people that post the files) and TheTVDB (which typically
-      follows the network's numbering). There are a number of shows on
-      there already, but it is easy to add another and typically the
-      changes are accepted within a couple days (if they're correct).
-      TheXEM is used to correct differences in episode numbering
-      (disagreement whether an episode is a special or not) as well as
-      season number differences, such as episodes being released as
-      S10E01, but TheTVDB listing that same episode as S2017E01.
-​​-   **Problematic Shows**
-  -   This by no means is an all inclusive list of shows that have
-      known issues with scene mapping however, these are the big ones
-      that come to mind while writing this.
-  -   Typical Issue: Scene numbering does not match TVDb numbering so
-      Sonarr doesn\'t work. Well enter XEM which creates a map for
-      Sonarr to look at.
-      -   Scene releases double episodes in a single file since that
-          is how they air but TVDb marks each episode individually.
-      -   Scene uses a year for the season S2010 and TVDb uses S01.
-  -   [XEM](http://thexem.de) works in most cases and keeps it running
-      smooth without you ever knowing. However as with most things,
-      there will always be a *black sheep* and in this case there is a
-      list of them.
-  -   This is an incomplete list of the known shows and how/why
-      they\'re problematic:
-      -   American Dad
-      -   Arrested Development
-      -   Mythbusters
-      -   Paw Patrol
-          -   Double episode files vs single episode TVDb but also not
-              all episodes are doubles so the map can get added wrong
-              pointing to which ones are singles vs doubles
-      -   Pawn Stars
-      -   Pokémon
-          -   On TheXem, [pokemon](http://thexem.de/xem/show/4638) is
-              tracking \* dubbed\* episodes. So if you want subbed
-              episodes, you may be out of luck. If certain release
-              groups are following TVDB and not XEM mapping, please
-              contact us on our discord and bring the release name and
-              group name as exceptions can be added for groups who
-              follow TVDB.
-​​-   **Possible resolutions:**
+​​ - **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.de/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
+​​ - **Problematic Shows**  - This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are the big ones that come to mind while writing this.  - Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn\'t work. Well enter XEM which creates a map for Sonarr to look at.  - Scene releases double episodes in a single file since that     is how they air but TVDb marks each episode individually.  - Scene uses a year for the season S2010 and TVDb uses S01.  - [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *black sheep* and in this case there is a list of them.  - This is an incomplete list of the known shows and how/why they\'re problematic:  - American Dad  - Arrested Development  - Mythbusters  - Paw Patrol  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles  - Pawn Stars  - Pokémon  - On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking \* dubbed\* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
+​​ - **Possible resolutions:**
 ​​
-​​1.  TVDb adds alternate ordering to the API (Current status: They say v4
-  but don\'t count on it to work or be stable based on the history of
-  v3)
-​​2.  XEM adds a map to allow for alternate orders that sonarr can use
-  (Current status: Unlikely)
-​​3.  Sonarr allows for disabling of XEM maps when doing manual searches
-  (Current status: Unlikely)
+​​1.  TVDb adds alternate ordering to the API (Current status: They say v4 but don\'t count on it to work or be stable based on the history of v3)
+​​2.  XEM adds a map to allow for alternate orders that sonarr can use (Current status: Unlikely)
+​​3.  Sonarr allows for disabling of XEM maps when doing manual searches (Current status: Unlikely)
 ​​
-​​-   **Sonarr side effects:**
-  -   On top of the issues with the shows already, Sonarr also has
-      some odd behavior so you may just need to overlook this as well.
-      Example:
-  -   American Dad is currently on S17 based on TVDb or S16 based on
-      Scene at the time of this writing. So searching in sonarr for
-      season 17 will **only** return S16 results because of the XEM
-      map. If you have a tracker with S17 episodes (because they use
-      P2P and not Scene), please contact us on our discord and bring
-      the release name and group name as exceptions can be added for
-      groups who follow TVDB.
+​​ - **Sonarr side effects:**  
+ - On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well. Example:  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map. If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 ​​
 ​​## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 ​​
@@ -184,10 +87,8 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​[thexem.de](https://thexem.de)**, for other series to request a new
 ​​mapping see the steps below.
 ​​
-​​1.  Make sure it hasn't already been requested. [Requested
-  Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-​​2.  Make a new request here: [Scene Mapping Request
-  Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+​​1.  Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+​​2.  Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
 ​​
 ​​*Typically these are added within 1-2 days.*
 ​​
@@ -234,11 +135,8 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​files (Episode File Count), each one uses slightly different logic to
 ​​give you the overall progress for a series or season.
 ​​
-​​-   Episode Count
-  -   Episode has already aired AND is monitored OR
-  -   Episode has a file
-​​-   Episode File Count
-  -   Episode has a file
+​​ - Episode Count  - Episode has already aired AND is monitored OR  - Episode has a file
+​​ - Episode File Count  - Episode has a file
 ​​
 ​​If a series has 10 episodes that have all aired and you don't have any
 ​​files for them you would have 0/10 episodes, if you unmonitored all the
@@ -286,87 +184,44 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​
 ​​
 ​​
-​​-   Sonarr refreshes series and episode information in addition to
-  rescanning the disk for files every 12 hours. This might seem
-  aggressive, but is a very important process. The data refresh from
-  our TVDB proxy is important, because new episode information is
-  synced down, air dates, number of episodes, status
-  (continuing/ended). Even shows that aren't airing are being updated
-  with new information.
-​​-   The disk scan is less important, but is used to check for new files
-  that weren't sorted by Sonarr and detect deleted files.
-​​-   The most time consuming portion is the information refresh (assuming
-  reasonable disk access speed), larger shows take longer due to the
-  number of episodes to process.
+​​ - Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDB proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
+​​ - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
+​​ - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
 ​​
 ​​## Why is there a number next to Activity?
 ​​
 ​​
 ​​
-​​-   This number shows the count of episodes in your download client's
-  queue and the last 30 items in its history that have not yet been
-  imported. If the number is blue it is operating normally and should
-  import episodes when they complete. Yellow means there is a warning
-  on one of the episodes. Red means there has been an error. In the
-  case of yellow (warning) and red (error), you will need to look at
-  the queue under Activity to see what the issue is (hover over the
-  icon to get more details).
-​​-   You need to remove the item from your download client's queue or
-  history to remove them from Sonarr's queue.
+​​ - This number shows the count of episodes in your download client's queue and the last 30 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
+​​ - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
 ​​
 ​​## I see log messages for shows I don't have/don't want
 ​​
 ​​
 ​​
-​​-   These messages are completely normal and come from the RSS feeds
-  that Sonarr checks to see if there are episodes you do want, usually
-  these only appear in debug/trace logging, but in the event of an
-  problem processing an item you may see a warning or error. It is
-  safe to ignore the warnings/errors as well since they are for shows
-  you don't want, in the event it is for a show you want, open up a
-  support thread on the forums.
+​​ - These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you don't want, in the event it is for a show you want, open up a support thread on the forums.
 ​​
 ​​## Seeding torrents aren't deleted automatically
 ​​
 ​​
 ​​
-​​-   When a torrent that is still seeding is imported, it is copied or
-  hard linked (if enabled and *possible*) so that the torrent client
-  can continue seeding. In an ideal setup, the torrent download folder
-  and the library folder will be on the same file system and *look
-  like it* (Docker and network shares make this easy to get wrong),
-  which makes hard links possible and minimizes wasted space.
-​​-   In addition, you can configure your seed time/ratio goals in Sonarr
-  or your download client, setup your download client to *pause* or
-  *stop* when they're met and enable Remove under Completed and Failed
-  Download Handler. That way, torrents that finish seeding will be
-  removed from the download client by Sonarr.
+​​ - When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
+​​ - In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
 ​​
 ​​## Why can't I add a new series?
 ​​
 ​​
 ​​
-​​-   In the event that TheTVDB is unavailable Sonarr is unable to get
-  search results and you will be unable to add any new series by
-  searching. You may be able to add a new series by the TVDBID if you
-  know what it is, the UI explains how to add it by an ID.
-​​-   Sonarr cannot add any series that does not have an English language
-  title. If you try to add a series via TVDB ID that does not have an
-  English title. If no English title exist for that series on TheTVDB
-  it will need to be added (if available).
-​​-   The show must be a TV Series, and not a movie. It must also exist on
-  TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you
-  cannot add the show.
-​​-   The series must exist on TVDB
+​​ - In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDBID if you know what it is, the UI explains how to add it by an ID.
+​​ - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+​​ - The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
+​​ - The series must exist on TVDB
 ​​
 ​​## Why can't I add a new series when I know the TVDB ID?
 ​​
 ​​
 ​​
-​​-   Sonarr cannot add any series that does not have an English language
-  title. If you try to add a series via TVDB ID that does not have an
-  English title. If no English title exist for that series on TheTVDB
-  it will need to be added (if available).
+​​ - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 ​​
 ​​## Sonarr won\'t work on Big Sur
 ​​
@@ -380,8 +235,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​supported.
 ​​
 ​​1.  Change your argument to be your path
-​​2.  Make sure the shebang in your script maps to your pwsh path (if you
-  don\'t have a shebang definition in there, add it)
+​​2.  Make sure the shebang in your script maps to your pwsh path (if you don\'t have a shebang definition in there, add it)
 ​​3.  Make sure the pwsh script is executable
 ​​
 ​​## What\'s the different Series Types?
@@ -403,23 +257,21 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​
 ​​**Daily**
 ​​
-​​-   Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
-​​-   A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
-​​-   DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
+​​ - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
+​​ - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
+​​ - DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
 ​​
 ​​**Standard**
 ​​
-​​-   The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
-​​-   Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
-​​-   GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
+​​ - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
+​​ - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
+​​ - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
 ​​
 ​​**Anime**
 ​​
-​​-   Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
-​​-   \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC)
-  \[63B8AC67\]
-​​-   \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English
-  Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
+​​ - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
+​​ - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
+​​ - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 ​​
 ​​## How can I rename my series folders?
 ​​
@@ -428,8 +280,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​
 ​​1.  Mass Editor
 ​​2.  Select what series need their folder renamed
-​​3.  Change Root Folder to the same Root Folder that the series currently
-  exist in
+​​3.  Change Root Folder to the same Root Folder that the series currently exist in
 ​​4.  Select \"Yes move files\"
 ​​
 ​​# General FAQs
@@ -469,39 +320,22 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​\* This means your SQLite database that stores most of the information
 ​​for Sonarr is corrupt.
 ​​
-​​-   -   [Try restoring from a
-      backup](#how_do_i_backup_restore_my_Sonarr "wikilink")
-  -   You can follow [our instructions on this
-      wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")
-  -   Alternatively, there is guide here to copy the contents from the
-      corrupt database into a new one:
-      <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
+​​ -  - [Try restoring from a backup](#how_do_i_backup_restore_my_Sonarr "wikilink")  - You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")  - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 ​​
 ​​```{=html}
 ​​<!-- -->
 ​​```
-​​-   This error may show if the database file is not writable by the
-  user/group Sonarr is running as.
+​​ - This error may show if the database file is not writable by the user/group Sonarr is running as.
 ​​
 ​​```{=html}
 ​​<!-- -->
 ​​```
-​​-   Another possible cause of you getting an error with your Database is
-  that you\'re placing your database on a network drive (nfs or smb or
-  something else not local). Simple answer to this is to not do this
-  as SQLite and network drives not typically play nice together and
-  will cause a malformed database eventually. **Sonarr\'s config
-  folder must be on a local drive**. If you\'re trying to restore your
-  database you can check out our Backup/Restore guide
-  [here](#Restoring_from_Backup "wikilink").
+​​ - Another possible cause of you getting an error with your Database is that you\'re placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **Sonarr\'s config folder must be on a local drive**. If you\'re trying to restore your database you can check out our Backup/Restore guide [here](#Restoring_from_Backup "wikilink").
 ​​
 ​​```{=html}
 ​​<!-- -->
 ​​```
-​​-   If you are using mergerFS you need to remove `direct_io` as sqlite
-  uses mmap which isn't supported by `direct_io` as explained in the
-  mergerFS [docs
-  here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
+​​ - If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn't supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 ​​
 ​​## I use Sonarr on a Mac and it suddenly stopped working. What happened?
 ​​
@@ -525,26 +359,12 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​various reasons, but the most common is, Sonarr is running as a service,
 ​​which causes one of two things:
 ​​
-​​-   Sonarr runs under the LocalService account by default which doesn't
-  have access to protected remote file shares.
-  -   **Solutions:**
-      -   Run Sonarr's service as another user that has access to that
-          share
-          -   Open the Administrative Tools \> Services window on your
-              Windows server.
-          -   Stop the Sonarr service.
-          -   Open the Properties \> Log On dialog.
-          -   Change the service user account to the target user
-              account.
-      -   Run Sonarr.exe using the Startup Folder
+​​ - Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  - **Solutions:**  - Run Sonarr's service as another user that has access to that share  - Open the Administrative Tools \> Services window on your Windows server.  - Stop the Sonarr service.  - Open the Properties \> Log On dialog.  - Change the service user account to the target user account.  - Run Sonarr.exe using the Startup Folder
 ​​
 ​​```{=html}
 ​​<!-- -->
 ​​```
-​​-   You're using a mapped network drive (not a UNC path)
-  -   **Solutions:**
-      -   Change your paths to UNC paths (`\\server\share`)
-      -   Run Sonarr.exe via the Startup Folder
+​​ - You're using a mapped network drive (not a UNC path)  - **Solutions:**  - Change your paths to UNC paths (`\\server\share`)  - Run Sonarr.exe via the Startup Folder
 ​​
 ​​## Mapped Network Drives vs UNC Paths
 ​​
@@ -554,9 +374,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​to set shares up is using UNC paths. So instead of `X:\Movies` use
 ​​`\\Server\Movies\`.
 ​​
-​​-   A key point to remember is that Sonarr gets path information from
-  the downloader, so you'll *also* need to setup NZBGet, SABNzbd or
-  any other downloader to use UNC paths too.
+​​ - A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 ​​
 ​​## How do I change from the Windows Service to a Tray App?
 ​​
@@ -564,28 +382,23 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​\# Shut Sonarr down
 ​​
 ​​1.  Run serviceuninstall.exe that\'s in the Sonarr directory
-​​2.  Run Sonarr.exe as an administrator once to give it proper
-  permissions and open the firewall. Once complete, then you can close
-  it and run it normally.
-​​3.  (Optional) Drop a shortcut to Sonarr.exe in the startup folder to
-  auto-start on boot.
+​​2.  Run Sonarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
+​​3.  (Optional) Drop a shortcut to Sonarr.exe in the startup folder to auto-start on boot.
 ​​
 ​​## How do I Backup/Restore my Sonarr?
 ​​
 ​​
 ​​=== Backing up Sonarr ===
 ​​
-​​-   **Using built-in backup**
+​​ - **Using built-in backup**
 ​​
 ​​1.  Go to System: Backup in the Sonarr UI
 ​​2.  Click the Backup button
 ​​3.  Download the zip after the backup is created for safekeeping
 
-​​-   Using file system directly
+​​ - Using file system directly
 ​​
-​​1.  Find the location of the AppData directory for Sonarr
-  -   Via the Sonarr UI go to System: About
-  -   [Sonarr Appdata Directory](Sonarr_Appdata_Directory "wikilink")
+​​1.  Find the location of the AppData directory for Sonarr  - Via the Sonarr UI go to System: About  - [Sonarr Appdata Directory](Sonarr_Appdata_Directory "wikilink")
 ​​2.  Stop Sonarr - This will prevent the database from being corrupted
 ​​3.  Copy the contents to a safe location
 ​​
@@ -596,7 +409,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​between OS X and Linux may work, since both use paths containing `/`
 ​​instead of `\` that Windows uses, but is not supported.*
 ​​
-​​-   **Using zip backup**
+​​ - **Using zip backup**
 ​​
 ​​1.  Re-install Sonarr
 ​​2.  Run Sonarr
@@ -606,19 +419,17 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​6.  Select your backup zip file
 ​​7.  Select Restore
 ​​
-​​-   **Using file system backup**
+​​ - **Using file system backup**
 ​​
 ​​1.  Re-install Sonarr
 ​​2.  Run Sonarr once to get the AppData directory location
 ​​3.  Stop Sonarr
-​​4.  Delete the contents of the AppData directory **(Including the
-  .db-wal/.db-journal files if they exist)**
+​​4.  Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 ​​5.  Restore from your backup
 ​​6.  Start Sonarr
-​​7.  As long as the paths are the same, everything will pick up where it
-  left off
+​​7.  As long as the paths are the same, everything will pick up where it left off
 ​​
-​​-   **Restore for Synology NAS**
+​​ - **Restore for Synology NAS**
 ​​
 ​​**CAUTION: Restoring on a Synology requires knowledge of Linux and Root
 ​​SSH access to the Synology Device.**
@@ -629,21 +440,14 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​4.  Connect to the Synology NAS through SSH and log in as root\
 ​​5.  Execute the following commands:
 
-```bash
-    rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*
-    cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
+```bash   rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*   cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
 ```
 
 ​​6.  Update permissions on the files:
 
-```bash
-        cd /usr/local/Sonarr/var/.config/Sonarr/
-        chown -R Sonarr:users *
-        chmod -R 0644*
+```bash   cd /usr/local/Sonarr/var/.config/Sonarr/   chown -R Sonarr:users *   chmod -R 0644*
 ```
-
-  On some installations, the user is different:
-  `chown -R sc-Sonarr:Sonarr *`
+ On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *`
 ​​7.  Start Sonarr
 ​​
 ​​## Help I have locked my self out
@@ -690,10 +494,7 @@ To disable authentication (to reset your username or password) you will need nee
 ​​them into the final location, so this means that Sonarr will need to
 ​​read/write to both the source and the destination directory and files.
 ​​
-​​-   On Linux, where best practices have services running as their own
-  user, this will probably mean using a shared group and setting
-  folder permissions to `775` and files to `664` both in your
-  downloader and Sonarr. In umask notation, that would be `002`.
+​​ - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
 ​​
 ​​## System & Logs loads forever
 ​​
@@ -712,10 +513,8 @@ To disable authentication (to reset your username or password) you will need nee
 ​​manually then give the cookies to Sonarr to work. This page describes
 ​​how you do that.
 ​​
-​​-   Chrome ![Chrome
-  cookies](chrome_cookies.png "fig:Chrome cookies"){width="750"}
-​​-   Firefox ![Firefox
-  cookies](Firefox_cookies.png "fig:Firefox cookies"){width="750"}
+​​ - Chrome ![Chrome cookies](chrome_cookies.png "fig:Chrome cookies"){width="750"}
+​​ - Firefox ![Firefox cookies](Firefox_cookies.png "fig:Firefox cookies"){width="750"}
 ​​
 ​​## Unpack Torrents
 ​​
@@ -811,13 +610,11 @@ To disable authentication (to reset your username or password) you will need nee
 ​​Using the all endpoint has no advantages (besides reduced management
 ​​overhead), only disadvantages:
 ​​
-​​-   you lose control over indexer specific settings (categories, search
-  modes, etc.)
-​​-   mixing search modes (IMDB, query, etc.) might cause low-quality
-  results
-​​-   indexer specific categories (\>= 100000) can\'t be used.
-​​-   slow indexers will slow down the overall result
-​​-   total results are limited to 1000
+​​ - you lose control over indexer specific settings (categories, search modes, etc.)
+​​ - mixing search modes (IMDB, query, etc.) might cause low-quality results
+​​ - indexer specific categories (\>= 100000) can\'t be used.
+​​ - slow indexers will slow down the overall result
+​​ - total results are limited to 1000
 ​​
 ​​Adding each indexer separately It allows for fine tuning of categories
 ​​on a per indexer basis, which can be a problem with the `/all` end point
@@ -833,25 +630,8 @@ To disable authentication (to reset your username or password) you will need nee
 ​​
 ​​This is expected. This is how the Torrent Process works with Sonarr.
 ​​
-​​1.  Sonarr will send a download request to your client, and associate it
-  with a label or category name that you have configured in the
-  download client settings. Examples: movies, tv, series, music, ect.
-​​2.  Sonarr will monitor your download clients active downloads that use
-  that category name. This monitoring occurs via your download
-  client\'s API.
-​​3.  Completed files are left in their original location to allow you to
-  seed the file (ratio or time can be adjusted in the download client
-  or from within Sonarr under the specific download client). When
-  files are imported to your media folder Sonarr will hardlink the
-  file if supported by your setup or copy if not hardlinks are not
-  supported.
-  -   Hardlinks are enabled by default. A hardlink will allow not use
-      any additional disk space. The file system and mounts must be
-      the same for your completed download directory and your media
-      library. If the hardlink creation fails or your setup does not
-      support hardlinks then Sonarr will fall back and copy the file.
-​​4.  If the \"Completed Download Handling - Remove\" option is enabled in
-  Sonarr\'s settings, Sonarr will delete the original file and torrent
-  from your client, but only if the client reports that seeding is
-  complete and torrent is stopped.
+​​1.  Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+​​2.  Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client\'s API.
+​​3.  Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.  - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
+​​4.  If the \"Completed Download Handling - Remove\" option is enabled in Sonarr\'s settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 ​​
