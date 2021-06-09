@@ -31,7 +31,7 @@ You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of lidarr and install it into `/opt`
 {.is-info}
 
-- Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
+- Ensure you have the required prequisite packages: `sudo apt install curl SQLite3`
 - Download the correct binaries for your architecture.
  `wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`
@@ -93,7 +93,7 @@ If this advice is not followed, you may have to configure a Remote Path Mapping 
 Permissions and ownership of files is one of the most common problems for Lidarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Lidarr will need read and write to the download folders as well as the final folders.
 
-> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
 ### Install Lidarr

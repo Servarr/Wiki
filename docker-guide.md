@@ -180,7 +180,7 @@ This is the best option for most users, it lets you control and configure many c
             - PGID=321
             - UMASK=002
 
-    ## sabnzbd
+    ## SABnzbd
     SABnzbd:
         image: hotio/sabnzbd
         volumes:
@@ -236,7 +236,7 @@ This is the best option for most users, it lets you control and configure many c
                -e PUID=222 -e PGID=321 -e UMASK=002 \
                binhex/arch-delugevpn
 
-    ## sabnzbd
+    ## SABnzbd
     docker run -v /path/to/config/sabnzbd:/config \
                -v /host/data/usenet:/data/usenet \
                -e PUID=333 -e PGID=321 -e UMASK=002 \
@@ -372,7 +372,7 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 - [hotio’s](https://hub.docker.com/u/hotio) [sonarr](https://hub.docker.com/r/hotio/sonarr), [radarr](https://hub.docker.com/r/hotio/radarr) and [lidarr](https://hub.docker.com/r/hotio/lidarr) images let you run the built in version *or* specify an alternative via environment variable. The documentation and Dockerfile also don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
 - [hotio’s](https://hub.docker.com/u/hotio) [ombi](https://hub.docker.com/r/hotio/ombi), [jackett](https://hub.docker.com/r/hotio/jackett), [nzbhydra2](https://hub.docker.com/r/hotio/nzbhydra2) and [bazarr](https://hub.docker.com/r/hotio/bazarr) are useful too, but don’t really require any special permissions or paths.
 - [hotio’s](https://hub.docker.com/u/hotio) [unpackerr](https://hub.docker.com/r/hotio/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
-- [binhex’s](https://hub.docker.com/u/binhex) [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [sabnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/) and [nzbget](https://hub.docker.com/r/binhex/arch-nzbget/).
+- [binhex’s](https://hub.docker.com/u/binhex) [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [SABnzbd](https://hub.docker.com/r/binhex/arch-SABnzbd/) and [NZBGet](https://hub.docker.com/r/binhex/arch-NZBGet/).
 - [binhex’s](https://hub.docker.com/u/binhex) [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/), [radarr](https://hub.docker.com/r/binhex/arch-radarr/) and [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/) images suggest default paths that don’t allow for hard linking, instead follow the process described above and pass in a single volume.
 - [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained.
 - [pyouroboros/ouroboros](https://hub.docker.com/r/pyouroboros/ouroboros) or [containrrr/watchtower](https://hub.docker.com/r/containrrr/watchtower) automatically update your running Docker containers to the latest available image. These are not recommended if you use Docker Compose.

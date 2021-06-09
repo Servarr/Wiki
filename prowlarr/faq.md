@@ -81,13 +81,13 @@ This means your SQLite database that stores most of the information for Prowlarr
 
 - Try restoring from a backup
 - You can follow our instructions on [this wiki](https://wiki.servarr.com/Useful_Tools#Recovering_a_Corrupt_DB).
-- Alternatively, [this guide](http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html) tells you how to copy the contents from the corrupt database into a new one.
+- Alternatively, [this guide](http://techblog.dorogin.com/2011/05/SQLiteexception-database-disk-image-is.html) tells you how to copy the contents from the corrupt database into a new one.
 
 This error may show if the database file is not writable by the user/group Prowlarr is running as.
 
 Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **Prowlarr's config folder must be on a local drive.**
 
-If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn’t supported by direct_io as explained in the mergerFS docs [here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs).
+If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by direct_io as explained in the mergerFS docs [here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs).
 
 ## I use Prowlarr on a Mac and it suddenly stopped working. What happened?
 

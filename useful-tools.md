@@ -8,20 +8,20 @@ editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
 ---
 
-The following apps are companions to the ARR Suite of Applications. They are neither maintained, developed, nor supported by the ARR Dev Teams. Please direct any specific support questions to the respective application development team.
+The following apps are companions to the *ARR Suite of Applications. They are neither maintained, developed, nor supported by the *ARR Dev Teams. Please direct any specific support questions to the respective application development team.
 
-## Common Software
+## Common  Software 
 
 ### DB Browser for SQLite
 
-[DB Browser for SQLite (DB4S)](https://sqlitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
+[DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 
-Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory).
+Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory, [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory).
 
 #### Recovering a Corrupt DB
 
 1. Make a copy of your corrupt DB
-1. Open your corrupt DB in DB Browser for Sqlite
+1. Open your corrupt DB in DB Browser for SQLite
 1. File -> Export -> Export DB to SQL file
 1. Select all tables
 1. Check/Enable "Keep column names in INSERT INTO"
@@ -49,7 +49,7 @@ Highlights
 
 - Application Status
 - Requests and Approvals (\~Ombi, Requesterr)
-- Customizable ARR application notifications
+- Customizable *ARR application notifications
 - Request System with approvals
 - Follow system for users to monitor a series or movie and be notified (via @mentions)
 - Server Status

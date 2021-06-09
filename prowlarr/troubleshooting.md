@@ -16,7 +16,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Prowlarr Subreddit*](https://reddit.com/r/prowlarr)
 {.links-list}
 
-But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono or .Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker-Guide](/Docker-Guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/Docker-Guide#Docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono or .Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/Docker-Guide#Docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
@@ -51,14 +51,14 @@ The flags have the following functions:
 
 ## Standard Logs Location
 
-The log files are located in 's [Appdata Directory](/prowlarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -> Logs -> Files.
+The log files are located in prowlarr's [Appdata Directory]/prowlarr/appdata-directory, inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
 
 > Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 {.is-info}
 
 ## Update Logs Location
 
-The update log files are located in 's [Appdata Directory](/prowlarr/appdata-directory), inside the UpdateLogs/ folder.
+The update log files are located in prowlarr's [Appdata Directory]/prowlarr/appdata-directory, inside the UpdateLogs/ folder.
 
 ### Sharing Logs
 

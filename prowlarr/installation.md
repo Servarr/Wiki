@@ -31,7 +31,7 @@ You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of prowlarr and install it into `/opt`
 {.is-info}
 
-- Ensure you have the required prequisite packages: `sudo apt install curl sqlite3`
+- Ensure you have the required prequisite packages: `sudo apt install curl SQLite3`
 - Download the correct binaries for your architecture.
  `wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`
@@ -72,7 +72,7 @@ EOF
   
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
-> For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/Docker-Guide) wiki article.
+> For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
 There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.

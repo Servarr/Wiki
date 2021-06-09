@@ -16,7 +16,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Radarr Subreddit*](https://reddit.com/r/radarr)
 {.links-list}
 
-But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono or .Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker-Guide](/Docker-Guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/Docker-Guide#Docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono or .Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/Docker-Guide#Docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
@@ -51,14 +51,14 @@ The flags have the following functions:
 
 ## Standard Logs Location
 
-The log files are located in 's [Appdata Directory](/radarr/appdata-directory), inside the logs/ folder. You can also access the log files from the  UI at System -> Logs -> Files.
+The log files are located in radarr's [Appdata Directory]/radarr/appdata-directory, inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
 
 > Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 {.is-info}
 
 ## Update Logs Location
 
-The update log files are located in 's [Appdata Directory](/radarr/appdata-directory), inside the UpdateLogs/ folder.
+The update log files are located in radarr's [Appdata Directory]/radarr/appdata-directory, inside the UpdateLogs/ folder.
 
 ### Sharing Logs
 
@@ -68,7 +68,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `.debug.txt` and `r.trace.txt` respectively.
 
-If you're unable to access the  UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
+If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
 ```xml
  <Config>
@@ -100,7 +100,7 @@ We do everything we can to prevent issues when upgrading, but they occur, this w
 
 ### Determine the issue
 
-- The best place to look when  won't start after an update is your log files, before trying to start  again, use [Logging](/radarr/settings#logging) and [Log Files](/radarr/system#log-files) to find them and increase the log level.
+- The best place to look when won't start after an update is your log files, before trying to start again, use [Logging](/radarr/settings#logging) and [Log Files](/radarr/system#log-files) to find them and increase the log level.
 
 - - **Migration Issue**
 
@@ -123,13 +123,13 @@ In the event of a migration issue there is not much you can do immediately, if t
 
 Grab the latest release from <https://radarr.video>
 
-Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run  as you normally would.
+Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run as you normally would.
 
 ## Downloads and Importing
 
 Downloading and importing is where *most* people experience issues. From a high level perspective,  needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
-**The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://paste.ubuntu.com) to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
+**The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.com), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 When you reach out for help, be sure to read [asking for help](#asking-for-help) so that you can provide us with the details we’ll need.
 
@@ -139,13 +139,13 @@ Ensure your download client(s) are running. Start by testing the download client
 
 ### Testing a Download
 
-Now we’ll try a download, pick a  and do a manual search. Pick one of those files and attempt to download it. Does it get sent to the download client? Does it end up with the correct category? Does it show up in Activity? Does it end up in the trace level logs during the **Check For Finished Download** task which runs roughly every minute? Does it get correctly parsed during that task? Does the queued up download have a reasonable name? Since  searches by ****, on most indexers/trackers, it can queue one up with a name that it can’t recognize.
+Now we’ll try a download, pick a and do a manual search. Pick one of those files and attempt to download it. Does it get sent to the download client? Does it end up with the correct category? Does it show up in Activity? Does it end up in the trace level logs during the **Check For Finished Download** task which runs roughly every minute? Does it get correctly parsed during that task? Does the queued up download have a reasonable name? Since searches by ****, on most indexers/trackers, it can queue one up with a name that it can’t recognize.
 
 ### Testing an Import
 
-Import issues should almost always manifest as an item in Activity with an orange icon you can hover to see the error. If they’re not showing up in Activity, this is the issue you need to focus on first so go back and figure that out. Most import errors are *permissions* issues, remember that  needs to be able to read and write in the download folder. Sometimes, permissions in the library folder can be at fault too, so be sure to check both.
+Import issues should almost always manifest as an item in Activity with an orange icon you can hover to see the error. If they’re not showing up in Activity, this is the issue you need to focus on first so go back and figure that out. Most import errors are *permissions* issues, remember that needs to be able to read and write in the download folder. Sometimes, permissions in the library folder can be at fault too, so be sure to check both.
 
-Incorrect path issues are possible too, though less common in normal setups. The key to understanding path issues is knowing that  gets the path to the download *from* the download client, via its API. This becomes a problem in more unique use cases, like the download client running on a different system (maybe even OS\!). It can also occur in a Docker setup, when volumes are not done well. A remote path map is a good solution where you don’t have control, like a seedbox setup. On a Docker setup, fixing the paths is a better option.
+Incorrect path issues are possible too, though less common in normal setups. The key to understanding path issues is knowing that gets the path to the download *from* the download client, via its API. This becomes a problem in more unique use cases, like the download client running on a different system (maybe even OS\!). It can also occur in a Docker setup, when volumes are not done well. A remote path map is a good solution where you don’t have control, like a seedbox setup. On a Docker setup, fixing the paths is a better option.
 
 ### Common Problems
 
@@ -155,31 +155,31 @@ Incorrect path issues are possible too, though less common in normal setups. The
 
 #### SSL in use and incorrectly configured
 
-Ensure SSL encryption is not turned on if you're using both your  instance and your download client on a local network. See [the SSL FAQ entry](/radarr/faq#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](/radarr/faq#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
 
 #### Can’t see share on Windows
 
-The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t  see my files on a remote server](/radarr/faq#why_can’t_radarr_see_my_files_on_a_remote_server?) for details.
+The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/radarr/faq#why_can’t_radarr_see_my_files_on_a_remote_server?) for details.
 
 #### Mapped network drives are not reliable
 
-While mapped network drives like `X:\` are convenient, they aren’t as reliable as UNC paths like `\\server\share` and they’re also not available before login. Setup  and your download client(s) so that they use UNC paths as needed. If your library is on a share, you’d make sure your root folders are using UNC paths. If your download client sends to a share, that is where you’ll need to configure UNC paths since  gets the download path from the download client. It is fine to keep your mapped network drives to use yourself, just don’t use them for automation.
+While mapped network drives like `X:\` are convenient, they aren’t as reliable as UNC paths like `\\server\share` and they’re also not available before login. Setup and your download client(s) so that they use UNC paths as needed. If your library is on a share, you’d make sure your root folders are using UNC paths. If your download client sends to a share, that is where you’ll need to configure UNC paths since gets the download path from the download client. It is fine to keep your mapped network drives to use yourself, just don’t use them for automation.
 
 #### Docker and user, group, ownership, permissions and paths
 
-Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/Docker-Guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
+Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/docker-guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
 
 #### Permissions on the Library Folder
 
-Don’t forget to check permissions and ownership of the *destination*. It is easy to get fixated on the download’s ownership and permissions and that is *usually* the cause of permissions related issues, but it *could* be the destination as well. Check that the destination folder(s) exist. Check that a destination *file* doesn’t already exist or can’t be deleted or moved to recycle bin. Check that ownership and permissions allow the downloaded file to be copied, hard linked or moved. The user or group that  runs as needs to be able to read and write the root folder.
+Don’t forget to check permissions and ownership of the *destination*. It is easy to get fixated on the download’s ownership and permissions and that is *usually* the cause of permissions related issues, but it *could* be the destination as well. Check that the destination folder(s) exist. Check that a destination *file* doesn’t already exist or can’t be deleted or moved to recycle bin. Check that ownership and permissions allow the downloaded file to be copied, hard linked or moved. The user or group that runs as needs to be able to read and write the root folder.
 
 #### Permissions on the Downloads Folder
 
-Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that  runs as needs to be able to read and write the downloads folder.
+Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that runs as needs to be able to read and write the downloads folder.
 
 #### Download folder and library folder not different folders
 
-The download client should download into a folder accessible by  and that is not your root/library folder;  should import from that separate download folder into your Library folder.
+The download client should download into a folder accessible by and that is not your root/library folder;  should import from that separate download folder into your Library folder.
 
 You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
 
@@ -191,7 +191,7 @@ This frequently causes other random import issues as well.
 
 #### Incorrect category
 
- should be setup to use a category so that it only tries to process its own downloads. It is rare that a torrent submitted by  gets added without the correct category, but it can happen. If you’re adding torrents manually and want  to process them, they’ll need to have the correct category. It can be set at any time, since  tries to process downloads every minute.
+ should be setup to use a category so that it only tries to process its own downloads. It is rare that a torrent submitted by gets added without the correct category, but it can happen. If you’re adding torrents manually and want to process them, they’ll need to have the correct category. It can be set at any time, since tries to process downloads every minute.
 
 #### Packed torrents
 
@@ -203,17 +203,17 @@ There are a few causes of repeated downloads, but a recent one is related to the
 
 #### Usenet download misses import
 
- only looks at the 60 most recent downloads in SABnzbd and NZBGet, so if you *keep* your history this means that during large queues with import issues, downloads can be silently missed and not imported. The best way to avoid that is to keep your history clear, so that any items that still appear need investigating. You can achieve this by enabling Remove under Completed and Failed Download Handler. In nzbget, this will move items to the *hidden* history which is great. Unfortunately, sabnzbd does not have a similar feature. The best you can achieve there is to use the nzb backup folder.
+ only looks at the 60 most recent downloads in SABnzbd and NZBGet, so if you *keep* your history this means that during large queues with import issues, downloads can be silently missed and not imported. The best way to avoid that is to keep your history clear, so that any items that still appear need investigating. You can achieve this by enabling Remove under Completed and Failed Download Handler. In NZBGet, this will move items to the *hidden* history which is great. Unfortunately, SABnzbd does not have a similar feature. The best you can achieve there is to use the nzb backup folder.
 
 #### Download client clearing items
 
-The download client should *not* be responsible for removing downloads. Usenet clients should be configured so they *don’t* remove downloads from history. Torrent clients should be setup so they *don’t* remove torrents when they’re finished seeding (pause or stop instead). This is because  communicates with the download client to know what to import, so if they’re *removed* there is nothing to be imported… even if there is a folder full of files.
+The download client should *not* be responsible for removing downloads. Usenet clients should be configured so they *don’t* remove downloads from history. Torrent clients should be setup so they *don’t* remove torrents when they’re finished seeding (pause or stop instead). This is because communicates with the download client to know what to import, so if they’re *removed* there is nothing to be imported… even if there is a folder full of files.
 
-For Sabnzbd, this is handled with the History Retention setting.
+For SABnzbd, this is handled with the History Retention setting.
 
 #### Download cannot be matched to a library item
 
-For various reasons, releases cannot be parsed once's grabbed and sent to the download client. Activity -> Options -> Shown Unknown will display all items not otherwise ignored / already imported within 's download client category. These will typically need to be manually mapped and imported.
+For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity -> Options -> Shown Unknown will display all items not otherwise ignored / already imported within *Arr's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 
@@ -225,13 +225,13 @@ Please discuss with the support team on discord. If this is something that may b
 
 ### Turn logging up to trace
 
-**The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://paste.ubuntu.com) to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
+**The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.com), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 ### Testing an Indexer or Tracker
 
-When you test an indexer or tracker, in debug or trace logs you can find the URL used. An example of a successful test is below, you can see it query the indexer via a specific URL with specific parameters and then the response. You test this url in your browser like  replacing the `apikey=(removed)` with the correct apikey like `apikey=123`. You can experiment with the parameters if you’re getting an error from the indexer or see if you have connectivity issues if it doesn’t even work. After you’ve tested in your own browser, you should test from the system  is running on *if* you haven’t already.
+When you test an indexer or tracker, in debug or trace logs you can find the URL used. An example of a successful test is below, you can see it query the indexer via a specific URL with specific parameters and then the response. You test this url in your browser like replacing the `apikey=(removed)` with the correct apikey like `apikey=123`. You can experiment with the parameters if you’re getting an error from the indexer or see if you have connectivity issues if it doesn’t even work. After you’ve tested in your own browser, you should test from the system is running on *if* you haven’t already.
 
-{{\#lst::Troubleshooting Misc|\_indexers\_and\_trackers\_code\_block}}
+
 
 ## Testing a Search
 
@@ -255,7 +255,7 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 
 #### Hitting rate limits
 
-If you run your  through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
+If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
 
 Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
 

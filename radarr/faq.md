@@ -290,9 +290,9 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you don't you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 
-## Can I update  inside my Docker container?
+## Can I update inside my Docker container?
 
-- *Technically, yes.* **But you should absolutely not.** It is a primary philosophy of Docker. Database issues can be caused for  if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
+- *Technically, yes.* **But you should absolutely not.** It is a primary philosophy of Docker. Database issues can be caused for if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
 
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
@@ -308,17 +308,17 @@ This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
 ## I am getting an error: Database disk image is malformed
 
-\* This means your SQLite database that stores most of the information for  is corrupt.
+\* This means your SQLite database that stores most of the information for is corrupt.
 
 - [Try restoring from a backup](#how_do_i_backup_restore_my_Radarr "wikilink")
-- You can follow [our instructions on this wiki.](/useful-tools#Recovering_a_Corrupt_DB "wikilink")
-- Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
+- You can follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/SQLiteexception-database-disk-image-is.html>
 
 - This error may show if the database file is not writable by the user/group Radarr is running as.
 
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **'s config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
 
-  - If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
+  - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
 ## I use Radarr on a Mac and it suddenly stopped working. What happened?
 
@@ -326,17 +326,17 @@ Most likely this is due to a MacOS bug which caused one of the databases to be c
 
 See the above database is malformed entry.
 
-Then attempt to launch  and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
+Then attempt to launch and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
-## Why can’t  see my files on a remote server?
+## Why can’t see my files on a remote server?
 
-- In short: the user  is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
+- In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
   - Radarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
     - **Solutions**
       - Run Radarr’s service as another user that has access to that share
       - Open the Administrative Tools \> Services window on your Windows server.
-        - Stop the  service.
+        - Stop the service.
         - Open the Properties \> Log On dialog.
         - Change the service user account to the target user account.
       - Run Radarr.exe using the Startup Folder
@@ -348,13 +348,13 @@ Then attempt to launch  and see if it works. If it does not work, you'll need fu
 
 ## Mapped Network Drives vs UNC Paths
 
-- Using mapped network drives generally doesn’t work very well, especially when  is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies\`.
+- Using mapped network drives generally doesn’t work very well, especially when is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies\`.
 
-  - A key point to remember is that  gets path information from the downloader, so you’ll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
+  - A key point to remember is that gets path information from the downloader, so you’ll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
 ## How do I change from the Windows Service to a Tray App?
 
-1. Shut  down Radarr
+1. Shut down Radarr
 1. Run serviceuninstall.exe that's in the Radarr directory
 1. Run `Radarr.exe` as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 1. (Optional) Drop a shortcut to .exe in the startup folder to auto-start on boot.
@@ -365,7 +365,7 @@ Then attempt to launch  and see if it works. If it does not work, you'll need fu
 
 #### Using built-in backup
 
-1. Go to System: Backup in the  UI
+1. Go to System: Backup in the UI
 2. Click the Backup button
 3. Download the zip after the backup is created for safekeeping
 
@@ -407,7 +407,7 @@ Then attempt to launch  and see if it works. If it does not work, you'll need fu
 **CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
 
 1. Re-install Radarr  
-2. Run  once to get the AppData directory location  
+2. Run once to get the AppData directory location  
 3. Stop Radarr
 4. Connect to the Synology NAS through SSH and log in as root  
 5. Execute the following commands:
@@ -437,15 +437,15 @@ To disable authentication (to reset your username or password) you will need nee
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
 1. Restart Radarr
-1. Radarr will now be accessible without a password, you should go the `Settings: General` in the  UI and set your username and password
+1. Radarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
 ## Help I have forgotten my password
 
 \* Please see steps listed above.
 
-## Jackett shows more results than  when manually searching
+## Jackett shows more results than when manually searching
   
-This is usually due to  searching Jackett differently than you do. See our [troubleshooting](/radarr/troubleshooting)Troubleshooting Article for more information.
+This is usually due to searching Jackett differently than you do. See our [troubleshooting](/radarr/troubleshooting)Troubleshooting Article for more information.
 
 ## Weird UI Issues
 
@@ -454,11 +454,11 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 ## Web Interface Only Loads at localhost on Windows
 
-- If you can only reach your web interface at <http://localhost:7878/> or <http://127.0.0.1:7878/>, you need to run  as administrator at least once.
+- If you can only reach your web interface at <http://localhost:7878/> or <http://127.0.0.1:7878/>, you need to run as administrator at least once.
 
 ## Permissions
 
-- Radarr will need to move files away from where the downloader puts them into the final location, so this means that  will need to read/write to both the source and the destination directory and files.
+- Radarr will need to move files away from where the downloader puts them into the final location, so this means that will need to read/write to both the source and the destination directory and files.
 
 - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and . In umask notation, that would be `002`.
 
@@ -468,7 +468,7 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 ## Finding Cookies
 
-- Some sites cannot be logged into automatically and require you to login manually then give the cookies to  to work. This page describes how you do that.
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to to work. This page describes how you do that.
 
   - [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
   - [Firefox cookies](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
@@ -487,19 +487,19 @@ This is usually due to  searching Jackett differently than you do. See our [trou
 
 ## Does Radarr require a SABnzbd post-processing script to import downloaded episodes?
 
-No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If  and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so  knows where to find the files.
+No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so knows where to find the files.
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
-- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get  back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start  and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
+- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
 - Your download client stopped working and you're getting an error like \`Localhost is an invalid certificate\`?
 
-- Radarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then  will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
+- Radarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
-- If your download client and  are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
+- If your download client and are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
 ## VPNs, Jackett, and the \* ARRs
 
@@ -513,7 +513,7 @@ In addition, some private trackers \* ban\* for browsing from a VPN, which is ho
 
 The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
 
-**May 2021 Update: It is likely  support will be phased out for the jackett \`/all\` endpoint in the future due to the fact it only causes issues.**
+**May 2021 Update: It is likely support will be phased out for the jackett \`/all\` endpoint in the future due to the fact it only causes issues.**
 
 [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
@@ -533,8 +533,8 @@ This is expected. This is how the Torrent Process works with .
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 1. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within  under the specific download client). When files are imported to your media folder  will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 
-- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then  will fall back and copy the file.
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
 
-1. If the "Completed Download Handling - Remove" option is enabled in 's settings,  will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+1. If the "Completed Download Handling - Remove" option is enabled in *Arr's settings,  will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.

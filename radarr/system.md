@@ -54,7 +54,7 @@ The upgrade procedure for Mono varies per platform.
 
 ##### Currently installed SQLite version is not supported
 
-Radarr stores its data in an SQLite database. The sqlite3 library installed on your system is too old. Radarr requires at least version 3.9.0. Note that Radarr uses libsqlite3.so which may or may not be contained in a sqlite3 upgrade package.
+Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0. Note that Radarr uses libSQLite3.so which may or may not be contained in a SQLite3 upgrade package.
 
 ##### New update is available
 

@@ -22,7 +22,7 @@ The branch you have set is not a valid release branch. You will not receive upda
 
 ##### Currently installed SQLite version is not supported
 
-Prowlarr stores its data in an SQLite database. The sqlite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses libsqlite3.so which may or may not be contained in a sqlite3 upgrade package.
+Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses libSQLite3.so which may or may not be contained in a SQLite3 upgrade package.
 
 ##### New update is available
 
