@@ -1,11 +1,11 @@
 ---
 title: Sonarr FAQ
-description:
+description: 
 published: true
-date: 2021-06-09T18:22:49.248Z
+date: 2021-06-09T19:14:31.968Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
-dateCreated: 2021-06-09T18:22:32.575Z
+dateCreated: 2021-06-09T18:39:33.208Z
 ---
 
 ## How does Sonarr find episodes?
@@ -32,8 +32,7 @@ dateCreated: 2021-06-09T18:22:32.575Z
 ​​    it, you have a few choices. You can go to the show\'s page and use
 ​​    the search button, which will do a search and then automatically
 ​​    pick episode(s). You can search individual episodes or seasons
-​​    automatically or manually. Or you can use the filters of `Missing`
-​​    and `Cut-off Unmet`.
+​​    automatically or manually. Or you can go to the [Wanted](sonarr/wanted) tab and search from there.
 ​​-   If Sonarr has been offline for an extended period of time, Sonarr
 ​​    will attempt to page back to find the last release it processed in
 ​​    an attempt to avoid missing a release. As long as your indexer
