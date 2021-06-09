@@ -58,7 +58,7 @@ The update log files are located in sonarr's [Appdata Directory]/sonarr/appdata-
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or \[<https://www.reddit.com/r/> Reddit\] post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or [Reddit](https://www.reddit.com/r/sonarr) post and they're spammy in \[ Discord\], so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.com), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 #### Trace/Debug Logs
 
