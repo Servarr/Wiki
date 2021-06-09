@@ -2,71 +2,60 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-06-09T19:18:44.502Z
+date: 2021-06-09T19:23:45.490Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
 
 ## How does Sonarr find episodes?
- 
- - Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you\'ll realize that it only   covers the *future* though.
- - So how do you deal with the present and past? When you\'re adding a show, you\'ll need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn\'t been released yet, you don\'t need to initiate a search.
-​​ - Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
-​​ - If you\'ve already added the show, but now you want to search for it, you have a few choices. You can go to the show\'s page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](sonarr/wanted) tab and search from there.
-​​ - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn\'t been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
-​​
-​​## Why didn't Sonarr grab an episode I was expecting?
-​​
-​​First, make sure you read and understand the section above called *"How
-​​does Sonarr find episodes?"* Second, make sure at least one of your
-​​indexers has the episode you were expecting to be grabbed.
-​​
-​​1.  Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
-​​2.  **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
-​​3.  **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
-​​4.  **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
-​​
-​​## How are possible downloads compared?
-​​
-​​**Generally Quality Trumps All**
-​​
-​​The current logic [can be found
-​​here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L40s).
-​​***As of 3/26/2021 the logic is as follows***
-​​
-​​1.  Quality
-​​2.  Language
-​​3.  Preferred Word Score
-​​4.  Protocol
-​​5.  Episode Count
-​​6.  Episode Number
-​​7.  Indexer Priority
-​​8.  Seeds/Peers (If Torrent)
-​​9.  Age (If Usenet)
-​​10. Size
-​​
-​​## Preferred Words FAQs
-​​
-​​For the score of the on disk file: The existing name of the file and the ​​\"scene name\" of the release are evaluated for preferred words. The ​​higher score of the two is taken.
-​​
-​​How are preferred words included in renaming?
-​​
-​​For Sonarr you can make use of the \`{Preferred Words}\` token in your
-​​renaming scheme. and also check mark \`Include Preferred when Renaming\`
-​​in the release profile. take a look
-​​[HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/)
-​​for a recommended naming scheme examples for Sonarr.
-​​
-​​Using the tokens in your renaming scheme could help with download loop
-​​issues.
-​​
-​​Preferred Words always upgrade a release even if the quality and/or
-​​language cutoff has been met.
-​​
-​​## How does Sonarr handle scene numbering issues (American Dad!, etc)?
-​​
-​​ - **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.de/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
+
+- Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you\'ll realize that it only   covers the *future* though.
+- So how do you deal with the present and past? When you\'re adding a show, you\'ll need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn\'t been released yet, you don\'t need to initiate a search.
+- Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
+- If you\'ve already added the show, but now you want to search for it, you have a few choices. You can go to the show\'s page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](sonarr/wanted) tab and search from there.
+- If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn\'t been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
+
+## Why didn't Sonarr grab an episode I was expecting?
+
+First, make sure you read and understand the section above called *"How does Sonarr find episodes?"* Second, make sure at least one of your indexers has the episode you were expecting to be grabbed.
+
+1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
+2. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
+3. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
+4. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
+
+## How are possible downloads compared?
+
+**Generally Quality Trumps All**
+
+The current logic [can be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L40s).
+***As of 3/26/2021 the logic is as follows***
+
+1. Quality
+2. Language
+3. Preferred Word Score
+4. Protocol
+5. Episode Count
+6. Episode Number
+7. Indexer Priority
+8. Seeds/Peers (If Torrent)
+9. Age (If Usenet)
+10. Size
+
+## Preferred Words FAQs
+
+For the score of the on disk file: The existing name of the file and the \"scene name\" of the release are evaluated for preferred words. The ​​higher score of the two is taken.
+
+How are preferred words included in renaming?
+
+For Sonarr you can make use of the \`{Preferred Words}\` token in your renaming scheme. and also check mark \`Include Preferred when Renaming\` in the release profile. take a look [HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
+
+Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
+
+## How does Sonarr handle scene numbering issues (American Dad!, etc)?
+
+- **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.de/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
 ​​ - **Problematic Shows**  - This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are the big ones that come to mind while writing this.  - Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn\'t work. Well enter XEM which creates a map for Sonarr to look at.  - Scene releases double episodes in a single file since that     is how they air but TVDb marks each episode individually.  - Scene uses a year for the season S2010 and TVDb uses S01.  - [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *black sheep* and in this case there is a list of them.  - This is an incomplete list of the known shows and how/why they\'re problematic:  - American Dad  - Arrested Development  - Mythbusters  - Paw Patrol  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles  - Pawn Stars  - Pokémon  - On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking \* dubbed\* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 ​​ - **Possible resolutions:**
 ​​
@@ -75,7 +64,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​3.  Sonarr allows for disabling of XEM maps when doing manual searches (Current status: Unlikely)
 ​​
 ​​ - **Sonarr side effects:**  
- - On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well. Example:  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map. If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
+- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well. Example:  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map. If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 ​​
 ​​## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 ​​
@@ -440,13 +429,14 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ​​4.  Connect to the Synology NAS through SSH and log in as root\
 ​​5.  Execute the following commands:
 
-```bash   rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*   cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
+```bash   rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
 ```
 
 ​​6.  Update permissions on the files:
 
-```bash   cd /usr/local/Sonarr/var/.config/Sonarr/   chown -R Sonarr:users *   chmod -R 0644*
+```bash   cd /usr/local/Sonarr/var/.config/Sonarr/   chown -R Sonarr:users *chmod -R 0644*
 ```
+
  On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *`
 ​​7.  Start Sonarr
 ​​
