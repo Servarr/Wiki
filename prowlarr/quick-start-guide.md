@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-06-07T00:40:35.072Z
+date: 2021-06-10T02:05:19.257Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -55,13 +55,17 @@ All programs you can add are listed. You should only add programs you currently 
 - Enter a name for this indexer.
 - Select your sync level for this indexer.
 
-`Add and Remove Only` will only add or remove indexers when they are added or removed from Prowlarr, but edits within the indexer itself either in your app or in Prowlarr are not synced.
+`Add and Remove Only` - When it is added or removed from Prowlarr, it will update your app.
 
-`Full Sync` will keep your app and Prowlarr fully in sync. If you make a change in either program, it is synced to the other program (and to any other program that has full sync selected!).
+`Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program (and to any other program that has Full Sync selected!) Any change made remotely will be overridden by Prowlarr on next sync.
+>`Full Sync` means Prowlarr will override any in-app customizations including user selected categories.
+{.is-danger}
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
-- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry. Note that tags are not yet functional. This is future use.
+- ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
+> **Note: tags are not yet functional**
+{.is-warning}
 
 - Enter the Prowlarr server URL here.
 
