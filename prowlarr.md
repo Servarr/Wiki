@@ -49,6 +49,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 ## Links
 
-- [Website](https://prowlarr.com)
-- [Donations](https://opencollective.com/prowlarr)
-- [GitHub](https://github.com/prowlarr/prowlarr)
+- [prowlarr.com *Website*](https://prowlarr.com)
+- [Open Collective *Donations*](https://opencollective.com/prowlarr)
+- [GitHub *Source Code*](https://github.com/prowlarr/prowlarr)
+{.links-list}

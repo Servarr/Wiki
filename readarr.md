@@ -53,6 +53,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 ## Links
 
-- [Website](https://readarr.com)
-- [Donations](https://opencollective.com/readarr)
-- [GitHub](https://github.com/readarr/readarr)
+- [readarr.com *Website*](https://readarr.com)
+- [Open Collective *Donations*](https://opencollective.com/readarr)
+- [GitHub *Source Code*](https://github.com/readarr/readarr)
+{.links-list}

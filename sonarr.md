@@ -51,6 +51,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 ## Links
 
-- [Website](https://sonarr.tv)
-- [Donations](https://opencollective.com/sonarr)
-- [Github](https://github.com/sonarr/sonarr)
+- [sonarr.tv *Website*](https://sonarr.tv)
+- [Open Collective *Donations*](https://opencollective.com/sonarr)
+- [GitHub *Source Code*](https://github.com/sonarr/sonarr)
+{.links-list}

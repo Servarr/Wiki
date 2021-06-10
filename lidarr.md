@@ -50,6 +50,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 ## Links
 
-- [Website](https://lidarr.audio)
-- [Donations](https://opencollective.com/lidarr)
-- [GitHub](https://github.com/lidarr/lidarr)
+- [lidarr.audio *Website*](https://lidarr.audio)
+- [Open Collective *Donations*](https://opencollective.com/lidarr)
+- [GitHub *Source Code*](https://github.com/lidarr/lidarr)
+{.links-list}
