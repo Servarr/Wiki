@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-06-10T02:03:39.650Z
+date: 2021-06-10T02:04:55.297Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -47,9 +47,8 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
-- If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
-
-> NOTE that tags are NOT YET FUNCTIONAL!
+- ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
+> **Note: tags are not yet functional**
 {.is-warning}
 
 - Enter the Prowlarr server URL here.
