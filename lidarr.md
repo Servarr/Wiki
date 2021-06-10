@@ -23,7 +23,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-play"></i>&emsp;Library](/lidarr/library)
 - [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/lidarr/calendar)
 - [<i class="fas fa-clock"></i>&emsp;Activity](/lidarr/activity)
-- [<i class="far fa-telescope"></i>&emsp;Wanted](/lidarr/wanted)
+- [<i class="fas fa-search-minus"></i>&emsp;Wanted](/lidarr/wanted)
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/lidarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/lidarr/system)
 {.links-list}

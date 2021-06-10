@@ -26,7 +26,7 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 - [<i class="fas fa-play"></i>&emsp;Library](/readarr/library)
 - [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/readarr/calendar)
 - [<i class="fas fa-clock"></i>&emsp;Activity](/readarr/activity)
-- [<i class="far fa-telescope"></i>&emsp;Wanted](/readarr/wanted)
+- [<i class="fas fa-search-minus"></i>&emsp;Wanted](/readarr/wanted)
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/readarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/readarr/system)
 {.links-list}
