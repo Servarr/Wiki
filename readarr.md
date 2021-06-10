@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2021-06-10T01:36:46.597Z
+date: 2021-06-10T01:37:50.249Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-16T23:40:17.311Z
