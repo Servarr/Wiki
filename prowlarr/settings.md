@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-06-09T22:56:46.143Z
+date: 2021-06-10T02:03:39.650Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -41,9 +41,9 @@ All programs you can add are listed. You should only add programs you currently 
 
 `Add and Remove Only` - When it is added or removed from Prowlarr, it will update your app.
 
-`Full Sync` - Full sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program (and to any other program that has full sync selected!) Any change made remotely will be overridden by Prowlarr on next sync
->Prowlarr will override any in-app customizations.
-{.is-warning}
+`Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program (and to any other program that has Full Sync selected!) Any change made remotely will be overridden by Prowlarr on next sync.
+>`Full Sync` means Prowlarr will override any in-app customizations including user selected categories.
+{.is-danger}
 
 `Disabled` will keep indexers from syncing with the program entirely.
 
