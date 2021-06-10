@@ -31,29 +31,39 @@ You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of prowlarr and install it into `/opt`
 {.is-info}
 
-- Ensure you have the required perquisite packages: 
+- Ensure you have the required perquisite packages:
+
 ```bash
 sudo apt install curl sqlite3
 ```
+
 - Download the correct binaries for your architecture.
+
 ```bash
 wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
-  - AMD64 use `arch=x64`
-  - ARM use `arch=arm`
-  - ARM64 use `arch=arm64`
-- Uncompress the files: 
+
+- AMD64 use `arch=x64`
+- ARM use `arch=arm`
+- ARM64 use `arch=arm64`
+- Uncompress the files:
+
 ```bash
 tar -xvzf Prowlarr*.linux*.tar.gz
 ```
+
 - Move the files to `/opt/`
+
 ```bash
 sudo mv Prowlarr/ /opt
 ```
+
 - Ensure ownership of the binary directory.
+
 ```bash
 sudo chown prowlarr:prowlarr /opt/Prowlarr
 ```
+
 - Configure systemd so Prowlarr can autostart at boot.
 
 > The below systemd creation script will use a data directory of `/data/.config/Prowlarr`.  For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument
@@ -78,14 +88,18 @@ WantedBy=multi-user.target
 EOF
 ```
 
-- Reload systemd: 
+- Reload systemd:
+
 ```bash
 systemctl -q daemon-reload
 ```
-- Enable the Prowlarr service: 
+
+- Enable the Prowlarr service:
+
 ```bash
 systemctl enable --now -q prowlarr
 ```
+
 ## Docker
   
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.

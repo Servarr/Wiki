@@ -78,7 +78,6 @@ As of 2021-06-09 the logic is as follows:
 
 ## How do I update Readarr?
 
-
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
 1. Under the Updates section change the branch name to `develop` or `nightly`
@@ -105,7 +104,7 @@ As of 2021-06-09 the logic is as follows:
 |                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
 
 | Release Channel Type                                          | Branch: master (stable) (none yet) | Branch: develop (beta) (v0.1) | Branch: nightly (unstable) (v0.1)            |
-| 
+|
 | [hotio](https://hub.docker.com/r/hotio/)                | `no stable release yet`         | `pre-alpha`        | `pre-alpha` |
 | [LinuxServer.io](https://hub.docker.com/r/linuxserver/) | `no stable release yet`    | `pre-alpha`  | `pre-alpha` |
 
@@ -119,6 +118,7 @@ If Native:
 If Docker:
 
 1. Repull your tag and update your container
+
 ## Can I switch between branches?
 
 - You can (almost) always increase your risk.

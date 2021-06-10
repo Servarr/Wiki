@@ -213,7 +213,9 @@ Indexers are how Readarr searches for books. You must have at least one for the 
 
 - Set the minimum age in minutes for usenet indexers to wait before downloading a book. This allows all articles to propagate to avoid failures for brand new files.
 - Set the HARD LIMIT maximum size for anything Readarr grabs.
+
 > It is very much recommended that you do NOT set this value. It overrides all size limits you set in Quality!
+
 - Retention is the maximum number of days old something can be on your indexers. If you set it to 300, and something is 301 days old, it will not be grabbed.
 - (Advanced Option) RSS Sync Interval is the number of minutes between RSS grabs from each of your indexers. Set it higher to reduce API hits, set it lower to grab things quicker. Setting it too low can result in bans from your indexers!
 

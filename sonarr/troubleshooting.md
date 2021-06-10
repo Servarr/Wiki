@@ -144,6 +144,7 @@ Import issues should almost always manifest as an item in Activity with an orang
 Incorrect path issues are possible too, though less common in normal setups. The key to understanding path issues is knowing that gets the path to the download *from* the download client, via its API. This becomes a problem in more unique use cases, like the download client running on a different system (maybe even OS\!). It can also occur in a Docker setup, when volumes are not done well. A remote path map is a good solution where you don’t have control, like a seedbox setup. On a Docker setup, fixing the paths is a better option.
 
 ### Common Problems
+
 Below are some common problems.
 
 #### Download Client's WebUI is not enabled
@@ -227,8 +228,6 @@ Please discuss with the support team on discord. If this is something that may b
 ### Testing an Indexer or Tracker
 
 When you test an indexer or tracker, in debug or trace logs you can find the URL used. An example of a successful test is below, you can see it query the indexer via a specific URL with specific parameters and then the response. You test this url in your browser like replacing the `apikey=(removed)` with the correct apikey like `apikey=123`. You can experiment with the parameters if you’re getting an error from the indexer or see if you have connectivity issues if it doesn’t even work. After you’ve tested in your own browser, you should test from the system is running on *if* you haven’t already.
-
-
 
 ### Testing a Search
 

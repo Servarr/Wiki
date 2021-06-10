@@ -33,7 +33,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - *Generally Quality Trumps All**
 
-- The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs). 
+- The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 ***As of 2021-06-09 the logic is as follows***
 
 1. Quality

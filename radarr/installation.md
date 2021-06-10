@@ -37,10 +37,12 @@ You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of radarr and install it into `/opt`
 {.is-info}
 
-- - Ensure you have the required perquisite packages: 
+- Ensure you have the required perquisite packages:
+
 ```bash
 sudo apt install curl mediainfo sqlite3
 ```
+
 - Download the correct binaries for your architecture.
  `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - AMD64 use `arch=x64`

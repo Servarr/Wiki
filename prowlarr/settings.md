@@ -67,7 +67,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
 {.is-info}
-
+---
 > Note: Prowlarr does not sync Download Clients to the Applications.
 {.is-info}
 

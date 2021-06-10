@@ -31,29 +31,39 @@ You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of lidarr and install it into `/opt`
 {.is-info}
 
-- Ensure you have the required perquisite packages: You'll need curl, mediainfo, chromaprint, and sqlite. 
+- Ensure you have the required perquisite packages: You'll need curl, mediainfo, chromaprint, and sqlite.
+
 ```bash
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
+
 - Download the correct binaries for your architecture.
+
 ```bash
 wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
-  - AMD64 use `arch=x64`
-  - ARM use `arch=arm`
-  - ARM64 use `arch=arm64`
-- Uncompress the files: 
+
+- AMD64 use `arch=x64`
+- ARM use `arch=arm`
+- ARM64 use `arch=arm64`
+- Uncompress the files:
+
 ```bash
 tar -xvzf Lidarr*.linux*.tar.gz
 ```
+
 - Move the files to `/opt/`
+
 ```bash
 sudo mv Lidarr/ /opt
 ```
+
 - Ensure ownership of the binary directory.
+
 ```bash
 sudo chown lidarr:lidarr /opt/Lidarr
 ```
+
 - Configure systemd so Lidarr can autostart at boot.
 
 > The below systemd creation script will use a data directory of `/data/.config/Lidarr`.  For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
@@ -78,14 +88,18 @@ WantedBy=multi-user.target
 EOF
 ```
 
-- Reload systemd: 
+- Reload systemd:
+
 ```bash
 systemctl -q daemon-reload
 ```
-- Enable the Radarr service: 
+
+- Enable the Radarr service:
+
 ```bash
 systemctl enable --now -q lidarr
 ```
+
 ## Docker
 
 The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
