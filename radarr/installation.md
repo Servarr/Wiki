@@ -39,7 +39,7 @@ You'll need to install the binaries using the below commands.
 
 - Ensure you have the required perquisite packages:
 
-```bash
+```shell
 sudo apt install curl mediainfo sqlite3
 ```
 
@@ -57,7 +57,7 @@ sudo apt install curl mediainfo sqlite3
 > The below systemd creation script will use a data directory of `/data/.config/Radarr`.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-warning}
 
-```bash
+```shell
     cat > /etc/systemd/system/radarr.service << EOF
 [Unit]
 Description=Radarr Daemon

@@ -303,7 +303,7 @@ And you can see the following in the trace log file:
 
 You might fix it by installing libcurl3. On Ubuntu/Debian use;
 
-```bash
+```shell
     `sudo apt install libcurl3`
 ```
 

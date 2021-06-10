@@ -407,12 +407,12 @@ Please note that if the series type is set to anime and none of your ​​enabl
 ​​4.  Connect to the Synology NAS through SSH and log in as root\
 ​​5.  Execute the following commands:
 
-```bash rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
+```shell rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
 ```
 
 ​​6.  Update permissions on the files:
 
-```bash cd /usr/local/Sonarr/var/.config/Sonarr/ chown -R Sonarr:users *chmod -R 0644*
+```shell cd /usr/local/Sonarr/var/.config/Sonarr/ chown -R Sonarr:users *chmod -R 0644*
 ```
 
  On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *`

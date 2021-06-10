@@ -412,14 +412,14 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
 4. Connect to the Synology NAS through SSH and log in as root  
 5. Execute the following commands:
 
-    ```bash
+    ```shell
         rm -r /usr/local/Radarr/var/.config/Radarr/Radarr.db*
         cp -f /tmp/Radarr_backup/* /usr/local/Radarr/var/.config/Radarr/
     ```
 
 6. Update permissions on the files:
 
-    ```bash
+    ```shell
         cd /usr/local/Radarr/var/.config/Radarr/
         chown -R Radarr:users *
         chmod -R 0644 *

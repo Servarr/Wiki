@@ -47,13 +47,13 @@ You'll need to install the binaries using the below commands.
 
 - Ensure you have the required perquisite packages:
 
-```bash
+```shell
 sudo apt install curl sqlite3
 ```
 
 - Download the correct binaries for your architecture.
 
-```bash
+```shell
 wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
@@ -62,19 +62,19 @@ wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefi
 - ARM64 use `arch=arm64`
 - Uncompress the files:
 
-```bash
+```shell
 tar -xvzf Readarr*.linux*.tar.gz
 ```
 
 - Move the files to `/opt/`
 
-```bash
+```shell
 sudo mv Readarr/ /opt
 ```
 
 - Ensure ownership of the binary directory.
 
-```bash
+```shell
 sudo chown readarr:readarr /opt/Readarr
 ```
 
@@ -83,7 +83,7 @@ sudo chown readarr:readarr /opt/Readarr
 > The below systemd creation script will use a data directory of `/data/.config/Readarr`.  For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
 {.is-warning}
 
-```bash
+```shell
 cat > /etc/systemd/system/readarr.service << EOF
 [Unit]
 Description=Readarr Daemon
@@ -104,13 +104,13 @@ EOF
 
 - Reload systemd:
 
-```bash
+```shell
 systemctl -q daemon-reload
 ```
 
 - Enable the Readarr service:
 
-```bash
+```shell
 systemctl enable --now -q readarr
 ```
 

@@ -46,13 +46,13 @@ Lidarr is written in C## (backend) and JS (frontend). The backend is built on th
 1. Navigate to the cloned directory
 1. Install the required Node Packages
 
-   ```
+   ```shell
    yarn install
    ```
 
 1. Start gulp to monitor your dev environment for any changes that need post processing using:
 
-   ```
+   ```shell
    yarn start
    ```
 

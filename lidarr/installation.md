@@ -33,13 +33,13 @@ You'll need to install the binaries using the below commands.
 
 - Ensure you have the required perquisite packages: You'll need curl, mediainfo, chromaprint, and sqlite.
 
-```bash
+```shell
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
 
 - Download the correct binaries for your architecture.
 
-```bash
+```shell
 wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
@@ -48,19 +48,19 @@ wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefil
 - ARM64 use `arch=arm64`
 - Uncompress the files:
 
-```bash
+```shell
 tar -xvzf Lidarr*.linux*.tar.gz
 ```
 
 - Move the files to `/opt/`
 
-```bash
+```shell
 sudo mv Lidarr/ /opt
 ```
 
 - Ensure ownership of the binary directory.
 
-```bash
+```shell
 sudo chown lidarr:lidarr /opt/Lidarr
 ```
 
@@ -69,7 +69,7 @@ sudo chown lidarr:lidarr /opt/Lidarr
 > The below systemd creation script will use a data directory of `/data/.config/Lidarr`.  For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
 {.is-warning}
 
-```bash
+```shell
 cat > /etc/systemd/system/lidarr.service << EOF
 [Unit]
 Description=Lidarr Daemon
@@ -90,13 +90,13 @@ EOF
 
 - Reload systemd:
 
-```bash
+```shell
 systemctl -q daemon-reload
 ```
 
 - Enable the Radarr service:
 
-```bash
+```shell
 systemctl enable --now -q lidarr
 ```
 

@@ -33,13 +33,13 @@ You'll need to install the binaries using the below commands.
 
 - Ensure you have the required perquisite packages:
 
-```bash
+```shell
 sudo apt install curl sqlite3
 ```
 
 - Download the correct binaries for your architecture.
 
-```bash
+```shell
 wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
@@ -48,19 +48,19 @@ wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/update
 - ARM64 use `arch=arm64`
 - Uncompress the files:
 
-```bash
+```shell
 tar -xvzf Prowlarr*.linux*.tar.gz
 ```
 
 - Move the files to `/opt/`
 
-```bash
+```shell
 sudo mv Prowlarr/ /opt
 ```
 
 - Ensure ownership of the binary directory.
 
-```bash
+```shell
 sudo chown prowlarr:prowlarr /opt/Prowlarr
 ```
 
@@ -69,7 +69,7 @@ sudo chown prowlarr:prowlarr /opt/Prowlarr
 > The below systemd creation script will use a data directory of `/data/.config/Prowlarr`.  For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument
 {.is-warning}
 
-```bash
+```shell
 cat > /etc/systemd/system/prowlarr.service << EOF
 [Unit]
 Description=Prowlarr Daemon
@@ -90,13 +90,13 @@ EOF
 
 - Reload systemd:
 
-```bash
+```shell
 systemctl -q daemon-reload
 ```
 
 - Enable the Prowlarr service:
 
-```bash
+```shell
 systemctl enable --now -q prowlarr
 ```
 

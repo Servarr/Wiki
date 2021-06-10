@@ -56,7 +56,7 @@ Cloudflare needs websockets enabled.
 
 Nginx requires the following addition to the location block for the app:
 
-```
+```none
  proxy_http_version 1.1;
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
@@ -68,17 +68,17 @@ Nginx requires the following addition to the location block for the app:
 
 For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 
-```
+```none
 RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
-RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
+RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 ```
 
 For Caddy (V1) use this:
 Note: you'll also need to add the websocket directive to your prowlarr configuration
 
-```
- proxy /prowlarr 127.0.0.1:7878 {
+```none
+ proxy /prowlarr 127.0.0.1:9696 {
      websocket
      transparent
  }
@@ -120,7 +120,7 @@ If you no longer use this download client, disable it in Prowlarr to prevent the
 
 ##### Bad Download Client Settings
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
+The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from Windows to Linux or Linux to Windows without a remote path map.
 
 #### Indexers
 
@@ -181,7 +181,7 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 ## Backup
 
 > This section will be more tailored to the buttons and overall point of the page.
-> However, if you're looking for how to back/restore your Prowlarr instance click [here](/prowlarr/faq).
+> However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](/prowlarr/faq).
 {.is-info}
 
 Within the Backup section you'll be presented with previous backups (unless you have a fresh install that hasn't made any backups).
@@ -201,7 +201,7 @@ Off to the right of each of the previous download you have two options.
 ## Updates
 
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
-This page will also display the update notes from the Devs telling you what has been fixed or added to Prowlarr (Rejoice!)
+This page will also display the update notes from the Developers telling you what has been fixed or added to Prowlarr (Rejoice!)
   
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
