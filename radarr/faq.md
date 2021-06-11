@@ -160,26 +160,28 @@ proxy_set_header Connection $http_connection;
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This is currently v3. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
-- <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This is currently v3. This version will receive updates either weekly or biweekly depending on development.
+- `master` (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
+- `develop` (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This version will receive updates either weekly or biweekly depending on development.
+
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately.
+- `nightly` (Alpha): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v4. This version is updated immediately.
 
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-- Note: If your install is through Docker append `:release`, `:latest`, or `:testing` to the end of your container tag depending on who makes your builds.
+- Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.
 
-| Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) |
+||`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
+|---|---|---|
+|[hotio](https://hub.docker.com/r/hotio/radarr)|`hotio/radarr:release`|`hotio/radarr:testing`|
+|[LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr)|`linuxserver/radarr:latest`|`linuxserver/radarr:develop`|
 
-| Release Channel Type                                          | Branch: master (stable) (v3.2.1) | Branch: develop (beta) (v3.2.1) | Branch: nightly (unstable) (v3.2)            | |
-| [hotio](https://hub.docker.com/r/hotio/radarr)                | `hotio/radarr:release`         | `hotio/radarr:testing`        | If you have to ask, you should not be on it. |
-| [LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr) | `linuxserver/radarr:latest`    | `linuxserver/radarr:develop`  | If you have to ask, you should not be on it. |
+## Can I update Radarr inside my Docker container?
+
+- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ### Installing a newer version
 
@@ -192,7 +194,7 @@ If Docker:
 
 1. Repull your tag and update your container
 
-## Can I switch from nightly back to develop?
+## Can I switch from `nightly` back to `develop`?
 
 - See the entry below
 
@@ -210,13 +212,13 @@ If Docker:
   - For those on nightly and are still on `3.2.1.5068` or lower you can safely downgrade to master
     - Same for those on develop.
 
-## How does radarr handle foreign movies or foreign titles?
+## How does Radarr handle foreign movies or foreign titles?
 
 - Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
 - To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages specified as multi.
 
-## How does radarr handle "multi" in names?
+## How does Radarr handle "multi" in names?
 
 - Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
 
@@ -280,7 +282,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 
-- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to radarr, use Ombi, or any similar app that adds them right away
+- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
 
 - This change was due to not have our server get killed by people updating lists every 10 minutes.
 
@@ -289,10 +291,6 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 - No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
 
 - A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you don't you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
-
-## Can I update inside my Docker container?
-
-- *Technically, yes.* **But you should absolutely not.** It is a primary philosophy of Docker. Database issues can be caused for if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
 
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 

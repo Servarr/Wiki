@@ -131,8 +131,6 @@ If a series has 10 episodes that have all aired and you don't have any files for
 
 ## Why doesn't Sonarr automatically search for missing episodes?
 
-​​
-​​
 ​​There are two times when we would want to have missing episodes searched ​​for, when a new series with existing aired episodes is added and when ​​Sonarr has been offline and unable to find episodes as it normally ​​would. Endlessly searching for episodes that have aired that are missing ​​is a waste of resources, both in terms of local processing power and on ​​the indexers and in our experience catches users off guard, wasting ​​bandwidth.
 ​​
 ​​In v1 of Sonarr we had an opt in backlog search option, often people ​​would turn it on and then get a bunch of old episodes and ask us why, we ​​also had indexers ask why they saw an increase in API calls, which was ​​due to the backlog searching.
@@ -142,9 +140,6 @@ If a series has 10 episodes that have all aired and you don't have any files for
 
 ## Why does Sonarr refresh series information so frequently?
 
-​​
-​​
-​​
 ​​ - Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDB proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
 ​​ - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
 ​​ - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
@@ -152,35 +147,23 @@ If a series has 10 episodes that have all aired and you don't have any files for
 
 ## Why is there a number next to Activity?
 
-​​
-​​
-​​
 ​​ - This number shows the count of episodes in your download client's queue and the last 30 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
 ​​ - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
 ​​
 
 ## I see log messages for shows I don't have/don't want
 
-​​
-​​
-​​
 ​​ - These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you don't want, in the event it is for a show you want, open up a support thread on the forums.
 ​​
 
 ## Seeding torrents aren't deleted automatically
 
-​​
-​​
-​​
 ​​ - When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
 ​​ - In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
 ​​
 
 ## Why can't I add a new series?
 
-​​
-​​
-​​
 ​​ - In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDBID if you know what it is, the UI explains how to add it by an ID.
 ​​ - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 ​​ - The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
@@ -189,23 +172,16 @@ If a series has 10 episodes that have all aired and you don't have any files for
 
 ## Why can't I add a new series when I know the TVDB ID?
 
-​​
-​​
-​​
 ​​ - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 ​​
 
 ## Sonarr won\'t work on Big Sur
 
-​​
-​​
 ​​Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 ​​
 
 ## My Custom Script stopped working after upgrading from v2
 
-​​
-​​
 ​​You were likely passing arguments in your connection\...that is not ​​supported.
 ​​
 ​​1.  Change your argument to be your path
@@ -215,8 +191,6 @@ If a series has 10 episodes that have all aired and you don't have any files for
 
 ## What\'s the different Series Types?
 
-​​
-​​
 ​​Most shows should be `Standard`. For daily shows which are typically ​​released with a date, `Daily` should be used. Finally, there is anime ​​where using `Anime` is *usually* right, but sometimes `Standard` can ​​work better, so try the *other* one if you're having issues. ​​
 ​​
 Please note that if the series type is set to anime and none of your ​​enabled indexers have any anime categories configured then it ​​effectively skips the indexer and may appear that it is not searching. ​​
@@ -247,27 +221,76 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## How can I rename my series folders?
 
-​​
-​​
 ​# Series
 ​​
 ​​1.  Mass Editor
 ​​2.  Select what series need their folder renamed
 ​​3.  Change Root Folder to the same Root Folder that the series currently exist in
 ​​4.  Select \"Yes move files\"
-​​
+
+## How do I update Sonarr?
+
+- Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
+
+1. Under the Updates section change the branch name to `master` or `develop`
+1. Save
+
+*This will not install the bits from that branch immediately, it will happen during the next update.*
+
+- `master` (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
+
+- `develop` (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This version will receive updates either weekly or biweekly depending on development.
+
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
+{.is-warning}
+
+- `nightly` (Alpha): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v3. This version is updated immediately.
+
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
+{.is-warning}
+
+- Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
+
+||`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json)|
+|---|---|---|
+|[hotio](https://hub.docker.com/r/hotio/sonarr)|`hotio/sonarr:release`|`hotio/sonarr:nightly`|
+|[LinuxServer.io](https://hub.docker.com/r/linuxserver/sonarr)|`linuxserver/sonarr:latest`|`linuxserver/sonarr:develop`|
 
 ## Can I update Sonarr inside my Docker container?
 
-​​
-​​
-​​\* *Technically, yes.* **But you should absolutely not.** It is a ​​primary philosophy of Docker. Database issues can be caused for Sonarr ​​if you upgrade your installation inside to the most recent nightly, then ​​update the docker container itself which might downgrade to an older ​​version.
-​​
+- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
+
+### Installing a newer version
+
+If Native:
+
+1. Go to System and then the Updates tab
+1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
+
+If Docker:
+
+1. Repull your tag and update your container
+
+## Can I switch from `nightly` back to `develop`?
+
+- See the entry below
+
+## Can I switch between branches?
+
+> You can (almost) always increase your risk.
+
+- `master` can go to `develop` or `nightly`
+- `develop` can go to `nightly`
+- Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
+  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+- **May 28 2021 Update**
+  - `3.2.1` has been released as master/stable
+  - For those on nightly and are still on `3.2.1.5068` or lower you can safely downgrade to master
+    - Same for those on develop.
 
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
-​​
-​​
 ​​\* This is simple, please see this link for more information ​​[here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ​​![Developer Cannot be ​​verified](developer-cannot-be-verified.png "fig:Developer Cannot be verified"){width="2500"}
 ​​
 ​​## Help, my Mac says Sonarr.app is damaged and can't be opened
@@ -277,15 +300,11 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## How do I request a feature for Sonarr?
 
-​​
-​​
 ​​This is an easy one click ​​[here](https://github.com/Sonarr/Sonarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
 ​​
 
 ## I am getting an error: Database disk image is malformed
 
-​​
-​​
 ​​\* This means your SQLite database that stores most of the information ​​for Sonarr is corrupt.
 ​​
 ​​ -  - [Try restoring from a backup](#how_do_i_backup_restore_my_Sonarr "wikilink")  - You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")  - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
@@ -308,8 +327,6 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## I use Sonarr on a Mac and it suddenly stopped working. What happened?
 
-​​
-​​
 ​​Most likely this is due to a MacOS bug which caused one of the Sonarr ​​databases to be corrupted.
 ​​
 ​​[Follow these steps to ​​resolve](#i_am_getting_an_error_database_disk_image_is_malformed "wikilink")
@@ -321,8 +338,6 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## Why can't Sonarr see my files on a remote server?
 
-​​
-​​
 ​​In short: the user Sonarr is running as (if service) or under (if tray ​​app) cannot access the file path on the remote server. This can be for ​​various reasons, but the most common is, Sonarr is running as a service, ​​which causes one of two things:
 ​​
 ​​ - Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  - **Solutions:**  - Run Sonarr's service as another user that has access to that share  - Open the Administrative Tools \> Services window on your Windows server.  - Stop the Sonarr service.  - Open the Properties \> Log On dialog.  - Change the service user account to the target user account.  - Run Sonarr.exe using the Startup Folder
@@ -335,8 +350,6 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## Mapped Network Drives vs UNC Paths
 
-​​
-​​
 ​​\* Using mapped network drives generally doesn't work very well, ​​especially when Sonarr is configured to run as a service. The better way ​​to set shares up is using UNC paths. So instead of `X:\Movies` use ​​`\\Server\Movies\`.
 ​​
 ​​ - A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
@@ -344,8 +357,6 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## How do I change from the Windows Service to a Tray App?
 
-​​
-​​
 ​​\# Shut Sonarr down
 ​​
 ​​1.  Run serviceuninstall.exe that\'s in the Sonarr directory
@@ -355,8 +366,6 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ## How do I Backup/Restore my Sonarr?
 
-​​
-​​
 ​​=== Backing up Sonarr ===
 ​​
 ​​ - **Using built-in backup**
@@ -437,8 +446,6 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Jackett shows more results than Sonarr when manually searching
 
-​​
-​​
 ​​This is usually due to Sonarr searching Jackett differently than you do. ​​[See this troubleshooting article for further ​​information](/sonarr/troubleshooting#searches-indexers-and-trackers).
 ​​
 
@@ -453,15 +460,11 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Web Interface Only Loads at localhost on Windows
 
-​​
-​​
 ​​\* If you can only reach your web interface at <http://localhost:8989/> ​​or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at ​​least once, maybe even always.
 ​​
 
 ## Permissions
 
-​​
-​​
 ​​\* Sonarr will need to move files away from where the downloader puts ​​them into the final location, so this means that Sonarr will need to ​​read/write to both the source and the destination directory and files.
 ​​
 ​​ - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
@@ -469,15 +472,11 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## System & Logs loads forever
 
-​​
-​​
 ​​It\'s the easy-privacy blocklist. They basically block any url with ​​/api/log? in it. Look over the list and tell me if you think that ​​blocking all the urls in that list is a sensible idea, there are dozens ​​of urls in there that potentially break sites. You selected that in your ​​adblocker. Easy solution is to whitelist the domain Sonarr is running ​​on. But I still recommend checking the list.
 ​​
 
 ## Finding Cookies
 
-​​
-​​
 ​​Some sites cannot be logged into automatically and require you to login ​​manually then give the cookies to Sonarr to work. This page describes ​​how you do that.
 ​​
 ​​ - Chrome ![Chrome cookies](chrome_cookies.png "fig:Chrome cookies"){width="750"}
@@ -486,8 +485,6 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Unpack Torrents
 
-​​
-​​
 ​​Most torrent clients doesn't come with the automatic handling of ​​compressed archives like their usenet counterparts. We recommend ​​[unpackerr](https://github.com/davidnewhall/unpackerr).
 ​​
 
@@ -501,22 +498,16 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
 
-​​
-​​
 ​​No. Sonarr will talk to your download client to determine where the ​​files have been downloaded and will import them automatically. If Sonarr ​​and your download client are on different machines you will need to use ​​Remote Path Mapping to link the remote path to a local one so Sonarr ​​knows where to find the files.
 ​​
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
-​​
-​​
 ​​Sonarr was unable to read your config file on start-up as it became ​​corrupted somehow. In order to get Sonarr back online, you will need to ​​delete `.xml` in your [\| AppData ​​Folder](Sonarr_Appdata_Directory "wikilink"), once deleted start Sonarr ​​and it will start on the default port (8989), you should now ​​re-configure any settings you configured on the General Settings page.
 ​​
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-​​
-​​
 ​​Your download client stopped working and you\'re getting an error like ​​\`Localhost is an invalid certificate\`?
 ​​
 ​​Sonarr now validates SSL certificates. If there is no SSL certificate ​​set in the download client, or you\'re using a self-signed https ​​certificate without the CA certificate added to your local certificate ​​store, then Sonarr will refuse to connect. Free properly signed ​​certificates are available from [let\'s ​​encrypt](https://letsencrypt.org/).
@@ -526,8 +517,6 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## VPNs, Jackett, and the \* ARRs
 
-​​
-​​
 ​​Unless you\'re in a repressive country like China, Australia or South ​​Africa, your torrent client is typically the only thing that needs to be ​​behind a VPN. Because the VPN endpoint is shared by many users, you can ​​and will experience rate limiting, DDOS protection, and ip bans from ​​various services each software uses.
 ​​
 ​​In other words, putting the \* Arrs (Lidarr, Radarr, Readarr, and ​​Sonarr) behind a VPN can and will make the applications unusable in some ​​cases due to the services not being accessible. **To be clear it is not ​​a matter if VPNs will cause issues with the \* Arrs, but when: image ​​providers will block you and cloudflare is in front of most of arr ​​servers (updates, metadata, etc.) and liable to block you too**
@@ -537,8 +526,6 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Jackett\'s /all Endpoint
 
-​​
-​​
 ​​The Jackett `/all` endpoint is convenient, but that is its only benefit. ​​Everything else is potential problems, so adding each tracker ​​individually is recommended.
 ​​
 ​​**May 2021 Update: It is likely Sonarr support will be phased out for ​​the jackett \`/all\` endpoint in the future due to the fact it only ​​causes issues.**
@@ -558,8 +545,6 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Why are there two files? \| Why is there a file left in downloads?
 
-​​
-​​
 ​​This is expected. This is how the Torrent Process works with Sonarr.
 ​​
 ​​1.  Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
