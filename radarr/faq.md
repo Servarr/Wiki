@@ -167,7 +167,7 @@ proxy_set_header Connection $http_connection;
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- `nightly` (Alpha): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v4. This version is updated immediately.
+- `nightly` (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v4. This version is updated immediately.
 
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}

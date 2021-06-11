@@ -92,14 +92,14 @@ As of 2021-06-09 the logic is as follows:
 > On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- `nightly` (Alpha): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
+- `nightly` (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
 <!--- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.-->
 
-||`master` (stable) <!--![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/release/VERSION.json)-->|`develop` (beta) <!--![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json)-->|`nightly` (alpha) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
+||`master` (stable) <!--![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/release/VERSION.json)-->|`develop` (beta) <!--![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json)-->|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
 |---|---|---|---|
 |[hotio](https://hub.docker.com/r/hotio/readarr)|no stable release yet|no beta release yet|`hotio/readarr:nightly`|
 
