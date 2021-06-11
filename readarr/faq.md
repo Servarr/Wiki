@@ -85,28 +85,27 @@ As of 2021-06-09 the logic is as follows:
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
+- `master` (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Readarr does not yet have a stable release.**
   
-- <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
+- `develop` (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. **Readarr does not yet have a beta release.**
 
-> On GitHub, this is a snapshot of the `develop` branch at a point in time.
+> On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
+- `nightly` (Alpha): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
+<!--- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.-->
 
-| Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
+||`master` (stable) <!--![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/release/VERSION.json)-->|`develop` (beta) <!--![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json)-->|`nightly` (alpha) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
+|---|---|---|---|
+|[hotio](https://hub.docker.com/r/hotio/readarr)|no stable release yet|no beta release yet|`hotio/readarr:nightly`|
 
-| Release Channel Type                                          | Branch: master (stable) (none yet) | Branch: develop (beta) (v0.1) | Branch: nightly (unstable) (v0.1)            |
-|
-| [hotio](https://hub.docker.com/r/hotio/)                | `no stable release yet`         | `pre-alpha`        | `pre-alpha` |
-| [LinuxServer.io](https://hub.docker.com/r/linuxserver/) | `no stable release yet`    | `pre-alpha`  | `pre-alpha` |
+## Can I update Readarr inside my Docker container?
+
+- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ### Installing a newer version
 
@@ -128,7 +127,7 @@ If Docker:
 - Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned.
 - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
-## How does readarr handle foreign books or foreign titles?
+## How does Readarr handle foreign books or foreign titles?
 
 - Readarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
 
@@ -182,7 +181,7 @@ Codename: buster
 
 Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
 
-You can trigger a list refresh manually, script it and trigger it via the API, or add the books directly to readarr.
+You can trigger a list refresh manually, script it and trigger it via the API, or add the books directly to Readarr.
 
 This change was due to not have our server get killed by people updating lists every 10 minutes.
 

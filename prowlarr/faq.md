@@ -1,9 +1,9 @@
 ---
 title: Prowlarr FAQ
-description: 
+description:
 published: true
 date: 2021-06-09T23:04:19.147Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
 ---
@@ -23,28 +23,28 @@ Yes.
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
-  
-- <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
+- `master` (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
 
-> On GitHub, this is a snapshot of the `develop` branch at a point in time.
+- `develop` (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
+
+> On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
+- `nightly` (Alpha): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
-| Current Versions | master                                                                                                                                                                                                           | develop                                                                                                                                                                                                         | nightly                                                                                                                                                                                                          |
-|
-|                  | ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
+||`master` (stable) <!--![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json)-->|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json)|
+|---|---|---|---|
+|[hotio](https://hub.docker.com/r/hotio/prowlarr)|no stable release yet|`hotio/prowlarr:testing`|`hotio/prowlarr:nightly`|
+|[LinuxServer.io](https://hub.docker.com/r/linuxserver/prowlarr)|no stable release yet|`linuxserver/prowlarr:develop`|`linuxserver/prowlarr:nightly`|
 
-| Release Channel Type                                          | Branch: master (stable) (none yet) | Branch: develop (beta) (v0.1) | Branch: nightly (unstable) (v0.1)            |
-|
-| [hotio](https://hub.docker.com/r/hotio/prowlarr)                | `no stable release yet`         | `hotio/prowlarr:testing`        | `hotio/prowlarr:nightly` |
-| [LinuxServer.io](https://hub.docker.com/r/linuxserver/prowlarr) | `no stable release yet`    | `linuxserver/prowlarr:develop`  | `linuxserver/prowlarr:nightly` |
+## Can I update Prowlarr inside my Docker container?
+
+- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ### Installing a newer version
 
@@ -56,10 +56,6 @@ If Native:
 If Docker:
 
 1. Repull your tag and update your container
-
-## Can I update Prowlarr inside my Docker container?
-
-Technically, yes. But you should absolutely not. It is a primary philosophy of Docker. Database issues can be caused for Prowlarr if you upgrade your installation inside to the most recent nightly, then update the docker container itself which might downgrade to an older version.
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
