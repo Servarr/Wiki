@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-09T12:43:33.338Z
+date: 2021-06-11T18:58:42.452Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -50,39 +50,40 @@ Right Box - Case Handling
 Author
 
 - {Author Name} Author Name
-- {Author CleanName} Author Name
 - {Author NameThe} Author Name, The
+- {Author CleanName} Author Name
+- {Author SortName} Name, Author
 - {Author Disambiguation} Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
 Book
 
-- {Book Title} Book Name!
-- {Book CleanTitle} Book Name
-- {Book TitleThe} Book Name, The
-- {Book Type} Book Type
+- {Book Title} Book Title!: Subtitle!
+- {Book TitleThe} Book Title!, The: Subtitle!
+- {Book CleanTitle} Book Title: Subtitle
+- {Book TitleNoSub} Book Title!
+- {Book TitleTheNoSub} Book Title!, The
+- {Book CleanTitleNoSub} Book Title: Subtitle
+- {Book Subtitle} Subtitle!
+- {Book SubtitleThe} Subtitle!, The
+- {Book CleanSubtitle} Subtitle
 - {Book Disambiguation} Book Name! (disambiguation title used from GoodReads)
+- {PartNumber} 2
+- {PartCount} 10
 
 Release Date
 
-- {Release Year} 2001
-
-Medium
-
-- {medium:0} 1
-- {medium:00} 01
-
-Medium Format
-
-- {Medium Format} CD
+- {Release Year} 2016
+- {Release YearFirst} 2015
+- {Edition Year} 2016
 
 Quality
 
-- {Quality Full} FLAC Proper
-- {Quality Title} FLAC
+- {Quality Full} AZW3 Proper
+- {Quality Title} AZW3
 
 Media Info
 
-- {MediaInfo AudioCodec} FLAC
+- {MediaInfo AudioCodec} MP3
 - {MediaInfo AudioChannels} 2.0
 - {MediaInfo AudioBitRate} 320kbps
 - {MediaInfo AudioBitsPerSample} 24bit
@@ -90,12 +91,12 @@ Media Info
 
 Other
 
-- {Release Group} Rls Group
+- {Release Group} Rls Grp
 - {Preferred Words} iNTERNAL
 
 Original
 
-- {Original Title} Author.Name.Book.Name.2018.FLAC-EVOLVE
+- {Original Title} Author.Name.Book.Name.2018.AZW3-EVOLVE
 - {Original Filename} 01-book name
 
 > Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
