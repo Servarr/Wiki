@@ -1,12 +1,13 @@
 ---
 title: Sonarr FAQ
-description:
+description: 
 published: true
-date: 2021-06-09T18:22:49.248Z
+date: 2021-06-11T21:06:11.800Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
-dateCreated: 2021-06-09T18:22:32.575Z
+dateCreated: 2021-06-09T18:39:33.208Z
 ---
+
 ## How does Sonarr find episodes?
 
 - Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you\'ll realize that it only covers the *future* though.

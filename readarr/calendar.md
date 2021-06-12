@@ -2,10 +2,10 @@
 title: Readarr Calendar
 description: 
 published: true
-date: 2021-05-25T15:51:07.612Z
+date: 2021-06-09T18:39:03.125Z
 tags: readarr
 editor: markdown
-dateCreated: 2021-05-25T15:51:03.809Z
+dateCreated: 2021-06-09T18:38:59.543Z
 ---
 
 ![calendar.png](/assets/readarr/calendar.png)

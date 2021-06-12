@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-06-05T20:47:01.086Z
+date: 2021-06-10T01:29:15.053Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-06-05T20:47:01.086Z
