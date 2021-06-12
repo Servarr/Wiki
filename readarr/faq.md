@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-06-11T21:06:04.625Z
+date: 2021-06-12T02:28:34.875Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -97,9 +97,7 @@ As of 2021-06-09 the logic is as follows:
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-<!--- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.-->
-
-||`master` (stable) <!--![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/release/VERSION.json)-->|`develop` (beta) <!--![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json)-->|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
+||`master` (stable)|`develop` (beta)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
 |---|---|---|---|
 |[hotio](https://hub.docker.com/r/hotio/readarr)|no stable release yet|no beta release yet|`hotio/readarr:nightly`|
 
