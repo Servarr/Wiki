@@ -17,11 +17,13 @@ This page contains a list of health checks errors. These health checks are perio
 #### System Warnings
 
 ##### Currently installed .Net Framework is old and unsupported
+
 Sonarr uses the .Net Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .Net to be able to use newer versions of Sonarr.
 
 Upgrading the .Net Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
 
 ##### Currently installed .Net Framework is supported but upgrading is recommended
+
 Sonarr uses the .Net Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
 Upgrading the .Net Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
@@ -144,6 +146,7 @@ Run the Test on the indexer to force Sonarr to recheck the indexer, please note 
 #### Media
 
 ##### Series Removed from TheTVDB
+
 The affected series were removed from TheTVDB, this usually happens because it is a duplicate or considered part of a different series. To correct you will need to remove the affected series and add the correct series.
 
 ##### Lists are unavailable due to failures
