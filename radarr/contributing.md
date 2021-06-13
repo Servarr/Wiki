@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-06-13T06:10:53.971Z
+date: 2021-06-13T23:47:32.189Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -92,7 +92,17 @@ Radarr utilizes nunit for its unit, integration, and automation test suite.
 
 ##### Running Tests
 
-Tests can be run easily from within VS using the included nunit3testadapter nuget package. Simply navidate to Test Explorer and run or debug the tests youd like to examine.
+Tests can be run easily from within VS using the included nunit3testadapter nuget package or from the command line using the included bash script `test.sh`.
+
+From VS simply navigate to Test Explorer and run or debug the tests you'd like to examine.
+
+Tests can be run all at once or one at a time in VS.
+
+From command line the `test.sh` script accepts 3 parameters
+
+```
+test.sh <PLATFORM> <TYPE> <COVERAGE>
+```
 
 ##### Writing Tests
 
