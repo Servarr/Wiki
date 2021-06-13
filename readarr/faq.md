@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-06-12T02:28:34.875Z
+date: 2021-06-13T05:42:41.495Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -129,10 +129,10 @@ If Docker:
 
 - Readarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
 
-- To get a book in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
+- To get a book in a foreign language set your Profile Language to Original (Book's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages specified as multi.
 
-## Help, Movie Added, But Not Searched
+## Help, Book Added, But Not Searched
 
 - Neither Readarr *actively* search for missing books automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet book shows up in that list, it gets downloaded. This means that until a book is posted (or reposted), it won’t get downloaded.
 - If you’re adding an author with books that you want now, the best option is to check the “Start search for missing books” box, to the left of the *Add Author* button. You can also go to the page for an author you’ve added and click the magnifying glass *Search* button next to the book you want, or use the Wanted view to search for Missing or Cutoff Unmet books.
@@ -191,7 +191,7 @@ A common complaint is the Refresh task causes heavy I/O usage.  One setting that
 
 ## Can I have BOTH an ebook and an audiobook version of the same book?
 
-No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4k versions of their media).
+No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4K versions of their media).
 
 ## Do I need to use Calibre?
 
