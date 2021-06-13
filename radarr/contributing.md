@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-06-09T18:38:44.655Z
+date: 2021-06-13T06:10:53.971Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -92,7 +92,14 @@ Radarr utilizes nunit for its unit, integration, and automation test suite.
 
 ##### Running Tests
 
+Tests can be run easily from within VS using the included nunit3testadapter nuget package. Simply navidate to Test Explorer and run or debug the tests youd like to examine.
+
 ##### Writing Tests
+
+While not always fun, we encourage writing unit tests for any backend code changes. This will ensure the change is functioning as you intended and that future changes dont break the expected behavior.
+
+> We currently require 80% coverage on new code when submitting a PR
+{.is-info}
 
 If you have any questions about any of this, please let us know.
 
