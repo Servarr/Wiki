@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-06-11T23:33:11.775Z
+date: 2021-06-13T05:58:54.342Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:33:08.344Z
@@ -68,10 +68,6 @@ Review your system time and ensure it is synced to an authoritative time server 
 ##### MediaInfo Library Could not be Loaded
 
 MediaInfo Library could not be loaded.
-
-##### PTP Indexer Settings Out of Date
-
-The following PassThePopcorn indexers have deprecated settings and should be updated.
 
 ##### Mono Legacy TLS enabled
 
