@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-06-09T18:38:15.720Z
+date: 2021-06-13T05:57:32.368Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -35,7 +35,7 @@ Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.ser
 4. Start gulp to monitor your dev environment for any changes that need post processing using `yarn start` command.
 5. Build the project in Visual Studio, Setting startup project to `Prowlarr.Console` and framework to `net5.0`
 6. Debug the project in Visual Studio
-7. Open <http://localhost:7878>
+7. Open <http://localhost:9696>
 
 #### Contributing Code ###
 
