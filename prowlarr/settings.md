@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-06-10T02:04:59.345Z
+date: 2021-06-14T22:49:38.946Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -38,6 +38,8 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Enter a name for this indexer.
 - Select your sync level for this indexer.
+> Note: Indexers are synced based on the capibilities/categories they claim to support. If an indexer supports only `tv` categories it will be synced to Sonarr.
+{.is-info}
 
 `Add and Remove Only` - When it is added or removed from Prowlarr, it will update your app.
 
@@ -104,7 +106,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Check this box to add downloads in a Paused state.
 - (Advanced Option) Enter the client priority.
 
->Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
+> Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 {.is-info}
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
