@@ -292,11 +292,11 @@ If Docker:
 
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
-​​\* This is simple, please see this link for more information ​​[here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ​​![Developer Cannot be ​​verified](developer-cannot-be-verified.png "fig:Developer Cannot be verified"){width="2500"}
+​​\* This is simple, please see this link for more information ​​[here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ​​![Developer Cannot be ​​verified](/general/faq_1_mac.png]
 ​​
 ​​## Help, my Mac says Sonarr.app is damaged and can't be opened
 ​​
-​​That is either due to a corrupt download so try again or [security ​​issues, please see this related FAQ ​​entry.](#help_my_mac_says_Sonarr_cannot_be_opened_because_the_developer_cannot_be_verified "wikilink")
+​​That is either due to a corrupt download so try again or [security ​​issues, please see this related FAQ ​​entry.](#help-my-mac-says-sonarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 ​​
 
 ## How do I request a feature for Sonarr?
@@ -306,23 +306,16 @@ If Docker:
 
 ## I am getting an error: Database disk image is malformed
 
-​​\* This means your SQLite database that stores most of the information ​​for Sonarr is corrupt.
+​​This means your SQLite database that stores most of the information ​​for Sonarr is corrupt.
 ​​
-​​ -  - [Try restoring from a backup](#how_do_i_backup_restore_my_Sonarr "wikilink")  - You can follow [our instructions on this wiki.](Useful_Tools#Recovering_a_Corrupt_DB "wikilink")  - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
+​​-[Try restoring from a backup](#how-do-i-backuprestore-my-sonarr) 
+- You can follow [our instructions on this wiki.](useful-tools#recovering-a-corrupt-db)
+- Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 ​​
-​​```{=html}
-​​<!-- -->
-​​```
 ​​ - This error may show if the database file is not writable by the user/group Sonarr is running as.
 ​​
-​​```{=html}
-​​<!-- -->
-​​```
-​​ - Another possible cause of you getting an error with your Database is that you\'re placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **Sonarr\'s config folder must be on a local drive**. If you\'re trying to restore your database you can check out our Backup/Restore guide [here](#Restoring_from_Backup "wikilink").
+​​ - Another possible cause of you getting an error with your Database is that you\'re placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **Sonarr\'s config folder must be on a local drive**. If you\'re trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
 ​​
-​​```{=html}
-​​<!-- -->
-​​```
 ​​ - If you are using mergerFS you need to remove `direct_io` as sqlite uses mmap which isn't supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 ​​
 
@@ -330,7 +323,7 @@ If Docker:
 
 ​​Most likely this is due to a MacOS bug which caused one of the Sonarr ​​databases to be corrupted.
 ​​
-​​[Follow these steps to ​​resolve](#i_am_getting_an_error_database_disk_image_is_malformed "wikilink")
+​​[Follow these steps to ​​resolve](#i_am_getting_an_error_database_disk_image_is_malformed)
 ​​
 ​​Then attempt to launch Sonarr and see if it works. If it does not work, ​​you\'ll need further support. Post in our
 ​​[reddit](http://reddit.com/r/Sonarr) or hop on
@@ -341,17 +334,25 @@ If Docker:
 
 ​​In short: the user Sonarr is running as (if service) or under (if tray ​​app) cannot access the file path on the remote server. This can be for ​​various reasons, but the most common is, Sonarr is running as a service, ​​which causes one of two things:
 ​​
-​​ - Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  - **Solutions:**  - Run Sonarr's service as another user that has access to that share  - Open the Administrative Tools \> Services window on your Windows server.  - Stop the Sonarr service.  - Open the Properties \> Log On dialog.  - Change the service user account to the target user account.  - Run Sonarr.exe using the Startup Folder
+​​- Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  
+**Solutions:**
+- Run Sonarr's service as another user that has access to that share 
+- Open the Administrative Tools \> Services window on your Windows server. 
+- Stop the Sonarr service. 
+- Open the Properties \> Log On dialog.
+- Change the service user account to the target user account. 
+OR
+- Run Sonarr.exe using the Startup Folder
 ​​
-​​```{=html}
-​​<!-- -->
-​​```
-​​ - You're using a mapped network drive (not a UNC path)  - **Solutions:**  - Change your paths to UNC paths (`\\server\share`)  - Run Sonarr.exe via the Startup Folder
+- You're using a mapped network drive (not a UNC path)
+**Solutions:**
+- Change your paths to UNC paths (`\\server\share`)
+- Run Sonarr.exe via the Startup Folder
 ​​
 
 ## Mapped Network Drives vs UNC Paths
 
-​​\* Using mapped network drives generally doesn't work very well, ​​especially when Sonarr is configured to run as a service. The better way ​​to set shares up is using UNC paths. So instead of `X:\Movies` use ​​`\\Server\Movies\`.
+​​\* Using mapped network drives generally doesn't work very well, ​​especially when Sonarr is configured to run as a service. The better way ​​to set shares up is using UNC paths. So instead of `X:\TV` use ​​`\\Server\TV\`.
 ​​
 ​​ - A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 ​​
@@ -367,7 +368,7 @@ If Docker:
 
 ## How do I Backup/Restore my Sonarr?
 
-​​=== Backing up Sonarr ===
+### Backing up Sonarr
 ​​
 ​​ - **Using built-in backup**
 ​​
@@ -377,7 +378,7 @@ If Docker:
 
 ​​ - Using file system directly
 ​​
-​​1.  Find the location of the AppData directory for Sonarr  - Via the Sonarr UI go to System: About  - [Sonarr Appdata Directory](Sonarr_Appdata_Directory "wikilink")
+​​1.  Find the location of the AppData directory for Sonarr  - Via the Sonarr UI go to System: About  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 ​​2.  Stop Sonarr - This will prevent the database from being corrupted
 ​​3.  Copy the contents to a safe location
 ​​
@@ -504,7 +505,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
-​​Sonarr was unable to read your config file on start-up as it became ​​corrupted somehow. In order to get Sonarr back online, you will need to ​​delete `.xml` in your [\| AppData ​​Folder](Sonarr_Appdata_Directory "wikilink"), once deleted start Sonarr ​​and it will start on the default port (8989), you should now ​​re-configure any settings you configured on the General Settings page.
+​​Sonarr was unable to read your config file on start-up as it became ​​corrupted somehow. In order to get Sonarr back online, you will need to ​​delete `.xml` in your [AppData ​​Folder](/sonarr/appdata-directory) once deleted start Sonarr ​​and it will start on the default port (8989), you should now ​​re-configure any settings you configured on the General Settings page.
 ​​
 
 ## Invalid Certificate and other HTTPS or SSL issues

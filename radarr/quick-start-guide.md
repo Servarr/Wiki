@@ -12,7 +12,7 @@ dateCreated: 2021-05-17T01:51:10.479Z
 
 In this guide we will try to explain the basic setup you need to do to get started with Radarr.
 
-> For a more detailed breakdown of all the setting check [Radarr ->Settings](Radarr_Settings "wikilink") We will cover the following options.
+> For a more detailed breakdown of all the setting check [Radarr ->Settings](/radarr/settings) We will cover the following options.
 {.is-info}
 > Please note that within the screenshots and GUI settings in `orange` are advanced options, so you'll need to enable those to make them visible.
 {.is-warning}
@@ -154,7 +154,7 @@ Select `Import Existing Movies` or select `Import` from the sidebar.
 
 ![Radarr-movies-import.png](/assets/radarr/Radarr-movies-import.png)
 
-Select the root path you added earlier [in the root folders section.](#root-folders "wikilink")
+Select the root path you added earlier [in the root folders section.](#root-folders)
 
 ##### Importing Existing Media
 
@@ -223,7 +223,7 @@ After activating it you select the movie(s) from where you want to have the fold
 
 ![Radarr-movie-editor-select.png](/assets/radarr/Radarr-movie-editor-select.png)
 
-1. If you want all your movie folders renamed to your folder naming scheme you set earlier [movie naming section](#movie-naming "wikilink").
+1. If you want all your movie folders renamed to your folder naming scheme you set earlier [movie naming section](#movie-naming).
 2. Select the movie(s) from where you want to have the folder(s) to be renamed.
 3. Choose the same `Root Folder`
 
@@ -257,7 +257,7 @@ When you see the movie you want click on it.
 
 ![Radarr-movie-add.png](/assets/radarr/Radarr-movie-add.png)
 
-1. Radarr will add the Root Folder you’ve setup [in the root folders section](#root-folders "wikilink")
+1. Radarr will add the Root Folder you’ve setup [in the root folders section](#root-folders)
 2. How you want the movie to be added to Radarr.
     >
     > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
