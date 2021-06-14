@@ -38,7 +38,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 
 ## Library Import
 
-Information about importing your media coming soon(tm)
+Information about importing your media Coming Soon - Contributions are Welcome.
 
 ## Discover
   

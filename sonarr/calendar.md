@@ -10,4 +10,4 @@ dateCreated: 2021-06-11T23:31:36.392Z
 
 ## Calendar
 
-Information about the Calendar coming soon
+Information about the Calendar Coming Soon - Contributions are Welcome.

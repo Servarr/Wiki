@@ -8,4 +8,4 @@ editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
 ---
 
-## Settings Coming Soon
+## Settings Coming Soon - Contributions are Welcome.

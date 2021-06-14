@@ -18,4 +18,4 @@ This set of screens show current and past activity performed by Readarr.
 
 ## Blacklist
 
-(Coming soon!)
+(Coming Soon - Contributions are Welcome.!)

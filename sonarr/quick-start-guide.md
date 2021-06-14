@@ -10,4 +10,4 @@ dateCreated: 2021-06-11T23:30:27.958Z
 
 ## QS Guide
 
-Coming soon
+Coming Soon - Contributions are Welcome.

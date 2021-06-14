@@ -10,23 +10,23 @@ dateCreated: 2021-06-11T23:31:01.289Z
 
 ## Series
 
-Library Information coming soon
+Library Information Coming Soon - Contributions are Welcome.
 
 ## Filters
 
-Information about filters coming soon
+Information about filters Coming Soon - Contributions are Welcome.
 
 ## Add New
 
-Information about Adding new media coming soon
+Information about Adding new media Coming Soon - Contributions are Welcome.
 
 ## Library Import
 
-Information about importing your media coming soon
+Information about importing your media Coming Soon - Contributions are Welcome.
 
 ## Mass Editor
 
-Information about the Mass Editor coming soon
+Information about the Mass Editor Coming Soon - Contributions are Welcome.
 
 ## Season Pass
 
