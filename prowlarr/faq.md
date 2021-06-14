@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-06-14T21:09:28.778Z
+date: 2021-06-14T21:09:57.870Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -10,9 +10,8 @@ dateCreated: 2021-06-05T13:59:03.261Z
 
 ## Can I add any (generic) Torznab or Newznab indexer?
 
-Yes.
-
-`Indexers` -> `Add Indexer` (Plus Button) -> `Generic Torznab` or `Generic Newznab`
+- Yes.
+- Go to `Indexers` -> `Add Indexer` (Plus Button) -> `Generic Torznab` or `Generic Newznab`
 
 ## How do I update Prowlarr?
 
