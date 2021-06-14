@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-06-14T20:53:26.670Z
+date: 2021-06-14T20:54:10.968Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -50,7 +50,7 @@ In short you'll need to delete your existing binaries (contents or folder of /op
 
 Radarr is written in .Net and requires Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
 The upgrade procedure for Mono varies per platform.
-> - Mono is no longer supported starting in version 4
+> Mono is no longer supported starting in version 4.0
 {.is-info}
 
 
