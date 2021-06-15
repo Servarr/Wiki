@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-06-15T16:08:00.296Z
+date: 2021-06-15T16:08:54.491Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -119,7 +119,7 @@ In the event of a migration issue there is not much you can do immediately, if t
 
 ##### Manually upgrading
 
-Grab the latest release from <https://lidarr.video>
+Grab the latest release from <https://lidarr.audio>
 
 Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run as you normally would.
 
