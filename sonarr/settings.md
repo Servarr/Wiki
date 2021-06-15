@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-15T16:38:49.222Z
+date: 2021-06-15T23:50:05.770Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -178,40 +178,48 @@ This is where you will set the naming convention for the folder that contains th
 - Add folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
 #### Profiles
-Quality Profiles
-Here you'll be allowed to set profiles for which you can have for the quality of series you're looking to download.
-When selecting an existing profile or adding an additional profile a new window will appear
-Note: The quality with the blue box will be the quality that is set for Upgrade Until (basically the cutoff)
-Name - Here you'll select a UNIQUE name for the profile to which you are creating
-Upgrades allowed - If you tell Sonarr to download a Web 1080p as it is the first release of a specific episode then later somebody is able to upload a Bluray-1080p then with this selected Sonarr will automatically upgrade to the better quality
-Note: This is only if you have Bluray-1080p higher than Web 1080p within the Qualities section
-Qualities - For definitions for qualities please click here
-Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases, Prime example of this is WebDL and WebRip as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
-Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted
-Note: By default the qualities are set from lowest (bottom) to highest (top)
+##### Quality Profiles
+- Here you'll be allowed to set profiles for which you can have for the quality of series you're looking to download.
+- When selecting an existing profile or adding an additional profile a new window will appear
+> Note: The quality with the blue box will be the quality that is set for
+{.is-info}
+- Upgrade Until (basically the cutoff)
+- Name - Here you'll select a UNIQUE name for the profile to which you are creating
+- Upgrades allowed - If you tell Sonarr to download a Web 1080p as it is the first release of a specific episode then later somebody is able to upload a Bluray-1080p then with this selected Sonarr will automatically upgrade to the better quality
+> Note: This is only if you have Bluray-1080p higher than Web 1080p within the Qualities section
+{.is-info}
+- Qualities - For definitions for qualities please click here
+- Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases, Prime example of this is WebDL and WebRip as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
+- Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted
+> Note: By default the qualities are set from lowest (bottom) to highest (top)
+{.is-info}
 
-Language Profiles
-Here you'll be allowed to set profiles for which you can have for the language of series you're looking to download.
-Please note that the priority / order does matter even if the language is not wanted (selected).
-Name - Select a unique name for this given profile
-Upgrades allowed - If you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
-Note: This is only valid if English is higher in the language list than Chinese and both are selected
-Languages - Languages higher in the list are more preferred. Only checked languages are wanted
+##### Language Profiles
+- Here you'll be allowed to set profiles for which you can have for the language of series you're looking to download.
+> Please note that the priority / order does matter even if the language is not wanted (selected).
+{.is-info}
+- Name - Select a unique name for this given profile
+- Upgrades allowed - If you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
+> Note: This is only valid if English is higher in the language list than Chinese and both are selected
+{.is-info}
+- Languages - Languages higher in the list are more preferred. Only checked languages are wanted
 
-Delay Profiles
-Delay profiles allow you to reduce the number of releases that will be downloaded for an Episode, by adding a delay while Sonarr will continue to watch for releases that better match your preferences.
-Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
-Usenet Delay - Set by the number of minutes you'll want to wait before the download to start
-Torrent Delay - Set by the number of minutes you'll want to wait before the download to start
-Bypass if Highest Quality - Bypass the delay profile if the highest quality for that Episode is found and grab once the first instance of the highest ranked quality is found. Otherwise wait for the best quality release until the end of the delay period.
-Tags - This is where you'll select any relevant tags that you'll be using for this scheme
-Wrench icon - This will allow you to edit the delay profile
-Plus icon - Create a new profile
-Example: Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
+##### Delay Profiles
+- Delay profiles allow you to reduce the number of releases that will be downloaded for an Episode, by adding a delay while Sonarr will continue to watch for releases that better match your preferences.
+- Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
+- Usenet Delay - Set by the number of minutes you'll want to wait before the download to start
+- Torrent Delay - Set by the number of minutes you'll want to wait before the download to start
+- Bypass if Highest Quality - Bypass the delay profile if the highest quality for that Episode is found and grab once the first instance of the highest ranked quality is found. Otherwise wait for the best quality release until the end of the delay period.
+- Tags - This is where you'll select any relevant tags that you'll be using for this scheme
+- Wrench icon - This will allow you to edit the delay profile
+- Plus icon - Create a new profile
+
+**Uses**
+Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
 
-How Delay Profiles Work
+**How Delay Profiles Work**
 
 The timer begins as soon as Sonarr detects an Episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay. Please note that the clock starts from the releases uploaded time and not from the time Sonarr sees it.
 
@@ -219,121 +227,107 @@ During the delay period, any new releases that become available will be noted by
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-NOTE: Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, any manual searches for content (non-RSS feed searches) will ignore delay profile settings.
+> NOTE: Delay profiles start from the timestamp that the indexer report the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, any manual searches for content (non-RSS feed searches) will ignore delay profile settings.
+{.is-info}
 
-Examples
+**Examples**
 
-For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
+- For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
 
-Example 1:
+- Example 1
 
-In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
+  - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
-At 11:00pm the first release for an Episode is detected by Sonarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Sonarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
+  - At 11:00pm the first release for an Episode is detected by Sonarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Sonarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
 
-At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradable and Sonarr will stop looking for new releases.
+  - At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradable and Sonarr will stop looking for new releases.
 
-At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
+  - At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
 
-Example 2:
+- Example 2
 
-This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
+  - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
-At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
+  - At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
-Example 3:
+- Example 3
 
-A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
+  - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
 
-You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
+  - You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
 
-If the first release that is detected is from Usenet, Sonarr will download it immediately.
+  - If the first release that is detected is from Usenet, Sonarr will download it immediately.
 
-If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
+  - If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
-Release Profiles
-Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for
-Enable Profile - Toggling this given profile on or off
-Must Contain - The release must contain at least one of these terms (case insensitive)
-Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
-Preferred:
-Here you can select a given term and give it a score.
-Example: Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you'll put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you'll put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that don't have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
-Include Preferred when Renaming - When utilizing the {Preferred Words} tag in the naming scheme
-Indexer - Specify what indexer the profile applies to.
-This is useful if you only want specific releases from a given indexer/tracker
-Tags - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
+##### Release Profiles
+- Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for
+> Tip: You can use regex (default case sensitive) in the must contain, must not contain, and preferred words values
+{.is-info}
+- Enable Profile - Toggling this given profile on or off
+- Must Contain - The release must contain at least one of these terms (case insensitive)
+- Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
+- Preferred - Here you can select a given term and give it a score.
+  - Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you'll put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you'll put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that don't have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
+- Include Preferred when Renaming - When utilizing the {Preferred Words} tag in the naming scheme
+- Indexer - Specify what indexer the profile applies to.
+  - This is useful if you only want specific releases from a given indexer/tracker
+- Tags - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
-Quality
-Quality Table Meanings
-Title - The name of the Quality in the GUI (configurable)
-Max - The maximum Megabytes per Minute (MB/min) a quality can have.
-Megabytes Per Minute - Self Explanatory
-Min - The minimum Megabytes per Minute (MB/min) a quality can have.
-Preferred - The preferred Megabytes per Minute (MB/min) a quality can have.
-Quality - The scene quality name (hardcoded)
-Size Limit - Self Explanatory
+##### Quality
+###### Quality Table Meanings
+- Title - The name of the Quality in the GUI (configurable)
+- Max - The maximum Megabytes per Minute (MB/min) a quality can have.
+- Megabytes Per Minute - Self Explanatory
+- Min - The minimum Megabytes per Minute (MB/min) a quality can have.
+- Preferred - The preferred Megabytes per Minute (MB/min) a quality can have.
+- Quality - The scene quality name (hardcoded)
+- Size Limit - Self Explanatory
 
-Qualities Defined
-Unknown - Self Explanatory
-SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
-WEBDL-480p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 480p (SD) quality.
-WEBRip-480p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 480p (SD) quality.
-DVD - A re-encode of the final released DVD9. If possible this is released PRE retail. It should be excellent quality (for the resolution). DVDrips are usually released in DivX/XviD or MP4.
-Bluray-480p - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
-HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
-HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
+###### Qualities Defined
+- Unknown - Self Explanatory
+- SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
+- WEBDL-480p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 480p (SD) quality.
+- WEBRip-480p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 480p (SD) quality.
+- DVD - A re-encode of the final released DVD9. If possible this is released PRE retail. It should be excellent quality (for the resolution). DVDrips are usually released in DivX/XviD or MP4.
+- Bluray-480p - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
+- HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
+- HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
+- WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
+- Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
+- WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
+- WEBRip-1080p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 1080p quality.
+- Bluray-1080p - A re-encode of the final released Blu-ray, at its native 1080p resolution (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality and the same resolution as the source. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while slightly reducing filesize. These are generally MKV or MP4 container.
+- Remux-1080p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 1080p quality.
+- HDTV-2160p - TVRip is a capture source from an capture card. HDTV stands for captured source from HD television. With an HDTV source, the quality can sometimes even surpass DVD. Movies in this format are starting to grow in popularity. Some advertisement and commercial banner can be seen on some releases during playback. This is at 2160p (4K) quality.
+- WEBDL-2160p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 2160p (4K) quality.
+- WEBRip-2160p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
+- Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
+- Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
+#### Indexers
+- Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files. If you're curious on how Sonarr works with your indexer/tracker click here
 
-WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
-Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
-WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
-WEBRip-1080p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 1080p quality.
-Bluray-1080p - A re-encode of the final released Blu-ray, at its native 1080p resolution (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality and the same resolution as the source. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while slightly reducing filesize. These are generally MKV or MP4 container.
-Remux-1080p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 1080p quality.
-HDTV-2160p - TVRip is a capture source from an capture card. HDTV stands for captured source from HD television. With an HDTV source, the quality can sometimes even surpass DVD. Movies in this format are starting to grow in popularity. Some advertisement and commercial banner can be seen on some releases during playback. This is at 2160p (4K) quality.
-WEBDL-2160p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 2160p (4K) quality.
-WEBRip-2160p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
-Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
-Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
-Indexers
-Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files. If you're curious on how Sonarr works with your indexer/tracker click here
-
-Supported Indexers
-Usenet
-Newznab
-Newznab is a standardized API used by many usenet indexing sites.
+##### Supported Indexers
+###### Usenet
+- Newznab
+  - Newznab is a standardized API used by many usenet indexing sites.
 Many presets are available, but all require an API key to be accessible.
-Omgwtfnzbs
-This indexer also supports newznab and is available as one of the above presets.
-Website: https://omgwtfnzbs.me/
-Fanzub
-Website: http://fanzub.com/
-Indexer for Japanese media (Anime) exclusively.
-Torrents
-BroadcastheNet
-Private Tracker
-Website: https://broadcasthe.net/
-Filelist
-Private Tracker
-Website: https://filelist.io
-HDBits
-Private tracker
-Website: https://hdbits.org/
-IPTorrents
-Private tracker, no search api.
-Website: http://www.iptorrents.com/
-Nyaa
-Website: http://www.nyaa.si/
+    - Omgwtfnzbs - This indexer also supports newznab and is available as one of the above presets. [Website](https://omgwtfnzbs.me/)
+    - Fanzub - Indexer for Japanese media (Anime) exclusively.[Website](http://fanzub.com/)
+
+- Torrents
+  - BroadcastheNet - Private Tracker - [Website](https://broadcasthe.net/)
+  - Filelist - Private Tracker - [Website](https://filelist.io)
+  - HDBits - Private tracker - [Website](https://hdbits.org/)
+  - IPTorrents - Private tracker, no search api. -[Website](http://www.iptorrents.com/)
+  - Nyaa - [Website](http://www.nyaa.si/)
 Torrent Indexer for Japanese media (Anime) exclusively.
-Rarbg
-Website: https://rarbg.to/
+- Rarbg - [Website](https://rarbg.to)
 Torrent RSS Feed
 Generic torrent RSS feed parser.
 NOTE: The RSS feed must contain a pubdate. The release size is recommended as well.
 Private tracker
-Torrentleech
-Private Indexer
-Website: http://torrentleech.org/
+- Torrentleech - Private Indexer - [Website](http://torrentleech.org/)
 Torznab
 Known indexers: Anime Tosho and Nyaa Pantsu as well as Jackett.
 Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent rss feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same api specification is shared with nZEDb)
