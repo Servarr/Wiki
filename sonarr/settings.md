@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T03:09:08.986Z
+date: 2021-06-16T03:14:40.219Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -35,72 +35,72 @@ dateCreated: 2021-06-11T23:29:12.300Z
 
 #### Series Naming
 
-`{Series Title}` = Series Name!
-`{Series CleanTitleYear}` = Series Title 2010
-`{Series TitleFirstCharacter}` = S
-`{Series CleanTitle}` = Series Title
-`{Series TitleThe}` = Series Title, The
-`{Series TitleYear}` = Series Title (2010)
-`{Series Year}` = (2010)
+- `{Series Title}` = Series Name!
+- `{Series CleanTitleYear}` = Series Title 2010
+- `{Series TitleFirstCharacter}` = S
+- `{Series CleanTitle}` = Series Title
+- `{Series TitleThe}` = Series Title, The
+- `{Series TitleYear}` = Series Title (2010)
+- `{Series Year}` = (2010)
 
 #### Series IDs
 
-`{ImdbId}` = tt12345
-`{Tmdbid}` = 123456
-`{TvMazeId}`= 54321
+- `{ImdbId}` = tt12345
+- `{Tmdbid}` = 123456
+- `{TvMazeId}`= 54321
 
 #### Seasons
 
-`{season:0}` = 1
-`{season:00}` =  01
+- `{season:0}` = 1
+- `{season:00}` =  01
 
 #### Episodes
 
-`{episode:0}` = 1
-`{episode:00}` = 01
+- `{episode:0}` = 1
+- `{episode:00}` = 01
 
 #### Air Date
 
-`{Air-Date}` = 2020-09-03
-`{Air Date}` = 2020 09 03
+- `{Air-Date}` = 2020-09-03
+- `{Air Date}` = 2020 09 03
 
 #### Episode Title
 
-`{Episode Title}` = Episode Title
-`{Episode CleanTitle}` =  Episode Title
+- `{Episode Title}` = Episode Title
+- `{Episode CleanTitle}` =  Episode Title
 
 #### Quality
 
-`{Quality Full}` = HDTV 720p Proper
-`{Quality Title}` = HDTV 720p
+- `{Quality Full}` = HDTV 720p Proper
+- `{Quality Title}` = HDTV 720p
 
 #### Media Info
 
-`{MediaInfo Simple}` = x264 DTS
-`{MediaInfo VideoCodec}` = x264
-`{MediaInfo AudioChannels}` = 5.1
-`{MediaInfo SubtitleLanguages}` = [EN]
-`{MediaInfo VideoBitDepth}` = 8
-`{MediaInfo Full}` = x264 DTS [EN+DE] *
-`{MediaInfo AudioCodec}` = DTS
-`{MediaInfo AudioLanguages}` = [EN+DE]
-`{MediaInfo VideoCodec}` = x264
-`{MediaInfo VideoDynamicRange}` = HDR
+- `{MediaInfo Simple}` = x264 DTS
+- `{MediaInfo VideoCodec}` = x264
+- `{MediaInfo AudioChannels}` = 5.1
+- `{MediaInfo SubtitleLanguages}` = [EN]
+- `{MediaInfo VideoBitDepth}` = 8
+- `{MediaInfo Full}` = x264 DTS [EN+DE]
+- `{MediaInfo AudioCodec}` = DTS
+- `{MediaInfo AudioLanguages}` = [EN+DE]
+- `{MediaInfo VideoCodec}` = x264
+- `{MediaInfo VideoDynamicRange}` = HDR
 
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending `+` (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
 {.is-info}
 
 #### Other
 
-`{Release Group}` = Rls Grp
-`{Preferred Words}` = iNTERNAL
+- `{Release Group}` = Rls Grp
+- `{Preferred Words}` = iNTERNAL
 > Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
 {.is-info}
 
 #### Original
 
-`{Original Title}` = Series.Title.S01E01.HDTV.x264.EVOLVE
-`{Original Filename}` = Series.title.s01e01hdtv.x264.EVOLVE
+- `{Original Title}` = Series.Title.S01E01.HDTV.x264.EVOLVE
+- `{Original Filename}` = Series.title.s01e01hdtv.x264.EVOLVE
 
 > `Original Title` is the release name and it is what is suggested to be used.
 {.is-info}
@@ -123,9 +123,9 @@ See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more
 
 #### Absolute Episode Number
 
-`{absolute:0}` = 1
-`{absolute:00}` = 01
-`{absolute:000}` =001
+- `{absolute:0}` = 1
+- `{absolute:00}` = 01
+- `{absolute:000}` =001
 
 ### Series Folder Format
 
@@ -133,26 +133,26 @@ Here you will set the naming convention for the folder that contains the season 
 
 #### Series Naming
 
-`{Series Title}` = Series Name!
-`{Series CleanTitleYear}` = Series Title 2010
-`{Series TitleFirstCharacter}` = S
-`{Series CleanTitle}` = Series Title
-`{Series TitleThe}` = Series Title, The
-`{Series TitleYear}` = Series Title (2010)
-`{Series Year}` = (2010)
+- `{Series Title}` = Series Name!
+- `{Series CleanTitleYear}` = Series Title 2010
+- `{Series TitleFirstCharacter}` = S
+- `{Series CleanTitle}` = Series Title
+- `{Series TitleThe}` = Series Title, The
+- `{Series TitleYear}` = Series Title (2010)
+- `{Series Year}` = (2010)
 
 #### Series IDs
 
-`{ImdbId}` = tt12345
-`{Tmdbid}` = 123456
-`{TvMazeId}` = 54321
+- `{ImdbId}` = tt12345
+- `{Tmdbid}` = 123456
+- `{TvMazeId}` = 54321
 
 ### Season Folder Format
 
 #### Seasons
 
-`{season:0}` = 1
-`{season:00}` = 01
+- `{season:0}` = 1
+- `{season:00}` = 01
 
 ### Folders
 
@@ -179,7 +179,7 @@ Here you will set the naming convention for the folder that contains the season 
   - `Prefer and Upgrade` - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - `Do Not Upgrade Automatically` - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - `Do Not Prefer` - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Release Profiles (Preferred Words).
-    -  For more information on this click [here](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/#proper-and-repacks)
+    -  For more information on propers and repacks click [here](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#propers-and-repacks)
 > Use preferred words for automatic upgrades to propers/repacks {.is-info}
 - `Analyse video files` - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
 - `Rescan Series Folder after Refresh` - Rescan the series folder after refreshing the series
@@ -271,7 +271,7 @@ Some media will receive half a dozen different releases of varying quality in th
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
 
-####### How Delay Profiles Work
+###### How Delay Profiles Work
 
 The timer begins as soon as Sonarr detects an Episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay. Please note that the clock starts from the releases uploaded time and not from the time Sonarr sees it.
 
