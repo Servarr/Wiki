@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-10T01:33:08.778Z
+date: 2021-06-16T00:14:22.038Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -29,4 +29,9 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 ## Indexer Management
 
 - [Prowlarr *Indexers*](/prowlarr)
+{.links-list}
+
+## Non-App Pages
+- [Docker Guide](/docker-guide)
+- [Useful Tools](/useful-tools)
 {.links-list}
