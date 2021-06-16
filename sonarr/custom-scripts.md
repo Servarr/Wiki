@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-06-16T21:29:41.693Z
+date: 2021-06-16T21:33:20.304Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -33,7 +33,7 @@ order.
 | `sonarr_series_title`                   | Title of the series                                                                          |
 | `sonarr_series_tvdbid`                  | TVDB ID for the series                                                                       |
 | `sonarr_series_tvmazeid`                | TVMaze ID for the series                                                                     |
-| `sonarr_series_imdbid`                  | IMDB ID for the series                                                                       |
+| `sonarr_series_imdbid`                  | IMDB ID for the series (empty if unknown)                                                    |
 | `sonarr_series_type`                    | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
 | `sonarr_release_episodecount`           | Number of episodes in the release                                                            |
 | `sonarr_release_seasonnumber`           | Season number from release                                                                   |
@@ -53,50 +53,50 @@ order.
 
 #### On Download/On Upgrade
 
-| Environment Variable                  | Details                                                                                      |
-| ------------------------------------- | -------------------------------------------------------------------------------------------- |
-| sonarr_eventtype                      | `Download`                                                                                   |
-| sonarr_isupgrade                      | `True` when an an existing file was upgraded, otherwise `False`                              |
-| sonarr_series_id                      | Internal ID of the series                                                                    |
-| sonarr_series_title                   | Title of the series                                                                          |
-| sonarr_series_path                    | Full path to the series                                                                      |
-| sonarr_series_tvdbid                  | TVDB ID for the series                                                                       |
-| sonarr_series_tvmazeid                | TVMaze ID for the series                                                                     |
-| sonarr_series_imdbid                  | IMDB ID for the series, empty if not available                                               |
-| sonarr_series_type                    | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
-| sonarr_episodefile_id                 | Internal ID of the episode file                                                              |
-| sonarr_episodefile_episodecount       | Number of episodes in the file                                                               |
-| sonarr_episodefile_relativepath       | Path to the episode file, relative to the series path                                        |
-| sonarr_episodefile_path               | Full path to the episode file                                                                |
-| sonarr_episodefile_episodeIDs         | Internal ID(s) of the episode file                                                           |
-| sonarr_episodefile_seasonnumber       | Season number of episode file                                                                |
-| sonarr_episodefile_episodenumbers     | Comma-delimited list of episode numbers                                                      |
-| sonarr_episodefile_episodeairdates    | Comma-delimited list of air dates from original network                                      |
-| sonarr_episodefile_episodeairdatesutc | Comma-delimited list of air dates in UTC                                                     |
-| sonarr_episodefile_episodetitles      | `\|`-delimited list of episode titles                                                        |
-| sonarr_episodefile_quality            | Quality name of the episode file, as detected by Sonarr                                      |
-| sonarr_episodefile_qualityversion     | `1` is the default, `2` is for proper, and `3`+ could be used for anime versions             |
-| sonarr_episodefile_releasegroup       | Release group (empty if unknown)                                                             |
-| sonarr_episodefile_scenename          | Original release name (empty if unknown)                                                     |
-| sonarr_episodefile_sourcepath         | Full path of the episode file that was imported                                              |
-| sonarr_episodefile_sourcefolder       | Full path of the folder the episode file was imported from                                   |
-| sonarr_download_client                | Download client (empty if unknown)                                                           |
-| sonarr_download_id                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
-| sonarr_deletedrelativepaths           | `\|`-delimited list of files that were deleted to import this file                           |
-| sonarr_deletedpaths                   | `\|`-delimited list of full paths of files that were deleted to import this file             |
+| Environment Variable                    | Details                                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `sonarr_eventtype`                      | `Download`                                                                                   |
+| `sonarr_isupgrade`                      | `True` when an an existing file was upgraded, otherwise `False`                              |
+| `sonarr_series_id`                      | Internal ID of the series                                                                    |
+| `sonarr_series_title`                   | Title of the series                                                                          |
+| `sonarr_series_path`                    | Full path to the series                                                                      |
+| `sonarr_series_tvdbid`                  | TVDB ID for the series                                                                       |
+| `sonarr_series_tvmazeid`                | TVMaze ID for the series                                                                     |
+| `sonarr_series_imdbid`                  | IMDB ID for the series (empty if unknown)                                                    |
+| `sonarr_series_type`                    | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
+| `sonarr_episodefile_id`                 | Internal ID of the episode file                                                              |
+| `sonarr_episodefile_episodecount`       | Number of episodes in the file                                                               |
+| `sonarr_episodefile_relativepath`       | Path to the episode file, relative to the series path                                        |
+| `sonarr_episodefile_path`               | Full path to the episode file                                                                |
+| `sonarr_episodefile_episodeids`         | Internal ID(s) of the episode file                                                           |
+| `sonarr_episodefile_seasonnumber`       | Season number of episode file                                                                |
+| `sonarr_episodefile_episodenumbers`     | Comma-delimited list of episode numbers                                                      |
+| `sonarr_episodefile_episodeairdates`    | Comma-delimited list of air dates from original network                                      |
+| `sonarr_episodefile_episodeairdatesutc` | Comma-delimited list of air dates in UTC                                                     |
+| `sonarr_episodefile_episodetitles`      | `\|`-delimited list of episode titles                                                        |
+| `sonarr_episodefile_quality`            | Quality name of the episode file, as detected by Sonarr                                      |
+| `sonarr_episodefile_qualityversion`     | `1` is the default, `2` is for proper, and `3`+ could be used for anime versions             |
+| `sonarr_episodefile_releasegroup`       | Release group (empty if unknown)                                                             |
+| `sonarr_episodefile_scenename`          | Original release name (empty if unknown)                                                     |
+| `sonarr_episodefile_sourcepath`         | Full path of the episode file that was imported                                              |
+| `sonarr_episodefile_sourcefolder`       | Full path of the folder the episode file was imported from                                   |
+| `sonarr_download_client`                | Download client (empty if unknown)                                                           |
+| `sonarr_download_id`                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
+| `sonarr_deletedrelativepaths`           | `\|`-delimited list of files that were deleted to import this file                           |
+| `sonarr_deletedpaths`                   | `\|`-delimited list of full paths of files that were deleted to import this file             |
 
 #### On Rename
 
-  Environment Variable     Details
-  ------------------------ ------------------------------------------------
-  sonarr_eventtype         Rename
-  sonarr_series_id         Internal ID of the series
-  sonarr_series_title      Title of the series
-  sonarr_series_path       Full path to the series
-  sonarr_series_tvdbid     TVDB ID for the series
-  sonarr_series_tvmazeid   TVMaze ID for the series
-  sonarr_series_imdbid     IMDB ID for the series, empty if not available
-  sonarr_series_type       Type of the series, Anime, Daily or Standard
+| Environment Variable     | Details                                              |
+| ------------------------ | ---------------------------------------------------- |
+| `sonarr_eventtype`       | `Rename`                                             |
+| `sonarr_series_id`       | Internal ID of the series                            |
+| `sonarr_series_title`    | Title of the series                                  |
+| `sonarr_series_path`     | Full path to the series                              |
+| `sonarr_series_tvdbid`   | TVDB ID for the series                               |
+| `sonarr_series_tvmazeid` | TVMaze ID for the series                             |
+| `sonarr_series_imdbid`   | IMDB ID for the series (empty if unknown)            |
+| `sonarr_series_type`     | Type of the series (`Anime`, `Daily`, or `Standard`) |
 
 #### On Episode File Delete
 
