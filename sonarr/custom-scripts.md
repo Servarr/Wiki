@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-06-16T21:48:58.388Z
+date: 2021-06-16T21:50:10.887Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-16T15:55:53.999Z
 
 ## Custom Post Processing Scripts {#custom_post_processing_scripts}
 
-If you're looking to trigger a custom script in your download client to tell Sonarr when to update, you can find more details here. Scripts are added to Sonarr via the [Connect Settings](/sonarr/settings#connections).
+If you're looking to trigger a custom script, you can find more details here. Scripts are added to Sonarr via the [Connect Settings](/sonarr/settings#connections).
 
 ### Overview
 
