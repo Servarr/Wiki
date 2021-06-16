@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T16:03:09.272Z
+date: 2021-06-16T16:08:59.567Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -297,24 +297,26 @@ Name for the `Specials` (Season) folder
   - `Wrench icon` - This will allow you to edit the delay profile
   - `Plus icon` - Create a new delay profile
 
-#### Uses
+##### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](/sonarr/settings/#example-3))
 
-##### How Delay Profiles Work
+#### How Delay Profiles Work
 
-The timer begins as soon as Sonarr detects an Episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay. Please note that the clock starts from the releases uploaded time and not from the time Sonarr sees it.
+The timer begins as soon as Sonarr detects an episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
+
+> The clock starts from the releases uploaded time and not from the time Sonarr sees it. {.is-info}
 
 During the delay period, any new releases that become available will be noted by Sonarr. When the delay timer expires, Sonarr will download the single release which best matches your quality preferences.
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-> NOTE: Delay profiles start from the timestamp that the indexer report the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, any manual searches for content (non-RSS feed searches) will ignore delay profile settings.
-{.is-info}
+> Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
+{.is-warning}
 
-###### Examples
+##### Examples
 
 - For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
 
@@ -346,20 +348,23 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Release Profiles
 
-- Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for
+- Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for.
 
-> Tip: You can use regex (default case sensitive) in the must contain, must not contain, and preferred words values
+> You can use regex (default case sensitive) in the `Must Contain`, `Must Not Contain`, and `Preferred` words values
 {.is-info}
 
-- Enable Profile - Toggling this given profile on or off
-- Must Contain - The release must contain at least one of these terms (case insensitive)
-- Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
-- Preferred - Here you can select a given term and give it a score.
+- `Name` - Select a **UNIQUE** name for the release profile you are creating
+- `Enable Profile` - Toggling this given profile on or off
+- `Must Contain` - The release must contain at least one of these terms (case insensitive)
+- `Must Not Contain` - The release will be rejected if it contains one or more of terms (case insensitive)
+- `Preferred` - Here you can select a given term and give it a score.
   - Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you'll put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you'll put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that don't have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
-- Include Preferred when Renaming - When utilizing the {Preferred Words} tag in the naming scheme
-- Indexer - Specify what indexer the profile applies to.
-  - This is useful if you only want specific releases from a given indexer/tracker
-- Tags - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
+- `Include Preferred when Renaming` - When utilizing the {Preferred Words} tag in the naming scheme
+- `Indexer` - Specify what indexer the profile applies to.
+
+> This is useful if you only want specific releases from a given indexer/tracker{.is-info}
+
+- `Tags` - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
 - [TRaSH maintains a list of WEB-DL Release Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/)
 - [TRaSH Anime Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/)
