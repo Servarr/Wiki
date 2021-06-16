@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-06-16T21:45:24.417Z
+date: 2021-06-16T21:48:58.388Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
