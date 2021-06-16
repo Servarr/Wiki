@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-06-14T21:09:57.870Z
+date: 2021-06-16T00:36:32.983Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -12,6 +12,14 @@ dateCreated: 2021-06-05T13:59:03.261Z
 
 - Yes.
 - Go to `Indexers` -> `Add Indexer` (Plus Button) -> `Generic Torznab` or `Generic Newznab`
+
+## Can I use flaresolverr indexers?
+
+At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
+
+## Prowlarr won't sync to Sonarr
+
+Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
 
 ## How do I update Prowlarr?
 
@@ -231,14 +239,6 @@ Unless you're in a repressive country like China, Australia or South Africa, you
 In other words, putting the *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the* Arrs, but when: image providers will block you and cloudflare is in front of most of *arr servers (updates, metadata, etc.) and liable to block you too.
 
 In addition, some private trackers ban for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
-
-## Can I use flaresolverr indexers?
-
-At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
-
-## Prowlarr won't sync to Sonarr
-
-Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
 
 ## How do I stop the browser from launching on startup?
 
