@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T03:07:50.782Z
+date: 2021-06-16T03:09:08.986Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -700,16 +700,14 @@ Tags can be useful to limit certain aspects of Sonarr to a specific series
 
 ## UI
 
-- Calendar
-In this section you can manipulate some features of the calendar
-
+### Calendar
 - First Day of Week - Here you can select what you think the first day of the week should be.
 - Week Column Header - Here you can select the header for the columns
 
-- Dates
-  - Short Date Format - How do you want Sonarr to display short dates?
-  - Long Date Format - How do you want Sonarr to display long format dates?
-  - Time Format - Do you want a 12hr or 24hr format?
+### Dates
+- Short Date Format - How do you want Sonarr to display short dates?
+- Long Date Format - How do you want Sonarr to display long format dates?
+- Time Format - Do you want a 12hr or 24hr format?
 - Show Relative Dates - Do you want Sonarr to show relative (Today/Yesterday/etc) or absolute dates?
-- Style
-  - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
+### Style
+- Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
