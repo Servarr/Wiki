@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T00:04:20.082Z
+date: 2021-06-16T00:11:40.504Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -203,9 +203,9 @@ This is where you will set the naming convention for the folder that contains th
   - The X at the end - This will remove this given root path
 - Add folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
-#### Profiles
+### Profiles
 
-##### Quality Profiles
+#### Quality Profiles
 
 - Here you'll be allowed to set profiles for which you can have for the quality of series you're looking to download.
 - When selecting an existing profile or adding an additional profile a new window will appear
@@ -227,7 +227,7 @@ This is where you will set the naming convention for the folder that contains th
 > Note: By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
-##### Language Profiles
+#### Language Profiles
 
 - Here you'll be allowed to set profiles for which you can have for the language of series you're looking to download.
 
@@ -242,7 +242,7 @@ This is where you will set the naming convention for the folder that contains th
 
 - Languages - Languages higher in the list are more preferred. Only checked languages are wanted
 
-##### Delay Profiles
+#### Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an Episode, by adding a delay while Sonarr will continue to watch for releases that better match your preferences.
 - Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
@@ -253,7 +253,7 @@ This is where you will set the naming convention for the folder that contains th
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon - Create a new profile
 
-###### Uses
+##### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
@@ -300,7 +300,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
   - If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
-##### Release Profiles
+#### Release Profiles
 
 - Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for
 
@@ -317,9 +317,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
   - This is useful if you only want specific releases from a given indexer/tracker
 - Tags - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
-##### Quality
+## Quality
 
-###### Quality Table Meanings
+### Quality Table Meanings
 
 - Title - The name of the Quality in the GUI (configurable)
 - Max - The maximum Megabytes per Minute (MB/min) a quality can have.
@@ -329,7 +329,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Quality - The scene quality name (hardcoded)
 - Size Limit - Self Explanatory
 
-###### Qualities Defined
+### Qualities Defined
 
 - Unknown - Self Explanatory
 - SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
@@ -351,13 +351,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
 - Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
 
-#### Indexers
+## Indexers
 
 - Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files. If you're curious on how Sonarr works with your indexer/tracker click here
 
-##### Supported Indexers
+### Supported Indexers
 
-###### Usenet
+#### Usenet
 
 - Newznab
   - Newznab is a standardized API used by many usenet indexing sites.
@@ -441,15 +441,15 @@ We’re not responsible if your account is banned for disobeying rules or accrui
   - Please see [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
   - Note: If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
 
-### Download Clients
+## Download Clients
 
-#### Overview
+### Overview
 
 - Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
 
-#### Download Clients
+### Download Clients
 
-##### Usenet Process
+#### Usenet Process
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -457,7 +457,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Sonarr will scan that completed file location for files that Sonarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
 
-##### Usenet Client Settings
+#### Usenet Client Settings
 
 - Name - The name of the download client within Sonarr
 - Enable - Enable this Download Client
@@ -473,7 +473,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-##### Torrent Process
+#### Torrent Process
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
 - Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
@@ -481,7 +481,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
-##### Torrent Client Settings
+#### Torrent Client Settings
 
 - Name - The name of the download client within Sonarr
 - Enable - Enable this Download Client
@@ -498,14 +498,14 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-##### Completed Download Handling
+### Completed Download Handling
 
 - Completed Download Handling is how Sonarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
 - Enable - Automatically import completed downloads from the download client
 - Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
 
-###### Remove Completed Downloads
+#### Remove Completed Downloads
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -518,7 +518,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Sonarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
-##### Failed Download Handling
+#### Failed Download Handling
 
 - Failed Download Handling is compatible with SABnzbd and NZBGet.
 
@@ -537,15 +537,15 @@ If you download using a BitTorrent client, the process is slightly different:
 - Redownload - Controls whether or not Sonarr will search for the same file after a failure
 - Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
-##### Remote Path Mappings
+### Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
 - One of our amazing community members have created [an excellent guide](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
-#### Import Lists
+## Import Lists
 
-## Lists
+### Lists
 
 Import lists are a part of Sonarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Sonarr and realize that you don't have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
 
@@ -556,11 +556,14 @@ From this new window you are presented with many different options to set up you
 Once you've selected the list provider that you're looking to pull from (such as IMDb, IMDb, Trakt) You'll be presented with a new window.
 Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
 
-List Exclusions
+### List Exclusions
+
 Import List Exclusion - This allows you to prune your list of movies you don't want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
-Connect
-Connections
+## Connect
+
+### Connections
+
 Connections are how you want Sonarr to communicate with the outside world.
 
 By pressing the + button you'll be presented with a new window which will allow you to configure many different endpoints
@@ -598,83 +601,103 @@ On Episode File Delete For Upgrade - Be notified when episode files are deleted 
 On Health Issue - Be notified on health check failures
 Include Health Warnings - Be notified on health warnings in addition to errors.
 
-Metadata
-Metadata
+## Metadata
+
+### Metadata
+
 Here you can select the type of metadata that will be consumed by your media player
 
 Kodi will be one of the most commonly used options here if that is the software that is being used. This will allow Sonarr to create a NFO file as well as associated movie posters to be scraped into your player
 
-Tags
+## Tags
+
 The tag section is for Sonarr is simply used to see what tags you have used and what seriess have that tag associated to it.
 Tags can be useful to limit certain aspects of Sonarr to a specific series
-General
-Host
-Binding Address - Valid IP4 address or '*' for all interfaces
-0.0.0.0 or* - any address can connect
-127.0.0.1 or localhost - only localhost applications can connect
-Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
-Port Number - The port number that you are wanting to use to access the webUI for Sonarr
-Note: If using Docker do not touch
-URL Base - For reverse proxy support, default is empty
-Note: If using a reverse proxy (example: mydomain.com/sonarr) you would enter '/sonarr' for URL Base.
-Enable SSL - If you have SSL credentials and would like to secure communication to and from your Sonarr enable this option.
-Note: do not mess with unless you know what you're doing
-Security
-Authentication - How would you like to authenticate to access your Sonarr instance
-None - You have no authentication to access your Sonarr
-Typically if you're the only user of your network, do not have anybody on your network that would care to access your Sonarr or your Sonarr is not exposed to the web
-Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password
-Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
-API Key - This is how other programs would communicate or have Sonarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
-Certificate Validation - Change how strict HTTPS certification validation is
-Proxy
-Proxy - This option allows you to run the information your Sonarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
-Logging
-Log level - Probably one of the most useful troubleshooting tools
-Info - This is the most basic way that Sonarr gathers information this will include very minimal amount of information in the logs.
-This log file contains fatal, error, warn and info entries.
-Debug - Debug will include all the information that Info includes plus more information that can be useful.
-This log files contains fatal, error, warn, info and debug entries
-Trace - The most advance and detailed logging on Sonarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log.
-This log files contains fatal, error, warn, info, debug and trace entries.
-Analytics
-Analytics - Send anonymous usage and error information to Sonarr's servers (SkyHook). This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
-Updates
-Branch - This is the branch of Sonarr that you are running on. Please see Github for available branches and version information. These branches only apply to V3.
-main (Stable): This has been tested by users on nightly branch and it's not known to have any major issues. This branch should be used by the majority of users.
-develop (Nightly) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
-phantom-develop (v3-preview): This is EOL and the built-in updater will automatically update to main.
-Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
-Mechanism - Use Sonarr built-in updater or a script
-Built-in - Use Sonarr's own updater
-Script - Have Sonarr run the update script
-Docker - Do not update Sonarr from inside the Docker, instead pull a brand new image with the new update
-Apt - Set by the Debian/Ubuntu package when updating is managed exclusively via Apt
-Script - Visible only when Mechanism is set to Script - Path to update script
-Update Process - Sonarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Sonarr is run under, it will need permissions to update the Sonarr files as well as stop/start Sonarr.
-Built-in - The built-in method will backup Sonarr files and settings, stop Sonarr, update the installation and Start Sonarr, if your system will not handle the stopping of Sonarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Sonarr will be restarted.
-Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
-Backups
-The backup section allows you to tell Sonarr how you would like for it to handle backups
+## General
 
-Folder - This allows you to select the backup location
-In docker you will be limited to what you allow the container to see
-Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder
-Interval - How often would you like Sonarr to make a backup
-Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+### Host
 
-UI
-Calendar
+- Binding Address - Valid IP4 address or '*' for all interfaces
+  - 0.0.0.0 or* - any address can connect
+  - 127.0.0.1 or localhost - only localhost applications can connect
+  - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
+- Port Number - The port number that you are wanting to use to access the webUI for Sonarr
+
+> Note: If using Docker do not touch
+{.is-warning}
+
+- URL Base - For reverse proxy support, default is empty
+
+> Note: If using a reverse proxy (example: mydomain.com/sonarr) you would enter '/sonarr' for URL Base.
+{.is-info}
+
+- Enable SSL - If you have SSL credentials and would like to secure communication to and from your Sonarr enable this option.
+
+> Note: do not mess with unless you know what you're doing
+{.is-warning}
+
+### Security
+
+- Authentication - How would you like to authenticate to access your Sonarr instance
+  - None - You have no authentication to access your Sonarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Sonarr or your Sonarr is not exposed to the web
+  - Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password
+  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
+- API Key - This is how other programs would communicate or have Sonarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
+- Certificate Validation - Change how strict HTTPS certification validation is
+
+### Proxy
+
+- Proxy - This option allows you to run the information your Sonarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
+
+### Logging
+
+- Log level - Probably one of the most useful troubleshooting tools
+  - Info - This is the most basic way that Sonarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+  - Trace - The most advance and detailed logging on Sonarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+
+### Analytics
+
+- Analytics - Send anonymous usage and error information to Sonarr's servers (SkyHook). This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
+
+### Updates
+
+- Branch - This is the branch of Sonarr that you are running on. Please see Github for available branches and version information. These branches only apply to V3.
+  - `main` (Stable): This has been tested by users on nightly branch and it's not known to have any major issues. This branch should be used by the majority of users.
+  - `develop` (Nightly) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
+  - `phantom-develop` (v3-preview): This is EOL and the built-in updater will automatically update to main.
+- Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
+- Mechanism - Use Sonarr built-in updater or a script
+  - Built-in - Use Sonarr's own updater
+  - Script - Have Sonarr run the update script
+  - Docker - Do not update Sonarr from inside the Docker, instead pull a brand new image with the new update
+  - Apt - Set by the Debian/Ubuntu package when updating is managed exclusively via Apt
+- Script - Visible only when Mechanism is set to Script - Path to update script
+- Update Process - Sonarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Sonarr is run under, it will need permissions to update the Sonarr files as well as stop/start Sonarr.
+- Built-in - The built-in method will backup Sonarr files and settings, stop Sonarr, update the installation and Start Sonarr, if your system will not handle the stopping of Sonarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Sonarr will be restarted.
+- Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
+
+## Backups
+
+- The backup section allows you to tell Sonarr how you would like for it to handle backups
+
+- Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
+- Interval - How often would you like Sonarr to make a backup
+- Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+
+## UI
+
+- Calendar
 In this section you can manipulate some features of the calendar
 
-First Day of Week - Here you can select what you think the first day of the week should be.
-Week Column Header - Here you can select the header for the columns
+- First Day of Week - Here you can select what you think the first day of the week should be.
+- Week Column Header - Here you can select the header for the columns
 
-Dates
-Short Date Format - How do you want Sonarr to display short dates?
-Long Date Format - How do you want Sonarr to display long format dates?
-Time Format - Do you want a 12hr or 24hr format?
-Show Relative Dates - Do you want Sonarr to show relative (Today/Yesterday/etc) or absolute dates?
-Style
-Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
+- Dates
+  - Short Date Format - How do you want Sonarr to display short dates?
+  - Long Date Format - How do you want Sonarr to display long format dates?
+  - Time Format - Do you want a 12hr or 24hr format?
+- Show Relative Dates - Do you want Sonarr to show relative (Today/Yesterday/etc) or absolute dates?
+- Style
+  - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
