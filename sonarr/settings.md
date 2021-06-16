@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-15T23:50:05.770Z
+date: 2021-06-16T00:01:56.245Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -320,215 +320,164 @@ Many presets are available, but all require an API key to be accessible.
   - Filelist - Private Tracker - [Website](https://filelist.io)
   - HDBits - Private tracker - [Website](https://hdbits.org/)
   - IPTorrents - Private tracker, no search api. -[Website](http://www.iptorrents.com/)
-  - Nyaa - [Website](http://www.nyaa.si/)
-Torrent Indexer for Japanese media (Anime) exclusively.
-- Rarbg - [Website](https://rarbg.to)
-Torrent RSS Feed
-Generic torrent RSS feed parser.
-NOTE: The RSS feed must contain a pubdate. The release size is recommended as well.
-Private tracker
-- Torrentleech - Private Indexer - [Website](http://torrentleech.org/)
-Torznab
-Known indexers: Anime Tosho and Nyaa Pantsu as well as Jackett.
-Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent rss feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same api specification is shared with nZEDb)
-At this point it’s unlikely your favorite tracker supports this. We’ll update this post once we become aware of other trackers supporting it. Additionally you can use Jackett. It acts as a Torznab proxy adding Torznab support for more than 100 torrent trackers, but uses website scraping instead of APIs.
-Important/Disclaimer: Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments and all. Please review your tracker rules and etiquette, keep your community alive.
-We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
-We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
-Indexer Settings
-Once you've clicked the + button to add a new indexer you'll be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
+  - Nyaa - Torrent Indexer for Japanese media (Anime) exclusively. - [Website](http://www.nyaa.si/)
+  - Rarbg - [Website](https://rarbg.to)
+  - Torrent RSS Feed - Generic torrent RSS feed parser.
+  > NOTE: The RSS feed must contain a pubdate. The release size is recommended as well.
+  {.is-info}
+  - Torrentleech - Private Indexer - [Website](http://torrentleech.org/)
 
-There are two sections here: Usenet and Torrents. Based upon what download client you'll be using you'll want to select the type of indexer you'll be going with.
+  - Torznab
+    - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent rss feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same api specification is shared with nZEDb)
+    - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
+> Important/Disclaimer: Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments and all. Please review your tracker rules and etiquette, keep your community alive.
+{.is-warning}
 
-More information on Indexers and Trackers can be found here
-
-Usenet Indexer Configuration
-Newznab - Here you'll find presets of popular usenet indexers (that are pre-filled out, all you'll need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-An excellent software that works with usenet and integrates quite well with Sonarr is NZBHydra2
-Regardless of if you select a pre filled out indexer or a custom indexer setup you'll be presented with a new window to input all your settings
-Choose from the presets or add a custom indexer (such as NZBHydra2)
-Name - The name of the indexer in Sonarr
-Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
-Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
-Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
-URL - The indexer provided URL of the indexer such as https://api.nzbgeek.info.
-API Path - The indexer provided path to the api. This is typically /api
-API Key - The indexer provided key to access the API.
-Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-Additional Parameters - Additional Newznab parameters to add to the query link
-Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
-Torrent Tracker Configuration
-As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program called Jackett. This software pairs well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
-Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you'll need to have each entry have a unique name
-Torznab Indexer
-Choose from the presets or add a custom indexer (such as Jackett)
-Name - The name of the indexer in Sonarr
-Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
-Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
-Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
-URL - The indexer provided URL of the indexer such as http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/.
-API Path - The indexer provided path to the api. This is typically /api
-API Key - The indexer provided key to access the API.
-Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-Additional Parameters - Additional Torznab parameters to add to the query link
-Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
-Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
-Options
-Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
-Retention - Usenet only: Set to zero to set for unlimited retention
-Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited
-RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-Please see How does Sonarr find episodes? for a better understanding of how RSS Sync will help you
-Note: If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
-Restrictions
-Not in Sonarr
+> We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
+{.is-warning}
 
 
-Download Clients
-Overview
-Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
+#### Indexer Settings
+- Once you've clicked the + button to add a new indexer you'll be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
 
-Download Clients
-Usenet Process
-Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
-Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
-When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Sonarr
-Sonarr will scan that completed file location for files that Sonarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
-Usenet Client Settings
-Name - The name of the download client within Sonarr
-Enable - Enable this Download Client
-Host - The URL of your download client
-Port - The port of your download client
-Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
-URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
-API Key - the API key to authenticate to your client
-Username - the username to authenticate to your client (typically not needed)
-Password- the password to authenticate to your client (typically not needed)
-Category - the category within your download client that Sonarr will use
-Recent Priority - download client priority for recently released media
-Older Priority - download client priority for media released not recently
-Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
-Torrent Process
-Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
-Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
-If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
-Torrent Client Settings
-Name - The name of the download client within Sonarr
-Enable - Enable this Download Client
-Host - The URL of your download client
-Port - The port of your download client
-Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
-URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
-Username - the username to authenticate to your client
-Password- the password to authenticate to your client
-Category - the category within your download client that Sonarr will use
-Post-Import Category - the category to set after the release is downloaded and imported. Please note that this breaks completed download handling removal.
-Recent Priority - download client priority for recently released media
-Older Priority - download client priority for media released not recently
-Initial State - Initial state for torrents
-Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
-Supported Clients
-Sabnzbd
-Website: SabNZBd
-Nzbget
-Website: NZBget
-NZBVortex
-Website: NZBVortex
-Pneumatic
-Website: None at this time
-Streaming Add-on for XBMC.
-DownloadStation
-Website: DownloadStation
-UsenetBlackhole
-Puts NZB into a folder to be picked up by an external tool. Will watch another folder to check for completed downloads.
-Deluge
-Website: Deluge
-TorrentBlackhole
-Puts .torrent files into a folder, to be picked up by an external tool. Will watch another folder to check for completed downloads.
-Transmission
-Website: Transmission
-uTorrent
-Version 3.0 or newer required. Requires Web UI (located in Preferences -> Advanced) enabled.
-Website: uTorrent
-rTorrent
-Requires rTorrent version 0.9.0 or newer compiled with XML-RPC support, and a SCGI to HTTP proxy (usually Lighttpd, Nginx, or Apache; ruTorrent can also provide this on on the URL plugins/rpc/rpc.php). Look for ruTorrent instructions for how to set up rTorrent.
-Website: rTorrent
-qBittorrent
-Requires qBittorrent 3.2.4 or higher.
-Website: qBittorrent
-Vuze
-Requires Vuze 5.0.0.0 or higher
-Website: Vuze
-DownloadStation
-Website: DownloadStation
-Hadouken
-Website: Hadouken
-Compatibility
+- There are two sections here: Usenet and Torrents. Based upon what download client you'll be using you'll want to select the type of indexer you'll be going with.
 
-Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
-Client	Ratio	Time
-Deluge	Yes	-
-Hadouken	-	-
-qBittorrent	Yes	Yes
-rTorrent	-	-
-Torrent Blackhole	-	-
-Download Station	-	-
-Transmission	Yes	Idle Limit [1]
-uTorrent	Yes	Yes
-Vuze	Yes	Yes
-[1] Transmission internally has an Idle Time check, but Sonarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.
+##### Usenet Indexer Configuration
+- Newznab - Here you'll find presets of popular usenet indexers (that are pre-filled out, all you'll need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- An excellent software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
+- Regardless of if you select a pre filled out indexer or a custom indexer setup you'll be presented with a new window to input all your settings
+- Choose from the presets or add a custom indexer (such as NZBHydra2)
+- Name - The name of the indexer in Sonarr
+- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
+- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
+- URL - The indexer provided URL of the indexer such as https://api.nzbgeek.info.
+- API Path - The indexer provided path to the api. This is typically `/api`
+- API Key - The indexer provided key to access the API.
+- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Additional Parameters - Additional Newznab parameters to add to the query link
+- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-Completed Download Handling
-Completed Download Handling is how Sonarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
+##### Torrent Tracker Configuration
+- As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
+- One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
+- Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you'll need to have each entry have a unique name
+- Torznab Indexer
+- Choose from the presets or add a custom indexer (such as Jackett)
+- Name - The name of the indexer in Sonarr
+- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
+- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
+- URL - The indexer provided URL of the indexer such as http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/.
+- API Path - The indexer provided path to the api. This is typically `/api`
+- API Key - The indexer provided key to access the API.
+- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Additional Parameters - Additional Torznab parameters to add to the query link
+- Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
+- Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+#### Options
+- Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
+- Retention - Usenet only: Set to zero to set for unlimited retention
+- Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited
+- RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
+  - Please see [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
+  - Note: If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
 
-Enable - Automatically import completed downloads from the download client
-Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
-Remove Completed Downloads
+### Download Clients
+#### Overview
+- Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
 
-Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
-When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder.
-Sonarr will scan that completed file location for video files. It will parse the video file name to match it to an episode. If it can do that, it will rename the file according to your specifications, and move it to the assigned library folder.
-Leftover files from the download will be sent to your trash or recycling.
+#### Download Clients
+##### Usenet Process
+- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+- Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
+- When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Sonarr
+- Sonarr will scan that completed file location for files that Sonarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
+##### Usenet Client Settings
+- Name - The name of the download client within Sonarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- API Key - the API key to authenticate to your client
+- Username - the username to authenticate to your client (typically not needed)
+- Password- the password to authenticate to your client (typically not needed)
+- Category - the category within your download client that Sonarr will use
+- Recent Priority - download client priority for recently released media
+- Older Priority - download client priority for media released not recently
+- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+##### Torrent Process
+- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+- Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
+- If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+##### Torrent Client Settings
+- Name - The name of the download client within Sonarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- Username - the username to authenticate to your client
+- Password- the password to authenticate to your client
+- Category - the category within your download client that Sonarr will use
+- Post-Import Category - the category to set after the release is downloaded and imported. Please note that this breaks completed download handling removal.
+- Recent Priority - download client priority for recently released media
+- Older Priority - download client priority for media released not recently
+- Initial State - Initial state for torrents
+- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+##### Completed Download Handling
+- Completed Download Handling is how Sonarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
+
+- Enable - Automatically import completed downloads from the download client
+- Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+###### Remove Completed Downloads
+
+- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
+- Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
+- When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder.
+- Sonarr will scan that completed file location for video files. It will parse the video file name to match it to an episode. If it can do that, it will rename the file according to your specifications, and move it to the assigned library folder.
+- Leftover files from the download will be sent to your trash or recycling.
+
 If you download using a BitTorrent client, the process is slightly different:
 
-Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Sonarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
-If the "Completed Download Handling - Remove" option is enabled in settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Sonarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
+- If the "Completed Download Handling - Remove" option is enabled in settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
-Failed Download Handling
-Failed Download Handling is compatible with SABnzbd and NZBGet.
+##### Failed Download Handling
+- Failed Download Handling is compatible with SABnzbd and NZBGet.
 
-There are a couple components that make up the failed download handling process:
+- There are a couple components that make up the failed download handling process:
 
-Check Downloader:
-Queue - Check your downloader's queue for password-protected (encrypted) releases
-History - Check your downloader's history for failure (eg. not enough to repair, or extraction failed)
-When Sonarr finds a failed download it starts processing them and does a few things:
-Adds a failed event to Sonarr's history
-Removes the failed download from Download Client to free space and clear downloaded files (optional)
-Starts searching for a replacement file (optional)
-Blacklisting Allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
-There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
+- Check Downloader:
+  - Queue - Check your downloader's queue for password-protected (encrypted) releases
+  - History - Check your downloader's history for failure (eg. not enough to repair, or extraction failed)
+- When Sonarr finds a failed download it starts processing them and does a few things:
+  - Adds a failed event to Sonarr's history
+  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
+  - Starts searching for a replacement file (optional)
+  - Blacklisting allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
+  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
 
-Redownload - Controls whether or not Sonarr will search for the same file after a failure
-Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
-Remote Path Mappings
-Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
+-  Redownload - Controls whether or not Sonarr will search for the same file after a failure
+-  Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
+##### Remote Path Mappings
+- Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
-One of our amazing community members have created an excellent guide to help you out if you think remotte path mapping is what will work for you here
+- One of our amazing community members have created [an excellent guide](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
 
-Import Lists
-Lists
+#### Import Lists
+# Lists
 Import lists are a part of Sonarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Sonarr and realize that you don't have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
 
 CAUTION: If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save. ie. physically look at the list before you even go to Sonarr.
