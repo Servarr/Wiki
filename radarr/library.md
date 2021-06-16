@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-06-16T03:03:56.677Z
+date: 2021-06-16T03:05:14.169Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -61,8 +61,8 @@ Discover shows recommended Movies.
     several options:
     1. Click on the [Add New Movie](/radarr/library#add-new) button to add movies by hand.
     1. Click on the [Import Existing Library](/radarr/library#library-import) button to import an existing library that you have collected
-    1. Click on the [Add Lists](Radarr_Settings#Lists) button to add a list to Radarr
-         - Some additional information about lists found [here](/radarr/faq#what_are_lists_and_what_can_they_do_for_me)
+    1. Click on the [Add Lists](/radarr/settings#lists) button to add a list to Radarr
+         - Some additional information about lists found [here](/radarr/faq#what-are-lists-and-what-can-they-do-for-me)
 
 ![radarr-discover-add-new-movies.png](/assets/radarr/radarr-discover-add-new-movies.png)
 
