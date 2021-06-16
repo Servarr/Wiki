@@ -3,7 +3,7 @@ title: Sonarr Custom Scripts
 description: 
 published: true
 date: 2021-06-16T01:07:19.984Z
-tags: sonarr
+tags: sonarr, custom scripts, needs-love
 editor: markdown
 dateCreated: 2021-06-16T01:28:37.350Z
 ---
@@ -12,8 +12,7 @@ dateCreated: 2021-06-16T01:28:37.350Z
 
 If you're looking to trigger a custom script in your download client to
 tell Sonarr when to update, you can find more details here. Scripts are
-added to Sonarr via the [Connect
-Settings](/sonarr/settings#connections)
+added to Sonarr via the [Connect Settings](/sonarr/settings#connections)
 
 ### Overview
 
@@ -23,9 +22,9 @@ They are passed to the script through environment variables which allows
 for more flexibility in what is sent to the script and in no particular
 order.
 
-### Environment Variables {#environment_variables}
+### Environment Variables
 
-##### On Grab {#on_grab}
+#### On Grab
 
 +-----------------------------------+-----------------------------------+
 | Environment Variable              | Details                           |
@@ -91,7 +90,7 @@ order.
 |                                   | download client)                  |
 +-----------------------------------+-----------------------------------+
 
-#### On Download/On Upgrade {#on_downloadon_upgrade}
+#### On Download/On Upgrade
 
 +-----------------------------------+-----------------------------------+
 | Environment Variable              | Details                           |
@@ -178,7 +177,7 @@ order.
 |                                   | import this file                  |
 +-----------------------------------+-----------------------------------+
 
-#### On Rename {#on_rename}
+#### On Rename
 
   Environment Variable     Details
   ------------------------ ------------------------------------------------
@@ -191,7 +190,7 @@ order.
   sonarr_series_imdbid     IMDB ID for the series, empty if not available
   sonarr_series_type       Type of the series, Anime, Daily or Standard
 
-#### On Episode File Delete {#on_episode_file_delete}
+#### On Episode File Delete
 
 +-----------------------------------+-----------------------------------+
 | Environment Variable              | Details                           |
@@ -254,7 +253,7 @@ order.
 |                                   | empty if unknown                  |
 +-----------------------------------+-----------------------------------+
 
-#### On Series Delete {#on_series_delete}
+#### On Series Delete
 
   Environment Variable         Details
   ---------------------------- --------------------------------------------------------------------------
@@ -267,7 +266,7 @@ order.
   sonarr_series_type           Type of the series, Anime, Daily or Standard
   sonarr_series_deletedfiles   `True` when the delete files option has been selected, otherwise `False`
 
-#### On Health Issue {#on_health_issue}
+#### On Health Issue
 
   Environment Variable          Details
   ----------------------------- ------------------------------------------------------
@@ -277,7 +276,7 @@ order.
   sonarr_health_issue_type      the area that failed and triggered the health issue
   sonarr_health_issue_wiki      the wiki url, empty if does not exist
 
-#### On Test {#on_test}
+#### On Test
 
 When adding the script to Sonarr and run 'Test' the script will be
 invoked with the following parameters. The script should be able to

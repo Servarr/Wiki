@@ -3,7 +3,7 @@ title: Radarr Custom Scripts
 description: 
 published: true
 date: 2021-06-16T01:07:18.984Z
-tags: radarr
+tags: radarr, custom scripts, needs-love
 editor: markdown
 dateCreated: 2021-06-16T01:28:36.350Z
 ---
@@ -12,8 +12,7 @@ dateCreated: 2021-06-16T01:28:36.350Z
 
 If you're looking to trigger a custom script in your download client to
 tell Radarr when to update, you can find more details below. Scripts are
-added to Radarr via the [Connect
-Settings](/radarr/settings#connections) page.
+added to Radarr via the [Connect Settings](/radarr/settings#connections) page.
 
 ### Overview
 
@@ -23,9 +22,9 @@ will be different. They are passed to the script through environment
 variables which allows for more flexibility in what is sent to the
 script and in no particular order.
 
-### Environment Variables {#environment_variables}
+### Environment Variables
 
-##### On Grab {#on_grab}
+#### On Grab
 
 +-----------------------------------+-----------------------------------+
 | Environment Variable              | Details                           |
@@ -75,7 +74,7 @@ script and in no particular order.
 | radarr_release_title              | NZB/Torrent title                 |
 +-----------------------------------+-----------------------------------+
 
-##### On Download/On Upgrade {#on_downloadon_upgrade}
+#### On Download/On Upgrade
 
 +-----------------------------------+-----------------------------------+
 | Environment Variable              | Details                           |
@@ -101,8 +100,7 @@ script and in no particular order.
 | radarr_movie_in_cinemas_date      | Cinema release date, empty if     |
 |                                   | missing                           |
 +-----------------------------------+-----------------------------------+
-| r                                 | Physical release date, empty if   |
-| adarr_movie_physical_release_date | missing                           |
+| radarr_movie_physical_release_date| Physical release date, empty if missing|
 +-----------------------------------+-----------------------------------+
 | radarr_movie_path                 | Full path to the movie            |
 +-----------------------------------+-----------------------------------+
@@ -144,7 +142,7 @@ script and in no particular order.
 |                                   | import this file                  |
 +-----------------------------------+-----------------------------------+
 
-##### On Rename {#on_rename}
+#### On Rename
 
   Environment Variable                 Details
   ------------------------------------ -----------------------------------------
@@ -158,7 +156,7 @@ script and in no particular order.
   radarr_movie_tmdbid                  TMDb ID for the movie
   radarr_movie_year                    Release year of the movie
 
-#### On Health Check {#on_health_check}
+#### On Health Check
 
   Environment Variable          Details
   ----------------------------- ------------------------------------------------------
@@ -168,7 +166,7 @@ script and in no particular order.
   radarr_health_issue_type      the area that failed and triggered the health issue
   radarr_health_issue_wiki      the wiki url, empty if does not exist
 
-#### On Test {#on_test}
+#### On Test
 
 When adding the script to Radarr and run 'Test' the script will be
 invoked with the following parameters. The script should be able to
