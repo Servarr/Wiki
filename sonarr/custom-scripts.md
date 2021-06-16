@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-06-16T21:50:10.887Z
+date: 2021-06-16T22:14:25.026Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -36,13 +36,13 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_release_episodeairdates`        | Comma-delimited list of air dates from original network                                      |
 | `sonarr_release_episodeairdatesutc`     | Comma-delimited list of air dates in UTC                                                     |
 | `sonarr_release_episodetitles`          | `\|`-delimited list of episode titles                                                        |
-| `sonarr_release_title`                  | NZB/Torrent title                                                                            |
+| `sonarr_release_title`                  | Torrent/NZB title                                                                            |
 | `sonarr_release_indexer`                | Indexer from which the release was grabbed                                                   |
 | `sonarr_release_size`                   | Size of the release, as reported by the indexer                                              |
 | `sonarr_release_quality`                | Quality name of the release, as detected by Sonarr                                           |
 | `sonarr_release_qualityversion`         | `1` is the default, `2` is for proper, and `3`+ could be used for anime versions             |
 | `sonarr_release_releasegroup`           | Release group (empty if unknown)                                                             |
-| `sonarr_download_client`                | Download client (empty if unknown)                                                           |
+| `sonarr_download_client`                | Download client                                                                              |
 | `sonarr_download_id`                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
 
 #### On Download/On Upgrade
@@ -50,7 +50,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | Environment Variable                    | Details                                                                                      |
 | --------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `sonarr_eventtype`                      | `Download`                                                                                   |
-| `sonarr_isupgrade`                      | `True` when an an existing file was upgraded, otherwise `False`                              |
+| `sonarr_isupgrade`                      | `True` when an existing file is upgraded, `False` otherwise                                  |
 | `sonarr_series_id`                      | Internal ID of the series                                                                    |
 | `sonarr_series_title`                   | Title of the series                                                                          |
 | `sonarr_series_path`                    | Full path to the series                                                                      |
@@ -72,9 +72,9 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_episodefile_qualityversion`     | `1` is the default, `2` is for proper, and `3`+ could be used for anime versions             |
 | `sonarr_episodefile_releasegroup`       | Release group (empty if unknown)                                                             |
 | `sonarr_episodefile_scenename`          | Original release name (empty if unknown)                                                     |
-| `sonarr_episodefile_sourcepath`         | Full path to the episode file that was imported                                              |
+| `sonarr_episodefile_sourcepath`         | Full path to the imported episode file                                                       |
 | `sonarr_episodefile_sourcefolder`       | Full path to the folder the episode file was imported from                                   |
-| `sonarr_download_client`                | Download client (empty if unknown)                                                           |
+| `sonarr_download_client`                | Download client                                                                              |
 | `sonarr_download_id`                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
 | `sonarr_deletedrelativepaths`           | `\|`-delimited list of files that were deleted to import this file                           |
 | `sonarr_deletedpaths`                   | `\|`-delimited list of full paths of files that were deleted to import this file             |
