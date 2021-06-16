@@ -12,11 +12,13 @@ dateCreated: 2021-06-11T23:29:12.300Z
 
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
+- [Community Suggested Naming Suggestions](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/)
+
 ### Episode Naming
 
 - `Rename Episodes` - If unchecked, Sonarr will use the existing file name if renaming is disabled.
 - `Replace Illegal Characters` - If unchecked, Sonarr will remove them instead.
-  - Example: `\` `#` `/` `$` `*` `<` `>` just to name a few
+  - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
 #### Standard Episode Format
 
@@ -77,14 +79,13 @@ dateCreated: 2021-06-11T23:29:12.300Z
 #### Media Info
 
 - `{MediaInfo Simple}` = x264 DTS
-- `{MediaInfo VideoCodec}` = x264
-- `{MediaInfo AudioChannels}` = 5.1
-- `{MediaInfo SubtitleLanguages}` = [EN]
-- `{MediaInfo VideoBitDepth}` = 8
-- `{MediaInfo Full}` = x264 DTS [EN+DE]
+- `{MediaInfo Full}` = x264 DTS \[EN+DE\]
 - `{MediaInfo AudioCodec}` = DTS
-- `{MediaInfo AudioLanguages}` = [EN+DE]
+- `{MediaInfo AudioChannels}` = 5.1
+- `{MediaInfo AudioLanguages}` = \[EN+DE\]
+- `{MediaInfo SubtitleLanguages}` = \[EN\]
 - `{MediaInfo VideoCodec}` = x264
+- `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
 
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending `+` (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
@@ -94,13 +95,14 @@ dateCreated: 2021-06-11T23:29:12.300Z
 
 - `{Release Group}` = Rls Grp
 - `{Preferred Words}` = iNTERNAL
+
 > Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
 {.is-info}
 
 #### Original
 
-- `{Original Title}` = Series.Title.S01E01.HDTV.x264.EVOLVE
-- `{Original Filename}` = Series.title.s01e01hdtv.x264.EVOLVE
+- `{Original Title}` = Series.Title.S01E01.HDTV.x264-EVOLVE
+- `{Original Filename}` = Series.title.s01e01hdtv.x264-EVOLVE
 
 > `Original Title` is the release name and it is what is suggested to be used.
 {.is-info}
@@ -154,6 +156,27 @@ Here you will set the naming convention for the folder that contains the season 
 - `{season:0}` = 1
 - `{season:00}` = 01
 
+### Season Folder Format
+
+#### Specials
+
+Name for the `Specials` (Season) folder
+
+- `Specials`
+
+> It's suggested to use `Specials`{.is-info}
+
+### Multi-Episode Style
+
+- `Extend` = `S01E01-02-03`
+- `Duplicate` = `S01E01.S01E01`
+- `Repeat` = `S01E01E02E03`
+- `Scene` = `S01E01-E02-E03`
+- `Range` = `S01E01-03`
+- `Prefixed Range` = `S01E01-E03`
+
+> It's suggested to use `Scene`{.is-info}
+
 ### Folders
 
 - `Create Empty Media folders` - Create missing series folders during disk scan
@@ -167,9 +190,11 @@ Here you will set the naming convention for the folder that contains the season 
   - `Never` - Do not delay importing if the episode is TBA.
 - `Skip Free Space Check` - Use when Sonarr is unable to detect free space from your series root folder
 - `Minimum Free Space` - Toggling this will prevent import if it would leave less than this amount of disk space available
-- `Use Hard links instead of Copy` - Use Hard links when trying to copy files from torrents that are still being seeded 
+- `Use Hard links instead of Copy` - Use Hard links when trying to copy files from torrents that are still being seeded
   - For more information on this click [here](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/)
+
  > Occasionally, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.{.is-warning}
+
 - `Import Extra Files` - Import matching extra files (subtitles, nfo, etc) after importing a file
 
 #### File Management
@@ -178,9 +203,12 @@ Here you will set the naming convention for the folder that contains the season 
 - `Download Proper & Repacks` - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
   - `Prefer and Upgrade` - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - `Do Not Upgrade Automatically` - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - `Do Not Prefer` - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Release Profiles (Preferred Words).
-    -  For more information on propers and repacks click [here](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#propers-and-repacks)
-> Use preferred words for automatic upgrades to propers/repacks {.is-info}
+  - `Do Not Prefer` - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Release Profiles (Preferred Words)](#release-profiles).
+- > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
+- > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
+
+> [Use preferred words for automatic upgrades to propers/repacks](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#propers-and-repacks) {.is-info}
+
 - `Analyse video files` - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
 - `Rescan Series Folder after Refresh` - Rescan the series folder after refreshing the series
   - `Always` - This will rescan series folder based upon Tasks Schedule
@@ -192,12 +220,14 @@ Here you will set the naming convention for the folder that contains the season 
   - `UTC Release date` - The date the video was released based upon the UTC
 - `Recycling Bin` - Episode files will go here when deleted instead of being permanently deleted
 - `Recycling Bin Cleanup` - This is how old a given file can be before it is deleted permanently
+
 > Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
 #### Permissions
 
 - `Set Permissions` - Should `chmod` be run when files are imported/renamed?
   - `chmod Folder` - Octal, applied during import/rename to media folders and files (without execute bits)
+
 > The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 {.is-info}
 
@@ -212,7 +242,9 @@ Here you will set the naming convention for the folder that contains the season 
 - `Path` - This shows the path to your media library
 - `Free Space` - This is the free space being reported to Sonarr from the system
 - `Unmapped Folders` - These are folders that do not have a Series associated to it
+
 >The `X` at the end will remove this root path{.is-warning}
+
 - `Add Root Folder` - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
 ## Profiles
@@ -225,14 +257,15 @@ Here you will set the naming convention for the folder that contains the season 
 > Note: The quality with the blue box will be the quality that is set for
 {.is-info}
 
-- Upgrade Until (basically the cutoff)
-- Name - Here you'll select a UNIQUE name for the profile to which you are creating
+- Name - Here you'll enter a UNIQUE name for the profile to which you are creating
 - Upgrades allowed - If you tell Sonarr to download a Web 1080p as it is the first release of a specific episode then later somebody is able to upload a Bluray-1080p then with this selected Sonarr will automatically upgrade to the better quality
 
 > Note: This is only if you have Bluray-1080p higher than Web 1080p within the Qualities section
 {.is-info}
 
-- Qualities - For definitions for qualities please click here
+- Upgrade Until - Here you'll set the cut-off to which Sonarr says to its self, "This is as high of quality that you want. I won't be looking anymore for better quality releases."
+
+- Qualities - [See Qualities](#qualities-defined)
 - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases, Prime example of this is WebDL and WebRip as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted
 
@@ -258,8 +291,8 @@ Here you will set the naming convention for the folder that contains the season 
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an Episode, by adding a delay while Sonarr will continue to watch for releases that better match your preferences.
 - Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
-- Usenet Delay - Set by the number of minutes you'll want to wait before the download to start
-- Torrent Delay - Set by the number of minutes you'll want to wait before the download to start
+- Usenet Delay - Set by the number of minutes you'll want to wait before the download starts
+- Torrent Delay - Set by the number of minutes you'll want to wait before the download starts
 - Bypass if Highest Quality - Bypass the delay profile if the highest quality for that Episode is found and grab once the first instance of the highest ranked quality is found. Otherwise wait for the best quality release until the end of the delay period.
 - Tags - This is where you'll select any relevant tags that you'll be using for this scheme
 - Wrench icon - This will allow you to edit the delay profile
@@ -328,6 +361,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Indexer - Specify what indexer the profile applies to.
   - This is useful if you only want specific releases from a given indexer/tracker
 - Tags - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
+
+- [TRaSH maintains a list of WEB-DL Release Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/)
+- [TRaSH Anime Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/)
 
 ## Quality
 
@@ -448,7 +484,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 
 - Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
 - Retention - Usenet only: Set to zero to set for unlimited retention
-- Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited
+- Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
   - Please see [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
   - Note: If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -576,42 +612,46 @@ Import List Exclusion - This allows you to prune your list of movies you don't w
 
 ### Connections
 
-Connections are how you want Sonarr to communicate with the outside world.
+Connections are how you want Radarr to communicate with the outside world.
 
 By pressing the + button you'll be presented with a new window which will allow you to configure many different endpoints
-There are many different endpoints
-Boxcar
-Custom Scripts - This allows you to make a custom script for when a particular action happens this script will run
-Discord - By far one of the most common ways to push notifications of actions happening on your Sonarr
-Email - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
-You can use a "pretty address" like SomePrettyName <email@example.org
-Emby
-Gotify
-Join
-Kodi - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customisable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community.
-By adding Kodi as a connection you can update Kodi's library when a new episode has been added to Sonarr
-Plex Home Theater
-Plex Media Center
-Plex Media Server - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available
-Prowl
-Pushbullet
-Pushover
-Sendgrid
-Slack
-Synology Indexer
-Telegram
-Trakt
-Twitter
-Connection Triggers
-On Grab - Be notified when episodes are available for download and has been sent to a download client
-On Import - Be notified when episodes are successfully imported
-On Upgrade - Be notified when episodes are upgraded to a better quality
-On Rename - Be notified when episodes are renamed
-On Series Delete - Be notified when series are deleted
-On Episode File Delete - Be notified when episodes files are deleted
-On Episode File Delete For Upgrade - Be notified when episode files are deleted for upgrades
-On Health Issue - Be notified on health check failures
-Include Health Warnings - Be notified on health warnings in addition to errors.
+
+- Boxcar
+- Custom Script - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/sonarr/custom-scripts) for more details.
+- Discord - By far one of the most common ways to push notifications of actions happening on your Sonarr
+- Email - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
+
+> You can use a "pretty address" like SomePrettyName <email@example.org {.is-info}
+
+- Emby
+- Gotify
+- Join
+- Kodi - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customisable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new episode has been added to Sonarr
+- Mailgun
+- Plex Home Theater
+- Plex Media Center
+- Plex Media Server - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available
+- Prowl
+- Pushbullet
+- Pushover
+- Sendgrid
+- Slack
+- Synology Indexer
+- Telegram
+- Twitter
+- Webhook
+
+### Connection Triggers
+
+- On Grab - Be notified when episodes are available for download and has been sent to a download client
+- On Import - Be notified when episodes are successfully imported
+- On Upgrade - Be notified when episodes are upgraded to a better quality
+- On Rename - Be notified when episodes are renamed
+- On Series Delete - Be notified when series are deleted
+- On Episode File Delete - Be notified when episodes files are deleted
+- On Episode File Delete For Upgrade - Be notified when episode files are deleted for upgrades
+- On Health Issue - Be notified on health check failures
+  - Include Health Warnings - Be notified on health warnings in addition to errors.
 
 ## Metadata
 
@@ -701,13 +741,17 @@ Tags can be useful to limit certain aspects of Sonarr to a specific series
 ## UI
 
 ### Calendar
+
 - First Day of Week - Here you can select what you think the first day of the week should be.
 - Week Column Header - Here you can select the header for the columns
 
 ### Dates
+
 - Short Date Format - How do you want Sonarr to display short dates?
 - Long Date Format - How do you want Sonarr to display long format dates?
 - Time Format - Do you want a 12hr or 24hr format?
 - Show Relative Dates - Do you want Sonarr to show relative (Today/Yesterday/etc) or absolute dates?
+
 ### Style
+
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
