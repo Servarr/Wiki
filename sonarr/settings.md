@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T02:41:46.599Z
+date: 2021-06-16T03:07:50.782Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -690,7 +690,7 @@ Tags can be useful to limit certain aspects of Sonarr to a specific series
 - Built-in - The built-in method will backup Sonarr files and settings, stop Sonarr, update the installation and Start Sonarr, if your system will not handle the stopping of Sonarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Sonarr will be restarted.
 - Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
-## Backups
+### Backups
 
 - The backup section allows you to tell Sonarr how you would like for it to handle backups
 
