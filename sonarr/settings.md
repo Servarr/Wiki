@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T00:11:40.504Z
+date: 2021-06-16T02:41:46.599Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -10,198 +10,210 @@ dateCreated: 2021-06-11T23:29:12.300Z
 
 ## Media Management
 
-Note: Some of these settings are only visible through 'show advanced' settings which is on the top bar under the search bar
+> Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
-### Naming
+### Episode Naming
 
-- Rename Episodes - If this is toggled off (no check in the box) Sonarr will use the existing file name if renaming is disabled
-- Replace Illegal Characters - If this is toggled off (no check in the box) Sonarr will replace illegal characters.
-- Example: \ # / $ * < > just to name a few
+- `Rename Episodes` - If unchecked, Sonarr will use the existing file name if renaming is disabled.
+- `Replace Illegal Characters` - If unchecked, Sonarr will remove them instead.
+  - Example: `\` `#` `/` `$` `*` `<` `>` just to name a few
 
 #### Standard Episode Format
 
-- Here you will select the naming convention for your episodes
+- Here you will select the naming convention for your standard episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 - Dropdown Box (upper right corner)
   - Left Box - Space Handling
-    - Space ( ) - Use spaces in naming (Default)
-    - Period (.) - Use periods in lieu of spaces in naming
-    - Underscore (_) - Use underscores in lieu of spaces in naming
-    - Dash (-) - Use dashes in lieu of spaces in naming
+    - `Space ( )` - Use spaces in naming (Default)
+    - `Period (.)` - Use periods in lieu of spaces in naming
+    - `Underscore (_)` - Use underscores in lieu of spaces in naming
+    - `Dash (-)` - Use dashes in lieu of spaces in naming
   - Right Box - Case Handling
-    - Default Case - Make title uppercase and lowercase (~camelcase) (Default)
-    - Uppercase - Make title all uppercase
-    - Lowercase - Make title all lowercase
+    - `Default Case` - Make title uppercase and lowercase (~camelcase) (Default)
+    - `Uppercase` - Make title all uppercase
+    - `Lowercase` - Make title all lowercase
 
 #### Series Naming
 
-{Series Title} Series Name!
-{Series CleanTitleYear} Series Title 2010
-{Series TitleFirstCharacter} S
-{Series CleanTitle} Series Title
-{Series TitleThe} Series Title, The
-{Series TitleYear} Series Title (2010)
-{Series Year} (2010)
+`{Series Title}` = Series Name!
+`{Series CleanTitleYear}` = Series Title 2010
+`{Series TitleFirstCharacter}` = S
+`{Series CleanTitle}` = Series Title
+`{Series TitleThe}` = Series Title, The
+`{Series TitleYear}` = Series Title (2010)
+`{Series Year}` = (2010)
 
 #### Series IDs
 
-{ImdbId} tt12345
-{Tmdbid} 123456
-{TvMazeId} 54321
+`{ImdbId}` = tt12345
+`{Tmdbid}` = 123456
+`{TvMazeId}`= 54321
 
 #### Seasons
 
-{season:0} 1
-{season:00} 01
-Episode
+`{season:0}` = 1
+`{season:00}` =  01
 
-{episode:0} 1
-{episode:00} 01
+#### Episodes
+
+`{episode:0}` = 1
+`{episode:00}` = 01
 
 #### Air Date
 
-{Air-Date} 2020-09-03
-{Air Date} 2020 09 03
+`{Air-Date}` = 2020-09-03
+`{Air Date}` = 2020 09 03
 
 #### Episode Title
 
-{Episode Title} Episode Title
-{Episode CleanTitle} Episode Title
+`{Episode Title}` = Episode Title
+`{Episode CleanTitle}` =  Episode Title
 
 #### Quality
 
-{Quality Full} HDTV 720p Proper
-{Quality Title} HDTV 720p
+`{Quality Full}` = HDTV 720p Proper
+`{Quality Title}` = HDTV 720p
 
 #### Media Info
 
-{MediaInfo Simple} x264 DTS
-{MediaInfo VideoCodec} x264
-{MediaInfo AudioChannels} 5.1
-{MediaInfo SubtitleLanguages} [EN]
-{MediaInfo VideoBitDepth} 8
-{MediaInfo Full} x264 DTS [EN+DE] *
-{MediaInfo AudioCodec} DTS
-{MediaInfo AudioLanguages} [EN+DE]
-{MediaInfo VideoCodec} x264
-{MediaInfo VideoDynamicRange} HDR
-> MediaInfo Full/AudioLanguages/SubtitleLanguages support a :EN+DE suffix allowing you to filter the languages included in the filename. Use -DE to exclude specific languages. Appending + (eg :EN+) will output [EN]/[EN+--]/[--] depending on excluded languages. For example {MediaInfo Full:EN+DE}.
+`{MediaInfo Simple}` = x264 DTS
+`{MediaInfo VideoCodec}` = x264
+`{MediaInfo AudioChannels}` = 5.1
+`{MediaInfo SubtitleLanguages}` = [EN]
+`{MediaInfo VideoBitDepth}` = 8
+`{MediaInfo Full}` = x264 DTS [EN+DE] *
+`{MediaInfo AudioCodec}` = DTS
+`{MediaInfo AudioLanguages}` = [EN+DE]
+`{MediaInfo VideoCodec}` = x264
+`{MediaInfo VideoDynamicRange}` = HDR
+
+> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending `+` (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
 {.is-info}
 
 #### Other
 
-{Release Group} Rls Grp
-{Preferred Words} iNTERNAL
-> Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of iNTERNAL or similarly a preferred word of /\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i would return AMZN or Amazon
+`{Release Group}` = Rls Grp
+`{Preferred Words}` = iNTERNAL
+> Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
 {.is-info}
 
 #### Original
 
-{Original Title} Series.Title.S01E01.HDTV.x264.EVOLVE
-{Original Filename} Series.title.s01e01hdtv.x264.EVOLVE
+`{Original Title}` = Series.Title.S01E01.HDTV.x264.EVOLVE
+`{Original Filename}` = Series.title.s01e01hdtv.x264.EVOLVE
 
-> Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti.
-Original Title is the release name is is what is suggested to be used.
-{.is-warning}
+> `Original Title` is the release name and it is what is suggested to be used.
+{.is-info}
+
+>`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yuti`.{.is-warning}
 
 #### Daily Episode Format
 
-Here you will select the naming convention for episodes that air daily
+Here you will select the naming convention for your daily episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-See Standard Episode Format
+See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
 ### Anime Episode Format
 
-Here you will select the naming convention for Anime series
-Note: Typically anime is aired in an absolute order also known as production order. Usually this is shown as e001, e002...e104, e105 ect. When a series is set to use Anime this setting will pull the absolute order from TheTVDB which is usually one continuous season. An example of this can be seen here
+Here you will select the naming convention for your anime series. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-All other settings are as above in the Standard Episode Format section
+See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
+
+> Typically anime is aired in an absolute order also known as production order. Usually this is shown as `e001`, `e002...e104`, `e105`, etc. When a series is set to use `Anime` this setting will pull the absolute order from `TheTVDB` which is usually one continuous season. An example of this can be seen here{.is-info}
 
 #### Absolute Episode Number
 
-{absolute:0} 1
-{absolute:00} 01
-{absolute:000} 001
+`{absolute:0}` = 1
+`{absolute:00}` = 01
+`{absolute:000}` =001
 
 ### Series Folder Format
 
-This is where you will set the naming convention for the folder that contains the season folders or episode files.
+Here you will set the naming convention for the folder that contains the season folders or episode files. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 #### Series Naming
 
-{Series Title} Series Name!
-{Series CleanTitleYear} Series Title 2010
-{Series TitleFirstCharacter} S
-{Series CleanTitle} Series Title
-{Series TitleThe} Series Title, The
-{Series TitleYear} Series Title (2010)
-{Series Year} (2010)
+`{Series Title}` = Series Name!
+`{Series CleanTitleYear}` = Series Title 2010
+`{Series TitleFirstCharacter}` = S
+`{Series CleanTitle}` = Series Title
+`{Series TitleThe}` = Series Title, The
+`{Series TitleYear}` = Series Title (2010)
+`{Series Year}` = (2010)
 
 #### Series IDs
 
-{ImdbId} tt12345
-{Tmdbid} 123456
-{TvMazeId} 54321
+`{ImdbId}` = tt12345
+`{Tmdbid}` = 123456
+`{TvMazeId}` = 54321
 
 ### Season Folder Format
 
 #### Seasons
 
-{season:0} 1
-{season:00} 01
+`{season:0}` = 1
+`{season:00}` = 01
 
 ### Folders
 
-- Create Empty Media folders - This will create an empty folder during disk scan
-- Delete Empty Folders - This will remove any empty folders during disk scan
+- `Create Empty Media folders` - Create missing series folders during disk scan
+- `Delete Empty Folders` - Delete empty series and season folders during disk scan and when episode files are deleted
 
 ### Importing
 
-- Episode Title Required - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
-  - Always - Always wait up to 24 hours for a title prior to importing if the episode is TBA
-  - Only for Bulk Season Releases - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA.
-  - Never - Do not delay importing if the episode is TBA.
-- Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
-- Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
-- Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded (for more information on this click here)
-- Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
+- `Episode Title Required` - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
+  - `Always` - Always wait up to 24 hours for a title prior to importing if the episode is TBA
+  - `Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA.
+  - `Never` - Do not delay importing if the episode is TBA.
+- `Skip Free Space Check` - Use when Sonarr is unable to detect free space from your series root folder
+- `Minimum Free Space` - Toggling this will prevent import if it would leave less than this amount of disk space available
+- `Use Hard links instead of Copy` - Use Hard links when trying to copy files from torrents that are still being seeded 
+  - For more information on this click [here](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/)
+ > Occasionally, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.{.is-warning}
+- `Import Extra Files` - Import matching extra files (subtitles, nfo, etc) after importing a file
 
 #### File Management
 
-- Ignore Deleted Episodes - Episodes deleted from disk, detected by a scheduled or manual rescan, are automatically unmonitored in Sonarr
-- Download Proper & Repacks - Should Sonarr automatically upgrade to propers when available? (see link for explanation on Proper and Repack)
-  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Release Profiles (Preferred Words).
-- Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
-- Rescan Series Folder after Refresh
-  - Always - This will rescan series folder based upon Tasks Schedule
-  - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the series folder.
-- Change File Date
-  - None - Sonarr will not change the date that shows in your given file browser
-  - Local Release - The date the video was aired locally
-  - UTC Release date - The date the video was released based upon the UTC
-- Recycling Bin - Designate a location for deleted files to go to (just in case you want to retrieve them before the bin is taken out)
-- Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
+- `Unmonitor Deleted Episodes` - Episodes deleted from disk are automatically unmonitored in Sonarr
+- `Download Proper & Repacks` - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
+  - `Prefer and Upgrade` - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+  - `Do Not Upgrade Automatically` - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+  - `Do Not Prefer` - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Release Profiles (Preferred Words).
+    -  For more information on this click [here](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/#proper-and-repacks)
+> Use preferred words for automatic upgrades to propers/repacks {.is-info}
+- `Analyse video files` - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
+- `Rescan Series Folder after Refresh` - Rescan the series folder after refreshing the series
+  - `Always` - This will rescan series folder based upon Tasks Schedule
+  - `After Manual Refresh` - You will have to manually rescan the disk
+  - `Never` - Just as it says, never rescan the series folder.
+- `Change File Date` - Change file date on import/rescan
+  - `None` - Sonarr will not change the date that shows in your given file browser
+  - `Local Release` - The date the video was aired locally
+  - `UTC Release date` - The date the video was released based upon the UTC
+- `Recycling Bin` - Episode files will go here when deleted instead of being permanently deleted
+- `Recycling Bin Cleanup` - This is how old a given file can be before it is deleted permanently
+> Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
 #### Permissions
 
-- Set Permissions - This will allow Sonarr to set the given file permission when a given file is imported or renamed
-  - chmod folder - This is the permission level that Sonarr will set for a given file on import or rename.
-
+- `Set Permissions` - Should `chmod` be run when files are imported/renamed?
+  - `chmod Folder` - Octal, applied during import/rename to media folders and files (without execute bits)
 > The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 {.is-info}
 
-- chmod Group - This only works if the user running Sonarr is the owner of the file. It's better to ensure the download client uses the same group as Sonarr.
+> This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+
+- `chown Group` - Group name or GID. Use GID for remote file systems
+
+> This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
 #### Root Folders
 
-- Path - This shows the path to your media / organized library
-- Free Space - This is the free space being reported to Sonarr from the system
-- Unmapped Folders - These are folders that do not have a Series associated to it
-  - The X at the end - This will remove this given root path
-- Add folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
+- `Path` - This shows the path to your media library
+- `Free Space` - This is the free space being reported to Sonarr from the system
+- `Unmapped Folders` - These are folders that do not have a Series associated to it
+>The `X` at the end will remove this root path{.is-warning}
+- `Add Root Folder` - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
 ### Profiles
 
