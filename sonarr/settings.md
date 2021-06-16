@@ -215,9 +215,9 @@ Here you will set the naming convention for the folder that contains the season 
 >The `X` at the end will remove this root path{.is-warning}
 - `Add Root Folder` - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
-### Profiles
+## Profiles
 
-#### Quality Profiles
+### Quality Profiles
 
 - Here you'll be allowed to set profiles for which you can have for the quality of series you're looking to download.
 - When selecting an existing profile or adding an additional profile a new window will appear
@@ -239,7 +239,7 @@ Here you will set the naming convention for the folder that contains the season 
 > Note: By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
-#### Language Profiles
+### Language Profiles
 
 - Here you'll be allowed to set profiles for which you can have for the language of series you're looking to download.
 
@@ -254,7 +254,7 @@ Here you will set the naming convention for the folder that contains the season 
 
 - Languages - Languages higher in the list are more preferred. Only checked languages are wanted
 
-#### Delay Profiles
+### Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an Episode, by adding a delay while Sonarr will continue to watch for releases that better match your preferences.
 - Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
@@ -265,13 +265,13 @@ Here you will set the naming convention for the folder that contains the season 
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon - Create a new profile
 
-##### Uses
+#### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
 
-###### How Delay Profiles Work
+##### How Delay Profiles Work
 
 The timer begins as soon as Sonarr detects an Episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay. Please note that the clock starts from the releases uploaded time and not from the time Sonarr sees it.
 
@@ -312,7 +312,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
   - If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
-#### Release Profiles
+### Release Profiles
 
 - Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for
 
