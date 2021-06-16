@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T03:14:40.219Z
+date: 2021-06-16T16:03:09.272Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -251,58 +251,57 @@ Name for the `Specials` (Season) folder
 
 ### Quality Profiles
 
-- Here you'll be allowed to set profiles for which you can have for the quality of series you're looking to download.
-- When selecting an existing profile or adding an additional profile a new window will appear
+- Set profiles for the quality of series you're looking to download.
 
-> Note: The quality with the blue box will be the quality that is set for
+> When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
+
+> Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
 
-- Name - Here you'll enter a UNIQUE name for the profile to which you are creating
-- Upgrades allowed - If you tell Sonarr to download a Web 1080p as it is the first release of a specific episode then later somebody is able to upload a Bluray-1080p then with this selected Sonarr will automatically upgrade to the better quality
+- `Name` - Select a **UNIQUE** name for the quality profile you are creating
+- `Upgrades Allowed` - When this option is checked and you tell Sonarr to download a `WEB 1080p` as it is the first release of a specific episode then later somebody is able to upload a `Bluray-1080p` Sonarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
+- `Upgrade Until` - Once this quality is reached Sonarr will no longer download episodes
 
-> Note: This is only if you have Bluray-1080p higher than Web 1080p within the Qualities section
-{.is-info}
+> Note: This is only applicable if you have `Bluray-1080`p higher than `WEB 1080p` within the `Qualities` section
+{.is-warning}
 
-- Upgrade Until - Here you'll set the cut-off to which Sonarr says to its self, "This is as high of quality that you want. I won't be looking anymore for better quality releases."
+- `Qualities` - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted. 
+  - `Edit Groups` - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 
-- Qualities - [See Qualities](#qualities-defined)
-- Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases, Prime example of this is WebDL and WebRip as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
-- Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted
-
-> Note: By default the qualities are set from lowest (bottom) to highest (top)
+> By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
 ### Language Profiles
 
-- Here you'll be allowed to set profiles for which you can have for the language of series you're looking to download.
+- Set profiles for the language of series you're looking to download.
 
 > Please note that the priority / order does matter even if the language is not wanted (selected).
 {.is-info}
 
-- Name - Select a unique name for this given profile
-- Upgrades allowed - If you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
+- `Name` - Select a **UNIQUE** name for the language profile you are creating
+- `Upgrades allowed` - If unchecked (disabled) languages will not be upgraded. For example, if you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
 
-> Note: This is only valid if English is higher in the language list than Chinese and both are selected
-{.is-info}
+> This is only valid if English is higher in the language list than Chinese and both are selected
+{.is-warning}
 
-- Languages - Languages higher in the list are more preferred. Only checked languages are wanted
+- `Languages` - Languages higher in the list are more preferred. Only checked languages are wanted
 
 ### Delay Profiles
 
-- Delay profiles allow you to reduce the number of releases that will be downloaded for an Episode, by adding a delay while Sonarr will continue to watch for releases that better match your preferences.
-- Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
-- Usenet Delay - Set by the number of minutes you'll want to wait before the download starts
-- Torrent Delay - Set by the number of minutes you'll want to wait before the download starts
-- Bypass if Highest Quality - Bypass the delay profile if the highest quality for that Episode is found and grab once the first instance of the highest ranked quality is found. Otherwise wait for the best quality release until the end of the delay period.
-- Tags - This is where you'll select any relevant tags that you'll be using for this scheme
-- Wrench icon - This will allow you to edit the delay profile
-- Plus icon - Create a new profile
+- Delay profiles allow you to reduce the number of releases that will be downloaded for an episode by adding a delay while Sonarr continues to watch for releases that better match your preferences.
+  - `Protocol` - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
+  - `Usenet Delay` - Set by the number of minutes you'll want to wait before the download to start
+  - `Torrent Delay` - Set by the number of minutes you'll want to wait before the download to start
+  - `Bypass if Highest Quality` - Bypass delay when release has the highest enabled quality profile with the preferred protocol
+  - `Tags` - This is where you'll select any relevant tags that you'll be using for this scheme
+  - `Wrench icon` - This will allow you to edit the delay profile
+  - `Plus icon` - Create a new delay profile
 
 #### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
-Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
+Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](/sonarr/settings/#example-3))
 
 ##### How Delay Profiles Work
 
@@ -319,7 +318,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
 
-- Example 1
+###### Example 1
 
   - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
@@ -329,13 +328,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
   - At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
 
-- Example 2
+###### Example 2
 
   - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
   - At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
-- Example 3
+###### Example 3
 
   - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
 
