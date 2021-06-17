@@ -120,7 +120,7 @@ There are many ways to manage Docker images and containers too, so installation 
 
 ## NGINX Reverse Proxy Configuration
 
-> This assumes the default port of `9696` and that you set a baseurl of `prowlarr`
+> This assumes the default port of `9696` and that you set a baseurl of `prowlarr`. It also assumes you have nginx and the application running on the same server accessible at `localhost`.
 {.is-info}
 
 ```

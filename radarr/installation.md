@@ -117,7 +117,7 @@ To install and use these Docker images, you'll need to keep the above in mind wh
 
 ## NGINX Reverse Proxy Configuration
 
-> This assumes the default port of `7878` and that you set a baseurl of `radarr`
+> This assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes you have nginx and the application running on the same server accessible at `localhost`.
 {.is-info}
 
 ```nginx
