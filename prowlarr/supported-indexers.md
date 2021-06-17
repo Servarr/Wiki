@@ -2,13 +2,15 @@
 title: Prowlarr Supported Indexers
 description: 
 published: false
-date: 2021-06-17T23:46:42.834Z
+date: 2021-06-17T23:48:24.504Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-17T21:08:26.444Z
 ---
 
 # Supported Indexers
+- As of Build `0.1.0.471` / Commit `210311cb38ca7d209feacacff8db7f54a1c4277c`
+
 |Indexer Name|Public or Private|Protocol|Description|
 |:--|:--|:--|:--|
 |0day.kiev|private|torrent||
