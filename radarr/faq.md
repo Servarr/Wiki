@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-11T21:06:04.448Z
+date: 2021-06-17T22:41:27.424Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -160,21 +160,21 @@ proxy_set_header Connection $http_connection;
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- `master` (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
+- `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) - (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
 
-- `develop` (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This version will receive updates either weekly or biweekly depending on development.
+- `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) - (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This version will receive updates either weekly or biweekly depending on development.
 
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- `nightly` (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v4. This version is updated immediately.
+- `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) - (Alpha/Unstable) : The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v4. This version is updated immediately.
 
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.
 
-||`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
+| |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
 |---|---|---|
 |[hotio](https://hub.docker.com/r/hotio/radarr)|`hotio/radarr:release`|`hotio/radarr:testing`|
 |[LinuxServer.io](https://hub.docker.com/r/linuxserver/radarr)|`linuxserver/radarr:latest`|`linuxserver/radarr:develop`|
@@ -200,17 +200,18 @@ If Docker:
 
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.
+> You can (almost) always increase your risk.{.is-info}
 
 - `master` can go to `develop` or `nightly`
 - `develop` can go to `nightly`
 - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **May 28 2021 Update**
-  - `3.2.1` has been released as master/stable
-  - For those on nightly and are still on `3.2.1.5068` or lower you can safely downgrade to master
-    - Same for those on develop.
+- **June 17 2021 Update**
+  - `3.2.2.5080` has been released as master/stable
+  - For those on nightly and are still on `4.0.0.5093` or lower you can safely downgrade to master
+  - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
+
 
 ## How does Radarr handle foreign movies or foreign titles?
 
