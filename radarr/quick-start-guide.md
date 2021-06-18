@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-06-18T00:24:25.112Z
+date: 2021-06-18T00:28:18.680Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-05-17T01:51:10.479Z
@@ -271,6 +271,6 @@ When you see the movie you want click on it.
     > - **Physical / Web**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
     >
 4. Select your preferred profile to use.
-5. Here you can add certain tags for advanced uasage.
-6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](https://wikijs.servarr.com/radarr_FAQ#How_does_Radarr_find_movies.3F)
+5. Here you can add certain tags for advanced usage.
+6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
 7. Click on `Add Movie` to add the movie to Radarr.
