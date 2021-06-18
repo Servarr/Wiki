@@ -2,11 +2,12 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-16T16:48:18.120Z
+date: 2021-06-18T19:46:06.848Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
 ---
+
 This page will go through all the settings available in Sonarr and how they work.  This is not meant to be a comprehensive "how to set up Sonarr." If you want that, please use the [Quick Start](/sonarr/quick-start-guide) page instead.
 
 ## Menu options
@@ -750,10 +751,8 @@ Tags can be useful to limit certain aspects of Sonarr to a specific series
 
 ### Updates
 
-- Branch - This is the branch of Sonarr that you are running on. Please see Github for available branches and version information. These branches only apply to V3.
-  - `main` (Stable): This has been tested by users on nightly branch and it's not known to have any major issues. This branch should be used by the majority of users.
-  - `develop` (Nightly) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
-  - `phantom-develop` (v3-preview): This is EOL and the built-in updater will automatically update to main.
+- Branch - This is the branch of Sonarr that you are running on.
+  - [Please see this FAQ entry for more information](/sonarr/faq#how-do-i-update-sonarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Sonarr built-in updater or a script
   - Built-in - Use Sonarr's own updater
