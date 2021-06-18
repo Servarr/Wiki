@@ -141,7 +141,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
 
-```
+```none
 proxy_http_version 1.1;
 proxy_set_header Upgrade $http_upgrade; 
 proxy_set_header Connection $http_connection;
@@ -211,7 +211,6 @@ If Docker:
   - `3.2.2.5080` has been released as master/stable
   - For those on nightly and are still on `4.0.0.5093` or lower you can safely downgrade to master
   - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
-
 
 ## How does Radarr handle foreign movies or foreign titles?
 

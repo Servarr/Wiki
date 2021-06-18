@@ -41,12 +41,15 @@ As of 2021-06-09 the logic is as follows:
 ## Why can't I add a new release or artist to Lidarr?
 
 ## Why can't I add a various artists album?
+
 Various Artists and other meta artists on Musicbrainz are due to the number of entries they provide.
 
 ## Why does Lidarr only show studio albums, How do I find singles or EPs?
+
 Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist, or for your entire library by utilizing Metadata Profiles.
 
 ## Can I add just an album?
+
 ​
 ​Not at the moment.
 ​
@@ -113,26 +116,29 @@ Lidarr defaults to only bringing in studio albums for each artist. However, you 
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
-1. Under the Updates section change the branch name to `develop` or `nightly`
+1. Under the Updates section change the branch name to `master` or `develop`
 1. Save
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- `master` (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Lidarr does not yet have a stable release.**
-  
-- `develop` (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. **Lidarr does not yet have a beta release.**
+- `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/release/VERSION.json) -    (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch.
+
+- `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/testing/VERSION.json) -  (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
 
 > On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
-- `nightly` (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
+- `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/nightly/VERSION.json) -  (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-warning}
 
-||`master` (stable)|`develop` (beta)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/nightly/VERSION.json)|
-|---|---|---|---|
-|[hotio](https://hotio.dev/containers/lidarr)|no stable release yet|no beta release yet|`hotio/lidarr:nightly`|
+- Note: If your install is through Docker append `:testing` or `:develop` if needed to the end of your container tag depending on who makes your builds.
+
+| |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/testing/VERSION.json)|
+|---|---|---|
+|[hotio](https://hotio.dev/containers/lidarr)|`hotio/lidarr:release`|`hotio/lidarr:testing`|
+|[LinuxServer.io](https://hotio.dev/containers/lidarr)|`linuxserver/lidarr:latest`|`linuxserver/lidarr:develop`|
 
 ## Can I update Lidarr inside my Docker container?
 
