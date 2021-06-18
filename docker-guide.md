@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-18T11:56:19.248Z
+date: 2021-06-18T11:58:34.653Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -10,7 +10,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 ## The Best Docker Setup
 
-**TL; DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume for Sonarr, Radarr, Lidarr and Readarr so the download folder and library folder are on the same file system which makes hard links and instant moves possible. And most of all, ignore *most* of the Docker image’s path documentation!
+**TL; DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume for Sonarr, Radarr, Lidarr and Readarr (so the download folder and library folder are on the same file system) makes hard links and instant moves possible. And most of all, ignore *most* of the Docker image’s path documentation!
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
