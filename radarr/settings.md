@@ -33,7 +33,7 @@ Note: Some of these settings are only visible through 'show advanced' settings w
 
 - Rename Movies - If this is toggled off (no check in the box) Radarr will use the existing file name if renaming is disabled
 - Replace Illegal Characters - If this is toggled off (no check in the box) Radarr will replace illegal characters.
-- The characters are: `:` `` `/` `>` `<` `?` `*` `|` `"`
+- The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
   - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
     - Delete - Self explanatory
       - Example: Movie,The.mkv -> MovieThe.mkv

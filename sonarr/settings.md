@@ -33,7 +33,7 @@ Also, note that for each individual settings page, there are some options at the
 
 - `Rename Episodes` - If unchecked, Sonarr will use the existing file name if renaming is disabled.
 - `Replace Illegal Characters` - If unchecked, Sonarr will remove them instead.
-  - The characters are: `:` `` `/` `>` `<` `?` `*` `|` `"`
+  - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
 #### Standard Episode Format
 
