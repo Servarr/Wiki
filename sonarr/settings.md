@@ -7,6 +7,21 @@ tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
 ---
+This page will go through all the settings available in Sonarr and how they work.  This is not meant to be a comprehensive "how to set up Sonarr." If you want that, please use the [Quick Start](/sonarr/quick-start-guide) page instead.
+
+## Menu options
+
+To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
+
+![settings_1_menu.png](/assets/sonarr/settings_1_menu.png)
+
+Also, note that for each individual settings page, there are some options at the top of the menu:
+
+![settings_2_topmenu.png](/assets/sonarr/settings_2_topmenu.png)
+
+- Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
+
+- You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
 
 ## Media Management
 
@@ -265,7 +280,7 @@ Name for the `Specials` (Season) folder
 > Note: This is only applicable if you have `Bluray-1080`p higher than `WEB 1080p` within the `Qualities` section
 {.is-warning}
 
-- `Qualities` - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted. 
+- `Qualities` - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
   - `Edit Groups` - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 
 > By default the qualities are set from lowest (bottom) to highest (top)
@@ -297,7 +312,7 @@ Name for the `Specials` (Season) folder
   - `Wrench icon` - This will allow you to edit the delay profile
   - `Plus icon` - Create a new delay profile
 
-##### Uses
+#### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
@@ -322,29 +337,29 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ###### Example 1
 
-  - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
+- In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
-  - At 11:00pm the first release for an Episode is detected by Sonarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Sonarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
+- At 11:00pm the first release for an Episode is detected by Sonarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Sonarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
 
-  - At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradable and Sonarr will stop looking for new releases.
+- At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradable and Sonarr will stop looking for new releases.
 
-  - At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
+- At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
 
 ###### Example 2
 
-  - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
+- This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
-  - At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
+- At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
 ###### Example 3
 
-  - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
+- A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
 
-  - You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
+- You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
 
-  - If the first release that is detected is from Usenet, Sonarr will download it immediately.
+- If the first release that is detected is from Usenet, Sonarr will download it immediately.
 
-  - If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
+- If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
 ### Release Profiles
 
@@ -518,6 +533,20 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
 ### Download Clients
+
+Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+
+![downloadclients.png](/assets/sonarr/downloadclients.png)
+
+Sonarr supports integration with the following Usenet download clients:
+
+![usenetclients.png](/assets/sonarr/usenetclients.png)
+
+And the following Torrent clients:
+
+![torrentclients.png](/assets/sonarr/torrentclients.png)
+
+Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
 #### Usenet Client Settings
 

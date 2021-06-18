@@ -7,6 +7,21 @@ tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
 ---
+This page will go through all the settings available in Radarr and how they work.  This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](/radarr/quick-start-guide) page instead.
+
+## Menu options
+
+To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
+
+![settings_1_menu.png](/assets/radarr/settings_1_menu.png)
+
+Also, note that for each individual settings page, there are some options at the top of the menu:
+
+![settings_2_topmenu.png](/assets/radarr/settings_2_topmenu.png)
+
+- Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
+
+- You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
 
 ## Media Management
 
@@ -500,6 +515,20 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
 ### Download Clients
+
+Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+
+![downloadclients.png](/assets/radarr/downloadclients.png)
+
+Radarr supports integration with the following Usenet download clients:
+
+![usenetclients.png](/assets/radarr/usenetclients.png)
+
+And the following Torrent clients:
+
+![torrentclients.png](/assets/radarr/torrentclients.png)
+
+Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
 #### Usenet Client Settings
 

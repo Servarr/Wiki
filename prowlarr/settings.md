@@ -38,6 +38,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Enter a name for this indexer.
 - Select your sync level for this indexer.
+
 > Note: Indexers are synced based on the capibilities/categories they claim to support. If an indexer supports only `tv` categories it will be synced to Sonarr.
 {.is-info}
 
