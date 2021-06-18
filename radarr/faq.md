@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-17T22:41:27.424Z
+date: 2021-06-18T00:41:33.287Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -327,7 +327,7 @@ See the above database is malformed entry.
 
 Then attempt to launch and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
-## Why can’t see my files on a remote server?
+## Why can’t I see my files on a remote server?
 
 - In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
