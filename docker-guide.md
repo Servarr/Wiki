@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-18T10:48:03.065Z
+date: 2021-06-18T11:13:18.406Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -27,7 +27,7 @@ Ideally, each software runs as its own user user and they’re all part of a sha
 
 #### UMASK
 
-Many docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you arre using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they willll be correct because you set each software up right.
+Many docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you are using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they will be correct because you set each software up right.
 
 #### PUID and PGID
 
