@@ -378,7 +378,7 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+> Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 {.is-warning}
 
 #### Using zip backup
