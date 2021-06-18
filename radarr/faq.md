@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-18T00:41:33.287Z
+date: 2021-06-18T20:17:38.510Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -294,19 +294,19 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
-\* This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
+- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
 
 ## Help, My Mac says Radarr.app is damaged and can’t be opened
 
-That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help_my_mac_says_radarr_cannot_be_opened_because_the_developer_cannot_be_verified)
+- That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-radarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 
 ## How do I request a feature for Radarr?
 
-This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
+- This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
 ## I am getting an error: Database disk image is malformed
 
-\* This means your SQLite database that stores most of the information for is corrupt.
+- This means your SQLite database that stores most of the information for is corrupt.
 
 - [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
 - You can follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
@@ -314,17 +314,17 @@ This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
 - This error may show if the database file is not writable by the user/group Radarr is running as.
 
-- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **'s config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
+- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
 
   - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
 ## I use Radarr on a Mac and it suddenly stopped working. What happened?
 
-Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
+- Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 
-See the above database is malformed entry.
+- See the above database is malformed entry.
 
-Then attempt to launch and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
+- Then attempt to launch and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
 ## Why can’t I see my files on a remote server?
 
@@ -364,16 +364,16 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
 #### Using built-in backup
 
 1. Go to System: Backup in the UI
-2. Click the Backup button
-3. Download the zip after the backup is created for safekeeping
+1. Click the Backup button
+1. Download the zip after the backup is created for safekeeping
 
 #### Using file system directly
 
 1. Find the location of the AppData directory for Radarr
       - Via the UI go to System \> About
       - [Radarr Appdata Directory](/radarr/appdata-directory)
-2. Stop  - This will prevent the database from being corrupted
-3. Copy the contents to a safe location
+1. Stop  - This will prevent the database from being corrupted
+1. Copy the contents to a safe location
 
 ### Restoring from Backup
 
@@ -383,39 +383,39 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
 #### Using zip backup
 
 1. Re-install Radarr
-2. Run Radarr
-3. Navigate to System \> Backup
-4. Select Restore Backup
-5. Select Choose File
-6. Select your backup zip file
-7. Select Restore
+1. Run Radarr
+1. Navigate to System \> Backup
+1. Select Restore Backup
+1. Select Choose File
+1. Select your backup zip file
+1. Select Restore
 
 #### Using file system backup
 
 1. Re-install Radarr
-2. Run Radarr once to get the AppData directory location
-3. Stop Radarr
-4. Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
-5. Restore from your backup
-6. Start Radarr
-7. As long as the paths are the same, everything will pick up where it left off
+1. Run Radarr once to get the AppData directory location
+1. Stop Radarr
+1. Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
+1. Restore from your backup
+1. Start Radarr
+1. As long as the paths are the same, everything will pick up where it left off
 
 - **Restore for Synology NAS**
 
 **CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
 
 1. Re-install Radarr  
-2. Run once to get the AppData directory location  
-3. Stop Radarr
-4. Connect to the Synology NAS through SSH and log in as root  
-5. Execute the following commands:
+1. Run once to get the AppData directory location  
+1. Stop Radarr
+1. Connect to the Synology NAS through SSH and log in as root  
+1. Execute the following commands:
 
     ```shell
         rm -r /usr/local/Radarr/var/.config/Radarr/Radarr.db*
         cp -f /tmp/Radarr_backup/* /usr/local/Radarr/var/.config/Radarr/
     ```
 
-6. Update permissions on the files:
+1. Update permissions on the files:
 
     ```shell
         cd /usr/local/Radarr/var/.config/Radarr/
@@ -424,7 +424,7 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
     ```
 
     On some installations, the user is different: `chown -R sc-``:``  *`
-7. Start
+1. Start
 
 ## Help I have locked my self out
 
@@ -499,31 +499,30 @@ No. Radarr will talk to your download client to determine where the files have b
 
 - If your download client and are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
-## VPNs, Jackett, and the \* ARRs
+## VPNs, Jackett, and the * ARRs
 
-Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
+- Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-In other words, putting the \* Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \* Arrs, but when: image providers will block you and cloudflare is in front of most of *arr servers (updates, metadata, etc.) and liable to block you too**
+- In other words, putting the  *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
 
-In addition, some private trackers \* ban\* for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
+- In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
 
 ## Jackett's /all Endpoint
 
-The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
 
-**May 2021 Update: It is likely support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+- **May 2021 Update: It is likely Sonarr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 
-[Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
-Using the all endpoint has no advantages (besides reduced management overhead), only disadvantages:
+- Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (\>= 100000) can't be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
 
-- you lose control over indexer specific settings (categories, search modes, etc.)
-- mixing search modes (IMDB, query, etc.) might cause low-quality results
-- indexer specific categories (\>= 100000) can't be used.
-- slow indexers will slow down the overall result
-- total results are limited to 1000
-
-Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
+- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you don't get any results.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
