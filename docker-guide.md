@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-18T12:21:38.703Z
+date: 2021-06-18T12:24:42.439Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -23,11 +23,11 @@ This article will not show you specifics about the best Docker setup, but it des
 
 #### Permissions
 
-Ideally, each software runs as its own user and they are all part of a shared group with folder permissions set to `775` (`drwxrwxr-x`) and files set to `664` (`-rw-rw-r--`), which is a umask of `002`. A sane alternative to this is a single shared user, which would use `755` and `644` which is a umask of `022`. You can restrict permissions even more by denying read from “other”, which would be a umask of `007` for a user per daemon or `077` for a single shared user. For a deeper explanation, try the Arch Linux wiki articles about [file permissions and attributes](https://wiki.archlinux.org/index.php/File_permissions_and_attributes) and [Umask](https://wiki.archlinux.org/index.php/Umask).
+Ideally, each software runs as its own user and they are all part of a shared group with folder permissions set to `775` (`drwxrwxr-x`) and files set to `664` (`-rw-rw-r--`), which is a umask of `002`. A sane alternative to this is a single shared user, which would use `755` and `644` which is a umask of `022`. You can restrict permissions even more by denying read from “other”, which would be a umask of `007` for a user per daemon or `077` for a single shared user. For a deeper explanation, try the Arch Linux wiki articles about [file permissions and attributes](https://wiki.archlinux.org/index.php/File_permissions_and_attributes) and [UMASK](https://wiki.archlinux.org/index.php/Umask).
 
 #### UMASK
 
-Many Docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you are using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they will be correct because you set each software up right.
+Many Docker images accept `-e UMASK=002` as an environment variable and some software can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr), inside the container. This will ensure that files and folders created by *one* can be read and written by the others. If you are using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they will be correct because you set each software up right.
 
 #### PUID and PGID
 
