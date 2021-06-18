@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-09T15:25:37.193Z
+date: 2021-06-18T10:48:03.065Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -10,14 +10,14 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 ## The Best Docker Setup
 
-**TL; DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume for Sonarr, Radarr and Lidarr so the download folder and library folder are on the same file system which makes hard links and instant moves possible. And most of all, ignore *most* of the Docker image’s path documentation!
+**TL; DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume for Sonarr, Radarr, Lidarr and Readarr so the download folder and library folder are on the same file system which makes hard links and instant moves possible. And most of all, ignore *most* of the Docker image’s path documentation!
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
 
 ### Introduction
 
-This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but difficult to understand and explain.
+This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each Docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but difficult to understand and explain.
 
 ### Multiple users and a shared group
 
@@ -27,7 +27,7 @@ Ideally, each software runs as its own user user and they’re all part of a sha
 
 #### UMASK
 
-Many docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you’re using existing folders and files, you’ll need to fix their current ownership and permissions too, but going forward they’ll be correct because you set each software up right.
+Many docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you arre using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they willll be correct because you set each software up right.
 
 #### PUID and PGID
 
