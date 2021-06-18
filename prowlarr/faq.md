@@ -83,7 +83,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 This means your SQLite database that stores most of the information for Prowlarr is corrupt.
 
 - Try restoring from a backup
-- You can follow our instructions on [this wiki](/useful-tools#recovering_a_corrupt_db).
+- You can follow our instructions on [this wiki](/useful-tools#recovering-a-corrupt-db).
 - Alternatively, [this guide](http://techblog.dorogin.com/2011/05/SQLiteexception-database-disk-image-is.html) tells you how to copy the contents from the corrupt database into a new one.
 
 This error may show if the database file is not writable by the user/group Prowlarr is running as.
