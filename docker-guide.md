@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-18T12:18:49.256Z
+date: 2021-06-18T12:20:27.556Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -17,7 +17,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 ### Introduction
 
-This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each Docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but difficult to understand and explain.
+This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each Docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but not so easy to understand and explain.
 
 ### Multiple users and a shared group
 
