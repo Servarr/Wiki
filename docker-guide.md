@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-18T12:24:42.439Z
+date: 2021-06-18T12:37:58.963Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -35,7 +35,7 @@ Many Docker images also take a `-e PUID=123` and `-e PGID=321` that lets you cha
 
 #### Example
 
-You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/Docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configured user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. Folders would be `775`, files `664` and the user/group are a little tricky because *inside* the container, they have a different name. Maybe `abc` or `nobody`. I’d leave all these blank unless you find you need them for some reason.
+You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/Docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configure the user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. Folders would be `775`, files `664` and the user/group are a little tricky because *inside* the container, they have a different name. Maybe `abc` or `nobody`. I’d leave all these blank unless you find you need them for some reason.
 
 ### Single user and optional shared group
 
@@ -52,7 +52,7 @@ Don’t forget that your `/config` volume will *also* need to have correct owner
 
 The easiest and most important detail is to create unified path definitions across all the containers.
 
-If you’re wondering why hard links aren’t working or why a simple move is taking far longer than it should, this section explains it. The paths you use on the *inside* matter. Because of how Docker’s volumes work, passing in two volumes such as the commonly suggested `/tv` and `/downloads` makes them look like two file systems, even if they aren’t. This means hard links won’t work *and* instead of an instant move, a slower and more io intensive copy + delete is used. If you have multiple download clients because you’re using torrents and usenet, having a single `/downloads` path means they’ll be mixed up. Because the Radarr in one container will ask the NZBGet in its own container where files are, using the same path in both means it will all just work. If you don’t, you’d need to fix it with a remote path map.
+If you’re wondering why hardlinks aren’t working or why a simple move is taking far longer than it should, this section explains it. The paths you use on the *inside* matter. Because of how Docker’s volumes work, passing in two volumes such as the commonly suggested `/tv` and `/downloads` makes them look like two different file systems, even if they are a single file system outside the container. This means hardlinks won’t work *and* instead of an instant/atomic move, a slower and more IO intensive copy+delete is used. If you have multiple download clients because you’re using torrents and usenet, having a single `/downloads` path means they’ll be mixed up. Because the Radarr in one container will ask the NZBGet in its own container where files are, using the same path in both means it will all just work. If you don’t, you’d need to fix it with a remote path map.
 
 So pick *one* path layout and use it for all of them. I’m a fan of `/data`, but there are other great names like `/shared`, `/media` or `/dvr`. If this can be the same on the outside *and* inside, your setup will be simpler: one path to remember or if integrating Docker and native software. But if not, that’s fine too. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
 
@@ -62,7 +62,7 @@ It is also important to remember that you’ll need to setup or re-configure pat
 
 What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
 
-This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies` and `music` subfolders, this is your library and what you’d pass to Plex, Kodi, or Emby.
+This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies` and `music` subfolders. This `media` folder is your library and what you’d pass to Plex, Kodi, Emby or Jellyfin.
 
 ```none
     data
@@ -150,7 +150,7 @@ If you use the latest version of the abandoned [RadarrSync](https://github.com/S
 
 ### Running containers using
 
-#### Docker-compose
+#### Docker Compose
 
 This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is Docker’s own [Get started with Docker Compose](https://docs.Docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/Docker-autocompose](#get-Docker-compose) to convert `docker run` commands into a single `Docker-compose.yml` file.
 
