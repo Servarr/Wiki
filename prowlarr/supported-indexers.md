@@ -8,7 +8,8 @@ editor: markdown
 dateCreated: 2021-06-17T21:08:26.444Z
 ---
 
-# Supported Indexers
+## Supported Indexers
+
 - As of Build `0.1.0.471` / Commit `210311cb38ca7d209feacacff8db7f54a1c4277c`
 
 |Indexer|Type|Protocol|Description|

@@ -53,10 +53,9 @@ The upgrade procedure for Mono varies per platform.
 > Mono is no longer supported starting in version 4.0
 {.is-info}
 
-
 ##### Currently installed SQLite version is not supported
 
-Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0. 
+Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
 > Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 {.is-info}
 
@@ -92,7 +91,7 @@ Cloudflare needs websockets enabled.
 
 Nginx requires the following addition to the location block for the app:
 
-```
+```none
  proxy_http_version 1.1;
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
@@ -104,7 +103,7 @@ Nginx requires the following addition to the location block for the app:
 
 For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 
-```
+```none
 RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
 RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
@@ -113,7 +112,7 @@ RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
 For Caddy (V1) use this:
 Note: you'll also need to add the websocket directive to your radarr configuration
 
-```
+```none
  proxy /radarr 127.0.0.1:7878 {
      websocket
      transparent

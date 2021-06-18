@@ -91,7 +91,7 @@ Cloudflare needs websockets enabled.
 
 Nginx requires the following addition to the location block for the app:
 
-```
+```none
  proxy_http_version 1.1;
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
@@ -103,17 +103,17 @@ Nginx requires the following addition to the location block for the app:
 
 For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 
-```
+```none
 RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
-RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
+RewriteRule /(.*) ws://127.0.0.1:8787/$1 [P,L]
 ```
 
 For Caddy (V1) use this:
 Note: you'll also need to add the websocket directive to your readarr configuration
 
-```
- proxy /readarr 127.0.0.1:7878 {
+```none
+ proxy /readarr 127.0.0.1:8787 {
      websocket
      transparent
  }

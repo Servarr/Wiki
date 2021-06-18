@@ -104,7 +104,7 @@ We do everything we can to prevent issues when upgrading, but they occur, this w
 
 - **Migration Issue** - Migration errors won't be identical, but here is an example:
 
-```
+```none
 14-2-4 18:56:49.5|Info|MigrationLogger|\*\*\* 36: update\_with\_quality\_converters migrating \*\*\*
 
 14-2-4 18:56:49.6|Error|MigrationLogger|SQL logic error or missing database duplicate column name: Items
@@ -291,13 +291,13 @@ This is caused by the indexer using a SSL protocol not supported by .net 4.5, to
 
  seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
-```
+```none
     System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.Net.WebException: The request timed out
 ```
 
 And you can see the following in the trace log file:
 
-```
+```none
     <DATE&TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
 ```
 

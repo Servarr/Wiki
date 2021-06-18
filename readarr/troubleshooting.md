@@ -35,7 +35,7 @@ What you need to do is:
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
 - **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/readarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
-```
+```none
 
     * The flags have the following functions
     * -i: ignore case
@@ -102,7 +102,7 @@ The best place to look when won't start after an update is your log files, befor
 
 - Migration errors won't be identical, but here is an example:
 
-```
+```none
 14-2-4 18:56:49.5|Info|MigrationLogger|\*\*\* 36: update\_with\_quality\_converters migrating \*\*\*
 
 14-2-4 18:56:49.6|Error|MigrationLogger|SQL logic error or missing database duplicate column name: Items
@@ -287,13 +287,13 @@ This is caused by the indexer using a SSL protocol not supported by .net 4.5, to
 
  seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
-```
+```none
     System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.Net.WebException: The request timed out
 ```
 
 And you can see the following in the trace log file:
 
-```
+```none
     <DATE&TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
 ```
 

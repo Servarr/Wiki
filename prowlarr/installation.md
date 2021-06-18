@@ -123,7 +123,7 @@ There are many ways to manage Docker images and containers too, so installation 
 > This assumes the default port of `9696` and that you set a baseurl of `prowlarr`. It also assumes you have nginx and the application running on the same server accessible at `localhost`.
 {.is-info}
 
-```
+```none
 location /prowlarr {
   proxy_pass        http://127.0.0.1:9696/prowlarr;
   proxy_set_header Host $host;

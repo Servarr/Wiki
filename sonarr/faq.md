@@ -308,7 +308,8 @@ If Docker:
 
 ​​This means your SQLite database that stores most of the information ​​for Sonarr is corrupt.
 ​​
-​​-[Try restoring from a backup](#how-do-i-backuprestore-my-sonarr) 
+​​-[Try restoring from a backup](#how-do-i-backuprestore-my-sonarr)
+
 - You can follow [our instructions on this wiki.](useful-tools#recovering-a-corrupt-db)
 - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
 ​​
@@ -336,11 +337,12 @@ If Docker:
 ​​
 ​​- Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  
 **Solutions:**
-- Run Sonarr's service as another user that has access to that share 
-- Open the Administrative Tools \> Services window on your Windows server. 
-- Stop the Sonarr service. 
+
+- Run Sonarr's service as another user that has access to that share
+- Open the Administrative Tools \> Services window on your Windows server.
+- Stop the Sonarr service.
 - Open the Properties \> Log On dialog.
-- Change the service user account to the target user account. 
+- Change the service user account to the target user account.
 OR
 - Run Sonarr.exe using the Startup Folder
 ​​
@@ -369,6 +371,7 @@ OR
 ## How do I Backup/Restore my Sonarr?
 
 ### Backing up Sonarr
+
 ​​
 ​​ - **Using built-in backup**
 ​​

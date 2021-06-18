@@ -46,13 +46,13 @@ Radarr is written in C## (backend) and JS (frontend). The backend is built on th
 1. Navigate to the cloned directory
 1. Install the required Node Packages
 
-   ```
+   ```bash
    yarn install
    ```
 
 1. Start gulp to monitor your dev environment for any changes that need post processing using:
 
-   ```
+   ```bash
    yarn start
    ```
 
@@ -100,7 +100,7 @@ Tests can be run all at once or one at a time in VS.
 
 From command line the `test.sh` script accepts 3 parameters
 
-```
+```bash
 test.sh <PLATFORM> <TYPE> <COVERAGE>
 ```
 

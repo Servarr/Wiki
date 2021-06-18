@@ -113,7 +113,6 @@ Once you’ve clicked the `+` button to add a new indexer you’ll be presented 
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
 
-
 ### Download Clients
 
 `Settings` => `Download Clients`
