@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-18T11:14:39.465Z
+date: 2021-06-18T11:56:19.248Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -27,15 +27,15 @@ Ideally, each software runs as its own user user and they’re all part of a sha
 
 #### UMASK
 
-Many docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you are using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they will be correct because you set each software up right.
+Many Docker images accept a `-e UMASK=002` environment variable and some software inside can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr). This will ensure that files and folders created by *one* can be read and written by the others. If you are using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they will be correct because you set each software up right.
 
 #### PUID and PGID
 
-Many docker images also take a `-e PUID=123` and `-e PGID=321` that lets you change the UID/GID used inside to that of an account on the outside. If you ever peak in, you’ll find that username is something like `abc`, `nobody` or `hotio`, but because it uses the UID/GID you pass in, on the outside it looks like the expected user. If you’re using storage from another system via NFS or CIFS, it will make your life easier if *that* system also has matching users and group. Perhaps let one system pick the UID/GIDs, then re-use those on the other system, assuming they don’t conflict.
+Many Docker images also take a `-e PUID=123` and `-e PGID=321` that lets you change the UID/GID used inside to that of an account on the outside. If you ever peak in, you’ll find that username is something like `abc`, `nobody` or `hotio`, but because it uses the UID/GID you pass in, on the outside it looks like the expected user. If you’re using storage from another system via NFS or CIFS, it will make your life easier if *that* system also has matching users and group. Perhaps let one system pick the UID/GIDs, then re-use those on the other system, assuming they don’t conflict.
 
 #### Example
 
-You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configured user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. Folders would be `775`, files `664` and the user/group are a little tricky because *inside* the container, they have a different name. Maybe `abc` or `nobody`. I’d leave all these blank unless you find you need them for some reason.
+You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/Docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configured user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. Folders would be `775`, files `664` and the user/group are a little tricky because *inside* the container, they have a different name. Maybe `abc` or `nobody`. I’d leave all these blank unless you find you need them for some reason.
 
 ### Single user and optional shared group
 
@@ -54,7 +54,7 @@ The easiest and most important detail is to create unified path definitions acro
 
 If you’re wondering why hard links aren’t working or why a simple move is taking far longer than it should, this section explains it. The paths you use on the *inside* matter. Because of how Docker’s volumes work, passing in two volumes such as the commonly suggested `/tv` and `/downloads` makes them look like two file systems, even if they aren’t. This means hard links won’t work *and* instead of an instant move, a slower and more io intensive copy + delete is used. If you have multiple download clients because you’re using torrents and usenet, having a single `/downloads` path means they’ll be mixed up. Because the Radarr in one container will ask the NZBGet in its own container where files are, using the same path in both means it will all just work. If you don’t, you’d need to fix it with a remote path map.
 
-So pick *one* path layout and use it for all of them. I’m a fan of `/data`, but there are other great names like `/shared`, `/media` or `/dvr`. If this can be the same on the outside *and* inside, your setup will be simpler: one path to remember or if integrating docker and native software. But if not, that’s fine too. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
+So pick *one* path layout and use it for all of them. I’m a fan of `/data`, but there are other great names like `/shared`, `/media` or `/dvr`. If this can be the same on the outside *and* inside, your setup will be simpler: one path to remember or if integrating Docker and native software. But if not, that’s fine too. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
 
 It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr and/or Plex.
 
@@ -142,7 +142,7 @@ Sonarr, Radarr and Lidarr get everything using `-v /host/data:/data` because the
 
 There are a couple minor issues with not following the Docker image’s suggested paths.
 
-The biggest is that volumes defined in the `Dockerfile` will get created if they’re not specified, this means they’ll pile up as you delete and re-create the containers. If they end up with data in them, they can consume space unexpectedly and likely in an unsuitable place. You can find a [cleanup command](#prune-docker) in the helpful commands section below. This could also be mitigated by passing in an empty folder for all the volumes you don’t want to use, like `/data/empty:/movies` and `/data/empty:/downloads`. Maybe even put a file named `DO NOT USE THIS FOLDER` inside, to remind yourself.
+The biggest is that volumes defined in the `Dockerfile` will get created if they’re not specified, this means they’ll pile up as you delete and re-create the containers. If they end up with data in them, they can consume space unexpectedly and likely in an unsuitable place. You can find a [cleanup command](#prune-Docker) in the helpful commands section below. This could also be mitigated by passing in an empty folder for all the volumes you don’t want to use, like `/data/empty:/movies` and `/data/empty:/downloads`. Maybe even put a file named `DO NOT USE THIS FOLDER` inside, to remind yourself.
 
 Another problem is that some images are pre-configured to use the documented volumes, so you’ll need to change settings in the software inside the Docker container. Thankfully, since configuration persists outside the container this is a one time issue. You might also pick a path like `/data` or `/media` which some images already define for a specific use. It shouldn’t be a problem, but will be a little more confusing when combined with the previous issues. In the end, it is worth it for working hard links and fast moves. The consistency and simplicity are welcome side effects as well.
 
@@ -152,7 +152,7 @@ If you use the latest version of the abandoned [RadarrSync](https://github.com/S
 
 #### Docker-compose
 
-This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/docker-autocompose](#get-docker-compose) to convert `docker run` commands into a single `docker-compose.yml` file.
+This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is Docker’s own [Get started with Docker Compose](https://docs.Docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/Docker-autocompose](#get-Docker-compose) to convert `docker run` commands into a single `Docker-compose.yml` file.
 
 > The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
 {.is-warning}
@@ -207,18 +207,18 @@ This is the best option for most users, it lets you control and configure many c
 ##### Update all images and containers
 
 ```shell
-    docker-compose pull
-    docker-compose up -d
+    Docker-compose pull
+    Docker-compose up -d
 ```
 
 ##### Update individual image and container
 
 ```shell
-    docker-compose pull NAME
-    docker-compose up -d NAME
+    Docker-compose pull NAME
+    Docker-compose up -d NAME
 ```
 
-#### Docker Run
+#### docker run
 
 > Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
 {.is-warning}
@@ -251,14 +251,14 @@ This is the best option for most users, it lets you control and configure many c
 
 #### Systemd
 
-I don’t run a full Docker setup, so I manage my few Docker containers with individual systemd service files. It standardizes control and makes dependencies simpler for both native and docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
+I don’t run a full Docker setup, so I manage my few Docker containers with individual systemd service files. It standardizes control and makes dependencies simpler for both native and Docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
 
 ```shell
     ## /etc/systemd/system/thing.service
     [Unit]
     Description=Thing
-    Requires=docker.service
-    After=network.target docker.service
+    Requires=Docker.service
+    After=network.target Docker.service
 
     [Service]
     ExecStart=/usr/bin/docker run --rm \
@@ -268,7 +268,7 @@ I don’t run a full Docker setup, so I manage my few Docker containers with ind
                               -e PUID=111 -e PGID=321 -e UMASK=002 \
                               nobody/thing
 
-    ExecStop=/usr/bin/docker stop -t 30 thing
+    ExecStop=/usr/bin/Docker stop -t 30 thing
 
     [Install]
     WantedBy=default.target
@@ -279,47 +279,47 @@ I don’t run a full Docker setup, so I manage my few Docker containers with ind
 #### List running containers
 
 ```shell
-    docker ps
+    Docker ps
 ```
 
 #### Shell *inside* a container
 
 ```shell
-    docker exec -it CONTAINER_NAME /bin/bash
+    Docker exec -it CONTAINER_NAME /bin/bash
 ```
 
-For more information, see the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) documentation.
+For more information, see the [Docker exec](https://docs.Docker.com/engine/reference/commandline/exec/) documentation.
 
-#### Prune docker
+#### Prune Docker
 
 ```shell
-    docker system prune --all --volumes
+    Docker system prune --all --volumes
 ```
 
-Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
+Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [Docker system prune](https://docs.Docker.com/engine/reference/commandline/system_prune/) documentation for more details.
 
 #### Get docker run command
 
-Getting the `docker run` command from GUI managers can be hard, this docker image makes it easy for a running container ([source](https://stackoverflow.com/questions/32758793/how-to-show-the-run-command-of-a-docker-container)).
+Getting the `docker run` command from GUI managers can be hard, this Docker image makes it easy for a running container ([source](https://stackoverflow.com/questions/32758793/how-to-show-the-run-command-of-a-Docker-container)).
 
 ```shell
-    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike CONTAINER_NAME
+    docker run --rm -v /var/run/Docker.sock:/var/run/Docker.sock assaflavie/runlike CONTAINER_NAME
 ```
 
-#### Get docker-compose
+#### Get Docker-compose
 
-> Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/Misc/how-to-provide-a-docker-compose/)
+> Additionally, you may check out [TRaSH's Guide for Docker-compose](https://trash-guides.info/Misc/how-to-provide-a-Docker-compose/)
 {.is-info}
 
-Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
+Getting a `Docker-compose.yml` from running instances is possible with [red5d/Docker-autocompose](https://hub.Docker.com/r/red5d/Docker-autocompose), in case you’ve already started your containers with `docker run` or `Docker create` and want to change to `Docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `Docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
 
 ```shell
-    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock red5d/docker-autocompose CONTAINER_NAME [ANOTHER_CONTAINER_NAME] ... [ONE_MORE_CONTAINER_NAME]
+    docker run --rm -v /var/run/Docker.sock:/var/run/Docker.sock red5d/Docker-autocompose CONTAINER_NAME [ANOTHER_CONTAINER_NAME] ... [ONE_MORE_CONTAINER_NAME]
 ```
 
 #### Troubleshoot networking
 
-Most Docker images don’t have many useful tools in them for troubleshooting, but you can [attach a network troubleshooting type image](https://success.docker.com/article/troubleshooting-container-networking) to an existing container to help with that.
+Most Docker images don’t have many useful tools in them for troubleshooting, but you can [attach a network troubleshooting type image](https://success.Docker.com/article/troubleshooting-container-networking) to an existing container to help with that.
 
 ```shell
     docker run -it --rm --network container:CONTAINER_NAME nicolaka/netshoot
@@ -366,20 +366,20 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
      Birth: 2020-09-11 11:55:43.803327144 -0500
 ```
 
-### Interesting docker images
+### Interesting Docker images
 
-- [rasmunk/sshfs](https://hub.docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/docker-volume-sshfs](https://github.com/rasmunk/docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.docker.com/p/vieux/sshfs).
-- [hotio’s](https://hub.docker.com/u/hotio) [sonarr](https://hub.docker.com/r/hotio/sonarr), [radarr](https://hub.docker.com/r/hotio/radarr) and [lidarr](https://hub.docker.com/r/hotio/lidarr) images let you run the built in version *or* specify an alternative via environment variable. The documentation and Dockerfile also don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
-- [hotio’s](https://hub.docker.com/u/hotio) [ombi](https://hub.docker.com/r/hotio/ombi), [jackett](https://hub.docker.com/r/hotio/jackett), [nzbhydra2](https://hub.docker.com/r/hotio/nzbhydra2) and [bazarr](https://hub.docker.com/r/hotio/bazarr) are useful too, but don’t really require any special permissions or paths.
-- [hotio’s](https://hub.docker.com/u/hotio) [unpackerr](https://hub.docker.com/r/hotio/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
-- [binhex’s](https://hub.docker.com/u/binhex) [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [SABnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/) and [NZBGet](https://hub.docker.com/r/binhex/arch-nzbget/).
-- [binhex’s](https://hub.docker.com/u/binhex) [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/), [radarr](https://hub.docker.com/r/binhex/arch-radarr/) and [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/) images suggest default paths that don’t allow for hard linking, instead follow the process described above and pass in a single volume.
-- [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained.
-- [pyouroboros/ouroboros](https://hub.docker.com/r/pyouroboros/ouroboros) or [containrrr/watchtower](https://hub.docker.com/r/containrrr/watchtower) automatically update your running Docker containers to the latest available image. These are not recommended if you use Docker Compose.
+- [rasmunk/sshfs](https://hub.Docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/Docker-volume-sshfs](https://github.com/rasmunk/Docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.Docker.com/p/vieux/sshfs).
+- [hotio’s](https://hub.Docker.com/u/hotio) [sonarr](https://hub.Docker.com/r/hotio/sonarr), [radarr](https://hub.Docker.com/r/hotio/radarr) and [lidarr](https://hub.Docker.com/r/hotio/lidarr) images let you run the built in version *or* specify an alternative via environment variable. The documentation and Dockerfile also don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
+- [hotio’s](https://hub.Docker.com/u/hotio) [ombi](https://hub.Docker.com/r/hotio/ombi), [jackett](https://hub.Docker.com/r/hotio/jackett), [nzbhydra2](https://hub.Docker.com/r/hotio/nzbhydra2) and [bazarr](https://hub.Docker.com/r/hotio/bazarr) are useful too, but don’t really require any special permissions or paths.
+- [hotio’s](https://hub.Docker.com/u/hotio) [unpackerr](https://hub.Docker.com/r/hotio/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
+- [binhex’s](https://hub.Docker.com/u/binhex) [qbittorrent](https://hub.Docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.Docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.Docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [SABnzbd](https://hub.Docker.com/r/binhex/arch-sabnzbd/) and [NZBGet](https://hub.Docker.com/r/binhex/arch-nzbget/).
+- [binhex’s](https://hub.Docker.com/u/binhex) [sonarr](https://hub.Docker.com/r/binhex/arch-sonarr/), [radarr](https://hub.Docker.com/r/binhex/arch-radarr/) and [lidarr](https://hub.Docker.com/r/binhex/arch-lidarr/) images suggest default paths that don’t allow for hard linking, instead follow the process described above and pass in a single volume.
+- [linuxserver.io’s](https://hub.Docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained.
+- [pyouroboros/ouroboros](https://hub.Docker.com/r/pyouroboros/ouroboros) or [containrrr/watchtower](https://hub.Docker.com/r/containrrr/watchtower) automatically update your running Docker containers to the latest available image. These are not recommended if you use Docker Compose.
 
 ### Custom Docker Network and DNS
 
-One interesting feature of a [custom Docker network](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks) is that it gets its own DNS server. If you create a bridge network for your containers, you can use their hostnames in your configuration. For example, if you `docker run --network=isolated --hostname=deluge binhex/arch-deluge` and `docker run --network=isolated --hostname=radarr binhex/arch-radarr`, you can then configure the Download Client in Radarr to point at just `deluge` and it’ll work *and* communicate on its own private network. Which means if you wanted to be even more secure, you could *stop* forwarding that port too. If you put your reverse proxy container on the same network, you can even stop forwarding the web interface ports and make them even more secure.
+One interesting feature of a [custom Docker network](https://docs.Docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks) is that it gets its own DNS server. If you create a bridge network for your containers, you can use their hostnames in your configuration. For example, if you `docker run --network=isolated --hostname=deluge binhex/arch-deluge` and `docker run --network=isolated --hostname=radarr binhex/arch-radarr`, you can then configure the Download Client in Radarr to point at just `deluge` and it’ll work *and* communicate on its own private network. Which means if you wanted to be even more secure, you could *stop* forwarding that port too. If you put your reverse proxy container on the same network, you can even stop forwarding the web interface ports and make them even more secure.
 
 ### Common Problems
 
