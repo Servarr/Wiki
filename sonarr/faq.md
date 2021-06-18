@@ -254,8 +254,8 @@ Please note that if the series type is set to anime and none of your ​​enabl
 
 ||`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json)|
 |---|---|---|
-|[hotio](https://hub.docker.com/r/hotio/sonarr)|`hotio/sonarr:release`|`hotio/sonarr:nightly`|
-|[LinuxServer.io](https://hub.docker.com/r/linuxserver/sonarr)|`linuxserver/sonarr:latest`|`linuxserver/sonarr:develop`|
+|[hotio](https://hotio.dev/containers/sonarr)|`hotio/sonarr:release`|`hotio/sonarr:nightly`|
+|[LinuxServer.io](https://hotio.dev/containers/sonarr)|`linuxserver/sonarr:latest`|`linuxserver/sonarr:develop`|
 
 ## Can I update Sonarr inside my Docker container?
 

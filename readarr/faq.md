@@ -99,7 +99,7 @@ As of 2021-06-09 the logic is as follows:
 
 ||`master` (stable)|`develop` (beta)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
 |---|---|---|---|
-|[hotio](https://hub.docker.com/r/hotio/readarr)|no stable release yet|no beta release yet|`hotio/readarr:nightly`|
+|[hotio](https://hotio.dev/containers/readarr)|no stable release yet|no beta release yet|`hotio/readarr:nightly`|
 
 ## Can I update Readarr inside my Docker container?
 

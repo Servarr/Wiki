@@ -132,7 +132,7 @@ Lidarr defaults to only bringing in studio albums for each artist. However, you 
 
 ||`master` (stable)|`develop` (beta)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/nightly/VERSION.json)|
 |---|---|---|---|
-|[hotio](https://hub.docker.com/r/hotio/lidarr)|no stable release yet|no beta release yet|`hotio/lidarr:nightly`|
+|[hotio](https://hotio.dev/containers/lidarr)|no stable release yet|no beta release yet|`hotio/lidarr:nightly`|
 
 ## Can I update Lidarr inside my Docker container?
 
