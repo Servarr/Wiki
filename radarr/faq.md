@@ -347,7 +347,7 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
 
 ## Mapped Network Drives vs UNC Paths
 
-- Using mapped network drives generally doesn’t work very well, especially when is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies\`.
+- Using mapped network drives generally doesn’t work very well, especially when is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies`.
 
   - A key point to remember is that gets path information from the downloader, so you’ll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
@@ -378,7 +378,7 @@ Then attempt to launch and see if it works. If it does not work, you'll need fur
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+> Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 {.is-warning}
 
 #### Using zip backup
@@ -494,7 +494,7 @@ No. Radarr will talk to your download client to determine where the files have b
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-- Your download client stopped working and you're getting an error like \`Localhost is an invalid certificate\`?
+- Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
 - Radarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
@@ -512,7 +512,7 @@ In addition, some private trackers \* ban\* for browsing from a VPN, which is ho
 
 The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
 
-**May 2021 Update: It is likely support will be phased out for the jackett \`/all\` endpoint in the future due to the fact it only causes issues.**
+**May 2021 Update: It is likely support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 
 [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 

@@ -157,11 +157,11 @@ Ensure SSL encryption is not turned on if you're using both your instance and yo
 
 #### Can’t see share on Windows
 
-The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/sonarr/faq#why_can’t_sonarr_see_my_files_on_a_remote_server?) for details.
+The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/sonarr/faq#why-cant-i-see-my-files-on-a-remote-server) for details.
 
 #### Mapped network drives are not reliable
 
-While mapped network drives like `X:\` are convenient, they aren’t as reliable as UNC paths like `\\server\share` and they’re also not available before login. Setup and your download client(s) so that they use UNC paths as needed. If your library is on a share, you’d make sure your root folders are using UNC paths. If your download client sends to a share, that is where you’ll need to configure UNC paths since gets the download path from the download client. It is fine to keep your mapped network drives to use yourself, just don’t use them for automation.
+While mapped network drives like `X:` are convenient, they aren’t as reliable as UNC paths like `\\server\share` and they’re also not available before login. Setup and your download client(s) so that they use UNC paths as needed. If your library is on a share, you’d make sure your root folders are using UNC paths. If your download client sends to a share, that is where you’ll need to configure UNC paths since gets the download path from the download client. It is fine to keep your mapped network drives to use yourself, just don’t use them for automation.
 
 #### Docker and user, group, ownership, permissions and paths
 

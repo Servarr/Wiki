@@ -142,7 +142,7 @@ Sonarr, Radarr and Lidarr get everything using `-v /host/data:/data` because the
 
 There are a couple minor issues with not following the Docker image’s suggested paths.
 
-The biggest is that volumes defined in the `Dockerfile` will get created if they’re not specified, this means they’ll pile up as you delete and re-create the containers. If they end up with data in them, they can consume space unexpectedly and likely in an unsuitable place. You can find a [cleanup command](https://old.reddit.com/r/usenet/wiki/docker#wiki_prune_docker) in the helpful commands section below. This could also be mitigated by passing in an empty folder for all the volumes you don’t want to use, like `/data/empty:/movies` and `/data/empty:/downloads`. Maybe even put a file named `DO NOT USE THIS FOLDER` inside, to remind yourself.
+The biggest is that volumes defined in the `Dockerfile` will get created if they’re not specified, this means they’ll pile up as you delete and re-create the containers. If they end up with data in them, they can consume space unexpectedly and likely in an unsuitable place. You can find a [cleanup command](#prune-docker) in the helpful commands section below. This could also be mitigated by passing in an empty folder for all the volumes you don’t want to use, like `/data/empty:/movies` and `/data/empty:/downloads`. Maybe even put a file named `DO NOT USE THIS FOLDER` inside, to remind yourself.
 
 Another problem is that some images are pre-configured to use the documented volumes, so you’ll need to change settings in the software inside the Docker container. Thankfully, since configuration persists outside the container this is a one time issue. You might also pick a path like `/data` or `/media` which some images already define for a specific use. It shouldn’t be a problem, but will be a little more confusing when combined with the previous issues. In the end, it is worth it for working hard links and fast moves. The consistency and simplicity are welcome side effects as well.
 
@@ -152,7 +152,7 @@ If you use the latest version of the abandoned [RadarrSync](https://github.com/S
 
 #### Docker-compose
 
-This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/docker-autocompose](https://old.reddit.com/r/usenet/wiki/docker#wiki_get_docker-compose)to convert `docker run` commands into a single `docker-compose.yml` file.
+This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/docker-autocompose](#get-docker-compose) to convert `docker run` commands into a single `docker-compose.yml` file.
 
 > The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
 {.is-warning}
@@ -311,7 +311,7 @@ Getting the `docker run` command from GUI managers can be hard, this docker imag
 > Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/Misc/how-to-provide-a-docker-compose/)
 {.is-info}
 
-Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of \`docker ps\`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
+Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
 
 ```shell
     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock red5d/docker-autocompose CONTAINER_NAME [ANOTHER_CONTAINER_NAME] ... [ONE_MORE_CONTAINER_NAME]

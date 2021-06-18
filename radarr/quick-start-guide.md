@@ -82,12 +82,12 @@ Don’t forget to save your changes
 
 Here you’ll be allowed to set profiles for which you can have for the quality of movie you’re looking to download Here you'll be allowed to set profiles for the quality of movie you're looking to download
 
-More info [Settings -> Profiles](https://wikijs.servarr.com/radarr_Settings#Profiles).
+More info [Settings -> Profiles](/radarr/settings#profiles).
 
 We recommend you to create your own profiles and only select the Quality Sources you actually want.
 
-> More info [Settings -> Profiles](https://wikijs.servarr.com/radarr_Settings#Profiles).
-> To see what the difference is between the Quality Sources look [at our Quality Definitions](https://wikijs.servarr.com/radarr_Settings#Qualities_Defined).
+> More info [Settings -> Profiles](/radarr/settings#profiles).
+> To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}
 
 ### Quality
@@ -96,7 +96,7 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 ![Radarr-settings-quality.png](/assets/radarr/Radarr-settings-quality.png)
 
-Here you’re able to change/fine tune the min and max size of your wanted media files (when using usenet keep in mind the RAR/PAR2 files)
+Here you’re able to change/fine tune the min and max size of your wanted media files (when using Usenet keep in mind the RAR/PAR2 files)
 
 > If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/) for a tested example.
 {.is-info}
@@ -113,8 +113,6 @@ Once you’ve clicked the `+` button to add a new indexer you’ll be presented 
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
 
-> More information on Indexers and Trackers can be found [on our definitions page](https://wiki.servarr.com/Definitions#Indexers.2FTrackers)
-{.is-info}
 
 ### Download Clients
 
