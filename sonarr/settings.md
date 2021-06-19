@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-19T03:31:25.177Z
+date: 2021-06-19T03:38:19.261Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -448,14 +448,20 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Supported Indexers
 
-#### Usenet
+#### Indexer Settings
+
+- Once you've clicked the `+` button to add a new indexer you'll be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
+
+- There are two sections here: Usenet and Torrents. Based upon what download client you'll be using you'll want to select the type of indexer you'll be going with.
+
+##### Usenet
 
 - `Newznab` - Newznab is a standardized API used by many usenet indexing sites.
 Many presets are available, but all require an API key to be accessible.
 - [Omgwtfnzbs](https://omgwtfnzbs.me/) - This indexer also supports newznab and is available as one of the above presets.
 - [Fanzub](http://fanzub.com/) - Indexer for Japanese Media (Anime) exclusively.
 
-#### Torrents
+##### Torrents
   - [BroadcastheNet](https://broadcasthe.net/) - Private Tracker
   - [Filelist](https://filelist.io) - Private Tracker
   - [HDBits](https://hdbits.org/) - Private Tracker
@@ -475,61 +481,56 @@ Many presets are available, but all require an API key to be accessible.
 > We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
 {.is-warning}
 
-#### Indexer Settings
+###### Usenet Indexer Configuration
 
-- Once you've clicked the + button to add a new indexer you'll be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
-
-- There are two sections here: Usenet and Torrents. Based upon what download client you'll be using you'll want to select the type of indexer you'll be going with.
-
-##### Usenet Indexer Configuration
-
-- Newznab - Here you'll find presets of popular usenet indexers (that are pre-filled out, all you'll need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-- An excellent software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
-- Regardless of if you select a pre filled out indexer or a custom indexer setup you'll be presented with a new window to input all your settings
+- `Newznab` - Here you'll find presets of popular usenet indexers (that are pre-filled out, all you'll need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+  - An excellent software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
+- Regardless if you select a pre-filled out indexer or a custom indexer setup you'll be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2)
-- Name - The name of the indexer in Sonarr
-- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
-- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
-- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
-- URL - The indexer provided URL of the indexer such as <https://api.nzbgeek.info>.
-- API Path - The indexer provided path to the api. This is typically `/api`
-- API Key - The indexer provided key to access the API.
-- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Additional Parameters - Additional Newznab parameters to add to the query link
-- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+  - `Name` - The name of the indexer in Sonarr
+  - `Enable RSS` - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+  - `Enable Automatic Search` - If enabled, use this indexer for automatic searches including Search on Add
+  - `Enable Interactive Search` - If enabled, use this indexer for manual interactive searches.
+  - `URL` - The indexer provided URL of the indexer such as <https://api.nzbgeek.info>.
+  - `API Path` - The indexer provided path to the api. This is typically `/api`
+  - `API Key` - The indexer provided key to access the API.
+  - `Categories` - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+  - `Anime Categories` - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+  - `Additional Parameters` - Additional Newznab parameters to add to the query link
+  - `Indexer Priority` - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-##### Torrent Tracker Configuration
+###### Torrent Tracker Configuration
 
-- As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
+- As with Usenet there are an assortment of pre-filled out Torrent Tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you'll need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
-- Name - The name of the indexer in Sonarr
-- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
-- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
-- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
-- URL - The indexer provided URL of the indexer such as <http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/>.
-- API Path - The indexer provided path to the api. This is typically `/api`
-- API Key - The indexer provided key to access the API.
-- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Additional Parameters - Additional Torznab parameters to add to the query link
-- Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
-- Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+  - `Name` - The name of the indexer in Sonarr
+  - `Enable RSS` - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+  - `Enable Automatic Search` - If enabled, use this indexer for automatic searches including Search on Add
+  - `Enable Interactive Search` - If enabled, use this indexer for manual interactive searches.
+  - `URL` - The indexer provided URL of the indexer such as <http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/>.
+  - `API Path` - The indexer provided path to the api. This is typically `/api`
+  - `API Key` - The indexer provided key to access the API.
+  - `Categories` - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+  - `Anime Categories` - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+  - `Additional Parameters` - Additional Torznab parameters to add to the query link
+  - `Minimum Seeders` - The minimum number of seeders required for a release from this tracker to be grabbed.
+  - `Seed Ratio` - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+  - `Seed Time` - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+  - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+  - `Indexer Priority` - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
 #### Options
 
-- Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
-- Retention - Usenet only: Set to zero to set for unlimited retention
-- Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
-- RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
+- `Minimum Age` - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
+- `Retention` - Usenet only: Set to zero to set for unlimited retention
+- `Maximum Size` - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
+- `RSS Sync interval` - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
   - Please see [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
-  - Note: If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
+
+>If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
 
 ## Download Clients
 
