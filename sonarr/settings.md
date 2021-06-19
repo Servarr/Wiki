@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-19T03:23:40.602Z
+date: 2021-06-19T03:31:25.177Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -444,36 +444,35 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Indexers
 
-- Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files. If you're curious on how Sonarr works with your indexer/tracker click here
+- Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files.
 
 ### Supported Indexers
 
 #### Usenet
 
-- Newznab
-  - Newznab is a standardized API used by many usenet indexing sites.
+- `Newznab` - Newznab is a standardized API used by many usenet indexing sites.
 Many presets are available, but all require an API key to be accessible.
-    - Omgwtfnzbs - This indexer also supports newznab and is available as one of the above presets. [Website](https://omgwtfnzbs.me/)
-    - Fanzub - Indexer for Japanese media (Anime) exclusively.[Website](http://fanzub.com/)
+- [Omgwtfnzbs](https://omgwtfnzbs.me/) - This indexer also supports newznab and is available as one of the above presets.
+- [Fanzub](http://fanzub.com/) - Indexer for Japanese Media (Anime) exclusively.
 
-- Torrents
-  - BroadcastheNet - Private Tracker - [Website](https://broadcasthe.net/)
-  - Filelist - Private Tracker - [Website](https://filelist.io)
-  - HDBits - Private tracker - [Website](https://hdbits.org/)
-  - IPTorrents - Private tracker, no search api. -[Website](http://www.iptorrents.com/)
-  - Nyaa - Torrent Indexer for Japanese media (Anime) exclusively. - [Website](http://www.nyaa.si/)
-  - Rarbg - [Website](https://rarbg.to)
-  - Torrent RSS Feed - Generic torrent RSS feed parser.
-  > NOTE: The RSS feed must contain a pubdate. The release size is recommended as well.
+#### Torrents
+  - [BroadcastheNet](https://broadcasthe.net/) - Private Tracker
+  - [Filelist](https://filelist.io) - Private Tracker
+  - [HDBits](https://hdbits.org/) - Private Tracker
+  - [IPTorrents](http://www.iptorrents.com/) - Private Tracker 
+  > No search API for IPTorrents {.is-info}
+  - [Nyaa](http://www.nyaa.si/) - Torrent Tracker for Japanese Media (Anime) exclusively.
+  - [Rarbg](https://rarbg.to) - Public Tracker
+  - `Torrent RSS Feed` - Generic torrent RSS feed parser.
+  > The RSS feed must contain a `pubdate`. The release size is recommended as well.
   {.is-info}
-  - Torrentleech - Private Indexer - [Website](http://torrentleech.org/)
+  - [Torrentleech](http://torrentleech.org/) - Private Indexer
+  - `Torznab` - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
+      - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
 
-  - Torznab
-    - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent rss feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same api specification is shared with nZEDb)
-    - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
-
-> Important/Disclaimer: Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments and all. Please review your tracker rules and etiquette, keep your community alive.
-We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
+> Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc. 
+> Please review your tracker rules and etiquette, keep your community alive.
+> We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
 {.is-warning}
 
 #### Indexer Settings
