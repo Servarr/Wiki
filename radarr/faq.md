@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-18T20:17:38.510Z
+date: 2021-06-19T19:02:27.583Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -274,9 +274,14 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 > Codename: buster
 
 - If you are using buster:
-  - Add the line `deb http://deb.debian.org/debian buster-backports main` to `/etc/apt/sources.list`
-  - Run `apt-get update`
-  - Install `apt-get -t buster-backports install libseccomp2`
+  - Run the following to add the backports to your sources
+  ```shell
+ echo "deb http://deb.debian.org/debian buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
+ ```
+  - Install the backport of libseccomp2
+  ```shell
+  sudo apt update && sudo apt-get -t buster-backports install libseccomp2
+  ```
 
 ## Why are lists sync times so long and can I change it?
 
