@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-20T23:37:36.079Z
+date: 2021-06-20T23:37:46.974Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -52,7 +52,7 @@ sudo apt install curl mediainfo sqlite3
 - Move the files to `/opt/` `sudo mv Radarr/ /opt`
 
 > Note: This assumes you will run as the user `radarr` and group `media`.
-{.is-info}
+{.is-warning}
 
 - Ensure ownership of the binary directory.
   `sudo chown radarr:radarr /opt/Radarr`
