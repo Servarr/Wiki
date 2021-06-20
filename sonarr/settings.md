@@ -462,21 +462,26 @@ Many presets are available, but all require an API key to be accessible.
 - [Fanzub](http://fanzub.com/) - Indexer for Japanese Media (Anime) exclusively.
 
 ##### Torrents
-  - [BroadcastheNet](https://broadcasthe.net/) - Private Tracker
-  - [Filelist](https://filelist.io) - Private Tracker
-  - [HDBits](https://hdbits.org/) - Private Tracker
-  - [IPTorrents](http://www.iptorrents.com/) - Private Tracker 
+
+- [BroadcastheNet](https://broadcasthe.net/) - Private Tracker
+- [Filelist](https://filelist.io) - Private Tracker
+- [HDBits](https://hdbits.org/) - Private Tracker
+- [IPTorrents](http://www.iptorrents.com/) - Private Tracker
+
   > No search API for IPTorrents {.is-info}
-  - [Nyaa](http://www.nyaa.si/) - Torrent Tracker for Japanese Media (Anime) exclusively.
-  - [Rarbg](https://rarbg.to) - Public Tracker
-  - `Torrent RSS Feed` - Generic torrent RSS feed parser.
+
+- [Nyaa](http://www.nyaa.si/) - Torrent Tracker for Japanese Media (Anime) exclusively.
+- [Rarbg](https://rarbg.to) - Public Tracker
+- `Torrent RSS Feed` - Generic torrent RSS feed parser.
+
   > The RSS feed must contain a `pubdate`. The release size is recommended as well.
   {.is-info}
-  - [Torrentleech](http://torrentleech.org/) - Private Indexer
-  - `Torznab` - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
-      - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
 
-> Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc. 
+- [Torrentleech](http://torrentleech.org/) - Private Indexer
+- `Torznab` - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
+  - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
+
+> Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
 > Please review your tracker rules and etiquette, keep your community alive.
 > We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
 {.is-warning}

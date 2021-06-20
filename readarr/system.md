@@ -137,10 +137,6 @@ Review your system time and ensure it is synced to an authoritative time server 
 
 MediaInfo Library could not be loaded.
 
-##### PTP Indexer Settings Out of Date
-
-The following PassThePopcorn indexers have deprecated settings and should be updated.
-
 ##### Mono Legacy TLS enabled
 
 Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option

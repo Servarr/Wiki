@@ -23,4 +23,5 @@ Feel free to contribute directly on the wiki or via Github Pull Requests.
 Please ensure to markdown is formatted properly.
 
 - Install Markdownlint `npm install -g markdownlint-cli`
-- Run the linting to attempt to fix issues. `markdownlint -f *.md -c .markdownlint.jsonc`
+- Run the linting to attempt to fix issues. `markdownlint -f '**/*.md' -c .markdownlint.jsonc`
+  - Note any errors and correct them.  This command should be ran from your local repo.

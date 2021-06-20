@@ -90,7 +90,6 @@ When Trace log level is enabled, additional `readarr.trace.txt` rolling log file
 
 -----
 
-
 - We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
 ### Determine the issue

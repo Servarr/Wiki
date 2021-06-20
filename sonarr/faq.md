@@ -128,7 +128,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 ## How do I access Sonarr from another computer?
 
- - By default Sonarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Sonarr uses integrates with Windows (this also applies for current alternatives). If Sonarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
+- By default Sonarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Sonarr uses integrates with Windows (this also applies for current alternatives). If Sonarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
 
 ## Why doesn't Sonarr automatically search for missing episodes?
 
@@ -136,39 +136,38 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - In v1 of Sonarr we had an opt in backlog search option, often people would turn it on and then get a bunch of old episodes and ask us why, we also had indexers ask why they saw an increase in API calls, which was due to the backlog searching.
 
- - In v2 we sat back and thought about it and realized the benefit is not really there, we could try to throttle the searching, but that just draws it out and still does the same thing; hammer the indexer with useless requests. If the episode wasn't there the last time the search was performed, why would it be there now? It would be if it was reposted, but if it was reposted, the automatic process that gets new episodes would see it was posted and act on it.
+- In v2 we sat back and thought about it and realized the benefit is not really there, we could try to throttle the searching, but that just draws it out and still does the same thing; hammer the indexer with useless requests. If the episode wasn't there the last time the search was performed, why would it be there now? It would be if it was reposted, but if it was reposted, the automatic process that gets new episodes would see it was posted and act on it.
 
 ## Why does Sonarr refresh series information so frequently?
 
- - Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDB proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
- - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
- - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
+- Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDB proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
+- The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
+- The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
 
 ## Why is there a number next to Activity?
 
- - This number shows the count of episodes in your download client's queue and the last 60 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
- - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
-
+- This number shows the count of episodes in your download client's queue and the last 60 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
+- You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
 
 ## I see log messages for shows I don't have/don't want
 
- - These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you don't want, in the event it is for a show you want, open up a support thread on the forums.
+- These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you don't want, in the event it is for a show you want, open up a support thread on the forums.
 
 ## Seeding torrents aren't deleted automatically
 
- - When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
- - In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
+- When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
+- In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
 
 ## Why can't I add a new series?
 
- - In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDBID if you know what it is, the UI explains how to add it by an ID.
- - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
- - The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
- - The series must exist on TVDB
+- In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDBID if you know what it is, the UI explains how to add it by an ID.
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+- The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
+- The series must exist on TVDB
 
 ## Why can't I add a new series when I know the TVDB ID?
 
- - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 
 ## Sonarr won't work on Big Sur
 
@@ -178,10 +177,9 @@ Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 
 - You were likely passing arguments in your connection\...that is not supported.
 - To correct this:
-  1.  Change your argument to be your path
-  1.  Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
-  1.  Make sure the pwsh script is executable
-
+  1. Change your argument to be your path
+  1. Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
+  1. Make sure the pwsh script is executable
 
 ## What's the different Series Types?
 
@@ -195,30 +193,29 @@ Below are some example release names for each show type. The specific differenti
 
 - **Daily**
 
-   - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
-   - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
-   - DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
+  - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
+  - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
+  - DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
 
 - **Standard**
 
-   - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
-   - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
-   - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
+  - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
+  - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
+  - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
 
 - **Anime**
 
-   - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
-   - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
-   - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
-
+  - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
+  - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
+  - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
 ## How can I rename my series folders?
 
 1. Series
-1.  Mass Editor
-1.  Select what series need their folder renamed
-1.  Change Root Folder to the same Root Folder that the series currently exist in
-1.  Select "Yes move files"
+1. Mass Editor
+1. Select what series need their folder renamed
+1. Change Root Folder to the same Root Folder that the series currently exist in
+1. Select "Yes move files"
 
 ## How do I update Sonarr?
 
@@ -228,7 +225,6 @@ Below are some example release names for each show type. The specific differenti
 1. Save
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
-
 
 - main - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/release/VERSION.json) - (Default/Stable): This has been tested by users on nightly (`develop`) branch and it's not known to have any major issues. This branch should be used by the majority of users. On GitHub, this is the `main` branch.
 - develop - ![Current Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json) -  (Alpha/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
@@ -287,6 +283,7 @@ If Docker:
 ## I am getting an error: Database disk image is malformed
 
 This means your SQLite database that stores most of the information for Sonarr is corrupt.
+
 - [Try restoring from a backup](#how-do-i-backuprestore-my-sonarr)
 - You can follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
 - Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/sqliteexception-database-disk-image-is.html>
@@ -314,7 +311,7 @@ This means your SQLite database that stores most of the information for Sonarr i
     - Change the service user account to the target user account.
     - Run Sonarr.exe using the Startup Folder
 
-  - You're using a mapped network drive (not a UNC path)
+- You're using a mapped network drive (not a UNC path)
 
 **Solutions:**
     - Change your paths to UNC paths (`\\server\share`)
@@ -324,14 +321,14 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 - Using mapped network drives generally doesn't work very well, especially when Sonarr is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\TV` use `\\Server\TV`.
 
- - A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
+- A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
 ## How do I change from the Windows Service to a Tray App?
 
 1. Shut Sonarr down
-1.  Run serviceuninstall.exe that's in the Sonarr directory
-1.  Run Sonarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
-1.  (Optional) Drop a shortcut to Sonarr.exe in the startup folder to auto-start on boot.
+1. Run serviceuninstall.exe that's in the Sonarr directory
+1. Run Sonarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
+1. (Optional) Drop a shortcut to Sonarr.exe in the startup folder to auto-start on boot.
 
 ## How do I Backup/Restore my Sonarr?
 
@@ -339,63 +336,61 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 #### Using built-in backup
 
-1.  Go to System: Backup in the Sonarr UI
-1.  Click the Backup button
-1.  Download the zip after the backup is created for safekeeping
+1. Go to System: Backup in the Sonarr UI
+1. Click the Backup button
+1. Download the zip after the backup is created for safekeeping
 
- 
- #### Using file system directly
+#### Using file system directly
 
-1.  Find the location of the AppData directory for Sonarr  - Via the Sonarr UI go to System: About  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
-1.  Stop Sonarr - This will prevent the database from being corrupted
-1.  Copy the contents to a safe location
+1. Find the location of the AppData directory for Sonarr  - Via the Sonarr UI go to System: About  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+1. Stop Sonarr - This will prevent the database from being corrupted
+1. Copy the contents to a safe location
 
 ### Restoring from Backup
 
-
 > Restoring to an OS that uses different paths won't work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported.{.is-warning}
 
-
 #### Using zip backup
-1.  Re-install Sonarr
-1.  Run Sonarr
-1.  Navigate to System \> Backup
-1.  Select Restore Backup
-1.  Select Choose File
-1.  Select your backup zip file
-1.  Select Restore
+
+1. Re-install Sonarr
+1. Run Sonarr
+1. Navigate to System \> Backup
+1. Select Restore Backup
+1. Select Choose File
+1. Select your backup zip file
+1. Select Restore
 
 #### Using file system backup
 
-1.  Re-install Sonarr
-1.  Run Sonarr once to get the AppData directory location
-1.  Stop Sonarr
-1.  Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
-1.  Restore from your backup
-1.  Start Sonarr
-1.  As long as the paths are the same, everything will pick up where it left off
+1. Re-install Sonarr
+1. Run Sonarr once to get the AppData directory location
+1. Stop Sonarr
+1. Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
+1. Restore from your backup
+1. Start Sonarr
+1. As long as the paths are the same, everything will pick up where it left off
 
- - **Restore for Synology NAS**
+- **Restore for Synology NAS**
 
 **CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
 
-1.  Re-install Sonarr
-1.  Run Sonarr once to get the AppData directory location
-1.  Stop Sonarr
-1.  Connect to the Synology NAS through SSH and log in as root
-1.  Execute the following commands:
+1. Re-install Sonarr
+1. Run Sonarr once to get the AppData directory location
+1. Stop Sonarr
+1. Connect to the Synology NAS through SSH and log in as root
+1. Execute the following commands:
 
-  ```shell 
-  rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
-  ```
-1.  Update permissions on the files:
+    shell
+    rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
 
-  ```shell 
-  cd /usr/local/Sonarr/var/.config/Sonarr/ chown -R Sonarr:users *chmod -R 0644*
-  ```
+1. Update permissions on the files:
+
+    shell
+    cd /usr/local/Sonarr/var/.config/Sonarr/ chown -R Sonarr:users *chmod -R 0644*
+
 > On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *` {.is-info}
-1.  Start Sonarr
 
+1. Start Sonarr
 
 ## Help I have locked myself out
 
@@ -418,9 +413,7 @@ This is usually due to Sonarr searching Jackett differently than you do. [See th
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage] wiki article.
-
-**Article Needed**
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage] wiki article. (Article Needed)
 
 ## Web Interface Only Loads at localhost on Windows
 
@@ -439,8 +432,8 @@ This is usually due to Sonarr searching Jackett differently than you do. [See th
 
 Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. This page describes how you do that.
 
- - Chrome ![Chrome cookies](/assets/general/chrome_cookies.png "fig:Chrome cookies"){width="750"}
- - Firefox ![Firefox cookies](/assets/general/Firefox_cookies.png "fig:Firefox cookies"){width="750"}
+- Chrome ![Chrome cookies](/assets/general/chrome_cookies.png "fig:Chrome cookies"){width="750"}
+- Firefox ![Firefox cookies](/assets/general/Firefox_cookies.png "fig:Firefox cookies"){width="750"}
 
 ## Unpack Torrents
 
@@ -498,7 +491,8 @@ Some sites cannot be logged into automatically and require you to login manually
 ## Why are there two files? \| Why is there a file left in downloads?
 
 - This is expected. This is how the Torrent Process works with Sonarr.
-1.  Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
-1.  Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-1.  Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.  - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
-1.  If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+
+1. Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+1. Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.  - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
+1. If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.

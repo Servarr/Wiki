@@ -94,7 +94,6 @@ When Trace log level is enabled, additional `.trace.txt` rolling log files will 
 
 -----
 
-#
 - We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
 ### Determine the issue
@@ -112,7 +111,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ```
 
-##### Resolving the issue
+#### Resolving the issue
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/lidarr> our subreddit or swing by our discord, if there are others with the same issue, then rest assured we are working on it.
 

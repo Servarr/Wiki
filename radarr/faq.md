@@ -275,10 +275,13 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - If you are using buster:
   - Run the following to add the backports to your sources
+
   ```shell
- echo "deb http://deb.debian.org/debian buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
- ```
+   echo "deb <http://deb.debian.org/debian> buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
+   ```
+
   - Install the backport of libseccomp2
+
   ```shell
   sudo apt update && sudo apt-get -t buster-backports install libseccomp2
   ```
