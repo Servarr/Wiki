@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-20T23:36:28.880Z
+date: 2021-06-20T23:42:58.700Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -93,13 +93,13 @@ EOF
 - Reload systemd:
 
 ```shell
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 - Enable the Prowlarr service:
 
 ```shell
-systemctl enable --now -q prowlarr
+sudo systemctl enable --now -q prowlarr
 ```
 
 ## Docker
