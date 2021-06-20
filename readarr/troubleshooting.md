@@ -46,13 +46,13 @@ What you need to do is:
 
 ```
 
-## Standard Logs Location
+### Standard Logs Location
 
 The log files are located in readarr's [Appdata Directory](/readarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
 
 Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
-## Update Logs Location
+### Update Logs Location
 
 The update log files are located in readarr's [Appdata Directory](/readarr/appdata-directory), inside the UpdateLogs/ folder.
 
@@ -60,7 +60,7 @@ The update log files are located in readarr's [Appdata Directory](/readarr/appda
 
 The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
-#### Trace/Debug Logs
+### Trace/Debug Logs
 
 You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `readarr.debug.txt` and `readarr.trace.txt` respectively.
 
@@ -78,7 +78,7 @@ If you're unable to access the UI to set the logging level you can do so by edit
 
 You can clear log files and the logs database directly from the UI, under System -> Logs -> Files and System -> Logs -> Delete (Trash Can Icon)
 
-#### Multiple Log Files
+### Log Files
 
  Readarr uses rolling log files limited to 1MB each. The current log file is always ,`readarr.txt`, for the the other files `readarr.0.txt` is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
 

@@ -49,14 +49,14 @@ The flags have the following functions:
 - -C: provide # of lines before and after the line it is found on
 - -e: the pattern to search for
 
-## Standard Logs Location
+### Standard Logs Location
 
 The log files are located in prowlarr's [Appdata Directory](/prowlarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
 
 > Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 {.is-info}
 
-## Update Logs Location
+### Update Logs Location
 
 The update log files are located in prowlarr's [Appdata Directory](/prowlarr/appdata-directory), inside the UpdateLogs/ folder.
 
