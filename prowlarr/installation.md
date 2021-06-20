@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-10T01:29:11.221Z
+date: 2021-06-20T23:36:28.880Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -27,7 +27,6 @@ Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows 
 ## Linux
   
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `prowlarr` and group `prowlarr`.
 > This will download the `x64` copy of prowlarr and install it into `/opt`
 {.is-info}
 
@@ -60,6 +59,9 @@ sudo mv Prowlarr/ /opt
 
 - Ensure ownership of the binary directory.
 
+> Note: This assumes you will run as the user `prowlarr` and group `prowlarr`.
+{.is-warning}
+
 ```shell
 sudo chown prowlarr:prowlarr /opt/Prowlarr
 ```
@@ -70,7 +72,7 @@ sudo chown prowlarr:prowlarr /opt/Prowlarr
 {.is-warning}
 
 ```shell
-cat > /etc/systemd/system/prowlarr.service << EOF
+sudo cat > /etc/systemd/system/prowlarr.service << EOF
 [Unit]
 Description=Prowlarr Daemon
 After=syslog.target network.target
