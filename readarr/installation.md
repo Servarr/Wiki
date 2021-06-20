@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-06-10T01:29:36.535Z
+date: 2021-06-20T23:41:34.895Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -41,7 +41,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 > Readarr is in a pre-alpha state and has no binaries currently available for Linux. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
 {.is-warning}
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `readarr` and group `media`.
+
 > This will download the `x64` copy of readarr and install it into `/opt`
 {.is-info}
 
@@ -72,6 +72,9 @@ tar -xvzf Readarr*.linux*.tar.gz
 sudo mv Readarr/ /opt
 ```
 
+> Note: This assumes you will run as the user `readarr` and group `media`.
+{.is-warning}
+
 - Ensure ownership of the binary directory.
 
 ```shell
@@ -84,7 +87,7 @@ sudo chown readarr:readarr /opt/Readarr
 {.is-warning}
 
 ```shell
-cat > /etc/systemd/system/readarr.service << EOF
+sudo cat > /etc/systemd/system/readarr.service << EOF
 [Unit]
 Description=Readarr Daemon
 After=syslog.target network.target
@@ -105,13 +108,13 @@ EOF
 - Reload systemd:
 
 ```shell
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 - Enable the Readarr service:
 
 ```shell
-systemctl enable --now -q readarr
+sudo systemctl enable --now -q readarr
 ```
 
 ## Docker
