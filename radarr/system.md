@@ -23,12 +23,12 @@ The branch you have set is not a valid release branch. You will not receive upda
 ##### Update to .NET Core version
 
 Newer versions of Radarr are targeted for .NET. We will no longer be providing legacy mono builds after 3.2 is released. You are running one of these legacy builds but your platform supports .NET.
-Fixing Docker installs
-Re-pull your container
-Fixing Standalone installs
-Back-Up your existing configuration before the next step.
-This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you'll need to adjust `/master/` in the URL.
-In short you'll need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded.
+- Fixing Docker installs
+  - Re-pull your container
+- Fixing Standalone installs
+  - Back-Up your existing configuration before the next step.
+  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you'll need to adjust `/master/` in the URL.
+  - In short you'll need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded.
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
 > YOU MUST DELETE THE OLD ONES FIRST.
 {.is-warning}
@@ -189,9 +189,9 @@ Download client: /data:/mnt/user/data
 Radarr: /data:/mnt/user/data
 
 Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
-There are many great write ups by some very talented people one on our wiki Docker Guide and the other by TRaSH with his How To Set Up Hardlinks and Atomic-Moves Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-See TRaSH's Remote Path Guide for more information.
+See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
 ##### Downloading into Root Folder
 
@@ -206,7 +206,7 @@ The location your download client is downloading files to is causing problems. C
 
 ##### Bad Remote Path Mapping
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See TRaSH's Remote Path Guide for more information.
+The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
 ##### Permissions Error
 
