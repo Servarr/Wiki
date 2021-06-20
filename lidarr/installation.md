@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-06-20T23:39:03.584Z
+date: 2021-06-20T23:39:44.394Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -73,7 +73,7 @@ sudo chown lidarr:lidarr /opt/Lidarr
 {.is-warning}
 
 ```shell
-cat > /etc/systemd/system/lidarr.service << EOF
+sudo cat > /etc/systemd/system/lidarr.service << EOF
 [Unit]
 Description=Lidarr Daemon
 After=syslog.target network.target
