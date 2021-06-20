@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-10T01:29:23.692Z
+date: 2021-06-20T23:37:36.079Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -33,7 +33,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 ### Linux
   
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `radarr` and group `media`.
+
 > This will download the `x64` copy of radarr and install it into `/opt`
 {.is-info}
 
@@ -50,6 +50,10 @@ sudo apt install curl mediainfo sqlite3
   - ARM64 use `arch=arm64`
 - Uncompress the files: `tar -xvzf Radarr*.linux*.tar.gz`
 - Move the files to `/opt/` `sudo mv Radarr/ /opt`
+
+> Note: This assumes you will run as the user `radarr` and group `media`.
+{.is-info}
+
 - Ensure ownership of the binary directory.
   `sudo chown radarr:radarr /opt/Radarr`
 - Configure systemd so radarr can autostart at boot.
@@ -58,7 +62,7 @@ sudo apt install curl mediainfo sqlite3
 {.is-warning}
 
 ```shell
-    cat > /etc/systemd/system/radarr.service << EOF
+    sudo cat > /etc/systemd/system/radarr.service << EOF
 [Unit]
 Description=Radarr Daemon
 After=syslog.target network.target
