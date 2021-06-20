@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-20T23:42:22.715Z
+date: 2021-06-20T23:44:34.377Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -80,8 +80,16 @@ WantedBy=multi-user.target
 EOF
 ```
 
-- Reload systemd: `sudo systemctl -q daemon-reload`
-- Enable the Radarr service: `sudo systemctl enable --now -q radarr`
+- Reload systemd: 
+
+```shell
+sudo systemctl -q daemon-reload
+```
+- Enable the Radarr service: 
+
+```shell
+sudo systemctl enable --now -q radarr
+```
 
 ## Docker
 
