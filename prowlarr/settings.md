@@ -57,7 +57,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Enter the Prowlarr server URL here.
 
-> Note that if you're using a reverse proxy, you need to add the URL Base to this! If you don't, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
+> Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
 {.is-info}
 
 - Enter the URL of your program here. Again, enter the full URL Base if used.

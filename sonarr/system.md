@@ -36,7 +36,7 @@ The upgrade procedure for Mono varies per platform.
 
 ##### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don't have Auto-Updating enabled, so you'll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
+Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you do not have Auto-Updating enabled, so you will have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -51,7 +51,7 @@ Sonarr detected that AppData folder for your Operating System is located inside 
 
 Please look at System -> Info to see the current AppData & Startup directories.
 This means Sonarr will be unable to update itself without risking data-loss.
-If you're on linux, you'll probably have to change the home directory for the user that is running Sonarr and copy the current contents of the ~/.config/Sonarr directory to preserve your database.
+If you're on linux, you will probably have to change the home directory for the user that is running Sonarr and copy the current contents of the ~/.config/Sonarr directory to preserve your database.
 
 ##### Failed to resolve the IP Address for the Configured Proxy Host
 
@@ -86,7 +86,7 @@ A properly configured and enabled download client is required for Sonarr to be a
 Sonarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 This is typically due to improperly configured download client. Things you can typically check:
 Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-The Port number of that your download client is using these are filled out with the default port number but if you've changed it you'll need to have the same one entered into Sonarr.
+The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Sonarr.
 Ensure SSL encryption is not turned on if you're using both your Sonarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 ##### Download clients are unavailable due to failure
@@ -211,9 +211,9 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 > However, if you're looking for how to back/restore your Sonarr instance click [here](/sonarr/faq).
 {.is-info}
 
-Within the Backup section you'll be presented with previous backups (unless you have a fresh install that hasn't made any backups).
+Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
   
-Here you'll have two options at the top of the screen
+Here you will have two options at the top of the screen
 
 - Backup Now - This option will trigger a manual backup of your Sonarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup

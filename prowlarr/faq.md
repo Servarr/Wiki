@@ -17,7 +17,7 @@ dateCreated: 2021-06-05T13:59:03.261Z
 
 At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
 
-## Prowlarr won't sync to Sonarr
+## Prowlarr will not sync to Sonarr
 
 Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
 

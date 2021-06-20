@@ -306,10 +306,10 @@ Name for the `Specials` (Season) folder
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an episode by adding a delay while Sonarr continues to watch for releases that better match your preferences.
   - `Protocol` - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
-  - `Usenet Delay` - Set by the number of minutes you'll want to wait before the download to start
-  - `Torrent Delay` - Set by the number of minutes you'll want to wait before the download to start
+  - `Usenet Delay` - Set by the number of minutes you will want to wait before the download to start
+  - `Torrent Delay` - Set by the number of minutes you will want to wait before the download to start
   - `Bypass if Highest Quality` - Bypass delay when release has the highest enabled quality profile with the preferred protocol
-  - `Tags` - This is where you'll select any relevant tags that you'll be using for this scheme
+  - `Tags` - This is where you will select any relevant tags that you will be using for this scheme
   - `Wrench icon` - This will allow you to edit the delay profile
   - `Plus icon` - Create a new delay profile
 
@@ -364,7 +364,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Release Profiles
 
-- Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you'll be able to select the preferred releases you're looking for.
+- Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you will be able to select the preferred releases you're looking for.
 
 > You can use regex (default case sensitive) in the `Must Contain`, `Must Not Contain`, and `Preferred` words values
 {.is-info}
@@ -374,13 +374,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - `Must Contain` - The release must contain at least one of these terms (case insensitive)
 - `Must Not Contain` - The release will be rejected if it contains one or more of terms (case insensitive)
 - `Preferred` - Here you can select a given term and give it a score.
-  - Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you'll put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you'll put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that don't have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
+  - Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you will put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you will put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that do not have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
 - `Include Preferred when Renaming` - When utilizing the {Preferred Words} tag in the naming scheme
 - `Indexer` - Specify what indexer the profile applies to.
 
 > This is useful if you only want specific releases from a given indexer/tracker{.is-info}
 
-- `Tags` - With giving this release profile a tag you'll be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
+- `Tags` - With giving this release profile a tag you will be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
 - [TRaSH maintains a list of WEB-DL Release Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/)
 - [TRaSH Anime Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/)
@@ -444,15 +444,15 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Indexers
 
-- Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files.
+- Once you're here you will be adding the indexer/tracker that you will be using to actually download any of your files.
 
 ### Supported Indexers
 
 #### Indexer Settings
 
-- Once you've clicked the `+` button to add a new indexer you'll be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
+- Once you've clicked the `+` button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
 
-- There are two sections here: Usenet and Torrents. Based upon what download client you'll be using you'll want to select the type of indexer you'll be going with.
+- There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
 ##### Usenet
 
@@ -488,9 +488,9 @@ Many presets are available, but all require an API key to be accessible.
 
 ###### Usenet Indexer Configuration
 
-- `Newznab` - Here you'll find presets of popular usenet indexers (that are pre-filled out, all you'll need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- `Newznab` - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
   - An excellent software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
-- Regardless if you select a pre-filled out indexer or a custom indexer setup you'll be presented with a new window to input all your settings
+- Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2)
   - `Name` - The name of the indexer in Sonarr
   - `Enable RSS` - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
@@ -508,7 +508,7 @@ Many presets are available, but all require an API key to be accessible.
 
 - As with Usenet there are an assortment of pre-filled out Torrent Tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
-- Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you'll need to have each entry have a unique name
+- Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
   - `Name` - The name of the indexer in Sonarr
@@ -659,7 +659,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ### Lists
 
-Import lists are a part of Sonarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Sonarr and realize that you don't have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
+Import lists are a part of Sonarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Sonarr and realize that you do not have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
 
 CAUTION: If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save. ie. physically look at the list before you even go to Sonarr.
 
@@ -670,7 +670,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ### List Exclusions
 
-Import List Exclusion - This allows you to prune your list of movies you don't want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
+Import List Exclusion - This allows you to prune your list of movies you do not want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
 ## Connect
 
@@ -678,7 +678,7 @@ Import List Exclusion - This allows you to prune your list of movies you don't w
 
 Connections are how you want Radarr to communicate with the outside world.
 
-By pressing the + button you'll be presented with a new window which will allow you to configure many different endpoints
+By pressing the + button you will be presented with a new window which will allow you to configure many different endpoints
 
 - Boxcar
 - Custom Script - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/sonarr/custom-scripts) for more details.

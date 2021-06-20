@@ -32,7 +32,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 
 ![radarr-add-new-empty.png](/assets/radarr/radarr-add-new-empty.png)
 
-- So you're looking to add a new movie this is the page that you'll be wanting to do that from.
+- So you're looking to add a new movie this is the page that you will be wanting to do that from.
   - You'll find the how to on going through that in our [Quick Start Guide](/radarr/quick-start-guide)
 - Below the search field you can also find the Import Existing Movies button. If that is the case for you you can find great infomration on that also in our [Quick Start Guide](/radarr/quick-start-guide)
 
@@ -44,7 +44,7 @@ Information about importing your media Coming Soon - Contributions are Welcome.
   
 Discover shows recommended Movies.
 
-- If you don't have (a/any) list(s) then it will show the top 90 most recommended movies based on the TMDb movies recommended for the movies in your library in addition to the 10 recommendations from your most recent additions.
+- If you do not have (a/any) list(s) then it will show the top 90 most recommended movies based on the TMDb movies recommended for the movies in your library in addition to the 10 recommendations from your most recent additions.
 
 >Tip: You can disable Radarr recommended movies and view only movies from your lists in `Options`
 {.is-info}
@@ -56,7 +56,7 @@ Discover shows recommended Movies.
 
 - Chances are that if you have a new installation without any movies
     added you're going to have a view very similar to this. In order to
-    have Radarr suggest any new movies to you you'll need to add
+    have Radarr suggest any new movies to you you will need to add
     something in order to give it a direction to suggest. You have
     several options:
     1. Click on the [Add New Movie](/radarr/library#add-new) button to add movies by hand.
@@ -66,7 +66,7 @@ Discover shows recommended Movies.
 
 ![radarr-discover-add-new-movies.png](/assets/radarr/radarr-discover-add-new-movies.png)
 
-- Once You've added a movie by one of the three options listed above you'll be presented with different movies to discover.
+- Once You've added a movie by one of the three options listed above you will be presented with different movies to discover.
     1. Here you can select what movies you want to add to your library
     1. Here if you're feeling extra crazy you can select all the movies that are on this list
     1. Select what root path you'd like for these movies to go to once they are imported

@@ -211,19 +211,19 @@ Here you will set the naming convention for the folder that contains the season 
 
 ### Quality Profiles
 
-- Here you'll be allowed to set profiles for which you can have for the quality of series you're looking to download.
+- Here you will be allowed to set profiles for which you can have for the quality of series you're looking to download.
 - When selecting an existing profile or adding an additional profile a new window will appear
 
 > Note: The quality with the blue box will be the quality that is set for
 {.is-info}
 
-- Name - Here you'll enter a UNIQUE name for the profile to which you are creating
+- Name - Here you will enter a UNIQUE name for the profile to which you are creating
 - Upgrades allowed - If you tell Radarr to download a Web 1080p as it is the first release of a specific movie then later somebody is able to upload a Bluray-1080p then with this selected Radarr will automatically upgrade to the better quality
 
 > Note: This is only if you have Bluray-1080p higher than Web 1080p within the Qualities section
 {.is-info}
 
-- Upgrade until Quality - Here you'll set the cut-off to which Radarr says to its self, "This is as high of quality that you want. I won't be looking anymore for better quality releases."
+- Upgrade until Quality - Here you will set the cut-off to which Radarr says to its self, "This is as high of quality that you want. I will not be looking anymore for better quality releases."
 - Minimum Custom Format Score - The minimum sum of custom format(s) for a release to be downloaded. Note this does not outrank qualities, but is ranked after qualities.
 - Upgrade Until Custom Format Score - Similar to - Upgrade until Quality; the minimum score to be reached within a quality to upgrade to. Once this is reached, there will be no upgrades within that quality due to custom formats.
 - Language - Select your preferred language
@@ -241,10 +241,10 @@ See [Custom Formats](#custom-formats) for more details.
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for a movie, by adding a delay while Radarr will continue to watch for releases that better match your preferences.
 - Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
-- Usenet Delay - Set by the number of minutes you'll want to wait before the download starts
-- Torrent Delay - Set by the number of minutes you'll want to wait before the download starts
+- Usenet Delay - Set by the number of minutes you will want to wait before the download starts
+- Torrent Delay - Set by the number of minutes you will want to wait before the download starts
 - Bypass if Highest Quality - Bypass the delay profile if the highest quality for that Movie is found and grab once the first instance of the highest ranked quality is found. Otherwise wait for the best quality release until the end of the delay period.
-- Tags - This is where you'll select any relevant tags that you'll be using for this scheme
+- Tags - This is where you will select any relevant tags that you will be using for this scheme
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon - Create a new profile
 
@@ -374,7 +374,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Indexers
 
-- Once you're here you'll be adding the indexer/tracker that you'll be using to actually download any of your files. If you're curious on how Radarr works with your indexer/tracker click here
+- Once you're here you will be adding the indexer/tracker that you will be using to actually download any of your files. If you're curious on how Radarr works with your indexer/tracker click here
 
 ### Supported Indexers
 
@@ -408,15 +408,15 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 
 #### Indexer Settings
 
-- Once you've clicked the + button to add a new indexer you'll be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
+- Once you've clicked the + button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
 
-- There are two sections here: Usenet and Torrents. Based upon what download client you'll be using you'll want to select the type of indexer you'll be going with.
+- There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
 #### Usenet Indexer Configuration
 
-- Newznab - Here you'll find presets of popular usenet indexers (that are pre-filled out, all you'll need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- Newznab - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
 - An excellent software that works with usenet and integrates quite well with Radarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
-- Regardless of if you select a pre filled out indexer or a custom indexer setup you'll be presented with a new window to input all your settings
+- Regardless of if you select a pre filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2)
 - Name - The name of the indexer in Radarr
 - Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
@@ -435,7 +435,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Radarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
-- Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you'll need to have each entry have a unique name
+- Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
 - Name - The name of the indexer in Radarr
@@ -484,7 +484,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 
 ### Restrictions
 
-- Here you'll be able to set global restrictions based upon a couple of parameters
+- Here you will be able to set global restrictions based upon a couple of parameters
 - Click the + and a new window will open
 - Must Contain - Within this field you can tell Radarr that if a release does not contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
 - Must Not Contain - Within this field you can tell Radarr that if a release does contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
@@ -612,7 +612,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ### Lists
 
-Import lists are a part of Radarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Radarr and realize that you don't have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
+Import lists are a part of Radarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Radarr and realize that you do not have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
 
 CAUTION: If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save. ie. physically look at the list before you even go to Radarr.
 
@@ -623,7 +623,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ### List Exclusions
 
-Import List Exclusion - This allows you to prune your list of movies you don't want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
+Import List Exclusion - This allows you to prune your list of movies you do not want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
 ## Connect
 
@@ -631,7 +631,7 @@ Import List Exclusion - This allows you to prune your list of movies you don't w
 
 Connections are how you want Radarr to communicate with the outside world.
 
-By pressing the + button you'll be presented with a new window which will allow you to configure many different endpoints
+By pressing the + button you will be presented with a new window which will allow you to configure many different endpoints
 
 - Boxcar
 Custom Script - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/radarr/custom-scripts) for more details.

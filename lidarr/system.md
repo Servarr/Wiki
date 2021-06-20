@@ -30,8 +30,8 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
   - Re-pull your container
 - Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
-  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you'll need to adjust `/master/` in the URL.
-  - In short you'll need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
+  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
+  - In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
 > YOU MUST DELETE THE OLD ONES FIRST.
 {.is-warning}
@@ -110,7 +110,7 @@ RewriteRule /(.*) ws://127.0.0.1:8787/$1 [P,L]
 ```
 
 For Caddy (V1) use this:
-Note: you'll also need to add the websocket directive to your lidarr configuration
+Note: you will also need to add the websocket directive to your lidarr configuration
 
 ```none
  proxy /lidarr 127.0.0.1:8787 {
@@ -174,7 +174,7 @@ A properly configured and enabled download client is required for Lidarr to be a
 Lidarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 This is typically due to improperly configured download client. Things you can typically check:
 Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-The Port number of that your download client is using these are filled out with the default port number but if you've changed it you'll need to have the same one entered into Lidarr.
+The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Lidarr.
 Ensure SSL encryption is not turned on if you're using both your Lidarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 ##### Download clients are unavailable due to failure
@@ -288,7 +288,7 @@ Easiest way to find this is to:
 - Create a custom filter with the old root folder path
 - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movies to be moved to.
 
-- Next you'll receive a pop-up that states Would you like to move the movie folders to 'root path' ? This will also state This will also rename the movie folder per the movie folder format in settings. Simply select No if the you do not want Lidarr to move your files
+- Next you will receive a pop-up that states Would you like to move the movie folders to 'root path' ? This will also state This will also rename the movie folder per the movie folder format in settings. Simply select No if the you do not want Lidarr to move your files
 
 #### Movies
 
@@ -362,9 +362,9 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 > However, if you're looking for how to back/restore your Lidarr instance click [here](/lidarr/faq).
 {.is-info}
 
-Within the Backup section you'll be presented with previous backups (unless you have a fresh install that hasn't made any backups).
+Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
   
-Here you'll have two options at the top of the screen
+Here you will have two options at the top of the screen
 
 - Backup Now - This option will trigger a manual backup of your Lidarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup

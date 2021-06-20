@@ -58,7 +58,7 @@ The update log files are located in readarr's [Appdata Directory](/readarr/appda
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. do not forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 ### Trace/Debug Logs
 
@@ -94,11 +94,11 @@ When Trace log level is enabled, additional `readarr.trace.txt` rolling log file
 
 ### Determine the issue
 
-The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
+The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
 
 - **Migration Issue**
 
-- Migration errors won't be identical, but here is an example:
+- Migration errors will not be identical, but here is an example:
 
 ```none
 14-2-4 18:56:49.5|Info|MigrationLogger|\*\*\* 36: update\_with\_quality\_converters migrating \*\*\*
@@ -263,7 +263,7 @@ Using the all endpoint has no advantages (besides reduced management overhead), 
 
 - you lose control over indexer specific settings (categories, search modes, etc.)
 - mixing search modes (IMDB, query, etc.) might cause low-quality results
-- indexer specific categories (\>= 100000) can't be used.
+- indexer specific categories (\>= 100000) cannot be used.
 - slow indexers will slow down the overall result
 - total results are limited to 1000
 

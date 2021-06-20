@@ -15,7 +15,7 @@ dateCreated: 2021-05-17T01:51:10.479Z
 
 In this guide we will try to explain the basic setup you need to do to get started with Radarr.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you'll need to enable those to make them visible.
+> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to enable those to make them visible.
 {.is-warning}
 
 ### Startup
@@ -80,7 +80,7 @@ Don’t forget to save your changes
 
 ![Radarr-settings-profiles.png](/assets/radarr/Radarr-settings-profiles.png)
 
-Here you’ll be allowed to set profiles for which you can have for the quality of movie you’re looking to download Here you'll be allowed to set profiles for the quality of movie you're looking to download
+Here you’ll be allowed to set profiles for which you can have for the quality of movie you’re looking to download Here you will be allowed to set profiles for the quality of movie you're looking to download
 
 More info [Settings -> Profiles](/radarr/settings#profiles).
 

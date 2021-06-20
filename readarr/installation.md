@@ -154,7 +154,7 @@ Keep in mind that Readarr will need read and write to the download folders as we
 
 ### Install Readarr
 
-To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
 - [linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)

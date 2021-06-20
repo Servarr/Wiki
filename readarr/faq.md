@@ -15,8 +15,8 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## How does Readarr find books?
 
-- Readarr does ''not'' regularly search for book files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for ''all'' the newly posted books, then compares that with its list of books that are missing or need to be upgraded. Any matches are downloaded. This lets Readarr cover a library of ''any size'' with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you'll realize that it only covers the ''future'' though.
-- So how do you deal with the present and past? When you're adding a book, you'll need to set the correct path, profile and monitoring status then use the Start search for missing book checkbox. If the book hasn't been released yet, you don't need to initiate a search.
+- Readarr does ''not'' regularly search for book files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for ''all'' the newly posted books, then compares that with its list of books that are missing or need to be upgraded. Any matches are downloaded. This lets Readarr cover a library of ''any size'' with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the ''future'' though.
+- So how do you deal with the present and past? When you're adding a book, you will need to set the correct path, profile and monitoring status then use the Start search for missing book checkbox. If the book hasn't been released yet, you do not need to initiate a search.
 - Put another way, Readarr will only find books that are newly uploaded to your indexers. It will not actively try to find books you want that were uploaded in the past.
 - If you've already added the book, but now you want to search for it, you have a few choices. You can go to the book's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see ''all'' the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Readarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed books.
@@ -41,16 +41,16 @@ As of 2021-06-09 the logic is as follows:
 ## What are Lists and what can they do for me?
 
 - Lists are a part of Readarr that allow you to follow a given list creator.
-- Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every book on their list. You look in your Readarr and realize that you don't have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
+- Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
 - `CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save.
 - ie. physically look at the list before you even go to Readarr.
 
-## Why can't I add a new book or author to Readarr?
+## Why can I not add a new book or author to Readarr?
 
 - Readarr uses [<http://goodreads.com> GoodReads] for book and author information and images like cover and author art, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a book:
 - GoodReads doesn't like special characters to be used when searching for books through the API (which Readarr uses), so try searching a translated name, and/or without special characters.
 - You can also add books and authors by GoodReads ID, ISBN ID, or ASIN ID.
-- The book has an issue with GoodReads API data. Unfortunately this is something we probably can't solve for you.
+- The book has an issue with GoodReads API data. Unfortunately this is something we probably cannot solve for you.
 - The book falls below the settings you've chosen (votes, pages, etc.) to appear in Readarr.
 
 ## How can I rename my author folders?

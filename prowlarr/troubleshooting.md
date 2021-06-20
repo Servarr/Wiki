@@ -62,7 +62,7 @@ The update log files are located in prowlarr's [Appdata Directory](/prowlarr/app
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Don't forget to wait for spammy tasks like the RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. do not forget to wait for spammy tasks like the RSS sync or library refresh to finish.
 
 ## Trace/Debug Logs
 
@@ -98,11 +98,11 @@ When Trace log level is enabled, additional Prowlarr.trace.txt rolling log files
 
 ### Determine the issue
 
-The best place to look when Prowlarr won't start after an update is your log files, before trying to start Prowlarr again, use Logging and Log Files to find them and increase the log level.
+The best place to look when Prowlarr will not start after an update is your log files, before trying to start Prowlarr again, use Logging and Log Files to find them and increase the log level.
 
 ### Migration Issue
 
-- Migration errors won't be identical, but here is an example:
+- Migration errors will not be identical, but here is an example:
 
 `14-2-4 18:56:49.5|Info|MigrationLogger|*** 36: update_with_quality_converters migrating ***`
 `14-2-4 18:56:49.6|Error|MigrationLogger|SQL logic error or missing database duplicate column name: Items`

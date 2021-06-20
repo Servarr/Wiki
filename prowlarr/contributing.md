@@ -40,7 +40,7 @@ Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.ser
 #### Contributing Code ###
 
 - If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Prowlarr/Prowlarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
-- Rebase from Prowlarr's develop branch, don't merge
+- Rebase from Prowlarr's develop branch, do not merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
 - Reach out to us on the discord if you have any questions
@@ -56,7 +56,7 @@ Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.ser
 
 #### Pull Requesting ###
 
-- Only make pull requests to develop, never master, if you make a PR to master we'll comment on it and close it
+- Only make pull requests to develop, never master, if you make a PR to master we will comment on it and close it
 - You're probably going to get some comments or questions from us, they will be to ensure consistency and maintainability
 - We'll try to respond to pull requests as soon as possible, if its been a day or two, please reach out to us, we may have missed it
 - Each PR should come from its own [feature branch](http://martinfowler.com/bliki/FeatureBranch.html) not develop in your fork, it should have a meaningful branch name (what is being added/fixed)

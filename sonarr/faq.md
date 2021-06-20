@@ -10,8 +10,8 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 ## How does Sonarr find episodes?
 
-- Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you'll realize that it only covers the *future* though.
-- So how do you deal with the present and past? When you're adding a show, you'll need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn't been released yet, you don't need to initiate a search.
+- Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you will realize that it only covers the *future* though.
+- So how do you deal with the present and past? When you're adding a show, you will need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn't been released yet, you do not need to initiate a search.
 - Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
 - If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](/sonarr/wanted) tab and search from there.
 - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
@@ -88,9 +88,9 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 > If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 {.is-info}
 
-## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
+## Why cannot Sonarr import episode files for series X? / Why cannot Sonarr find releases for series X?
 
-- Sonarr relies on being able to match titles, often the scene posts episodes using different titles, e.g. `CSI: Crime Scene Investigation` as just `CSI` so Sonarr can't match the names without some help. Sonarr maintains a list of problematic series which lets us solve this issue.
+- Sonarr relies on being able to match titles, often the scene posts episodes using different titles, e.g. `CSI: Crime Scene Investigation` as just `CSI` so Sonarr cannot match the names without some help. Sonarr maintains a list of problematic series which lets us solve this issue.
 
 - **For anime, it will need to be added to [thexem.de](https://thexem.de)**, for other series to request a new mapping see the steps below.
 
@@ -110,7 +110,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 - If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
 
-## I see that feature/bug X was fixed, why can't I see it?
+## I see that feature/bug X was fixed, Why can I not see it?
 
 Sonarr consists of two main branches of code, `main` and `develop`.
 
@@ -124,7 +124,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
   - Episode Count => Episode has already aired AND is monitored OR - Episode has a file
   - Episode File Count => Episode has a file
 
-- If a series has 10 episodes that have all aired and you don't have any files for them you would have 0/10 episodes, if you unmonitored all the episodes in that series you would have 0/0 and if you got all the episodes for that series, regardless of if the episodes are monitored or not, you would have 10/10 episodes.
+- If a series has 10 episodes that have all aired and you do not have any files for them you would have 0/10 episodes, if you unmonitored all the episodes in that series you would have 0/0 and if you got all the episodes for that series, regardless of if the episodes are monitored or not, you would have 10/10 episodes.
 
 ## How do I access Sonarr from another computer?
 
@@ -149,27 +149,27 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - This number shows the count of episodes in your download client's queue and the last 60 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
 - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
 
-## I see log messages for shows I don't have/don't want
+## I see log messages for shows I do not have/do not want
 
-- These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you don't want, in the event it is for a show you want, open up a support thread on the forums.
+- These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you do not want, in the event it is for a show you want, open up a support thread on the forums.
 
 ## Seeding torrents aren't deleted automatically
 
 - When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
 - In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
 
-## Why can't I add a new series?
+## Why can I not add a new series?
 
 - In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDBID if you know what it is, the UI explains how to add it by an ID.
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 - The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
 - The series must exist on TVDB
 
-## Why can't I add a new series when I know the TVDB ID?
+## Why can I not add a new series when I know the TVDB ID?
 
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 
-## Sonarr won't work on Big Sur
+## Sonarr will not work on Big Sur
 
 Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 
@@ -178,7 +178,7 @@ Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 - You were likely passing arguments in your connection\...that is not supported.
 - To correct this:
   1. Change your argument to be your path
-  1. Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
+  1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
   1. Make sure the pwsh script is executable
 
 ## What's the different Series Types?
@@ -272,7 +272,7 @@ If Docker:
 - This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
 [![Developer Cannot be verified](/assets/general/faq_1_mac.png)]
 
-## Help, my Mac says Sonarr.app is damaged and can't be opened
+## Help, my Mac says Sonarr.app is damaged and cannot be opened
 
 - That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-sonarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 
@@ -295,9 +295,9 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 - Most likely this is due to a MacOS bug which caused one of the Sonarr databases to be corrupted.
 - [Follow these steps to resolve](#i-am-getting-an-error-database-disk-image-is-malformed)
-- Then attempt to launch Sonarr and see if it works. If it does not work, you'll need further support. Post in our [reddit](http://reddit.com/r/Sonarr) or hop on [discord](https://discord.gg/M6BvZn5) for help.
+- Then attempt to launch Sonarr and see if it works. If it does not work, you will need further support. Post in our [reddit](http://reddit.com/r/Sonarr) or hop on [discord](https://discord.gg/M6BvZn5) for help.
 
-## Why can't Sonarr see my files on a remote server?
+## Why cannot Sonarr see my files on a remote server?
 
 - In short: the user Sonarr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is, Sonarr is running as a service, which causes one of two things:
   - Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  
@@ -321,7 +321,7 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 - Using mapped network drives generally doesn't work very well, especially when Sonarr is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\TV` use `\\Server\TV`.
 
-- A key point to remember is that Sonarr gets path information from the downloader, so you'll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
+- A key point to remember is that Sonarr gets path information from the downloader, so you will *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
 ## How do I change from the Windows Service to a Tray App?
 
@@ -348,7 +348,7 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths won't work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported.{.is-warning}
+> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported.{.is-warning}
 
 #### Using zip backup
 
@@ -482,11 +482,11 @@ Some sites cannot be logged into automatically and require you to login manually
 - Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
   - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) can't be used.
+  - indexer specific categories (\>= 100000) cannot be used.
   - slow indexers will slow down the overall result
   - total results are limited to 1000
 
-- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you don't get any results.
+- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
 
 ## Why are there two files? \| Why is there a file left in downloads?
 

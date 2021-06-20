@@ -154,7 +154,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 - If you want Readarr to keep grabbing new versions until it hits your favorite format of ebook, check the box.
 - If you checked the box, select your final "best" version of ebooks from the drop-down.
 
-Under Qualities, you are going to check the boxes for the formats of ebooks you want. If they are not checked here, you will not get other formats; be careful what you choose to eliminate as it might mean that you don't get a particular book.
+Under Qualities, you are going to check the boxes for the formats of ebooks you want. If they are not checked here, you will not get other formats; be careful what you choose to eliminate as it might mean that you do not get a particular book.
   
 You can drag the format up and down using the icon on the right, to rank them. This only matters if you have upgrades allowed. Upgrades are from bottom to top on the quality ranking.
   
@@ -173,7 +173,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 
 - Enter the minimum number of pages a book must have to be added for an author.
 - Check this box to skip books with a missing release date.
-- Check this box to skip books that don't contain either an ISBN or ASIN number.
+- Check this box to skip books that do not contain either an ISBN or ASIN number.
 - Check this box to skip part books and sets.
 - Check this box to skip secondary series books.
 - Enter a comma-separated list of allowed languages for your books.

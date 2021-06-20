@@ -16,9 +16,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How does Radarr find movies?
 
-- Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you'll realize that it only covers the *future* though.
+- Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 
-- So how do you deal with the present and past? When you're adding a movie, you'll need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you don't need to initiate a search.
+- So how do you deal with the present and past? When you're adding a movie, you will need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you do not need to initiate a search.
 - Put another way, Radarr will only find movies that are newly uploaded to your indexers. It will not actively try to find movies you want that were uploaded in the past.
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
@@ -49,7 +49,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - Lists are a part of Radarr that allow you to follow a given list creator.
 
-- Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you don't have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
+- Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
 
 > **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
 {.is-warning}
@@ -71,7 +71,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
 
-## Why can't I add a new movie to Radarr?
+## Why can I not add a new movie to Radarr?
 
 - Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
@@ -253,7 +253,7 @@ If Docker:
 You were likely passing arguments in your connection and that is not supported.
 
 1. Change your argument to be your path
-2. Make sure the shebang in your script maps to your pwsh path (if you don't have a shebang definition in there, add it)
+2. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
 3. Make sure the pwsh script is executable
 
 ## I am using a Pi and Raspbian and Radarr will not launch
@@ -298,7 +298,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
 
-- A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you don't you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+- A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
@@ -332,7 +332,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - See the above database is malformed entry.
 
-- Then attempt to launch and see if it works. If it does not work, you'll need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
+- Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
 ## Why can’t I see my files on a remote server?
 
@@ -526,11 +526,11 @@ No. Radarr will talk to your download client to determine where the files have b
 - Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
   - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) can't be used.
+  - indexer specific categories (\>= 100000) cannot be used.
   - slow indexers will slow down the overall result
   - total results are limited to 1000
 
-- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you don't get any results.
+- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
 
 ## Why are there two files? | Why is there a file left in downloads?
 

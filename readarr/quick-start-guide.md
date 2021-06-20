@@ -12,7 +12,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 There are a lot more settings you may need or want. They can be found at the [settings]( /readarr/settings) page.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you'll need to enable those to make them visible.
+> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to enable those to make them visible.
 
 After installation and starting up, you open a browser and go to `http://ip_where_installed:8787`
 

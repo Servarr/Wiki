@@ -75,7 +75,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 ```
 
 For Caddy (V1) use this:
-Note: you'll also need to add the websocket directive to your prowlarr configuration
+Note: you will also need to add the websocket directive to your prowlarr configuration
 
 ```none
  proxy /prowlarr 127.0.0.1:9696 {
@@ -109,7 +109,7 @@ A properly configured and enabled download client is required for Prowlarr to be
 Prowlarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 This is typically due to improperly configured download client. Things you can typically check:
 Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-The Port number of that your download client is using these are filled out with the default port number but if you've changed it you'll need to have the same one entered into Prowlarr.
+The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.
 Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 ##### Download clients are unavailable due to failure
@@ -184,9 +184,9 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 > However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](/prowlarr/faq).
 {.is-info}
 
-Within the Backup section you'll be presented with previous backups (unless you have a fresh install that hasn't made any backups).
+Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
   
-Here you'll have two options at the top of the screen
+Here you will have two options at the top of the screen
 
 - Backup Now - This option will trigger a manual backup of your Prowlarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
