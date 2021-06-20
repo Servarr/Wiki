@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-06-13T05:27:17.272Z
+date: 2021-06-20T15:17:55.378Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -43,3 +43,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 - (Advanced Option) Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
 
 Test your indexer, and if a green checkmark appears, you're okay to save it. When you save it, depending on your sync settings, it will be added to your apps automatically.
+
+## Supported Indexers
+
+- [See this page](/prowlarr/supported-indexers/)
