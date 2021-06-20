@@ -94,13 +94,12 @@ When Trace log level is enabled, additional `.trace.txt` rolling log files will 
 
 -----
 
-#### Purpose
+#
+- We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
-We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
+### Determine the issue
 
-#### Determine the issue
-
-- The best place to look when won't start after an update is your log files, before trying to start again, use [Logging](/lidarr/settings#logging) and [Log Files](/lidarr/system#log-files) to find them and increase the log level.
+- The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/lidarr/settings#logging) and [Log Files](/lidarr/system#log-files) to find them and increase the log level.
 
 - **Migration Issue** - Migration errors won't be identical, but here is an example:
 

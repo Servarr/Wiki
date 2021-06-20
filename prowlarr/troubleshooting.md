@@ -94,9 +94,8 @@ When Trace log level is enabled, additional Prowlarr.trace.txt rolling log files
 
 ## Recovering from a Failed Update
 
-### Purpose
 
-We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
+- We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
 ### Determine the issue
 

@@ -90,13 +90,12 @@ When Trace log level is enabled, additional `readarr.trace.txt` rolling log file
 
 -----
 
-### Purpose
 
-We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
+- We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
-#### Determine the issue
+### Determine the issue
 
-The best place to look when won't start after an update is your log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
+The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
 
 - **Migration Issue**
 
