@@ -234,6 +234,6 @@ On the top row there are several options to allow you to control your log files.
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
 - Last Written - This is the local time that this particular log file was written to.
-  - Prowlarr uses rolling log files limited to 1MB each. The current log file is always prowlarr.txt, for the the other files prowlarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains fatal, error, warn, and info entries.
-  - When Debug log level is enabled, additional prowlarr.debug.txt rolling log files will be present, up to 51 files. This log files contains fatal, error, warn, info, and debug entries. It usually covers a ~40h period.
-  - When Trace log level is enabled, additional prowlarr.trace.txt rolling log files will be present, up to 51 files. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most.
+  - Prowlarr uses rolling log files limited to 1MB each. The current log file is always prowlarr.txt, for the the other files prowlarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+  - When Debug log level is enabled, additional prowlarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
+  - When Trace log level is enabled, additional prowlarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.

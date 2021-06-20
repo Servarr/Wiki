@@ -80,11 +80,11 @@ You can clear log files and the logs database directly from the UI, under System
 
 ### Log Files
 
- Readarr uses rolling log files limited to 1MB each. The current log file is always ,`readarr.txt`, for the the other files `readarr.0.txt` is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
+ Readarr uses rolling log files limited to 1MB each. The current log file is always ,`readarr.txt`, for the the other files `readarr.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
-When Debug log level is enabled, additional `readarr.debug.txt` rolling log files will be present. This log files contains fatal, error, warn, info, and debug entries. It usually covers a 40h period.
+When Debug log level is enabled, additional `readarr.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
-When Trace log level is enabled, additional `readarr.trace.txt` rolling log files will be present. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most.
+When Trace log level is enabled, additional `readarr.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
 

@@ -86,11 +86,11 @@ You can clear log files and the logs database directly from the UI, under `Syste
 
 ## Multiple Log Files
 
-Prowlarr uses rolling log files limited to 1MB each. The current log file is always Prowlarr.txt, for the the other files Prowlarr.0.txt is the next newest (the higher the number the older it is). This log file contains fatal, error, warn, and info entries.
+Prowlarr uses rolling log files limited to 1MB each. The current log file is always Prowlarr.txt, for the the other files Prowlarr.0.txt is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
-When Debug log level is enabled, additional Prowlarr.debug.txt rolling log files will be present. This log files contains fatal, error, warn, info, and debug entries. It usually covers a 40h period.
+When Debug log level is enabled, additional Prowlarr.debug.txt rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
-When Trace log level is enabled, additional Prowlarr.trace.txt rolling log files will be present. This log files contains fatal, error, warn, info, debug, and trace entries. Due to trace verbosity it only covers a couple of hours at most, and sometimes less than a minute if you're doing something intensive.
+When Trace log level is enabled, additional Prowlarr.trace.txt rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most, and sometimes less than a minute if you're doing something intensive.
 
 ## Recovering from a Failed Update
 
