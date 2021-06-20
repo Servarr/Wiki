@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-06-20T23:39:44.394Z
+date: 2021-06-20T23:43:36.931Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -94,13 +94,13 @@ EOF
 - Reload systemd:
 
 ```shell
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 - Enable the Radarr service:
 
 ```shell
-systemctl enable --now -q lidarr
+sudo systemctl enable --now -q lidarr
 ```
 
 ## Docker
