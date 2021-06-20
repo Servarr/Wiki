@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-06-10T01:29:06.856Z
+date: 2021-06-20T23:39:03.584Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -27,7 +27,7 @@ Lidarr is supported natively on Windows. Lidarr can be installed on Windows as W
 ## Linux
 
 You'll need to install the binaries using the below commands.
-> Note: This assumes you will run as the user `lidarr` and group `media`.
+
 > This will download the `x64` copy of lidarr and install it into `/opt`
 {.is-info}
 
@@ -57,6 +57,9 @@ tar -xvzf Lidarr*.linux*.tar.gz
 ```shell
 sudo mv Lidarr/ /opt
 ```
+
+> Note: This assumes you will run as the user `lidarr` and group `media`.
+{.is-warning}
 
 - Ensure ownership of the binary directory.
 
