@@ -28,6 +28,7 @@ Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base
 {.links-list}
 
 - [Supported Indexers](/prowlarr/supported-indexers)
+
 ## Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/prowlarr/troubleshooting)

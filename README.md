@@ -15,3 +15,12 @@ Welcome to the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sona
 ## GitHub
 
 This the git backup of [WikiArr](https://wikijs.servarr.com/), the consolidated Wiki for Sonarr, Radarr, Lidarr, and Readarr.
+
+### Contributing
+
+Feel free to contribute directly on the wiki or via Github Pull Requests.
+
+Please ensure to markdown is formatted properly.
+
+- Install Markdownlint `npm install -g markdownlint-cli`
+- Run the linting to attempt to fix issues. `markdownlint -f *.md -c .markdownlint.jsonc`
