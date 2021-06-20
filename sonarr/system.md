@@ -36,14 +36,14 @@ The upgrade procedure for Mono varies per platform.
 
 ##### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don�t have Auto-Updating enabled, so you�ll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
+Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don't have Auto-Updating enabled, so you'll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
 ##### Cannot install update because startup folder is not writable by the user
 
-This means Sonarr will be unable to update itself. You�ll have to update Sonarr manually or set the permissions on Sonarr�s Startup directory (the installation directory) to allow Sonarr to update itself.
+This means Sonarr will be unable to update itself. You'll have to update Sonarr manually or set the permissions on Sonarr's Startup directory (the installation directory) to allow Sonarr to update itself.
 
 ##### Updating will not be possible to prevent deleting AppData on Update
 
@@ -51,7 +51,7 @@ Sonarr detected that AppData folder for your Operating System is located inside 
 
 Please look at System -> Info to see the current AppData & Startup directories.
 This means Sonarr will be unable to update itself without risking data-loss.
-If you�re on linux, you�ll probably have to change the home directory for the user that is running Sonarr and copy the current contents of the ~/.config/Sonarr directory to preserve your database.
+If you're on linux, you'll probably have to change the home directory for the user that is running Sonarr and copy the current contents of the ~/.config/Sonarr directory to preserve your database.
 
 ##### Failed to resolve the IP Address for the Configured Proxy Host
 
@@ -91,7 +91,7 @@ Ensure SSL encryption is not turned on if you're using both your Sonarr instance
 
 ##### Download clients are unavailable due to failure
 
-One or more of your download clients is not responding to requests made by Sonarr. Therefore Sonarr has decided to temporarily stop querying the download client on it�s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Sonarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
+One or more of your download clients is not responding to requests made by Sonarr. Therefore Sonarr has decided to temporarily stop querying the download client on it's normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Sonarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 You should inspect System->Logs to see what the reason is for the failures.
 If you no longer use this download client, disable it in Sonarr to prevent the errors.
 
@@ -103,14 +103,17 @@ Sonarr requires Completed Download Handling to be able to import files that were
 ##### Downloading into Root Folder
 
 Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-Configured Root Folders can be found in [Settings -> Media Management -> Root Folders](/sonarr/settings/#root-folders)
+Configured Root Folders (aka Library folders) can be found in [Settings -> Media Management -> Root Folders](/sonarr/settings/#root-folders)
+One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
+It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+ -> Media Management -> Root Folders](/sonarr/settings/#root-folders)
 
 #### Completed/Failed Download Handling
 
 ##### Completed Download Handling is disabled
 
 (This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.)
-It�s recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Sonarr will only import a download once the download client reports it as ready.
+It's recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Sonarr will only import a download once the download client reports it as ready.
 If you wish to enable Completed Download Handling you should verify the following: * Warning: Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
 
 #### Indexers

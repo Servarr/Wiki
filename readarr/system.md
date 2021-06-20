@@ -181,14 +181,14 @@ This error is typically associated with bad docker paths within either your down
 An example of this would be:
 Download client: Download Path: /downloads:/mnt/user/downloads
 Readarr: Download Path: /data:/mnt/user/downloads
-Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished movie is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
+Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished book is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 Team Readarr is a big fan of simply using /data.
 Download client: /data:/mnt/user/data
 Readarr: /data:/mnt/user/data
 
-Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
+Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
 There are many great write ups by some very talented people one on our wiki Docker Guide and the other by TRaSH with his How To Set Up Hardlinks and Atomic-Moves Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
 See TRaSH's Remote Path Guide for more information.
@@ -196,7 +196,9 @@ See TRaSH's Remote Path Guide for more information.
 ##### Downloading into Root Folder
 
 Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-Configured Root Folders can be found in [Settings -> Media Management -> Root Folders](/readarr/settings/#root-folders)
+Configured Root Folders (aka Library folders) can be found in [Settings -> Media Management -> Root Folders](/readarr/settings/#root-folders)
+One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
+It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
 ##### Bad Download Client Settings
 
@@ -244,7 +246,7 @@ Readarr requires indexers to be able to discover new releases. Please read the w
 
 #### Enabled indexers do not support searching
 
-None of the indexers you have enabled support searching. This means Readarr will only be able to find new releases via the RSS feeds. But searching for movies (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
+None of the indexers you have enabled support searching. This means Readarr will only be able to find new releases via the RSS feeds. But searching for books (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
 
 ##### No indexers avaiable with Interactive Search Enabled
 
@@ -263,23 +265,23 @@ Run the Test on the indexer to force Readarr to recheck the indexer, please note
 
 This error is typically identified if a Movie is looking for a root folder but that root folder is no longer available.
 
-If you would like to remove this warning simply find the movie that is still using the old root folder and edit it to the correct root folder
+If you would like to remove this warning simply find the book that is still using the old root folder and edit it to the correct root folder
 
 Easiest way to find this is to:
 
 - Go to the Movies (Library) Tab
 - Create a custom filter with the old root folder path
-- Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movies to be moved to.
+- Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these books to be moved to.
 
-- Next you'll receive a pop-up that states Would you like to move the movie folders to 'root path' ? This will also state This will also rename the movie folder per the movie folder format in settings. Simply select No if the you do not want Readarr to move your files
+- Next you'll receive a pop-up that states Would you like to move the book folders to 'root path' ? This will also state This will also rename the book folder per the book folder format in settings. Simply select No if the you do not want Readarr to move your files
 
 #### Movies
 
 ##### Movie was removed from TMDb
 
-The movie is linked to a TMDb Id that was deleted from TMDb, usually because it was a duplicate, wasn't a movie or changed ID for some other reason. Deleted movies will not receive any updates and should be corrected by the user to ensure continued functionality. Remove the movie from Readarr without deleting the files, then try to re-add it. If it doesn't show up in a search, check Readarr because it might be a TV miniseries like Stephen King's It.
+The book is linked to a TMDb Id that was deleted from TMDb, usually because it was a duplicate, wasn't a book or changed ID for some other reason. Deleted books will not receive any updates and should be corrected by the user to ensure continued functionality. Remove the book from Readarr without deleting the files, then try to re-add it. If it doesn't show up in a search, check Readarr because it might be a TV miniseries like Stephen King's It.
 
-You can find and edit deleted movies by creating a custom filter using the following steps:
+You can find and edit deleted books by creating a custom filter using the following steps:
 
   1. Click Movies from the left menu
   1. Click the dropdown on Filter and select “Custom Filter”
@@ -326,10 +328,10 @@ This page lists all scheduled tasks that Readarr runs
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Readarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
 - Clean Up Recycle Bin - The recycling bin will be cleared out on the displayed schedule in the UI. This will only be used if the recycling bin is set in File Management
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
-- Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new movies. More info about lists can be found Settings -> Lists.
+- Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new books. More info about lists can be found Settings -> Lists.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Readarr
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
-- Refresh Movie - This goes through and refreshes all the metadata for all monitored and unmonitored movies
+- Refresh Movie - This goes through and refreshes all the metadata for all monitored and unmonitored books
 - Rss Sync - This will run the RSS Sync. This can be changed in settings -> options. More information on the RSS function can be found on our FAQ
   
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
