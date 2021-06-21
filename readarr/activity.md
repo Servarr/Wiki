@@ -2,7 +2,7 @@
 title: Readarr Activity
 description: 
 published: true
-date: 2021-06-21T14:34:06.435Z
+date: 2021-06-21T14:46:26.097Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T16:14:58.862Z
@@ -32,6 +32,26 @@ Make sure the author and book match, and click `Import`.
 
 ## History
 
+The History page shows you everything that Readarr has done with your media. The default sorting is from newest to oldest.
+
+![history1.png](/assets/readarr/history1.png)
+
+The left icon is the action that was taken (the list of possible actions is shown below). You can filter these by clicking on the Filter icon on the right side. You can also show more columns by clicking on Options.
+
+![history2.png](/assets/readarr/history2.png)
+
+On `Grabbed` statuses, you can click on the `i` icon on the right to see more details about the download (what indexer it came from, the URL of the grab, the age of the upload, etc.). You can also mark this item as failed, to initiate a removal, blacklist, and re-search of the item.
+
+![history4.png](/assets/readarr/history4.png)
+
 ## Blacklist
 
-(Coming Soon - Contributions are Welcome.!)
+The Blacklist page shows you items that are blacklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blacklist forever unless you manually remove them.
+
+![blacklist1.png](/assets/readarr/blacklist1.png)
+
+Clicking on the `i` icon on the far right shows you more details about the blacklisted entry, and whether it was manually marked as failed or automatically failed during download.
+
+![blacklist2.png](/assets/readarr/blacklist2.png)
+
+Clicking on the `x` on the far right removes the item from the blacklist, so that you can potentially grab it again, if it was added in error.
