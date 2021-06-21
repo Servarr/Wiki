@@ -185,21 +185,21 @@ Click on `Settings` -> `General`.
 
 The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
 
-- `Info` logging is the minimum logging level. Good for day-to-day operations, but not sufficient for reporting errors to the dev team.
+- `Info` logging is the minimum logging level. Good for day-to-day operations, but not sufficient for reporting errors to the development team.
 - `Debug` logging is a mid-range logging level. Good for some error resolution, but still not extremely detailed.  Contains all Info level logging as well.
-- `Trace` logging is extremely detailed, and what the devs want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
+- `Trace` logging is extremely detailed, and what the Developers want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
 
 ### Analytics
 
 ![general_analytics.png](/assets/prowlarr/general_analytics.png)
 
-Check the box to help the Prowlarr dev team gather statistics on install types, version, browser, and other information so that they can prioritize development and fixes properly.
+Check the box to help the Prowlarr development team gather statistics on install types, version, browser, and other information so that they can prioritize development and fixes properly.
 
 ### Updates
 
 ![general_updates.png](/assets/prowlarr/general_updates.png)
 
-Select the development branch you would like to use here. (Advanced Option) Valid options are `master`, `develop`, and `nightly` and possibly other temporary testing branches as the dev group determines.
+Select the development branch you would like to use here. (Advanced Option) Valid options are `master`, `develop`, and `nightly` and possibly other temporary testing branches as the developer group determines.
 
 - <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
   

@@ -436,7 +436,7 @@ Select your logging level here.
 
 ![genanalytics.png](/assets/readarr/genanalytics.png)
 
-Check this box so that the Readarr dev team can make decisions about what issues and bug reports to prioritize.
+Check this box so that the Readarr development team can make decisions about what issues and bug reports to prioritize.
 
 ### Updates
 

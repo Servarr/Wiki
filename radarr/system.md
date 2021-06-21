@@ -364,7 +364,7 @@ Off to the right of each of the previous download you have two options.
 ## Updates
 
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
-This page will also display the update notes from the Devs telling you what has been fixed or added to Radarr (Rejoice!)
+This page will also display the update notes from the Developers telling you what has been fixed or added to Radarr (Rejoice!)
   
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}

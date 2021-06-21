@@ -16,7 +16,7 @@ We currently use OpenCollective to accept donations on all projects, this allows
 
 ### Benefits
 
-- Donate Role on Discord, giving you access to dev chat
+- Donate Role on Discord, giving you access to developer chat
 - Priority Support. Yes, we have favorites and you are now one!
 - Early release and roadmap announcements through OpenCollective
 
