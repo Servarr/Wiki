@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-21T15:57:56.274Z
+date: 2021-06-21T16:06:40.554Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -298,5 +298,21 @@ To add a download client, click on the `+` icon, which will open a pop-up box.
 Click `Test` to test the connection. If you get a green checkmark, you can click `Save` to save it. Repeat as necessary for each client you wish to add.
 
 If you get an error, please check your logs for the specific issue and fix it until it tests green.
+
+## Import Lists
+
+Import lists allow you to add items to Readarr automatically from your GoodReads shelves or from other users. This has the potential to add a lot of unexpected items to your Readarr database, so please use it with care.
+
+![importlists.png](/assets/readarr/importlists.png)
+
+### Import Lists
+
+This shows you the lists you currently have, and allows you to add new lists. Adding lists is covered below in more detail.
+
+### Import List Exclusions
+
+Anything on here has been excluded from being added by lists, and will never be added from any list.  You can remove items from this by clicking on it.
+
+## Adding an Import List
 
 
