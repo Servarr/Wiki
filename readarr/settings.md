@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-21T16:06:40.554Z
+date: 2021-06-21T16:33:53.007Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -315,4 +315,71 @@ Anything on here has been excluded from being added by lists, and will never be 
 
 ## Adding an Import List
 
+After clicking the `+`, choose what kind of list you'd like to add:
+
+![addlist.png](/assets/readarr/addlist.png)
+
+In this instance, we're going to add a Goodreads Bookshelf list.
+
+![bookshelflist.png](/assets/readarr/bookshelflist.png)
+
+- Enter a name for this list.
+- Check this box to have anything on the list automatically add to Readarr.
+
+> This is going to add all authors, and ALL BOOKS from that author, to Readarr!
+
+- Select your monitoring level for things added. Valid options are `None`, `Selected book`, and `All Author Books`. All books are added to Readarr, but will be monitored or unmonitored based on this selection.
+- Check this box to have Readarr initiate a search for missing monitored items when they are added from a list. If you're adding a lot of authors/monitored books, this may overload your system!
+- Choose the root folder for these authors/books.
+- Choose your quality profile.
+- Choose your metadata profile.
+- Choose what tags apply to items from this list.
+> It is highly recommended that you add a descriptive tag here. Otherwise, you will not know what list added these items to Readarr, and once they're added you can never get this information again! This info is not logged!
+- (Advanced Option) Enter a userid here if it is not your userid you're added.
+- Click the button to authenticate with Goodreads.
+
+When done, click `Test` to test the connection. If you get a green checkmark, you can click `Save` to save the list.
+
+If you get an error, you should check your logs to see what the specific error is, and then fix that issue before saving.
+
+Lists sync by default every 24 hours, but can be triggered manually from the `Settings` -> `Tasks` page. You cannot automate this process any quicker than that.
+
+## Connect
+
+This page lists the external 3rd party connections Readarr uses for notifications.
+
+![connect.png](/assets/readarr/connect.png)
+
+### Connections
+
+This section lists all current connections, and allows you to add new ones.
+
+## Adding a Connection
+
+To add a new connection, click the `+` icon.  There are many connection types you can select from:
+
+![connectiontypes.png](/assets/readarr/connectiontypes.png)
+
+Since there are so many, and each is different, we won't get into the individual details. But there are a few things to note:
+
+- The Email connection allows you to attach the book itself to the email, which is a great way to deliver books to your reading device.
+- Notifiarr allows you to customize most of these same connections in a single setup, if you have [Notifiarr](https://github.com/Notifiarr/notifiarr) installed. 
+- Custom Script allows you to invoke a custom script for many different event types - if you want to convert book formats, sync to your device, or other options.
+
+## Metadata
+
+This page allows you to create/update metadata tags/covers.
+
+![metadata.png](/assets/readarr/metadata.png)
+
+### Calibre Metadata
+If you are using Calibre to manage your ebook collection, you will use these options to control it.
+- Send Metadata to Calibre options.
+- Check the box to send book covers to Calibre.
+- Check the box to embed metadata into the book files.
+
+### Write Metadata to Audio Files
+If you are using audiobooks, you will use these options to control it.
+- Select your options for tagging audiobooks with metadata.
+- Check the box to remove any embedded tags and leave only those added by Readarr.
 
