@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-21T15:52:39.111Z
+date: 2021-06-21T15:57:56.274Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -283,3 +283,20 @@ To add a download client, click on the `+` icon, which will open a pop-up box.
 - Enter the port that your download client is running on.
 - (Advanced Option) If you use a reverse proxy, enter a URL Base.
 - If your client requires a username, enter it here.
+- If your client requires a password, enter it here.
+- We highly recommend entering a Category here, which also exists in your download client. This way, every *arr you run doesn't have to parse every download.
+
+![addclient2.png](/assets/readarr/addclient2.png)
+
+- For releases less than 14 days old, this is the priority assigned in the download client.
+- For releases more than 14 days old, this is the priority assigned in the download client.
+- Check this box to add downloads to your client in a "Paused" state.
+- Check this box to use https instead of http.
+> If you are using localhost or an IP, you almost certainly DO NOT WANT to check this box.
+- (Advanced Option) Client priority from 1-50. This is used where you have multiple of a given type (usenet/torrent) of client, and want one to be prioritized over the other. If two clients have the same priority, items are round-robined among them.
+
+Click `Test` to test the connection. If you get a green checkmark, you can click `Save` to save it. Repeat as necessary for each client you wish to add.
+
+If you get an error, please check your logs for the specific issue and fix it until it tests green.
+
+
