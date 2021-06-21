@@ -2,14 +2,11 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-06-10T01:37:30.782Z
+date: 2021-06-21T17:06:48.887Z
 tags: readarr, needs-love, system
 editor: markdown
-dateCreated: 2021-06-10T01:35:44.125Z
+dateCreated: 2021-06-20T19:54:43.262Z
 ---
-
-> Warning: This page is a work in progress and is currently a rough draft based on Radarr
-{.is-danger}
 
 ## Status
 
@@ -22,38 +19,6 @@ This page contains a list of health checks errors. These health checks are perio
 ##### Branch is not a valid release branch
 
 The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
-
-##### Update to .NET Core version
-
-Newer versions of Readarr are targeted for .NET. We will no longer be providing legacy mono builds after 3.2 is released. You are running one of these legacy builds but your platform supports .NET.
-- Fixing Docker installs
-  - Re-pull your container
-- Fixing Standalone installs
-  - Back-Up your existing configuration before the next step.
-  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
-  - In short you will need to delete your existing binaries (contents or folder of /opt/Readarr) and replace with the contents of the .tar.gz you just downloaded.
-> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
-
-- Download the .net binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://readarr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=x64'`
-  - For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM use `arch=arm` and for ARM64 use `arch=arm64`
-- Stop Readarrr `sudo systemctl stop readarr`
-- Backup the old Binaries `sudo mv /opt/Readarr /opt/Readarr.old`
-- Extract the Readarr Tarball `tar -xvzf Readarr*.linux-core-x64.tar.gz`
-- Move the new Readarr Binaries `sudo mv Readarr/ /opt`
-- Ensure Readarr has permissions to its directory, this assumes it runs as the user readarr `sudo chown -R readarr:readarr /opt/Readarr`
-- Remove the old binaries `sudo rm -rf /opt/Readarr.old`
-- Remove the Tarball `sudo rm -rf Readarr*.linux-core-x64.tar.gz`
-- Update your startup script and replace `mono --debug /opt/Readarr/Readarr.exe` with `/opt/Readarr/Readarr`. To edit the script the command is likely: `sudo nano -e /etc/systemd/system/readarr.service`
-- Reload the Systemd Files `systemctl daemon-reload`
-- Restart Readarr `sudo systemctl start readarr.service`
-
-##### Currently installed mono version is old and unsupported
-
-Readarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after 3.2.
-Mono 5.20 is the absolute minimum for Readarr.
-The upgrade procedure for Mono varies per platform.
 
 ##### Currently installed SQLite version is not supported
 
@@ -136,14 +101,6 @@ Review your system time and ensure it is synced to an authoritative time server 
 ##### MediaInfo Library Could not be Loaded
 
 MediaInfo Library could not be loaded.
-
-##### Mono Legacy TLS enabled
-
-Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option
-
-##### Mono and x86 builds are ending
-
-Mono and x86 builds will no longer be supported in the next build of the application. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulting in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
 
 #### Download Clients
 
@@ -255,35 +212,23 @@ This mechanism is triggered if Readarr was unable to get a response from the ind
 You can prevent the warning by disabling the affected indexer.
 Run the Test on the indexer to force Readarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
-#### Movie Folders
+#### Book Folders
 
 ##### Missing root folder
 
-This error is typically identified if a Movie is looking for a root folder but that root folder is no longer available.
+This error is typically identified if a book is looking for a root folder but that root folder is no longer available.
 
 If you would like to remove this warning simply find the book that is still using the old root folder and edit it to the correct root folder
 
 Easiest way to find this is to:
 
-- Go to the Movies (Library) Tab
+- Go to the Authors (Library) Tab
 - Create a custom filter with the old root folder path
 - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these books to be moved to.
 
 - Next you will receive a pop-up that states Would you like to move the book folders to 'root path' ? This will also state This will also rename the book folder per the book folder format in settings. Simply select No if the you do not want Readarr to move your files
 
-#### Movies
-
-##### Movie was removed from TMDb
-
-The book is linked to a TMDb Id that was deleted from TMDb, usually because it was a duplicate, wasn't a book or changed ID for some other reason. Deleted books will not receive any updates and should be corrected by the user to ensure continued functionality. Remove the book from Readarr without deleting the files, then try to re-add it. If it doesn't show up in a search, check Readarr because it might be a TV miniseries like Stephen King's It.
-
-You can find and edit deleted books by creating a custom filter using the following steps:
-
-  1. Click Movies from the left menu
-  1. Click the dropdown on Filter and select “Custom Filter”
-  1. Enter a label, for example “Deleted Movies”
-  1. Make the filter as follows: Status is Deleted
-  1. Click save and select the newly created filter from the filter dropdown menu
+#### Books
 
 ##### Lists are unavailable due to failures
 
@@ -315,22 +260,22 @@ Feature Requests: Got a great idea drop it here
 
 This page lists all scheduled tasks that Readarr runs
 
-- Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings-> Update
+- Application Update Check - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings-> Update
 
 > Note: If on Docker this will not update your container as a new image will need to be downloaded.
 {.is-warning}
 
 - Backup - This will run a backup of your Readarr's database on a set schedule more details on this can be found here. More information about backups can be found System -> Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Readarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
-- Clean Up Recycle Bin - The recycling bin will be cleared out on the displayed schedule in the UI. This will only be used if the recycling bin is set in File Management
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
 - Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new books. More info about lists can be found Settings -> Lists.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Readarr
+- Refresh Author - This goes through and refreshes all authors in your Library.
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
-- Refresh Movie - This goes through and refreshes all the metadata for all monitored and unmonitored books
+- Rescan folders - This scans all book folders to see if a book exists or not, and updates the status of it appropriately.
 - Rss Sync - This will run the RSS Sync. This can be changed in settings -> options. More information on the RSS function can be found on our FAQ
   
-> All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
+> All these tasks can be run manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
 ### Queue
