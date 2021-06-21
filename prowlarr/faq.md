@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-06-17T22:39:31.612Z
+date: 2021-06-21T00:28:06.179Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-05T13:59:03.261Z
@@ -247,3 +247,8 @@ Depending on your OS, there are multiple possible ways.
 - In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Prowlarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Prowlarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
+
+## Can I easily add all indexers at once?
+
+No. This would not be a good thing to do, and this functionality will not be added. It is much better to choose your indexers wisely, pay attention to the stats to remove indexers that are too slow or not producing grabs. Proper pruning and maintenance of your indexers will result in much better results overall, and quicker results on searches from your apps.
+
