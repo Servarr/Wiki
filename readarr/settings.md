@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-11T18:58:48.474Z
+date: 2021-06-21T15:52:39.111Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -227,3 +227,59 @@ To add an indexer, click the `+` symbol.
 There are some preconfigured indexers available, but mostly you will be using Custom Newznab (for usenet) or Custom Torznab (for torrents) setups.
 
 ![addindexer.png](/assets/readarr/addindexer.png)
+
+- Enter a name for this indexer.
+
+- Check this box if you want this indexer to be used for the periodic RSS feed pulls. If you do not check this box, it will only be used for searches if those boxes are checked!
+- Check this box to enable automatic searches (the magnifying glass).
+- Check this box to enable interactive searches (the person icon).
+- Enter the URL of your indexer (including the `https://`)
+- (Advanced Option) A few indexers have a non-standard API path. Change this if necessary.
+- Enter the API Key from your indexer's profile page here. Do not share this API key with anyone, and blur it out of any screenshots.
+- The Categories here are pulled automatically from a "caps" (capabilities) call to your indexer when you Test, but they can be modified here.
+- (Advanced Option) If you enter a number here, this is the number of days before a book's release that Readarr will grab a book.
+- (Advanced Option) You can add additional Newznab parameters here as needed for this indexer.
+- (Advanced Option) You can set the indexer's priority here from 1-50 (1 being highest). This will be a deciding factor in where downloads are grabbed from if they are identical releases.
+
+Then click `Test`, and if you get a green checkmark, you can `Save` the indexer and you're ready to go. Repeat as necessary for the indexers you want to add.
+
+> If it doesn't test successfully, you will need to review your logs to see what's wrong and fix it. You cannot add an indexer if that indexer is currently down.
+
+## Download Clients
+
+This page is where you will add or edit your Usenet or Torrent download clients, and if necessary to add Remote Path Mappings.
+
+![downloadclients.png](/assets/readarr/downloadclients.png)
+
+### Download Clients
+
+This is a list of download clients you've added to Readarr. How to add more is detailed below.
+
+### Completed Download Handling
+
+- Enable: If this is not checked, Readarr won't handle completed downloads in any way. You will need to handle them manually.
+
+- (Advanced Option) Check this box to remove imported downloads from the download client history. This should be checked if you're using only usenet, but should not be checked if you're using torrent downloads.
+
+### Failed Download Handling
+
+- This box should be checked if you want Readarr to automatically do a new search for an item that failed download.
+
+- (Advanced Option) This box should be checked to remove failed downloads from the download client history. This should be checked for both usenet and torrent clients.
+
+### Remote Path Mappings
+
+If your download client is on another physical machine, you may need a remote path mapping. These are detailed extensively [here](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/). Keep in mind that remote path mappings are "dumb" search/replaces. "If you see this, then replace it with this". If your error messages display the old/bad path, then the remote path mapping is not working properly. If they display the new path, then they are working as expected but may be incorrect.
+
+## Adding a Download Client
+
+To add a download client, click on the `+` icon, which will open a pop-up box.
+
+![addclient1.png](/assets/readarr/addclient1.png)
+
+- Enter a name for this client.
+- Check this box to enable it for use by Readarr.
+- Enter the hostname. This can be a domain, localhost, or IP address.
+- Enter the port that your download client is running on.
+- (Advanced Option) If you use a reverse proxy, enter a URL Base.
+- If your client requires a username, enter it here.
