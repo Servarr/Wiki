@@ -2,15 +2,15 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-06-18T00:28:18.680Z
+date: 2021-06-21T21:51:53.039Z
 tags: radarr, quickstart
 editor: markdown
-dateCreated: 2021-05-17T01:51:10.479Z
+dateCreated: 2021-06-20T20:05:44.814Z
 ---
 
 ## Setup Guide
 
-> For a more detailed breakdown of all the setting check [Radarr ->Settings](/radarr/settings) We will cover the following options.
+> For a more detailed breakdown of all the settings, check [Radarr ->Settings](/radarr/settings) We will cover the following options.
 {.is-info}
 
 In this guide we will try to explain the basic setup you need to do to get started with Radarr.
