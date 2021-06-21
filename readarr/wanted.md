@@ -2,7 +2,7 @@
 title: Readarr Wanted
 description: 
 published: true
-date: 2021-06-21T14:59:04.172Z
+date: 2021-06-21T15:01:50.299Z
 tags: readarr, needs-love, wanted
 editor: markdown
 dateCreated: 2021-06-10T01:37:09.224Z
@@ -32,3 +32,8 @@ You can also do a Manual Import from here by clicking the icon at the top. This 
 
 ## Cutoff Unmet
 
+The Cutoff Unmet screen is like the Missing screen. The difference is that there are book files already in your library, but they are not in the quality or format you prefer, so Readarr is still looking for a "better" copy for you.
+
+![cutoffunmet.png](/assets/readarr/cutoffunmet.png)
+
+Like the Missing page, you can unmonitor or initiate searches from this page.
