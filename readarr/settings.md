@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-21T16:33:53.007Z
+date: 2021-06-21T16:59:56.315Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -383,3 +383,109 @@ If you are using audiobooks, you will use these options to control it.
 - Select your options for tagging audiobooks with metadata.
 - Check the box to remove any embedded tags and leave only those added by Readarr.
 
+## Tags
+
+If you have created any tags, they will be listed here and you can remove them if necessary.
+
+## General
+
+This page is for general Readarr settings that are not covered in other sections.
+
+### Host
+
+![genhost.png](/assets/readarr/genhost.png)
+
+- (Advanced Option) Bind address should be * unless you have a specific setup that requires something different.
+- Port number that Readarr is running on. This can also be changed in the `config.xml` file if Readarr is not running.
+- URL Base for Readarr if you're using a reverse proxy.
+- (Advanced Option) Check this box to enable SSL.
+> If you are running on an IP or localhost, do not check this box!
+- Check this box to open a (default) browser window on start.
+
+### Security
+
+![gensecurity.png](/assets/readarr/gensecurity.png)
+
+- Choose your authentication here. You can set a username/password for accessing Readarr.
+> If you forget your password, you will need to stop Readarr, edit the `config.xml` file and change Authentication to `none` and restart, and then set these values again.
+- This is your API key for use by other programs where necessary. Do not share this API with anyone, and blur it from any public postings.
+- Change how string HTTPS certificate validation is. This only applies to Readarr access itself!
+
+### Proxy
+
+![genproxy.png](/assets/readarr/genproxy.png)
+
+- If you use a proxy, check this box.
+- Select your proxy type (HTTPS, Socks4, or Socks5).
+- Enter your proxy hostname.
+- Enter your proxy port.
+- Enter your proxy username.
+- Enter your proxy password.
+- Enter a comma-separated list of addresses that bypass the proxy.
+- Check the box to bypass the proxy for local addresses.
+
+### Logging
+
+![genlogging.png](/assets/readarr/genlogging.png)
+
+Select your logging level here.
+
+> When asking for help, `Trace` level logging is generally needed. Regardless of the warning in the image above, trace logging rolls over and will not fill up your drive. It's fine to leave on all the time, so you have the required logs when necessaery.
+
+### Analytics
+
+![genanalytics.png](/assets/readarr/genanalytics.png)
+
+Check this box so that the Readarr dev team can make decisions about what issues and bug reports to prioritize.
+
+### Updates
+
+![genupdates.png](/assets/readarr/genupdates.png)
+
+(Advanced Option) This is the branch of the software you're running. In general, there are usually 3 branches:
+
+- Main: This is very stable and not updated very often.
+- Develop: This is pretty stable, and updated every couple of weeks on average.
+- Nightly: This is bleeding edge. It could break your install, and is updated sometimes a couple of times per day.
+
+### Backups
+
+![genbackups.png](/assets/readarr/genbackups.png)
+
+- (Advanced Option) The folder where backups are located.
+- (Advanced Option) How many days apart backups are made.
+- (Advanced Option) How many days old backups are deleted.
+
+By default, backups are performed every 7 days, and the last 4 are kept.
+
+## UI (User Interface)
+
+This page allows you to customize the user interface display options.
+
+### Calendar
+
+![uicalendar.png](/assets/readarr/uicalendar.png)
+
+- Choose the day of the first day of the week on the calendar.
+- Choose the week's column header for the calendar.
+
+### Dates
+
+![caldates.png](/assets/readarr/caldates.png)
+
+- Choose the short date format.
+- Choose the long date format.
+- Choose the time format.
+- Check the box to show "Today", etc. instead of dates that are close.
+
+### Style
+
+![calstyle.png](/assets/readarr/calstyle.png)
+
+- Check the box to change colors to be separated on the spectrum better for color-impaired viewers.
+
+### Language
+
+![callanguage.png](/assets/readarr/callanguage.png)
+
+- Choose the UI language from the drop-down of available translations.
