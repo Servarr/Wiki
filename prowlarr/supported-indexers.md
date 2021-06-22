@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: 
 published: true
-date: 2021-06-22T01:35:11.496Z
+date: 2021-06-22T01:36:21.181Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-17T21:08:26.444Z
@@ -16,7 +16,7 @@ dateCreated: 2021-06-17T21:08:26.444Z
 
 Indexer                                       |Description                                                                  |Protocol |Type
 ---------------------------------------------|----------------------------------------------------------------------------|--------|-------
-0day.kiev {#0day-keiv}                                     |                                                                              | torrent  | private
+0day.kiev{#0day-kiev}                                     |                                                                              | torrent  | private
 1337x                                         |                                                                              | torrent  | public
 1ptbar                                        |                                                                              | torrent  | private
 2 Fast 4 You                                  |                                                                              | torrent  | private
