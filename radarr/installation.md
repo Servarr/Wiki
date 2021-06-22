@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-20T23:44:34.377Z
+date: 2021-06-22T10:01:44.068Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -30,7 +30,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 1. Open the archive and drag the Radarr icon to your Application folder.
 1. Browse to <http://localhost:7878> to start using Radarr
 
-### Linux
+## Linux
   
 You'll need to install the binaries using the below commands.
 
