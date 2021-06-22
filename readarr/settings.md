@@ -292,7 +292,9 @@ To add a download client, click on the `+` icon, which will open a pop-up box.
 - For releases more than 14 days old, this is the priority assigned in the download client.
 - Check this box to add downloads to your client in a "Paused" state.
 - Check this box to use https instead of http.
+
 > If you are using localhost or an IP, you almost certainly DO NOT WANT to check this box.
+
 - (Advanced Option) Client priority from 1-50. This is used where you have multiple of a given type (usenet/torrent) of client, and want one to be prioritized over the other. If two clients have the same priority, items are round-robined among them.
 
 Click `Test` to test the connection. If you get a green checkmark, you can click `Save` to save it. Repeat as necessary for each client you wish to add.
@@ -334,7 +336,9 @@ In this instance, we're going to add a Goodreads Bookshelf list.
 - Choose your quality profile.
 - Choose your metadata profile.
 - Choose what tags apply to items from this list.
+
 > It is highly recommended that you add a descriptive tag here. Otherwise, you will not know what list added these items to Readarr, and once they're added you can never get this information again! This info is not logged!
+
 - (Advanced Option) Enter a userid here if it is not your userid you're added.
 - Click the button to authenticate with Goodreads.
 
@@ -363,7 +367,7 @@ To add a new connection, click the `+` icon.  There are many connection types yo
 Since there are so many, and each is different, we won't get into the individual details. But there are a few things to note:
 
 - The Email connection allows you to attach the book itself to the email, which is a great way to deliver books to your reading device.
-- Notifiarr allows you to customize most of these same connections in a single setup, if you have [Notifiarr](https://github.com/Notifiarr/notifiarr) installed. 
+- Notifiarr allows you to customize most of these same connections in a single setup, if you have [Notifiarr](https://github.com/Notifiarr/notifiarr) installed.
 - Custom Script allows you to invoke a custom script for many different event types - if you want to convert book formats, sync to your device, or other options.
 
 ## Metadata
@@ -373,13 +377,17 @@ This page allows you to create/update metadata tags/covers.
 ![metadata.png](/assets/readarr/metadata.png)
 
 ### Calibre Metadata
+
 If you are using Calibre to manage your ebook collection, you will use these options to control it.
+
 - Send Metadata to Calibre options.
 - Check the box to send book covers to Calibre.
 - Check the box to embed metadata into the book files.
 
 ### Write Metadata to Audio Files
+
 If you are using audiobooks, you will use these options to control it.
+
 - Select your options for tagging audiobooks with metadata.
 - Check the box to remove any embedded tags and leave only those added by Readarr.
 
@@ -399,7 +407,9 @@ This page is for general Readarr settings that are not covered in other sections
 - Port number that Readarr is running on. This can also be changed in the `config.xml` file if Readarr is not running.
 - URL Base for Readarr if you're using a reverse proxy.
 - (Advanced Option) Check this box to enable SSL.
+
 > If you are running on an IP or localhost, do not check this box!
+
 - Check this box to open a (default) browser window on start.
 
 ### Security
@@ -407,7 +417,9 @@ This page is for general Readarr settings that are not covered in other sections
 ![gensecurity.png](/assets/readarr/gensecurity.png)
 
 - Choose your authentication here. You can set a username/password for accessing Readarr.
+
 > If you forget your password, you will need to stop Readarr, edit the `config.xml` file and change Authentication to `none` and restart, and then set these values again.
+
 - This is your API key for use by other programs where necessary. Do not share this API with anyone, and blur it from any public postings.
 - Change how string HTTPS certificate validation is. This only applies to Readarr access itself!
 

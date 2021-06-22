@@ -251,4 +251,3 @@ Depending on your OS, there are multiple possible ways.
 ## Can I easily add all indexers at once?
 
 No. This would not be a good thing to do, and this functionality will not be added. It is much better to choose your indexers wisely, pay attention to the stats to remove indexers that are too slow or not producing grabs. Proper pruning and maintenance of your indexers will result in much better results overall, and quicker results on searches from your apps.
-

@@ -80,12 +80,13 @@ WantedBy=multi-user.target
 EOF
 ```
 
-- Reload systemd: 
+- Reload systemd:
 
 ```shell
 sudo systemctl -q daemon-reload
 ```
-- Enable the Radarr service: 
+
+- Enable the Radarr service:
 
 ```shell
 sudo systemctl enable --now -q radarr

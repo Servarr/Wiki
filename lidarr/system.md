@@ -26,12 +26,14 @@ The branch you have set is not a valid release branch. You will not receive upda
 ##### Update to .NET Core version
 
 Newer versions of Lidarr are targeted for .NET. We will no longer be providing legacy mono builds after 3.2 is released. You are running one of these legacy builds but your platform supports .NET.
+
 - Fixing Docker installs
   - Re-pull your container
 - Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
   - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
   - In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
+
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
 > YOU MUST DELETE THE OLD ONES FIRST.
 {.is-warning}
