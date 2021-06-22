@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: 
 published: true
-date: 2021-06-22T01:36:21.181Z
+date: 2021-06-22T01:37:00.759Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-17T21:08:26.444Z
@@ -452,7 +452,7 @@ Torrent9                                      |                                 
 Torrent9 clone                                |                                                                              | torrent  | public
 TorrentBD                                     |                                                                              | torrent  | private
 TorrentCCF                                    |                                                                              | torrent  | private
-[TorrentDay](https://torrentday.cool/)        |                                                                              | torrent  | private
+[TorrentDay](https://torrentday.cool/){#torrentday}        |                                                                              | torrent  | private
 TorrentDB                                     |                                                                              | torrent  | private
 TorrentDownload                               |                                                                              | torrent  | public
 Torrent-Explosiv                              |                                                                              | torrent  | private
