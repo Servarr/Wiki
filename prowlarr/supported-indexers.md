@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: 
 published: true
-date: 2021-06-20T15:17:14.145Z
+date: 2021-06-22T01:31:34.444Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-17T21:08:26.444Z
@@ -10,6 +10,8 @@ dateCreated: 2021-06-17T21:08:26.444Z
 
 ## Supported Indexers
 
+
+### 0day.kiev
 - As of Build `0.1.0.494` / [Commit: 87d91a0f15154c5f33327e242820fe11936cfc57](https://github.com/Prowlarr/Prowlarr/commit/87d91a0f15154c5f33327e242820fe11936cfc57)
 
 Indexer                                       |Description                                                                  |Protocol |Type
