@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: 
 published: true
-date: 2021-06-22T01:37:00.759Z
+date: 2021-06-22T02:55:50.653Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-17T21:08:26.444Z
@@ -12,517 +12,521 @@ dateCreated: 2021-06-17T21:08:26.444Z
 
 
 
-- As of Build `0.1.0.494` / [Commit: 87d91a0f15154c5f33327e242820fe11936cfc57](https://github.com/Prowlarr/Prowlarr/commit/87d91a0f15154c5f33327e242820fe11936cfc57)
+- As of Build `0.1.0.509` / [Commit: 3435d9db6e5b44e8a6a228eabe756ec32232c840](https://github.com/Prowlarr/Prowlarr/commit/3435d9db6e5b44e8a6a228eabe756ec32232c840)
 
-Indexer                                       |Description                                                                  |Protocol |Type
----------------------------------------------|----------------------------------------------------------------------------|--------|-------
-0day.kiev{#0day-kiev}                                     |                                                                              | torrent  | private
-1337x                                         |                                                                              | torrent  | public
-1ptbar                                        |                                                                              | torrent  | private
-2 Fast 4 You                                  |                                                                              | torrent  | private
-3ChangTrai                                    |                                                                              | torrent  | private
-3D Torrents                                   |                                                                              | torrent  | private
-4thD                                          |                                                                              | torrent  | private
-52PT                                          |                                                                              | torrent  | private
-720pier                                       |                                                                              | torrent  | private
-7torrents                                     |                                                                              | torrent  | public
-abNZB                                         |                                                                              | usenet   | private
-ABtorrents                                    |                                                                              | torrent  | private
-ACG.RIP                                       |                                                                              | torrent  | public
-ACGsou                                        |                                                                              | torrent  | public
-Acid-Lounge                                   |                                                                              | torrent  | private
-Across The Tasman                             |                                                                              | torrent  | private
-Aftershock                                    |                                                                              | torrent  | private
-Aidoru!Online                                 |                                                                              | torrent  | private
-[Aither](https://aither.cc/)                  | Aither is a Private Torrent Tracker for HD MOVIES / TV                       | torrent  | private
-[AlphaRatio](https://alpharatio.cc/)          | AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL               | torrent  | private
-altHUB                                        |                                                                              | usenet   | private
-Amigos Share Club                             |                                                                              | torrent  | private
-anasch.cc                                     |                                                                              | torrent  | private
-[AnimeBytes](https://animebytes.tv/)          | Powered by Tentacles                                                         | torrent  | private
-AnimeClipse                                   |                                                                              | torrent  | public
-Anime-Free                                    |                                                                              | torrent  | public
-[AnimeTorrents](https://animetorrents.me/)    |                                                                              | torrent  | private
-AnimeTosho                                    |                                                                              | torrent  | private
-AnimeTosho (Usenet)                           |                                                                              | usenet   | private
-[AnimeWorld](https://animeworld.cx/)          | AnimeWorld (AW) is a GERMAN Private site for ANIME / MANGA / HENTAI          | torrent  | private
-AniRena                                       |                                                                              | torrent  | public
-AniSource                                     |                                                                              | torrent  | public
-[Anthelion](https://anthelion.me/)            | A movies tracker                                                             | torrent  | private
-ArabaFenice                                   |                                                                              | torrent  | private
-ArabP2P                                       |                                                                              | torrent  | private
-ArenaBG                                       |                                                                              | torrent  | public
-AsianCinema                                   |                                                                              | torrent  | private
-Asylum Share                                  |                                                                              | torrent  | private
-AudioBookBay                                  |                                                                              | torrent  | public
-AudioNews                                     |                                                                              | torrent  | private
-Aussierul.es                                  |                                                                              | torrent  | private
-[AvistaZ](https://avistaz.to/)                |                                                                              | torrent  | private
-Back-ups                                      |                                                                              | torrent  | private
-BaibaKo                                       |                                                                              | torrent  | public
-[BakaBT](https://bakabt.me/)                  |                                                                              | torrent  | private
-BeiTai                                        |                                                                              | torrent  | private
-[BeyondHD](https://beyond-hd.me/)             |                                                                              | torrent  | private
-Bibliotik                                     |                                                                              | torrent  | private
-BigFANGroup                                   |                                                                              | torrent  | public
-BIGTorrent                                    |                                                                              | torrent  | private
-Bithorlo                                      |                                                                              | torrent  | private
-BitHUmen                                      |                                                                              | torrent  | private
-BitRu                                         |                                                                              | torrent  | public
-Bitspyder                                     |                                                                              | torrent  | private
-BiT-TiTAN                                     |                                                                              | torrent  | private
-Bittorrentfiles                               |                                                                              | torrent  | private
-BiTTuRK                                       |                                                                              | torrent  | private
-BlueBird                                      |                                                                              | torrent  | private
-[Blutopia](https://blutopia.xyz/)             |                                                                              | torrent  | private
-BookTracker                                   |                                                                              | torrent  | public
-BootyTape                                     |                                                                              | torrent  | public
-Borgzelle                                     |                                                                              | torrent  | private
-Boxing Torrents                               |                                                                              | torrent  | private
-BrasilTracker                                 |                                                                              | torrent  | private
-[BroadcastheNet](http://api.broadcasthe.net/) |                                                                              | torrent  | private
-BroadCity                                     |                                                                              | torrent  | private
-[BrokenStones](https://brokenstones.club/)    |                                                                              | torrent  | private
-BT.etree                                      |                                                                              | torrent  | public
-BT4G                                          |                                                                              | torrent  | public
-BTDB                                          |                                                                              | torrent  | public
-BTDigg                                        |                                                                              | torrent  | public
-BTNext                                        |                                                                              | torrent  | private
-BTSCHOOL                                      |                                                                              | torrent  | private
-BTSOW                                         |                                                                              | torrent  | public
-BwTorrents                                    |                                                                              | torrent  | private
-Byrutor                                       |                                                                              | torrent  | public
-Carpathians                                   |                                                                              | torrent  | private
-Carp-Hunter                                   |                                                                              | torrent  | private
-CartoonChaos                                  |                                                                              | torrent  | private
-Casa-Torrent                                  |                                                                              | torrent  | private
-CasStudioTV                                   |                                                                              | torrent  | public
-Catorrent                                     |                                                                              | torrent  | public
-CCFBits                                       |                                                                              | torrent  | private
-[CGPeers](https://cgpeers.to/)                |                                                                              | torrent  | private
-CHDBits                                       |                                                                              | torrent  | private
-ChileBT                                       |                                                                              | torrent  | private
-CiliPro                                       |                                                                              | torrent  | public
-Cinemageddon                                  |                                                                              | torrent  | private
-CinemaMovieS_ZT                               |                                                                              | torrent  | private
-Cinematik                                     |                                                                              | torrent  | private
-[CinemaZ](https://cinemaz.to/)                |                                                                              | torrent  | private
-Classix                                       |                                                                              | torrent  | private
-Coastal-Crew                                  |                                                                              | torrent  | private
-comicat                                       |                                                                              | torrent  | public
-ConCen                                        |                                                                              | torrent  | public
-Concertos                                     |                                                                              | torrent  | private
-cpasbien                                      |                                                                              | torrent  | public
-cpasbien clone                                |                                                                              | torrent  | public
-CrazyHD                                       |                                                                              | torrent  | private
-CrazySpirits                                  |                                                                              | torrent  | private
-CrnaBerza                                     |                                                                              | torrent  | private
-DANISH BYTES                                  |                                                                              | torrent  | private
-Darius Tracker                                |                                                                              | torrent  | private
-Dark Tracker                                  |                                                                              | torrent  | public
-Dark-Shadow                                   |                                                                              | torrent  | private
-Das Unerwartete                               |                                                                              | torrent  | private
-DataScene                                     |                                                                              | torrent  | private
-Deildu                                        |                                                                              | torrent  | public
-Demonoid                                      |                                                                              | torrent  | public
-DesiReleasers                                 |                                                                              | torrent  | private
-DesiTorrents                                  |                                                                              | torrent  | private
-Diablo Torrent                                |                                                                              | torrent  | private
-[DigitalCore](https://digitalcore.club/)      |                                                                              | torrent  | private
-DimeADozen                                    |                                                                              | torrent  | public
-DivTeam                                       |                                                                              | torrent  | private
-dmhy                                          |                                                                              | torrent  | public
-DOGnzb                                        |                                                                              | usenet   | private
-Dragonworld Reloaded                          |                                                                              | torrent  | private
-DrunkenSlug                                   |                                                                              | usenet   | private
-DXP                                           |                                                                              | torrent  | public
-EbookParadijs                                 |                                                                              | torrent  | private
-Ebooks-Shares                                 |                                                                              | torrent  | private
-Efecto Doppler                                |                                                                              | torrent  | private
-E-Hentai                                      |                                                                              | torrent  | public
-Empornium                                     |                                                                              | torrent  | private
-Empornium2FA                                  |                                                                              | torrent  | private
-emtrek                                        |                                                                              | torrent  | public
-EniaHD                                        |                                                                              | torrent  | public
-Erzsebet.pl                                   |                                                                              | torrent  | public
-eShareNet                                     |                                                                              | torrent  | private
-eStone                                        |                                                                              | torrent  | private
-ETTV                                          |                                                                              | torrent  | public
-ExKinoRay                                     |                                                                              | torrent  | public
-[ExoticaZ](https://exoticaz.to/)              |                                                                              | torrent  | private
-EXT Torrents                                  |                                                                              | torrent  | public
-ExtraTorrent.cd                               |                                                                              | torrent  | public
-ExtraTorrent.it                               |                                                                              | torrent  | public
-ExtremeBits                                   |                                                                              | torrent  | private
-ExtremeTorrents                               |                                                                              | torrent  | private
-EZTV                                          |                                                                              | torrent  | public
-FANO.IN                                       |                                                                              | torrent  | private
-Fantastic Heaven                              |                                                                              | torrent  | private
-FeedUrNeed                                    |                                                                              | torrent  | private
-Femdomcult                                    |                                                                              | torrent  | private
-Filebase                                      |                                                                              | torrent  | public
-[FileList](https://filelist.io)               |                                                                              | torrent  | private
-Film-Paleis                                   |                                                                              | torrent  | private
-FinElite                                      |                                                                              | torrent  | private
-FinVip                                        |                                                                              | torrent  | private
-FireBit                                       |                                                                              | torrent  | public
-FocusX                                        |                                                                              | torrent  | public
-Fou-Du-Cinema                                 |                                                                              | torrent  | public
-FreeTorrent                                   |                                                                              | torrent  | public
-Frozen Layer                                  |                                                                              | torrent  | public
-FunkyTorrents                                 |                                                                              | torrent  | private
-GamesTorrents                                 |                                                                              | torrent  | public
-GAYtorrent.ru                                 |                                                                              | torrent  | private
-Gay-Torrents.net                              |                                                                              | torrent  | public
-gay-torrents.org                              |                                                                              | torrent  | private
-[GazelleGames](https://gazellegames.net/)     | A gaming tracker.                                                            | torrent  | private
-Generation-Free                               |                                                                              | torrent  | private
-Generic Newznab                               |                                                                              | usenet   | private
-Generic Torznab                               |                                                                              | torrent  | private
-Genesis-Movement                              |                                                                              | torrent  | public
-GFXPeers                                      |                                                                              | torrent  | private
-GigaTorrents                                  |                                                                              | torrent  | private
-GingaDADDY                                    |                                                                              | usenet   | private
-Girotorrent                                   |                                                                              | torrent  | private
-GkTorrent                                     |                                                                              | torrent  | public
-GloDLS                                        |                                                                              | torrent  | public
-Greek Team                                    |                                                                              | torrent  | private
-GreekDiamond                                  |                                                                              | torrent  | private
-GTorrent                                      |                                                                              | torrent  | public
-GTorrent.pro                                  |                                                                              | torrent  | public
-HaiDan                                        |                                                                              | torrent  | private
-HamsterStudio                                 |                                                                              | torrent  | public
-HD4FANS                                       |                                                                              | torrent  | private
-HD4Free.xyz                                   |                                                                              | torrent  | private
-HDArea                                        |                                                                              | torrent  | private
-HDAtmos                                       |                                                                              | torrent  | private
-[HDBits](https://hdbits.org)                  |                                                                              | torrent  | private
-HD-Bits.com                                   |                                                                              | torrent  | private
-HDC                                           |                                                                              | torrent  | private
-HDCenter                                      |                                                                              | torrent  | private
-HDChina                                       |                                                                              | torrent  | private
-HDCity                                        |                                                                              | torrent  | private
-HD-CzTorrent                                  |                                                                              | torrent  | public
-HDDolby                                       |                                                                              | torrent  | private
-HD-Forever                                    |                                                                              | torrent  | private
-HDHome                                        |                                                                              | torrent  | private
-HDhouse                                       |                                                                              | torrent  | public
-HDME                                          |                                                                              | torrent  | private
-HD-Olimpo                                     |                                                                              | torrent  | private
-HD-Only                                       |                                                                              | torrent  | private
-HDRoute                                       |                                                                              | torrent  | private
-HDSky                                         |                                                                              | torrent  | private
-HD-Spain                                      |                                                                              | torrent  | private
-HDtime                                        |                                                                              | torrent  | private
-[HDTorrents](https://hdts.ru/)                |                                                                              | torrent  | private
-HDTorrents.it                                 |                                                                              | torrent  | private
-HDTurk                                        |                                                                              | torrent  | private
-HDU                                           |                                                                              | torrent  | private
-HDZone                                        |                                                                              | torrent  | private
-[Headphones](https://indexer.codeshy.com)     |                                                                              | usenet   | private
-HellasTZ                                      |                                                                              | torrent  | private
-Hon3y HD                                      |                                                                              | torrent  | private
-HQSource                                      |                                                                              | torrent  | private
-HunTorrent                                    |                                                                              | torrent  | public
-HuSh                                          |                                                                              | torrent  | private
-IBit                                          |                                                                              | torrent  | public
-Idope                                         |                                                                              | torrent  | public
-Il Corsaro Blu                                |                                                                              | torrent  | public
-Il Corsaro Nero                               |                                                                              | torrent  | public
-[ImmortalSeed](https://immortalseed.me/)      |                                                                              | torrent  | private
-Immortuos                                     |                                                                              | torrent  | private
-Insane Tracker                                |                                                                              | torrent  | private
-[IPTorrents](https://iptorrents.com/)         |                                                                              | torrent  | private
-Isohunt2                                      |                                                                              | torrent  | public
-iTorrent                                      |                                                                              | torrent  | public
-IV-Torrents                                   |                                                                              | torrent  | public
-JPopsuki                                      |                                                                              | torrent  | private
-JPTV                                          |                                                                              | torrent  | private
-Karagarga                                     |                                                                              | torrent  | private
-Keep Friends                                  |                                                                              | torrent  | private
-kickasstorrents.to                            |                                                                              | torrent  | public
-kickasstorrents.ws                            |                                                                              | torrent  | public
-KinoNaVse100                                  |                                                                              | torrent  | public
-Kinorun                                       |                                                                              | torrent  | public
-Kinozal                                       |                                                                              | torrent  | public
-LastFiles                                     |                                                                              | torrent  | private
-LatinoP2P                                     |                                                                              | torrent  | private
-LearnFlakes                                   |                                                                              | torrent  | private
-LegacyHD                                      |                                                                              | torrent  | private
-Legit Torrents                                |                                                                              | torrent  | public
-LemonHD                                       |                                                                              | torrent  | private
-LePorno.info                                  |                                                                              | torrent  | public
-LeSaloon                                      |                                                                              | torrent  | private
-LibraNet                                      |                                                                              | torrent  | private
-LimeTorrents                                  |                                                                              | torrent  | public
-LinkoManija                                   |                                                                              | torrent  | private
-LinuxTracker                                  |                                                                              | torrent  | public
-LosslessClub                                  |                                                                              | torrent  | private
-MacTorrents                                   |                                                                              | torrent  | public
-MaDs Revolution                               |                                                                              | torrent  | private
-magic-heaven                                  |                                                                              | torrent  | private
-Magico                                        |                                                                              | torrent  | private
-Magnet4You                                    |                                                                              | torrent  | public
-Majomparádé                                   |                                                                              | torrent  | private
-Marine Tracker                                |                                                                              | torrent  | public
-MeseVilág                                     |                                                                              | torrent  | private
-Metal Tracker                                 |                                                                              | torrent  | public
-Miatrix                                       |                                                                              | usenet   | private
-MicroBit                                      |                                                                              | torrent  | private
-[Milkie](https://milkie.cc/)                  |                                                                              | torrent  | private
-MixtapeTorrent                                |                                                                              | torrent  | public
-MMA-torrents                                  |                                                                              | torrent  | private
-MNV                                           |                                                                              | torrent  | private
-Mononoké-BT                                   |                                                                              | torrent  | private
-MonTorrent                                    |                                                                              | torrent  | public
-MoviesDVDR                                    |                                                                              | torrent  | public
-MovieTorrent                                  |                                                                              | torrent  | public
-M-Team - TP                                   |                                                                              | torrent  | private
-MTeamTP2FA                                    |                                                                              | torrent  | private
-MuziekFabriek                                 |                                                                              | torrent  | private
-MVGroup Forum                                 |                                                                              | torrent  | public
-MVGroup Main                                  |                                                                              | torrent  | public
-[MyAnonamouse](https://www.myanonamouse.net/) |                                                                              | torrent  | private
-MyPornClub                                    |                                                                              | torrent  | public
-MySpleen                                      |                                                                              | torrent  | private
-NBTorrents                                    |                                                                              | torrent  | private
-[Nebulance](https://nebulance.io/)            | At Nebulance we will change the way you think about TV                       | torrent  | private
-NetCosmo                                      |                                                                              | torrent  | private
-NetHD                                         |                                                                              | torrent  | public
-NetLab                                        |                                                                              | torrent  | private
-Newstudio                                     |                                                                              | torrent  | public
-NewstudioL                                    |                                                                              | torrent  | public
-Newz69                                        |                                                                              | usenet   | private
-Newz-Complex                                  |                                                                              | usenet   | private
-NinjaCentral                                  |                                                                              | usenet   | private
-Nitro                                         |                                                                              | torrent  | public
-NNTT                                          |                                                                              | torrent  | public
-NoNaMe Club                                   |                                                                              | torrent  | public
-NoNaMe ClubL                                  |                                                                              | torrent  | public
-Nordic+                                       |                                                                              | torrent  | private
-[NotWhatCD](https://notwhat.cd/)              |                                                                              | torrent  | private
-Nyaa.si                                       |                                                                              | torrent  | public
-Nyaa-pantsu                                   |                                                                              | torrent  | public
-Nzb.su                                        |                                                                              | usenet   | private
-NZBCat                                        |                                                                              | usenet   | private
-NZBFinder                                     |                                                                              | usenet   | private
-NZBgeek                                       |                                                                              | usenet   | private
-NzbNoob                                       |                                                                              | usenet   | private
-NzbPlanet                                     |                                                                              | usenet   | private
-NZBStars                                      |                                                                              | usenet   | private
-NZBXS                                         |                                                                              | usenet   | private
-Oasis                                         |                                                                              | torrent  | private
-oMg[WtF]trackr                                |                                                                              | torrent  | private
-OnceSearch                                    |                                                                              | torrent  | public
-OneJAV                                        |                                                                              | torrent  | public
-OpenCD                                        |                                                                              | torrent  | private
-[Orpheus](https://orpheus.network/)           |                                                                              | torrent  | private
-OshenPT                                       |                                                                              | torrent  | private
-Ourbits                                       |                                                                              | torrent  | private
-OxTorrent                                     |                                                                              | torrent  | public
-OZnzb                                         |                                                                              | usenet   | private
-P2PBG                                         |                                                                              | torrent  | private
-P2PElite                                      |                                                                              | torrent  | private
-ParnuXi                                       |                                                                              | torrent  | public
-[PassThePopcorn](https://passthepopcorn.me)   |                                                                              | torrent  | private
-PC-torrent                                    |                                                                              | torrent  | public
-Peers.FM                                      |                                                                              | torrent  | private
-Pirata Digital                                |                                                                              | torrent  | private
-PiratBit                                      |                                                                              | torrent  | public
-PiratBitL                                     |                                                                              | torrent  | public
-Pirateiro                                     |                                                                              | torrent  | public
-PixelCove                                     |                                                                              | torrent  | private
-PleasureDome                                  |                                                                              | torrent  | private
-PolishSource                                  |                                                                              | torrent  | private
-Pornbay                                       |                                                                              | torrent  | private
-Pornbits                                      |                                                                              | torrent  | private
-Pornforall                                    |                                                                              | torrent  | public
-PornLeech                                     |                                                                              | torrent  | public
-PornoLive                                     |                                                                              | torrent  | public
-PornoRip                                      |                                                                              | torrent  | public
-Pornotor                                      |                                                                              | torrent  | public
-Portugas                                      |                                                                              | torrent  | private
-PotUK                                         |                                                                              | torrent  | private
-[PreToMe](https://pretome.info/)              | BitTorrent site for High Quality, High Definition (HD) movies and TV Shows   | torrent  | private
-[PrivateHD](https://privatehd.to/)            |                                                                              | torrent  | private
-ProAudioTorrents                              |                                                                              | torrent  | private
-ProPorno                                      |                                                                              | torrent  | public
-ProStyleX                                     |                                                                              | torrent  | public
-PTerClub                                      |                                                                              | torrent  | private
-PTFiles                                       |                                                                              | torrent  | private
-PThome                                        |                                                                              | torrent  | private
-PTMSG                                         |                                                                              | torrent  | private
-PTSBAO                                        |                                                                              | torrent  | private
-PTTime                                        |                                                                              | torrent  | private
-PuntoTorrent                                  |                                                                              | torrent  | private
-PuroVicio                                     |                                                                              | torrent  | private
-PussyTorrents                                 |                                                                              | torrent  | public
-Puur-Hollands                                 |                                                                              | torrent  | private
-PWTorrents                                    |                                                                              | torrent  | private
-R3V WTF!                                      |                                                                              | torrent  | private
-Racing4Everyone (R4E)                         |                                                                              | torrent  | private
-RacingForMe                                   |                                                                              | torrent  | private
-Rainbow Tracker                               |                                                                              | torrent  | public
-Rapidzona                                     |                                                                              | torrent  | public
-[Rarbg](https://torrentapi.org)               |                                                                              | torrent  | public
-Red Star Torrent                              |                                                                              | torrent  | private
-[Redacted](https://redacted.ch/)              |                                                                              | torrent  | private
-RedBits                                       |                                                                              | torrent  | private
-[RevolutionTT](https://revolutiontt.me/)      |                                                                              | torrent  | private
-RinTor                                        |                                                                              | torrent  | public
-RinTor.NeT                                    |                                                                              | torrent  | public
-RiperAM                                       |                                                                              | torrent  | public
-RockBox                                       |                                                                              | torrent  | public
-ROFD                                          |                                                                              | torrent  | private
-Romanian Metal Torrents                       |                                                                              | torrent  | private
-RPTorrents                                    |                                                                              | torrent  | private
-Rus-media                                     |                                                                              | torrent  | public
-Rustorka                                      |                                                                              | torrent  | public
-RuTor                                         |                                                                              | torrent  | public
-RuTracker.RU                                  |                                                                              | torrent  | public
-ScenePalace                                   |                                                                              | torrent  | private
-SceneRush                                     |                                                                              | torrent  | private
-SDBits                                        |                                                                              | torrent  | private
-SDkino                                        |                                                                              | torrent  | public
-SeedFile                                      |                                                                              | torrent  | private
-seleZen                                       |                                                                              | torrent  | public
-Sexy-Pics                                     |                                                                              | torrent  | public
-ShareFiles                                    |                                                                              | torrent  | private
-[ShareIsland](https://shareisland.org/)       | A general italian tracker                                                    | torrent  | private
-Sharewood                                     |                                                                              | torrent  | public
-shokweb                                       |                                                                              | torrent  | public
-[ShowRSS](https://showrss.info/)              | showRSS is a service that allows you to keep track of your favorite TV shows | torrent  | public
-SiamBIT                                       |                                                                              | torrent  | private
-SimplyNZBs                                    |                                                                              | usenet   | private
-SkTorrent                                     |                                                                              | torrent  | public
-SkTorrent-org                                 |                                                                              | torrent  | public
-SkyTorrents.to                                |                                                                              | torrent  | public
-SnowPT                                        |                                                                              | torrent  | private
-sosulki                                       |                                                                              | torrent  | public
-SoulVoice                                     |                                                                              | torrent  | private
-[SpeedApp](https://speedapp.io)               | SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL     | torrent  | private
-Speedmaster HD                                |                                                                              | torrent  | private
-SpeedTorrent Reloaded                         |                                                                              | torrent  | private
-Spirit of Revolution                          |                                                                              | torrent  | private
-SportHD                                       |                                                                              | torrent  | private
-SportsCult                                    |                                                                              | torrent  | private
-SpotNZB                                       |                                                                              | usenet   | private
-SpringSunday                                  |                                                                              | torrent  | private
-[SubsPlease](https://subsplease.org/)         | SubsPlease - A better HorribleSubs/Erai replacement                          | torrent  | public
-SugoiMusic                                    |                                                                              | torrent  | private
-sukebei.nyaa.si                               |                                                                              | torrent  | public
-Sukebei-pantsu                                |                                                                              | torrent  | public
-[SuperBits](https://superbits.org/)           |                                                                              | torrent  | private
-Tabula Rasa                                   |                                                                              | usenet   | private
-Tapochek                                      |                                                                              | torrent  | private
-Tasmanit                                      |                                                                              | torrent  | private
-TeamHD                                        |                                                                              | torrent  | private
-TeamOS                                        |                                                                              | torrent  | private
-TEKNO3D                                       |                                                                              | torrent  | private
-TellyTorrent                                  |                                                                              | torrent  | private
-teracod                                       |                                                                              | torrent  | private
-The Empire                                    |                                                                              | torrent  | private
-The Falling Angels                            |                                                                              | torrent  | private
-The Geeks                                     |                                                                              | torrent  | private
-The Horror Charnel                            |                                                                              | torrent  | private
-The New Retro                                 |                                                                              | torrent  | private
-The Occult                                    |                                                                              | torrent  | private
-The Place                                     |                                                                              | torrent  | private
-The Shinning                                  |                                                                              | torrent  | private
-The Show                                      |                                                                              | torrent  | private
-The Vault                                     |                                                                              | torrent  | private
-TheAudioScene                                 |                                                                              | torrent  | private
-TheLeachZone                                  |                                                                              | torrent  | private
-themixingbowl                                 |                                                                              | torrent  | public
-[ThePirateBay](https://thepiratebay.org/)     |                                                                              | torrent  | public
-TheScenePlace                                 |                                                                              | torrent  | private
-TJUPT                                         |                                                                              | torrent  | private
-TLFBits                                       |                                                                              | torrent  | private
-TNTfork                                       |                                                                              | torrent  | public
-Tokyo Toshokan                                |                                                                              | torrent  | public
-Torlock                                       |                                                                              | torrent  | public
-TOROS                                         |                                                                              | torrent  | public
-Torrent Downloads                             |                                                                              | torrent  | public
-Torrent Oyun indir                            |                                                                              | torrent  | public
-Torrent Sector Crew                           |                                                                              | torrent  | private
-Torrent Surf                                  |                                                                              | torrent  | private
-Torrent.LT                                    |                                                                              | torrent  | private
-Torrent4You                                   |                                                                              | torrent  | public
-Torrent9                                      |                                                                              | torrent  | public
-Torrent9 clone                                |                                                                              | torrent  | public
-TorrentBD                                     |                                                                              | torrent  | private
-TorrentCCF                                    |                                                                              | torrent  | private
-[TorrentDay](https://torrentday.cool/){#torrentday}        |                                                                              | torrent  | private
-TorrentDB                                     |                                                                              | torrent  | private
-TorrentDownload                               |                                                                              | torrent  | public
-Torrent-Explosiv                              |                                                                              | torrent  | private
-TorrentFactory                                |                                                                              | torrent  | private
-TorrentFunk                                   |                                                                              | torrent  | public
-TorrentGalaxy                                 |                                                                              | torrent  | public
-TorrentHR                                     |                                                                              | torrent  | private
-Torrenting                                    |                                                                              | torrent  | private
-TorrentKitty                                  |                                                                              | torrent  | public
-Torrentland                                   |                                                                              | torrent  | private
-[TorrentLeech](https://www.torrentleech.org/) |                                                                              | torrent  | private
-Torrentleech.pl                               |                                                                              | torrent  | private
-TorrentMax                                    |                                                                              | torrent  | public
-TorrentParadise                               |                                                                              | torrent  | public
-torrent-pirat                                 |                                                                              | torrent  | public
-[TorrentPotato](http://127.0.0.1)             |                                                                              | torrent  | private
-TorrentProject2                               |                                                                              | torrent  | public
-TorrentQQ                                     |                                                                              | torrent  | public
-[TorrentSeeds](https://torrentseeds.org/)     |                                                                              | torrent  | private
-TorrentSir                                    |                                                                              | torrent  | public
-Torrents-Local                                |                                                                              | torrent  | public
-TOrrent-tuRK                                  |                                                                              | torrent  | private
-Torrentv                                      |                                                                              | torrent  | public
-TorrentView                                   |                                                                              | torrent  | public
-TorrentWhiz                                   |                                                                              | torrent  | public
-TotallyKids                                   |                                                                              | torrent  | private
-ToTheGlory                                    |                                                                              | torrent  | private
-ToTheGloryCookie                              |                                                                              | torrent  | private
-Trackeros                                     |                                                                              | torrent  | private
-TranceTraffic                                 |                                                                              | torrent  | private
-Trezzor                                       |                                                                              | torrent  | private
-TribalMixes                                   |                                                                              | torrent  | public
-truPornolabs                                  |                                                                              | torrent  | public
-TTsWeb                                        |                                                                              | torrent  | private
-TurkSeed                                      |                                                                              | torrent  | private
-TurkTorrent                                   |                                                                              | torrent  | private
-TVChaosUK                                     |                                                                              | torrent  | private
-Twilight Torrents                             |                                                                              | torrent  | private
-Twilights Zoom                                |                                                                              | torrent  | private
-U2                                            |                                                                              | torrent  | private
-UHDBits                                       |                                                                              | torrent  | private
-Underverse                                    |                                                                              | torrent  | public
-UnderverseL                                   |                                                                              | torrent  | public
-Union Fansub                                  |                                                                              | torrent  | public
-UnionDHT                                      |                                                                              | torrent  | public
-UnionGang                                     |                                                                              | torrent  | private
-Unlimitz                                      |                                                                              | torrent  | private
-Usenet Crawler                                |                                                                              | usenet   | private
-Vizuk                                         |                                                                              | torrent  | private
-VST Torrents                                  |                                                                              | torrent  | public
-VSTHouse                                      |                                                                              | torrent  | public
-WDT                                           |                                                                              | torrent  | private
-Witch-Hunter                                  |                                                                              | torrent  | private
-wOOt                                          |                                                                              | torrent  | private
-World-In-HD                                   |                                                                              | torrent  | private
-XbytesV2                                      |                                                                              | torrent  | private
-x-ite.me                                      |                                                                              | torrent  | private
-XWT-Classics                                  |                                                                              | torrent  | private
-XWtorrents                                    |                                                                              | torrent  | private
-xxxAdultTorrent                               |                                                                              | torrent  | public
-xxxtor                                        |                                                                              | torrent  | public
-xxxtorrents                                   |                                                                              | torrent  | public
-YDYPT                                         |                                                                              | torrent  | private
-YGGcookie                                     |                                                                              | torrent  | public
-YGGtorrent                                    |                                                                              | torrent  | public
-YourBittorrent                                |                                                                              | torrent  | public
-[YTS](https://yts.mx/)                        | YTS is a Public torrent site specialising in HD movies of small size         | torrent  | public
-Zamunda.net                                   |                                                                              | torrent  | private
-Zelka.org                                     |                                                                              | torrent  | private
-zetorrents                                    |                                                                              | torrent  | public
-[ZonaQ](https://www.zonaq.pw/)                | ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV                   | torrent  | private
-Zooqle                                        |                                                                              | torrent  | public
-Ztracker                                      |                                                                              | torrent  | public
+Indexer                                                        |Description                                                                                                                |Protocol |Type   
+-------------------------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------- |-------- |-------
+0day.kiev{#0daykiev}                                           | 0day.kiev.ua is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                | torrent  | private
+1337x{#1337x}                                                  | 1337X is a Public torrent site that offers verified torrent downloads                                                      | torrent  | public 
+1ptbar{#1ptbar}                                                | 1ptbar is a CHINESE Private Torrent Tracker for Movies, TV, and e-Learning                                                 | torrent  | private
+2 Fast 4 You{#2fast4you}                                       | 2 Fast 4 You is a FRENCH Private site for TV / MOVIES / GENERAL                                                            | torrent  | private
+3ChangTrai{#3changtrai}                                        | 3ChangTrai (3CT) is a VIETNAMESE Private Torrent Tracker for HD MOVIES / TV                                                | torrent  | private
+3D Torrents{#3dtorrents}                                       | 3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES                                                   | torrent  | private
+4thD{#4thd}                                                    | 4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                       | torrent  | private
+52PT{#52pt}                                                    | 52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                               | torrent  | private
+720pier{#pier720}                                              | 720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS                                                                 | torrent  | private
+7torrents{#7torrents}                                          | 7torrents is a Public BitTorrent DHT search engine.                                                                        | torrent  | public 
+abNZB{#newznab}                                                |                                                                                                                            | usenet   | private
+ABtorrents{#abtorrents}                                        | ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS                                                               | torrent  | private
+ACG.RIP{#acgrip}                                               | ACG.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents                             | torrent  | public 
+ACGsou{#acgsou}                                                | ACGsou (36DM) is a CHINESE Public torrent tracker for ANIME                                                                | torrent  | public 
+Acid-Lounge{#acidlounge}                                       | Acid Lounge (A-L) is a Private Torrent Tracker for 0DAY / GENERAL                                                          | torrent  | private
+Across The Tasman{#acrossthetasman}                            | ATT is a torrent site for Rugby and other sports played in Australia                                                       | torrent  | private
+Aftershock{#aftershock}                                        | Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL                                                     | torrent  | private
+Aidoru!Online{#aidoruonline}                                   | Aidoru!Online is a Private Torrent Tracker for Female Japanese Idol related files                                          | torrent  | private
+[Aither](https://aither.cc/){#aither}                          | Aither is a Private Torrent Tracker for HD MOVIES / TV                                                                     | torrent  | private
+[AlphaRatio](https://alpharatio.cc/){#alpharatio}              | AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL                                                             | torrent  | private
+altHUB{#newznab}                                               |                                                                                                                            | usenet   | private
+Amigos Share Club{#amigosshare}                                | Amigos Share Club is a Brazilian Private site for TV / MOVIES / GENERAL                                                    | torrent  | private
+anasch.cc{#anaschcc}                                           | anasch.cc is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                           | torrent  | private
+[AnimeBytes](https://animebytes.tv/){#animebytes}              | Powered by Tentacles                                                                                                       | torrent  | private
+AnimeClipse{#animeclipse}                                      | AnimeClipse is a Public site for Hellenic Fansubs Anime.                                                                   | torrent  | public 
+Anime-Free{#anime-free}                                        | Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games                          | torrent  | public 
+[AnimeTorrents](https://animetorrents.me/){#animetorrents}     |                                                                                                                            | torrent  | private
+AnimeTosho{#torznab}                                           |                                                                                                                            | torrent  | private
+AnimeTosho (Usenet){#newznab}                                  |                                                                                                                            | usenet   | private
+[AnimeWorld](https://animeworld.cx/){#animeworld}              | AnimeWorld (AW) is a GERMAN Private site for ANIME / MANGA / HENTAI                                                        | torrent  | private
+AniRena{#anirena}                                              | AniRena is a Public torrent tracker for the latest anime and Japanese related torrents                                     | torrent  | public 
+AniSource{#anisource}                                          | AniSource is a Public site for HD Anime raws.                                                                              | torrent  | public 
+[Anthelion](https://anthelion.me/){#anthelion}                 | A movies tracker                                                                                                           | torrent  | private
+ArabaFenice{#arabafenice}                                      | Araba Fenice (Phoenix) is an ITALIAN Private site for TV / MOVIES / GENERAL                                                | torrent  | private
+ArabP2P{#arabp2p}                                              | ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL                                                     | torrent  | private
+ArenaBG{#arenabg}                                              | ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL                                                     | torrent  | public 
+AsianCinema{#asiancinema}                                      | Tracker Movies/TV/Music                                                                                                    | torrent  | private
+Asylum Share{#asylumshare}                                     | Asylum Share is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                              | torrent  | private
+AudioBookBay{#audiobookbay}                                    | AudioBook Bay (ABB) is a public Torrent Tracker for AUDIOBOOKS                                                             | torrent  | public 
+AudioNews{#audionews}                                          | AudioNews (AN) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC                                             | torrent  | private
+Aussierul.es{#aussierules}                                     | Aussierul.es is a torrent site for Aussie Rules Football played in Australia                                               | torrent  | private
+[AvistaZ](https://avistaz.to/){#avistaz}                       |                                                                                                                            | torrent  | private
+Back-ups{#backups}                                             | Back-Ups is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                            | torrent  | private
+Badass Torrents{#badasstorrents}                               | Badass Torrents is a Public torrent site for MOVIES / TV / GENERAL                                                         | torrent  | public 
+BaibaKo{#baibako}                                              | BaibaKo is a RUSSIAN Semi-Private Torrent Tracker for TV                                                                   | torrent  | public 
+[BakaBT](https://bakabt.me/){#bakabt}                          |                                                                                                                            | torrent  | private
+BeiTai{#beitai}                                                | BeiTai is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                             | torrent  | private
+[BeyondHD](https://beyond-hd.me/){#beyondhd}                   |                                                                                                                            | torrent  | private
+Bibliotik{#bibliotik}                                          | Bibliotik is a private site for eBooks and audiobooks                                                                      | torrent  | private
+BigFANGroup{#bigfangroup}                                      | BigFANGroup is a RUSSIAN Public Torrent Tracker for MOVIES / TV                                                            | torrent  | public 
+BIGTorrent{#bigtorrent}                                        | BIGTorrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                | torrent  | private
+Bithorlo{#bithorlo}                                            | Bithorlo (BHO) is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL                                                 | torrent  | private
+BitHUmen{#bithumen}                                            | BitHUmen is a Hungarian Private site for TV / MOVIES / GENERAL                                                             | torrent  | private
+BitRu{#bitru}                                                  | BitRu is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                        | torrent  | public 
+Bitspyder{#bitspyder}                                          | Bitspyder is a Private site for Educational BOOKS / AUDIO                                                                  | torrent  | private
+BiT-TiTAN{#bit-titan}                                          | BiT-TiTAN is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+Bittorrentfiles{#bittorrentfiles}                              | Bittorrentfiles is a Private GERMAN tracker                                                                                | torrent  | private
+BiTTuRK{#bitturk}                                              | BiTTuRK is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL. This Indexer is for English only.               | torrent  | private
+BlueBird{#bluebird}                                            | BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES                                                                | torrent  | private
+[Blutopia](https://blutopia.xyz/){#blutopia}                   |                                                                                                                            | torrent  | private
+BookTracker{#booktracker}                                      | BookTracker is a RUSSIAN Semi-Private Torrent Tracker for EBOOKS                                                           | torrent  | public 
+BootyTape{#bootytape}                                          | BootyTape is a Semi-Private site for 3X                                                                                    | torrent  | public 
+Borgzelle{#borgzelle}                                          | Borgzelle is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+Boxing Torrents{#boxingtorrents}                               | Boxing Torrents is a Private Torrent Tracker for BOXING                                                                    | torrent  | private
+BrasilTracker{#brasiltracker}                                  | BrasilTracker is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                             | torrent  | private
+[BroadcastheNet](http://api.broadcasthe.net/){#broadcasthenet} |                                                                                                                            | torrent  | private
+BroadCity{#broadcity}                                          | BroadCity is a TURKISH Private Torrent Tracker for MOVIES and TV                                                           | torrent  | private
+[BrokenStones](https://brokenstones.club/){#brokenstones}      |                                                                                                                            | torrent  | private
+BT.etree{#btetree}                                             | BT.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC                                                               | torrent  | public 
+BT4G{#bt4g}                                                    | BT4G is a Public metadata crawler for magnets                                                                              | torrent  | public 
+BTDB{#btdb}                                                    | BTDB is a Public BitTorrent DHT search engine.                                                                             | torrent  | public 
+BTDigg{#btdigg}                                                | BTDigg is a Public BitTorrent DHT search engine.                                                                           | torrent  | public 
+BTNext{#btnext}                                                | BTNext (BTNT) is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL                                                   | torrent  | private
+BTSCHOOL{#btschool}                                            | BTSCHOOL is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+BTSOW{#btsow}                                                  | BTSOW is a Public torrent indexer                                                                                          | torrent  | public 
+BwTorrents{#bwtorrents}                                        | BwTorrents is a Private Torrent Tracker for BollyWood MOVIES / TV / GENERAL                                                | torrent  | private
+Byrutor{#byrutor}                                              | Byrutor is a RUSSIAN Public Torrent Tracker for GAMES                                                                      | torrent  | public 
+Carpathians{#carpathians}                                      | Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL                                                      | torrent  | private
+Carp-Hunter{#carphunter}                                       | Carp-Hunter is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                               | torrent  | private
+CartoonChaos{#cartoonchaos}                                    | CartoonChaos (CC) is a Private Torrent Tracker for ANIMATED MOVIES / TV                                                    | torrent  | private
+Casa-Torrent{#casatorrent}                                     | Casa-Torrent is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL                                                 | torrent  | private
+CasStudioTV{#casstudiotv}                                      | CasStudioTV is a RUSSIAN Semi-Private Torrent Tracker for TV                                                               | torrent  | public 
+Catorrent{#catorrent}                                          | Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES                                                              | torrent  | public 
+CCFBits{#ccfbits}                                              | CCFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                            | torrent  | private
+[CGPeers](https://cgpeers.to/){#cgpeers}                       |                                                                                                                            | torrent  | private
+CHDBits{#chdbits}                                              | CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                            | torrent  | private
+ChileBT{#chilebt}                                              | ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                     | torrent  | private
+CiliPro{#cilipro}                                              | CiliPro (LIAORENCILI) is a Public BitTorrent DHT search engine.                                                            | torrent  | public 
+Cinemageddon{#cinemageddon}                                    | B-movie tracker                                                                                                            | torrent  | private
+CinemaMovieS_ZT{#cinemamovies}                                 | CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL                                              | torrent  | private
+Cinematik{#cinematik}                                          | A tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse.                                   | torrent  | private
+[CinemaZ](https://cinemaz.to/){#cinemaz}                       |                                                                                                                            | torrent  | private
+Classix{#classix}                                              | Classic movie tracker                                                                                                      | torrent  | private
+Coastal-Crew{#coastalcrew}                                     | Coastal-Crew is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                 | torrent  | private
+comicat{#comicat}                                              | comicat is a CHINESE Public tracker for Anime / Hentai / Manga                                                             | torrent  | public 
+ConCen{#concen}                                                | ConCen (Conspiracy Central) is a Public conspiracy related torrent index                                                   | torrent  | public 
+Concertos{#concertos}                                          | Concertos - Private site for Live Concerts with Strict Quality Control                                                     | torrent  | private
+cpasbien{#cpabien}                                             | cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL                                                                 | torrent  | public 
+cpasbien clone{#cpasbienclone}                                 | cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL                                                           | torrent  | public 
+CrazyHD{#crazyhd}                                              | CrazyHD is a BANGLADESHI Private Torrent Tracker for MOVIES / TV / GENERAL                                                 | torrent  | private
+CrazySpirits{#crazyspirits}                                    | Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL                                                | torrent  | private
+CrnaBerza{#crnaberza}                                          | Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                   | torrent  | private
+DANISH BYTES{#danishbytes}                                     | DANISH BYTES is a Private Danish Tracker                                                                                   | torrent  | private
+Darius Tracker{#dariustracker}                                 | Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+Dark Tracker{#darktracker}                                     | Dark Tracker is a RUSSIAN Semi-Private Torrent Tracker for 0DAY / GENERAL                                                  | torrent  | public 
+Dark-Shadow{#dark-shadow}                                      | Dark-Shadow is a German Private site for TV / MOVIES / GENERAL                                                             | torrent  | private
+Das Unerwartete{#dasunerwartete}                               | Das Unerwartete is a Private GERMAN tracker                                                                                | torrent  | private
+DataScene{#datascene}                                          | DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                             | torrent  | private
+Deildu{#deildu}                                                | Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL                                                         | torrent  | public 
+Demonoid{#demonoid}                                            | Demonoid is a Public torrent site for MOVIES / TV / GENERAL                                                                | torrent  | public 
+DesiReleasers{#desireleasers}                                  | DesiReleasers is an INDIAN Private Torrent Tracker for INDIAN MOVIES                                                       | torrent  | private
+DesiTorrents{#desitorrents}                                    | Desitorrents is a  Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / GENERAL                                             | torrent  | private
+Diablo Torrent{#diablotorrent}                                 |  Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL                                                      | torrent  | private
+[DigitalCore](https://digitalcore.club/){#digitalcore}         |                                                                                                                            | torrent  | private
+DimeADozen{#dimeadozen}                                        | DimeADozen (EzTorrent) is a Semi-Private Torrent Tracker for BOOTLEG MUSIC                                                 | torrent  | public 
+DivTeam{#divteam}                                              | DivTeam is a SPANISH Private Torrent Tracker for MOVIES / GENERAL                                                          | torrent  | private
+dmhy{#dmhy}                                                    | dmhy is a TAIWANESE Public magnet tracker for ANIME                                                                        | torrent  | public 
+DOGnzb{#newznab}                                               |                                                                                                                            | usenet   | private
+Dragonworld Reloaded{#dragonworldreloaded}                     | Dragonworld Reloaded is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                         | torrent  | private
+DrunkenSlug{#newznab}                                          |                                                                                                                            | usenet   | private
+DXP{#dxp}                                                      | Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles.                       | torrent  | public 
+EbookParadijs{#ebookparadijs}                                  | EbookParadijs is a DUTCH Private Tracker for EBOOKS                                                                        | torrent  | private
+Ebooks-Shares{#ebooks-shares}                                  | Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS                                                         | torrent  | private
+Efecto Doppler{#efectodoppler}                                 | Efecto Doppler is a SPANISH Private Torrent Tracker for MUSIC                                                              | torrent  | private
+E-Hentai{#ehentai}                                             | E-Hentai is a Public site for Hentai doujinshi, manga.                                                                     | torrent  | public 
+Empornium{#empornium}                                          | Empornium (EMP) is a Private Torrent Tracker for XXX                                                                       | torrent  | private
+Empornium2FA{#empornium2fa}                                    | this indexer uses a cookie login for Empornium for those that want to use 2FA                                              | torrent  | private
+emtrek{#emtrek}                                                | emtrek is a RUSSIAN Public Torrent Tracker for 0DAY / GENERAL                                                              | torrent  | public 
+EniaHD{#eniahd}                                                | EniaHD is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV                                                           | torrent  | public 
+Erzsebet.pl{#erzsebetpl}                                       | Erzsebet.pl is a RUSSIAN Semi-Private Torrent Tracker for 3X                                                               | torrent  | public 
+eShareNet{#esharenet}                                          | eShareNet is a Private Tracker for Brittish MOVIE / TV                                                                     | torrent  | private
+eStone{#estone}                                                | eStone (XiDER, BeLoad) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL                                           | torrent  | private
+ETTV{#ettv}                                                    | ETTV is a Public torrent site for TV / MOVIES, home of the  ETTV, ETHD and DTOne groups.                                   | torrent  | public 
+ExKinoRay{#exkinoray}                                          | ExKinoRay is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV                                                        | torrent  | public 
+[ExoticaZ](https://exoticaz.to/){#exoticaz}                    |                                                                                                                            | torrent  | private
+EXT Torrents{#exttorrents}                                     | EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL                                                            | torrent  | public 
+ExtraTorrent.cd{#extratorrent-cd}                              | ExtraTorrent.cd is a Public tracker for MOVIE / TV / GENERAL magnets                                                       | torrent  | public 
+ExtraTorrent.it{#extratorrent-it}                              | ExtraTorrent.it is a Public tracker, a popular alternative to the original ET site, providing Movie / TV / General magnets | torrent  | public 
+ExtremeBits{#extremebits}                                      | ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS                                                                | torrent  | private
+ExtremeTorrents{#extremetorrents}                              | ExtremeTorrents is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL                                               | torrent  | private
+EZTV{#eztv}                                                    | EZTV is a Public torrent site for TV shows                                                                                 | torrent  | public 
+FANO.IN{#fanoin}                                               | Fano.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL                                                            | torrent  | private
+Fantastic Heaven{#fantasticheaven}                             | Fantastic Heaven is a German Time based tracker                                                                            | torrent  | private
+FeedUrNeed{#feedurneed}                                        | FeedUrNeed (FuN) is a Private Torrent Tracker for MOVIES / TV / General                                                    | torrent  | private
+Femdomcult{#femdomcult}                                        | Femdomcult is a Private Torrent Tracker for FETISH XXX                                                                     | torrent  | private
+Filebase{#filebase}                                            | Filebase is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                     | torrent  | public 
+[FileList](https://filelist.io){#filelist.io}                  |                                                                                                                            | torrent  | private
+Film-Paleis{#film-paleis}                                      | Film-Paleis is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL                                                   | torrent  | private
+FinElite{#finelite}                                            | FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL                                               | torrent  | private
+FinVip{#finvip}                                                | FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL                                                      | torrent  | private
+FireBit{#firebit}                                              | FireBit is an UKRAINIAN / RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                         | torrent  | public 
+FocusX{#focusx}                                                | FocusX is a RUSSIAN Public torrent site for MOVIES and TV                                                                  | torrent  | public 
+Fou-Du-Cinema{#fouducinema}                                    | Fou-Du-Cinema (FdC) is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL                                     | torrent  | public 
+FreeTorrent{#freetorrent}                                      | FreeTorrent is a Semi-Private Torrent Tracker for HD MOVIES / TV                                                           | torrent  | public 
+Frozen Layer{#frozenlayer}                                     | Frozen Layer is a SPANISH Public torrent site focused on ANIME                                                             | torrent  | public 
+FunkyTorrents{#funkytorrents}                                  | FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC                                                                  | torrent  | private
+GamesTorrents{#gamestorrents}                                  | GamesTorrents is a SPANISH Public tracker for GAMES                                                                        | torrent  | public 
+GAYtorrent.ru{#gaytorrentru}                                   | GayTorrent.ru is a Private Torrent Tracker for GAY 3X                                                                      | torrent  | private
+Gay-Torrents.net{#gay-torrents}                                | Gay-Torrents.net is a Private Torrent Tracker for GAY XXX                                                                  | torrent  | public 
+gay-torrents.org{#gay-torrentsorg}                             | Gay-Torrents.org is a Private Torrent Tracker for GAY 3X                                                                   | torrent  | private
+[GazelleGames](https://gazellegames.net/){#gazellegames}       | A gaming tracker.                                                                                                          | torrent  | private
+Generation-Free{#generationfree}                               | Generation-Free is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL                                              | torrent  | private
+Generic Newznab{#newznab}                                      |                                                                                                                            | usenet   | private
+Generic Torznab{#torznab}                                      |                                                                                                                            | torrent  | private
+Genesis-Movement{#genesismovement}                             | Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC                                               | torrent  | public 
+GFXPeers{#gfxpeers}                                            | GFXPeers is a ratio-based torrent tracker for all things graphic design and visual effects                                 | torrent  | private
+GigaTorrents{#gigatorrents}                                    | Giga Torrents is a Hungarian Private site for TV / MOVIES / GENERAL                                                        | torrent  | private
+GingaDADDY{#newznab}                                           |                                                                                                                            | usenet   | private
+Girotorrent{#girotorrent}                                      | Girotorrent is an ITALIAN Private site for TV / MOVIES / GENERAL                                                           | torrent  | private
+GkTorrent{#gktorrent}                                          | GkTorrent is a French Public site for TV / MOVIES / GENERAL                                                                | torrent  | public 
+GloDLS{#glodls}                                                | GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL                                                               | torrent  | public 
+Greek Team{#greekteam}                                         | Greek Team is a GREEK Private site for TV / MOVIES / GENERAL                                                               | torrent  | private
+GreekDiamond{#greekdiamond}                                    | GreekDiamond is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL                                                  | torrent  | private
+GTorrent{#gtorrent}                                            | GTorrent is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                     | torrent  | public 
+GTorrent.pro{#gtorrentpro}                                     | GTorrent.pro is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                 | torrent  | public 
+HaiDan{#haidan}                                                | HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                             | torrent  | private
+HamsterStudio{#hamsterstudio}                                  | HamsterStudio is a RUSSIAN Semi-Private Torrent Tracker for TV                                                             | torrent  | public 
+HD4FANS{#hd4fans}                                              | HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                                  | torrent  | private
+HD4Free.xyz{#torznab}                                          |                                                                                                                            | torrent  | private
+HDArea{#hdarea}                                                | HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                             | torrent  | private
+HDAtmos{#hdatmos}                                              | HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                                  | torrent  | private
+[HDBits](https://hdbits.org){#hdbits}                          |                                                                                                                            | torrent  | private
+HD-Bits.com{#hdbitscom}                                        | HD tracker                                                                                                                 | torrent  | private
+HDC{#hdc}                                                      | HDC (HDCiTY) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                             | torrent  | private
+HDCenter{#hdcenter}                                            | An German HD tracker                                                                                                       | torrent  | private
+HDChina{#hdchina}                                              | HDChina (HDWing) is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                   | torrent  | private
+HDCity{#hdcity}                                                | HDCity is a SPANISH site for HD content                                                                                    | torrent  | private
+HD-CzTorrent{#hdcztorrent}                                     | HD-CzTorrent is a CZECH semi private site for TV / MOVIES / GENERAL                                                        | torrent  | public 
+HDDolby{#hddolby}                                              | HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                                 | torrent  | private
+HD-Forever{#hdforever}                                         | HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES                                                        | torrent  | private
+HDHome{#hdhome}                                                | HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                   | torrent  | private
+HDhouse{#hdhouse}                                              | HDhouse (HDReactor) is a RUSSIAN Public Torrent Tracker for MOVIES / TV                                                    | torrent  | public 
+HDME{#hdme}                                                    | HDME is a Private Torrent Tracker for HD MOVIES / TV / GENERAL                                                             | torrent  | private
+HD-Olimpo{#hdolimpo}                                           | HD-Olimpo is a SPANISH site for HD content                                                                                 | torrent  | private
+HD-Only{#hdonly}                                               | HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV                                                      | torrent  | private
+HDRoute{#hdroute}                                              | HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                            | torrent  | private
+HDSky{#hdsky}                                                  | HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                              | torrent  | private
+HD-Spain{#hdspain}                                             | HD-Spain is a SPANISH site for HD content                                                                                  | torrent  | private
+HDtime{#hdtime}                                                | HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                                   | torrent  | private
+[HDTorrents](https://hdts.ru/){#hd-torrents}                   |                                                                                                                            | torrent  | private
+HDTorrents.it{#hdtorrentsit}                                   | HDTorrents.it is an ITALIAN Private site for TV / MOVIES                                                                   | torrent  | private
+HDTurk{#hdturk}                                                | HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL                                                      | torrent  | private
+HDU{#hdu}                                                      | HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                                      | torrent  | private
+HDZone{#hdzone}                                                | HDZone is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                             | torrent  | private
+[Headphones](https://indexer.codeshy.com){#headphones-vip}     |                                                                                                                            | usenet   | private
+HellasTZ{#hellastz}                                            | HellasTZ is an Greek Private site for TV / MOVIES / GENERAL                                                                | torrent  | private
+Hon3y HD{#hon3yhd}                                             | Hon3yHD is an INDIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                     | torrent  | private
+HQSource{#hqsource}                                            | HQSource (HQS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL                                               | torrent  | private
+HunTorrent{#huntorrent}                                        | HunTorrent is a Hungarian Semi-Private site for MOVIES / TV / GENERAL                                                      | torrent  | public 
+HuSh{#hush}                                                    | HuSh is a community-built Movie/TV/FANRES database.                                                                        | torrent  | private
+IBit{#ibit}                                                    | IBit is a Public Verified Torrent Search Engine                                                                            | torrent  | public 
+Idope{#idope}                                                  | iDope is a Public torrent search engine presenting direct magnet links                                                     | torrent  | public 
+Il Corsaro Blu{#ilcorsaroblu}                                  | il CorSaRo Blu is an ITALIAN Semi-Private site for TV / MOVIES / GENERAL                                                   | torrent  | public 
+Il Corsaro Nero{#ilcorsaronero}                                | Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL                                                        | torrent  | public 
+[ImmortalSeed](https://immortalseed.me/){#immortalseed}        |                                                                                                                            | torrent  | private
+Immortuos{#immortuos}                                          | Immortuos is a GERMAN Private Tracker for MOVIES / TV                                                                      | torrent  | private
+Insane Tracker{#insanetracker}                                 | Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL                                                   | torrent  | private
+[IPTorrents](https://iptorrents.com/){#iptorrents}             |                                                                                                                            | torrent  | private
+Isohunt2{#isohunt2}                                            | Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL                                                       | torrent  | public 
+iTorrent{#itorrent}                                            | iTorrent is a Public HUNGARIAN site                                                                                        | torrent  | public 
+IV-Torrents{#iv-torrents}                                      | IV-Torrents is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL                                            | torrent  | public 
+JPopsuki{#jpopsuki}                                            | JPopSuki is a Private Torrent Tracker for ASIAN MUSIC                                                                      | torrent  | private
+JPTV{#jptv}                                                    | JPTV is a JAPANESE Private Torrent Tracker for JAPANESE TV / MOVIES                                                        | torrent  | private
+Karagarga{#karagarga}                                          | Karagarga tracks non-hollywood, rare and obscure movies, music and literature.                                             | torrent  | private
+Keep Friends{#keepfriends}                                     | Keep Friends is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                       | torrent  | private
+kickasstorrents.to{#kickasstorrents-to}                        | kickasstorrents.to is a Public KickAssTorrent clone for TV / MOVIES / GENERAL                                              | torrent  | public 
+kickasstorrents.ws{#kickasstorrents-ws}                        | kickasstorrents.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL                                              | torrent  | public 
+KinoNaVse100{#kinonavse100}                                    | Кино на все 100 is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC                                          | torrent  | public 
+Kinorun{#kinorun}                                              | Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X                                                                   | torrent  | public 
+Kinozal{#kinozal}                                              | Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC                                                  | torrent  | public 
+LastFiles{#lastfiles}                                          | LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL                                                    | torrent  | private
+LatinoP2P{#latinop2p}                                          | LatinoP2P is a Latin American Private Torrent Tracker for MOVIES / TV / GENERAL                                            | torrent  | private
+LearnFlakes{#learnflakes}                                      | LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING                                             | torrent  | private
+LegacyHD{#legacyhd}                                            | LegacyHD (HD4Free) is a Private Torrent Tracker for HD MOVIES / TV / GENERAL                                               | torrent  | private
+Legit Torrents{#legittorrents}                                 | Legit Torrents is a Public site for free and legal torrents                                                                | torrent  | public 
+LemonHD{#lemonhd}                                              | LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                            | torrent  | private
+LePorno.info{#lepornoinfo}                                     | LePorno.info is a Public Tracker for 3X                                                                                    | torrent  | public 
+LeSaloon{#lesaloon}                                            | Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+LibraNet{#libranet}                                            | LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC                                           | torrent  | private
+LimeTorrents{#limetorrents}                                    | LimeTorrents is a Public general torrent index with mostly verified torrents                                               | torrent  | public 
+LinkoManija{#linkomanija}                                      | LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL                                                        | torrent  | private
+LinuxTracker{#linuxtracker}                                    | LinuxTracker is a Public Linux ISO Torrent Repository                                                                      | torrent  | public 
+LosslessClub{#losslessclub}                                    | LosslessClub is a Romanian Private site for High Quality Music                                                             | torrent  | private
+MacTorrents{#mactorrents}                                      | MacTorrents is a Public tracker for Mac software                                                                           | torrent  | public 
+MaDs Revolution{#madsrevolution}                               | MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL                                                         | torrent  | private
+magic-heaven{#magicheaven}                                     | magic-heaven is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                        | torrent  | private
+Magico{#magico}                                                | Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL                                              | torrent  | private
+Magnet4You{#magnet4you}                                        | Magnet4You is a Public magnet search engine                                                                                | torrent  | public 
+Majomparádé{#majomparade}                                      | Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL                                           | torrent  | private
+Marine Tracker{#marinetracker}                                 | Marine Tracker is a RUSSIAN Semi-Private Torrent Tracker for MARITIME E-LEARNING                                           | torrent  | public 
+MeseVilág{#mesevilag}                                          | MeseVilág (Fairytale World) is a Hungarian Private site for fairy tales, family movies and comedies                        | torrent  | private
+Metal Tracker{#metaltracker}                                   | Metal Tracker is a Semi-Private site dedicated to HEAVY METAL MUSIC. This definition is for the English site.              | torrent  | public 
+Miatrix{#newznab}                                              |                                                                                                                            | usenet   | private
+MicroBit{#microbit}                                            | MicroBit (µBit) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                           | torrent  | private
+[Milkie](https://milkie.cc/){#milkie}                          |                                                                                                                            | torrent  | private
+MixtapeTorrent{#mixtapetorrent}                                | MixtapeTorrent is a Public Music site for MixTapes                                                                         | torrent  | public 
+MMA-torrents{#mma-torrents}                                    | MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)                                                     | torrent  | private
+MNV{#mnv}                                                      | MNV (Max-New-Vision) is a Private GERMAN tracker                                                                           | torrent  | private
+Mononoké-BT{#mononokebt}                                       | Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME                                                                  | torrent  | private
+MonTorrent{#montorrent}                                        | MonTorrent is a FRENCH Public Indexer                                                                                      | torrent  | public 
+MoviesDVDR{#moviesdvdr}                                        | MoviesDVDR is a SPANISH Public tracker for MOVIES                                                                          | torrent  | public 
+MovieTorrent{#movietorrent}                                    | MovieTorrent is a Public site for Bollywood, Hollywood, Hindi Dubbed, Tamil , Punjabi, Pakistani MOVIES                    | torrent  | public 
+M-Team - TP{#mteamtp}                                          | M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / XXX                                             | torrent  | private
+MTeamTP2FA{#mteamtp2fa}                                        | this indexer uses a cookie login for MTeamTP for those that want to use 2FA                                                | torrent  | private
+MuziekFabriek{#muziekfabriek}                                  | MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC                                                                 | torrent  | private
+MVGroup Forum{#mvgroupforum}                                   | MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES. This definition is for the Forum Tracker site.        | torrent  | public 
+MVGroup Main{#mvgroupmain}                                     | MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES. This definition is for the Main Tracker site.         | torrent  | public 
+[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}   |                                                                                                                            | torrent  | private
+MyPornClub{#mypornclub}                                        | MyPornClub is a Public Torrent Tracker for 3X                                                                              | torrent  | public 
+MySpleen{#myspleen}                                            | MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA                                  | torrent  | private
+NBTorrents{#nbtorrents}                                        | NBTorrents is an INDIAN Private site for MOVIES / TV / MUSIC                                                               | torrent  | private
+[Nebulance](https://nebulance.io/){#nebulance}                 | At Nebulance we will change the way you think about TV                                                                     | torrent  | private
+NetCosmo{#netcosmo}                                            | NetCosmo is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                   | torrent  | private
+NetHD{#nethd}                                                  | NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV                                        | torrent  | public 
+NetLab{#netlab}                                                | NetLab is a RUSSIAN Private Torrent Tracker                                                                                | torrent  | private
+Newstudio{#newstudio}                                          | Newstudio is a RUSSIAN Public site for TV                                                                                  | torrent  | public 
+NewstudioL{#newstudiol}                                        | this is the Newstudio indexer with Login enabled in the config.                                                            | torrent  | public 
+Newz69{#newznab}                                               |                                                                                                                            | usenet   | private
+Newz-Complex{#newznab}                                         |                                                                                                                            | usenet   | private
+NinjaCentral{#newznab}                                         |                                                                                                                            | usenet   | private
+Nitro{#nitro}                                                  | Nitro is a POLISH Public Torrent Tracker                                                                                   | torrent  | public 
+NNTT{#nntt}                                                    | NNTT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                         | torrent  | public 
+NoNaMe Club{#noname-club}                                      | NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC                                                 | torrent  | public 
+NoNaMe ClubL{#noname-clubl}                                    | This is the NoNaMe Club indexer with Login enabled in the config.                                                          | torrent  | public 
+Nordic+{#nordicplus}                                           | Nordic+ is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                             | torrent  | private
+[NotWhatCD](https://notwhat.cd/){#notwhat.cd}                  |                                                                                                                            | torrent  | private
+Nyaa.si{#nyaasi}                                               | Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music                  | torrent  | public 
+Nyaa-pantsu{#nyaa-pantsu}                                      | Nyaa-pantsu is a Public site for dedicated to Asian ANIME                                                                  | torrent  | public 
+Nzb.su{#newznab}                                               |                                                                                                                            | usenet   | private
+NZBCat{#newznab}                                               |                                                                                                                            | usenet   | private
+NZBFinder{#newznab}                                            |                                                                                                                            | usenet   | private
+NZBgeek{#newznab}                                              |                                                                                                                            | usenet   | private
+NZBNDX{#newznab}                                               |                                                                                                                            | usenet   | private
+NzbNoob{#newznab}                                              |                                                                                                                            | usenet   | private
+NzbPlanet{#newznab}                                            |                                                                                                                            | usenet   | private
+NZBStars{#newznab}                                             |                                                                                                                            | usenet   | private
+NZBXS{#newznab}                                                |                                                                                                                            | usenet   | private
+Oasis{#oasis}                                                  | Oasis is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL                                                        | torrent  | private
+Obscure{#obscure}                                              | Obscure is a Private Torrent Tracker for Obscure Stuff.                                                                    | torrent  | private
+oMg[WtF]trackr{#omgwtftrackr}                                  | oMg[WtF]trackr is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                      | torrent  | private
+OnceSearch{#oncesearch}                                        | OnceSearch is a Public Torrent Tracker for 3X                                                                              | torrent  | public 
+OneJAV{#onejav}                                                | OneJAV is a Public tracker for Asian 3X (JAV)                                                                              | torrent  | public 
+OpenCD{#opencd}                                                | OpenCD is a CHINESE Private Torrent Tracker for MUSIC                                                                      | torrent  | private
+[Orpheus](https://orpheus.network/){#orpheus}                  |                                                                                                                            | torrent  | private
+OshenPT{#oshenpt}                                              | OshenPT is a CHINESE Private Torrent Tracker for HD Movies, TV, Music                                                      | torrent  | private
+Ourbits{#ourbits}                                              | Ourbits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                         | torrent  | private
+OxTorrent{#oxtorrent}                                          | OxTorrent is a French Public site for TV / MOVIES / GENERAL                                                                | torrent  | public 
+OZnzb{#newznab}                                                |                                                                                                                            | usenet   | private
+P2PBG{#p2pbg}                                                  | P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL                                                            | torrent  | private
+P2PElite{#p2pelite}                                            | P2PElite is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS                                                              | torrent  | private
+ParnuXi{#parnuxi}                                              | ParnuXi is a RUSSIAN Public Torrent Tracker for 3X                                                                         | torrent  | public 
+[PassThePopcorn](https://passthepopcorn.me){#passthepopcorn}   |                                                                                                                            | torrent  | private
+PC-torrent{#pctorrent}                                         | PC-torrent is a RUSSIAN Public Torrent Tracker for Games                                                                   | torrent  | public 
+Peers.FM{#peersfm}                                             | Peers.FM is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+Pirata Digital{#piratadigital}                                 | Pirata Digital (PD) is a Private Torrent Tracker for HD MOVIES / TV                                                        | torrent  | private
+PiratBit{#piratbit}                                            | PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | public 
+PiratBitL{#piratbitl}                                          | this is the PiratBit indexer with Login enabled in the config.                                                             | torrent  | public 
+Pirateiro{#pirateiro}                                          | Pirateiro is a Public site for MOVIES / TV / GENERAL                                                                       | torrent  | public 
+PixelCove{#pixelcove}                                          | PixelCove (Ultimate Gamer) is a Private Torrent Tracker for GAMES                                                          | torrent  | private
+PleasureDome{#pleasuredome}                                    | PleasureDome is a private site for Arcade / Console / PC Games                                                             | torrent  | private
+PolishSource{#polishsource}                                    | PolishSource (PS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL                                            | torrent  | private
+Pornbay{#pornbay}                                              | Pornbay is a Private Torrent Tracker for 3X                                                                                | torrent  | private
+Pornbits{#pornbits}                                            | Pornbits (PB) is a Private Torrent Tracker for 3X                                                                          | torrent  | private
+Pornforall{#pornforall}                                        | Pornforall is a RUSSIAN Public tracker for 3X                                                                              | torrent  | public 
+PornLeech{#pornleech}                                          | PornLeech is a Public Tracker for 3X                                                                                       | torrent  | public 
+PornoLive{#pornolive}                                          | PornoLive is a RUSSIAN Public Torrent Tracker for 3X                                                                       | torrent  | public 
+PornoRip{#pornorip}                                            | PornoRip is a RUSSIAN Public Torrent Tracker for 3X                                                                        | torrent  | public 
+Pornotor{#pornotor}                                            | Pornotor is a RUSSIAN Public Torrent Tracker for 3X                                                                        | torrent  | public 
+Portugas{#portugas}                                            | Portugas is a Private Portoguese Tracker                                                                                   | torrent  | private
+PotUK{#potuk}                                                  | PotUK - Private site for MOVIES / TV / GENERAL                                                                             | torrent  | private
+[PreToMe](https://pretome.info/){#pretome}                     | BitTorrent site for High Quality, High Definition (HD) movies and TV Shows                                                 | torrent  | private
+[PrivateHD](https://privatehd.to/){#privatehd}                 |                                                                                                                            | torrent  | private
+ProAudioTorrents{#proaudiotorrents}                            | ProAudioTorrents (PAT) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / TUTORIALS / ETC                         | torrent  | private
+ProPorno{#proporno}                                            | ProPorno is a RUSSIAN Public tracker for 3X                                                                                | torrent  | public 
+ProStyleX{#prostylex}                                          | ProStyleX is a Semi-Private torrent site for 0Day and General                                                              | torrent  | public 
+PTerClub{#pterclub}                                            | PTerClub is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS, MOVIES, TV & ANIME                                      | torrent  | private
+PTFiles{#ptfiles}                                              | PTFiles (PTF) is a Private site for TV / MOVIES / GENERAL                                                                  | torrent  | private
+PThome{#pthome}                                                | PThome is a CHINESE Private Torrent Tracker for 0DAY / GENERAL                                                             | torrent  | private
+PTMSG{#ptmsg}                                                  | PTMSG is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                              | torrent  | private
+PTSBAO{#ptsbao}                                                | PTSBAO is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                             | torrent  | private
+PTTime{#pttime}                                                | PTTime is a ratioless CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                         | torrent  | private
+PuntoTorrent{#puntotorrent}                                    | PuntoTorrent is a SPANISH site for General content                                                                         | torrent  | private
+PuroVicio{#purovicio}                                          | PuroVicio is a Latin American Private Torrent Tracker for MOVIES / TV / GENERAL                                            | torrent  | private
+PussyTorrents{#pussytorrents}                                  | PussyTorrents is a Semi-Private Torrent Tracker for 3X                                                                     | torrent  | public 
+Puur-Hollands{#puurhollands}                                   | Puur-Hollands is a DUTCH Private Torrent Tracker for MUSIC                                                                 | torrent  | private
+PWTorrents{#pwtorrents}                                        | PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING                                                   | torrent  | private
+R3V WTF!{#r3vwtf}                                              | R3V WTF! is a Private site for MOVIES / TV / GENERAL                                                                       | torrent  | private
+Racing4Everyone (R4E){#racing4everyone}                        | Racing4Everyone (R4E) is a Private Torrent Tracker for RACING                                                              | torrent  | private
+RacingForMe{#racingforme}                                      | Racing For Me (RFM) is a Private Torrent Tracker for RACING                                                                | torrent  | private
+Rainbow Tracker{#rainbowtracker}                               | Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV                                            | torrent  | public 
+Rapidzona{#rapidzona}                                          | Rapidzona is a RUSSIAN Public Torrent Tracker for 3X                                                                       | torrent  | public 
+[Rarbg](https://torrentapi.org){#rarbg}                        |                                                                                                                            | torrent  | public 
+Red Star Torrent{#redstartorrent}                              | Red Star Torrent (RST) is a POLISH Private Torrent Tracker for TV                                                          | torrent  | private
+[Redacted](https://redacted.ch/){#redacted}                    |                                                                                                                            | torrent  | private
+RedBits{#redbits}                                              | RedBits is a SPANISH site for classic content                                                                              | torrent  | private
+[RevolutionTT](https://revolutiontt.me/){#revolutiontt}        |                                                                                                                            | torrent  | private
+RinTor{#rintor}                                                | RinTor is a Semi-Private Tracker for 3X                                                                                    | torrent  | public 
+RinTor.NeT{#rintornet}                                         | RinTor.NeT is a RUSSIAN Public tracker for 3X                                                                              | torrent  | public 
+RiperAM{#riperam}                                              | RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV                                                          | torrent  | public 
+RockBox{#rockbox}                                              | RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC. This definition is for the English site.                    | torrent  | public 
+ROFD{#rofd}                                                    | ROFD is a Private GERMAN site for TV / MOVIES / GENERAL                                                                    | torrent  | private
+Romanian Metal Torrents{#romanianmetaltorrents}                | Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC. This definition is for the English site.         | torrent  | private
+RPTorrents{#rptorrents}                                        | RPTorrents is a Private tracker for MOVIES / TV / GENERAL                                                                  | torrent  | private
+Rus-media{#rus-media}                                          | Rus-media is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | public 
+Rustorka{#rustorka}                                            | Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL                                                    | torrent  | public 
+RuTor{#rutor}                                                  | RuTor is a RUSSIAN Public site for MOVIES / TV / GENERAL                                                                   | torrent  | public 
+RuTracker.RU{#rutracker-ru}                                    | RuTracker.RU is a RUSSIAN Public Torrent Tracker for MOVIES / GENERAL                                                      | torrent  | public 
+ScenePalace{#scenepalace}                                      | ScenePalace (SP) is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                    | torrent  | private
+SceneRush{#scenerush}                                          | SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL                                                       | torrent  | private
+SDBits{#sdbits}                                                | SDBits is a small tracker that focuses on SD movies and tv.                                                                | torrent  | private
+SDkino{#sdkino}                                                | SDkino is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV                                                           | torrent  | public 
+SeedFile{#seedfile}                                            | SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL                                                     | torrent  | private
+seleZen{#selezen}                                              | seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES                                                               | torrent  | public 
+Sexy-Pics{#sexypics}                                           | Sexy-Pics is a Public Magnet Links site for 3X MP4                                                                         | torrent  | public 
+ShareFiles{#sharefiles}                                        | ShareFiles is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                 | torrent  | private
+[ShareIsland](https://shareisland.org/){#shareisland}          | A general italian tracker                                                                                                  | torrent  | private
+Sharewood{#sharewood}                                          | sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL                                                             | torrent  | public 
+shokweb{#shokweb}                                              | shokweb is a CHINESE Public tracker                                                                                        | torrent  | public 
+[ShowRSS](https://showrss.info/){#showrss}                     | showRSS is a service that allows you to keep track of your favorite TV shows                                               | torrent  | public 
+SiamBIT{#siambit}                                              | SiamBIT is a THAI Private Torrent Tracker for GENERAL                                                                      | torrent  | private
+SimplyNZBs{#newznab}                                           |                                                                                                                            | usenet   | private
+SkTorrent{#sktorrent}                                          | SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL                                         | torrent  | public 
+SkTorrent-org{#sktorrent-org}                                  | SkTorrent.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL                                                      | torrent  | public 
+SkyTorrents.to{#skytorrents-to}                                | SkyTorrents.to is a Public SkyTorrents clone for TV / MOVIES / GENERAL                                                     | torrent  | public 
+SnowPT{#snowpt}                                                | SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME                                                               | torrent  | private
+sosulki{#sosulki}                                              | sosulki is a RUSSIAN Public Torrent Tracker for 3X                                                                         | torrent  | public 
+SoulVoice{#soulvoice}                                          | SoulVoice is a CHINESE Private Torrent Tracker for Movies, TV, and e-Learning                                              | torrent  | private
+[SpeedApp](https://speedapp.io){#speedapp.io}                  | SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                                   | torrent  | private
+Speedmaster HD{#speedmasterhd}                                 | Speedmaster HD is a German Time based tracker for MOVIES / TV                                                              | torrent  | private
+SpeedTorrent Reloaded{#speedtorrentreloaded}                   | SpeedTorrent Reloaded is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                        | torrent  | private
+Spirit of Revolution{#spiritofrevolution}                      | Spirit of Revolution is a German Time based tracker for 0DAY                                                               | torrent  | private
+SportHD{#sporthd}                                              | SportHD is a Private Torrent Tracker for HD SPORTS                                                                         | torrent  | private
+SportsCult{#sportscult}                                        | SportsCult is a Private Torrent Tracker for SPORTS                                                                         | torrent  | private
+SpotNZB{#newznab}                                              |                                                                                                                            | usenet   | private
+SpringSunday{#springsunday}                                    | SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL                                       | torrent  | private
+[SubsPlease](https://subsplease.org/){#subsplease}             | SubsPlease - A better HorribleSubs/Erai replacement                                                                        | torrent  | public 
+SugoiMusic{#sugoimusic}                                        | SugoiMusic is a Private Torrent Tracker for Asian MUSIC / TV                                                               | torrent  | private
+sukebei.nyaa.si{#sukebeinyaasi}                                | sukebei.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV           | torrent  | public 
+Sukebei-pantsu{#sukebei-pantsu}                                | Sukebei-pantsu is a Public site dedicated to Adult Asian content                                                           | torrent  | public 
+[SuperBits](https://superbits.org/){#superbits}                |                                                                                                                            | torrent  | private
+Tabula Rasa{#newznab}                                          |                                                                                                                            | usenet   | private
+Tapochek{#tapochek}                                            | Tapochek is a RUSSIAN Private Torrent Tracker for 0DAY / GENERAL                                                           | torrent  | private
+Tasmanit{#tasmanit}                                            | Tasmanit.es is a AUSTRALIAN / NEW ZEALAND Private Torrent Tracker for AUS / NZ TV                                          | torrent  | private
+TeamHD{#teamhd}                                                | TeamHD is a RUSSIAN Private Torrent Tracker for HD MOVIES / TV                                                             | torrent  | private
+TeamOS{#teamos}                                                | Team OS is a Private Torrent Tracker for SOFTWARE                                                                          | torrent  | private
+TEKNO3D{#tekno3d}                                              | TEKNO3D is a Private Torrent Tracker for MOVIES / TV                                                                       | torrent  | private
+TellyTorrent{#tellytorrent}                                    | TellyTorrent is an INDIAN Private Tracker for MOVIES / TV                                                                  | torrent  | private
+teracod{#teracod}                                              | teracod (Movie Zone) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL                                             | torrent  | private
+The Empire{#theempire}                                         | TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO                                                    | torrent  | private
+The Falling Angels{#thefallingangels}                          | The Falling Angels (TFA) is a German Private site for TV / MOVIES / GENERAL                                                | torrent  | private
+The Geeks{#thegeeks}                                           | Technology E-Learning                                                                                                      | torrent  | private
+The Horror Charnel{#thehorrorcharnel}                          | The Horror Charnel (THC) is a Private Torrent Tracker for HORROR / CULT / SLEAZE / SCI FI MOVIES                           | torrent  | private
+The New Retro{#newretro}                                       | The New Retro is a GERMAN Private Torrent Tracker for MOVIES / GENERAL                                                     | torrent  | private
+The Occult{#theoccult}                                         | Cult E-Learning                                                                                                            | torrent  | private
+The Place{#theplace}                                           | Self-improvement E-Learning                                                                                                | torrent  | private
+The Shinning{#theshinning}                                     | The Shinning (TsH) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                           | torrent  | private
+The Show{#theshow}                                             | Entertainment E-Learning                                                                                                   | torrent  | private
+The Vault{#thevault}                                           | Business/Marketing E-Learning                                                                                              | torrent  | private
+TheAudioScene{#theaudioscene}                                  | TheAudioScene is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC                                              | torrent  | private
+TheLeachZone{#theleachzone}                                    | The Leach Zone is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                      | torrent  | private
+themixingbowl{#themixingbowl}                                  | themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes                                                   | torrent  | public 
+[ThePirateBay](https://thepiratebay.org/){#thepiratebay}       |                                                                                                                            | torrent  | public 
+TheScenePlace{#thesceneplace}                                  | TheScenePlace (TSP) is a Private site for TV / MOVIES / GENERAL                                                            | torrent  | private
+TJUPT{#tjupt}                                                  | TJUPT is a CHINESE Private Torrent Tracker for GENERAL                                                                     | torrent  | private
+TLFBits{#tlfbits}                                              | TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                            | torrent  | private
+TNTfork{#tntfork}                                              | TNTfork is a mirror for the archive published by tntvillage                                                                | torrent  | public 
+Tokyo Toshokan{#tokyotosho}                                    | A BitTorrent Library for Japanese Media                                                                                    | torrent  | public 
+Torlock{#torlock}                                              | Torlock is a torrent search site that lists verified torrents only for TV series and movies                                | torrent  | public 
+TOROS{#toros}                                                  | TOROS is a Public torrent index                                                                                            | torrent  | public 
+Torrent Downloads{#torrentdownloads}                           | Torrent Downloads (TD) is a Public torrent site for all kinds of content                                                   | torrent  | public 
+Torrent Oyun indir{#torrentoyunindir}                          | Torrent Oyun indir is a TURKISH Public torrent site for GAMES                                                              | torrent  | public 
+Torrent Sector Crew{#torrentsectorcrew}                        | Torrent Sector Crew (TSC) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL                                    | torrent  | private
+Torrent Surf{#torrentsurf}                                     | Torrent Surf is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                        | torrent  | private
+Torrent.LT{#torrentlt}                                         | Torrent.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL                                                      | torrent  | private
+Torrent4You{#torrent4you}                                      | Torrent4You is a Public torrent storage cache                                                                              | torrent  | public 
+Torrent9{#torrent9}                                            | Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL                                                                 | torrent  | public 
+Torrent9 clone{#torrent9clone}                                 | Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL                                                 | torrent  | public 
+TorrentBD{#torrentbd}                                          | A general Bangladesh tracker                                                                                               | torrent  | private
+TorrentCCF{#torrentccf}                                        | TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV                                                  | torrent  | private
+[TorrentDay](https://torrentday.cool/){#torrentday}            |                                                                                                                            | torrent  | private
+TorrentDB{#torrentdb}                                          | TorrentDB - Private site for MOVIES / TV / GENERAL                                                                         | torrent  | private
+TorrentDownload{#torrentdownload}                              | TorrentDownload is a Public general torrent index                                                                          | torrent  | public 
+Torrent-Explosiv{#torrent-explosiv}                            | Torrent-Explosiv is a German Private site for TV / MOVIES / GENERAL                                                        | torrent  | private
+TorrentFactory{#torrentfactory}                                | TorrentFactory is a SPANISH site for General content                                                                       | torrent  | private
+TorrentFunk{#torrentfunk}                                      | TorrentFunk is a Public torrent index                                                                                      | torrent  | public 
+TorrentGalaxy{#torrentgalaxy}                                  | TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL                                                             | torrent  | public 
+TorrentHR{#torrenthr}                                          | TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL                                               | torrent  | private
+Torrenting{#torrenting}                                        | Torrenting (TT) is a Private site for MOVIES / TV / GENERAL                                                                | torrent  | private
+TorrentKitty{#torrentkitty}                                    | TorrentKitty is a Public torrent indexer                                                                                   | torrent  | public 
+Torrentland{#torrentland}                                      | Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL                                                 | torrent  | private
+[TorrentLeech](https://www.torrentleech.org/){#torrentleech}   |                                                                                                                            | torrent  | private
+Torrentleech.pl{#torrentleech-pl}                              | Torrentleech.pl is a POLISH Private Torrent Tracker for 0DAY / GENERAL                                                     | torrent  | private
+TorrentMax{#torrentmax}                                        | TorrentMax (토렌트맥스) is a Public KOREAN tracker for Korean media.                                                            | torrent  | public 
+TorrentParadise{#torrentparadise}                              | Torrent Paradise is a Public magnet indexer                                                                                | torrent  | public 
+torrent-pirat{#torrent-pirat}                                  | torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X                                                                   | torrent  | public 
+[TorrentPotato](http://127.0.0.1){#torrentpotato}              |                                                                                                                            | torrent  | private
+TorrentProject2{#torrentproject2}                              | TorrentProject2 is a Public torrent meta-search engine                                                                     | torrent  | public 
+TorrentQQ{#torrentqq}                                          | TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.                                                             | torrent  | public 
+[TorrentSeeds](https://torrentseeds.org/){#torrentseeds}       |                                                                                                                            | torrent  | private
+TorrentSir{#torrentsir}                                        | TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.                                                             | torrent  | public 
+Torrents-Local{#torrentslocal}                                 | Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker                                                                   | torrent  | public 
+TOrrent-tuRK{#torrent-turk}                                    | TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL                                      | torrent  | private
+Torrentv{#torrentv}                                            | Torrentv is a Public tracker for MOVIES                                                                                    | torrent  | public 
+TorrentView{#torrentview}                                      | Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.                                                          | torrent  | public 
+TorrentWhiz{#torrentwhiz}                                      | TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.                                                          | torrent  | public 
+TotallyKids{#totallykids}                                      | TotallyKids (TK) is a Private Torrent Tracker for CHILDRENS MOVIES / TV / GENERAL                                          | torrent  | private
+ToTheGlory{#totheglory}                                        | ToTheGlory (TTG) A Chinese tracker                                                                                         | torrent  | private
+ToTheGloryCookie{#totheglorycookie}                            | this is an alternate to the ToTheGlory indexer using the cookie method for access                                          | torrent  | private
+Trackeros{#trackeros}                                          | Trackeros is a Private SPANISH Tracker for HD MOVIES / TV / GENERAL                                                        | torrent  | private
+TranceTraffic{#trancetraffic}                                  | TranceTraffic is a Private site for MUSIC                                                                                  | torrent  | private
+Trezzor{#trezzor}                                              | Trezzor is a CZECH Private site for TV / MOVIES / GENERAL                                                                  | torrent  | private
+TribalMixes{#tribalmixes}                                      | TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES                                                       | torrent  | public 
+truPornolabs{#trupornolabs}                                    | truPornolabs is a RUSSIAN Public tracker for 3X                                                                            | torrent  | public 
+ttobogo{#ttobogo}                                              | ttobogo (토렌트 - 또보고) is a Public KOREAN tracker for Korean media.                                                           | torrent  | public 
+TTsWeb{#ttsweb}                                                | TTsWeb is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                              | torrent  | private
+TurkSeed{#turkseed}                                            | TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL                                            | torrent  | private
+TurkTorrent{#turktorrent}                                      | TurkTorrent (TT) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL                                            | torrent  | private
+TVChaosUK{#tvchaosuk}                                          | TV Chaos UK (TVCUK) is a Private Torrent Tracker for UK TV                                                                 | torrent  | private
+Twilight Torrents{#twilight}                                   | Twilight Torrents is a Private Torrent Tracker for MOVIES / TV / GENERAL                                                   | torrent  | private
+Twilights Zoom{#twilightszoom}                                 | Twilights Zoom is a Private Torrent Tracker for MUSIC                                                                      | torrent  | private
+U2{#u2}                                                        | U2 (U2分享園@動漫花園) is a CHINESE Private Torrent Tracker for ANIME                                                             | torrent  | private
+UHDBits{#uhdbits}                                              | A vietnamese general tracker                                                                                               | torrent  | private
+Underverse{#underverse}                                        | Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL                                           | torrent  | public 
+UnderverseL{#underversel}                                      | this is the Underverse indexer with Login enabled in the config.                                                           | torrent  | public 
+Union Fansub{#unionfansub}                                     | Union Fansub is a SPANISH Semi private torrent site focused on ANIME                                                       | torrent  | public 
+UnionDHT{#uniondht}                                            | UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL                                             | torrent  | public 
+UnionGang{#uniongang}                                          | UnionGang is a RUSSIAN Private Torrent Tracker for MOVIES / GENERAL                                                        | torrent  | private
+Unlimitz{#unlimitz}                                            | Unlimitz is a THAI Private Torrent Tracker for GENERAL                                                                     | torrent  | private
+Usenet Crawler{#newznab}                                       |                                                                                                                            | usenet   | private
+Vizuk{#vizuk}                                                  | Vizuk is a SPANISH private site for HD content                                                                             | torrent  | private
+VST Torrents{#vsttorrents}                                     | VST Torrents is a Public site for AUDIO apps, plugins and samples                                                          | torrent  | public 
+VSTHouse{#vsthouse}                                            | VSTHouse is a Public Russian site for AUDIO apps, plugins and samples                                                      | torrent  | public 
+WDT{#wdt}                                                      | Wrestling Desires Torrents (Ultimate Wrestling Torrents) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA     | torrent  | private
+Witch-Hunter{#witchhunter}                                     | Witch-Hunter (Demon-Site) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL                                 | torrent  | private
+wOOt{#woot}                                                    | wOOt is a Private GERMAN site for TV / MOVIES / GENERAL                                                                    | torrent  | private
+World-In-HD{#wihd}                                             | Your world in HD                                                                                                           | torrent  | private
+XbytesV2{#xbytes2}                                             | xbytesV2 is a SPANISH site for HD content                                                                                  | torrent  | private
+x-ite.me{#x-ite.me}                                            | Tracker for LGBTQ movies, TV, books, magazines, anime, PC and XXX.                                                         | torrent  | private
+XWT-Classics{#xwtclassics}                                     | XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING                                               | torrent  | private
+XWtorrents{#xwtorrents}                                        | XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA                                | torrent  | private
+xxxAdultTorrent{#xxxadulttorrent}                              | xxxAdultTorrent is a RUSSIAN Public tracker for 3X                                                                         | torrent  | public 
+xxxtor{#xxxtor}                                                | xxxtor is a RUSSIAN Public Torrent Tracker for 3X                                                                          | torrent  | public 
+xxxtorrents{#xxxtorrents}                                      | xxxtorrents is a RUSSIAN Public Torrent Tracker for 3X                                                                     | torrent  | public 
+YDYPT{#ydypt}                                                  | YDYPT is a CHINESE Private Torrent Tracker for 3X                                                                          | torrent  | private
+YGGcookie{#yggcookie}                                          | YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL                                                     | torrent  | public 
+YGGtorrent{#yggtorrent}                                        | YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL                                                     | torrent  | public 
+YourBittorrent{#yourbittorrent}                                | YourBittorrent is a Public torrent index                                                                                   | torrent  | public 
+[YTS](https://yts.mx/){#yts}                                   | YTS is a Public torrent site specialising in HD movies of small size                                                       | torrent  | public 
+Zamunda.net{#zamundanet}                                       | Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL                                                          | torrent  | private
+Zelka.org{#zelkaorg}                                           | Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL                                                  | torrent  | private
+zetorrents{#zetorrents}                                        | zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL                                                               | torrent  | public 
+[ZonaQ](https://www.zonaq.pw/){#zonaq}                         | ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV                                                                 | torrent  | private
+Zooqle{#zooqle}                                                | Zooqle is a Public torrent index providing a huge database of verified torrents                                            | torrent  | public 
+Ztracker{#ztracker}                                            | Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL                                                         | torrent  | public 
