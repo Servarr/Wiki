@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-06-20T15:22:59.055Z
+date: 2021-06-22T03:04:22.798Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -25,9 +25,8 @@ Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base
 - [<i class="fas fa-clock"></i>&emsp;History](/prowlarr/history)
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/prowlarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/prowlarr/system)
-{.links-list}
-
 - [Supported Indexers](/prowlarr/supported-indexers)
+{.links-list}
 
 ## Troubleshooting
 
