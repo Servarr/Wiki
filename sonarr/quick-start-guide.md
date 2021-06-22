@@ -8,11 +8,11 @@ editor: markdown
 dateCreated: 2021-06-11T23:30:27.958Z
 ---
 
-# Quick Start Setup Guide
+## Quick Start Setup Guide
 
 > This page is still in progress and not complete.
 
-> For a more detailed breakdown of all the settings, check [Radarr ->Settings](/radarr/settings) We will cover the following options.
+> For a more detailed breakdown of all the settings, check [Sonarr ->Settings](/sonarr/settings) We will cover the following options.
 {.is-info}
 
 In this guide we will try to explain the basic setup you need to do to get started with Sonarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ for a full explanation.
@@ -97,7 +97,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 #### BitTorrent
 
-1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder by default Sonarr will copy the file, which uses twice the disk space.
+1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder by default Sonarr will copy the file, which uses twice the disk space.
 1. An advanced option to hardlink can be enabled (Settings > Media Management > Importing) which will attempt to hardlink the media to your Series folder. A hardlink will allow not use any additional disk space. If the hardlink creation fails, Sonarr will fall back to the default behavior and copy the file.
 1. If the “Completed Download Handling - Remove” option is enabled in Sonarr’s settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
