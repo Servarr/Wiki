@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T07:02:56.745Z
+date: 2021-06-23T07:03:14.036Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -32,7 +32,7 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 - [![32.png](/assets/prowlarr/logos/32.png)&emsp;Prowlarr *Indexers*](/prowlarr)
 {.links-list}
 
-## Other Pages
+## Other
 
 - [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
 - [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
