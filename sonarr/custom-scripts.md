@@ -2,21 +2,19 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-06-23T03:09:05.893Z
+date: 2021-06-23T06:42:29.581Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
 ---
 
-## Custom Post Processing Scripts {#custom_post_processing_scripts}
-
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Sonarr via the [Connect Settings](/sonarr/settings#connections).
 
-### Overview
+## Overview
 
 Sonarr can execute a custom script when an episode is newly imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
 
-### Environment Variables
+## Environment Variables
 
 #### On Grab
 
