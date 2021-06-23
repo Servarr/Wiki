@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-06-23T06:42:29.581Z
+date: 2021-06-23T06:44:50.595Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -16,7 +16,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 
 ## Environment Variables
 
-#### On Grab
+### On Grab
 
 | Environment Variable                    | Details                                                                                      |
 | --------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_download_client`                | Download client                                                                              |
 | `sonarr_download_id`                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
 
-#### On Download/On Upgrade
+### On Download/On Upgrade
 
 | Environment Variable                    | Details                                                                                      |
 | --------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_deletedrelativepaths`           | `\|`-delimited list of files that were deleted to import this file                           |
 | `sonarr_deletedpaths`                   | `\|`-delimited list of full paths of files that were deleted to import this file             |
 
-#### On Rename
+### On Rename
 
 | Environment Variable     | Details                                              |
 | ------------------------ | ---------------------------------------------------- |
@@ -90,7 +90,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_series_imdbid`   | IMDB ID for the series (empty if unknown)            |
 | `sonarr_series_type`     | Type of the series (`Anime`, `Daily`, or `Standard`) |
 
-#### On Episode File Delete
+### On Episode File Delete
 
 | Environment Variable                    | Details                                                                          |
 | --------------------------------------- | -------------------------------------------------------------------------------- |
@@ -117,7 +117,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_episodefile_releasegroup`       | Release group (empty if unknown)                                                 |
 | `sonarr_episodefile_scenename`          | Original release name (empty if unknown)                                         |
 
-#### On Series Delete
+### On Series Delete
 
 | Environment Variable         | Details                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------ |
@@ -130,7 +130,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_series_type`         | Type of the series (`Anime`, `Daily`, or `Standard`)                     |
 | `sonarr_series_deletedfiles` | `True` when the delete files option has been selected, otherwise `False` |
 
-#### On Health Issue
+### On Health Issue
 
 | Environment Variable          | Details                                                      |
 | ----------------------------- | ------------------------------------------------------------ |
@@ -140,7 +140,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 | `sonarr_health_issue_type`    | Area that failed and triggered the health issue              |
 | `sonarr_health_issue_wiki`    | Wiki URL (empty if does not exist)                           |
 
-#### On Test
+### On Test
 
 When adding the script to Sonarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
 
