@@ -2,7 +2,7 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-06-23T06:42:33.946Z
+date: 2021-06-23T06:45:05.544Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
@@ -17,7 +17,7 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 
 ## Environment Variables
 
-#### On Grab
+### On Grab
 
 | Environment Variable                 | Details                                                                                      |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 | `radarr_release_size`                | Size of the release, as reported by the indexer                                              |
 | `radarr_release_title`               | Torrent/NZB title                                                                            |
 
-#### On Download/On Upgrade
+### On Download/On Upgrade
 
 | Environment Variable                 | Details                                                                                      |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 | `radarr_deletedrelativepaths`        | `\|`-delimited list of files that were deleted to import this file                           |
 | `radarr_deletedpaths`                | `\|`-delimited list of full paths to files that were deleted to import this file             |
 
-#### On Rename
+### On Rename
 
 | Environment Variable                 | Details                                  |
 | ------------------------------------ | ---------------------------------------- |
@@ -80,7 +80,7 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 | `radarr_movie_tmdbid`                | TMDb ID for the movie                    |
 | `radarr_movie_year`                  | Release year of the movie                |
 
-#### On Health Check
+### On Health Check
 
 | Environment Variable          | Details                                                      |
 | ----------------------------- | ------------------------------------------------------------ |
@@ -90,7 +90,7 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 | `radarr_health_issue_type`    | Area that failed and triggered the health issue              |
 | `radarr_health_issue_wiki`    | Wiki URL (empty if does not exist)                           |
 
-#### On Test
+### On Test
 
 When adding the script to Radarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
 
