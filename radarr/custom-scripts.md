@@ -2,21 +2,20 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-06-23T03:07:26.835Z
+date: 2021-06-23T06:42:33.946Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
 ---
 
-## Custom Post Processing Scripts
 
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Radarr via the [Connect Settings](/radarr/settings#connections).
 
-### Overview
+## Overview
 
 Radarr can execute a custom script when movies are imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
 
-### Environment Variables
+## Environment Variables
 
 #### On Grab
 
