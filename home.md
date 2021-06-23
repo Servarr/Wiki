@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T07:03:14.036Z
+date: 2021-06-23T07:05:05.047Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -21,15 +21,15 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 ## Applications
 ### Media Automation
 
-- [![32.png](/assets/lidarr/logos/32.png)&emsp;Lidarr *Music*](/lidarr)
-- [![32.png](/assets/radarr/logos/32.png)&emsp;Radarr *Movies*](/radarr)
-- [![32.png](/assets/readarr/logos/32.png)&emsp;Readarr *Books*](/readarr)
-- [![32.png](/assets/sonarr/logos/32.png)&emsp;Sonarr *TV*](/sonarr)
+- [![16.png](/assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)
+- [![16.png](/assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
+- [![16.png](/assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
+- [![16.png](/assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
 {.links-list}
 
 ### Indexer Management
 
-- [![32.png](/assets/prowlarr/logos/32.png)&emsp;Prowlarr *Indexers*](/prowlarr)
+- [![16.png](/assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
 {.links-list}
 
 ## Other
