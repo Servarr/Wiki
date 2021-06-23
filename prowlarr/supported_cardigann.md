@@ -2,10 +2,10 @@
 title: Prowlarr Supported Cardigann
 description: 
 published: true
-date: 2021-06-23T03:07:00.753Z
+date: 2021-06-18T16:47:28.872Z
 tags: 
 editor: markdown
-dateCreated: 2021-06-23T03:06:57.769Z
+dateCreated: 2021-06-17T18:30:14.044Z
 ---
 
 Coming Soon

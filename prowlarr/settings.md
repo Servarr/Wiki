@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-06-14T22:49:38.946Z
+date: 2021-06-23T03:06:49.178Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z

@@ -2,11 +2,12 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-06-16T16:47:32.267Z
+date: 2021-06-23T03:07:48.091Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
 ---
+
 This page will go through all the settings available in Radarr and how they work.  This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](/radarr/quick-start-guide) page instead.
 
 ## Menu options

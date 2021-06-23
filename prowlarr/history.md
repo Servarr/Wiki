@@ -2,7 +2,7 @@
 title: Prowlarr History
 description: 
 published: true
-date: 2021-06-09T18:38:19.307Z
+date: 2021-06-23T03:06:30.972Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T23:32:35.055Z

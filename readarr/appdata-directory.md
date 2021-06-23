@@ -2,7 +2,7 @@
 title: Readarr Appdata Directory
 description: 
 published: true
-date: 2021-06-09T15:54:35.529Z
+date: 2021-06-23T03:08:06.478Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:54:32.028Z
