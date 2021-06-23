@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T07:01:38.895Z
+date: 2021-06-23T07:02:56.745Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -36,4 +36,5 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 
 - [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
 - [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
+- [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides](https://trash-guides.info/)
 {.links-list}
