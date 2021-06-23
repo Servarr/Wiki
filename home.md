@@ -2,8 +2,8 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T07:05:05.047Z
-tags: 
+date: 2021-06-23T07:05:23.501Z
+tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
 ---
