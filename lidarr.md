@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2021-06-23T03:05:07.116Z
+date: 2021-06-23T06:53:51.783Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -14,8 +14,8 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 ## Getting Started
 
-- [Installation Guide](/lidarr/installation)
-- [Quick Start Guide](/lidarr/quick-start-guide)
+- [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/lidarr/installation)
+- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/lidarr/quick-start-guide)
 {.links-list}
 
 ## User Guide
@@ -32,12 +32,12 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/lidarr/troubleshooting)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/lidarr/faq)
-- [Application Data Directory](/lidarr/appdata-directory)
+- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/lidarr/appdata-directory)
 {.links-list}
 
 ## Development
 
-- [Contributing](/lidarr/contributing)
+- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/lidarr/contributing)
 {.links-list}
 
 ## Support
