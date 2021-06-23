@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-06-23T03:09:24.160Z
+date: 2021-06-23T06:51:55.837Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -14,8 +14,8 @@ Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base
 
 ## Getting Started
 
-- [Installation Guide](/prowlarr/installation)
-- [Quick Start Guide](/prowlarr/quick-start-guide)
+- [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/prowlarr/installation)
+- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/prowlarr/quick-start-guide)
 {.links-list}
 
 ## User Guide
@@ -25,19 +25,20 @@ Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base
 - [<i class="fas fa-clock"></i>&emsp;History](/prowlarr/history)
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/prowlarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/prowlarr/system)
-- [Supported Indexers](/prowlarr/supported-indexers)
+- [<i class="fas fa-info-circle"></i>&emsp;Supported Indexers](/prowlarr/supported-indexers)
+- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/prowlarr/custom-scripts)
 {.links-list}
 
 ## Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/prowlarr/troubleshooting)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/prowlarr/faq)
-- [Application Data Directory](/prowlarr/appdata-directory)
+- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/prowlarr/appdata-directory)
 {.links-list}
 
 ## Development
 
-- [Contributing](/prowlarr/contributing)
+- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/prowlarr/contributing)
 {.links-list}
 
 ## Support
