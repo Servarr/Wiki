@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-06-23T17:21:41.726Z
+date: 2021-06-23T17:23:19.542Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -105,7 +105,7 @@ Note: Some of these settings are only visible through 'show advanced' settings w
 
 `{Edition Tags}` = IMAX
 
-#### Custom Formats
+#### Custom Formats {custom-formats-naming}
 
 - `{Custom Formats}` = Surround Sound x264
 
@@ -330,7 +330,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
 - Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
 
-## Custom Formats {custom formats 2}
+## Custom Formats {rcustom formats 2}
 
 - Ensure you get the right release every time! Custom formats allows fine control over release prioritization and selection. As simple as a single preferred word or as complex as you want with multiple criteria and regex.
 
