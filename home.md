@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T07:01:09.858Z
+date: 2021-06-23T07:01:38.895Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -18,7 +18,8 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 - [<i class="fab fa-github"></i>&emsp;Servarr Wiki Github *Servarr Wiki Repo*](https://github.com/Servarr/Wiki)
 {.links-list}
 
-## Media Automation
+## Applications
+### Media Automation
 
 - [![32.png](/assets/lidarr/logos/32.png)&emsp;Lidarr *Music*](/lidarr)
 - [![32.png](/assets/radarr/logos/32.png)&emsp;Radarr *Movies*](/radarr)
@@ -26,12 +27,12 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 - [![32.png](/assets/sonarr/logos/32.png)&emsp;Sonarr *TV*](/sonarr)
 {.links-list}
 
-## Indexer Management
+### Indexer Management
 
 - [![32.png](/assets/prowlarr/logos/32.png)&emsp;Prowlarr *Indexers*](/prowlarr)
 {.links-list}
 
-## Non-App Pages
+## Other Pages
 
 - [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
 - [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
