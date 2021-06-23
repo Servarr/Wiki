@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-06-23T17:24:20.027Z
+date: 2021-06-23T17:25:00.086Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -105,7 +105,7 @@ Note: Some of these settings are only visible through 'show advanced' settings w
 
 `{Edition Tags}` = IMAX
 
-#### Custom Formats {#custom-formats-naming}
+#### Custom Formats (Naming)
 
 - `{Custom Formats}` = Surround Sound x264
 
