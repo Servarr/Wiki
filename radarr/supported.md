@@ -1,5 +1,5 @@
 ---
-title: Prowlarr Supported
+title: Radarr Supported
 description: 
 published: true
 date: 2021-06-23T03:07:00.753Z
