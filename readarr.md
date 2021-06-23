@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2021-06-23T06:53:50.316Z
+date: 2021-06-23T06:54:37.372Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-16T23:40:17.311Z
@@ -29,6 +29,7 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 - [<i class="fas fa-search-minus"></i>&emsp;Wanted](/readarr/wanted)
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/readarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/readarr/system)
+- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/readarr/custom-scripts)
 {.links-list}
 
 ## Troubleshooting
