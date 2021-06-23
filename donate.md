@@ -2,7 +2,7 @@
 title: Donate
 description: 
 published: true
-date: 2021-06-23T03:04:59.396Z
+date: 2021-06-23T07:14:26.356Z
 tags: needs-love
 editor: markdown
 dateCreated: 2021-05-30T17:43:32.301Z
@@ -20,7 +20,6 @@ We currently use OpenCollective to accept donations on all projects, this allows
 - Priority Support. Yes, we have favorites and you are now one!
 - Early release and roadmap announcements through OpenCollective
 
-### Donate Below
+### Donate Buttons
 
-[![48.png](/assets/lidarr/logos/48.png)](https://opencollective.com/lidarr) [![48.png](/assets/prowlarr/logos/48.png)](https://opencollective.com/prowlarr) [![48.png](/assets/radarr/logos/48.png)](https://opencollective.com/radarr) [![48.png](/assets/readarr/logos/48.png)](https://opencollective.com/readarr) [![48.png](/assets/sonarr/logos/48.png)](https://opencollective.com/sonarr)
-{.links-list}
+[![Lidarr.png](/assets/lidarr/logos/48.png)](https://opencollective.com/lidarr)&emsp;[![Prowlarr.png](/assets/prowlarr/logos/48.png)](https://opencollective.com/prowlarr)&emsp;[![Radarr.png](/assets/radarr/logos/48.png)](https://opencollective.com/radarr)&emsp;[![Readarr.png](/assets/readarr/logos/48.png)](https://opencollective.com/readarr)&emsp;[![Sonarr.png](/assets/sonarr/logos/48.png)](https://opencollective.com/sonarr)&emsp;{.links-list}
