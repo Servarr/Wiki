@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2021-06-23T06:53:48.822Z
+date: 2021-06-23T06:54:41.186Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -26,6 +26,7 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 - [<i class="fas fa-search-minus"></i>&emsp;Wanted](/sonarr/wanted)
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/sonarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/sonarr/system)
+- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/sonarr/custom-scripts)
 {.links-list}
 
 ## Troubleshooting
