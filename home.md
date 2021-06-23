@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T07:00:49.842Z
+date: 2021-06-23T07:01:09.858Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -11,7 +11,7 @@ dateCreated: 2021-05-16T02:37:25.239Z
 > This wiki is home to Lidarr, Prowlarr, Radarr, Readarr, and Sonarr information
 {.is-info}
 
-Welcome to **WikiArr** the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sonarr. Collectively they are commonly referred to as "*Arr" or "*arrs". They are designed to automagically grab, sort, organize, and monitor your Music, Movie, E-Book, or TV Show collections for Lidarr, Radarr, Readarr, and Sonarr; and to manage your indexers and keep them in sync with the aforementioned apps for Prowlarr.
+Welcome to **Servarr** the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sonarr. Collectively they are commonly referred to as "*Arr" or "*arrs". They are designed to automagically grab, sort, organize, and monitor your Music, Movie, E-Book, or TV Show collections for Lidarr, Radarr, Readarr, and Sonarr; and to manage your indexers and keep them in sync with the aforementioned apps for Prowlarr.
 
 Contributions are welcome either on the Wiki directly, just authenticate first, or via Pull Requests on our Repository.
 
