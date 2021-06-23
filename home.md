@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-06-23T03:05:03.054Z
+date: 2021-06-23T07:00:49.842Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -15,24 +15,24 @@ Welcome to **WikiArr** the consolidated wiki for Lidarr, Prowlarr, Radarr, Reada
 
 Contributions are welcome either on the Wiki directly, just authenticate first, or via Pull Requests on our Repository.
 
-- [Servarr Wiki Github](https://github.com/Servarr/Wiki)
+- [<i class="fab fa-github"></i>&emsp;Servarr Wiki Github *Servarr Wiki Repo*](https://github.com/Servarr/Wiki)
 {.links-list}
 
 ## Media Automation
 
-- [Lidarr *Music*](/lidarr)
-- [Radarr *Movies*](/radarr)
-- [Readarr *Books*](/readarr)
-- [Sonarr *TV*](/sonarr)
+- [![32.png](/assets/lidarr/logos/32.png)&emsp;Lidarr *Music*](/lidarr)
+- [![32.png](/assets/radarr/logos/32.png)&emsp;Radarr *Movies*](/radarr)
+- [![32.png](/assets/readarr/logos/32.png)&emsp;Readarr *Books*](/readarr)
+- [![32.png](/assets/sonarr/logos/32.png)&emsp;Sonarr *TV*](/sonarr)
 {.links-list}
 
 ## Indexer Management
 
-- [Prowlarr *Indexers*](/prowlarr)
+- [![32.png](/assets/prowlarr/logos/32.png)&emsp;Prowlarr *Indexers*](/prowlarr)
 {.links-list}
 
 ## Non-App Pages
 
-- [Docker Guide](/docker-guide)
-- [Useful Tools](/useful-tools)
+- [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
+- [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
 {.links-list}
