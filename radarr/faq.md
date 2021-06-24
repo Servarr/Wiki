@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-23T03:07:31.466Z
+date: 2021-06-24T14:47:59.758Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -542,4 +542,4 @@ This is expected. This is how the Torrent Process works with .
 
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
 
-1. If the "Completed Download Handling - Remove" option is enabled in *Arr's settings,  will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+1. If the "Completed Download Handling - Remove Completed" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
