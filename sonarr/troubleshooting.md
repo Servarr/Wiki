@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-06-23T03:09:40.006Z
+date: 2021-06-24T05:21:51.884Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -16,7 +16,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
 {.links-list}
 
-But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of Mono/.Net/.Netcore, version of , download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the Logging and Log Files to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .Net/Mono, version of Sonarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
@@ -24,13 +24,26 @@ The more we know, the easier it is to help you.
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
+>- **Do not simply provide the whole log file unless explictly asked.**
+>- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explictly asked.**
+>	- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
+>````
+>   ```
+>   words here
+>   ```
+>````
+>- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
+>- **Do ensure [Logging](/sonarr/settings#logging) is set to Trace (or Debug if requested).**
+> **Do ensure the logs you provide capture the issue**
+
 What you need to do is:
 
 1. Turn Logging up to Trace
 1. Clear Logs
 1. Reproduce the Issue
-1. Open the trace log file (.trace.txt) and fine the relevant context
-1. [Hastebin](https://hastebin.com/), [Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+1. Open the trace log file (sonarr.trace.txt) and find the relevant context
+1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+> It is **not** suggested to use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.{.is-info}
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
 - **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/sonarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
