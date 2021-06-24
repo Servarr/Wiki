@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-06-24T05:21:51.884Z
+date: 2021-06-24T05:23:39.172Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -34,7 +34,7 @@ If you're linked here for support remember to get them the information from the 
 >````
 >- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
 >- **Do ensure [Logging](/sonarr/settings#logging) is set to Trace (or Debug if requested).**
-> **Do ensure the logs you provide capture the issue**
+>- **Do ensure the logs you provide capture the issue**
 
 What you need to do is:
 
