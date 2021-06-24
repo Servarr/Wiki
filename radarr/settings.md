@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-06-23T17:25:00.086Z
+date: 2021-06-24T17:14:52.813Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -455,17 +455,17 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
 - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
 - Required Flags - What indexer flags are required?
-|    Flag Name   | Symbol | Description                                                                                                                                                                                                               |
-|:--------------:|:------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   G_Freeleech  |   ⬇⬇   | Sometimes, torrent sites set a torrent to be freeleech. This means, that the download of this torrent will not count towards your download quota or ratio. This is really useful, if you do not have the best ratio yet.  |
-|   G_Halfleech  |   ⇩⇩   | Similar to G_Freeleech, G_Halfleech signifies that only half of the size of this torrent will count towards your download quota or ratio.                                                                                 |
-| G_DoubleUpload |    ⬆   | Similar to G_Freeleech, G_DoubleUpload signifies that any amount of data you upload via seeding is counted twice towards your upload quota and ratio. This is very useful, if you want to build up a ratio buffer.        |
-|   PTP_Golden   |    🌟   | On PassThePopcorn, some torrents are given the Golden tag, when they meet certain encoding standards. These are usually the best encodes, with almost no perceptible quality loss. You can learn more on their wiki page. |
-|  PTP_Approved  |    ✔   | On PassThePopcorn, some torrents are approved, when they meet the minimum standards for encoding (e.g. no low bitrates). See their wiki for more information.                                                             |
-|  HDB_Internal  |    🚪   | Releases on HDBits receive this tag, when the release was uploaded by one of the release groups of HDBits themselves.                                                                                                     |
-|     G_Scene    |    ☠   | Similar to G_Freeleech, G_Freeleech75 signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                                |
-|  G_Freeleech75 |   ⇩⬇   | Similar to G_Freeleech, G_Freeleech75 signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                                |
-|  G_Freeleech25 |    ⇩   | Similar to G_Freeleech, G_Freeleech25 signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                                |
+  | Flag             | Symbol | Description                                                                                                                                                                                                                 |
+  | ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `G_Freeleech`    | ⬇⬇     | Sometimes, torrent sites set a torrent to be freeleech. This means, that the download of this torrent will not count towards your download quota or ratio. This is really useful if you have not built up a good ratio yet. |
+  | `G_Halfleech`    | ⇩⇩     | Similar to `G_Freeleech`, `G_Halfleech` signifies that only half of the size of this torrent will count towards your download quota or ratio.                                                                               |
+  | `G_DoubleUpload` | ⬆      | Similar to `G_Freeleech`, `G_DoubleUpload` signifies that any amount of data you upload via seeding is counted twice towards your upload quota and ratio. This is very useful, if you want to build up a ratio buffer.      |
+  | `PTP_Golden`     | 🌟     | On PassThePopcorn, some torrents are given the _Golden_ tag, when they meet certain encoding standards. These are usually the best encodes, with almost no perceptible quality loss. You can learn more on their wiki page. |
+  | `PTP_Approved`   | ✔      | On PassThePopcorn, some torrents are approved, when they meet the minimum standards for encoding (e.g., no low bitrates). See their wiki for more information.                                                              |
+  | `HDB_Internal`   | 🚪     | Releases on HDBits receive this tag, when the release was uploaded by one of the release groups of HDBits themselves.                                                                                                       |
+  | `G_Scene`        | ☠      | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
+  | `G_Freeleech75`  | ⇩⬇     | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
+  | `G_Freeleech25`  | ⇩      | Similar to `G_Freeleech`, `G_Freeleech25` signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                              |
 - Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
 ### Options
