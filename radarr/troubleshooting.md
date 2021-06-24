@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-06-24T05:22:11.511Z
+date: 2021-06-24T05:23:29.687Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:43.764Z
@@ -34,7 +34,7 @@ If you're linked here for support remember to get them the information from the 
 >````
 >- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
 >- **Do ensure [Logging](/radarr/settings#logging) is set to Trace (or Debug if requested).**
-> **Do ensure the logs you provide capture the issue**
+>- **Do ensure the logs you provide capture the issue**
 
 What you need to do is:
 
