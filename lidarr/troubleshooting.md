@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-06-24T05:22:40.863Z
+date: 2021-06-24T05:23:21.007Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -34,7 +34,7 @@ If you're linked here for support remember to get them the information from the 
 >````
 >- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
 >- **Do ensure [Logging](/lidarr/settings#logging) is set to Trace (or Debug if requested).**
-> **Do ensure the logs you provide capture the issue**
+>- **Do ensure the logs you provide capture the issue**
 
 What you need to do is:
 
