@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-06-24T14:37:00.721Z
+date: 2021-06-25T17:22:42.463Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -87,6 +87,10 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 > If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 {.is-info}
+
+## Why wont Sonarr import a TBA episode?
+
+- On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing>) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files.
 
 ## Why cannot Sonarr import episode files for series X? / Why cannot Sonarr find releases for series X?
 
