@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-06-23T03:06:56.208Z
+date: 2021-06-26T13:58:09.770Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-23T03:06:49.247Z
 ---
 
-- Supported Indexers as of Build `0.1.0.515` / [Commit: bd79d3c828944c4911b6473f4e913cb757d223a9](https://github.com/Prowlarr/Prowlarr/commit/bd79d3c828944c4911b6473f4e913cb757d223a9)
+- Supported Indexers as of Build `0.1.0.545` / [Commit: dfb254d2dcd1ef79b58cbcf1b088199c3a4203c3](https://github.com/Prowlarr/Prowlarr/commit/dfb254d2dcd1ef79b58cbcf1b088199c3a4203c3)
 
 ## Torrents
 
@@ -198,6 +198,7 @@ dateCreated: 2021-06-23T03:06:49.247Z
 |zetorrents{#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-fr|
 |Zooqle{#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-us|
 |Ztracker{#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
+
 
 ### Private
 
@@ -510,6 +511,7 @@ dateCreated: 2021-06-23T03:06:49.247Z
 |Zelka.org{#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-es|
 
+
 ## Usenet
 
 ### Public
@@ -546,3 +548,4 @@ None
 |SpotNZB{#newznab}||en-US|
 |Tabula Rasa{#newznab}||en-US|
 |Usenet Crawler{#newznab}||en-US|
+
