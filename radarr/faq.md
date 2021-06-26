@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-24T14:47:59.758Z
+date: 2021-06-26T09:33:13.994Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -11,13 +11,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## How does Radarr work?
 
 - Radarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
-
 - Radarr enforces a minimum of 10 minutes on the RSS Sync interval and a maximum of 2 hours. 15 minutes is the minimum recommended by most indexers, though some do allow lower intervals and 2 hours ensures Radarr is checking frequently enough to not miss a release (even though it can page through the RSS feed on many indexers to help with that). Some indexers allow clients to perform an RSS sync more frequently than 10 minutes, in those scenarios we recommend using Radarr's Release-Push API endpoint along with an IRC announce channel to push releases to Radarr for processing which can happen in near real time and with less overhead on the indexer and Radarr as Radarr doesn’t need to request the RSS feed too frequently and process the same releases over and over.
 
 ## How does Radarr find movies?
 
 - Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
-
 - So how do you deal with the present and past? When you're adding a movie, you will need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you do not need to initiate a search.
 - Put another way, Radarr will only find movies that are newly uploaded to your indexers. It will not actively try to find movies you want that were uploaded in the past.
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
@@ -34,7 +32,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - *Generally Quality Trumps All**
 
 - The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
-***As of 2021-06-09 the logic is as follows***
+***As of 2021-06-26 the logic is as follows***
 
 1. Quality
 1. Custom Format Score
@@ -84,7 +82,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - If you're looking to moving all your movies from one folder to individual folders check Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS**
 
-## Can I put all my movies in my library into one folder
+## Can I put all my movies in my library into one folder?
 
 - We get asked this a lot. There are no plans to support `\data\Movies\Movie1.mkv`, `\data\Movies\Movie2.mkv`, etc.
 
@@ -207,9 +205,9 @@ If Docker:
 - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **June 17 2021 Update**
+- **June 26 2021 Update**
   - `3.2.2.5080` has been released as master/stable
-  - For those on nightly and are still on `4.0.0.5093` or lower you can safely downgrade to master
+  - For those on nightly and are still on `4.0.0.5100` or lower you can safely downgrade to master
   - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
 
 ## How does Radarr handle foreign movies or foreign titles?
