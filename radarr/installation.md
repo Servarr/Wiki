@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-23T03:07:35.147Z
+date: 2021-06-29T13:14:01.577Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -19,6 +19,9 @@ A Windows Service runs even when the user is not logged in, but special care mus
 Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
 
 It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+
+> You may have to run once "As Administrator" after installing in tray mode, if you get an access error or you use mapped network drives. This gives Radarr the permissions it needs. You should not need to run As Administrator every time.
+{.is-warning}
 
 1. Download the latest version of Radarr from <https://radarr.video/#downloads-v3-windows> for your architecture
 1. Run the installer
