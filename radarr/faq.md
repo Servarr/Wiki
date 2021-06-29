@@ -432,7 +432,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
     On some installations, the user is different: `chown -R sc-``:``  *`
 1. Start
 
-## Help I have locked my self out
+## Help I have locked myself out
 
 To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
