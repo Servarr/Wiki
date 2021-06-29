@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-06-23T03:08:22.150Z
+date: 2021-06-29T13:17:23.082Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -19,6 +19,9 @@ A Windows Service runs even when the user is not logged in, but special care mus
 Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
 
 It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+
+> You may have to run once "As Administrator" after installing in tray mode, if you get an access error or you use mapped network drives. This gives Radarr the permissions it needs. You should not need to run As Administrator every time.
+{.is-warning}
 
 > Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
 {.is-warning}
