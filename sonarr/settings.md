@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-23T03:09:31.197Z
+date: 2021-06-29T14:52:15.859Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -53,12 +53,12 @@ Also, note that for each individual settings page, there are some options at the
 
 #### Series Naming
 
-- `{Series Title}` = Series Name!
-- `{Series CleanTitleYear}` = Series Title 2010
+- `{Series Title}` = The Series Name's Title!
+- `{Series CleanTitleYear}` = The Series Names Title! 2010
 - `{Series TitleFirstCharacter}` = S
-- `{Series CleanTitle}` = Series Title
-- `{Series TitleThe}` = Series Title, The
-- `{Series TitleYear}` = Series Title (2010)
+- `{Series CleanTitle}` = The Series Names Title!
+- `{Series TitleThe}` = Series Name's Title!, The
+- `{Series TitleYear}` = The Series Name's Title (2010)
 - `{Series Year}` = (2010)
 
 #### Series IDs
