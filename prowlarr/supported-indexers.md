@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-06-28T05:12:18.625Z
+date: 2021-06-29T01:40:10.992Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-06-23T03:06:49.247Z
@@ -334,7 +334,7 @@ dateCreated: 2021-06-23T03:06:49.247Z
 |HD-Only{#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|fr-fr|
 |HDRoute{#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |HDSky{#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
-|HDSpace{#hdspace}|Sharing The Universe|en-us|
+|HD-Space{#hdspace}|Sharing The Universe|en-us|
 |HD-Spain{#hdspain}|HD-Spain is a SPANISH site for HD content|es-es|
 |HDtime{#hdtime}|HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-cn|
 |HDTorrents{#hd-torrents}|HD-Torrents is a private torrent website with HD torrents and strict rules on their content.|en-US|
