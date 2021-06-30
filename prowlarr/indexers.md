@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-06-23T03:06:57.748Z
+date: 2021-06-30T14:59:07.806Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -19,7 +19,7 @@ To add an indexer, first click on `Indexers` on the left, then `Add Indexer` (th
 Choose your indexer from the list, or type a partial name in the box to find your indexer. If your indexer is not listed, please use "Generic Newznab" (for usenet) or "Generic Torznab" (for torrents).
 
 > This assumes your indexer supports standardized *znab formats. If it doesn't, then this will not work.
-> If your indexer is not listed, you can request it be added in Discord, in the `#indexer-requests` channel.
+> If your indexer is not listed, you can request it be added via our [Indexer Requests Site](https://requests.prowlarr.com)
 {.is-info}
 
 Once you've selected your indexer, there will be a pop-up containing further information you will need to configure it.
