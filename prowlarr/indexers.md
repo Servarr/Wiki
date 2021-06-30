@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-06-30T14:59:07.806Z
+date: 2021-06-30T15:04:19.401Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -26,13 +26,13 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 ![ind_2_indexerconfig.png](/assets/prowlarr/ind_2_indexerconfig.png)
 
-- Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
+- Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
 
-- Check the box to enable this indexer.
+- Enable - Check the box to enable this indexer.
 
-- Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned.
+- Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
 
-- Select your App Profile here. These can be created in `Settings` -> `Apps`. The Standard one already exists, and looks like this:
+- App Profile - Select your App Profile here. These can be created in `Settings` -> `Apps`. The Standard one already exists, and looks like this:
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 
