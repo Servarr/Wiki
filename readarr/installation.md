@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-01T21:51:41.108Z
+date: 2021-07-01T21:53:25.698Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -125,6 +125,7 @@ sudo systemctl enable --now -q readarr
 
 > Readarr is in a pre-alpha state. If you wait a bit, there should be an official release soon.
 {.is-warning}
+
 The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Readarr Docker image.
