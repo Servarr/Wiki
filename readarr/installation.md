@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-06-29T13:17:23.082Z
+date: 2021-07-01T21:51:41.108Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -43,6 +43,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 > Readarr is in a pre-alpha state and has no binaries currently available for Linux. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
 {.is-warning}
+
 You'll need to install the binaries using the below commands.
 
 > This will download the `x64` copy of readarr and install it into `/opt`
