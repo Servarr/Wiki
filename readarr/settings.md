@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-06-23T03:08:34.768Z
+date: 2021-07-02T00:12:44.243Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -49,20 +49,20 @@ Right Box - Case Handling
 
 Author
 
-- {Author Name} Author Name
-- {Author NameThe} Author Name, The
-- {Author CleanName} Author Name
+- {Author Name} Author's Name
+- {Author NameThe} Author's Name, The
+- {Author CleanName} Authors Name
 - {Author SortName} Name, Author
 - {Author Disambiguation} Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
 Book
 
-- {Book Title} Book Title!: Subtitle!
-- {Book TitleThe} Book Title!, The: Subtitle!
-- {Book CleanTitle} Book Title: Subtitle
-- {Book TitleNoSub} Book Title!
-- {Book TitleTheNoSub} Book Title!, The
-- {Book CleanTitleNoSub} Book Title: Subtitle
+- {Book Title} The Book's Title!: Subtitle!
+- {Book TitleThe} Book's Title!, The: Subtitle!
+- {Book CleanTitle} The Books Title: Subtitle
+- {Book TitleNoSub} The Book's Title!
+- {Book TitleTheNoSub} Book's Title!, The
+- {Book CleanTitleNoSub} The Books Title
 - {Book Subtitle} Subtitle!
 - {Book SubtitleThe} Subtitle!, The
 - {Book CleanSubtitle} Subtitle
