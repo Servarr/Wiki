@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-06-26T09:33:13.994Z
+date: 2021-07-02T16:53:38.654Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -207,7 +207,7 @@ If Docker:
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 - **June 26 2021 Update**
   - `3.2.2.5080` has been released as master/stable
-  - For those on nightly and are still on `4.0.0.5100` or lower you can safely downgrade to master
+  - For those on nightly and are still on `4.0.0.5121` or lower you can safely downgrade to master
   - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
 
 ## How does Radarr handle foreign movies or foreign titles?
