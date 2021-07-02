@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-07-02T16:53:38.654Z
+date: 2021-07-02T16:56:04.315Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -202,10 +202,10 @@ If Docker:
 
 - `master` can go to `develop` or `nightly`
 - `develop` can go to `nightly`
-- Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **June 26 2021 Update**
+- **July 2 2021 Update**
   - `3.2.2.5080` has been released as master/stable
   - For those on nightly and are still on `4.0.0.5121` or lower you can safely downgrade to master
   - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
