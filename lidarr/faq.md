@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-06-23T03:05:46.201Z
+date: 2021-07-04T06:34:08.130Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -230,3 +230,41 @@ A common complaint is the Refresh task causes heavy I/O usage.  One setting that
     - **Solutions**
       - Change your paths to UNC paths (`\\server\share`)
       - Run Lidarr.exe via the Startup Folder
+      
+## VPNs, Jackett, and the * ARRs
+
+- Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
+
+- In other words, putting the  *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
+
+- In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
+
+## Jackett's /all Endpoint
+
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
+
+- **May 2021 Update: It is likely Lidarr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+
+- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+
+- Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (\>= 100000) cannot be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
+
+- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Lidarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
+
+## Why are there two files? | Why is there a file left in downloads?
+
+This is expected. This is how the Torrent Process works.
+
+1. Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
+1. Lidarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
+
+1. If the "Completed Download Handling - Remove Completed" option is enabled in Lidarr's settings, Lidarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
+
