@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:23:28.361Z
+date: 2021-07-04T23:34:23.612Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -87,7 +87,7 @@ After installation and starting Lidarr, you access by opening a browser and go t
 
 ![qs_startup.png](/assets/lidarr/lidarr_qs_startup.png)
 
-There are two options shown on the startup screen but we will not be utilizing those initially. Configure settings to begin utilizing Lidarr.
+There are two options shown on the startup screen but we will not be utilizing those initially.
 
 # Settings
 
