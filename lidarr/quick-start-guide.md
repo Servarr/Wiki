@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:50:39.294Z
+date: 2021-07-04T23:54:33.295Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -115,7 +115,7 @@ You'll be presented with the following window:
 
 Leave the other options at their defaults.
 
-> If utilizing a `Root Folder` with existing files. Review the Advanced QuickStart for considerations
+> If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
 {.is-warning}
 
 > Your `Root Folder` and `Download Folder` cannot be the same location!
