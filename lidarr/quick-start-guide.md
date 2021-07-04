@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:35:11.347Z
+date: 2021-07-04T23:50:39.294Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -85,7 +85,7 @@ This list could go on and on. All releases are correlated with a artist. You mus
 
 After installation and starting Lidarr, you access by opening a browser and go to `http://{your_ip_here}:8686`
 
-![qs_startup.png](/assets/lidarr/lidarr_qs_startup.png)
+![lidarr_qs_startup.png](/assets/lidarr/quick-start-guide/lidarr_qs_startup.png)
 
 There are two options shown on the startup screen but we will not be utilizing those initially.
 
@@ -102,13 +102,13 @@ First we’re going to take a look at the `Media Management` where we will set t
 
 Click on `Settings` > `Media Management` on the left menu.
 
-![lidarr_qs_mediamanagement.png](/assets/lidarr/lidarr_qs_mediamanagement.png)
+![lidarr_qs_mediamanagement.png](/assets/lidarr/quick-start-guide/lidarr_qs_mediamanagement.png)
 
 Click on `Add (+)` of the `Root Folders`.
 
 You'll be presented with the following window:
 
-![lidarr_qs_rootfolder.png](/assets/lidarr/lidarr_qs_rootfolder.png)
+![lidarr_qs_rootfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_rootfolder.png)
 
 - **Name** - This is the `Friendly Name` of the storage location.
 - **Path** - This is the actual `Path` to the data storage location. The system/user must have the proper permissions to this storage path. This folder cannot be your download location!
@@ -157,19 +157,19 @@ Understanding the installation/concepts behind `Download Client's` are beyond th
 
 # First Artist
 
-You will need to add an `Artist`.
+If following this guide and your `Root Folder` did not have any media files you will need to add an `Artist`.
 
 `Library` > `Add New`
 
-![lidarr_qs_addnew.png](/assets/lidarr/lidarr_qs_addnew.png)
+![lidarr_qs_addnew.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnew.png)
 
 This will link to the search screen to find an artist. Search and select the `Artist` you want to add. This will bring up the "Add new Artist" window.
 
-![lidarr_qs_addnewdylan.png](/assets/lidarr/lidarr_qs_addnewdylan.png)
+![lidarr_qs_addnewdylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnewdylan.png)
 
 We will utilize the default selections. Which should include:
 
-- Root Folder - The folder created in the last step
+- Root Folder - The folder you created
 - Monitor - None
 - Quality Profile - Any
 - Tags - (empty)
@@ -185,15 +185,11 @@ Click the newly added `Artist`. (Bob Dylan in this example)
 {.is-info}
 
 
-
-
-
 # First Download/Import
 
-Finally time to download/import your first `Release`! If your `Root Folder` did not have any media files you will need to add an `Artist`.
+Finally time to download/import your first `Release`! 
 
-
-
+//
 
 
 # // Quick Start - Advanced
