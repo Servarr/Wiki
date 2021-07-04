@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T21:57:29.295Z
+date: 2021-07-04T22:44:36.994Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -64,7 +64,7 @@ Every item to be managed must have a correlating release in the 3rd party data s
 
 > Releases must exist in the 3rd party services to be managed in Lidarr.
 
-### Artist
+### Artist (Metadata)
 
 Artists are exactly what are to be expected the `Release Artist`. Unfortunately artist naming, styling, changes over time, user preferences and other reasons have convoluted what constitutes this `Release Artist`.
 
@@ -83,7 +83,7 @@ This list could go on and on. All releases are correlated with a artist. You mus
 
 > Artists must exist in the 3rd party services to be managed in Lidarr. 
 
-## 1st Start
+## First Start
 
 After installation and starting Lidarr, you access by opening a browser and go to `http://{your_ip_here}:8686`
 
@@ -100,7 +100,7 @@ We will be using the default configuration of settings to configure Lidarr. This
 
 ### Media Management
 
-First we’re going to take a look at the `Media Management` where we will set the `Root Folder`. This will be the location that the media files will be stored in.
+First we’re going to take a look at the `Media Management` where we will set the `Root Folder`.  This will be the location that the media files will be stored in.
 
 Click on `Settings` > `Media Management` on the left menu.
 
@@ -112,7 +112,10 @@ You'll be presented with the following window:
 
 //![lidarr_qs_rootfolder.png](/assets/lidarr/lidarr_qs_rootfolder.png)
 
+- **Name** - This is the `Friendly Name` of the storage location.
+- **Path** - This is the actual `Path` to the data storage location. The system/user must have the proper permissions to this storage path. This folder cannot be your download location!
 
+Leave the other options at their defaults.
 
 > If utilizing a `Root Folder` with existing files. Review the Advanced QuickStart for considerations
 {.is-warning}
@@ -122,53 +125,27 @@ You'll be presented with the following window:
 
 ### Profiles
 
-//////////////////////////////////// Everything Past this point - Under Construction
+`Settings` > `Profiles`
 
-### Episode Naming
+Profile settings will stay at their default values.
 
-![qs_episodenaming.png](/assets/lidarr/lidarr_qs_episodenaming.png)
+### Quality
 
-- Check the box to enable Rename Episodes.
-- Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/).
+`Settings` > `Quality`
 
-> If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
+Quality settings will stay at their default values.
 
-### Importing
+### Indexers
 
-![mm_importing.png](/assets/sonarr/mm_importing.png)
+`Settings` > `Indexers`
 
-- (Advanced Option) If you want TBA episodes to be imported immediately, change Episode Title Required to "Never".
-- (Advanced Option) Enable `Use Hardlinks instead of Copy` more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).
-- Check the box to import extra files, and add at least `.srt` to the list.
+This section sets the indexer/trackers that you’ll be using to find downloadable media files.
 
-### Root Folders
+Click on `Add (+)` of `Indexers`. You’ll be presented with a new window with many different options. Lidarr considers both Usenet Indexers and Torrent Trackers as `Indexers`.
 
-Here we will add the root folder that Sonarr will be using to import your existing organized media library and where Sonarr will be importing (copy/hardlink/move) your media after your download client has downloaded it. This is the folder where your series and episodes are stored for your media player to play them. It is NOT where you download files to!
+Add at least one `Indexer` in order for Lidarr to properly find available files.
 
-> **Your download folder and media folder can’t be the same location**
-{.is-danger}
-
-Don’t forget to save your changes!
-
-## Profiles
-
-`Settings` => `Profiles`
-
-We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several pre-filled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the appropriate wiki page for that section.
-
-## Indexers
-
-`Settings` => `Indexers`
-
-Here you’ll be adding the indexer/trackers that you’ll be using to actually download any of your files.
-
-Once you’ve clicked the `+` button to add a new indexer, you’ll be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers as “Indexers”.
-
-There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
-
-Most usenet indexers require an API key, which can be found in your Profile page on the indexer's website.
-
-Add at least one indexer in order for Sonarr to work properly.
+Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information available.
 
 ### Download Clients
 
@@ -176,22 +153,12 @@ Add at least one indexer in order for Sonarr to work properly.
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups, there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-### {.tabset}
+Add at least one `Download Client` in order for Lidarr to properly download files found by the indexer.
 
-#### Usenet
+Understanding the installation/concepts behind `Download Client's` are beyond the scope of this guide. The internet holds a wealth of information available.
 
-1. Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-        -   Examples: movies, tv, series, music, ect.
-1. Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client’s API.
-1. When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Sonarr.
-1. Sonarr will scan that completed file location for files that Sonarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-1. Leftover files from the download will be sent to your trash or recycling.
 
-#### BitTorrent
 
-1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder by default Sonarr will copy the file, which uses twice the disk space.
-1. An advanced option to hardlink can be enabled (Settings > Media Management > Importing) which will attempt to hardlink the media to your Series folder. A hardlink will allow not use any additional disk space. If the hardlink creation fails, Sonarr will fall back to the default behavior and copy the file.
-1. If the “Completed Download Handling - Remove” option is enabled in Sonarr’s settings, Sonarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
 ## How to import your existing organized media library
 
@@ -223,3 +190,8 @@ Coming Soon
 {.is-warning}
 
 //If you are not seeing a release in Lidarr it's possible that it has not been added to the data service.
+
+- Monitor * - This sets the default monitoring option (`Releases`) for the `Root Folder`.
+- Quality Profile * - This sets the default quality option for the `Root Folder`.
+- Metadata Profile * - This sets the default metadata option for the `Root Folder`.
+
