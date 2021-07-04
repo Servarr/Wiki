@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:34:23.612Z
+date: 2021-07-04T23:35:11.347Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -190,7 +190,7 @@ Click the newly added `Artist`. (Bob Dylan in this example)
 
 # First Download/Import
 
-Finally time to download/import your first `Release`! If your `Root Folder` did not have any media files. You will need to add an `Artist`.
+Finally time to download/import your first `Release`! If your `Root Folder` did not have any media files you will need to add an `Artist`.
 
 
 
