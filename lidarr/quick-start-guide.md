@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T21:30:35.193Z
+date: 2021-07-04T21:56:23.593Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -93,6 +93,8 @@ There are two options shown on the startup screen but we will not be utilizing t
 
 ## Settings
 
+We will be using the default configuration of settings to configure Lidarr. This will utilize the existing Profiles, Quality, Tags, etc.
+
 > For a more detailed breakdown of all the settings, check [Lidarr ->Settings](/lidarr/settings)
 {.is-info}
 
@@ -100,9 +102,25 @@ There are two options shown on the startup screen but we will not be utilizing t
 
 First we’re going to take a look at the `Media Management` where we will set the `Root Folder`. This will be the location that the media files will be stored in.
 
-Click on `Settings` => `Media Management` on the left menu.
+Click on `Settings` > `Media Management` on the left menu.
+
+//![lidarr_qs_mediamanagement.png](/assets/lidarr/lidarr_qs_mediamanagement.png)
+
+Click on `Add (+)` of the `Root Folders`.
+
+You'll be presented with the following window:
+
+//![lidarr_qs_rootfolder.png](/assets/lidarr/lidarr_qs_rootfolder.png)
 
 
+
+> If utilizing a `Root Folder` with existing files. Review the Advanced QuickStart for considerations
+{.is-warning}
+
+> Your `Root Folder` and `Download Folder` cannot be the same location!
+{.is-danger}
+
+### Profiles
 
 ### Episode Naming
 
