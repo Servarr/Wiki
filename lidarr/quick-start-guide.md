@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T22:57:05.953Z
+date: 2021-07-04T23:13:06.431Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -156,48 +156,52 @@ Add at least one `Download Client` in order for Lidarr to properly download file
 
 Understanding the installation/concepts behind `Download Client's` are beyond the scope of this guide. The internet holds a wealth of information available.
 
-## First Download/Import
+## First Artist
 
-Finally time to download/import your first `Release`! If your `Root Folder` did not have any media files. You will need to add an `Artist`.
+You will need to add an `Artist`.
 
 `Library` > `Add New`
 
 ![lidarr_qs_addnew.png](/assets/lidarr/lidarr_qs_addnew.png)
 
+This will link to the search screen to find an artist. Search and select the `Artist` you want to add. This will bring up the "Add new Artist" window.
+
+![lidarr_qs_addnewdylan.png](/assets/lidarr/lidarr_qs_addnewdylan.png)
+
+We will utilize the default selections. Which should include:
+
+- Root Folder - The folder created in the last step
+- Monitor - None
+- Quality Profile - Any
+- Tags - (empty)
+- Start search for missing albums - Unchecked
+
+This will kick off the `Artist` metadata download. This will take some time depending on the amount of data to gather. Remember this information comes 3rd party sources and is only as complete as what the community has contributed.
+
+Click the newly added `Artist`. (Bob Dylan in this example)
+
+![lidarr_qs_dylan.png](/assets/lidarr/lidarr_qs_dylan.png)
+
+> Don't like the metadata downloaded? - Contribute to make it better!
+{.is-info}
 
 
-# Quick Start - Advanced
+
+
+
+## First Download/Import
+
+Finally time to download/import your first `Release`! If your `Root Folder` did not have any media files. You will need to add an `Artist`.
+
+
+
+
+
+# // Quick Start - Advanced
 
 ## How to import your existing organized media library
 
-After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
-
 Coming soon
-
-### Import episodes
-
-Coming soon
-
-#### Importing Existing Media
-
-Depending how well your existing series folders are named, Sonarr will try to match it with the correct series. You should review this list carefully before importing.
-
-Coming soon
-
-#### No match found
-
-Coming Soon
-
-#### Fix faulty folder name after import
-
-Coming Soon
-
-//We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ for a full explanation.
-
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
-{.is-warning}
-
-//If you are not seeing a release in Lidarr it's possible that it has not been added to the data service.
 
 - Monitor * - This sets the default monitoring option (`Releases`) for the `Root Folder`.
 - Quality Profile * - This sets the default quality option for the `Root Folder`.
