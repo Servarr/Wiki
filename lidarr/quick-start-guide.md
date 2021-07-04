@@ -2,13 +2,13 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T21:02:42.520Z
+date: 2021-07-04T21:11:30.356Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
 ---
 
-> This page is still in progress and not complete.
+> This page is still in progress and not complete. Items to be updated are denoted with //
 
 ## Quick Start Guide
 
@@ -17,9 +17,13 @@ In this guide we will explain the basic steps to begin working with Lidarr. We w
 - Existing library or files
 - Improper use case
 - Improper folder structure
-- Improper or extremly complicated tagging
+- Improper or extremely complicated tagging
 - Loose collection of files
-- Speciality based music libraries: Classical, Singles, Electronic
+- Specialty based music libraries: Classical, Singles, Electronic
+
+This guide is broken into sections. It is recommended to read the whole guide to have a complete understanding but you can jump to specific sections for immediate concerns.
+
+
 
 //*(Link to QS Advanced section)*
 
@@ -35,9 +39,9 @@ Lidarr utilizes information from data aggregation services to properly tag and m
 Details are below to participate and contribute.
 {.is-warning}
 
-The main service utilized is [MusicBrainz](https://musicbrainz.org/). This is free service that is community driven and ultimately exists and survives on your contributions and participation. Release creation and contribution is beyond the scope of this quide. Instructions can be found here: [How To Contribute](https://musicbrainz.org/doc/How_to_Contribute)
+The main service utilized is [MusicBrainz](https://musicbrainz.org/). This is free service that is community driven and ultimately exists and survives on your contributions and participation. Release creation and contribution is beyond the scope of this guide. Instructions can be found here: [How To Contribute](https://musicbrainz.org/doc/How_to_Contribute)
 
-Ultimately the data is defined by the 3rd party data standards. If the standards **do not align** with your use case. Lidarr may not be the proper solution. Other applications for the management of your media may include:
+Ultimately the data is defined by the 3rd party data standards. If the standards do not align with your use case - **Lidarr may not be the proper solution**. Other applications for the management of your media may include:
 
 [Beets Media Management](https://beets.io/)
 [MusicBrainz Picard](https://picard.musicbrainz.org/)
@@ -67,10 +71,11 @@ Artists are exactly what are to be expected the "Release Artist". Unfortunately 
 Examples of correct and incorrect "Artists":
 
 - Bob Dylan
+- BOB DYLAN
 - The Bob Dylan
 - Bob Dylan, The
 - Bob Dylan & the Band
-- Bob Dylan feat. Band
+- Bob Dylan feat. The Band
 - The Band featuring Bob Dylan
 - ...
 
@@ -78,12 +83,11 @@ This list could go on and on. All releases are correlated with a artist. You mus
 
 > Artists must exist in the 3rd party services to be managed in Lidarr. 
 
-
 ## Startup
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:8686`
 
-![qs_startup.png](/assets/lidarr/qs_startup.png)
+//![qs_startup.png](/assets/lidarr/qs_startup.png)
 
 ## Settings
 
