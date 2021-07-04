@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:17:24.543Z
+date: 2021-07-04T23:20:18.523Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -21,8 +21,7 @@ In this guide we will explain the basic steps to begin working with Lidarr. This
 - Loose collection of files
 - Specialty based music libraries: Classical, Singles, Electronic
 
-If any of the above situations apply please refer to the following section: 
-[Quick Start - Advanced](/lidarr/quick-start-guide#//-Quick-Start - Advanced)
+If any of the above situations apply please refer to the following section: [Quick Start - Advanced](#QuickStart-Advanced)
 
 This guide is broken into sections. It is recommended to read the whole guide to have a complete understanding but you can jump to specific sections for immediate concerns. Use the outline to the left to quickly jump.
 
