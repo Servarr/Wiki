@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:13:06.431Z
+date: 2021-07-04T23:17:24.543Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 > This page is still in progress and not complete. Items to be updated are denoted with //
 
-## Quick Start Guide
+# Quick Start Guide
 
 In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found [here](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
 
@@ -22,11 +22,11 @@ In this guide we will explain the basic steps to begin working with Lidarr. This
 - Specialty based music libraries: Classical, Singles, Electronic
 
 If any of the above situations apply please refer to the following section: 
-//*(Link to QS Advanced section)*
+[Quick Start - Advanced](/lidarr/quick-start-guide#//-Quick-Start - Advanced)
 
 This guide is broken into sections. It is recommended to read the whole guide to have a complete understanding but you can jump to specific sections for immediate concerns. Use the outline to the left to quickly jump.
 
-## Concept
+# Concept
 
 To properly use Lidarr the underlying concepts must be understood. At a high level it follows the principles of the other Arr applications. It acts as a music library management system, data aggregator and automation platform.
 
@@ -48,7 +48,7 @@ Ultimately the data is defined by the 3rd party data standards. If the standards
 
 These implementations may be used in tandem with Lidarr but this is beyond the scope of this guide.
 
-### Releases (Metadata)
+## Releases (Metadata)
 
 Lidarr has selected the `Release Standard` of music media management. This means that for the system to work properly all media running through the system will need to be a release.
 
@@ -63,7 +63,7 @@ Every item to be managed must have a correlating release in the 3rd party data s
 
 > Releases must exist in the 3rd party services to be managed in Lidarr.
 
-### Artist (Metadata)
+## Artist (Metadata)
 
 Artists are exactly what are to be expected the `Release Artist`. Unfortunately artist naming, styling, changes over time, user preferences and other reasons have convoluted what constitutes this `Release Artist`.
 
@@ -82,7 +82,7 @@ This list could go on and on. All releases are correlated with a artist. You mus
 
 > Artists must exist in the 3rd party services to be managed in Lidarr. 
 
-## First Start
+# First Start
 
 After installation and starting Lidarr, you access by opening a browser and go to `http://{your_ip_here}:8686`
 
@@ -90,14 +90,14 @@ After installation and starting Lidarr, you access by opening a browser and go t
 
 There are two options shown on the startup screen but we will not be utilizing those initially. Configure settings to begin utilizing Lidarr.
 
-## Settings
+# Settings
 
 We will be using the default configuration of settings to configure Lidarr. This will utilize the existing Profiles, Quality, Tags, etc.
 
 > For a more detailed breakdown of all the settings, check [Lidarr ->Settings](/lidarr/settings)
 {.is-info}
 
-### Media Management
+## Media Management
 
 First we’re going to take a look at the `Media Management` where we will set the `Root Folder`.  This will be the location that the media files will be stored in.
 
@@ -122,19 +122,19 @@ Leave the other options at their defaults.
 > Your `Root Folder` and `Download Folder` cannot be the same location!
 {.is-danger}
 
-### Profiles
+## Profiles
 
 `Settings` > `Profiles`
 
 Profile settings will stay at their default values.
 
-### Quality
+## Quality
 
 `Settings` > `Quality`
 
 Quality settings will stay at their default values.
 
-### Indexers
+## Indexers
 
 `Settings` > `Indexers`
 
@@ -146,7 +146,7 @@ Add at least one `Indexer` in order for Lidarr to properly find available files.
 
 Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information available.
 
-### Download Clients
+## Download Clients
 
 `Settings` => `Download Clients`
 
@@ -156,7 +156,7 @@ Add at least one `Download Client` in order for Lidarr to properly download file
 
 Understanding the installation/concepts behind `Download Client's` are beyond the scope of this guide. The internet holds a wealth of information available.
 
-## First Artist
+# First Artist
 
 You will need to add an `Artist`.
 
@@ -189,7 +189,7 @@ Click the newly added `Artist`. (Bob Dylan in this example)
 
 
 
-## First Download/Import
+# First Download/Import
 
 Finally time to download/import your first `Release`! If your `Root Folder` did not have any media files. You will need to add an `Artist`.
 
