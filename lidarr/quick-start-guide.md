@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T20:56:25.404Z
+date: 2021-07-04T21:02:42.520Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -37,6 +37,14 @@ Details are below to participate and contribute.
 
 The main service utilized is [MusicBrainz](https://musicbrainz.org/). This is free service that is community driven and ultimately exists and survives on your contributions and participation. Release creation and contribution is beyond the scope of this quide. Instructions can be found here: [How To Contribute](https://musicbrainz.org/doc/How_to_Contribute)
 
+Ultimately the data is defined by the 3rd party data standards. If the standards **do not align** with your use case. Lidarr may not be the proper solution. Other applications for the management of your media may include:
+
+[Beets Media Management](https://beets.io/)
+[MusicBrainz Picard](https://picard.musicbrainz.org/)
+[Music Bee](https://getmusicbee.com/)
+
+These implementations may be used in tandem with Lidarr but this is beyond the scope of this guide.
+
 ### Releases (Metadata)
 
 Lidarr has selected the **Release Standard** of music media management. This means that for the system to work properly all media running through the system will need to be a release.
@@ -66,17 +74,10 @@ Examples of correct and incorrect "Artists":
 - The Band featuring Bob Dylan
 - ...
 
-This list could go on and on. All releases are correlated with a artist. You must find and use the proper artist for a release. Ultimately these are defined by the 3rd party data standards. 
+This list could go on and on. All releases are correlated with a artist. You must find and use the proper artist for a release. 
 
 > Artists must exist in the 3rd party services to be managed in Lidarr. 
 
-If these standards do align with your use case. Lidarr may not be the proper solution. Other applications for the management of your media may include:
-
-[Beets Media Management](https://beets.io/)
-[MusicBrainz Picard](https://picard.musicbrainz.org/)
-[Music Bee](https://getmusicbee.com/)
-
-These implementations may be used in tandem with Lidarr but this is beyond the scope of this guide.
 
 ## Startup
 
