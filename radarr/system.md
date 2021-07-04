@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-06-23T03:07:52.311Z
+date: 2021-07-04T00:03:15.499Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -53,7 +53,7 @@ Newer versions of Radarr are targeted for .NET. We will no longer be providing l
 Radarr is written in .Net and requires Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
 The upgrade procedure for Mono varies per platform.
 > Mono is no longer supported starting in version 4.0
-{.is-info}
+{.is-warning}
 
 ##### Currently installed SQLite version is not supported
 
