@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-07-02T16:56:04.315Z
+date: 2021-07-04T06:32:59.343Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -517,7 +517,7 @@ No. Radarr will talk to your download client to determine where the files have b
 
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
 
-- **May 2021 Update: It is likely Sonarr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+- **May 2021 Update: It is likely Radarr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 
 - [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
@@ -528,11 +528,11 @@ No. Radarr will talk to your download client to determine where the files have b
   - slow indexers will slow down the overall result
   - total results are limited to 1000
 
-- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
+- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Radarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
-This is expected. This is how the Torrent Process works with .
+This is expected. This is how the Torrent Process works.
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 1. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
@@ -540,4 +540,4 @@ This is expected. This is how the Torrent Process works with .
 
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
 
-1. If the "Completed Download Handling - Remove Completed" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
+1. If the "Completed Download Handling - Remove Completed" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
