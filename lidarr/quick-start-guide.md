@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T21:11:30.356Z
+date: 2021-07-04T21:30:35.193Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -12,7 +12,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 ## Quick Start Guide
 
-In this guide we will explain the basic steps to begin working with Lidarr. We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
+In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed. Installation instructions can be found [here](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
 
 - Existing library or files
 - Improper use case
@@ -21,11 +21,11 @@ In this guide we will explain the basic steps to begin working with Lidarr. We w
 - Loose collection of files
 - Specialty based music libraries: Classical, Singles, Electronic
 
-This guide is broken into sections. It is recommended to read the whole guide to have a complete understanding but you can jump to specific sections for immediate concerns.
-
-
-
+If any of the above situations apply please refer to the following section: 
 //*(Link to QS Advanced section)*
+
+
+This guide is broken into sections. It is recommended to read the whole guide to have a complete understanding but you can jump to specific sections for immediate concerns. Use the outline to the left to quickly jump.
 
 ## Concept
 
@@ -51,7 +51,7 @@ These implementations may be used in tandem with Lidarr but this is beyond the s
 
 ### Releases (Metadata)
 
-Lidarr has selected the **Release Standard** of music media management. This means that for the system to work properly all media running through the system will need to be a release.
+Lidarr has selected the `Release Standard` of music media management. This means that for the system to work properly all media running through the system will need to be a release.
 
 Examples of Releases:
 
@@ -66,7 +66,7 @@ Every item to be managed must have a correlating release in the 3rd party data s
 
 ### Artist
 
-Artists are exactly what are to be expected the "Release Artist". Unfortunately artist naming, styling, changes over time, user preferences and other reasons have convoluted what constitutes this "Release Artist".
+Artists are exactly what are to be expected the `Release Artist`. Unfortunately artist naming, styling, changes over time, user preferences and other reasons have convoluted what constitutes this `Release Artist`.
 
 Examples of correct and incorrect "Artists":
 
@@ -83,26 +83,30 @@ This list could go on and on. All releases are correlated with a artist. You mus
 
 > Artists must exist in the 3rd party services to be managed in Lidarr. 
 
-## Startup
+## 1st Start
 
-After installation and starting up, you open a browser and go to `http://{your_ip_here}:8686`
+After installation and starting Lidarr, you access by opening a browser and go to `http://{your_ip_here}:8686`
 
-//![qs_startup.png](/assets/lidarr/qs_startup.png)
+//![qs_startup.png](/assets/lidarr/lidarr_qs_startup.png)
+
+There are two options shown on the startup screen but we will not be utilizing those initially. Configure settings to begin utilizing Lidarr.
 
 ## Settings
 
-> For a more detailed breakdown of all the settings, check [Lidarr ->Settings](/lidarr/settings) We will cover the following options.
+> For a more detailed breakdown of all the settings, check [Lidarr ->Settings](/lidarr/settings)
 {.is-info}
 
-## Media Management
+### Media Management
 
-First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
+First we’re going to take a look at the `Media Management` where we will set the `Root Folder`. This will be the location that the media files will be stored in.
 
 Click on `Settings` => `Media Management` on the left menu.
 
+
+
 ### Episode Naming
 
-![qs_episodenaming.png](/assets/sonarr/qs_episodenaming.png)
+![qs_episodenaming.png](/assets/lidarr/lidarr_qs_episodenaming.png)
 
 - Check the box to enable Rename Episodes.
 - Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/).
