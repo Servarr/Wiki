@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-04T23:54:33.295Z
+date: 2021-07-05T00:04:41.442Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -49,7 +49,7 @@ These implementations may be used in tandem with Lidarr but this is beyond the s
 
 ## Releases (Metadata)
 
-Lidarr has selected the `Release Standard` of music media management. This means that for the system to work properly all media running through the system will need to be a release.
+Lidarr has selected the `Release` standard of music media management. This means that for the system to work properly all media being processed by the system will need to be a `Release`
 
 Examples of Releases:
 
@@ -58,9 +58,9 @@ Examples of Releases:
 - Single
 - Broadcast
 
-Every item to be managed must have a correlating release in the 3rd party data service.
+Every item to be managed must have a correlating `Release` in the 3rd party data service.
 
-> Releases must exist in the 3rd party services to be managed in Lidarr.
+> `Releases` must exist in the 3rd party services to be managed in Lidarr.
 
 ## Artist (Metadata)
 
@@ -77,9 +77,9 @@ Examples of correct and incorrect "Artists":
 - The Band featuring Bob Dylan
 - ...
 
-This list could go on and on. All releases are correlated with a artist. You must find and use the proper artist for a release. 
+This list could go on and on. Once again all `Releases` are correlated with a `Artist`. You must find (steps later in this guide) and use the proper `Artist` to download a `Release`. 
 
-> Artists must exist in the 3rd party services to be managed in Lidarr. 
+> `Release Artists` must exist in the 3rd party services to be managed in Lidarr. 
 
 # First Start
 
@@ -143,17 +143,17 @@ Click on `Add (+)` of `Indexers`. You’ll be presented with a new window with m
 
 Add at least one `Indexer` in order for Lidarr to properly find available files.
 
-Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information available.
+Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information on the subject.
 
 ## Download Clients
 
-`Settings` => `Download Clients`
+`Settings` > `Download Clients`
 
-Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups, there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There are a large variety of supported download clients and an even larger variety of setups. This means that while there are some common setups, there isn’t one right setup and everyone’s setup can be a little different.
 
-Add at least one `Download Client` in order for Lidarr to properly download files found by the indexer.
+Add at least one `Download Client` in order for Lidarr to properly download files found by the `Indexer`.
 
-Understanding the installation/concepts behind `Download Client's` are beyond the scope of this guide. The internet holds a wealth of information available.
+Understanding the installation/concepts behind `Download Clients` are beyond the scope of this guide. The internet holds a wealth of information on the subject.
 
 # First Artist
 
@@ -194,7 +194,7 @@ Finally time to download/import your first `Release`!
 
 # // Quick Start - Advanced
 
-## How to import your existing organized media library
+## // How to import your existing organized media library
 
 Coming soon
 
