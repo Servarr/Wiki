@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T00:04:41.442Z
+date: 2021-07-05T00:10:10.390Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -27,7 +27,7 @@ This guide is broken into sections. It is recommended to read the whole guide to
 
 # Concept
 
-To properly use Lidarr the underlying concepts must be understood. At a high level it follows the principles of the other Arr applications. It acts as a music library management system, data aggregator and automation platform.
+To properly use Lidarr the underlying concepts must be understood. At a high level it follows the principles of the other Arr applications. Lidarr acts as a music library management system, data aggregator and automation platform for finding and downloading media. 
 
 From there the deviation is pretty substantial. Music library management is a very complicated process as there are many competing variables that impede the process. Unlike Movie or TV Show management there are not a consistent set of standards for music tagging, naming or storage. This has been further complicated by the changing methods of music distribution from physical media to electronic. Finally the opinions on how to handle this management are wide and varied.
 
@@ -49,7 +49,7 @@ These implementations may be used in tandem with Lidarr but this is beyond the s
 
 ## Releases (Metadata)
 
-Lidarr has selected the `Release` standard of music media management. This means that for the system to work properly all media being processed by the system will need to be a `Release`
+Lidarr has selected the `Release` standard of music media management. This means that for the system to work properly all media being processed by the system will need to be a `Release`.
 
 Examples of Releases:
 
