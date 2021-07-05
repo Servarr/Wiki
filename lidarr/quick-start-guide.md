@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T00:10:10.390Z
+date: 2021-07-05T04:06:33.185Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -93,7 +93,7 @@ There are two options shown on the startup screen but we will not be utilizing t
 
 We will be using the default configuration of settings to configure Lidarr. This will utilize the existing Profiles, Quality, Tags, etc.
 
-> For a more detailed breakdown of all the settings, check [Lidarr ->Settings](/lidarr/settings)
+> For a more detailed breakdown of all the settings, check [Lidarr > Settings](/lidarr/settings)
 {.is-info}
 
 ## Media Management
@@ -179,18 +179,46 @@ This will kick off the `Artist` metadata download. This will take some time depe
 
 Click the newly added `Artist`. (Bob Dylan in this example)
 
-![lidarr_qs_dylan.png](/assets/lidarr/lidarr_qs_dylan.png)
+> The default `Metadata Profile` is in use the only `Releases` shown will be of the type `Studio Albums`.
+
+![lidarr_qs_dylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylan.png)
 
 > Don't like the metadata downloaded? - Contribute to make it better!
 {.is-info}
-
 
 # First Download/Import
 
 Finally time to download/import your first `Release`! 
 
-//
+Find the `Release` that you are looking to add to your library. Select the Manual Search (human) icon next to the release.
 
+![lidarr_qs_dylanrelease.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanrelease.png)
+
+This will bring up the `Release` selection window. This windows will display the results of the `Indexer` query or simply put the search results of available downloads.
+
+> The default `Quality Profile` allows any file type. The default `Release Profile` allows all downloads. For a detailed breakdown of these advanced settings, check [Lidarr > Settings](/lidarr/settings)
+
+![lidarr_qs_dylandownload.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylandownload.png)
+
+Review the download window for the various provided information:
+
+1. Title - This is the name of the download as returned by the `Indexer`.
+1. Quality - This is quality as determined by Lidarr utilizing the title.
+1. The warning indicators will give a description of why the download has failed the Lidarr checks. In the example the search returned "Wrong Album".
+
+When you have reviewed select the download icon (number 4) to download the available `Release`.
+
+If configured properly the download will be sent to your `Download Client`.
+
+The download will be added to the `Queue` and will go through the various states of your type of `Download Client`.
+
+Finally the download will be imported to your `Root Folder`. If everything is successful it should appear as below.
+
+![lidarr_qs_dylandownload.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylandownload.png)
+
+You can find your downloaded files in your `Root Folder` and are able to consume utlizing your media player of choice.
+
+![lidarr_qs_dylanfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
 
 # // Quick Start - Advanced
 
