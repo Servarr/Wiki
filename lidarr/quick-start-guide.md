@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T05:45:03.828Z
+date: 2021-07-05T05:53:11.136Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -293,21 +293,17 @@ Use of these applications is beyond the scope of this guide but it is preferable
 
 Once files are properly tagged and named the following items should be verified to ensure that the process will complete successfully:
 
+- **System Architecture** - Recommended x64 / 64 Bit - Importing large libraries requires the system to access large amounts of RAM and compute more efficiently. x86 / 32 Bit is supported but will not be as efficient and take substantially more time.
 - **System Memory Requirement (RAM)** - Minimum 4GB, Recommended 8GB - The import process is memory intensive and having Lidarr importing and a browser open will result in substantial amounts of RAM usage.
 - **`Release` Disc/Track Limits** - Releases that have substantial amounts of tracks or discs should be removed from the import process. They can be manually imported utilizing the built in procedures. There is no exact limit but to be safe releases larger then 25 discs or 250 tracks should be removed.
 - **`Release Artist` with many `Releases`** - Lidarrs automated process compares releases to your files. Though not likely to fail, having these files go through the automated procedure will result in a substantial increase in import time. There are singular artists with 1000's of releases.
 - **Time** - The automated import procedure takes time. A resonable estimation would be 1 hour for 500 properly tagged `Releases`. This is highly variable based on your storage, internet speed and system performance.
 
-### Begin Importing
+### Begin Import
 
 
 
-
-
-
-
-
-
+//
 
 Coming soon
 
