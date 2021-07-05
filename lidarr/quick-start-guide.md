@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T04:06:33.185Z
+date: 2021-07-05T05:41:09.291Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -220,9 +220,94 @@ You can find your downloaded files in your `Root Folder` and are able to consume
 
 ![lidarr_qs_dylanfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
 
-# // Quick Start - Advanced
+# Quick Start - Advanced
 
-## // How to import your existing organized media library
+This advanced section is intended for setups that may have special considerations. Review if any apply to your configuration and potentially save some headache.
+
+>The following sections will assist with common pitfalls and problems. 
+{.is-warning}
+
+## Lidarr Use Case
+
+As stated ealier in the Concept section. Lidarr should not be used if your intended use does not match Lidarr's management system of `Releases`. Lidarr will NOT work with the following use cases:
+
+- Loose collection of files - Files from multiple artists (Not Compilations) or multiple `Releases`
+- Specialty based music libraries: Classical, Singles, Electronic
+
+### Loose Files
+
+Low to no curation of loose files will not work with Lidarr. Best to not attempt utilizing these files with Lidarr.
+
+### Speciality Libraries
+
+Speciality libraries create unique issues for any management system. These situations may work with Lidarr but it may require extensive work on your part, pretty much foregoing the automations built in. For example:
+
+- **Classical Music** - Usually has extensive tagging requirements or desires. `Releases` metadata will likely not exist or be incorrect.
+- **Singles** - Singles may not be actual `Releases`. 3rd party data services will return no metadata. They will not be automated and Lidarr will not be able to apply management.
+- **Electronic** - This does NOT apply to `Releases` in the Electronic genre. This is in relation to libraries of mixes, beats, samples etc. (Beatport). 3rd party data sources do not recognize these as `Releases`. They will not be automated and Lidarr will not be able to apply management.
+
+## Importing existing library or files
+
+> Automated Import is a scheduled process and cannot be stopped once started
+Do NOT add a `Root Folder` with existing files until you have reviewed this full section
+{.is-warning}
+
+
+Lidarr utilizes an automated system of adding `Release Artists` and `Releases` located in your `Root Folder`.
+
+If Lidarr's use case matches and you do not have unique or speciality libraries. You can proceed with importing your existing library.
+
+It is imperative that your existing library files are structured and follow Lidarrs management system of `Releases`. This means the following will not work:
+
+- Improper folder structure - Files located in a singular folder - Refer to Folder Structure
+- Improper or extremely complicated tagging - Refer to Tagging section
+
+### Preparing your existing files
+
+For the automated process to work your files must be prepped to make sure this flows efficiently or works at all.
+
+#### Folder Structure
+
+It is recommended to follow the standard folder structure:
+
+\Root Folder\Release Artist\Release\XX - Track
+
+This when combined with proper tags will allow for almost 95% or greater recognition by media players. 
+
+#### Tagging
+
+Tagging can be a complicated procedure. The amount of files and how they are currently tagged will determine the amount of effort required.
+
+The recommended methods for tagging your files include:
+
+- MusicBrainz Picard
+- Beets
+- MusicBee, MediaMonkey, JRiver
+
+Use of these applications is beyond the scope of this guide but it is preferable to associate MusicBrainz Release ID's as part of the tagging process.
+
+> Most tagging software is capable of Folder Structure & Renaming while properly tagging files.
+{.is-info}
+
+### Pre Import Considerations
+
+Once files are properly tagged and named the following items should be verified to ensure that the process will complete successfully:
+
+- **System Memory Requirement (RAM)** - Minimum 4GB, Recommended 8GB - The import process is memory intensive and having Lidarr importing and a browser open will result in substantial amounts of RAM usage
+- **`Release` Disc/Track Limits** - Releases that have substantial amounts of tracks or discs should be removed from the import process. They can be manually imported utilizing the built in procedures. There is no exact limit but to be safe releases larger then 25 discs or 250 tracks should be removed
+- **`Release Artist` with many `Releases`** - Lidarrs automated process compares releases to your files. Though it's not likely to fail having these go through the automated procedure will result a substantial increase in import time. There are singular artists with 1000's of releases.
+- **Time** - The automated import procedure takes time. A resonable estimation would be 1 hour for 200 properly tagged `Releases`.
+
+### Begin Importing
+
+
+
+
+
+
+
+
+
 
 Coming soon
 
