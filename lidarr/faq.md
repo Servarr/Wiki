@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-07-04T06:34:08.130Z
+date: 2021-07-05T18:27:27.517Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -42,7 +42,7 @@ As of 2021-06-09 the logic is as follows:
 
 ## Why can I not add a various artists album?
 
-Various Artists and other meta artists on Musicbrainz are due to the number of entries they provide.
+- Various Artists and other meta artists on Musicbrainz are due to the number of entries they provide.
 
 ## Why does Lidarr only show studio albums, How do I find singles or EPs?
 
@@ -50,44 +50,43 @@ Lidarr defaults to only bringing in studio albums for each artist. However, you 
 
 ## Can I add just an album?
 
-​
-​Not at the moment.
-​
-​## Can I download single tracks?
-​
-​Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
-​
-​## Why doesn't artist X show up in search?
-​
-​Search is still a work in progress. Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
-​
-​## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
-​
-​Open the Album details page and select the Edit Icon in the top nav. There you can find a dropdown of all releases tied to that Album.
-​
-​## I'm having trouble importing my artists, what could it be?
-​
-​The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
-​
-​## I cannot find a release in Lidarr but it is on MusicBrainz
-​
-​This is likely due to the release having an `unknown` release status.  Update MusicBrainz.
-​
-​## How often do Lidarr's and MusicBrainz databases sync?
-​
-​Every hour at 5 after the hour
-​
-​## How can I add missing artist images?
-​
-​Add art to fanart.tv and wait ~7+ days for it to clear through the cache. Then refresh the metadata.
-​
-​## How can I get missing album images? (Cover Art)
-​
-​Add coverart to musicbrainz and wait ~1hr+ for it to clear through the cache. Then refresh the metadata.
-​
-​## I'm having trouble importing my artists, what could it be?
-​
-​The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
+ Not at the moment.
+ 
+## Can I download single tracks?
+
+- Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
+
+## Why doesn't artist X show up in search?
+
+- Search is still a work in progress. Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
+
+## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
+
+- Open the Album details page and select the Edit Icon in the top nav. There you can find a dropdown of all releases tied to that Album.
+
+## I'm having trouble importing my artists, what could it be?
+
+- The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
+
+## I cannot find a release in Lidarr but it is on MusicBrainz
+
+- This is likely due to the release having an `unknown` release status.  Update MusicBrainz.
+
+## How often do Lidarr's and MusicBrainz databases sync?
+
+- Every hour at 5 after the hour
+
+## How can I add missing artist images?
+
+- Add art to fanart.tv and wait ~7+ days for it to clear through the cache. Then refresh the metadata.
+
+## How can I get missing album images? (Cover Art)
+
+- Add coverart to musicbrainz and wait ~1hr+ for it to clear through the cache. Then refresh the metadata.
+
+## I'm having trouble importing my artists, what could it be?
+
+- The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
 
 ## How can I rename my artist folders?
 
