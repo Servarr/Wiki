@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-06-23T03:07:23.868Z
+date: 2021-07-05T19:44:09.950Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -50,18 +50,19 @@ Radarr is written in C## (backend) and JS (frontend). The backend is built on th
    yarn install
    ```
 
-1. Start gulp to monitor your development environment for any changes that need post processing using:
+1. Start webpack to monitor your development environment for any changes that need post processing using:
 
    ```bash
    yarn start
    ```
 
-> Ensure startup project is set to `Radarr.Console` and    framework to `net5.0`
+1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
+
+> Ensure startup project is set to `Radarr.Console` and    framework to `net5.0` 
 {.is-info}
 
-1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
-1. Next `Debug/Run` the project in Visual Studio to start Radarr
-1. Open <http://localhost:7878>
+7. Next `Debug/Run` the project in Visual Studio to start Radarr
+8. Open <http://localhost:7878>
 
 #### Contributing Code
 
@@ -117,6 +118,12 @@ If you have any questions about any of this, please let us know.
 
 Radarr uses a self hosted open access [Weblate](https://translate.servarr.com) instance to manage its json translation files. These files are stored in the repo at `src/NzbDrone.Core/Localization`
 
+#### Contributing to an Existing Translation
+
+Weblate handles synchronization and translation of strings for all languages other than English. Editing of translated strings and translating existing strings for supported languages should be performed there for the Radarr project.
+
+The English translation, `en.json`, serves as the source for all other translations and is managed on GitHub repo.
+
 #### Adding a Language
 
 Adding translations to Radarr requires two steps
@@ -126,12 +133,32 @@ Adding translations to Radarr requires two steps
 
 #### Adding Translation Strings in Code
 
-Backend Strings
+The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
 
-Frontend Strings
+> PRs for translation of log messages will not be accepted
+{.is-warning}
 
-#### Contributing to an Existing Translation
+##### Backend Strings
+Backend strings may be added utilizing the Localization Service `GetLocalizedString` method
 
-Weblate handles synchronization and translation of strings for all languages other than English. Editing of translated strings and translating existing strings for supported languages should be performed there for the Radarr project.
+```dotnet
+private readonly ILocalizationService _localizationService;
 
-The English translation, `en.json`, serves as the source for all other translations and is managed on GitHub repo.
+public IndexerCheck(ILocalizationService localizationService)
+{
+		_localizationService = localizationService;
+}
+        
+var translated = _localizationService.GetLocalizedString("IndexerHealthCheckNoIndexers")
+```
+
+##### Frontend Strings
+New strings can be added to the frontend by importing the translate function and using a key specified from `en.json`
+
+```js
+import translate from 'Utilities/String/translate';
+
+<div>
+  {translate('UnableToAddANewIndexerPleaseTryAgain')}
+</div>
+```
