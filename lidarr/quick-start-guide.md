@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T05:53:11.136Z
+date: 2021-07-05T05:53:27.841Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -289,7 +289,7 @@ Use of these applications is beyond the scope of this guide but it is preferable
 > Most tagging software is capable of Folder Structure & Renaming while properly tagging files.
 {.is-info}
 
-### Pre Import Considerations
+### Pre-Import Considerations
 
 Once files are properly tagged and named the following items should be verified to ensure that the process will complete successfully:
 
