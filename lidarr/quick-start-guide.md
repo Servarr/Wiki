@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T17:15:23.918Z
+date: 2021-07-05T17:18:12.116Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -249,7 +249,7 @@ Speciality libraries create unique issues for any management system. These situa
 ## Importing existing library or files
 
 > Automated Import is a scheduled process and cannot be stopped once started
-Do NOT add a `Root Folder` with existing files until you have reviewed this full section
+Do NOT add a `Root Folder` with existing files until you have reviewed this section in full
 {.is-warning}
 
 
@@ -259,8 +259,8 @@ If Lidarr's use case matches and you do not have unique or speciality libraries.
 
 It is imperative that your existing library files are structured and follow Lidarrs management system of `Releases`. This means the following will not work:
 
-- Improper folder structure - Files located in a singular folder - Refer to Folder Structure
-- Improper or extremely complicated tagging - Refer to Tagging section
+- Improper folder structure - Files located in a singular folder - Refer to Preparing>Folder Structure section
+- Improper or extremely complicated tagging - Refer to Preparing>Tagging section
 
 ### Preparing your existing files
 
