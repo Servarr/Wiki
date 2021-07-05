@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-07-05T05:53:51.499Z
+date: 2021-07-05T17:15:23.918Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -214,7 +214,7 @@ The download will be added to the `Queue` and will go through the various states
 
 Finally the download will be imported to your `Root Folder`. If everything is successful it should appear as below.
 
-![lidarr_qs_dylandownload.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylandownload.png)
+![lidarr_qs_dylansucess.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylansuccess.png)
 
 You can find your downloaded files in your `Root Folder` and are able to consume utlizing your media player of choice.
 
