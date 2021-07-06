@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-07-06T19:51:22.384Z
+date: 2021-07-06T19:52:32.652Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:43.764Z
@@ -273,6 +273,10 @@ Rarbg has a tendency to have some sort of rate limiting within their API and dis
 ##### Year doesn't match
 
 Sometimes a movie won't be grabbed, because it's release year was pushed back. So on TMDB, the movie listed as 2021, for example, but the release names all have 2020. The only way to get these movies is with a manual download/import. There is no "fix" to be made. Eventually, someone will usually upload a movie with the correct year and Radarr will grab it without issue, but until they do, you can only manually manage it.
+
+##### Missing year
+
+Radarr will not grab a release if the release name doesn't contain a year. This is a bad release, and can only be manually grabbed. This is a common thing to overlook when trying to figure out why a movie was not grabbed as expected.
 
 ##### Using the Jackett /all endpoint
 
