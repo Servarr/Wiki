@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-06-24T05:23:29.687Z
+date: 2021-07-06T19:50:32.266Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:43.764Z
@@ -269,6 +269,10 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
 
 Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
+
+##### Year doesn't match
+
+Sometimes a movie won't be grabbed, because it's release year was pushed back. So on TMDB, the movie listed as 2021, for example, but the release names all have 2020. The only way to get these movies is with a manual download/import. There is no "fix" to be made. Eventually, someone will usually upload a movie with the correct year and Radarr will grab it without issue, but until they do, you can only manually manage it.
 
 ##### Using the Jackett /all endpoint
 
