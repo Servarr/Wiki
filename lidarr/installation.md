@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-06-29T13:16:38.195Z
+date: 2021-07-07T08:09:50.393Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -106,7 +106,7 @@ EOF
 sudo systemctl -q daemon-reload
 ```
 
-- Enable the Radarr service:
+- Enable the Lidarr service:
 
 ```shell
 sudo systemctl enable --now -q lidarr
