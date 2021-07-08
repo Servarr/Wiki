@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-06-29T13:14:01.577Z
+date: 2021-07-08T00:39:59.465Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -47,21 +47,38 @@ sudo apt install curl mediainfo sqlite3
 ```
 
 - Download the correct binaries for your architecture.
- `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
-  - AMD64 use `arch=x64`
-  - ARM use `arch=arm`
-  - ARM64 use `arch=arm64`
-- Uncompress the files: `tar -xvzf Radarr*.linux*.tar.gz`
-- Move the files to `/opt/` `sudo mv Radarr/ /opt`
+  - You can determine your architecture with `dpkg --print-architecture`
+    - AMD64 use `arch=x64`
+    - ARM use `arch=arm`
+    - ARM64 use `arch=arm64`
+
+```shell
+wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
+```
+
+- Uncompress the files: 
+
+```shell
+tar -xvzf Radarr*.linux*.tar.gz
+```
+
+- Move the files to `/opt/` 
+```shell
+sudo mv Radarr/ /opt
+```
 
 > Note: This assumes you will run as the user `radarr` and group `media`.
 {.is-warning}
 
 - Ensure ownership of the binary directory.
-  `sudo chown radarr:radarr /opt/Radarr`
+
+```shell  
+sudo chown radarr:radarr /opt/Radarr
+```
+
 - Configure systemd so radarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/data/.config/Radarr`.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/data/.config/Radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-warning}
 
 ```shell
