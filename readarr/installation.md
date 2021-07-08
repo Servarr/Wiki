@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-01T21:53:25.698Z
+date: 2021-07-08T00:40:14.344Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -56,14 +56,15 @@ sudo apt install curl sqlite3
 ```
 
 - Download the correct binaries for your architecture.
+  - You can determine your architecture with `dpkg --print-architecture`
+    - AMD64 use `arch=x64`
+    - ARM use `arch=arm`
+    - ARM64 use `arch=arm64`
 
 ```shell
 wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
-- AMD64 use `arch=x64`
-- ARM use `arch=arm`
-- ARM64 use `arch=arm64`
 - Uncompress the files:
 
 ```shell
@@ -87,7 +88,7 @@ sudo chown readarr:readarr /opt/Readarr
 
 - Configure systemd so readarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/data/.config/Readarr`.  For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/data/.config/Readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
 {.is-warning}
 
 ```shell
