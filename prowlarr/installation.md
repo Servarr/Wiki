@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-06-29T13:17:49.145Z
+date: 2021-07-08T00:32:24.793Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -46,6 +46,7 @@ sudo apt install curl sqlite3
 ```
 
 - Download the correct binaries for your architecture.
+- You can determine your architecture with `dpkg --print-architecture`
 
 ```shell
 wget --content-disposition 'http://prowlarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'
