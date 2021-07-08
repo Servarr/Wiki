@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-07-07T08:09:50.393Z
+date: 2021-07-08T00:39:13.395Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -46,15 +46,15 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
 
-- Download the correct binaries for your architecture.
+- You can determine your architecture with `dpkg --print-architecture`
+  - AMD64 use `arch=x64`
+  - ARM use `arch=arm`
+  - ARM64 use `arch=arm64`
 
 ```shell
 wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
-- AMD64 use `arch=x64`
-- ARM use `arch=arm`
-- ARM64 use `arch=arm64`
 - Uncompress the files:
 
 ```shell
@@ -78,7 +78,7 @@ sudo chown lidarr:lidarr /opt/Lidarr
 
 - Configure systemd so Lidarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/data/.config/Lidarr`.  For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/data/.config/Lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
 {.is-warning}
 
 ```shell
