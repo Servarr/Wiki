@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-07-08T00:39:13.395Z
+date: 2021-07-08T00:40:09.825Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -46,10 +46,11 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
 
-- You can determine your architecture with `dpkg --print-architecture`
-  - AMD64 use `arch=x64`
-  - ARM use `arch=arm`
-  - ARM64 use `arch=arm64`
+- Download the correct binaries for your architecture.
+  - You can determine your architecture with `dpkg --print-architecture`
+    - AMD64 use `arch=x64`
+    - ARM use `arch=arm`
+    - ARM64 use `arch=arm64`
 
 ```shell
 wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
