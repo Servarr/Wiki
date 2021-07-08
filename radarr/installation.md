@@ -56,13 +56,14 @@ sudo apt install curl mediainfo sqlite3
 wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
-- Uncompress the files: 
+- Uncompress the files:
 
 ```shell
 tar -xvzf Radarr*.linux*.tar.gz
 ```
 
-- Move the files to `/opt/` 
+- Move the files to `/opt/`
+
 ```shell
 sudo mv Radarr/ /opt
 ```

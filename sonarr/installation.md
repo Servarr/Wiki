@@ -44,5 +44,3 @@ dateCreated: 2021-06-11T23:29:52.753Z
 ## Docker
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-docker)
-
-

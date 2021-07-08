@@ -26,12 +26,14 @@ If you're linked here for support remember to get them the information from the 
 
 >- **Do not simply provide the whole log file unless explictly asked.**
 >- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explictly asked.**
->	- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
->````
+>- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
+>
+>````none
 >   ```
 >   words here
 >   ```
 >````
+>
 >- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
 >- **Do ensure [Logging](/sonarr/settings#logging) is set to Trace (or Debug if requested).**
 >- **Do ensure the logs you provide capture the issue**
@@ -43,6 +45,7 @@ What you need to do is:
 1. Reproduce the Issue
 1. Open the trace log file (sonarr.trace.txt) and find the relevant context
 1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+
 > It is **not** suggested to use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.{.is-info}
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.

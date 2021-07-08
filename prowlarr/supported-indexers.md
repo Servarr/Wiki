@@ -200,7 +200,6 @@ dateCreated: 2021-06-23T03:06:49.247Z
 |Zooqle{#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-us|
 |Ztracker{#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 
-
 ### Private
 
 |Indexer|Description|Language|
@@ -513,7 +512,6 @@ dateCreated: 2021-06-23T03:06:49.247Z
 |Zelka.org{#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |ZonaQ{#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-es|
 
-
 ## Usenet
 
 ### Public
@@ -550,4 +548,3 @@ None
 |SpotNZB{#newznab}||en-US|
 |Tabula Rasa{#newznab}||en-US|
 |Usenet Crawler{#newznab}||en-US|
-

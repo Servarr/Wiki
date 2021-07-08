@@ -58,11 +58,11 @@ Radarr is written in C## (backend) and JS (frontend). The backend is built on th
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 
-> Ensure startup project is set to `Radarr.Console` and    framework to `net5.0` 
+> Ensure startup project is set to `Radarr.Console` and    framework to `net5.0`
 {.is-info}
 
-7. Next `Debug/Run` the project in Visual Studio to start Radarr
-8. Open <http://localhost:7878>
+1. Next `Debug/Run` the project in Visual Studio to start Radarr
+1. Open <http://localhost:7878>
 
 ### Contributing Code
 
@@ -139,6 +139,7 @@ The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the
 {.is-warning}
 
 #### Backend Strings
+
 Backend strings may be added utilizing the Localization Service `GetLocalizedString` method
 
 ```dotnet
@@ -146,13 +147,14 @@ private readonly ILocalizationService _localizationService;
 
 public IndexerCheck(ILocalizationService localizationService)
 {
-		_localizationService = localizationService;
+  _localizationService = localizationService;
 }
         
 var translated = _localizationService.GetLocalizedString("IndexerHealthCheckNoIndexers")
 ```
 
 #### Frontend Strings
+
 New strings can be added to the frontend by importing the translate function and using a key specified from `en.json`
 
 ```js

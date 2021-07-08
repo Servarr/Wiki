@@ -3,7 +3,7 @@ title: Lidarr FAQ
 description: 
 published: true
 date: 2021-07-05T18:27:27.517Z
-tags: lidarr, needs-love, faq
+tags: lidarr, faq, needs-love
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
@@ -23,20 +23,20 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 ## How are possible downloads compared?
 
-`Generally Quality Trumps All`
+***Generally Quality Trumps All***
 
 The current logic [can be found here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
 As of 2021-06-09 the logic is as follows:
 
-- Quality
-- Custom Preferred Word Score
-- Protocol
-- Indexer Priority
-- Seeds/Peers (If Torrent)
-- Album Count
-- Age (If Usenet)
-- Size
+1. Quality
+1. Preferred Word Score
+1. Protocol
+1. Indexer Priority
+1. Seeds/Peers (If Torrent)
+1. Album Count
+1. Age (If Usenet)
+1. Size
 
 ## Why can I not add a new release or artist to Lidarr?
 
@@ -51,7 +51,7 @@ Lidarr defaults to only bringing in studio albums for each artist. However, you 
 ## Can I add just an album?
 
  Not at the moment.
- 
+
 ## Can I download single tracks?
 
 - Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
@@ -124,7 +124,7 @@ Lidarr defaults to only bringing in studio albums for each artist. However, you 
 
 - `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/testing/VERSION.json) -  (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
 
-> On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
+> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
 
 - `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/nightly/VERSION.json) -  (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
@@ -154,9 +154,14 @@ If Docker:
 
 1. Repull your tag and update your container
 
+## Can I switch from `nightly` back to `develop`?
+
+- See the entry below
+
 ## Can I switch between branches?
 
-- You can (almost) always increase your risk.
+> You can (almost) always increase your risk.{.is-info}
+
 - `master` can go to `develop` or `nightly`
 - `develop` can go to `nightly`
 - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
@@ -176,7 +181,9 @@ If Docker:
 
 ## I am using a Pi and Raspbian and Lidarr will not launch
 
-- Possible Solution:
+Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
+
+**Possible Solution:**
 
 Managed to fix the issue by installing the backport from debian repo. Generally not recommended to use backport in blanket upgrade mode. Installation of a single package may be ok but may also cause issues. So got to understand what you are doing.
 
@@ -184,19 +191,23 @@ Steps to fix:
 
 First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
-Distributor ID: Raspbian
-
-Description: Raspbian GNU/Linux 10 (buster)
-
-Release: 10
-
-Codename: buster
+> Distributor ID: Raspbian
+> Description: Raspbian GNU/Linux 10 (buster)
+> Release: 10
+> Codename: buster
 
 - If you are using buster:
+  - Run the following to add the backports to your sources
 
- Add the line `deb http://deb.debian.org/debian buster-backports` main to `/etc/apt/sources.list`
- Run `apt-get update`
- `apt-get -t buster-backports install libseccomp2`
+  ```shell
+   echo "deb <http://deb.debian.org/debian> buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
+   ```
+
+  - Install the backport of libseccomp2
+
+  ```shell
+  sudo apt update && sudo apt-get -t buster-backports install libseccomp2
+  ```
 
 ## Why are lists sync times so long and can I change it?
 
@@ -229,7 +240,7 @@ A common complaint is the Refresh task causes heavy I/O usage.  One setting that
     - **Solutions**
       - Change your paths to UNC paths (`\\server\share`)
       - Run Lidarr.exe via the Startup Folder
-      
+
 ## VPNs, Jackett, and the * ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
@@ -266,4 +277,3 @@ This is expected. This is how the Torrent Process works.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
 
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Lidarr's settings, Lidarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
-

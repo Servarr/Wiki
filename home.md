@@ -19,6 +19,7 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 {.links-list}
 
 ## Applications
+
 ### Media Automation
 
 - [![16.png](/assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)

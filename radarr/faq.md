@@ -3,7 +3,7 @@ title: Radarr FAQ
 description: 
 published: true
 date: 2021-07-04T06:32:59.343Z
-tags: radarr, needs-love
+tags: radarr, faq, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
@@ -29,7 +29,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How are possible downloads compared?
 
-- *Generally Quality Trumps All**
+- ***Generally Quality Trumps All***
 
 - The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 ***As of 2021-06-26 the logic is as follows***
@@ -39,7 +39,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 1. Protocol
 1. Indexer Priority
 1. Indexer Flags
-1. Peers (If Torrent)
+1. Seeds/Peers (If Torrent)
 1. Age (If Usenet)
 1. Size
 

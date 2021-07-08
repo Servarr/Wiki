@@ -3,7 +3,7 @@ title: Lidarr Contributing
 description: 
 published: true
 date: 2021-06-23T03:05:42.053Z
-tags: lidarr
+tags: lidarr, contributing
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
 ---

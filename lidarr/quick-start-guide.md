@@ -10,7 +10,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 > This page is still in progress and not complete. Items to be updated are denoted with //
 
-# Quick Start Guide
+## Quick Start Guide
 
 In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found [here](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
 
@@ -25,15 +25,15 @@ If any of the above situations apply please refer to the Quick Start - Advanced 
 
 This guide is broken into sections. It is recommended to read the whole guide to have a complete understanding but you can jump to specific sections for immediate concerns. Use the outline to the left to quickly jump.
 
-# Concept
+## Concept
 
-To properly use Lidarr the underlying concepts must be understood. At a high level it follows the principles of the other Arr applications. Lidarr acts as a music library management system, data aggregator and automation platform for finding and downloading media. 
+To properly use Lidarr the underlying concepts must be understood. At a high level it follows the principles of the other Arr applications. Lidarr acts as a music library management system, data aggregator and automation platform for finding and downloading media.
 
 From there the deviation is pretty substantial. Music library management is a very complicated process as there are many competing variables that impede the process. Unlike Movie or TV Show management there are not a consistent set of standards for music tagging, naming or storage. This has been further complicated by the changing methods of music distribution from physical media to electronic. Finally the opinions on how to handle this management are wide and varied.
 
 Lidarr utilizes information from data aggregation services to properly tag and manage the music library. This third party data represents media in defined categories and types.
 
-> If the data does not exist in the 3rd party services it can NOT be managed by Lidarr. 
+> If the data does not exist in the 3rd party services it can NOT be managed by Lidarr.
 Details are below to participate and contribute.
 {.is-warning}
 
@@ -47,7 +47,7 @@ Ultimately the data is defined by the 3rd party data standards. If the standards
 
 These implementations may be used in tandem with Lidarr but this is beyond the scope of this guide.
 
-## Releases (Metadata)
+### Releases (Metadata)
 
 Lidarr has selected the `Release` standard of music media management. This means that for the system to work properly all media being processed by the system will need to be a `Release`.
 
@@ -62,7 +62,7 @@ Every item to be managed must have a correlating `Release` in the 3rd party data
 
 > `Releases` must exist in the 3rd party services to be managed in Lidarr.
 
-## Artist (Metadata)
+### Artist (Metadata)
 
 Artists are exactly what are to be expected the `Release Artist`. Unfortunately artist naming, styling, changes over time, user preferences and other reasons have convoluted what constitutes this `Release Artist`.
 
@@ -77,11 +77,11 @@ Examples of correct and incorrect "Artists":
 - The Band featuring Bob Dylan
 - ...
 
-This list could go on and on. Once again all `Releases` are correlated with a `Artist`. You must find (steps later in this guide) and use the proper `Artist` to download a `Release`. 
+This list could go on and on. Once again all `Releases` are correlated with a `Artist`. You must find (steps later in this guide) and use the proper `Artist` to download a `Release`.
 
-> `Release Artists` must exist in the 3rd party services to be managed in Lidarr. 
+> `Release Artists` must exist in the 3rd party services to be managed in Lidarr.
 
-# First Start
+## First Start
 
 After installation and starting Lidarr, you access by opening a browser and go to `http://{your_ip_here}:8686`
 
@@ -89,14 +89,14 @@ After installation and starting Lidarr, you access by opening a browser and go t
 
 There are two options shown on the startup screen but we will not be utilizing those initially.
 
-# Settings
+## Settings
 
 We will be using the default configuration of settings to configure Lidarr. This will utilize the existing Profiles, Quality, Tags, etc.
 
 > For a more detailed breakdown of all the settings, check [Lidarr > Settings](/lidarr/settings)
 {.is-info}
 
-## Media Management
+### Media Management
 
 First we’re going to take a look at the `Media Management` where we will set the `Root Folder`.  This will be the location that the media files will be stored in.
 
@@ -121,19 +121,19 @@ Leave the other options at their defaults.
 > Your `Root Folder` and `Download Folder` cannot be the same location!
 {.is-danger}
 
-## Profiles
+### Profiles
 
 `Settings` > `Profiles`
 
 Profile settings will stay at their default values.
 
-## Quality
+### Quality
 
 `Settings` > `Quality`
 
 Quality settings will stay at their default values.
 
-## Indexers
+### Indexers
 
 `Settings` > `Indexers`
 
@@ -145,7 +145,7 @@ Add at least one `Indexer` in order for Lidarr to properly find available files.
 
 Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information on the subject.
 
-## Download Clients
+### Download Clients
 
 `Settings` > `Download Clients`
 
@@ -155,7 +155,7 @@ Add at least one `Download Client` in order for Lidarr to properly download file
 
 Understanding the installation/concepts behind `Download Clients` are beyond the scope of this guide. The internet holds a wealth of information on the subject.
 
-# First Artist
+## First Artist
 
 If following this guide and your `Root Folder` did not have any media files you will need to add an `Artist`.
 
@@ -186,9 +186,9 @@ Click the newly added `Artist`. (Bob Dylan in this example)
 > Don't like the metadata downloaded? - Contribute to make it better!
 {.is-info}
 
-# First Download/Import
+## First Download/Import
 
-Finally time to download/import your first `Release`! 
+Finally time to download/import your first `Release`!
 
 Find the `Release` that you are looking to add to your library. Select the Manual Search (human) icon next to the release.
 
@@ -220,25 +220,25 @@ You can find your downloaded files in your `Root Folder` and are able to consume
 
 ![lidarr_qs_dylanfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
 
-# Quick Start - Advanced
+## Quick Start - Advanced
 
 This advanced section is intended for setups that may have special considerations. Review if any apply to your configuration and potentially save some headache.
 
->The following sections will assist with common pitfalls and problems. 
+>The following sections will assist with common pitfalls and problems.
 {.is-warning}
 
-## Lidarr Use Case
+### Lidarr Use Case
 
 As stated ealier in the Concept section. Lidarr should not be used if your intended use does not match Lidarr's management system of `Releases`. Lidarr will NOT work with the following use cases:
 
 - Loose collection of files - Files from multiple artists (Not Compilations) or multiple `Releases`
 - Specialty based music libraries: Classical, Singles, Electronic
 
-### Loose Files
+#### Loose Files
 
 Low to no curation of loose files will not work with Lidarr. Best to not attempt utilizing these files with Lidarr.
 
-### Speciality Libraries
+#### Speciality Libraries
 
 Speciality libraries create unique issues for any management system. These situations may work with Lidarr but it may require extensive work on your part, pretty much foregoing the automations built in. For example:
 
@@ -246,12 +246,11 @@ Speciality libraries create unique issues for any management system. These situa
 - **Singles** - Singles may not be actual `Releases`. 3rd party data services will return no metadata. They will not be automated and Lidarr will not be able to apply management.
 - **Electronic** - This does NOT apply to `Releases` in the Electronic genre. This is in relation to libraries of mixes, beats, samples etc. (Beatport). 3rd party data sources do not recognize these as `Releases`. They will not be automated and Lidarr will not be able to apply management.
 
-## Importing existing library or files
+### Importing existing library or files
 
 > Automated Import is a scheduled process and cannot be stopped once started
 Do NOT add a `Root Folder` with existing files until you have reviewed this section in full
 {.is-warning}
-
 
 Lidarr utilizes an automated system of adding `Release Artists` and `Releases` located in your `Root Folder`.
 
@@ -262,19 +261,19 @@ It is imperative that your existing library files are structured and follow Lida
 - Improper folder structure - Files located in a singular folder - Refer to Preparing>Folder Structure section
 - Improper or extremely complicated tagging - Refer to Preparing>Tagging section
 
-### Preparing your existing files
+#### Preparing your existing files
 
 For the automated process to work your files must be prepped to make sure this flows efficiently or works at all.
 
-#### Folder Structure
+##### Folder Structure
 
 It is recommended to follow the standard folder structure:
 
 \Root Folder\Release Artist\Release\XX - Track
 
-This when combined with proper tags will allow for almost 95% or greater recognition by media players. 
+This when combined with proper tags will allow for almost 95% or greater recognition by media players.
 
-#### Tagging
+##### Tagging
 
 Tagging can be a complicated procedure. The amount of files and how they are currently tagged will determine the amount of effort required.
 
@@ -289,7 +288,7 @@ Use of these applications is beyond the scope of this guide but it is preferable
 > Most tagging software is capable of Folder Structure & Renaming while properly tagging files.
 {.is-info}
 
-### Pre-Import Considerations
+#### Pre-Import Considerations
 
 Once files are properly tagged and named the following items should be verified to ensure that the process will complete successfully:
 
@@ -299,9 +298,7 @@ Once files are properly tagged and named the following items should be verified 
 - **`Release Artist` with many `Releases`** - Lidarrs automated process compares releases to your files. Though not likely to fail, having these files go through the automated procedure will result in a substantial increase in import time. There are singular artists with 1000's of releases.
 - **Time** - The automated import procedure takes time. A resonable estimation would be 1 hour for 500 properly tagged `Releases`. This is highly variable based on your storage, internet speed and system performance.
 
-### Begin Import
-
-
+#### Begin Import
 
 //
 
@@ -310,4 +307,3 @@ Coming soon
 - Monitor * - This sets the default monitoring option (`Releases`) for the `Root Folder`.
 - Quality Profile * - This sets the default quality option for the `Root Folder`.
 - Metadata Profile * - This sets the default metadata option for the `Root Folder`.
-
