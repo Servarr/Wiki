@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-06-23T03:09:35.914Z
+date: 2021-07-11T07:20:43.929Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:33:08.344Z
@@ -18,19 +18,19 @@ This page contains a list of health checks errors. These health checks are perio
 
 ##### Currently installed .Net Framework is old and unsupported
 
-Sonarr uses the .Net Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .Net to be able to use newer versions of Sonarr.
+Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .Net to be able to use newer versions of Sonarr.
 
-Upgrading the .Net Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
+Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
 
 ##### Currently installed .Net Framework is supported but upgrading is recommended
 
-Sonarr uses the .Net Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
+Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
-Upgrading the .Net Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
+Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
 
 ##### Currently installed mono version is old and unsupported
 
-Sonarr is written in .Net and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
+Sonarr is written in .NET and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
 Mono 5.8 is the absolute minimum for Sonarr, but Mono 5.20 is currently recommended.
 The upgrade procedure for Mono varies per platform.
 
@@ -51,7 +51,7 @@ Sonarr detected that AppData folder for your Operating System is located inside 
 
 Please look at System -> Info to see the current AppData & Startup directories.
 This means Sonarr will be unable to update itself without risking data-loss.
-If you're on linux, you will probably have to change the home directory for the user that is running Sonarr and copy the current contents of the ~/.config/Sonarr directory to preserve your database.
+If you're on Linux, you will probably have to change the home directory for the user that is running Sonarr and copy the current contents of the ~/.config/Sonarr directory to preserve your database.
 
 ##### Failed to resolve the IP Address for the Configured Proxy Host
 
@@ -73,7 +73,7 @@ MediaInfo Library could not be loaded.
 
 ##### Mono Legacy TLS enabled
 
-Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option
+Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option.
 
 #### Download Clients
 
@@ -126,7 +126,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 ##### No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically
 
 So Sonarr uses the RSS feed to pick up new releases as they come along. More info on that here
-To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync
+To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync.
 
 ##### No indexers are enabled
 
@@ -160,22 +160,22 @@ Typically this simply means that Sonarr is no longer able to communicate via API
 ### Disk Space
 
 This section will show you available disk space
-In docker this can be tricky as it will typically show you the available space within your Docker image
+In docker this can be tricky as it will typically show you the available space within your Docker image.
 
 ### About
 
-This will tell you about your current install of Sonarr
+This will tell you about your current install of Sonarr.
 
 ### More Info
 
 Home Page: Sonarr's home page
-Wiki: You're here already
+Wiki: You're here already.
 Reddit: r/sonarr
 Discord: Join our discord
-Donations: If you're feeling generous and would like to donate click here
-Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all click here
+Donations: If you're feeling generous and would like to donate, click here.
+Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all, click here.
 Source: GitHub
-Feature Requests: Got a great idea drop it here
+Feature Requests: Got a great idea drop it here.
 
 ## Tasks
 
@@ -246,7 +246,7 @@ The events tab will show you what has been happening within your Sonarr. This ca
 
 ## Log Files
 
-This page will allow you to download and see what current log files are available for Sonarr
+This page will allow you to download and see what current log files are available for Sonarr.
 
 On the top row there are several options to allow you to control your log files.
 
