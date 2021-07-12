@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-12T02:40:51.682Z
+date: 2021-07-12T02:42:47.591Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -77,7 +77,7 @@ tar -xvzf Readarr*.linux*.tar.gz
 sudo mv Readarr/ /opt
 ```
 
-> Note: This assumes you will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.
+> This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.
 {.is-warning}
 
 - Ensure ownership of the binary directory.
