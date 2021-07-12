@@ -2,7 +2,7 @@
 title: Sonarr Activity
 description: 
 published: true
-date: 2021-07-11T07:30:29.054Z
+date: 2021-07-12T19:32:53.129Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:32:31.144Z
@@ -23,5 +23,7 @@ More information about the Queue section Coming Soon - Contributions are Welcome
 The history tab shows all things that have left the queue by way of the task being finished/ended.  This includes imports, failures, grabs, deletes, and upgrades.
 
 ## Blocklist
+
+> Blocklist is formerly known as 'Blacklist' {.is-info}
 
 The blocklist feature (accessible via selecting an "Unwanted" file, or one needing human attention, and deleting it, you are able to check the "Blocklist" box), allows you to tell Sonarr to no longer allow this release (not applicable to duplicate releases) and to search for a different one, that fits your filters (exactly like normally searching).
