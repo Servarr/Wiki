@@ -2,7 +2,7 @@
 title: Radarr Activity
 description: 
 published: true
-date: 2021-06-23T03:07:13.885Z
+date: 2021-07-12T07:39:08.685Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:28:36.350Z
@@ -10,7 +10,7 @@ dateCreated: 2021-05-25T01:28:36.350Z
 
 ## Activity
 
-Information about the activity section Coming Soon - Contributions are Welcome.
+The activity tab shows all processes on Radarr's "to-do list", "have done list", as well as the blacklisted releases that have failed.
 
 ## Queue
 
@@ -20,8 +20,8 @@ More information about the Queue section Coming Soon - Contributions are Welcome
 
 ## History
 
-Information about the History section Coming Soon - Contributions are Welcome.
+The history tab shows all previous operations that Radarr has completed (regardless of successison).  This includes any operation that Radarr can do via user input, such as failures, grabs, imports, upgrades, and human input requiring completed downloads (seen as a yellow import icon).
 
 ## Blacklist
 
-Information about the Blacklist section Coming Soon - Contributions are Welcome.
+The blacklist tab shows all blacklisted releases that have failed and have been automatically blacklisted, or via user input in the queue tab.  You are able to remove individual blacklists or clear the entire list.
