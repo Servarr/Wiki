@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-08T00:40:14.344Z
+date: 2021-07-12T02:40:51.682Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -14,9 +14,9 @@ Readarr is supported natively on Windows. Readarr can be installed on Windows as
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
-A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
+A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives or \\server\share UNC paths) without special configuration steps.
 
-Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+Additionally the Windows Service runs under the 'Local Service' account, by default this account **does not have permissions to access your user's home directory unless permissions have been assigned manually**. This is particularly relevant when using download clients that are configured to download to your home directory.
 
 It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
@@ -42,7 +42,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 ### Linux
 
 > Readarr is in a pre-alpha state and has no binaries currently available for Linux. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
-{.is-warning}
+{.is-danger}
 
 You'll need to install the binaries using the below commands.
 
@@ -77,7 +77,7 @@ tar -xvzf Readarr*.linux*.tar.gz
 sudo mv Readarr/ /opt
 ```
 
-> Note: This assumes you will run as the user `readarr` and group `media`.
+> Note: This assumes you will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.
 {.is-warning}
 
 - Ensure ownership of the binary directory.
