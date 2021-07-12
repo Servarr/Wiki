@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-07-12T20:27:49.181Z
+date: 2021-07-12T20:28:02.660Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -36,7 +36,7 @@ Contributions are welcome either on the Wiki directly, just authenticate first, 
 ## Other
 
 - [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
-- [<i class="fas fa-box-open"></i>&emsp;Installing Docker on a ARM Synology NAS](/docker-arm-synology)
+- [<i class="fas fa-box-open"></i>&emsp;Installing Docker on an ARM-based Synology NAS](/docker-arm-synology)
 - [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
 - [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides](https://trash-guides.info/)
 {.links-list}
