@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-06-29T14:52:15.859Z
+date: 2021-07-12T19:33:37.872Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -643,7 +643,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - Adds a failed event to Sonarr's history
   - Removes the failed download from Download Client to free space and clear downloaded files (optional)
   - Starts searching for a replacement file (optional)
-  - Blocklisting allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
+  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Sonarr will search for the same file after a failure
