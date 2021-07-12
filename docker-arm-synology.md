@@ -2,7 +2,7 @@
 title: Installing Docker on a Synology ARM NAS
 description: 
 published: true
-date: 2021-07-12T20:23:14.191Z
+date: 2021-07-12T20:29:57.637Z
 tags: docker, synology
 editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
@@ -29,7 +29,7 @@ The instructions below will:
 
 ## Installation
 
-1. Login to your Synology via SSH and elevate to as `root`.
+1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet) 
 
 1. Execute the following command:
 
