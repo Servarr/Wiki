@@ -2,12 +2,11 @@
 title: Radarr Calendar
 description: 
 published: true
-date: 2021-06-23T03:07:20.652Z
+date: 2021-07-12T07:40:36.075Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:29:31.158Z
 ---
 
 ## Calendar
-
-Information about the Calendar Coming Soon - Contributions are Welcome.
+The calendar tab allows you to see any upcoming films (or recently released) that is presently monitored in your library.  It is viewable week by week.
