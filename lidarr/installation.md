@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-07-12T02:40:21.333Z
+date: 2021-07-12T02:41:42.262Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -68,7 +68,7 @@ tar -xvzf Lidarr*.linux*.tar.gz
 sudo mv Lidarr/ /opt
 ```
 
-> Note: This assumes you will run as the user `lidarr` and group `media`.  You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
+> This assumes you have created the user and will run as the user `lidarr` and group `media`.  You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
 {.is-warning}
 
 - Ensure ownership of the binary directory.
