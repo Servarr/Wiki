@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-07-12T02:42:07.580Z
+date: 2021-07-12T02:42:49.134Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
