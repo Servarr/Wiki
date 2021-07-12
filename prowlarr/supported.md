@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-07-12T16:27:19.113Z
+date: 2021-07-12T16:30:23.810Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
