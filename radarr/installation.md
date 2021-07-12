@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-07-08T00:39:59.465Z
+date: 2021-07-12T02:38:23.186Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -68,7 +68,7 @@ tar -xvzf Radarr*.linux*.tar.gz
 sudo mv Radarr/ /opt
 ```
 
-> Note: This assumes you will run as the user `radarr` and group `media`.
+> Note: This assumes you will run as the user `radarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Radarr.
 {.is-warning}
 
 - Ensure ownership of the binary directory.
