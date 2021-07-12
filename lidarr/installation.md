@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-07-08T00:40:09.825Z
+date: 2021-07-12T02:40:21.333Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -14,9 +14,9 @@ Lidarr is supported natively on Windows. Lidarr can be installed on Windows as W
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
-A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.
+A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives or \\server\share UNC paths) without special configuration steps.
 
-Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+Additionally the Windows Service runs under the 'Local Service' account, by default this account **does not have permissions to access your user's home directory unless permissions have been assigned manually**. This is particularly relevant when using download clients that are configured to download to your home directory.
 
 It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
@@ -68,7 +68,7 @@ tar -xvzf Lidarr*.linux*.tar.gz
 sudo mv Lidarr/ /opt
 ```
 
-> Note: This assumes you will run as the user `lidarr` and group `media`.
+> Note: This assumes you will run as the user `lidarr` and group `media`.  You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
 {.is-warning}
 
 - Ensure ownership of the binary directory.
