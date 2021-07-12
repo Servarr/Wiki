@@ -2,7 +2,7 @@
 title: Installing Docker on a Synology ARM NAS
 description: 
 published: true
-date: 2021-07-12T20:22:05.719Z
+date: 2021-07-12T20:23:14.191Z
 tags: docker, synology
 editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
@@ -10,10 +10,7 @@ dateCreated: 2021-07-12T20:22:05.719Z
 
 ## Introduction
 
-Synology only offer a Docker package on their `x64` based NAS. Using
-this method to install Docker on an `aarch64` NAS is totally
-unsupported/untested and totally at your own risk. It is entirely
-possible it will destroy your NAS.
+Synology only offer a Docker package on their `x64` based NAS. Using this method to install Docker on an `aarch64` NAS is totally unsupported/untested and totally at your own risk. It is entirely possible it will destroy your NAS.
 
 > Again, this method to install Docker on an `aarch64` NAS is **totally
 unsupported/untested** and totally at your own risk. It is entirely
@@ -24,12 +21,11 @@ possible it will destroy your NAS. {.is-danger}
 The instructions below will:
 
 1.  Place the Docker binaries in `/usr/local/bin/`
-2.  Create a Docker config file `/usr/local/etc/docker/docker.json`
-3.  Configure Docker to save its data to `/volume1/docker/var`
-4.  Create a script to start Docker on boot at
-    `/usr/local/etc/rc.d/docker.sh`
-5.  Create a `docker` group
-6.  Place a docker-compose script in `/usr/local/bin/`
+1.  Create a Docker config file `/usr/local/etc/docker/docker.json`
+1.  Configure Docker to save its data to `/volume1/docker/var`
+1.  Create a script to start Docker on boot at `/usr/local/etc/rc.d/docker.sh`
+1.  Create a `docker` group
+1.  Place a docker-compose script in `/usr/local/bin/`
 
 ## Installation
 
@@ -52,8 +48,7 @@ Do as it says:
 1.  Add your user to the new `docker` group using the Synology GUI
 1.  **Reboot.**
 
-Hopefully you have functioning `docker` and `docker-compose` commands,
-which should work when logged in as your normal user.
+Hopefully you have functioning `docker` and `docker-compose` commands, which should work when logged in as your normal user.
 
 ## Caveats
 
@@ -85,17 +80,14 @@ compose:
     volumes:
       portainer_data:
 ```
-Place this in a file called `docker-compose.yml` in an otherwise empty
-directory. Run:
+Place this in a file called `docker-compose.yml` in an otherwise empty directory. Run:
 
 ```shell
 docker-compose up -d
 ```
 
-Visit [`http://ip:9000`](http://ip:9000) to complete setup (where `ip`
-is the IP address of your synology).
+Visit [`http://ip:9000`](http://ip:9000) to complete setup (where `ip` is the IP address of your synology).
 
 ## Setting up Sonarr/Radarr/Lidarr/Readarr
 
-For guidance setting up Sonarr/Radarr/Lidarr/Readarr, see the [Docker
-Guide](/docker-guide), and **remember caveat 2 above.**
+For guidance setting up Sonarr/Radarr/Lidarr/Readarr, see the [Docker Guide](/docker-guide), and **remember caveat 2 above.**
