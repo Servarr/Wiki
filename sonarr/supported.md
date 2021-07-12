@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-07-12T16:35:29.981Z
+date: 2021-07-12T16:37:20.096Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -14,45 +14,11 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Download Clients
 
-- deluge{#deluge}
-- torrentdownloadstation{#torrentdownloadstation}
-- usenetdownloadstation{#usenetdownloadstation}
-- flood{#flood}
-- hadouken{#hadouken}
-- nzbget{#nzbget}
-- nzbvortex{#nzbvortex}
-- pneumatic{#pneumatic}
-- qbittorrent{#qbittorrent}
-- rtorrent{#rtorrent}
-- sabnzbd{#sabnzbd}
-- torrentblackhole{#torrentblackhole}
-- transmission{#transmission}
-- usenetblackhole{#usenetblackhole}
-- utorrent{#utorrent}
-- vuze{#vuze}
+- DownloadClients{#DownloadClients}
 
 ## Notifications
 
-- boxcar{#boxcar}
-- customscript{#customscript}
-- discord{#discord}
-- email{#email}
-- goodreadsbookshelf{#goodreadsbookshelf}
-- goodreadsownedbooks{#goodreadsownedbooks}
-- gotify{#gotify}
-- join{#join}
-- mailgun{#mailgun}
-- notifiarr{#notifiarr}
-- prowl{#prowl}
-- pushbullet{#pushbullet}
-- pushover{#pushover}
-- sendgrid{#sendgrid}
-- slack{#slack}
-- subsonic{#subsonic}
-- synologyindexer{#synologyindexer}
-- telegram{#telegram}
-- twitter{#twitter}
-- webhook{#webhook}
+- Notifications{#Notifications}
 
 ## Lists
 
