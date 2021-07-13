@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-07-13T17:01:26.280Z
+date: 2021-07-13T17:02:08.533Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -21,6 +21,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
 > You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Prowlarr\config.xml` is denied -- or you use mapped network drives. This gives Prowlarr the permissions it needs. You should not need to run As Administrator every time.
+{.is-warning}
 
 1. Download the latest version of Prowlarr from <https://github.com/Prowlarr/Prowlarr/releases> for your architecture
 1. Run the installer
