@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-12T02:42:47.591Z
+date: 2021-07-13T17:00:49.671Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -20,7 +20,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You may have to run once "As Administrator" after installing in tray mode, if you get an access error or you use mapped network drives. This gives Radarr the permissions it needs. You should not need to run As Administrator every time.
+> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Readarr\config.xml` is denied -- or you use mapped network drives. This gives Readarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 > Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
@@ -104,7 +104,7 @@ Type=simple
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/Readarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=on-failure
+Restart=always
 [Install]
 WantedBy=multi-user.target
 EOF
