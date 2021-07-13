@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-06-30T15:04:19.401Z
+date: 2021-07-13T11:50:07.242Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -22,9 +22,9 @@ Choose your indexer from the list, or type a partial name in the box to find you
 > If your indexer is not listed, you can request it be added via our [Indexer Requests Site](https://requests.prowlarr.com)
 {.is-info}
 
-Once you've selected your indexer, there will be a pop-up containing further information you will need to configure it.
+Once you've selected your indexer, there will be a pop-up containing further information you will need to configure it. Note that the specific settings will change slightly for each indexer based on their required fields and the type of indexer you're configuring.
 
-![ind_2_indexerconfig.png](/assets/prowlarr/ind_2_indexerconfig.png)
+![ind_3_indexer2.png](/assets/prowlarr/ind_3_indexer2.png)
 
 - Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
 
@@ -35,6 +35,10 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 - App Profile - Select your App Profile here. These can be created in `Settings` -> `Apps`. The Standard one already exists, and looks like this:
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
+
+- (Advanced Option) If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
+
+- (Advanced Option) If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit.
 
 - If you're adding a torrent indexer, you will need to choose what kind of download link to use.
 
