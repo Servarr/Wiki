@@ -2,13 +2,13 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-06-23T03:05:27.927Z
+date: 2021-07-14T17:31:49.091Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
 ---
 
-The following apps are companions to the *ARR Suite of Applications. They are neither maintained, developed, nor supported by the \*ARR Development Team. Please direct any specific support questions to the respective application development team.
+The following apps are companions to the *ARR Suite of Applications or media hoarding in general. They are neither maintained, developed, nor supported by the *ARR Development Team. Please direct any specific support questions to the respective application development team.
 
 ## Common  Software
 
@@ -35,9 +35,37 @@ Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidar
 
 ## Other Projects and Programs
 
+### AMD
+
+[Automated Music Downlaoder](https://github.com/RandomNinjaAtk/docker-amd) RandomNinjaAtk/amd is a Lidarr companion script to automatically download music for Lidarr
+
+### AMVD
+
+[Automated Music Video Downloader](https://github.com/RandomNinjaAtk/docker-amvd) RandomNinjaAtk/amvd is a Lidarr companion script to automatically download and tag Music Videos for use in other video applications (plex/kodi/jellyfin/emby)
+
+### AMTD
+
+[Automated Movie Trailer Downloader](https://github.com/RandomNinjaAtk/docker-amtd) RandomNinjaAtk/amtd is a Radarr companion script to automatically download movie trailers and extras for use in other video applications (plex/kodi/jellyfin/emby)
+
 ### Bazarr
 
 [Bazarr](https://github.com/morpheus65535/bazarr) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+
+### Cross-Seed
+
+[Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention.  It supports Jackett and Qbittorrent/rTorrent at this time.
+
+### Filebot
+
+[FileBot](https://www.filebot.net/) is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime as well as fetching subtitles and artwork. It's smart and just works.
+
+### LunaSea
+
+[LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
+
+### NZB360
+
+[NZB360](https://nzb360.com/) is a full-featured NZB manager that focuses on providing the best experience possible for controlling all of your usenet needs.
 
 ### Notifiarr (fka Discord Notifier)
 
@@ -55,25 +83,13 @@ Highlights
 - Server Status
 - Frequent New Features
 
-### Filebot
-
-[FileBot](https://www.filebot.net/) is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime as well as fetching subtitles and artwork. It's smart and just works.
-
 ### Ombi
 
 [Ombi](https://github.com/tidusjar/Ombi/) gives users the ability to request movies, tv shows (series, seasons or single episodes) and music albums.
 
-### Radarr & Sonarr Companion - Android App
+### Overseerr
 
-Add new movies/shows to your system easily with your phone. App available at [Google Play](https://play.google.com/store/apps/details?id=easy.radarr)
-
-### NZB360
-
-[NZB360](https://nzb360.com/) is a full-featured NZB manager that focuses on providing the best experience possible for controlling all of your usenet needs.
-
-### LunaSea
-
-[LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
+[Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
 
 ### Petio
 
@@ -81,9 +97,9 @@ Add new movies/shows to your system easily with your phone. App available at [Go
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
 
-### Overseerr
+### Radarr & Sonarr Companion - Android App
 
-[Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
+Add new movies/shows to your system easily with your phone. App available at [Google Play](https://play.google.com/store/apps/details?id=easy.radarr)
 
 ### Tautulli
 
@@ -98,18 +114,6 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 [Unpackerr](https://github.com/davidnewhall/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so Radarr and/or Sonarr and/or Lidarr may import them.
 
 There are a handful of options out there for extracting and deleting files after your client downloads them. I just didn't care for any of them, so I wrote my own. I wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
-
-### AMD
-
-[Automated Music Downlaoder](https://github.com/RandomNinjaAtk/docker-amd) RandomNinjaAtk/amd is a Lidarr companion script to automatically download music for Lidarr
-
-### AMVD
-
-[Automated Music Video Downloader](https://github.com/RandomNinjaAtk/docker-amvd) RandomNinjaAtk/amvd is a Lidarr companion script to automatically download and tag Music Videos for use in other video applications (plex/kodi/jellyfin/emby)
-
-### AMTD
-
-[Automated Movie Trailer Downloader](https://github.com/RandomNinjaAtk/docker-amtd) RandomNinjaAtk/amtd is a Radarr companion script to automatically download movie trailers and extras for use in other video applications (plex/kodi/jellyfin/emby)
 
 ## Scripts & Things
 
