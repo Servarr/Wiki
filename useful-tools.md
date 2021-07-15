@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-07-14T17:31:49.091Z
+date: 2021-07-15T00:12:55.398Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -96,6 +96,17 @@ Highlights
 [Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
+
+### qBit Management
+
+[qBit Management](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance such as:
+
+- Tag torrents based on tracker URL (only tag torrents that have no tags)
+- Update categories based on save directory
+- Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent)
+- Automatically add cross-seed torrents in paused state (used in conjunction with the [cross-seed script](#Cross-Seed))
+- Recheck paused torrents sorted by lowest size and resume if completed
+- Remove orphaned files from your root directory that are not referenced by qBittorrent
 
 ### Radarr & Sonarr Companion - Android App
 
