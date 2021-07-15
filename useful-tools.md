@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-07-15T00:12:55.398Z
+date: 2021-07-15T00:13:39.047Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -104,7 +104,7 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 - Tag torrents based on tracker URL (only tag torrents that have no tags)
 - Update categories based on save directory
 - Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent)
-- Automatically add cross-seed torrents in paused state (used in conjunction with the [cross-seed script](#Cross-Seed))
+- Automatically add cross-seed torrents in paused state (used in conjunction with the [cross-seed script](#cross-seed))
 - Recheck paused torrents sorted by lowest size and resume if completed
 - Remove orphaned files from your root directory that are not referenced by qBittorrent
 
