@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-07-05T20:02:49.167Z
+date: 2021-07-18T15:53:05.062Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -18,7 +18,7 @@ Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.ser
 
 ## Development
 
-Radarr is written in C## (backend) and JS (frontend). The backend is built on the net5 framework, while the frontend utilizes Reactjs.
+Radarr is written in C# (backend) and JS (frontend). The backend is built on the net5 framework, while the frontend utilizes Reactjs.
 
 ### Tools required
 
@@ -34,7 +34,7 @@ Radarr is written in C## (backend) and JS (frontend). The backend is built on th
   - **14.0** or later
 {.grid-list}
 
-> Radarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below 12.0!
+> Radarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below `12.0`
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/) is required to build the frontend
@@ -43,26 +43,48 @@ Radarr is written in C## (backend) and JS (frontend). The backend is built on th
 
 1. Fork Radarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
-1. Navigate to the cloned directory
-1. Install the required Node Packages
+#### Building the frontend
+  - Navigate to the cloned directory
+  - Install the required Node Packages
 
-   ```bash
-   yarn install
-   ```
+     ```bash
+     yarn install
+     ```
 
-1. Start webpack to monitor your development environment for any changes that need post processing using:
+  - Start webpack to monitor your development environment for any changes that need post processing using:
 
-   ```bash
-   yarn start
-   ```
+     ```bash
+     yarn start
+     ```
 
-1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
+#### Building the Backend
+
+The backend solution is most easily built and ran in Visual Studio or Rider, however if the only priority is working on the frontend UI it can be built easily from command line as well when the correct SDK is installed.
+
+##### Visual Studio
 
 > Ensure startup project is set to `Radarr.Console` and    framework to `net5.0`
 {.is-info}
 
+1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Radarr
 1. Open <http://localhost:7878>
+
+##### Command line
+
+1. Clean solution 
+
+  ```
+  dotnet clean $slnFile -c Debug
+  ```
+
+2. Restore and Build debug configuration for the correct platform (Posix or Windows)
+
+```
+dotnet msbuild -restore src/Radarr.sln -p:Configuration=Debug -p:Platform=Posix -t:PublishAllRids
+```
+
+3. Run the produced executable from `/_output`
 
 ### Contributing Code
 
