@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-07-06T19:52:32.652Z
+date: 2021-07-20T20:50:54.745Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:43.764Z
@@ -181,6 +181,10 @@ While mapped network drives like `X:\` are convenient, they aren’t as reliable
 
 Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/docker-guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
 
+##### Remote Path Mapping
+
+A remote path mapping is used when your download client is reporting a path for completed data either on aother server or in a way that Radarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+
 ##### Permissions on the Library Folder
 
 Don’t forget to check permissions and ownership of the *destination*. It is easy to get fixated on the download’s ownership and permissions and that is *usually* the cause of permissions related issues, but it *could* be the destination as well. Check that the destination folder(s) exist. Check that a destination *file* doesn’t already exist or can’t be deleted or moved to recycle bin. Check that ownership and permissions allow the downloaded file to be copied, hard linked or moved. The user or group that runs as needs to be able to read and write the root folder.
@@ -297,10 +301,6 @@ Using the all endpoint has no advantages (besides reduced management overhead), 
 
 Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
 
-##### Problem Not Listed
-
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
-
 #### Errors
 
 These are some of the common errors you may see when adding an indexer
@@ -335,3 +335,8 @@ This can also be caused by:
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues
+
+##### Problem Not Listed
+
+Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+
