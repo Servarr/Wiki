@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-06-24T05:23:25.983Z
+date: 2021-07-20T20:54:16.551Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -178,6 +178,10 @@ While mapped network drives like `X:\` are convenient, they aren’t as reliable
 #### Docker and user, group, ownership, permissions and paths
 
 Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/docker-guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
+
+#### Remote Path Mapping
+
+A remote path mapping is used when your download client is reporting a path for completed data either on aother server or in a way that Readarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
 
 #### Permissions on the Library Folder
 
