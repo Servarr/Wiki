@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-06-23T03:07:38.907Z
+date: 2021-07-21T14:49:05.681Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -32,9 +32,9 @@ dateCreated: 2021-05-25T01:24:18.386Z
 
 ![radarr-add-new-empty.png](/assets/radarr/radarr-add-new-empty.png)
 
-- So you're looking to add a new movie this is the page that you will be wanting to do that from.
-  - You'll find the how to on going through that in our [Quick Start Guide](/radarr/quick-start-guide)
-- Below the search field you can also find the Import Existing Movies button. If that is the case for you you can find great infomration on that also in our [Quick Start Guide](/radarr/quick-start-guide)
+- If you're looking to add a new movie this is the page that you will be wanting to do that from.
+  - You'll find the how to in our [Quick Start Guide](/radarr/quick-start-guide)
+- Below the search field you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](/radarr/quick-start-guide)
 
 ## Library Import
 
@@ -73,6 +73,6 @@ Discover shows recommended Movies.
     1. Select what availability you'd like the movie to have before it is grabbed
     1. Select any quality profiles you have already built ([More info](/radarr/settings#quality-profiles))
     1. Do you want Radarr to monitor this movie for any upgrades in quality
-    1. Would you like Radarr to go out and Automatically search for this moive after you add it?
+    1. Would you like Radarr to go out and Automatically search for this movie after you add it?
     1. Do you want Radarr to exclude this/these movies from any lists that would be imported ([More info](/radarr/settings#list-exclusion))
     1. Finally Add the movie. This will add the entry into your library.
