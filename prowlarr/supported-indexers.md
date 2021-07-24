@@ -2,13 +2,14 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-07-16T02:38:41.279Z
+date: 2021-07-24T17:53:26.661Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-07-08T23:42:46.063Z
 ---
 
-- Supported Indexers as of Build `0.1.0.686` / [Commit: afa87b711333a1492aa20b3cd3b0422a00f43859](https://github.com/Prowlarr/Prowlarr/commit/afa87b711333a1492aa20b3cd3b0422a00f43859)
+
+- Supported Indexers as of Build `0.1.0.710` / [Commit: e26081acfff6f6a5261dac1da88ac4f73506b859](https://github.com/Prowlarr/Prowlarr/commit/e26081acfff6f6a5261dac1da88ac4f73506b859)
 
 ## Torrents
 
@@ -23,6 +24,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[AngieTorrents](https://angietorrents.cc/){#angietorrents}|AngieTorrents is a Public Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[Anilibria](https://anilibria.tv/){#anilibria}|Anilibria is russian anime voiceover group and eponymous anime tracker.|ru-ru|
 |[AnimeClipse](http://www.animeclipse.com/){#animeclipse}|AnimeClipse is a Public site for Hellenic Fansubs Anime.|en-us|
+|[Animedia](https://tt.animedia.tv/){#animedia}|Animedia is russian anime voiceover group and eponymous anime tracker.|ru-ru|
 |[Anime-Free](https://anime-free.biz/){#anime-free}|Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games|ru-ru|
 |[AniRena](https://www.anirena.com/){#anirena}|AniRena is a Public torrent tracker for the latest anime and Japanese related torrents|en-us|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws.|en-us|
@@ -41,7 +43,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[BTSOW](https://btsow.us/){#btsow}|BTSOW is a Public torrent indexer|en-us|
 |[Byrutor](https://byrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|ru-ru|
 |[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|ru-ru|
-|[CiliPro](http://www.cilinb1.xyz/){#cilipro}|CiliPro (LIAORENCILI) is a Public BitTorrent DHT search engine.|en-us|
+|[CiliPro](http://www.kmsoso1.xyz/){#cilipro}|CiliPro (LIAORENCILI) is a Public BitTorrent DHT search engine.|en-us|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|zh-CN|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|en-us|
 |[cpasbien](https://wwwv.cpasbien-fr.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-fr|
@@ -53,7 +55,6 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|zh-TW|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles.|ru-ru|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga.|en-us|
-|[emtrek](http://emtrek.org/){#emtrek}|emtrek is a RUSSIAN Public Torrent Tracker for 0DAY / GENERAL|ru-ru|
 |[EniaHD](https://eniatv.com/){#eniahd}|EniaHD is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|ru-ru|
 |[ETTV](https://www.ettvcentral.com/){#ettv}|ETTV is a Public torrent site for TV / MOVIES, home of the  ETTV, ETHD and DTOne groups.|en-us|
 |[ExKinoRay](http://exkinoray.tv/){#exkinoray}|ExKinoRay is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|ru-ru|
@@ -71,10 +72,9 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[Genesis-Movement](https://torrent.genesis-movement.org/){#genesismovement}|Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC|en-us|
 |[GkTorrent](https://www.gktorrent.cc/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|fr-fr|
 |[GloDLS](https://www.gtdb.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|en-us|
-|[GTorrent](https://gtorrent.org/){#gtorrent}|GTorrent is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-ru|
 |[GTorrent.pro](http://gtorrent.pro/){#gtorrentpro}|GTorrent.pro is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-ru|
 |[HamsterStudio](http://hamsterstudio.org/){#hamsterstudio}|HamsterStudio is a RUSSIAN Semi-Private Torrent Tracker for TV|ru-ru|
-|[HD-CzTorrent](https://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH semi private site for TV / MOVIES / GENERAL|cs-cz|
+|[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH semi private site for TV / MOVIES / GENERAL|cs-cz|
 |[HDhouse](https://hdhouse.club/){#hdhouse}|HDhouse (HDReactor) is a RUSSIAN Public Torrent Tracker for MOVIES / TV|ru-ru|
 |[HunTorrent](https://huntorrent.net/){#huntorrent}|HunTorrent is a Hungarian Semi-Private site for MOVIES / TV / GENERAL|hu-hu|
 |[IBit](https://ibit.to/){#ibit}|IBit is a Public Verified Torrent Search Engine|en-us|
@@ -141,9 +141,10 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[Rustorka](http://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|ru-ru|
 |[RuTor](http://rutor.info/){#rutor}|RuTor is a RUSSIAN Public site for MOVIES / TV / GENERAL|ru-ru|
 |[RuTracker.RU](http://rutracker.ru/){#rutracker-ru}|RuTracker.RU is a RUSSIAN Public Torrent Tracker for MOVIES / GENERAL|ru-ru|
-|[seleZen](https://mel.selezen.net/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|ru-ru|
+|[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|ru-ru|
 |[Sexy-Pics](https://www.sexy-pics.us/){#sexypics}|Sexy-Pics is a Public Magnet Links site for 3X MP4|en-us|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|fr-fr|
+|[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-ru|
 |[shokweb](https://shokweb.com/){#shokweb}|shokweb is a CHINESE Public tracker|zh-CN|
 |[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-us|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|cs-cz|
@@ -172,15 +173,14 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[TorrentParadise](https://torrentparadise.pm/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-us|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-us|
-|[TorrentQQ](https://torrentqq96.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq97.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentSir](https://torrentsir31.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-ru|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-us|
-|[TorrentView](https://torrentview36.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentWhiz](https://torrentwiz26.me/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentView](https://torrentview37.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentWhiz](https://torrentwiz27.me/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|en|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-ru|
-|[ttobogo](https://www8.ttobogo.net/){#ttobogo}|ttobogo (토렌트 - 또보고) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Underverse](https://underver.se/){#underverse}|Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-ru|
 |[UnderverseL](https://underver.se/){#underversel}|this is the Underverse indexer with Login enabled in the config.|ru-ru|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|es-es|
@@ -228,7 +228,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private site for TV / MOVIES / GENERAL|it-it|
 |[ArabP2P](https://www.arabp2p.com/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|ar-ar|
 |[AsianCinema](https://asiancinema.me/){#asiancinema}|Tracker Movies/TV/Music|en-us|
-|[Asylum Share](https://asylumshare.net/){#asylumshare}|Asylum Share is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|pt-br|
+|[AsianDVDClub](https://asiandvdclub.org/){#asiandvdclub}|AsianDVDClub (ADC) is a Private Torrent Tracker for Asian DVD and BluRay|en|
 |[AudioNews](https://audionews.org/){#audionews}|AudioNews (AN) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|en-us|
 |[Aussierul.es](https://aussierul.es/){#aussierules}|Aussierul.es is a torrent site for Aussie Rules Football played in Australia|en|
 |[AvistaZ](https://avistaz.to/){#avistaz}|Aka AsiaTorrents|en-US|
@@ -238,6 +238,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|en-US|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a private site for eBooks and audiobooks|en-US|
 |[BIGTorrent](https://www.bigtorrent.eu/){#bigtorrent}|BIGTorrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu|
+|[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|th-th|
 |[Bithorlo](https://www.bithorlo.info/){#bithorlo}|Bithorlo (BHO) is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|hu-hu|
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a Hungarian Private site for TV / MOVIES / GENERAL|hu-hu|
 |[Bitspyder](https://bitspyder.net/){#bitspyder}|Bitspyder is a Private site for Educational BOOKS / AUDIO|en-us|
@@ -508,6 +509,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[World-In-HD](https://world-in-hd.net/){#wihd}|Your world in HD|fr-fr|
 |[XbytesV2](http://xbytesv2.li/){#xbytes2}|xbytesV2 is a SPANISH site for HD content|es-es|
 |[x-ite.me](https://x-ite.me/){#x-ite.me}|Tracker for LGBTQ movies, TV, books, magazines, anime, PC and XXX.|en-us|
+|[Xthor](https://api.xthor.tk/){#xthor}|Xthor is a general Private torrent site|fr-fr|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|en-us|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|en-us|
 |[YDYPT](https://pt.hdbd.us/){#ydypt}|YDYPT is a CHINESE Private Torrent Tracker for 3X|zh-cn|
@@ -552,3 +554,4 @@ None
 |SpotNZB{#newznab}||en-US|
 |Tabula Rasa{#newznab}||en-US|
 |Usenet Crawler{#newznab}||en-US|
+
