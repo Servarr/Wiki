@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-07-18T15:53:05.062Z
+date: 2021-07-25T19:03:18.655Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -14,17 +14,17 @@ We're always looking for people to help make Radarr even better, there are a num
 
 ## Documentation
 
-Setup guides, FAQ, the more information we have on the [wiki](https://wikijs.servarr.com/radarr) the better.
+Setup guides, FAQ, the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
 
 ## Development
 
-Radarr is written in C# (backend) and JS (frontend). The backend is built on the net5 framework, while the frontend utilizes Reactjs.
+Radarr is written in C# (backend) and JS (frontend). The backend is built on the .Net5 framework, while the frontend utilizes Reactjs.
 
 ### Tools required
 
 - Visual Studio 2019 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2019 V16.9 or higher is recommended as it includes the net5 SDK
+> VS 2019 V16.9 or higher is recommended as it includes the .net5 SDK
 {.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
@@ -108,7 +108,7 @@ dotnet msbuild -restore src/Radarr.sln -p:Configuration=Debug -p:Platform=Posix 
   - `fix-bug` (Good)
   - `patch` (Bad)
   - `develop` (Bad)
-  
+- Commits should be wrote as `New:` or `Fixed:` for changes that would not be considered a `maintenance release`
 ### Unit Testing
 
 Radarr utilizes nunit for its unit, integration, and automation test suite.
