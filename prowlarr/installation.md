@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-07-26T17:56:07.741Z
+date: 2021-07-26T17:57:26.590Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -135,7 +135,7 @@ There are many ways to manage Docker images and containers too, so installation 
 
 ## Reverse Proxy Configuration
 
-Sample config examples of reverse proxying Prowlarr.
+Sample config examples for configuring Prowlarr to be accessible through a reverse proxy.
 
 > These examples assumes the default port of `9696` and that you set a baseurl of `prowlarr`. It also assumes your web server i.e nginx and Prowlarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 {.is-info}
@@ -171,6 +171,8 @@ location /prowlarr {
 ### Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `prowlarr` from the `Location` block and simply use `/` as the location.
+
+Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
 
 ```
 <Location /prowlarr>
