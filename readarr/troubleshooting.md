@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-07-20T20:54:16.551Z
+date: 2021-07-27T10:44:14.486Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -158,6 +158,12 @@ Import issues should almost always manifest as an item in Activity with an orang
 Incorrect path issues are possible too, though less common in normal setups. The key to understanding path issues is knowing that gets the path to the download *from* the download client, via its API. This becomes a problem in more unique use cases, like the download client running on a different system (maybe even OS\!). It can also occur in a Docker setup, when volumes are not done well. A remote path map is a good solution where you don’t have control, like a seedbox setup. On a Docker setup, fixing the paths is a better option.
 
 ### Common Problems
+
+#### You prefer one format, but it imported another format instead
+
+When Readarr imports, it imports in order of your priorities in your quality profile, regardless of whether they are checked or not. To resolve this issue, you need to drag your checked formats to the top of the quality list. For example, in the options below, even though only EPUB is wanted, if the download has an AZW3 in it along with the EPUB, it will get imported with priority over the EPUB, causing unwanted formats to be imported.
+
+![qualities.png](/assets/readarr/qualities.png)
 
 #### Download Client's WebUI is not enabled
 
