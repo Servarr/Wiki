@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-07-13T16:59:42.879Z
+date: 2021-07-28T19:56:47.684Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -74,7 +74,7 @@ sudo mv Lidarr/ /opt
 - Ensure ownership of the binary directory.
 
 ```shell
-sudo chown lidarr:lidarr /opt/Lidarr
+sudo chown lidarr:media /opt/Lidarr
 ```
 
 - Configure systemd so Lidarr can autostart at boot.
@@ -82,8 +82,8 @@ sudo chown lidarr:lidarr /opt/Lidarr
 > The below systemd creation script will use a data directory of `/data/.config/Lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
 {.is-warning}
 
-```shell
-sudo cat > /etc/systemd/system/lidarr.service << EOF
+```
+cat << EOF | sudo tee /etc/systemd/system/lidarr.service > /dev/null
 [Unit]
 Description=Lidarr Daemon
 After=syslog.target network.target
