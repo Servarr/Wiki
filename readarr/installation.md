@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-13T17:00:49.671Z
+date: 2021-07-28T17:26:08.438Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -166,5 +166,4 @@ Keep in mind that Readarr will need read and write to the download folders as we
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
-- [linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
 {.links-list}
