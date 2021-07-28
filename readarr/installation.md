@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-28T17:34:14.540Z
+date: 2021-07-28T18:05:06.985Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -56,7 +56,7 @@ sudo apt install curl sqlite3
     - ARM64 use `arch=arm64`
 
 ```shell
-wget --content-disposition 'http://readarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
+wget --content-disposition 'http://readarr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
 - Uncompress the files:
