@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-28T18:05:06.985Z
+date: 2021-07-28T19:14:23.991Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -86,7 +86,7 @@ sudo chown readarr:media /opt/Readarr
 {.is-warning}
 
 ```shell
-sudo cat > /etc/systemd/system/readarr.service << EOF
+cat << EOF | sudo tee /etc/systemd/system/readarr.service > /dev/null
 [Unit]
 Description=Readarr Daemon
 After=syslog.target network.target
