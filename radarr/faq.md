@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-07-27T20:10:53.516Z
+date: 2021-07-28T01:08:53.764Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -205,9 +205,10 @@ If Docker:
 - See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **July 2 2021 Update**
+- **July 27 2021 Update**
   - `3.2.2.5080` has been released as master/stable
-  - For those on nightly and are still on `4.0.0.5121` or lower you can safely downgrade to master
+  - For those on nightly and are still on `4.0.0.5120` or lower you can safely downgrade to master
+    - If you are on a newer version you are stuck on nightly until a new develop / new master are cut.  If you have a backup, you can reinstall and restore the backup.
   - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
 
 ## How does Radarr handle foreign movies or foreign titles?
