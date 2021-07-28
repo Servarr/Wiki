@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-07-28T19:54:35.896Z
+date: 2021-07-28T19:55:29.298Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -88,7 +88,7 @@ cat << EOF | sudo tee /etc/systemd/system/radarr.service > /dev/null
 Description=Radarr Daemon
 After=syslog.target network.target
 [Service]
-User=readarr
+User=radarr
 Group=media
 Type=simple
 
