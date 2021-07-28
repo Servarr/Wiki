@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-07-13T17:01:41.332Z
+date: 2021-07-28T19:54:35.896Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -82,13 +82,13 @@ sudo chown radarr:radarr /opt/Radarr
 > The below systemd creation script will use a data directory of `/data/.config/Radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-warning}
 
-```shell
-    sudo cat > /etc/systemd/system/radarr.service << EOF
+```
+cat << EOF | sudo tee /etc/systemd/system/radarr.service > /dev/null
 [Unit]
 Description=Radarr Daemon
 After=syslog.target network.target
 [Service]
-User=radarr
+User=readarr
 Group=media
 Type=simple
 
