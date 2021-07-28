@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-07-26T17:57:26.590Z
+date: 2021-07-28T19:58:28.594Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -72,11 +72,11 @@ sudo mv Prowlarr/ /opt
 
 - Ensure ownership of the binary directory.
 
-> This assumes you have created the user and will run as the user `prowlarr` and group `prowlarr`. You may change this to fit your usecase.
+> This assumes you have created the user and will run as the user `prowlarr` and group `media`. You may change this to fit your usecase.
 {.is-warning}
 
 ```shell
-sudo chown prowlarr:prowlarr /opt/Prowlarr
+sudo chown prowlarr:media /opt/Prowlarr
 ```
 
 - Configure systemd so Prowlarr can autostart at boot.
@@ -84,14 +84,14 @@ sudo chown prowlarr:prowlarr /opt/Prowlarr
 > The below systemd creation script will use a data directory of `/data/.config/Prowlarr`.  Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument
 {.is-warning}
 
-```shell
-sudo cat > /etc/systemd/system/prowlarr.service << EOF
+```
+cat << EOF | sudo tee /etc/systemd/system/prowlarr.service > /dev/null
 [Unit]
 Description=Prowlarr Daemon
 After=syslog.target network.target
 [Service]
 User=prowlarr
-Group=prowlarr
+Group=media
 Type=simple
 
 ExecStart=/opt/Prowlarr/Prowlarr -nobrowser -data=/data/.config/Prowlarr/
