@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-28T17:26:08.438Z
+date: 2021-07-28T17:27:25.727Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -23,7 +23,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 > You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Readarr\config.xml` is denied -- or you use mapped network drives. This gives Readarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
-> Readarr is in a pre-alpha state and has no binaries currently available for Windows. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
+> Readarr is curretly in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
 {.is-warning}
 
 1. Download the latest version of Readarr from <https://readarr.com/#downloads-v1-windows> for your architecture
@@ -32,17 +32,11 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 ## OSX
 
-> Readarr is in a pre-alpha state and has no binaries currently available for OSX. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
-{.is-warning}
-
 1. Download the latest version of Readarr from <https://readarr.com/#downloads-v1-macos>
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to <http://localhost:8787> to start using Readarr
 
 ### Linux
-
-> Readarr is in a pre-alpha state and has no binaries currently available for Linux. If you wait a bit, there should be an official release soon. Until that time, building from source is your only available option. This is a difficult process that requires advanced technical knowledge, and is not supported by the Readarr team.
-{.is-danger}
 
 You'll need to install the binaries using the below commands.
 
@@ -123,9 +117,6 @@ sudo systemctl enable --now -q readarr
 ```
 
 ## Docker
-
-> Readarr is in a pre-alpha state. If you wait a bit, there should be an official release soon.
-{.is-warning}
 
 The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
