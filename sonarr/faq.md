@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-07-23T17:54:23.280Z
+date: 2021-07-29T13:11:32.046Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -400,7 +400,7 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 ## Help I have locked myself out
 
-To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/Sonarr/appdata-directory)
+To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
