@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-29T02:49:51.114Z
+date: 2021-07-29T02:51:37.535Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -31,6 +31,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 1. Browse to <http://localhost:8787> to start using Readarr
 
 ## MacOS (OSX)
+{#OSX}
 
 1. Download the latest version of Readarr from <https://readarr.com/#downloads-v1-macos>
 1. Open the archive and drag the Readarr icon to your Application folder.
