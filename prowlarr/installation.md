@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-07-28T19:58:28.594Z
+date: 2021-07-29T02:51:11.486Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -30,13 +30,16 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 > If you happen to use [Cerify The Web](https://docs.certifytheweb.com/docs/backgroundservice/) for LetsEncrypt certificate management for IIS and are installing Prowlarr on the same machine, port `9696` is used by the background service. You will need to either change the listening port of Prowlarr in your `config.xml` to something else or change the port of the Certify The Web background service.
 {.is-warning}
 
-## OSX
+## MacOS (OSX)
+{#OSX}
   
 1. Download the latest version of Prowlarr from <https://github.com/Prowlarr/Prowlarr/releases>
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Browse to <http://localhost:9696> to start using Prowlarr
 
 ## Linux
+
+## Debian/Ubuntu
   
 You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of prowlarr and install it into `/opt`
