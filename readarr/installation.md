@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-29T02:47:16.291Z
+date: 2021-07-29T02:49:51.114Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -43,7 +43,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 You'll need to install the binaries using the below commands.
 
 > This will download the `x64` copy of readarr and install it into `/opt`
-{.is-info}
+{.is-warning}
 
 - Ensure you have the required perquisite packages:
 
@@ -74,7 +74,7 @@ sudo mv Readarr/ /opt
 ```
 
 > This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.
-{.is-warning}
+{.is-danger}
 
 - Ensure ownership of the binary directory.
 
@@ -85,7 +85,7 @@ sudo chown readarr:media /opt/Readarr
 - Configure systemd so readarr can autostart at boot.
 
 > The below systemd creation script will use a data directory of `/data/.config/Readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
-{.is-warning}
+{.is-danger}
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/readarr.service > /dev/null
