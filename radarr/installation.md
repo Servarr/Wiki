@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-07-28T19:55:29.298Z
+date: 2021-07-29T02:48:48.063Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -27,18 +27,20 @@ It's therefore advisable to install Radarr as a system tray application if the u
 1. Run the installer
 1. Browse to <http://localhost:7878> to start using Radarr
 
-## OSX
+## MacOS (OSX)
 
 1. Download the latest version of Radarr from <https://radarr.video/#downloads-v3-macos>
 1. Open the archive and drag the Radarr icon to your Application folder.
 1. Browse to <http://localhost:7878> to start using Radarr
 
 ## Linux
+
+### Debian / Ubuntu 
   
 You'll need to install the binaries using the below commands.
 
 > This will download the `x64` copy of radarr and install it into `/opt`
-{.is-info}
+{.is-warning}
 
 - Ensure you have the required perquisite packages:
 
@@ -69,7 +71,7 @@ sudo mv Radarr/ /opt
 ```
 
 > Note: This assumes you will run as the user `radarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Radarr.
-{.is-warning}
+{.is-danger}
 
 - Ensure ownership of the binary directory.
 
@@ -80,7 +82,7 @@ sudo chown radarr:radarr /opt/Radarr
 - Configure systemd so radarr can autostart at boot.
 
 > The below systemd creation script will use a data directory of `/data/.config/Radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
-{.is-warning}
+{.is-danger}
 
 ```
 cat << EOF | sudo tee /etc/systemd/system/radarr.service > /dev/null
