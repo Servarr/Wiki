@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-07-04T00:03:15.499Z
+date: 2021-07-30T16:46:55.938Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -26,6 +26,8 @@ Newer versions of Radarr are targeted for .NET. We will no longer be providing l
 
 - Fixing Docker installs
   - Re-pull your container
+- Fixing BSD installs
+  - See [Frank's Ports](https://github.com/Thefrank/freebsd-port-sooners)
 - Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
   - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
