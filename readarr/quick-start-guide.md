@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-07-30T01:25:08.182Z
+date: 2021-07-30T01:26:09.744Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
