@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-06-23T03:08:28.612Z
+date: 2021-07-30T01:25:08.182Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -84,7 +84,7 @@ To do this, open Calibre, and click `Preferences / Sharing over the net`
 
 ![calibreprefs.png](/assets/readarr/calibreprefs.png)
 
-First, add a user account. The account does not need "make changes" access.
+First, add a user account. The account DOES need "make changes" access.
 
 ![calibreacct.png](/assets/readarr/calibreacct.png)
 
