@@ -25,7 +25,7 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 1. Download the latest version of Lidarr for your architecture linked below.
 1. Run the installer
-1. Browse to <http://localhost:7878> to start using Lidarr
+1. Browse to <http://localhost:8686> to start using Lidarr
 
 [Windows x64 Installer](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
 [Windows x32 Installer](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
