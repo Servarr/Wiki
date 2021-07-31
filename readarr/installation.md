@@ -24,16 +24,30 @@ It's therefore advisable to install Readarr as a system tray application if the 
 {.is-warning}
 
 > Readarr is curretly in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
-{.is-warning}
+{.is-danger}
 
-1. Download the latest version of Readarr from <https://readarr.com/#downloads-v1-windows> for your architecture
+1. Download the latest version of Readarr for your architecture linked below.
 1. Run the installer
 1. Browse to <http://localhost:8787> to start using Readarr
 
+[Windows x64 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+[Windows x32 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+{.links-list}
+
+> It is possible to install Readarr manually using the [x64 .zip download](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+{.is-info}
+
 ## MacOS (OSX)
+
 {#OSX}
 
-1. Download the latest version of Readarr from <https://readarr.com/#downloads-v1-macos>
+> Readarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+{.is-warning}
+
+> Readarr is curretly in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
+{.is-danger}
+
+1. Download the [MacOS App](https://readarr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to <http://localhost:8787> to start using Readarr
 
@@ -41,9 +55,12 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 ### Debian / Ubuntu
 
+> Readarr is curretly in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
+{.is-danger}
+
 You'll need to install the binaries using the below commands.
 
-> This will download the `x64` copy of readarr and install it into `/opt`
+> The steps below will download the `x64` copy of readarr and install it into `/opt`
 {.is-warning}
 
 - Ensure you have the required perquisite packages:
@@ -145,7 +162,8 @@ When installing Readarr, you can choose to use Calibre integration or not. This 
 
 If you are running Calibre, you must first start the Calibre Content Server (Preferences / Sharing over the net), and also set up a user and password. This will require a Calibre restart.
 
-Please note that Calibre Content Server, and Calibre, are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these things, and is not required or used by Readarr in any way.
+> Please note that Calibre Content Server and Calibre are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these programs, and is not required nor used by Readarr in any way.
+{.is-warning}
 
 #### Ownership and Permissions
 
@@ -159,5 +177,57 @@ Keep in mind that Readarr will need read and write to the download folders as we
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
+> Temporarily, you will need to use the `:nightly` tag with docker images, as there is no `master` nor `develop` branch.
+{.is-warning}
+
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
+- [linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
 {.links-list}
+
+## Reverse Proxy Configuration
+
+Sample config examples for configuring Readarr to be accessible through a reverse proxy.
+
+> These examples assumes the default port of `8787` and that you set a baseurl of `readarr`. It also assumes your web server i.e nginx and Readarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
+{.is-info}
+
+### NGINX
+
+```none
+location /readarr {
+  proxy_pass        http://127.0.0.1:8787/readarr;
+  proxy_set_header Host $proxy_host;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_redirect off;
+
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection $http_connection;
+}
+  location /readarr/api { auth_request off;
+  proxy_pass       http://127.0.0.1:8787/readarr/api;
+}
+
+  location /readarr/Content { auth_request off;
+    proxy_pass http://127.0.0.1:8787/readarr/Content;
+ }
+```
+
+### Apache
+
+This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `readarr` from the `Location` block and simply use `/` as the location.
+
+Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
+
+```none
+<Location /readarr>
+  ProxyPass http://127.0.0.1:8787/readarr connectiontimeout=5 timeout=300
+    ProxyPassReverse http://127.0.0.1:8787/readarr
+</Location>
+```
+
+If you implement any additional authentication through Apache, you should exclude the following paths:
+
+- `/readarr/api/`
+- `/readarr/Content/`

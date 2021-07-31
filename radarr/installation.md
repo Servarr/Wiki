@@ -23,20 +23,31 @@ It's therefore advisable to install Radarr as a system tray application if the u
 > You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Radarr\config.xml` is denied -- or you use mapped network drives. This gives Radarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
-1. Download the latest version of Radarr from <https://radarr.video/#downloads-v3-windows> for your architecture
+1. Download the latest version of Radarr for your architecture linked below.
 1. Run the installer
 1. Browse to <http://localhost:7878> to start using Radarr
 
+[Windows x64 Installer](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+[Windows x32 Installer](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+{.links-list}
+
+> It is possible to install Radarr manually using the [x64 .zip download](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+{.is-info}
+
 ## MacOS (OSX)
+
 {#OSX}
 
-1. Download the latest version of Radarr from <https://radarr.video/#downloads-v3-macos>
+> Radarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+{.is-warning}
+
+1. Download the [MacOS App](https://radarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Radarr icon to your Application folder.
 1. Browse to <http://localhost:7878> to start using Radarr
 
 ## Linux
 
-### Debian / Ubuntu 
+### Debian / Ubuntu
   
 You'll need to install the binaries using the below commands.
 
@@ -85,7 +96,7 @@ sudo chown radarr:radarr /opt/Radarr
 > The below systemd creation script will use a data directory of `/data/.config/Radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-danger}
 
-```
+```shell
 cat << EOF | sudo tee /etc/systemd/system/radarr.service > /dev/null
 [Unit]
 Description=Radarr Daemon
@@ -152,12 +163,16 @@ To install and use these Docker images, you will need to keep the above in mind 
 - [linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
 {.links-list}
 
-## NGINX Reverse Proxy Configuration
+## Reverse Proxy Configuration
 
-> This assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes you have nginx and the application running on the same server accessible at `localhost`.
+Sample config examples for configuring Radarr to be accessible through a reverse proxy.
+
+> These examples assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes your web server i.e nginx and Radarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 {.is-info}
 
-```nginx
+### NGINX
+
+```none
 location /radarr {
   proxy_pass        http://127.0.0.1:7878/radarr;
   proxy_set_header Host $proxy_host;
@@ -177,3 +192,21 @@ location /radarr {
     proxy_pass http://127.0.0.1:7878/radarr/Content;
  }
 ```
+
+### Apache
+
+This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `radarr` from the `Location` block and simply use `/` as the location.
+
+Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
+
+```none
+<Location /radarr>
+  ProxyPass http://127.0.0.1:7878/radarr connectiontimeout=5 timeout=300
+    ProxyPassReverse http://127.0.0.1:7878/radarr
+</Location>
+```
+
+If you implement any additional authentication through Apache, you should exclude the following paths:
+
+- `/radarr/api/`
+- `/radarr/Content/`

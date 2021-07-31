@@ -23,17 +23,28 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 > You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Prowlarr\config.xml` is denied -- or you use mapped network drives. This gives Prowlarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
-1. Download the latest version of Prowlarr from <https://github.com/Prowlarr/Prowlarr/releases> for your architecture
+1. Download the latest version of Prowlarr for your architecture linked below.
 1. Run the installer
 1. Browse to <http://localhost:9696> to start using Prowlarr
+
+[Windows x64 Installer](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+[Windows x32 Installer](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+{.links-list}
+
+> It is possible to install Radarr manually using the [x64 .zip download](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+{.is-info}
 
 > If you happen to use [Cerify The Web](https://docs.certifytheweb.com/docs/backgroundservice/) for LetsEncrypt certificate management for IIS and are installing Prowlarr on the same machine, port `9696` is used by the background service. You will need to either change the listening port of Prowlarr in your `config.xml` to something else or change the port of the Certify The Web background service.
 {.is-info}
 
 ## MacOS (OSX)
+
 {#OSX}
   
-1. Download the latest version of Prowlarr from <https://github.com/Prowlarr/Prowlarr/releases>
+> Prowlarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+{.is-warning}
+
+1. Download the [MacOS App](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Browse to <http://localhost:9696> to start using Prowlarr
 
@@ -87,14 +98,14 @@ sudo chown prowlarr:media /opt/Prowlarr
 > The below systemd creation script will use a data directory of `/data/.config/Prowlarr`.  Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument
 {.is-warning}
 
-```
+```shell
 cat << EOF | sudo tee /etc/systemd/system/prowlarr.service > /dev/null
 [Unit]
 Description=Prowlarr Daemon
 After=syslog.target network.target
 [Service]
 User=prowlarr
-Group=media
+Group=prowlarr
 Type=simple
 
 ExecStart=/opt/Prowlarr/Prowlarr -nobrowser -data=/data/.config/Prowlarr/
@@ -125,14 +136,12 @@ The Prowlarr team does not offer an official Docker image. However, a number of 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
-There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 > Temporarily, you will need to use the `:nightly` or `:develop` tags with docker images, as there is no `master` branch.
 {.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
-{.links-list}
-
 - [linuxserver/prowlarr](https://github.com/linuxserver/docker-prowlarr/tree/develop)
 {.links-list}
 
@@ -177,14 +186,14 @@ This should be added within an existing VirtualHost site. If you wish to use the
 
 Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
 
-```
+```none
 <Location /prowlarr>
-		ProxyPass http://127.0.0.1:9696/prowlar connectiontimeout=5 timeout=300
+  ProxyPass http://127.0.0.1:9696/prowlarr connectiontimeout=5 timeout=300
     ProxyPassReverse http://127.0.0.1:9696/prowlarr
 </Location>
 ```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
-* `/prowlarr/api/`
-* `/prowlarr/Content/`
+- `/prowlarr/api/`
+- `/prowlarr/Content/`

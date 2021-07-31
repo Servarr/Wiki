@@ -18,18 +18,28 @@ A Windows Service runs even when the user is not logged in, but special care mus
 
 Additionally the Windows Service runs under the 'Local Service' account, by default this account **does not have permissions to access your user's home directory unless permissions have been assigned manually**. This is particularly relevant when using download clients that are configured to download to your home directory.
 
-It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+It's therefore advisable to install Lidarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
 > You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
-1. Download the latest version of Lidarr from <https://lidarr.com/#downloads-v1-windows> for your architecture
-2. Run the installer
-3. Browse to <http://localhost:8686> to start using Lidarr
+1. Download the latest version of Lidarr for your architecture linked below.
+1. Run the installer
+1. Browse to <http://localhost:7878> to start using Lidarr
+
+[Windows x64 Installer](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+[Windows x32 Installer](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+{.links-list}
+
+> It is possible to install Lidarr manually using the [x64 .zip download](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+{.is-info}
 
 ## OSX
 
-1. Download the latest version of Lidarr from <https://lidarr.com/#downloads-v1-macos>
+> Lidarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+{.is-warning}
+
+1. Download the [MacOS App](https://lidarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Lidarr icon to your Application folder.
 1. Browse to <http://localhost:8686> to start using Lidarr
 
@@ -82,7 +92,7 @@ sudo chown lidarr:media /opt/Lidarr
 > The below systemd creation script will use a data directory of `/data/.config/Lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
 {.is-warning}
 
-```
+```shell
 cat << EOF | sudo tee /etc/systemd/system/lidarr.service > /dev/null
 [Unit]
 Description=Lidarr Daemon
@@ -143,8 +153,56 @@ Keep in mind that Lidarr will need read and write to the download folders as wel
 
 ### Install Lidarr
 
-There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/lidarr](https://hotio.dev/containers/lidarr/)
 - [linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
 {.links-list}
+
+## Reverse Proxy Configuration
+
+Sample config examples for configuring Lidarr to be accessible through a reverse proxy.
+
+> These examples assumes the default port of `8686` and that you set a baseurl of `lidarr`. It also assumes your web server i.e nginx and Lidarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
+{.is-info}
+
+### NGINX
+
+```none
+location /lidarr {
+  proxy_pass        http://127.0.0.1:8686/lidarr;
+  proxy_set_header Host $proxy_host;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_redirect off;
+
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection $http_connection;
+}
+  location /lidarr/api { auth_request off;
+  proxy_pass       http://127.0.0.1:8686/lidarr/api;
+}
+
+  location /lidarr/Content { auth_request off;
+    proxy_pass http://127.0.0.1:8686/lidarr/Content;
+ }
+```
+
+### Apache
+
+This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `lidarr` from the `Location` block and simply use `/` as the location.
+
+Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
+
+```none
+<Location /lidarr>
+  ProxyPass http://127.0.0.1:8686/lidarr connectiontimeout=5 timeout=300
+    ProxyPassReverse http://127.0.0.1:8686/lidarr
+</Location>
+```
+
+If you implement any additional authentication through Apache, you should exclude the following paths:
+
+- `/lidarr/api/`
+- `/lidarr/Content/`
