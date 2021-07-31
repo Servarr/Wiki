@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-07-31T22:00:57.134Z
+date: 2021-07-31T22:05:12.375Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -102,11 +102,11 @@ Click on `Settings` -> `Download Clients`, and then click the `+` to add a new d
 
 Prowlarr supports integration with the following Usenet download clients:
 
-![usenetclients.png](/assets/prowlarr/usenetclients.png)
+![usenetclients2.png](/assets/readarr/usenetclients2.png)
 
 And the following Torrent clients:
 
-![torrentclients.png](/assets/prowlarr/torrentclients.png)
+![torrentclients2.png](/assets/readarr/torrentclients2.png)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
