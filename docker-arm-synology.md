@@ -20,16 +20,16 @@ possible it will destroy your NAS. {.is-danger}
 
 The instructions below will:
 
-1.  Place the Docker binaries in `/usr/local/bin/`
-1.  Create a Docker config file `/usr/local/etc/docker/docker.json`
-1.  Configure Docker to save its data to `/volume1/docker/var`
-1.  Create a script to start Docker on boot at `/usr/local/etc/rc.d/docker.sh`
-1.  Create a `docker` group
-1.  Place a docker-compose script in `/usr/local/bin/`
+1. Place the Docker binaries in `/usr/local/bin/`
+1. Create a Docker config file `/usr/local/etc/docker/docker.json`
+1. Configure Docker to save its data to `/volume1/docker/var`
+1. Create a script to start Docker on boot at `/usr/local/etc/rc.d/docker.sh`
+1. Create a `docker` group
+1. Place a docker-compose script in `/usr/local/bin/`
 
 ## Installation
 
-1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet) 
+1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet)
 
 1. Execute the following command:
 
@@ -45,26 +45,27 @@ Done.  Please add your user to the Docker group in the Synology GUI and reboot y
 
 Do as it says:
 
-1.  Add your user to the new `docker` group using the Synology GUI
-1.  **Reboot.**
+1. Add your user to the new `docker` group using the Synology GUI
+1. **Reboot.**
 
 Hopefully you have functioning `docker` and `docker-compose` commands, which should work when logged in as your normal user.
 
 ## Caveats
 
-1.  It seems most ARM Synology don't support seccomp, so the Docker 
+1. It seems most ARM Synology don't support seccomp, so the Docker
     container has unfettered access to your system (even more so than
     with a regular docker).
-1.  Again, due to Synology constraints, all containers need to use
+1. Again, due to Synology constraints, all containers need to use
     `--network=host` (or `network: host` in compose) and everything will
     be directly accessible from the host. There are no port maps.
-1.  Obviously you can only run aarch64 images, but most hotio and
+1. Obviously you can only run aarch64 images, but most hotio and
     linuxserver images offer an aarch64 version.
 
 ## Setting up a Docker GUI
 
 If you want a GUI you can run Portainer using the following example
 compose:
+
 ```yml
     version: '2'
 
@@ -80,6 +81,7 @@ compose:
     volumes:
       portainer_data:
 ```
+
 Place this in a file called `docker-compose.yml` in an otherwise empty directory. Run:
 
 ```shell

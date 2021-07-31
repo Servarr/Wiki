@@ -43,15 +43,17 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 
 1. Fork Prowlarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
+
 #### Building the frontend
-  - Navigate to the cloned directory
-  - Install the required Node Packages
+
+- Navigate to the cloned directory
+- Install the required Node Packages
 
      ```bash
      yarn install
      ```
 
-  - Start webpack to monitor your development environment for any changes that need post processing using:
+- Start webpack to monitor your development environment for any changes that need post processing using:
 
      ```bash
      yarn start
@@ -72,19 +74,19 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 ##### Command line
 
-1. Clean solution 
+1. Clean solution
 
-  ```
+  ```shell
   dotnet clean $slnFile -c Debug
   ```
 
-2. Restore and Build debug configuration for the correct platform (Posix or Windows)
+1. Restore and Build debug configuration for the correct platform (Posix or Windows)
 
-```
+```shell
 dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posix -t:PublishAllRids
 ```
 
-3. Run the produced executable from `/_output`
+1. Run the produced executable from `/_output`
 
 ### Contributing Code
 
@@ -98,7 +100,7 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 - One feature/bug fix per pull request to keep things clean and easy to understand
 - Use 4 spaces instead of tabs, this is the default for VS 2019 and WebStorm
 
-#### Contributing Indexers ###
+#### Contributing Indexers
 
 - If you're contributing an indexer please phrase your commit as something like: `New: (Indexer) {Indexer Name}`, `New: (Indexer) {Usenet|Torrent} {Indexer Name}`, `New: (Indexer) {Torznab|Newznab} {Indexer Name}`
 - If you're updating an indexer please phrase your commit as something like: `Fixed: (Indexer) {Indexer Name} {changes}` e.g. `Fixed: (Indexer) Changed BHD to use API`
@@ -114,6 +116,7 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
   - `patch` (Bad)
   - `develop` (Bad)
 - Commits should be wrote as `New:` or `Fixed:` for changes that would not be considered a `maintenance release`
+
 ### Unit Testing
 
 Prowlarr utilizes nunit for its unit, integration, and automation test suite.

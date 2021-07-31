@@ -43,15 +43,17 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
 
 1. Fork Readarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
+
 #### Building the frontend
-  - Navigate to the cloned directory
-  - Install the required Node Packages
+
+- Navigate to the cloned directory
+- Install the required Node Packages
 
      ```bash
      yarn install
      ```
 
-  - Start webpack to monitor your development environment for any changes that need post processing using:
+- Start webpack to monitor your development environment for any changes that need post processing using:
 
      ```bash
      yarn start
@@ -72,19 +74,19 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 ##### Command line
 
-1. Clean solution 
+1. Clean solution
 
-  ```
+  ```shell
   dotnet clean $slnFile -c Debug
   ```
 
-2. Restore and Build debug configuration for the correct platform (Posix or Windows)
+1. Restore and Build debug configuration for the correct platform (Posix or Windows)
 
-```
+```shell
 dotnet msbuild -restore src/Readarr.sln -p:Configuration=Debug -p:Platform=Posix -t:PublishAllRids
 ```
 
-3. Run the produced executable from `/_output`
+1. Run the produced executable from `/_output`
 
 ### Contributing Code
 
@@ -109,6 +111,7 @@ dotnet msbuild -restore src/Readarr.sln -p:Configuration=Debug -p:Platform=Posix
   - `patch` (Bad)
   - `develop` (Bad)
 - Commits should be wrote as `New:` or `Fixed:` for changes that would not be considered a `maintenance release`
+
 ### Unit Testing
 
 Readarr utilizes nunit for its unit, integration, and automation test suite.

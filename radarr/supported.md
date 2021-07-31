@@ -14,7 +14,6 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Download Clients
 
-
 - deluge{#deluge}
 - torrentdownloadstation{#torrentdownloadstation}
 - usenetdownloadstation{#usenetdownloadstation}
@@ -33,7 +32,6 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - vuze{#vuze}
 
 ## Notifications
-
 
 - boxcar{#boxcar}
 - customscript{#customscript}
@@ -59,20 +57,20 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Lists
 
- - couchpotatoimport {#couchpotatoimport}
- - imdblistimport {#imdblistimport}
- - radarrimport {#radarrimport}
- - radarrlistimport {#radarrlistimport}
- - rssimport {#rssimport}
- - stevenlu2import {#stevenlu2import}
- - stevenluimport {#stevenluimport}
- - tmdbcollectionimport {#tmdbcollectionimport}
- - tmdbcompanyimport {#tmdbcompanyimport}
- - tmdbkeywordimport {#tmdbkeywordimport}
- - tmdblistimport {#tmdblistimport}
- - tmdbpersonimport {#tmdbpersonimport}
- - tmdbpopularimport {#tmdbpopularimport}
- - tmdbuserimport {#tmdbuserimport}
- - traktlistimport {#traktlistimport}
- - traktpopularimport {#traktpopularimport}
- - traktuserimport {#traktuserimport}
+- couchpotatoimport {#couchpotatoimport}
+- imdblistimport {#imdblistimport}
+- radarrimport {#radarrimport}
+- radarrlistimport {#radarrlistimport}
+- rssimport {#rssimport}
+- stevenlu2import {#stevenlu2import}
+- stevenluimport {#stevenluimport}
+- tmdbcollectionimport {#tmdbcollectionimport}
+- tmdbcompanyimport {#tmdbcompanyimport}
+- tmdbkeywordimport {#tmdbkeywordimport}
+- tmdblistimport {#tmdblistimport}
+- tmdbpersonimport {#tmdbpersonimport}
+- tmdbpopularimport {#tmdbpopularimport}
+- tmdbuserimport {#tmdbuserimport}
+- traktlistimport {#traktlistimport}
+- traktpopularimport {#traktpopularimport}
+- traktuserimport {#traktuserimport}
