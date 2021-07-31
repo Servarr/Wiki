@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-29T02:51:37.535Z
+date: 2021-07-31T15:00:27.373Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -30,8 +30,8 @@ It's therefore advisable to install Readarr as a system tray application if the 
 1. Run the installer
 1. Browse to <http://localhost:8787> to start using Readarr
 
-[Windows x64 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
-[Windows x32 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+- [Windows x64 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+- [Windows x32 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
 {.links-list}
 
 > It is possible to install Readarr manually using the [x64 .zip download](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
