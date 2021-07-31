@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-07-30T03:13:07.299Z
+date: 2021-07-31T16:26:55.473Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-07-08T23:42:46.063Z
+dateCreated: 2021-07-31T16:26:55.473Z
 ---
 
-- Supported Indexers as of Build `0.1.0.722` / [Commit: 924db7a39447216b1094971f4b2ba6122c23069d](https://github.com/Prowlarr/Prowlarr/commit/924db7a39447216b1094971f4b2ba6122c23069d)
+- Supported Indexers as of Build `0.1.0.738` / [Commit: 5c4045e772b0e05c2e270f08d60c43428a4e54f4](https://github.com/Prowlarr/Prowlarr/commit/5c4045e772b0e05c2e270f08d60c43428a4e54f4)
 
 ## Torrents
 
@@ -195,6 +195,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[zetorrents](https://wvw.zetorrents.org/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-fr|
 |[Zooqle](https://zooqle.com/){#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-us|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
+
 
 ### Private
 
@@ -428,10 +429,12 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[RevolutionTT](https://revolutiontt.me/){#revolutiontt}|The Revolution has begun|en-US|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC. This definition is for the English site.|en-us|
 |[RPTorrents](https://rptorrents.com/){#rptorrents}|RPTorrents is a Private tracker for MOVIES / TV / GENERAL|en-us|
+|[RuTracker](https://rutracker.org/){#rutracker}|RuTracker is a Semi-Private Russian torrent site with a thriving file-sharing community|ru-org|
 |[ScenePalace](https://scenepalace.info/){#scenepalace}|ScenePalace (SP) is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|pt-PT|
 |[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|en-us|
 |[SDBits](https://sdbits.org/){#sdbits}|SDBits is a small tracker that focuses on SD movies and tv.|en-us|
+|[SecretCinema](https://secret-cinema.pw/){#secret-cinema}|A tracker for rare movies.|en-US|
 |[SeedFile](https://www.seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|ro-ro|
 |[ShareFiles](https://sharefiles.ro/){#sharefiles}|ShareFiles is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-ro|
 |[ShareIsland](https://shareisland.org/){#shareisland}|A general italian tracker.|it-it|
@@ -519,6 +522,7 @@ dateCreated: 2021-07-08T23:42:46.063Z
 |[Zamunda.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[Zelka.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-es|
+
 
 ## Usenet
 
