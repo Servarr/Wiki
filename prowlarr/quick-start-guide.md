@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-06-23T03:06:40.991Z
+date: 2021-07-31T22:00:57.134Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -49,6 +49,12 @@ Click on `Settings` -> `Apps`, and then click the `+` to add an *arr program.
 ![addapps.png](/assets/prowlarr/addapps.png)
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you should add each of them separately.
+
+Prowlarr currently supports the addition of these apps:
+
+![prowlarrapps.png](/assets/readarr/prowlarrapps.png)
+
+When you add an app, you will need to enter values in the pop-up screen:
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
