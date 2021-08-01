@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-08-01T23:11:27.268Z
+date: 2021-08-01T23:12:50.559Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:33:08.344Z
@@ -45,9 +45,12 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 This means Sonarr will be unable to update itself. You'll have to update Sonarr manually or set the permissions on Sonarr's Startup directory (the installation directory) to allow Sonarr to update itself.
 
-##### Updating will not be possible to prevent deleting AppData on Update
 
-{#cannot-install-update-because-startup-folder-is-in-an-App-Translocation-folder}
+##### Cannot install update because startup folder is in an App Translocation folder
+
+In macOS Sierra, Apple added a strange security feature called App Translocation (sometimes known as Gatekeeper Path Randomization) which means that after downloading an application, if you do not move the resulting application somewhere (anywhere!), with the Finder (you must use the Finder!), the application will be run as if it is located at a randomly chosen path by the system.
+
+##### Updating will not be possible to prevent deleting AppData on Update
 
 Sonarr detected that AppData folder for your Operating System is located inside the directory that contains the Sonarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
