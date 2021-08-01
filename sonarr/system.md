@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-08-01T23:12:50.559Z
+date: 2021-08-01T23:14:32.285Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:33:08.344Z
@@ -41,7 +41,9 @@ Rejoice, the developers have released a new update. This generally means awesome
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
-##### Cannot install update because startup folder is not writable by the user
+##### Cannot install update because startup folder and/or UI folder are not writable by the user
+
+{#cannot-install-update-because-UI-folder-is-not-writable-by-the-user}
 
 This means Sonarr will be unable to update itself. You'll have to update Sonarr manually or set the permissions on Sonarr's Startup directory (the installation directory) to allow Sonarr to update itself.
 
