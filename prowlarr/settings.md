@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-06-23T03:06:49.178Z
+date: 2021-08-01T15:14:27.275Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -23,6 +23,17 @@ Also, note that for each individual settings page, there are some options at the
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
 - You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
+## Indexers
+
+Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
+
+Click on `Settings` -> `Indexers`, and then click the `+` to add a proxy.
+
+![proxies.png](/assets/prowlarr/proxies.png)
+
+Configuring HTTP, SOCKS4, or SOCKS5 proxies are all the same. Enter a name, the hostname/port/userid/password of your proxy server into the appropriate boxes. If you want this to apply to only a specific subset of your indexers, then enter a TAG name here (and then apply that TAG to your indexers you want it to apply to).
+
+Configuring a Flaresolverr server requires you to enter the hostname:port of your Flaresolver installation (which can be found [here](https://github.com/FlareSolverr/FlareSolverr)). Again, applying a TAG allows you to only use Flaresolverr on those indexers which require its use.
 
 ## Applications
 
