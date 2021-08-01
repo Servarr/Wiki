@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-07-11T07:20:43.929Z
+date: 2021-08-01T23:11:27.268Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:33:08.344Z
@@ -46,6 +46,8 @@ Rejoice, the developers have released a new update. This generally means awesome
 This means Sonarr will be unable to update itself. You'll have to update Sonarr manually or set the permissions on Sonarr's Startup directory (the installation directory) to allow Sonarr to update itself.
 
 ##### Updating will not be possible to prevent deleting AppData on Update
+
+{#cannot-install-update-because-startup-folder-is-in-an-App-Translocation-folder}
 
 Sonarr detected that AppData folder for your Operating System is located inside the directory that contains the Sonarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
