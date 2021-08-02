@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-06-23T03:08:38.672Z
+date: 2021-08-02T23:40:41.879Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -22,7 +22,7 @@ The branch you have set is not a valid release branch. You will not receive upda
 
 ##### Currently installed SQLite version is not supported
 
-Readarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Readarr requires at least version 3.9.0. Note that Readarr uses libSQLite3.so which may or may not be contained in a SQLite3 upgrade package.
+Readarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Readarr requires at least version 3.9.0. Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 ##### New update is available
 
