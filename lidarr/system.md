@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2021-06-23T03:06:06.019Z
+date: 2021-08-02T23:41:28.803Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -59,7 +59,7 @@ The upgrade procedure for Mono varies per platform.
 
 ##### Currently installed SQLite version is not supported
 
-Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses libSQLite3.so which may or may not be contained in a SQLite3 upgrade package.
+Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 ##### New update is available
 
