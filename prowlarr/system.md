@@ -2,8 +2,8 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-08-02T23:28:42.538Z
-tags: 
+date: 2021-08-02T23:39:44.389Z
+tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-06-05T20:47:01.086Z
 ---
