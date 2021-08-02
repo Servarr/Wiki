@@ -1,0 +1,186 @@
+<!--
+title: Prowlarr System
+description: 
+published: true
+date: 2021-08-02T23:17:21.243Z
+tags: prowlarr, system
+editor: ckeditor
+dateCreated: 2021-06-05T20:47:01.086Z
+-->
+
+<h2 class="toc-header" id="status"> Status</h2><div>
+</div><h3 class="toc-header" id="health"> Health</h3><div>
+</div><p>This page contains a list of health checks errors. These health checks are periodically performed performed by Prowlarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.</p><div>
+</div><h4 class="toc-header" id="system-warnings"> System Warnings</h4><div>
+</div><h5 class="toc-header" id="branch-is-not-a-valid-release-branch"> Branch is not a valid release branch</h5><div>
+</div><p>The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.</p><div>
+</div><h5 class="toc-header" id="currently-installed-sqlite-version-is-not-supported"> Currently installed SQLite version is not supported</h5><div>
+</div><p>Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses <a class="is-external-link" href="http://libSQLite3.so">libSQLite3.so</a> which may or may not be contained in a SQLite3 upgrade package.</p><div>
+</div><h5 class="toc-header" id="new-update-is-available"> New update is available</h5><div>
+</div><p>Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System -&gt; Updates page is probably a good starting point.</p><div>
+</div><blockquote class="is-info">
+<p>This warning will not appear if your current version is less than 14 days old</p>
+</blockquote><div>
+</div><h5 class="toc-header" id="cannot-install-update-because-startup-folder-is-not-writable-by-the-user"> Cannot install update because startup folder is not writable by the user</h5><div>
+</div><p>This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s Startup directory (the installation directory) to allow Prowlarr to update itself.</p><div>
+</div><h5 class="toc-header" id="updating-will-not-be-possible-to-prevent-deleting-appdata-on-update"> Updating will not be possible to prevent deleting AppData on Update</h5><div>
+</div><p>Prowlarr detected that AppData folder for your Operating System is located inside the directory that contains the Prowlarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.</p><div>
+</div><p>Please look at System -&gt; Info to see the current AppData &amp; Startup directories.<br>
+This means Prowlarr will be unable to update itself without risking data-loss.<br>
+If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.</p><div>
+</div><h5 class="toc-header" id="branch-is-for-a-previous-version"> Branch is for a previous version</h5><div>
+</div><p>The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.</p><div>
+</div><h5 class="toc-header" id="could-not-connect-to-signalr"> Could not connect to signalR</h5><div>
+</div><p>signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.</p><div>
+</div><p>The most common occurrence of this is use of a reverse proxy or cloudflare<br>
+Cloudflare needs websockets enabled.</p><div>
+</div><p>Nginx requires the following addition to the location block for the app:</p><div>
+</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-none"> proxy_http_version 1.1;
+ proxy_set_header Upgrade $http_upgrade;
+ proxy_set_header Connection $http_connection;
+</code></pre><div>
+</div><blockquote class="is-warning">
+<p>Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK<br>
+See <a class="is-external-link" href="https://github.com/aspnet/AspNetCore/issues/17081">https://github.com/aspnet/AspNetCore/issues/17081</a></p>
+</blockquote><div>
+</div><p>For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:</p><div>
+</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-none">RewriteEngine On
+RewriteCond %{HTTP:Upgrade} =websocket [NC]
+RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
+</code></pre><div>
+</div><p>For Caddy (V1) use this:<br>
+Note: you will also need to add the websocket directive to your prowlarr configuration</p><div>
+</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-none"> proxy /prowlarr 127.0.0.1:9696 {
+     websocket
+     transparent
+ }
+</code></pre><div>
+</div><h5 class="toc-header" id="failed-to-resolve-the-ip-address-for-the-configured-proxy-host"> Failed to resolve the IP Address for the Configured Proxy Host</h5><div>
+</div><p>Review your proxy settings and ensure they are accurate<br>
+Ensure your proxy is up, running, and accessible</p><div>
+</div><h5 class="toc-header" id="proxy-failed-test"> Proxy Failed Test</h5><div>
+</div><p>Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.</p><div>
+</div><h5 class="toc-header" id="system-time-is-off-by-more-than-1-day"> System Time is off by more than 1 day</h5><div>
+</div><p>System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected<br>
+Review your system time and ensure it is synced to an authoritative time server and accurate</p><div>
+</div><h4 class="toc-header" id="download-clients"> Download Clients</h4><div>
+</div><h5 class="toc-header" id="no-download-client-is-available"> No download client is available</h5><div>
+</div><p>A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings -&gt; Download Client.</p><div>
+</div><h5 class="toc-header" id="unable-to-communicate-with-download-client"> Unable to communicate with download client</h5><div>
+</div><p>Prowlarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.<br>
+This is typically due to improperly configured download client. Things you can typically check:<br>
+Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1<br>
+The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.<br>
+Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.</p><div>
+</div><h5 class="toc-header" id="download-clients-are-unavailable-due-to-failure"> Download clients are unavailable due to failure</h5><div>
+</div><p>One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likeliness fail.<br>
+You should inspect System-&gt;Logs to see what the reason is for the failures.<br>
+If you no longer use this download client, disable it in Prowlarr to prevent the errors.</p><div>
+</div><h5 class="toc-header" id="bad-download-client-settings"> Bad Download Client Settings</h5><div>
+</div><p>The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from Windows to Linux or Linux to Windows without a remote path map.</p><div>
+</div><h4 class="toc-header" id="indexers"> Indexers</h4><div>
+</div><h5 class="toc-header" id="no-indexers-are-enabled"> No indexers are enabled</h5><div>
+</div><p>Prowlarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.</p><div>
+</div><h5 class="toc-header" id="indexers-are-unavailable-due-to-failures"> Indexers are unavailable due to failures</h5><div>
+</div><p>Errors occurs while Prowlarr tried to use one of your indexers. To limit retries, Prowlarr will not use the indexer for an increasing amount of time (up to 24h).<br>
+This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be dns, connection, authentication or indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.<br>
+You can prevent the warning by disabling the affected indexer.<br>
+Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.</p><div>
+</div><h3 class="toc-header" id="disk-space"> Disk Space</h3><div>
+</div><p>This section will show you available disk space<br>
+In docker this can be tricky as it will typically show you the available space within your Docker image</p><div>
+</div><h3 class="toc-header" id="about"> About</h3><div>
+</div><p>This will tell you about your current install of Prowlarr</p><div>
+</div><h3 class="toc-header" id="more-info"> More Info</h3><div>
+</div><p>Home Page: Prowlarr's home page<br>
+Wiki: You're here already<br>
+Reddit: r/prowlarr<br>
+Discord: Join our discord<br>
+Donations: If you're feeling generous and would like to donate click here<br>
+Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all click here<br>
+Source: GitHub<br>
+Feature Requests: Got a great idea drop it here</p><div>
+</div><h2 class="toc-header" id="tasks"> Tasks</h2><div>
+</div><h3 class="toc-header" id="scheduled"> Scheduled</h3><div>
+</div><p>This page lists all scheduled tasks that Prowlarr runs</p><div>
+</div><ul>
+<li>Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Prowlarr is on the most current version then triggering the update script to update Prowlarr. Settings-&gt; Update</li>
+</ul><div>
+</div><blockquote class="is-warning">
+<p>Note: If on Docker this will not update your container as a new image will need to be downloaded.</p>
+</blockquote><div>
+</div><ul>
+<li>Backup - This will run a backup of your Prowlarr's database on a set schedule more details on this can be found here. More information about backups can be found System -&gt; Backups.</li>
+<li>Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Prowlarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.</li>
+<li>Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.</li>
+<li>Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Prowlarr</li>
+</ul><div>
+</div><blockquote class="is-info">
+<p>All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.</p>
+</blockquote><div>
+</div><h3 class="toc-header" id="queue"> Queue</h3><div>
+</div><p>The queue will show you upcoming tasks as well as a history of recently ran tasks as well as how long those tasks took.</p><div>
+</div><h2 class="toc-header" id="backup"> Backup</h2><div>
+</div><blockquote class="is-info">
+<p>This section will be more tailored to the buttons and overall point of the page.<br>
+However, if you're looking for how to back/restore your Prowlarr instance <a class="is-internal-link is-valid-page" href="/prowlarr/faq">see our FAQ</a>.</p>
+</blockquote><div>
+</div><p>Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).</p><div>
+</div><p>Here you will have two options at the top of the screen</p><div>
+</div><ul>
+<li>Backup Now - This option will trigger a manual backup of your Prowlarr's database</li>
+<li>Restore Backup - This will open a new screen to restore from a previous backup<br>
+By selecting Choose File this will prompt your browser to open a dialog box to restore from a Prowlarr Zip backup</li>
+</ul><div>
+</div><p>Finally if you have any previous backups and would like to download them from Prowlarr to be placed in a non standard location you simply can select one of these files to download them<br>
+Off to the right of each of the previous download you have two options.</p><div>
+</div><ul>
+<li>One - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup</li>
+<li>Two - To delete a previous backup</li>
+</ul><div>
+</div><h2 class="toc-header" id="updates"> Updates</h2><div>
+</div><p>The update screen will show the past 5 updates that have been made as well as the current version you are on.<br>
+This page will also display the update notes from the Developers telling you what has been fixed or added to Prowlarr (Rejoice!)</p><div>
+</div><blockquote class="is-info">
+<p>A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.</p>
+</blockquote><div>
+</div><h2 class="toc-header" id="events"> Events</h2><div>
+</div><p>The events tab will show you what has been happening within your Prowlarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging. Events are the equivalent of INFO Logs.</p><div>
+</div><ul>
+<li>Components - This column will tell you what component within Prowlarr has been triggered</li>
+<li>Message - This column will tell you what message as been sent from the component from the previous column.</li>
+<li>Gear Icon - This option will allow you to change how many Components/Messages are displayed per page (Default is 50)</li>
+<li>Options at the top of the page
+<ul>
+<li>Refresh - This option will refresh the current page, pulling a new events log</li>
+<li>Clear - This will clear the current events log allowing you to start from fresh</li>
+</ul>
+</li>
+</ul><div>
+</div><h2 class="toc-header" id="log-files"> Log Files</h2><div>
+</div><p>This page will allow you to download and see what current log files are available for Prowlarr</p><div>
+</div><p>On the top row there are several options to allow you to control your log files.</p><div>
+</div><ul>
+<li>The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
+<ul>
+<li>Log Files - The bread and butter of any support issue more on log files can be found here.</li>
+<li>Updater Log Files - This will show the log files associated with Prowlarr's updater script</li>
+</ul>
+</li>
+</ul><div>
+</div><blockquote class="is-info">
+<p>If you're on docker this will be empty as you should be updating by downloading a new docker image</p>
+</blockquote><div>
+</div><ul>
+<li>Refresh - This will refresh the current page and display any newly created logs</li>
+<li>Delete - This will clear all logs allowing you to start from fresh</li>
+<li>File Name - This will display the file name associated with the log</li>
+<li>Last Written - This is the local time that this particular log file was written to.
+<ul>
+<li>Prowlarr uses rolling log files limited to 1MB each. The current log file is always prowlarr.txt, for the the other files prowlarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains <code>fatal</code>, <code>error</code>, <code>warn</code>, and <code>info</code> entries.</li>
+<li>When Debug log level is enabled, additional prowlarr.debug.txt rolling log files will be present, up to 51 files. This log files contains <code>fatal</code>, <code>error</code>, <code>warn</code>, <code>info</code>, and <code>debug</code> entries. It usually covers a ~40h period.</li>
+<li>When Trace log level is enabled, additional prowlarr.trace.txt rolling log files will be present, up to 51 files. This log files contains <code>fatal</code>, <code>error</code>, <code>warn</code>, <code>info</code>, <code>debug</code>, and <code>trace</code> entries. Due to trace verbosity it only covers a couple of hours at most.</li>
+</ul>
+</li>
+</ul><div>
+</div>
