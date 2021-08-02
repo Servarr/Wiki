@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-07-29T13:11:32.046Z
+date: 2021-08-02T17:23:12.303Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -149,6 +149,9 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDB proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
 - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
 - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
+
+>It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
+{.is-warning}
 
 ## Why is there a number next to Activity?
 
