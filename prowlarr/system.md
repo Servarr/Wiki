@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-08-02T23:39:44.389Z
+date: 2021-08-02T23:40:26.550Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-06-05T20:47:01.086Z
@@ -22,7 +22,7 @@ The branch you have set is not a valid release branch. You will not receive upda
 
 ##### Currently installed SQLite version is not supported
 
-Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses libSQLite3.so which may or may not be contained in a SQLite3 upgrade package.
+Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 ##### New update is available
 
