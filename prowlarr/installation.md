@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-07-31T14:59:57.335Z
+date: 2021-08-03T21:08:36.885Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -50,7 +50,7 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 
 ## Linux
 
-## Debian/Ubuntu
+### Debian/Ubuntu
   
 You'll need to install the binaries using the below commands.
 > This will download the `x64` copy of prowlarr and install it into `/opt`
@@ -130,7 +130,9 @@ sudo systemctl enable --now -q prowlarr
 ```
 
 ## Docker
-  
+
+### Install Prowlarr
+
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
