@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-07-31T15:00:10.133Z
+date: 2021-08-03T21:08:38.191Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -34,7 +34,9 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 > It is possible to install Lidarr manually using the [x64 .zip download](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
-## OSX
+## MacOS (OSX)
+
+{#OSX}
 
 > Lidarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
 {.is-warning}
@@ -44,6 +46,8 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 1. Browse to <http://localhost:8686> to start using Lidarr
 
 ## Linux
+
+### Debian/Ubuntu
 
 You'll need to install the binaries using the below commands.
 
@@ -129,7 +133,7 @@ The Lidarr team does not offer an official Docker image. However, a number of th
 
 These instructions provide generic guidance that should apply to any Lidarr Docker image.
 
-### 1. Avoid Common Pitfalls
+### Avoid Common Pitfalls
 
 #### Volumes and Paths
 
