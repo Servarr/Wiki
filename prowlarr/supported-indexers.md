@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-07-31T16:26:55.473Z
+date: 2021-08-03T21:23:11.354Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-07-31T16:26:55.473Z
 ---
 
-- Supported Indexers as of Build `0.1.0.738` / [Commit: 5c4045e772b0e05c2e270f08d60c43428a4e54f4](https://github.com/Prowlarr/Prowlarr/commit/5c4045e772b0e05c2e270f08d60c43428a4e54f4)
+- Supported Indexers as of Build `0.1.0.749` / [Commit: 50cae0719f9c03fb1b06913a1eb9270db644b40b](https://github.com/Prowlarr/Prowlarr/commit/50cae0719f9c03fb1b06913a1eb9270db644b40b)
 
 ## Torrents
 
@@ -195,7 +195,6 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[zetorrents](https://wvw.zetorrents.org/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-fr|
 |[Zooqle](https://zooqle.com/){#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-us|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
-
 
 ### Private
 
@@ -522,7 +521,6 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[Zamunda.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[Zelka.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-es|
-
 
 ## Usenet
 
