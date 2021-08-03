@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-02T10:30:04.778Z
+date: 2021-08-03T21:15:01.890Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -175,9 +175,10 @@ Sample config examples for configuring Radarr to be accessible through a reverse
 ```none
 location /radarr {
   proxy_pass        http://127.0.0.1:7878/radarr;
-  proxy_set_header Host $proxy_host;
+  proxy_set_header Host $host;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Host $host;
+  proxy_set_header X-Forwarded-Proto https;
   proxy_redirect off;
 
   proxy_http_version 1.1;
