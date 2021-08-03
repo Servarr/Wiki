@@ -2,12 +2,11 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2021-06-23T07:11:09.114Z
+date: 2021-08-03T21:09:31.666Z
 tags: sonarr
 editor: markdown
-dateCreated: 2021-06-11T23:29:52.753Z
+dateCreated: 2021-07-10T16:07:37.425Z
 ---
-
 
 ## Windows
 
@@ -33,7 +32,9 @@ dateCreated: 2021-06-11T23:29:52.753Z
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-gentoo)
 
-## macOS
+## MacOS (OSX)
+
+{#OSX}
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-macos)
 
