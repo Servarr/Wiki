@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-03T21:08:38.191Z
+date: 2021-08-03T21:15:06.242Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -175,9 +175,10 @@ Sample config examples for configuring Lidarr to be accessible through a reverse
 ```none
 location /lidarr {
   proxy_pass        http://127.0.0.1:8686/lidarr;
-  proxy_set_header Host $proxy_host;
+  proxy_set_header Host $host;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Host $host;
+  proxy_set_header X-Forwarded-Proto https;
   proxy_redirect off;
 
   proxy_http_version 1.1;
