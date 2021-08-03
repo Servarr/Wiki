@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-07-31T15:00:27.373Z
+date: 2021-08-03T21:15:03.822Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -196,9 +196,10 @@ Sample config examples for configuring Readarr to be accessible through a revers
 ```none
 location /readarr {
   proxy_pass        http://127.0.0.1:8787/readarr;
-  proxy_set_header Host $proxy_host;
+  proxy_set_header Host $host;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Host $host;
+  proxy_set_header X-Forwarded-Proto https;
   proxy_redirect off;
 
   proxy_http_version 1.1;
