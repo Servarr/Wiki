@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-07-12T16:30:23.810Z
+date: 2021-08-04T02:30:23.296Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -26,7 +26,9 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - rtorrent{#rtorrent}
 - sabnzbd{#sabnzbd}
 - transmission{#transmission}
+- torrentblackhole{#torrentblackhole}
 - utorrent{#utorrent}
+- usenetblackhole{#usenetblackhole}
 - vuze{#vuze}
 
 ## Notifications
