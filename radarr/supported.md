@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-07-26T15:53:58.716Z
+date: 2021-08-04T02:07:13.076Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -30,6 +30,21 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - usenetblackhole{#usenetblackhole}
 - utorrent{#utorrent}
 - vuze{#vuze}
+
+## Indexers
+
+- filelist{#filelist}
+- hdbits{#hdbits}
+- iptorrents{#iptorrents}
+- newznab{#newznab}
+- nyaa{#nyaa}
+- omgwtfnzbs{#omgwtfnzbs}
+- passthepopcorn{#passthepopcorn}
+- rarbg{#rarbg}
+- torrentrssindexer{#torrentrssindexer}
+- torrentpotato{#torrentpotato}
+- torznab{#torznab}
+
 
 ## Notifications
 
