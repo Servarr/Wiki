@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-08-04T02:27:17.532Z
+date: 2021-08-04T02:28:44.436Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -34,17 +34,29 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 ## Indexers
 
 - filelist{#filelist}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - gazelle{#gazelle}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - headphones{#headphones}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - iptorrents{#iptorrents}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - newznab{#newznab}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - nyaa{#nyaa}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - omgwtfnzbs{#omgwtfnzbs}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - rarbg{#rarbg}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - redacted{#redacted}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - torrentrssindexer{#torrentrssindexer}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - torrentleech{#torrentleech}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - torznab{#torznab}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 
 ## Notifications
 
