@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-02T17:23:12.303Z
+date: 2021-08-04T22:38:16.076Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -403,6 +403,8 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 ## Help I have locked myself out
 
+{#help-i-have-forgotten-my-password}
+
 To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
 1. Open config.xml in a text editor
@@ -411,10 +413,6 @@ To disable authentication (to reset your username or password) you will need nee
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
 1. Restart Sonarr
 1. Sonarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
-
-## Help I have forgotten my password
-
-- Please see steps listed above.
 
 ## Jackett shows more results than Sonarr when manually searching
 
