@@ -2,8 +2,8 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-07-05T18:27:27.517Z
-tags: lidarr, faq, needs-love
+date: 2021-08-04T22:31:52.137Z
+tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
@@ -240,6 +240,19 @@ A common complaint is the Refresh task causes heavy I/O usage.  One setting that
     - **Solutions**
       - Change your paths to UNC paths (`\\server\share`)
       - Run Lidarr.exe via the Startup Folder
+
+## Help I have locked myself out
+
+{#help-i-have-forgotten-my-password}
+
+To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Lidarr Appdata Directory](/lidarr/appdata-directory)
+
+1. Open config.xml in a text editor
+1. Find the authentication method line will be
+`<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+1. Restart Lidarr
+1. Lidarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
 ## VPNs, Jackett, and the * ARRs
 
