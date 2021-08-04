@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-04T02:07:13.076Z
+date: 2021-08-04T02:11:24.078Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -33,17 +33,29 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Indexers
 
-- filelist{#filelist}
+- filelist{#filelist} 
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - hdbits{#hdbits}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - iptorrents{#iptorrents}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - newznab{#newznab}
+  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - nyaa{#nyaa}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - omgwtfnzbs{#omgwtfnzbs}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - passthepopcorn{#passthepopcorn}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - rarbg{#rarbg}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - torrentrssindexer{#torrentrssindexer}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - torrentpotato{#torrentpotato}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - torznab{#torznab}
+  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
 
 ## Notifications
