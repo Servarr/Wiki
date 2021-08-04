@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-08-04T22:31:52.137Z
+date: 2021-08-04T22:43:27.955Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -40,17 +40,19 @@ As of 2021-06-09 the logic is as follows:
 
 ## Why can I not add a new release or artist to Lidarr?
 
+- The release is likely `unknown` type on MusicBrainz
+
 ## Why can I not add a various artists album?
 
 - Various Artists and other meta artists on Musicbrainz are due to the number of entries they provide.
 
 ## Why does Lidarr only show studio albums, How do I find singles or EPs?
 
-Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist, or for your entire library by utilizing Metadata Profiles.
+- Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist, or for your entire library by utilizing Metadata Profiles.
 
 ## Can I add just an album?
 
- Not at the moment.
+ - Not at the moment.
 
 ## Can I download single tracks?
 
@@ -64,9 +66,6 @@ Lidarr defaults to only bringing in studio albums for each artist. However, you 
 
 - Open the Album details page and select the Edit Icon in the top nav. There you can find a dropdown of all releases tied to that Album.
 
-## I'm having trouble importing my artists, what could it be?
-
-- The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
 
 ## I cannot find a release in Lidarr but it is on MusicBrainz
 
@@ -168,16 +167,28 @@ If Docker:
 - Failure to follow these instructions may result in your Lidarr becoming unusable or throwing errors. You have been warned.
 - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
-## Help, Book Added, But Not Searched
 
-- Neither Lidarr *actively* search for missing releases automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet release shows up in that list, it gets downloaded. This means that until a release is posted (or reposted), it won’t get downloaded.
-- If you’re adding an artist with releases that you want now, the best option is to check the “Start search for missing releases” box, to the left of the *Add Author* button. You can also go to the page for an artist you’ve added and click the magnifying glass *Search* button next to the release you want, or use the Wanted view to search for Missing or Cutoff Unmet releases.
+## I am getting an error: Database disk image is malformed
 
-## Book Imported, But Source File And Torrent Not Deleted
+- This means your SQLite database that stores most of the information for is corrupt.
 
-- Check if you have Completed Download Handling - Remove turned on. (This does not work if you are using rtorrent.)
+- [Try restoring from a backup](#how-do-i-backup-and-restore-lidarr)
+- You can follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/SQLiteexception-database-disk-image-is.html>
 
-- If you are using deluge make sure auto-managed is turned on. And that torrents get paused when they reach specified seeding quota.
+- This error may show if the database file is not writable by the user/group Radarr is running as.
+
+- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
+
+  - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
+
+## I use Lidarr on a Mac and it suddenly stopped working. What happened?
+
+- Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
+
+- See the above database is malformed entry.
+
+- Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/lidarr](http://reddit.com/r/lidarr) or hop on [our discord](https://lidarr.audio/discord) for help.
 
 ## I am using a Pi and Raspbian and Lidarr will not launch
 
