@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-07-28T01:08:53.764Z
+date: 2021-08-04T22:38:14.034Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -435,6 +435,8 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 ## Help I have locked myself out
 
+{#help-i-have-forgotten-my-password}
+
 To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
 1. Open config.xml in a text editor
@@ -444,13 +446,10 @@ To disable authentication (to reset your username or password) you will need nee
 1. Restart Radarr
 1. Radarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-## Help I have forgotten my password
-
-\* Please see steps listed above.
 
 ## Jackett shows more results than when manually searching
   
-This is usually due to searching Jackett differently than you do. See our [troubleshooting](/radarr/troubleshooting)Troubleshooting Article for more information.
+- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
 
 ## Weird UI Issues
 
@@ -492,7 +491,7 @@ This is usually due to searching Jackett differently than you do. See our [troub
 
 ## Does Radarr require a SABnzbd post-processing script to import downloaded episodes?
 
-No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so knows where to find the files.
+- No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so knows where to find the files.
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
