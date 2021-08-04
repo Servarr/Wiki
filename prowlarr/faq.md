@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-06-23T03:06:25.451Z
+date: 2021-08-04T22:39:40.771Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -231,6 +231,19 @@ Your download client stopped working and you're getting an error like `Localhost
 Prowlarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Prowlarr will refuse to connect. Free properly signed certificates are available from let's encrypt.
 
 If your download client and Prowlarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
+
+## Help I have locked myself out
+
+{#help-i-have-forgotten-my-password}
+
+To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
+
+1. Open config.xml in a text editor
+1. Find the authentication method line will be
+`<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+1. Restart Prowlarr
+1. Prowlarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
 ## VPNs, Prowlarr, and the * ARRs
 
