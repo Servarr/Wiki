@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-07-04T06:33:40.186Z
+date: 2021-08-04T22:32:16.620Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -197,17 +197,30 @@ This change was due to not have our server get killed by people updating lists e
 
 ## Can I disable the refresh books task
 
-No, nor should you through any SQL hackery.  The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
+- No, nor should you through any SQL hackery.  The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
 
-A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr.  If you delete book files manually or a third party program, do not set this to `Never`.
+- A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr.  If you delete book files manually or a third party program, do not set this to `Never`.
 
 ## Can I have BOTH an ebook and an audiobook version of the same book?
 
-No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4K versions of their media).
+- No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4K versions of their media).
 
 ## Do I need to use Calibre?
 
-No. In general Calibre offers some further enhancement, such as the ability to auto-convert ebooks to another format specific to your e-reader's capabilities, and also to connect to that e-reader. But if you weren't running Calibre prior to installing Readarr, then it's probably going to be of limited added benefit to you to install it, and it's a very large program.
+- No. In general Calibre offers some further enhancement, such as the ability to auto-convert ebooks to another format specific to your e-reader's capabilities, and also to connect to that e-reader. But if you weren't running Calibre prior to installing Readarr, then it's probably going to be of limited added benefit to you to install it, and it's a very large program.
+
+## Help I have locked myself out
+
+{#help-i-have-forgotten-my-password}
+
+To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Readarr Appdata Directory](/readarr/appdata-directory)
+
+1. Open config.xml in a text editor
+1. Find the authentication method line will be
+`<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+1. Restart Readarr
+1. Readarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
 ## VPNs, Jackett, and the * ARRs
 
