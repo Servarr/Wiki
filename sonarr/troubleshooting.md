@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-07-20T20:52:11.520Z
+date: 2021-08-05T17:48:03.571Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -250,6 +250,10 @@ When you test an indexer or tracker, in debug or trace logs you can find the URL
 ### Testing a Search
 
 ### Common Problems
+
+#### Series needs an alias
+
+Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences.  Please see [this FAQ entry](https://wiki.servarr.com/sonarr/faq#why-cannot-sonarr-import-episode-files-for-series-x-why-cannot-sonarr-find-releases-for-series-x)
 
 #### Media is Unmonitored
 
