@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: 
 published: true
-date: 2021-06-23T03:05:34.515Z
+date: 2021-08-05T23:23:21.924Z
 tags: lidarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
@@ -33,6 +33,11 @@ Unless otherwise specified Lidarr will store it's application data in the home f
 `/share/MD0_DATA/homes/admin/.config/Lidarr`
 
 `/share/CACHEDEV1_DATA/Lidarr_CONFIG`
+
+## Docker
+
+`/config`
+- This will very based on where the user maps `/config` to on their host system
 
 ## Argument
 
