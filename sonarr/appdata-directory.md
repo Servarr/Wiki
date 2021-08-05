@@ -2,7 +2,7 @@
 title: Sonarr Appdata Directory
 description: 
 published: true
-date: 2021-06-23T03:08:52.067Z
+date: 2021-08-05T23:24:52.943Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:53:57.860Z
@@ -34,6 +34,11 @@ Unless otherwise specified Sonarr will store it's application data in the home f
 `/share/MD0_DATA/homes/admin/.config/Sonarr`
 
 `/share/CACHEDEV1_DATA/Sonarr_CONFIG`
+
+## Docker
+
+`/config`
+- This will very based on where the user maps `/config` to on their host system
 
 ## Argument
 
