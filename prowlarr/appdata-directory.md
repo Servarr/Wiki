@@ -2,7 +2,7 @@
 title: Prowlarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:23:20.672Z
+date: 2021-08-05T23:25:26.880Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T01:06:44.136Z
@@ -37,7 +37,7 @@ Unless otherwise specified Prowlarr will store it's application data in the home
 ## Docker
 
 `/config`
-- This will very based on where the user maps `/config` to on their host system
+- This will vary based on where the user maps `/config` to on their host system
 
 ## Argument
 
