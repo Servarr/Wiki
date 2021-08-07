@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-03T21:15:06.242Z
+date: 2021-08-07T21:20:11.028Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -88,7 +88,7 @@ sudo mv Lidarr/ /opt
 - Ensure ownership of the binary directory.
 
 ```shell
-sudo chown lidarr:media /opt/Lidarr
+sudo chown lidarr:lidarr /opt/Lidarr
 ```
 
 - Configure systemd so Lidarr can autostart at boot.
