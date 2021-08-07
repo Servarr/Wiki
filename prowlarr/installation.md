@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-03T21:15:07.351Z
+date: 2021-08-07T21:18:53.037Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -86,11 +86,11 @@ sudo mv Prowlarr/ /opt
 
 - Ensure ownership of the binary directory.
 
-> This assumes you have created the user and will run as the user `prowlarr` and group `media`. You may change this to fit your usecase.
+> This assumes you have created the user and will run as the user `prowlarr` and group `prowlarr`. You may change this to fit your usecase.
 {.is-warning}
 
 ```shell
-sudo chown prowlarr:media /opt/Prowlarr
+sudo chown prowlarr:prowlarr /opt/Prowlarr
 ```
 
 - Configure systemd so Prowlarr can autostart at boot.
