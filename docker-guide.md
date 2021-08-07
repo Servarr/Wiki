@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-06-23T03:04:53.970Z
+date: 2021-08-07T03:50:27.000Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -35,7 +35,7 @@ Many Docker images also take a `-e PUID=123` and `-e PGID=321` that lets you cha
 
 #### Example
 
-You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configure the user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. Folders would be `775`, files `664` and the user/group are a little tricky because *inside* the container, they have a different name. Maybe `abc` or `nobody`. I’d leave all these blank unless you find you need them for some reason.
+You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configure the user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. An UMASK of `002` results in `775` (`drwxrwxr-x`) for folders and `664` (`-rw-rw-r--`) for files. and the user/group are a little tricky because *inside* the container, they have a different name. Typically they are `abc` or `nobody`.
 
 ### Single user and optional shared group
 
@@ -52,31 +52,34 @@ Don’t forget that your `/config` volume will *also* need to have correct owner
 
 The easiest and most important detail is to create unified path definitions across all the containers.
 
-If you’re wondering why hardlinks aren’t working or why a simple move is taking far longer than it should, this section explains it. The paths you use on the *inside* matter. Because of how Docker’s volumes work, passing in two volumes such as the commonly suggested `/tv` and `/downloads` makes them look like two different file systems, even if they are a single file system outside the container. This means hardlinks won’t work *and* instead of an instant/atomic move, a slower and more IO intensive copy+delete is used. If you have multiple download clients because you’re using torrents and usenet, having a single `/downloads` path means they’ll be mixed up. Because the Radarr in one container will ask the NZBGet in its own container where files are, using the same path in both means it will all just work. If you don’t, you’d need to fix it with a remote path map.
+If you’re wondering why hardlinks aren’t working or why a simple move is taking far longer than it should, this section explains it. The paths you use on the *inside* matter. Because of how Docker’s volumes work, passing in two volumes such as the commonly suggested `/tv`, `/movies`, and `/downloads` makes them look like two different file systems, even if they are a single file system outside the container. This means hardlinks won’t work *and* instead of an instant/atomic move, a slower and more IO intensive copy+delete is used. If you have multiple download clients because you’re using torrents and usenet, having a single `/downloads` path means they’ll be mixed up. Because the Radarr in one container will ask the NZBGet in its own container where files are, using the same path in both means it will all just work. If you don’t, you’d need to fix it with a remote path map.
 
-So pick *one* path layout and use it for all of them. I’m a fan of `/data`, but there are other great names like `/shared`, `/media` or `/dvr`. If this can be the same on the outside *and* inside, your setup will be simpler: one path to remember or if integrating Docker and native software. But if not, that’s fine too. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
+So pick *one* path layout and use it for all of them. It's suggested to use `/data`, but there are other  common names like `/shared`, `/media` or `/dvr`. Keeping this the same on the outside *and* inside will make your setup simpler: one path to remember or if integrating Docker and native software. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
 
-It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr and/or Plex.
+It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match and likely updare existing torrents.. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr, Plex, etc.
 
 #### Examples
 
-What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
+What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|books|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
 
-This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies` and `music` subfolders. This `media` folder is your library and what you’d pass to Plex, Kodi, Emby or Jellyfin.
+This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies`, `books`, and `music` subfolders. This `media` folder is your library and what you’d pass to Plex, Kodi, Emby, Jellyfin, etc.
 
 ```none
     data
     ├── torrents
     │  ├── movies
     │  ├── music
+    |  ├── books
     │  └── tv
     ├── usenet
     │  ├── movies
     │  ├── music
+    │  ├── books
     │  └── tv
     └── media
         ├── movies
         ├── music
+        ├── books
         └── tv
 ```
 
@@ -89,10 +92,11 @@ The path for each Docker container can be as specific as needed while still main
     └── torrents
         ├── movies
         ├── music
+        ├── books
         └── tv
 ```
 
-Torrents only needs access to torrent files, so pass it `-v /host/data/torrents:/data/torrents`. In the torrent software settings, you’ll need to reconfigure paths and you can sort into subfolders like`/data/torrents/{tv|movies|music}`.
+Torrents only needs access to torrent files, so pass it `-v /host/data/torrents:/data/torrents`. In the torrent software settings, you’ll need to reconfigure paths and you can sort into subfolders like`/data/torrents/{tv|books|movies|music}`.
 
 ##### Usenet
 
@@ -146,7 +150,7 @@ The biggest is that volumes defined in the `dockerfile` will get created if they
 
 Another problem is that some images are pre-configured to use the documented volumes, so you’ll need to change settings in the software inside the Docker container. Thankfully, since configuration persists outside the container this is a one time issue. You might also pick a path like `/data` or `/media` which some images already define for a specific use. It shouldn’t be a problem, but will be a little more confusing when combined with the previous issues. In the end, it is worth it for working hard links and fast moves. The consistency and simplicity are welcome side effects as well.
 
-If you use the latest version of the abandoned [RadarrSync](https://github.com/Sperryfreak01/RadarrSync) to synchronize two Radarr instances, it *depends* on mapping the *same* path inside to a different path on the outside, for example `/movies` for one instance would point at `/data/media/Movies` and the other at `/data/media/Movies 4k`. This breaks *everything* you’ve read above. There is no good solution, you either use the old version which isn’t as good, do your mapping in a way that is ugly and breaks hard links or just don’t use it at all.
+If you use the latest version of the abandoned [RadarrSync](https://github.com/Sperryfreak01/RadarrSync) to synchronize two Radarr instances, it *depends* on mapping the *same* path inside to a different path on the outside, for example `/movies` for one instance would point at `/data/media/movies` and the other at `/data/media/movies4k`. This breaks *everything* you’ve read above. There is no good solution, you either use the old version which isn’t as good, do your mapping in a way that is ugly and breaks hard links or just don’t use it at all.
 
 ### Running containers using
 
@@ -251,7 +255,7 @@ This is the best option for most users, it lets you control and configure many c
 
 #### Systemd
 
-I don’t run a full Docker setup, so I manage my few Docker containers with individual systemd service files. It standardizes control and makes dependencies simpler for both native and Docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
+For maintaining a few Docker containsrs just using systemd is an option. It standardizes control and makes dependencies simpler for both native and Docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
 
 ```shell
     ## /etc/systemd/system/thing.service
@@ -296,7 +300,8 @@ For more information, see the [docker exec](https://docs.docker.com/engine/refer
     docker system prune --all --volumes
 ```
 
-Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [Docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
+> Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [Docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
+{.is-warning}
 
 #### Get docker run command
 
@@ -314,7 +319,7 @@ Getting the `docker run` command from GUI managers can be hard, this Docker imag
 Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
 
 ```shell
-    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock red5d/docker-autocompose CONTAINER_NAME [ANOTHER_CONTAINER_NAME] ... [ONE_MORE_CONTAINER_NAME]
+    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock red5d/docker-autocompose $CONTAINER_NAME $ANOTHER_CONTAINER_NAME ... $ONE_MORE_CONTAINER_NAME
 ```
 
 #### Troubleshoot networking
