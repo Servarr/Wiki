@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-03T21:15:01.890Z
+date: 2021-08-07T21:19:56.093Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -88,7 +88,7 @@ sudo mv Radarr/ /opt
 - Ensure ownership of the binary directory.
 
 ```shell  
-sudo chown radarr:media /opt/Radarr
+sudo chown radarr:radarr /opt/Radarr
 ```
 
 - Configure systemd so radarr can autostart at boot.
