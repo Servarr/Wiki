@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-08T09:02:12.968Z
+date: 2021-08-08T09:02:36.878Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -199,8 +199,8 @@ As a sub directory such as mydomain.com/prowlarr
 Or for making an entire VirtualHost for Prowlarr:
 
 ```
-ProxyPass / http://127.0.0.1:9696/prowlarr
-ProxyPassReverse / http://127.0.0.1:9696/prowlarr
+ProxyPass / http://127.0.0.1:9696/prowlarr/
+ProxyPassReverse / http://127.0.0.1:9696/prowlarr/
 ```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
