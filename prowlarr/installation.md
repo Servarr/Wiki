@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-07T21:18:53.037Z
+date: 2021-08-08T08:58:43.799Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -31,7 +31,7 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 - [Windows x32 Installer](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
 {.links-list}
 
-> It is possible to install Radarr manually using the [x64 .zip download](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+> It is possible to install Prowlarr manually using the [x64 .zip download](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
 > If you happen to use [Cerify The Web](https://docs.certifytheweb.com/docs/backgroundservice/) for LetsEncrypt certificate management for IIS and are installing Prowlarr on the same machine, port `9696` is used by the background service. You will need to either change the listening port of Prowlarr in your `config.xml` to something else or change the port of the Certify The Web background service.
