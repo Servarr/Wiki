@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-08T08:58:43.799Z
+date: 2021-08-08T09:02:12.968Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -185,15 +185,22 @@ location /prowlarr {
 
 ### Apache
 
-This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `prowlarr` from the `Location` block and simply use `/` as the location.
+This should be added within an existing VirtualHost site.
 
-Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
+As a sub directory such as mydomain.com/prowlarr
 
 ```none
 <Location /prowlarr>
-  ProxyPass http://127.0.0.1:9696/prowlarr connectiontimeout=5 timeout=300
+    ProxyPass http://127.0.0.1:9696/prowlarr connectiontimeout=5 timeout=300
     ProxyPassReverse http://127.0.0.1:9696/prowlarr
 </Location>
+```
+
+Or for making an entire VirtualHost for Prowlarr:
+
+```
+ProxyPass / http://127.0.0.1:9696/prowlarr
+ProxyPassReverse / http://127.0.0.1:9696/prowlarr
 ```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
