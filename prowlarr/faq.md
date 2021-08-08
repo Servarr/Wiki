@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-08-04T22:39:40.771Z
+date: 2021-08-08T19:27:52.484Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -198,10 +198,17 @@ If you can only reach your web interface at `http://localhost:9696/` or `http://
 
 Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. This page describes how you do that.
 
-Chrome
+**Chrome**
 
-![faq_2_cookies.png](/assets/general/faq_2_cookies.png)
+* Go to the torrent tracker website and log in.
 
+* Hit F12
+
+* Under the Application tab at the top, there will be "Storage" on the left side. You will see a "Cookies" subsection, and under that you will see IPT's url. Click on that.
+
+* Click on "Pass" on that screen, and it will pop up a box that says "Cookie Value" with a string about 25-30 chars long. Copy that, and paste it into Prowlarr.
+
+![cookie_chrome.png](/assets/prowlarr/cookie_chrome.png)
 Firefox
 
 ![faq_3_cookies.png](/assets/general/faq_3_cookies.png)
