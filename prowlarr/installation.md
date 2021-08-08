@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-08T09:03:36.499Z
+date: 2021-08-08T09:04:26.007Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -151,7 +151,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 Sample config examples for configuring Prowlarr to be accessible through a reverse proxy.
 
-> These examples assumes the default port of `9696` and that you set a baseurl of `prowlarr`. It also assumes your web server i.e nginx and Prowlarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
+> These examples assumes the default port of `9696` and that you set a baseurl of `prowlarr`. It also assumes your web server i.e nginx and Prowlarr running on the same server accessible at `localhost`. If not, use the host IP address or a FQDN instead.
 {.is-info}
 
 ### NGINX
