@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-07T21:19:19.884Z
+date: 2021-08-10T17:16:08.013Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -97,7 +97,7 @@ sudo mv Readarr/ /opt
 - Ensure ownership of the binary directory.
 
 ```shell
-sudo chown readarr:readarr /opt/Readarr
+sudo chown -R readarr:readarr /opt/Readarr
 ```
 
 - Configure systemd so readarr can autostart at boot.
