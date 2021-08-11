@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-08-11T19:35:34.206Z
+date: 2021-08-11T19:37:09.992Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -105,7 +105,7 @@ OnHealthIssue
 
 ### Updates
 
-- Branch - This is the branch of Lidarr that you are running on.
+- (Advanced Option) Branch - This is the branch of Lidarr that you are running on.
   - [Please see this FAQ entry for more information](/lidarr/faq#how-do-i-update-lidarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Lidarr built-in updater or a script
