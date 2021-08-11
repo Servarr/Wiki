@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-08-01T15:14:27.275Z
+date: 2021-08-11T19:38:39.213Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -210,21 +210,17 @@ Check the box to help the Prowlarr development team gather statistics on install
 
 ![general_updates.png](/assets/prowlarr/general_updates.png)
 
-Select the development branch you would like to use here. (Advanced Option) Valid options are `master`, `develop`, and `nightly` and possibly other temporary testing branches as the developer group determines.
-
-- <span style="color:#00ff00">master</span> (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
-  
-- <span style="color:#00ff00">develop</span> (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
-
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a point in time.
-{.is-warning}
-
-- <span style="color:#00ff00">nightly</span> (Nightly): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
-  
-> **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-warning}
-
-- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
+- Branch - This is the branch of Prowlarr that you are running on.
+  - [Please see this FAQ entry for more information](/prowlarr/faq#how-do-i-update-prowlarr)
+- Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
+- Mechanism - Use Prowlarr built-in updater or a script
+  - Built-in - Use Prowlarr's own updater
+  - Script - Have Prowlarr run the update script
+  - Docker - Do not update Prowlarr from inside the Docker, instead pull a brand new image with the new update
+- Script - Visible only when Mechanism is set to Script - Path to update script
+- Update Process - Prowlarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Prowlarr is run under, it will need permissions to update the Prowlarr files as well as stop/start Prowlarr.
+- Built-in - The built-in method will backup Prowlarr files and settings, stop Prowlarr, update the installation and Start Prowlarr, if your system will not handle the stopping of Prowlarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Prowlarr will be restarted.
+- Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
 ### Backups
 
