@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-07-12T19:33:37.872Z
+date: 2021-08-11T19:37:04.962Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -779,7 +779,7 @@ Tags can be useful to limit certain aspects of Sonarr to a specific series
 
 ### Updates
 
-- Branch - This is the branch of Sonarr that you are running on.
+- (Advanced Option) Branch - This is the branch of Sonarr that you are running on.
   - [Please see this FAQ entry for more information](/sonarr/faq#how-do-i-update-sonarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Sonarr built-in updater or a script
