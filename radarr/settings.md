@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-06-29T13:32:21.381Z
+date: 2021-08-11T19:34:03.132Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -152,7 +152,7 @@ Here you will set the naming convention for the folder that contains the season 
 - `Skip Free Space Check` - Use when Radarr is unable to detect free space from your series root folder
 - `Minimum Free Space` - Toggling this will prevent import if it would leave less than this amount of disk space available
 - `Use Hard links instead of Copy` - Use Hard links when trying to copy files from torrents that are still being seeded
-  - For more information on this click [here](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/)
+  - For more information on this click [here](https://trash-guides.info/hardlinks)
 
  > Occasionally, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.{.is-warning}
 
@@ -733,10 +733,8 @@ Tags can be useful to limit certain aspects of Radarr to a specific series
 
 ### Updates
 
-- Branch - This is the branch of Radarr that you are running on. Please see Github for available branches and version information. These branches only apply to V3.
-  - `main` (Stable): This has been tested by users on nightly branch and it's not known to have any major issues. This branch should be used by the majority of users.
-  - `develop` (Nightly) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
-  - `phantom-develop` (v3-preview): This is EOL and the built-in updater will automatically update to main.
+- Branch - This is the branch of Radarr that you are running on.
+  - [Please see this FAQ entry for more information](/radarr/faq#how-do-i-update-radarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Radarr built-in updater or a script
   - Built-in - Use Radarr's own updater
