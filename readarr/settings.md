@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-07-02T00:12:44.243Z
+date: 2021-08-11T19:38:42.082Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -454,11 +454,19 @@ Check this box so that the Readarr development team can make decisions about wha
 
 ![genupdates.png](/assets/readarr/genupdates.png)
 
-(Advanced Option) This is the branch of the software you're running. In general, there are usually 3 branches:
+### Updates
 
-- Main: This is very stable and not updated very often.
-- Develop: This is pretty stable, and updated every couple of weeks on average.
-- Nightly: This is bleeding edge. It could break your install, and is updated sometimes a couple of times per day.
+- (Advanced Option) Branch - This is the branch of Readarr that you are running on.
+  - [Please see this FAQ entry for more information](/readarr/faq#how-do-i-update-readarr)
+- Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
+- Mechanism - Use Readarr built-in updater or a script
+  - Built-in - Use Readarr's own updater
+  - Script - Have Readarr run the update script
+  - Docker - Do not update Readarr from inside the Docker, instead pull a brand new image with the new update
+- Script - Visible only when Mechanism is set to Script - Path to update script
+- Update Process - Readarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Readarr is run under, it will need permissions to update the Readarr files as well as stop/start Readarr.
+- Built-in - The built-in method will backup Readarr files and settings, stop Readarr, update the installation and Start Readarr, if your system will not handle the stopping of Readarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Readarr will be restarted.
+- Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
 ### Backups
 
