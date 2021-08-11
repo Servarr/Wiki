@@ -2,7 +2,7 @@
 title: Sonarr Library
 description: 
 published: true
-date: 2021-07-11T07:40:09.327Z
+date: 2021-08-11T19:51:34.663Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
@@ -30,4 +30,4 @@ The mass editor allows you to edit series in mass.  Such as changing any of the 
 
 ## Season Pass
 
-Information about what the deal is with bulk monitoring editing is all about soon
+Information about how many seasons every series has and how many episodes in each season are missing.
