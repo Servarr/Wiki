@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-07-20T20:53:34.786Z
+date: 2021-08-11T22:11:32.210Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -100,7 +100,7 @@ You can clear log files and the logs database directly from the UI, under System
 
 #### Log Files
 
- uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
+Lidarr uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
 When Debug log level is enabled, additional `.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
