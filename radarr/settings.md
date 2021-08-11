@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-08-11T19:34:03.132Z
+date: 2021-08-11T19:36:47.515Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -733,14 +733,13 @@ Tags can be useful to limit certain aspects of Radarr to a specific series
 
 ### Updates
 
-- Branch - This is the branch of Radarr that you are running on.
+- (Advanced Option) Branch - This is the branch of Radarr that you are running on.
   - [Please see this FAQ entry for more information](/radarr/faq#how-do-i-update-radarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Radarr built-in updater or a script
   - Built-in - Use Radarr's own updater
   - Script - Have Radarr run the update script
   - Docker - Do not update Radarr from inside the Docker, instead pull a brand new image with the new update
-  - Apt - Set by the Debian/Ubuntu package when updating is managed exclusively via Apt
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Radarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Radarr is run under, it will need permissions to update the Radarr files as well as stop/start Radarr.
 - Built-in - The built-in method will backup Radarr files and settings, stop Radarr, update the installation and Start Radarr, if your system will not handle the stopping of Radarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Radarr will be restarted.
