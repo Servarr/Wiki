@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-08-03T21:05:52.988Z
+date: 2021-08-11T22:10:59.338Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -100,7 +100,7 @@ You can clear log files and the logs database directly from the UI, under System
 
 #### Log Files
 
- uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
+ Radar uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
 When Debug log level is enabled, additional `.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
