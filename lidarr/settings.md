@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-08-07T17:55:00.749Z
+date: 2021-08-11T19:35:34.206Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -98,3 +98,21 @@ OnHealthIssue
 * Lidarr_Health_Issue_Message => healthCheck.Message
 * Lidarr_Health_Issue_Type => healthCheck.Source.Name
 * Lidarr_Health_Issue_Wiki => healthCheck.WikiUrl.ToString() ?? string.Empty
+
+## General
+
+### Updates
+
+### Updates
+
+- Branch - This is the branch of Lidarr that you are running on.
+  - [Please see this FAQ entry for more information](/lidarr/faq#how-do-i-update-lidarr)
+- Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
+- Mechanism - Use Lidarr built-in updater or a script
+  - Built-in - Use Lidarr's own updater
+  - Script - Have Lidarr run the update script
+  - Docker - Do not update Lidarr from inside the Docker, instead pull a brand new image with the new update
+- Script - Visible only when Mechanism is set to Script - Path to update script
+- Update Process - Lidarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Lidarr is run under, it will need permissions to update the Lidarr files as well as stop/start Lidarr.
+- Built-in - The built-in method will backup Lidarr files and settings, stop Lidarr, update the installation and Start Lidarr, if your system will not handle the stopping of Lidarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Lidarr will be restarted.
+- Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
