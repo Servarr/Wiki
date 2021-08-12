@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-08-12T02:42:50.871Z
+date: 2021-08-12T02:43:39.728Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -20,7 +20,7 @@ But before you go there and post, be sure your request for help is the best it c
 
 The more we know, the easier it is to help you.
 
-### Logging and Log Files
+## Logging and Log Files
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
@@ -137,7 +137,7 @@ Grab the latest release from <https://lidarr.audio>
 
 Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run as you normally would.
 
-### Downloads and Importing
+## Downloads and Importing
 
 Downloading and importing is where *most* people experience issues. From a high level perspective,  needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
@@ -207,7 +207,7 @@ This frequently causes other random import issues as well.
 
 #### Incorrect category
 
- should be setup to use a category so that it only tries to process its own downloads. It is rare that a torrent submitted by gets added without the correct category, but it can happen. If you’re adding torrents manually and want to process them, they’ll need to have the correct category. It can be set at any time, since tries to process downloads every minute.
+Lidarr should be setup to use a category so that it only tries to process its own downloads. It is rare that a torrent submitted by gets added without the correct category, but it can happen. If you’re adding torrents manually and want to process them, they’ll need to have the correct category. It can be set at any time, since tries to process downloads every minute.
 
 #### Packed torrents
 
@@ -237,7 +237,7 @@ This can also occur if you have a release in your download client but that media
 
 Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
-### Searches Indexers and Trackers
+## Searches Indexers and Trackers
 
 ### Turn logging up to trace
 
