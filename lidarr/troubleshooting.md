@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-08-12T02:43:39.728Z
+date: 2021-08-12T02:44:46.753Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -106,9 +106,7 @@ When Debug log level is enabled, additional `.debug.txt` rolling log files will 
 
 When Trace log level is enabled, additional `.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
 
-### Recovering from a Failed Update
-
------
+## Recovering from a Failed Update
 
 - We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
