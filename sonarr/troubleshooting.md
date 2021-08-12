@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-12T02:44:45.135Z
+date: 2021-08-12T02:45:00.571Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -103,8 +103,6 @@ When Debug log level is enabled, additional `sonarr.debug.txt` rolling log files
 When Trace log level is enabled, additional `sonarr.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
-
------
 
 - We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
