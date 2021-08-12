@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-08-12T02:41:29.606Z
+date: 2021-08-12T02:44:30.275Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -107,8 +107,6 @@ When Debug log level is enabled, additional `.debug.txt` rolling log files will 
 When Trace log level is enabled, additional `.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
-
------
 
 - We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
