@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-07-27T10:44:14.486Z
+date: 2021-08-12T02:45:53.665Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -103,8 +103,6 @@ When Debug log level is enabled, additional `readarr.debug.txt` rolling log file
 When Trace log level is enabled, additional `readarr.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
-
------
 
 - We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
 
