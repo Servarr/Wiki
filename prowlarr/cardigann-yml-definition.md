@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-08-14T18:37:36.563Z
+date: 2021-08-14T18:45:19.638Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -704,11 +704,11 @@ download:
         - name: toupper
 ```
 
-# Template engine
+## Template engine
 
 The template engine is very basic, and supports the following statements.
 
-## re_replace
+### re_replace
 
 A simple regex replace operation.
 
@@ -738,9 +738,9 @@ search:
     - path: "{{ if .Keywords }}search.php{{ else }}latest.php{{ end }}"
 ```
 
-## if or/and ... else ... end
+### if or/and ... else ... end
 
-The implementation is based on: <https://golang.org/pkg/text/template/#hdr-Functions>
+The implementation is based on: [go hdr functions](https://golang.org/pkg/text/template/#hdr-Functions)
 These are not true logical OR and AND operators in that they operate on variables that contain a value or are empty.
 
 Example of: if or ... else ... end
@@ -770,9 +770,9 @@ Example of: if and ... else ... end
       text: "{{ if and (.Config.lang) (.Result.is_polish) }}{{ .Result.title_polish }}{{ else }}{{ .Result.title_phase1 }}{{ end }}"
 ```
 
-## if eq/ne ... else ... end
+### if eq/ne ... else ... end
 
-The implementation is based on: <https://golang.org/pkg/text/template/#hdr-Functions>
+The implementation is based on: [go hdr functions](https://golang.org/pkg/text/template/#hdr-Functions)
 This is a string comparison only.
 Supports the use of both variables and strings.
 
@@ -800,7 +800,7 @@ Special variables .True and .False are available
 .True contains "True" (which represents a non-empty variable) and
 .False contains null (which represents an empty variable).
 
-## join
+### join
 
 A simple loop over a list variable building a concatenated string with items joined by a delimiter.  
 
@@ -815,7 +815,7 @@ Example:
 # output: "101,201,301"
 ```
 
-## range
+### range
 
 A simple loop over a list variable building a concatenated string.  
 
@@ -830,17 +830,17 @@ Example:
 # output: "&cat101=1&cat201=1&cat301=1"
 ```
 
-## Variable substitution
+### Variable substitution
 
 The basic variable substitution operation.  
 
 Syntax: `{{ .Variable }}`
 
-# Variables
+## Variables
 
 TODO: more explanation
 
-## Config variables (always available)
+### Config variables (always available)
 
 Generated based on the settings section
 
@@ -848,7 +848,7 @@ Generated based on the settings section
 .Config.$Name # for example .Config.username , .Config.password , .Config.sitelink
 ```
 
-## Special variables (always available)
+### Special variables (always available)
 
 ```yaml
 .True contains "True" (which represents a non-empty variable)
@@ -856,7 +856,7 @@ Generated based on the settings section
 .Today.Year contains "2020" (or whatever the current year is)
 ```
 
-## Variables available during search queries
+### Variables available during search queries
 
 ```yaml
 .Query.Type
@@ -890,7 +890,7 @@ Generated based on the settings section
 .Keywords          # keywords after applying the keywordsfilters
 ```
 
-note: variables that are not supported are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
+Note: variables that are not supported are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
 
 All field results are available to the following fields via the `.Result.$FieldName` variables too.
 For example:
@@ -909,7 +909,7 @@ For example:
       text: "{{ .Result.subcat }} {{ .Result.year }} {{ .Result.quality }}"
 ```
 
-## Variables available in the download block
+### Variables available in the download block
 
 Based on the download search field result the following variables are available:
 
@@ -929,9 +929,9 @@ would generate the following two variables:
 `.DownloadUri.Query.id` with the value `37346` and
 `.DownloadUri.Query.hit` with the value `yes`.
 
-# Filters
+## Filters
 
-## querystring
+### querystring
 
 Extract values from URL arguments.
 
@@ -948,7 +948,7 @@ filters:
   # result: 123
 ```
 
-## prepend
+### prepend
 
 Inserts a *string* by appending additional characters to the beginning of its current value.
 The single parameter in the argument is the *string* to be prefixed.
@@ -966,7 +966,7 @@ filters:
   # result: magnet:?xt=urn:btih:B21F2A6DB07A8F4F76E2C5E15D28235D356B8D41
 ```
 
-## append
+### append
 
 Extends a *string* by appending additional characters to the end.
 The single parameter in the argument is the *string* to be appended.
@@ -984,7 +984,7 @@ filters:
   # result: magnet:?xt=urn:btih:B21F2A6DB07A8F4F76E2C5E15D28235D356B8D41&dn=I.Am.A.Magnet&tr=udp://tracker.coppersurfer.tk:6969
 ```
 
-## tolower
+### tolower
 
 Converts a *string* to lowercase letters.
 Does not require any parameters.
@@ -1000,7 +1000,7 @@ filters:
   # result: my movie title 1080p
 ```
 
-## toupper
+### toupper
 
 Converts a *string* to uppercase letters.
 Does not require any parameters.
@@ -1016,7 +1016,7 @@ filters:
   # result: MY MOVIE TITLE 1080P
 ```
 
-## replace
+### replace
 
 If the *pattern string* is matched, then the *pattern* is replaced by a *replacement string*.
 The first parameter in the argument is the *pattern string*, and the second is the *replacement string*.
@@ -1033,7 +1033,7 @@ filters:
   # result: yesterday 12:27
 ```
 
-## split
+### split
 
 Divides a *string* into an array of *substrings*, and return the selected *substring*.
 The first parameter in the argument is the single character *pattern* used to split the *string*, and the second parameter is the array element *number* of the wanted *substring*, counting from zero for the first element.
@@ -1051,7 +1051,7 @@ filters:
   # result: 45
 ```
 
-## trim
+### trim
 
 Removes all leading and trailing occurrences of a set of specified *characters*.
 Used without an argument removes all leading and trailing *white-space characters*.
@@ -1080,7 +1080,7 @@ filters:
   # result: This Is My Title
 ```
 
-## regexp
+### regexp
 
 Perform pattern-matching and "search-and-replace" functions on a *string* using a[Regular Expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
@@ -1096,7 +1096,7 @@ filters:
   # result: 09-14 02:31
 ```
 
-## re_replace
+### re_replace
 
 Similar to [replace](#replace), but the parameters in the argument are [Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
@@ -1113,7 +1113,7 @@ filters:
   # result: S12E45
 ```
 
-## dateparse
+### dateparse
 
 Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z") using a GoLang layout.
 Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *layout* to use for the conversion.
@@ -1178,11 +1178,11 @@ filters:
   # result: Mon, 18 Sep 2017 19:17:24 GMT
 ```
 
-## timeparse
+### timeparse
 
 Alias for [dateparse](#dateparse)
 
-## timeago
+### timeago
 
 Converts a time-ago *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
 Does not require an argument.
@@ -1209,11 +1209,11 @@ filters:
   # result: Sun, 17 Sep 2017 17:17:24 GMT
 ```
 
-## reltime
+### reltime
 
 Alias for [timeago](#dateparse)
 
-## fuzzytime
+### fuzzytime
 
 Converts a fuzzy-time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
 By default fuzzytime renders a USA_Date. But if you supply an argument containing "UK" then it will return a UK_Date.
@@ -1242,7 +1242,7 @@ filters:
   # result: Sun, 17 Sep 2017 19:17:24 GMT
 ```
 
-## urldecode
+### urldecode
 
 Converts a *string* that has been encoded for transmission in a URL into a decoded *string*.
 
@@ -1258,7 +1258,7 @@ filters:
   # result: https://zooqle.com/search?q=preacher s01e10
 ```
 
-## urlencode
+### urlencode
 
 Encodes a URL *string*.
 
@@ -1274,7 +1274,7 @@ magfile:
     # result: https://zooqle.com/search?q=preacher+s01e10
 ```
 
-## validfilename
+### validfilename
 
 Ensures that a *string* comprises only characters that are valid for use in filenames.
 
@@ -1289,7 +1289,7 @@ filters:
   # result: aFileNameWithInvalidSymbols
 ```
 
-## diacritics
+### diacritics
 
 Replace diacritics characters with their base character.
 
@@ -1304,7 +1304,7 @@ keywordsfilters:
   # result: SĐCZsđccz
 ```
 
-## jsonjoinarray
+### jsonjoinarray
 
 Parse the input string as JSON, apply a JSONPath expression and join the resulting array using the specified separator.
 
@@ -1319,7 +1319,7 @@ Example:
       args: ["$.result", ""]
 ```
 
-## hexdump
+### hexdump
 
 Dump the HTML of each row to the log in HEX format (for debugging purposes).
 You will need to have *Enhanced Logging* enabled to view the results.
@@ -1335,7 +1335,7 @@ filters:
   # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: T(54)u(75)e(65),(2C) (20)1(31)9(39) (20)S(53)e(65)p(70) (20)2(32)0(30)1(31)7(37) (20)2(32)1(31):(3A)2(32)1(31):(3A)5(35)2(32) (20)+(2B)1(31)2(32) 
 ```
 
-## strdump
+### strdump
 
 Dump the HTML of each row or field to the log (for debugging purposes).
 You will need to have *Enhanced Logging* enabled to view the results.
