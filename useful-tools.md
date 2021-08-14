@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-07-15T00:13:39.047Z
+date: 2021-08-14T17:32:49.540Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -32,6 +32,32 @@ Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidar
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
 1. Run a pragma check on the new DB
 1. Save the DB and point the application at it
+
+## Finding Cookies
+
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to to work. The pages below describe how you do that.
+
+  - [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
+  - [Firefox cookies](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
+
+## Clearing Cookies and Local Storage
+
+### Chrome
+
+1. Navigate to `chrome://settings/siteData`
+1. Enter the site (or app) name you wish to clear
+1. Click the trash icon for the site
+
+### Firefox
+
+- Please see [Mozilla's Help Article](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
+
+### Microsoft Edge (Chromium)
+
+1. Navigate to `edge://settings/siteData`
+1. Enter the site (or app) name you wish to clear
+1. Click the arrow for the site
+1. Click the trash icon for the site
 
 ## Other Projects and Programs
 
