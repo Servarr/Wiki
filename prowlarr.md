@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-08-14T15:22:01.616Z
+date: 2021-08-14T18:49:26.376Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -39,6 +39,7 @@ Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base
 ## Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/prowlarr/contributing)
+- [<i class="fas fa-book-reader"></i>&emsp;Prowlarr (Cardigann) YAML Indexer Definition](/prowlarr/cardigann-yml-definition)
 - [<i class="fas fa-book"></i>&emsp;API Docs
 {.links-list}
 
