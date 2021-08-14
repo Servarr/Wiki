@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-08-14T18:45:19.638Z
+date: 2021-08-14T18:45:56.061Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -721,7 +721,7 @@ Example:
 "{{ re_replace .Keywords \"[^a-zA-Z0-9]+\" \"*\" }}"
 ```
 
-## if ... else ... end
+### if ... else ... end
 
 A basic if/else condition. Only boolean true (non empty)/false (empty) operations on variables are supported.
 
