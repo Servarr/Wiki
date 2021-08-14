@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-08-04T22:32:16.620Z
+date: 2021-08-14T15:54:52.307Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -232,9 +232,11 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Jackett's /all Endpoint
 
+{#jackett-all-endpoint}
+
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
 
-- **May 2021 Update: It is likely Radarr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+- **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 
 - [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
@@ -245,16 +247,17 @@ To disable authentication (to reset your username or password) you will need nee
   - slow indexers will slow down the overall result
   - total results are limited to 1000
 
-- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Readarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
+- Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
+
+- Add each indexer seperatedly. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
-This is expected. This is how the Torrent Process works.
+This is expected. Below is how the Torrent Process works.
 
 1. Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 1. Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-
-- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
-
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
+
+> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
