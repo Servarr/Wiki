@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-08-12T02:44:30.275Z
+date: 2021-08-14T15:11:45.465Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -217,7 +217,7 @@ There are a few causes of repeated downloads, but a recent one is related to the
 
 #### Usenet download misses import
 
- only looks at the 60 most recent downloads in SABnzbd and NZBGet, so if you *keep* your history this means that during large queues with import issues, downloads can be silently missed and not imported. The best way to avoid that is to keep your history clear, so that any items that still appear need investigating. You can achieve this by enabling Remove under Completed and Failed Download Handler. In NZBGet, this will move items to the *hidden* history which is great. Unfortunately, SABnzbd does not have a similar feature. The best you can achieve there is to use the nzb backup folder.
+Radarr only looks at the 60 most recent downloads in SABnzbd and NZBGet, so if you *keep* your history this means that during large queues with import issues, downloads can be silently missed and not imported. The best way to avoid that is to keep your history clear, so that any items that still appear need investigating. You can achieve this by enabling Remove under Completed and Failed Download Handler. In NZBGet, this will move items to the *hidden* history which is great. Unfortunately, SABnzbd does not have a similar feature. The best you can achieve there is to use the nzb backup folder.
 
 #### Download client clearing items
 
@@ -247,7 +247,282 @@ When you test an indexer or tracker, in debug or trace logs you can find the URL
 
 ### Testing a Search
 
-placeholder
+Just like the indexer/tracker test above, when you trigger a search while at Debug or Trace level logging, you can get the URL used from the log files. While testing, it is best to use as narrow a search as possible. A manual search is good because it is specific and you can see the results in the UI while examining the logs.
+
+In this test, you’ll be looking for obvious errors and running some simple tests. You can see the search used the url `https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou`, which you can try yourself in a browser after replacing `(removed)` with your apikey for that indexer. Does it work? Do you see the expected results? In that URL, you can see that it set the specific category of 2000, so if you’re not seeing expected results, this is one likely reason. If the movie isn’t properly categorized on the indexer, it will need to be fixed. Look at Manual Search XML Output below to see an example of a working query’s output.
+
+- Manual Search XML Output
+
+```xml
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:newznab="http://www.newznab.com/DTD/2010/feeds/attributes/" version="2.0">
+<channel>
+<atom:link href="https://api.nzbgeek.info/api?t=movie&cat=2000&apikey=(removed)&q=O+Brother+Where+Art+Thou" rel="self" type="application/rss+xml"/>
+<title>api.nzbgeek.info</title>
+<description>NZBgeek API</description>
+<link>http://api.nzbgeek.info/</link>
+<language>en-gb</language>
+<webMaster>info@nzbgeek.info (NZBgeek)</webMaster>
+<category/>
+<image>
+<url>https://api.nzbgeek.info/covers/nzbgeek.png</url>
+<title>api.nzbgeek.info</title>
+<link>http://api.nzbgeek.info/</link>
+<description>NZBgeek</description>
+</image>
+<newznab:response offset="0" total="17"/>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.1080p.BluRay.H264.AC3.DD5.1</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=e83b7ae75bca71e92367fab29b036731&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=e83b7ae75bca71e92367fab29b036731&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=e83b7ae75bca71e92367fab29b036731</comments>
+<pubDate>Sat, 10 Jul 2021 08:33:22 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.1080p.BluRay.H264.AC3.DD5.1</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=e83b7ae75bca71e92367fab29b036731&apikey=(removed)" length="4041237000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="4041237000"/>
+<newznab:attr name="guid" value="e83b7ae75bca71e92367fab29b036731"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.1080p.BluRay.H264.AC3.DD5.1</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=c00a92567863801ab1a4901458ae31ba&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=c00a92567863801ab1a4901458ae31ba&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=c00a92567863801ab1a4901458ae31ba</comments>
+<pubDate>Sun, 28 Mar 2021 10:50:38 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.1080p.BluRay.H264.AC3.DD5.1</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=c00a92567863801ab1a4901458ae31ba&apikey=(removed)" length="4041237000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="4041237000"/>
+<newznab:attr name="guid" value="c00a92567863801ab1a4901458ae31ba"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.720p.BrRip.x264-YIFY</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=75f5be8b4cd573c2359b638350689f73&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=75f5be8b4cd573c2359b638350689f73&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=75f5be8b4cd573c2359b638350689f73</comments>
+<pubDate>Sun, 28 Jul 2019 00:46:00 +0000</pubDate>
+<category>Movies > HD</category>
+<description>O.Brother.Where.Art.Thou.2000.720p.BrRip.x264-YIFY</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=75f5be8b4cd573c2359b638350689f73&apikey=(removed)" length="936738000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2040"/>
+<newznab:attr name="size" value="936738000"/>
+<newznab:attr name="guid" value="75f5be8b4cd573c2359b638350689f73"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.[bdrip-1080p-multilang-multisub-CHAPTERS]</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=a0fe801d9ba0a703db7d2164e996aa1f&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=a0fe801d9ba0a703db7d2164e996aa1f&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=a0fe801d9ba0a703db7d2164e996aa1f</comments>
+<pubDate>Mon, 14 Aug 2017 15:34:36 +0000</pubDate>
+<category>Movies > HD</category>
+<description>O.Brother.Where.Art.Thou.[bdrip-1080p-multilang-multisub-CHAPTERS]</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=a0fe801d9ba0a703db7d2164e996aa1f&apikey=(removed)" length="9746182000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2040"/>
+<newznab:attr name="size" value="9746182000"/>
+<newznab:attr name="guid" value="a0fe801d9ba0a703db7d2164e996aa1f"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.BRRip.XviD-BS5</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=b4c5712590bd1185bacef1d8c854f3fd&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=b4c5712590bd1185bacef1d8c854f3fd&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=b4c5712590bd1185bacef1d8c854f3fd</comments>
+<pubDate>Mon, 21 Oct 2013 13:49:50 +0000</pubDate>
+<category>Movies > SD</category>
+<description>O.Brother.Where.Art.Thou.2000.BRRip.XviD-BS5</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=b4c5712590bd1185bacef1d8c854f3fd&apikey=(removed)" length="1780257000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2030"/>
+<newznab:attr name="size" value="1780257000"/>
+<newznab:attr name="guid" value="b4c5712590bd1185bacef1d8c854f3fd"/>
+</item>
+<item>
+<title>O Brother, Where Art Thou? 2000 1080p ITA Blu-ray VC-1 DTS-HD MA 5.1-CtrlHD</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=116a67627bede54900a6ec82fa0d90ca&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=116a67627bede54900a6ec82fa0d90ca&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=116a67627bede54900a6ec82fa0d90ca</comments>
+<pubDate>Thu, 26 Sep 2013 02:45:52 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O Brother, Where Art Thou? 2000 1080p ITA Blu-ray VC-1 DTS-HD MA 5.1-CtrlHD</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=116a67627bede54900a6ec82fa0d90ca&apikey=(removed)" length="14745390000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="14745390000"/>
+<newznab:attr name="guid" value="116a67627bede54900a6ec82fa0d90ca"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.720p.Bluray.X264-BARC0DE</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=18292dc7f8878874cb69aa2bdba7217a&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=18292dc7f8878874cb69aa2bdba7217a&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=18292dc7f8878874cb69aa2bdba7217a</comments>
+<pubDate>Wed, 17 Apr 2013 14:32:28 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.720p.Bluray.X264-BARC0DE</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=18292dc7f8878874cb69aa2bdba7217a&apikey=(removed)" length="7721375000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="7721375000"/>
+<newznab:attr name="guid" value="18292dc7f8878874cb69aa2bdba7217a"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.iNTERNAL.DVDRip.XviD-MULTiPLY</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=a5d2c984574b91ec84b944514188ad36&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=a5d2c984574b91ec84b944514188ad36&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=a5d2c984574b91ec84b944514188ad36</comments>
+<pubDate>Mon, 15 Apr 2013 05:30:24 +0000</pubDate>
+<category>Movies > SD</category>
+<description>O.Brother.Where.Art.Thou.2000.iNTERNAL.DVDRip.XviD-MULTiPLY</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=a5d2c984574b91ec84b944514188ad36&apikey=(removed)" length="1716608000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2030"/>
+<newznab:attr name="size" value="1716608000"/>
+<newznab:attr name="guid" value="a5d2c984574b91ec84b944514188ad36"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=0ab52e14a78fdf02913c07f2d2ab9f7d&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=0ab52e14a78fdf02913c07f2d2ab9f7d&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=0ab52e14a78fdf02913c07f2d2ab9f7d</comments>
+<pubDate>Sat, 13 Apr 2013 22:09:57 +0000</pubDate>
+<category>Movies > SD</category>
+<description>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=0ab52e14a78fdf02913c07f2d2ab9f7d&apikey=(removed)" length="1693765000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2030"/>
+<newznab:attr name="size" value="1693765000"/>
+<newznab:attr name="guid" value="0ab52e14a78fdf02913c07f2d2ab9f7d"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.MULTi.COMPLETE.BLURAY-FULLSiZE</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=9a243b018b5f4cdf57494f76e6ef442e&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=9a243b018b5f4cdf57494f76e6ef442e&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=9a243b018b5f4cdf57494f76e6ef442e</comments>
+<pubDate>Sat, 26 May 2012 06:16:15 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.MULTi.COMPLETE.BLURAY-FULLSiZE</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=9a243b018b5f4cdf57494f76e6ef442e&apikey=(removed)" length="35592757000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="35592757000"/>
+<newznab:attr name="guid" value="9a243b018b5f4cdf57494f76e6ef442e"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.German.720p.BluRay.x264-DETAiLS</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=a3a74f843ca0f508661a274cef3accbc&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=a3a74f843ca0f508661a274cef3accbc&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=a3a74f843ca0f508661a274cef3accbc</comments>
+<pubDate>Sun, 08 Apr 2012 22:15:13 +0000</pubDate>
+<category>Movies > Foreign</category>
+<description>O.Brother.Where.Art.Thou.2000.German.720p.BluRay.x264-DETAiLS</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=a3a74f843ca0f508661a274cef3accbc&apikey=(removed)" length="3158258000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2010"/>
+<newznab:attr name="size" value="3158258000"/>
+<newznab:attr name="guid" value="a3a74f843ca0f508661a274cef3accbc"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.720p.BluRay.DD5.1.x264-EbP</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=12f6a26918ad984270312e0cf8cca77d&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=12f6a26918ad984270312e0cf8cca77d&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=12f6a26918ad984270312e0cf8cca77d</comments>
+<pubDate>Thu, 19 Jan 2012 14:06:18 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.720p.BluRay.DD5.1.x264-EbP</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=12f6a26918ad984270312e0cf8cca77d&apikey=(removed)" length="5516285000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="5516285000"/>
+<newznab:attr name="guid" value="12f6a26918ad984270312e0cf8cca77d"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.MULTi.1080p.BluRay.x264-HDZ</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=3c40226dd763afaeac6453801d23ab9c&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=3c40226dd763afaeac6453801d23ab9c&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=3c40226dd763afaeac6453801d23ab9c</comments>
+<pubDate>Mon, 24 Oct 2011 04:21:51 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.MULTi.1080p.BluRay.x264-HDZ</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=3c40226dd763afaeac6453801d23ab9c&apikey=(removed)" length="14973693000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="14973693000"/>
+<newznab:attr name="guid" value="3c40226dd763afaeac6453801d23ab9c"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.1080p.BluRay.X264-AMIABLE</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=1643c3b2996de1824675ede214cc8cc3&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=1643c3b2996de1824675ede214cc8cc3&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=1643c3b2996de1824675ede214cc8cc3</comments>
+<pubDate>Wed, 31 Aug 2011 20:25:44 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.1080p.BluRay.X264-AMIABLE</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=1643c3b2996de1824675ede214cc8cc3&apikey=(removed)" length="9452909000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="9452909000"/>
+<newznab:attr name="guid" value="1643c3b2996de1824675ede214cc8cc3"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.720p.BluRay.X264-AMIABLE</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=13d48effa81b1d457be31b93ada7f5fb&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=13d48effa81b1d457be31b93ada7f5fb&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=13d48effa81b1d457be31b93ada7f5fb</comments>
+<pubDate>Mon, 29 Aug 2011 16:04:28 +0000</pubDate>
+<category>Movies > BluRay</category>
+<description>O.Brother.Where.Art.Thou.2000.720p.BluRay.X264-AMIABLE</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=13d48effa81b1d457be31b93ada7f5fb&apikey=(removed)" length="5125894000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2050"/>
+<newznab:attr name="size" value="5125894000"/>
+<newznab:attr name="guid" value="13d48effa81b1d457be31b93ada7f5fb"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=bcdb8219eb87063a0d49aa35aa45ca75&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=bcdb8219eb87063a0d49aa35aa45ca75&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=bcdb8219eb87063a0d49aa35aa45ca75</comments>
+<pubDate>Sun, 20 Mar 2011 17:16:49 +0000</pubDate>
+<category>Movies > SD</category>
+<description>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=bcdb8219eb87063a0d49aa35aa45ca75&apikey=(removed)" length="1682357000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2030"/>
+<newznab:attr name="size" value="1682357000"/>
+<newznab:attr name="guid" value="bcdb8219eb87063a0d49aa35aa45ca75"/>
+</item>
+<item>
+<title>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-T</title>
+<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=f22f3b8b55a717df57953d2e46688f6e&apikey=(removed)</guid>
+<link>https://api.nzbgeek.info/api?t=get&id=f22f3b8b55a717df57953d2e46688f6e&apikey=(removed)</link>
+<comments>https://nzbgeek.info/geekseek.php?guid=f22f3b8b55a717df57953d2e46688f6e</comments>
+<pubDate>Mon, 14 Mar 2011 18:23:05 +0000</pubDate>
+<category>Movies > SD</category>
+<description>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-T</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=f22f3b8b55a717df57953d2e46688f6e&apikey=(removed)" length="1844957000" type="application/x-nzb"/>
+<newznab:attr name="category" value="2000"/>
+<newznab:attr name="category" value="2030"/>
+<newznab:attr name="size" value="1844957000"/>
+<newznab:attr name="guid" value="f22f3b8b55a717df57953d2e46688f6e"/>
+</item>
+</channel>
+</rss>
+```
+
+- Trace Log Snippet
+
+```none
+Snippet of Trace Log for a Manual Search Needed
+```
+
+- Full Trace Log of a Search
+
+```none
+Full section of Trace Log for a Manual Search Needed
+```
 
 ### Common Problems
 
@@ -255,7 +530,7 @@ Below are some common problems.
 
 #### Media is Unmonitored
 
-The media is/are not monitored.
+The movie(s) is(are) not monitored.
 
 #### Wrong categories
 
@@ -299,17 +574,23 @@ Using the all endpoint has no advantages (besides reduced management overhead), 
 
 Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
 
+#### Using NZBHydra2 as a single entry
+
+Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Sonarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+
 ### Errors
 
 These are some of the common errors you may see when adding an indexer
 
 #### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by .net 4.5, to resolve this you will need to install .net 4.5, which is available on Vista/Server 2008 and above (if you’re on XP/Server 2003 its time to upgrade).
+This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Radarr -> System -> Status](/radarr/system/status).
 
 #### The request timed out
 
- seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
+Radarr is getting no response from the indexer.
+
+Radarr seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
 ```none
     System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.Net.WebException: The request timed out
@@ -324,7 +605,7 @@ And you can see the following in the trace log file:
 You might fix it by installing libcurl3. On Ubuntu/Debian use;
 
 ```shell
-    `sudo apt install libcurl3`
+    sudo apt install libcurl3
 ```
 
 This can also be caused by:
@@ -332,7 +613,7 @@ This can also be caused by:
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
 - local DNS issues
-- local IPv6 issues
+- local IPv6 issues - typically IPv6 is enabled, but non-functional
 
 #### Problem Not Listed
 
