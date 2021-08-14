@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-08-14T15:59:36.500Z
+date: 2021-08-14T15:59:43.395Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-07-31T16:26:55.473Z

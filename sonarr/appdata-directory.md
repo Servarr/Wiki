@@ -2,7 +2,7 @@
 title: Sonarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:03.887Z
+date: 2021-08-05T23:25:06.437Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:53:57.860Z

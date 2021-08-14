@@ -2,12 +2,11 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-06-23T06:45:05.544Z
+date: 2021-07-10T16:05:49.469Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
 ---
-
 
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Radarr via the [Connect Settings](/radarr/settings#connections).
 

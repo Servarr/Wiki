@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2021-08-14T15:24:05.690Z
+date: 2021-08-14T15:24:08.684Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z

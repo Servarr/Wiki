@@ -2,7 +2,7 @@
 title: Lidarr Wanted
 description: 
 published: true
-date: 2021-07-12T07:26:02.073Z
+date: 2021-07-31T14:59:01.155Z
 tags: lidarr, needs-love, wanted
 editor: markdown
 dateCreated: 2021-06-14T21:35:43.417Z

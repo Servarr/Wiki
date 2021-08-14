@@ -2,7 +2,7 @@
 title: Radarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:07.905Z
+date: 2021-08-05T23:25:10.284Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T02:34:50.549Z

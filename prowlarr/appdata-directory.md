@@ -2,7 +2,7 @@
 title: Prowlarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:26.880Z
+date: 2021-08-05T23:25:29.335Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T01:06:44.136Z

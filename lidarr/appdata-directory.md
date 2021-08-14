@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:17.385Z
+date: 2021-08-05T23:25:20.431Z
 tags: lidarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z

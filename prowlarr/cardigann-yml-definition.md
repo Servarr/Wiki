@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-08-14T18:55:36.055Z
+date: 2021-08-14T18:55:41.230Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z

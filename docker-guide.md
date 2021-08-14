@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-08-07T03:50:27.000Z
+date: 2021-08-07T03:50:30.092Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
