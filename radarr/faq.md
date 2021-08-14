@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-14T15:54:26.839Z
+date: 2021-08-14T15:55:14.331Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -488,7 +488,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
-- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (), you should now re-configure any settings you configured on the General Settings page.
+- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
