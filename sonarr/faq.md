@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-14T15:51:58.956Z
+date: 2021-08-14T15:54:35.407Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -484,7 +484,7 @@ Some sites cannot be logged into automatically and require you to login manually
 
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
 
-- **May 2021 Update: It is likely Sonarr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+- **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 
 - [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
@@ -495,7 +495,9 @@ Some sites cannot be logged into automatically and require you to login manually
   - slow indexers will slow down the overall result
   - total results are limited to 1000
 
-- Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In Sonarr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, Sonarr will disable it and now you do not get any results.
+- Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
+
+- Add each indexer seperatedly. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
 ## Why are there two files? \| Why is there a file left in downloads?
 
