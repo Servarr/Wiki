@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-06-23T17:19:10.088Z
+date: 2021-08-14T15:16:54.274Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -26,6 +26,7 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-cogs"></i>&emsp;Settings](/radarr/settings)
 - [<i class="fas fa-laptop"></i>&emsp;System](/radarr/system)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/radarr/custom-scripts)
+- [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/radarr/tips-and-tricks)
 {.links-list}
 
 ## Troubleshooting
