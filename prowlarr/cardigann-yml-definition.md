@@ -2,31 +2,31 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-08-14T18:19:59.428Z
+date: 2021-08-14T18:37:36.563Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
 ---
 
-Here you'll find details on the yaml indexer definition format. It's very incomplete at this time (work in progress).
-
 ## General
 
 Using definitions files it's possible to support most trackers without having to write native C# code.
 All you need is a little knowledge about HTML and CSS selectors.
-In order to add support for a new tracker just create a corresponding definition file in one of the corresponding folders (See the Jackett log output during startup for the exact folder locations).
 
-The best way to get started is to look at existing definitions files (https://github.com/Jackett/Jackett/tree/master/src/Jackett.Common/Definitions). If you know a tracker which is similar to the one you want to add and is already supported just use it's definition as a base for your new definition file.    
-Many sites often have a `Powered by` logo at a footer on their pages, and we try to tag our yaml indexers with a comment at the bottom to make finding similar engines a little easier. If you find a matching engine then you can use that indexer as a base for your new site, which will save you a lot of time and effort.     
+In order to add support for a new Cadigann/YML tracker submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
 
-In general using cardigann definitions is the preferred way of adding new indexers. there's just one exception: Gazelle based trackers can be easily added by inheriting the GazelleTracker C# class.
+The best way to get started is to look at existing definitions files. If you know a tracker which is similar to the one you want to add and is already supported just use it's definition as a base for your new definition file.
+Many sites often have a `Powered by` logo at a footer on their pages, and we try to tag our yaml indexers with a comment at the bottom to make finding similar engines a little easier. If you find a matching engine then you can use that indexer as a base for your new site, which will save you a lot of time and effort.
 
-# Format
-- Cardigann is quite fussy about indentation. Ensure you maintain the 2 space indentation per level as shown in the examples here. Getting it wrong could lead to errors during a run, or perhaps worse, a silent ignore of the clause altogether!      
-Text following a `#` (Hash) is a comment, and the ones in the examples below do not have to be included in your code.    
+## Format
 
-## Header ##
+- Cardigann is quite fussy about indentation. Ensure you maintain the 2 space indentation per level as shown in the examples here. Getting it wrong could lead to errors during a run, or perhaps worse, a silent ignore of the clause altogether!
+- Text following a `#` (Hash) is a comment, and the ones in the examples below do not have to be included in your code.
+
+## Header
+
 Each definition must start with a header like this:
+
 ```yaml
 ---
 # [REQUIRED] Internal name of the indexer, must be unique. Usually its the name of the
@@ -77,8 +77,7 @@ certificates:
   - D40789207A75EA36B02E255BF7162C8DF9637751
 ```
 
-
-## Caps ##
+## Caps
 
 Next you've to specify the capabilities of the indexer.
 
@@ -89,7 +88,7 @@ Next you've to specify the capabilities of the indexer.
 #            Can be a string too.
 # - cat:     [REQUIRED] The corresponding newznab predefined category.
 #            See this list for valid options:
-#            https://github.com/Jackett/Jackett/wiki/Jackett-Categories
+#            https://wiki.servarr.com/en/prowlarr/cardigann-yml-definition#categories
 # - desc:    [OPTIONAL] The tracker category name.
 #            If provided it will be used for a 1:1 mapping between
 #            tracker and newznab categories.
@@ -106,8 +105,8 @@ caps:
     - {id: 902, cat: XXX, desc: "Porn HD", default: false}
    
   # Specify one or more torznab search modes and attributes that are supported by the indexer.
-  # Implementation note: Jackett doesn't care very much about this, but you should still
-  # specify the correct modes, as most apps calling Jackett via the Torznab API depend on them.
+  # Implementation note: Prowlarr doesn't care very much about this, but you should still
+  # specify the correct modes, as most apps calling Prowlarr via the Torznab API depend on them.
   # The q attribute is the absolute minimum default, and you should only add the others if
   # the tracker supports searching with them, especially imdbid, tvdbid, tmdbid and rid (TVRage).
   modes:
@@ -117,11 +116,100 @@ caps:
     music-search: [q, album, artist, label, year]
     book-search: [q, author, title]
 ```
-A list of the categories that Jackett can define are available [here](https://github.com/Jackett/Jackett/wiki/Jackett-Categories)
-## Settings ##
+
+### Categories
+
+```none
+---- --------------------
+id   title  
+---- --------------------
+1000 Console
+1010 Console/NDS
+1020 Console/PSP
+1030 Console/Wii
+1040 Console/XBox
+1050 Console/XBox 360
+1060 Console/Wiiware
+1070 Console/XBox 360 DLC
+1080 Console/PS3
+1090 Console/Other
+1110 Console/3DS
+1120 Console/PS Vita
+1130 Console/WiiU
+1140 Console/XBox One
+1180 Console/PS4
+ 
+2000 Movies 
+2010 Movies/Foreign
+2020 Movies/Other
+2030 Movies/SD
+2040 Movies/HD
+2045 Movies/UHD
+2050 Movies/BluRay
+2060 Movies/3D
+2070 Movies/DVD
+2080 Movies/WEB-DL
+ 
+3000 Audio 
+3010 Audio/MP3
+3020 Audio/Video
+3030 Audio/Audiobook
+3040 Audio/Lossless
+3050 Audio/Other
+3060 Audio/Foreign
+ 
+4000 PC 
+4010 PC/0day
+4020 PC/ISO
+4030 PC/Mac
+4040 PC/Mobile-Other
+4050 PC/Games
+4060 PC/Mobile-iOS
+4070 PC/Mobile-Android
+ 
+5000 TV 
+5010 TV/WEB-DL
+5020 TV/Foreign
+5030 TV/SD
+5040 TV/HD
+5045 TV/UHD
+5050 TV/Other
+5060 TV/Sport
+5070 TV/Anime
+5080 TV/Documentary
+ 
+6000 XXX 
+6010 XXX/DVD
+6020 XXX/WMV
+6030 XXX/XviD
+6040 XXX/x264
+6045 XXX/UHD
+6050 XXX/Pack
+6060 XXX/ImageSet
+6070 XXX/Other
+6080 XXX/SD
+6090 XXX/WEB-DL
+ 
+7000 Books 
+7010 Books/Mags
+7020 Books/EBook
+7030 Books/Comics
+7040 Books/Technical
+7050 Books/Other
+7060 Books/Foreign
+ 
+8000 Other 
+8010 Other/Misc 
+8020 Other/Hashed
+ 
+100000- Custom   
+```
+
+## Settings
 
 Optionally you can specify which config options should be available for the indexer. If the settings block is not specified, the defaults are used (username and password).
 Some examples:
+
 ```yaml
 settings:
   # internal variable name
@@ -176,9 +264,10 @@ settings:
 
 If it's a public tracker and no config settings are needed then set `settings: []` to disable all options.
 
-## Login ## 
+## Login
 
 If the tracker requires a login you've to include a login block. First you've to pick one of the following login methods:
+
 - post: The input values are transmitted as a HTTP POST request. This will work for many trackers which require only static login information (username, password, ...).
 - get: Same as post but HTTP GET is used
 - form: The input values are transmitted as a HTTP POST request. But instead of sending them directly, the specified path is retrieved first and the corresponding HTML form is extracted. This allows login to most trackers which require dynamic login information (e.g. CAPTCHAS or CSRF tokens). For google ReCaptchas no special configuration is required, they're detected automatically. In case the the tracker is using "simplecaptcha" (Messages like "click on the Bug" and "Click on the "X") it's automatically solved.
@@ -189,6 +278,7 @@ After sending the actual login request the resulting HTML document is checked fo
 After checking for error messages a login test is performed (`test` section). The specified path will be requested. If a redirect is returned the login is considered as failed. Optionally it's possible to specify an selector which must match for a successful login. Typically the `path` is set to the same path as the torrent search path. Most trackers will redirect users to the login page if a login is required. If a tracker will just show the login form (no redirect) you'll have to specify a selector too.
 
 Example for a simple POST login:
+
 ```yaml
   # use simple post login
   method: post
@@ -210,7 +300,8 @@ Example for a simple POST login:
 ```
 
 Example for a very complex form based login (Real world form logins won't need most of the options):
-```yaml 
+
+```yaml
 login:
   # Using a form based login
   method: form
@@ -237,7 +328,7 @@ login:
   # [OPTIONAL] Only needed in case of dynamic input element names (very rare)
   # If it's set to true the keys/names from the 'input' section will be
   # interpreted as CSS selectors
-  # example: https://github.com/Jackett/Jackett/blob/master/src/Jackett.Common/Definitions/spiritofrevolution.yml
+  # example: https://github.com/Prowlarr/Indexers/blob/84349de6f7e2208caeab1d52d31169830dbbda01/definitions/v1/spiritofrevolution.yml
   selectors: false
   # [OPTIONAL] Only needed in very limited cases.
   # Can be used to include values based on a result of a selector.
@@ -288,6 +379,7 @@ If the FORM or POST method does not work for the web site you can resort to usin
 which uses the session cookie when accessing the web site's pages
 
 Example for a typical COOKIE definition:
+
 ```yaml
 settings:
   - name: cookie
@@ -307,14 +399,15 @@ login:
     selector: a[href="logout.php"]
 ```
 
-## Search ##
+## Search
 
 The search block contains all the information on how to search and how to extract the necessary information from the various trackers.
 
 It's possible to do some optional pre-processing of the search keywords first using the `keywordsfilters` list (e.g. to remove short search words or replace special characters with wildcards. After that the search URLs will be constructed based on the provided `paths` and `inputs`. All resulting paths will be requested. Each result is checked for error messages based on the `error` selector list. After that the rows are extracted based on the selector, etc. provided in the `rows` block. Finally each row is parsed based on the `fields` list.
 
 Example of a complex search block explaining all available options:
-```yaml 
+
+```yaml
 search:
   # list of paths which should be searched
   # For the most trackers just a single path is needed. But some trackers use
@@ -445,7 +538,6 @@ search:
         - name: querystring
           args: id
     # [OPTIONAL] link to a poster image (cover, banner, etc.)
-    # This will show up (on the Jackett dashboard search page) as a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     poster:
       selector: a[href^="details.php?id="]
@@ -541,15 +633,17 @@ search:
       remove: a, img
 ```
 
-Each field starts with the HTML row as value.    
-If the `text` keyword is specified the keys value is used. This can be used for fixed values (e.g. minimumratio and minimumseedtime).     
-If a fixed text value is not specified then the presence of the selector keyword is checked. If it's found then it's applied to the row. This allows you to extract more specific details such as the title or download link using CSS selectors.   
-After that the selector specified in the `remove` keyword is applied. With this, it's possible to remove unwanted elements (See the `description` example above). Any removed elements will be removed for good, they won't be available to following fields. Due to that you should put fields using the remove keyword at the end of the list.     
-Now it's possible to set the value based on the existence of elements using the `case` keyword. If the corresponding selector matches the field value is set to the specified case value. Processing ends after the first case selector matches. This is commonly used for `downloadvolumefactor` and `uploadvolumefactor`.     
-Finally the resulting value will be processed by the template engine and filter engine (see below).     
+Each field starts with the HTML row as value.
+If the `text` keyword is specified the keys value is used. This can be used for fixed values (e.g. minimumratio and minimumseedtime).
+If a fixed text value is not specified then the presence of the selector keyword is checked. If it's found then it's applied to the row. This allows you to extract more specific details such as the title or download link using CSS selectors.
+After that the selector specified in the `remove` keyword is applied. With this, it's possible to remove unwanted elements (See the `description` example above). Any removed elements will be removed for good, they won't be available to following fields. Due to that you should put fields using the remove keyword at the end of the list.
+Now it's possible to set the value based on the existence of elements using the `case` keyword. If the corresponding selector matches the field value is set to the specified case value. Processing ends after the first case selector matches. This is commonly used for `downloadvolumefactor` and `uploadvolumefactor`.
+Finally the resulting value will be processed by the template engine and filter engine (see below).
 
-#### Providing the category field with a default value
+### Providing the category field with a default value
+
 In the event that you need to provide a default category due to the possibility that a site may not provide one consistently, you can use the `noappend` modifier, as shown in this example:
+
 ```yaml
     category:
       text: "Other"
@@ -563,16 +657,18 @@ In the event that you need to provide a default category due to the possibility 
       selector: a.label[href*="type="]
 ```
 
-## Download ## 
+## Download
 
 The download block is needed in the following cases:
-* The torrent download link can't be extracted from the search results (e.g. if it's only available from the details page of the torrent)
-* The download request must be done via HTTP POST instead of GET
-* You've to access another page first before downloading the file (e.g. you've to click on the "Thank you" button first).
+
+- The torrent download link can't be extracted from the search results (e.g. if it's only available from the details page of the torrent)
+- The download request must be done via HTTP POST instead of GET
+- You've to access another page first before downloading the file (e.g. you've to click on the "Thank you" button first).
 
 Note: Some trackers just omit the download link from the search results but it still can be easily generated from the available information (e.g. use the details link and replace "details.php" with "download.php"). In this case the download block isn't needed.
 
 Example of the download block explaining all options:
+
 ```yaml
 download:
   # [OPTIONAL] use HTTP POST instead of GET to download the torrent file
@@ -607,26 +703,32 @@ download:
       filters:
         - name: toupper
 ```
-# Template engine #
+
+# Template engine
+
 The template engine is very basic, and supports the following statements.
 
 ## re_replace
+
 A simple regex replace operation.
 
 Syntax: `{{ re_replace .Variable "regex-term" "replace-term"}}`
 
 Example:
-```
+
+```yaml
 # Replace any non alphanumeric character in the keywords with the wildcard character
 "{{ re_replace .Keywords \"[^a-zA-Z0-9]+\" \"*\" }}"
 ```
 
 ## if ... else ... end
+
 A basic if/else condition. Only boolean true (non empty)/false (empty) operations on variables are supported.
 
 Syntax: `{{ if .Variable }}on true result{{ else }}on false result{{ end }}`
 
 Example:
+
 ```yaml
 search:
   paths:
@@ -637,10 +739,12 @@ search:
 ```
 
 ## if or/and ... else ... end
-The implementation is based on: https://golang.org/pkg/text/template/#hdr-Functions    
-These are not true logical OR and AND operators in that they operate on variables that contain a value or are empty.     
+
+The implementation is based on: <https://golang.org/pkg/text/template/#hdr-Functions>
+These are not true logical OR and AND operators in that they operate on variables that contain a value or are empty.
 
 Example of: if or ... else ... end
+
 ```yaml
 search:
   paths:
@@ -654,7 +758,9 @@ search:
     # and when neither var has a value then load the value from .Keywords to the string
     q: "{{ if or (.Query.Album) (.Query.Artist) }}{{ or (.Query.Album) (.Query.Artist) }}{{ else }}{{ .Keywords }}{{ end }}"
 ```
+
 Example of: if and ... else ... end
+
 ```yaml
     title:
       # when both the vars in brackets have a value 
@@ -663,12 +769,15 @@ Example of: if and ... else ... end
       # then load the value from title_phase1 to the string
       text: "{{ if and (.Config.lang) (.Result.is_polish) }}{{ .Result.title_polish }}{{ else }}{{ .Result.title_phase1 }}{{ end }}"
 ```
+
 ## if eq/ne ... else ... end
-The implementation is based on: https://golang.org/pkg/text/template/#hdr-Functions     
-This is a string comparison only.      
-Supports the use of both variables and strings.      
+
+The implementation is based on: <https://golang.org/pkg/text/template/#hdr-Functions>
+This is a string comparison only.
+Supports the use of both variables and strings.
 
 Example of: if eq ... else ... end
+
 ```yaml
     size:
       # when the variable .Result.cat contains the string "series"
@@ -676,7 +785,9 @@ Example of: if eq ... else ... end
       # otherwise it will be set to "2 GB"
       text: "{{ if eq .Result.cat \"series\" }}512 MB{{ else }}2 GB{{ end }}"
 ```
+
 Nesting is supported.
+
 ```yaml
     size:
       # when the variable .Result.cat contains any of the strings "movie", "movie_etc", "movie_eng"
@@ -684,16 +795,20 @@ Nesting is supported.
       # otherwise it will be set to "512 MB"
       text: "{{ if or (eq .Result.cat \"movie\") (or (eq .Result.cat \"movie_etc\") (eq .Result.cat \"movie_eng\")) }}2 GB{{ else }}512 MB{{ end }}"
 ```
-Special variables .True and .False are available     
-.True contains "True" (which represents a non-empty variable) and     
-.False contains null (which represents an empty variable). 
+
+Special variables .True and .False are available
+.True contains "True" (which represents a non-empty variable) and
+.False contains null (which represents an empty variable).
+
 ## join
+
 A simple loop over a list variable building a concatenated string with items joined by a delimiter.  
 
 Syntax: `{{ join .Variable "<delimiter>"}}{{end}}`
 
 Example:
-```
+
+```yaml
 # build a query string by concatenating all the categories with a comma
 # input: [101,201,301]
 "{{join .Categories \",\"}}{{end}}"
@@ -701,12 +816,14 @@ Example:
 ```
 
 ## range
+
 A simple loop over a list variable building a concatenated string.  
 
 Syntax: `{{ range .Variable }}<prefix>{{.}}<suffix>{{end}}`
 
 Example:
-```
+
+```yaml
 # build a query string argument list for the selected categories
 # input: [101,201,301]
 "{{range .Categories}}&cat{{.}}=1{{end}}"
@@ -714,24 +831,33 @@ Example:
 ```
 
 ## Variable substitution
+
 The basic variable substitution operation.  
 
 Syntax: `{{ .Variable }}`
 
-# Variables #
+# Variables
+
 TODO: more explanation
+
 ## Config variables (always available)
+
 Generated based on the settings section
-```
+
+```yaml
 .Config.$Name # for example .Config.username , .Config.password , .Config.sitelink
 ```
+
 ## Special variables (always available)
-```
+
+```yaml
 .True contains "True" (which represents a non-empty variable)
 .False contains null (which represents an empty variable)
 .Today.Year contains "2020" (or whatever the current year is)
 ```
+
 ## Variables available during search queries
+
 ```yaml
 .Query.Type
 .Query.Q
@@ -763,10 +889,12 @@ Generated based on the settings section
 .Query.Keywords    # original keywords
 .Keywords          # keywords after applying the keywordsfilters
 ```
-note: variables that are not supported are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.    
 
-All field results are available to the following fields via the `.Result.$FieldName` variables too.    
-For example:    
+note: variables that are not supported are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
+
+All field results are available to the following fields via the `.Result.$FieldName` variables too.
+For example:
+
 ```yaml
   fields:
     title:
@@ -780,9 +908,12 @@ For example:
     description:
       text: "{{ .Result.subcat }} {{ .Result.year }} {{ .Result.quality }}"
 ```
+
 ## Variables available in the download block
+
 Based on the download search field result the following variables are available:
-```
+
+```yaml
 .DownloadUri.AbsoluteUri
 .DownloadUri.AbsolutePath
 .DownloadUri.Scheme
@@ -791,18 +922,21 @@ Based on the download search field result the following variables are available:
 .DownloadUri.PathAndQuery
 .DownloadUri.Query
 ```
-For each query string argument of the URI a corresponding `.DownloadUri.Query.$Key` variable is generated.     
-for example, a URI like `https://amigos-share.club/torrents-details.php?id=37346&hit=yes`    
-would generate the following two variables:     
-`.DownloadUri.Query.id` with the value `37346` and       
-`.DownloadUri.Query.hit` with the value `yes`.      
 
+For each query string argument of the URI a corresponding `.DownloadUri.Query.$Key` variable is generated.
+for example, a URI like `https://amigos-share.club/torrents-details.php?id=37346&hit=yes`
+would generate the following two variables:
+`.DownloadUri.Query.id` with the value `37346` and
+`.DownloadUri.Query.hit` with the value `yes`.
 
-# Filters #
-## querystring ##
+# Filters
+
+## querystring
+
 Extract values from URL arguments.
 
 Example:
+
 ```yaml
 # extract the category ID from a category link
 selector: a[href^="browse.php?cat="]
@@ -814,12 +948,13 @@ filters:
   # result: 123
 ```
 
+## prepend
 
-## prepend ##
-Inserts a *string* by appending additional characters to the beginning of its current value.    
-The single parameter in the argument is the *string* to be prefixed.    
+Inserts a *string* by appending additional characters to the beginning of its current value.
+The single parameter in the argument is the *string* to be prefixed.
 
 Example:
+
 ```yaml
 # prefix InfoHash with a magnet URI header
 selector: span > a
@@ -831,12 +966,13 @@ filters:
   # result: magnet:?xt=urn:btih:B21F2A6DB07A8F4F76E2C5E15D28235D356B8D41
 ```
 
+## append
 
-## append ##
-Extends a *string* by appending additional characters to the end.     
-The single parameter in the argument is the *string* to be appended.     
+Extends a *string* by appending additional characters to the end.
+The single parameter in the argument is the *string* to be appended.
 
 Example:
+
 ```yaml
 # add a tracker to complete the magnet URI
 selector: span > a
@@ -848,12 +984,13 @@ filters:
   # result: magnet:?xt=urn:btih:B21F2A6DB07A8F4F76E2C5E15D28235D356B8D41&dn=I.Am.A.Magnet&tr=udp://tracker.coppersurfer.tk:6969
 ```
 
+## tolower
 
-## tolower ##
-Converts a *string* to lowercase letters.    
-Does not require any parameters.     
+Converts a *string* to lowercase letters.
+Does not require any parameters.
 
 Example:
+
 ```yaml
 # make the title lowercase
 selector: dt a
@@ -863,12 +1000,13 @@ filters:
   # result: my movie title 1080p
 ```
 
+## toupper
 
-## toupper ##
-Converts a *string* to uppercase letters.    
-Does not require any parameters.     
+Converts a *string* to uppercase letters.
+Does not require any parameters.
 
 Example:
+
 ```yaml
 # make the title uppercase
 selector: dt a
@@ -878,12 +1016,13 @@ filters:
   # result: MY MOVIE TITLE 1080P
 ```
 
+## replace
 
-## replace ##
-If the *pattern string* is matched, then the *pattern* is replaced by a *replacement string*.    
-The first parameter in the argument is the *pattern string*, and the second is the *replacement string*.    
+If the *pattern string* is matched, then the *pattern* is replaced by a *replacement string*.
+The first parameter in the argument is the *pattern string*, and the second is the *replacement string*.
 
 Example:
+
 ```yaml
 # fix the date field when it contains Y-day
 selector: td:nth-child(2)
@@ -894,12 +1033,13 @@ filters:
   # result: yesterday 12:27
 ```
 
+## split
 
-## split ##
-Divides a *string* into an array of *substrings*, and return the selected *substring*.     
-The first parameter in the argument is the single character *pattern* used to split the *string*, and the second parameter is the array element *number* of the wanted *substring*, counting from zero for the first element.     
+Divides a *string* into an array of *substrings*, and return the selected *substring*.
+The first parameter in the argument is the single character *pattern* used to split the *string*, and the second parameter is the array element *number* of the wanted *substring*, counting from zero for the first element.
 
 Example:
+
 ```yaml
 # extract the category id
 selector:  td[class^="coll-1"] a[href^="sub/"]
@@ -911,13 +1051,14 @@ filters:
   # result: 45
 ```
 
+## trim
 
-## trim ##
-Removes all leading and trailing occurrences of a set of specified *characters*.    
-Used without an argument removes all leading and trailing *white-space characters*.    
-If a set of *characters* are supplied in an argument then those will be removed from all leading and trailing occurrences.    
+Removes all leading and trailing occurrences of a set of specified *characters*.
+Used without an argument removes all leading and trailing *white-space characters*.
+If a set of *characters* are supplied in an argument then those will be removed from all leading and trailing occurrences.
 
 Example:
+
 ```yaml
 # fetch the title
 selector: td:nth-child(2) a
@@ -927,6 +1068,7 @@ filters:
   - name: trim
   # result: This Is My Title
 ```
+
 ```yaml
 # extract the title
 selector: td:nth-child(2) a
@@ -938,11 +1080,12 @@ filters:
   # result: This Is My Title
 ```
 
+## regexp
 
-## regexp ##
-Perform pattern-matching and "search-and-replace" functions on a *string* using a [[Regular Expression|https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference]].
+Perform pattern-matching and "search-and-replace" functions on a *string* using a[Regular Expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 Example:
+
 ```yaml
 # extract the uploaded date and time
 selector: td:nth-child(2) font.detDesc
@@ -953,11 +1096,12 @@ filters:
   # result: 09-14 02:31
 ```
 
+## re_replace
 
-## re_replace ##
-Similar to [[replace|https://github.com/Jackett/Jackett/wiki/Definition-format#replace]], but the parameters in the argument are [[Regular Expressions|https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference]].
+Similar to [replace](#replace), but the parameters in the argument are [Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 Example:
+
 ```yaml
 # normalize to SXXEYY format
 selector: td:nth-child(2) a.tab
@@ -969,12 +1113,13 @@ filters:
   # result: S12E45
 ```
 
+## dateparse
 
-## dateparse ##
-Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z") using a GoLang layout.    
-Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *layout* to use for the conversion.    
+Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z") using a GoLang layout.
+Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *layout* to use for the conversion.
 The GoLang layout converts as follows:
-```
+
+```yaml
 // year
 Replace("2006", "yyyy")
 Replace("06", "yy")
@@ -1022,6 +1167,7 @@ Replace("-07", "zz")
 ```
 
 Example:
+
 ```yaml
 # get the DateTime
 selector: td.torrent_table_dateAdded
@@ -1032,15 +1178,17 @@ filters:
   # result: Mon, 18 Sep 2017 19:17:24 GMT
 ```
 
+## timeparse
 
-## timeparse ##
-Alias for [[dateparse|https://github.com/Jackett/Jackett/wiki/Definition-format#dateparse]]
+Alias for [dateparse](#dateparse)
 
-## timeago ##
-Converts a time-ago *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").    
-Does not require an argument.    
+## timeago
+
+Converts a time-ago *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
+Does not require an argument.
 Timeago can handle a time-ago *string* such as:
-```
+
+```none
 now
 2 hours and 1 day
 4 years ago
@@ -1051,6 +1199,7 @@ now
 ```
 
 Example:
+
 ```yaml
 # get the DateTime (assuming the current time is Mon, 18 Sep 2017 19:17:24 GMT)
 selector: td.torrent_table_dateAdded
@@ -1060,14 +1209,17 @@ filters:
   # result: Sun, 17 Sep 2017 17:17:24 GMT
 ```
 
-## reltime ##
-Alias for [[timeago|https://github.com/Jackett/Jackett/wiki/Definition-format#dateparse]]
+## reltime
 
-## fuzzytime ##
-Converts a fuzzy-time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").    
-By default fuzzytime renders a USA_Date. But if you supply an argument containing "UK" then it will return a UK_Date.    
+Alias for [timeago](#dateparse)
+
+## fuzzytime
+
+Converts a fuzzy-time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
+By default fuzzytime renders a USA_Date. But if you supply an argument containing "UK" then it will return a UK_Date.
 Fuzzytime can handle a fuzzy-time *string* such as:
-```
+
+```yaml
 now
 4 years ago (or any other timeago values)
 Today
@@ -1080,6 +1232,7 @@ Wednesday at 15:30
 ```
 
 Example:
+
 ```yaml
 # get the DateTime (assuming the current time is Mon, 18 Sep 2017 19:17:24 GMT)
 selector: td.torrent_table_dateAdded
@@ -1089,11 +1242,12 @@ filters:
   # result: Sun, 17 Sep 2017 19:17:24 GMT
 ```
 
+## urldecode
 
-## urldecode ##
 Converts a *string* that has been encoded for transmission in a URL into a decoded *string*.
 
 Example:
+
 ```yaml
 # decode the url
 selector: td:nth-child(2) a.tab
@@ -1104,10 +1258,12 @@ filters:
   # result: https://zooqle.com/search?q=preacher s01e10
 ```
 
-## urlencode ##
+## urlencode
+
 Encodes a URL *string*.
 
 Example:
+
 ```yaml
 # encode the url
 magfile:
@@ -1118,11 +1274,12 @@ magfile:
     # result: https://zooqle.com/search?q=preacher+s01e10
 ```
 
+## validfilename
 
-## validfilename ##
 Ensures that a *string* comprises only characters that are valid for use in filenames.
 
 Example:
+
 ```yaml
 # get the filename
 text: "{{ .Result.title }}"
@@ -1132,10 +1289,12 @@ filters:
   # result: aFileNameWithInvalidSymbols
 ```
 
-## diacritics ##
+## diacritics
+
 Replace diacritics characters with their base character.
 
 Example:
+
 ```yaml
 # replace any diacritics
 keywordsfilters:
@@ -1145,12 +1304,14 @@ keywordsfilters:
   # result: SĐCZsđccz
 ```
 
-## jsonjoinarray ##
+## jsonjoinarray
+
 Parse the input string as JSON, apply a JSONPath expression and join the resulting array using the specified separator.
 
 args: [JSONPathExpression, separator]
 
 Example:
+
 ```yaml
   # extract HTML code from a JSON response
   preprocessingfilters:
@@ -1158,11 +1319,13 @@ Example:
       args: ["$.result", ""]
 ```
 
-## hexdump ##
-Dump the HTML of each row to the log in HEX format (for debugging purposes).    
-You will need to have *Enhanced Logging* enabled to view the results.    
+## hexdump
+
+Dump the HTML of each row to the log in HEX format (for debugging purposes).
+You will need to have *Enhanced Logging* enabled to view the results.
 
 Example:
+
 ```yaml
 date:
 selector: div[class="resultdivbotton"] div[class="resulttime"] div[class="resultdivbottontime"]
@@ -1172,13 +1335,14 @@ filters:
   # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: T(54)u(75)e(65),(2C) (20)1(31)9(39) (20)S(53)e(65)p(70) (20)2(32)0(30)1(31)7(37) (20)2(32)1(31):(3A)2(32)1(31):(3A)5(35)2(32) (20)+(2B)1(31)2(32) 
 ```
 
+## strdump
 
-## strdump ##
-Dump the HTML of each row or field to the log (for debugging purposes).    
-You will need to have *Enhanced Logging* enabled to view the results.    
-If you are using strdump to debug multiple field selectors, you can use the Optional args so that you can uniquely tag the results in the enhanced log.    
+Dump the HTML of each row or field to the log (for debugging purposes).
+You will need to have *Enhanced Logging* enabled to view the results.
+If you are using strdump to debug multiple field selectors, you can use the Optional args so that you can uniquely tag the results in the enhanced log.
 
 Example:
+
 ```yaml
 selector: div[class="resultdivbotton"] div[id^="hideinfohash"]
 filters:
@@ -1186,6 +1350,7 @@ filters:
   - name: strdump
   # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: dbbde2fc0c299c1d1aa43280b57dafc3fbf0bd39
 ```
+
 ```yaml
 fields:
   title:
