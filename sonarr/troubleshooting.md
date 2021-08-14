@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-14T14:52:10.254Z
+date: 2021-08-14T15:11:43.537Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -217,7 +217,7 @@ There are a few causes of repeated downloads, but a recent one is related to the
 
 #### Usenet download misses import
 
- only looks at the 60 most recent downloads in SABnzbd and NZBGet, so if you *keep* your history this means that during large queues with import issues, downloads can be silently missed and not imported. The best way to avoid that is to keep your history clear, so that any items that still appear need investigating. You can achieve this by enabling Remove under Completed and Failed Download Handler. In NZBGet, this will move items to the *hidden* history which is great. Unfortunately, SABnzbd does not have a similar feature. The best you can achieve there is to use the nzb backup folder.
+Sonarr only looks at the 60 most recent downloads in SABnzbd and NZBGet, so if you *keep* your history this means that during large queues with import issues, downloads can be silently missed and not imported. The best way to avoid that is to keep your history clear, so that any items that still appear need investigating. You can achieve this by enabling Remove under Completed and Failed Download Handler. In NZBGet, this will move items to the *hidden* history which is great. Unfortunately, SABnzbd does not have a similar feature. The best you can achieve there is to use the nzb backup folder.
 
 #### Download client clearing items
 
@@ -233,7 +233,7 @@ This can also occur if you have a release in your download client but that media
 
 #### Connection Timed Out
 
-#### The request timed out
+`The request timed out`
 
 Sonarr is getting no response from the client.
 
@@ -242,7 +242,7 @@ This is typically caused by:
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
 - local DNS issues
-- local IPv6 issues
+- local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
 
 ### Problem Not Listed
@@ -352,7 +352,7 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 - Full Trace Log of a Search
 
 ```none
-2021-03-20 13:15:23.6|Trace|Http|Req: 66 [GET] /api/v3/release?episodeId=1                                                                                                                                                                                                                         [5/3289]
+2021-03-20 13:15:23.6|Trace|Http|Req: 66 [GET] /api/v3/release?episodeId=1   
 2021-03-20 13:15:23.6|Info|NzbSearchService|Searching 1 indexers for [The Fix : S01E01]
 2021-03-20 13:15:23.6|Debug|Newznab|Downloading Feed https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1
 2021-03-20 13:15:23.6|Trace|HttpClient|Req: [GET] https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1
@@ -431,6 +431,7 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 2021-03-20 13:15:24.3|Trace|Http|Res: 66 [GET] /api/v3/release?episodeId=1: 200.OK (775 ms)
 2021-03-20 13:15:24.3|Debug|Api|[GET] /api/v3/release?episodeId=1: 200.OK (775 ms)
 ```
+
 ### Common Problems
 
 #### Series needs an alias
@@ -497,7 +498,7 @@ These are some of the common errors you may see when adding an indexer
 
 #### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .Net Version ([Sonarr -> System -> Status](/sonarr/system/status).
+This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Sonarr -> System -> Status](/sonarr/system/status).
 
 #### The request timed out
 
@@ -518,7 +519,7 @@ And you can see the following in the trace log file:
 You might fix it by installing libcurl3. On Ubuntu/Debian use;
 
 ```shell
-    `sudo apt install libcurl3`
+    sudo apt install libcurl3
 ```
 
 This can also be caused by:
@@ -526,5 +527,5 @@ This can also be caused by:
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
 - local DNS issues
-- local IPv6 issues
+- local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
