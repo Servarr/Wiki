@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-14T15:54:35.407Z
+date: 2021-08-14T17:22:59.095Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -112,7 +112,9 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 ## TVDB is updated why isn't Sonarr?
 
-- TVDB has a 24 hour cache on their API. Skyhook has a much smaller few hour cache on top of that. Sonarr only runs the Refresh Series task every 12 hours. Thus it typically takes 24 to 48 hours for a TVDB update to make it into Sonarr.
+- TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
+
+- Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
 
 - If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
 
