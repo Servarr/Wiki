@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-14T16:17:30.482Z
+date: 2021-08-14T16:18:50.863Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -228,7 +228,7 @@ The following requirements should be noted:
  
 ### Windows
 
-> [Please see the legacy wiki entry.](https://wikiold.servarr.com/Radarr_Tips_and_Tricks#Installing_multiple_Radarrs_on_Windows) Contributions to conver the entry to this wiki are welcome and encouraged.{.is-info}
+> [Please see the legacy wiki entry.](https://wikiold.servarr.com/Radarr_Tips_and_Tricks#Installing_multiple_Radarrs_on_Windows) Contributions to convert the entry to this wiki are welcome and encouraged.{.is-info}
 
 ### Linux
 
