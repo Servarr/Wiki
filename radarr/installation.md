@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-14T16:14:39.604Z
+date: 2021-08-14T16:17:30.482Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -224,6 +224,7 @@ The following requirements should be noted:
     - If docker, different external ports must be used
   - Different download client categories must be used
   - Different root folders must be used.
+  - If non-docker, disable automatic updates on all but 1 instance.
  
 ### Windows
 
