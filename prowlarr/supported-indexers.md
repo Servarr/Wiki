@@ -2,14 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-08-07T21:12:03.897Z
+date: 2021-08-14T15:59:36.500Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-07-31T16:26:55.473Z
 ---
 
-
-- Supported Indexers as of Build `0.1.0.768` / [Commit: e47c7e6a47616b178175a10b420fff00fc123ce7](https://github.com/Prowlarr/Prowlarr/commit/e47c7e6a47616b178175a10b420fff00fc123ce7)
+- Supported Indexers as of Build `0.1.0.786` / [Commit: 868f779c5d749b780d66c6d5520b0c3b4dae0715](https://github.com/Prowlarr/Prowlarr/commit/868f779c5d749b780d66c6d5520b0c3b4dae0715)
 
 ## Torrents
 
@@ -173,7 +172,7 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[TorrentParadiseMl](https://torrent-paradise.ml/){#torrentparadiseml}|The most innovative torrent site|en-us|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-us|
-|[TorrentQQ](https://torrentqq99.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq101.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents.csv is a self-hostable open source torrent search engine and database|en-us|
 |[TorrentSir](https://torrentsir31.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-ru|
@@ -191,8 +190,8 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[xxxAdultTorrent](https://xxxadulttorrent.org/){#xxxadulttorrent}|xxxAdultTorrent is a RUSSIAN Public tracker for 3X|ru-ru|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[xxxtorrents](https://www.xxxtorrents.pro/){#xxxtorrents}|xxxtorrents is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
-|[YGGcookie](https://www4.yggtorrent.li/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-fr|
-|[YGGtorrent](https://www4.yggtorrent.li/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-fr|
+|[YGGcookie](https://www3.yggtorrent.nz/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-fr|
+|[YGGtorrent](https://www3.yggtorrent.nz/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-fr|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|en-us|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|en-us|
 |[zetorrents](https://www.zetorrents.cc/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-fr|
@@ -235,6 +234,7 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[AvistaZ](https://avistaz.to/){#avistaz}|Aka AsiaTorrents|en-US|
 |[Back-ups](https://back-ups.me/){#backups}|Back-Ups is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[BakaBT](https://bakabt.me/){#bakabt}|Anime Community|en-US|
+|[BB](https://baconbits.org/){#bb}|bB is a Private Torrent Tracker for 0DAY / GENERAL|en-us|
 |[BeiTai](https://www.beitai.pt/){#beitai}|BeiTai is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|en-US|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a private site for eBooks and audiobooks|en-US|
@@ -378,8 +378,8 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|de-de|
 |[Mononoké-BT](http://mononoke-bt.org/){#mononokebt}|Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME|fr-fr|
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|en-us|
-|[M-Team - TP](https://pt.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / XXX|zh-cn|
-|[MTeamTP2FA](https://pt.m-team.cc/){#mteamtp2fa}|this indexer uses a cookie login for MTeamTP for those that want to use 2FA|zh-cn|
+|[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / XXX|zh-cn|
+|[MTeamTP2FA](https://kp.m-team.cc/){#mteamtp2fa}|this indexer uses a cookie login for MTeamTP for those that want to use 2FA|zh-cn|
 |[MuziekFabriek](https://www.muziekfabriek.org/){#muziekfabriek}|MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC|nl-NL|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker.|en-US|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|en-us|
