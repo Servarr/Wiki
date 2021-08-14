@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-14T14:40:10.687Z
+date: 2021-08-14T14:52:10.254Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -338,7 +338,99 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 </channel>
 </rss>
 ```
+![searches-indexers-and-trackers1.png](/assets/sonarr/searches-indexers-and-trackers1.png)
+![searches-indexers-and-trackers2.png](/assets/sonarr/searches-indexers-and-trackers2.png)
 
+- Trace Log Snippet
+
+```none
+2021-03-20 13:15:23.6|Info|NzbSearchService|Searching 1 indexers for [The Fix : S01E01]
+2021-03-20 13:15:23.6|Debug|Newznab|Downloading Feed https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1
+2021-03-20 13:15:23.6|Trace|HttpClient|Req: [GET] https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1
+```
+
+- Full Trace Log of a Search
+
+```none
+2021-03-20 13:15:23.6|Trace|Http|Req: 66 [GET] /api/v3/release?episodeId=1                                                                                                                                                                                                                         [5/3289]
+2021-03-20 13:15:23.6|Info|NzbSearchService|Searching 1 indexers for [The Fix : S01E01]
+2021-03-20 13:15:23.6|Debug|Newznab|Downloading Feed https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1
+2021-03-20 13:15:23.6|Trace|HttpClient|Req: [GET] https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1
+2021-03-20 13:15:23.6|Trace|ConfigService|Using default config value for 'proxyenabled' defaultValue:'False'
+2021-03-20 13:15:24.3|Trace|HttpClient|Res: [GET] https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1: 200.OK (680 ms)
+2021-03-20 13:15:24.3|Trace|NewznabRssParser|Parsed: The.Fix.S01E01.1080p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Trace|NewznabRssParser|Parsed: The.Fix.S01E01.720p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|NzbSearchService|Total of 2 reports were found for [The Fix : S01E01] from 1 indexers
+2021-03-20 13:15:24.3|Debug|NzbSearchService|Setting last search time to: 11/20/2019 13:15:24
+2021-03-20 13:15:24.3|Info|DownloadDecisionMaker|Processing 2 releases
+2021-03-20 13:15:24.3|Trace|DownloadDecisionMaker|Processing release 1/2
+2021-03-20 13:15:24.3|Debug|DownloadDecisionMaker|Processing release 'The.Fix.S01E01.1080p.AMZN.WEB-DL' from 'NZBgeek'
+2021-03-20 13:15:24.3|Debug|Parser|Parsing string 'The.Fix.S01E01.1080p.AMZN.WEB-DL'
+2021-03-20 13:15:24.3|Trace|Parser|^(?<title>.+?)(?:(?:[-_\W](?<![()\[!]))+S?(?<season>(?<!\d+)(?:\d{1,2})(?!\d+))(?:[ex]|\W[ex]){1,2}(?<episode>\d{2,3}(?!\d+))(?:(?:\-|[ex]|\W[ex]|_){1,2}(?<episode>\d{2,3}(?!\d+)))*)\W?(?!\\)
+2021-03-20 13:15:24.3|Debug|Parser|Episode Parsed. The Fix - S01E01
+2021-03-20 13:15:24.3|Debug|Parser|Language parsed: English
+2021-03-20 13:15:24.3|Debug|QualityParser|Trying to parse quality for The.Fix.S01E01.1080p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|Parser|Quality parsed: WEBDL-1080p v1
+2021-03-20 13:15:24.3|Debug|Parser|Release Group parsed:
+2021-03-20 13:15:24.3|Trace|PreferredWordService|Calculating preferred word score for 'The.Fix.S01E01.1080p.AMZN.WEB-DL'
+2021-03-20 13:15:24.3|Trace|PreferredWordService|Calculated preferred word score for 'The.Fix.S01E01.1080p.AMZN.WEB-DL': 0
+2021-03-20 13:15:24.3|Debug|AcceptableSizeSpecification|Beginning size check for: The.Fix.S01E01.1080p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|AcceptableSizeSpecification|Possible double episode, doubling allowed size.
+2021-03-20 13:15:24.3|Debug|AcceptableSizeSpecification|Item: The.Fix.S01E01.1080p.AMZN.WEB-DL, meets size constraints.
+2021-03-20 13:15:24.3|Debug|AlreadyImportedSpecification|Performing already imported check on report
+2021-03-20 13:15:24.3|Debug|AlreadyImportedSpecification|Skipping already imported check for episode without file
+2021-03-20 13:15:24.3|Debug|LanguageSpecification|Checking if report meets language requirements. English
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'maximumsize' defaultValue:'0'
+2021-03-20 13:15:24.3|Debug|MaximumSizeSpecification|Maximum size is not set.
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'minimumage' defaultValue:'0'
+2021-03-20 13:15:24.3|Debug|MinimumAgeSpecification|Minimum age is not set.
+2021-03-20 13:15:24.3|Debug|QualityAllowedByProfileSpecification|Checking if report meets quality requirements. WEBDL-1080p v1
+2021-03-20 13:15:24.3|Debug|QualityAllowedByProfileSpecification|Quality WEBDL-1080p v1 rejected by Series' quality profile
+2021-03-20 13:15:24.3|Debug|ReleaseRestrictionsSpecification|Checking if release meets restrictions: The.Fix.S01E01.1080p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|ReleaseRestrictionsSpecification|[The.Fix.S01E01.1080p.AMZN.WEB-DL] No restrictions apply, allowing
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'retention' defaultValue:'0'
+2021-03-20 13:15:24.3|Debug|RetentionSpecification|Checking if report meets retention requirements. 245
+2021-03-20 13:15:24.3|Debug|SeriesSpecification|Checking if series matches searched series
+2021-03-20 13:15:24.3|Debug|DelaySpecification|Ignoring delay for user invoked search
+2021-03-20 13:15:24.3|Debug|HistorySpecification|Skipping history check during search
+2021-03-20 13:15:24.3|Debug|MonitoredEpisodeSpecification|Skipping monitored check during search
+2021-03-20 13:15:24.3|Debug|DownloadDecisionMaker|Release rejected for the following reasons: [Permanent] WEBDL-1080p is not wanted in profile
+2021-03-20 13:15:24.3|Trace|DownloadDecisionMaker|Processing release 2/2
+2021-03-20 13:15:24.3|Debug|DownloadDecisionMaker|Processing release 'The.Fix.S01E01.720p.AMZN.WEB-DL' from 'NZBgeek'
+2021-03-20 13:15:24.3|Debug|Parser|Parsing string 'The.Fix.S01E01.720p.AMZN.WEB-DL'
+2021-03-20 13:15:24.3|Trace|Parser|^(?<title>.+?)(?:(?:[-_\W](?<![()\[!]))+S?(?<season>(?<!\d+)(?:\d{1,2})(?!\d+))(?:[ex]|\W[ex]){1,2}(?<episode>\d{2,3}(?!\d+))(?:(?:\-|[ex]|\W[ex]|_){1,2}(?<episode>\d{2,3}(?!\d+)))*)\W?(?!\\)
+2021-03-20 13:15:24.3|Debug|Parser|Episode Parsed. The Fix - S01E01
+2021-03-20 13:15:24.3|Debug|Parser|Language parsed: English
+2021-03-20 13:15:24.3|Debug|QualityParser|Trying to parse quality for The.Fix.S01E01.720p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|Parser|Quality parsed: WEBDL-720p v1
+2021-03-20 13:15:24.3|Debug|Parser|Release Group parsed:
+2021-03-20 13:15:24.3|Trace|PreferredWordService|Calculating preferred word score for 'The.Fix.S01E01.720p.AMZN.WEB-DL'
+2021-03-20 13:15:24.3|Trace|PreferredWordService|Calculated preferred word score for 'The.Fix.S01E01.720p.AMZN.WEB-DL': 0
+2021-03-20 13:15:24.3|Debug|AcceptableSizeSpecification|Beginning size check for: The.Fix.S01E01.720p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|AcceptableSizeSpecification|Possible double episode, doubling allowed size.
+2021-03-20 13:15:24.3|Debug|AcceptableSizeSpecification|Item: The.Fix.S01E01.720p.AMZN.WEB-DL, meets size constraints.
+2021-03-20 13:15:24.3|Debug|AlreadyImportedSpecification|Performing already imported check on report
+2021-03-20 13:15:24.3|Debug|AlreadyImportedSpecification|Skipping already imported check for episode without file
+2021-03-20 13:15:24.3|Debug|LanguageSpecification|Checking if report meets language requirements. English
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'maximumsize' defaultValue:'0'
+2021-03-20 13:15:24.3|Debug|MaximumSizeSpecification|Maximum size is not set.
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'minimumage' defaultValue:'0'
+2021-03-20 13:15:24.3|Debug|MinimumAgeSpecification|Minimum age is not set.
+2021-03-20 13:15:24.3|Debug|QualityAllowedByProfileSpecification|Checking if report meets quality requirements. WEBDL-720p v1
+2021-03-20 13:15:24.3|Debug|ReleaseRestrictionsSpecification|Checking if release meets restrictions: The.Fix.S01E01.720p.AMZN.WEB-DL
+2021-03-20 13:15:24.3|Debug|ReleaseRestrictionsSpecification|[The.Fix.S01E01.720p.AMZN.WEB-DL] No restrictions apply, allowing
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'retention' defaultValue:'0'
+2021-03-20 13:15:24.3|Debug|RetentionSpecification|Checking if report meets retention requirements. 245
+2021-03-20 13:15:24.3|Debug|SeriesSpecification|Checking if series matches searched series
+2021-03-20 13:15:24.3|Debug|DelaySpecification|Ignoring delay for user invoked search
+2021-03-20 13:15:24.3|Debug|HistorySpecification|Skipping history check during search
+2021-03-20 13:15:24.3|Debug|MonitoredEpisodeSpecification|Skipping monitored check during search
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'autounmonitorpreviouslydownloadedepisodes' defaultValue:'False'
+2021-03-20 13:15:24.3|Debug|DownloadDecisionMaker|Release accepted
+2021-03-20 13:15:24.3|Trace|ConfigService|Using default config value for 'downloadpropersandrepacks' defaultValue:'PreferAndUpgrade'
+2021-03-20 13:15:24.3|Trace|Http|Res: 66 [GET] /api/v3/release?episodeId=1: 200.OK (775 ms)
+2021-03-20 13:15:24.3|Debug|Api|[GET] /api/v3/release?episodeId=1: 200.OK (775 ms)
+```
 ### Common Problems
 
 #### Series needs an alias
@@ -390,6 +482,10 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 #### Using NZBHydra2 as a single entry
 
 Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Sonarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+
+#### Indexer not being searched
+
+If an indexer does not appear to being searched, it is likely due to the indexer not supporting the query time. The most common instance is Nyaa only supports query searches and not Season/Episode searches.  The Trace logs indicate after a reboot on the first search what capabilites an indexer has or does not have.
 
 #### Problem Not Listed
 
