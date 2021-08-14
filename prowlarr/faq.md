@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-08-08T19:27:52.484Z
+date: 2021-08-14T18:00:09.953Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -15,11 +15,12 @@ dateCreated: 2021-06-23T03:06:20.944Z
 
 ## Can I use flaresolverr indexers?
 
-At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
+- At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
+- Support for this is planned to be added as part of the [Per Indexer Proxy Pull Request](https://github.com/Prowlarr/Prowlarr/pull/380)
 
 ## Prowlarr will not sync to Sonarr
 
-Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
+- Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
 
 ## How do I update Prowlarr?
 
@@ -103,71 +104,78 @@ Most likely this is due to a MacOS bug which caused the Prowlarr database to be 
 - Run Prowlarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 - (Optional) Drop a shortcut to Prowlarr.exe in the startup folder to auto-start on boot.
 
-## How do I Backup/Restore my Prowlarr?
+## How do I Backup/Restore Prowlarr ?
 
-Backing up Prowlarr
+### Backing up Prowlarr
 
-Using built-in backup
+#### Using built-in backup
 
-- Go to System: Backup in the Prowlarr UI
+- Go to System \-> Backup in the Prowlarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
-Using file system directly
+#### Using file system directly
 
-- Find the location of the AppData directory for Prowlarr (Via the Prowlarr UI go to System: About)
+- Find the location of the AppData directory for Prowlarr  
+  - Via the Prowlarr UI go to System -> About  
+  - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
+### Restoring from Backup
 
-Restoring from Backup
+> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+{.is-warning}
 
-Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing / instead of \ that Windows uses, but is not supported.
-
-Using zip backup
+#### Using zip backup
 
 - Re-install Prowlarr
 - Run Prowlarr
-- Navigate to System > Backup
+- Navigate to System -> Backup
 - Select Restore Backup
 - Select Choose File
 - Select your backup zip file
 - Select Restore
 
-Using file system backup
+#### Using file system backup
 
 - Re-install Prowlarr
-- Run Prowlarr once to get the AppData directory location
+- Find the location of the AppData directory for Prowlarr  
+  - Running Prowlarr once and via the UI go to System -> About  
+  - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
-- Delete the contents of the AppData directory (Including the .db-wal/.db-journal files if they exist)
+- Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
 - Start Prowlarr
+- As long as the paths are the same, everything will pick up where it left off
 
-As long as the paths are the same, everything will pick up where it left off.
-
-Restore for Synology NAS
+- **Restore for Synology NAS**
 
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
+{.is-warning}
 
 - Re-install Prowlarr
-- Run Prowlarr once to get the AppData directory location
+- Find the location of the AppData directory for Prowlarr  
+  - Running Prowlarr once and via the UI go to System -> About  
+  - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
-- Connect to the Synology NAS through SSH and log in as root
+- Connect to the Synology NAS through SSH and log in as root  
 - Execute the following commands:
 
-`rm -r /usr/local/{{{ARRNAME}}}/var/.config/{{{ARRNAME}}}/{{{ARRNAME}}}.db*`
-`cp -f /tmp/{{{ARRNAME}}}_backup/* /usr/local/{{{ARRNAME}}}/var/.config/{{{ARRNAME}}}/`
+    ```shell
+        rm -r /usr/local/Prowlarr/var/.config/Prowlarr/Prowlarr.db
+        cp -f /tmp/Prowlarr_backup/* /usr/local/Prowlarr/var/.config/Prowlarr/
+    ```
 
-Update permissions on the files:
+- Update permissions on the files:
 
-`cd /usr/local/{{{ARRNAME}}}/var/.config/{{{ARRNAME}}}/`
-`chown -R {{{ARRNAME}}}:users *`
-`chmod -R 0644 *`
+    ```shell
+        cd /usr/local/Prowlarr/var/.config/Prowlarr/
+        chown -R Prowlarr:users *
+        chmod -R 0644 *
+    ```
 
-On some installations, the user is different:
-
-`chown -R sc-Prowlarr:Prowlarr *`
-
-Start Prowlarr
+    On some installations, the user is different: `chown -R sc-`sc-Prowlarr`:`Prowlarr`  *`
+- Start Prowlarr
 
 ## Help I have locked myself out
 
@@ -196,22 +204,7 @@ If you can only reach your web interface at `http://localhost:9696/` or `http://
 
 ## Finding Cookies
 
-Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. This page describes how you do that.
-
-**Chrome**
-
-* Go to the torrent tracker website and log in.
-
-* Hit F12
-
-* Under the Application tab at the top, there will be "Storage" on the left side. You will see a "Cookies" subsection, and under that you will see IPT's url. Click on that.
-
-* Click on "Pass" on that screen, and it will pop up a box that says "Cookie Value" with a string about 25-30 chars long. Copy that, and paste it into Prowlarr.
-
-![cookie_chrome.png](/assets/prowlarr/cookie_chrome.png)
-Firefox
-
-![faq_3_cookies.png](/assets/general/faq_3_cookies.png)
+Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
 ## uTorrent is no longer working
 
@@ -235,7 +228,7 @@ Prowlarr was unable to read your config file on start-up as it became corrupted 
 
 Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
-Prowlarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Prowlarr will refuse to connect. Free properly signed certificates are available from let's encrypt.
+Prowlarr validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Prowlarr will refuse to connect. Free properly signed certificates are available from let's encrypt.
 
 If your download client and Prowlarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
@@ -252,11 +245,11 @@ To disable authentication (to reset your username or password) you will need nee
 1. Restart Prowlarr
 1. Prowlarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-## VPNs, Prowlarr, and the * ARRs
+## VPNs, Prowlarr, and the \*ARRs
 
 Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-In other words, putting the *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the* Arrs, but when: image providers will block you and cloudflare is in front of most of *arr servers (updates, metadata, etc.) and liable to block you too.
+In other words, putting the \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of *arr servers (updates, metadata, etc.) and liable to block you too.
 
 In addition, some private trackers ban for browsing from a VPN, which is how Prowlarr works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Prowlarr behind the VPN. However, you should not do that if you have private trackers without checking their rules first. Many private trackers will ban you for using or accessing them (i.e. using Prowlarr) via a VPN.
 
