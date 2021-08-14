@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-10T17:16:08.013Z
+date: 2021-08-14T16:18:40.591Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -91,7 +91,7 @@ tar -xvzf Readarr*.linux*.tar.gz
 sudo mv Readarr/ /opt
 ```
 
-> This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.
+> This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.  Please note that if use wish to use Calibre - Readarr will need permissions for that directory.
 {.is-danger}
 
 - Ensure ownership of the binary directory.
@@ -232,3 +232,58 @@ If you implement any additional authentication through Apache, you should exclud
 
 - `/readarr/api/`
 - `/readarr/Content/`
+
+## Multiple Instances
+
+- It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
+- Note that you can configure Radarr to use a second Radarr as a list.  This is helpful if you wish to keep both in sync.
+
+The following requirements should be noted:
+  - If non-docker, the same binaries (program files) should be used
+  - If non-docker, all instances *must* have a `-data=` or `/data=` argument passed
+  - If non-docker, different ports must be used
+    - If docker, different external ports must be used
+  - Different download client categories must be used
+  - Different root folders must be used.
+  - If non-docker, disable automatic updates on all but 1 instance.
+ 
+### Windows
+
+> Contributions welcome and encouraged.{.is-info}
+
+### Linux
+
+- Ensure your first instance has the `-data=` argument passed.
+- Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
+> Below is an example script to create a RadarrAudio instance. The below systemd creation script will use a data directory of /data/.config/RadarrAudio. Ensure it exists or modify it as needed.{.is-danger}
+
+```shell
+cat << EOF | sudo tee /etc/systemd/system/readarraudio.service > /dev/null
+[Unit]
+Description=ReadarrAudio Daemon
+After=syslog.target network.target
+[Service]
+User=readarr
+Group=media
+Type=simple
+
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/ReadarrAudio/
+TimeoutStopSec=20
+KillMode=process
+Restart=always
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+- Reload systemd:
+```shell
+sudo systemctl -q daemon-reload
+```
+- Enable the ReadarrAudio service:
+```shell
+sudo systemctl enable --now -q readarraudio
+```
+
+### Docker
+
+- Simply spin up a second Docker container with a different name, ensuring the above requirments are met.
