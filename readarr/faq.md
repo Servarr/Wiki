@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:00:12.832Z
+date: 2021-08-14T18:02:17.897Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -229,6 +229,10 @@ Depending on your OS, there are multiple possible ways.
 - In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Readarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Readarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
+
+## Weird UI Issues
+
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
 
 ## VPNs, Jackett, and the \*ARRs
 
