@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-07-25T19:02:15.498Z
+date: 2021-08-14T18:20:39.246Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -102,8 +102,11 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 
 #### Contributing Indexers
 
-- If you're contributing an indexer please phrase your commit as something like: `New: (Indexer) {Indexer Name}`, `New: (Indexer) {Usenet|Torrent} {Indexer Name}`, `New: (Indexer) {Torznab|Newznab} {Indexer Name}`
-- If you're updating an indexer please phrase your commit as something like: `Fixed: (Indexer) {Indexer Name} {changes}` e.g. `Fixed: (Indexer) Changed BHD to use API`
+- If you're contributing a C# indexer please phrase your commit as something like: `New: (Indexer) {Indexer Name}`, `New: (Indexer) {Usenet|Torrent} {Indexer Name}`, `New: (Indexer) {Torznab|Newznab} {Indexer Name}`
+- If you're updating a C# indexer please phrase your commit as something like: `Fixed: (Indexer) {Indexer Name} {changes}` e.g. `Fixed: (Indexer) Changed BHD to use API`
+- For Cardigann/YML Indexers please see [the definition and description of the yml format](/prowlarr/cardigann-yml-definition)
+
+##### Indexer YML Definition
 
 ### Pull Requesting
 
