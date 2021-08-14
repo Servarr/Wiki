@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-12T02:45:00.571Z
+date: 2021-08-14T14:40:10.687Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -221,7 +221,7 @@ There are a few causes of repeated downloads, but a recent one is related to the
 
 #### Download client clearing items
 
-The download client should *not* be responsible for removing downloads. Usenet clients should be configured so they *don’t* remove downloads from history. Torrent clients should be setup so they *don’t* remove torrents when they’re finished seeding (pause or stop instead). This is because communicates with the download client to know what to import, so if they’re *removed* there is nothing to be imported… even if there is a folder full of files.
+The download client should *not* be responsible for removing downloads. Usenet clients should be configured so they *don’t* remove downloads from history. Torrent clients should be setup so they *don’t* remove torrents when they’re finished seeding (pause or stop instead). This is because communicates with the download client to know what to import, so if they’re *removed* there is nothing to be imported. even if there is a folder full of files.
 
 For SABnzbd, this is handled with the History Retention setting.
 
@@ -230,6 +230,20 @@ For SABnzbd, this is handled with the History Retention setting.
 For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity -> Options -> Shown Unknown will display all items not otherwise ignored / already imported within *Arr's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
+
+#### Connection Timed Out
+
+#### The request timed out
+
+Sonarr is getting no response from the client.
+
+This is typically caused by:
+
+- improperly configured or use of a VPN
+- improperly configured or use of a proxy
+- local DNS issues
+- local IPv6 issues
+- the use of Privoxy
 
 ### Problem Not Listed
 
@@ -247,6 +261,84 @@ When you test an indexer or tracker, in debug or trace logs you can find the URL
 
 ### Testing a Search
 
+Just like the indexer/tracker test above, when you trigger a search while at Debug or Trace level logging, you can get the URL used from the log files. While testing, it is best to use as narrow a search as possible. A manual search is good because it is specific and you can see the results in the UI while examining the logs.
+
+In this test, you’ll be looking for obvious errors and running some simple tests. You can see the search used the url `https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1`, which you can try yourself in a browser after replacing (removed) with your apikey for that indexer. Does it work? Do you see the expected results? Does this FAQ entry apply? In that URL, you can see that it set specific categories with `cat=5030,5040,5045,5080`, so if you’re not seeing expected results, this is one likely reason. You can also see that it searched by tvdbid with `tvdbid=354629`, so if the episode isn’t properly categorized on the indexer, it will need to be fixed. You can also see that it searches by specific season and episode with season=1 and ep=1, so if that isn’t correct on the indexer, you won’t see those results. Look at Manual Search XML Output below to see an example of a working query’s output.
+
+- Manual Search XML Output
+```xml
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:newznab="http://www.newznab.com/DTD/2010/feeds/attributes/" version="2.0">
+<channel>
+<atom:link href="https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1" rel="self" type="application/rss+xml"/>
+<title>api.nzbgeek.info</title>
+<description>NZBgeek API</description>
+<link>http://api.nzbgeek.info/</link>
+<language>en-gb</language>
+<webMaster>info@nzbgeek.info (NZBgeek)</webMaster>
+<category/>
+<image>
+<url>https://api.nzbgeek.info/covers/nzbgeek.png</url>
+<title>api.nzbgeek.info</title>
+<link>http://api.nzbgeek.info/</link>
+<description>NZBgeek</description>
+</image>
+<newznab:response offset="0" total="2"/>
+<item>
+<title>The.Fix.S01E01.1080p.AMZN.WEB-DL</title>
+<guid isPermaLink="true">
+https://api.nzbgeek.info/details/358e0f946f953771c7688864b0334ba1
+</guid>
+<link>
+https://api.nzbgeek.info/api?t=get&id=358e0f946f953771c7688864b0334ba1&apikey=(removed)
+</link>
+<comments>
+https://nzbgeek.info/geekseek.php?guid=358e0f946f953771c7688864b0334ba1
+</comments>
+<pubDate>Wed, 20 Mar 2019 05:03:32 +0000</pubDate>
+<category>TV > HD</category>
+<description>The.Fix.S01E01.1080p.AMZN.WEB-DL</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=358e0f946f953771c7688864b0334ba1&apikey=(removed)" length="3810861000" type="application/x-nzb"/>
+<newznab:attr name="category" value="5000"/>
+<newznab:attr name="category" value="5040"/>
+<newznab:attr name="size" value="3810861000"/>
+<newznab:attr name="guid" value="358e0f946f953771c7688864b0334ba1"/>
+<newznab:attr name="tvdbid" value="354629"/>
+<newznab:attr name="season" value="S01"/>
+<newznab:attr name="episode" value="E01"/>
+<newznab:attr name="tvairdate" value="2019-03-18T00:00:00Z"/>
+<newznab:attr name="grabs" value="55"/>
+<newznab:attr name="usenetdate" value="Wed, 20 Mar 2019 04:54:15 +0000"/>
+</item>
+<item>
+<title>The.Fix.S01E01.720p.AMZN.WEB-DL</title>
+<guid isPermaLink="true">
+https://api.nzbgeek.info/details/f7e4ac2875b6a1ce45bae91ab19e9699
+</guid>
+<link>
+https://api.nzbgeek.info/api?t=get&id=f7e4ac2875b6a1ce45bae91ab19e9699&apikey=(removed)
+</link>
+<comments>
+https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
+</comments>
+<pubDate>Wed, 20 Mar 2019 05:03:33 +0000</pubDate>
+<category>TV > HD</category>
+<description>The.Fix.S01E01.720p.AMZN.WEB-DL</description>
+<enclosure url="https://api.nzbgeek.info/api?t=get&id=f7e4ac2875b6a1ce45bae91ab19e9699&apikey=(removed)" length="1195794000" type="application/x-nzb"/>
+<newznab:attr name="category" value="5000"/>
+<newznab:attr name="category" value="5040"/>
+<newznab:attr name="size" value="1195794000"/>
+<newznab:attr name="guid" value="f7e4ac2875b6a1ce45bae91ab19e9699"/>
+<newznab:attr name="tvdbid" value="354629"/>
+<newznab:attr name="season" value="S01"/>
+<newznab:attr name="episode" value="E01"/>
+<newznab:attr name="tvairdate" value="2019-03-18T00:00:00Z"/>
+<newznab:attr name="grabs" value="14"/>
+<newznab:attr name="usenetdate" value="Wed, 20 Mar 2019 04:51:45 +0000"/>
+</item>
+</channel>
+</rss>
+```
+
 ### Common Problems
 
 #### Series needs an alias
@@ -255,7 +347,7 @@ Releases may be uploaded as `The Series Name`, but TVDB has the series as `Serie
 
 #### Media is Unmonitored
 
-The media is/are not monitored.
+The series/season/episode(s) is(are) not monitored.
 
 #### Wrong categories
 
@@ -271,9 +363,13 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 
 #### Hitting rate limits
 
-If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
+If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy.
 
 Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
+
+#### IP Ban
+
+Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address.  This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.
 
 #### Using the Jackett /all endpoint
 
@@ -291,6 +387,10 @@ Using the all endpoint has no advantages (besides reduced management overhead), 
 
 Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
 
+#### Using NZBHydra2 as a single entry
+
+Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Sonarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+
 #### Problem Not Listed
 
 Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
@@ -301,11 +401,13 @@ These are some of the common errors you may see when adding an indexer
 
 #### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by .net 4.5, to resolve this you will need to install .net 4.5, which is available on Vista/Server 2008 and above (if you’re on XP/Server 2003 its time to upgrade).
+This is caused by the indexer using a SSL protocol not supported by the current .Net Version ([Sonarr -> System -> Status](/sonarr/system/status).
 
 #### The request timed out
 
- seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
+Sonarr is getting no response from the indexer.
+
+Sonarr seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
 ```none
     System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.Net.WebException: The request timed out
@@ -329,3 +431,4 @@ This can also be caused by:
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues
+- the use of Privoxy
