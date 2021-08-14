@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-04T22:38:14.034Z
+date: 2021-08-14T15:50:46.230Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -57,15 +57,14 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## Why did the GUI / UI Change? Can it be changed back?
 
 - Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
-
 - No it cannot be changed back to be like v0.2. No it will not be changed back.
 - You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
 
 ## Where did Wanted and Cut-off Unmet go?
 
 - Movie Index (AKA 'Movies') -> Filter (top right corner) -> `Wanted` and `Cut-off Unmet`
-  - Wanted - Movie is missing, monitored, and available
-  - Missing - Movie is missing and monitored
+  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your avaiaibliy settings.
+  - Missing - Movie is Missing and Monitored
 
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
 
@@ -78,22 +77,19 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Can all my movie files be stored in one folder?
 
-- Not yet and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.
-
-- If you're looking to moving all your movies from one folder to individual folders check Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS**
-
-## Can I put all my movies in my library into one folder?
-
-- We get asked this a lot. There are no plans to support `\data\Movies\Movie1.mkv`, `\data\Movies\Movie2.mkv`, etc.
-
+- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
-
-- A slight hack-ish solution is noted below. Please note that you mustn't trigger a rescan or it will show as missing and regardless the movie will never be upgraded.
+- A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
 
   - Use a Custom Script
     - the script should be triggered on import
     - it should be designed to move the file whenever you want it
     - it then needs to call the Radarr API and change the movie to unmonitored.
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
+
+## Can I put all my movies in my library into one folder?
+
+- No, see above.
 
 ## How can I rename my movie folders?
 
@@ -109,7 +105,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-- See Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS** for more details.
+- See [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
 ## Movie Folders Named Incorrectly
 
@@ -129,7 +125,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
     - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The Create a Folder for Each Movie **LINK NEEDED TO TIPS AND TRICKS** is a great source for making sure your file and folder structure will work great.
+  - The [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## How can I mass delete movies from the wanted list?
 
@@ -168,9 +164,9 @@ proxy_set_header Connection $http_connection;
 - `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/nightly/VERSION.json) - (Alpha/Unstable) : The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This is currently v4. This version is updated immediately.
 
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-warning}
+{.is-danger}
 
-- Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.
+- Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.  Please note that `nightly` branches are intentionally not listed below.
 
 | |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
 |---|---|---|
@@ -205,11 +201,11 @@ If Docker:
 - See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **July 27 2021 Update**
+- **August 14 2021 Update**
   - `3.2.2.5080` has been released as master/stable
   - For those on nightly and are still on `4.0.0.5120` or lower you can safely downgrade to master
-    - If you are on a newer version you are stuck on nightly until a new develop / new master are cut.  If you have a backup, you can reinstall and restore the backup.
-  - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to master
+    - If you are on a newer version you are stuck on nightly until a new develop / new master are cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup.
+  - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to `master`
 
 ## How does Radarr handle foreign movies or foreign titles?
 
@@ -220,16 +216,17 @@ If Docker:
 ## How does Radarr handle "multi" in names?
 
 - Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
-
-- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
+r- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
 
 ## Help, Movie Added, But Not Searched
 
 - Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
 - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
 
-"Add and Search for movie" (on add) **IMAGE NEEDED**
-"Add and Search for movie" (on select via index) **IMAGE NEEDED**
+  - Add and Search for Movie when adding a movie
+![addmovie-add-and-search.png](/assets/radarr/addmovie-add-and-search.png)
+  - Search an existing Movie
+![searchmovie-movie-page.png](/assets/radarr/searchmovie-movie-page.png)
 
 ## Root path for movies imported from lists becomes “C:” or other weird paths
   
@@ -241,23 +238,19 @@ If Docker:
 
 ## Movie Imported, But Source File And Torrent Not Deleted
 
-\* Check if you have Completed Download Handling - Remove turned on. (This does not work if you are using rtorrent.)
-
-![Settings \> Download Clients](Remove_turned_on.png "Settings \> Download Clients")
-
-- If you are using deluge make sure auto-managed is turned on. And that torrents get paused when they reach specified seeding quota.
+- Check if you have [Completed Download Handling - Remove](/radarr/settings#completed-download-handling) turned on. See the settings page for additional information and details.
 
 ## My Custom Script stopped working after upgrading from v0.2
 
 You were likely passing arguments in your connection and that is not supported.
 
 1. Change your argument to be your path
-2. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
-3. Make sure the pwsh script is executable
+1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
+1. Make sure the pwsh script is executable
 
-## I am using a Pi and Raspbian and Radarr will not launch
+## I am using a Pi running Raspbian and Radarr will not launch
 
-Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base for v3. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
+- Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base for v3. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
 
 **Possible Solution:**
 
@@ -534,12 +527,11 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Why are there two files? | Why is there a file left in downloads?
 
-This is expected. This is how the Torrent Process works.
+This is expected. Below is how the Torrent Process works.
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 1. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-
-- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
-
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
+
+> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
