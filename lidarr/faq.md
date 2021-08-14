@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-08-14T17:42:15.842Z
+date: 2021-08-14T18:00:11.834Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -273,11 +273,11 @@ Depending on your OS, there are multiple possible ways.
 - When invoking Lidarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Lidarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
-## VPNs, Jackett, and the * ARRs
+## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-- In other words, putting the  *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
+- In other words, putting the  \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
 
