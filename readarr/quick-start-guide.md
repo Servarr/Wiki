@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-14T15:31:06.859Z
+date: 2021-08-14T20:20:36.819Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -72,10 +72,10 @@ Here we will add the root folder that Readarr will be using to import your exist
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
 
->If you are going to use Calibre, the books you want to have Readarr recognize must ALREADY BE in Calibre. You cannot ADD Calibre integration later!
-{.is-warning}
+> If you are going to use Calibre, the books you want to have Readarr recognize must ALREADY BE in Calibre. You cannot ADD Calibre integration later!
+{.is-danger}
 
->Your download client downloads to a download folder, and Readarr imports it to your media folder (final destination) that your media server uses. Your download folder and media folder can’t be the same location!
+> Your download client downloads to a download folder, and Readarr imports it to your media folder (final destination) that your media server uses. Your download folder and media folder can’t be the same location! {.is-warning}
 
 Don’t forget to save your changes.
 
