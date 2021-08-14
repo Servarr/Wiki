@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-14T17:22:59.095Z
+date: 2021-08-14T17:42:50.787Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -289,7 +289,7 @@ If Docker:
 
 ## How do I request a feature for Sonarr?
 
-- This is an easy one click [here](https://github.com/Sonarr/Sonarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
+- This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
 
 ## I am getting an error: Database disk image is malformed
 
@@ -439,10 +439,7 @@ This is usually due to Sonarr searching Jackett differently than you do. [See th
 
 ## Finding Cookies
 
-Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. This page describes how you do that.
-
-- Chrome ![Chrome cookies](/assets/general/chrome_cookies.png "fig:Chrome cookies"){width="750"}
-- Firefox ![Firefox cookies](/assets/general/Firefox_cookies.png "fig:Firefox cookies"){width="750"}
+Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
 ## Unpack Torrents
 
@@ -471,6 +468,14 @@ Some sites cannot be logged into automatically and require you to login manually
 - Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
 - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
+
+## How do I stop the browser from launching on startup?
+
+Depending on your OS, there are multiple possible ways.
+
+- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- When invoking Sonarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
+- Stop Sonarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
 ## VPNs, Jackett, and the * ARRs
 
