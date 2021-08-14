@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-08-14T15:16:54.274Z
+date: 2021-08-14T15:23:41.282Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -39,7 +39,10 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 ## Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/radarr/contributing)
+- [<i class="fas fa-book"></i>&emsp;API Docs](https://radarr.video/docs/api/#/)
 {.links-list}
+
+> Note that the API Docs are a perpectual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console. {.is-info}
 
 ## Support
 
