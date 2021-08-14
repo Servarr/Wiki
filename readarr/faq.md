@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-08-14T17:41:05.626Z
+date: 2021-08-14T17:42:35.877Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -221,6 +221,14 @@ To disable authentication (to reset your username or password) you will need nee
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
 1. Restart Readarr
 1. Readarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
+
+## How do I stop the browser from launching on startup?
+
+Depending on your OS, there are multiple possible ways.
+
+- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- When invoking Readarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
+- Stop Readarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
 ## VPNs, Jackett, and the * ARRs
 
