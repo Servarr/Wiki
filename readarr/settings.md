@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-08-11T19:38:42.082Z
+date: 2021-08-14T20:22:35.840Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -15,6 +15,8 @@ dateCreated: 2021-05-27T16:47:28.054Z
 ![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
 
 If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.
+
+> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. {.is-info}
 
 Commonly used naming schema are:
 
