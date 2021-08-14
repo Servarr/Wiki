@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-14T15:55:14.331Z
+date: 2021-08-14T17:57:03.755Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -359,63 +359,67 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 ## How do I Backup/Restore Radarr ?
 
-### Backing up
+### Backing up Radarr
 
 #### Using built-in backup
 
-1. Go to System: Backup in the UI
-1. Click the Backup button
-1. Download the zip after the backup is created for safekeeping
+- Go to System \-> Backup in the Radarr UI
+- Click the Backup button
+- Download the zip after the backup is created for safekeeping
 
 #### Using file system directly
 
-1. Find the location of the AppData directory for Radarr
-      - Via the UI go to System \> About
-      - [Radarr Appdata Directory](/radarr/appdata-directory)
-1. Stop  - This will prevent the database from being corrupted
-1. Copy the contents to a safe location
-
+- Find the location of the AppData directory for Radarr  
+  - Via the Radarr UI go to System -> About  
+  - [Radarr Appdata Directory](/radarr/appdata-directory)
+- Stop Radarr - This will prevent the database from being corrupted
+- Copy the contents to a safe location
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths won’t work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 {.is-warning}
 
 #### Using zip backup
 
-1. Re-install Radarr
-1. Run Radarr
-1. Navigate to System \> Backup
-1. Select Restore Backup
-1. Select Choose File
-1. Select your backup zip file
-1. Select Restore
+- Re-install Radarr
+- Run Radarr
+- Navigate to System -> Backup
+- Select Restore Backup
+- Select Choose File
+- Select your backup zip file
+- Select Restore
 
 #### Using file system backup
 
-1. Re-install Radarr
-1. Run Radarr once to get the AppData directory location
-1. Stop Radarr
-1. Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
-1. Restore from your backup
-1. Start Radarr
-1. As long as the paths are the same, everything will pick up where it left off
+- Re-install Radarr
+- Find the location of the AppData directory for Radarr  
+  - Running Radarr once and via the UI go to System -> About  
+  - [Radarr Appdata Directory](/radarr/appdata-directory)
+- Stop Radarr
+- Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
+- Restore from your backup
+- Start Radarr
+- As long as the paths are the same, everything will pick up where it left off
 
 - **Restore for Synology NAS**
 
-**CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
+> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
+{.is-warning}
 
-1. Re-install Radarr  
-1. Run once to get the AppData directory location  
-1. Stop Radarr
-1. Connect to the Synology NAS through SSH and log in as root  
-1. Execute the following commands:
+- Re-install Radarr
+- Find the location of the AppData directory for Radarr  
+  - Running Radarr once and via the UI go to System -> About  
+  - [Radarr Appdata Directory](/radarr/appdata-directory)
+- Stop Radarr
+- Connect to the Synology NAS through SSH and log in as root  
+- Execute the following commands:
 
     ```shell
-        rm -r /usr/local/Radarr/var/.config/Radarr/Radarr.db*
+        rm -r /usr/local/Radarr/var/.config/Radarr/Radarr.db
         cp -f /tmp/Radarr_backup/* /usr/local/Radarr/var/.config/Radarr/
     ```
 
-1. Update permissions on the files:
+- Update permissions on the files:
 
     ```shell
         cd /usr/local/Radarr/var/.config/Radarr/
@@ -423,8 +427,8 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
         chmod -R 0644 *
     ```
 
-    On some installations, the user is different: `chown -R sc-``:``  *`
-1. Start
+    On some installations, the user is different: `chown -R sc-`sc-Radarr`:`Radarr`  *`
+- Start Radarr
 
 ## Help I have locked myself out
 
@@ -439,6 +443,13 @@ To disable authentication (to reset your username or password) you will need nee
 1. Restart Radarr
 1. Radarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
+## How do I stop the browser from launching on startup?
+
+Depending on your OS, there are multiple possible ways.
+
+- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- When invoking Radarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
+- Stop Radarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
 ## Jackett shows more results than when manually searching
   
@@ -465,10 +476,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 ## Finding Cookies
 
-- Some sites cannot be logged into automatically and require you to login manually then give the cookies to to work. This page describes how you do that.
-
-  - [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
-  - [Firefox cookies](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Radarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
 ## Unpack Torrents
 
@@ -498,11 +506,11 @@ To disable authentication (to reset your username or password) you will need nee
 
 - If your download client and are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
-## VPNs, Jackett, and the * ARRs
+## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-- In other words, putting the  *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
+- In other words, putting the \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
 
