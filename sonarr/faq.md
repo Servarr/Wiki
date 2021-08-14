@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-14T17:42:50.787Z
+date: 2021-08-14T17:57:19.913Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -347,61 +347,75 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 #### Using built-in backup
 
-1. Go to System: Backup in the Sonarr UI
-1. Click the Backup button
-1. Download the zip after the backup is created for safekeeping
+- Go to System \-> Backup in the Sonarr UI
+- Click the Backup button
+- Download the zip after the backup is created for safekeeping
 
 #### Using file system directly
 
-1. Find the location of the AppData directory for Sonarr  - Via the Sonarr UI go to System: About  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
-1. Stop Sonarr - This will prevent the database from being corrupted
-1. Copy the contents to a safe location
+- Find the location of the AppData directory for Sonarr  
+  - Via the Sonarr UI go to System -> About  
+  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+- Stop Sonarr - This will prevent the database from being corrupted
+- Copy the contents to a safe location
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported.{.is-warning}
+> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+{.is-warning}
 
 #### Using zip backup
 
-1. Re-install Sonarr
-1. Run Sonarr
-1. Navigate to System \> Backup
-1. Select Restore Backup
-1. Select Choose File
-1. Select your backup zip file
-1. Select Restore
+- Re-install Sonarr
+- Run Sonarr
+- Navigate to System -> Backup
+- Select Restore Backup
+- Select Choose File
+- Select your backup zip file
+- Select Restore
 
 #### Using file system backup
 
-1. Re-install Sonarr
-1. Run Sonarr once to get the AppData directory location
-1. Stop Sonarr
-1. Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
-1. Restore from your backup
-1. Start Sonarr
-1. As long as the paths are the same, everything will pick up where it left off
+- Re-install Sonarr
+- Find the location of the AppData directory for Sonarr  
+  - Running Sonarr once and via the UI go to System -> About  
+  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+- Stop Sonarr
+- Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
+- Restore from your backup
+- Start Sonarr
+- As long as the paths are the same, everything will pick up where it left off
 
 - **Restore for Synology NAS**
 
-**CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.**
+> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
+{.is-warning}
 
-1. Re-install Sonarr
-1. Run Sonarr once to get the AppData directory location
-1. Stop Sonarr
-1. Connect to the Synology NAS through SSH and log in as root
-1. Execute the following commands:
+- Re-install Sonarr
+- Find the location of the AppData directory for Sonarr  
+  - Running Sonarr once and via the UI go to System -> About  
+  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+- Stop Sonarr
+- Connect to the Synology NAS through SSH and log in as root
+- Execute the following commands:
 
-    shell
-    rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db*cp -f /tmp/Sonarr_backup/*/usr/local/Sonarr/var/.config/Sonarr/
+    ```shell
+        rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db
+        cp -f /tmp/Sonarr_backup/ /usr/local/Sonarr/var/.config/Sonarr/
+    ```
 
-1. Update permissions on the files:
+- Update permissions on the files:
 
-    shell
-    cd /usr/local/Sonarr/var/.config/Sonarr/ chown -R Sonarr:users *chmod -R 0644*
+    ```shell
+        cd /usr/local/Sonarr/var/.config/Sonarr/
+        chown -R Sonarr:users *
+        chmod -R 0644 *
+    ```
 
 > On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *` {.is-info}
 
-1. Start Sonarr
+- Start Sonarr
+
 
 ## Help I have locked myself out
 
@@ -439,7 +453,7 @@ This is usually due to Sonarr searching Jackett differently than you do. [See th
 
 ## Finding Cookies
 
-Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
 ## Unpack Torrents
 
@@ -477,11 +491,11 @@ Depending on your OS, there are multiple possible ways.
 - When invoking Sonarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Sonarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
-## VPNs, Jackett, and the * ARRs
+## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-- In other words, putting the  *Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
+- In other words, putting the  \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
 
