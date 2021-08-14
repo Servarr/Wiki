@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-14T16:18:40.591Z
+date: 2021-08-14T16:19:13.744Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -235,8 +235,8 @@ If you implement any additional authentication through Apache, you should exclud
 
 ## Multiple Instances
 
-- It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
-- Note that you can configure Radarr to use a second Radarr as a list.  This is helpful if you wish to keep both in sync.
+- It is possible to run multiple instances of Readarr. This is typically done when one wants a text and audiobook of the same book.
+- Note that you can configure Readarr to use a second Readarr as a list.  This is helpful if you wish to keep both in sync.
 
 The following requirements should be noted:
   - If non-docker, the same binaries (program files) should be used
