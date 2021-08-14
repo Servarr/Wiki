@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:00:09.953Z
+date: 2021-08-14T18:02:14.873Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -244,6 +244,10 @@ To disable authentication (to reset your username or password) you will need nee
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
 1. Restart Prowlarr
 1. Prowlarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
+
+## Weird UI Issues
+
+- If you experience any weird UI issues or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
 
 ## VPNs, Prowlarr, and the \*ARRs
 
