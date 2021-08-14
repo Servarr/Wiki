@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-08-14T20:22:35.840Z
+date: 2021-08-14T20:38:31.891Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -10,103 +10,112 @@ dateCreated: 2021-05-27T16:47:28.054Z
 
 ## Media Management
 
-### Book File Naming
-
 ![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
 
 If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.
 
-> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. {.is-info}
+> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. `{.is-info}
 
 Commonly used naming schema are:
 
-Standard Book Format
-`{Book Title}\{Author Name} - {Book Title}` which would then output a folder named `Cujo`, and a subdirectory containing a file with the name `Stephen King - Cujo.m4b`
+- Standard Book Format
+  - `{Book Title}\{Author Name}` - `{Book Title}` which would then output a folder named `Cujo`, and a subdirectory containing a file with the name `Stephen King - Cujo.m4b`
 
-Author Folder Format
+- Author Folder Format
+  - `{Author Name}` which would then output: `Stephen King`
 
-- `{Author Name}` which would then output: `Stephen King`
+### Book Naming
 
 - Rename Books - If this is toggled off (no check in the box) Readarr will use the existing file name if renaming is disabled.
 
-> If you leave Rename Books unchecked, then none of the naming stuff below applies - you have told Readarr you do not want any renaming done at all.
+> If you leave Rename Books unchecked, then none of the naming stuff below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
 {.is-info}
 
 - Replace Illegal Characters - If this is toggled off (no check in the box) Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
 
-Dropdown Box (upper right corner)
+#### Standard Book Format
 
-Left Box - Space Handling
+- Here you will select the naming convention for your books
 
-- Space ( ) - Use spaces in naming (Default)
-- Period (.) - Use periods in lieu of spaces in naming
-- Underscore (_) - Use underscores in lieu of spaces in naming
-- Dash (-) - Use dashes in lieu of spaces in naming
+- Dropdown Box (upper right corner)
+  - Left Box - Space Handling
+    - `Space ( )` - Use spaces in naming (Default)
+    - `Period (.)` - Use periods in lieu of spaces in naming
+    - `Underscore (_)` - Use underscores in lieu of spaces in naming
+    - `Dash (-)` - Use dashes in lieu of spaces in naming
+  - Right Box - Case Handling
+    - `Default Case` - Make title uppercase and lowercase (~camelcase) (Default)
+    - `Uppercase` - Make title all uppercase
+    - `Lowercase` - Make title all lowercase
 
-Right Box - Case Handling
+#### Author
 
-- Default Case - Make title uppercase and lowercase (~camelcase) (Default)
-- Uppercase - Make title all Uppercase
-- Lowercase - Make title all Lowercase
+- `{Author Name}` = Author's Name
+- `{Author NameThe}` = Author's Name, The
+- `{Author CleanName}` = Authors Name
+- `{Author SortName}` = Name, Author
+- `{Author Disambiguation}` = Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
-Author
+#### Book
 
-- {Author Name} Author's Name
-- {Author NameThe} Author's Name, The
-- {Author CleanName} Authors Name
-- {Author SortName} Name, Author
-- {Author Disambiguation} Author Name (disambiguation used from GoodReads for multiple authors with the same name)
+- `{Book Title}` = The Book's Title!: Subtitle!
+- `{Book TitleThe}` = Book's Title!, The: Subtitle!
+- `{Book CleanTitle}` = The Books Title: Subtitle
+- `{Book TitleNoSub}` = The Book's Title!
+- `{Book TitleTheNoSub}` = Book's Title!, The
+- `{Book CleanTitleNoSub}` = The Books Title
+- `{Book Subtitle}` = Subtitle!
+- `{Book SubtitleThe}` Subtitle!, The
+- `{Book CleanSubtitle}` = Subtitle
+- `{Book Disambiguation}` = Book Name! (disambiguation title used from GoodReads)
+- `{PartNumber:0}` or `{PartNumber:0}` = 2
+- `{PartNumber:00}` = 02
+- `{PartCount}` or `{PartCount:0} = 9
+- `{PartCount:00}` = 09
 
-Book
+#### Release Date
 
-- {Book Title} The Book's Title!: Subtitle!
-- {Book TitleThe} Book's Title!, The: Subtitle!
-- {Book CleanTitle} The Books Title: Subtitle
-- {Book TitleNoSub} The Book's Title!
-- {Book TitleTheNoSub} Book's Title!, The
-- {Book CleanTitleNoSub} The Books Title
-- {Book Subtitle} Subtitle!
-- {Book SubtitleThe} Subtitle!, The
-- {Book CleanSubtitle} Subtitle
-- {Book Disambiguation} Book Name! (disambiguation title used from GoodReads)
-- {PartNumber} 2
-- {PartCount} 10
+- `{Release Year}` = 2016
+- `{Release YearFirst}` = 2015
+- `{Edition Year}` = 2016
 
-Release Date
+#### Quality
 
-- {Release Year} 2016
-- {Release YearFirst} 2015
-- {Edition Year} 2016
+- `{Quality Full}` = AZW3 Proper
+- `{Quality Title}` = AZW3
 
-Quality
+#### Media Info
 
-- {Quality Full} AZW3 Proper
-- {Quality Title} AZW3
+- `{MediaInfo AudioCodec}` = MP3
+- `{MediaInfo AudioChannels}` = 2.0
+- `{MediaInfo AudioBitRate}` = 320kbps
+- `{MediaInfo AudioBitsPerSample}` = 24bit
+- `{MediaInfo AudioSampleRate}` = 44.1kHz
 
-Media Info
+#### Other
 
-- {MediaInfo AudioCodec} MP3
-- {MediaInfo AudioChannels} 2.0
-- {MediaInfo AudioBitRate} 320kbps
-- {MediaInfo AudioBitsPerSample} 24bit
-- {MediaInfo AudioSampleRate} 44.1kHz
+- `{Release Group}` = Rls Grp
+- `{Preferred Words}` = iNTERNAL
 
-Other
+#### Original
 
-- {Release Group} Rls Grp
-- {Preferred Words} iNTERNAL
-
-Original
-
-- {Original Title} Author.Name.Book.Name.2018.AZW3-EVOLVE
-- {Original Filename} 01-book name
+- `{Original Title}` = Author.Name.Book.Name.2018.AZW3-EVOLVE
+- `{Original Filename}` = 01-book name
 
 > Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
 {.is-info}
   
-Author Folder Format
+### Author Folder Format
 
 - (Advanced Option) This is where you will set the naming convention for the author folder name.
+
+#### Author
+
+- `{Author Name}` = Author's Name
+- `{Author NameThe}` = Author's Name, The
+- `{Author CleanName}` = Authors Name
+- `{Author SortName}` = Name, Author
+- `{Author Disambiguation}` = Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
 ### Folders
   
@@ -196,9 +205,9 @@ Release profiles are used to determine if indexer release names qualify for down
   
 > Preferred words with a higher score than were originally grabbed are ALWAYS an upgrade!
   
-- Check this box to include your preferred words in the {Preferred Words} file naming assignment token.
+- Check this box to include your preferred words in the `{Preferred Words}` file naming assignment token.
   
-> You should include {Preferred Words} in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
+> You should include `{Preferred Words}` in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
 
 - In this drop-down, you can limit this release profile to a single indexer.
 - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
