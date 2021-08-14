@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:00:17.983Z
+date: 2021-08-14T18:02:24.168Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -457,8 +457,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage] wiki article.
-**Article Needed**
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
 
 ## Web Interface Only Loads at localhost on Windows
 
