@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-08-07T00:36:38.603Z
+date: 2021-08-14T18:55:05.016Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -51,8 +51,13 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 ### Adding a custom YML definition
 
 - If you wish to add a custom Cardigann compatible YML definition file for an indexer that is not supported:
-  1. Navigate to (or create) the Custom Indexer Defintion folder of `Custom` within the "[App Data](/prowlarr/appdata-directory)/Definitions"folder
-  1. Save the Cardigann compatible YML file within the folder and ensure Prowlarr has permissions to access it.
+  - Navigate to (or create) the Custom Indexer Defintion folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](/prowlarr/appdata-directory)
+    - Examples:
+      - Windows: `C:\ProgramData\Prowlarr\Definitions\Custom`
+      - Linux: `/home/$USER/.config/Prowlarr/Definitions/Custom`
+      - OSX: `/Users/$USER/.config/Prowlarr/Definitions/Custom`
+      
+  - Save the Cardigann compatible YML file within the folder and ensure Prowlarr has permissions to access it.
 
 ## Supported Indexers
 
