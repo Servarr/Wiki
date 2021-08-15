@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-08-14T18:55:08.106Z
+date: 2021-08-15T01:48:38.678Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -57,7 +57,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
       - Linux: `/home/$USER/.config/Prowlarr/Definitions/Custom`
       - OSX: `/Users/$USER/.config/Prowlarr/Definitions/Custom`
 
-  - Save the Cardigann compatible YML file within the folder and ensure Prowlarr has permissions to access it.
+  - Save the [Cardigann compatible YML file](/prowlarr/cardigann-yml-definition) within the folder and ensure Prowlarr has permissions to access it.
 
 ## Supported Indexers
 
