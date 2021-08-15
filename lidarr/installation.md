@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-15T12:43:21.281Z
+date: 2021-08-15T12:45:23.670Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -56,7 +56,7 @@ You'll need to install the binaries using the below commands.
 > Lidarr's configuration files will be stored in `/var/lib/lidarr`
 {.is-warning}
 
-- Ensure you have the required perquisite packages:
+- Ensure you have the required prerequisite packages:
 
 ```shell
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
