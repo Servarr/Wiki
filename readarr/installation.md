@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-14T16:19:16.949Z
+date: 2021-08-15T12:46:32.803Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -60,14 +60,24 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download the `x64` copy of readarr and install it into `/opt`
+> The steps below will download Readarr and install it into `/opt`
+> Readarr will run under the user `readarr` and group `media`
+> Readarr's configuration files will be stored in `/var/lib/readarr`
 {.is-warning}
 
-- Ensure you have the required perquisite packages:
+- Ensure you have the required prerequisite packages:
 
 ```shell
 sudo apt install curl sqlite3
 ```
+
+> **Installation Prerequisites**
+> The below instructions are based on the following prerequisites; change the instructions as needed to suit your specific needs if necessary.
+> \* The user `readarr` is created
+> \* The user `readarr` is part of the group `media`
+> \* Your download clients, media server, and calibre (if calibre will be used) are part of the group `media`
+> \* You created `/var/lib/readarr` and ensured the user `readarr` has read/write permissions
+{.is-danger}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -102,7 +112,7 @@ sudo chown -R readarr:readarr /opt/Readarr
 
 - Configure systemd so readarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/data/.config/Readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
 {.is-danger}
 
 ```shell
@@ -115,7 +125,7 @@ User=readarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/Readarr/
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=always
