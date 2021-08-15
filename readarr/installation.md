@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-15T12:47:19.492Z
+date: 2021-08-15T12:48:37.727Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -267,7 +267,7 @@ The following requirements should be noted:
 - Ensure your first instance has the `-data=` argument passed.
 - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
 
-> Below is an example script to create a RadarrAudio instance. The below systemd creation script will use a data directory of /data/.config/RadarrAudio. Ensure it exists or modify it as needed.{.is-danger}
+> Below is an example script to create a RadarrAudio instance. The below systemd creation script will use a data directory of `/var/lib/readarraudio/`. Ensure it exists or modify it as needed.{.is-danger}
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/readarraudio.service > /dev/null
@@ -279,7 +279,7 @@ User=readarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Readarr/Readarr -nobrowser -data=/data/.config/ReadarrAudio/
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarraudio/
 TimeoutStopSec=20
 KillMode=process
 Restart=always
