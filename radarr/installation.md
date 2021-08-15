@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-15T12:47:12.879Z
+date: 2021-08-15T12:49:19.848Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -248,7 +248,7 @@ The following requirements should be noted:
   - Ensure your first instance has the `-data=` argument passed.
   - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop radarr`
 
-> Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of /data/.config/Radarr4k. Ensure it exists or modify it as needed.{.is-danger}
+> Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of `/var/lib/radarr4k/`. Ensure it exists or modify it as needed.{.is-danger}
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/radarr4k.service > /dev/null
@@ -260,7 +260,7 @@ User=radarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Radarr/Radarr -nobrowser -data=/data/.config/Radarr4k/
+ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr4k/
 TimeoutStopSec=20
 KillMode=process
 Restart=always
