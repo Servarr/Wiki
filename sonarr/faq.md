@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:02:37.839Z
+date: 2021-08-15T01:20:57.833Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -122,7 +122,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 Sonarr consists of two main branches of code, `main` and `develop`.
 
-- `main`is released periodically, when the `develop` branch is stable\
+- `main`is released periodically, when the `develop` branch is stable
 - `develop` is for pre-release testing and people willing to live on the edge. When a feature is marked as in `develop` it will only be available to users running the `develop` branch, once it has been move to live (in `main`) it is officially released.
 
 ## Episode Progress - How is it calculated?
@@ -152,7 +152,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
 - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
 
->It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
+> It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
 {.is-warning}
 
 ## Why is there a number next to Activity?
@@ -398,7 +398,7 @@ This means your SQLite database that stores most of the information for Sonarr i
 - Stop Sonarr
 - Connect to the Synology NAS through SSH and log in as root  
 
-> On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr \*` {.is-info}
+> On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr *` {.is-info}
 
 - Execute the following commands:
 
@@ -411,8 +411,8 @@ This means your SQLite database that stores most of the information for Sonarr i
 
     ```shell
         cd /usr/local/Sonarr/var/.config/Sonarr/
-        chown -R Sonarr:users \*
-        chmod -R 0644 \*
+        chown -R Sonarr:users *
+        chmod -R 0644 *
     ```
 
 - Start Sonarr
