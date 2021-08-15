@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:02:30.626Z
+date: 2021-08-15T01:21:08.645Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -176,7 +176,7 @@ If Docker:
 
 - This error may show if the database file is not writable by the user/group Radarr is running as.
 
-- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
+- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. **The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
 
   - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
