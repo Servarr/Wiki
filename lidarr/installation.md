@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-07T21:20:13.759Z
+date: 2021-08-15T12:43:21.281Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -51,14 +51,24 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 You'll need to install the binaries using the below commands.
 
-> This will download the `x64` copy of lidarr and install it into `/opt`
-{.is-info}
+> This will download Lidarr and install it into `/opt`
+> Lidarr will run under the user `lidarr` and group `media`
+> Lidarr's configuration files will be stored in `/var/lib/lidarr`
+{.is-warning}
 
-- Ensure you have the required perquisite packages: You'll need curl, mediainfo, chromaprint, and sqlite.
+- Ensure you have the required perquisite packages:
 
 ```shell
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
+
+> **Installation Prerequisites**
+> The below instructions are based on the following prerequisites; change the instructions as needed to suit your specific needs if necessary.
+> \* The user `lidarr` is created
+> \* The user `lidarr` is part of the group `media`
+> \* Your download clients and media server are part of the group `media`
+> \* You created `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions
+{.is-danger}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -83,7 +93,7 @@ sudo mv Lidarr/ /opt
 ```
 
 > This assumes you have created the user and will run as the user `lidarr` and group `media`.  You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
-{.is-warning}
+{.is-danger}
 
 - Ensure ownership of the binary directory.
 
@@ -93,8 +103,8 @@ sudo chown lidarr:lidarr /opt/Lidarr
 
 - Configure systemd so Lidarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/data/.config/Lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
-{.is-warning}
+> The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
+{.is-danger}
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/lidarr.service > /dev/null
@@ -106,7 +116,7 @@ User=lidarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/data/.config/Lidarr/
+ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/var/lib/lidarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=always
