@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-15T12:46:43.751Z
+date: 2021-08-15T12:47:12.879Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -63,7 +63,7 @@ sudo apt install curl mediainfo sqlite3
 ```
 
 > **Installation Prerequisites**
-> The below instructions are based on the following prerequisites; change the instructions as needed to suit your specific needs if necessary.
+> The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `radarr` is created
 > \* The user `radarr` is part of the group `media`
 > \* Your download clients and media server are part of the group `media`
