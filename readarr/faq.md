@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:02:33.292Z
+date: 2021-08-15T01:18:01.479Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -67,9 +67,12 @@ dateCreated: 2021-05-25T20:01:09.320Z
 ## Why doesn't Readarr work behind a reverse proxy
 
 - Readarr uses .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Readarr:
+
+```none
  proxy_http_version 1.1;
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
+```
 
 - Make sure you `do not` include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. `THIS WILL NOT WORK`
 - [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
