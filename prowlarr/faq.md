@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:02:26.091Z
+date: 2021-08-15T01:21:02.554Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -104,7 +104,7 @@ Most likely this is due to a MacOS bug which caused the Prowlarr database to be 
 - Run Prowlarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 - (Optional) Drop a shortcut to Prowlarr.exe in the startup folder to auto-start on boot.
 
-## How do I Backup/Restore Prowlarr ?
+## How do I Backup/Restore Prowlarr?
 
 ### Backing up Prowlarr
 
@@ -160,6 +160,9 @@ Most likely this is due to a MacOS bug which caused the Prowlarr database to be 
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
 - Connect to the Synology NAS through SSH and log in as root  
+
+> On some installations, the user is different than the below commands: `chown -R sc-Prowlarr:Prowlarr *` {.is-info}
+
 - Execute the following commands:
 
     ```shell
@@ -175,8 +178,7 @@ Most likely this is due to a MacOS bug which caused the Prowlarr database to be 
         chmod -R 0644 *
     ```
 
-    On some installations, the user is different: `chown -R sc-`sc-Prowlarr`:`Prowlarr`*`
-- Start Prowlarr
+- Start Radarr
 
 ## Help I have locked myself out
 
