@@ -2,7 +2,7 @@
 title: Readarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:17.075Z
+date: 2021-08-15T12:50:09.016Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:54:32.028Z
@@ -16,7 +16,7 @@ dateCreated: 2021-06-09T15:54:32.028Z
 
 Unless otherwise specified Readarr will store it's application data in the home folder of the user Readarr is running under `/home/$USER/.config/Readarr` (`~/.config/Readarr`)
 
-`/var/lib/Readarr`
+`/var/lib/readarr`
 
 ## OS X
 
