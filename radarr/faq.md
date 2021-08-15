@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-14T18:02:37.082Z
+date: 2021-08-15T01:20:47.687Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -414,7 +414,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 - Stop Radarr
 - Connect to the Synology NAS through SSH and log in as root  
 
-> On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr \*` {.is-info}
+> On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr *` {.is-info}
 
 - Execute the following commands:
 
@@ -427,8 +427,8 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
     ```shell
         cd /usr/local/Radarr/var/.config/Radarr/
-        chown -R Radarr:users \*
-        chmod -R 0644 \*
+        chown -R Radarr:users *
+        chmod -R 0644 *
     ```
 
 - Start Radarr
