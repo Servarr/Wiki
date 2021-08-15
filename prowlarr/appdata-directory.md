@@ -2,7 +2,7 @@
 title: Prowlarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:29.335Z
+date: 2021-08-15T12:50:10.533Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T01:06:44.136Z
@@ -16,7 +16,7 @@ dateCreated: 2021-06-08T01:06:44.136Z
 
 Unless otherwise specified Prowlarr will store it's application data in the home folder of the user Prowlarr is running under `/home/$USER/.config/Prowlarr` (`~/.config/Prowlarr`)
 
-`/var/lib/Prowlarr`
+`/var/lib/prowlarr`
 
 ## OS X
 
