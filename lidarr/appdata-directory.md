@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:20.431Z
+date: 2021-08-15T12:50:15.674Z
 tags: lidarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
@@ -16,7 +16,7 @@ dateCreated: 2021-06-09T15:53:13.142Z
 
 Unless otherwise specified Lidarr will store it's application data in the home folder of the user Lidarr is running under `/home/$USER/.config/Lidarr` (`~/.config/Lidarr`)
 
-`/var/lib/Lidarr`
+`/var/lib/lidarr`
 
 ## OS X
 
