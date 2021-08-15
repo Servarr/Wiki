@@ -2,7 +2,7 @@
 title: Radarr Appdata Directory
 description: 
 published: true
-date: 2021-08-05T23:25:10.284Z
+date: 2021-08-15T12:49:38.310Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T02:34:50.549Z
@@ -16,7 +16,7 @@ dateCreated: 2021-05-25T02:34:50.549Z
 
 Unless otherwise specified Radarr will store it's application data in the home folder of the user Radarr is running under `/home/$USER/.config/Radarr` (`~/.config/Radarr`)
 
-`/var/lib/Radarr`
+`/var/lib/radarr`
 
 ## OS X
 
