@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-08-11T19:38:43.523Z
+date: 2021-08-15T13:41:35.820Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -24,11 +24,11 @@ Also, note that for each individual settings page, there are some options at the
 
 - You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
 
-## Indexers
+## Indexer Proxies
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
-Click on `Settings` -> `Indexers`, and then click the `+` to add a proxy.
+Click on `Settings` -> `Indexer Proxies`, and then click the `+` to add a proxy.
 
 ![proxies.png](/assets/prowlarr/proxies.png)
 
@@ -74,7 +74,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Enter the URL of your program here. Again, enter the full URL Base if used.
 
-- Enter the API Key of your program here. You can get this from your program in the `Settings` / `General` tab, and copy/paste it here.
+- Enter the API Key of your program here. You can get this from your program in the `Settings` -> `General` tab, and copy/paste it here.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
@@ -124,13 +124,13 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
 
-## Connect
+## Notifications
 
-Connections are used for notifications from Prowlarr.
+Notifications are used for notifications from Prowlarr.
 
 ![settings_connect.png](/assets/prowlarr/settings_connect.png)
 
-Click on `Settings` -> `Connect`, and then click the `+` to add a new connection.
+Click on `Settings` -> `Notifications`, and then click the `+` to add a new connection.
 
 There are many notification options available:
 
@@ -143,9 +143,6 @@ Each one has different configuration options. If you're using notifications with
 Here is where you can maintain any existing tags you've used.
 
 Click on `Settings` -> `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
-
-> Note that tags are not yet functional in Prowlarr!
-{.is-warning}
 
 ## General
 
