@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-15T12:46:32.803Z
+date: 2021-08-15T12:47:19.492Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -72,7 +72,7 @@ sudo apt install curl sqlite3
 ```
 
 > **Installation Prerequisites**
-> The below instructions are based on the following prerequisites; change the instructions as needed to suit your specific needs if necessary.
+> The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `readarr` is created
 > \* The user `readarr` is part of the group `media`
 > \* Your download clients, media server, and calibre (if calibre will be used) are part of the group `media`
