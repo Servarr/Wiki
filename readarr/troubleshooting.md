@@ -173,7 +173,7 @@ Ensure SSL encryption is not turned on if you're using both your instance and yo
 
 #### Can’t see share on Windows
 
-The default user for a Windows service is **SYSTEM** which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/readarr/faq#why-cant-i-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/readarr/faq#why-cant-i-see-my-files-on-a-remote-server) for details.
 
 #### Mapped network drives are not reliable
 
