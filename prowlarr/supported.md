@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-08-15T00:09:36.219Z
+date: 2021-08-15T03:31:00.799Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -20,6 +20,7 @@ Prowlarr can automatically sync indexers with various applications
 - Radarr{#radarr}
 - Readarr{#readarr}
 - Sonarr{#sonarr}
+- Mylar3{#mylar}
 
 ## Download Clients
 
