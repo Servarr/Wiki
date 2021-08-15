@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-14T16:18:54.485Z
+date: 2021-08-15T12:46:43.751Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -48,17 +48,27 @@ It's therefore advisable to install Radarr as a system tray application if the u
 ## Linux
 
 ### Debian / Ubuntu
-  
+
 You'll need to install the binaries using the below commands.
 
-> This will download the `x64` copy of radarr and install it into `/opt`
+> The steps below will download Radarr and install it into `/opt`.
+> Radarr will run under the user `radarr` and group `media`
+> Radarr's configuration files will be stored in `/var/lib/radarr`
 {.is-warning}
 
-- Ensure you have the required perquisite packages:
+- Ensure you have the required prerequisite packages:
 
 ```shell
 sudo apt install curl mediainfo sqlite3
 ```
+
+> **Installation Prerequisites**
+> The below instructions are based on the following prerequisites; change the instructions as needed to suit your specific needs if necessary.
+> \* The user `radarr` is created
+> \* The user `radarr` is part of the group `media`
+> \* Your download clients and media server are part of the group `media`
+> \* You created `/var/lib/radarr` and ensured the user `radarr` has read/write permissions
+{.is-danger}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -93,7 +103,7 @@ sudo chown radarr:radarr /opt/Radarr
 
 - Configure systemd so radarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/data/.config/Radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/var/lib/radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument
 {.is-danger}
 
 ```shell
@@ -106,7 +116,7 @@ User=radarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Radarr/Radarr -nobrowser -data=/data/.config/Radarr/
+ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=always
