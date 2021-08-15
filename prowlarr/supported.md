@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-08-15T03:31:30.388Z
+date: 2021-08-15T13:23:57.851Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -41,6 +41,13 @@ Prowlarr can automatically sync indexers with various applications
 - utorrent{#utorrent}
 - usenetblackhole{#usenetblackhole}
 - vuze{#vuze}
+
+## Indexer Proxies
+
+- flaresolverr{#flaresolverr}
+- http{#http}
+- socks4{#socks4}
+- socks5{#socks5}
 
 ## Notifications
 
