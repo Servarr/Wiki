@@ -218,14 +218,15 @@ If you implement any additional authentication through Apache, you should exclud
 - Note that you can configure Radarr to use a second Radarr as a list.  This is helpful if you wish to keep both in sync.
 
 The following requirements should be noted:
-  - If non-docker, the same binaries (program files) should be used
-  - If non-docker, all instances *must* have a `-data=` or `/data=` argument passed
-  - If non-docker, different ports must be used
-    - If docker, different external ports must be used
-  - Different download client categories must be used
-  - Different root folders must be used.
-  - If non-docker, disable automatic updates on all but 1 instance.
- 
+
+- If non-docker, the same binaries (program files) should be used
+- If non-docker, all instances *must* have a `-data=` or `/data=` argument passed
+- If non-docker, different ports must be used
+  - If docker, different external ports must be used
+- Different download client categories must be used
+- Different root folders must be used.
+- If non-docker, disable automatic updates on all but 1 instance.
+
 ### Windows
 
 > [Please see the legacy wiki entry.](https://wikiold.servarr.com/Radarr_Tips_and_Tricks#Installing_multiple_Radarrs_on_Windows) Contributions to convert the entry to this wiki are welcome and encouraged.{.is-info}
@@ -236,6 +237,7 @@ The following requirements should be noted:
 - Non-Swizzin Users
   - Ensure your first instance has the `-data=` argument passed.
   - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop radarr`
+
 > Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of /data/.config/Radarr4k. Ensure it exists or modify it as needed.{.is-danger}
 
 ```shell
@@ -256,11 +258,15 @@ Restart=always
 WantedBy=multi-user.target
 EOF
 ```
+
 - Reload systemd:
+
 ```shell
 sudo systemctl -q daemon-reload
 ```
+
 - Enable the Radarr4k service:
+
 ```shell
 sudo systemctl enable --now -q radarr4k
 ```

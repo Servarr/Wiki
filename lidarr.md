@@ -44,6 +44,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 {.links-list}
 
 > Note that the API Docs are a currently non-existent. Contributions to start swagger docs welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console. {.is-info}
+
 ## Support
 
 Still having issues? feel free to stop by one of our support sites for extra help

@@ -37,6 +37,7 @@ Unless otherwise specified Radarr will store it's application data in the home f
 ## Docker
 
 `/config`
+
 - This will vary based on where the user maps `/config` to on their host system
 
 ## Argument

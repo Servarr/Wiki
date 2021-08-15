@@ -47,7 +47,6 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 This means Sonarr will be unable to update itself. You'll have to update Sonarr manually or set the permissions on Sonarr's Startup directory (the installation directory) to allow Sonarr to update itself.
 
-
 ##### Cannot install update because startup folder is in an App Translocation folder
 
 In macOS Sierra, Apple added a strange security feature called App Translocation (sometimes known as Gatekeeper Path Randomization) which means that after downloading an application, if you do not move the resulting application somewhere (anywhere!), with the Finder (you must use the Finder!), the application will be run as if it is located at a randomly chosen path by the system.

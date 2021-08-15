@@ -30,7 +30,7 @@ dateCreated: 2021-08-14T15:12:58.934Z
 
 - To keep this pattern for future movies, you should set:
 
-- [Settings -> Media Management (Advanced Settings Shown) -> Movie Naming](/radarr/settings#media-management) 
+- [Settings -> Media Management (Advanced Settings Shown) -> Movie Naming](/radarr/settings#media-management)
 
   - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {\[Quality Title]}`
   - Folder: `{Movie CleanTitle} {(Release Year)}`

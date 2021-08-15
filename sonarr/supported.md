@@ -34,7 +34,6 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Indexers
 
-
 - broadcasthenet{#broadcasthenet}
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - fanzub{#fanzub}

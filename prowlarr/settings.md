@@ -23,6 +23,7 @@ Also, note that for each individual settings page, there are some options at the
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
 - You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
+
 ## Indexers
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.

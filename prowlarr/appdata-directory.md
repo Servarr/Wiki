@@ -37,6 +37,7 @@ Unless otherwise specified Prowlarr will store it's application data in the home
 ## Docker
 
 `/config`
+
 - This will vary based on where the user maps `/config` to on their host system
 
 ## Argument

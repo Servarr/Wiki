@@ -396,26 +396,26 @@ This means your SQLite database that stores most of the information for Sonarr i
   - Running Sonarr once and via the UI go to System -> About  
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr
-- Connect to the Synology NAS through SSH and log in as root
+- Connect to the Synology NAS through SSH and log in as root  
+
+> On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr \*` {.is-info}
+
 - Execute the following commands:
 
     ```shell
         rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db
-        cp -f /tmp/Sonarr_backup/ /usr/local/Sonarr/var/.config/Sonarr/
+        cp -f /tmp/Sonarr_backup/* /usr/local/Sonarr/var/.config/Sonarr/
     ```
 
 - Update permissions on the files:
 
     ```shell
         cd /usr/local/Sonarr/var/.config/Sonarr/
-        chown -R Sonarr:users *
-        chmod -R 0644 *
+        chown -R Sonarr:users \*
+        chmod -R 0644 \*
     ```
 
-> On some installations, the user is different: `chown -R sc-Sonarr:Sonarr *` {.is-info}
-
 - Start Sonarr
-
 
 ## Help I have locked myself out
 

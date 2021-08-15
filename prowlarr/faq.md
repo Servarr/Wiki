@@ -121,6 +121,7 @@ Most likely this is due to a MacOS bug which caused the Prowlarr database to be 
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
+
 ### Restoring from Backup
 
 > Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
@@ -174,7 +175,7 @@ Most likely this is due to a MacOS bug which caused the Prowlarr database to be 
         chmod -R 0644 *
     ```
 
-    On some installations, the user is different: `chown -R sc-`sc-Prowlarr`:`Prowlarr`  *`
+    On some installations, the user is different: `chown -R sc-`sc-Prowlarr`:`Prowlarr`*`
 - Start Prowlarr
 
 ## Help I have locked myself out

@@ -56,7 +56,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
       - Windows: `C:\ProgramData\Prowlarr\Definitions\Custom`
       - Linux: `/home/$USER/.config/Prowlarr/Definitions/Custom`
       - OSX: `/Users/$USER/.config/Prowlarr/Definitions/Custom`
-      
+
   - Save the Cardigann compatible YML file within the folder and ensure Prowlarr has permissions to access it.
 
 ## Supported Indexers

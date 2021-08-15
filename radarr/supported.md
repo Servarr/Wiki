@@ -33,7 +33,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Indexers
 
-- filelist{#filelist} 
+- filelist{#filelist}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - hdbits{#hdbits}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
@@ -56,7 +56,6 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - torznab{#torznab}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-
 
 ## Notifications
 

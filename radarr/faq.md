@@ -374,6 +374,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
+
 ### Restoring from Backup
 
 > Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
@@ -412,6 +413,9 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr
 - Connect to the Synology NAS through SSH and log in as root  
+
+> On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr \*` {.is-info}
+
 - Execute the following commands:
 
     ```shell
@@ -423,11 +427,10 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
     ```shell
         cd /usr/local/Radarr/var/.config/Radarr/
-        chown -R Radarr:users *
-        chmod -R 0644 *
+        chown -R Radarr:users \*
+        chmod -R 0644 \*
     ```
 
-    On some installations, the user is different: `chown -R sc-`sc-Radarr`:`Radarr`  *`
 - Start Radarr
 
 ## Help I have locked myself out

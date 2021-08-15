@@ -52,7 +52,7 @@ As of 2021-06-09 the logic is as follows:
 
 ## Can I add just an album?
 
- - Not at the moment.
+- Not at the moment.
 
 ## Can I download single tracks?
 
@@ -65,7 +65,6 @@ As of 2021-06-09 the logic is as follows:
 ## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
 
 - Open the Album details page and select the Edit Icon in the top nav. There you can find a dropdown of all releases tied to that Album.
-
 
 ## I cannot find a release in Lidarr but it is on MusicBrainz
 
@@ -166,7 +165,6 @@ If Docker:
 - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Lidarr becoming unusable or throwing errors. You have been warned.
 - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-
 
 ## I am getting an error: Database disk image is malformed
 

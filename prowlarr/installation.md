@@ -198,7 +198,7 @@ As a sub directory such as mydomain.com/prowlarr
 
 Or for making an entire VirtualHost for Prowlarr:
 
-```
+```none
 ProxyPass / http://127.0.0.1:9696/prowlarr/
 ProxyPassReverse / http://127.0.0.1:9696/prowlarr/
 ```

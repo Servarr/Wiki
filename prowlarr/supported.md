@@ -13,6 +13,7 @@ dateCreated: 2021-06-23T03:06:57.769Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Applications
+
 Prowlarr can automatically sync indexers with various applications
 
 - Lidarr{#lidarr}
