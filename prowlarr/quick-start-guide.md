@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-07-31T22:05:15.323Z
+date: 2021-08-17T01:52:57.805Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -71,12 +71,12 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
 
-> **Note: tags are not yet functional**
+> **Note: tags to isolate app sync are not yet functional**
 {.is-warning}
 
 - Enter the Prowlarr server URL here.
 
-> Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
+> Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!{.is-info}
 
 - Enter the URL of your program here. Again, enter the full URL Base if used.
 
@@ -84,13 +84,16 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
-> When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen plus (Prowlarr) after it.
+> When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it.{.is-info}
 
 ![nzbgeek.png](/assets/prowlarr/nzbgeek.png)
 
 You should then go into your program, and disable the non-Prowlarr version of the indexer. Once everything is running smoothly, you can delete those entries and leave just the (Prowlarr) versions in place.
 
-> You should also go into your programs and check the categories for the Prowlarr indexers. Categories are not currently editable in Prowlarr, but are pushed over from a capabilities check.
+> You may wish to go into your programs and check the categories for the Prowlarr indexers. Categories are not currently editable in Prowlarr, but are pushed over from a capabilities check.
+**Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
+Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app settings you **must** use Add and Remove and **must not** use Full Sync.
+{.is-warning} 
 
 ## Download Clients (for In-Prowlarr searches only!)
 
