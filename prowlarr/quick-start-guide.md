@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-17T01:53:34.812Z
+date: 2021-08-17T02:11:34.562Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -74,13 +74,13 @@ When you add an app, you will need to enter values in the pop-up screen:
 > **Note: tags for apps are not yet functional**
 {.is-warning}
 
-- Enter the Prowlarr server URL here.
+- Prowlarr Server - Enter the Prowlarr server URL here.
 
 > Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!{.is-info}
 
-- Enter the URL of your program here. Again, enter the full URL Base if used.
+- Application Server -  Enter the URL of your program here. Again, enter the full URL Base if used.
 
-- Enter the API Key of your program here. You can get this from your program in the Settings / General tab, and copy/paste it here.
+- API KEnter the API Key of your program here. You can get this from your program in the Settings / General tab, and copy/paste it here.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
