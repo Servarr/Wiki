@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-17T01:52:57.805Z
+date: 2021-08-17T01:53:34.812Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -71,7 +71,7 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
 
-> **Note: tags to isolate app sync are not yet functional**
+> **Note: tags for apps are not yet functional**
 {.is-warning}
 
 - Enter the Prowlarr server URL here.
