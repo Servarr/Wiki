@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-08-15T13:41:35.820Z
+date: 2021-08-17T01:54:21.291Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -64,7 +64,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
 
-> **Note: tags are not yet functional**
+> **Note: tags for apps are not yet functional**
 {.is-warning}
 
 - Enter the Prowlarr server URL here.
