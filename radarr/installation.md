@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-18T02:05:41.647Z
+date: 2021-08-18T02:14:05.530Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -135,12 +135,6 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q radarr
-```
-
-- If the Radarr service starts properly but the webUI is unreachable, ensure ownership of /var/lib/radarr.
-
-```shell  
-sudo chown radarr:radarr /var/lib/radarr
 ```
 
 ## Docker
