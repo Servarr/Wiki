@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-08-15T01:20:27.072Z
+date: 2021-08-19T22:32:17.854Z
 tags: readarr, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -26,7 +26,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 - ***Generally Quality Trumps All***
 
 - The current logic [can be found here](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
-***As of 2021-07--8 the logic is as follows***
+***As of 2021-07-08 the logic is as follows***
 
 1. Quality
 1. Preferred Word Score
@@ -46,7 +46,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## Why can I not add a new book or author to Readarr?
 
-- Readarr uses [<http://goodreads.com> GoodReads] for book and author information and images like cover and author art, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a book:
+- Readarr uses [GoodReads](http://goodreads.com) for book and author information and images like cover and author art, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a book:
 - GoodReads doesn't like special characters to be used when searching for books through the API (which Readarr uses), so try searching a translated name, and/or without special characters.
 - You can also add books and authors by GoodReads ID, ISBN ID, or ASIN ID.
 - The book has an issue with GoodReads API data. Unfortunately this is something we probably cannot solve for you.
