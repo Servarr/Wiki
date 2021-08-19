@@ -40,18 +40,20 @@ The left icon is the action that was taken (the list of possible actions is show
 
 ![history2.png](/assets/readarr/history2.png)
 
-On `Grabbed` statuses, you can click on the `i` icon on the right to see more details about the download (what indexer it came from, the URL of the grab, the age of the upload, etc.). You can also mark this item as failed, to initiate a removal, blacklist, and re-search of the item.
+On `Grabbed` statuses, you can click on the `i` icon on the right to see more details about the download (what indexer it came from, the URL of the grab, the age of the upload, etc.). You can also mark this item as failed, to initiate a removal, blocklist, and re-search of the item.
 
 ![history4.png](/assets/readarr/history4.png)
 
-## Blacklist
+## Blocklist
 
-The Blacklist page shows you items that are blacklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blacklist forever unless you manually remove them.
+> Blocklist is formerly known as 'Blacklist' {.is-info}
 
-![blacklist1.png](/assets/readarr/blacklist1.png)
+The blocklist page shows you items that are blocklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blocklist forever unless you manually remove them.
 
-Clicking on the `i` icon on the far right shows you more details about the blacklisted entry, and whether it was manually marked as failed or automatically failed during download.
+![blocklist1.png](/assets/readarr/blocklist1.png)
 
-![blacklist2.png](/assets/readarr/blacklist2.png)
+Clicking on the `i` icon on the far right shows you more details about the blocklisted entry, and whether it was manually marked as failed or automatically failed during download.
 
-Clicking on the `x` on the far right removes the item from the blacklist, so that you can potentially grab it again, if it was added in error.
+![blocklist2.png](/assets/readarr/blocklist2.png)
+
+Clicking on the `x` on the far right removes the item from the blocklist, so that you can potentially grab it again, if it was added in error.

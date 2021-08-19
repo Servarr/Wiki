@@ -597,7 +597,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - Adds a failed event to Radarr's history
   - Removes the failed download from Download Client to free space and clear downloaded files (optional)
   - Starts searching for a replacement file (optional)
-  - Blacklisting allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
+  - Blocklisting (fka 'blocklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Radarr will search for the same file after a failure

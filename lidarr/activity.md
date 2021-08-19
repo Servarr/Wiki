@@ -18,6 +18,8 @@ The queue page allows you to view what is currently in progress or "to be done",
 
 The history page shows all operations previously completed via Lidarr, such as imports, grabs, deletes, fails, and downloads requiring human input (yellow import symbol).
 
-## Blacklist
+## Blocklist
 
-The blacklist tab shows all the attempted grabs that upon downloading, failed.  This can also be done manually by a user, in the queue tab.
+> Blocklist is formerly known as 'Blacklist' {.is-info}
+
+The blocklist tab shows all the attempted grabs that upon downloading, failed.  This can also be done manually by a user, in the queue tab.

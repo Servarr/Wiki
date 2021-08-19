@@ -10,7 +10,7 @@ dateCreated: 2021-05-25T01:28:36.350Z
 
 ## Activity
 
-The activity tab shows all processes on Radarr's "to-do list", "have done list", as well as the blacklisted releases that have failed.
+The activity tab shows all processes on Radarr's "to-do list", "have done list", as well as the blocklisted releases that have failed.
 
 ## Queue
 
@@ -22,6 +22,8 @@ More information about the Queue section Coming Soon - Contributions are Welcome
 
 The history tab shows all previous operations that Radarr has completed (regardless of successison).  This includes any operation that Radarr can do via user input, such as failures, grabs, imports, upgrades, and human input requiring completed downloads (seen as a yellow import icon).
 
-## Blacklist
+## Blocklist
 
-The blacklist tab shows all blacklisted releases that have failed and have been automatically blacklisted, or via user input in the queue tab.  You are able to remove individual blacklists or clear the entire list.
+> Blocklist is formerly known as 'Blacklist' {.is-info}
+
+The blocklist tab shows all blocklisted releases that have failed and have been automatically blocklisted, or via user input in the queue tab.  You are able to remove individual blocklists or clear the entire list.
