@@ -2,7 +2,7 @@
 title: Installing Docker on a Synology ARM NAS
 description: 
 published: true
-date: 2021-07-31T14:58:47.174Z
+date: 2021-08-19T19:08:48.327Z
 tags: docker, synology
 editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
@@ -56,7 +56,7 @@ Hopefully you have functioning `docker` and `docker-compose` commands, which sho
     container has unfettered access to your system (even more so than
     with a regular docker).
 1. Again, due to Synology constraints, all containers need to use
-    `--network=host` (or `network: host` in compose) and everything will
+    `--network=host` (or `network_mode: host` in compose) and everything will
     be directly accessible from the host. There are no port maps.
 1. Obviously you can only run aarch64 images, but most hotio and
     linuxserver images offer an aarch64 version.
