@@ -93,7 +93,7 @@ You should then go into your program, and disable the non-Prowlarr version of th
 > You may wish to go into your programs and check the categories for the Prowlarr indexers. Categories are not currently editable in Prowlarr, but are pushed over from a capabilities check.
 **Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
 Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app settings you **must** use Add and Remove and **must not** use Full Sync.
-{.is-warning} 
+{.is-warning}
 
 ## Download Clients (for In-Prowlarr searches only!)
 

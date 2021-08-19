@@ -14,4 +14,4 @@ The calendar shows you recently aired episodes, as well as upcoming episodes.
 
 ## iCal Feed
 
-- Sonarr can procide your calendar as an iCal feed. This will contain the previous [7 days](https://github.com/Sonarr/Sonarr/blob/0a2b109a3fe101e260b623d0768240ef8b7a47ae/src/NzbDrone.Api/Calendar/CalendarFeedModule.cs#L35) and the next [28 days](https://github.com/Sonarr/Sonarr/blob/0a2b109a3fe101e260b623d0768240ef8b7a47ae/src/NzbDrone.Api/Calendar/CalendarFeedModule.cs#L36)
+- Sonarr can provide your calendar as an iCal feed. This will contain the previous [7 days](https://github.com/Sonarr/Sonarr/blob/22f044844c33187450dcc2d6b329ad3e1d241e74/src/NzbDrone.Api/Calendar/CalendarFeedModule.cs#L35) and the next [28 days](https://github.com/Sonarr/Sonarr/blob/22f044844c33187450dcc2d6b329ad3e1d241e74/src/NzbDrone.Api/Calendar/CalendarFeedModule.cs#L36)

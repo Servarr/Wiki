@@ -52,6 +52,13 @@ dateCreated: 2021-05-25T20:01:09.320Z
 - The book has an issue with GoodReads API data. Unfortunately this is something we probably cannot solve for you.
 - The book falls below the settings you've chosen (votes, pages, etc.) to appear in Readarr.
 
+## Book Match is not Close Enough: XX% vs YY% \[book\]
+
+- Readarr has a hardcoded minimum percent match threshold when comparing the to-be-imported file against the book and author.  Matches below this threshold will need to be manually imported.
+- This is not user configurable.
+- Currently this is 80% [1-_bookThreshold](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/MediaFiles/BookImport/Specifications/CloseAlbumMatchSpecification.cs#L11)
+- The development team is considering lowering this to somewhere in the 70%s.  If you have false negative matches between 70% and 80% please share them with us on discord.
+
 ## How can I rename my author folders?
 
 - Library
