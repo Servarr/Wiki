@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-08-14T15:11:50.491Z
+date: 2021-08-20T18:17:55.499Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -213,7 +213,9 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 #### Repeated downloads
 
-There are a few causes of repeated downloads, but a recent one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any preferred word scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
+There are a few causes of repeated downloads, but one is related to Custom Formats. It's possible the release name matches a custom format, but the download files do not. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t.  Depending on your custom format you may be able to work around this by including the custom format in your renaming schema. (Enable the Custom Format to be included in renaming & then add Custom Format to you rnaming schema)
+
+This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpectually grabed and never imported. Please see the various other common problems and troubleshoting steps for this.
 
 #### Usenet download misses import
 
