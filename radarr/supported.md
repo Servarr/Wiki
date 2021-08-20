@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-20T18:35:00.389Z
+date: 2021-08-20T18:35:16.910Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -86,9 +86,9 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - couchpotatoimport {#couchpotatoimport}
 - imdblistimport {#imdblistimport}
   - It is recommend to figure out the `ls` number by cilcking export and using that as your entry.
-  - 1. Go to your IMDB List Settings
-  - 2. Ensure Privacy -> Public is Enabled
-  - 3. Use the `ls` number within the URL
+  1. Go to your IMDB List Settings
+  1. Ensure Privacy -> Public is Enabled
+  1. Use the `ls` number within the URL
   - ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
 - radarrimport {#radarrimport}
 - radarrlistimport {#radarrlistimport}
