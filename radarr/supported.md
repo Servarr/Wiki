@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-04T02:11:27.930Z
+date: 2021-08-20T18:25:20.359Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -85,6 +85,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 - couchpotatoimport {#couchpotatoimport}
 - imdblistimport {#imdblistimport}
+  - It may be prudent to figure out the `ls` number by cilcking export and using that as your entry.
 - radarrimport {#radarrimport}
 - radarrlistimport {#radarrlistimport}
 - rssimport {#rssimport}
