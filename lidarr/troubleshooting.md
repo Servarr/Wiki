@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-08-20T18:16:25.113Z
+date: 2021-08-20T18:44:05.287Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -238,6 +238,33 @@ This can also occur if you have a release in your download client but that media
 Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 ## Searches Indexers and Trackers
+
+Just like the indexer/tracker test above, when you trigger a search while at Debug or Trace level logging, you can get the URL used from the log files. While testing, it is best to use as narrow a search as possible. A manual search is good because it is specific and you can see the results in the UI while examining the logs.
+
+In this test, you’ll be looking for obvious errors and running some simple tests. You can see the search used the url ***UPDATED MUSIC SPECIFIC URL NEEDED - THIS IS A SONARR URL EXAMPLE*** `https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1`, which you can try yourself in a browser after replacing (removed) with your apikey for that indexer. Does it work? Do you see the expected results? Does this FAQ entry apply? In that URL, you can see that it set specific categories with `cat=5030,5040,5045,5080`, so if you’re not seeing expected results, this is one likely reason. You can also see that it searched by tvdbid with `tvdbid=354629`, so if the episode isn’t properly categorized on the indexer, it will need to be fixed. You can also see that it searches by specific season and episode with season=1 and ep=1, so if that isn’t correct on the indexer, you won’t see those results. Look at Manual Search XML Output below to see an example of a working query’s output.
+
+- Manual Search XML Output
+
+```xml
+INDEXER SEARCH RESPONSE EXAMPLE NEEDED
+```
+***Images needed***
+
+![searches-indexers-and-trackers1.png](/assets/lidarr/searches-indexers-and-trackers1.png)
+![searches-indexers-and-trackers2.png](/assets/lidarr/searches-indexers-and-trackers2.png)
+
+- Trace Log Snippet
+
+```none
+EXAMPLE TRACE LOG SNIPPET NEEDED
+```
+
+- Full Trace Log of a Search
+
+```none
+EXAMPLE TRACE LOGS NEEDED
+```
+
 
 ### Turn logging up to trace
 
