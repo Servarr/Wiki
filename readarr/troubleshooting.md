@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-08-20T18:16:11.432Z
+date: 2021-08-20T18:21:39.444Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -252,6 +252,31 @@ Please discuss with the support team on discord. If this is something that may b
 When you test an indexer or tracker, in debug or trace logs you can find the URL used. An example of a successful test is below, you can see it query the indexer via a specific URL with specific parameters and then the response. You test this url in your browser like replacing the `apikey=(removed)` with the correct apikey like `apikey=123`. You can experiment with the parameters if you’re getting an error from the indexer or see if you have connectivity issues if it doesn’t even work. After you’ve tested in your own browser, you should test from the system is running on *if* you haven’t already.
 
 ### Testing a Search
+
+Just like the indexer/tracker test above, when you trigger a search while at Debug or Trace level logging, you can get the URL used from the log files. While testing, it is best to use as narrow a search as possible. A manual search is good because it is specific and you can see the results in the UI while examining the logs.
+
+In this test, you’ll be looking for obvious errors and running some simple tests. You can see the search used the url *UPDATED BOOK SPECIFIC URL NEEDED - THIS IS A SONARR URL EXAMPLE* `https://api.nzbgeek.info/api?t=tvsearch&cat=5030,5040,5045,5080&extended=1&apikey=(removed)&offset=0&limit=100&tvdbid=354629&season=1&ep=1`, which you can try yourself in a browser after replacing (removed) with your apikey for that indexer. Does it work? Do you see the expected results? Does this FAQ entry apply? In that URL, you can see that it set specific categories with `cat=5030,5040,5045,5080`, so if you’re not seeing expected results, this is one likely reason. You can also see that it searched by tvdbid with `tvdbid=354629`, so if the episode isn’t properly categorized on the indexer, it will need to be fixed. You can also see that it searches by specific season and episode with season=1 and ep=1, so if that isn’t correct on the indexer, you won’t see those results. Look at Manual Search XML Output below to see an example of a working query’s output.
+
+- Manual Search XML Output
+
+```xml
+INDEXER SEARCH RESPONSE EXAMPLE NEEDED
+```
+
+![searches-indexers-and-trackers1.png](/assets/readarr/searches-indexers-and-trackers1.png)
+![searches-indexers-and-trackers2.png](/assets/readarr/searches-indexers-and-trackers2.png)
+
+- Trace Log Snippet
+
+```none
+EXAMPLE TRACE LOG SNIPPET NEEDED
+```
+
+- Full Trace Log of a Search
+
+```none
+EXAMPLE TRACE LOGS NEEDED
+```
 
 ### Common Problems
 
