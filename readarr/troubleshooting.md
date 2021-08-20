@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-08-20T18:21:39.444Z
+date: 2021-08-20T18:43:00.366Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -262,6 +262,7 @@ In this test, you’ll be looking for obvious errors and running some simple tes
 ```xml
 INDEXER SEARCH RESPONSE EXAMPLE NEEDED
 ```
+***Images needed***
 
 ![searches-indexers-and-trackers1.png](/assets/readarr/searches-indexers-and-trackers1.png)
 ![searches-indexers-and-trackers2.png](/assets/readarr/searches-indexers-and-trackers2.png)
