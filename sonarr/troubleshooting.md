@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-20T18:15:43.134Z
+date: 2021-08-20T18:16:08.008Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -213,7 +213,7 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 #### Repeated downloads
 
-There are a few causes of repeated downloads, but a one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any preferred word scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
+There are a few causes of repeated downloads, but one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any preferred word scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
 
 This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpectually grabed and never imported. Please see the various other common problems and troubleshoting steps for this.
 
