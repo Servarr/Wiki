@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-20T18:35:40.287Z
+date: 2021-08-20T18:38:25.331Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -87,7 +87,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - imdblistimport {#imdblistimport}
   - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Radarr
   1. Go to your IMDB List Settings
-  1. Ensure Privacy -> Public is Enabled
+  1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
   1. Use the `ls` number within the URL
   - ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
 - radarrimport {#radarrimport}
