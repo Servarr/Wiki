@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-21T20:10:57.024Z
+date: 2021-08-21T20:24:42.896Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -118,7 +118,7 @@ sudo chown -R readarr:readarr /opt/Readarr
 
 - Configure systemd so readarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument.  Note: that `$USER` is the User Readarr runs as and is defined below.
 {.is-danger}
 
 ```shell
