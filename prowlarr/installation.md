@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-15T12:47:23.844Z
+date: 2021-08-21T20:07:35.552Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -65,11 +65,15 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl sqlite3
 ```
 
+> Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
+
 > **Installation Prerequisites**
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `prowlarr` is created
 > \* You created `/var/lib/prowlarr` and ensured the user `prowlarr` has read/write permissions
 {.is-danger}
+
+> By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
