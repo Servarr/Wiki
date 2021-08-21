@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-21T20:10:30.636Z
+date: 2021-08-21T20:10:57.024Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -80,7 +80,7 @@ sudo apt install curl sqlite3
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
 > \* If Calibre will be used, Calibre runs as the group `media` and the Calibre library has read/write permissions for `media`
-> \* You created `/var/lib/readarr` and ensured the user `readarr` has read/write permissions
+> \* You created the directory `/var/lib/readarr` and ensured the user `readarr` has read/write permissions
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
