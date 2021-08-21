@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-21T20:11:04.362Z
+date: 2021-08-21T20:24:57.596Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -108,7 +108,7 @@ sudo chown lidarr:lidarr /opt/Lidarr
 
 - Configure systemd so Lidarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument
+> The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument.  Note: that `$USER` is the User Lidarr runs as and is defined below.
 {.is-danger}
 
 ```shell
