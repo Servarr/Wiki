@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-21T20:07:41.730Z
+date: 2021-08-21T20:10:47.490Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -68,7 +68,8 @@ sudo apt install curl mediainfo sqlite3
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `radarr` is created
 > \* The user `radarr` is part of the group `media`
-> \* Your download clients and media server are part of the group `media`
+> \* Your download clients and media server run as and are a part of the group `media`
+> \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
 > \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it
 {.is-danger}
 
