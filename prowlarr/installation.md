@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-21T20:07:35.552Z
+date: 2021-08-21T20:08:04.622Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -70,7 +70,7 @@ sudo apt install curl sqlite3
 > **Installation Prerequisites**
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `prowlarr` is created
-> \* You created `/var/lib/prowlarr` and ensured the user `prowlarr` has read/write permissions
+> \* You created the directory `/var/lib/prowlarr` and ensured the user `prowlarr` has read/write permissions
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
