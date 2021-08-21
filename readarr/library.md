@@ -2,7 +2,7 @@
 title: Readarr Library
 description: 
 published: true
-date: 2021-07-10T16:06:54.257Z
+date: 2021-08-21T20:57:29.764Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T15:29:27.457Z
@@ -31,7 +31,7 @@ This section is for managing your library of authors and books.
 
 ![addnew.png](/assets/readarr/addnew.png)
 
-- You can add new authors by entering the author's name or a book name here, and selecting it from the result list.
+- You can add new authors or individual books by entering the author's name or a book name here, and selecting it from the result list.
   - You'll find the how-to in our [Quick Start Guide](/readarr/quick-start-guide)
 - You can also add authors by GoodReads ID, ISBN, or ASIN as needed, using the format shown.
 
@@ -47,6 +47,9 @@ This section is for managing your library of authors and books.
 - If you would like a tag applied to this author's books, enter it here.
 - Choose whether to start a historical search of your indexers for all books by this author immediately. If you do not do this, only NEWLY uploaded books will be grabbed from this point forward.
 - Click the Add button to add this author to Readarr and start pulling metadata for all books by this author. This process can take some time, so it would be advisable not to add too many authors too quickly.
+
+>If you add an individual book, and select "None" for the metadata profile, only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+{.is-warning}
 
 ## Mass Editor
 
