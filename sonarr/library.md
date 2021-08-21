@@ -2,7 +2,7 @@
 title: Sonarr Library
 description: 
 published: true
-date: 2021-08-11T19:51:37.805Z
+date: 2021-08-21T20:50:43.812Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
@@ -22,7 +22,14 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
 
 ## Library Import
 
-The library import allows you to import series (and their seasond & episodes) into Sonarr via existing files in the path directory.  This is especially useful when making a new Sonarr instance and wanting to keep your existing series.
+Library Import allows you to import existing organized series and episode files into Sonarr via existing files in the path directory.  This is especially useful when making a new Sonarr instance and wanting to keep your existing series.
+
+- Library import is for adding and importing an existing organized library of  series into Sonarr
+
+- Library Import shall not be used for:
+  - Importing files from a download folder
+  - Adding or Importing one or more files that are not properly named and organized in their own Series Folder within your root folder or a folder you wish to add as a root folder
+  - Any other uses that are not adding a series or episode to Sonarr and importing the series and it's file(s) from the root (library) folder that was input to Library Import
 
 ## Mass Editor
 
