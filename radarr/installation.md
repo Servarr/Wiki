@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-18T02:14:05.530Z
+date: 2021-08-21T20:07:41.730Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -62,13 +62,17 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl mediainfo sqlite3
 ```
 
+> Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
+
 > **Installation Prerequisites**
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `radarr` is created
 > \* The user `radarr` is part of the group `media`
 > \* Your download clients and media server are part of the group `media`
-> \* You created `/var/lib/radarr` and ensured the user `radarr` has read/write permissions
+> \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it
 {.is-danger}
+
+> By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
