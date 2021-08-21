@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-07-10T16:06:05.992Z
+date: 2021-08-21T19:04:38.948Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -69,6 +69,8 @@ Here we will add the root folder that Radarr will be using to import your existi
 
 > Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 {.is-info}
+
+
 > **Your download folder and media folder can’t be the same location**
 {.is-danger}
 
