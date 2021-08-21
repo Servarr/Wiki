@@ -1,14 +1,15 @@
 ---
 title: Prowlarr Supported Indexers
-description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab. 
+description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-08-15T01:01:10.5308612Z
+date: 2021-08-21T15:30:15.928Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-08-15T01:01:10.5308612Z
+dateCreated: 2021-07-31T16:26:55.473Z
 ---
 
-- Supported Indexers as of Build `0.1.0.790` / [Commit: 1c15932b900ffd7ae3350cb11f3b5074abf30180](https://github.com/Prowlarr/Prowlarr/commit/1c15932b900ffd7ae3350cb11f3b5074abf30180)
+
+- Supported Indexers as of Build `0.1.1.842` / [Commit: 27064cd2933afe328cfe0688b0361b2fd50507f6](https://github.com/Prowlarr/Prowlarr/commit/27064cd2933afe328cfe0688b0361b2fd50507f6)
 
 ## Torrents
 
@@ -41,7 +42,6 @@ dateCreated: 2021-08-15T01:01:10.5308612Z
 |[BTSOW](https://btsow.one/){#btsow}|BTSOW is a Public torrent indexer|en-us|
 |[Byrutor](https://byrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|ru-ru|
 |[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|ru-ru|
-|[CiliPro](http://www.kmsoso1.xyz/){#cilipro}|CiliPro (LIAORENCILI) is a Public BitTorrent DHT search engine.|en-us|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|zh-CN|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|en-us|
 |[cpasbien](https://wwwv.cpasbien-fr.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-fr|
@@ -53,6 +53,7 @@ dateCreated: 2021-08-15T01:01:10.5308612Z
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|zh-TW|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles.|ru-ru|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga.|en-us|
+|[EliteTorrent.biz](https://elitetorrent.com/){#elitetorrent-biz}|EliteTorrent.biz is a Public torrent site for TV, movies and documentaries|es-es|
 |[EniaHD](https://eniatv.com/){#eniahd}|EniaHD is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|ru-ru|
 |[ETTV](https://www.ettvcentral.com/){#ettv}|ETTV is a Public torrent site for TV / MOVIES, home of the  ETTV, ETHD and DTOne groups.|en-us|
 |[ExKinoRay](http://exkinoray.fun/){#exkinoray}|ExKinoRay is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|ru-ru|
@@ -174,11 +175,11 @@ dateCreated: 2021-08-15T01:01:10.5308612Z
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-us|
 |[TorrentQQ](https://torrentqq101.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents.csv is a self-hostable open source torrent search engine and database|en-us|
-|[TorrentSir](https://torrentsir31.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir33.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-ru|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-us|
-|[TorrentView](https://torrentview37.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentWhiz](https://torrentwiz27.me/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentView](https://torrentview38.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentWhiz](https://torrentwiz28.me/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|en|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-ru|
 |[Underverse](https://underver.se/){#underverse}|Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-ru|
@@ -194,9 +195,10 @@ dateCreated: 2021-08-15T01:01:10.5308612Z
 |[YGGtorrent](https://www3.yggtorrent.nz/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-fr|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|en-us|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|en-us|
-|[zetorrents](https://www.zetorrents.cc/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-fr|
+|[zetorrents](https://www.zetorrents.tv/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-fr|
 |[Zooqle](https://zooqle.com/){#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-us|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
+
 
 ### Private
 
@@ -280,7 +282,6 @@ dateCreated: 2021-08-15T01:01:10.5308612Z
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|hu|
 |[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a German Private site for TV / MOVIES / GENERAL|de-de|
 |[Das Unerwartete](https://dasunerwartete.nl){#dasunerwartete}|Das Unerwartete is a Private GERMAN tracker|de-de|
-|[DataScene](http://datascene.net/){#datascene}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-ro|
 |[DesiReleasers](https://desireleasers.be/){#desireleasers}|DesiReleasers is an INDIAN Private Torrent Tracker for INDIAN MOVIES|en-us|
 |[DesiTorrents](https://desitorrents.tv/){#desitorrents}|Desitorrents is a  Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / GENERAL|en-US|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}| Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL|hu-hu|
@@ -525,6 +526,7 @@ dateCreated: 2021-08-15T01:01:10.5308612Z
 |[Zamunda.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[Zelka.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-bg|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-es|
+
 
 ## Usenet
 
