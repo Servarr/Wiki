@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-15T01:20:47.687Z
+date: 2021-08-21T20:39:04.715Z
 tags: radarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -74,6 +74,18 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
+  
+## Path is Already Configured for an Existing Movie
+
+![existing-movie.png](/assets/radarr/existing-movie.png)
+
+- This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
+- Likely this was caused by not correcting a mismatched movie when the user imported their library.
+- Locate and correct the movie that is already assigned to that movie's path.
+  - Movie Index
+  - Table View
+  - Options -> Add path as a column
+  - Sort and find the movie at the noted problematic path.
 
 ## Can all my movie files be stored in one folder?
 
