@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-08-21T20:48:05.942Z
+date: 2021-08-21T20:50:28.122Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -44,12 +44,12 @@ Library Import allows you to import existing organized movies and each movie's f
 - Library import is for adding and importing an existing organized library of (a) movie(s) into Radarr
 
 - Library Import shall not be used for:
-  - Importing files from a download golder
+  - Importing files from a download folder
   - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a movie to Radarr and importing the movie and it's file from the root (library) folder that was input to Library Import
 - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
   
-> It is required movie folders and files have the year in their name to be imported and parsed.{.is-warning}
+> It is required that movie folders and files have the year in their name to be imported and parsed.{.is-warning}
 
 ## Discover
   
