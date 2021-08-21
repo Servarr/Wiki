@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-21T19:04:38.948Z
+date: 2021-08-21T20:47:14.620Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -18,13 +18,13 @@ In this guide we will try to explain the basic setup you need to do to get start
 > Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to enable those to make them visible.
 {.is-warning}
 
-### Startup
+## Startup
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:7878`
 
 ![Radarr-start.png](/assets/radarr/Radarr-start.png)
 
-### Media Management
+## Media Management
 
 First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
@@ -32,7 +32,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ![Radarr-settings-mm.png](/assets/radarr/Radarr-settings-mm.png)
 
-#### Movie Naming
+### Movie Naming
 
 ![Radarr-settings-mm-movie-naming.png](/assets/radarr/Radarr-settings-mm-movie-naming.png)
 
@@ -45,14 +45,14 @@ First we’re going to take a look at the `Media Management` settings where we c
 > If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/).
 {.is-info}
 
-#### Importing
+### Importing
 
 ![Radarr-settings-mm-importing.png](/assets/radarr/Radarr-settings-mm-importing.png)
 
 1. *(Advanced Option) Enable `Use Hardlinks instead of Copy` more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).*
 1. *(Advanced Option) Import matching extra files (subtitles, nfo, etc) after importing a file.*
 
-#### File Management
+### File Management
 
 ![Radarr-settings-mm-fm.png](/assets/radarr/Radarr-settings-mm-fm.png)
 
@@ -61,7 +61,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 1. *(Advanced Option) Designate a location for deleted files to go to (just in case you want to retrieve them before the bin is taken out).*
 1. *(Advanced Option) This is how old a given file can be before it is deleted permanently.*
 
-#### Root Folders
+### Root Folders
 
 ![Radarr-settings-mm-root-folder.png](/assets/radarr/Radarr-settings-mm-root-folder.png)
 
@@ -76,7 +76,7 @@ Here we will add the root folder that Radarr will be using to import your existi
 
 Don’t forget to save your changes
 
-### Profiles
+## Profiles
 
 `Settings` => `Profiles`
 
@@ -92,7 +92,7 @@ We recommend you to create your own profiles and only select the Quality Sources
 > To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}
 
-### Quality
+## Quality
 
 `Settings` => `Quality`
 
@@ -103,7 +103,7 @@ Here you’re able to change/fine tune the min and max size of your wanted media
 > If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/) for a tested example.
 {.is-info}
 
-### Indexers
+## Indexers
 
 `Settings` => `Indexers`
 
@@ -115,7 +115,7 @@ Once you’ve clicked the `+` button to add a new indexer you’ll be presented 
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
 
-### Download Clients
+## Download Clients
 
 `Settings` => `Download Clients`
 
@@ -123,9 +123,9 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-### {.tabset}
+## {.tabset}
 
-#### Usenet
+### Usenet
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
         -   Examples: movies, tv, series, music, ect.
@@ -134,13 +134,13 @@ Downloading and importing is where most people experience issues. From a high le
 1. Radarr will scan that completed file location for files that Radarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
 1. Leftover files from the download will be sent to your trash or recycling.
 
-#### BitTorrent
+### BitTorrent
 
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder by default Radarr will copy the file, which uses twice the disk space.
 1. An advanced option to hardlink can be enabled (Settings > Media Management > Importing) which will attempt to hardlink the media to your Series folder. A hardlink will allow not use any additional disk space. If the hardlink creation fails, Radarr will fall back to the default behavior and copy the file.
 1. If the “Completed Download Handling - Remove” option is enabled in Radarr’s settings, Radarr} will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
-### How to import your existing organized media library
+## How to import your existing organized media library
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
@@ -150,13 +150,13 @@ After setting up your profiles/quality sizes and added your indexers and downloa
 
 Select `Import Existing Movies` or select `Import` from the sidebar.
 
-#### Import movies
+### Import movies
 
 ![Radarr-movies-import.png](/assets/radarr/Radarr-movies-import.png)
 
 Select the root path you added earlier [in the root folders section.](#root-folders)
 
-##### Importing Existing Media
+#### Importing Existing Media
 
 ![Radarr-importing-existing.png](/assets/radarr/Radarr-importing-existing.png)
 
@@ -259,17 +259,17 @@ When you see the movie you want click on it.
 
 1. Radarr will add the Root Folder you’ve setup [in the root folders section](#root-folders)
 2. How you want the movie to be added to Radarr.
-    >
+
     > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-    > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
-    >
+    > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.{.is-info}
 3. When Radarr shall consider a movie is available..
-    >
-    > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
-    > - **InCinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+
+    > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+    > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
     > - **Physical / Web**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
-    >
+    
 4. Select your preferred profile to use.
 5. Here you can add certain tags for advanced usage.
 6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
 7. Click on `Add Movie` to add the movie to Radarr.
+- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
