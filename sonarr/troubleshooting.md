@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-20T18:16:08.008Z
+date: 2021-08-21T20:56:06.533Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -490,7 +490,11 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for 
 
 #### Indexer not being searched
 
-If an indexer does not appear to being searched, it is likely due to the indexer not supporting the query time. The most common instance is Nyaa only supports query searches and not Season/Episode searches.  The Trace logs indicate after a reboot on the first search what capabilites an indexer has or does not have.
+- If an indexer does not appear to being searched, it is likely due to the indexer not supporting the query type. The most common instance is Nyaa only supports query searches and not Season/Episode searches.  The Trace logs indicate after a reboot on the first search what capabilites an indexer has or does not have.
+
+#### Jackett manual search finding more results
+
+- [See this FAQ entry](/sonarr/faq#jackett-shows-more-results-than-sonarr-when-manually-searching)
 
 #### Problem Not Listed
 
