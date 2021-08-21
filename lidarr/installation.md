@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-15T12:47:28.957Z
+date: 2021-08-21T20:07:37.457Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -62,6 +62,8 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
 
+> Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
+
 > **Installation Prerequisites**
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `lidarr` is created
@@ -69,6 +71,8 @@ sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 > \* Your download clients and media server are part of the group `media`
 > \* You created `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions
 {.is-danger}
+
+> By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
