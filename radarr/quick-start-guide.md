@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-21T20:47:14.620Z
+date: 2021-08-21T20:51:28.799Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -156,7 +156,7 @@ Select `Import Existing Movies` or select `Import` from the sidebar.
 
 Select the root path you added earlier [in the root folders section.](#root-folders)
 
-#### Importing Existing Media
+### Importing Existing Media
 
 ![Radarr-importing-existing.png](/assets/radarr/Radarr-importing-existing.png)
 
@@ -164,14 +164,14 @@ Depending how well you got your existing movie folders named Radarr will try to 
 
 1. Your movie folder name.
 1. How you want the movie to be added to Radarr.
-    >
+
     > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
     > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
-    >
+
 1. When will Radarr consider a movie is available.
 
-    > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
-    > - **InCinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+    > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+    > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
     > - **Physical / Web**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
 
 1. Select your preferred profile to use.
@@ -181,7 +181,7 @@ Depending how well you got your existing movie folders named Radarr will try to 
 1. Mass select Quality Profile.
 1. Start Importing your existing media library.
 
-##### No match found
+#### No match found
 
 If you’re getting a error like this
 
@@ -205,7 +205,7 @@ Or you can just use the tmdb:id or imdb:id and then select the found movie if ma
 
 ![Radarr-importing-existing-no-match-expand-imdb.png](/assets/radarr/Radarr-importing-existing-no-match-expand-imdb.png)
 
-##### Fix faulty folder name after import
+#### Fix faulty folder name after import
 
 ![Radarr-wrong-folder-name.png](/assets/radarr/Radarr-wrong-folder-name.png)
 
