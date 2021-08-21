@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-08-21T19:00:14.641Z
+date: 2021-08-21T20:41:14.203Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -35,6 +35,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 - If you're looking to add a new movie this is the page that you will be wanting to do that from.
   - You'll find the how to in our [Quick Start Guide](/radarr/quick-start-guide)
 - Below the search field you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](/radarr/quick-start-guide)
+- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
 
 ## Library Import
 
@@ -44,6 +45,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
   - Importing files from a download golder
   - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a movie to Radarr and importing the movie and it's file from the root (library) folder that was input to Library Import
+- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
   
 > It is required movie folders and files have the year in their name to be imported and parsed.{.is-warning}
 
