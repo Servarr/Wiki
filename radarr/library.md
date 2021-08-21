@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-08-21T20:41:14.203Z
+date: 2021-08-21T20:48:05.942Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -38,6 +38,8 @@ dateCreated: 2021-05-25T01:24:18.386Z
 - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
 
 ## Library Import
+
+Library Import allows you to import existing organized movies and each movie's file via existing files in the path directory.  This is especially useful when making a new Radarr instance and wanting to keep your existing series.
 
 - Library import is for adding and importing an existing organized library of (a) movie(s) into Radarr
 
