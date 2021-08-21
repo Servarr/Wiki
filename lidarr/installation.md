@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-21T20:07:37.457Z
+date: 2021-08-21T20:08:24.446Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -68,8 +68,8 @@ sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `lidarr` is created
 > \* The user `lidarr` is part of the group `media`
-> \* Your download clients and media server are part of the group `media`
-> \* You created `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions
+> \* Your download clients and media server run as and are a part of the group `media`
+> \* You created the direcotry `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
