@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-08-11T19:36:52.787Z
+date: 2021-08-22T16:27:59.082Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -375,6 +375,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Indexers
 
+> Information on supported indexers can be found [here](/radarr/supported#indexers)
+{.is-info}
+
 - Once you're here you will be adding the indexer/tracker that you will be using to actually download any of your files. If you're curious on how Radarr works with your indexer/tracker click here
 
 ### Supported Indexers
@@ -492,6 +495,9 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Tags - Here you can apply these settings to movies with at least one of the given [tag](#tags).
 
 ## Download Clients
+
+> Information on supported download clients can be found [here](/radarr/supported#download-clients)
+{.is-info}
 
 ### Overview
 
@@ -611,6 +617,9 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ## Import Lists
 
+> Information on supported list types can be found [here](/radarr/supported#lists)
+{.is-info}
+
 ### Lists
 
 Import lists are a part of Radarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Radarr and realize that you do not have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
@@ -627,6 +636,9 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 Import List Exclusion - This allows you to prune your list of movies you do not want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
 ## Connect
+
+> Information on supported connection types can be found [here](/radarr/supported#notifications)
+{.is-info}
 
 ### Connections
 
@@ -674,6 +686,9 @@ Discord - By far one of the most common ways to push notifications of actions ha
 ## Metadata
 
 ### Metadata
+
+> Information on supported metadata consumers can be found [here](/radarr/supported#metadata)
+{.is-info}
 
 Here you can select the type of metadata that will be consumed by your media player
 
