@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-22T16:53:10.559Z
+date: 2021-08-22T16:59:21.951Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -65,6 +65,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
+  - [More Info](/radarr/custom-scripts)
 - Discord {#discord}
 - Email {#email}
 - Emby {#mediabrowser}
