@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-08-22T17:17:02.065Z
+date: 2021-08-22T17:17:09.766Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -25,7 +25,6 @@ Prowlarr can automatically sync indexers with various applications
 
 ## Download Clients
 {#downloadclient}
-
 
 - Aria2 {#aria2}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
