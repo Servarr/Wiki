@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-22T16:30:33.076Z
+date: 2021-08-22T16:53:10.559Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -13,100 +13,105 @@ dateCreated: 2021-06-23T07:55:24.002Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Download Clients
+{#downloadclient}
 
-- deluge{#deluge}
-- torrentdownloadstation{#torrentdownloadstation}
-- usenetdownloadstation{#usenetdownloadstation}
-- flood{#flood}
-- hadouken{#hadouken}
-- nzbget{#nzbget}
-- nzbvortex{#nzbvortex}
-- pneumatic{#pneumatic}
-- qbittorrent{#qbittorrent}
-- rtorrent{#rtorrent}
-- sabnzbd{#sabnzbd}
-- torrentblackhole{#torrentblackhole}
-- transmission{#transmission}
-- usenetblackhole{#usenetblackhole}
-- utorrent{#utorrent}
-- vuze{#vuze}
+- Aria2 {#aria2}
+- Deluge {#deluge}
+- Download Station {#torrentdownloadstation}
+- Download Station {#usenetdownloadstation}
+- Flood {#flood}
+- Hadouken {#hadouken}
+- NZBGet {#nzbget}
+- NZBVortex {#nzbvortex}
+- Pneumatic {#pneumatic}
+- qBittorrent {#qbittorrent}
+- rTorrent {#rtorrent}
+- SABnzbd {#sabnzbd}
+- Torrent Blackhole {#torrentblackhole}
+- Transmission {#transmission}
+- Usenet Blackhole {#usenetblackhole}
+- uTorrent {#utorrent}
+- Vuze {#vuze}
 
 ## Indexers
+{#indexer}
 
-- filelist{#filelist}
+- FileList.io {#filelist}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- hdbits{#hdbits}
+- HDBits {#hdbits}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- iptorrents{#iptorrents}
+- IP Torrents {#iptorrents}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- newznab{#newznab}
+- Newznab {#newznab}
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- nyaa{#nyaa}
+- Nyaa {#nyaa}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- omgwtfnzbs{#omgwtfnzbs}
+- omgwtfnzbs {#omgwtfnzbs}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- passthepopcorn{#passthepopcorn}
+- PassThePopcorn {#passthepopcorn}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- rarbg{#rarbg}
+- Rarbg {#rarbg}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- torrentrssindexer{#torrentrssindexer}
+- Torrent RSS Feed {#torrentrssindexer}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- torrentpotato{#torrentpotato}
+- TorrentPotato {#torrentpotato}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
-- torznab{#torznab}
+- Torznab {#torznab}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
 ## Notifications
+{#notification}
 
-- boxcar{#boxcar}
-- customscript{#customscript}
-- discord{#discord}
-- email{#email}
-- mediabrowser{#mediabrowser}
-- gotify{#gotify}
-- join{#join}
-- xbmc{#xbmc}
-- mailgun{#mailgun}
-- notifiarr{#notifiarr}
-- plexserver{#plexserver}
-- prowl{#prowl}
-- pushbullet{#pushbullet}
-- pushover{#pushover}
-- sendgrid{#sendgrid}
-- slack{#slack}
-- synologyindexer{#synologyindexer}
-- telegram{#telegram}
-- trakt{#trakt}
-- twitter{#twitter}
-- webhook{#webhook}
+- Boxcar {#boxcar}
+- Custom Script {#customscript}
+- Discord {#discord}
+- Email {#email}
+- Emby {#mediabrowser}
+- Gotify {#gotify}
+- Join {#join}
+- Kodi {#xbmc}
+- Mailgun {#mailgun}
+- Notifiarr {#notifiarr}
+- Plex Media Server {#plexserver}
+- Prowl {#prowl}
+- Pushbullet {#pushbullet}
+- Pushover {#pushover}
+- SendGrid {#sendgrid}
+- Slack {#slack}
+- Synology Indexer {#synologyindexer}
+- Telegram {#telegram}
+- Trakt {#trakt}
+- Twitter {#twitter}
+- Webhook {#webhook}
 
 ## Lists
+{#importlist}
 
-- couchpotatoimport {#couchpotatoimport}
-- imdblistimport {#imdblistimport}
+- Custom Lists {#radarrlistimport}
+- IMDb Lists {#imdblistimport}
   - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Radarr
-  1. Go to your IMDB List Settings
-  1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
-  1. Use the `ls` number within the URL
-  - ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
-- radarrimport {#radarrimport}
-- radarrlistimport {#radarrlistimport}
-- rssimport {#rssimport}
-- stevenlu2import {#stevenlu2import}
-- stevenluimport {#stevenluimport}
-- tmdbcollectionimport {#tmdbcollectionimport}
-- tmdbcompanyimport {#tmdbcompanyimport}
-- tmdbkeywordimport {#tmdbkeywordimport}
-- tmdblistimport {#tmdblistimport}
-- tmdbpersonimport {#tmdbpersonimport}
-- tmdbpopularimport {#tmdbpopularimport}
-- tmdbuserimport {#tmdbuserimport}
-- traktlistimport {#traktlistimport}
-- traktpopularimport {#traktpopularimport}
-- traktuserimport {#traktuserimport}
+ 1. Go to your IMDB List Settings
+ 1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
+ 1. Use the `ls` number within the URL
+ - ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
+- Radarr {#radarrimport}
+- RSS List {#rssimport}
+- StevenLu Custom {#stevenluimport}
+- StevenLu List {#stevenlu2import}
+- TMDb Collection {#tmdbcollectionimport}
+- TMDb Company {#tmdbcompanyimport}
+- TMDb Keyword {#tmdbkeywordimport}
+- TMDb List {#tmdblistimport}
+- TMDb Person {#tmdbpersonimport}
+- TMDb Popular {#tmdbpopularimport}
+- TMDb User {#tmdbuserimport}
+- Trakt List {#traktlistimport}
+- Trakt Popular List {#traktpopularimport}
+- Trakt User {#traktuserimport}
 
-## Metadata
+## Metadata 
+{#metadata}
 
 - Emby (Legacy) {#mediabrowsermetadata}
 - Kodi (XBMC) / Emby {#xbmcmetadata}
