@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-08-22T04:01:09.818Z
+date: 2021-08-22T04:06:26.574Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -320,7 +320,7 @@ If you get an error, please check your logs for the specific issue and fix it un
 
 ## Import Lists
 
-> Information on supported list types can be found [here](/readarr/supported#import-lists)
+> Information on supported list types can be found [here](/readarr/supported#lists)
 {.is-info}
 
 Import lists allow you to add items to Readarr automatically from your GoodReads shelves or from other users. This has the potential to add a lot of unexpected items to your Readarr database, so please use it with care.
