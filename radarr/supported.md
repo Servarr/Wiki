@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-22T16:59:21.951Z
+date: 2021-08-22T17:05:26.808Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -16,22 +16,40 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 {#downloadclient}
 
 - Aria2 {#aria2}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Deluge {#deluge}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Download Station {#torrentdownloadstation}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Download Station {#usenetdownloadstation}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Flood {#flood}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Hadouken {#hadouken}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - NZBGet {#nzbget}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - NZBVortex {#nzbvortex}
-- Pneumatic {#pneumatic}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
+- Pneumatic {#pneumatic
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - qBittorrent {#qbittorrent}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - rTorrent {#rtorrent}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - SABnzbd {#sabnzbd}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Torrent Blackhole {#torrentblackhole}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Transmission {#transmission}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Usenet Blackhole {#usenetblackhole}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 - uTorrent {#utorrent}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
+  - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent.
 - Vuze {#vuze}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
 
 ## Indexers
 {#indexer}
