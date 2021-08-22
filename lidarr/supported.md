@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-08-22T16:24:56.164Z
+date: 2021-08-22T17:47:00.700Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -13,90 +13,115 @@ dateCreated: 2021-06-23T07:55:13.803Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Download Clients
+{#downloadclient}
 
-- deluge{#deluge}
-- torrentdownloadstation{#torrentdownloadstation}
-- usenetdownloadstation{#usenetdownloadstation}
-- flood{#flood}
-- hadouken{#hadouken}
-- nzbget{#nzbget}
-- nzbvortex{#nzbvortex}
-- pneumatic{#pneumatic}
-- qbittorrent{#qbittorrent}
-- rtorrent{#rtorrent}
-- sabnzbd{#sabnzbd}
-- torrentblackhole{#torrentblackhole}
-- transmission{#transmission}
-- usenetblackhole{#usenetblackhole}
-- utorrent{#utorrent}
-- vuze{#vuze}
+- Deluge {#deluge}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Download Station {#torrentdownloadstation}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Download Station {#usenetdownloadstation}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Flood {#flood}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Hadouken {#hadouken}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- NZBGet {#nzbget}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- NZBVortex {#nzbvortex}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Pneumatic {#pneumatic}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- qBittorrent {#qbittorrent}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- rTorrent {#rtorrent}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- SABnzbd {#sabnzbd}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Torrent Blackhole {#torrentblackhole}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Transmission {#transmission}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Usenet Blackhole {#usenetblackhole}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- uTorrent {#utorrent}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+  - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent.
+- Vuze {#vuze}
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
 
 ## Indexers
+{#indexer}
 
-- filelist{#filelist}
+- FileList {#filelist}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- gazelle{#gazelle}
+- Gazelle API {#gazelle}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- headphones{#headphones}
+- Headphones VIP {#headphones}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- iptorrents{#iptorrents}
+- IP Torrents {#iptorrents}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- newznab{#newznab}
+- Newznab {#newznab}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- nyaa{#nyaa}
+  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
+- Nyaa {#nyaa}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- omgwtfnzbs{#omgwtfnzbs}
+- omgwtfnzbs {#omgwtfnzbs}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- rarbg{#rarbg}
+- Rarbg {#rarbg}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- redacted{#redacted}
+- Redacted {#redacted}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- torrentrssindexer{#torrentrssindexer}
+- Torrent RSS Feed {#torrentrssindexer}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- torrentleech{#torrentleech}
+- TorrentLeech {#torrentleech}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- torznab{#torznab}
+- Torznab {#torznab}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+- Waffles {#waffles}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 
 ## Notifications
+{#notification}
 
-- boxcar{#boxcar}
-- customscript{#customscript}
-- discord{#discord}
-- email{#email}
-- mediabrowser{#mediabrowser}
-- gotify{#gotify}
-- join{#join}
-- xbmc{#xbmc}
-- mailgun{#mailgun}
-- notifiarr{#notifiarr}
-- plexserver{#plexserver}
-- prowl{#prowl}
-- pushbullet{#pushbullet}
-- pushover{#pushover}
-- sendgrid{#sendgrid}
-- slack{#slack}
-- subsonic{#subsonic}
-- synologyindexer{#synologyindexer}
-- telegram{#telegram}
-- twitter{#twitter}
-- webhook{#webhook}
+- Boxcar {#boxcar}
+- Custom Script {#customscript}
+  - [More Info](/liddarr/custom-scripts)
+- Discord {#discord}
+- Email {#email}
+- Emby (Media Browser) {#mediabrowser}
+- Gotify {#gotify}
+- Join {#join}
+- Kodi {#xbmc}
+- Mailgun {#mailgun}
+- Notifiarr {#notifiarr}
+- Plex Media Server {#plexserver}
+- Prowl {#prowl}
+- Pushbullet {#pushbullet}
+- Pushover {#pushover}
+- SendGrid {#sendgrid}
+- Slack {#slack}
+- Subsonic {#subsonic}
+- Synology Indexer {#synologyindexer}
+- Telegram {#telegram}
+- Twitter {#twitter}
+- Webhook {#webhook}
 
 ## Lists
+{#importlist}
 
-- headphonesimport{#headphonesimport}
-- lastfmtag{#lastfmtag}
-- lastfmuser{#lastfmuser}
-- lidarrimport{#lidarrimport}
-- lidarrlists{#lidarrlists}
-- musicbrainzseries{#musicbrainzseries}
-- spotifyfollowedartists{#spotifyfollowedartists}
-- spotifyplaylist{#spotifyplaylist}
-- spotifysavedalbums{#spotifysavedalbums}
+- Headphones {#headphonesimport}
+- Last.fm Tag {#lastfmtag}
+- Last.fm User {#lastfmuser}
+- Lidarr {#lidarrimport}
+- Lidarr Lists {#lidarrlists}
+- MusicBrainz Series {#musicbrainzseries}
+- Spotify Followed Artists {#spotifyfollowedartists}
+- Spotify Playlists {#spotifyplaylist}
+- Spotify Saved Albums {#spotifysavedalbums}
 
 ## Metadata
+{#metadata}
 
-- Audio tagging
-- Kodi (XBMC) / Emby
-- Roksbox
-- WDTV
+- Kodi (XBMC) / Emby {#xbmcmetadata}
+- Roksbox {#roksboxmetadata}
+- WDTV {#wdtvmetadata}
