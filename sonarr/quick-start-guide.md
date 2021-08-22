@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-07-10T16:07:49.948Z
+date: 2021-08-22T01:48:45.019Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:30:27.958Z
@@ -78,11 +78,15 @@ Most usenet indexers require an API key, which can be found in your Profile page
 
 Add at least one indexer in order for Sonarr to work properly.
 
+[More Info](/sonarr/supported#indexers)
+
 ### Download Clients
 
 `Settings` => `Download Clients`
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups, there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+
+[More Info](/sonarr/supported#download-clients)
 
 ### {.tabset}
 
