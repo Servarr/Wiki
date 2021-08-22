@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-21T20:51:28.799Z
+date: 2021-08-22T03:52:45.513Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -126,6 +126,7 @@ Downloading and importing is where most people experience issues. From a high le
 ## {.tabset}
 
 ### Usenet
+{#usenet}
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
         -   Examples: movies, tv, series, music, ect.
