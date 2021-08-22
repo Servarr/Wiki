@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-08-17T01:54:21.291Z
+date: 2021-08-22T03:40:00.448Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -26,6 +26,9 @@ Also, note that for each individual settings page, there are some options at the
 
 ## Indexer Proxies
 
+> Information on supported proxy types can be found [here](/prowlarr/supported#indexer-proxies)
+{.is-info}
+
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
 Click on `Settings` -> `Indexer Proxies`, and then click the `+` to add a proxy.
@@ -37,6 +40,9 @@ Configuring HTTP, SOCKS4, or SOCKS5 proxies are all the same. Enter a name, the 
 Configuring a Flaresolverr server requires you to enter the hostname:port of your Flaresolver installation (which can be found [here](https://github.com/FlareSolverr/FlareSolverr)). Again, applying a TAG allows you to only use Flaresolverr on those indexers which require its use.
 
 ## Applications
+
+> Information on supported applications can be found [here](/prowlarr/supported#applications)
+{.is-info}
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
@@ -80,23 +86,17 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 ## Download Clients (Prowlarr Searches)
 
-> If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+> Information on supported download clients can be found [here](/prowlarr/supported#download-clients)
 {.is-info}
----
-> Note: Prowlarr does not sync Download Clients to the Applications.
+
+If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+
+> Prowlarr does not sync Download Clients to the Applications.
 {.is-info}
 
 Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
-
-Prowlarr supports integration with the following Usenet download clients:
-
-![usenetclients.png](/assets/prowlarr/usenetclients.png)
-
-And the following Torrent clients:
-
-![torrentclients.png](/assets/prowlarr/torrentclients.png)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -125,6 +125,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
 
 ## Notifications
+
+> Information on supported notification providers can be found [here](/prowlarr/supported#notifications)
+{.is-info}
 
 Notifications are used for notifications from Prowlarr.
 
