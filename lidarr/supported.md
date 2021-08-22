@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-08-04T02:28:47.692Z
+date: 2021-08-22T16:24:56.164Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -93,3 +93,10 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - spotifyfollowedartists{#spotifyfollowedartists}
 - spotifyplaylist{#spotifyplaylist}
 - spotifysavedalbums{#spotifysavedalbums}
+
+## Metadata
+
+- Audio tagging
+- Kodi (XBMC) / Emby
+- Roksbox
+- WDTV
