@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-08-14T20:38:35.191Z
+date: 2021-08-22T04:01:09.818Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -220,6 +220,9 @@ Here you can adjust your size limits for the various types of books you want. Th
 
 ## Indexers
 
+> Information on supported indexers can be found [here](/readarr/supported#indexers)
+{.is-info}
+
 Indexers are how Readarr searches for books. You must have at least one for the program to function. Before we get into how to add them, there are some options at the bottom of the page:
 ![indexeroptions.png](/assets/readarr/indexeroptions.png)
 
@@ -257,6 +260,9 @@ Then click `Test`, and if you get a green checkmark, you can `Save` the indexer 
 > If it doesn't test successfully, you will need to review your logs to see what's wrong and fix it. You cannot add an indexer if that indexer is currently down.
 
 ## Download Clients
+
+> Information on supported download clients can be found [here](/readarr/supported#download-clients)
+{.is-info}
 
 This page is where you will add or edit your Usenet or Torrent download clients, and if necessary to add Remote Path Mappings.
 
@@ -314,6 +320,9 @@ If you get an error, please check your logs for the specific issue and fix it un
 
 ## Import Lists
 
+> Information on supported list types can be found [here](/readarr/supported#import-lists)
+{.is-info}
+
 Import lists allow you to add items to Readarr automatically from your GoodReads shelves or from other users. This has the potential to add a lot of unexpected items to your Readarr database, so please use it with care.
 
 ![importlists.png](/assets/readarr/importlists.png)
@@ -361,6 +370,9 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Se
 
 ## Connect
 
+> Information on supported connection types can be found [here](/readarr/supported#notifications)
+{.is-info}
+
 This page lists the external 3rd party connections Readarr uses for notifications.
 
 ![connect.png](/assets/readarr/connect.png)
@@ -382,6 +394,9 @@ Since there are so many, and each is different, we won't get into the individual
 - Custom Script allows you to invoke a custom script for many different event types - if you want to convert book formats, sync to your device, or other options.
 
 ## Metadata
+
+> Information on supported metadata consumers can be found [here](/readarr/supported#metadata)
+{.is-info}
 
 This page allows you to create/update metadata tags/covers.
 
