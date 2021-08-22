@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-08-22T17:17:09.766Z
+date: 2021-08-22T17:17:27.097Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -75,6 +75,7 @@ Prowlarr can automatically sync indexers with various applications
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
+  - [More Info](/prowlarr/custom-scripts)
 - Discord {#discord}
 - Email {#email}
 - Gotify {#gotify}
