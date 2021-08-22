@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-22T16:25:14.790Z
+date: 2021-08-22T16:30:33.076Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -108,8 +108,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 ## Metadata
 
-- Emby (Legacy)
-- Kodi (XBMC) / Emby
-- Roksbox
-- WDTV
-
+- Emby (Legacy) {#mediabrowsermetadata}
+- Kodi (XBMC) / Emby {#xbmcmetadata}
+- Roksbox {#roksboxmetadata}
+- WDTV {#wdtvmetadata}
