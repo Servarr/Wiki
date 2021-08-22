@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-20T18:38:25.331Z
+date: 2021-08-22T16:22:12.263Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -105,3 +105,11 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - traktlistimport {#traktlistimport}
 - traktpopularimport {#traktpopularimport}
 - traktuserimport {#traktuserimport}
+
+## Metadata
+
+- Emby (Legacy)
+- Kodi (XBMC) / Emby
+- Roxbox
+- WDTV
+
