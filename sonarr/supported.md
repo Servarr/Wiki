@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-08-22T01:55:13.032Z
+date: 2021-08-22T16:23:27.314Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -109,3 +109,9 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - traktlistimport{#traktlistimport}
 - traktpopularimport{#traktpopularimport}
 - traktuserimport{#traktuserimport}
+
+## Metadata
+
+- Roxbox
+- WDTV
+- XBMC
