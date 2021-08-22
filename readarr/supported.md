@@ -2,7 +2,7 @@
 title: Readarr Supported
 description: 
 published: true
-date: 2021-08-22T17:06:13.860Z
+date: 2021-08-22T17:08:25.750Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:28.684Z
@@ -59,6 +59,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - IP Torrents {#iptorrents}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Newznab {#newznab}
+  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
 - Nyaa {#nyaa}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
