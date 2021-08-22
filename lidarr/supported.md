@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-08-22T17:47:00.700Z
+date: 2021-08-22T17:50:11.013Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -85,7 +85,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - [More Info](/liddarr/custom-scripts)
+  - [More Info](/lidarr/custom-scripts)
 - Discord {#discord}
 - Email {#email}
 - Emby (Media Browser) {#mediabrowser}
