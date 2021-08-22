@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-22T17:05:26.808Z
+date: 2021-08-22T17:08:50.365Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -61,8 +61,8 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - IP Torrents {#iptorrents}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Newznab {#newznab}
-  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
+  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
 - Nyaa {#nyaa}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - omgwtfnzbs {#omgwtfnzbs}
