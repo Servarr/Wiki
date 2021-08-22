@@ -2,7 +2,7 @@
 title: Readarr Supported
 description: 
 published: true
-date: 2021-08-04T02:14:21.131Z
+date: 2021-08-22T16:19:33.029Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:28.684Z
@@ -85,3 +85,9 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - goodreadsownedbooks{#goodreadsownedbooks}
 - lazylibrarianimport{#lazylibrarianimport}
 - readarrimport{#readarrimport}
+
+## Metadata
+
+- Calibre
+- Audio tagging
+
