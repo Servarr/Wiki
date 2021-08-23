@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-07-30T16:47:01.927Z
+date: 2021-08-23T03:02:38.893Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -283,7 +283,7 @@ Easiest way to find this is to:
 
 ##### Movie was removed from TMDb
 
-The movie is linked to a TMDb Id that was deleted from TMDb, usually because it was a duplicate, wasn't a movie or changed ID for some other reason. Deleted movies will not receive any updates and should be corrected by the user to ensure continued functionality. Remove the movie from Radarr without deleting the files, then try to re-add it. If it doesn't show up in a search, check Radarr because it might be a TV miniseries like Stephen King's It.
+The movie is linked to a TMDb Id that was deleted from TMDb, usually because it was a duplicate, wasn't a movie or changed ID for some other reason. Deleted movies will not receive any updates and should be corrected by the user to ensure continued functionality. Remove the movie from Radarr without deleting the files, then try to re-add it. If it doesn't show up in a search, check Sonarr because it might be a TV miniseries like Stephen King's It.
 
 You can find and edit deleted movies by creating a custom filter using the following steps:
 
