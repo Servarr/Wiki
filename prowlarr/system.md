@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-08-03T21:21:12.415Z
+date: 2021-08-23T22:06:43.937Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -18,43 +18,42 @@ This page contains a list of health checks errors. These health checks are perio
 
 ##### Branch is not a valid release branch
 
-The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
 
 ##### Currently installed SQLite version is not supported
 
-Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+- Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 ##### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
+- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
 ##### Cannot install update because startup folder is not writable by the user
 
-This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s Startup directory (the installation directory) to allow Prowlarr to update itself.
+- This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s Startup directory (the installation directory) to allow Prowlarr to update itself.
 
 ##### Updating will not be possible to prevent deleting AppData on Update
 
-Prowlarr detected that AppData folder for your Operating System is located inside the directory that contains the Prowlarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
+- Prowlarr detected that AppData folder for your Operating System is located inside the directory that contains the Prowlarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
-Please look at System -> Info to see the current AppData & Startup directories.
-This means Prowlarr will be unable to update itself without risking data-loss.
-If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
+- Please look at System -> Info to see the current AppData & Startup directories.
+- This means Prowlarr will be unable to update itself without risking data-loss.
+- If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
 
 ##### Branch is for a previous version
 
-The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
+- The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
 ##### Could not connect to signalR
 
-signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
+- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
 
-The most common occurrence of this is use of a reverse proxy or cloudflare
-Cloudflare needs websockets enabled.
-
-Nginx requires the following addition to the location block for the app:
+- The most common occurrence of this is use of a reverse proxy or cloudflare
+  - Cloudflare needs websockets enabled.
+  - Nginx requires the following addition to the location block for the app:
 
 ```none
  proxy_http_version 1.1;
@@ -66,7 +65,7 @@ Nginx requires the following addition to the location block for the app:
 > See <https://github.com/aspnet/AspNetCore/issues/17081>
 {.is-warning}
 
-For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
+- For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 
 ```none
 RewriteEngine On
@@ -74,8 +73,9 @@ RewriteCond %{HTTP:Upgrade} =websocket [NC]
 RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 ```
 
-For Caddy (V1) use this:
-Note: you will also need to add the websocket directive to your prowlarr configuration
+- For Caddy (V1) use this:
+
+> Note: you will also need to add the websocket directive to your prowlarr configuration{.is-info}
 
 ```none
  proxy /prowlarr 127.0.0.1:9696 {
@@ -86,54 +86,62 @@ Note: you will also need to add the websocket directive to your prowlarr configu
 
 ##### Failed to resolve the IP Address for the Configured Proxy Host
 
-Review your proxy settings and ensure they are accurate
-Ensure your proxy is up, running, and accessible
+- Review your proxy settings and ensure they are accurate
+- Ensure your proxy is up, running, and accessible
 
 ##### Proxy Failed Test
 
-Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
+- Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
 
 ##### System Time is off by more than 1 day
 
-System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
-Review your system time and ensure it is synced to an authoritative time server and accurate
+- System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
+- Review your system time and ensure it is synced to an authoritative time server and accurate
 
 #### Download Clients
 
 ##### No download client is available
 
-A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings -> Download Client.
+- A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings -> Download Client.
 
 ##### Unable to communicate with download client
 
-Prowlarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
-This is typically due to improperly configured download client. Things you can typically check:
-Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.
-Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+- Prowlarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
+- This is typically due to improperly configured download client. Things you can typically check:
+- Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
+- The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.
+- Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 ##### Download clients are unavailable due to failure
 
-One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
-You should inspect System->Logs to see what the reason is for the failures.
-If you no longer use this download client, disable it in Prowlarr to prevent the errors.
+- One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
+- You should inspect System->Logs to see what the reason is for the failures.
+- If you no longer use this download client, disable it in Prowlarr to prevent the errors.
 
 ##### Bad Download Client Settings
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from Windows to Linux or Linux to Windows without a remote path map.
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from Windows to Linux or Linux to Windows without a remote path map.
 
 #### Indexers
 
 ##### No indexers are enabled
 
-Prowlarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.
+- Prowlarr requires indexers to be able to discover new releases. Please read the wiki instructions how to add indexers.
 
 ##### Indexers are unavailable due to failures
 
-Errors occurs while Prowlarr tried to use one of your indexers. To limit retries, Prowlarr will not use the indexer for an increasing amount of time (up to 24h).
-This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be dns, connection, authentication or indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
-You can prevent the warning by disabling the affected indexer.
-Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+- (An) Error(s) occur(s) while Prowlarr tried to use one of your indexers. To limit retries, Prowlarr will not use the indexer for an increasing amount of time (up to 24h).
+- This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be dns, connection, authentication or indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
+- You can prevent the warning by disabling the affected indexer.
+- Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+
+#### Applications
+
+##### Applications are unavailable due to failures
+- (An) Error(s) occur(s) while Prowlarr tried to use one of your applications. To limit retries, Prowlarr will not use the application for an increasing amount of time (up to 24h).
+- This mechanism is triggered if Prowlarr was unable to get a response from the application (could be dns, connection, authentication, or application issue). Please inspect the logs to determine what kind of error causes the problem.
+- You can prevent the warning by disabling the affected application.
+- Run the Test on the application to force Prowlarr to recheck the application, please note that the Health Check warning will not always disappear immediately.
 
 ### Disk Space
 
