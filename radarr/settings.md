@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-08-22T16:27:59.082Z
+date: 2021-08-23T15:30:45.104Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -647,8 +647,8 @@ Connections are how you want Radarr to communicate with the outside world.
 By pressing the + button you will be presented with a new window which will allow you to configure many different endpoints
 
 - Boxcar
-Custom Script - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/radarr/custom-scripts) for more details.
-Discord - By far one of the most common ways to push notifications of actions happening on your Radarr
+- Custom Script - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/radarr/custom-scripts) for more details.
+- Discord - By far one of the most common ways to push notifications of actions happening on your Radarr
 - Email - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
 > You can use a "pretty address" like SomePrettyName <email@example.org {.is-info}
