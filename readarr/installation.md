@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-24T00:46:58.047Z
+date: 2021-08-24T19:59:47.181Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -150,6 +150,12 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q readarr
+```
+
+- (Optional) Remove the tarball:
+
+```shell
+rm Readarr*.linux*.tar.gz
 ```
 
 ## Docker
