@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-21T20:24:42.896Z
+date: 2021-08-24T00:46:58.047Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -88,7 +88,7 @@ sudo apt install curl sqlite3
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
     - AMD64 use `arch=x64`
-    - ARM use `arch=arm`
+    - ARM and armh use `arch=arm`
     - ARM64 use `arch=arm64`
 
 ```shell
