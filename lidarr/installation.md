@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-24T00:44:28.694Z
+date: 2021-08-24T19:59:59.660Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -141,6 +141,12 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q lidarr
+```
+
+- (Optional) Remove the tarball:
+
+```shell
+rm Lidarr*.linux*.tar.gz
 ```
 
 ## Docker
