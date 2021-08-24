@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-21T20:24:27.617Z
+date: 2021-08-24T00:44:39.794Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -78,7 +78,7 @@ sudo apt install curl mediainfo sqlite3
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
     - AMD64 use `arch=x64`
-    - ARM use `arch=arm`
+    - ARM and armh use `arch=arm`
     - ARM64 use `arch=arm64`
 
 ```shell
@@ -103,7 +103,7 @@ sudo mv Radarr/ /opt
 - Ensure ownership of the binary directory.
 
 ```shell  
-sudo chown radarr:radarr /opt/Radarr
+sudo chown radarr:radarr -R /opt/Radarr
 ```
 
 - Configure systemd so radarr can autostart at boot.
