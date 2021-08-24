@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-21T20:24:57.596Z
+date: 2021-08-24T00:44:28.694Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -79,6 +79,7 @@ sudo apt install curl mediainfo sqlite3 libchromaprint-tools
   - You can determine your architecture with `dpkg --print-architecture`
     - AMD64 use `arch=x64`
     - ARM use `arch=arm`
+    - ARM and armh use `arch=arm`
     - ARM64 use `arch=arm64`
 
 ```shell
@@ -103,7 +104,7 @@ sudo mv Lidarr/ /opt
 - Ensure ownership of the binary directory.
 
 ```shell
-sudo chown lidarr:lidarr /opt/Lidarr
+sudo chown -R lidarr:lidarr /opt/Lidarr
 ```
 
 - Configure systemd so Lidarr can autostart at boot.
