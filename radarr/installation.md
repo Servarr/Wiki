@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-24T00:44:39.794Z
+date: 2021-08-24T19:59:29.133Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -140,6 +140,12 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q radarr
+```
+
+- (Optional) Remove the tarball:
+
+```shell
+rm Radarr*.linux*.tar.gz
 ```
 
 ## Docker
