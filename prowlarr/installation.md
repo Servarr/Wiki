@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-24T00:44:49.139Z
+date: 2021-08-24T20:00:12.021Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -140,6 +140,12 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q prowlarr
+```
+
+- (Optional) Remove the tarball:
+
+```shell
+rm Prowlarr*.linux*.tar.gz
 ```
 
 ## Docker
