@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-08-23T22:08:03.027Z
+date: 2021-08-24T02:43:05.148Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -134,6 +134,14 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 - This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be dns, connection, authentication or indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+
+##### Indexer VIP Expiring
+
+- Your VIP subscription or benefits to your indexer expire within the next 7 days or less based on the expiration date you configured for your indexer in Prowlarr.
+
+##### Indexer VIP Expired
+
+- Your VIP subscription or benefits to your indexer have expired based on the expiration date you configured into for indexer in Prowlarr.
 
 #### Applications
 
