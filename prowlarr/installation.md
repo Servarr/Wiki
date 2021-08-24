@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-21T20:25:16.463Z
+date: 2021-08-24T00:44:49.139Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -78,7 +78,7 @@ sudo apt install curl sqlite3
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
     - AMD64 use `arch=x64`
-    - ARM use `arch=arm`
+    - ARM and armh use `arch=arm`
     - ARM64 use `arch=arm64`
 
 ```shell
@@ -103,7 +103,7 @@ sudo mv Prowlarr/ /opt
 {.is-danger}
 
 ```shell
-sudo chown prowlarr:prowlarr /opt/Prowlarr
+sudo chown prowlarr:prowlarr -R /opt/Prowlarr
 ```
 
 - Configure systemd so Prowlarr can autostart at boot.
