@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-08-15T01:21:02.554Z
+date: 2021-08-28T16:10:51.662Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -15,12 +15,15 @@ dateCreated: 2021-06-23T03:06:20.944Z
 
 ## Can I use flaresolverr indexers?
 
-- At the moment, indexers that use cloudflare and captchas are not supported with a flaresolverr solution. If you want to use those, you will need to continue to use your existing method of connection.
-- Support for this is planned to be added as part of the [Per Indexer Proxy Pull Request](https://github.com/Prowlarr/Prowlarr/pull/380)
+- Yes.
+1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexers)
+1. Add a tag to the created flaresovlerr proxy
+1. Add a tag to your [Indexer](/prowlarr/indexers)
+
 
 ## Prowlarr will not sync to Sonarr
 
-- Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is reaching EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
+- Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
 
 ## How do I update Prowlarr?
 
@@ -41,7 +44,7 @@ dateCreated: 2021-06-23T03:06:20.944Z
 - `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) -  (Alpha/Unstable): The bleeding edge. Released as soon as code is committed and passed all automated tests. ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-warning}
+{.is-danger}
 
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
@@ -95,7 +98,7 @@ If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap whi
 
 ## I use Prowlarr on a Mac and it suddenly stopped working. What happened?
 
-Most likely this is due to a MacOS bug which caused the Prowlarr database to be corrupted. Please check the FAQ entry for restoring a corrupt database.
+- Most likely this is due to a MacOS bug which caused the Prowlarr database to be corrupted. Please check the FAQ entry for restoring a corrupt database.
 
 ## How do I change from the Windows Service to a Tray App?
 
