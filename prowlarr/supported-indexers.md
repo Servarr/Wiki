@@ -2,14 +2,14 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-08-21T15:30:15.928Z
+date: 2021-08-28T23:06:01.9437887Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-07-31T16:26:55.473Z
+dateCreated: 2021-08-28T23:06:01.9437887Z
 ---
 
 
-- Supported Indexers as of Build `0.1.1.842` / [Commit: 27064cd2933afe328cfe0688b0361b2fd50507f6](https://github.com/Prowlarr/Prowlarr/commit/27064cd2933afe328cfe0688b0361b2fd50507f6)
+- Supported Indexers as of Build `0.1.1.885` / [Commit: a2c8cec27ebd18d0310718ebb0e19e9baa54a0b5](https://github.com/Prowlarr/Prowlarr/commit/a2c8cec27ebd18d0310718ebb0e19e9baa54a0b5)
 
 ## Torrents
 
@@ -44,7 +44,7 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|ru-ru|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|zh-CN|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|en-us|
-|[cpasbien](https://wwwv.cpasbien-fr.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-fr|
+|[cpasbien](https://www2.cpasbien-fr.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-fr|
 |[cpasbien clone](https://cpasbien.to/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|fr-fr|
 |[Dark Tracker](https://darkos.club/){#darktracker}|Dark Tracker is a RUSSIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|ru-ru|
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|is-is|
@@ -62,6 +62,7 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[ExtremlymTorrents](https://extremlymtorrents.ws/){#extremlymtorrents}|ExtremlymTorrents (XTR) is a Semi-Private tracker for MOVIES / TV / GENERAL|en-us|
 |[EZTV](https://eztv.re/){#eztv}|EZTV is a Public torrent site for TV shows|en-us|
 |[Filebase](http://www.filebase.ws/){#filebase}|Filebase is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-ru|
+|[FileListing](https://filelisting.com/){#filelisting}|FileListing is a Public Torrent Search Engine|en-us|
 |[FireBit](https://firebit.net/){#firebit}|FireBit is an UKRAINIAN / RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-ru|
 |[FocusX](https://focu.sx/){#focusx}|FocusX is a RUSSIAN Public torrent site for MOVIES and TV|ru-ru|
 |[Fou-Du-Cinema](https://fou-du-cinema.net/){#fouducinema}|Fou-Du-Cinema (FdC) is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|fr-fr|
@@ -173,7 +174,7 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[TorrentParadiseMl](https://torrent-paradise.ml/){#torrentparadiseml}|The most innovative torrent site|en-us|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-us|
-|[TorrentQQ](https://torrentqq101.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq102.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents.csv is a self-hostable open source torrent search engine and database|en-us|
 |[TorrentSir](https://torrentsir33.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-ru|
@@ -360,6 +361,7 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[Keep Friends](https://pt.keepfrds.com/){#keepfriends}|Keep Friends is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[LastFiles](https://www.lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|ro-ro|
 |[LatinoP2P](https://latinop2p.com/){#latinop2p}|LatinoP2P is a Latin American Private Torrent Tracker for MOVIES / TV / GENERAL|es-419|
+|[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|en-us|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|en-us|
 |[LegacyHD](https://legacyhd.org/){#legacyhd}|LegacyHD (HD4Free) is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-us|
 |[LemonHD](https://lemonhd.org/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
@@ -391,7 +393,6 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[Nordic+](https://nordicplus.org/){#nordicplus}|Nordic+ is a Private Torrent Tracker for MOVIES / TV / GENERAL|en|
 |[NotWhatCD](https://notwhat.cd/){#notwhat.cd}|NotWhat.CD (NWCD) is a private Music tracker that arised after the former (WCD) shut down.|en-US|
 |[Oasis](https://oasis-fun.club/){#oasis}|Oasis is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-fr|
-|[Obscure](https://www.obscure.wtf/){#obscure}|Obscure is a Private Torrent Tracker for Obscure Stuff.|en-us|
 |[oMg[WtF]trackr](https://omg.wtftrackr.xyz/){#omgwtftrackr}|oMg[WtF]trackr is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[OpenCD](https://open.cd/){#opencd}|OpenCD is a CHINESE Private Torrent Tracker for MUSIC|zh-cn|
 |[Orpheus](https://orpheus.network/){#orpheus}|Orpheus (APOLLO) is a Private Torrent Tracker for MUSIC|en-US|
@@ -475,7 +476,6 @@ dateCreated: 2021-07-31T16:26:55.473Z
 |[TheAudioScene](https://theaudioscene.net/){#theaudioscene}|TheAudioScene is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|en-us|
 |[TheLeachZone](https://tlz.digital/){#theleachzone}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[TheScenePlace](https://www.thesceneplace.com/){#thesceneplace}|TheScenePlace (TSP) is a Private site for TV / MOVIES / GENERAL|en|
-|[TheSpit](https://www.thespit.me/){#thespit}|TheSpit is a Private Torrent Tracker for SPORT|en|
 |[TJUPT](https://tjupt.org/){#tjupt}|TJUPT is a CHINESE Private Torrent Tracker for GENERAL|zh-cn|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[Torrent Sector Crew](https://tsctracker.org/){#torrentsectorcrew}|Torrent Sector Crew (TSC) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-de|
@@ -564,3 +564,4 @@ None
 |SpotNZB{#newznab}||en-US|
 |Tabula Rasa{#newznab}||en-US|
 |Usenet Crawler{#newznab}||en-US|
+
