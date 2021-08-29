@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-08-23T15:30:45.104Z
+date: 2021-08-29T02:15:32.223Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -26,15 +26,15 @@ Also, note that for each individual settings page, there are some options at the
 
 ## Media Management
 
-Note: Some of these settings are only visible through 'show advanced' settings which is on the top bar under the search bar
+> Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
 - [Community Suggested Naming Suggestions](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/)
 
-### Naming
+### Movie Naming
 
-- Rename Movies - If this is toggled off (no check in the box) Radarr will use the existing file name if renaming is disabled
-- Replace Illegal Characters - If this is toggled off (no check in the box) Radarr will replace illegal characters.
-- The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
+- `Rename Movies` - If unchecked, Radarr will use the existing file name if renaming is disabled
+- `Replace Illegal` Characters - If unchecked, Radarr will remove them instead.
+  - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
   - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
     - Delete - Self explanatory
       - Example: Movie,The.mkv -> MovieThe.mkv
@@ -62,22 +62,22 @@ Note: Some of these settings are only visible through 'show advanced' settings w
 
 #### Movie Naming
 
-`{Movie Title}` = The Movie's Title!
-`{Movie Title:DE}` = FileTitle
-`{Movie CleanTitle}` = The Movies Title!
-`{Movie TitleThe}` = Movie's Title!, The
-`{Movie OriginalTitle}` = Τίτλος ταινίας
-`{Movie TitleFirstCharacter}` = S
-`{Movie Collection}` = The Movie Collection
-`{Movie Certification}` = R
-`{Release Year}` = 2009
+- `{Movie Title}` = The Movie's Title!
+- `{Movie Title:DE}` = FileTitle
+- `{Movie CleanTitle}` = The Movies Title!
+- `{Movie TitleThe}` = Movie's Title!, The
+- `{Movie OriginalTitle}` = Τίτλος ταινίας
+- `{Movie TitleFirstCharacter}` = S
+- `{Movie Collection}` = The Movie Collection
+- `{Movie Certification}` = R
+- `{Release Year}` = 2009
 
-#### Movie ID
+#### Movie IDs
 
-`{ImdbId}` = tt12345
-`{Tmdbid}` = 123456
+- `{ImdbId}` = tt12345
+- `{Tmdbid}` = 123456
 
-##### Quality
+#### Quality
 
 - `{Quality Full}` = HDTV 720p Proper
 - `{Quality Title}` = HDTV 720p
@@ -103,7 +103,7 @@ Note: Some of these settings are only visible through 'show advanced' settings w
 
 #### Edition
 
-`{Edition Tags}` = IMAX
+- `{Edition Tags}` = IMAX
 
 #### Custom Formats (Naming)
 
@@ -127,20 +127,20 @@ Here you will set the naming convention for the folder that contains the season 
 
 #### Movie Naming
 
-`{Movie Title}` = Movie Name!
-`{Movie Title:DE}` = FileTitle
-`{Movie CleanTitle}` = Movie Title
-`{Movie TitleThe}` = Movie Title, The
-`{Movie OriginalTitle}` = Τίτλος ταινίας
-`{Movie TitleFirstCharacter}` = S
-`{Movie Collection}` = The Movie Collection
-`{Movie Certification}` = R
-`{Release Year}` = 2009
+- `{Movie Title}` = Movie Name!
+- `{Movie Title:DE}` = FileTitle
+- `{Movie CleanTitle}` = Movie Title
+- `{Movie TitleThe}` = Movie Title, The
+- `{Movie OriginalTitle}` = Τίτλος ταινίας
+- `{Movie TitleFirstCharacter}` = S
+- `{Movie Collection}` = The Movie Collection
+- `{Movie Certification}` = R
+- `{Release Year}` = 2009
 
 #### Movie ID
 
-`{ImdbId}` = tt12345
-`{Tmdbid}` = 123456
+- `{ImdbId}` = tt12345
+- `{Tmdbid}` = 123456
 
 ### Folders
 
@@ -158,13 +158,13 @@ Here you will set the naming convention for the folder that contains the season 
 
 - `Import Extra Files` - Import matching extra files (subtitles, nfo, etc) after importing a file
 
-#### File Management
+### File Management
 
 - `Unmonitor Deleted Movies` - Movies deleted from disk are automatically unmonitored in Radarr
 - `Download Proper & Repacks` - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
-  - `Prefer and Upgrade` - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - `Do Not Upgrade Automatically` - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - `Do Not Prefer` - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
+  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
 - > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
 - > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
 
@@ -172,19 +172,19 @@ Here you will set the naming convention for the folder that contains the season 
 
 - `Analyse video files` - Extract file information such as resolution, runtime and codec information from files. This requires Radarr to read parts of the file which may cause high disk or network activity during scans.
 - `Rescan Movie Folder after Refresh` - Rescan the series folder after refreshing the series
-  - `Always` - This will rescan series folder based upon Tasks Schedule
-  - `After Manual Refresh` - You will have to manually rescan the disk
-  - `Never` - Just as it says, never rescan the series folder.
+  - Always - This will rescan series folder based upon Tasks Schedule
+  - After Manual Refresh - You will have to manually rescan the disk
+  - Never - Just as it says, never rescan the series folder.
 - `Change File Date` - Change file date on import/rescan
-  - `None` - Radarr will not change the date that shows in your given file browser
-  - `In Cinemas Date` - The date the movie was released in theaters.
-  - `Physical Release Date` - The date the movie was released either on disk (physical) or on the web.
+  - None - Radarr will not change the date that shows in your given file browser
+  - In Cinemas Date` - The date the movie was released in theaters.
+  - Physical Release Date` - The date the movie was released either on disk (physical) or on the web.
 - `Recycling Bin` - Movie files will go here when deleted instead of being permanently deleted
 - `Recycling Bin Cleanup` - This is how old a given file can be before it is deleted permanently
 
 > Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
-#### Permissions
+### Permissions
 
 - `Set Permissions` - Should `chmod` be run when files are imported/renamed?
   - `chmod Folder` - Octal, applied during import/rename to media folders and files (without execute bits)
@@ -198,7 +198,7 @@ Here you will set the naming convention for the folder that contains the season 
 
 > This only works if the user running `Radarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
-#### Root Folders
+### Root Folders
 
 - `Path` - This shows the path to your media library
 - `Free Space` - This is the free space being reported to Radarr from the system
@@ -212,42 +212,44 @@ Here you will set the naming convention for the folder that contains the season 
 
 ### Quality Profiles
 
-- Here you will be allowed to set profiles for which you can have for the quality of series you're looking to download.
-- When selecting an existing profile or adding an additional profile a new window will appear
+- Set profiles for the quality of series you're looking to download.
 
-> Note: The quality with the blue box will be the quality that is set for
+> When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
+
+> Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
 
-- Name - Here you will enter a UNIQUE name for the profile to which you are creating
-- Upgrades allowed - If you tell Radarr to download a Web 1080p as it is the first release of a specific movie then later somebody is able to upload a Bluray-1080p then with this selected Radarr will automatically upgrade to the better quality
+- `Name` - Select a **UNIQUE** name for the quality profile you are creating
+- `Upgrades Allowed` - When this option is checked and you tell Radarr to download a `WEB 1080p` as it is the first release of a specific movie then later somebody is able to upload a `Bluray-1080p` Radarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
+- `Upgrade Until` - Once this quality is reached Radarr will no longer download movies
 
-> Note: This is only if you have Bluray-1080p higher than Web 1080p within the Qualities section
+> Note: This is only applicable if you have `Bluray-1080`p higher than `WEB 1080p` within the `Qualities` section
+{.is-warning}
+
+- `Qualities` - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
+  - `Edit Groups` - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
+  - [See Qualities](#qualities-defined)
+
+> By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
-- Upgrade until Quality - Here you will set the cut-off to which Radarr says to its self, "This is as high of quality that you want. I will not be looking anymore for better quality releases."
-- Minimum Custom Format Score - The minimum sum of custom format(s) for a release to be downloaded. Note this does not outrank qualities, but is ranked after qualities.
-- Upgrade Until Custom Format Score - Similar to - Upgrade until Quality; the minimum score to be reached within a quality to upgrade to. Once this is reached, there will be no upgrades within that quality due to custom formats.
 - Language - Select your preferred language
-- Qualities - [See Qualities](#qualities-defined)
-- Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases, Prime example of this is WebDL and WebRip as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
-- Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted
 
-> Note: By default the qualities are set from lowest (bottom) to highest (top)
-{.is-info}
+
 
 - Custom Format - Radarr scores each release using the sum of scores for matching custom formats. If a new release would improve the score, at the same or better quality, then Radarr will grab it.
 See [Custom Formats](#custom-formats) for more details.
 
 ### Delay Profiles
 
-- Delay profiles allow you to reduce the number of releases that will be downloaded for a movie, by adding a delay while Radarr will continue to watch for releases that better match your preferences.
-- Protocol - This will either be Usenet or Torrent depending on which download protocol you're using
-- Usenet Delay - Set by the number of minutes you will want to wait before the download starts
-- Torrent Delay - Set by the number of minutes you will want to wait before the download starts
-- Bypass if Highest Quality - Bypass the delay profile if the highest quality for that Movie is found and grab once the first instance of the highest ranked quality is found. Otherwise wait for the best quality release until the end of the delay period.
-- Tags - This is where you will select any relevant tags that you will be using for this scheme
-- Wrench icon - This will allow you to edit the delay profile
-- Plus icon - Create a new profile
+- Delay profiles allow you to reduce the number of releases that will be downloaded for an movie by adding a delay while Radarr continues to watch for releases that better match your preferences.
+  - `Protocol` - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
+  - `Usenet Delay` - Set by the number of minutes you will want to wait before the download to start
+  - `Torrent Delay` - Set by the number of minutes you will want to wait before the download to start
+  - `Bypass if Highest Quality` - Bypass delay when release has the highest enabled quality profile with the preferred protocol
+  - `Tags` - This is where you will select any relevant tags that you will be using for this scheme
+  - `Wrench icon` - This will allow you to edit the delay profile
+  - `Plus icon` - Create a new delay profile
 
 #### Uses
 
@@ -255,58 +257,60 @@ Some media will receive half a dozen different releases of varying quality in th
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
 
-##### How Delay Profiles Work
+#### How Delay Profiles Work
 
-The timer begins as soon as Radarr detects an Movie has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay. Please note that the clock starts from the releases uploaded time and not from the time Radarr sees it.
+The timer begins as soon as Radarr detects a movie has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
+
+> The clock starts from the releases uploaded time and not from the time Radarr sees it. {.is-info}
 
 During the delay period, any new releases that become available will be noted by Radarr. When the delay timer expires, Radarr will download the single release which best matches your quality preferences.
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-> NOTE: Delay profiles start from the timestamp that the indexer report the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, any manual searches for content (non-RSS feed searches) will ignore delay profile settings.
-{.is-info}
+> Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
+{.is-warning}
 
-###### Examples
+##### Examples
 
 - For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
 
-- Example 1
+###### Example 1
 
-  - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
+- In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
-  - At 11:00pm the first release for an Movie is detected by Radarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Radarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
+- At 11:00pm the first release for an Movie is detected by Radarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Radarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
 
-  - At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Movie no longer is upgradable and Radarr will stop looking for new releases.
+- At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Movie no longer is upgradable and Radarr will stop looking for new releases.
 
-  - At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
+- At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
 
-- Example 2
+###### Example 2
 
-  - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
+- This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
-  - At 11:00pm the first release for an Movie is detected by Radarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Radarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Radarr will wait until 12:15am and download the best release, regardless of which source it came from.
+- At 11:00pm the first release for an Movie is detected by Radarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Radarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Radarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
-- Example 3
+###### Example 3
 
-  - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
+- A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
 
-  - You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
+- You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
 
-  - If the first release that is detected is from Usenet, Radarr will download it immediately.
+- If the first release that is detected is from Usenet, Radarr will download it immediately.
 
-  - If the first release is from BitTorrent, Radarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
+- If the first release is from BitTorrent, Radarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
 ## Quality
 
 ### Quality Table Meanings
 
-- Title - The name of the Quality in the GUI (configurable)
-- Max - The maximum Megabytes per Minute (MB/min) a quality can have.
-- Megabytes Per Minute - Self Explanatory
-- Min - The minimum Megabytes per Minute (MB/min) a quality can have.
-- Preferred - The preferred Megabytes per Minute (MB/min) a quality can have.
-- Quality - The scene quality name (hardcoded)
-- Size Limit - Self Explanatory
+- `Quality` - The scene quality name (hardcoded)
+- `Title` - The name of the Quality in the GUI (configurable)
+- `Megabytes Per Minute` - Self Explanatory
+- `Size Limit` - Self Explanatory
+- `Min` - The minimum Megabytes per Minute (MB/min) a quality can have.
+- `Preferred` - The preferred Megabytes per Minute (MB/min) a quality can have.
+- `Max` - The maximum Megabytes per Minute (MB/min) a quality can have.
 
 ### Qualities Defined
 
@@ -378,9 +382,15 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Information on supported indexers can be found [here](/radarr/supported#indexers)
 {.is-info}
 
-- Once you're here you will be adding the indexer/tracker that you will be using to actually download any of your files. If you're curious on how Radarr works with your indexer/tracker click here
+- Once you're here you will be adding the indexer/tracker that you will be using to actually download any of your files.
 
 ### Supported Indexers
+
+#### Indexer Settings
+
+- Once you've clicked the `+` button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Radarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
+
+- There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
 #### Usenet
 
@@ -390,24 +400,25 @@ Many presets are available, but all require an API key to be accessible.
     - Omgwtfnzbs - This indexer also supports newznab and is available as one of the above presets. [Website](https://omgwtfnzbs.me/)
     - Fanzub - Indexer for Japanese media (Anime) exclusively.[Website](http://fanzub.com/)
 
-- Torrents
-  - BroadcastheNet - Private Tracker - [Website](https://broadcasthe.net/)
-  - Filelist - Private Tracker - [Website](https://filelist.io)
-  - HDBits - Private tracker - [Website](https://hdbits.org/)
-  - IPTorrents - Private tracker, no search api. -[Website](http://www.iptorrents.com/)
-  - Nyaa - Torrent Indexer for Japanese media (Anime) exclusively. - [Website](http://www.nyaa.si/)
-  - Rarbg - [Website](https://rarbg.to)
-  - Torrent RSS Feed - Generic torrent RSS feed parser.
-  > NOTE: The RSS feed must contain a pubdate. The release size is recommended as well.
+#### Torrents
+- Filelist - Private Tracker - [Website](https://filelist.io)
+- HDBits - Private tracker - [Website](https://hdbits.org/)
+- [IPTorrents](http://www.iptorrents.com/) - Private Tracker
+
+  > No search API for IPTorrents {.is-info}  - Nyaa - Torrent Indexer for Japanese media (Anime) exclusively. - [Website](http://www.nyaa.si/)
+
+- [Rarbg](https://rarbg.to) - Public Tracker
+- Torrent RSS Feed - Generic torrent RSS feed parser.
+  > The RSS feed must contain a `pubdate`. The release size is recommended as well.
   {.is-info}
-  - Torrentleech - Private Indexer - [Website](http://torrentleech.org/)
 
-  - Torznab
-    - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent rss feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same api specification is shared with nZEDb)
-    - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
+- [Torrentleech](http://torrentleech.org/) - Private Indexer
+- `Torznab` - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
+  - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
 
-> Important/Disclaimer: Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments and all. Please review your tracker rules and etiquette, keep your community alive.
-We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
+> Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
+> Please review your tracker rules and etiquette, keep your community alive.
+> We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
 {.is-warning}
 
 #### Indexer Settings
@@ -420,7 +431,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 
 - Newznab - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
 - An excellent software that works with usenet and integrates quite well with Radarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
-- Regardless of if you select a pre filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
+- Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2)
 - Name - The name of the indexer in Radarr
 - Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
@@ -435,7 +446,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-#### Torrent Tracker Configuration
+###### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Radarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
@@ -456,7 +467,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 - Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
 - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
-- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
+
 - Required Flags - What indexer flags are required?
   | Flag             | Symbol | Description                                                                                                                                                                                                                 |
   | ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -523,7 +534,7 @@ We’re not responsible if your account is banned for disobeying rules or accrui
 
 ### Download Clients
 
-Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/radarr/downloadclients.png)
 
@@ -570,6 +581,24 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
+#### Torrent Client Remove Download Compatibility
+
+- Radarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
+
+|       Client      | Ratio |      Time      |
+|:-----------------:|:-----:|:--------------:|
+| Deluge            | Yes   | No             |
+| Hadouken          | No    | No             |
+| qBittorrent       | Yes   | Yes            |
+| rTorrent          | No    | No             |
+| Torrent Blackhole | No    | No             |
+| Download Station  | No    | No             |
+| Transmission      | Yes   | *Idle Limit*\* |
+| uTorrent          | Yes   | Yes            |
+| Vuze              | Yes   | Yes            |
+
+> *Idle Limit* - Transmission internally has an Idle Time check, but Radarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
+
 ### Completed Download Handling
 
 - Completed Download Handling is how Radarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
@@ -603,7 +632,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - Adds a failed event to Radarr's history
   - Removes the failed download from Download Client to free space and clear downloaded files (optional)
   - Starts searching for a replacement file (optional)
-  - Blocklisting (fka 'blocklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
+  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Radarr will search for the same file after a failure

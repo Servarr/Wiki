@@ -2,12 +2,11 @@
 title: Readarr
 description: 
 published: true
-date: 2021-08-15T13:12:38.327Z
+date: 2021-08-19T21:42:57.983Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
 ---
-
 
 ![128.png](/assets/readarr/logos/128.png)
 

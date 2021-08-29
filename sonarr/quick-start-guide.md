@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-22T01:48:45.019Z
+date: 2021-08-28T17:58:31.169Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:30:27.958Z
@@ -109,22 +109,28 @@ Downloading and importing is where most people experience issues. From a high le
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
-Coming soon
+Coming soon - Contributions Welcome
 
 ### Import episodes
 
-Coming soon
+Coming soon - Contributions Welcome
 
 #### Importing Existing Media
 
 Depending how well your existing series folders are named, Sonarr will try to match it with the correct series. You should review this list carefully before importing.
 
-Coming soon
+Coming soon - Contributions Welcome
 
 #### No match found
 
-Coming Soon
+Coming soon - Contributions Welcome
 
 #### Fix faulty folder name after import
 
-Coming Soon
+Coming soon - Contributions Welcome
+
+## Add New Series
+
+
+[Refer to the Library Page for additional information](/en/sonarr/library#add-new)
+

@@ -2,7 +2,7 @@
 title: Installing Docker on a Synology ARM NAS
 description: 
 published: true
-date: 2021-08-19T19:08:48.327Z
+date: 2021-08-19T19:08:55.099Z
 tags: docker, synology
 editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z

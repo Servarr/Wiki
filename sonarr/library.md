@@ -2,7 +2,7 @@
 title: Sonarr Library
 description: 
 published: true
-date: 2021-08-21T20:50:43.812Z
+date: 2021-08-28T17:56:21.722Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
@@ -18,7 +18,22 @@ The filters options allows you to narrow your series down, and is incredibly hel
 
 ## Add New
 
-The add new feature allows you to add a new series for Sonarr to monitor and download.  You have a variety of options when doing this, you can use an assortment of monitor features (i.e, only download the newest season, first season, new episodes, entire show, missing episodes, and pilot episode).  As well as being able to choose the media path, and Series type (Standard, Daily, and Anime).
+The add new feature allows you to add a new series for Sonarr to monitor and download.
+
+- Root Folder - The selected [root/library folder](/sonarr/settings#root-folders) in Sonarr for this series to use.
+- Monitor - How do you want the series monitored initally?
+  - All Episodes - Monitor all episodes except specials
+  - Future Episodes - Monitor episodes that have not aired yet
+  - Missing Episodes - Monitor episodes that do not have files or have not aired yet
+  - Existing Episodes - Monitor episodes that have files or have not aired yet
+  - First Season - Monitor all episodes of the first season. All other seasons will be ignored
+  - Latest Season - Monitor all episodes of the latest season and future seasons
+  - None - No episodes will be monitored
+- Quality Profile - The [quality profile](/sonarr/settings#quality-profiles) to use for this series
+- Series Type - Which Series Type to use for this series. This changes how searches occur. [See the FAQ entry for more info](/sonarr/faq#whats-the-different-series-types)
+- Season Folder - Enable or Disable creation and usage of Season folders for this series
+- Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series
+- Start search for cutoff unmet episodes - based on your selected monitor settings and only applicable if you have existing files for your episodes in the series folder, search for all existing and monitored episodes in this series that due not meet or exceed your qualtiy profile's cutoff.
 
 ## Library Import
 

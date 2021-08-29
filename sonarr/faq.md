@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-15T01:20:57.833Z
+date: 2021-08-28T17:54:13.297Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -196,9 +196,16 @@ Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 
 - Most shows should be `Standard`. For daily shows which are typically released with a date, `Daily` should be used. Finally, there is anime where using `Anime` is *usually* right, but sometimes `Standard` can work better, so try the *other* one if you're having issues.
 
-- Please note that if the series type is set to anime and none of your enabled indexers have any anime categories configured then it effectively skips the indexer and may appear that it is not searching.
+- Please note that if the series type is set to anime and if none of your enabled indexers have any anime categories configured then it effectively skips the indexer and may appear that it is not searching.
 
-### Show Type Examples
+- Please note that not all indexers support season/episode (standard) searches.
+
+### Series Types
+- **Anime** - Episodes released using an absolute episode number
+- **Daily** - Episodes released daily or less frequently that use year-month-day (2017-05-25)
+- **Standard** - Episodes released with SxxEyy pattern
+
+### Series Type Examples
 
 Below are some example release names for each show type. The specific differentiating piece is noted in bold.
 

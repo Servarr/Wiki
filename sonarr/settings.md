@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-08-11T19:37:09.073Z
+date: 2021-08-29T02:15:36.562Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -32,8 +32,8 @@ Also, note that for each individual settings page, there are some options at the
 
 ### Episode Naming
 
-- `Rename Episodes` - If unchecked, Sonarr will use the existing file name if renaming is disabled.
-- `Replace Illegal Characters` - If unchecked, Sonarr will remove them instead.
+- `Rename Episodes - If unchecked, Sonarr will use the existing file name if renaming is disabled.
+- `Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
 #### Standard Episode Format
@@ -42,14 +42,14 @@ Also, note that for each individual settings page, there are some options at the
 
 - Dropdown Box (upper right corner)
   - Left Box - Space Handling
-    - `Space ( )` - Use spaces in naming (Default)
-    - `Period (.)` - Use periods in lieu of spaces in naming
-    - `Underscore (_)` - Use underscores in lieu of spaces in naming
-    - `Dash (-)` - Use dashes in lieu of spaces in naming
+  - Space ( ) - Use spaces in naming (Default)
+  - Period (.) - Use periods in lieu of spaces in naming
+  - Underscore (_) - Use underscores in lieu of spaces in naming
+  - Dash (-) - Use dashes in lieu of spaces in naming
   - Right Box - Case Handling
-    - `Default Case` - Make title uppercase and lowercase (~camelcase) (Default)
-    - `Uppercase` - Make title all uppercase
-    - `Lowercase` - Make title all lowercase
+  - Default Case - Make title uppercase and lowercase (~camelcase) (Default)
+  - Uppercase - Make title all uppercase
+  - Lowercase - Make title all lowercase
 
 #### Series Naming
 
@@ -137,7 +137,6 @@ Here you will select the naming convention for your anime series. Click on the `
 
 See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
-> Typically anime is aired in an absolute order also known as production order. Usually this is shown as `e001`, `e002...e104`, `e105`, etc. When a series is set to use `Anime` this setting will pull the absolute order from `TheTVDB` which is usually one continuous season. An example of this can be seen here{.is-info}
 
 #### Absolute Episode Number
 
@@ -195,31 +194,31 @@ Name for the `Specials` (Season) folder
 
 ### Folders
 
-- `Create Empty Media folders` - Create missing series folders during disk scan
-- `Delete Empty Folders` - Delete empty series and season folders during disk scan and when episode files are deleted
+- `Create Empty Media folders - Create missing series folders during disk scan
+- `Delete Empty Folders - Delete empty series and season folders during disk scan and when episode files are deleted
 
 ### Importing
 
-- `Episode Title Required` - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
-  - `Always` - Always wait up to 24 hours for a title prior to importing if the episode is TBA
-  - `Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA.
-  - `Never` - Do not delay importing if the episode is TBA.
-- `Skip Free Space Check` - Use when Sonarr is unable to detect free space from your series root folder
-- `Minimum Free Space` - Toggling this will prevent import if it would leave less than this amount of disk space available
-- `Use Hard links instead of Copy` - Use Hard links when trying to copy files from torrents that are still being seeded
-  - For more information on this click [here](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/)
+- `Episode Title Required - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
+- Always - Always wait up to 24 hours for a title prior to importing if the episode is TBA
+- Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA. <- This is recommended.
+- Never - Do not delay importing if the episode is TBA.
+- `Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
+- `Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
+- `Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
+  - For more information on this click [here](https://trash-guides.info/hardlinks)
 
  > Occasionally, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.{.is-warning}
 
-- `Import Extra Files` - Import matching extra files (subtitles, nfo, etc) after importing a file
+- `Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 
-#### File Management
+### File Management
 
 - `Unmonitor Deleted Episodes` - Episodes deleted from disk are automatically unmonitored in Sonarr
 - `Download Proper & Repacks` - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
-  - `Prefer and Upgrade` - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - `Do Not Upgrade Automatically` - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - `Do Not Prefer` - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Release Profiles (Preferred Words)](#release-profiles).
+  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Release Profiles (Preferred Words)](#release-profiles).
 - > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
 - > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
 
@@ -227,19 +226,19 @@ Name for the `Specials` (Season) folder
 
 - `Analyse video files` - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
 - `Rescan Series Folder after Refresh` - Rescan the series folder after refreshing the series
-  - `Always` - This will rescan series folder based upon Tasks Schedule
-  - `After Manual Refresh` - You will have to manually rescan the disk
-  - `Never` - Just as it says, never rescan the series folder.
+  - Always - This will rescan series folder based upon Tasks Schedule
+  - After Manual Refresh - You will have to manually rescan the disk
+  - Never - Just as it says, never rescan the series folder.
 - `Change File Date` - Change file date on import/rescan
-  - `None` - Sonarr will not change the date that shows in your given file browser
-  - `Local Release` - The date the video was aired locally
-  - `UTC Release date` - The date the video was released based upon the UTC
+  - None - Sonarr will not change the date that shows in your given file browser
+  - Local Release - The date the video was aired locally
+  - UTC Release date - The date the video was released based upon the UTC
 - `Recycling Bin` - Episode files will go here when deleted instead of being permanently deleted
 - `Recycling Bin Cleanup` - This is how old a given file can be before it is deleted permanently
 
 > Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
-#### Permissions
+### Permissions
 
 - `Set Permissions` - Should `chmod` be run when files are imported/renamed?
   - `chmod Folder` - Octal, applied during import/rename to media folders and files (without execute bits)
@@ -249,19 +248,19 @@ Name for the `Specials` (Season) folder
 
 > This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
-- `chown Group` - Group name or GID. Use GID for remote file systems
+- `chown Group - Group name or GID. Use GID for remote file systems
 
 > This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
-#### Root Folders
+### Root Folders
 
-- `Path` - This shows the path to your media library
-- `Free Space` - This is the free space being reported to Sonarr from the system
-- `Unmapped Folders` - These are folders that do not have a Series associated to it
+- `Path - This shows the path to your media library
+- `Free Space - This is the free space being reported to Sonarr from the system
+- `Unmapped Folders - These are folders that do not have a Series associated to it
 
 >The `X` at the end will remove this root path{.is-warning}
 
-- `Add Root Folder` - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
+- `Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
 ## Profiles
 
@@ -274,15 +273,16 @@ Name for the `Specials` (Season) folder
 > Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
 
-- `Name` - Select a **UNIQUE** name for the quality profile you are creating
-- `Upgrades Allowed` - When this option is checked and you tell Sonarr to download a `WEB 1080p` as it is the first release of a specific episode then later somebody is able to upload a `Bluray-1080p` Sonarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
-- `Upgrade Until` - Once this quality is reached Sonarr will no longer download episodes
+- `Name - Select a **UNIQUE** name for the quality profile you are creating
+- `Upgrades Allowed - When this option is checked and you tell Sonarr to download a `WEB 1080p` as it is the first release of a specific episode then later somebody is able to upload a `Bluray-1080p` Sonarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
+- `Upgrade Until - Once this quality is reached Sonarr will no longer download episodes
 
 > Note: This is only applicable if you have `Bluray-1080`p higher than `WEB 1080p` within the `Qualities` section
 {.is-warning}
 
-- `Qualities` - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
-  - `Edit Groups` - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
+- `Qualities - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
+- Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
+  - [See Qualities](#qualities-defined)
 
 > By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
@@ -294,24 +294,24 @@ Name for the `Specials` (Season) folder
 > Please note that the priority / order does matter even if the language is not wanted (selected).
 {.is-info}
 
-- `Name` - Select a **UNIQUE** name for the language profile you are creating
-- `Upgrades allowed` - If unchecked (disabled) languages will not be upgraded. For example, if you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
+- `Name - Select a **UNIQUE** name for the language profile you are creating
+- `Upgrades allowed - If unchecked (disabled) languages will not be upgraded. For example, if you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
 
 > This is only valid if English is higher in the language list than Chinese and both are selected
 {.is-warning}
 
-- `Languages` - Languages higher in the list are more preferred. Only checked languages are wanted
+- `Languages - Languages higher in the list are more preferred. Only checked languages are wanted
 
 ### Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an episode by adding a delay while Sonarr continues to watch for releases that better match your preferences.
-  - `Protocol` - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
-  - `Usenet Delay` - Set by the number of minutes you will want to wait before the download to start
-  - `Torrent Delay` - Set by the number of minutes you will want to wait before the download to start
-  - `Bypass if Highest Quality` - Bypass delay when release has the highest enabled quality profile with the preferred protocol
-  - `Tags` - This is where you will select any relevant tags that you will be using for this scheme
-  - `Wrench icon` - This will allow you to edit the delay profile
-  - `Plus icon` - Create a new delay profile
+- Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
+- Usenet Delay - Set by the number of minutes you will want to wait before the download to start
+- Torrent Delay - Set by the number of minutes you will want to wait before the download to start
+- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
+- Tags - This is where you will select any relevant tags that you will be using for this scheme
+- Wrench icon - This will allow you to edit the delay profile
+- Plus icon - Create a new delay profile
 
 #### Uses
 
@@ -369,18 +369,18 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > You can use regex (default case sensitive) in the `Must Contain`, `Must Not Contain`, and `Preferred` words values
 {.is-info}
 
-- `Name` - Select a **UNIQUE** name for the release profile you are creating
-- `Enable Profile` - Toggling this given profile on or off
-- `Must Contain` - The release must contain at least one of these terms (case insensitive)
-- `Must Not Contain` - The release will be rejected if it contains one or more of terms (case insensitive)
-- `Preferred` - Here you can select a given term and give it a score.
+- `Name - Select a **UNIQUE** name for the release profile you are creating
+- `Enable Profile - Toggling this given profile on or off
+- `Must Contain - The release must contain at least one of these terms (case insensitive)
+- `Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
+- `Preferred - Here you can select a given term and give it a score.
   - Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you will put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you will put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that do not have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
-- `Include Preferred when Renaming` - When utilizing the {Preferred Words} tag in the naming scheme
-- `Indexer` - Specify what indexer the profile applies to.
+- `Include Preferred when Renaming - When utilizing the {Preferred Words} tag in the naming scheme
+- `Indexer - Specify what indexer the profile applies to.
 
 > This is useful if you only want specific releases from a given indexer/tracker{.is-info}
 
-- `Tags` - With giving this release profile a tag you will be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
+- `Tags - With giving this release profile a tag you will be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
 - [TRaSH maintains a list of WEB-DL Release Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/)
 - [TRaSH Anime Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/)
@@ -389,60 +389,41 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Quality Table Meanings
 
-- `Quality` - The scene quality name (hardcoded)
-- `Title` - The name of the Quality in the GUI (configurable)
-- `Size Limit` - Self Explanatory
-- `Min` - The minimum Megabytes per Minute (MB/min) a quality can have.
-- `Max` - The maximum Megabytes per Minute (MB/min) a quality can have.
-- `Megabytes Per Hour` - Self Explanatory
+- `Quality - The scene quality name (hardcoded)
+- `Title - The name of the Quality in the GUI (configurable)
+- `Megabytes Per Hour - Self Explanatory
+- `Size Limit - Self Explanatory
+- `Min - The minimum Megabytes per Minute (MB/min) a quality can have.
+- `Max - The maximum Megabytes per Minute (MB/min) a quality can have.
 
 ### Qualities Defined
 
-- `Unknown` - Self Explanatory
-
-- `SDTV` - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
-
-- `WEBRip-480p` - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 480p (SD) quality.
-
-- `WEBDL-480p` - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 480p (SD) quality.
-
-- `DVD` - A re-encode of the final released DVD9. If possible this is released PRE retail. It should be excellent quality (for the resolution). DVDrips are usually released in DivX/XviD or MP4.
-
-- `Bluray-480p` - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
-
-- `HDTV-720p` - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
-
-- `HDTV-1080p` - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
-
-- `Raw-HD` - TBD
-
-- `WEBRip-720p` - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
+- Unknown - Self Explanatory
+- SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
+- WEBDL-480p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 480p (SD) quality.
+- WEBRip-480p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 480p (SD) quality.
+- DVD - A re-encode of the final released DVD9. If possible this is released PRE retail. It should be excellent quality (for the resolution). DVDrips are usually released in DivX/XviD or MP4.
+- Bluray-480p - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
+- HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
+- HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
+- Raw-HD - TBD
+- WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
 - Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
-
-- `WEBDL-720p` - TBD
-
-- `Bluray-720p` - TBD
-
-- `WEBRip-1080p` - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 1080p quality.
-
-- `WEBDL-1080p` - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
-
-- `Bluray-1080p` - A re-encode of the final released Blu-ray, at its native 1080p resolution (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality and the same resolution as the source. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while slightly reducing filesize. These are generally MKV or MP4 container.
-
-- `Bluray-1080p Remux` - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 1080p quality.
-
-- `HDTV-2160p` - TVRip is a capture source from an capture card. HDTV stands for captured source from HD television. With an HDTV source, the quality can sometimes even surpass DVD. Movies in this format are starting to grow in popularity. Some advertisement and commercial banner can be seen on some releases during playback. This is at 2160p (4K) quality.
-
-- `WEBRip-2160p` - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
+- WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
+- WEBRip-1080p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 1080p quality.
+- Bluray-1080p - A re-encode of the final released Blu-ray, at its native 1080p resolution (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality and the same resolution as the source. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while slightly reducing filesize. These are generally MKV or MP4 container.
+- Remux-1080p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 1080p quality.
+- HDTV-2160p - TVRip is a capture source from an capture card. HDTV stands for captured source from HD television. With an HDTV source, the quality can sometimes even surpass DVD. Movies in this format are starting to grow in popularity. Some advertisement and commercial banner can be seen on some releases during playback. This is at 2160p (4K) quality.
+- WEBDL-2160p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 2160p (4K) quality.
+- WEBRip-2160p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
+- Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
 
-- `WEBDL-2160p` - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 2160p (4K) quality.
-
-- `Bluray-2160p` - TBD
-
-- `Bluray-2160p Remux` - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
 
 ## Indexers
+
+> Information on supported indexers can be found [here](/sonarr/supported#indexers)
+{.is-info}
 
 - Once you're here you will be adding the indexer/tracker that you will be using to actually download any of your files.
 
@@ -454,14 +435,14 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
-##### Usenet
+#### Usenet
 
-- `Newznab` - Newznab is a standardized API used by many usenet indexing sites.
+- `Newznab - Newznab is a standardized API used by many usenet indexing sites.
 Many presets are available, but all require an API key to be accessible.
 - [Omgwtfnzbs](https://omgwtfnzbs.me/) - This indexer also supports newznab and is available as one of the above presets.
 - [Fanzub](http://fanzub.com/) - Indexer for Japanese Media (Anime) exclusively.
 
-##### Torrents
+#### Torrents
 
 - [BroadcastheNet](https://broadcasthe.net/) - Private Tracker
 - [Filelist](https://filelist.io) - Private Tracker
@@ -472,13 +453,12 @@ Many presets are available, but all require an API key to be accessible.
 
 - [Nyaa](http://www.nyaa.si/) - Torrent Tracker for Japanese Media (Anime) exclusively.
 - [Rarbg](https://rarbg.to) - Public Tracker
-- `Torrent RSS Feed` - Generic torrent RSS feed parser.
-
+- Torrent RSS Feed - Generic torrent RSS feed parser.
   > The RSS feed must contain a `pubdate`. The release size is recommended as well.
   {.is-info}
 
 - [Torrentleech](http://torrentleech.org/) - Private Indexer
-- `Torznab` - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
+- `Torznab - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
   - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
 
 > Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
@@ -486,64 +466,72 @@ Many presets are available, but all require an API key to be accessible.
 > We’re not responsible if your account is banned for disobeying rules or accruing HnRs/low-ratio.
 {.is-warning}
 
-###### Usenet Indexer Configuration
+#### Indexer Settings
 
-- `Newznab` - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-  - An excellent software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
+- Once you've clicked the + button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers as "Indexers".
+
+- There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
+
+#### Usenet Indexer Configuration
+
+- Newznab - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- An excellent software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrates with both Usenet and Torrents
 - Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2)
-  - `Name` - The name of the indexer in Sonarr
-  - `Enable RSS` - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
-  - `Enable Automatic Search` - If enabled, use this indexer for automatic searches including Search on Add
-  - `Enable Interactive Search` - If enabled, use this indexer for manual interactive searches.
-  - `URL` - The indexer provided URL of the indexer such as <https://api.nzbgeek.info>.
-  - `API Path` - The indexer provided path to the api. This is typically `/api`
-  - `API Key` - The indexer provided key to access the API.
-  - `Categories` - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-  - `Anime Categories` - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-  - `Additional Parameters` - Additional Newznab parameters to add to the query link
-  - `Indexer Priority` - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- `Name - The name of the indexer in Sonarr
+- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
+- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
+- URL - The indexer provided URL of the indexer such as <https://api.nzbgeek.info>.
+- API Path - The indexer provided path to the api. This is typically `/api`
+- API Key - The indexer provided key to access the API.
+- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Additional Parameters - Additional Newznab parameters to add to the query link
+- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
 ###### Torrent Tracker Configuration
 
-- As with Usenet there are an assortment of pre-filled out Torrent Tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
+- As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
+- One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Radarr as a search indexer that houses all your information and sends it to Sonarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
-  - `Name` - The name of the indexer in Sonarr
-  - `Enable RSS` - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
-  - `Enable Automatic Search` - If enabled, use this indexer for automatic searches including Search on Add
-  - `Enable Interactive Search` - If enabled, use this indexer for manual interactive searches.
-  - `URL` - The indexer provided URL of the indexer such as <http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/>.
-  - `API Path` - The indexer provided path to the api. This is typically `/api`
-  - `API Key` - The indexer provided key to access the API.
-  - `Categories` - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-  - `Anime Categories` - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-  - `Additional Parameters` - Additional Torznab parameters to add to the query link
-  - `Minimum Seeders` - The minimum number of seeders required for a release from this tracker to be grabbed.
-  - `Seed Ratio` - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-  - `Seed Time` - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-  - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for season pack releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-  - `Indexer Priority` - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- Name - The name of the indexer in Sonarr
+- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
+- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
+- URL - The indexer provided URL of the indexer such as <http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/>.
+- API Path - The indexer provided path to the api. This is typically `/api`
+- API Key - The indexer provided key to access the API.
+- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- Additional Parameters - Additional Torznab parameters to add to the query link
+- Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
+- Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-#### Options
+### Options
 
-- `Minimum Age` - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
-- `Retention` - Usenet only: Set to zero to set for unlimited retention
-- `Maximum Size` - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
-- `RSS Sync interval` - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
+- Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
+- Retention - Usenet only: Set to zero to set for unlimited retention
+- Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
+- RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
   - Please see [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
 
 >If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
 
 ## Download Clients
 
+> Information on supported download clients can be found [here](/sonarr/supported#download-clients)
+{.is-info}
+
 ### Overview
 
 - Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
 
-### Download Clients Processes
+### Download Client Processes
 
 #### Usenet Process
 
@@ -563,7 +551,7 @@ Many presets are available, but all require an API key to be accessible.
 
 ### Download Clients
 
-Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/sonarr/downloadclients.png)
 
@@ -609,6 +597,24 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+#### Torrent Client Remove Download Compatibility
+
+- Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
+
+|       Client      | Ratio |      Time      |
+|:-----------------:|:-----:|:--------------:|
+| Deluge            | Yes   | No             |
+| Hadouken          | No    | No             |
+| qBittorrent       | Yes   | Yes            |
+| rTorrent          | No    | No             |
+| Torrent Blackhole | No    | No             |
+| Download Station  | No    | No             |
+| Transmission      | Yes   | *Idle Limit*\* |
+| uTorrent          | Yes   | Yes            |
+| Vuze              | Yes   | Yes            |
+
+> *Idle Limit* - Transmission internally has an Idle Time check, but Sonarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
 ### Completed Download Handling
 
@@ -657,6 +663,9 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ## Import Lists
 
+> Information on supported list types can be found [here](/sonarr/supported#lists)
+{.is-info}
+
 ### Lists
 
 Import lists are a part of Sonarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Sonarr and realize that you do not have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
@@ -673,6 +682,9 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 Import List Exclusion - This allows you to prune your list of movies you do not want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
 ## Connect
+
+> Information on supported connection types can be found [here](/sonarr/supported#notifications)
+{.is-info}
 
 ### Connections
 
@@ -720,6 +732,9 @@ By pressing the + button you will be presented with a new window which will allo
 ## Metadata
 
 ### Metadata
+
+> Information on supported metadata consumers can be found [here](/sonarr/supported#metadata)
+{.is-info}
 
 Here you can select the type of metadata that will be consumed by your media player
 

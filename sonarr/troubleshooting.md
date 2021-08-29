@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-28T17:34:54.640Z
+date: 2021-08-29T01:15:12.587Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -148,7 +148,7 @@ Ensure your download client(s) are running. Start by testing the download client
 
 ### Testing a Download
 
-Now we’ll try a download, pick a and do a manual search. Pick one of those files and attempt to download it. Does it get sent to the download client? Does it end up with the correct category? Does it show up in Activity? Does it end up in the trace level logs during the **Check For Finished Download** task which runs roughly every minute? Does it get correctly parsed during that task? Does the queued up download have a reasonable name? Since searches by ****, on most indexers/trackers, it can queue one up with a name that it can’t recognize.
+Now we’ll try a download, pick an episode for a series and do a manual search. Pick one of those files and attempt to download it. Does it get sent to the download client? Does it end up with the correct category? Does it show up in Activity? Does it end up in the trace level logs during the **Check For Finished Download** task which runs roughly every minute? Does it get correctly parsed during that task? Does the queued up download have a reasonable name? Since searches by are by id on some indexers/trackers, it can queue one up with a name that it can’t recognize.
 
 ### Testing an Import
 
@@ -162,7 +162,7 @@ Below are some common problems.
 
 #### Download Client's WebUI is not enabled
 
- talks to you download client via it's API and accesses it via the client's webui. You must ensure the client's webui is enabled and the port it is using does not conflict with any other client ports in use or ports in use on your system.
+Sonarr talks to you download client via it's API and accesses it via the client's webui. You must ensure the client's webui is enabled and the port it is using does not conflict with any other client ports in use or ports in use on your system.
 
 #### SSL in use and incorrectly configured
 
@@ -214,7 +214,7 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 #### Repeated downloads
 
-There are a few causes of repeated downloads, but one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any preferred word scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
+There are a few causes of repeated downloads, but one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any `preferred word` scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. Similarly for any `must contain` or `must-not` contain the restrictions only apply to that indexer; anything else is fair game. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
 
 This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpectually grabed and never imported. Please see the various other common problems and troubleshoting steps for this.
 
@@ -497,6 +497,10 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for 
 #### Jackett manual search finding more results
 
 - [See this FAQ entry](/sonarr/faq#jackett-shows-more-results-than-sonarr-when-manually-searching)
+
+#### Release Profiles not being respected
+
+There are a few causes why it may appear your profiles are being ignored. The most common one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any `preferred word` scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. Similarly for any `must contain` or `must-not` contain the restrictions only apply to that indexer; anything else is fair game. This may then cause release profiles to appear to be ignored or for upgrade loops to occur.
 
 #### Problem Not Listed
 

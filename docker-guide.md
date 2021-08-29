@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-08-07T03:50:30.092Z
+date: 2021-08-29T02:56:25.846Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -63,6 +63,8 @@ It is also important to remember that you’ll need to setup or re-configure pat
 What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|books|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
 
 This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies`, `books`, and `music` subfolders. This `media` folder is your library and what you’d pass to Plex, Kodi, Emby, Jellyfin, etc.
+
+For the below example `data` is equivalent to the host path `/host/data` and the docker path `/data`
 
 ```none
     data
@@ -391,6 +393,14 @@ One interesting feature of a [custom Docker network](https://docs.docker.com/net
 #### Correct *outside* paths, incorrect *inside* paths
 
 Many people read this and think they understand, but they end up seeing the outside path correctly to something like `/data/usenet`, but then they miss the point and set the *inside* path to `/downloads` still.
+
+- Good:
+  - `/host/data/usenet:/data/usenet`
+  - `/data/media:/data/media`
+- Bad:
+  - `/host/data:/downloads`
+  - `/host/data:/media`
+  - `/data/downloads:/data`
 
 #### Running Docker containers as root or changing users around
 

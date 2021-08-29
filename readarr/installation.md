@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-08-24T19:59:47.181Z
+date: 2021-08-24T19:59:52.217Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
