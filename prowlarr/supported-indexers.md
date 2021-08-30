@@ -2,11 +2,12 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-08-29T21:26:15.2764830Z
+date: 2021-08-30T17:49:08.815Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-08-29T21:26:15.2764830Z
+dateCreated: 2021-08-30T17:49:08.815Z
 ---
+
 
 - Supported Indexers as of Build `0.1.1.885` / [Commit: a2c8cec27ebd18d0310718ebb0e19e9baa54a0b5](https://github.com/Prowlarr/Prowlarr/commit/a2c8cec27ebd18d0310718ebb0e19e9baa54a0b5)
 
@@ -373,7 +374,7 @@ dateCreated: 2021-08-29T21:26:15.2764830Z
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a Hungarian Private site for fairy tales, family movies and comedies|hu-hu|
 |[MicroBit](http://microbit.eu/){#microbit}|MicroBit (µBit) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu|
-|[Milkie](https://milkie.cc/){#milkie}|Milkie is a general tracker providing unpacked and 0day/0sec scene content.|en-US|
+|[Milkie](https://milkie.cc/){#milkie}|Milkie is a general tracker providing unpacked and 0day/0sec scene content.|en-US|
 |[MMA-torrents](https://mma-torrents.com/){#mma-torrents}|MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)|en-us|
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|de-de|
 |[Mononoké-BT](http://mononoke-bt.org/){#mononokebt}|Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME|fr-fr|
