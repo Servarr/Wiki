@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-08-29T03:58:08.600Z
+date: 2021-08-30T15:48:19.010Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -175,31 +175,34 @@ Sample config examples for configuring Prowlarr to be accessible through a rever
 
 ### NGINX
 
-```none
+```nginx
 location /prowlarr {
-  proxy_pass        http://127.0.0.1:9696/prowlarr;
-  proxy_set_header Host $host;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Host $host;
-  proxy_set_header X-Forwarded-Proto https;
-  proxy_redirect off;
+  proxy_pass				http://127.0.0.1:9696/prowlarr;
+  proxy_set_header	Host              $host;
+  proxy_set_header	X-Forwarded-For   $proxy_add_x_forwarded_for;
+  proxy_set_header	X-Forwarded-Host  $host;
+  proxy_set_header	X-Forwarded-Proto https;
+  proxy_redirect		off;
 
-  proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection $http_connection;
+  proxy_http_version	1.1;
+  proxy_set_header		Upgrade     $http_upgrade;
+  proxy_set_header		Connection  $http_connection;
 }
 
-  location /prowlarr/api { auth_request off;
-  proxy_pass       http://127.0.0.1:9696/prowlarr/api;
+location /prowlarr/api {
+  auth_request	off;
+  proxy_pass		http://127.0.0.1:9696/prowlarr/api;
 }
 
-  location ~ /prowlarr/[0-9]+/api { auth_request off;
-  proxy_pass       http://127.0.0.1:9696;
+location ~ /prowlarr/[0-9]+/api {
+	auth_request	off;
+  proxy_pass		http://127.0.0.1:9696;
 }
 
-  location /prowlarr/Content { auth_request off;
-    proxy_pass http://127.0.0.1:9696/prowlarr/Content;
- }
+location /prowlarr/Content {
+	auth_request	off;
+	proxy_pass		http://127.0.0.1:9696/prowlarr/Content;
+}
 ```
 
 ### Apache
