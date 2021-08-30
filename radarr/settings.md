@@ -235,8 +235,6 @@ Here you will set the naming convention for the folder that contains the season 
 
 - Language - Select your preferred language
 
-
-
 - Custom Format - Radarr scores each release using the sum of scores for matching custom formats. If a new release would improve the score, at the same or better quality, then Radarr will grab it.
 See [Custom Formats](#custom-formats) for more details.
 
@@ -401,6 +399,7 @@ Many presets are available, but all require an API key to be accessible.
     - Fanzub - Indexer for Japanese media (Anime) exclusively.[Website](http://fanzub.com/)
 
 #### Torrents
+
 - Filelist - Private Tracker - [Website](https://filelist.io)
 - HDBits - Private tracker - [Website](https://hdbits.org/)
 - [IPTorrents](http://www.iptorrents.com/) - Private Tracker
@@ -534,7 +533,7 @@ Many presets are available, but all require an API key to be accessible.
 
 ### Download Clients
 
-Click on `Settings -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings ->`Download Clients`, and then click the`+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/radarr/downloadclients.png)
 

@@ -13,6 +13,7 @@ dateCreated: 2021-06-23T07:55:24.002Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Download Clients
+
 {#downloadclient}
 
 - Aria2 {#aria2}
@@ -52,6 +53,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#download-clients)
 
 ## Indexers
+
 {#indexer}
 
 - FileList.io {#filelist}
@@ -79,6 +81,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
 ## Notifications
+
 {#notification}
 
 - Boxcar {#boxcar}
@@ -105,15 +108,18 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Webhook {#webhook}
 
 ## Lists
+
 {#importlist}
 
 - Custom Lists {#radarrlistimport}
 - IMDb Lists {#imdblistimport}
   - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Radarr
+
  1. Go to your IMDB List Settings
  1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
  1. Use the `ls` number within the URL
- - ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
+
+- ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
 - Radarr {#radarrimport}
 - RSS List {#rssimport}
 - StevenLu Custom {#stevenluimport}
@@ -129,7 +135,8 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
 
-## Metadata 
+## Metadata
+
 {#metadata}
 
 - Emby (Legacy) {#mediabrowsermetadata}

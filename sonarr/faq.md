@@ -201,6 +201,7 @@ Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
 - Please note that not all indexers support season/episode (standard) searches.
 
 ### Series Types
+
 - **Anime** - Episodes released using an absolute episode number
 - **Daily** - Episodes released daily or less frequently that use year-month-day (2017-05-25)
 - **Standard** - Episodes released with SxxEyy pattern

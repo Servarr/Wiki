@@ -131,6 +131,4 @@ Coming soon - Contributions Welcome
 
 ## Add New Series
 
-
 [Refer to the Library Page for additional information](/en/sonarr/library#add-new)
-

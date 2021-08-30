@@ -33,26 +33,29 @@ You can download the result by clicking on the download icon on the right of the
 - Standard Newznab/Torznab compatible endpoint/parameters.
 
 #### API Key in Query
-- http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q=mike&apikey={yourkey}&cat={comma separated list}
+
+- <http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q=mike&apikey={yourkey}&cat={comma> separated list}
   - e.g. `http://192.168.1.100:9696/11/api?t=search&q=mike&apikey={yourkey}&cat=5000,2000`
 
 #### API Key in Header
 
 > Pass `X-Api-Key` with the API Key as a header {.is-info}
 
-- http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q=mike&apikey={yourkey}&cat={comma separated list}
+- <http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q=mike&apikey={yourkey}&cat={comma> separated list}
   - e.g. `http://192.168.1.100:9696/{indexerid}/api?t=search&q=mike&cat=5000,2000`
 
 ### Search Feed
-- http://{prowlarrhost}:{prowlarrport}/{baseurl}/api/v1/search?query={encoded term}&indexerIds={comma separated list}&categories={comma separated list}
+
+- <http://{prowlarrhost}:{prowlarrport}/{baseurl}/api/v1/search?query={encoded> term}&indexerIds={comma separated list}&categories={comma separated list}
 - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=black%20hawk%20down&indexerIds=-1&categories=2000`
 
 Parameters
-  - `query` - URL Encoded Search String
-  - `indexerIds` - comma separated list of Indexer ID 
-    - leave off parameter for all
-    - `-2` is all torrents
-    - `-1` is all usenet
-    - Indexer Ids
-  - `categories` - comma separated list of Categories to use
-    - leave off parameter for all
+
+- `query` - URL Encoded Search String
+- `indexerIds` - comma separated list of Indexer ID
+  - leave off parameter for all
+  - `-2` is all torrents
+  - `-1` is all usenet
+  - Indexer Ids
+- `categories` - comma separated list of Categories to use
+  - leave off parameter for all

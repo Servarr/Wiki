@@ -13,6 +13,7 @@ dateCreated: 2021-06-23T03:06:57.769Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Applications
+
 {#applications}
 
 Prowlarr can automatically sync indexers with various applications
@@ -24,6 +25,7 @@ Prowlarr can automatically sync indexers with various applications
 - Sonarr {#sonarr}
 
 ## Download Clients
+
 {#downloadclient}
 
 - Aria2 {#aria2}
@@ -63,6 +65,7 @@ Prowlarr can automatically sync indexers with various applications
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
 
 ## Indexer Proxies
+
 {#indexerproxy}
 
 - FlareSolverr {#flaresolverr}
@@ -71,6 +74,7 @@ Prowlarr can automatically sync indexers with various applications
 - Socks5 {#socks5}
 
 ## Notifications
+
 {#notification}
 
 - Boxcar {#boxcar}

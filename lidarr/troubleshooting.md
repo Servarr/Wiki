@@ -249,6 +249,7 @@ In this test, you’ll be looking for obvious errors and running some simple tes
 ```xml
 INDEXER SEARCH RESPONSE EXAMPLE NEEDED
 ```
+
 ***Images needed***
 
 ![searches-indexers-and-trackers1.png](/assets/lidarr/searches-indexers-and-trackers1.png)
@@ -265,7 +266,6 @@ EXAMPLE TRACE LOG SNIPPET NEEDED
 ```none
 EXAMPLE TRACE LOGS NEEDED
 ```
-
 
 ### Turn logging up to trace
 

@@ -137,7 +137,6 @@ Here you will select the naming convention for your anime series. Click on the `
 
 See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
-
 #### Absolute Episode Number
 
 - `{absolute:0}` = 1
@@ -274,7 +273,7 @@ Name for the `Specials` (Season) folder
 {.is-info}
 
 - `Name - Select a **UNIQUE** name for the quality profile you are creating
-- `Upgrades Allowed - When this option is checked and you tell Sonarr to download a `WEB 1080p` as it is the first release of a specific episode then later somebody is able to upload a `Bluray-1080p` Sonarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
+- `Upgrades Allowed - When this option is checked and you tell Sonarr to download a`WEB 1080p` as it is the first release of a specific episode then later somebody is able to upload a `Bluray-1080p` Sonarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
 - `Upgrade Until - Once this quality is reached Sonarr will no longer download episodes
 
 > Note: This is only applicable if you have `Bluray-1080`p higher than `WEB 1080p` within the `Qualities` section
@@ -419,7 +418,6 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
 - Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
 
-
 ## Indexers
 
 > Information on supported indexers can be found [here](/sonarr/supported#indexers)
@@ -551,7 +549,7 @@ Many presets are available, but all require an API key to be accessible.
 
 ### Download Clients
 
-Click on `Settings -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings ->`Download Clients`, and then click the`+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/sonarr/downloadclients.png)
 

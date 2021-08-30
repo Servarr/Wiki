@@ -146,6 +146,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 #### Applications
 
 ##### Applications are unavailable due to failures
+
 - (An) Error(s) occur(s) while Prowlarr tried to use one of your applications. To limit retries, Prowlarr will not use the application for an increasing amount of time (up to 24h).
 - This mechanism is triggered if Prowlarr was unable to get a response from the application (could be dns, connection, authentication, or application issue). Please inspect the logs to determine what kind of error causes the problem.
 - Prowlarr will be unable to sync to the application and it is more than likely the application will be unable to use Prowlarr's indexers.

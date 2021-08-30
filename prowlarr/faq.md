@@ -16,10 +16,10 @@ dateCreated: 2021-06-23T03:06:20.944Z
 ## Can I use flaresolverr indexers?
 
 - Yes.
+
 1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexers)
 1. Add a tag to the created flaresovlerr proxy
 1. Add a tag to your [Indexer](/prowlarr/indexers)
-
 
 ## Prowlarr will not sync to Sonarr
 

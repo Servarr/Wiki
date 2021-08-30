@@ -13,6 +13,7 @@ dateCreated: 2021-06-23T07:55:13.803Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Download Clients
+
 {#downloadclient}
 
 - Deluge {#deluge}
@@ -50,6 +51,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 
 ## Indexers
+
 {#indexer}
 
 - FileList {#filelist}
@@ -81,6 +83,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 
 ## Notifications
+
 {#notification}
 
 - Boxcar {#boxcar}
@@ -107,6 +110,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Webhook {#webhook}
 
 ## Lists
+
 {#importlist}
 
 - Headphones {#headphonesimport}
@@ -120,6 +124,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Spotify Saved Albums {#spotifysavedalbums}
 
 ## Metadata
+
 {#metadata}
 
 - Kodi (XBMC) / Emby {#xbmcmetadata}

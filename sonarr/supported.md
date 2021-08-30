@@ -13,6 +13,7 @@ dateCreated: 2021-06-23T07:55:33.769Z
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
 ## Download Clients
+
 {#downloadclient}
 
 - Aria2 {#aria2}
@@ -52,6 +53,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
 
 ## Indexers
+
 {#indexer}
 
 - BroadcasTheNet {#broadcasthenet}
@@ -81,6 +83,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 
 ## Notifications
+
 {#notification}
 
 - Boxcar {#boxcar}
@@ -107,6 +110,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Webhook {#webhook}
 
 ## Lists
+
 {#importlist}
 
 - Sonarr {#sonarrimport}
@@ -115,6 +119,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Trakt User {#traktuserimport}
 
 ## Metadata
+
 {#metadata}
 
 - Kodi (XBMC) / Emby {#xbmcmetadata}

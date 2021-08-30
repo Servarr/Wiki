@@ -70,7 +70,6 @@ Here we will add the root folder that Radarr will be using to import your existi
 > Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 {.is-info}
 
-
 > **Your download folder and media folder can’t be the same location**
 {.is-danger}
 
@@ -126,6 +125,7 @@ Downloading and importing is where most people experience issues. From a high le
 ## {.tabset}
 
 ### Usenet
+
 {#usenet}
 
 1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
@@ -263,14 +263,16 @@ When you see the movie you want click on it.
 
     > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
     > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.{.is-info}
+    >
 3. When Radarr shall consider a movie is available..
 
     > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
     > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
     > - **Physical / Web**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
-    
+
 4. Select your preferred profile to use.
 5. Here you can add certain tags for advanced usage.
 6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
 7. Click on `Add Movie` to add the movie to Radarr.
+
 - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
