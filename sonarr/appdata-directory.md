@@ -2,7 +2,7 @@
 title: Sonarr Appdata Directory
 description: 
 published: true
-date: 2021-08-15T01:12:10.252Z
+date: 2021-08-31T01:19:27.934Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:53:57.860Z
@@ -25,9 +25,9 @@ Unless otherwise specified Sonarr will store it's application data in the home f
 
 ## Synology
 
-`/usr/local/Sonarr/var/.config/Sonarr`
+`/volume1/@appstore/nzbdrone/.config/Sonarr`
 
-`/volume1/@appstore/Sonarr/var/.config/Sonarr`
+> SynoCommunity still uses the original package name `nzbdrone` for the underlying package name {.is-info}
 
 ## QNAP
 
