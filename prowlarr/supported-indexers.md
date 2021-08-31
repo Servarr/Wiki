@@ -2,14 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-08-30T17:49:08.815Z
+date: 2021-08-31T20:06:30.0553484Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-08-30T17:49:08.815Z
+dateCreated: 2021-08-31T20:06:30.0553484Z
 ---
 
-
-- Supported Indexers as of Build `0.1.1.885` / [Commit: a2c8cec27ebd18d0310718ebb0e19e9baa54a0b5](https://github.com/Prowlarr/Prowlarr/commit/a2c8cec27ebd18d0310718ebb0e19e9baa54a0b5)
+- Supported Indexers as of Build `0.1.1.903` / [Commit: 89a4c03dd2b34daab6f287c28fb2c2753286fbac](https://github.com/Prowlarr/Prowlarr/commit/89a4c03dd2b34daab6f287c28fb2c2753286fbac)
 
 ## Torrents
 
@@ -23,9 +22,9 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[ACGsou](https://www.36dm.club/){#acgsou}|ACGsou (36DM) is a CHINESE Public torrent tracker for ANIME|zh-cn|
 |[AngieTorrents](https://angietorrents.cc/){#angietorrents}|AngieTorrents is a Public Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[Anilibria](https://anilibria.tv/){#anilibria}|Anilibria is russian anime voiceover group and eponymous anime tracker.|ru-ru|
+|[Anime-Free](https://anime-free.biz/){#anime-free}|Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games|ru-ru|
 |[AnimeClipse](http://www.animeclipse.com/){#animeclipse}|AnimeClipse is a Public site for Hellenic Fansubs Anime.|en-us|
 |[Animedia](https://tt.animedia.tv/){#animedia}|Animedia is russian anime voiceover group and eponymous anime tracker.|ru-ru|
-|[Anime-Free](https://anime-free.biz/){#anime-free}|Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games|ru-ru|
 |[AniRena](https://www.anirena.com/){#anirena}|AniRena is a Public torrent tracker for the latest anime and Japanese related torrents|en-us|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws.|en-us|
 |[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|bg-BG|
@@ -95,7 +94,6 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[LimeTorrents](https://www.limetorrents.pro/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|en-us|
 |[LinuxTracker](https://linuxtracker.org/){#linuxtracker}|LinuxTracker is a Public Linux ISO Torrent Repository|en-us|
 |[MacTorrents](https://mac-torrents.io/){#mactorrents}|MacTorrents is a Public tracker for Mac software|en-us|
-|[Magnet4You](https://magnet4you.me/){#magnet4you}|Magnet4You is a Public magnet search engine|en-us|
 |[Marine Tracker](https://seatracker.ru/){#marinetracker}|Marine Tracker is a RUSSIAN Semi-Private Torrent Tracker for MARITIME E-LEARNING|ru-ru|
 |[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private site dedicated to HEAVY METAL MUSIC. This definition is for the English site.|en-us|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|en-us|
@@ -112,11 +110,11 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[NNTT](http://www.nntt.org/){#nntt}|NNTT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-ru|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|ru-ru|
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config.|ru-ru|
-|[Nyaa.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|en-us|
 |[Nyaa-pantsu](https://nyaa.net/){#nyaa-pantsu}|Nyaa-pantsu is a Public site for dedicated to Asian ANIME|en-en|
+|[Nyaa.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|en-us|
 |[OnceSearch](http://oncesearch.com/){#oncesearch}|OnceSearch is a Public Torrent Tracker for 3X|en-us|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|en|
-|[OxTorrent](https://www.oxtorrent.io/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-fr|
+|[OxTorrent](https://www.oxtorrent.cx/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-fr|
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|ru-ru|
 |[PiratBit](https://piratbit.top/){#piratbit}|PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-ru|
@@ -152,8 +150,8 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|en-us|
 |[sosulki](http://sosulki.net/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|en-us|
-|[sukebei.nyaa.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|en-us|
 |[Sukebei-pantsu](https://sukebei.nyaa.net/){#sukebei-pantsu}|Sukebei-pantsu is a Public site dedicated to Adult Asian content|en-en|
+|[sukebei.nyaa.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|en-us|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|en-us|
 |[ThePirateBay](https://thepiratebay.org/){#thepiratebay}|Pirate Bay(TPB) is the galaxy’s most resilient Public BitTorrent site|en-us|
 |[TNTfork](https://www.tntfork.it/){#tntfork}|TNTfork is a mirror for the archive published by tntvillage|it-it|
@@ -162,7 +160,7 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[TOROS](https://www.toros.co/){#toros}|TOROS is a Public torrent index|en-us|
 |[Torrent Downloads](https://www.torrentdownloads.info/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|en-us|
 |[Torrent Oyun indir](https://www.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|tr|
-|[Torrent4You](https://torrent4you.me/){#torrent4you}|Torrent4You is a Public torrent storage cache|en-us|
+|[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|fr-fr|
 |[Torrent9 clone](https://www.torrent9.pw/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|fr-fr|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-us|
@@ -172,12 +170,11 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[TorrentMax](https://torrentmax15.com/){#torrentmax}|TorrentMax (토렌트맥스) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentParadise](https://torrentparadise.pm/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-us|
 |[TorrentParadiseMl](https://torrent-paradise.ml/){#torrentparadiseml}|The most innovative torrent site|en-us|
-|[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-ru|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-us|
-|[TorrentQQ](https://torrentqq102.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents.csv is a self-hostable open source torrent search engine and database|en-us|
-|[TorrentSir](https://torrentsir33.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq103.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-ru|
+|[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents.csv is a self-hostable open source torrent search engine and database|en-us|
+|[TorrentSir](https://torrentsir34.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-us|
 |[TorrentView](https://torrentview38.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz28.me/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -240,12 +237,12 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|en-US|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a private site for eBooks and audiobooks|en-US|
 |[BIGTorrent](https://www.bigtorrent.eu/){#bigtorrent}|BIGTorrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu|
+|[BiT-TiTAN](https://bit-titan.net/){#bit-titan}|BiT-TiTAN is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-de|
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|th-th|
 |[Bithorlo](https://www.bithorlo.info/){#bithorlo}|Bithorlo (BHO) is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|hu-hu|
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a Hungarian Private site for TV / MOVIES / GENERAL|hu-hu|
 |[BitSexy](https://bitsexy.org/){#bitsexy}|BitSexy is a Private Torrent Tracker for 3x|en-us|
 |[Bitspyder](https://bitspyder.net/){#bitspyder}|Bitspyder is a Private site for Educational BOOKS / AUDIO|en-us|
-|[BiT-TiTAN](https://bit-titan.net/){#bit-titan}|BiT-TiTAN is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-de|
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN tracker|de-de|
 |[BiTTuRK](http://bitturk.net/){#bitturk}|BiTTuRK is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL. This Indexer is for English only.|en-us|
 |[BlueBird](https://bluebird-hd.org/){#bluebird}|BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES|ru-ru|
@@ -256,13 +253,15 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[BroadcastheNet](http://api.broadcasthe.net/){#broadcasthenet}|BroadcasTheNet (BTN) is an invite-only torrent tracker focused on TV shows|en-US|
 |[BroadCity](https://broadcity.in/){#broadcity}|BroadCity is a TURKISH Private Torrent Tracker for MOVIES and TV|tr-TR|
 |[BrokenStones](https://brokenstones.club/){#brokenstones}|Broken Stones is a Private site for MacOS and iOS APPS / GAMES|en-US|
+|[BrSociety](https://brsociety.club/){#brsociety}|BrSociety (SemeandoCC) is a BRAZILIAN Private Torrent Tracker for E-LEARNING|pt-br|
 |[BTNext](http://tracker.btnext.com/){#btnext}|BTNext (BTNT) is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|pt-pt|
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|zh-cn|
 |[BwTorrents](https://bwtorrents.tv/){#bwtorrents}|BwTorrents is a Private Torrent Tracker for BollyWood MOVIES / TV / GENERAL|en-us|
-|[Carpathians](https://mycarpathians.net/){#carpathians}|Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 |[Carp-Hunter](https://carp-hunter.hu/){#carphunter}|Carp-Hunter is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu-hu|
+|[Carpathians](https://mycarpathians.net/){#carpathians}|Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 |[CartoonChaos](http://www.cartoonchaos.org/){#cartoonchaos}|CartoonChaos (CC) is a Private Torrent Tracker for ANIMATED MOVIES / TV|en-us|
 |[Casa-Torrent](https://tctg.in/){#casatorrent}|Casa-Torrent is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-fr|
+|[Cathode-Ray.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|en|
 |[CCFBits](https://ccfbits.org/){#ccfbits}|CCFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|cs-cz|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|en-US|
@@ -308,39 +307,39 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|fi-fi|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|fi-fi|
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|en-us|
-|[GAYtorrent.ru](https://www.gaytorrent.ru/){#gaytorrentru}|GayTorrent.ru is a Private Torrent Tracker for GAY 3X|en-us|
 |[gay-torrents.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents.org is a Private Torrent Tracker for GAY 3X|en-us|
+|[GAYtorrent.ru](https://www.gaytorrent.ru/){#gaytorrentru}|GayTorrent.ru is a Private Torrent Tracker for GAY 3X|en-us|
 |[GazelleGames](https://gazellegames.net/){#gazellegames}|GazelleGames (GGn) is a Private Torrent Tracker for GAMES|en-us|
 |[Generation-Free](https://generation-free.biz/){#generationfree}|Generation-Free is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-fr|
 |Generic Torznab{#torznab}||en-US|
 |[GFXPeers](https://gfxpeers.net/){#gfxpeers}|GFXPeers is a ratio-based torrent tracker for all things graphic design and visual effects|en-us|
 |[GigaTorrents](https://gigatorrents.ws/){#gigatorrents}|Giga Torrents is a Hungarian Private site for TV / MOVIES / GENERAL|hu-hu|
-|[Girotorrent](http://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private site for TV / MOVIES / GENERAL|it-it|
+|[Girotorrent](https://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private site for TV / MOVIES / GENERAL|it-it|
 |[Greek Team](https://www.greek-team.cc/){#greekteam}|Greek Team is a GREEK Private site for TV / MOVIES / GENERAL|el-gr|
 |[GreekDiamond](https://greekdiamond.info/){#greekdiamond}|GreekDiamond is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|el-gr|
 |[HaiDan](https://www.haidan.video/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[Haitang](https://www.htpt.cc/){#haitang}|海棠PT (Hǎitáng PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|zh-cn|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|en|
+|[HD-Bits.com](https://www.hd-bits.com/){#hdbitscom}|HD tracker|en-us|
+|[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|fr-fr|
+|[HD-Olimpo](https://hd-olimpo.club/){#hdolimpo}|HD-Olimpo is a SPANISH site for HD content|es-es|
+|[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|fr-fr|
+|[HD-Spain](https://www.hd-spain.com/){#hdspain}|HD-Spain is a SPANISH site for HD content|es-es|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-cn|
 |HD4Free.xyz{#torznab}||en-US|
 |[HDArea](https://www.hdarea.co/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[HDAtmos](https://hdatmos.club/){#hdatmos}|HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-cn|
 |[HDBits](https://hdbits.org){#hdbits}|Best HD Tracker|en-US|
-|[HD-Bits.com](https://www.hd-bits.com/){#hdbitscom}|HD tracker|en-us|
 |[HDC](https://hdcity.city/){#hdc}|HDC (HDCiTY) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-cn|
 |[HDCenter](https://hdcenter.cc/){#hdcenter}|An German HD tracker|de-de|
 |[HDChina](https://hdchina.org/){#hdchina}|HDChina (HDWing) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[HDCity](https://hdcity.li/){#hdcity}|HDCity is a SPANISH site for HD content|es-es|
 |[HDDolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-cn|
-|[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|fr-fr|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[HDME](https://hdme.eu/){#hdme}|HDME is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-us|
-|[HD-Olimpo](https://hd-olimpo.club/){#hdolimpo}|HD-Olimpo is a SPANISH site for HD content|es-es|
-|[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|fr-fr|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[HDSpace](https://hd-space.org/){#hd-space}|HD-Space (HDS) is a Private Torrent Tracker for HD MOVIES / TV|en-us|
-|[HD-Spain](https://www.hd-spain.com/){#hdspain}|HD-Spain is a SPANISH site for HD content|es-es|
 |[HDtime](https://hdtime.org/){#hdtime}|HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-cn|
 |[HDTorrents](https://hdts.ru/){#hd-torrents}|HD-Torrents is a private torrent website with HD torrents and strict rules on their content.|en-US|
 |[HDTorrents.it](https://hdtorrents.xyz/){#hdtorrentsit}|HDTorrents.it is an ITALIAN Private site for TV / MOVIES|it-it|
@@ -368,18 +367,18 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|hu|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL|lt-lt|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a Romanian Private site for High Quality Music|ru-ru|
+|[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / XXX|zh-cn|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|de-de|
 |[magic-heaven](https://magic-heaven.info/){#magicheaven}|magic-heaven is a Private Torrent Tracker for MOVIES / TV / GENERAL|en|
 |[Magico](https://trellas.info/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|el-gr|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a Hungarian Private site for fairy tales, family movies and comedies|hu-hu|
 |[MicroBit](http://microbit.eu/){#microbit}|MicroBit (µBit) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu|
-|[Milkie](https://milkie.cc/){#milkie}|Milkie is a general tracker providing unpacked and 0day/0sec scene content.|en-US|
+|[Milkie](https://milkie.cc/){#milkie}|Milkie is a general tracker providing unpacked and 0day/0sec scene content.|en-US|
 |[MMA-torrents](https://mma-torrents.com/){#mma-torrents}|MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)|en-us|
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|de-de|
 |[Mononoké-BT](http://mononoke-bt.org/){#mononokebt}|Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME|fr-fr|
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|en-us|
-|[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / XXX|zh-cn|
 |[MTeamTP2FA](https://kp.m-team.cc/){#mteamtp2fa}|this indexer uses a cookie login for MTeamTP for those that want to use 2FA|zh-cn|
 |[MuziekFabriek](https://www.muziekfabriek.org/){#muziekfabriek}|MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC|nl-NL|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker.|en-US|
@@ -479,12 +478,13 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[Torrent Sector Crew](https://tsctracker.org/){#torrentsectorcrew}|Torrent Sector Crew (TSC) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-de|
 |[Torrent Surf](https://torrentsurf.net/){#torrentsurf}|Torrent Surf is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-us|
+|[Torrent-Explosiv](https://torrent-explosiv.eu/){#torrent-explosiv}|Torrent-Explosiv is a German Private site for TV / MOVIES / GENERAL|de-de|
+|[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL|tr-TR|
 |[Torrent.LT](https://torrent.lt/){#torrentlt}|Torrent.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|lt-lt|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|A general Bangladesh tracker|en-us|
 |[TorrentCCF](https://et8.org/){#torrentccf}|TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[TorrentDay](https://torrentday.cool/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|en-US|
 |[TorrentDB](https://torrentdb.net/){#torrentdb}|TorrentDB - Private site for MOVIES / TV / GENERAL|en-us|
-|[Torrent-Explosiv](https://torrent-explosiv.eu/){#torrent-explosiv}|Torrent-Explosiv is a German Private site for TV / MOVIES / GENERAL|de-de|
 |[TorrentHR](https://www.torrenthr.org/){#torrenthr}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|hr-hr|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private site for MOVIES / TV / GENERAL|en-us|
 |[Torrentland](https://torrentland.li/){#torrentland}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|es-es|
@@ -493,7 +493,6 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[TorrentPotato](http://127.0.0.1){#torrentpotato}||en-US|
 |[TorrentSeeds](https://torrentseeds.org/){#torrentseeds}|TorrentSeeds is a Private site for MOVIES / TV / GENERAL|en-US|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|de-de|
-|[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL|tr-TR|
 |[TotallyKids](http://www.totallykids.tv/){#totallykids}|TotallyKids (TK) is a Private Torrent Tracker for CHILDRENS MOVIES / TV / GENERAL|en-us|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) A Chinese tracker|zh-cn|
 |[ToTheGloryCookie](https://totheglory.im/){#totheglorycookie}|this is an alternate to the ToTheGlory indexer using the cookie method for access|zh-cn|
@@ -516,8 +515,8 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |[Witch-Hunter](https://witch-hunter.eu/){#witchhunter}|Witch-Hunter (Demon-Site) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu-hu|
 |[wOOt](https://mywoot.biz/){#woot}|wOOt is a Private GERMAN site for TV / MOVIES / GENERAL|de-de|
 |[World-In-HD](https://world-in-hd.net/){#wihd}|Your world in HD|fr-fr|
-|[XbytesV2](http://xbytesv2.li/){#xbytes2}|xbytesV2 is a SPANISH site for HD content|es-es|
 |[x-ite.me](https://x-ite.me/){#x-ite.me}|Tracker for LGBTQ movies, TV, books, magazines, anime, PC and XXX.|en-us|
+|[XbytesV2](http://xbytesv2.li/){#xbytes2}|xbytesV2 is a SPANISH site for HD content|es-es|
 |[Xthor](https://api.xthor.tk/){#xthor}|Xthor is a general Private torrent site|fr-fr|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|en-us|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|en-us|
@@ -529,6 +528,7 @@ dateCreated: 2021-08-30T17:49:08.815Z
 ## Usenet
 
 ### Public
+
 
 ### Private
 
@@ -543,8 +543,8 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |GingaDADDY{#newznab}||en-US|
 |[Headphones](https://indexer.codeshy.com){#headphones-vip}||en-US|
 |Miatrix{#newznab}||en-US|
-|Newz69{#newznab}||en-US|
 |Newz-Complex{#newznab}||en-US|
+|Newz69{#newznab}||en-US|
 |NinjaCentral{#newznab}||en-US|
 |Nzb.su{#newznab}||en-US|
 |NZBCat{#newznab}||en-US|
@@ -560,3 +560,4 @@ dateCreated: 2021-08-30T17:49:08.815Z
 |SpotNZB{#newznab}||en-US|
 |Tabula Rasa{#newznab}||en-US|
 |Usenet Crawler{#newznab}||en-US|
+
