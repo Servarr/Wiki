@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-08-22T03:35:35.152Z
+date: 2021-09-01T04:32:29.061Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -41,10 +41,10 @@ dateCreated: 2021-05-24T03:32:41.926Z
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/prowlarr/contributing)
 - [<i class="fas fa-book-reader"></i>&emsp;Prowlarr (Cardigann) YAML Indexer Definition](/prowlarr/cardigann-yml-definition)
-- [<i class="fas fa-book"></i>&emsp;API Docs
+- [<i class="fas fa-book"></i>&emsp;API Docs](https://prowlarr.com/docs/api/#/)
 {.links-list}
 
-> Note that the API Docs are a currently non-existent. Contributions to start swagger docs welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console. {.is-info}
+> Note that the API Docs are a currently very rough. Contributions to enhance them are welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console. {.is-info}
 
 ## Support
 
