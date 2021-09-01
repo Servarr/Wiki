@@ -48,7 +48,7 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 - Remove the old binaries `sudo rm -rf /opt/Lidarr.old`
 - Remove the Tarball `sudo rm -rf Lidarr*.linux-core-x64.tar.gz`
 - Update your startup script and replace `mono --debug /opt/Lidarr/Lidarr.exe` with `/opt/Lidarr/Lidarr`. To edit the script the command is likely: `sudo nano -e /etc/systemd/system/lidarr.service`
-- Reload the Systemd Files `systemctl daemon-reload`
+- Reload the Systemd Files `sudo systemctl daemon-reload`
 - Restart Lidarr `sudo systemctl start lidarr.service`
 
 ##### Currently installed mono version is old and unsupported

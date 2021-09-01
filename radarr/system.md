@@ -47,7 +47,7 @@ Newer versions of Radarr are targeted for .NET. We will no longer be providing l
 - Remove the old binaries `sudo rm -rf /opt/Radarr.old`
 - Remove the Tarball `sudo rm -rf Radarr*.linux-core-x64.tar.gz`
 - Update your startup script and replace `mono --debug /opt/Radarr/Radarr.exe` with `/opt/Radarr/Radarr`. To edit the script the command is likely: `sudo nano -e /etc/systemd/system/radarr.service`
-- Reload the Systemd Files `systemctl daemon-reload`
+- Reload the Systemd Files `sudo systemctl daemon-reload`
 - Restart Radarr `sudo systemctl start radarr.service`
 
 ##### Currently installed mono version is old and unsupported
