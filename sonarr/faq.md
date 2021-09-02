@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-08-28T17:54:13.297Z
+date: 2021-09-02T12:21:57.824Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -74,6 +74,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
 - Pawn Stars
 - Pokémon
+- La Casa de Papel / Money Heist - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "seasom 5" to be imported over existing "season 3" episodes.
 - On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking \* dubbed\* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
 - **Possible resolutions:**
   1. TVDb adds alternate ordering to the API (Current status: Unlikely)
