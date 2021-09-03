@@ -2,11 +2,12 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-28T17:58:31.169Z
-tags: sonarr
+date: 2021-09-03T19:14:22.283Z
+tags: sonarr, needs-love
 editor: markdown
-dateCreated: 2021-06-11T23:30:27.958Z
+dateCreated: 2021-09-03T19:14:22.283Z
 ---
+
 
 ## Quick Start Setup Guide
 
