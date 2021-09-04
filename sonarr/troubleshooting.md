@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-08-29T01:15:12.587Z
+date: 2021-09-04T00:11:11.891Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -454,7 +454,7 @@ Incorrect categories is probably the most common cause of results showing in man
 
 #### Wrong results
 
-Sometimes indexers will return completely unrelated results,  will feed in parameters to limit the search to a , but the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
+Sometimes indexers will return completely unrelated results; Sonarr will feed in parameters to limit the search to an series. Sometimes the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
 
 #### Certificate validation
 
@@ -469,6 +469,11 @@ Rarbg has a tendency to have some sort of rate limiting within their API and dis
 #### IP Ban
 
 Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address.  This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.
+
+#### Wrong Series Type
+
+The series type affects how Sonarr searches.
+[See this FAQ entry](/sonarr/faq#whats-the-different-series-types)
 
 #### Using the Jackett /all endpoint
 
