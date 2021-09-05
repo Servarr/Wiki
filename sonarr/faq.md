@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-09-02T12:21:57.824Z
+date: 2021-09-05T19:58:24.985Z
 tags: sonarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -67,31 +67,28 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 - Scene uses a year for the season S2010 and TVDb uses S01.  
 - [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *black sheep* and in this case there is a list of them.  
 - This is an incomplete list of the known shows and how/why they're problematic:  
-- American Dad
+- American Dad {#problemshow-americandad}
 - Arrested Development
-- Mythbusters
-- Paw Patrol
-- Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
-- Pawn Stars
-- Pokémon
-- La Casa de Papel / Money Heist - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "seasom 5" to be imported over existing "season 3" episodes.
-- On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking \* dubbed\* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
-- **Possible resolutions:**
-  1. TVDb adds alternate ordering to the API (Current status: Unlikely)
-  1. XEM adds a map to allow for alternate orders that sonarr can use (Current status: Unlikely)
-  1. Sonarr allows for disabling of XEM maps when doing manual searches (Current status: Unlikely)
+- Mythbusters {#problemshow-mythbusters}
+- Paw Patrol {#problemshow-pawpatrol}
+  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
+- Pawn Stars {#problemshow-pawnstars}
+- Pokémon {#problemshow-pokemon}
+  - On TheXem, [pokemon](http://thexem.de/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+- La Casa de Papel / Money Heist  {#problemshow-moneyheist}
+  - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "seasom 5" to be imported over existing "season 3" episodes. [Additional information on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 
 - **Sonarr side effects:**  
 - On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well.
 - Example:
-  - American Dad is currently on S17 based on TVDb or S16 based on Scene at the time of this writing. So searching in sonarr for season 17 will **only** return S16 results because of the XEM map.
+  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in sonarr for season 18 will **only** return S17 results because of the XEM map.
 
-> If you have a tracker with S17 episodes (because they use P2P and not Scene), please contact us on our discord and bring the release name and group name as exceptions can be added for groups who follow TVDB.
+> If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
 {.is-info}
 
 ## Why wont Sonarr import a TBA episode?
 
-- On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing>) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
+- On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 
 ## Why cannot Sonarr import episode files for series X? / Why cannot Sonarr find releases for series X?
 
@@ -104,7 +101,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 1. Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
 1. Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
 
-- *Typically these are added within 1-2 days.*
+- *Typically these are added within 1-5 days.*
 
 - *Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
 
@@ -112,6 +109,8 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 {.is-info}
 
 ## TVDB is updated why isn't Sonarr?
+
+{#tvdb}
 
 - TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
