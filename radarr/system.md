@@ -269,7 +269,7 @@ Run the Test on the indexer to force Radarr to recheck the indexer, please note 
 
 This error is typically identified if a Movie is looking for a root folder but that root folder is no longer available.
 
-This error may also be if a list is still pointed at a root folder but that root folder is no longer available. 
+This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
 
 If you would like to remove this warning simply find the movie that is still using the old root folder and edit it to the correct root folder
 
@@ -280,8 +280,6 @@ Easiest way to find this is to:
 - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movies to be moved to.
 
 - Next you will receive a pop-up that states Would you like to move the movie folders to 'root path' ? This will also state This will also rename the movie folder per the movie folder format in settings. Simply select No if the you do not want Radarr to move your files
-
-
 
 #### Movies
 

@@ -3,7 +3,7 @@ title: Readarr FAQ
 description: 
 published: true
 date: 2021-08-19T22:32:21.960Z
-tags: readarr, faq
+tags: readarr, troubleshooting, faq, needs-love
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
 ---
@@ -218,6 +218,24 @@ This change was due to not have our server get killed by people updating lists e
 ## Do I need to use Calibre?
 
 - No. In general Calibre offers some further enhancement, such as the ability to auto-convert ebooks to another format specific to your e-reader's capabilities, and also to connect to that e-reader. But if you weren't running Calibre prior to installing Readarr, then it's probably going to be of limited added benefit to you to install it, and it's a very large program.
+
+## Why can Readarr not see my files on a remote server?
+
+- In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
+
+### Readarr runs under the LocalService account by default which doesn't have access to protected remote file shares
+
+- Run Readarr service as another user that has access to that share
+- Open the Administrative Tools \> Services window on your Windows server.
+- Stop the Readarr service.
+- Open the Properties \> Log On dialog.
+- Change the service user account to the target user account.
+- Run Readarr.exe using the Startup Folder
+
+### You're using a mapped network drive (not a UNC path)
+
+- Change your paths to UNC paths (`\\server\share`)
+- Run Readarr.exe via the Startup Folder
 
 ## Help I have locked myself out
 

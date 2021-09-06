@@ -3,7 +3,7 @@ title: Radarr FAQ
 description: 
 published: true
 date: 2021-08-21T20:39:08.480Z
-tags: radarr, needs-love, faq
+tags: radarr, troubleshooting, faq, needs-love
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
@@ -338,29 +338,23 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
-## Why can’t I see my files on a remote server?
+## Why can Radarr not see my files on a remote server?
 
 - In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
-  - Radarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
-    - **Solutions**
-      - Run Radarr’s service as another user that has access to that share
-      - Open the Administrative Tools \> Services window on your Windows server.
-        - Stop the service.
-        - Open the Properties \> Log On dialog.
-        - Change the service user account to the target user account.
-      - Run Radarr.exe using the Startup Folder
+### Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
-  - You’re using a mapped network drive (not a UNC path)
-    - **Solutions**
-      - Change your paths to UNC paths (`\\server\share`)
-      - Run Radarr.exe via the Startup Folder
+- Run Radarr's service as another user that has access to that share
+- Open the Administrative Tools \> Services window on your Windows server.
+- Stop the Radarr service.
+- Open the Properties \> Log On dialog.
+- Change the service user account to the target user account.
+- Run Radarr.exe using the Startup Folder
 
-## Mapped Network Drives vs UNC Paths
+### You're using a mapped network drive (not a UNC path)
 
-- Using mapped network drives generally doesn’t work very well, especially when is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\Movies` use `\\Server\Movies`.
-
-  - A key point to remember is that gets path information from the downloader, so you’ll *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
+- Change your paths to UNC paths (`\\server\share`)
+- Run Radarr.exe via the Startup Folder
 
 ## How do I change from the Windows Service to a Tray App?
 

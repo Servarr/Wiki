@@ -3,7 +3,7 @@ title: Sonarr FAQ
 description: 
 published: true
 date: 2021-09-05T19:58:24.985Z
-tags: sonarr, troubleshooting, faq
+tags: sonarr, troubleshooting, faq, needs-love
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
@@ -182,7 +182,11 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 ## Sonarr will not work on Big Sur
 
-Run `chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr`
+Run
+
+```shell
+chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
+```
 
 ## My Custom Script stopped working after upgrading from v2
 
@@ -316,25 +320,23 @@ This means your SQLite database that stores most of the information for Sonarr i
 - [Follow these steps to resolve](#i-am-getting-an-error-database-disk-image-is-malformed)
 - Then attempt to launch Sonarr and see if it works. If it does not work, you will need further support. Post in our [reddit](http://reddit.com/r/Sonarr) or hop on [discord](https://discord.gg/M6BvZn5) for help.
 
-## Why cannot Sonarr see my files on a remote server?
+## Why can Sonarr not see my files on a remote server?
 
 - In short: the user Sonarr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is, Sonarr is running as a service, which causes one of two things:
-  - Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares.  
 
-**Solutions:**
+### Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
-    - Run Sonarr's service as another user that has access to that share
-    - Open the Administrative Tools \> Services window on your Windows server.
-    - Stop the Sonarr service.
-    - Open the Properties \> Log On dialog.
-    - Change the service user account to the target user account.
-    - Run Sonarr.exe using the Startup Folder
+- Run Sonarr's service as another user that has access to that share
+- Open the Administrative Tools \> Services window on your Windows server.
+- Stop the Sonarr service.
+- Open the Properties \> Log On dialog.
+- Change the service user account to the target user account.
+- Run Sonarr.exe using the Startup Folder
 
-- You're using a mapped network drive (not a UNC path)
+### You're using a mapped network drive (not a UNC path)
 
-**Solutions:**
-    - Change your paths to UNC paths (`\\server\share`)
-    - Run Sonarr.exe via the Startup Folder
+- Change your paths to UNC paths (`\\server\share`)
+- Run Sonarr.exe via the Startup Folder
 
 ## Mapped Network Drives vs UNC Paths
 
@@ -410,18 +412,18 @@ This means your SQLite database that stores most of the information for Sonarr i
 
 - Execute the following commands:
 
-    ```shell
-        rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db
-        cp -f /tmp/Sonarr_backup/* /usr/local/Sonarr/var/.config/Sonarr/
-    ```
+```shell
+rm -r /usr/local/Sonarr/var/.config/Sonarr/Sonarr.db
+cp -f /tmp/Sonarr_backup/* /usr/local/Sonarr/var/.config/Sonarr/
+```
 
 - Update permissions on the files:
 
-    ```shell
-        cd /usr/local/Sonarr/var/.config/Sonarr/
-        chown -R Sonarr:users *
-        chmod -R 0644 *
-    ```
+ ```shell
+cd /usr/local/Sonarr/var/.config/Sonarr/
+chown -R Sonarr:users *
+chmod -R 0644 *
+```
 
 - Start Sonarr
 

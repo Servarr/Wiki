@@ -529,7 +529,6 @@ dateCreated: 2021-08-31T20:06:30.0553484Z
 
 ### Public
 
-
 ### Private
 
 |Indexer|Description|Language|
@@ -560,4 +559,3 @@ dateCreated: 2021-08-31T20:06:30.0553484Z
 |SpotNZB{#newznab}||en-US|
 |Tabula Rasa{#newznab}||en-US|
 |Usenet Crawler{#newznab}||en-US|
-

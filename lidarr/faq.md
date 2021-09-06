@@ -232,23 +232,23 @@ No, nor should you through any SQL hackery.  The refresh releases task queries t
 
 A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr.  If you delete release files manually or a third party program, do not set this to `Never`.
 
-## Why can’t see my files on a remote server?
+## Why can Lidarr not see my files on a remote server?
 
 - In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
-  - Lidarr runs under the LocalService account by default which doesn’t have access to protected remote file shares.
-    - **Solutions**
-      - Run Lidarr’s service as another user that has access to that share
-      - Open the Administrative Tools \> Services window on your Windows server.
-        - Stop the service.
-        - Open the Properties \> Log On dialog.
-        - Change the service user account to the target user account.
-      - Run Lidarr.exe using the Startup Folder
+### Lidarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
-  - You’re using a mapped network drive (not a UNC path)
-    - **Solutions**
-      - Change your paths to UNC paths (`\\server\share`)
-      - Run Lidarr.exe via the Startup Folder
+- Run Lidarr's service as another user that has access to that share
+- Open the Administrative Tools \> Services window on your Windows server.
+- Stop the Lidarr service.
+- Open the Properties \> Log On dialog.
+- Change the service user account to the target user account.
+- Run Lidarr.exe using the Startup Folder
+
+### You're using a mapped network drive (not a UNC path)
+
+- Change your paths to UNC paths (`\\server\share`)
+- Run Lidarr.exe via the Startup Folder
 
 ## Help I have locked myself out
 

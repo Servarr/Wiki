@@ -46,7 +46,8 @@ What you need to do is:
 1. Open the trace log file (prowlarr.trace.txt) and find the relevant context
 1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
 
-> It is **not** suggested to use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.{.is-info}
+> Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.{.is-info}
+> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.{.is-info}
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
 - Unix Only: Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command:
