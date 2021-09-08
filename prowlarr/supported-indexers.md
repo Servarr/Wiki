@@ -2,17 +2,17 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-09-06T17:37:40.680Z
+date: 2021-09-08T02:36:11.6166379Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-09-06T17:37:40.680Z
+dateCreated: 2021-09-08T02:36:11.6166379Z
 ---
 
-- Supported Indexers as of Build `0.1.1.903` / [Commit: 89a4c03dd2b34daab6f287c28fb2c2753286fbac](https://github.com/Prowlarr/Prowlarr/commit/89a4c03dd2b34daab6f287c28fb2c2753286fbac)
+- Supported Indexers as of Build `0.1.1.927` / [Commit: 593a0e965867401ee9a007c16daeece9f667d7d9](https://github.com/Prowlarr/Prowlarr/commit/593a0e965867401ee9a007c16daeece9f667d7d9)
 
 ## Torrents
 
-### Public
+### Public Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -197,7 +197,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[Zooqle](https://zooqle.com/){#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-us|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 
-### Private
+### Private Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -209,6 +209,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[4thD](https://4thd.xyz/){#4thd}|4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-us|
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-cn|
 |[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|ru-ru|
+|[Abnormal](https://abn.lol/){#abnormal}|General French Private Tracker|fr-fr|
 |[ABtorrents](https://abtorrents.me/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|en-us|
 |[Acid-Lounge](https://www.acid-lounge.org.uk/){#acidlounge}|Acid Lounge (A-L) is a Private Torrent Tracker for 0DAY / GENERAL|en-us|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|en|
@@ -374,7 +375,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-hu|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a Hungarian Private site for fairy tales, family movies and comedies|hu-hu|
 |[MicroBit](http://microbit.eu/){#microbit}|MicroBit (µBit) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu|
-|[Milkie](https://milkie.cc/){#milkie}|Milkie is a general tracker providing unpacked and 0day/0sec scene content.|en-US|
+|[Milkie](https://milkie.cc/){#milkie}|Milkie is a general tracker providing unpacked and 0day/0sec scene content.|en-US|
 |[MMA-torrents](https://mma-torrents.com/){#mma-torrents}|MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)|en-us|
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|de-de|
 |[Mononoké-BT](http://mononoke-bt.org/){#mononokebt}|Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME|fr-fr|
@@ -527,35 +528,40 @@ dateCreated: 2021-09-06T17:37:40.680Z
 
 ## Usenet
 
-### Public
-
-### Private
+### Public Indexers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|abNZB{#newznab}||en-US|
-|altHUB{#newznab}||en-US|
-|AnimeTosho (Usenet){#newznab}||en-US|
-|DOGnzb{#newznab}||en-US|
-|DrunkenSlug{#newznab}||en-US|
+|BinSearch{#binsearch}|The binary Usenet search engine|en-us|
+
+### Private Indexers
+
+|Indexer|Description|Language|
+|:--|:--|:--|
+|[abNZB](https://abnzb.com){#newznab}||en-US|
+|[altHUB](https://althub.co.za){#newznab}||en-US|
+|[AnimeTosho (Usenet)](https://animetosho.org){#newznab}||en-US|
+|[DOGnzb](https://dognzb.cr){#newznab}||en-US|
+|[DrunkenSlug](https://drunkenslug.com){#newznab}||en-US|
 |Generic Newznab{#newznab}||en-US|
-|GingaDADDY{#newznab}||en-US|
-|[Headphones](https://indexer.codeshy.com){#headphones-vip}||en-US|
-|Miatrix{#newznab}||en-US|
-|Newz-Complex{#newznab}||en-US|
-|Newz69{#newznab}||en-US|
-|NinjaCentral{#newznab}||en-US|
-|Nzb.su{#newznab}||en-US|
-|NZBCat{#newznab}||en-US|
-|NZBFinder{#newznab}||en-US|
-|NZBgeek{#newznab}||en-US|
-|NZBNDX{#newznab}||en-US|
-|NzbNoob{#newznab}||en-US|
-|NzbPlanet{#newznab}||en-US|
-|NZBStars{#newznab}||en-US|
-|NZBXS{#newznab}||en-US|
-|OZnzb{#newznab}||en-US|
-|SimplyNZBs{#newznab}||en-US|
-|SpotNZB{#newznab}||en-US|
-|Tabula Rasa{#newznab}||en-US|
-|Usenet Crawler{#newznab}||en-US|
+|[GingaDADDY](https://www.gingadaddy.com){#newznab}||en-US|
+|Headphones{#headphones-vip}||en-US|
+|[Miatrix](https://www.miatrix.com){#newznab}||en-US|
+|[Newz-Complex](https://newz-complex.org/www){#newznab}||en-US|
+|[Newz69](https://newz69.keagaming.com){#newznab}||en-US|
+|[NinjaCentral](https://ninjacentral.co.za){#newznab}||en-US|
+|[Nzb.su](https://nzb.su){#newznab}||en-US|
+|[NZBCat](https://nzb.cat){#newznab}||en-US|
+|[NZBFinder](https://nzbfinder.ws){#newznab}||en-US|
+|[NZBgeek](https://nzbgeek.info){#newznab}||en-US|
+|[NZBNDX](https://www.nzbndx.com){#newznab}||en-US|
+|[NzbNoob](https://www.nzbnoob.com){#newznab}||en-US|
+|[NzbPlanet](https://nzbplanet.net){#newznab}||en-US|
+|[NZBStars](https://nzbstars.com){#newznab}||en-US|
+|[NZBXS](https://www.nzbxs.com){#newznab}||en-US|
+|[OZnzb](https://oznzb.com){#newznab}||en-US|
+|[SimplyNZBs](https://simplynzbs.com){#newznab}||en-US|
+|[SpotNZB](https://spotnzb.xyz){#newznab}||en-US|
+|[Tabula Rasa](https://www.tabula-rasa.pw){#newznab}||en-US|
+|[Usenet Crawler](https://www.usenet-crawler.com){#newznab}||en-US|
+
