@@ -2,13 +2,12 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-09-08T02:36:11.6166379Z
+date: 2021-09-08T02:40:53.441Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-09-08T02:36:11.6166379Z
+dateCreated: 2021-09-06T17:37:40.680Z
 ---
 
-- Supported Indexers as of Build `0.1.1.927` / [Commit: 593a0e965867401ee9a007c16daeece9f667d7d9](https://github.com/Prowlarr/Prowlarr/commit/593a0e965867401ee9a007c16daeece9f667d7d9)
 
 ## Torrents
 
@@ -532,7 +531,7 @@ dateCreated: 2021-09-08T02:36:11.6166379Z
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|BinSearch{#binsearch}|The binary Usenet search engine|en-us|
+|[BinSearch](https://binsearch.info/){#binsearch}|The binary Usenet search engine|en-us|
 
 ### Private Indexers
 
@@ -545,7 +544,7 @@ dateCreated: 2021-09-08T02:36:11.6166379Z
 |[DrunkenSlug](https://drunkenslug.com){#newznab}||en-US|
 |Generic Newznab{#newznab}||en-US|
 |[GingaDADDY](https://www.gingadaddy.com){#newznab}||en-US|
-|Headphones{#headphones-vip}||en-US|
+|[Headphones](https://indexer.codeshy.com){#headphones-vip}||en-US|
 |[Miatrix](https://www.miatrix.com){#newznab}||en-US|
 |[Newz-Complex](https://newz-complex.org/www){#newznab}||en-US|
 |[Newz69](https://newz69.keagaming.com){#newznab}||en-US|
@@ -564,4 +563,3 @@ dateCreated: 2021-09-08T02:36:11.6166379Z
 |[SpotNZB](https://spotnzb.xyz){#newznab}||en-US|
 |[Tabula Rasa](https://www.tabula-rasa.pw){#newznab}||en-US|
 |[Usenet Crawler](https://www.usenet-crawler.com){#newznab}||en-US|
-
