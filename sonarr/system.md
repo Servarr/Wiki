@@ -2,11 +2,12 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-08-01T23:14:35.320Z
-tags: sonarr
+date: 2021-09-08T17:58:43.288Z
+tags: 
 editor: markdown
-dateCreated: 2021-06-11T23:33:08.344Z
+dateCreated: 2021-09-08T17:58:43.288Z
 ---
+
 
 ## Status
 
