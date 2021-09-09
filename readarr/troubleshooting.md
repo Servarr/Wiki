@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-08-28T17:40:23.975Z
+date: 2021-09-09T12:46:58.140Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -105,7 +105,7 @@ When Trace log level is enabled, additional `readarr.trace.txt` rolling log file
 
 ## Recovering from a Failed Update
 
-- We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
+We do everything we can to prevent issues when upgrading, but if they do occur this will walk you through the steps to take to recover your installation.
 
 ### Determine the issue
 
@@ -136,7 +136,7 @@ Install the update (.exe) or extract (.zip) the contents over your existing inst
 
 ## Downloads and Importing
 
-Downloading and importing is where *most* people experience issues. From a high level perspective,  needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
+Downloading and importing is where *most* people experience issues. From a high level perspective, Readarr needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
 > **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 {.is-danger}
