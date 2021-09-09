@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2021-08-28T17:40:23.484Z
+date: 2021-09-09T12:49:44.357Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -111,7 +111,7 @@ When Trace log level is enabled, additional Prowlarr.trace.txt rolling log files
 
 ## Recovering from a Failed Update
 
-- We do everything we can to prevent issues when upgrading, but they occur, this will walk you through the steps of recovering your installation.
+We do everything we can to prevent issues when upgrading, but if they do occur this will walk you through the steps to take to recover your installation.
 
 ### Determine the issue
 
@@ -127,7 +127,7 @@ The best place to look when Prowlarr will not start after an update is your log 
 
 ### Resolving the issue
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on our subreddit or swing by our discord. If there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on https://reddit.com/r/prowlarr our subreddit or swing by our [discord](https://prowlarr.com/discord). If there are others with the same issue, then rest assured we are working on it.
 
 ## Manually upgrading
 
