@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-09-15T23:47:42.183Z
+date: 2021-09-15T23:49:05.734Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -279,7 +279,7 @@ $ chown -R plex:plex /usr/local/share/Lidarr-0.8.1.2135
 $ ln -s /usr/local/share/Lidarr-0.8.1.2135/Lidarr /usr/local/share/lidarr
 ```
 
-This will make easier to switch back and forth versions if something went wrong with updates...
+> This will make easier to switch back and forth versions if something went wrong with updates...
 
 7. Create a file in "/usr/local/etc/rc.d" with the name "lidarr" and the following content:
 
