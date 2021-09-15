@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-09-15T23:44:32.981Z
+date: 2021-09-15T23:47:42.183Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -353,6 +353,9 @@ $ service start lidarr
 12. And check that it is really running and listening on port 8686:
 
 ```bash
+$ service lidarr status
+lidarr is running as pid 94896 # your number will be different...
+
 $ netstat -an | grep -iw listen
 tcp46      0      0 *.8686                 *.*                    LISTEN
 ```
