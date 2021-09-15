@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-09-15T23:49:05.734Z
+date: 2021-09-15T23:52:10.664Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -280,6 +280,7 @@ $ ln -s /usr/local/share/Lidarr-0.8.1.2135/Lidarr /usr/local/share/lidarr
 ```
 
 > This will make easier to switch back and forth versions if something went wrong with updates...
+{.is-info}
 
 7. Create a file in "/usr/local/etc/rc.d" with the name "lidarr" and the following content:
 
