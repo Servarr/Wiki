@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-09-15T23:42:04.508Z
+date: 2021-09-15T23:44:32.981Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -239,7 +239,7 @@ If you implement any additional authentication through Apache, you should exclud
 
 This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although in this case more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
 
-1. Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion:
+1. Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion, but feel free to use "lidarr" or any other if you want. Just make things accordingly:
 
 ```bash
 $ pw add group plex
