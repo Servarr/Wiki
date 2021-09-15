@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-08-24T20:00:02.571Z
+date: 2021-09-15T23:37:35.823Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -233,3 +233,128 @@ If you implement any additional authentication through Apache, you should exclud
 
 - `/lidarr/api/`
 - `/lidarr/Content/`
+
+## FreeBSD
+{#freebsd}
+
+This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
+
+1. Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "War Permission from Hell". As this is generally used in conjunction with Plex, here is my suggestion:
+
+```bash
+$ pw add group plex
+$ pw add user plex
+```
+
+2. Install the required packages:
+
+```bash
+$ pkg install mono6.8 curl mediainfo sqlite3 chromaprint
+```
+
+3. Get the latest & greatest Lidarr version for Linux, but not the "-core" ones. Right now, while I'm writing this, the latest version is "0.8.1.2135". Change things accordingly:
+
+```bash
+
+$ cd /root
+$ fetch "https://github.com/Lidarr/Lidarr/releases/download/v0.8.1.2135/Lidarr.master.0.8.1.2135.linux.tar.gz"
+```
+
+4. Create a folder in /usr/local/share with the name "Lidar-\<version\>". In our case:
+
+```bash
+$ mkir /usr/local/share/Lidarr-0.8.1.2135
+```
+
+5. Uncompress the Lidarr package inside this new created folder, and change its permissions to the user/group "plex/plex":
+
+```bash
+$ tar xvfz /root/Lidarr.master.0.8.1.2135.linux.tar.gz -C /usr/local/share/Lidarr-0.8.1.2135
+$ chown -R plex:plex /usr/local/share/Lidarr-0.8.1.2135
+```
+
+6. Make a simbolic link to this folder:
+
+```bash
+$ ln -s /usr/local/share/Lidarr-0.8.1.2135/Lidarr /usr/local/share/lidarr
+```
+
+This will make easier to switch back and forth versions if something went wrong with updates...
+
+7. Create a file in "/usr/local/etc/rc.d" with the name "lidarr" and the following content:
+
+```bash
+#!/bin/sh
+#
+# Author: Michiel van Baak <michiel@vanbaak.eu>
+
+# PROVIDE: lidarr
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+# Add the following lines to /etc/rc.conf to enable lidarr:
+# lidarr_enable="YES"
+
+. /etc/rc.subr
+
+name="lidarr"
+rcvar=lidarr_enable
+
+load_rc_config $name
+
+: ${lidarr_enable="NO"}
+: ${lidarr_user:="lidarr"}
+: ${lidarr_data_dir:="/usr/local/lidarr"}
+
+pidfile="${lidarr_data_dir}/lidarr.pid"
+procname="/usr/local/bin/mono"
+command="/usr/sbin/daemon"
+command_args="-f ${procname} /usr/local/share/lidarr/Lidarr.exe --nobrowser --data=${lidarr_data_dir}"
+start_precmd=lidarr_precmd
+
+lidarr_precmd()
+{
+        export XDG_CONFIG_HOME=${lidarr_data_dir}
+
+        if [ ! -d ${lidarr_data_dir} ]; then
+                install -d -o ${lidarr_user} ${lidarr_data_dir}
+        fi
+}
+
+run_rc_command "$1"
+```
+
+8. Enable the execution flags:
+
+```bash
+$ chmod +x /usr/local/etc/rc.d/lidarr
+```
+
+9. Now turn on the automatic execution of the Lidarr process and set the user under wich it will be ran:
+
+```bash
+$ sysrc lidarr_enable=YES
+$ sysrc lidarr_user=plex
+```
+
+10. Create the folder where the config files and data will be kept, and change the user/group of this folder so that the user "plex" can write on it:
+
+```bash
+$ mkdir /usr/local/lidarr
+$ chown -R plex:plex /usr/local/lidarr
+```
+
+11. Now, execute the following command to run Lidarr:
+
+```bash
+$ service start lidarr
+```
+
+12. And check that it is really running and listening on port 8686:
+
+```bash
+$ netstat -an | grep -iw listen
+tcp46      0      0 *.8686                 *.*                    LISTEN
+```
+
+Congratulations!
