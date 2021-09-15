@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-09-15T23:37:35.823Z
+date: 2021-09-15T23:42:04.508Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -237,9 +237,9 @@ If you implement any additional authentication through Apache, you should exclud
 ## FreeBSD
 {#freebsd}
 
-This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
+This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although in this case more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
 
-1. Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "War Permission from Hell". As this is generally used in conjunction with Plex, here is my suggestion:
+1. Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion:
 
 ```bash
 $ pw add group plex
@@ -252,7 +252,7 @@ $ pw add user plex
 $ pkg install mono6.8 curl mediainfo sqlite3 chromaprint
 ```
 
-3. Get the latest & greatest Lidarr version for Linux, but not the "-core" ones. Right now, while I'm writing this, the latest version is "0.8.1.2135". Change things accordingly:
+3. Get the latest & greatest Lidarr version for Linux, but not the "-core" ones. Right now, while I'm writing, the latest version is "0.8.1.2135". Change things accordingly from now on if you got a different version number:
 
 ```bash
 
@@ -324,7 +324,7 @@ lidarr_precmd()
 run_rc_command "$1"
 ```
 
-8. Enable the execution flags:
+8. Enable the execution flags for this file:
 
 ```bash
 $ chmod +x /usr/local/etc/rc.d/lidarr
