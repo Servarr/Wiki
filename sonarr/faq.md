@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-09-09T12:35:37.600Z
+date: 2021-09-16T22:01:47.733Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -255,7 +255,7 @@ Below are some example release names for each show type. The specific differenti
 - develop - ![Current Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json) -  (Alpha/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
 
 > **Warning: You may not be able to go back to `main` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-warning}
+{.is-danger}
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
 
@@ -285,12 +285,16 @@ If Docker:
 
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.
+> You can (almost) always increase your risk.{.is-info}
 
 - `main` can go to `develop`
-- Check with the development team to see if you can switch from `develop` to `main` for your given build.
-- Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned.
+- See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
+- Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+- **August 5 2021 Update**
+  - `3.0.6.1265` has been released as main/stable
+  - For those on develop and are still on `3.0.6.1295` or lower you can safely downgrade to main
+    - If you are on a newer version you are stuck on nightly/develop until a new stable release is cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup.
 
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
