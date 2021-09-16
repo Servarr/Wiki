@@ -445,7 +445,7 @@ Many presets are available, but all require an API key to be accessible.
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-###### Torrent Tracker Configuration
+#### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Radarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
