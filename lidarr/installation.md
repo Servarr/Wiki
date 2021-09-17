@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-09-16T23:30:55.918Z
+date: 2021-09-17T00:10:39.488Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -191,20 +191,20 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although in this case more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
 
-1. Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion, but feel free to use "lidarr" or any other if you want. Just make things accordingly:
+- Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion, but feel free to use "lidarr" or any other if you want. Just make things accordingly:
 
 ```bash
 pw add group plex
 pw add user plex
 ```
 
-2. Install the required packages:
+- Install the required packages:
 
 ```bash
 pkg install mono6.8 curl mediainfo sqlite3 chromaprint
 ```
 
-3. Get the latest & greatest Lidarr version for Linux, but not the "-core" ones. Right now, while I'm writing, the latest version is "0.8.1.2135". Change things accordingly from now on if you got a different version number:
+- Get the latest & greatest Lidarr version for Linux, but not the "-core" ones. Right now, while I'm writing, the latest version is "0.8.1.2135". Change things accordingly from now on if you got a different version number:
 
 ```bash
 
@@ -212,20 +212,20 @@ cd /root
 fetch "https://github.com/Lidarr/Lidarr/releases/download/v0.8.1.2135/Lidarr.master.0.8.1.2135.linux.tar.gz"
 ```
 
-4. Create a folder in /usr/local/share with the name "Lidar-\<version\>". In our case:
+- Create a folder in /usr/local/share with the name "Lidar-\<version\>". In our case:
 
 ```bash
 mkir /usr/local/share/Lidarr-0.8.1.2135
 ```
 
-5. Uncompress the Lidarr package inside this new created folder, and change its permissions to the user/group "plex/plex":
+- Uncompress the Lidarr package inside this new created folder, and change its permissions to the user/group "plex/plex":
 
 ```bash
 tar xvfz /root/Lidarr.master.0.8.1.2135.linux.tar.gz -C /usr/local/share/Lidarr-0.8.1.2135
 chown -R plex:plex /usr/local/share/Lidarr-0.8.1.2135
 ```
 
-6. Make a simbolic link to this folder:
+- Make a simbolic link to this folder:
 
 ```bash
 ln -s /usr/local/share/Lidarr-0.8.1.2135/Lidarr /usr/local/share/lidarr
@@ -234,7 +234,7 @@ ln -s /usr/local/share/Lidarr-0.8.1.2135/Lidarr /usr/local/share/lidarr
 > This will make easier to switch back and forth versions if something went wrong with updates...
 {.is-info}
 
-7. Create a file in "/usr/local/etc/rc.d" with the name "lidarr" and the following content:
+- Create a file in "/usr/local/etc/rc.d" with the name "lidarr" and the following content:
 
 ```bash
 #!/bin/sh
@@ -277,33 +277,33 @@ lidarr_precmd()
 run_rc_command "$1"
 ```
 
-8. Enable the execution flags for this file:
+- Enable the execution flags for this file:
 
 ```bash
 chmod +x /usr/local/etc/rc.d/lidarr
 ```
 
-9. Now turn on the automatic execution of the Lidarr process and set the user under wich it will be ran:
+- Now turn on the automatic execution of the Lidarr process and set the user under wich it will be ran:
 
 ```bash
 sysrc lidarr_enable=YES
 sysrc lidarr_user=plex
 ```
 
-10. Create the folder where the config files and data will be kept, and change the user/group of this folder so that the user "plex" can write on it:
+- Create the folder where the config files and data will be kept, and change the user/group of this folder so that the user "plex" can write on it:
 
 ```bash
 mkdir /usr/local/lidarr
 chown -R plex:plex /usr/local/lidarr
 ```
 
-11. Now, execute the following command to run Lidarr:
+- Now, execute the following command to run Lidarr:
 
 ```bash
 service start lidarr
 ```
 
-12. And check that it is really running and listening on port 8686:
+- And check that it is really running and listening on port 8686:
 
 ```bash
 $ service lidarr status
