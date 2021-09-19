@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-08-15T01:10:44.868Z
+date: 2021-09-19T19:49:12.985Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -100,8 +100,6 @@ OnHealthIssue
 - Lidarr_Health_Issue_Wiki => healthCheck.WikiUrl.ToString() ?? string.Empty
 
 ## General
-
-### Updates
 
 ### Updates
 
