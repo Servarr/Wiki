@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-09-17T03:42:04.529Z
+date: 2021-09-24T14:55:02.998Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -241,6 +241,9 @@ Below are some example release names for each show type. The specific differenti
 1. Select what series need their folder renamed
 1. Change Root Folder to the same Root Folder that the series currently exist in
 1. Select "Yes move files"
+
+> If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
+{.is-warning}
 
 ## How do I update Sonarr?
 
