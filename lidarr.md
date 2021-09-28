@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2021-09-28T00:13:52.708Z
+date: 2021-09-28T00:14:04.246Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -42,6 +42,9 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/lidarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://lidarr.audio/docs/api/)
 {.links-list}
+
+> Note that the API Docs are a perpectual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console.
+{.is-info}
 
 ## Support
 
