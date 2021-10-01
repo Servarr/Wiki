@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-08-28T16:10:57.358Z
+date: 2021-10-01T00:02:52.666Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -53,10 +53,6 @@ dateCreated: 2021-06-23T03:06:20.944Z
 |[hotio](https://hotio.dev/containers/prowlarr)|no stable release yet|`hotio/prowlarr:testing`|`hotio/prowlarr:nightly`|
 |[LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr)|no stable release yet|`linuxserver/prowlarr:develop`|`linuxserver/prowlarr:nightly`|
 
-## Can I update Prowlarr inside my Docker container?
-
-- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
-
 ### Installing a newer version
 
 If Native:
@@ -67,6 +63,10 @@ If Native:
 If Docker:
 
 1. Repull your tag and update your container
+
+## Can I update Prowlarr inside my Docker container?
+
+- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
