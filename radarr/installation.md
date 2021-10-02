@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T14:08:24.095Z
+date: 2021-10-02T14:16:39.439Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -70,7 +70,8 @@ If you want an easy life follow this for a base Debian / Ubuntu / Raspian instal
 nano RadarrInstall.sh
 ```
 - Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user pasting could be as simple as right clicking.
-```shell
+
+```
 #!/bin/bash
 #### Description: Radarr 3.2+ (.NET Core) Debian install
 #### Written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10 v1.0
@@ -79,8 +80,8 @@ nano RadarrInstall.sh
 ## Am I root, need root
 
 if [ "$EUID" -ne 0 ]
-	then echo "Please run as root. See https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password for help."
-	exit
+    then echo "Please run as root. See https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password for help."
+    exit
 fi
 
 ## Const
@@ -96,58 +97,58 @@ bindir="/opt/{$app^}"
 ## Create radarr user and group if they don't exist
 
 PASSCHK=$(grep -c ":$RADARR_UID:" /etc/passwd)
-if [ $PASSCHK -ge 1 ]
-	then
-	echo "UID: $RADARR_UID seems to exist. Skipping creation, ensure user $RADARR_UID with its's group $RADARR_UID are setup."
+if [ "$PASSCHK" -ge 1 ]
+    then
+    echo "UID: $RADARR_UID seems to exist. Skipping creation, ensure user $RADARR_UID with its's group $RADARR_UID are setup."
 else
-	echo "UID: $RADARR_UID created with disabled password."
-	adduser --disabled-password --gecos "" $RADARR_UID
+    echo "UID: $RADARR_UID created with disabled password."
+    adduser --disabled-password --gecos "" $RADARR_UID
 fi
 
 ## Stop Radarr if running
 
-if service --status-all | grep -Fq '$app'; then    
-	systemctl stop $app   
-	sytemctl disable  $app.service
+if service --status-all | grep -Fq '$app'; then
+    systemctl stop $app
+    sytemctl disable  $app.service
 fi
 
 ## Create Appdata Directory
 
-	## AppData
-	mkdir -p $datadir
-	chown $RADARR_UID:$RADARR_UID -R $datadir
-	
+    ## AppData
+    mkdir -p $datadir
+    chown $RADARR_UID:$RADARR_UID -R $datadir
+
 ## Download and install Radarr
 
-	## prerequisite packages:
-	apt install curl mediainfo sqlite3
-	rm -rf $bindir
+    ## prerequisite packages:
+    apt install curl mediainfo sqlite3
+    rm -rf $bindir
   ## remove existing installs
-  ARCH=dpkg --print-architecture
-  DL BASE="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
+  ARCH=$(dpkg --print-architecture)
+  dlbase="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
     case "$ARCH" in
-        "amd64") DLURL="${urlbase}&arch=x64" ;;
-        "armhf") DLURL="${urlbase}&arch=arm" ;;
-        "arm64") DLURL="${urlbase}&arch=arm64" ;;
+        "amd64") DLURL="${dlbase}&arch=x64" ;;
+        "armhf") DLURL="${dlbase}&arch=arm" ;;
+        "arm64") DLURL="${dlbase}&arch=arm64" ;;
         *)
             echo_error "Arch not supported"
             exit 1
             ;;
     esac
 
-	wget --content-disposition "$DLURL"
-	tar -xvzf {$app^}.*.tar.gz
-	mv {$app^} /opt/
+    wget --content-disposition "$DLURL"
+    tar -xvzf "{$app^}.*.tar.gz"
+    mv "{$app^}" /opt/
   chown $RADARR_UID:$RADARR_UID -R $bindir
-	rm -rf {$app^}.*.tar.gz
+    rm -rf "{$app^}.*.tar.gz"
 
 ##Configure Autostart
 
-	#Remove any previous app .service
-		rm -rf /etc/systemd/system/$app.service
-	
-	##Create app .service with correct user startup
-	
+    #Remove any previous app .service
+        rm -rf /etc/systemd/system/$app.service
+
+    ##Create app .service with correct user startup
+
 cat << EOF | tee /etc/systemd/system/$app.service > /dev/null
 [Unit]
 Description={$app^} Daemon
@@ -167,30 +168,26 @@ EOF
 
 ##Start Radarr
 
-	systemctl -q daemon-reload
-	systemctl enable --now -q $app
-	systemctl start $app.service
+    systemctl -q daemon-reload
+    systemctl enable --now -q $app
+    systemctl start $app.service
 
 ## Finish update
 
-		HOST=$(hostname -I)
-        IP_LOCAL=$(grep -oP '^\S*' <<< $HOST)
-		echo ""
-		echo "Install complete"
+        HOST=$(hostname -I)
+        IP_LOCAL=$(grep -oP '^\S*' <<< "$HOST")
+        echo ""
+        echo "Install complete"
         echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
+```
 
-- Press `Ctrl O` (save) then `Enter`
+- Press $(Ctrl O) (save) then `Enter`
 - Press `Ctrl X` (exit) then `Enter`
 - Enter:
 ```shell
 bash Rada <tab>
 ```
-which should auto complete the input to:
-```
-bash RadarrInstall.sh
-```
-- Browse to http://<your_ip>:7878 for the Radarr GUI
-- Configure Radarr and make a backup.
+- This should autocomplete to RadarrInstall.sh
 
 If you need to re-install run again:
 
