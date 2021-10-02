@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-08-24T19:59:32.464Z
+date: 2021-10-02T02:34:31.835Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -47,7 +47,149 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 ## Linux
 
-### Debian / Ubuntu
+### Debian / Ubuntu / Raspian
+
+#### Easy Install for x64 and a tweak for arm
+
+For the  Debian / Ubuntu / Raspian beginners there isn't an apt-get package yet. If you want to go hands on follow the 'Debian / Ubuntu / Raspian Hands on Install' steps below.
+
+If you want an easy life follow this for a base Debian / Ubuntu / Raspian install:
+For other CPUs change arch= in the wget line to:
+
+- ARM and armh use ``arch=arm``
+- ARM64 use ``arch=arm64``
+
+
+- Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/) , it's Optional but will make your life easier.
+- SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users try mRemoteNG so you can save you're connections.
+- Type: 
+```
+nano RadarrInstall.sh
+```
+- Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user pasting could be as simple as right clicking.
+```shell
+#!/bin/bash
+#### Description: Radarr 3.2+ (.NET Core) Debian install
+#### Directory struture similar to Sonarr
+#### Written by: DoctorArr - doctorarr@the-rowlands.co.uk on 10-2021 v1.0
+
+## Am I root, need root
+
+if [ "$EUID" -ne 0 ]
+	then echo "Please run as root. See https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password for help."
+	exit
+fi
+
+## Const
+
+RADARR_UID="radarr"
+BRANCH="master"
+
+## Create radarr user and group if they don't exist
+
+PASSCHK=$(grep -c ":$RADARR_UID:" /etc/passwd)
+if [ $PASSCHK -ge 1 ]
+	then
+	echo "UID: $RADARR_UID seems to exist skipping creation, ensure user $RADARR_UID and group $RADARR_UID are setup."
+else
+	echo "UID: $RADARR_UID and group with disabled password."
+	adduser --disabled-password --gecos "" $RADARR_UID
+fi
+
+## Stop Radarr if running
+
+if service --status-all | grep -Fq 'radarr'; then    
+	systemctl stop radarr   
+	sytemctl disable  radarr.service
+fi
+
+## Create directories like Sonarr and change owner
+
+	## config
+	mkdir -p /var/lib/radarr/
+	chown radarr:radarr -R /var/lib/radarr/
+	
+	## bin
+	mkdir -p /usr/lib/radarr
+	chown radarr:radarr -R /var/lib/radarr/
+	
+## Download and install Radarr
+
+	## prerequisite packages:
+	apt install curl mediainfo sqlite3
+	cd /usr/lib/radarr
+	rm -rf bin
+	rm -rf Radarr
+	wget --content-disposition "http://radarr.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore&arch=x64"
+	tar -xvzf Radarr*.linux-core-x64.tar.gz
+	chown radarr:radarr -R /usr/lib/radarr/Radarr
+	mv Radarr bin
+	rm -rf Radarr*.linux-core-x64.tar.gz
+
+##Configure Auot-start
+
+	#Remove any previous radarr.service
+		rm -rf /etc/systemd/system/radarr.service
+	
+	##Create radarr.service with correct user startup
+	
+cat << EOF | tee /etc/systemd/system/radarr.service > /dev/null
+[Unit]
+Description=Radarr Daemon
+After=syslog.target network.target
+[Service]
+User=radarr
+Group=radarr
+UMask=0002
+Type=simple
+ExecStart=/usr/lib/radarr/bin/Radarr -nobrowser -data=/var/lib/radarr/
+TimeoutStopSec=20
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+EOF
+
+##Start Radarr
+
+	systemctl -q daemon-reload
+	systemctl enable --now -q radarr
+	systemctl start radarr.service
+
+## Finish update
+
+		HOST=$(hostname -I)
+        IP_LOCAL=$(grep -oP '^\S*' <<< $HOST)
+		echo ""
+		echo "Install complete"
+        echo "Browse to http://$IP_LOCAL:7878 for the Radarr GUI"
+
+	
+```
+- Press Ctrl O (save)<enter>
+- Press Ctrl X (exit)<enter>
+- Type:
+```shell
+bash Rada <tab>
+```
+which should auto complete the input to:
+```
+bash RadarrInstall.sh
+```
+Then Browse to http://$<your_ip>:7878 for the Radarr GUI
+
+Configure Radarr and make a backup.
+
+If you need to re-install run again:
+
+```
+bash RadarrInstall.sh
+```
+###### Root
+
+If you can't run the [install as root follow these instructions](https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password).
+  
+#### Debian Hands on Install
 
 You'll need to install the binaries using the below commands.
 
