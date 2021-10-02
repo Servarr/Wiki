@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-09-24T14:55:02.998Z
+date: 2021-10-02T06:36:39.868Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -294,10 +294,10 @@ If Docker:
 - See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
 - Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **August 5 2021 Update**
-  - `3.0.6.1265` has been released as main/stable
-  - For those on develop and are still on `3.0.6.1295` or lower you can safely downgrade to main
-    - If you are on a newer version you are stuck on nightly/develop until a new stable release is cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup.
+- **September 30 2021 Update**
+  - `3.0.6.1342` has been released as main/stable
+  - For those on develop and are still on `3.0.6.1343` or lower you can safely downgrade to main
+    - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
