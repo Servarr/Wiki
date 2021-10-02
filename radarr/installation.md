@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T02:34:31.835Z
+date: 2021-10-02T02:37:28.395Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -59,7 +59,7 @@ For other CPUs change arch= in the wget line to:
 - ARM and armh use ``arch=arm``
 - ARM64 use ``arch=arm64``
 
-
+###### Easy Install
 - Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/) , it's Optional but will make your life easier.
 - SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users try mRemoteNG so you can save you're connections.
 - Type: 
