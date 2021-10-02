@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T13:27:37.929Z
+date: 2021-10-02T13:42:30.066Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -74,8 +74,8 @@ nano RadarrInstall.sh
 ```shell
 #!/bin/bash
 #### Description: Radarr 3.2+ (.NET Core) Debian install
-#### Directory struture similar to Sonarr
 #### Written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10 v1.0
+#### Updates by: The Radarr Community
 
 ## Am I root, need root
 
@@ -87,6 +87,8 @@ fi
 ## Const
 
 RADARR_UID="radarr"
+RADARR_GUID="radarr"
+APP="radarr"
 BRANCH="master"
 
 ## Create radarr user and group if they don't exist
@@ -94,9 +96,9 @@ BRANCH="master"
 PASSCHK=$(grep -c ":$RADARR_UID:" /etc/passwd)
 if [ $PASSCHK -ge 1 ]
 	then
-	echo "UID: $RADARR_UID seems to exist skipping creation, ensure user $RADARR_UID and group $RADARR_UID are setup."
+	echo "UID: $RADARR_UID seems to exist. Skipping creation, ensure user $RADARR_UID with its's group $RADARR_UID are setup."
 else
-	echo "UID: $RADARR_UID and group with disabled password."
+	echo "UID: $RADARR_UID created with disabled password."
 	adduser --disabled-password --gecos "" $RADARR_UID
 fi
 
@@ -107,30 +109,37 @@ if service --status-all | grep -Fq 'radarr'; then
 	sytemctl disable  radarr.service
 fi
 
-## Create directories like Sonarr and change owner
+## Create Appdata Directory
 
-	## config
+	## AppData
 	mkdir -p /var/lib/radarr/
-	chown radarr:radarr -R /var/lib/radarr/
-	
-	## bin
-	mkdir -p /usr/lib/radarr
 	chown radarr:radarr -R /var/lib/radarr/
 	
 ## Download and install Radarr
 
 	## prerequisite packages:
 	apt install curl mediainfo sqlite3
-	cd /usr/lib/radarr
-	rm -rf bin
-	rm -rf Radarr
-	wget --content-disposition "http://radarr.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore&arch=x64"
-	tar -xvzf Radarr*.linux-core-x64.tar.gz
-	chown radarr:radarr -R /usr/lib/radarr/Radarr
-	mv Radarr bin
-	rm -rf Radarr*.linux-core-x64.tar.gz
+	rm -rf /opt/Radarr
+  ## remove existing installs
+  ARCH=dpkg --print-architecture
+  DL BASE="https://$APP.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
+    case "$ARCH" in
+        "amd64") DLURL="${urlbase}&arch=x64" ;;
+        "armhf") DLURL="${urlbase}&arch=arm" ;;
+        "arm64") DLURL="${urlbase}&arch=arm64" ;;
+        *)
+            echo_error "Arch not supported"
+            exit 1
+            ;;
+    esac
 
-##Configure Auot-start
+	wget --content-disposition "$DLURL"
+	tar -xvzf Radarr.*.tar.gz
+	mv Radarr /opt/
+  chown radarr:radarr -R /opt/Radarr
+	rm -rf Radarr.*.tar.gz
+
+##Configure Autostart
 
 	#Remove any previous radarr.service
 		rm -rf /etc/systemd/system/radarr.service
@@ -146,7 +155,7 @@ User=radarr
 Group=radarr
 UMask=0002
 Type=simple
-ExecStart=/usr/lib/radarr/bin/Radarr -nobrowser -data=/var/lib/radarr/
+ExecStart=/opt/Radarr -nobrowser -data=/var/lib/radarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
@@ -168,11 +177,9 @@ EOF
 		echo "Install complete"
         echo "Browse to http://$IP_LOCAL:7878 for the Radarr GUI"
 
-	
-```
-- Press Ctrl O (save)<enter>
-- Press Ctrl X (exit)<enter>
-- Type:
+- Press `Ctrl O` (save) then `Enter`
+- Press `Ctrl X` (exit) then `Enter`
+- Enter:
 ```shell
 bash Rada <tab>
 ```
@@ -190,9 +197,9 @@ bash RadarrInstall.sh
 ```
 ###### Root
 
-If you can't run the [install as root follow these instructions](https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password).
+If you can't run the [install as root then follow these instructions](https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password).
   
-#### Debian Hands on Install
+#### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
