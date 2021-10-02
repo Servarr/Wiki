@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T13:42:30.066Z
+date: 2021-10-02T14:08:24.095Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -53,17 +53,16 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 > The following is a community wrote script {.is-info}
 
-For the  Debian / Ubuntu beginners there isn't an apt-get package. If you want to go hands on follow the 'Debian / Ubuntu Hands on Install' steps below.
+For the  Debian / Ubuntu beginners there isn't an Apt Repository or Deb package. If you want to go hands on follow the 'Debian / Ubuntu Hands on Install' steps below.
 
 If you want an easy life follow this for a base Debian / Ubuntu / Raspian install:
-For other CPUs change arch= in the wget line to:
-
-- ARM and armh use ``arch=arm``
-- ARM64 use ``arch=arm64``
 
 ###### Easy Install
 
-> This will create the user `radarr` and install Radarr to /opt {.is-info}
+> This will create the user `radarr`and install Radarr to /opt {.is-info}
+
+> This will remove any existing Installations {.is-danger}
+
 - Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/) , it's Optional but will make your life easier.
 - SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users use Putty, mRemoteNG, or any other SSH tool so you can save your connections.
 - One SSHed in
@@ -88,8 +87,11 @@ fi
 
 RADARR_UID="radarr"
 RADARR_GUID="radarr"
-APP="radarr"
+app="radarr"
 BRANCH="master"
+app_port="7878"
+datadir="/var/lib/radarr/"
+bindir="/opt/{$app^}"
 
 ## Create radarr user and group if they don't exist
 
@@ -104,25 +106,25 @@ fi
 
 ## Stop Radarr if running
 
-if service --status-all | grep -Fq 'radarr'; then    
-	systemctl stop radarr   
-	sytemctl disable  radarr.service
+if service --status-all | grep -Fq '$app'; then    
+	systemctl stop $app   
+	sytemctl disable  $app.service
 fi
 
 ## Create Appdata Directory
 
 	## AppData
-	mkdir -p /var/lib/radarr/
-	chown radarr:radarr -R /var/lib/radarr/
+	mkdir -p $datadir
+	chown $RADARR_UID:$RADARR_UID -R $datadir
 	
 ## Download and install Radarr
 
 	## prerequisite packages:
 	apt install curl mediainfo sqlite3
-	rm -rf /opt/Radarr
+	rm -rf $bindir
   ## remove existing installs
   ARCH=dpkg --print-architecture
-  DL BASE="https://$APP.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
+  DL BASE="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
     case "$ARCH" in
         "amd64") DLURL="${urlbase}&arch=x64" ;;
         "armhf") DLURL="${urlbase}&arch=arm" ;;
@@ -134,28 +136,28 @@ fi
     esac
 
 	wget --content-disposition "$DLURL"
-	tar -xvzf Radarr.*.tar.gz
-	mv Radarr /opt/
-  chown radarr:radarr -R /opt/Radarr
-	rm -rf Radarr.*.tar.gz
+	tar -xvzf {$app^}.*.tar.gz
+	mv {$app^} /opt/
+  chown $RADARR_UID:$RADARR_UID -R $bindir
+	rm -rf {$app^}.*.tar.gz
 
 ##Configure Autostart
 
-	#Remove any previous radarr.service
-		rm -rf /etc/systemd/system/radarr.service
+	#Remove any previous app .service
+		rm -rf /etc/systemd/system/$app.service
 	
-	##Create radarr.service with correct user startup
+	##Create app .service with correct user startup
 	
-cat << EOF | tee /etc/systemd/system/radarr.service > /dev/null
+cat << EOF | tee /etc/systemd/system/$app.service > /dev/null
 [Unit]
-Description=Radarr Daemon
+Description={$app^} Daemon
 After=syslog.target network.target
 [Service]
-User=radarr
-Group=radarr
+User=$RADARR_UID
+Group=$RADARR_GUID
 UMask=0002
 Type=simple
-ExecStart=/opt/Radarr -nobrowser -data=/var/lib/radarr/
+ExecStart=$bindir -nobrowser -data=$datadir
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
@@ -166,8 +168,8 @@ EOF
 ##Start Radarr
 
 	systemctl -q daemon-reload
-	systemctl enable --now -q radarr
-	systemctl start radarr.service
+	systemctl enable --now -q $app
+	systemctl start $app.service
 
 ## Finish update
 
@@ -175,7 +177,7 @@ EOF
         IP_LOCAL=$(grep -oP '^\S*' <<< $HOST)
 		echo ""
 		echo "Install complete"
-        echo "Browse to http://$IP_LOCAL:7878 for the Radarr GUI"
+        echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
 
 - Press `Ctrl O` (save) then `Enter`
 - Press `Ctrl X` (exit) then `Enter`
@@ -187,7 +189,7 @@ which should auto complete the input to:
 ```
 bash RadarrInstall.sh
 ```
-- Browse to http://<your_ip>:7878 for the Radarr GUI- 
+- Browse to http://<your_ip>:7878 for the Radarr GUI
 - Configure Radarr and make a backup.
 
 If you need to re-install run again:
