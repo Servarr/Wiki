@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T02:38:51.695Z
+date: 2021-10-02T02:40:06.122Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -176,9 +176,8 @@ which should auto complete the input to:
 ```
 bash RadarrInstall.sh
 ```
-Then Browse to http://<your_ip>:7878 for the Radarr GUI
-
-Configure Radarr and make a backup.
+- Browse to http://<your_ip>:7878 for the Radarr GUI- 
+- Configure Radarr and make a backup.
 
 If you need to re-install run again:
 
