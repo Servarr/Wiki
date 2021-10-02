@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T02:40:06.122Z
+date: 2021-10-02T13:27:37.929Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -47,11 +47,13 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 ## Linux
 
-### Debian / Ubuntu / Raspian
+### Debian / Ubuntu
 
-#### Easy Install for x64 and a tweak for arm
+#### Easy Install for x64 and Arm
 
-For the  Debian / Ubuntu / Raspian beginners there isn't an apt-get package yet. If you want to go hands on follow the 'Debian / Ubuntu / Raspian Hands on Install' steps below.
+> The following is a community wrote script {.is-info}
+
+For the  Debian / Ubuntu beginners there isn't an apt-get package. If you want to go hands on follow the 'Debian / Ubuntu Hands on Install' steps below.
 
 If you want an easy life follow this for a base Debian / Ubuntu / Raspian install:
 For other CPUs change arch= in the wget line to:
@@ -60,10 +62,12 @@ For other CPUs change arch= in the wget line to:
 - ARM64 use ``arch=arm64``
 
 ###### Easy Install
+
+> This will create the user `radarr` and install Radarr to /opt {.is-info}
 - Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/) , it's Optional but will make your life easier.
-- SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users try mRemoteNG so you can save you're connections.
-- Type: 
-```
+- SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users use Putty, mRemoteNG, or any other SSH tool so you can save your connections.
+- One SSHed in
+```bash
 nano RadarrInstall.sh
 ```
 - Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user pasting could be as simple as right clicking.
@@ -71,7 +75,7 @@ nano RadarrInstall.sh
 #!/bin/bash
 #### Description: Radarr 3.2+ (.NET Core) Debian install
 #### Directory struture similar to Sonarr
-#### Written by: DoctorArr - doctorarr@the-rowlands.co.uk on 10-2021 v1.0
+#### Written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10 v1.0
 
 ## Am I root, need root
 
