@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-03T17:38:04.432Z
+date: 2021-10-03T23:08:48.707Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -47,15 +47,26 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 ## Linux
 
-### Debian / Ubuntu
+### Debian / Ubuntu / Raspian
 
-#### Easy Install for x64 and Arm
+#### Easy Install for x64 and Arm (as of October 2021)
 
-> The following is a community wrote script {.is-info}
+---
 
-For the Debian / Ubuntu beginners there isn't an Apt Repository or Deb package. If you want to go hands on follow the 'Debian / Ubuntu Hands on Install' steps below.
+> The following is a community written script. Please check back for an official package release. {.is-info}
 
-If you want an easy life, follow this for a base Debian / Ubuntu / Raspian install:
+For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
+
+If you want an easy life, follow this for a base Debian / Ubuntu / Raspian install.
+
+If you want to go 'Hands on' follow the 'Debian / Ubuntu / Raspian Hands on Install' further steps below.
+
+> Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience until Radarr is a grown up application!
+>
+> Its target is the beginner/novice with ‘I know enough to be dangerous’ experience.
+> If you see any errors or improvements then please update for the next person by amending the wiki and script.
+>
+> One day this script will be obsolete but is useful as of October 2021 Radar v3.2+. If you’re reading this in 2023/4 then something has gone wrong with the project! {.is-info}
 
 ###### Easy Install
 
@@ -69,7 +80,7 @@ If you want an easy life, follow this for a base Debian / Ubuntu / Raspian insta
 ```bash
 nano RadarrInstall.sh
 ```
-- Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user, pasting could be as simple as right clicking.
+- Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user, pasting could be as simple as 'right clicking'.
 
 ```
 #!/bin/bash
@@ -79,13 +90,12 @@ nano RadarrInstall.sh
 #### Orgianlly written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 #### Updates by: The Radarr Community
 #### Thanks to Bakerboy448 for the guidance and improved wiki and script
-#### For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience.
+#### Orginal author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
 #### It’s target is the beginner/novice with ‘I know enough to be dangerous’ experience.
-#### If you see an errors or improvements please update for the next person.
+#### If you see any errors or improvements please update for the next person.
 #### One day this script will be obsolete but is useful as of October 2021 Radar v3.2+
 
-
-## Am I root, need root
+## Am I root?, need root!
 
 if [ "$EUID" -ne 0 ]
     then echo "Please run as root. See https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password for help."
@@ -211,12 +221,12 @@ If you can't run the [install as root then follow these instructions](https://as
 
 ---
 
-#### Debian / Ubuntu Hands on Install
+#### Debian / Ubuntu / Raspian Hands on Install
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Radarr and install it into `/opt`.
-> Radarr will run under the user `radarr` and group `media`
+> The steps below will download Radarr and install it into `/opt` because it's not an offical package yet.
+> Radarr will run under the user `radarr` and group `media`; `media` so other Arrs feel like they belong!
 > Radarr's configuration files will be stored in `/var/lib/radarr`
 {.is-warning}
 
