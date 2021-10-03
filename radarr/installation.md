@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-02T14:16:39.439Z
+date: 2021-10-03T13:46:41.977Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -53,19 +53,19 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 > The following is a community wrote script {.is-info}
 
-For the  Debian / Ubuntu beginners there isn't an Apt Repository or Deb package. If you want to go hands on follow the 'Debian / Ubuntu Hands on Install' steps below.
+For the Debian / Ubuntu beginners there isn't an Apt Repository or Deb package. If you want to go hands on follow the 'Debian / Ubuntu Hands on Install' steps below.
 
-If you want an easy life follow this for a base Debian / Ubuntu / Raspian install:
+If you want an easy life, follow this for a base Debian / Ubuntu / Raspian install:
 
 ###### Easy Install
 
-> This will create the user `radarr`and install Radarr to /opt {.is-info}
+> This will create the user `radarr` and install Radarr to /opt {.is-info}
 
-> This will remove any existing Installations {.is-danger}
+> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Radarr. The script won't delete your settings but be safe. {.is-danger}
 
 - Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/) , it's Optional but will make your life easier.
 - SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users use Putty, mRemoteNG, or any other SSH tool so you can save your connections.
-- One SSHed in
+- Once SSHed in type
 ```bash
 nano RadarrInstall.sh
 ```
@@ -74,8 +74,14 @@ nano RadarrInstall.sh
 ```
 #!/bin/bash
 #### Description: Radarr 3.2+ (.NET Core) Debian install
-#### Written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10 v1.0
+#### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
+#### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
+#### Orgianlly written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 #### Updates by: The Radarr Community
+#### Thanks to Bakerboy448 for the guidance and improved wiki and script
+#### For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience. It’s target at the beginner/novice with ‘I know enough to be dangerous’ experience. If you see an errors or improvements please update for the next person.
+#### One day this script will be obsolete but is useful as of October 2021 Radar v3.2+
+
 
 ## Am I root, need root
 
@@ -109,7 +115,7 @@ fi
 
 if service --status-all | grep -Fq '$app'; then
     systemctl stop $app
-    sytemctl disable  $app.service
+    sytemctl disable $app.service
 fi
 
 ## Create Appdata Directory
@@ -120,12 +126,14 @@ fi
 
 ## Download and install Radarr
 
-    ## prerequisite packages:
+    ## prerequisite packages
+    
     apt install curl mediainfo sqlite3
     rm -rf $bindir
-  ## remove existing installs
-  ARCH=$(dpkg --print-architecture)
-  dlbase="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
+    
+    ## remove existing installs
+    ARCH=$(dpkg --print-architecture)
+    dlbase="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
     case "$ARCH" in
         "amd64") DLURL="${dlbase}&arch=x64" ;;
         "armhf") DLURL="${dlbase}&arch=arm" ;;
@@ -139,13 +147,14 @@ fi
     wget --content-disposition "$DLURL"
     tar -xvzf "{$app^}.*.tar.gz"
     mv "{$app^}" /opt/
-  chown $RADARR_UID:$RADARR_UID -R $bindir
+    chown $RADARR_UID:$RADARR_UID -R $bindir
     rm -rf "{$app^}.*.tar.gz"
 
 ##Configure Autostart
 
     #Remove any previous app .service
-        rm -rf /etc/systemd/system/$app.service
+    
+		rm -rf /etc/systemd/system/$app.service
 
     ##Create app .service with correct user startup
 
@@ -174,14 +183,14 @@ EOF
 
 ## Finish update
 
-        HOST=$(hostname -I)
-        IP_LOCAL=$(grep -oP '^\S*' <<< "$HOST")
-        echo ""
-        echo "Install complete"
-        echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
+		HOST=$(hostname -I)
+		IP_LOCAL=$(grep -oP '^\S*' <<< "$HOST")
+		echo ""
+		echo "Install complete"
+		echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
 ```
 
-- Press $(Ctrl O) (save) then `Enter`
+- Press `(Ctrl O)` (save) then `Enter`
 - Press `Ctrl X` (exit) then `Enter`
 - Enter:
 ```shell
@@ -197,7 +206,9 @@ bash RadarrInstall.sh
 ###### Root
 
 If you can't run the [install as root then follow these instructions](https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password).
-  
+
+---
+
 #### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
@@ -291,6 +302,7 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q radarr
+sudo systemctl start
 ```
 
 - (Optional) Remove the tarball:
@@ -298,6 +310,9 @@ sudo systemctl enable --now -q radarr
 ```shell
 rm Radarr*.linux*.tar.gz
 ```
+Typically to access the Radarr web GUI browse to http://{Your server IP Address}:7878
+
+---
 
 ## Docker
 
