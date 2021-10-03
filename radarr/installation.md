@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-03T13:49:29.472Z
+date: 2021-10-03T13:51:16.131Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -69,7 +69,7 @@ If you want an easy life, follow this for a base Debian / Ubuntu / Raspian insta
 ```bash
 nano RadarrInstall.sh
 ```
-- Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user pasting could be as simple as right clicking.
+- Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user, pasting could be as simple as right clicking.
 
 ```
 #!/bin/bash
