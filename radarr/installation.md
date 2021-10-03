@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-03T13:46:41.977Z
+date: 2021-10-03T13:49:29.472Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -79,7 +79,9 @@ nano RadarrInstall.sh
 #### Orgianlly written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 #### Updates by: The Radarr Community
 #### Thanks to Bakerboy448 for the guidance and improved wiki and script
-#### For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience. It’s target at the beginner/novice with ‘I know enough to be dangerous’ experience. If you see an errors or improvements please update for the next person.
+#### For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience.
+#### It’s target at the beginner/novice with ‘I know enough to be dangerous’ experience.
+#### If you see an errors or improvements please update for the next person.
 #### One day this script will be obsolete but is useful as of October 2021 Radar v3.2+
 
 
