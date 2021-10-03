@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-03T17:33:21.115Z
+date: 2021-10-03T17:38:04.432Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -192,9 +192,9 @@ EOF
 		echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
 ```
 
-- Press `(Ctrl O)` (save) then `Enter`
+- Press `Ctrl O` (save) then `Enter`
 - Press `Ctrl X` (exit) then `Enter`
-- Enter:
+- Then type:
 ```shell
 bash Rada <tab>
 ```
