@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-08-22T17:10:21.376Z
+date: 2021-10-04T01:39:27.377Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -111,6 +111,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 {#importlist}
 
+- CouchPotato {#couchpotatoimport}
 - Custom Lists {#radarrlistimport}
 - IMDb Lists {#imdblistimport}
   - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Radarr
