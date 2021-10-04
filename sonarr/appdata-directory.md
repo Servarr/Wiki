@@ -2,7 +2,7 @@
 title: Sonarr Appdata Directory
 description: 
 published: true
-date: 2021-08-31T01:19:27.934Z
+date: 2021-10-04T08:18:07.188Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:53:57.860Z
@@ -24,6 +24,14 @@ Unless otherwise specified Sonarr will store it's application data in the home f
 `/Users/$USER/.config/Sonarr (~/.config/Sonarr)`
 
 ## Synology
+
+If you are using the SynoCommunity package for Sonarr, this is where you should expect to find your appdata. If you are using Docker on your Synology NAS, look below in the Docker section.
+
+### DSM 7 and above
+
+`/volume1/@appdata/nzbdrone/.config/Sonarr`
+
+### DSM 6 and below
 
 `/volume1/@appstore/nzbdrone/.config/Sonarr`
 
