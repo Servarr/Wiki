@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-03T23:08:48.707Z
+date: 2021-10-04T00:30:50.783Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -47,7 +47,9 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 ## Linux
 
-### Debian / Ubuntu / Raspian
+### Debian / Ubuntu
+
+> Note Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
 #### Easy Install for x64 and Arm (as of October 2021)
 
@@ -57,25 +59,24 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
 
-If you want an easy life, follow this for a base Debian / Ubuntu / Raspian install.
+If you want an easy life, follow this for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
 
-If you want to go 'Hands on' follow the 'Debian / Ubuntu / Raspian Hands on Install' further steps below.
+If you want to go 'Hands on' follow the 'Debian (Raspbian / Raspberry Pi OS) / Ubuntu Hands on Install' further steps below.
 
-> Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience until Radarr is a grown up application!
+> Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience until Radarr eventually when a deb package / Apt Repo is created.
 >
 > Its target is the beginner/novice with ‘I know enough to be dangerous’ experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 >
-> One day this script will be obsolete but is useful as of October 2021 Radar v3.2+. If you’re reading this in 2023/4 then something has gone wrong with the project! {.is-info}
 
 ###### Easy Install
 
-> This will create the user `radarr` and install Radarr to /opt {.is-info}
+> This will create the user `radarr` and install Radarr to /opt. You will likely need to modify thr group (GUID) in the script to match the common group of your download clisnt snd media server.{.is-info}
 
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Radarr. The script won't delete your settings but be safe. {.is-danger}
 
-- Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/) , it's Optional but will make your life easier.
-- SSH into your Debian / Ubuntu / Raspian box as root (yes root more below), Windows users use Putty, mRemoteNG, or any other SSH tool so you can save your connections.
+- (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
+- SSH into your 'Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or login as root. SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.
 - Once SSHed in type
 ```bash
 nano RadarrInstall.sh
@@ -84,7 +85,7 @@ nano RadarrInstall.sh
 
 ```
 #!/bin/bash
-#### Description: Radarr 3.2+ (.NET Core) Debian install
+#### Description: Radarr 3.2+ (.NET) Debian install
 #### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 #### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 #### Orgianlly written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
@@ -93,7 +94,6 @@ nano RadarrInstall.sh
 #### Orginal author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
 #### It’s target is the beginner/novice with ‘I know enough to be dangerous’ experience.
 #### If you see any errors or improvements please update for the next person.
-#### One day this script will be obsolete but is useful as of October 2021 Radar v3.2+
 
 ## Am I root?, need root!
 
@@ -112,7 +112,7 @@ app_port="7878"
 datadir="/var/lib/radarr/"
 bindir="/opt/{$app^}"
 
-## Create radarr user and group if they don't exist
+## Create radarr user and radarr user group if they don't exist
 
 PASSCHK=$(grep -c ":$RADARR_UID:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]
@@ -135,6 +135,7 @@ fi
     ## AppData
     mkdir -p $datadir
     chown $RADARR_UID:$RADARR_UID -R $datadir
+    chmod 775 $datadir
 
 ## Download and install Radarr
 
@@ -145,6 +146,7 @@ fi
     
     ## remove existing installs
     ARCH=$(dpkg --print-architecture)
+    ## get arch
     dlbase="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
     case "$ARCH" in
         "amd64") DLURL="${dlbase}&arch=x64" ;;
@@ -221,7 +223,7 @@ If you can't run the [install as root then follow these instructions](https://as
 
 ---
 
-#### Debian / Ubuntu / Raspian Hands on Install
+#### Debian (Raspbian / Raspberry Pi OS) / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
