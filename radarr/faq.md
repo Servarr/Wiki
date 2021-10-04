@@ -2,8 +2,8 @@
 title: Radarr FAQ
 description: 
 published: true
-date: 2021-08-21T20:39:08.480Z
-tags: radarr, troubleshooting, faq, needs-love
+date: 2021-10-04T19:24:02.461Z
+tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
@@ -97,7 +97,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
     - the script should be triggered on import
     - it should be designed to move the file whenever you want it
     - it then needs to call the Radarr API and change the movie to unmonitored.
-- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder?
 
