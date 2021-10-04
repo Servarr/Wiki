@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-04T00:30:50.783Z
+date: 2021-10-04T00:31:14.803Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -55,7 +55,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 ---
 
-> The following is a community written script. Please check back for an official package release. {.is-info}
+> The following is a community written script.{.is-info}
 
 For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
 
