@@ -173,7 +173,7 @@ If Docker:
 - If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-lidarr)
 
-- This error may show if the database file is not writable by the user/group Readarr is running as.
+- This error may show if the database file is not writable by the user/group Lidarr is running as.
 
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#how-do-i-backup-and-restore-lidarr).
 
