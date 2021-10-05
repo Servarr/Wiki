@@ -8,7 +8,8 @@ editor: markdown
 dateCreated: 2021-10-03T16:48:28.241Z
 ---
 
-# TheXEM Moderation Guide
+## TheXEM Moderation Guide
+
 [TheXEM](https://thexem.info) is a service that allows making connections between other services/entities that use different numbering and naming schemes for TV series releases. Sonarr uses TVDB as a data source for its episode information and sometimes scene and other release groups will use a different naming or numbering scheme. With the proper mapping it is possible to make sure that episode 1 of season 1 by TVDB's reckoning matches episode 5 of season 1 by the scene's reckoning, so that Sonarr is able to download the correct episode despite the numbering being different.
 
 This guide is for people with an account on TheXEM and will walk you through some of the more common patterns that you may want to use. But first, we'll walk you through some of the basics.
@@ -19,7 +20,7 @@ As a convention, we use the same name that The TVDB uses for the show itself. Th
 
 Additionally it is possible to enter different aliases for the series name, which is mainly used for anime but occasionally useful for "regular" TV as well.
 
-## The different entity types
+## The different Entity types
 
 TheXEM has four different data sources or entity types that it currently supports and can connect with one another as and when needed. These four types are:
 
@@ -65,7 +66,7 @@ You can enable direct mapping by clicking the icon above the automatic mapping t
 
 The above is a lot to take in but all in all there are just a handful of use cases that cover the vast majority of all shows that you will ever need to add to TheXEM. The following are some very common types of mapping.
 
-### Basic anime mapping
+### Basic Anime mapping
 
 When mapping an anime show we always use the AniDB column. Whenever allowed at all by the mapping you're trying to achieve you should *always* aim to use full mapping between the Scene column and the AniDB column.
 

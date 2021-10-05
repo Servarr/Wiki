@@ -69,7 +69,7 @@ If you want to go 'Hands on' follow the 'Debian (Raspbian / Raspberry Pi OS) / U
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 >
 
-###### Easy Install
+##### Easy Install
 
 > This will create the user `radarr` and install Radarr to /opt. You will likely need to modify thr group (GUID) in the script to match the common group of your download clisnt snd media server.{.is-info}
 
@@ -78,12 +78,14 @@ If you want to go 'Hands on' follow the 'Debian (Raspbian / Raspberry Pi OS) / U
 - (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
 - SSH into your 'Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or login as root. SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.
 - Once SSHed in type
+
 ```bash
 nano RadarrInstall.sh
 ```
+
 - Copy and paste (Assuming most of you are in an GUI OS such as Windows or MacOS (OSX)): Windows user, pasting could be as simple as 'right clicking'.
 
-```
+```bash
 #!/bin/bash
 #### Description: Radarr 3.2+ (.NET) Debian install
 #### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
@@ -168,7 +170,7 @@ fi
 
     #Remove any previous app .service
     
-		rm -rf /etc/systemd/system/$app.service
+  rm -rf /etc/systemd/system/$app.service
 
     ##Create app .service with correct user startup
 
@@ -197,26 +199,29 @@ EOF
 
 ## Finish update
 
-		HOST=$(hostname -I)
-		IP_LOCAL=$(grep -oP '^\S*' <<< "$HOST")
-		echo ""
-		echo "Install complete"
-		echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
+  HOST=$(hostname -I)
+  IP_LOCAL=$(grep -oP '^\S*' <<< "$HOST")
+  echo ""
+  echo "Install complete"
+  echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
 ```
 
 - Press `Ctrl O` (save) then `Enter`
 - Press `Ctrl X` (exit) then `Enter`
 - Then type:
+
 ```shell
 bash Rada <tab>
 ```
+
 - This should autocomplete to RadarrInstall.sh
 
 If you need to re-install run again:
 
-```
+```bash
 bash RadarrInstall.sh
 ```
+
 ###### Root
 
 If you can't run the [install as root then follow these instructions](https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password).
@@ -324,7 +329,8 @@ sudo systemctl start
 ```shell
 rm Radarr*.linux*.tar.gz
 ```
-Typically to access the Radarr web GUI browse to http://{Your server IP Address}:7878
+
+Typically to access the Radarr web GUI browse to <http://{Your> server IP Address}:7878
 
 ---
 
