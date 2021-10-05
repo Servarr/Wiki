@@ -2,7 +2,7 @@
 title: Readarr Contributing
 description: 
 published: true
-date: 2021-08-15T13:12:43.619Z
+date: 2021-10-05T01:18:15.947Z
 tags: readarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-25T19:21:59.324Z
@@ -14,7 +14,7 @@ We're always looking for people to help make Readarr even better, there are a nu
 
 ## Documentation
 
-Setup guides, FAQ, the more information we have on the [wiki](https://wiki.servarr.com/readarr) the better.
+Setup guides, [FAQ](/readarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/readarr) the better.
 
 ## Development
 
@@ -34,7 +34,7 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
   - **14.0** or later
 {.grid-list}
 
-> Readarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below `12.0`
+> Readarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/) is required to build the frontend
@@ -42,7 +42,10 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
 ### Getting started
 
 1. Fork Readarr
-1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
+1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+> Be sure to run lint `yarn lint --fix` on your code for any front end changes before comitting.
+For css changes `yarn stylelint-windows --fix` {.is-info}
 
 #### Building the frontend
 
