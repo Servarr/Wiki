@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-10-05T01:15:51.447Z
+date: 2021-10-05T01:17:32.880Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -34,7 +34,7 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
   - **14.0** or later
 {.grid-list}
 
-> Radarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below `12.0`
+> Radarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/) is required to build the frontend
@@ -42,7 +42,7 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
 ### Getting started
 
 1. Fork Radarr
-1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
+1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 > Be sure to run lint `yarn lint --fix` on your code for any front end changes before comitting.
 For css changes `yarn stylelint-windows --fix` {.is-info}
