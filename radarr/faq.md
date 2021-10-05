@@ -318,17 +318,16 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 ## I am getting an error: Database disk image is malformed
 
-- This means your SQLite database that stores most of the information for is corrupt.
-
+- This means your SQLite database that stores most of the information for Radarr is corrupt.
+- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
-- You can follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
-- Alternatively, there is guide here to copy the contents from the corrupt database into a new one: <http://techblog.dorogin.com/2011/05/SQLiteexception-database-disk-image-is.html>
 
-- This error may show if the database file is not writable by the user/group Radarr is running as.
+- This error may show if the database file is not writable by the user/group Readarr is running as.
 
-- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#restoring-from-backup).
+- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#how-do-i-backup-and-restore-radarr).
 
-  - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
+- If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
 ## I use Radarr on a Mac and it suddenly stopped working. What happened?
 

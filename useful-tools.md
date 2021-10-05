@@ -20,6 +20,8 @@ Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidar
 
 #### Recovering a Corrupt DB
 
+> Note this effectively does the same as `.recover` | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
+
 1. Make a copy of your corrupt DB
 1. Open your corrupt DB in DB Browser for SQLite
 1. File -> Export -> Export DB to SQL file
