@@ -440,7 +440,7 @@ These are some of the common errors you may see when adding an indexer
 
 #### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Radarr => System => Status](/radarr/system/status).
+This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Radarr => System => Status](/radarr/system#status).
 
 #### The request timed out
 
