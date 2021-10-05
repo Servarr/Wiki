@@ -36,21 +36,24 @@ If you're linked here for support remember to get them the information from the 
 >
 >- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
 >- **Do ensure [Logging](/sonarr/settings#logging) is set to Trace (or Debug if requested).**
+>- **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
 >- **Do ensure the logs you provide capture the issue**
 
-What you need to do is:
+To provide good and useful logs for sharing:
 
-1. Turn Logging up to Trace
-1. Clear Logs
-1. Reproduce the Issue
-1. Open the trace log file (sonarr.trace.txt) and find the relevant context
-1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+1. [Turn Logging up to Trace](#tracedebug-logs)
+1. [Clear Logs](#clearing-logs)
+1. Reproduce the Issue (Redo what is breaking things)
+1. [Open the trace log file (sonarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
+1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/) to share the issue from above
 
-> Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.{.is-info}
-> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.{.is-info}
+> Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.
+> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+{.is-info}
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/sonarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/sonarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```none
 
@@ -65,39 +68,40 @@ What you need to do is:
 
 ### Standard Logs Location
 
-The log files are located in sonarr's [Appdata Directory](/sonarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
+The log files are located in Sonarr's [Appdata Directory](/sonarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
-Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
+> Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
+{.is-info}
 
 ### Update Logs Location
 
-The update log files are located in sonarr's [Appdata Directory](/sonarr/appdata-directory), inside the UpdateLogs/ folder.
+The update log files are located in Sonarr's [Appdata Directory](/sonarr/appdata-directory), inside the UpdateLogs/ folder.
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Do not forget to wait for spammy tasks like an RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site. The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Do not forget to wait for spammy tasks like an RSS sync or library refresh to finish.
 
 ### Trace/Debug Logs
 
-You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `r.trace.txt` respectively.
+You can change the log level at Settings => General => Logging. Sonarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `sonarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
 ```xml
  <Config>
-  ...
+  [...]
   <LogLevel>debug</LogLevel>
-  ...
+  [...]
  </Config>
 ```
 
 ### Clearing Logs
 
-You can clear log files and the logs database directly from the UI, under System -> Logs -> Files and System -> Logs -> Delete (Trash Can Icon)
+You can clear log files and the logs database directly from the UI, under System => Logs => Files and System => Logs => Delete (Trash Can Icon)
 
-### Log Files
+## Multiple Log Files
 
- Sonarr uses rolling log files limited to 1MB each. The current log file is always ,`sonarr.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
+ Sonarr uses rolling log files limited to 1MB each. The current log file is always ,`sonarr.txt`, for the the other files `sonarr.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
 When Debug log level is enabled, additional `sonarr.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
@@ -111,7 +115,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/sonarr/settings#logging) and [Log Files](/sonarr/system#log-files) to find them and increase the log level.
 
-- **Migration Issue**
+#### Migration Issue
 
 - Migration errors will not be identical, but here is an example:
 
@@ -124,15 +128,17 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ```
 
-#### Resolving the issue
+### Resolving the issue
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/sonarr> our subreddit or swing by our [discord](https://discord.gg/M6BvZn5), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/readarr> our subreddit or swing by our [discord](https://readarr.com/discord), if there are others with the same issue, then rest assured we are working on it.
+
+> Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
 
 #### Manually upgrading
 
-Grab the latest release from <https://sonarr.com>
+Grab the latest release from our website.
 
-Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run as you normally would.
+Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run Sonarr as you normally would.
 
 ## Downloads and Importing
 
@@ -441,6 +447,8 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 
 ### Common Problems
 
+Below are some common problems.
+
 #### Series needs an alias
 
 Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences.  Please see [this FAQ entry](https://wiki.servarr.com/sonarr/faq#why-cannot-sonarr-import-episode-files-for-series-x-why-cannot-sonarr-find-releases-for-series-x)
@@ -518,7 +526,7 @@ These are some of the common errors you may see when adding an indexer
 
 #### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Sonarr -> System -> Status](/sonarr/system/status).
+This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Sonarr => System => Status](/sonarr/system/status).
 
 #### The request timed out
 
@@ -549,3 +557,7 @@ This can also be caused by:
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
+
+#### Problem Not Listed
+
+Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.

@@ -36,76 +36,76 @@ If you're linked here for support remember to get them the information from the 
 >
 >- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
 >- **Do ensure [Logging](/radarr/settings#logging) is set to Trace (or Debug if requested).**
+>- **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
 >- **Do ensure the logs you provide capture the issue**
 
-What you need to do is:
+To provide good and useful logs for sharing:
 
-1. Turn Logging up to Trace
-1. Clear Logs
-1. Reproduce the Issue
-1. Open the trace log file (radarr.trace.txt) and find the relevant context
-1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/), or any other pastebin type site a big chunk before the issue, the issue, and a big chunk after the issue.
+1. [Turn Logging up to Trace](#tracedebug-logs)
+1. [Clear Logs](#clearing-logs)
+1. Reproduce the Issue (Redo what is breaking things)
+1. [Open the trace log file (radarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
+1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/) to share the issue from above
 
-> Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.{.is-info}
-> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.{.is-info}
+> Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.
+> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+{.is-info}
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- Unix Only: Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie or show "Shooter" you can run the following command:
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/radarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
-`grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`
+```none
 
-If your Appdata Directory is in your home folder then you'd run:
+    * The flags have the following functions
+    * -i: ignore case
+    * -n: show line number
+    *  -r: recursively check all files in the path
+    * -C: provide # of lines before and after the line it is found on
+    * -e: the pattern to search for
 
-`grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
-
-The flags have the following functions:
-
-- -i: ignore case
-- -n: show line number
-- -r: recursively check all files in the path
-- -C: provide ## of lines before and after the line it is found on
-- -e: the pattern to search for
+```
 
 ### Standard Logs Location
 
-The log files are located in radarr's [Appdata Directory](/radarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System -> Logs -> Files.
+The log files are located in Radarr's [Appdata Directory](/radarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
 > Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 {.is-info}
 
 ### Update Logs Location
 
-The update log files are located in radarr's [Appdata Directory](/radarr/appdata-directory), inside the UpdateLogs/ folder.
+The update log files are located in Radarr's [Appdata Directory](/radarr/appdata-directory), inside the UpdateLogs/ folder.
 
 ### Sharing Logs
 
-The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site . The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Do not forget to wait for spammy tasks like an RSS sync or library refresh to finish.
+The logs can be long and hard to read as part of a forum or Reddit post and they're spammy in Discord, so please use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or any other similar pastebin site. The whole file typically isn't needed, just a good amount of context from before and after the issue/error. Do not forget to wait for spammy tasks like an RSS sync or library refresh to finish.
 
 ### Trace/Debug Logs
 
-You can change the log level at Settings -> General -> Logging.  does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `radarr.debug.txt` and `radarr.trace.txt` respectively.
+You can change the log level at Settings => General => Logging. Radarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `radarr.debug.txt` and `radarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
 ```xml
  <Config>
-  ...
+  [...]
   <LogLevel>debug</LogLevel>
-  ...
+  [...]
  </Config>
 ```
 
 ### Clearing Logs
 
-You can clear log files and the logs database directly from the UI, under System -> Logs -> Files and System -> Logs -> Delete (Trash Can Icon)
+You can clear log files and the logs database directly from the UI, under System => Logs => Files and System => Logs => Delete (Trash Can Icon)
 
-### Log Files
+## Multiple Log Files
 
- Radar uses rolling log files limited to 1MB each. The current log file is always ,`.txt`, for the the other files `.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
+Radarr uses rolling log files limited to 1MB each. The current log file is always ,`radarr.txt`, for the the other files `radarr.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
-When Debug log level is enabled, additional `.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
+When Debug log level is enabled, additional `radarr.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
-When Trace log level is enabled, additional `.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+When Trace log level is enabled, additional `radarr.trace.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
 
 ## Recovering from a Failed Update
 
@@ -115,7 +115,9 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 - The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/radarr/settings#logging) and [Log Files](/radarr/system#log-files) to find them and increase the log level.
 
-- **Migration Issue** - Migration errors will not be identical, but here is an example:
+#### Migration Issue
+
+- Migration errors will not be identical, but here is an example:
 
 ```none
 14-2-4 18:56:49.5|Info|MigrationLogger|\*\*\* 36: update\_with\_quality\_converters migrating \*\*\*
@@ -128,13 +130,15 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### Resolving the issue
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/radarr> our subreddit or swing by our [discord](https://radarr.video/discord), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/readarr> our subreddit or swing by our [discord](https://readarr.com/discord), if there are others with the same issue, then rest assured we are working on it.
 
-### Manually upgrading
+> Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
 
-Grab the latest release from <https://radarr.video>
+#### Manually upgrading
 
-Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run as you normally would.
+Grab the latest release from our website.
+
+Install the update (.exe) or extract (.zip) the contents over your existing installation and re-run Radarr as you normally would.
 
 ## Downloads and Importing
 
@@ -161,6 +165,8 @@ Incorrect path issues are possible too, though less common in normal setups. The
 
 ### Common Problems
 
+Below are some common problems.
+
 #### Download Client's WebUI is not enabled
 
 Radarr talks to you download client via it's API and accesses it via the client's webui. You must ensure the client's webui is enabled and the port it is using does not conflict with any other client ports in use or ports in use on your system.
@@ -183,7 +189,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 #### Remote Path Mapping
 
-A remote path mapping is used when your download client is reporting a path for completed data either on aother server or in a way that Radarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+A remote path mapping is used when your download client is reporting a path for completed data either on aother server or in a way that Readarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
 
 #### Permissions on the Library Folder
 
@@ -231,9 +237,23 @@ For SABnzbd, this is handled with the History Retention setting.
 
 #### Download cannot be matched to a library item
 
-For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity -> Options -> Shown Unknown will display all items not otherwise ignored / already imported within *Arr's download client category. These will typically need to be manually mapped and imported.
+For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Shown Unknown will display all items not otherwise ignored / already imported within *Arr's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
+
+#### Connection Timed Out
+
+`The request timed out`
+
+Radarr is getting no response from the client.
+
+This is typically caused by:
+
+- improperly configured or use of a VPN
+- improperly configured or use of a proxy
+- local DNS issues
+- local IPv6 issues - typically IPv6 is enabled, but non-functional
+- the use of Privoxy
 
 ### Problem Not Listed
 
@@ -331,191 +351,14 @@ In this test, you’ll be looking for obvious errors and running some simple tes
 <newznab:attr name="size" value="9746182000"/>
 <newznab:attr name="guid" value="a0fe801d9ba0a703db7d2164e996aa1f"/>
 </item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.BRRip.XviD-BS5</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=b4c5712590bd1185bacef1d8c854f3fd&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=b4c5712590bd1185bacef1d8c854f3fd&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=b4c5712590bd1185bacef1d8c854f3fd</comments>
-<pubDate>Mon, 21 Oct 2013 13:49:50 +0000</pubDate>
-<category>Movies > SD</category>
-<description>O.Brother.Where.Art.Thou.2000.BRRip.XviD-BS5</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=b4c5712590bd1185bacef1d8c854f3fd&apikey=(removed)" length="1780257000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2030"/>
-<newznab:attr name="size" value="1780257000"/>
-<newznab:attr name="guid" value="b4c5712590bd1185bacef1d8c854f3fd"/>
-</item>
-<item>
-<title>O Brother, Where Art Thou? 2000 1080p ITA Blu-ray VC-1 DTS-HD MA 5.1-CtrlHD</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=116a67627bede54900a6ec82fa0d90ca&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=116a67627bede54900a6ec82fa0d90ca&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=116a67627bede54900a6ec82fa0d90ca</comments>
-<pubDate>Thu, 26 Sep 2013 02:45:52 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O Brother, Where Art Thou? 2000 1080p ITA Blu-ray VC-1 DTS-HD MA 5.1-CtrlHD</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=116a67627bede54900a6ec82fa0d90ca&apikey=(removed)" length="14745390000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="14745390000"/>
-<newznab:attr name="guid" value="116a67627bede54900a6ec82fa0d90ca"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.720p.Bluray.X264-BARC0DE</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=18292dc7f8878874cb69aa2bdba7217a&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=18292dc7f8878874cb69aa2bdba7217a&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=18292dc7f8878874cb69aa2bdba7217a</comments>
-<pubDate>Wed, 17 Apr 2013 14:32:28 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O.Brother.Where.Art.Thou.2000.720p.Bluray.X264-BARC0DE</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=18292dc7f8878874cb69aa2bdba7217a&apikey=(removed)" length="7721375000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="7721375000"/>
-<newznab:attr name="guid" value="18292dc7f8878874cb69aa2bdba7217a"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.iNTERNAL.DVDRip.XviD-MULTiPLY</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=a5d2c984574b91ec84b944514188ad36&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=a5d2c984574b91ec84b944514188ad36&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=a5d2c984574b91ec84b944514188ad36</comments>
-<pubDate>Mon, 15 Apr 2013 05:30:24 +0000</pubDate>
-<category>Movies > SD</category>
-<description>O.Brother.Where.Art.Thou.2000.iNTERNAL.DVDRip.XviD-MULTiPLY</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=a5d2c984574b91ec84b944514188ad36&apikey=(removed)" length="1716608000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2030"/>
-<newznab:attr name="size" value="1716608000"/>
-<newznab:attr name="guid" value="a5d2c984574b91ec84b944514188ad36"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=0ab52e14a78fdf02913c07f2d2ab9f7d&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=0ab52e14a78fdf02913c07f2d2ab9f7d&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=0ab52e14a78fdf02913c07f2d2ab9f7d</comments>
-<pubDate>Sat, 13 Apr 2013 22:09:57 +0000</pubDate>
-<category>Movies > SD</category>
-<description>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=0ab52e14a78fdf02913c07f2d2ab9f7d&apikey=(removed)" length="1693765000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2030"/>
-<newznab:attr name="size" value="1693765000"/>
-<newznab:attr name="guid" value="0ab52e14a78fdf02913c07f2d2ab9f7d"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.MULTi.COMPLETE.BLURAY-FULLSiZE</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=9a243b018b5f4cdf57494f76e6ef442e&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=9a243b018b5f4cdf57494f76e6ef442e&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=9a243b018b5f4cdf57494f76e6ef442e</comments>
-<pubDate>Sat, 26 May 2012 06:16:15 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O.Brother.Where.Art.Thou.MULTi.COMPLETE.BLURAY-FULLSiZE</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=9a243b018b5f4cdf57494f76e6ef442e&apikey=(removed)" length="35592757000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="35592757000"/>
-<newznab:attr name="guid" value="9a243b018b5f4cdf57494f76e6ef442e"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.German.720p.BluRay.x264-DETAiLS</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=a3a74f843ca0f508661a274cef3accbc&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=a3a74f843ca0f508661a274cef3accbc&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=a3a74f843ca0f508661a274cef3accbc</comments>
-<pubDate>Sun, 08 Apr 2012 22:15:13 +0000</pubDate>
-<category>Movies > Foreign</category>
-<description>O.Brother.Where.Art.Thou.2000.German.720p.BluRay.x264-DETAiLS</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=a3a74f843ca0f508661a274cef3accbc&apikey=(removed)" length="3158258000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2010"/>
-<newznab:attr name="size" value="3158258000"/>
-<newznab:attr name="guid" value="a3a74f843ca0f508661a274cef3accbc"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.720p.BluRay.DD5.1.x264-EbP</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=12f6a26918ad984270312e0cf8cca77d&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=12f6a26918ad984270312e0cf8cca77d&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=12f6a26918ad984270312e0cf8cca77d</comments>
-<pubDate>Thu, 19 Jan 2012 14:06:18 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O.Brother.Where.Art.Thou.2000.720p.BluRay.DD5.1.x264-EbP</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=12f6a26918ad984270312e0cf8cca77d&apikey=(removed)" length="5516285000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="5516285000"/>
-<newznab:attr name="guid" value="12f6a26918ad984270312e0cf8cca77d"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.MULTi.1080p.BluRay.x264-HDZ</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=3c40226dd763afaeac6453801d23ab9c&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=3c40226dd763afaeac6453801d23ab9c&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=3c40226dd763afaeac6453801d23ab9c</comments>
-<pubDate>Mon, 24 Oct 2011 04:21:51 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O.Brother.Where.Art.Thou.2000.MULTi.1080p.BluRay.x264-HDZ</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=3c40226dd763afaeac6453801d23ab9c&apikey=(removed)" length="14973693000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="14973693000"/>
-<newznab:attr name="guid" value="3c40226dd763afaeac6453801d23ab9c"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.1080p.BluRay.X264-AMIABLE</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=1643c3b2996de1824675ede214cc8cc3&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=1643c3b2996de1824675ede214cc8cc3&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=1643c3b2996de1824675ede214cc8cc3</comments>
-<pubDate>Wed, 31 Aug 2011 20:25:44 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O.Brother.Where.Art.Thou.2000.1080p.BluRay.X264-AMIABLE</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=1643c3b2996de1824675ede214cc8cc3&apikey=(removed)" length="9452909000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="9452909000"/>
-<newznab:attr name="guid" value="1643c3b2996de1824675ede214cc8cc3"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.720p.BluRay.X264-AMIABLE</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=13d48effa81b1d457be31b93ada7f5fb&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=13d48effa81b1d457be31b93ada7f5fb&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=13d48effa81b1d457be31b93ada7f5fb</comments>
-<pubDate>Mon, 29 Aug 2011 16:04:28 +0000</pubDate>
-<category>Movies > BluRay</category>
-<description>O.Brother.Where.Art.Thou.2000.720p.BluRay.X264-AMIABLE</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=13d48effa81b1d457be31b93ada7f5fb&apikey=(removed)" length="5125894000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2050"/>
-<newznab:attr name="size" value="5125894000"/>
-<newznab:attr name="guid" value="13d48effa81b1d457be31b93ada7f5fb"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=bcdb8219eb87063a0d49aa35aa45ca75&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=bcdb8219eb87063a0d49aa35aa45ca75&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=bcdb8219eb87063a0d49aa35aa45ca75</comments>
-<pubDate>Sun, 20 Mar 2011 17:16:49 +0000</pubDate>
-<category>Movies > SD</category>
-<description>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-TNS</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=bcdb8219eb87063a0d49aa35aa45ca75&apikey=(removed)" length="1682357000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2030"/>
-<newznab:attr name="size" value="1682357000"/>
-<newznab:attr name="guid" value="bcdb8219eb87063a0d49aa35aa45ca75"/>
-</item>
-<item>
-<title>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-T</title>
-<guid isPermaLink="true">https://api.nzbgeek.info/api?t=details&id=f22f3b8b55a717df57953d2e46688f6e&apikey=(removed)</guid>
-<link>https://api.nzbgeek.info/api?t=get&id=f22f3b8b55a717df57953d2e46688f6e&apikey=(removed)</link>
-<comments>https://nzbgeek.info/geekseek.php?guid=f22f3b8b55a717df57953d2e46688f6e</comments>
-<pubDate>Mon, 14 Mar 2011 18:23:05 +0000</pubDate>
-<category>Movies > SD</category>
-<description>O.Brother.Where.Art.Thou.2000.INTERNAL.REPACK.DVDRip.XviD-T</description>
-<enclosure url="https://api.nzbgeek.info/api?t=get&id=f22f3b8b55a717df57953d2e46688f6e&apikey=(removed)" length="1844957000" type="application/x-nzb"/>
-<newznab:attr name="category" value="2000"/>
-<newznab:attr name="category" value="2030"/>
-<newznab:attr name="size" value="1844957000"/>
-<newznab:attr name="guid" value="f22f3b8b55a717df57953d2e46688f6e"/>
-</item>
 </channel>
 </rss>
 ```
+
+***Images needed***
+
+![searches-indexers-and-trackers1.png](/assets/readarr/searches-indexers-and-trackers1.png)
+![searches-indexers-and-trackers2.png](/assets/readarr/searches-indexers-and-trackers2.png)
 
 - Trace Log Snippet
 
@@ -543,7 +386,7 @@ Incorrect categories is probably the most common cause of results showing in man
 
 #### Wrong results
 
-Sometimes indexers will return completely unrelated results,  will feed in parameters to limit the search to a , but the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
+Sometimes indexers will return completely unrelated results, Radarr will feed in parameters to limit the search to a , but the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
 
 #### Certificate validation
 
@@ -554,6 +397,10 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
 
 Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
+
+#### IP Ban
+
+Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address.  This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.
 
 #### Year doesn't match
 
@@ -581,7 +428,11 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 
 #### Using NZBHydra2 as a single entry
 
-Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Sonarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Radarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Radarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+
+#### Problem Not Listed
+
+Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 ### Errors
 
@@ -589,7 +440,7 @@ These are some of the common errors you may see when adding an indexer
 
 #### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Radarr -> System -> Status](/radarr/system/status).
+This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Radarr => System => Status](/radarr/system/status).
 
 #### The request timed out
 
@@ -619,6 +470,7 @@ This can also be caused by:
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
+- the use of Privoxy
 
 #### Problem Not Listed
 
