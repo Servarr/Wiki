@@ -2,7 +2,7 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-07-10T16:05:49.469Z
+date: 2021-10-05T02:09:10.507Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
@@ -19,7 +19,7 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 ### On Grab
 
 | Environment Variable                 | Details                                                                                      |
-| ------------------------------------ | -------------------------------------------------------------------------------------------- |
+|--------------------------------------|----------------------------------------------------------------------------------------------|
 | `radarr_eventtype`                   | `Grab`                                                                                       |
 | `radarr_download_client`             | Download client (empty if unknown)                                                           |
 | `radarr_download_id`                 | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
@@ -62,22 +62,27 @@ Radarr can execute a custom script when movies are imported or renamed. Dependin
 | `radarr_moviefile_scenename`         | Original release name (empty if unknown)                                                     |
 | `radarr_moviefile_sourcepath`        | Full path to the imported movie file                                                         |
 | `radarr_moviefile_sourcefolder`      | Full path to the folder the movie file was imported from                                     |
-| `radarr_deletedrelativepaths`        | `\|`-delimited list of files that were deleted to import this file                           |
-| `radarr_deletedpaths`                | `\|`-delimited list of full paths to files that were deleted to import this file             |
+| `radarr_deletedrelativepaths`        | `|`-delimited list of files that were deleted to import this file                           |
+| `radarr_deletedpaths`                | `|`-delimited list of full paths to files that were deleted to import this file             |
 
 ### On Rename
 
-| Environment Variable                 | Details                                  |
-| ------------------------------------ | ---------------------------------------- |
-| `radarr_eventtype`                   | Rename                                   |
-| `radarr_movie_id`                    | Internal ID of the movie                 |
-| `radarr_movie_imdbid`                | IMDb ID for the movie (empty if unknown) |
-| `radarr_movie_in_cinemas_date`       | Cinema release date (empty if unknown)   |
-| `radarr_movie_path`                  | Full path to the movie                   |
-| `radarr_movie_physical_release_date` | Physical release date (empty if unknown) |
-| `radarr_movie_title`                 | Title of the movie                       |
-| `radarr_movie_tmdbid`                | TMDb ID for the movie                    |
-| `radarr_movie_year`                  | Release year of the movie                |
+| Environment Variable                     | Details                                          |
+|------------------------------------------|--------------------------------------------------|
+| `radarr_eventtype`                       | `Rename`                                         |
+| `radarr_movie_id`                        | Internal ID of the movie                         |
+| `radarr_movie_title`                     | Title of the movie                               |
+| `radarr_movie_year`                      | Release year of the movie                        |
+| `radarr_movie_path`                      | Full path to the movie                           |
+| `radarr_movie_imdbid`                    | IMDb ID for the movie (empty if unknown)         |
+| `radarr_movie_tmdbid`                    | TMDb ID for the movie                            |
+| `radarr_movie_in_cinemas_date`           | Cinema release date (empty if unknown)           |
+| `radarr_movie_physical_release_date`     | Physical/Web release date (empty if unknown)     |
+| `radarr_moviefile_ids`                   | `,`-delimited list of file ID(s)                     |
+| `radarr_moviefile_relativepaths`         | `|`-delimited list of relative path(s)          |
+| `radarr_moviefile_paths`                 | `|`-delimited list of path(s)                   |
+| `radarr_moviefile_previousrelativepaths` | `|`-delimited list of previous relative path(s) |
+| `radarr_moviefile_previouspaths`         | `|`-delimited list of previous path(s)          |
 
 ### On Health Check
 
