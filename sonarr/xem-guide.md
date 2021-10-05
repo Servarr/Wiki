@@ -2,7 +2,7 @@
 title: TheXEM Moderation Guide
 description: Guide for how to map various scenarios in XEM for optimal use with Sonarr and other PVR software.
 published: true
-date: 2021-10-05T00:11:04.956Z
+date: 2021-10-05T15:41:48.487Z
 tags: sonarr, xem
 editor: markdown
 dateCreated: 2021-10-03T16:48:28.241Z
@@ -36,7 +36,7 @@ A proper XEM mapping for a particular show should *at the very least* have an en
 
 ## Mapping types
 
-TheXEM has three different automatic options options for connecting different entities with one another: SxxExx mapping, absolute mapping and the combination of both, full mapping. Additionally you can also directly map episodes onto one another using direct mapping. Each of these has its own use and is useful in particular situations.
+TheXEM has three different automatic options for connecting different entities with one another: SxxExx mapping, absolute mapping and the combination of both, full mapping. Additionally you can also directly map episodes onto one another using direct mapping. Each of these has its own use and is useful in particular situations.
 
 ### ![SxxExx mapping](/assets/sonarr/xem-guide/mapping-sxxexx.svg) SxxExx mapping
 
