@@ -2,7 +2,7 @@
 title: Radarr Contributing
 description: 
 published: true
-date: 2021-07-31T14:59:14.183Z
+date: 2021-10-05T01:15:51.447Z
 tags: radarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
@@ -14,7 +14,7 @@ We're always looking for people to help make Radarr even better, there are a num
 
 ## Documentation
 
-Setup guides, FAQ, the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
+Setup guides, [FAQ](/radarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
 
 ## Development
 
@@ -43,6 +43,9 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
 
 1. Fork Radarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
+
+> Be sure to run lint `yarn lint --fix` on your code for any front end changes before comitting.
+For css changes `yarn stylelint-windows --fix` {.is-info}
 
 #### Building the frontend
 
