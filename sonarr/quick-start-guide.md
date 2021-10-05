@@ -2,12 +2,11 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-09-03T19:14:22.283Z
+date: 2021-10-05T22:35:41.495Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
 ---
-
 
 ## Quick Start Setup Guide
 
@@ -81,7 +80,7 @@ Add at least one indexer in order for Sonarr to work properly.
 
 [More Info](/sonarr/supported#indexers)
 
-### Download Clients
+## Download Clients
 
 `Settings` => `Download Clients`
 
