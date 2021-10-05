@@ -51,7 +51,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 > Note Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
-#### Easy Install for x64 and Arm (as of October 2021)
+#### Easy Install
 
 ---
 
@@ -61,19 +61,18 @@ For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb
 
 If you want an easy life, follow this for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
 
-If you want to go 'Hands on' follow the 'Debian (Raspbian / Raspberry Pi OS) / Ubuntu Hands on Install' further steps below.
+If you want to go 'Hands on' follow the 'Debian / Ubuntu Hands on Install' further steps below.
 
 > Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Radarr install experience until Radarr eventually when a deb package / Apt Repo is created.
 >
-> Its target is the beginner/novice with ‘I know enough to be dangerous’ experience.
+> Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
->
 
 ##### Easy Install
 
-> This will create the user `radarr` and install Radarr to /opt. You will likely need to modify thr group (GUID) in the script to match the common group of your download clisnt snd media server.{.is-info}
+> This will create the user `radarr` and install Radarr to /opt. You will likely need to modify the group (GUID) in the script to match the common group of your download clisnt and media server.{.is-info}
 
-> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Radarr. The script won't delete your settings but be safe. {.is-danger}
+> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Radarr. The script won't delete your settings, but be safe. {.is-danger}
 
 - (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
 - SSH into your 'Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or login as root. SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.
@@ -88,46 +87,46 @@ nano RadarrInstall.sh
 ```bash
 #!/bin/bash
 #### Description: Radarr 3.2+ (.NET) Debian install
+#### Originally written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 #### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 #### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
-#### Orgianlly written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 #### Updates by: The Radarr Community
-#### Thanks to Bakerboy448 for the guidance and improved wiki and script
-#### Orginal author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
-#### It’s target is the beginner/novice with ‘I know enough to be dangerous’ experience.
-#### If you see any errors or improvements please update for the next person.
+#### Thanks to Bakerboy448 for the guidance and improved wiki entry & script
+#### Original author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
+#### Its target is the beginner/novice with 'I know enough to be dangerous' experience.
+#### If you see any errors or improvements please update the script for future users.
 
 ## Am I root?, need root!
 
 if [ "$EUID" -ne 0 ]
-    then echo "Please run as root. See https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password for help."
+    then echo "Please run as root."
     exit
 fi
 
 ## Const
 
-RADARR_UID="radarr"
-RADARR_GUID="radarr"
+radarr_uid="radarr"
+radarr_guid="radarr"
 app="radarr"
-BRANCH="master"
+branch="master"
 app_port="7878"
 datadir="/var/lib/radarr/"
 bindir="/opt/{$app^}"
 
 ## Create radarr user and radarr user group if they don't exist
 
-PASSCHK=$(grep -c ":$RADARR_UID:" /etc/passwd)
+PASSCHK=$(grep -c ":$radarr_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]
     then
-    echo "UID: $RADARR_UID seems to exist. Skipping creation, ensure user $RADARR_UID with its's group $RADARR_UID are setup."
+    echo "UID: $radarr_uid seems to exist. Skipping creation, ensure user $radarr_uid with its group $radarr_uid are setup."
 else
-    echo "UID: $RADARR_UID created with disabled password."
-    adduser --disabled-password --gecos "" $RADARR_UID
+    echo "UID: $radarr_uid created with disabled password."
+    adduser --disabled-password --gecos "" $radarr_uid
 fi
 
 ## Stop Radarr if running
 
-if service --status-all | grep -Fq '$app'; then
+if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
     sytemctl disable $app.service
 fi
@@ -136,7 +135,7 @@ fi
 
     ## AppData
     mkdir -p $datadir
-    chown $RADARR_UID:$RADARR_UID -R $datadir
+    chown $radarr_uid:$radarr_uid -R $datadir
     chmod 775 $datadir
 
 ## Download and install Radarr
@@ -149,7 +148,7 @@ fi
     ## remove existing installs
     ARCH=$(dpkg --print-architecture)
     ## get arch
-    dlbase="https://$app.servarr.com/v1/update/$BRANCH/updatefile?os=linux&runtime=netcore"
+    dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
     case "$ARCH" in
         "amd64") DLURL="${dlbase}&arch=x64" ;;
         "armhf") DLURL="${dlbase}&arch=arm" ;;
@@ -163,7 +162,7 @@ fi
     wget --content-disposition "$DLURL"
     tar -xvzf "{$app^}.*.tar.gz"
     mv "{$app^}" /opt/
-    chown $RADARR_UID:$RADARR_UID -R $bindir
+    chown $radarr_uid:$radarr_uid -R $bindir
     rm -rf "{$app^}.*.tar.gz"
 
 ##Configure Autostart
@@ -179,8 +178,8 @@ cat << EOF | tee /etc/systemd/system/$app.service > /dev/null
 Description={$app^} Daemon
 After=syslog.target network.target
 [Service]
-User=$RADARR_UID
-Group=$RADARR_GUID
+User=$radarr_uid
+Group=$radarr_guid
 UMask=0002
 Type=simple
 ExecStart=$bindir -nobrowser -data=$datadir
@@ -194,16 +193,16 @@ EOF
 ##Start Radarr
 
     systemctl -q daemon-reload
-    systemctl enable --now -q $app
-    systemctl start $app.service
+    systemctl enable --now -q "$app"
+    systemctl start "$app.service"
 
 ## Finish update
 
-  HOST=$(hostname -I)
-  IP_LOCAL=$(grep -oP '^\S*' <<< "$HOST")
+  host=$(hostname -I)
+  ip_local=$(grep -oP '^\S*' <<< "$host")
   echo ""
   echo "Install complete"
-  echo "Browse to http://$IP_LOCAL:$app_port for the {$app^} GUI"
+  echo "Browse to http://$ip_local:$app_port for the {$app^} GUI"
 ```
 
 - Press `Ctrl O` (save) then `Enter`
@@ -222,18 +221,14 @@ If you need to re-install run again:
 bash RadarrInstall.sh
 ```
 
-###### Root
-
-If you can't run the [install as root then follow these instructions](https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password).
-
 ---
 
-#### Debian (Raspbian / Raspberry Pi OS) / Ubuntu Hands on Install
+#### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Radarr and install it into `/opt` because it's not an offical package yet.
-> Radarr will run under the user `radarr` and group `media`; `media` so other Arrs feel like they belong!
+> The steps below will download Radarr and install it into `/opt` because it's not an official package yet.
+> Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
 > Radarr's configuration files will be stored in `/var/lib/radarr`
 {.is-warning}
 
@@ -330,7 +325,7 @@ sudo systemctl start
 rm Radarr*.linux*.tar.gz
 ```
 
-Typically to access the Radarr web GUI browse to <http://{Your> server IP Address}:7878
+Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:7878`
 
 ---
 
@@ -480,4 +475,4 @@ sudo systemctl enable --now -q radarr4k
 
 ### Docker
 
-- Simply spin up a second Docker container with a different name, ensuring the above requirments are met.
+- Simply spin up a second Docker container with a different name, ensuring the above requirements are met.
