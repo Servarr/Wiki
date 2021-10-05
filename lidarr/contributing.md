@@ -2,11 +2,12 @@
 title: Lidarr Contributing
 description: 
 published: true
-date: 2021-07-10T16:04:00.860Z
+date: 2021-10-05T01:02:43.115Z
 tags: lidarr, contributing
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
 ---
+
 
 ## How to Contribute
 
@@ -14,11 +15,11 @@ We're always looking for people to help make Lidarr even better, there are a num
 
 ### Documentation
 
-Setup guides, FAQ, the more information we have on the [wiki](/lidarr) the better.
+Setup guides, [FAQ](/lidarr/faq), the more information we have on the [wiki](/lidarr) the better.
 
 ### Development
 
-Lidarr is written in C## (backend) and JS (frontend). The backend is built on the net5 framework, while the frontend utilizes Reactjs.
+Lidarr is written in C# (backend) and JS (frontend). The backend is built on the net5 framework, while the frontend utilizes Reactjs.
 
 #### Tools required
 
@@ -34,7 +35,7 @@ Lidarr is written in C## (backend) and JS (frontend). The backend is built on th
   - **14.0** or later
 {.grid-list}
 
-> Lidarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below 12.0!
+> Lidarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/) is required to build the frontend
@@ -50,14 +51,17 @@ Lidarr is written in C## (backend) and JS (frontend). The backend is built on th
    yarn install
    ```
 
-1. Start gulp to monitor your development environment for any changes that need post processing using:
+1. Start webpack to monitor your development environment for any changes that need post processing using:
 
    ```shell
    yarn start
    ```
 
-> Ensure startup project is set to `Lidarr.Console` and    framework to `net5.0`
+> Ensure startup project is set to `Lidarr.Console` and framework to `net5.0`
 {.is-info}
+
+> Be sure to run lint `yarn lint --fix` on your code for any front end changes before comitting.
+For css changes `yarn stylelint-windows --fix` {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all proects correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Lidarr
