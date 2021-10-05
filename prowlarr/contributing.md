@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-08-15T01:10:57.101Z
+date: 2021-10-05T01:22:01.503Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -14,7 +14,7 @@ We're always looking for people to help make Prowlarr even better, there are a n
 
 ## Documentation
 
-Setup guides, FAQ, the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
+Setup guides, [FAQ](/prowlarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
 
 ## Development
 
@@ -34,7 +34,7 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
   - **14.0** or later
 {.grid-list}
 
-> Prowlarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below `12.0`
+> Prowlarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/) is required to build the frontend
@@ -42,7 +42,10 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 ### Getting started
 
 1. Fork Prowlarr
-1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
+1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+> Be sure to run lint `yarn lint --fix` on your code for any front end changes before comitting.
+For css changes `yarn stylelint-windows --fix` {.is-info}
 
 #### Building the frontend
 
