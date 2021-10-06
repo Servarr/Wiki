@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2021-09-09T12:49:44.357Z
+date: 2021-10-06T00:50:09.006Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -160,7 +160,7 @@ Below are some common causes
 
 `The request timed out`
 
-Radarr is getting no response from the client.
+Prowlarr is getting no response from the client.
 
 This is typically caused by:
 
