@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-04T00:31:53.715Z
+date: 2021-10-06T13:57:28.611Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -316,7 +316,7 @@ sudo systemctl -q daemon-reload
 
 ```shell
 sudo systemctl enable --now -q radarr
-sudo systemctl start
+sudo systemctl start radarr
 ```
 
 - (Optional) Remove the tarball:
