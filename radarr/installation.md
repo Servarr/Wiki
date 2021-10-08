@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-08T15:20:37.622Z
+date: 2021-10-08T15:27:00.365Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -70,7 +70,7 @@ If you want to go 'Hands on' follow the 'Debian / Ubuntu Hands on Install' furth
 
 ##### Easy Install
 
-> This will create the user `radarr` and install Radarr to /opt. You will likely need to modify the group (GUID) in the script to match the common group of your download clisnt and media server.{.is-info}
+> This will create the user `radarr` and install Radarr to /opt. You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
 
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Radarr. The script won't delete your settings, but be safe. {.is-danger}
 
