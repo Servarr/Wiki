@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-06T14:10:38.459Z
+date: 2021-10-08T12:13:12.688Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -111,7 +111,7 @@ app="radarr"
 branch="master"
 app_port="7878"
 datadir="/var/lib/radarr/"
-bindir="/opt/{$app^}"
+bindir="/opt/${app^}"
 
 ## Create radarr user and radarr user group if they don't exist
 
@@ -160,10 +160,10 @@ fi
     esac
 
     wget --content-disposition "$DLURL"
-    tar -xvzf "{$app^}.*.tar.gz"
-    mv "{$app^}" /opt/
+    tar -xvzf "${app^}.*.tar.gz"
+    mv "${app^}" /opt/
     chown $radarr_uid:$radarr_uid -R $bindir
-    rm -rf "{$app^}.*.tar.gz"
+    rm -rf "${app^}.*.tar.gz"
 
 ##Configure Autostart
 
@@ -175,7 +175,7 @@ fi
 
 cat << EOF | tee /etc/systemd/system/$app.service > /dev/null
 [Unit]
-Description={$app^} Daemon
+Description=${app^} Daemon
 After=syslog.target network.target
 [Service]
 User=$radarr_uid
