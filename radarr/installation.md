@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-08T12:13:12.688Z
+date: 2021-10-08T15:20:37.622Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -160,7 +160,7 @@ fi
     esac
 
     wget --content-disposition "$DLURL"
-    tar -xvzf "${app^}.*.tar.gz"
+    tar -xvzf ${app^}.*.tar.gz
     mv "${app^}" /opt/
     chown $radarr_uid:$radarr_uid -R $bindir
     rm -rf "${app^}.*.tar.gz"
@@ -202,7 +202,7 @@ EOF
   ip_local=$(grep -oP '^\S*' <<< "$host")
   echo ""
   echo "Install complete"
-  echo "Browse to http://$ip_local:$app_port for the {$app^} GUI"
+  echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
 ```
 
 - Press `Ctrl O` (save) then `Enter`
