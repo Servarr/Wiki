@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-08T15:27:00.365Z
+date: 2021-10-08T19:57:32.638Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -112,6 +112,7 @@ branch="master"
 app_port="7878"
 datadir="/var/lib/radarr/"
 bindir="/opt/${app^}"
+app_bin=${app^}
 
 ## Create radarr user and radarr user group if they don't exist
 
@@ -182,7 +183,7 @@ User=$radarr_uid
 Group=$radarr_guid
 UMask=0002
 Type=simple
-ExecStart=$bindir -nobrowser -data=$datadir
+ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
