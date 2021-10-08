@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-08T20:02:31.860Z
+date: 2021-10-08T20:03:52.747Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -116,7 +116,7 @@ app_bin=${app^}
 
 ## Create radarr user and radarr user group if they don't exist
 
-PASSCHK=$(grep -c "$radarr_uid" /etc/passwd)
+PASSCHK=$(grep -c "$radarr_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]
     then
     echo "UID: $radarr_uid seems to exist. Skipping creation, ensure user $radarr_uid with its group $radarr_uid are setup."
