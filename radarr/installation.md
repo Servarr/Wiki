@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-08T20:03:52.747Z
+date: 2021-10-08T20:06:43.782Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -104,24 +104,25 @@ if [ "$EUID" -ne 0 ]
 fi
 
 ## Const
+#### Update these variables as required for your specific instance
 
-radarr_uid="radarr"
-radarr_guid="radarr"
-app="radarr"
-branch="master"
-app_port="7878"
-datadir="/var/lib/radarr/"
-bindir="/opt/${app^}"
-app_bin=${app^}
+radarr_uid="radarr" # {Update Me} User Radarr will run as and the owner of it's binaries
+radarr_guid="radarr" # {Update Me} Group Radarr will run as.
+app="radarr" # App Name
+branch="master"  # {Update Me} branch to instal
+app_port="7878" # Default App Port
+datadir="/var/lib/radarr/" # {Update Me} AppData directory to use
+bindir="/opt/${app^}" # Instal Location
+app_bin=${app^} # Binary Name of the app
 
 ## Create radarr user and radarr user group if they don't exist
 
 PASSCHK=$(grep -c "$radarr_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]
     then
-    echo "UID: $radarr_uid seems to exist. Skipping creation, ensure user $radarr_uid with its group $radarr_uid are setup."
+    echo "User: $radarr_uid seems to exist. Skipping creation, ensure user $radarr_uid and group $radarr_uid are setup properly."
 else
-    echo "UID: $radarr_uid created with disabled password."
+    echo "User: $radarr_uid created with disabled password."
     adduser --disabled-password --gecos "" $radarr_uid
 fi
 
