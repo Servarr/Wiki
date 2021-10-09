@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-09T19:32:08.627Z
+date: 2021-10-09T19:48:07.003Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -66,7 +66,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 > Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 
-> This will create the user `radarr` and install Radarr to /opt. You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
+> This will create the user `radarr` and install Radarr to /opt. It will run Radarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
 
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Radarr. The script won't delete your settings (application data), but be safe. {.is-danger}
 
@@ -106,7 +106,7 @@ fi
 
 app="radarr"                        # App Name
 app_uid="radarr"                    # {Update me if needed} User App will run as and the owner of it's binaries
-app_guid="radarr"                   # {Update me if needed} Group App will run as.
+app_guid="media"                   # {Update me if needed} Group App will run as.
 app_port="7878"                     # Default App Port; Modify config.xml after install if needed
 app_prereq="curl mediainfo sqlite3" # Required packages
 app_umask="0002"                    # UMask the Service will run as
@@ -119,12 +119,15 @@ datadir="/var/lib/radarr/"          # {Update me if needed} AppData directory to
 
 PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]; then
-    echo "User: [$app_uid] seems to exist. Skipping creation, ensure User [$app_uid] and Group [$app_uid] are setup properly.  Specifically the application will need access to your download client and media files."
+    groupadd -f $app_guid
+    usermod -a -G $app_uid $app_guid
+    echo "User: [$app_uid] seems to exist. Skipping creation, but adding to the group if needed. Ensure the User [$app_uid] and Group [$app_guid] are setup properly.  Specifically the application will need access to your download client and media files."
 else
     echo "User: [$app_uid] created with disabled password."
     adduser --disabled-password --gecos "" $app_uid
+    groupadd -f $app_guid
+    usermod -a -G $app_uid $app_guid
 fi
-
 ## Stop the App if running
 
 if service --status-all | grep -Fq "$app"; then
