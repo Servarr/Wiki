@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-10-08T18:43:24.181Z
+date: 2021-10-09T17:50:36.532Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -79,12 +79,13 @@ Preferred Words always upgrade a release even if the quality and/or language cut
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "seasom 5" to be imported over existing "season 3" episodes. [Additional information on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 
 - **Sonarr side effects:**  
+{.is-info}
 - On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well.
 - Example:
-  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in sonarr for season 18 will **only** return S17 results because of the XEM map.
+  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in Sonarr for season 18 will **only** return S17 results because of the XEM map.
+  > If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+  - Other series may be affected by this as well.
 
-> If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-{.is-info}
 
 ## Why wont Sonarr import a TBA episode?
 
