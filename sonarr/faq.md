@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-10-09T17:50:55.069Z
+date: 2021-10-09T18:50:18.775Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -91,13 +91,17 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 - On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 
+## Sonarr says Unknown Series on Searches or Imports
+
+- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
+
 ## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
 There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
 
 - Sonarr does not use aliases from TVDB.
 
-- Sonarr relies on being able to match titles, often the scene posts episodes using different titles, e.g. `CSI: Crime Scene Investigation` as just `CSI` so Sonarr cannot match the names without some help. Sonarr maintains a list of problematic series which lets us solve this issue.
+- Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
 
 - **For anime, it will need to be added to [thexem.de](https://thexem.de)**, for other series to request a new mapping see the steps below.
 
