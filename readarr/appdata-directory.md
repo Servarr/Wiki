@@ -2,11 +2,15 @@
 title: Readarr Appdata Directory
 description: 
 published: true
-date: 2021-08-15T12:52:39.403Z
+date: 2021-10-09T16:12:08.638Z
 tags: readarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:54:32.028Z
 ---
+
+> Below are the default paths for the application data directiory {.is-info}
+
+> All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 
 ## Windows
 
@@ -16,7 +20,7 @@ dateCreated: 2021-06-09T15:54:32.028Z
 
 Unless otherwise specified Readarr will store it's application data in the home folder of the user Readarr is running under `/home/$USER/.config/Readarr` (`~/.config/Readarr`)
 
-`/var/lib/readarr`
+The installation instructions specify `/var/lib/readarr`
 
 ## OS X
 
