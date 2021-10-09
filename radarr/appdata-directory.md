@@ -2,7 +2,7 @@
 title: Radarr Appdata Directory
 description: 
 published: true
-date: 2021-10-09T16:12:06.659Z
+date: 2021-10-09T16:16:09.692Z
 tags: radarr, appdata
 editor: markdown
 dateCreated: 2021-05-25T02:34:50.549Z
@@ -18,13 +18,15 @@ dateCreated: 2021-05-25T02:34:50.549Z
 
 ## Linux
 
-Unless otherwise specified Radarr will store it's application data in the home folder of the user Radarr is running under `/home/$USER/.config/Radarr` (`~/.config/Radarr`)
+Unless otherwise specified Radarr will store it's application data in the home folder of the user Radarr is running under `/home/$USER/.config/Radarr` or `~/.config/Radarr`
 
 The installation instructions specify `/var/lib/radarr`
 
-## OS X
+## MacOS (OSX)
 
-`/Users/$USER/.config/Radarr (~/.config/Radarr)`
+{#os-x}
+
+`/Users/$USER/.config/Radarr` or `~/.config/Radarr`
 
 ## Synology
 
@@ -44,8 +46,8 @@ The installation instructions specify `/var/lib/radarr`
 
 - This will vary based on where the user maps `/config` to on their host system
 
-## Argument
+## Arguments
 
-The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On windows this would be `/data=`
+The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
 
-The `-nobrowser` argument refrains from launching/opening the browser on startup. On windows this would be `/nobrowser`
+The `-nobrowser` argument refrains from launching/opening the browser on startup. On Windows this would be `/nobrowser`
