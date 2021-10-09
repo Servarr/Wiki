@@ -2,7 +2,7 @@
 title: Radarr Tips and Tricks
 description: 
 published: true
-date: 2021-08-15T01:11:49.169Z
+date: 2021-10-09T20:52:46.544Z
 tags: radarr, needs-love, tips-and-tricks
 editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
@@ -60,3 +60,19 @@ The following script will take all `*.mkv` files within your selected folder and
 cd /path/to/your/movies/files/
 find . -maxdepth 1 -type f -iname "*.mkv" -exec sh -c 'mkdir "${1%.*}" ; mv "${1%}" "${1%.*}" ' _ {} \;
 ```
+
+### Windows Command Line
+
+Drop to a command line in Windows (cmd.exe) `As Administrator`. Navigate to your movie folder. Run these two commands (copy/paste is fine, there is nothing to change):
+
+`for %i in (*) do md "%~ni"`
+
+This will create a folder for every file in the directory.
+
+`for %i in (*) do move "%i" "%~ni"`
+
+This will move all of your files into the new directories.
+
+If you need to clean up empty directories, this command will do that:
+
+`for /f "usebackq delims=" %d in ("dir /ad/b/s | sort /R") do rd "%d"`
