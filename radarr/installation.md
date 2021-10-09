@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-09T19:31:59.722Z
+date: 2021-10-09T19:32:08.627Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -49,7 +49,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 ### Debian / Ubuntu
 
-> Note Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
+> Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
 #### Easy Install
 
