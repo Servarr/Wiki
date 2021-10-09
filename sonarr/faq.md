@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-10-09T17:50:36.532Z
+date: 2021-10-09T17:50:55.069Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -65,7 +65,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 - Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.de) which creates a map for Sonarr to look at.  
 - Scene releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
 - Scene uses a year for the season S2010 and TVDb uses S01.  
-- [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *black sheep* and in this case there is a list of them.  
+- [XEM](http://thexem.de) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.  
 - This is an incomplete list of the known shows and how/why they're problematic:  
 - American Dad {#problemshow-americandad}
 - Arrested Development
