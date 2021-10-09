@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-09T19:27:59.017Z
+date: 2021-10-09T19:28:27.689Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -181,7 +181,7 @@ rm -rf /etc/systemd/system/$app.service
 
 ##Create app .service with correct user startup
 echo "Creating service file"
-cat <<EOF | tee /etc/systemd/system/$app.service >/dev/null
+cat << EOF | tee /etc/systemd/system/$app.service >/dev/null
 [Unit]
 Description=${app^} Daemon
 After=syslog.target network.target
