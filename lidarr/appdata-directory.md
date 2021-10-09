@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: 
 published: true
-date: 2021-10-09T16:12:10.644Z
+date: 2021-10-09T16:16:04.680Z
 tags: lidarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
@@ -18,13 +18,15 @@ dateCreated: 2021-06-09T15:53:13.142Z
 
 ## Linux
 
-Unless otherwise specified Lidarr will store it's application data in the home folder of the user Lidarr is running under `/home/$USER/.config/Lidarr` (`~/.config/Lidarr`)
+Unless otherwise specified Lidarr will store it's application data in the home folder of the user Lidarr is running under `/home/$USER/.config/Lidarr` or `~/.config/Lidarr`
 
 The installation instructions specify `/var/lib/lidarr`
 
-## OS X
+## MacOS (OSX)
 
-`/Users/$USER/.config/Lidarr (~/.config/Lidarr)`
+{#os-x}
+
+`/Users/$USER/.config/Lidarr` or `~/.config/Lidarr`
 
 ## Synology
 
@@ -44,8 +46,8 @@ The installation instructions specify `/var/lib/lidarr`
 
 - This will vary based on where the user maps `/config` to on their host system
 
-## Argument
+## Arguments
 
-The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On windows this would be `/data=`
+The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
 
-The `-nobrowser` argument refrains from launching/opening the browser on startup. On windows this would be `/nobrowser`
+The `-nobrowser` argument refrains from launching/opening the browser on startup. On Windows this would be `/nobrowser`
