@@ -2,11 +2,15 @@
 title: Prowlarr Appdata Directory
 description: 
 published: true
-date: 2021-08-15T12:52:48.779Z
+date: 2021-10-09T16:12:16.003Z
 tags: prowlarr, appdata
 editor: markdown
 dateCreated: 2021-06-08T01:06:44.136Z
 ---
+
+> Below are the default paths for the application data directiory {.is-info}
+
+> All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 
 ## Windows
 
@@ -16,7 +20,7 @@ dateCreated: 2021-06-08T01:06:44.136Z
 
 Unless otherwise specified Prowlarr will store it's application data in the home folder of the user Prowlarr is running under `/home/$USER/.config/Prowlarr` (`~/.config/Prowlarr`)
 
-`/var/lib/prowlarr`
+The installation instructions specify `/var/lib/prowlarr`
 
 ## OS X
 
