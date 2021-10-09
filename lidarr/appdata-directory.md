@@ -2,11 +2,15 @@
 title: Lidarr Appdata Directory
 description: 
 published: true
-date: 2021-08-15T12:50:21.318Z
+date: 2021-10-09T16:12:10.644Z
 tags: lidarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
 ---
+
+> Below are the default paths for the application data directiory {.is-info}
+
+> All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 
 ## Windows
 
@@ -16,7 +20,7 @@ dateCreated: 2021-06-09T15:53:13.142Z
 
 Unless otherwise specified Lidarr will store it's application data in the home folder of the user Lidarr is running under `/home/$USER/.config/Lidarr` (`~/.config/Lidarr`)
 
-`/var/lib/lidarr`
+The installation instructions specify `/var/lib/lidarr`
 
 ## OS X
 
