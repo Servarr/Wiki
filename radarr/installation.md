@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-09T19:25:56.843Z
+date: 2021-10-09T19:27:59.017Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -226,15 +226,6 @@ If you need to re-install run again:
 ```bash
 bash RadarrInstall.sh
 ```
-To uninstall:
-> Warning: This will destroy your application data. {.is-danger}
-```bash
-sudo systemctl stop radarr
-sudo rm -rf /opt/Radarr
-sudo rm -rf /var/lib.radarr
-sudo rm -rf /etc/systemd/system/radarr.service
-systemctl -q daemon-reload
-```
 ---
 
 #### Debian / Ubuntu Hands on Install
@@ -341,6 +332,24 @@ rm Radarr*.linux*.tar.gz
 Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:7878`
 
 ---
+
+#### Uninstall
+To uninstall and purge:
+> Warning: This will destroy your application data. {.is-danger}
+```bash
+sudo systemctl stop radarr
+sudo rm -rf /opt/Radarr
+sudo rm -rf /var/lib/radarr
+sudo rm -rf /etc/systemd/system/radarr.service
+systemctl -q daemon-reload
+```
+To uninstall and keep your application data:
+```bash
+sudo systemctl stop radarr
+sudo rm -rf /opt/Radarr
+sudo rm -rf /etc/systemd/system/radarr.service
+systemctl -q daemon-reload
+```
 
 ## Docker
 
