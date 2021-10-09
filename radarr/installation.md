@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-08T20:06:43.782Z
+date: 2021-10-09T19:02:44.439Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -106,24 +106,25 @@ fi
 ## Const
 #### Update these variables as required for your specific instance
 
-radarr_uid="radarr" # {Update Me} User Radarr will run as and the owner of it's binaries
-radarr_guid="radarr" # {Update Me} Group Radarr will run as.
+app_uid="radarr" # {Update Me} User Radarr will run as and the owner of it's binaries
+app_guid="radarr" # {Update Me} Group Radarr will run as.
 app="radarr" # App Name
 branch="master"  # {Update Me} branch to instal
 app_port="7878" # Default App Port
 datadir="/var/lib/radarr/" # {Update Me} AppData directory to use
 bindir="/opt/${app^}" # Instal Location
 app_bin=${app^} # Binary Name of the app
+app_prereq="curl mediainfo sqlite3"
 
 ## Create radarr user and radarr user group if they don't exist
 
-PASSCHK=$(grep -c "$radarr_uid:" /etc/passwd)
+PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]
     then
-    echo "User: $radarr_uid seems to exist. Skipping creation, ensure user $radarr_uid and group $radarr_uid are setup properly."
+    echo "User: $app_uid seems to exist. Skipping creation, ensure user $radarr_uid and group $app_uid are setup properly."
 else
-    echo "User: $radarr_uid created with disabled password."
-    adduser --disabled-password --gecos "" $radarr_uid
+    echo "User: $app_uid created with disabled password."
+    adduser --disabled-password --gecos "" $app_uid
 fi
 
 ## Stop Radarr if running
@@ -137,14 +138,14 @@ fi
 
     ## AppData
     mkdir -p $datadir
-    chown $radarr_uid:$radarr_uid -R $datadir
+    chown $app_uid:$app_uid -R $datadir
     chmod 775 $datadir
 
 ## Download and install Radarr
 
     ## prerequisite packages
     
-    apt install curl mediainfo sqlite3
+    apt install "$app_prereq"
     rm -rf $bindir
     
     ## remove existing installs
@@ -180,8 +181,8 @@ cat << EOF | tee /etc/systemd/system/$app.service > /dev/null
 Description=${app^} Daemon
 After=syslog.target network.target
 [Service]
-User=$radarr_uid
-Group=$radarr_guid
+User=$app_uid
+Group=$app_guid
 UMask=0002
 Type=simple
 ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
@@ -192,7 +193,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 
-##Start Radarr
+##Start the App
 
     systemctl -q daemon-reload
     systemctl enable --now -q "$app"
