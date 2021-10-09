@@ -2,7 +2,7 @@
 title: Readarr Appdata Directory
 description: 
 published: true
-date: 2021-10-09T16:12:08.638Z
+date: 2021-10-09T16:16:06.914Z
 tags: readarr, appdata
 editor: markdown
 dateCreated: 2021-06-09T15:54:32.028Z
@@ -18,13 +18,15 @@ dateCreated: 2021-06-09T15:54:32.028Z
 
 ## Linux
 
-Unless otherwise specified Readarr will store it's application data in the home folder of the user Readarr is running under `/home/$USER/.config/Readarr` (`~/.config/Readarr`)
+Unless otherwise specified Readarr will store it's application data in the home folder of the user Readarr is running under `/home/$USER/.config/Readarr` or `~/.config/Readarr`
 
 The installation instructions specify `/var/lib/readarr`
 
-## OS X
+## MacOS (OSX)
 
-`/Users/$USER/.config/Readarr (~/.config/Readarr)`
+{#os-x}
+
+`/Users/$USER/.config/Readarr` or `~/.config/Readarr`
 
 ## Synology
 
@@ -44,8 +46,8 @@ The installation instructions specify `/var/lib/readarr`
 
 - This will vary based on where the user maps `/config` to on their host system
 
-## Argument
+## Arguments
 
-The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On windows this would be `/data=`
+The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
 
-The `-nobrowser` argument refrains from launching/opening the browser on startup. On windows this would be `/nobrowser`
+The `-nobrowser` argument refrains from launching/opening the browser on startup. On Windows this would be `/nobrowser`
