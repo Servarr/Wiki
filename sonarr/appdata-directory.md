@@ -2,11 +2,15 @@
 title: Sonarr Appdata Directory
 description: 
 published: true
-date: 2021-10-04T08:18:07.188Z
+date: 2021-10-09T16:12:14.666Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T15:53:57.860Z
 ---
+
+> Below are the default paths for the application data directiory {.is-info}
+
+> All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 
 ## Windows
 
@@ -16,7 +20,7 @@ dateCreated: 2021-06-09T15:53:57.860Z
 
 Unless otherwise specified Sonarr will store it's application data in the home folder of the user Sonarr is running under `/home/$USER/.config/Sonarr` (`~/.config/Sonarr`)
 
-> For apt based installs, it defaults to `/var/lib/Sonarr`
+> For apt repo based installs, it defaults to `/var/lib/Sonarr`
 {.is-info}
 
 ## OS X
