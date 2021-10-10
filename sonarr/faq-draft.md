@@ -154,183 +154,6 @@ This is expected. Below is how the Torrent Process works.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
 
-## Sonarr and Series Issues + Metadata
-
-### How does Sonarr handle scene numbering issues (American Dad!, etc)?
-
-- **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
-- **Problematic Shows**  
-
-> This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are some common ones.
-{.is-info}
-
-- Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.  
-- Scene releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
-- Scene uses a year for the season S2010 and TVDb uses S01.  
-- [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.  
-- This is an incomplete list of the known shows and how/why they're problematic:  
-- American Dad {#problemshow-americandad}
-- Arrested Development
-- Mythbusters {#problemshow-mythbusters}
-- Paw Patrol {#problemshow-pawpatrol}
-  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
-- Pawn Stars {#problemshow-pawnstars}
-- Pokémon {#problemshow-pokemon}
-  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-- La Casa de Papel / Money Heist  {#problemshow-moneyheist}
-  - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "seasom 5" to be imported over existing "season 3" episodes. [Additional information on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
-
-- **Sonarr side effects:**  
-{.is-info}
-- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well.
-- Example:
-  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in Sonarr for season 18 will **only** return S17 results because of the XEM map.
-  > If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
-  - Other series may be affected by this as well.
-
-### Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
-
-There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
-
-- Sonarr does not use aliases from TVDB.
-
-- Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
-
-- **For anime, it will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below.
-
-1. Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-1. Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-
-- *Typically these are added within 1-5 days.*
-
-- *Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
-
-- > The series "Helt Perfekt" with TVDB ids of `343189` and `252077` is difficult to automate due to TVDB having the same name for both shows, violating TVDB's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
-{.is-info}
-
-### TVDB is updated why isn't Sonarr?
-
-{#tvdb}
-
-- TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
-
-- Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
-
-- If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
-
-## Sonarr Common Problems
-
-### System & Logs loads forever
-
-- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
-
-### Weird UI Issues
-
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
-
-### Web Interface Only Loads at localhost on Windows
-
-- If you can only reach your web interface at <http://localhost:8989/> or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at least once.
-
-### uTorrent is no longer working
-
-- Ensure the Web UI is enabled
-
-- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
-
-- We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
-
-### Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
-
-- No. Sonarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If Sonarr and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so Sonarr knows where to find the files.
-
-### I got a pop-up that said config.xml was corrupt, what now?
-
-- Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](/sonarr/appdata-directory) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
-
-### Invalid Certificate and other HTTPS or SSL issues
-
-- Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
-
-- Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
-
-- If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
-
-### How do I stop the browser from launching on startup?
-
-Depending on your OS, there are multiple possible ways.
-
-- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
-- When invoking Sonarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
-- Stop Sonarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
-
-### VPNs, Jackett, and the \*ARRs
-
-- Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
-
-- In other words, putting the  \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
-
-- In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
-
-## Sonarr Searching & Downloading Common Problems
-
-### Jackett's /all Endpoint
-
-{#jackett-all-endpoint}
-
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
-
-- **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
-
-- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
-
-- Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-
-- Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
-
-- Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
-
-### Jackett shows more results than Sonarr when manually searching
-
-This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
-
-### Finding Cookies
-
-- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
-
-### Unpack Torrents
-
-- Most torrent clients doesn't come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
-
-### Permissions
-
-- Sonarr will need to move files away from where the downloader puts them into the final location, so this means that Sonarr will need to read/write to both the source and the destination directory and files.
-- On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
-
-## Unsorted Entries
-
-### Why didn't Sonarr grab an episode I was expecting?
-
-First, make sure you read and understand the section above called ["How does Sonarr find episodes?](#how-does-sonarr-find-episodes) Second, make sure at least one of your indexers has the episode you were expecting to be grabbed.
-
-1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
-1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
-1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
-1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
-
-### Why wont Sonarr import a TBA episode?
-
-- On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
-
-### Sonarr says Unknown Series on Searches or Imports
-
-- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
-
 ### I see that feature/bug X was fixed, Why can I not see it?
 
 Sonarr consists of two main branches of code, `main` and `develop`.
@@ -372,45 +195,6 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - This number shows the count of episodes in your download client's queue and the last 60 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
 - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
-
-### I see log messages for shows I do not have/do not want
-
-- These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you do not want, in the event it is for a show you want, open up a support thread on the forums.
-
-### Seeding torrents aren't deleted automatically
-
-- When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
-- In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
-
-### Why can I not add a new series?
-
-- In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDBID if you know what it is, the UI explains how to add it by an ID.
-- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
-- The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
-- The series must exist on TVDB
-- Certain series may actually be considered continuations are and seasons in their primary series.
-  - Some series/seasons known are:
-    - [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
-
-### Why can I not add a new series when I know the TVDB ID?
-
-- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
-
-### Sonarr will not work on Big Sur
-
-Run
-
-```shell
-chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
-```
-
-### My Custom Script stopped working after upgrading from v2
-
-- You were likely passing arguments in your connection\...that is not supported.
-- To correct this:
-  1. Change your argument to be your path
-  1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
-  1. Make sure the pwsh script is executable
 
 ### What's the different Series Types?
 
@@ -513,6 +297,73 @@ If Docker:
   - For those on develop and are still on `3.0.6.1343` or lower you can safely downgrade to main
     - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
+### How do I request a feature for Sonarr?
+
+- This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
+
+## Sonarr Common Problems
+
+### System & Logs loads forever
+
+- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
+
+### Weird UI Issues
+
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
+
+### Web Interface Only Loads at localhost on Windows
+
+- If you can only reach your web interface at <http://localhost:8989/> or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at least once.
+
+### uTorrent is no longer working
+
+- Ensure the Web UI is enabled
+
+- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
+
+- We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
+
+### Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
+
+- No. Sonarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If Sonarr and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so Sonarr knows where to find the files.
+
+### I got a pop-up that said config.xml was corrupt, what now?
+
+- Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](/sonarr/appdata-directory) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
+
+### Invalid Certificate and other HTTPS or SSL issues
+
+- Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
+
+- Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
+
+- If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
+
+### How do I stop the browser from launching on startup?
+
+Depending on your OS, there are multiple possible ways.
+
+- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- When invoking Sonarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
+- Stop Sonarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
+
+### VPNs, Jackett, and the \*ARRs
+
+- Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
+
+- In other words, putting the  \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
+
+- In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
+
+### I see log messages for shows I do not have/do not want
+
+- These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you do not want, in the event it is for a show you want, open up a support thread on the forums.
+
+### Seeding torrents aren't deleted automatically
+
+- When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
+- In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
+
 ### Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
 - This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
@@ -522,15 +373,11 @@ If Docker:
 
 - That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-sonarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 
-### How do I request a feature for Sonarr?
-
-- This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
-
 ### I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Sonarr is corrupt.
 - Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqllite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-sonarr)
 
 - This error may show if the database file is not writable by the user/group Sonarr is running as.
@@ -568,3 +415,154 @@ If Docker:
 - Using mapped network drives generally doesn't work very well, especially when Sonarr is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\TV` use `\\Server\TV`.
 
 - A key point to remember is that Sonarr gets path information from the downloader, so you will *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
+
+### Sonarr will not work on Big Sur
+
+Run
+
+```shell
+chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
+```
+
+### My Custom Script stopped working after upgrading from v2
+
+- You were likely passing arguments in your connection\...that is not supported.
+- To correct this:
+  1. Change your argument to be your path
+  1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
+  1. Make sure the pwsh script is executable
+
+## Sonarr and Series Issues + Metadata
+
+### How does Sonarr handle scene numbering issues (American Dad!, etc)?
+
+- **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
+- **Problematic Shows**  
+
+> This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are some common ones.
+{.is-info}
+
+- Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.  
+- Scene releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
+- Scene uses a year for the season S2010 and TVDb uses S01.  
+- [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.  
+- This is an incomplete list of the known shows and how/why they're problematic:  
+- American Dad {#problemshow-americandad}
+- Arrested Development
+- Mythbusters {#problemshow-mythbusters}
+- Paw Patrol {#problemshow-pawpatrol}
+  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
+- Pawn Stars {#problemshow-pawnstars}
+- Pokémon {#problemshow-pokemon}
+  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+- La Casa de Papel / Money Heist  {#problemshow-moneyheist}
+  - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
+
+- **Sonarr side effects:**  
+{.is-info}
+- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well.
+- Example:
+  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in Sonarr for season 18 will **only** return S17 results because of the XEM map.
+  > If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+  - Other series may be affected by this as well.
+
+### Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
+
+There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
+
+- Sonarr does not use aliases from TVDB.
+
+- Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
+
+- **For anime, it will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below.
+
+1. Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+1. Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+
+- *Typically these are added within 1-5 days.*
+
+- *Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
+
+- > The series "Helt Perfekt" with TVDB ids of `343189` and `252077` is difficult to automate due to TVDB having the same name for both shows, violating TVDB's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
+{.is-info}
+
+### TVDB is updated why isn't Sonarr?
+
+{#tvdb}
+
+- TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
+
+- Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
+
+- If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
+
+### Why can I not add a new series?
+
+- In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+- The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
+- The series must exist on TVDB
+- Certain series may actually be considered continuations are and seasons in their primary series.
+  - Some series/seasons known are:
+    - [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
+
+### Why can I not add a new series when I know the TVDB ID?
+
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+
+## Sonarr Searching & Downloading Common Problems
+
+### Why didn't Sonarr grab an episode I was expecting?
+
+First, make sure you read and understand the section above called ["How does Sonarr find episodes?](#how-does-sonarr-find-episodes) Second, make sure at least one of your indexers has the episode you were expecting to be grabbed.
+
+1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
+1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
+1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
+1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
+
+### Why wont Sonarr import a TBA episode?
+
+- On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
+
+### Sonarr says Unknown Series on Searches or Imports
+
+- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
+
+### Jackett's /all Endpoint
+
+{#jackett-all-endpoint}
+
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is recommended.
+
+- **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+
+- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+
+- Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (\>= 100000) cannot be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
+
+- Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
+
+- Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
+
+### Jackett shows more results than Sonarr when manually searching
+
+This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
+
+### Finding Cookies
+
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
+
+### Unpack Torrents
+
+- Most torrent clients doesn't come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
+
+### Permissions
+
+- Sonarr will need to move files away from where the downloader puts them into the final location, so this means that Sonarr will need to read/write to both the source and the destination directory and files.
+- On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
