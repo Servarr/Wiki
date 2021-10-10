@@ -304,7 +304,7 @@ Type=simple
 ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -476,7 +476,7 @@ Type=simple
 ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr4k/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF

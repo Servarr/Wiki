@@ -137,7 +137,7 @@ Type=simple
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -297,7 +297,7 @@ Type=simple
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarraudio/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF

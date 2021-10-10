@@ -125,7 +125,7 @@ Type=simple
 ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/var/lib/lidarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
