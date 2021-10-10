@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-10-10T22:52:13.068Z
+date: 2021-10-10T22:52:42.883Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -145,7 +145,7 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ### qBit Management
 
-[qBit Management](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance such as:
+[qBit Management a.k.a. "qbit_manage"](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance such as:
 
 - Tag torrents based on tracker URL (only tag torrents that have no tags)
 - Update categories based on save directory
