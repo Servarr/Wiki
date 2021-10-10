@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-09T19:48:07.003Z
+date: 2021-10-10T02:56:30.590Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -210,8 +210,8 @@ echo "Install complete"
 echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
 ```
 
-- Press `Ctrl O` (save) then `Enter`
-- Press `Ctrl X` (exit) then `Enter`
+- Press <kbd>Ctrl</kbd>+<kbd>O</kbd> (save) then <kbd>Enter</kbd>
+- Press <kbd>Ctrl</kbd>+<kbd>X</kbd> (exit) then <kbd>Enter</kbd>
 - Then in your console type:
 
 ```shell
