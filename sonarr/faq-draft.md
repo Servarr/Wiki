@@ -260,10 +260,10 @@ Below are some example release names for each show type. The specific differenti
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
 
-| |`main` (stable) ![Current Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json)|
-|---|---|---|
-|[hotio](https://hotio.dev/containers/sonarr)|`hotio/sonarr:release`|`hotio/sonarr:nightly`|
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr)|`linuxserver/sonarr:latest`|`linuxserver/sonarr:develop`|
+|                                                                    | `main` (stable) ![Current Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json) |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/sonarr)                       | `hotio/sonarr:release`                                                                                                                                                                                            | `hotio/sonarr:nightly`                                                                                                                                                                                              |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `linuxserver/sonarr:latest`                                                                                                                                                                                       | `linuxserver/sonarr:develop`                                                                                                                                                                                        |
 
 #### Installing a newer version
 
