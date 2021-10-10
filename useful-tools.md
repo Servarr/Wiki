@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-08-14T17:37:50.216Z
+date: 2021-10-10T22:52:13.068Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -153,6 +153,7 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 - Automatically add cross-seed torrents in paused state (used in conjunction with the [cross-seed script](#cross-seed))
 - Recheck paused torrents sorted by lowest size and resume if completed
 - Remove orphaned files from your root directory that are not referenced by qBittorrent
+- Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded
 
 ### Radarr & Sonarr Companion - Android App
 
