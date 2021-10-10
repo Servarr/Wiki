@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-10-09T18:50:18.775Z
+date: 2021-10-10T01:52:40.053Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -182,6 +182,9 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 - The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
 - The series must exist on TVDB
+- Certain series may actually be considered continuations are and seasons in their primary series.
+  - Some series/seasons known are:
+  		- [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
 
 ## Why can I not add a new series when I know the TVDB ID?
 
