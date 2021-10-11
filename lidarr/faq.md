@@ -96,7 +96,7 @@ As of 2021-06-09 the logic is as follows:
 
 ## How can I mass delete artists from the wanted list?
 
-- Use Mass Editor -> Select artists you want to delete -> Delete
+- Use Mass Editor => Select artists you want to delete => Delete
 
 ## Why doesn't Lidarr work behind a reverse proxy
 
@@ -266,7 +266,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 Depending on your OS, there are multiple possible ways.
 
-- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- In `Settings` => `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Lidarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Lidarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 

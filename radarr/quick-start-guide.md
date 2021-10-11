@@ -10,7 +10,7 @@ dateCreated: 2021-06-20T20:05:44.814Z
 
 ## Setup Guide
 
-> For a more detailed breakdown of all the settings, check [Radarr ->Settings](/radarr/settings) We will cover the following options.
+> For a more detailed breakdown of all the settings, check [Radarr =>Settings](/radarr/settings) We will cover the following options.
 {.is-info}
 
 In this guide we will try to explain the basic setup you need to do to get started with Radarr.
@@ -83,11 +83,11 @@ Don’t forget to save your changes
 
 Here you’ll be allowed to set profiles for which you can have for the quality of movie you’re looking to download Here you will be allowed to set profiles for the quality of movie you're looking to download
 
-More info [Settings -> Profiles](/radarr/settings#profiles).
+More info [Settings => Profiles](/radarr/settings#profiles).
 
 We recommend you to create your own profiles and only select the Quality Sources you actually want.
 
-> More info [Settings -> Profiles](/radarr/settings#profiles).
+> More info [Settings => Profiles](/radarr/settings#profiles).
 > To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}
 

@@ -60,14 +60,14 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 ##### Using built-in backup
 
-- Go to System \-> Backup in the Sonarr UI
+- Go to System => Backup in the Sonarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
 ##### Using file system directly
 
 - Find the location of the AppData directory for Sonarr  
-  - Via the Sonarr UI go to System -> About  
+  - Via the Sonarr UI go to System => About  
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -81,7 +81,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 - Re-install Sonarr
 - Run Sonarr
-- Navigate to System -> Backup
+- Navigate to System => Backup
 - Select Restore Backup
 - Select Choose File
 - Select your backup zip file
@@ -91,7 +91,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 - Re-install Sonarr
 - Find the location of the AppData directory for Sonarr  
-  - Running Sonarr once and via the UI go to System -> About  
+  - Running Sonarr once and via the UI go to System => About  
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -106,7 +106,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 - Re-install Sonarr
 - Find the location of the AppData directory for Sonarr  
-  - Running Sonarr once and via the UI go to System -> About  
+  - Running Sonarr once and via the UI go to System => About  
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr
 - Connect to the Synology NAS through SSH and log in as root  
@@ -319,7 +319,7 @@ If Docker:
 
 - Ensure the Web UI is enabled
 
-- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
+- Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections)
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
@@ -343,7 +343,7 @@ If Docker:
 
 Depending on your OS, there are multiple possible ways.
 
-- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- In `Settings` => `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Sonarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Sonarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 

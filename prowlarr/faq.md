@@ -11,7 +11,7 @@ dateCreated: 2021-06-23T03:06:20.944Z
 ## Can I add any (generic) Torznab or Newznab indexer?
 
 - Yes.
-- Go to `Indexers` -> `Add Indexer` (Plus Button) -> `Generic Torznab` or `Generic Newznab`
+- Go to `Indexers` => `Add Indexer` (Plus Button) => `Generic Torznab` or `Generic Newznab`
 
 ## Can I use flaresolverr indexers?
 
@@ -112,14 +112,14 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 #### Using built-in backup
 
-- Go to System \-> Backup in the Prowlarr UI
+- Go to System => Backup in the Prowlarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
 #### Using file system directly
 
 - Find the location of the AppData directory for Prowlarr  
-  - Via the Prowlarr UI go to System -> About  
+  - Via the Prowlarr UI go to System => About  
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -133,7 +133,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 - Re-install Prowlarr
 - Run Prowlarr
-- Navigate to System -> Backup
+- Navigate to System => Backup
 - Select Restore Backup
 - Select Choose File
 - Select your backup zip file
@@ -143,7 +143,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 - Re-install Prowlarr
 - Find the location of the AppData directory for Prowlarr  
-  - Running Prowlarr once and via the UI go to System -> About  
+  - Running Prowlarr once and via the UI go to System => About  
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -158,7 +158,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 - Re-install Prowlarr
 - Find the location of the AppData directory for Prowlarr  
-  - Running Prowlarr once and via the UI go to System -> About  
+  - Running Prowlarr once and via the UI go to System => About  
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
 - Connect to the Synology NAS through SSH and log in as root  
@@ -221,7 +221,7 @@ Some sites cannot be logged into automatically and require you to login manually
 
 ![faq_5_utorrent.png](/assets/general/faq_5_utorrent.png)
 
-- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections). We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
+- Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections). We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
 ![faq_6_utorrent.png](/assets/general/faq_6_utorrent.png)
 
@@ -266,7 +266,7 @@ In addition, some private trackers ban for browsing from a VPN, which is how Pro
 
 Depending on your OS, there are multiple possible ways.
 
-- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- In `Settings` => `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Prowlarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Prowlarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 

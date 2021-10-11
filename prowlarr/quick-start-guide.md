@@ -44,7 +44,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 After you've added your indexers, we then connect Prowlarr to your other *arr programs.
 
-Click on `Settings` -> `Apps`, and then click the `+` to add an *arr program.
+Click on `Settings` => `Apps`, and then click the `+` to add an *arr program.
 
 ![addapps.png](/assets/prowlarr/addapps.png)
 
@@ -99,7 +99,7 @@ Please note that full sync means Prowlarr will overwrite any in-app changes you 
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
 
-Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 

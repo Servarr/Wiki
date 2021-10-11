@@ -62,7 +62,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Where did Wanted and Cut-off Unmet go?
 
-- Movie Index (AKA 'Movies') -> Filter (top right corner) -> `Wanted` and `Cut-off Unmet`
+- Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
   - Wanted - Movie does not have a file (missing), is monitored, and is available based on your avaiaibliy settings.
   - Missing - Movie is Missing and Monitored
 
@@ -84,7 +84,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - Locate and correct the movie that is already assigned to that movie's path.
   - Movie Index
   - Table View
-  - Options -> Add path as a column
+  - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
 
 ## Can all my movie files be stored in one folder?
@@ -97,7 +97,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
     - the script should be triggered on import
     - it should be designed to move the file whenever you want it
     - it then needs to call the Radarr API and change the movie to unmonitored.
-- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder?
 
@@ -117,7 +117,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-- See [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
+- See [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
 ## Movie Folders Named Incorrectly
 
@@ -137,11 +137,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
     - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section -> Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+  - The [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## How can I mass delete movies from the wanted list?
 
-- Use Movie Editor -> Select movies you want to delete -> Delete
+- Use Movie Editor => Select movies you want to delete => Delete
 
 ## Why doesn't Radarr work behind a reverse proxy
 
@@ -368,14 +368,14 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 #### Using built-in backup
 
-- Go to System \-> Backup in the Radarr UI
+- Go to System => Backup in the Radarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
 #### Using file system directly
 
 - Find the location of the AppData directory for Radarr  
-  - Via the Radarr UI go to System -> About  
+  - Via the Radarr UI go to System => About  
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -389,7 +389,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - Re-install Radarr
 - Run Radarr
-- Navigate to System -> Backup
+- Navigate to System => Backup
 - Select Restore Backup
 - Select Choose File
 - Select your backup zip file
@@ -399,7 +399,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - Re-install Radarr
 - Find the location of the AppData directory for Radarr  
-  - Running Radarr once and via the UI go to System -> About  
+  - Running Radarr once and via the UI go to System => About  
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -414,7 +414,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - Re-install Radarr
 - Find the location of the AppData directory for Radarr  
-  - Running Radarr once and via the UI go to System -> About  
+  - Running Radarr once and via the UI go to System => About  
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr
 - Connect to the Synology NAS through SSH and log in as root  
@@ -455,7 +455,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 Depending on your OS, there are multiple possible ways.
 
-- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- In `Settings` => `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Radarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Radarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
@@ -493,7 +493,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Ensure the Web UI is enabled
 
-- Ensure that the Alt Listening Port (Advanced -> Web UI) is not the same as the Listening Port (Connections)
+- Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections)
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 

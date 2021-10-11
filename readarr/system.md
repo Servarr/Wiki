@@ -26,7 +26,7 @@ Readarr stores its data in an SQLite database. The SQLite3 library installed on 
 
 ##### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
+Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -39,7 +39,7 @@ This means Readarr will be unable to update itself. You’ll have to update Read
 
 Readarr detected that AppData folder for your Operating System is located inside the directory that contains the Readarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
-Please look at System -> Info to see the current AppData & Startup directories.
+Please look at System => Info to see the current AppData & Startup directories.
 This means Readarr will be unable to update itself without risking data-loss.
 If you’re on linux, you’ll probably have to change the home directory for the user that is running Readarr and copy the current contents of the ~/.config/Readarr directory to preserve your database.
 
@@ -106,7 +106,7 @@ MediaInfo Library could not be loaded.
 
 ##### No download client is available
 
-A properly configured and enabled download client is required for Readarr to be able to download media. Since Readarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Readarr to use it and create a category. See Settings -> Download Client.
+A properly configured and enabled download client is required for Readarr to be able to download media. Since Readarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Readarr to use it and create a category. See Settings => Download Client.
 
 ##### Unable to communicate with download client
 
@@ -119,7 +119,7 @@ Ensure SSL encryption is not turned on if you're using both your Readarr instanc
 ##### Download clients are unavailable due to failure
 
 One or more of your download clients is not responding to requests made by Readarr. Therefore Readarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Readarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
-You should inspect System->Logs to see what the reason is for the failures.
+You should inspect System=>Logs to see what the reason is for the failures.
 If you no longer use this download client, disable it in Readarr to prevent the errors.
 
 ##### Enable Completed Download Handling
@@ -149,7 +149,7 @@ See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-p
 ##### Downloading into Root Folder
 
 Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-Configured Root Folders (aka Library folders) can be found in [Settings -> Media Management -> Root Folders](/readarr/settings/#root-folders)
+Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/readarr/settings/#root-folders)
 One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
@@ -208,7 +208,7 @@ None of the indexers you have enabled support interactive searching. This means 
 ##### Indexers are unavailable due to failures
 
 Errors occurs while Readarr tried to use one of your indexers. To limit retries, Readarr will not use the indexer for an increasing amount of time (up to 24h).
-This mechanism is triggered if Readarr was unable to get a response from the indexer (could be dns, connection, authentication or indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
+This mechanism is triggered if Readarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
 You can prevent the warning by disabling the affected indexer.
 Run the Test on the indexer to force Readarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
@@ -260,20 +260,20 @@ Feature Requests: Got a great idea drop it here
 
 This page lists all scheduled tasks that Readarr runs
 
-- Application Update Check - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings-> Update
+- Application Update Check - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings=> Update
 
 > Note: If on Docker this will not update your container as a new image will need to be downloaded.
 {.is-warning}
 
-- Backup - This will run a backup of your Readarr's database on a set schedule more details on this can be found here. More information about backups can be found System -> Backups.
+- Backup - This will run a backup of your Readarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Readarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
-- Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new books. More info about lists can be found Settings -> Lists.
+- Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new books. More info about lists can be found Settings => Lists.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Readarr
 - Refresh Author - This goes through and refreshes all authors in your Library.
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Rescan folders - This scans all book folders to see if a book exists or not, and updates the status of it appropriately.
-- Rss Sync - This will run the RSS Sync. This can be changed in settings -> options. More information on the RSS function can be found on our FAQ
+- Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
   
 > All these tasks can be run manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}

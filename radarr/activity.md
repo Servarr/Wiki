@@ -14,7 +14,7 @@ The activity tab shows all processes on Radarr's "to-do list", "have done list",
 
 ## Queue
 
-The queue shows all items the application can recognize that is in the specified download client's category (Settings -> Download Client -> Category). To view all releases Options -> Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
+The queue shows all items the application can recognize that is in the specified download client's category (Settings => Download Client => Category). To view all releases Options => Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
 More information about the Queue section Coming Soon - Contributions are Welcome.
 

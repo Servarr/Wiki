@@ -513,7 +513,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Download Clients
 
-Click on `Settings ->`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
+Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
 #### Supported Download Clients
 

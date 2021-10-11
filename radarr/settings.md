@@ -38,13 +38,13 @@ Also, note that for each individual settings page, there are some options at the
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
   - Delete - Self explanatory
-    - Example: Movie,The.mkv -> MovieThe.mkv
+    - Example: Movie,The.mkv => MovieThe.mkv
   - Replace with Dash - Removes the colon and adds a dash in its place
-    - Example: Movie,The.mkv -> Movie-The.mkv
+    - Example: Movie,The.mkv => Movie-The.mkv
   - Replace with Space - Removes the colon and adds a space in its place
-    - Example: Movie,The.mkv -> Movie The.mkv
+    - Example: Movie,The.mkv => Movie The.mkv
   - Replace with Space Dash Space - self explanatory
-    - Example: Movie,The.mkv -> Movie - The.mkv
+    - Example: Movie,The.mkv => Movie - The.mkv
 
 #### Standard Movie Format
 
@@ -504,7 +504,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Download Clients
 
-Click on `Settings ->`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
+Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
 #### Supported Download Clients
 

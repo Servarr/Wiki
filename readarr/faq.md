@@ -69,7 +69,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## How can I mass delete authors from the wanted list?
 
-- Use Mass Editor -> Select authors you want to delete -> Delete
+- Use Mass Editor => Select authors you want to delete => Delete
 
 ## Why doesn't Readarr work behind a reverse proxy
 
@@ -267,7 +267,7 @@ To disable authentication (to reset your username or password) you will need nee
 
 Depending on your OS, there are multiple possible ways.
 
-- In `Settings` -> `General` on some OS'es, there is a checkbox to launch the browser on startup.
+- In `Settings` => `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Readarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Readarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 

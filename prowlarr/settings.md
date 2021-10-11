@@ -31,7 +31,7 @@ Also, note that for each individual settings page, there are some options at the
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
-Click on `Settings` -> `Indexer Proxies`, and then click the `+` to add a proxy.
+Click on `Settings` => `Indexer Proxies`, and then click the `+` to add a proxy.
 
 ![proxies.png](/assets/prowlarr/proxies.png)
 
@@ -46,7 +46,7 @@ Configuring a Flaresolverr server requires you to enter the hostname:port of you
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
-Click on `Settings` -> `Apps`, and then click the `+` to add an *arr program.
+Click on `Settings` => `Apps`, and then click the `+` to add an *arr program.
 
 ![addapps.png](/assets/prowlarr/addapps.png)
 
@@ -80,7 +80,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Enter the URL of your program here. Again, enter the full URL Base if used.
 
-- Enter the API Key of your program here. You can get this from your program in the `Settings` -> `General` tab, and copy/paste it here.
+- Enter the API Key of your program here. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
@@ -94,7 +94,7 @@ If you intend to do searches directly within Prowlarr, you need to add Download 
 > Prowlarr does not sync Download Clients to the Applications.
 {.is-info}
 
-Click on `Settings` -> `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
@@ -133,7 +133,7 @@ Notifications are used for notifications from Prowlarr.
 
 ![settings_connect.png](/assets/prowlarr/settings_connect.png)
 
-Click on `Settings` -> `Notifications`, and then click the `+` to add a new connection.
+Click on `Settings` => `Notifications`, and then click the `+` to add a new connection.
 
 There are many notification options available:
 
@@ -145,13 +145,13 @@ Each one has different configuration options. If you're using notifications with
 
 Here is where you can maintain any existing tags you've used.
 
-Click on `Settings` -> `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
+Click on `Settings` => `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
 
 ## General
 
 Here is where you will change generalized application settings such as port and logging level.
 
-Click on `Settings` -> `General`.
+Click on `Settings` => `General`.
 
 > A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are hidden.
 {.is-info}

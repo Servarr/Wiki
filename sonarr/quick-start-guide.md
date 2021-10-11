@@ -12,7 +12,7 @@ dateCreated: 2021-09-03T19:14:22.283Z
 
 > This page is still in progress and not complete.
 
-> For a more detailed breakdown of all the settings, check [Sonarr ->Settings](/sonarr/settings) We will cover the following options.
+> For a more detailed breakdown of all the settings, check [Sonarr =>Settings](/sonarr/settings) We will cover the following options.
 {.is-info}
 
 In this guide we will try to explain the basic setup you need to do to get started with Sonarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ for a full explanation.

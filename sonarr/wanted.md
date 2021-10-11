@@ -10,7 +10,7 @@ dateCreated: 2021-06-10T01:40:02.329Z
 
 ## Wanted
 
-The Wanted -> Missing section contains a list of the episodes you have marked to monitor that are missing from your disk (haven't been downloaded yet).
+The Wanted => Missing section contains a list of the episodes you have marked to monitor that are missing from your disk (haven't been downloaded yet).
 
 > This will only include episodes completely missing from your disk, not episodes which exist on disk, but have their cutoff profile unmet.
 {.is-info}
@@ -26,7 +26,7 @@ The Wanted -> Missing section contains a list of the episodes you have marked to
 
 ## Cutoff Unmet
 
-The Wanted -> Cutoff Unmet section contains a list of the episodes that have not yet reached their cut off. The cut off is set within your profiles
+The Wanted => Cutoff Unmet section contains a list of the episodes that have not yet reached their cut off. The cut off is set within your profiles
 
 The cut off is where you essentially tell Sonarr that the quality of the video file is good enough for you and you no longer wish for Sonarr to keep searching for better.
 

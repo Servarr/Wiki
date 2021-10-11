@@ -26,7 +26,7 @@ This page contains a list of health checks errors. These health checks are perio
 
 ##### New update is available
 
-- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System -> Updates page is probably a good starting point.
+- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -39,7 +39,7 @@ This page contains a list of health checks errors. These health checks are perio
 
 - Prowlarr detected that AppData folder for your Operating System is located inside the directory that contains the Prowlarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
-- Please look at System -> Info to see the current AppData & Startup directories.
+- Please look at System => Info to see the current AppData & Startup directories.
 - This means Prowlarr will be unable to update itself without risking data-loss.
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
 
@@ -102,7 +102,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 
 ##### No download client is available
 
-- A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings -> Download Client.
+- A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings => Download Client.
 
 ##### Unable to communicate with download client
 
@@ -115,7 +115,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 ##### Download clients are unavailable due to failure
 
 - One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
-- You should inspect System->Logs to see what the reason is for the failures.
+- You should inspect System=>Logs to see what the reason is for the failures.
 - If you no longer use this download client, disable it in Prowlarr to prevent the errors.
 
 ##### Bad Download Client Settings
@@ -131,7 +131,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 ##### Indexers are unavailable due to failures
 
 - (An) Error(s) occur(s) while Prowlarr tried to use one of your indexers. To limit retries, Prowlarr will not use the indexer for an increasing amount of time (up to 24h).
-- This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be dns, connection, authentication or indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
+- This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
@@ -179,12 +179,12 @@ Feature Requests: Got a great idea drop it here
 
 This page lists all scheduled tasks that Prowlarr runs
 
-- Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Prowlarr is on the most current version then triggering the update script to update Prowlarr. Settings-> Update
+- Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Prowlarr is on the most current version then triggering the update script to update Prowlarr. Settings=> Update
 
 > Note: If on Docker this will not update your container as a new image will need to be downloaded.
 {.is-warning}
 
-- Backup - This will run a backup of your Prowlarr's database on a set schedule more details on this can be found here. More information about backups can be found System -> Backups.
+- Backup - This will run a backup of your Prowlarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Prowlarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Prowlarr

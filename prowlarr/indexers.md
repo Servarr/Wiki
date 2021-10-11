@@ -58,7 +58,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 > Redirect is typically only needed for a handful of very specific indexers {.is-info}
 
-- App Profile - Select your App Profile here. These can be created in [`Settings` -> `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
+- App Profile - Select your App Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 

@@ -366,7 +366,7 @@ When done, click `Test` to test the connection. If you get a green checkmark, yo
 
 If you get an error, you should check your logs to see what the specific error is, and then fix that issue before saving.
 
-Lists sync by default every 24 hours, but can be triggered manually from the `Settings` -> `Tasks` page. You cannot automate this process any quicker than that.
+Lists sync by default every 24 hours, but can be triggered manually from the `Settings` => `Tasks` page. You cannot automate this process any quicker than that.
 
 ## Connect
 
