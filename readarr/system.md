@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-08-02T23:40:45.790Z
+date: 2021-10-11T22:44:10.786Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -117,6 +117,8 @@ The Port number of that your download client is using these are filled out with 
 Ensure SSL encryption is not turned on if you're using both your Readarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 ##### Download clients are unavailable due to failure
+
+{#download-clients-are-unavailable-due-to-failures}
 
 One or more of your download clients is not responding to requests made by Readarr. Therefore Readarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Readarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 You should inspect System=>Logs to see what the reason is for the failures.
