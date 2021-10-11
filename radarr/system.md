@@ -73,19 +73,19 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 ##### Cannot install update because startup folder is not writable by the user
 
-This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s Startup directory (the installation directory) to allow Radarr to update itself.
+- This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s Startup directory (the installation directory) to allow Radarr to update itself.
 
 ##### Updating will not be possible to prevent deleting AppData on Update
 
-Radarr detected that AppData folder for your Operating System is located inside the directory that contains the Radarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
+- Radarr detected that AppData folder for your Operating System is located inside the directory that contains the Radarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
-Please look at System => Info to see the current AppData & Startup directories.
-This means Radarr will be unable to update itself without risking data-loss.
-If you’re on linux, you’ll probably have to change the home directory for the user that is running Radarr and copy the current contents of the ~/.config/Radarr directory to preserve your database.
+- Please look at System => Info to see the current AppData & Startup directories.
+- This means Radarr will be unable to update itself without risking data-loss.
+- If you’re on linux, you’ll probably have to change the home directory for the user that is running Radarr and copy the current contents of the ~/.config/Radarr directory to preserve your database.
 
 ##### Branch is for a previous version
 
-The update branch setup in Settings/General is for a previous version of Radarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
+- The update branch setup in Settings/General is for a previous version of Radarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
 ##### Could not connect to signalR
 
@@ -199,57 +199,57 @@ If you no longer use this download client, disable it in Radarr to prevent the e
   - Download client: /mnt/user/data/downloads:/data/downloads
   - Radarr: /mnt/user/data:/data
 
-Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
-There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+- Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
+- There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+- See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
 ##### Downloading into Root Folder
 
 - Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/radarr/settings/#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
-It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
 ##### Bad Download Client Settings
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
 
 ##### Bad Remote Path Mapping
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
 ##### Permissions Error
 
-Radarr or the user radarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
+- Radarr or the user radarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
 
 ##### Remote File was removed part way through processing
 
-A file accessible via a remote path map appears to have been removed prior to processing completing.
+- A file accessible via a remote path map appears to have been removed prior to processing completing.
 
 ##### Remote Path is Used and Import Failed
 
-Check your logs for more info; Refer to our Troubleshooting Guides
+- Check your logs for more info; Refer to our Troubleshooting Guides
 
 #### Completed/Failed Download Handling
 
 ##### Completed Download Handling is disabled
 
-(This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.)
-It’s recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Radarr will only import a download once the download client reports it as ready.
-If you wish to enable Completed Download Handling you should verify the following: * Warning: Completed Download Handling only works properly if the download client and Radarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
+- (This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.)
+- It’s recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Radarr will only import a download once the download client reports it as ready.
+- If you wish to enable Completed Download Handling you should verify the following: * Warning: Completed Download Handling only works properly if the download client and Radarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
 
 #### Indexers
 
 ##### No indexers available with automatic search enabled, Radarr will not provide any automatic search results
 
-Simply put you do not have any of your indexers set to allow automatic searches
-Go into Settings > Indexers, select an indexer you'd like to allow Automatic Searches and then click save.
+- Simply put you do not have any of your indexers set to allow automatic searches
+- Go into Settings => Indexers, select an indexer you'd like to allow Automatic Searches and then click save.
 
 ##### No indexers available with RSS sync enabled, Radarr will not grab new releases automatically
 
-So Radarr uses the RSS feed to pick up new releases as they come along. More info on that here
-To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync
+- So Radarr uses the RSS feed to pick up new releases as they come along. More info on that here
+- To correct this issue go to Settings => Indexers, select an indexer you have and enable RSS Sync
 
 ##### No indexers are enabled
 
@@ -268,7 +268,7 @@ To correct this issue go to Settings > Indexers, select an indexer you have and 
 - Errors occurs while Radarr tried to use one of your indexers. To limit retries, Radarr will not use the indexer for an increasing amount of time (up to 24h).
 - This mechanism is triggered if Radarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error caused the problem.
 - You can prevent the warning by disabling the affected indexer.
-Run the Test on the indexer to force Radarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+- Run the Test on the indexer to force Radarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
 #### Movie Folders
 

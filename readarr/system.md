@@ -12,17 +12,19 @@ dateCreated: 2021-06-20T19:54:43.262Z
 
 ### Health
 
-This page contains a list of health checks errors. These health checks are periodically performed performed by Readarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.
+- This page contains a list of health checks errors. These health checks are periodically performed performed by Readarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.
 
 #### System Warnings
 
 ##### Branch is not a valid release branch
 
-The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
 
 ##### Currently installed SQLite version is not supported
 
-Readarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Readarr requires at least version 3.9.0. Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+- Readarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Readarr requires at least version 3.9.0. Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+> Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+{.is-info}
 
 ##### New update is available
 
@@ -33,19 +35,19 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 ##### Cannot install update because startup folder is not writable by the user
 
-This means Readarr will be unable to update itself. You’ll have to update Readarr manually or set the permissions on Readarr’s Startup directory (the installation directory) to allow Readarr to update itself.
+- This means Readarr will be unable to update itself. You’ll have to update Readarr manually or set the permissions on Readarr’s Startup directory (the installation directory) to allow Readarr to update itself.
 
 ##### Updating will not be possible to prevent deleting AppData on Update
 
-Readarr detected that AppData folder for your Operating System is located inside the directory that contains the Readarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
+- Readarr detected that AppData folder for your Operating System is located inside the directory that contains the Readarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
-Please look at System => Info to see the current AppData & Startup directories.
-This means Readarr will be unable to update itself without risking data-loss.
-If you’re on linux, you’ll probably have to change the home directory for the user that is running Readarr and copy the current contents of the ~/.config/Readarr directory to preserve your database.
+- Please look at System => Info to see the current AppData & Startup directories.
+- This means Readarr will be unable to update itself without risking data-loss.
+- If you’re on linux, you’ll probably have to change the home directory for the user that is running Readarr and copy the current contents of the ~/.config/Readarr directory to preserve your database.
 
 ##### Branch is for a previous version
 
-The update branch setup in Settings/General is for a previous version of Readarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
+- The update branch setup in Settings/General is for a previous version of Readarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
 ##### Could not connect to signalR
 
@@ -53,6 +55,8 @@ signalR drives the dynamic UI updates, so if your browser cannot connect to sign
 
 The most common occurrence of this is use of a reverse proxy or cloudflare
 Cloudflare needs websockets enabled.
+
+###### Nginx
 
 Nginx requires the following addition to the location block for the app:
 
@@ -86,17 +90,17 @@ Note: you will also need to add the websocket directive to your readarr configur
 
 ##### Failed to resolve the IP Address for the Configured Proxy Host
 
-Review your proxy settings and ensure they are accurate
-Ensure your proxy is up, running, and accessible
+- Review your proxy settings and ensure they are accurate
+- Ensure your proxy is up, running, and accessible
 
 ##### Proxy Failed Test
 
-Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
+- Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
 
 ##### System Time is off by more than 1 day
 
-System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
-Review your system time and ensure it is synced to an authoritative time server and accurate
+- System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
+- Review your system time and ensure it is synced to an authoritative time server and accurate
 
 ##### MediaInfo Library Could not be Loaded
 
@@ -106,14 +110,14 @@ MediaInfo Library could not be loaded.
 
 ##### No download client is available
 
-A properly configured and enabled download client is required for Readarr to be able to download media. Since Readarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Readarr to use it and create a category. See Settings => Download Client.
+- A properly configured and enabled download client is required for Readarr to be able to download media. Since Readarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Readarr to use it and create a category. See Settings => Download Client.
 
 ##### Unable to communicate with download client
 
-Readarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
-This is typically due to improperly configured download client. Things you can typically check:
-Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Readarr.
+- Readarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
+- This is typically due to improperly configured download client. Things you can typically check:
+- Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
+- The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Readarr.
 Ensure SSL encryption is not turned on if you're using both your Readarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 ##### Download clients are unavailable due to failure
@@ -139,130 +143,131 @@ Readarr: Download Path: /data:/mnt/user/downloads
 Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished book is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
-Team Readarr is a big fan of simply using /data.
-Download client: /data:/mnt/user/data
-Readarr: /data:/mnt/user/data
+- Team Readarr is a big fan of simply using /data.
+  - Download client: /data:/mnt/user/data
+  - Readarr: /data:/mnt/user/data
 
-Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
-There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+- Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
+- There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+- See [TRaSH's Remote Path Guide](https://trash-guides.info/Readarr/Readarr-remote-path-mapping/) for more information.
 
 ##### Downloading into Root Folder
 
-Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/readarr/settings/#root-folders)
-One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
-It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+- Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/readarr/settings/#root-folders)
+- One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
+- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
 ##### Bad Download Client Settings
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
 
 ##### Bad Remote Path Mapping
 
-The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Readarr/Readarr-remote-path-mapping/) for more information.
 
 ##### Permissions Error
 
-Readarr or the user readarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
+- Readarr or the user readarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
 
 ##### Remote File was removed part way through processing
 
-A file accessible via a remote path map appears to have been removed prior to processing completing.
+- A file accessible via a remote path map appears to have been removed prior to processing completing.
 
 ##### Remote Path is Used and Import Failed
 
-Check your logs for more info; Refer to our Troubleshooting Guides
+- Check your logs for more info; Refer to our Troubleshooting Guides
 
 #### Completed/Failed Download Handling
 
 ##### Completed Download Handling is disabled
 
-(This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.)
-It’s recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Readarr will only import a download once the download client reports it as ready.
-If you wish to enable Completed Download Handling you should verify the following: * Warning: Completed Download Handling only works properly if the download client and Readarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
+- (This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.)
+- It’s recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Readarr will only import a download once the download client reports it as ready.
+- If you wish to enable Completed Download Handling you should verify the following: * Warning: Completed Download Handling only works properly if the download client and Readarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
 
 #### Indexers
 
 ##### No indexers available with automatic search enabled, Readarr will not provide any automatic search results
 
-Simply put you do not have any of your indexers set to allow automatic searches
-Go into Settings > Indexers, select an indexer you'd like to allow Automatic Searches and then click save.
+- Simply put you do not have any of your indexers set to allow automatic searches
+- Go into Settings => Indexers, select an indexer you'd like to allow Automatic Searches and then click save.
 
 ##### No indexers available with RSS sync enabled, Readarr will not grab new releases automatically
 
-So Readarr uses the RSS feed to pick up new releases as they come along. More info on that here
-To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync
+- So Readarr uses the RSS feed to pick up new releases as they come along. More info on that here
+- To correct this issue go to Settings => Indexers, select an indexer you have and enable RSS Sync
 
 ##### No indexers are enabled
 
-Readarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.
+- Readarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.
 
 #### Enabled indexers do not support searching
 
-None of the indexers you have enabled support searching. This means Readarr will only be able to find new releases via the RSS feeds. But searching for books (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
+- None of the indexers you have enabled support searching. This means Readarr will only be able to find new releases via the RSS feeds. But searching for books (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
 
 ##### No indexers avaiable with Interactive Search Enabled
 
-None of the indexers you have enabled support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
+- None of the indexers you have enabled support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
 
 ##### Indexers are unavailable due to failures
 
-Errors occurs while Readarr tried to use one of your indexers. To limit retries, Readarr will not use the indexer for an increasing amount of time (up to 24h).
-This mechanism is triggered if Readarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
-You can prevent the warning by disabling the affected indexer.
-Run the Test on the indexer to force Readarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+- Errors occurs while Readarr tried to use one of your indexers. To limit retries, Readarr will not use the indexer for an increasing amount of time (up to 24h).
+- This mechanism is triggered if Readarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
+- You can prevent the warning by disabling the affected indexer.
+- Run the Test on the indexer to force Readarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
 #### Book Folders
 
 ##### Missing root folder
 
-This error is typically identified if a book is looking for a root folder but that root folder is no longer available.
+- This error is typically identified if a book is looking for a root folder but that root folder is no longer available.
 
-If you would like to remove this warning simply find the book that is still using the old root folder and edit it to the correct root folder
+- This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
 
-Easiest way to find this is to:
+- If you would like to remove this warning simply find the book that is still using the old root folder and edit it to the correct root folder
 
-- Go to the Authors (Library) Tab
-- Create a custom filter with the old root folder path
-- Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these books to be moved to.
+- Easiest way to find this is to:
 
-- Next you will receive a pop-up that states Would you like to move the book folders to 'root path' ? This will also state This will also rename the book folder per the book folder format in settings. Simply select No if the you do not want Readarr to move your files
+  - Go to the Authors (Library) Tab
+  - Create a custom filter with the old root folder path
+  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these books to be moved to.
+  - You will receive a pop-up that states Would you like to move the book folders to 'root path' ? This will also state This will also rename the book folder per the book folder format in settings. Simply select No if the you do not want Readarr to move your files
 
 #### Books
 
 ##### Lists are unavailable due to failures
 
-Typically this simply means that Readarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
+- Typically this simply means that Readarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 
 ### Disk Space
 
-This section will show you available disk space
-In docker this can be tricky as it will typically show you the available space within your Docker image
+- This section will show you available disk space
+- In docker this can be tricky as it will typically show you the available space within your Docker image
 
 ### About
 
-This will tell you about your current install of Readarr
+- This will tell you about your current install of Readarr
 
 ### More Info
 
-Home Page: Readarr's home page
-Wiki: You're here already
-Reddit: r/readarr
-Discord: Join our discord
-Donations: If you're feeling generous and would like to donate click here
-Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all click here
-Source: GitHub
-Feature Requests: Got a great idea drop it here
+- Home Page: Readarr's home page
+- Wiki: You're here already
+- Reddit: r/readarr
+- Discord: Join our discord
+- Donations: If you're feeling generous and would like to donate click here
+- Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all click here
+- Source: GitHub
+- Feature Requests: Got a great idea drop it here
 
 ## Tasks
 
 ### Scheduled
 
-This page lists all scheduled tasks that Readarr runs
+- This section lists all scheduled tasks that Readarr runs
 
-- Application Update Check - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings=> Update
+- Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings=> Update
 
 > Note: If on Docker this will not update your container as a new image will need to be downloaded.
 {.is-warning}
@@ -275,46 +280,44 @@ This page lists all scheduled tasks that Readarr runs
 - Refresh Author - This goes through and refreshes all authors in your Library.
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Rescan folders - This scans all book folders to see if a book exists or not, and updates the status of it appropriately.
-- Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
+- RSS Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
   
-> All these tasks can be run manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
+> All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
 ### Queue
 
-The queue will show you upcoming tasks as well as a history of recently ran tasks as well as how long those tasks took.
+The queue will show you running and upcoming tasks as well as a history of recently ran tasks as well as how long those tasks took.
 
 ## Backup
 
-> This section will be more tailored to the buttons and overall point of the page.
-> However, if you're looking for how to back/restore your Readarr instance click [here](/readarr/faq).
+> If you're looking for how to back/restore your Readarr instance click [here](/readarr/faq).
 {.is-info}
 
-Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
+- Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
   
-Here you will have two options at the top of the screen
-
 - Backup Now - This option will trigger a manual backup of your Readarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
-By selecting Choose File this will prompt your browser to open a dialog box to restore from a Readarr Zip backup
+  - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Readarr Zip backup
   
-Finally if you have any previous backups and would like to download them from Readarr to be placed in a non standard location you simply can select one of these files to download them
-Off to the right of each of the previous download you have two options.
-
-- One - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
-- Two - To delete a previous backup
+- If you have any previous backups and would like to download them from Readarr to be placed in a non standard location you simply can select one of these files to download them
+- Off to the right of each of the previous download you have two options.
+  - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
+  - Delete (Trashcan) - To delete a previous backup
 
 ## Updates
 
-The update screen will show the past 5 updates that have been made as well as the current version you are on.
-This page will also display the update notes from the Developers telling you what has been fixed or added to Readarr (Rejoice!)
+- The update screen will show the past 5 updates that have been made as well as the current version you are on.
+- This page will also display the update notes from the Developers telling you what has been fixed or added to Readarr (Rejoice!)
   
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
 
 ## Events
 
-The events tab will show you what has been happening within your Readarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging. Events are the equivalent of INFO Logs.
+- The events tab will show you what has been happening within your Readarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
+
+> Events are the equivalent of INFO Logs. {.is-info}
 
 - Components - This column will tell you what component within Readarr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.
@@ -325,9 +328,9 @@ The events tab will show you what has been happening within your Readarr. This c
 
 ## Log Files
 
-This page will allow you to download and see what current log files are available for Readarr
+- This page will allow you to download and see what current log files are available for Readarr
 
-On the top row there are several options to allow you to control your log files.
+- On the top row there are several options to allow you to control your log files.
 
 - The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
   - Log Files - The bread and butter of any support issue more on log files can be found here.
