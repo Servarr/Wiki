@@ -10,7 +10,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 ## The Best Docker Setup
 
-**TL; DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
+**TL;DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
@@ -56,7 +56,7 @@ If you’re wondering why hardlinks aren’t working or why a simple move is tak
 
 So pick *one* path layout and use it for all of them. It's suggested to use `/data`, but there are other  common names like `/shared`, `/media` or `/dvr`. Keeping this the same on the outside *and* inside will make your setup simpler: one path to remember or if integrating Docker and native software. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
 
-It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match and likely updare existing torrents.. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr, Plex, etc.
+It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match and likely update existing torrents.. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr, Plex, etc.
 
 #### Examples
 
@@ -158,7 +158,7 @@ If you use the latest version of the abandoned [RadarrSync](https://github.com/S
 
 #### Docker Compose
 
-This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is Docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [red5d/docker-autocompose](#get-docker-compose) to convert `docker run` commands into a single `docker-compose.yml` file.
+This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is Docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [ghcr.io/red5d/docker-autocompose](#get-docker-compose) to convert `docker run` commands into a single `docker-compose.yml` file.
 
 > The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
 {.is-warning}
@@ -257,7 +257,7 @@ This is the best option for most users, it lets you control and configure many c
 
 #### Systemd
 
-For maintaining a few Docker containsrs just using systemd is an option. It standardizes control and makes dependencies simpler for both native and Docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
+For maintaining a few Docker containers just using systemd is an option. It standardizes control and makes dependencies simpler for both native and Docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
 
 ```shell
     ## /etc/systemd/system/thing.service
@@ -315,13 +315,13 @@ Getting the `docker run` command from GUI managers can be hard, this Docker imag
 
 #### Get docker-compose
 
-> Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/Misc/how-to-provide-a-docker-compose/)
+> Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/compose/)
 {.is-info}
 
-Getting a `docker-compose.yml` from running instances is possible with [red5d/docker-autocompose](https://hub.docker.com/r/red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
+Getting a `docker-compose.yml` from running instances is possible with [ghcr.io/red5d/docker-autocompose](https://github.com/Red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
 
 ```shell
-    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock red5d/docker-autocompose $CONTAINER_NAME $ANOTHER_CONTAINER_NAME ... $ONE_MORE_CONTAINER_NAME
+    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docker-autocompose $CONTAINER_NAME $ANOTHER_CONTAINER_NAME ... $ONE_MORE_CONTAINER_NAME
 ```
 
 #### Troubleshoot networking
@@ -358,9 +358,9 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 
 ```shell
     ls -alhi
-    42207934 -rw-r--r--  2 user group    0 Sep 11 11:55 hardlink
-    42207936 -rw-r--r--  1 user group    0 Sep 11 11:55 nohardlinks
-    42207934 -rw-r--r--  2 user group    0 Sep 11 11:55 original
+    42207934 -rw-r--r--  2 user group    0 Sep 11 11:55 # hardlinked
+    42207936 -rw-r--r--  1 user group    0 Sep 11 11:55 # no hardlinks
+    42207934 -rw-r--r--  2 user group    0 Sep 11 11:55 # original
 
     stat original
       File: original
@@ -376,13 +376,34 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 ### Interesting Docker images
 
 - [rasmunk/sshfs](https://hub.docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/docker-volume-sshfs](https://github.com/rasmunk/docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.docker.com/p/vieux/sshfs).
-- [hotio’s](https://hotio.dev/) [sonarr](https://hotio.dev/containers/sonarr), [radarr](https://hotio.dev/containers/radarr) and [lidarr](https://hotio.dev/containers/lidarr) images let you run the built in version *or* specify an alternative via environment variable. The documentation and Dockerfile also don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
-- [hotio’s](https://hotio.dev/) [ombi](https://hotio.dev/containers/ombi), [jackett](https://hotio.dev/containers/jackett), [nzbhydra2](https://hotio.dev/containers/nzbhydra2) and [bazarr](https://hotio.dev/containers/bazarr) are useful too, but don’t really require any special permissions or paths.
-- [hotio’s](https://hotio.dev/) [unpackerr](https://hotio.dev/containers/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
-- [binhex’s](https://hub.docker.com/u/binhex) [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/), [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/) and [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/) are popular torrent clients with built in VPN support. For usenet, there is [SABnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/) and [NZBGet](https://hub.docker.com/r/binhex/arch-nzbget/).
-- [binhex’s](https://hub.docker.com/u/binhex) [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/), [radarr](https://hub.docker.com/r/binhex/arch-radarr/) and [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/) images suggest default paths that don’t allow for hard linking, instead follow the process described above and pass in a single volume.
-- [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained.
-- [pyouroboros/ouroboros](https://hub.docker.com/r/pyouroboros/ouroboros) or [containrrr/watchtower](https://hub.docker.com/r/containrrr/watchtower) automatically update your running Docker containers to the latest available image. These are not recommended if you use Docker Compose.
+- [hotio’s](https://hotio.dev/) - The documentation and Dockerfile don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests (except Sonarr which may be useful for testing.
+  - [sonarr](https://hotio.dev/containers/sonarr)
+  - [radarr](https://hotio.dev/containers/radarr)
+  - [lidarr](https://hotio.dev/containers/lidarr)
+  - [readarr](https://hotio.dev/containers/readarr)
+  - [prowlarr](https://hotio.dev/containers/prowlarr) for usenet and torrent tracker searching
+- Some of hotio's other containers include:
+  - [qbittorrent](https://hotio.dev/containers/qbittorrent/)
+  - [NZBGet](https://hotio.dev/containers/nzbget/)
+  - [SABnzbd](https://hotio.dev/containers/sabnzbd/)
+  - [qflood](https://hotio.dev/containers/qflood/)
+  - [ombi](https://hotio.dev/containers/ombi) for requesting media
+  - [overseerr](https://hotio.dev/containers/overseerr/) for requesting media
+  - [jackett](https://hotio.dev/containers/jackett) for torrent tracker searching
+  - [nzbhydra2](https://hotio.dev/containers/nzbhydra2) for usenet indexer searching
+  - [bazarr](https://hotio.dev/containers/bazarr) for subtitles
+  - [pullio](https://hotio.dev/pullio/) for auto updating containers
+  - [unpackerr](https://hotio.dev/containers/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
+- [binhex’s](https://hub.docker.com/u/binhex) offers many containers as well
+  - [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/)
+  - [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/)
+  - [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/)
+  - [SABnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/)
+  - [NZBGet](https://hub.docker.com/r/binhex/arch-nzbget/)
+  - [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/)
+  - [radarr](https://hub.docker.com/r/binhex/arch-radarr/)
+  - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
+- [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained. However, avoid their 'recommended' paths.
 
 ### Custom Docker Network and DNS
 
