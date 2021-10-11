@@ -31,7 +31,7 @@ Upgrading the .NET Framework is very straightforward on Windows, although it oft
 
 ##### Currently installed mono version is old and unsupported
 
-Sonarr is written in .NET and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
+Sonarr is written in .Net and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
 Mono 5.8 is the absolute minimum for Sonarr, but Mono 5.20 is currently recommended.
 The upgrade procedure for Mono varies per platform.
 
@@ -190,7 +190,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 ### Scheduled
 
-This section lists all scheduled tasks that Sonarr runs
+- This section lists all scheduled tasks that Sonarr runs
 
 - Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Sonarr is on the most current version then triggering the update script to update Sonarr. Settings => Update
 
@@ -205,7 +205,7 @@ This section lists all scheduled tasks that Sonarr runs
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Sonarr
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Refresh Series - This goes through and refreshes all the metadata for all monitored and unmonitored series
-- Rss Sync - This will run the RSS Sync. This can be changed in Settings => Indexers => Options. More information on the RSS function can be found on our [FAQ](/sonarr/faq)
+- RSS Sync - This will run the RSS Sync. This can be changed in Settings => Indexers => Options. More information on the RSS function can be found on our [FAQ](/sonarr/faq)
   
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
@@ -221,17 +221,15 @@ The queue will show you running and upcoming tasks as well as a history of recen
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
   
-Here you will have two options at the top of the screen
-
 - Backup Now - This option will trigger a manual backup of your Sonarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
-By selecting Choose File this will prompt your browser to open a dialog box to restore from a Sonarr Zip backup
+  - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Sonarr Zip backup
   
-Finally if you have any previous backups and would like to download them from Sonarr to be placed in a non standard location you simply can select one of these files to download them
-Off to the right of each of the previous download you have two options.
+- If you have any previous backups and would like to download them from Sonarr to be placed in a non standard location you simply can select one of these files to download them
+- Off to the right of each of the previous download you have two options.
 
-- One - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
-- Two - To delete a previous backup
+  - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
+  - Delete (Trashcan) - To delete a previous backup
 
 ## Updates
 
@@ -256,9 +254,9 @@ The events tab will show you what has been happening within your Sonarr. This ca
 
 ## Log Files
 
-This page will allow you to download and see what current log files are available for Sonarr.
+- This page will allow you to download and see what current log files are available for Sonarr.
 
-On the top row there are several options to allow you to control your log files.
+- On the top row there are several options to allow you to control your log files.
 
 - The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
   - Log Files - The bread and butter of any support issue more on log files can be found here.

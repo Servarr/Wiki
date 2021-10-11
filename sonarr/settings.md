@@ -193,15 +193,15 @@ Name for the `Specials` (Season) folder
 
 ### Folders
 
-- Create Empty Media folders - Create missing series folders during disk scan
+- Create Empty Media Folders - Create missing series folders during disk scan
 - Delete Empty Folders - Delete empty series and season folders during disk scan and when episode files are deleted
 
 ### Importing
 
 - Episode Title Required - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
-- Always - Always wait up to 24 hours for a title prior to importing if the episode is TBA
-- Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA. <- This is recommended.
-- Never - Do not delay importing if the episode is TBA.
+  - Always - Always wait up to 24 hours for a title prior to importing if the episode is TBA
+  - Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA. <- This is recommended.
+  - Never - Do not delay importing if the episode is TBA.
 - Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
@@ -213,8 +213,8 @@ Name for the `Specials` (Season) folder
 
 ### File Management
 
-- Unmonitor Deleted Episodes` - Episodes deleted from disk are automatically unmonitored in Sonarr
-- Download Proper & Repacks` - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
+- Unmonitor Deleted Episodes - Episodes deleted from disk are automatically unmonitored in Sonarr
+- Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Release Profiles (Preferred Words)](#release-profiles).
@@ -223,24 +223,24 @@ Name for the `Specials` (Season) folder
 
 > [Use preferred words for automatic upgrades to propers/repacks](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#propers-and-repacks) {.is-info}
 
-- Analyse video files` - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
+- Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Series Folder after Refresh` - Rescan the series folder after refreshing the series
   - Always - This will rescan series folder based upon Tasks Schedule
   - After Manual Refresh - You will have to manually rescan the disk
   - Never - Just as it says, never rescan the series folder.
-- Change File Date` - Change file date on import/rescan
+- Change File Date - Change file date on import/rescan
   - None - Sonarr will not change the date that shows in your given file browser
   - Local Release - The date the video was aired locally
-  - UTC Release date - The date the video was released based upon the UTC
-- Recycling Bin` - Episode files will go here when deleted instead of being permanently deleted
-- Recycling Bin Cleanup` - This is how old a given file can be before it is deleted permanently
+  - UTC Release Date - The date the video was released based upon the UTC
+- Recycling Bin - Episode files will go here when deleted instead of being permanently deleted
+- Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
 > Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
 ### Permissions
 
-- Set Permissions` - Should `chmod` be run when files are imported/renamed?
-  - chmod Folder` - Octal, applied during import/rename to media folders and files (without execute bits)
+- Set Permissions - Should `chmod` be run when files are imported/renamed?
+  - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
 > The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 {.is-info}
@@ -310,7 +310,7 @@ Name for the `Specials` (Season) folder
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
 - Tags - This is where you will select any relevant tags that you will be using for this scheme
 - Wrench icon - This will allow you to edit the delay profile
-- Plus icon - Create a new delay profile
+- Plus icon (<kb>+</kb>) - Create a new delay profile
 
 #### Uses
 
@@ -405,7 +405,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Bluray-480p - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
 - HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
 - HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
-- Raw-HD - TBD
+- Raw-HD - A raw feed of an HD stream.
 - WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
 - Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
 - WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
@@ -436,9 +436,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 #### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-- Software that works with usenet and integrates quite well with Sonarr is [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
+- Software that works with usenet and integrates quite well with Sonarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
 - Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
-- Choose from the presets or add a custom indexer (such as NZBHydra2 or PRowlarr)
+- Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
 - Name - The name of the indexer in Sonarr
 - Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
 - Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
@@ -558,17 +558,17 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
 
-|      Client       | Ratio |      Time      |
-| :---------------: | :---: | :------------: |
-|      Deluge       |  Yes  |       No       |
-|     Hadouken      |  No   |       No       |
-|    qBittorrent    |  Yes  |      Yes       |
-|     rTorrent      |  No   |       No       |
-| Torrent Blackhole |  No   |       No       |
-| Download Station  |  No   |       No       |
-|   Transmission    |  Yes  | *Idle Limit*\* |
-|     uTorrent      |  Yes  |      Yes       |
-|       Vuze        |  Yes  |      Yes       |
+|      Client       | Ratio |     Time     |
+| :---------------: | :---: | :----------: |
+|      Deluge       |  Yes  |      No      |
+|     Hadouken      |  No   |      No      |
+|    qBittorrent    |  Yes  |     Yes      |
+|     rTorrent      |  No   |      No      |
+| Torrent Blackhole |  No   |      No      |
+| Download Station  |  No   |      No      |
+|   Transmission    |  Yes  | *Idle Limit* |
+|     uTorrent      |  Yes  |     Yes      |
+|       Vuze        |  Yes  |     Yes      |
 
 > *Idle Limit* - Transmission internally has an Idle Time check, but Sonarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
@@ -602,7 +602,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 - Check Downloader:
   - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
-  - History - Check your downloader's history for failure (e.g. not blocks to repair, or extraction failed)
+  - History - Check your downloader's history for failure (e.g. not enough blocks to repair, or extraction failed)
 - When Sonarr finds a failed download it starts processing them and does a few things:
   - Adds a failed event to Sonarr's history
   - Removes the failed download from Download Client to free space and clear downloaded files (optional)
@@ -646,11 +646,11 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ### Connections
 
-- Connections are how you want Radarr to communicate with the outside world.
+- Connections are how you want Sonarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported download clients is located [here](/sonarr/supported#notifications)
+- A list of supported notifications & connections is located [here](/sonarr/supported#notifications)
 
 ### Connection Triggers
 
