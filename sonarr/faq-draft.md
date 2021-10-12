@@ -8,9 +8,9 @@ editor: markdown
 dateCreated: 2021-10-10T02:09:18.775Z
 ---
 
-## Sonarr Basics
+# Sonarr Basics
 
-### How does Sonarr find episodes?
+## How does Sonarr find episodes?
 
 - Sonarr does *not* regularly search for episode files that are   missing or have not met their quality goals. Instead, it fairly   frequently queries your indexers and trackers for *all* the newly   posted episodes/newly uploaded releases, then compares that with its   list of episodes that are missing or need to be upgraded. Any   matches are downloaded. This lets Sonarr cover a library of *any   size* with just 24-100 queries per day (RSS interval of 15-60   minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a show, you will need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn't been released yet, you do not need to initiate a search.
@@ -18,7 +18,7 @@ dateCreated: 2021-10-10T02:09:18.775Z
 - If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](/sonarr/wanted) tab and search from there.
 - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
 
-### How are possible downloads compared?
+## How are possible downloads compared?
 
 >Generally Quality Trumps All
 {-is.info}
@@ -37,7 +37,7 @@ The current logic [can be found here](https://github.com/Sonarr/Sonarr/blob/deve
 1. Age (If Usenet)
 1. Size
 
-### Preferred Words FAQs
+## Preferred Words FAQs
 
 For the score of the on disk file: The existing name of the file and the "scene name" of the release are evaluated for preferred words. The ​​higher score of the two is taken.
 
@@ -47,24 +47,24 @@ For Sonarr you can make use of the `{Preferred Words}` token in your renaming sc
 
 Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
 
-### How do I change from the Windows Service to a Tray App?
+## How do I change from the Windows Service to a Tray App?
 
 1. Shut Sonarr down
 1. Run serviceuninstall.exe that's in the Sonarr directory
 1. Run Sonarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 1. (Optional) Drop a shortcut to Sonarr.exe in the startup folder to auto-start on boot.
 
-### How do I Backup/Restore my Sonarr?
+## How do I Backup/Restore my Sonarr?
 
-#### Backing up Sonarr
+### Backing up Sonarr
 
-##### Using built-in backup
+#### Using built-in backup
 
 - Go to System => Backup in the Sonarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
-##### Using file system directly
+#### Using file system directly
 
 - Find the location of the AppData directory for Sonarr  
   - Via the Sonarr UI go to System => About  
@@ -72,12 +72,12 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 - Stop Sonarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
-#### Restoring from Backup
+### Restoring from Backup
 
 > Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 {.is-warning}
 
-##### Using zip backup
+#### Using zip backup
 
 - Re-install Sonarr
 - Run Sonarr
@@ -87,7 +87,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 - Select your backup zip file
 - Select Restore
 
-##### Using file system backup
+#### Using file system backup
 
 - Re-install Sonarr
 - Find the location of the AppData directory for Sonarr  
@@ -130,7 +130,7 @@ chmod -R 0644 *
 
 - Start Sonarr
 
-### Help I have locked myself out
+## Help I have locked myself out
 
 {#help-i-have-forgotten-my-password}
 
@@ -143,7 +143,7 @@ To disable authentication (to reset your username or password) you will need nee
 1. Restart Sonarr
 1. Sonarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-### Why are there two files? \| Why is there a file left in downloads?
+## Why are there two files? \| Why is there a file left in downloads?
 
 This is expected. Below is how the Torrent Process works.
 
@@ -154,14 +154,14 @@ This is expected. Below is how the Torrent Process works.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
 
-### I see that feature/bug X was fixed, Why can I not see it?
+## I see that feature/bug X was fixed, Why can I not see it?
 
 Sonarr consists of two main branches of code, `main` and `develop`.
 
 - `main`is released periodically, when the `develop` branch is stable
 - `develop` is for pre-release testing and people willing to live on the edge. When a feature is marked as in `develop` it will only be available to users running the `develop` branch, once it has been move to live (in `main`) it is officially released.
 
-### Episode Progress - How is it calculated?
+## Episode Progress - How is it calculated?
 
 - There are two parts to the episode count, one being the number of episodes (Episode Count) and the other being the number of episodes with files (Episode File Count), each one uses slightly different logic to give you the overall progress for a series or season.
 
@@ -170,11 +170,11 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - If a series has 10 episodes that have all aired and you do not have any files for them you would have 0/10 episodes, if you unmonitored all the episodes in that series you would have 0/0 and if you got all the episodes for that series, regardless of if the episodes are monitored or not, you would have 10/10 episodes.
 
-### How do I access Sonarr from another computer?
+## How do I access Sonarr from another computer?
 
 - By default Sonarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Sonarr uses integrates with Windows (this also applies for current alternatives). If Sonarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
 
-### Why doesn't Sonarr automatically search for missing episodes?
+## Why doesn't Sonarr automatically search for missing episodes?
 
 - There are two times when we would want to have missing episodes searched for, when a new series with existing aired episodes is added and when  Sonarr has been offline and unable to find episodes as it normally would. Endlessly searching for episodes that have aired that are missing is a waste of resources, both in terms of local processing power and on the indexers and in our experience catches users off guard, wasting bandwidth.
 
@@ -182,7 +182,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - In v2 we sat back and thought about it and realized the benefit is not really there, we could try to throttle the searching, but that just draws it out and still does the same thing; hammer the indexer with useless requests. If the episode wasn't there the last time the search was performed, why would it be there now? It would be if it was reposted, but if it was reposted, the automatic process that gets new episodes would see it was posted and act on it.
 
-### Why does Sonarr refresh series information so frequently?
+## Why does Sonarr refresh series information so frequently?
 
 - Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDB proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
 - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
@@ -191,12 +191,12 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 > It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
 {.is-warning}
 
-### Why is there a number next to Activity?
+## Why is there a number next to Activity?
 
 - This number shows the count of episodes in your download client's queue and the last 60 items in its history that have not yet been imported. If the number is blue it is operating normally and should import episodes when they complete. Yellow means there is a warning on one of the episodes. Red means there has been an error. In the case of yellow (warning) and red (error), you will need to look at the queue under Activity to see what the issue is (hover over the icon to get more details).
 - You need to remove the item from your download client's queue or history to remove them from Sonarr's queue.
 
-### What's the different Series Types?
+## What's the different Series Types?
 
 - Most shows should be `Standard`. For daily shows which are typically released with a date, `Daily` should be used. Finally, there is anime where using `Anime` is *usually* right, but sometimes `Standard` can work better, so try the *other* one if you're having issues.
 
@@ -204,13 +204,13 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - Please note that not all indexers support season/episode (standard) searches.
 
-#### Series Types
+### Series Types
 
 - **Anime** - Episodes released using an absolute episode number
 - **Daily** - Episodes released daily or less frequently that use year-month-day (2017-05-25)
 - **Standard** - Episodes released with SxxEyy pattern
 
-#### Series Type Examples
+### Series Type Examples
 
 Below are some example release names for each show type. The specific differentiating piece is noted in bold.
 
@@ -232,7 +232,7 @@ Below are some example release names for each show type. The specific differenti
   - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
   - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
-### How can I rename my series folders?
+## How can I rename my series folders?
 
 1. Series
 1. Mass Editor
@@ -243,7 +243,7 @@ Below are some example release names for each show type. The specific differenti
 > If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 {.is-warning}
 
-### How do I update Sonarr?
+## How do I update Sonarr?
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -265,7 +265,7 @@ Below are some example release names for each show type. The specific differenti
 | [hotio](https://hotio.dev/containers/sonarr)                       | `hotio/sonarr:release`                                                                                                                                                                                            | `hotio/sonarr:nightly`                                                                                                                                                                                              |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `linuxserver/sonarr:latest`                                                                                                                                                                                       | `linuxserver/sonarr:develop`                                                                                                                                                                                        |
 
-#### Installing a newer version
+### Installing a newer version
 
 If Native:
 
@@ -276,15 +276,15 @@ If Docker:
 
 1. Repull your tag and update your container
 
-### Can I update Sonarr inside my Docker container?
+## Can I update Sonarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
-### Can I switch from `develop` back to `main`?
+## Can I switch from `develop` back to `main`?
 
 - See the entry below
 
-### Can I switch between branches?
+## Can I switch between branches?
 
 > You can (almost) always increase your risk.{.is-info}
 
@@ -297,25 +297,25 @@ If Docker:
   - For those on develop and are still on `3.0.6.1343` or lower you can safely downgrade to main
     - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
-### How do I request a feature for Sonarr?
+## How do I request a feature for Sonarr?
 
 - This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
 
-## Sonarr Common Problems
+# Sonarr Common Problems
 
-### System & Logs loads forever
+## System & Logs loads forever
 
 - It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
 
-### Weird UI Issues
+## Weird UI Issues
 
 - If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
 
-### Web Interface Only Loads at localhost on Windows
+## Web Interface Only Loads at localhost on Windows
 
 - If you can only reach your web interface at <http://localhost:8989/> or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at least once.
 
-### uTorrent is no longer working
+## uTorrent is no longer working
 
 - Ensure the Web UI is enabled
 
@@ -323,15 +323,15 @@ If Docker:
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-### Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
+## Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
 
 - No. Sonarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If Sonarr and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so Sonarr knows where to find the files.
 
-### I got a pop-up that said config.xml was corrupt, what now?
+## I got a pop-up that said config.xml was corrupt, what now?
 
 - Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](/sonarr/appdata-directory) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
 
-### Invalid Certificate and other HTTPS or SSL issues
+## Invalid Certificate and other HTTPS or SSL issues
 
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
@@ -339,7 +339,7 @@ If Docker:
 
 - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
-### How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup?
 
 Depending on your OS, there are multiple possible ways.
 
@@ -347,7 +347,7 @@ Depending on your OS, there are multiple possible ways.
 - When invoking Sonarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Sonarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
-### VPNs, Jackett, and the \*ARRs
+## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
@@ -355,25 +355,25 @@ Depending on your OS, there are multiple possible ways.
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
 
-### I see log messages for shows I do not have/do not want
+## I see log messages for shows I do not have/do not want
 
 - These messages are completely normal and come from the RSS feeds that Sonarr checks to see if there are episodes you do want, usually these only appear in debug/trace logging, but in the event of an problem processing an item you may see a warning or error. It is safe to ignore the warnings/errors as well since they are for shows you do not want, in the event it is for a show you want, open up a support thread on the forums.
 
-### Seeding torrents aren't deleted automatically
+## Seeding torrents aren't deleted automatically
 
 - When a torrent that is still seeding is imported, it is copied or hard linked (if enabled and *possible*) so that the torrent client can continue seeding. In an ideal setup, the torrent download folder and the library folder will be on the same file system and *look like it* (Docker and network shares make this easy to get wrong), which makes hard links possible and minimizes wasted space.
 - In addition, you can configure your seed time/ratio goals in Sonarr or your download client, setup your download client to *pause* or *stop* when they're met and enable Remove under Completed and Failed Download Handler. That way, torrents that finish seeding will be removed from the download client by Sonarr.
 
-### Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
+## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
 - This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
 [![Developer Cannot be verified](/assets/general/faq_1_mac.png)]
 
-### Help, my Mac says Sonarr.app is damaged and cannot be opened
+## Help, my Mac says Sonarr.app is damaged and cannot be opened
 
 - That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-sonarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 
-### I am getting an error: Database disk image is malformed
+## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Sonarr is corrupt.
 - Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
@@ -386,17 +386,17 @@ Depending on your OS, there are multiple possible ways.
 
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-### I use Sonarr on a Mac and it suddenly stopped working. What happened?
+## I use Sonarr on a Mac and it suddenly stopped working. What happened?
 
 - Most likely this is due to a MacOS bug which caused one of the Sonarr databases to be corrupted.
 - [Follow these steps to resolve](#i-am-getting-an-error-database-disk-image-is-malformed)
 - Then attempt to launch Sonarr and see if it works. If it does not work, you will need further support. Post in our [reddit](http://reddit.com/r/Sonarr) or hop on [discord](https://discord.gg/M6BvZn5) for help.
 
-### Why can Sonarr not see my files on a remote server?
+## Why can Sonarr not see my files on a remote server?
 
 - In short: the user Sonarr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is, Sonarr is running as a service, which causes one of two things:
 
-#### Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares
+### Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
 - Run Sonarr's service as another user that has access to that share
 - Open the Administrative Tools \> Services window on your Windows server.
@@ -405,18 +405,18 @@ Depending on your OS, there are multiple possible ways.
 - Change the service user account to the target user account.
 - Run Sonarr.exe using the Startup Folder
 
-#### You're using a mapped network drive (not a UNC path)
+### You're using a mapped network drive (not a UNC path)
 
 - Change your paths to UNC paths (`\\server\share`)
 - Run Sonarr.exe via the Startup Folder
 
-### Mapped Network Drives vs UNC Paths
+## Mapped Network Drives vs UNC Paths
 
 - Using mapped network drives generally doesn't work very well, especially when Sonarr is configured to run as a service. The better way to set shares up is using UNC paths. So instead of `X:\TV` use `\\Server\TV`.
 
 - A key point to remember is that Sonarr gets path information from the downloader, so you will *also* need to setup NZBGet, SABNzbd or any other downloader to use UNC paths too.
 
-### Sonarr will not work on Big Sur
+## Sonarr will not work on Big Sur
 
 Run
 
@@ -424,7 +424,7 @@ Run
 chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
 ```
 
-### My Custom Script stopped working after upgrading from v2
+## My Custom Script stopped working after upgrading from v2
 
 - You were likely passing arguments in your connection\...that is not supported.
 - To correct this:
@@ -432,9 +432,9 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
   1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
   1. Make sure the pwsh script is executable
 
-## Sonarr and Series Issues + Metadata
+# Sonarr and Series Issues + Metadata
 
-### How does Sonarr handle scene numbering issues (American Dad!, etc)?
+## How does Sonarr handle scene numbering issues (American Dad!, etc)?
 
 - **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
 - **Problematic Shows**  
@@ -466,7 +466,7 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
   > If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
   - Other series may be affected by this as well.
 
-### Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
+## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
 There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
 
@@ -486,7 +486,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - > The series "Helt Perfekt" with TVDB ids of `343189` and `252077` is difficult to automate due to TVDB having the same name for both shows, violating TVDB's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
 {.is-info}
 
-### TVDB is updated why isn't Sonarr?
+## TVDB is updated why isn't Sonarr?
 
 {#tvdb}
 
@@ -496,7 +496,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
 
-### Why can I not add a new series?
+## Why can I not add a new series?
 
 - In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
@@ -506,13 +506,13 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
   - Some series/seasons known are:
     - [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
 
-### Why can I not add a new series when I know the TVDB ID?
+## Why can I not add a new series when I know the TVDB ID?
 
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 
-## Sonarr Searching & Downloading Common Problems
+# Sonarr Searching & Downloading Common Problems
 
-### Why didn't Sonarr grab an episode I was expecting?
+## Why didn't Sonarr grab an episode I was expecting?
 
 First, make sure you read and understand the section above called ["How does Sonarr find episodes?](#how-does-sonarr-find-episodes) Second, make sure at least one of your indexers has the episode you were expecting to be grabbed.
 
@@ -521,15 +521,15 @@ First, make sure you read and understand the section above called ["How does Son
 1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
 1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
 
-### Why wont Sonarr import a TBA episode?
+## Why wont Sonarr import a TBA episode?
 
 - On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDB API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 
-### Sonarr says Unknown Series on Searches or Imports
+## Sonarr says Unknown Series on Searches or Imports
 
 - See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
 
-### Jackett's /all Endpoint
+## Jackett's /all Endpoint
 
 {#jackett-all-endpoint}
 
@@ -550,19 +550,19 @@ First, make sure you read and understand the section above called ["How does Son
 
 - Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
-### Jackett shows more results than Sonarr when manually searching
+## Jackett shows more results than Sonarr when manually searching
 
 This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
 
-### Finding Cookies
+## Finding Cookies
 
 - Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
-### Unpack Torrents
+## Unpack Torrents
 
 - Most torrent clients doesn't come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
 
-### Permissions
+## Permissions
 
 - Sonarr will need to move files away from where the downloader puts them into the final location, so this means that Sonarr will need to read/write to both the source and the destination directory and files.
 - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
