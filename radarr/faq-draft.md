@@ -2,7 +2,7 @@
 title: Radarr FAQ - DRAFT
 description: Draft of Reorganized Radarr FAQ
 published: true
-date: 2021-10-13T00:21:01.949Z
+date: 2021-10-13T00:23:44.967Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-13T00:19:40.319Z
@@ -10,14 +10,6 @@ dateCreated: 2021-10-13T00:19:40.319Z
 
 
 # Radarr Basics
-
-# Radarr Common Problems
-
-# Sonarr and Series Issues + Metadata
-
-# Sonarr Searching & Downloading Common Problems
-
-# Unsorted
 
 ## How does Radarr work?
 
@@ -65,6 +57,30 @@ dateCreated: 2021-10-13T00:19:40.319Z
 
 - It's suggested that physically look at the list before you even go to Radarr.
 
+## Can all my movie files be stored in one folder?
+
+- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
+- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
+- A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
+
+  - Use a Custom Script
+    - the script should be triggered on import
+    - it should be designed to move the file whenever you want it
+    - it then needs to call the Radarr API and change the movie to unmonitored.
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
+
+## Can I put all my movies in my library into one folder?
+
+- No, see above.
+
+# Radarr Common Problems
+
+# Radarr and Series Issues + Metadata
+
+# Radarr Searching & Downloading Common Problems
+
+# Radarr v0.2 => v3+ questions
+
 ## Why did the GUI / UI Change? Can it be changed back?
 
 - Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
@@ -78,6 +94,34 @@ dateCreated: 2021-10-13T00:19:40.319Z
   - Missing - Movie is Missing and Monitored
 
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
+
+## My Custom Script stopped working after upgrading from v0.2
+
+You were likely passing arguments in your connection and that is not supported.
+
+1. Change your argument to be your path
+1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
+1. Make sure the pwsh script is executable
+
+## Why doesn't Radarr work behind a reverse proxy
+
+- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
+
+```none
+proxy_http_version 1.1;
+proxy_set_header Upgrade $http_upgrade; 
+proxy_set_header Connection $http_connection;
+```
+
+- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
+- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
+- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
+
+# Unsorted
+
+
+
+
 
 ## Why can I not add a new movie to Radarr?
 
@@ -98,21 +142,6 @@ dateCreated: 2021-10-13T00:19:40.319Z
   - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
 
-## Can all my movie files be stored in one folder?
-
-- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
-- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
-- A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
-
-  - Use a Custom Script
-    - the script should be triggered on import
-    - it should be designed to move the file whenever you want it
-    - it then needs to call the Radarr API and change the movie to unmonitored.
-- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
-
-## Can I put all my movies in my library into one folder?
-
-- No, see above.
 
 ## How can I rename my movie folders?
 
@@ -153,20 +182,6 @@ dateCreated: 2021-10-13T00:19:40.319Z
 ## How can I mass delete movies from the wanted list?
 
 - Use Movie Editor => Select movies you want to delete => Delete
-
-## Why doesn't Radarr work behind a reverse proxy
-
-- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
-
-```none
-proxy_http_version 1.1;
-proxy_set_header Upgrade $http_upgrade; 
-proxy_set_header Connection $http_connection;
-```
-
-- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
-- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
-- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
 ## How do I update Radarr?
 
@@ -239,7 +254,7 @@ If Docker:
 ## How does Radarr handle "multi" in names?
 
 - Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
-r- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
+- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
 
 ## Help, Movie Added, But Not Searched
 
@@ -263,13 +278,6 @@ r- Note that multi definitions only help for release parsing and not for foreign
 
 - Check if you have [Completed Download Handling - Remove](/radarr/settings#completed-download-handling) turned on. See the settings page for additional information and details.
 
-## My Custom Script stopped working after upgrading from v0.2
-
-You were likely passing arguments in your connection and that is not supported.
-
-1. Change your argument to be your path
-1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
-1. Make sure the pwsh script is executable
 
 ## I am using a Pi running Raspbian and Radarr will not launch
 
