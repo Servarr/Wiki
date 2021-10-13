@@ -1,12 +1,23 @@
 ---
-title: Radarr FAQ
+title: Radarr FAQ - DRAFT
 description: Draft of Reorganized Radarr FAQ
 published: true
-date: 2021-10-13T00:19:40.319Z
+date: 2021-10-13T00:21:01.949Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-13T00:19:40.319Z
 ---
+
+
+# Radarr Basics
+
+# Radarr Common Problems
+
+# Sonarr and Series Issues + Metadata
+
+# Sonarr Searching & Downloading Common Problems
+
+# Unsorted
 
 ## How does Radarr work?
 
