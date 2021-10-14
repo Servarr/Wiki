@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-10-12T22:23:33.984Z
+date: 2021-10-14T18:23:18.907Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -302,6 +302,10 @@ If Docker:
 - This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
 
 # Sonarr Common Problems
+
+## Episode does not have an absolute number
+
+- The episode(s) on TVDB do not have an absolute number assigned.  Update the series on TVDB if required and then wait the 36-48 hours for the update to clear TVDB's internal cache and load into Sonarr
 
 ## System & Logs loads forever
 
