@@ -90,7 +90,7 @@ dateCreated: 2021-10-13T00:19:40.319Z
 ## Where did Wanted and Cut-off Unmet go?
 
 - Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
-  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your avaiaibliy settings.
+  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your availability settings.
   - Missing - Movie is Missing and Monitored
 
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
@@ -119,10 +119,6 @@ proxy_set_header Connection $http_connection;
 
 # Unsorted
 
-
-
-
-
 ## Why can I not add a new movie to Radarr?
 
 - Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
@@ -141,7 +137,6 @@ proxy_set_header Connection $http_connection;
   - Table View
   - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
-
 
 ## How can I rename my movie folders?
 
@@ -206,10 +201,10 @@ proxy_set_header Connection $http_connection;
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.  Please note that `nightly` branches are intentionally not listed below.
 
-| |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
-|---|---|---|
-|[hotio](https://hotio.dev/containers/radarr)|`hotio/radarr:release`|`hotio/radarr:testing`|
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr)|`linuxserver/radarr:latest`|`linuxserver/radarr:develop`|
+|                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/radarr)                       | `hotio/radarr:release`                                                                                                                                                                                                | `hotio/radarr:testing`                                                                                                                                                                                              |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `linuxserver/radarr:latest`                                                                                                                                                                                           | `linuxserver/radarr:develop`                                                                                                                                                                                        |
 
 ## Can I update Radarr inside my Docker container?
 
@@ -277,7 +272,6 @@ If Docker:
 ## Movie Imported, But Source File And Torrent Not Deleted
 
 - Check if you have [Completed Download Handling - Remove](/radarr/settings#completed-download-handling) turned on. See the settings page for additional information and details.
-
 
 ## I am using a Pi running Raspbian and Radarr will not launch
 
@@ -559,7 +553,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
 
-- Add each indexer seperatedly. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
+- Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
