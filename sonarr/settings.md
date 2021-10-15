@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-10-15T21:25:36.501Z
+date: 2021-10-15T22:06:33.310Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -686,7 +686,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - For Example:
   - You want a specific series to only use a specific indexer. You would create a tag and assign the series and indexer that tag.
   - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
-> Note: Tags do not influence “Must Contain”, “Must Not Contain”, “Preferred” or any other aspect not mentioned above.
+> Note: Tags do not influence “Must Contain”, “Must Not Contain”, “Preferred” words or any other aspect not mentioned above.
 {.is-info}
 
 ## General
