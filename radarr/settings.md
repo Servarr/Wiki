@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-10-15T21:36:58.279Z
+date: 2021-10-15T21:50:13.313Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -667,17 +667,16 @@ Kodi will be one of the most commonly used options here if that is the software 
 
 ## Tags
 
-- The tag section in Radarr is used to link different aspects of Radarr.
+- The tag section in Radarr is used to link different aspects of Radarr.  They are also useful for tracking which movies come from which lists.
 - Tags are particularly useful for:
 
   - Delay Profiles
-  - Indexers
   - Restrictions
 
-- Tags can be used to link Delay Profiles, Indexers, Restrictions and Movies together.
+- Tags can be used to link Delay Profiles and Restrictions and Movies together.
 - For Example:
-  - You want a specific Movie to only use a specific indexer. You would create a tag and assign the Movie and indexer that tag.
-  - You want a specific Restrictions to only use a specific Delay Profile. You would create a tag and assign the Restrictions and Delay Profile that tag.
+  - You want a specific Restrictions to only apply to a specifc movie. You would create a tag and assign the Restrictions and Movie that tag.
+  - This proess is the same for Delay Profiles.
 > Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
 {.is-info}
 
