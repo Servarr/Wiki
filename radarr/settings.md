@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-08-29T02:15:32.223Z
+date: 2021-10-15T02:49:11.603Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -250,7 +250,7 @@ See [Custom Formats](#custom-formats) for more details.
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
-- Tags - This is where you will select any relevant tags that you will be using for this scheme
+- Tags - With giving this delay profile a tag you will be able to tag a given movie to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
 
