@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-09-03T19:14:45.446Z
+date: 2021-10-15T02:48:46.952Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -308,7 +308,7 @@ Name for the `Specials` (Season) folder
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
-- Tags - This is where you will select any relevant tags that you will be using for this scheme
+- Tags - With giving this delay profile a tag you will be able to tag a given series to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
 
