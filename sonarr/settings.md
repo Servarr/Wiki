@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-10-15T02:48:46.952Z
+date: 2021-10-15T21:25:36.501Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -677,11 +677,17 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ## Tags
 
-- The tag section is for Sonarr is simply used to see what tags you have used and what series have that tag associated to it.
-- Tags can be useful to limit certain aspects of Sonarr to a specific series such as:
+- The tag section in Sonarr is used to link different aspects of Sonarr.
+- Tags are particularly useful for:
   - Delay Profiles
   - Release Profiles
   - Indexers
+- Tags can be used to link Delay Profiles, Release Profiles, Indexers and Series together.
+- For Example:
+  - You want a specific series to only use a specific indexer. You would create a tag and assign the series and indexer that tag.
+  - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
+> Note: Tags do not influence “Must Contain”, “Must Not Contain”, “Preferred” or any other aspect not mentioned above.
+{.is-info}
 
 ## General
 
