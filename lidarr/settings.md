@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-09-19T19:49:12.985Z
+date: 2021-10-15T21:51:27.204Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -98,6 +98,23 @@ OnHealthIssue
 - Lidarr_Health_Issue_Message => healthCheck.Message
 - Lidarr_Health_Issue_Type => healthCheck.Source.Name
 - Lidarr_Health_Issue_Wiki => healthCheck.WikiUrl.ToString() ?? string.Empty
+
+## Tags
+
+- The tag section in Lidarr is used to link different aspects of Lidarr.
+- Tags are particularly useful for:
+
+  - Delay Profiles
+  - Release Profiles
+  - Indexers
+
+- Tags can be used to link Delay Profiles, Release Profiles, Indexers and Artists/Albums together.
+- For Example:
+  - You want a specific Artist/Album to only use a specific indexer. You would create a tag and assign the Artist/Album and indexer that tag.
+  - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
+> Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
+{.is-info}
+
 
 ## General
 
