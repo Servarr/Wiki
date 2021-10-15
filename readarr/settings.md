@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-08-22T04:06:31.296Z
+date: 2021-10-15T22:07:14.708Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -419,7 +419,21 @@ If you are using audiobooks, you will use these options to control it.
 
 ## Tags
 
-If you have created any tags, they will be listed here and you can remove them if necessary.
+- The tag section in Readarr is used to link different aspects of Readarr.
+- Tags are particularly useful for:
+
+  - Release Profiles
+  - Indexers
+  - Import Lists
+
+- Tags can be used to link Release Profiles, Indexers, Import Lists and Authors/Books together.
+- For Example:
+  - You want a specific Author/Book to only use a specific indexer. You would create a tag and assign the Author/Book and indexer that tag.
+  - You want a specific Import List to only use a specific Release Profile. You would create a tag and assign the Import List and Release Profile that tag.
+> It is highly recommended that you add a descriptive tag to an Import List aside from what is mentioned above.
+
+> Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
+{.is-info}
 
 ## General
 
