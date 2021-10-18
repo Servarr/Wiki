@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2021-10-16T10:14:52.921Z
+date: 2021-10-18T22:37:30.437Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -150,7 +150,7 @@ In your Prowlarr setup, you will need this line:
 
 If you have any different `proxy_set_header` you must replace it with the line above.
 
-## Indexer, Application, and Download Client Connection Issues
+## Indexer, Application, and Download Client Issues
 
 - At a basic level Prowlarr needs to be able to talk to your indexers.
 - If you use application sync, Prowlarr also needs to be able to talk to your applications and the applications need to be able to talk to Prowlarr.
@@ -177,3 +177,9 @@ This is typically caused by:
 - This is typically due to running an end of life (EOL) version of Sonarr which does not have the v3 API endpoints
 - Prowlarr does not support Sonarr v2
 - Prowlarr only supports Sonarr v3
+
+### Invalid Torrents
+
+- Try downloading the link via the URL and variables Prowlarr used
+- Try downloading thr torrent proxided via prowlarr (i.e. use the prowlarr link the app that grabbed the file use)
+- If the issue is Prowlarr caused then please file a bug report.
