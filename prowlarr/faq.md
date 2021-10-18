@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-10-01T00:02:52.666Z
+date: 2021-10-18T18:44:15.701Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -20,6 +20,18 @@ dateCreated: 2021-06-23T03:06:20.944Z
 1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexers)
 1. Add a tag to the created flaresovlerr proxy
 1. Add a tag to your [Indexer](/prowlarr/indexers)
+
+
+## How can I add an indexer that is down or not functional?
+
+- Follow then standard steps to add the indexer noting thr following changes.
+- Uncheck (Disable) the `Enabled` box
+- Press `Save`
+- Press `Save` again to trigger a force save
+- Edit the Indexer (Wrench Icon)
+- Check (Enable) the `Enabled` box
+- Press `Save`
+- Press `Save` again to trigger a force save
 
 ## Prowlarr will not sync to Sonarr
 
