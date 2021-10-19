@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-10-19T13:52:03.628Z
+date: 2021-10-19T13:56:48.505Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -349,6 +349,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - Name - The Name of the Custom Format
 - Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
+
+> Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses. {.is-info}
 
 ### Custom Format Conditions
 
