@@ -2,7 +2,7 @@
 title: Readarr Custom Scripts
 description: 
 published: true
-date: 2021-09-13T22:33:11.721Z
+date: 2021-10-23T03:45:12.487Z
 tags: readarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:41:11.792Z
@@ -12,7 +12,8 @@ If you're looking to trigger a custom script, you can find more details here. Sc
 
 ## Overview
 
-Readarr can execute a custom script (coming soon)
+Readarr can execute a custom script 
+- Docs coming soon(tm)
 
 ## Environment Variables
 
