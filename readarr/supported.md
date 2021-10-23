@@ -2,7 +2,7 @@
 title: Readarr Supported
 description: 
 published: true
-date: 2021-08-22T17:08:29.034Z
+date: 2021-10-23T21:12:48.414Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:28.684Z
@@ -107,6 +107,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 {#importlist}
 
 - Goodreads Bookshelves {#goodreadsbookshelf}
+  - Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
 - Goodreads Owned Books {#goodreadsownedbooks}
 - LazyLibrarian {#lazylibrarianimport}
 - Readarr {#readarrimport}
