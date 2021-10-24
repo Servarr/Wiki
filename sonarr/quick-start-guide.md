@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T06:04:29.410Z
+date: 2021-10-24T06:06:23.380Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -92,6 +92,8 @@ Downloading and importing is where most people experience issues. From a high le
 
 #### Usenet
 
+{#usenet}
+
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
   - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -102,12 +104,14 @@ Downloading and importing is where most people experience issues. From a high le
 
 ### BitTorrent
 
+{#bittrrent}
+
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
   - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
-- If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completetion).
+- If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 ## How to import your existing organized media library
 
