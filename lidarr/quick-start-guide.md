@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-10-24T06:10:08.958Z
+date: 2021-10-24T06:10:58.973Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -169,7 +169,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 ##### BitTorrent
 
-{#bittrrent}
+{#bittorrent}
 
 - Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
   - Examples: movies, tv, series, music, etc.
