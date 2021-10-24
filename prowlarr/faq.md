@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: 
 published: true
-date: 2021-10-18T18:44:15.701Z
+date: 2021-10-24T01:04:37.918Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-06-23T03:06:20.944Z
@@ -14,6 +14,8 @@ dateCreated: 2021-06-23T03:06:20.944Z
 - Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
 ## Can I use flaresolverr indexers?
+
+> Flaresolverr v2.0 is not yet supported by Prowlarr {.is-warning}
 
 - Yes.
 
