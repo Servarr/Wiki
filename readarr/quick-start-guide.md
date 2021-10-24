@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T06:08:30.452Z
+date: 2021-10-24T06:11:18.857Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -147,7 +147,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 #### BitTorrent
 
-{#bittrrent}
+{#bittorrent}
 
 - Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
   - Examples: movies, tv, series, music, etc.
