@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T06:07:04.651Z
+date: 2021-10-24T06:11:31.992Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -104,7 +104,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 #### BitTorrent
 
-{#bittrrent}
+{#bittorrent}
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
   - Examples: movies, tv, series, music, etc.
