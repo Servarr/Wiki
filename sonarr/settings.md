@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-10-24T06:06:28.729Z
+date: 2021-10-24T06:07:10.969Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -495,7 +495,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Download Client Processes
 
-#### Usenet
+### Usenet
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
   - Examples: movies, tv, series, music, etc.
