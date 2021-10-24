@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T05:59:15.464Z
+date: 2021-10-24T06:07:23.522Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -122,27 +122,30 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-## {.tabset}
+### {.tabset}
 
-### Usenet
+#### Usenet
 
 {#usenet}
 
-1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-  -   Examples: movies, tv, series, music, ect.
-1. Radarr will monitor your download clients active downloads that use that category name. It monitors this via your download client’s API.
-1. When the download is completed, Radarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Radarr
-1. Radarr will scan that completed file location for files that Radarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-1. Leftover files from the download will be sent to your trash or recycling.
+- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+  - Examples: movies, tv, series, music, etc.
+- Radarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
+- When the download is completed, Radarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Radarr
+- Radarr will scan that completed file location for files that Radarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Radarr will fall back and copy the file then delete from the source which is IO intensive.
+- If the "Completed Download Handling - Remove" option is enabled in Radarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
-### BitTorrent
+#### BitTorrent
 
-1. Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
-  - Examples: movies, tv, series, music, ect.
-1. Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-1. Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
-1. If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
+{#bittrrent}
+
+- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+  - Examples: movies, tv, series, music, etc.
+- Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Radarr will fall back and copy the file.
+- If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 ## How to import your existing organized media library
 
