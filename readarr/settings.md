@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-10-15T22:07:14.708Z
+date: 2021-10-24T03:33:37.489Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -264,60 +264,134 @@ Then click `Test`, and if you get a green checkmark, you can `Save` the indexer 
 > Information on supported download clients can be found [here](/readarr/supported#download-clients)
 {.is-info}
 
-This page is where you will add or edit your Usenet or Torrent download clients, and if necessary to add Remote Path Mappings.
+### Overview
 
-![downloadclients.png](/assets/readarr/downloadclients.png)
+- Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
+
+### Download Client Processes
+
+#### Usenet Process
+
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, ect.
+- Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
+- When the download is completed, Readarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Readarr
+- Readarr will scan that completed file location for files that Readarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
+
+#### Torrent Process
+
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, ect.
+- Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
+- If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
 ### Download Clients
 
-This is a list of download clients you've added to Readarr. How to add more is detailed below.
+Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
+
+#### Supported Download Clients
+
+- A list of supported download clients is located [here](/readarr/supported#downloadclient)
+
+Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+
+#### Usenet Client Settings
+
+- Name - The name of the download client within Readarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- API Key - the API key to authenticate to your client
+- Username - the username to authenticate to your client (typically not needed)
+- Password- the password to authenticate to your client (typically not needed)
+- Category - the category within your download client that Readarr will use
+- Recent Priority - download client priority for recently released media
+- Older Priority - download client priority for media released not recently
+- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+#### Torrent Client Settings
+
+- Name - The name of the download client within Readarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- Username - the username to authenticate to your client
+- Password- the password to authenticate to your client
+- Category - the category within your download client that Readarr will use
+- Post-Import Category - the category to set after the release is downloaded and imported. Please note that this breaks completed download handling removal.
+- Recent Priority - download client priority for recently released media
+- Older Priority - download client priority for media released not recently
+- Initial State - Initial state for torrents
+- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+#### Torrent Client Remove Download Compatibility
+
+- Readarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
+
+|      Client       | Ratio |      Time      |
+| :---------------: | :---: | :------------: |
+|      Deluge       |  Yes  |       No       |
+|     Hadouken      |  No   |       No       |
+|    qBittorrent    |  Yes  |      Yes       |
+|     rTorrent      |  No   |       No       |
+| Torrent Blackhole |  No   |       No       |
+| Download Station  |  No   |       No       |
+|   Transmission    |  Yes  | *Idle Limit*\* |
+|     uTorrent      |  Yes  |      Yes       |
+|       Vuze        |  Yes  |      Yes       |
+
+> *Idle Limit* - Transmission internally has an Idle Time check, but Readarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
 ### Completed Download Handling
 
-- Enable: If this is not checked, Readarr won't handle completed downloads in any way. You will need to handle them manually.
+- Completed Download Handling is how Readarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
-- (Advanced Option) Check this box to remove imported downloads from the download client history. This should be checked if you're using only usenet, but should not be checked if you're using torrent downloads.
+- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
+- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
 
-### Failed Download Handling
+#### Remove Completed Downloads
 
-- This box should be checked if you want Readarr to automatically do a new search for an item that failed download.
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
+- Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
+- When the download is completed, Readarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder.
+- Readarr will scan that completed file location for video files. It will parse the video file name to match it to an book. If it can do that, it will rename the file according to your specifications, and move it to the assigned library folder.
+- Leftover files from the download will be sent to your trash or recycling.
 
-- (Advanced Option) This box should be checked to remove failed downloads from the download client history. This should be checked for both usenet and torrent clients.
+If you download using a BitTorrent client, the process is slightly different:
+
+- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Readarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
+- If the "Completed Download Handling - Remove" option is enabled in settings, Readarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the seed goal reached is supported by Readarr, and torrent is paused (stopped).
+
+#### Failed Download Handling
+
+- Failed Download Handling is only compatible with SABnzbd and NZBGet.
+- Failed Downloading Handling does not apply to Torrents nor is their plans to add such functionality.
+
+- There are several components that make up the failed download handling process:
+
+- Check Downloader:
+  - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
+  - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
+- When Readarr finds a failed download it starts processing them and does a few things:
+  - Adds a failed event to Readarr's history
+  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
+  - Starts searching for a replacement file (optional)
+  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Readarr ever again (You can still force the download via a manual search).
+  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Readarr, at this time, they are all on by default.
+
+- Redownload - Controls whether or not Readarr will search for the same file after a failure
+- Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ### Remote Path Mappings
 
-If your download client is on another physical machine, you may need a remote path mapping. These are detailed extensively [here](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/). Keep in mind that remote path mappings are "dumb" search/replaces. "If you see this, then replace it with this". If your error messages display the old/bad path, then the remote path mapping is not working properly. If they display the new path, then they are working as expected but may be incorrect.
+- Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
-## Adding a Download Client
-
-To add a download client, click on the `+` icon, which will open a pop-up box.
-
-![addclient1.png](/assets/readarr/addclient1.png)
-
-- Enter a name for this client.
-- Check this box to enable it for use by Readarr.
-- Enter the hostname. This can be a domain, localhost, or IP address.
-- Enter the port that your download client is running on.
-- (Advanced Option) If you use a reverse proxy, enter a URL Base.
-- If your client requires a username, enter it here.
-- If your client requires a password, enter it here.
-- We highly recommend entering a Category here, which also exists in your download client. This way, every *arr you run doesn't have to parse every download.
-
-![addclient2.png](/assets/readarr/addclient2.png)
-
-- For releases less than 14 days old, this is the priority assigned in the download client.
-- For releases more than 14 days old, this is the priority assigned in the download client.
-- Check this box to add downloads to your client in a "Paused" state.
-- Check this box to use https instead of http.
-
-> If you are using localhost or an IP, you almost certainly DO NOT WANT to check this box.
-
-- (Advanced Option) Client priority from 1-50. This is used where you have multiple of a given type (usenet/torrent) of client, and want one to be prioritized over the other. If two clients have the same priority, items are round-robined among them.
-
-Click `Test` to test the connection. If you get a green checkmark, you can click `Save` to save it. Repeat as necessary for each client you wish to add.
-
-If you get an error, please check your logs for the specific issue and fix it until it tests green.
-
+- One of our amazing community members have created [an excellent guide (for Radarr - same concepts for readarr)](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 ## Import Lists
 
 > Information on supported list types can be found [here](/readarr/supported#lists)
