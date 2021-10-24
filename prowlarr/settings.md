@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-08-22T03:40:03.726Z
+date: 2021-10-24T01:05:08.362Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -28,6 +28,8 @@ Also, note that for each individual settings page, there are some options at the
 
 > Information on supported proxy types can be found [here](/prowlarr/supported#indexer-proxies)
 {.is-info}
+
+> Flaresolverr v2.0 is not yet supported by Prowlarr {.is-warning}
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
