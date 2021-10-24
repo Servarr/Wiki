@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-10-24T06:15:45.869Z
+date: 2021-10-24T06:15:52.793Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -152,7 +152,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ## Connections
 
-> Information on supported connection types can be found [here](/radarr/supported#notifications)
+> Information on supported connection types can be found [here](/lidarr/supported#notifications)
 {.is-info}
 
 ## Tags
