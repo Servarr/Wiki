@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-24T19:45:04.037Z
+date: 2021-10-24T06:08:30.452Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -122,3 +122,36 @@ If you have chosen Calibre integration, you will enter more values here.
 - Select the quality profile to use for authors' books in Calibre.
 - Select the metadata profile to use for authors' books in Calibre.
 - If you want to apply a tag in Readarr for these authors, enter that here.
+
+## Download Clients
+
+`Settings` => `Download Clients`
+
+![Readarr-settings-download-clients.png](/assets/readarr/Readarr-settings-download-clients.png)
+
+Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+
+### {.tabset}
+
+#### Usenet
+
+{#usenet}
+
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+  - Examples: movies, tv, series, music, etc.
+- Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
+- When the download is completed, Readarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Readarr
+- Readarr will scan that completed file location for files that Readarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
+- If the "Completed Download Handling - Remove" option is enabled in Readarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
+
+#### BitTorrent
+
+{#bittrrent}
+
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+  - Examples: movies, tv, series, music, etc.
+- Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+- Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
+- If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
