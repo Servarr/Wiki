@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-08-22T17:17:55.713Z
+date: 2021-10-24T01:05:37.346Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -69,6 +69,7 @@ Prowlarr can automatically sync indexers with various applications
 {#indexerproxy}
 
 - FlareSolverr {#flaresolverr}
+> Flaresolverr v2.0 is not yet supported by Prowlarr {.is-warning}
 - Http {#http}
 - Socks4 {#socks4}
 - Socks5 {#socks5}
