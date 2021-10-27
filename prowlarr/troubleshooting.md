@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2021-10-18T22:37:30.437Z
+date: 2021-10-27T17:09:04.795Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -41,7 +41,7 @@ If you're linked here for support remember to get them the information from the 
 
 To provide good and useful logs for sharing:
 
-> For debugging indexer responses, it is likely helpful to go to `settings/development` in Prowlarr and temporarily enable Enhanced Indexer Logging to log the Indexer's Response {.is-info}
+> For debugging indexer responses, it is likely helpful to go to `settings/development` (hidden page) in Prowlarr and temporarily enable Enhanced Indexer Logging to log the Indexer's Response {.is-info}
 
 1. [Turn Logging up to Trace](#tracedebug-logs)
 1. [Clear Logs](#clearing-logs)
