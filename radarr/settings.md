@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-10-19T13:56:48.505Z
+date: 2021-10-28T00:31:33.834Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -644,7 +644,7 @@ Connections are how you want Radarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located [here](/sonarr/supported#notifications)
+- A list of supported notifications & connections is located [here](/radarr/supported#notifications)
 
 ### Connection Triggers
 
