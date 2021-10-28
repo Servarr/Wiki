@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-10-24T03:33:37.489Z
+date: 2021-10-28T00:33:49.772Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -447,25 +447,25 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Se
 > Information on supported connection types can be found [here](/readarr/supported#notifications)
 {.is-info}
 
-This page lists the external 3rd party connections Readarr uses for notifications.
-
-![connect.png](/assets/readarr/connect.png)
-
 ### Connections
 
-This section lists all current connections, and allows you to add new ones.
+Connections are how you want Readarr to communicate with the outside world.
 
-## Adding a Connection
+- By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-To add a new connection, click the `+` icon.  There are many connection types you can select from:
+- A list of supported notifications & connections is located [here](/readarr/supported#notifications)
 
-![connectiontypes.png](/assets/readarr/connectiontypes.png)
+### Connection Triggers
 
-Since there are so many, and each is different, we won't get into the individual details. But there are a few things to note:
-
-- The Email connection allows you to attach the book itself to the email, which is a great way to deliver books to your reading device.
-- Notifiarr allows you to customize most of these same connections in a single setup, if you have [Notifiarr](https://github.com/Notifiarr/notifiarr) installed.
-- Custom Script allows you to invoke a custom script for many different event types - if you want to convert book formats, sync to your device, or other options.
+- On Grab - Be notified when books are available for download and has been sent to a download client
+- On Release Import - Be notified when books are successfully imported
+- On Upgrade - Be notified when books are upgraded to a better quality
+- On Download Failure - Be notified when a book download fails (usenet only)
+- On Import Failure - Be notified when a book download fails to import
+- On Rename - Be notified when books are renamed
+- On Book Retag - Be notified when books are retagged
+- On Health Issue - Be notified on health check failures
+  - Include Health Warnings - Be notified on health warnings in addition to errors.
 
 ## Metadata
 
