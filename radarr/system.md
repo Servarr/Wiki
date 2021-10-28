@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-09-02T03:06:50.019Z
+date: 2021-10-28T04:55:27.966Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -20,7 +20,9 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
 
-##### Update to .NET Core version
+##### Update to .NET version
+
+{#update-to-net-core-version}
 
 - Newer versions of Radarr are targeted for .NET. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
 
