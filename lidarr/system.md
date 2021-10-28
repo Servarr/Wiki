@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2021-08-02T23:41:32.750Z
+date: 2021-10-28T04:55:55.867Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -23,9 +23,11 @@ This page contains a list of health checks errors. These health checks are perio
 
 The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
 
-##### Update to .NET Core version
+##### Update to .NET version
 
-Newer versions of Lidarr are targeted for .NET. We will no longer be providing legacy mono builds after 3.2 is released. You are running one of these legacy builds but your platform supports .NET.
+{#update-to-net-core-version}
+
+Newer versions of Lidarr are targeted for .NET. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
 
 - Fixing Docker installs
   - Re-pull your container
