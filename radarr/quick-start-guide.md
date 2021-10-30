@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T06:11:11.812Z
+date: 2021-10-30T13:00:06.422Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -179,7 +179,7 @@ Depending how well you got your existing movie folders named Radarr will try to 
 
     > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
     > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-    > - **Physical / Web**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+    > - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
 
 1. Select your preferred profile to use.
 1. What Radarr thinks the movie matched for. (if you got to many wrong matched you might need to name your folders better).
@@ -274,7 +274,7 @@ When you see the movie you want click on it.
 
     > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
     > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-    > - **Physical / Web**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+    > - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
 
 4. Select your preferred profile to use.
 5. Here you can add certain tags for advanced usage.
