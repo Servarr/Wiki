@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-10-31T03:43:21.210Z
+date: 2021-10-31T03:45:28.890Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -64,7 +64,7 @@ Discover shows recommended Movies
 
 ![radarr-discover-empty.png](/assets/radarr/radarr-discover-empty.png)
 
-- Chances are that your Discover recommendations will be sparse if you have a new installation few or no movies. You will need to add library content to fuel recommendation direction. You have several options:
+- Chances are that your Discover recommendations will be sparse if you have a new installation with few or no movies. You will need to add library content to fuel recommendation direction. You have several options:
   1. Click on the [Add New Movie](/radarr/library#add-new) button to add movies by hand.
   1. Click on the [Import Existing Library](/radarr/library#library-import) button to import an existing library.
   1. Click on the [Add Lists](/radarr/settings#lists) button to add a list to Radarr. Additional information about lists can be found [here](/radarr/faq#what-are-lists-and-what-can-they-do-for-me).
