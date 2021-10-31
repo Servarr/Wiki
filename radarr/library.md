@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-10-31T03:45:28.890Z
+date: 2021-10-31T03:47:53.628Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -79,5 +79,5 @@ Discover shows recommended Movies
     1. Select any quality profiles you have already built ([More info](/radarr/settings#quality-profiles))
     1. Do you want Radarr to monitor this movie for any upgrades in quality?
     1. Would you like Radarr to automatically search for this movie after you add it?
-    1. Do you want Radarr to exclude these movies from any lists that would be imported ([More info](/radarr/settings#list-exclusion))?
+    1. Do you want Radarr to exclude these movies from any lists that would be imported? ([More info](/radarr/settings#list-exclusion))
     1. Finally, Add the movie to your library.
