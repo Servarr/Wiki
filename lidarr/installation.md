@@ -354,14 +354,13 @@ Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want 
 
 ```none
 <Location /lidarr>
-		ProxyPreserveHost on
+  ProxyPreserveHost on
     ProxyPass http://127.0.0.1:8686/lidarr connectiontimeout=5 timeout=300
     ProxyPassReverse http://127.0.0.1:8686/lidarr
 </Location>
 ```
 
 `ProxyPreserveHost on` prevents apache2 from redirecting to localhost when using a reverse proxy.
-
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
 

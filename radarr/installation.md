@@ -225,6 +225,7 @@ If you need to re-install run again:
 ```bash
 bash RadarrInstall.sh
 ```
+
 ---
 
 #### Debian / Ubuntu Hands on Install
@@ -333,8 +334,10 @@ Typically to access the Radarr web GUI browse to `http://{Your server IP Address
 ---
 
 #### Uninstall
+
 To uninstall and purge:
 > Warning: This will destroy your application data. {.is-danger}
+
 ```bash
 sudo systemctl stop radarr
 sudo rm -rf /opt/Radarr
@@ -342,7 +345,9 @@ sudo rm -rf /var/lib/radarr
 sudo rm -rf /etc/systemd/system/radarr.service
 systemctl -q daemon-reload
 ```
+
 To uninstall and keep your application data:
+
 ```bash
 sudo systemctl stop radarr
 sudo rm -rf /opt/Radarr

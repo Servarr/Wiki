@@ -392,6 +392,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
 - One of our amazing community members have created [an excellent guide (for Radarr - same concepts for readarr)](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
+
 ## Import Lists
 
 > Information on supported list types can be found [here](/readarr/supported#lists)
@@ -504,6 +505,7 @@ If you are using audiobooks, you will use these options to control it.
 - For Example:
   - You want a specific Author/Book to only use a specific indexer. You would create a tag and assign the Author/Book and indexer that tag.
   - You want a specific Import List to only use a specific Release Profile. You would create a tag and assign the Import List and Release Profile that tag.
+
 > It is highly recommended that you add a descriptive tag to an Import List aside from what is mentioned above.
 
 > Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.

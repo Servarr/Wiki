@@ -23,7 +23,6 @@ dateCreated: 2021-06-23T03:06:20.944Z
 1. Add a tag to the created flaresovlerr proxy
 1. Add a tag to your [Indexer](/prowlarr/indexers)
 
-
 ## How can I add an indexer that is down or not functional?
 
 - Follow then standard steps to add the indexer noting thr following changes.

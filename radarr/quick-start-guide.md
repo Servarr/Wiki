@@ -128,7 +128,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 {#usenet}
 
-- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Radarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Radarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Radarr
@@ -140,7 +140,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 {#bittorrent}
 
-- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.

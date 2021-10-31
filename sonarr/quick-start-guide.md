@@ -94,7 +94,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 {#usenet}
 
-- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Sonarr
@@ -106,7 +106,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 {#bittorrent}
 
-- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. 
+- Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.

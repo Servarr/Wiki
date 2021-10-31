@@ -681,6 +681,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 - For Example:
   - You want a specific Restrictions to only apply to a specifc movie. You would create a tag and assign the Restrictions and Movie that tag.
   - This process is the same for Delay Profiles.
+
 > Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
 {.is-info}
 

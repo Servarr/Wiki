@@ -23,6 +23,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
 ##### Currently installed SQLite version is not supported
 
 - Readarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Readarr requires at least version 3.9.0. Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+
 > Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 {.is-info}
 

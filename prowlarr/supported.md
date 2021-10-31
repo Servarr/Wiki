@@ -69,7 +69,9 @@ Prowlarr can automatically sync indexers with various applications
 {#indexerproxy}
 
 - FlareSolverr {#flaresolverr}
+
 > Flaresolverr v2.0 is not yet supported by Prowlarr {.is-warning}
+
 - Http {#http}
 - Socks4 {#socks4}
 - Socks5 {#socks5}

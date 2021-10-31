@@ -12,7 +12,8 @@ If you're looking to trigger a custom script, you can find more details here. Sc
 
 ## Overview
 
-Readarr can execute a custom script 
+Readarr can execute a custom script
+
 - Docs coming soon(tm)
 
 ## Environment Variables
