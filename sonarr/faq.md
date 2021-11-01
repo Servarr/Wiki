@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-10-14T18:23:18.907Z
+date: 2021-11-01T03:25:52.270Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -301,6 +301,85 @@ If Docker:
 
 - This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
 
+# Sonarr and Series Issues + Metadata
+
+## How does Sonarr handle scene numbering issues (American Dad!, etc)?
+
+- **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
+- **Problematic Shows**  
+
+> This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are some common ones.
+{.is-info}
+
+- Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.  
+- Scene releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
+- Scene uses a year for the season S2010 and TVDb uses S01.  
+- [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.  
+- This is an incomplete list of the known shows and how/why they're problematic:  
+- American Dad {#problemshow-americandad}
+- Arrested Development {#problemshow-arresteddevelopment}
+- Kitchen Nightmares (US) {#problemshow-kitchennightmaresus}
+- Mythbusters {#problemshow-mythbusters}
+- Paw Patrol {#problemshow-pawpatrol}
+  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
+- Pawn Stars {#problemshow-pawnstars}
+- Pokémon {#problemshow-pokemon}
+  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+- La Casa de Papel / Money Heist  {#problemshow-moneyheist}
+  - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
+
+- **Sonarr side effects:**  
+{.is-info}
+- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well.
+- Example:
+  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in Sonarr for season 18 will **only** return S17 results because of the XEM map.
+  > If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+  - Other series may be affected by this as well.
+
+## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
+
+There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
+
+- Sonarr does not use aliases from TVDB.
+
+- Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
+
+- **For anime, it will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below.
+
+1. Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+1. Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+
+- *Typically these are added within 1-5 days.*
+
+- *Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
+
+- > The series "Helt Perfekt" with TVDB ids of `343189` and `252077` is difficult to automate due to TVDB having the same name for both shows, violating TVDB's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
+{.is-info}
+
+## TVDB is updated why isn't Sonarr?
+
+{#tvdb}
+
+- TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
+
+- Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
+
+- If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
+
+## Why can I not add a new series?
+
+- In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+- The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
+- The series must exist on TVDB
+- Certain series may actually be considered continuations are and seasons in their primary series.
+  - Some series/seasons known are:
+    - [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
+
+## Why can I not add a new series when I know the TVDB ID?
+
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
+
 # Sonarr Common Problems
 
 ## Episode does not have an absolute number
@@ -435,84 +514,6 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
   1. Change your argument to be your path
   1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
   1. Make sure the pwsh script is executable
-
-# Sonarr and Series Issues + Metadata
-
-## How does Sonarr handle scene numbering issues (American Dad!, etc)?
-
-- **How Sonarr handles scene numbering issues**  - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDB (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDB listing that same episode as S2017E01.
-- **Problematic Shows**  
-
-> This by no means is an all inclusive list of shows that have known issues with scene mapping however, these are some common ones.
-{.is-info}
-
-- Typical Issue: Scene numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.  
-- Scene releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
-- Scene uses a year for the season S2010 and TVDb uses S01.  
-- [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.  
-- This is an incomplete list of the known shows and how/why they're problematic:  
-- American Dad {#problemshow-americandad}
-- Arrested Development
-- Mythbusters {#problemshow-mythbusters}
-- Paw Patrol {#problemshow-pawpatrol}
-  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
-- Pawn Stars {#problemshow-pawnstars}
-- Pokémon {#problemshow-pokemon}
-  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDB and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-- La Casa de Papel / Money Heist  {#problemshow-moneyheist}
-  - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
-
-- **Sonarr side effects:**  
-{.is-info}
-- On top of the issues with the shows already, Sonarr also has some odd behavior so you may just need to overlook this as well.
-- Example:
-  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in Sonarr for season 18 will **only** return S17 results because of the XEM map.
-  > If you have a tracker with S18 episodes (because they use P2P and not Scene), please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
-  - Other series may be affected by this as well.
-
-## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
-
-There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
-
-- Sonarr does not use aliases from TVDB.
-
-- Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
-
-- **For anime, it will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below.
-
-1. Make sure it hasn't already been requested. [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-1. Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-
-- *Typically these are added within 1-5 days.*
-
-- *Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
-
-- > The series "Helt Perfekt" with TVDB ids of `343189` and `252077` is difficult to automate due to TVDB having the same name for both shows, violating TVDB's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
-{.is-info}
-
-## TVDB is updated why isn't Sonarr?
-
-{#tvdb}
-
-- TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
-
-- Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
-
-- If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
-
-## Why can I not add a new series?
-
-- In the event that TheTVDB is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
-- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
-- The show must be a TV Series, and not a movie. It must also exist on TVDB. If it is on IMDB, TMDB, or anywhere else, but not on TVDB you cannot add the show.
-- The series must exist on TVDB
-- Certain series may actually be considered continuations are and seasons in their primary series.
-  - Some series/seasons known are:
-    - [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
-
-## Why can I not add a new series when I know the TVDB ID?
-
-- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDB ID that does not have an English title. If no English title exist for that series on TheTVDB it will need to be added (if available).
 
 # Sonarr Searching & Downloading Common Problems
 
