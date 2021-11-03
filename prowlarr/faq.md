@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2021-11-03T03:01:18.079Z
+date: 2021-11-03T03:02:28.336Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -14,9 +14,6 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
 ## Can I use flaresolverr indexers?
-
-> Flaresolverr v2.0 is not yet supported by Prowlarr {.is-warning}
-
 - Yes.
 
 1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexers)
