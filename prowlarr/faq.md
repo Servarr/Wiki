@@ -1,11 +1,11 @@
 ---
 title: Prowlarr FAQ
-description: 
+description: Prowlarr FAQ
 published: true
-date: 2021-10-24T01:04:37.918Z
+date: 2021-11-03T03:01:18.079Z
 tags: prowlarr, faq
 editor: markdown
-dateCreated: 2021-06-23T03:06:20.944Z
+dateCreated: 2021-11-03T03:01:18.079Z
 ---
 
 ## Can I add any (generic) Torznab or Newznab indexer?
