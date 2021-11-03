@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-10-10T22:52:42.883Z
+date: 2021-11-03T23:19:55.931Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -108,6 +108,12 @@ Firefox
 ### LunaSea
 
 [LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
+
+### JDupes
+[Jdupes](https://github.com/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
+ - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files
+
+- `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them
 
 ### NZB360
 
