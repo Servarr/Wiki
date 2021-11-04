@@ -206,7 +206,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 {.is-warning}
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
-- [linuxserver/readarr](https://github.com/linuxserver/docker-prowlarr/tree/nightly)
+- [lscr.io/linuxserver/readarr](https://github.com/lscr.io/linuxserver/docker-prowlarr/tree/nightly)
 {.links-list}
 
 ## Reverse Proxy Configuration

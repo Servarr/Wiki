@@ -183,7 +183,7 @@ proxy_set_header Connection $http_connection;
 | |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
 |---|---|---|
 |[hotio](https://hotio.dev/containers/radarr)|`hotio/radarr:release`|`hotio/radarr:testing`|
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr)|`linuxserver/radarr:latest`|`linuxserver/radarr:develop`|
+|[LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr)|`lscr.io/linuxserver/radarr:latest`|`lscr.io/linuxserver/radarr:develop`|
 
 ## Can I update Radarr inside my Docker container?
 

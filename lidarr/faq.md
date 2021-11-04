@@ -135,7 +135,7 @@ As of 2021-06-09 the logic is as follows:
 | |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/testing/VERSION.json)|
 |---|---|---|
 |[hotio](https://hotio.dev/containers/lidarr)|`hotio/lidarr:release`|`hotio/lidarr:testing`|
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr)|`linuxserver/lidarr:latest`|`linuxserver/lidarr:develop`|
+|[LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr)|`lscr.io/linuxserver/lidarr:latest`|`lscr.io/linuxserver/lidarr:develop`|
 
 ## Can I update Lidarr inside my Docker container?
 

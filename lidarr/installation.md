@@ -182,7 +182,7 @@ Keep in mind that Lidarr will need read and write to the download folders as wel
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/lidarr](https://hotio.dev/containers/lidarr/)
-- [linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
+- [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
 {.links-list}
 
 ## FreeBSD

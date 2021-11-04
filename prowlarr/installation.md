@@ -163,7 +163,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 {.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
-- [linuxserver/prowlarr](https://github.com/linuxserver/docker-prowlarr/tree/develop)
+- [lscr.io/linuxserver/prowlarr](https://github.com/lscr.io/linuxserver/docker-prowlarr/tree/develop)
 {.links-list}
 
 ## Reverse Proxy Configuration
