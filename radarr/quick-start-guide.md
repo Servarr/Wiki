@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-30T13:00:06.422Z
+date: 2021-11-04T09:37:01.726Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -167,7 +167,7 @@ Select the root path you added earlier [in the root folders section.](#root-fold
 
 ![Radarr-importing-existing.png](/assets/radarr/Radarr-importing-existing.png)
 
-Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directrly follow this [guide](https://wikijs.servarr.com/radarr_Tips_and_Tricks#Create_a_Folder_for_Each_Movie)
+Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](/radarr/tips-and-tricks#creating-a-folder-for-each-movie)
 
 1. Your movie folder name.
 1. How you want the movie to be added to Radarr.
