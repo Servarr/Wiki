@@ -2,12 +2,11 @@
 title: Radarr FAQ - DRAFT
 description: Draft of Reorganized Radarr FAQ
 published: true
-date: 2021-10-13T00:23:44.967Z
+date: 2021-11-06T23:28:15.957Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-13T00:19:40.319Z
 ---
-
 
 # Radarr Basics
 
@@ -204,7 +203,7 @@ proxy_set_header Connection $http_connection;
 |                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [hotio](https://hotio.dev/containers/radarr)                       | `hotio/radarr:release`                                                                                                                                                                                                | `hotio/radarr:testing`                                                                                                                                                                                              |
-| [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `lscr.io/linuxserver/radarr:latest`                                                                                                                                                                                           | `lscr.io/linuxserver/radarr:develop`                                                                                                                                                                                        |
+|[LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr)|`lscr.io/linuxserver/radarr:latest`|`lscr.io/linuxserver/radarr:develop`|
 
 ## Can I update Radarr inside my Docker container?
 
