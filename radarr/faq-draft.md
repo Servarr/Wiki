@@ -2,7 +2,7 @@
 title: Radarr FAQ - DRAFT
 description: Draft of Reorganized Radarr FAQ
 published: true
-date: 2021-11-06T23:28:15.957Z
+date: 2021-10-13T00:23:44.967Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-13T00:19:40.319Z
@@ -27,14 +27,14 @@ dateCreated: 2021-10-13T00:19:40.319Z
 
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
-- **Released**: Radarr shall consider movies available as soon as the blu-ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` days.
+- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
 
 ## How are possible downloads compared?
 
 - ***Generally Quality Trumps All***
 
 - The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
-***As of 2021-06-26 the logic is as follows***
+***As of 2021-11-06 the logic is as follows***
 
 1. Quality
 1. Custom Format Score
