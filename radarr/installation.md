@@ -106,7 +106,7 @@ fi
 
 app="radarr"                        # App Name
 app_uid="radarr"                    # {Update me if needed} User App will run as and the owner of it's binaries
-app_guid="media"                   # {Update me if needed} Group App will run as.
+app_guid="media"                    # {Update me if needed} Group App will run as.
 app_port="7878"                     # Default App Port; Modify config.xml after install if needed
 app_prereq="curl mediainfo sqlite3" # Required packages
 app_umask="0002"                    # UMask the Service will run as
@@ -145,7 +145,7 @@ chmod 775 $datadir
 ## Download and install the App
 
 ## prerequisite packages
-apt install $app_prereq
+apt install "$app_prereq"
 
 ARCH=$(dpkg --print-architecture)
 ## get arch
@@ -287,7 +287,7 @@ sudo mv Radarr /opt/
 sudo chown radarr:radarr -R /opt/Radarr
 ```
 
-- Configure systemd so radarr can autostart at boot.
+- Configure systemd so Radarr can autostart at boot.
 
 > The below systemd creation script will use a data directory of `/var/lib/radarr`. Ensure it exists or modify it as needed.  For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument. Note: that `$USER` is the User Radarr runs as and is defined below.
 {.is-danger}
@@ -430,9 +430,19 @@ Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want 
 
 ```none
 <Location /radarr>
-  ProxyPass http://127.0.0.1:7878/radarr connectiontimeout=5 timeout=300
+  ProxyPreserveHost on
+    ProxyPass http://127.0.0.1:7878/radarr connectiontimeout=5 timeout=300
     ProxyPassReverse http://127.0.0.1:7878/radarr
 </Location>
+```
+
+`ProxyPreserveHost on` prevents apache2 from redirecting to localhost when using a reverse proxy.
+
+Or for making an entire VirtualHost for Radarr:
+
+```none
+ProxyPass / http://127.0.0.1:7878/radarr/
+ProxyPassReverse / http://127.0.0.1:7878/radarr/
 ```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:

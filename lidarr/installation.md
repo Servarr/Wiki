@@ -20,7 +20,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Lidarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
+> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 1. Download the latest version of Lidarr for your architecture linked below.
@@ -47,11 +47,160 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 ## Linux
 
-### Debian/Ubuntu
+### Debian / Ubuntu
+
+> Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
+
+#### Easy Install
+
+> **The following is a community written and maintained script.** {.is-info}
+For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
+If you want an easy life, follow this community provided and maintained `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
+**For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](/lidarr/installation#debian-ubuntu-hands-on-install)  steps further below.**
+> Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Lidarr install experience until Lidarr eventually when a deb package / Apt Repo is created.
+>
+> Its target is the beginner/novice with `I know enough to be dangerous` experience.
+> If you see any errors or improvements then please update for the next person by amending the wiki and script.
+> This will create the user `lidarr` and install Lidarr to /opt. It will run Lidarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
+> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Lidarr. The script won't delete your settings (application data), but be safe. {.is-danger}
+
+- (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
+- SSH into your 'Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or login as root. SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.
+- Once SSHed in type the below to create the installation script in your current director
+
+```bash
+nano LidarrInstall.sh
+```
+
+- Copy (top right corner of the script) and Paste into your SSH console
+  - If you are in an GUI OS such as Windows or MacOS (OSX): pasting could be as simple as 'right clicking' in your ssh client.
+
+```bash
+#!/bin/bash
+#### Description: Lidarr Debian install
+#### Originally from the Radarr Community
+## Am I root?, need root!
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root."
+    exit
+fi
+## Const
+#### Update these variables as required for your specific instance
+app="lidarr"                         # App Name
+app_uid="lidarr"                     # {Update me if needed} User App will run as and the owner of it's binaries
+app_guid="media"                     # {Update me if needed} Group App will run as.
+app_port="8686"                      # Default App Port; Modify config.xml after install if needed
+app_prereq="curl mediainfo sqlite3 libchromaprint-tools"            # Required packages
+app_umask="0002"                     # UMask the Service will run as
+app_bin=${app^}                      # Binary Name of the app
+bindir="/opt/${app^}"                # Install Location
+branch="master"                     # {Update me if needed} branch to install
+datadir="/var/lib/lidarr/"          # {Update me if needed} AppData directory to use
+## Create App user if it doesn't exist
+PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
+if [ "$PASSCHK" -ge 1 ]; then
+    groupadd -f $app_guid
+    usermod -a -G $app_uid $app_guid
+    echo "User: [$app_uid] seems to exist. Skipping creation, but adding to the group if needed. Ensure the User [$app_uid] and Group [$app_guid] are setup properly.  Specifically the application will need access to your download client and media files."
+else
+    echo "User: [$app_uid] created with disabled password."
+    adduser --disabled-password --gecos "" $app_uid
+    groupadd -f $app_guid
+    usermod -a -G $app_uid $app_guid
+fi
+## Stop the App if running
+if service --status-all | grep -Fq "$app"; then
+    systemctl stop $app
+    sytemctl disable $app.service
+fi
+## Create Appdata Directory
+## AppData
+mkdir -p $datadir
+chown -R $app_uid:$app_uid $datadir
+chmod 775 $datadir
+## Download and install the App
+## prerequisite packages
+apt install "$app_prereq"
+ARCH=$(dpkg --print-architecture)
+## get arch
+dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
+case "$ARCH" in
+"amd64") DLURL="${dlbase}&arch=x64" ;;
+"armhf") DLURL="${dlbase}&arch=arm" ;;
+"arm64") DLURL="${dlbase}&arch=arm64" ;;
+*)
+    echo_error "Arch not supported"
+    exit 1
+    ;;
+esac
+echo "Downloading..."
+wget --content-disposition "$DLURL"
+tar -xvzf ${app^}.*.tar.gz
+echo "Installation files downloaded and extracted"
+## remove existing installs
+echo "Removing existing installation"
+rm -rf $bindir
+echo "Installing..."
+mv "${app^}" /opt/
+chown $app_uid:$app_uid -R $bindir
+rm -rf "${app^}.*.tar.gz"
+echo "App Installed"
+##Configure Autostart
+#Remove any previous app .service
+echo "Removing old service file"
+rm -rf /etc/systemd/system/$app.service
+##Create app .service with correct user startup
+echo "Creating service file"
+cat << EOF | tee /etc/systemd/system/$app.service >/dev/null
+[Unit]
+Description=${app^} Daemon
+After=syslog.target network.target
+[Service]
+User=$app_uid
+Group=$app_guid
+UMask=$app_umask
+Type=simple
+ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
+TimeoutStopSec=20
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+EOF
+##Start the App
+echo "Service file created. Attempting to start the app"
+systemctl -q daemon-reload
+systemctl enable --now -q "$app"
+## Finish update
+host=$(hostname -I)
+ip_local=$(grep -oP '^\S*' <<<"$host")
+echo ""
+echo "Install complete"
+echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
+```
+
+- Press <kbd>Ctrl</kbd>+<kbd>O</kbd> (save) then <kbd>Enter</kbd>
+- Press <kbd>Ctrl</kbd>+<kbd>X</kbd> (exit) then <kbd>Enter</kbd>
+- Then in your console type:
+
+```shell
+bash Lida <tab>
+```
+
+- This should autocomplete to LidarrInstall.sh
+If you need to re-install run again:
+
+```bash
+bash LidarrInstall.sh
+```
+
+---
+
+#### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
-> This will download Lidarr and install it into `/opt`
+> The steps below will download Lidarr and install it into `/opt`
 > Lidarr will run under the user `lidarr` and group `media`
 > Lidarr's configuration files will be stored in `/var/lib/lidarr`
 {.is-warning}
@@ -70,7 +219,7 @@ sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 > \* The user `lidarr` is part of the group `media`
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
-> \* You created the direcotry `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions
+> \* You created the directory `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
@@ -78,7 +227,6 @@ sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
     - AMD64 use `arch=x64`
-    - ARM use `arch=arm`
     - ARM and armh use `arch=arm`
     - ARM64 use `arch=arm64`
 
@@ -147,6 +295,28 @@ sudo systemctl enable --now -q lidarr
 
 ```shell
 rm Lidarr*.linux*.tar.gz
+```
+
+#### Uninstall
+
+To uninstall and purge:
+> Warning: This will destroy your application data. {.is-danger}
+
+```bash
+sudo systemctl stop lidarr
+sudo rm -rf /opt/Lidarr
+sudo rm -rf /var/lib/lidarr
+sudo rm -rf /etc/systemd/system/lidarr.service
+systemctl -q daemon-reload
+```
+
+To uninstall and keep your application data:
+
+```bash
+sudo systemctl stop lidarr
+sudo rm -rf /opt/Lidarr
+sudo rm -rf /etc/systemd/system/lidarr.service
+systemctl -q daemon-reload
 ```
 
 ## Docker
@@ -361,6 +531,13 @@ Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want 
 ```
 
 `ProxyPreserveHost on` prevents apache2 from redirecting to localhost when using a reverse proxy.
+
+Or for making an entire VirtualHost for Lidarr:
+
+```none
+ProxyPass / http://127.0.0.1:8686/lidarr/
+ProxyPassReverse / http://127.0.0.1:8686/lidarr/
+```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
