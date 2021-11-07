@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-08-22T17:15:50.738Z
+date: 2021-11-07T22:27:39.799Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -70,7 +70,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 ### Torrents
 
-- BroadcasTheNet {#broadcasthenet}
+- BroadcasTheNet (BTN) {#broadcasthenet}
   - Private Tracker
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - FileList {#filelist}
@@ -86,7 +86,10 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
   - Nyaa only supports search for Anime Series Types
-  - > Nyaa frowns upon automation and frequently will ban your API. {.is-info}
+  - Known Issues exist with the native Sonarr version
+    - [Nyaa seeders/leechers not parsed properly anymore. #4614](https://github.com/Sonarr/Sonarr/issues/4614)
+      - This can be fixed when / if [Pull Request #4637](https://github.com/Sonarr/Sonarr/pull/4637) is merged
+  - > Nyaa frowns upon automation and frequently will ban your IP and API. {.is-warning}
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Rarbg {#rarbg}
   - Public Tracker
