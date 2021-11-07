@@ -1,13 +1,12 @@
 ---
 title: Radarr FAQ
-description: 
+description: Reorganized Radarr FAQ
 published: true
-date: 2021-10-04T19:24:54.260Z
-tags: radarr, needs-love, troubleshooting, faq
+date: 2021-10-13T00:23:44.967Z
+tags: 
 editor: markdown
-dateCreated: 2021-05-16T20:44:27.778Z
+dateCreated: 2021-10-13T00:19:40.319Z
 ---
-
 # Radarr Basics
 
 ## How does Radarr work?
@@ -72,111 +71,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - No, see above.
 
-# Radarr Common Problems
-
-# Radarr and Series Issues + Metadata
-
-# Radarr Searching & Downloading Common Problems
-
-# Radarr v0.2 => v3+ questions
-
-## Why did the GUI / UI Change? Can it be changed back?
-
-- Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
-- No it cannot be changed back to be like v0.2. No it will not be changed back.
-- You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
-
-## Where did Wanted and Cut-off Unmet go?
-
-- Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
-  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your availability settings.
-  - Missing - Movie is Missing and Monitored
-
-![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
-
-## My Custom Script stopped working after upgrading from v0.2
-
-You were likely passing arguments in your connection and that is not supported.
-
-1. Change your argument to be your path
-1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
-1. Make sure the pwsh script is executable
-
-## Why doesn't Radarr work behind a reverse proxy
-
-- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
-
-```none
-proxy_http_version 1.1;
-proxy_set_header Upgrade $http_upgrade; 
-proxy_set_header Connection $http_connection;
-```
-
-- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
-- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
-- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
-
-# Unsorted
-
-## Why can I not add a new movie to Radarr?
-
-- Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
-  - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
-  - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
-  - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
-  
-## Path is Already Configured for an Existing Movie
-
-![existing-movie.png](/assets/radarr/existing-movie.png)
-
-- This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
-- Likely this was caused by not correcting a mismatched movie when the user imported their library.
-- Locate and correct the movie that is already assigned to that movie's path.
-  - Movie Index
-  - Table View
-  - Options => Add path as a column
-  - Sort and find the movie at the noted problematic path.
-
-## How can I rename my movie folders?
-
-1. Movies
-1. Movie Editor
-1. Select what movies need their folder renamed
-1. Change Root Folder to the same Root Folder that the movies currently exist in
-1. Select "Yes move files"
-
-## Movie File and Folder Naming
-
-- Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
-
-  - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
-
-- See [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
-
-## Movie Folders Named Incorrectly
-
-- Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
-
-  - Examples that will work well:
-    - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - `/mnt/Kid Movies/Frozen (2013)/Frozen (2013) [Bluray-1080p].mkv`
-  - Examples that will work, but will require manual management:
-    - By letters: `/mnt/Movies/A-D/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - By rating: `/mnt/Movies/R/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - By genre: `/mnt/Movies/Crime, Drama, Sci-Fi/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - These examples will require manual management when the movie is added. Each of the examples will have many root directories, like `A-D` and `E-G` in the first letter example, `R` and `PG-13` in the rating example and you can guess at the variety of genre folders. When adding a new movie, the correct base folder will need to be selected for this format to work.
-  - Examples that won’t work:
-    - Single folder: `/mnt/Kid Movies/Frozen (2013) [Bluray-1080p].mkv`
-      - At this time, movies simply have to be in a folder named after the movie. There is no way around this until development work is done to add this feature.
-    - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
-      - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
-      - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
-
-## How can I mass delete movies from the wanted list?
-
-- Use Movie Editor => Select movies you want to delete => Delete
-
 ## How do I update Radarr?
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
@@ -203,7 +97,7 @@ proxy_set_header Connection $http_connection;
 |                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [hotio](https://hotio.dev/containers/radarr)                       | `hotio/radarr:release`                                                                                                                                                                                                | `hotio/radarr:testing`                                                                                                                                                                                              |
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr)|`lscr.io/linuxserver/radarr:latest`|`lscr.io/linuxserver/radarr:develop`|
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `lscr.io/linuxserver/radarr:latest`                                                                                                                                                                                   | `lscr.io/linuxserver/radarr:develop`                                                                                                                                                                                |
 
 ## Can I update Radarr inside my Docker container?
 
@@ -239,142 +133,7 @@ If Docker:
     - If you are on a newer version you are stuck on nightly until a new develop / new master are cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup.
   - For those on develop and are still on `3.2.2.5080` or lower you can safely downgrade to `master`
 
-## How does Radarr handle foreign movies or foreign titles?
-
-- Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
-- To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
-- Note that this does not include any indexer languages specified as multi.
-
-## How does Radarr handle "multi" in names?
-
-- Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
-- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
-
-## Help, Movie Added, But Not Searched
-
-- Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
-- If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
-
-  - Add and Search for Movie when adding a movie
-![addmovie-add-and-search.png](/assets/radarr/addmovie-add-and-search.png)
-  - Search an existing Movie
-![searchmovie-movie-page.png](/assets/radarr/searchmovie-movie-page.png)
-
-## Root path for movies imported from lists becomes “C:” or other weird paths
-  
-- Sometimes you can get a problem that movies that are imported from your lists, gets imported with the root path set to “C:” or other weird paths.
-
-- This is a known issue for when the root path is either not setup during the creation of the list, or if the root path has been deleted after the list was created. Note that this problem can still occur even if the list is **edited** and the correct root path is set.
-
-- Use the Movie Editor to fix paths of existing movies.
-
-## Movie Imported, But Source File And Torrent Not Deleted
-
-- Check if you have [Completed Download Handling - Remove](/radarr/settings#completed-download-handling) turned on. See the settings page for additional information and details.
-
-## I am using a Pi running Raspbian and Radarr will not launch
-
-- Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base for v3. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
-
-**Possible Solution:**
-
-Managed to fix the issue by installing the backport from debian repo. Generally not recommended to use backport in blanket upgrade mode. Installation of a single package may be ok but may also cause issues. So got to understand what you are doing.
-
-Steps to fix:
-
-First ensure you are running Raspbian buster e.g using `lsb_release -a`
-
-> Distributor ID: Raspbian
-> Description: Raspbian GNU/Linux 10 (buster)
-> Release: 10
-> Codename: buster
-
-- If you are using buster:
-  - Run the following to add the backports to your sources
-
-  ```shell
-   echo "deb <http://deb.debian.org/debian> buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
-   ```
-
-  - Install the backport of libseccomp2
-
-  ```shell
-  sudo apt update && sudo apt-get -t buster-backports install libseccomp2
-  ```
-
-## Why are lists sync times so long and can I change it?
-
-- Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
-
-- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
-
-- This change was due to not have our server get killed by people updating lists every 10 minutes.
-
-## Can I disable the refresh movies task
-
-- No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
-
-- A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
-
-## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
-
-- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
-
-## Help, My Mac says Radarr.app is damaged and can’t be opened
-
-- That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-radarr-cannot-be-opened-because-the-developer-cannot-be-verified)
-
-## How do I request a feature for Radarr?
-
-- This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
-
-## I am getting an error: Database disk image is malformed
-
-- This means your SQLite database that stores most of the information for Radarr is corrupt.
-- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
-- [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
-
-- This error may show if the database file is not writable by the user/group Radarr is running as.
-
-- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#how-do-i-backup-and-restore-radarr).
-
-- If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
-
-## I use Radarr on a Mac and it suddenly stopped working. What happened?
-
-- Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
-
-- See the above database is malformed entry.
-
-- Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
-
-## Why can Radarr not see my files on a remote server?
-
-- In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
-
-### Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
-
-- Run Radarr's service as another user that has access to that share
-- Open the Administrative Tools \> Services window on your Windows server.
-- Stop the Radarr service.
-- Open the Properties \> Log On dialog.
-- Change the service user account to the target user account.
-- Run Radarr.exe using the Startup Folder
-
-### You're using a mapped network drive (not a UNC path)
-
-- Change your paths to UNC paths (`\\server\share`)
-- Run Radarr.exe via the Startup Folder
-
-## How do I change from the Windows Service to a Tray App?
-
-1. Shut down Radarr
-1. Run serviceuninstall.exe that's in the Radarr directory
-1. Run `Radarr.exe` as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
-1. (Optional) Drop a shortcut to .exe in the startup folder to auto-start on boot.
-
-## How do I Backup/Restore Radarr ?
+## How do I Backup/Restore Radarr?
 
 ### Backing up Radarr
 
@@ -450,6 +209,137 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - Start Radarr
 
+# Radarr Common Problems
+
+## Path is Already Configured for an Existing Movie
+
+![existing-movie.png](/assets/radarr/existing-movie.png)
+
+- This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
+- Likely this was caused by not correcting a mismatched movie when the user imported their library.
+- Locate and correct the movie that is already assigned to that movie's path.
+  - Movie Index
+  - Table View
+  - Options => Add path as a column
+  - Sort and find the movie at the noted problematic path.
+
+## How can I rename my movie folders?
+
+1. Movies
+1. Movie Editor
+1. Select what movies need their folder renamed
+1. Change Root Folder to the same Root Folder that the movies currently exist in
+1. Select "Yes move files"
+
+## Movie File and Folder Naming
+
+- Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
+
+  - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
+
+- See [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
+
+## Movie Folders Named Incorrectly
+
+- Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
+
+  - Examples that will work well:
+    - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - `/mnt/Kid Movies/Frozen (2013)/Frozen (2013) [Bluray-1080p].mkv`
+  - Examples that will work, but will require manual management:
+    - By letters: `/mnt/Movies/A-D/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - By rating: `/mnt/Movies/R/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - By genre: `/mnt/Movies/Crime, Drama, Sci-Fi/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+    - These examples will require manual management when the movie is added. Each of the examples will have many root directories, like `A-D` and `E-G` in the first letter example, `R` and `PG-13` in the rating example and you can guess at the variety of genre folders. When adding a new movie, the correct base folder will need to be selected for this format to work.
+  - Examples that won’t work:
+    - Single folder: `/mnt/Kid Movies/Frozen (2013) [Bluray-1080p].mkv`
+      - At this time, movies simply have to be in a folder named after the movie. There is no way around this until development work is done to add this feature.
+    - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
+      - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
+      - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
+  - The [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+
+## Why are lists sync times so long and can I change it?
+
+- Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
+
+- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
+
+- This change was due to not have our server get killed by people updating lists every 10 minutes.
+
+## Can I disable the refresh movies task
+
+- No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
+
+- A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+
+## How do I request a feature for Radarr?
+
+- This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
+
+# Radarr and Movie Issues + Metadata
+
+## Why can I not add a new movie to Radarr?
+
+- Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
+  - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
+  - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
+  - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
+
+## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
+
+- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
+
+## Help, My Mac says Radarr.app is damaged and can’t be opened
+
+- That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-radarr-cannot-be-opened-because-the-developer-cannot-be-verified)
+
+## I am getting an error: Database disk image is malformed
+
+- This means your SQLite database that stores most of the information for Radarr is corrupt.
+- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
+
+- This error may show if the database file is not writable by the user/group Radarr is running as.
+
+- Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). Simple answer to this is to not do this as SQLite and network drives not typically play nice together and will cause a malformed database eventually. The config folder must be on a local drive**. If you're trying to restore your database you can check out our Backup/Restore guide [here](#how-do-i-backup-and-restore-radarr).
+
+- If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
+
+## I use Radarr on a Mac and it suddenly stopped working. What happened?
+
+- Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
+
+- See the above database is malformed entry.
+
+- Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
+
+## Why can Radarr not see my files on a remote server?
+
+- In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
+
+### Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
+
+- Run Radarr's service as another user that has access to that share
+- Open the Administrative Tools \> Services window on your Windows server.
+- Stop the Radarr service.
+- Open the Properties \> Log On dialog.
+- Change the service user account to the target user account.
+- Run Radarr.exe using the Startup Folder
+
+### You're using a mapped network drive (not a UNC path)
+
+- Change your paths to UNC paths (`\\server\share`)
+- Run Radarr.exe via the Startup Folder
+
+## How do I change from the Windows Service to a Tray App?
+
+1. Shut down Radarr
+1. Run serviceuninstall.exe that's in the Radarr directory
+1. Run `Radarr.exe` as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
+1. (Optional) Drop a shortcut to .exe in the startup folder to auto-start on boot.
+
 ## Help I have locked myself out
 
 {#help-i-have-forgotten-my-password}
@@ -470,10 +360,6 @@ Depending on your OS, there are multiple possible ways.
 - In `Settings` => `General` on some OS'es, there is a checkbox to launch the browser on startup.
 - When invoking Radarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Radarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
-
-## Jackett shows more results than when manually searching
-  
-- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
 
 ## Weird UI Issues
 
@@ -509,10 +395,6 @@ Depending on your OS, there are multiple possible ways.
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-## Does Radarr require a SABnzbd post-processing script to import downloaded episodes?
-
-- No. Radarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so knows where to find the files.
-
 ## I got a pop-up that said config.xml was corrupt, what now?
 
 - Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
@@ -532,6 +414,33 @@ Depending on your OS, there are multiple possible ways.
 - In other words, putting the \*Arrs (Lidarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
+
+# Radarr Searching & Downloading Common Problems
+
+## Jackett shows more results than when manually searching
+  
+- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
+
+## How does Radarr handle foreign movies or foreign titles?
+
+- Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
+- To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
+- Note that this does not include any indexer languages specified as multi.
+
+## How does Radarr handle "multi" in names?
+
+- Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
+- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
+
+## Help, Movie Added, But Not Searched
+
+- Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
+- If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
+
+  - Add and Search for Movie when adding a movie
+![addmovie-add-and-search.png](/assets/radarr/addmovie-add-and-search.png)
+  - Search an existing Movie
+![searchmovie-movie-page.png](/assets/radarr/searchmovie-movie-page.png)
 
 ## Jackett's /all Endpoint
 
@@ -564,3 +473,71 @@ This is expected. Below is how the Torrent Process works.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
+
+# Radarr v0.2 => v3+ questions
+
+## I am using a Pi running Raspbian and Radarr will not launch
+
+- Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base for v3. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
+
+**Solution:**
+
+Managed to fix the issue by installing the backport from debian repo. Generally not recommended to use backport in blanket upgrade mode. Installation of a single package may be ok but may also cause issues. So got to understand what you are doing.
+
+Steps to fix:
+
+First ensure you are running Raspbian buster e.g using `lsb_release -a`
+
+> Distributor ID: Raspbian
+> Description: Raspbian GNU/Linux 10 (buster)
+> Release: 10
+> Codename: buster
+
+- If you are using buster:
+  - Run the following to add the backports to your sources
+
+  ```shell
+   echo "deb <http://deb.debian.org/debian> buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
+   ```
+
+  - Install the backport of libseccomp2
+
+  ```shell
+  sudo apt update && sudo apt-get -t buster-backports install libseccomp2
+  ```
+
+## Why did the GUI / UI Change? Can it be changed back?
+
+- Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
+- No it cannot be changed back to be like v0.2. No it will not be changed back.
+- You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
+
+## Where did Wanted and Cut-off Unmet go?
+
+- Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
+  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your availability settings.
+  - Missing - Movie is Missing and Monitored
+
+![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
+
+## My Custom Script stopped working after upgrading from v0.2
+
+You were likely passing arguments in your connection and that is not supported.
+
+1. Change your argument to be your path
+1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
+1. Make sure the pwsh script is executable
+
+## Why doesn't Radarr work behind a reverse proxy
+
+- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
+
+```none
+proxy_http_version 1.1;
+proxy_set_header Upgrade $http_upgrade; 
+proxy_set_header Connection $http_connection;
+```
+
+- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
+- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
+- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
