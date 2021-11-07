@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-11-01T03:25:52.270Z
+date: 2021-11-07T21:44:39.848Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -363,6 +363,10 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - TVDB has a 24 hour cache on their API. TVDB's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
 - Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
+
+- If a series or episodes are missing on TVDB, they'll take 36 to 48 hours from when they're added to populate into your Sonarr instance. 
+
+{#missing-episodes}
 
 - If you know a TVDB update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
 
