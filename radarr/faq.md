@@ -8,6 +8,8 @@ editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
 
+# Radarr Basics
+
 ## How does Radarr work?
 
 - Radarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
@@ -25,14 +27,14 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
-- **Released**: Radarr shall consider movies available as soon as the blu-ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` days.
+- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
 
 ## How are possible downloads compared?
 
 - ***Generally Quality Trumps All***
 
 - The current logic [can be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
-***As of 2021-06-26 the logic is as follows***
+***As of 2021-11-06 the logic is as follows***
 
 1. Quality
 1. Custom Format Score
@@ -54,6 +56,30 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - It's suggested that physically look at the list before you even go to Radarr.
 
+## Can all my movie files be stored in one folder?
+
+- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
+- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
+- A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
+
+  - Use a Custom Script
+    - the script should be triggered on import
+    - it should be designed to move the file whenever you want it
+    - it then needs to call the Radarr API and change the movie to unmonitored.
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
+
+## Can I put all my movies in my library into one folder?
+
+- No, see above.
+
+# Radarr Common Problems
+
+# Radarr and Series Issues + Metadata
+
+# Radarr Searching & Downloading Common Problems
+
+# Radarr v0.2 => v3+ questions
+
 ## Why did the GUI / UI Change? Can it be changed back?
 
 - Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
@@ -63,10 +89,34 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## Where did Wanted and Cut-off Unmet go?
 
 - Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
-  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your avaiaibliy settings.
+  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your availability settings.
   - Missing - Movie is Missing and Monitored
 
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
+
+## My Custom Script stopped working after upgrading from v0.2
+
+You were likely passing arguments in your connection and that is not supported.
+
+1. Change your argument to be your path
+1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
+1. Make sure the pwsh script is executable
+
+## Why doesn't Radarr work behind a reverse proxy
+
+- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
+
+```none
+proxy_http_version 1.1;
+proxy_set_header Upgrade $http_upgrade; 
+proxy_set_header Connection $http_connection;
+```
+
+- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
+- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
+- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
+
+# Unsorted
 
 ## Why can I not add a new movie to Radarr?
 
@@ -86,22 +136,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - Table View
   - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
-
-## Can all my movie files be stored in one folder?
-
-- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
-- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
-- A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
-
-  - Use a Custom Script
-    - the script should be triggered on import
-    - it should be designed to move the file whenever you want it
-    - it then needs to call the Radarr API and change the movie to unmonitored.
-- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
-
-## Can I put all my movies in my library into one folder?
-
-- No, see above.
 
 ## How can I rename my movie folders?
 
@@ -143,20 +177,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - Use Movie Editor => Select movies you want to delete => Delete
 
-## Why doesn't Radarr work behind a reverse proxy
-
-- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
-
-```none
-proxy_http_version 1.1;
-proxy_set_header Upgrade $http_upgrade; 
-proxy_set_header Connection $http_connection;
-```
-
-- Make sure you **do not** include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. **THIS WILL NOT WORK**
-- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
-- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
-
 ## How do I update Radarr?
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
@@ -180,9 +200,9 @@ proxy_set_header Connection $http_connection;
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.  Please note that `nightly` branches are intentionally not listed below.
 
-| |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json)|
-|---|---|---|
-|[hotio](https://hotio.dev/containers/radarr)|`hotio/radarr:release`|`hotio/radarr:testing`|
+|                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/radarr)                       | `hotio/radarr:release`                                                                                                                                                                                                | `hotio/radarr:testing`                                                                                                                                                                                              |
 |[LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr)|`lscr.io/linuxserver/radarr:latest`|`lscr.io/linuxserver/radarr:develop`|
 
 ## Can I update Radarr inside my Docker container?
@@ -228,7 +248,7 @@ If Docker:
 ## How does Radarr handle "multi" in names?
 
 - Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
-r- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
+- Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
 
 ## Help, Movie Added, But Not Searched
 
@@ -251,14 +271,6 @@ r- Note that multi definitions only help for release parsing and not for foreign
 ## Movie Imported, But Source File And Torrent Not Deleted
 
 - Check if you have [Completed Download Handling - Remove](/radarr/settings#completed-download-handling) turned on. See the settings page for additional information and details.
-
-## My Custom Script stopped working after upgrading from v0.2
-
-You were likely passing arguments in your connection and that is not supported.
-
-1. Change your argument to be your path
-1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
-1. Make sure the pwsh script is executable
 
 ## I am using a Pi running Raspbian and Radarr will not launch
 
@@ -540,7 +552,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
 
-- Add each indexer seperatedly. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
+- Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
