@@ -126,7 +126,7 @@ chown -R $app_uid:$app_uid $datadir
 chmod 775 $datadir
 ## Download and install the App
 ## prerequisite packages
-apt install "$app_prereq"
+apt install $app_prereq
 ARCH=$(dpkg --print-architecture)
 ## get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
