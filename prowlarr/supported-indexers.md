@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-05T21:12:52.8283330Z
+date: 2021-11-09T03:21:24.4745316Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-05T21:12:52.8283330Z
+dateCreated: 2021-11-09T03:21:24.4745316Z
 ---
 
-- Supported Indexers as of Build `0.1.2.1045` / [Commit: e688dac0407c248a82f220b1c0c694278274513b](https://github.com/Prowlarr/Prowlarr/commit/e688dac0407c248a82f220b1c0c694278274513b)
+- Supported Indexers as of Build `0.1.2.1052` / [Commit: f38d6c5b426e957f1eec030d47b933f88f5f7f0b](https://github.com/Prowlarr/Prowlarr/commit/f38d6c5b426e957f1eec030d47b933f88f5f7f0b)
 
 ## Torrents
 
@@ -102,7 +102,6 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private site dedicated to HEAVY METAL MUSIC. This definition is for the English site.|en-US|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|zh-CN|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|en-US|
-|[MonTorrent](https://www.montorrent.com/){#montorrent}|MonTorrent is a FRENCH Public Indexer|fr-FR|
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|es-ES|
 |[MovieTorrent](https://movietorrent.co/){#movietorrent}|MovieTorrent is a Public site for Bollywood, Hollywood, Hindi Dubbed, Tamil , Punjabi, Pakistani MOVIES|en-US|
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES. This definition is for the Forum Tracker site.|en-US|
@@ -121,7 +120,7 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[OnceSearch](http://oncesearch.com/){#oncesearch}|OnceSearch is a Public Torrent Tracker for 3X|en-US|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|en-US|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
-|[OxTorrent](https://www.oxtorrent.sh/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
+|[OxTorrent](https://www.oxtorrent.pl/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|ru-RU|
 |[PiratBit](https://piratbit.top/){#piratbit}|PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
@@ -178,10 +177,10 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|en-US|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentMax](https://torrentmax2.net/){#torrentmax}|TorrentMax (토렌트맥스) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentParadise](https://torrentparadise.cl/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
+|[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentParadiseMl](https://torrent-paradise.ml/){#torrentparadiseml}|The most innovative torrent site|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq113.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq114.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-RU|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir40.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -295,7 +294,6 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[DanishBytes](https://danishbytes.org/){#danishbytes}|DanishBytes is a Private Danish Tracker|en-US|
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|hu-HU|
 |[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a German Private site for TV / MOVIES / GENERAL|de-DE|
-|[Das Unerwartete](https://dasunerwartete.nl){#dasunerwartete}|Das Unerwartete is a Private GERMAN tracker|de-DE|
 |[DataScene](https://datascene.xyz/){#datascene}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[DataTalli](https://datatalli.net/){#datatalli}|DataTalli is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|fi-FI|
 |[DesiReleasers](https://desireleasers.be/){#desireleasers}|DesiReleasers is an INDIAN Private Torrent Tracker for INDIAN MOVIES|en-US|
@@ -382,7 +380,6 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[LatTeam](https://lat-team.com/){#lat-team}|Lat-Team is a Private Torrent Tracker for HD MOVIES / TV|es|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|en-US|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|en-US|
-|[LegacyHD](https://reelflix.xyz/){#legacyhd}|LegacyHD (HD4Free) is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-US|
 |[LemonHD](https://lemonhd.org/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[LeSaloon](https://lesaloonv2-0.net/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|hu-HU|
@@ -401,6 +398,7 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|de-DE|
 |[Mononoké-BT](http://mononoke-bt.org/){#mononokebt}|Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME|fr-FR|
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|en-US|
+|[Moviesite](http://moviesite.info.hu/){#moviesite}|Moviesite is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|hu-HU|
 |[MTeamTP2FA](https://kp.m-team.cc/){#mteamtp2fa}|this indexer uses a cookie login for MTeamTP for those that want to use 2FA|zh-CN|
 |[MuziekFabriek](https://www.muziekfabriek.org/){#muziekfabriek}|MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC|nl-NL|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker.|en-US|
@@ -449,7 +447,7 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[Redacted](https://redacted.ch/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers.|en-US|
 |[RedBits](https://red-bits.com/){#redbits}|RedBits is a SPANISH site for classic content|es-ES|
 |[ReelFlix](https://reelflix.xyz/){#reelflix}|ReelFlix (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-US|
-|[Renegade](https://renegade-tracker.com/){#renegade}|Renegade is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu-HU|
+|[Renegade](http://renegade-tracker.com/){#renegade}|Renegade is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu-HU|
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|en-US|
 |[RevolutionTT](https://revolutiontt.me/){#revolutiontt}|The Revolution has begun|en-US|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC. This definition is for the English site.|en-US|
@@ -514,6 +512,7 @@ dateCreated: 2021-11-05T21:12:52.8283330Z
 |[Torrentland](https://torrentland.li/){#torrentland}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|es-ES|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|This is what happens when you seed|en-US|
 |[Torrentleech\.pl](https://torrentleech.pl/){#torrentleech-pl}|Torrentleech\.pl is a POLISH Private Torrent Tracker for 0DAY / GENERAL|pl-PL|
+|[TorrentMasters](https://torrentmasters.info/){#torrentmasters}|TorrentMasters is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|hu-HU|
 |[TorrentPotato](http://127.0.0.1){#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|en-US|
 |[TorrentSeeds](https://torrentseeds.org/){#torrentseeds}|TorrentSeeds is a Private site for MOVIES / TV / GENERAL|en-US|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|de-DE|
