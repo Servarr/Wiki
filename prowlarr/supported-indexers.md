@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-09T03:21:24.4745316Z
+date: 2021-11-10T20:43:13.9469358Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-09T03:21:24.4745316Z
+dateCreated: 2021-11-10T20:43:13.9469358Z
 ---
 
-- Supported Indexers as of Build `0.1.2.1052` / [Commit: f38d6c5b426e957f1eec030d47b933f88f5f7f0b](https://github.com/Prowlarr/Prowlarr/commit/f38d6c5b426e957f1eec030d47b933f88f5f7f0b)
+- Supported Indexers as of Build `0.1.2.1058` / [Commit: 11fad915d56468d6f1bb1ba5700785bcc4673615](https://github.com/Prowlarr/Prowlarr/commit/11fad915d56468d6f1bb1ba5700785bcc4673615)
 
 ## Torrents
 
@@ -55,7 +55,7 @@ dateCreated: 2021-11-09T03:21:24.4745316Z
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|zh-TW|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles.|ru-RU|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga.|en-US|
-|[EliteTorrent\.biz](https://elitetorrent.com/){#elitetorrent-biz}|EliteTorrent\.biz is a Public torrent site for TV, movies and documentaries|es-ES|
+|[EliteTorrent\.biz](https://elitetorrent.app/){#elitetorrent-biz}|EliteTorrent\.biz is a Public torrent site for TV, movies and documentaries|es-ES|
 |[EniaHD](https://eniatv.com/){#eniahd}|EniaHD is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|ru-RU|
 |[ETTV](https://www.ettvcentral.com/){#ettv}|ETTV is a Public torrent site for TV / MOVIES, home of the  ETTV, ETHD and DTOne groups.|en-US|
 |[ExKinoRay](http://exkinoray.fun/){#exkinoray}|ExKinoRay is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|ru-RU|
@@ -407,6 +407,7 @@ dateCreated: 2021-11-09T03:21:24.4745316Z
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|en-US|
 |[NetCosmo](http://netcosmo.it/){#netcosmo}|NetCosmo is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|it-IT|
 |[NetLab](https://torrent.e2k.ru/){#netlab}|NetLab is a RUSSIAN Private Torrent Tracker|ru-RU|
+|[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|nb-NO|
 |[NotWhatCD](https://notwhat.cd/){#notwhat.cd}|NotWhat\.CD (NWCD) is a private Music tracker that arised after the former (WCD) shut down.|en-US|
 |[Oasis](https://oasis-fun.club/){#oasis}|Oasis is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[oMg\[WtF\]trackr](https://omg.wtftrackr.xyz/){#omgwtftrackr}|oMg\[WtF\]trackr is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
