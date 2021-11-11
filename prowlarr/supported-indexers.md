@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-10T20:43:13.9469358Z
+date: 2021-11-11T00:52:32.1709828Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-10T20:43:13.9469358Z
+dateCreated: 2021-11-11T00:52:32.1709828Z
 ---
 
-- Supported Indexers as of Build `0.1.2.1058` / [Commit: 11fad915d56468d6f1bb1ba5700785bcc4673615](https://github.com/Prowlarr/Prowlarr/commit/11fad915d56468d6f1bb1ba5700785bcc4673615)
+- Supported Indexers as of Build `0.1.2.1060` / [Commit: 51df1be144e6f4ea6c22c4a3833c160849fc5a32](https://github.com/Prowlarr/Prowlarr/commit/51df1be144e6f4ea6c22c4a3833c160849fc5a32)
 
 ## Torrents
 
@@ -580,7 +580,6 @@ dateCreated: 2021-11-10T20:43:13.9469358Z
 |[NzbNoob](https://www.nzbnoob.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[NzbPlanet](https://nzbplanet.net){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[NZBStars](https://nzbstars.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
-|[NZBXS](https://www.nzbxs.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[OZnzb](https://oznzb.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[SimplyNZBs](https://simplynzbs.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[SpotNZB](https://spotnzb.xyz){#newznab}|Newznab is an API search specification for Usenet|en-US|
