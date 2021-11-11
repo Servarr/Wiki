@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-11-07T21:44:39.848Z
+date: 2021-11-11T00:30:40.345Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -378,7 +378,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - The series must exist on TVDB
 - Certain series may actually be considered continuations are and seasons in their primary series.
   - Some series/seasons known are:
-    - [Dexter New Blood is Season 9](https://thetvdb.com/series/dexter/seasons/official/9)
+    - [Dexter New Blood was Season 9](https://thetvdb.com/series/dexter/seasons/official/9) but it is now [it's own series](https://thetvdb.com/series/dexter-new-blood)
 
 ## Why can I not add a new series when I know the TVDB ID?
 
