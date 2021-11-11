@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-10-28T04:55:27.966Z
+date: 2021-11-11T16:35:18.158Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -91,14 +91,14 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 ##### Could not connect to signalR
 
-signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
+- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
 
-The most common occurrence of this is use of a reverse proxy or cloudflare
-Cloudflare needs websockets enabled.
+- The most common occurrence of this is use of a reverse proxy or cloudflare
+- Cloudflare needs websockets enabled.
 
 ###### Nginx
 
-Nginx requires the following addition to the location block for the app:
+- Nginx requires the following addition to the location block for the app:
 
 ```none
  proxy_http_version 1.1;
