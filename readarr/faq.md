@@ -2,8 +2,8 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-08-19T22:32:21.960Z
-tags: readarr, troubleshooting, faq, needs-love
+date: 2021-11-11T18:05:02.237Z
+tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
 ---
@@ -86,6 +86,8 @@ dateCreated: 2021-05-25T20:01:09.320Z
 - If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
 ## How do I update Readarr?
+
+{#how-do-I-update-my-readarr}
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
