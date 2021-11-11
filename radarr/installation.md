@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-10-18T11:18:09.134Z
+date: 2021-11-11T23:07:08.492Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -120,13 +120,13 @@ datadir="/var/lib/radarr/"          # {Update me if needed} AppData directory to
 PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]; then
     groupadd -f $app_guid
-    usermod -a -G $app_uid $app_guid
+    usermod -a -G $app_guid $app_uid
     echo "User: [$app_uid] seems to exist. Skipping creation, but adding to the group if needed. Ensure the User [$app_uid] and Group [$app_guid] are setup properly.  Specifically the application will need access to your download client and media files."
 else
     echo "User: [$app_uid] created with disabled password."
     adduser --disabled-password --gecos "" $app_uid
     groupadd -f $app_guid
-    usermod -a -G $app_uid $app_guid
+    usermod -a -G $app_guid $app_uid
 fi
 ## Stop the App if running
 
