@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-10-11T22:44:10.786Z
+date: 2021-11-11T16:35:27.554Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -52,14 +52,14 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 ##### Could not connect to signalR
 
-signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
+- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
 
-The most common occurrence of this is use of a reverse proxy or cloudflare
-Cloudflare needs websockets enabled.
+- The most common occurrence of this is use of a reverse proxy or cloudflare
+- Cloudflare needs websockets enabled.
 
 ###### Nginx
 
-Nginx requires the following addition to the location block for the app:
+- Nginx requires the following addition to the location block for the app:
 
 ```none
  proxy_http_version 1.1;
