@@ -2,13 +2,21 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-11T00:52:32.1709828Z
+date: 2021-11-12T19:19:34.6476432Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-11T00:52:32.1709828Z
+dateCreated: 2021-11-12T19:19:34.6476432Z
 ---
 
 - Supported Indexers as of Build `0.1.2.1060` / [Commit: 51df1be144e6f4ea6c22c4a3833c160849fc5a32](https://github.com/Prowlarr/Prowlarr/commit/51df1be144e6f4ea6c22c4a3833c160849fc5a32)
+
+---
+
+- Current Master Version | ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/latest/VERSION.json)
+- Current Develop Version | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json)
+- Current Nightly Version | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json)
+
+---
 
 ## Torrents
 
