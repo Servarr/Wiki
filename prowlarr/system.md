@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-11-14T04:37:41.230Z
+date: 2021-11-14T04:37:50.098Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -126,7 +126,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 
 ##### Indexers are Obsolete
 
-- Due to changes the indexer(s) noted is/are obsolete as currently configured. Remove and Re-add the indexer to Prowlarr to resolve.
+- Due to code changes the indexer(s) noted is/are obsolete as currently configured. Remove and Re-add the indexer to Prowlarr to resolve.
 - This is typically caused by converting APIs or from YML to C# or vice versa.
 
 ##### No indexers are enabled
