@@ -2,7 +2,7 @@
 title: Readarr Supported
 description: 
 published: true
-date: 2021-10-23T21:12:48.414Z
+date: 2021-11-14T18:18:35.686Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:28.684Z
@@ -107,10 +107,29 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 {#importlist}
 
 - Goodreads Bookshelves {#goodreadsbookshelf}
-  - Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
+  - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
+  - Bookshelves - Select which bookshelves to import from Goodreads
+  - Authenticate with Goodreads - Click the button to authenticate with Goodreads.
+> Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
+{.is-info}
 - Goodreads Owned Books {#goodreadsownedbooks}
+  - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
+  - Bookshelves - Select which bookshelves to import from Goodreads
+  - Authenticate with Goodreads - Click the button to authenticate with Goodreads.
+> Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
+{.is-info}
+- Goodreads Lists {#goodreadslistimportlist}
+  - List ID - Enter the Goodreads public List ID to add as a list
+- Goodreads Series {#goodreadsseriesimportlist}
+  - Series ID - Enter the Goodreads Series ID to add as a list
 - LazyLibrarian {#lazylibrarianimport}
+  - Url - URL of your LazyLibrarian Instance
+  - API Key - API Key of your LazyLibrarian Instance
 - Readarr {#readarrimport}
+  - Full Url - Full URL of the Readarr instance to import from e.g. `http://localhost:8787/readarr`
+  - API Key - API Key of the Readarr Instance to import from
+  - Profiles - Profiles from the Readarr instance to import from
+  - Tags - Tags from the Readarr instance to import from
 
 ## Metadata
 
