@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-14T01:59:15.546Z
+date: 2021-11-14T23:20:20.505Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -302,7 +302,7 @@ User=radarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr/
+ExecStart=/opt/Radarr -nobrowser -data=/var/lib/radarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
