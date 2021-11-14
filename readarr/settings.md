@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-14T18:13:16.367Z
+date: 2021-11-14T18:36:57.758Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -661,6 +661,8 @@ Connections are how you want Readarr to communicate with the outside world.
 
 ## Metadata
 
+{#write-metadata-to-book-files}
+
 > Information on supported metadata consumers can be found [here](/readarr/supported#metadata)
 {.is-info}
 
@@ -672,16 +674,22 @@ This page allows you to create/update metadata tags/covers.
 
 If you are using Calibre to manage your ebook collection, you will use these options to control it.
 
-- Send Metadata to Calibre options.
-- Check the box to send book covers to Calibre.
-- Check the box to embed metadata into the book files.
+- Send Metadata to Calibre
+  - All files; keep in sync with Goodreads - Write tags to all files and update if Goodreads updates
+  - All files; inital import only - Write tags to all files once and do not update if Goodreads updates
+  - For new downloads only - Write tags to only new downloads when they are imported
+- Update Covers - Enable to tell Calibre Content Server to use the same book covers as Readarr 
+- Embed Metadata in Book Files - Enable to tell Calibre Content Server to write and embed metadata into the book files.
 
 ### Write Metadata to Audio Files
 
 If you are using audiobooks, you will use these options to control it.
 
-- Select your options for tagging audiobooks with metadata.
-- Check the box to remove any embedded tags and leave only those added by Readarr.
+- Tag Audio Files with Metadata
+  - All files; keep in sync with Goodreads - Write tags to all files and update if Goodreads updates
+  - All files; inital import only - Write tags to all files once and do not update if Goodreads updates
+  - For new downloads only - Write tags to only new downloads when they are imported
+- Scrub Existing Tags - Enable to remove all tags from files except those added by Readarr
 
 ## Tags
 
@@ -710,52 +718,68 @@ This page is for general Readarr settings that are not covered in other sections
 
 ![genhost.png](/assets/readarr/genhost.png)
 
-- (Advanced Option) Bind address should be * unless you have a specific setup that requires something different.
-- Port number that Readarr is running on. This can also be changed in the `config.xml` file if Readarr is not running.
-- URL Base for Readarr if you're using a reverse proxy.
-- (Advanced Option) Check this box to enable SSL.
+- Bind Address - Valid IP4 address or '*' for all interfaces
+  - 0.0.0.0 or `*` - any address can connect
+  - 127.0.0.1 or localhost - only localhost applications can connect
+  - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
+- Port Number - The port number that you are wanting to use to access the webUI for Readarr
 
-> If you are running on an IP or localhost, do not check this box!
+> Note: If using Docker do not touch this setting.
+{.is-warning}
 
-- Check this box to open a (default) browser window on start.
+- URL Base - For reverse proxy support, default is empty
+
+> Note: If using a reverse proxy (example: mydomain.com/readarr) you would enter '/readarr' for URL Base.
+{.is-info}
+
+- Enable SSL - If you have SSL credentials and would like to secure communication to and from your Readarr enable this option.
+
+> Note: Do not use this unless you know what you're doing.
+{.is-warning}
 
 ### Security
 
 ![gensecurity.png](/assets/readarr/gensecurity.png)
 
-- Choose your authentication here. You can set a username/password for accessing Readarr.
-
-> If you forget your password, you will need to stop Readarr, edit the `config.xml` file and change Authentication to `none` and restart, and then set these values again.
-
-- This is your API key for use by other programs where necessary. Do not share this API with anyone, and blur it from any public postings.
-- Change how string HTTPS certificate validation is. This only applies to Readarr access itself!
+- Authentication - How would you like to authenticate to access your Readarr instance
+  - None - You have no authentication to access your Readarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Readarr or your Readarr is not exposed to the web
+  - Basic (Browser pop-up) - This option when accessing your Readarr will show a small pop-up allowing you to input a Username and Password
+  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Readarr
+- API Key - This is how other programs would communicate or have Readarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
+- Certificate Validation - Change how strict HTTPS certification validation is
+  - Enabled - Validate all HTTPS certificates (recommended)
+  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+  - Disabled - Do not validate any HTTPS certificates
 
 ### Proxy
 
 ![genproxy.png](/assets/readarr/genproxy.png)
 
-- If you use a proxy, check this box.
-- Select your proxy type (HTTPS, Socks4, or Socks5).
-- Enter your proxy hostname.
-- Enter your proxy port.
-- Enter your proxy username.
-- Enter your proxy password.
-- Enter a comma-separated list of addresses that bypass the proxy.
-- Check the box to bypass the proxy for local addresses.
+- Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
+
+- Use Proxy - Enable to use a Proxy
+- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Hostname - Enter your proxy hostname
+- Port - Enter your proxy port
+- Username - Enter your proxy username if applicable
+- Password - Enter your proxy password if applicable
+- Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
+- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses.
 
 ### Logging
 
 ![genlogging.png](/assets/readarr/genlogging.png)
 
-Select your logging level here.
-
-> When asking for help, `Trace` level logging is generally needed. Regardless of the warning in the image above, trace logging rolls over and will not fill up your drive. It's fine to leave on all the time, so you have the required logs when necessaery.
+- Log level - Probably one of the most useful troubleshooting tools
+  - Info - This is the most basic way that Readarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+  - Trace - The most advance and detailed logging on Readarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
 ### Analytics
 
 ![genanalytics.png](/assets/readarr/genanalytics.png)
 
-Check this box so that the Readarr development team can make decisions about what issues and bug reports to prioritize.
+- Analytics - Send anonymous usage and error information to Readarr's servers (Servarr). This includes information on your browser, which Readarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
 ### Updates
 
@@ -779,9 +803,11 @@ Check this box so that the Readarr development team can make decisions about wha
 
 ![genbackups.png](/assets/readarr/genbackups.png)
 
-- (Advanced Option) The folder where backups are located.
-- (Advanced Option) How many days apart backups are made.
-- (Advanced Option) How many days old backups are deleted.
+- The backup section allows you to tell Readarr how you would like for it to handle backups
+
+- Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
+- Interval - How often would you like Readarr to make a backup
+- Retention - How long would you like Readarr to hold on to each backup. After a new backup is made the oldest backup will be removed
 
 By default, backups are performed every 7 days, and the last 4 are kept.
 
@@ -793,26 +819,26 @@ This page allows you to customize the user interface display options.
 
 ![uicalendar.png](/assets/readarr/uicalendar.png)
 
-- Choose the day of the first day of the week on the calendar.
-- Choose the week's column header for the calendar.
+- First Day of Week - Here you can select what you think the first day of the week should be.
+- Week Column Header - Here you can select the header for the columns
 
 ### Dates
 
 ![caldates.png](/assets/readarr/caldates.png)
 
-- Choose the short date format.
-- Choose the long date format.
-- Choose the time format.
-- Check the box to show "Today", etc. instead of dates that are close.
+- Short Date Format - How do you want Readarr to display short dates?
+- Long Date Format - How do you want Readarr to display long format dates?
+- Time Format - Do you want a 12hr or 24hr format?
+- Show Relative Dates - Do you want Readarr to show relative (Today/Yesterday/etc) or absolute dates?
 
 ### Style
 
 ![calstyle.png](/assets/readarr/calstyle.png)
 
-- Check the box to change colors to be separated on the spectrum better for color-impaired viewers.
+- Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
 
 ### Language
 
 ![callanguage.png](/assets/readarr/callanguage.png)
 
-- Choose the UI language from the drop-down of available translations.
+- UI Language - Select the Language for Radarr to use within the application UI
