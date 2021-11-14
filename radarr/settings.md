@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T17:34:34.851Z
+date: 2021-11-14T17:35:28.583Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -216,7 +216,7 @@ Add Root Folder - This allows you to select a root path for a place to either pl
 
 ### Quality Profiles
 
-- Set profiles for the quality of series you're looking to download.
+- Set profiles for the quality of movies you're looking to download.
 
 > When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
 
