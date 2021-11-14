@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T17:33:13.101Z
+date: 2021-11-14T17:34:18.923Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -222,6 +222,8 @@ Add Root Folder - This allows you to select a root path for a place to either pl
 
 > Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
+
+- Plus icon (<kb>+</kb>) - Create a new quality profile
 
 - Name - Select a **UNIQUE** name for the quality profile you are creating
 - Upgrades Allowed - When this option is checked and you tell Radarr to download a `WEB 1080p` as it is the first release of a specific movie then later somebody is able to upload a `Bluray-1080p` Radarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
