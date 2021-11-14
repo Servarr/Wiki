@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T17:34:18.923Z
+date: 2021-11-14T17:34:34.851Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -229,7 +229,7 @@ Add Root Folder - This allows you to select a root path for a place to either pl
 - Upgrades Allowed - When this option is checked and you tell Radarr to download a `WEB 1080p` as it is the first release of a specific movie then later somebody is able to upload a `Bluray-1080p` Radarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
 - Upgrade Until - Once this quality is reached Radarr will no longer download movies
 
-> Note: This is only applicable if you have `Bluray-1080`p higher than `WEB 1080p` within the `Qualities` section
+> Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
 {.is-warning}
 
 - Qualities - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
