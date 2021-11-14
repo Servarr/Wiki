@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T17:26:09.844Z
+date: 2021-11-14T17:27:56.355Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -176,9 +176,9 @@ Here you will set the naming convention for the folder that contains the season 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Radarr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Movie Folder after Refresh - Rescan the series folder after refreshing the series
 
-  - Always - This will rescan series folder based upon Tasks Schedule
+  - Always - This will rescan movie folders based upon Tasks Schedule
   - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the series folder.
+  - Never - Just as it says, never rescan the movie folders.
 - Change File Date - Change file date on import/rescan
   - None - Radarr will not change the date that shows in your given file browser
   - In Cinemas Date - The date the movie was released in theaters.
