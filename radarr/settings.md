@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T18:32:26.137Z
+date: 2021-11-14T18:32:49.971Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -764,7 +764,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 
 ### Analytics
 
-- Analytics - Send anonymous usage and error information to Radarr's servers (SkyHook). This includes information on your browser, which Radarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
+- Analytics - Send anonymous usage and error information to Radarr's servers (Servarr). This includes information on your browser, which Radarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
 ### Updates
 
