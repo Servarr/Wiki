@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-11-11T23:09:03.231Z
+date: 2021-11-14T01:59:14.576Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -65,15 +65,21 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 #### Easy Install
 
-> **The following is a community written and maintained script.** {.is-info}
+> **The following is a community written and community maintained unofficial script.** {.is-info}
+
 For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
+
 If you want an easy life, follow this community provided and maintained `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
+
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](/readarr/installation#debian-ubuntu-hands-on-install)  steps further below.**
+
 > Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Readarr install experience until Readarr eventually when a deb package / Apt Repo is created.
 >
 > Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
+
 > This will create the user `readarr` and install Readarr to /opt. It will run Readarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
+
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Readarr. The script won't delete your settings (application data), but be safe. {.is-danger}
 
 - (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
