@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-14T17:35:39.767Z
+date: 2021-11-14T17:47:02.848Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -244,7 +244,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 
 - Plus icon (<kb>+</kb>) - Create a new quality profile
 
-- Name - Select a **UNIQUE** name for the quality profile you are creating
+- Name - Enter a **UNIQUE** name for the quality profile you are creating
 - Upgrades Allowed - When this option is checked and you tell Readarr to download a `EPUB` as it is the first release of a specific book then later somebody is able to upload a `AZW3` Readarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
   - Upgrade Until - Once this quality is reached Readarr will no longer download movies
 
@@ -263,20 +263,22 @@ Quality profiles are used to determine what formats of books are acceptable for 
 
 Metadata profiles are used to determine which books from GoodReads to add under an author when a new author is added.
 
+- Plus icon (<kb>+</kb>) - Create a new Metadata profile
+
 ![metaprofiles.png](/assets/readarr/metaprofiles.png)
   
-- Enter a name for this profile.
-- Enter the minimum popularity for a book to be added for an author.
+- Name - Enter a **UNIQUE** name for the metadata profile profile
+- Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
 
 > Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
 
-- Enter the minimum number of pages a book must have to be added for an author.
-- Check this box to skip books with a missing release date.
-- Check this box to skip books that do not contain either an ISBN or ASIN number.
-- Check this box to skip part books and sets.
-- Check this box to skip secondary series books.
-- Enter a comma-separated list of allowed languages for your books.
-- Enter words or phrases that a book title must not contain in order to be added.
+- Minimum Pages - Enter the minimum number of pages a book must have to be added for an author.
+- Skip books with missing release date - Enable to skip books with a missing release date.
+- Skip books with no ISBN or ASIN - Enable to skip books that do not contain either an ISBN or ASIN number.
+- Skip part books and sets - Enable to skip part books and sets.
+- Skip secondary series books - Enable to skip secondary series books.
+- Allowed Languages - Enter a comma-separated list of ISO 639-3 language codes, or 'null' for allowable langauges for your books
+- Must Not Contain - Enter words or phrases that a book title must not contain in order to be added.
   
 > You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
   
