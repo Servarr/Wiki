@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-14T18:09:32.873Z
+date: 2021-11-14T18:13:16.367Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -618,26 +618,19 @@ In this instance, we're going to add a Goodreads Bookshelf list.
 
 ![bookshelflist.png](/assets/readarr/bookshelflist.png)
 
-- Enter a name for this list.
-- Check this box to have anything on the list automatically add to Readarr.
+- Name - Enter a name for this list.
+- Enable Automatic Add - If enabled have anything on the list automatically add to Readarr.
 
 > This is going to add all authors, and ALL BOOKS from that author, to Readarr!
 
-- Select your monitoring level for things added. Valid options are `None`, `Selected book`, and `All Author Books`. All books are added to Readarr, but will be monitored or unmonitored based on this selection.
-- Check this box to have Readarr initiate a search for missing monitored items when they are added from a list. If you're adding a lot of authors/monitored books, this may overload your system!
-- Choose the root folder for these authors/books.
-- Choose your quality profile.
-- Choose your metadata profile.
-- Choose what tags apply to items from this list.
+- Monitor - Select your monitoring level for things added. Valid options are `None`, `Selected book`, and `All Author Books`. All books are added to Readarr, but will be monitored or unmonitored based on this selection.
+- Search for New Items - If enabled have Readarr initiate a search for missing monitored items when they are added from a list. If you're adding a lot of authors/monitored books, this may overload your system!
+- Root Folder - Choose the root folder for authors added from this list
+- Quality Profile - Choose your quality profile for authors added from this list
+- Metadata Profile - Choose your metadata profile for authors added from this list
+- Readarr Tags - Choose what tags apply for authors added from this list
 
 > It is highly recommended that you add a descriptive tag here. Otherwise, you will not know what list added these items to Readarr, and once they're added you can never get this information again! This info is not logged!
-
-- (Advanced Option) Enter a userid here if it is not your userid you're added.
-- Click the button to authenticate with Goodreads.
-
-When done, click `Test` to test the connection. If you get a green checkmark, you can click `Save` to save the list.
-
-If you get an error, you should check your logs to see what the specific error is, and then fix that issue before saving.
 
 Lists sync by default every 24 hours, but can be triggered manually from the `Settings` => `Tasks` page. You cannot automate this process any quicker than that.
 
