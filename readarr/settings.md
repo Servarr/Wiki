@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-14T17:57:09.972Z
+date: 2021-11-14T18:09:32.873Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -392,41 +392,70 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Information on supported indexers can be found [here](/readarr/supported#indexers)
 {.is-info}
 
-Indexers are how Readarr searches for books. You must have at least one for the program to function. Before we get into how to add them, there are some options at the bottom of the page:
-![indexeroptions.png](/assets/readarr/indexeroptions.png)
+### Supported Indexers
 
-- Set the minimum age in minutes for usenet indexers to wait before downloading a book. This allows all articles to propagate to avoid failures for brand new files.
-- Set the HARD LIMIT maximum size for anything Readarr grabs.
+- A list of supported indexers is located [here](/readarr/supported#indexers)
 
-> It is very much recommended that you do NOT set this value. It overrides all size limits you set in Quality!
+#### Indexer Settings
 
-- Retention is the maximum number of days old something can be on your indexers. If you set it to 300, and something is 301 days old, it will not be grabbed.
-- (Advanced Option) RSS Sync Interval is the number of minutes between RSS grabs from each of your indexers. Set it higher to reduce API hits, set it lower to grab things quicker. Setting it too low can result in bans from your indexers!
+- Once you've clicked the <kb>+</kb> button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
 
-### Adding an indexer
+- There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
-To add an indexer, click the `+` symbol.
+#### Usenet Indexer Configuration
 
-There are some preconfigured indexers available, but mostly you will be using Custom Newznab (for usenet) or Custom Torznab (for torrents) setups.
+- Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- Software that works with usenet and integrates quite well with Readarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
+- Regardless if you select a prefilled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
+- Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
+- Name - The name of the indexer in Readarr
+- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
+- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
+- URL - The indexer provided URL of the indexer such as `https://api.nzbgeek.info`.
+- API Path - The indexer provided path to the api. This is typically `/api`
+- Multi Languages - Set what languages `MULTI` are for this indexer.
+- API Key - The indexer provided key to access the API.
+- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Readarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- (Advanced Option) Early Download Limit - Time before release date Readarr will download from this indexer, leave blank for no limit. This is similar to availability in Radarr.
+- (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-![addindexer.png](/assets/readarr/addindexer.png)
+#### Torrent Tracker Configuration
 
-- Enter a name for this indexer.
+- As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
+- One of the best and simplest ways to utilize Torrent trackers with Readarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Readarr as a search indexer that houses all your information and sends it to Readarr.
+- Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
+- Torznab Indexer
+- Choose from the presets or add a custom indexer (such as Jackett)
+- Name - The name of the indexer in Readarr
+- Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
+- Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
+- Enable Interactive Search - If enabled, use this indexer for manual interactive searches.
+- URL - The indexer provided URL such as `http://localhost:9117/jackett/api/v2.0/indexers/torrentdb/results/torznab/`.
+- API Path - The indexer provided path to the api. This is typically `/api`
+- API Key - The indexer provided key to access the API.
+- Multi Languages - Set what languages `MULTI` are for this indexer.
+- Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Readarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+- (Advanced Option) Early Download Limit - Time before release date Readarr will download from this indexer, leave blank for no limit. This is similar to availability in Radarr.
+- (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
+- (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Readarr (Requires Completed Download Handling - Remove enabled)
+- (Advanced Option) Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Readarr (Requires Completed Download Handling - Remove enabled)
+- (Advanced Option) Discography Seed Time - Ignore, carry over from Lidarr
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-- Check this box if you want this indexer to be used for the periodic RSS feed pulls. If you do not check this box, it will only be used for searches if those boxes are checked!
-- Check this box to enable automatic searches (the magnifying glass).
-- Check this box to enable interactive searches (the person icon).
-- Enter the URL of your indexer (including the `https://`)
-- (Advanced Option) A few indexers have a non-standard API path. Change this if necessary.
-- Enter the API Key from your indexer's profile page here. Do not share this API key with anyone, and blur it out of any screenshots.
-- The Categories here are pulled automatically from a "caps" (capabilities) call to your indexer when you Test, but they can be modified here.
-- (Advanced Option) If you enter a number here, this is the number of days before a book's release that Readarr will grab a book.
-- (Advanced Option) You can add additional Newznab parameters here as needed for this indexer.
-- (Advanced Option) You can set the indexer's priority here from 1-50 (1 being highest). This will be a deciding factor in where downloads are grabbed from if they are identical releases.
+### Options
 
-Then click `Test`, and if you get a green checkmark, you can `Save` the indexer and you're ready to go. Repeat as necessary for the indexers you want to add.
+- Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
+- Retention - Usenet only: Set to zero to set for unlimited retention
+- Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
+- RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
+  - Please see [How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
 
-> If it doesn't test successfully, you will need to review your logs to see what's wrong and fix it. You cannot add an indexer if that indexer is currently down.
+> If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
+
 
 ## Download Clients
 
@@ -520,8 +549,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Completed Download Handling is how Readarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
-- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
-- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- Enable - Automatically import completed downloads from the download client
+- (Advanced Option) Remove  - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
 
 #### Remove Completed Downloads
 
@@ -539,7 +568,7 @@ If you download using a BitTorrent client, the process is slightly different:
 #### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
-- Failed Downloading Handling does not apply to Torrents nor is their plans to add such functionality.
+- Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
 
 - There are several components that make up the failed download handling process:
 
@@ -554,13 +583,13 @@ If you download using a BitTorrent client, the process is slightly different:
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Readarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Readarr will search for the same file after a failure
-- Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
+- (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ### Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
-- One of our amazing community members have created [an excellent guide (for Radarr - same concepts for readarr)](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
+- One of our amazing community members have created [an excellent guide (for Radarr - same concepts for Readarr)](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
 ## Import Lists
 
