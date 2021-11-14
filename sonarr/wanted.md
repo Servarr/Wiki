@@ -21,7 +21,7 @@ The Wanted => Missing section contains a list of the episodes you have marked to
 
 - "Search All" - Selecting here will send a search to all of your indexers for all current missing episodes. Once pressed, a dialog box will pop up with a warning to you, letting you know how many episodes will be searched for; this is particularly helpful to know if your indexers limit your api calls.
 
-> This search process cannot be cancelled once started without restarting Sonarr.
+> This search process cannot be canceled once started without restarting Sonarr.
 {.is-info}
 
 ## Cutoff Unmet

@@ -163,7 +163,7 @@ Here you will set the naming convention for the folder that contains the season 
 ### File Management
 
 - Unmonitor Deleted Movies - Movies deleted from disk are automatically unmonitored in Radarr
-- Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by Custom Format score over propers/repacks
+- Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
 
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
@@ -302,17 +302,17 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
-- At 11:00pm the first release for an books is detected by Readarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Readarr will evaluate any releases it has found in the past two hours, and download the best one, which is MOBI.
+- At 11:00pm the first release for an Movie is detected by Radarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Radarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
 
-- At 3:00am another release is found, which is MOBI that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the books no longer is upgradeable and Readarr will stop looking for new releases.
+- At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Movie no longer is upgradable and Radarr will stop looking for new releases.
 
-- At any point, if a AZW3 release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
+- At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
 
 ###### Example 2
 
 - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
-- At 11:00pm the first release for an books is detected by Readarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Readarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Readarr will wait until 12:15am and download the best release, regardless of which source it came from.
+- At 11:00pm the first release for an Movie is detected by Radarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Radarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Radarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
 ###### Example 3
 
@@ -320,9 +320,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
 
-- If the first release that is detected is from Usenet, Readarr will download it immediately.
+- If the first release that is detected is from Usenet, Radarr will download it immediately.
 
-- If the first release is from BitTorrent, Readarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
+- If the first release is from BitTorrent, Radarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
 ## Quality
 
@@ -422,7 +422,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 #### Usenet Indexer Configuration
 
-- Newznab - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
 - Software that works with usenet and integrates quite well with Radarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
 - Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
@@ -435,9 +435,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Multi Languages - Set what languages `MULTI` are for this indexer.
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Radarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
-- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
 #### Torrent Tracker Configuration
 
@@ -455,7 +455,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Multi Languages - Set what languages `MULTI` are for this indexer.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Radarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Additional Parameters - Additional Torznab parameters to add to the query link
+- (Advanced Option)  Additional Parameters - Additional Torznab parameters to add to the query link
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
@@ -473,7 +473,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
   | `G_Scene`        | ☠      | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
   | `G_Freeleech75`  | ⇩⬇     | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
   | `G_Freeleech25`  | ⇩      | Similar to `G_Freeleech`, `G_Freeleech25` signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                              |
-- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
 ### Options
 
@@ -612,7 +612,7 @@ If you download using a BitTorrent client, the process is slightly different:
 #### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
-- Failed Downloading Handling does not apply to Torrents nor is their plans to add such functionality.
+- Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
 
 - There are several components that make up the failed download handling process:
 
@@ -627,7 +627,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Radarr will search for the same file after a failure
-- Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
+- (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ### Remote Path Mappings
 

@@ -328,7 +328,7 @@ During the delay period, any new releases that become available will be noted by
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-> Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
+> Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 {.is-warning}
 
 ##### Examples
@@ -341,9 +341,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - At 11:00pm the first release for an Episode is detected by Sonarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Sonarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
 
-- At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradable and Sonarr will stop looking for new releases.
+- At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradeable and Sonarr will stop looking for new releases.
 
-- At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
+- At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
 
 ###### Example 2
 
@@ -435,9 +435,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 #### Usenet Indexer Configuration
 
-- Newznab - Here you will find presets of popular usenet indexers (that are pre-filled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
+- Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
 - Software that works with usenet and integrates quite well with Sonarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
-- Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
+- Regardless if you select a prefilled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
 - Name - The name of the indexer in Sonarr
 - Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
@@ -448,8 +448,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Additional Parameters - Additional Newznab parameters to add to the query link
-- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - Tags - Only use this indexer for series with at least one matching tag. Leave blank to use with all series.
 
 #### Torrent Tracker Configuration
@@ -468,11 +468,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - Anime Categories - The categories that Sonarr will use for Anime searches. No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Additional Parameters - Additional Torznab parameters to add to the query link
-- Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
-- Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-- Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
-- Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Additional Parameters - Additional Torznab parameters to add to the query link
+- (Advanced Option) Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
+- (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- (Advanced Option) Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
 ### Options
 
@@ -599,7 +599,7 @@ If you download using a BitTorrent client, the process is slightly different:
 #### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
-- Failed Downloading Handling does not apply to Torrents nor is their plans to add such functionality.
+- Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
 
 - There are several components that make up the failed download handling process:
 
@@ -614,7 +614,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Sonarr will search for the same file after a failure
-- Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
+- (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ### Remote Path Mappings
 
@@ -699,7 +699,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ### Host
 
-- Binding Address - Valid IP4 address or '*' for all interfaces
+- Bind Address - Valid IP4 address or '*' for all interfaces
   - 0.0.0.0 or `*` - any address can connect
   - 127.0.0.1 or localhost - only localhost applications can connect
   - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect

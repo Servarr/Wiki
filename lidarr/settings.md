@@ -127,7 +127,7 @@ If you download using a BitTorrent client, the process is slightly different:
 #### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
-- Failed Downloading Handling does not apply to Torrents nor is their plans to add such functionality.
+- Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
 
 - There are several components that make up the failed download handling process:
 
@@ -142,7 +142,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Lidarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Lidarr will search for the same file after a failure
-- Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
+- (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ### Remote Path Mappings
 

@@ -62,7 +62,7 @@ Don’t forget to save your changes!
 
 `Settings` => `Profiles`
 
-We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several pre-filled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the appropriate wiki page for that section.
+We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several prefilled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the appropriate wiki page for that section.
 
 ## Indexers
 

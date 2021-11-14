@@ -28,12 +28,12 @@ dateCreated: 2021-05-27T16:47:28.054Z
       - Failure to do so will result in an error of `Anonymous users are not allowed to make changes`
   - Calibre Host - The IP/domain of the host of the Calibre Content Server
   - Calibre Port - The Port that Calibre Content Server is listening on
-  - (Advanced) Calibre URL Base - Add a prefux to the Calibre URL e.g. http://[host]:[port]/[urlBase]
-  - Calibre Username - Username to use to access Calibre Content Server 
+  - (Advanced) Calibre URL Base - Add a prefux to the Calibre URL e.g. `http://[host]:[port]/[urlBase]`
+  - Calibre Username - Username to use to access Calibre Content Server
   - Calibre Password - Password to use to access Calibre Content Server
   - Calibre Library - Calibre Content Server library name. Leave blank for default
-  - Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a comma separated list. 
-    - Review the (i) icon within the app for a current list of options. 
+  - Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a comma separated list.
+    - Review the (i) icon within the app for a current list of options.
     - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
   - Calibre Output Profile - Select the Calibre Content Server Output Profile to use
     - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
@@ -50,7 +50,6 @@ dateCreated: 2021-05-27T16:47:28.054Z
 - Metadata Profile - Select the Metadata Profile to use for authors detected in this folder.  To only load books that were explictly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
   
-
 ### Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
@@ -455,7 +454,6 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
   - Please see [How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
 
 > If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
-
 
 ## Download Clients
 
