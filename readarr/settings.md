@@ -2,13 +2,58 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-10-28T00:33:49.772Z
+date: 2021-11-14T17:35:39.767Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
 ---
 
 ## Media Management
+
+### Root Folders
+
+- A list of your configured Root Folders (Library Folders) is displayed.
+- Click the <kb>+</kb> button to add a new Root Folder or click an existing's card to edit it.
+
+#### Root Folder Settings
+
+- Name - The name of the Root Folder for UI Purposes
+- Path - The folder containing your book library i.e. the final destination as Readarr sees it. Note that this must be different than the location your download client places files.
+- Calibre Specific Settings (Only if Use Calibre is enabled)
+  - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
+    - Note that this **cannot be enabled on an existing root folder**.
+    - Note that this **cannot be disabled on an existing Calibre enabled root folder**.
+    - Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
+    - Note that this requires that Calibre to have `Require username and password to access the content server` to ne enabled.
+      - Failure to do so will result in an error of `Anonymous users are not allowed to make changes`
+  - Calibre Host - The IP/domain of the host of the Calibre Content Server
+  - Calibre Port - The Port that Calibre Content Server is listening on
+  - (Advanced) Calibre URL Base - Add a prefux to the Calibre URL e.g. http://[host]:[port]/[urlBase]
+  - Calibre Username - Username to use to access Calibre Content Server 
+  - Calibre Password - Password to use to access Calibre Content Server
+  - Calibre Library - Calibre Content Server library name. Leave blank for default
+  - Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a comma separated list. 
+    - Review the (i) icon within the app for a current list of options. 
+    - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
+  - Calibre Output Profile - Select the Calibre Content Server Output Profile to use
+    - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
+  - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
+- Monitor - Configure your monitoring options for books detected in this folder
+  - All Books - Monitor all books
+  - Future Books - Monitor books that have not released yet
+  - Missing Books - Monitor books that do not have files or have not released yet
+  - Existing Books - Monitor books that have files or have not released yet
+  - First Book - Monitor the first book. All other books will be ignored
+  - Latest Book - Monitor the latest book and future books
+  - None - No books will be monitored unless explictly added
+- Quality Profile - Default Quality Profile for books and authors detected within this folder
+- Metadata Profile - Select the Metadata Profile to use for authors detected in this folder.  To only load books that were explictly added or detected select None.
+- Default Readarr Tags - Default tags for authors detected within this folder
+  
+
+### Remote Path Mappings
+
+- Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
 
 ![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
 
@@ -31,7 +76,7 @@ Commonly used naming schema are:
 > If you leave Rename Books unchecked, then none of the naming stuff below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
 {.is-info}
 
-- Replace Illegal Characters - If this is toggled off (no check in the box) Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
+- Replace Illegal Characters - If disabled Readarr will remove illegal characters. If enabled Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
 
 #### Standard Book Format
 
@@ -121,20 +166,21 @@ Commonly used naming schema are:
   
 ![mm_folders.png](/assets/readarr/mm_folders.png)
   
-- (Advanced Option) Select the box to create empty author folders when a new author is added.
-- (Advanced Option) Select the box to delete empty author folders if there are no books in it.
+- (Advanced Option) Create empty author folders - Select the box to create empty author folders when a new author is added.
+- (Advanced Option) Delete empty author folders -  Select the box to delete empty author folders if there are no books in it.
   
 > One of those boxes can be checked, but they should not BOTH be checked.
   
 ![mm_importing.png](/assets/readarr/mm_importing.png)
   
-- (Advanced Option) Enter the minimum free space for the drive to have before importing stops.
-- (Advanced Option) Check this box to use Hardlinks instead of Copies (for Torrents).
+- (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
+- (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
+- (Advanced Option) Use Hardlinks instead of Copy - Check this box to use Hardlinks instead of Copies (for Torrents). Note that this is enabled by default.
   
 > You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points.
   
-- If you would like additional files to be imported, check this box.
-- (Advanced Option, only shown when box is checked) Enter the extensions to move with files, separated by commas. Some good examples are `jpg,nfo,cue`.
+- Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
+- (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
 
 > If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
   
@@ -142,16 +188,44 @@ Commonly used naming schema are:
   
   ![mm_filemgmt.png](/assets/readarr/mm_filemgmt.png)
 
-- Check this box to unmonitor books you delete from Readarr's root folder.
-- (Advanced Option) Choose how you would like to handle re-uploads with PROPER or REPACK or FIXED in them.
-- (Advanced Option) Check this box to trigger a rescan when the root folder changes.
-- (Advanced Option) Choose when to rescan an author folder after refreshing the author.
-- (Advanced Option) Choose how to handle fingerprinting, which allows increased accuracy for book matching, at the expense of CPU/disk time.
-- (Advanced Option) Choose whether to change the file date stamp.
-- (Advanced Option) Enter a folder here if you want to use a Recycling Bin (things you delete will go here instead of being permanently deleted, so that you can restore them if you made a mistake).
-- (Advanced Option) Enter the number of days to keep files in the Recycling Bin before they are permanently deleted.
+- Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inacessible from Readarr's root folder.
+- Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
+  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
+- > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
+- > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
+
+- (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
+- (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
+  - Always - This will rescan author folders based upon Tasks Schedule
+  - After Manual Refresh - You will have to manually rescan the disk
+  - Never - Just as it says, never rescan the author folders.
+- (Advanced Option) Allow Fingerprinting - Choose how to handle fingerprinting, which allows increased accuracy for book matching, at the expense of CPU/disk time.
+  - Always - Always use fingerprinting if possible
+  - For new imports only - Only fingerprint newly imported releases
+  - Never - Just as it says, never use fingerprinting
+- (Advanced Option) Change File Date - Change file date on import/rescan
+  - None - Readarr will not change the date that shows in your given file browser
+  - Book Release Date - The date the book was released.
+- (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
+- (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
 > It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
+
+## Permissions
+
+- Set Permissions - Should `chmod` be run when files are imported/renamed?
+  - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
+
+> The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
+{.is-info}
+
+> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+
+- chown Group - Group name or GID. Use GID for remote file systems
+
+> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
 ## Profiles
 
@@ -161,16 +235,30 @@ Quality profiles are used to determine what formats of books are acceptable for 
   
 ![qualityprofile.png](/assets/readarr/qualityprofile.png)
 
-- On a new quality profile, enter a name for it.
-- If you want Readarr to keep grabbing new versions until it hits your favorite format of ebook, check the box.
-- If you checked the box, select your final "best" version of ebooks from the drop-down.
+- Set profiles for the quality of books you're looking to download.
 
-Under Qualities, you are going to check the boxes for the formats of ebooks you want. If they are not checked here, you will not get other formats; be careful what you choose to eliminate as it might mean that you do not get a particular book.
-  
-You can drag the format up and down using the icon on the right, to rank them. This only matters if you have upgrades allowed. Upgrades are from bottom to top on the quality ranking.
-  
-> You may create multiple quality profiles, and apply a separate one to each author as needed. But, you may only apply a single quality profile to any given author.
-  
+> When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
+
+> Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
+{.is-info}
+
+- Plus icon (<kb>+</kb>) - Create a new quality profile
+
+- Name - Select a **UNIQUE** name for the quality profile you are creating
+- Upgrades Allowed - When this option is checked and you tell Readarr to download a `EPUB` as it is the first release of a specific book then later somebody is able to upload a `AZW3` Readarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
+  - Upgrade Until - Once this quality is reached Readarr will no longer download movies
+
+> Note: This is only applicable if you have `AZW3` higher than `EPUB` within the `Qualities` section
+{.is-warning}
+
+- Qualities - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
+  - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
+
+  - [See Qualities](#qualities-defined)
+
+> By default the qualities are set from lowest (bottom) to highest (top)
+{.is-info}
+
 ### Metadata Profiles
 
 Metadata profiles are used to determine which books from GoodReads to add under an author when a new author is added.
