@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T18:32:49.971Z
+date: 2021-11-14T18:36:33.515Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -795,6 +795,10 @@ Kodi will be one of the most commonly used options here if that is the software 
 - First Day of Week - Here you can select what you think the first day of the week should be.
 - Week Column Header - Here you can select the header for the columns
 
+### Movies
+
+- Runtime Format - Select how to format runtimes as either hours & minutes or minutes 
+
 ### Dates
 
 - Short Date Format - How do you want Radarr to display short dates?
@@ -805,3 +809,8 @@ Kodi will be one of the most commonly used options here if that is the software 
 ### Style
 
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
+
+### Language
+
+- Movie Info Language - Select the Language for Radarr to display Movie Information in the UI
+- UI Language - Select the Language for Radarr to use within the application UI
