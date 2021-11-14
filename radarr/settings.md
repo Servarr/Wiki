@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T18:28:10.904Z
+date: 2021-11-14T18:32:26.137Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -738,10 +738,22 @@ Kodi will be one of the most commonly used options here if that is the software 
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
 - API Key - This is how other programs would communicate or have Radarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
-
+  - Enabled - Validate all HTTPS certificates (recommended)
+  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+  - Disabled - Do not validate any HTTPS certificates
+  
 ### Proxy
 
 - Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
+
+- Use Proxy - Enable to use a Proxy
+- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Hostname - Enter your proxy hostname
+- Port - Enter your proxy port
+- Username - Enter your proxy username if applicable
+- Password - Enter your proxy password if applicable
+- Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
+- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses.
 
 ### Logging
 
