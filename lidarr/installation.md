@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-11-11T23:08:14.679Z
+date: 2021-11-14T02:00:17.281Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -53,15 +53,21 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 #### Easy Install
 
-> **The following is a community written and maintained script.** {.is-info}
+> **The following is a community written and community maintained unofficial script.** {.is-info}
+
 For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
+
 If you want an easy life, follow this community provided and maintained `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
+
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](/lidarr/installation#debian-ubuntu-hands-on-install)  steps further below.**
+
 > Original script author note: For the avoidance of doubt this script is just to help the next person along and improve the Lidarr install experience until Lidarr eventually when a deb package / Apt Repo is created.
 >
 > Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
+
 > This will create the user `lidarr` and install Lidarr to /opt. It will run Lidarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
+
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Lidarr. The script won't delete your settings (application data), but be safe. {.is-danger}
 
 - (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
