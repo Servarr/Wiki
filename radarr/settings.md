@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-14T17:35:28.583Z
+date: 2021-11-14T18:07:36.247Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -275,25 +275,44 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 {.is-warning}
 
+#### Uses
+
+Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Readarr might try to download all of them. With delay profiles, Readarr can be configured to ignore the first few hours of releases.
+
+Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
+
+#### How Delay Profiles Work
+
+The timer begins as soon as Readarr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
+
+> The clock starts from the releases uploaded time and not from the time Readarr sees it. {.is-info}
+
+During the delay period, any new releases that become available will be noted by Readarr. When the delay timer expires, Readarr will download the single release which best matches your quality preferences.
+
+The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
+
+> Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
+{.is-warning}
+
 ##### Examples
 
-- For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
+- For each example, assume the user has the follow quality profile active: EPUB and above are allowed MOBI is the quality cutoff * AZW3 is the highest ranked quality
 
 ###### Example 1
 
 - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
-- At 11:00pm the first release for an Movie is detected by Radarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Radarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
+- At 11:00pm the first release for an books is detected by Readarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Readarr will evaluate any releases it has found in the past two hours, and download the best one, which is MOBI.
 
-- At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Movie no longer is upgradable and Radarr will stop looking for new releases.
+- At 3:00am another release is found, which is MOBI that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the books no longer is upgradeable and Readarr will stop looking for new releases.
 
-- At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be cancelled.
+- At any point, if a AZW3 release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
 
 ###### Example 2
 
 - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
-- At 11:00pm the first release for an Movie is detected by Radarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Radarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Radarr will wait until 12:15am and download the best release, regardless of which source it came from.
+- At 11:00pm the first release for an books is detected by Readarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Readarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Readarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
 ###### Example 3
 
@@ -301,9 +320,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
 
-- If the first release that is detected is from Usenet, Radarr will download it immediately.
+- If the first release that is detected is from Usenet, Readarr will download it immediately.
 
-- If the first release is from BitTorrent, Radarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
+- If the first release is from BitTorrent, Readarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
 ## Quality
 
@@ -573,8 +592,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Completed Download Handling is how Radarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
-- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
-- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- Enable - Automatically import completed downloads from the download client
+- (Advanced Option) Remove  - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues
 
 #### Remove Completed Downloads
 
