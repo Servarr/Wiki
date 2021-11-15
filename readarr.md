@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2021-09-28T00:15:03.644Z
+date: 2021-11-15T23:39:36.587Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
@@ -19,6 +19,7 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/readarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/readarr/quick-start-guide)
+- [<i class="far fa-question-circle"></i>&emsp;FAQ](/readarr/faq)
 {.links-list}
 
 ## User Guide
@@ -31,13 +32,12 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 - [<i class="fas fa-laptop"></i>&emsp;System](/readarr/system)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/readarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/readarr/tips-and-tricks)
+- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/readarr/appdata-directory)
 {.links-list}
 
 ## Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/readarr/troubleshooting)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/readarr/faq)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/readarr/appdata-directory)
 {.links-list}
 
 ## Development
