@@ -84,7 +84,6 @@ This event type is only sent when clicking the "Test" button in the settings pag
 
 ### Track Retag
 
-
 | Environment Variable              | Details                                 |
 | --------------------------------- | --------------------------------------- |
 | `Lidarr_EventType`                | TrackRetag                              |

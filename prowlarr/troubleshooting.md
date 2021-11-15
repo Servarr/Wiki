@@ -155,6 +155,7 @@ If you have any different `proxy_set_header` you must replace it with the line a
 - At a basic level Prowlarr needs to be able to talk to your indexers.
 - If you use application sync, Prowlarr also needs to be able to talk to your applications and the applications need to be able to talk to Prowlarr.
 - If you have a download client in Prowlarr for manual in-Prowlarr downloads, Prowlarr will need to be able to talk with your download client.
+
 > Note that logs indicating querying indexer ID 0: The 0 ID is a generic test endpoint that allows us to test if \*Arr can call back and connect to Prowlarr without actually relying on an indexer working.
 {.is-info}
 

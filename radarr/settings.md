@@ -797,7 +797,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 
 ### Movies
 
-- Runtime Format - Select how to format runtimes as either hours & minutes or minutes 
+- Runtime Format - Select how to format runtimes as either hours & minutes or minutes
 
 ### Dates
 

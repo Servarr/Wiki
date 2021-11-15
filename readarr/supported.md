@@ -110,14 +110,18 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
   - Bookshelves - Select which bookshelves to import from Goodreads
   - Authenticate with Goodreads - Click the button to authenticate with Goodreads.
+
 > Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
 {.is-info}
+
 - Goodreads Owned Books {#goodreadsownedbooks}
   - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
   - Bookshelves - Select which bookshelves to import from Goodreads
   - Authenticate with Goodreads - Click the button to authenticate with Goodreads.
+
 > Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
 {.is-info}
+
 - Goodreads Lists {#goodreadslistimportlist}
   - List ID - Enter the Goodreads public List ID to add as a list
 - Goodreads Series {#goodreadsseriesimportlist}

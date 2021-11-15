@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-11-13T21:09:50.099Z
 ---
 
-# Network Troubleshooting 
+# Network Troubleshooting
 
 ## Not connectable IPv6 IP
 

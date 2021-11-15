@@ -110,8 +110,10 @@ Firefox
 [LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
 
 ### JDupes
+
 [Jdupes](https://github.com/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
- - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files
+
+- `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files
 
 - `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
 

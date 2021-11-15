@@ -676,7 +676,7 @@ If you are using Calibre to manage your ebook collection, you will use these opt
   - All files; keep in sync with Goodreads - Write tags to all files and update if Goodreads updates
   - All files; inital import only - Write tags to all files once and do not update if Goodreads updates
   - For new downloads only - Write tags to only new downloads when they are imported
-- Update Covers - Enable to tell Calibre Content Server to use the same book covers as Readarr 
+- Update Covers - Enable to tell Calibre Content Server to use the same book covers as Readarr
 - Embed Metadata in Book Files - Enable to tell Calibre Content Server to write and embed metadata into the book files.
 
 ### Write Metadata to Audio Files

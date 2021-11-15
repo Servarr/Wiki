@@ -14,6 +14,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
 ## Can I use flaresolverr indexers?
+
 - Yes.
 
 1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexers)

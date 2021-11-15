@@ -364,7 +364,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - Therefore for a change on TVDB to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
 
-- If a series or episodes are missing on TVDB, they'll take 36 to 48 hours from when they're added to populate into your Sonarr instance. 
+- If a series or episodes are missing on TVDB, they'll take 36 to 48 hours from when they're added to populate into your Sonarr instance.
 
 {#missing-episodes}
 
