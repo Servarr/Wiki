@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-09-01T04:32:29.061Z
+date: 2021-11-15T23:39:54.455Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -17,6 +17,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/prowlarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/prowlarr/quick-start-guide)
+- [<i class="far fa-question-circle"></i>&emsp;FAQ](/prowlarr/faq)
 {.links-list}
 
 ## User Guide
@@ -28,13 +29,12 @@ dateCreated: 2021-05-24T03:32:41.926Z
 - [<i class="fas fa-laptop"></i>&emsp;System](/prowlarr/system)
 - [<i class="fas fa-info-circle"></i>&emsp;Supported Indexers](/prowlarr/supported-indexers)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/prowlarr/custom-scripts)
+- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/prowlarr/appdata-directory)
 {.links-list}
 
 ## Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/prowlarr/troubleshooting)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/prowlarr/faq)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/prowlarr/appdata-directory)
 {.links-list}
 
 ## Development
