@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-11-15T23:39:54.455Z
+date: 2021-11-15T23:40:43.090Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -44,7 +44,8 @@ dateCreated: 2021-05-24T03:32:41.926Z
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://prowlarr.com/docs/api/#/)
 {.links-list}
 
-> Note that the API Docs are a currently very rough. Contributions to enhance them are welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console. {.is-info}
+> Note that the API Docs are a perpectual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console.
+{.is-info}
 
 ## Support
 
