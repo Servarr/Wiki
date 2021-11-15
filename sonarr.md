@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2021-10-10T02:18:51.739Z
+date: 2021-11-15T23:40:05.184Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -16,6 +16,7 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/sonarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/sonarr/quick-start-guide)
+- [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
 {.links-list}
 
 ## User Guide
@@ -28,13 +29,12 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 - [<i class="fas fa-laptop"></i>&emsp;System](/sonarr/system)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/sonarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/sonarr/tips-and-tricks)
+- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/sonarr/appdata-directory)
 {.links-list}
 
 ## Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/sonarr/troubleshooting)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/sonarr/appdata-directory)
 {.links-list}
 
 ## Development
