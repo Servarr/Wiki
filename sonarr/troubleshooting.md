@@ -83,7 +83,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 ### Trace/Debug Logs
 
-You can change the log level at Settings => General => Logging. Sonarr does not need to restarted for the change to take effetc. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `sonarr.trace.txt` respectively.
+You can change the log level at Settings => General => Logging. Sonarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `sonarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
@@ -189,7 +189,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 #### Remote Path Mapping
 
-A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Sonarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expetc. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/).
+A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Sonarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/).
 
 #### Permissions on the Library Folder
 

@@ -156,7 +156,7 @@ Prowlarr uses a self hosted open access [Weblate](https://translate.servarr.com)
 
 ### Contributing to an Existing Translation
 
-Weblate handles synchronization and translation of strings for all languages other than English. Editing of translated strings and translating existing strings for supported languages should be performed there for the Prowlarr projetc.
+Weblate handles synchronization and translation of strings for all languages other than English. Editing of translated strings and translating existing strings for supported languages should be performed there for the Prowlarr project.
 
 The English translation, `en.json`, serves as the source for all other translations and is managed on GitHub repo.
 

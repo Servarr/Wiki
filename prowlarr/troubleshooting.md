@@ -85,7 +85,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 ### Trace/Debug Logs
 
-You can change the log level at Settings => General => Logging. Prowlarr does not need to restarted for the change to take effetc. This change only affects the log files, not the logging database. The latest debug/trace log files are named `prowlarr.debug.txt` and `prowlarr.trace.txt` respectively.
+You can change the log level at Settings => General => Logging. Prowlarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `prowlarr.debug.txt` and `prowlarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 

@@ -133,7 +133,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 Notifications are used for notifications from Prowlarr.
 
-![settings_connetc.png](/assets/prowlarr/settings_connetc.png)
+![settings_connect.png](/assets/prowlarr/settings_connect.png)
 
 Click on `Settings` => `Notifications`, and then click the `+` to add a new connection.
 

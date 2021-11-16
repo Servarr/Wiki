@@ -163,7 +163,7 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[Sexxi](https://sexxi.club/){#sexxi}|Sexxi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[Sexy-Pics](https://www.sexy-pics.us/){#sexypics}|Sexy-Pics is a Public Magnet Links site for 3X MP4|en-US|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|fr-FR|
-|[Shizaproject](https://shiza-projetc.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
+|[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
 |[shokweb](https://shokweb.com/){#shokweb}|shokweb is a CHINESE Public tracker|zh-CN|
 |[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|cs-CZ|
