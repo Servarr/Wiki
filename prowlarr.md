@@ -44,7 +44,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://prowlarr.com/docs/api/#/)
 {.links-list}
 
-> Note that the API Docs are a perpectual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console.
+> Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
 {.is-info}
 
 ## Support

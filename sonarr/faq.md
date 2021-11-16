@@ -422,7 +422,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
-- Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
+- Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connetc. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
 - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 

@@ -24,8 +24,8 @@ The more we know, the easier it is to help you.
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
->- **Do not simply provide the whole log file unless explictly asked.**
->- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explictly asked.**
+>- **Do not simply provide the whole log file unless explicitly asked.**
+>- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
 >- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
 >
 >````none
@@ -83,7 +83,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 ### Trace/Debug Logs
 
-You can change the log level at Settings => General => Logging. Readarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `readarr.debug.txt` and `readarr.trace.txt` respectively.
+You can change the log level at Settings => General => Logging. Readarr does not need to restarted for the change to take effetc. This change only affects the log files, not the logging database. The latest debug/trace log files are named `readarr.debug.txt` and `readarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
@@ -113,7 +113,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 ### Determine the issue
 
-- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
+- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
 
 #### Migration Issue
 
@@ -195,7 +195,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 #### Remote Path Mapping
 
-A remote path mapping is used when your download client is reporting a path for completed data either on aother server or in a way that Readarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Readarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expetc. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
 
 #### Permissions on the Library Folder
 
@@ -207,7 +207,7 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 #### Download folder and library folder not different folders
 
-The download client should download into a folder accessible by and that is not your root/library folder;  should import from that separate download folder into your Library folder.
+The download client should download into a folder accessible by and that is not your root/library folder; should import from that separate download folder into your Library folder.
 
 You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
 
@@ -229,7 +229,7 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 There are a few causes of repeated downloads, but one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any preferred word scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
 
-This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpectually grabed and never imported. Please see the various other common problems and troubleshoting steps for this.
+This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perceptually grabbed and never imported. Please see the various other common problems and troubleshooting steps for this.
 
 #### Usenet download misses import
 

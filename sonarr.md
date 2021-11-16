@@ -43,7 +43,7 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://github.com/Sonarr/Sonarr/wiki/API)
 {.links-list}
 
-> Note that the API Docs are a perpectual work-in-progress and may not be complete. Contributions welcome. Note that the API Docs are primarily for the legacy API. **Contributions to start to convert the docs to Swagger are welcomed.** The best way to view see the API is to watch the network calls the frontend makes via the browser developement network call console. {.is-info}
+> Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. Note that the API Docs are primarily for the legacy API. **Contributions to start to convert the docs to Swagger are welcomed.** The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console. {.is-info}
 
 ## Support
 

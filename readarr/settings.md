@@ -28,7 +28,7 @@ dateCreated: 2021-05-27T16:47:28.054Z
       - Failure to do so will result in an error of `Anonymous users are not allowed to make changes`
   - Calibre Host - The IP/domain of the host of the Calibre Content Server
   - Calibre Port - The Port that Calibre Content Server is listening on
-  - (Advanced) Calibre URL Base - Add a prefux to the Calibre URL e.g. `http://[host]:[port]/[urlBase]`
+  - (Advanced) Calibre URL Base - Add a prefix to the Calibre URL e.g. `http://[host]:[port]/[urlBase]`
   - Calibre Username - Username to use to access Calibre Content Server
   - Calibre Password - Password to use to access Calibre Content Server
   - Calibre Library - Calibre Content Server library name. Leave blank for default
@@ -45,9 +45,9 @@ dateCreated: 2021-05-27T16:47:28.054Z
   - Existing Books - Monitor books that have files or have not released yet
   - First Book - Monitor the first book. All other books will be ignored
   - Latest Book - Monitor the latest book and future books
-  - None - No books will be monitored unless explictly added
+  - None - No books will be monitored unless explicitly added
 - Quality Profile - Default Quality Profile for books and authors detected within this folder
-- Metadata Profile - Select the Metadata Profile to use for authors detected in this folder.  To only load books that were explictly added or detected select None.
+- Metadata Profile - Select the Metadata Profile to use for authors detected in this folder.  To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
   
 ### Remote Path Mappings
@@ -88,7 +88,7 @@ Commonly used naming schema are:
     - `Underscore (_)` - Use underscores in lieu of spaces in naming
     - `Dash (-)` - Use dashes in lieu of spaces in naming
   - Right Box - Case Handling
-    - `Default Case` - Make title uppercase and lowercase (~camelcase) (Default)
+    - `Default Case` - Make title uppercase and lowercase (~camel-case) (Default)
     - `Uppercase` - Make title all uppercase
     - `Lowercase` - Make title all lowercase
 
@@ -187,7 +187,7 @@ Commonly used naming schema are:
   
   ![mm_filemgmt.png](/assets/readarr/mm_filemgmt.png)
 
-- Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inacessible from Readarr's root folder.
+- Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
@@ -276,7 +276,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Skip books with no ISBN or ASIN - Enable to skip books that do not contain either an ISBN or ASIN number.
 - Skip part books and sets - Enable to skip part books and sets.
 - Skip secondary series books - Enable to skip secondary series books.
-- Allowed Languages - Enter a comma-separated list of ISO 639-3 language codes, or 'null' for allowable langauges for your books
+- Allowed Languages - Enter a comma-separated list of ISO 639-3 language codes, or 'null' for allowable languages for your books
 - Must Not Contain - Enter words or phrases that a book title must not contain in order to be added.
   
 > You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
@@ -290,7 +290,7 @@ Release profiles are used to determine if indexer release names qualify for down
 - Check the box to enable this profile.
 - Add a list of words or phrases that MUST be in the release name in order to be considered valid.
 - Add a list of words or phrases that MUST NOT be in the release name in order to be considered valid.
-- Here you can add terms or regexes with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
+- Here you can add terms or regex with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
   
 > Preferred words with a higher score than were originally grabbed are ALWAYS an upgrade!
   
@@ -468,7 +468,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 #### Usenet Process
 
-- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, ect.
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, etc.
 - Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Readarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Readarr
 - Readarr will scan that completed file location for files that Readarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
@@ -476,7 +476,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 #### Torrent Process
 
-- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, ect.
+- Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, etc.
 - Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
@@ -612,7 +612,7 @@ After clicking the `+`, choose what kind of list you'd like to add:
 
 ![addlist.png](/assets/readarr/addlist.png)
 
-In this instance, we're going to add a Goodreads Bookshelf list.
+In this instance, we're going to add a GoodReads Bookshelf list.
 
 ![bookshelflist.png](/assets/readarr/bookshelflist.png)
 
@@ -673,8 +673,8 @@ This page allows you to create/update metadata tags/covers.
 If you are using Calibre to manage your ebook collection, you will use these options to control it.
 
 - Send Metadata to Calibre
-  - All files; keep in sync with Goodreads - Write tags to all files and update if Goodreads updates
-  - All files; inital import only - Write tags to all files once and do not update if Goodreads updates
+  - All files; keep in sync with GoodReads - Write tags to all files and update if GoodReads updates
+  - All files; initial import only - Write tags to all files once and do not update if GoodReads updates
   - For new downloads only - Write tags to only new downloads when they are imported
 - Update Covers - Enable to tell Calibre Content Server to use the same book covers as Readarr
 - Embed Metadata in Book Files - Enable to tell Calibre Content Server to write and embed metadata into the book files.
@@ -684,8 +684,8 @@ If you are using Calibre to manage your ebook collection, you will use these opt
 If you are using audiobooks, you will use these options to control it.
 
 - Tag Audio Files with Metadata
-  - All files; keep in sync with Goodreads - Write tags to all files and update if Goodreads updates
-  - All files; inital import only - Write tags to all files once and do not update if Goodreads updates
+  - All files; keep in sync with GoodReads - Write tags to all files and update if GoodReads updates
+  - All files; initial import only - Write tags to all files once and do not update if GoodReads updates
   - For new downloads only - Write tags to only new downloads when they are imported
 - Scrub Existing Tags - Enable to remove all tags from files except those added by Readarr
 

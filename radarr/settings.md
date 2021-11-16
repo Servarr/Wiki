@@ -57,7 +57,7 @@ Also, note that for each individual settings page, there are some options at the
     Underscore (_) - Use underscores in lieu of spaces in naming
     Dash (-) - Use dashes in lieu of spaces in naming
   - Right Box - Case Handling
-    Default Case - Make title uppercase and lowercase (~camelcase) (Default)
+    Default Case - Make title uppercase and lowercase (~camel-case) (Default)
     Uppercase - Make title all uppercase
     Lowercase - Make title all lowercase
 
@@ -513,7 +513,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 #### Usenet Process
 
-- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 - Radarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Radarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Radarr
 - Radarr will scan that completed file location for files that Radarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
@@ -521,7 +521,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 #### Torrent Process
 
-- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, ect.
+- Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 - Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Radarr will fall back and copy the file.

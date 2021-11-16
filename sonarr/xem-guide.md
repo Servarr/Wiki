@@ -53,7 +53,7 @@ Full mapping tells any service using TheXEM that between the two entities it con
 > This means that if all you want to add to your mapping is a scene column and a TVDB column with full mapping between them, your series entry is obsolete as this works by default without an entry on TheXEM.
 {.is-info}
 
-### ![Direct mapping](/assets/sonarr/xem-guide/mapping-direct.svg) Direct mapping
+### ![Direct mapping](/assets/sonarr/xem-guide/mapping-diretc.svg) Direct mapping
 
 Direct mapping is only possible between the Master entity type and the entities to either side of it. You'll want to use it as sparingly as possible because once you start using direct connections you'll need to keep using them for at least the remainder of the season and in some cases for the remainder of the entire show.
 

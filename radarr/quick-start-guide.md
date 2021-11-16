@@ -228,7 +228,7 @@ On the top click on `Movie Editor`
 
 After activating it you select the movie(s) from where you want to have the folder(s) to be renamed.
 
-![Radarr-movie-editor-select.png](/assets/radarr/Radarr-movie-editor-select.png)
+![Radarr-movie-editor-seletc.png](/assets/radarr/Radarr-movie-editor-seletc.png)
 
 1. If you want all your movie folders renamed to your folder naming scheme you set earlier [movie naming section](#movie-naming).
 2. Select the movie(s) from where you want to have the folder(s) to be renamed.

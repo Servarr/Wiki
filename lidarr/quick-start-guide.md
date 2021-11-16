@@ -143,7 +143,7 @@ Click on `Add (+)` of `Indexers`. You’ll be presented with a new window with m
 
 Add at least one `Indexer` in order for Lidarr to properly find available files.
 
-Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information on the subject.
+Understanding the configuration/concepts behind `Indexers` are beyond the scope of this guide. The internet holds a wealth of information on the subjetc.
 
 ### Download Clients
 
@@ -265,7 +265,7 @@ Low to no curation of loose files will not work with Lidarr. Best to not attempt
 
 Speciality libraries create unique issues for any management system. These situations may work with Lidarr but it may require extensive work on your part, pretty much foregoing the automations built in. For example:
 
-- **Classical Music** - Usually has extensive tagging requirements or desires. `Releases` metadata will likely not exist or be incorrect.
+- **Classical Music** - Usually has extensive tagging requirements or desires. `Releases` metadata will likely not exist or be incorretc.
 - **Singles** - Singles may not be actual `Releases`. 3rd party data services will return no metadata. They will not be automated and Lidarr will not be able to apply management.
 - **Electronic** - This does NOT apply to `Releases` in the Electronic genre. This is in relation to libraries of mixes, beats, samples etc. (Beatport). 3rd party data sources do not recognize these as `Releases`. They will not be automated and Lidarr will not be able to apply management.
 

@@ -47,7 +47,7 @@ Also, note that for each individual settings page, there are some options at the
   - Underscore (_) - Use underscores in lieu of spaces in naming
   - Dash (-) - Use dashes in lieu of spaces in naming
   - Right Box - Case Handling
-  - Default Case - Make title uppercase and lowercase (~camelcase) (Default)
+  - Default Case - Make title uppercase and lowercase (~camel-case) (Default)
   - Uppercase - Make title all uppercase
   - Lowercase - Make title all lowercase
 

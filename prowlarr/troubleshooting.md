@@ -24,8 +24,8 @@ The more we know, the easier it is to help you.
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
->- **Do not simply provide the whole log file unless explictly asked.**
->- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explictly asked.**
+>- **Do not simply provide the whole log file unless explicitly asked.**
+>- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
 >- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
 >
 >````none
@@ -85,7 +85,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 ### Trace/Debug Logs
 
-You can change the log level at Settings => General => Logging. Prowlarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `prowlarr.debug.txt` and `prowlarr.trace.txt` respectively.
+You can change the log level at Settings => General => Logging. Prowlarr does not need to restarted for the change to take effetc. This change only affects the log files, not the logging database. The latest debug/trace log files are named `prowlarr.debug.txt` and `prowlarr.trace.txt` respectively.
 
 If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
 
@@ -115,7 +115,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 ### Determine the issue
 
-- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed sucessfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/radarr/settings#logging) and [Log Files](/radarr/system#log-files) to find them and increase the log level.
+- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/radarr/settings#logging) and [Log Files](/radarr/system#log-files) to find them and increase the log level.
 
 #### Migration Issue
 

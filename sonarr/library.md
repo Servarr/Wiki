@@ -21,7 +21,7 @@ The filters options allows you to narrow your series down and is incredibly help
 The add new feature allows you to add a new series for Sonarr to monitor and download.
 
 - Root Folder - The selected [root/library folder](/sonarr/settings#root-folders) in Sonarr for this series to use
-- Monitor - How do you want the series monitored initally?
+- Monitor - How do you want the series monitored initially?
   - All Episodes - Monitor all episodes except specials
   - Future Episodes - Monitor episodes that have not aired yet
   - Missing Episodes - Monitor episodes that do not have files or have not aired yet

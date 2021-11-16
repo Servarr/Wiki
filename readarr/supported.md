@@ -85,8 +85,8 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [More Info](/readarr/custom-scripts)
 - Discord {#discord}
 - Email {#email}
-- Goodreads Bookshelves {#goodreadsbookshelf}
-- Goodreads Owned Books {#goodreadsownedbooks}
+- GoodReads Bookshelves {#goodreadsbookshelf}
+- GoodReads Owned Books {#goodreadsownedbooks}
 - Gotify {#gotify}
 - Join {#join}
 - Mailgun {#mailgun}
@@ -106,26 +106,26 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 {#importlist}
 
-- Goodreads Bookshelves {#goodreadsbookshelf}
+- GoodReads Bookshelves {#goodreadsbookshelf}
   - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
-  - Bookshelves - Select which bookshelves to import from Goodreads
-  - Authenticate with Goodreads - Click the button to authenticate with Goodreads.
+  - Bookshelves - Select which bookshelves to import from GoodReads
+  - Authenticate with GoodReads - Click the button to authenticate with GoodReads.
 
-> Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
+> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with GoodReads to fetch the user's shelves.
 {.is-info}
 
-- Goodreads Owned Books {#goodreadsownedbooks}
+- GoodReads Owned Books {#goodreadsownedbooks}
   - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
-  - Bookshelves - Select which bookshelves to import from Goodreads
-  - Authenticate with Goodreads - Click the button to authenticate with Goodreads.
+  - Bookshelves - Select which bookshelves to import from GoodReads
+  - Authenticate with GoodReads - Click the button to authenticate with GoodReads.
 
-> Multiple Goodreads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with Goodreads to fetch the user's shelves.
+> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with GoodReads to fetch the user's shelves.
 {.is-info}
 
-- Goodreads Lists {#goodreadslistimportlist}
-  - List ID - Enter the Goodreads public List ID to add as a list
-- Goodreads Series {#goodreadsseriesimportlist}
-  - Series ID - Enter the Goodreads Series ID to add as a list
+- GoodReads Lists {#goodreadslistimportlist}
+  - List ID - Enter the GoodReads public List ID to add as a list
+- GoodReads Series {#goodreadsseriesimportlist}
+  - Series ID - Enter the GoodReads Series ID to add as a list
 - LazyLibrarian {#lazylibrarianimport}
   - Url - URL of your LazyLibrarian Instance
   - API Key - API Key of your LazyLibrarian Instance
