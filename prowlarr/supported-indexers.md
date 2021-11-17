@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-14T16:50:13.2454757Z
+date: 2021-11-17T16:28:45.4143754Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-14T16:50:13.2454757Z
+dateCreated: 2021-11-17T16:28:45.4143754Z
 ---
 
-- Supported Indexers as of Build `0.1.3.1077` / [Commit: 1aa914986600e0a494f7752d2850cdc098887aa9](https://github.com/Prowlarr/Prowlarr/commit/1aa914986600e0a494f7752d2850cdc098887aa9)
+- Supported Indexers as of Build `0.1.3.1089` / [Commit: 39fd9bea8943d068996c9e6dd29344daa3d7fcc8](https://github.com/Prowlarr/Prowlarr/commit/39fd9bea8943d068996c9e6dd29344daa3d7fcc8)
 
 ---
 
@@ -195,11 +195,11 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[TorrentQQ](https://torrentqq115.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-RU|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
-|[TorrentSir](https://torrentsir41.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir42.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://torrentview45.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz34.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[Torrentz2eu](https://torrentz2.unblockninja.com/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
+|[Torrentz2eu](https://torrentzeu.org/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|en-GB|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-RU|
 |[Underverse](https://underver.se/){#underverse}|Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-RU|
@@ -401,6 +401,7 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[LatTeam](https://lat-team.com/){#lat-team}|Lat-Team is a Private Torrent Tracker for HD MOVIES / TV|es|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|en-US|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|en-US|
+|[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[LemonHD](https://lemonhd.org/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[LeSaloon](https://lesaloonv2-0.net/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|hu-HU|
@@ -462,6 +463,7 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[Punk's Horror Tracker](https://punck-tracker.net/){#punkshorror}|Punk's Horror Tracker is a HUNGARIAN Private Tracker for Horror MOVIES / TV|hu-HU|
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH site for General content|es-ES|
 |[PuroVicio](https://purovicio.in/){#purovicio}|PuroVicio is a Latin American Private Torrent Tracker for MOVIES / TV / GENERAL|es-419|
+|[PuTao](https://pt.sjtu.edu.cn/){#putao}|葡萄 (PuTao) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|zh-CN|
 |[Puur-Hollands](https://www.puur-hollands.org/){#puurhollands}|Puur-Hollands is a DUTCH Private Torrent Tracker for MUSIC|nl-NL|
 |[PWTorrents](https://pwtorrents.net/){#pwtorrents}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING|en-US|
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private site for MOVIES / TV / GENERAL|en-US|
@@ -470,9 +472,9 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for TV|pl-PL|
 |[Redacted](https://redacted.ch/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers.|en-US|
 |[RedBits](https://red-bits.com/){#redbits}|RedBits is a SPANISH site for classic content|es-ES|
-|[ReelFlix](https://reelflix.xyz/){#reelflix}|ReelFlix (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-US|
-|[ReelFlix (API)](https://reelflix.xyz/){#reelflix-api}|ReelFlix (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-US|
-|[Renegade](https://renegade-tracker.com/){#renegade}|Renegade is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu-HU|
+|[ReelFLiX](https://reelflix.xyz/){#reelflix}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|en-US|
+|[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|en-US|
+|[Renegade](http://renegade-tracker.com/){#renegade}|Renegade is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|hu-HU|
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|en-US|
 |[RevolutionTT](https://revolutiontt.me/){#revolutiontt}|The Revolution has begun|en-US|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC. This definition is for the English site.|en-US|
@@ -489,7 +491,7 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[SiamBIT](https://www.siambit.me/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|th-TH|
 |[SkipTheCommercials](https://skipthecommericals.xyz/){#skipthecommercials}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|en-US|
 |[SkipTheCommercials (API)](https://skipthecommericals.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|en-US|
-|[slosoul](https://slosoul.net/){#slosoul}|slosoul is a Slovanian  Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
+|[slosoul](http://slosoul.net/){#slosoul}|slosoul is a Slovanian  Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|zh-CN|
 |[SoulVoice](https://pt.soulvoice.club/){#soulvoice}|SoulVoice is a CHINESE Private Torrent Tracker for Movies, TV, and e-Learning|zh-CN|
 |[SpeedApp](https://speedapp.io){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-RO|
@@ -521,6 +523,7 @@ dateCreated: 2021-11-14T16:50:13.2454757Z
 |[The Shinning](https://theshinning.me/){#theshinning}|The Shinning (TsH) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
 |[The Show](https://theshow.click/){#theshow}|Entertainment E-Learning|en-US|
 |[The Vault](https://thevault.click/){#thevault}|Business/Marketing E-Learning|en-US|
+|[The-Devils-Lounge](https://the-devils-lounge.xyz/){#the-devils-lounge}|The-Devils-Lounge is a Private torrent site for MOVIES / TV / GENERAL|en-US|
 |[TheAudioScene](https://theaudioscene.net/){#theaudioscene}|TheAudioScene is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|en-US|
 |[TheLeachZone](https://tlz.digital/){#theleachzone}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[TheScenePlace](https://www.thesceneplace.com/){#thesceneplace}|TheScenePlace (TSP) is a Private site for TV / MOVIES / GENERAL|en-US|
