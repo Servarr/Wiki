@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-11-18T03:27:20.587Z
+date: 2021-11-18T03:29:44.315Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -12,6 +12,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 - Using definitions files it's possible to support many trackers or even indexers without having to write native C# code. All you need is a little knowledge about HTML and CSS selectors.
 
+- Prowlarr Cardigann supports regular standard Cardigann scraping (HTML), parsing JSON responses, and parsing XML responses (exclusive to Prowlarr).
+
 - In order to add support for a new Cadigann/YML tracker or indexer submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
 
 - You may test out your definition locally or create one for your own needs by using the [Custom Definiton Folder](/prowlarr/indexers#adding-a-custom-yml-definition)
@@ -19,7 +21,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
 - The best way to get started is to look at existing definitions files. If you know a tracker which is similar to the one you want to add and is already supported just use it's definition as a base for your new definition file.
 
 - Many sites often have a `Powered by` logo at a footer on their pages, and we try to tag our yaml indexers with a comment at the bottom to make finding similar engines a little easier. If you find a matching engine then you can use that indexer as a base for your new site, which will save you a lot of time and effort.
-  - Json definitions should be tagged as such
+  - JSON definitions should be tagged as such
   - XML definitions should be tagged as such
 
 # Format
