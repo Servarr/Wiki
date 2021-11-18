@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-11-03T23:20:20.695Z
+date: 2021-11-18T02:38:50.730Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -123,9 +123,9 @@ Firefox
 
 ### Notifiarr (fka Discord Notifier)
 
-[Notifiarr](https://notifiarr.com/) is a tool created to facilitate more in-depth detailed discord notifications. It provides a configurable way to add notifications (including reactions) based on triggers you pick. Website provides a UI or picking what to show in the notification. Includes support for Grab, Import, Upgrade, Health, & Failed notifications in addition to much more.
+[Notifiarr](https://notifiarr.com/) is a tool created to facilitate more in-depth detailed discord notifications by one of the \*Arr Developers. It provides a configurable way to add notifications (including reactions) based on triggers you pick. Website provides a UI or picking what to show in the notification. Includes support for Grab, Import, Upgrade, Health, & Failed notifications in addition to much more.
 
-[Setup Guide](https://trash-guides.info/Misc/Discord-Notifier-Basic-Setup/)
+[Wiki](https://notifiarr.wiki/)
 
 Highlights
 
