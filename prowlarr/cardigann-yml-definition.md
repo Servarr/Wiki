@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-11-18T03:29:44.315Z
+date: 2021-11-18T03:32:52.658Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -687,6 +687,9 @@ In the event that you need to provide a default category due to the possibility 
 
 ## Search JSON
 
+- This is supported for `XML` as well as `JSON`
+- Note that `XML` has all the standard HTML filters available to it, but JSON does not.
+
 Example of a complex search block explaining all available options:
 
 ```yaml
@@ -794,12 +797,10 @@ search:
     infohash:
       selector: hash
     # [OPTIONAL] link to a poster image (cover, banner, etc.)
-    # This will show up (on the Jackett dashboard search page) as a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     poster:
       selector: ..large_cover_image
     # [OPTIONAL] description (any other available/relevant information)
-    # This will show up (on the Jackett dashboard search page) as info on a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     description:
       text: "{{ .Result.year }} - {{ .Result.quality }} - {{ .Result.type }}"
@@ -1644,4 +1645,4 @@ fields:
 
 # Credit
 
-- This page is based on [Jackett's wiki entry](https://github.com/Jackett/Jackett/wiki/Definition-format) by [garfield69](https://github.com/garfield69).
+- This page is based on [Jackett's wiki entry](https://github.com/Jackett/Jackett/wiki/Definition-format) by [garfield69](https://github.com/garfield69) and others.
