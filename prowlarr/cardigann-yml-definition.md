@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-08-14T18:55:41.230Z
+date: 2021-11-18T03:27:20.587Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -10,15 +10,17 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 # General
 
-- Using definitions files it's possible to support many trackers without having to write native C# code. All you need is a little knowledge about HTML and CSS selectors.
+- Using definitions files it's possible to support many trackers or even indexers without having to write native C# code. All you need is a little knowledge about HTML and CSS selectors.
 
-- In order to add support for a new Cadigann/YML tracker submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
+- In order to add support for a new Cadigann/YML tracker or indexer submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
 
 - You may test out your definition locally or create one for your own needs by using the [Custom Definiton Folder](/prowlarr/indexers#adding-a-custom-yml-definition)
 
 - The best way to get started is to look at existing definitions files. If you know a tracker which is similar to the one you want to add and is already supported just use it's definition as a base for your new definition file.
 
 - Many sites often have a `Powered by` logo at a footer on their pages, and we try to tag our yaml indexers with a comment at the bottom to make finding similar engines a little easier. If you find a matching engine then you can use that indexer as a base for your new site, which will save you a lot of time and effort.
+  - Json definitions should be tagged as such
+  - XML definitions should be tagged as such
 
 # Format
 
@@ -419,7 +421,8 @@ The search block contains all the information on how to search and how to extrac
 There are two search method available, which are based on the response type from the web site.
 
 - [Search HTML](/prowlarr/cardigann-yml-definition#search-html) (Default)
-- [Search HTML](/prowlarr/cardigann-yml-definition#search-json)
+- [Search JSON](/prowlarr/cardigann-yml-definition#search-json)
+  - It is also possible to search `XML` in Prowlarr with the JSON format
 
 ## Search HTML
 
