@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-17T16:28:45.4143754Z
+date: 2021-11-20T14:21:17.7576720Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-17T16:28:45.4143754Z
+dateCreated: 2021-11-20T14:21:17.7576720Z
 ---
 
-- Supported Indexers as of Build `0.1.3.1089` / [Commit: 39fd9bea8943d068996c9e6dd29344daa3d7fcc8](https://github.com/Prowlarr/Prowlarr/commit/39fd9bea8943d068996c9e6dd29344daa3d7fcc8)
+- Supported Indexers as of Build `0.1.3.1113` / [Commit: 77fa113d77658136c3b2ceffbeb3d127a4206ded](https://github.com/Prowlarr/Prowlarr/commit/77fa113d77658136c3b2ceffbeb3d127a4206ded)
 
 ---
 
@@ -131,7 +131,7 @@ dateCreated: 2021-11-17T16:28:45.4143754Z
 |[OnceSearch](http://oncesearch.com/){#oncesearch}|OnceSearch is a Public Torrent Tracker for 3X|en-US|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|en-US|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
-|[OxTorrent](https://www.oxtorrent.pl/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
+|[OxTorrent](https://www.oxtorrent.vc/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|ru-RU|
 |[PiratBit](https://piratbit.top/){#piratbit}|PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
@@ -199,7 +199,7 @@ dateCreated: 2021-11-17T16:28:45.4143754Z
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://torrentview45.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz34.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[Torrentz2eu](https://torrentzeu.org/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
+|[Torrentz2eu](https://torrentz2eu.me/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|en-GB|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-RU|
 |[Underverse](https://underver.se/){#underverse}|Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-RU|
