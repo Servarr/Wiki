@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-20T14:21:17.7576720Z
+date: 2021-11-20T17:49:18.7163881Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-20T14:21:17.7576720Z
+dateCreated: 2021-11-20T17:49:18.7163881Z
 ---
 
-- Supported Indexers as of Build `0.1.3.1113` / [Commit: 77fa113d77658136c3b2ceffbeb3d127a4206ded](https://github.com/Prowlarr/Prowlarr/commit/77fa113d77658136c3b2ceffbeb3d127a4206ded)
+- Supported Indexers as of Build `0.1.4.1117` / [Commit: f69f96695b1262a89ff1ea4ff2de376a55925b99](https://github.com/Prowlarr/Prowlarr/commit/f69f96695b1262a89ff1ea4ff2de376a55925b99)
 
 ---
 
@@ -192,7 +192,7 @@ dateCreated: 2021-11-20T14:21:17.7576720Z
 |[TorrentMax](https://torrentmax2.net/){#torrentmax}|TorrentMax (토렌트맥스) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq115.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq117.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-RU|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir42.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -430,7 +430,6 @@ dateCreated: 2021-11-20T14:21:17.7576720Z
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|en-US|
 |[NetCosmo](http://netcosmo.it/){#netcosmo}|NetCosmo is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|it-IT|
 |[NetLab](https://torrent.e2k.ru/){#netlab}|NetLab is a RUSSIAN Private Torrent Tracker|ru-RU|
-|[nForce](http://n-force.eu/){#nforce}|nForce is a HUNGARIAN Private Tracker for MOVIES / TV|hu-HU|
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|nb-NO|
 |[NotWhatCD](https://notwhat.cd/){#notwhat.cd}|NotWhat\.CD (NWCD) is a private Music tracker that arised after the former (WCD) shut down.|en-US|
 |[Oasis](https://oasis-fun.club/){#oasis}|Oasis is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
