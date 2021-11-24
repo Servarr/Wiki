@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-24T19:06:07.309Z
+date: 2021-11-24T19:10:40.412Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -312,19 +312,19 @@ Release profiles are used to determine if indexer release names qualify for down
 
 ![releaseprofiles.png](/assets/readarr/releaseprofiles.png)  
   
-- Check the box to enable this profile.
-- Add a list of words or phrases that MUST be in the release name in order to be considered valid.
-- Add a list of words or phrases that MUST NOT be in the release name in order to be considered valid.
-- Here you can add terms or regex with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
+- Enable Profile - Check the box to enable this profile.
+- Must Contain - Add a list of words or phrases that MUST be in the release name in order to be considered valid.
+- Must Not Contain - Add a list of words or phrases that MUST NOT be in the release name in order to be considered valid.
+- Preferred (Words) - Here you can add terms or regex with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
   
-> Preferred words with a higher score than were originally grabbed are ALWAYS an upgrade!
+> Releases with a higher preferred word score than the existing file are ALWAYS an upgrade! {.is-info}
   
-- Check this box to include your preferred words in the `{Preferred Words}` file naming assignment token.
+- Include Preferred when Renaming Check this box to include your preferred words (or regex matches) in the `{Preferred Words}` file naming assignment token.
   
 > You should include `{Preferred Words}` in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
 
-- In this drop-down, you can limit this release profile to a single indexer.
-- Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
+- Indexer - In this drop-down, you can limit this release profile to a single indexer. This should almost always be left at `(any)`
+- Tags - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
 
 ### Delay Profiles
 
