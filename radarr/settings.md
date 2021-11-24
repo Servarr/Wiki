@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-24T19:06:09.451Z
+date: 2021-11-24T19:52:58.455Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -552,6 +552,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Completed Download Handling
+  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
 
 ### Torrent Client Settings
 
@@ -569,6 +571,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Completed Download Handling
+  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Radarr per the below table.  Torrents must also stay in the same category.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -577,11 +582,12 @@ Select the download client you wish to add, and there will be a pop-up box to en
 |      Client       | Ratio |      Time      |
 | :---------------: | :---: | :------------: |
 |      Deluge       |  Yes  |       No       |
+| Download Station  |  No   |       No       |
+|       Flood       |  Yes  |      Yes       |
 |     Hadouken      |  No   |       No       |
 |    qBittorrent    |  Yes  |      Yes       |
-|     rTorrent      |  No   |       No       |
+|     rTorrent      |  Yes  |      Yes       |
 | Torrent Blackhole |  No   |       No       |
-| Download Station  |  No   |       No       |
 |   Transmission    |  Yes  | *Idle Limit*\* |
 |     uTorrent      |  Yes  |      Yes       |
 |       Vuze        |  Yes  |      Yes       |
@@ -592,9 +598,10 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Completed Download Handling is how Radarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
-- Enable - Automatically import completed downloads from the download client
-- (Advanced Option) Remove  - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
 - (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues
+- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+  - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Sonarr per the above table.  Torrents must also stay in the same category.
 
 ### Remove Completed Downloads
 
