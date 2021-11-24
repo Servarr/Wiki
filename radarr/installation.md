@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-14T01:59:15.546Z
+date: 2021-11-24T02:39:02.384Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -88,6 +88,7 @@ nano RadarrInstall.sh
 #### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 #### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 #### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
+#### Version v2.0.1 2021-11-23 - brightghost (Fixed user creation step to use correct variables.)
 #### Updates by: The Radarr Community
 #### Thanks to Bakerboy448 for the guidance and improved wiki entry & script
 #### Original author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
@@ -112,7 +113,7 @@ app_prereq="curl mediainfo sqlite3" # Required packages
 app_umask="0002"                    # UMask the Service will run as
 app_bin=${app^}                     # Binary Name of the app
 bindir="/opt/${app^}"               # Install Location
-branch="master"                     # {Update me if needed} branch to instal
+branch="master"                     # {Update me if needed} branch to install
 datadir="/var/lib/radarr/"          # {Update me if needed} AppData directory to use
 
 ## Create App user if it doesn't exist
@@ -139,7 +140,7 @@ fi
 
 ## AppData
 mkdir -p $datadir
-chown -R $app_uid:$app_uid $datadir
+chown -R $app_uid:$app_guid $datadir
 chmod 775 $datadir
 
 ## Download and install the App
@@ -215,10 +216,8 @@ echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
 - Then in your console type:
 
 ```shell
-bash Rada <tab>
+bash RadarrInstall.sh
 ```
-
-- This should autocomplete to RadarrInstall.sh
 
 If you need to re-install run again:
 
