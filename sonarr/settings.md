@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-10-24T06:07:10.969Z
+date: 2021-11-24T19:52:57.013Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -539,6 +539,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Completed Download Handling
+  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
 
 ### Torrent Client Settings
 
@@ -556,22 +558,26 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
-
+- Completed Download Handling
+  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Sonarr per the below table.  Torrents must also stay in the same category.
+  
 ### Torrent Client Remove Download Compatibility
 
 - Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
 
-|      Client       | Ratio |     Time     |
-| :---------------: | :---: | :----------: |
-|      Deluge       |  Yes  |      No      |
-|     Hadouken      |  No   |      No      |
-|    qBittorrent    |  Yes  |     Yes      |
-|     rTorrent      |  No   |      No      |
-| Torrent Blackhole |  No   |      No      |
-| Download Station  |  No   |      No      |
-|   Transmission    |  Yes  | *Idle Limit* |
-|     uTorrent      |  Yes  |     Yes      |
-|       Vuze        |  Yes  |     Yes      |
+|      Client       | Ratio |      Time      |
+| :---------------: | :---: | :------------: |
+|      Deluge       |  Yes  |       No       |
+| Download Station  |  No   |       No       |
+|       Flood       |  Yes  |      Yes       |
+|     Hadouken      |  No   |       No       |
+|    qBittorrent    |  Yes  |      Yes       |
+|     rTorrent      |  Yes  |      Yes       |
+| Torrent Blackhole |  No   |       No       |
+|   Transmission    |  Yes  | *Idle Limit*\* |
+|     uTorrent      |  Yes  |      Yes       |
+|       Vuze        |  Yes  |      Yes       |
 
 > *Idle Limit* - Transmission internally has an Idle Time check, but Sonarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
