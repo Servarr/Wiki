@@ -8,11 +8,11 @@ editor: markdown
 dateCreated: 2021-05-25T16:14:58.862Z
 ---
 
-## Activity
+# Activity
 
 This set of screens show current and past activity performed by Readarr.
 
-## Queue
+# Queue
 
 When something is actively downloading and not yet imported into Readarr, it will show in the Queue page.
 
@@ -30,7 +30,7 @@ If an item needs a human to review it and make a decision, it will be orange on 
 
 Make sure the author and book match, and click `Import`.
 
-## History
+# History
 
 The History page shows you everything that Readarr has done with your media. The default sorting is from newest to oldest.
 
@@ -44,7 +44,7 @@ On `Grabbed` statuses, you can click on the `i` icon on the right to see more de
 
 ![history4.png](/assets/readarr/history4.png)
 
-## Blocklist
+# Blocklist
 
 > Blocklist is formerly known as 'Blacklist' {.is-info}
 

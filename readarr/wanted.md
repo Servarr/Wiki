@@ -8,11 +8,11 @@ editor: markdown
 dateCreated: 2021-06-10T01:37:09.224Z
 ---
 
-## Wanted
+# Wanted
 
 The Wanted pages will show you all books that are either Missing or have not yet met their Cutoff.
 
-## Missing
+# Missing
 
 The Missing page shows you all books that are monitored (i.e. Wanted), and missing from your collection completely.
 
@@ -30,7 +30,7 @@ If you want to unmonitor books from this page, select them in the checkbox and c
 
 You can also do a Manual Import from here by clicking the icon at the top. This will allow you to import from somewhere other than your Root Folder, and manually match up the author and the book. It will move, rename, and organize your files to where they belong.
 
-## Cutoff Unmet
+# Cutoff Unmet
 
 The Cutoff Unmet screen is like the Missing screen. The difference is that there are book files already in your library, but they are not in the quality or format you prefer, so Readarr is still looking for a "better" copy for you.
 

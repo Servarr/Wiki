@@ -12,14 +12,14 @@ dateCreated: 2021-05-16T23:39:16.456Z
 
 Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
-## Getting Started
+# Getting Started
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/lidarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/lidarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/lidarr/faq)
 {.links-list}
 
-## User Guide
+# User Guide
 
 - [<i class="fas fa-play"></i>&emsp;Library](/lidarr/library)
 - [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/lidarr/calendar)
@@ -32,12 +32,12 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/lidarr/appdata-directory)
 {.links-list}
 
-## Troubleshooting
+# Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/lidarr/troubleshooting)
 {.links-list}
 
-## Development
+# Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/lidarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://lidarr.audio/docs/api/)
@@ -46,7 +46,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 > Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
 {.is-info}
 
-## Support
+# Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
@@ -54,7 +54,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Lidarr Subreddit*](https://reddit.com/r/lidarr)
 {.links-list}
 
-## Links
+# Links
 
 - [lidarr.audio *Website*](https://lidarr.audio)
 - [Open Collective *Donations*](https://opencollective.com/lidarr)

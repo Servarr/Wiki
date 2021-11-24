@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
 ---
 
-## Windows
+# Windows
 
 Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
@@ -37,7 +37,7 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 > If you use [Cerify The Web](https://docs.certifytheweb.com/docs/backgroundservice/) for LetsEncrypt certificate management for IIS and are installing Prowlarr on the same machine, port `9696` is used by the background service. You will need to either change the listening port of Prowlarr in your `config.xml` to something else or change the port of the Certify The Web background service.
 {.is-info}
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#OSX}
   
@@ -48,15 +48,15 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Browse to <http://localhost:9696> to start using Prowlarr
 
-## Linux
+# Linux
 
-### Debian / Ubuntu
+## Debian / Ubuntu
 
 > Prowlarr is curretly in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
 {.is-danger}
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
-#### Easy Install
+### Easy Install
 
 > **The following is a community written and community maintained unofficial script.** {.is-info}
 
@@ -88,15 +88,15 @@ nano ProwlarrInstall.sh
 
 ```bash
 #!/bin/bash
-#### Description: Prowlarr Debian install
-#### Originally from the Radarr Community
-## Am I root?, need root!
+### Description: Prowlarr Debian install
+### Originally from the Radarr Community
+# Am I root?, need root!
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root."
     exit
 fi
-## Const
-#### Update these variables as required for your specific instance
+# Const
+### Update these variables as required for your specific instance
 app="prowlarr"                       # App Name
 app_uid="prowlarr"                   # {Update me if needed} User App will run as and the owner of it's binaries
 app_guid="prowlarr"                  # {Update me if needed} Group App will run as.
@@ -108,7 +108,7 @@ bindir="/opt/${app^}"                # Install Location
 branch="develop"                     # {Update me if needed} branch to install
 datadir="/var/lib/prowlarr/"         # {Update me if needed} AppData directory to use
 
-## Create App user if it doesn't exist
+# Create App user if it doesn't exist
 PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]; then
     groupadd -f $app_guid
@@ -120,21 +120,21 @@ else
     groupadd -f $app_guid
     usermod -a -G $app_guid $app_uid
 fi
-## Stop the App if running
+# Stop the App if running
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
     sytemctl disable $app.service
 fi
-## Create Appdata Directory
-## AppData
+# Create Appdata Directory
+# AppData
 mkdir -p $datadir
 chown -R $app_uid:$app_uid $datadir
 chmod 775 $datadir
-## Download and install the App
-## prerequisite packages
+# Download and install the App
+# prerequisite packages
 apt install $app_prereq
 ARCH=$(dpkg --print-architecture)
-## get arch
+# get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
 case "$ARCH" in
 "amd64") DLURL="${dlbase}&arch=x64" ;;
@@ -149,7 +149,7 @@ echo "Downloading..."
 wget --content-disposition "$DLURL"
 tar -xvzf ${app^}.*.tar.gz
 echo "Installation files downloaded and extracted"
-## remove existing installs
+# remove existing installs
 echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
@@ -183,7 +183,7 @@ EOF
 echo "Service file created. Attempting to start the app"
 systemctl -q daemon-reload
 systemctl enable --now -q "$app"
-## Finish update
+# Finish update
 host=$(hostname -I)
 ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
@@ -208,7 +208,7 @@ bash ProwlarrInstall.sh
 
 ---
 
-#### Debian / Ubuntu Hands on Install
+### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
@@ -310,7 +310,7 @@ Typically to access the Radarr web GUI browse to `http://{Your server IP Address
 
 ---
 
-#### Uninstall
+### Uninstall
 
 To uninstall and purge:
 > Warning: This will destroy your application data. {.is-danger}
@@ -332,9 +332,9 @@ sudo rm -rf /etc/systemd/system/prowlarr.service
 systemctl -q daemon-reload
 ```
 
-## Docker
+# Docker
 
-### Install Prowlarr
+## Install Prowlarr
 
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
@@ -350,14 +350,14 @@ To install and use these Docker images, you will need to keep the above in mind 
 - [lscr.io/linuxserver/prowlarr](https://github.com/lscr.io/linuxserver/docker-prowlarr/tree/develop)
 {.links-list}
 
-## Reverse Proxy Configuration
+# Reverse Proxy Configuration
 
 Sample config examples for configuring Prowlarr to be accessible through a reverse proxy.
 
 > These examples assumes the default port of `9696` and that you set a baseurl of `prowlarr`. It also assumes your web server i.e nginx and Prowlarr running on the same server accessible at `localhost`. If not, use the host IP address or a FQDN instead.
 {.is-info}
 
-### NGINX
+## NGINX
 
 ```nginx
 location /prowlarr {
@@ -389,7 +389,7 @@ location /prowlarr/Content {
 }
 ```
 
-### Apache
+## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `prowlarr` from the `Location` block and simply use `/` as the location.
 

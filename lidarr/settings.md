@@ -8,22 +8,22 @@ editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
 ---
 
-## Settings
+# Settings
 
 This page is a work in progress.
 
-## Download Clients
+# Download Clients
 
 > Information on supported download clients can be found [here](/lidarr/supported#download-clients)
 {.is-info}
 
-### Overview
+## Overview
 
 - Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
 
-### Download Client Processes
+## Download Client Processes
 
-### Usenet
+## Usenet
 
 - Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
@@ -33,7 +33,7 @@ This page is a work in progress.
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Lidarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Lidarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
-### BitTorrent
+## BitTorrent
 
 - Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
@@ -42,17 +42,17 @@ This page is a work in progress.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Lidarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Lidarr's settings, Lidarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
-### Download Clients
+## Download Clients
 
 Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
-#### Supported Download Clients
+### Supported Download Clients
 
 - A list of supported download clients is located [here](/Lidarr/supported#downloadclient)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
-#### Usenet Client Settings
+### Usenet Client Settings
 
 - Name - The name of the download client within Lidarr
 - Enable - Enable this Download Client
@@ -68,7 +68,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-#### Torrent Client Settings
+### Torrent Client Settings
 
 - Name - The name of the download client within Lidarr
 - Enable - Enable this Download Client
@@ -85,7 +85,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-#### Torrent Client Remove Download Compatibility
+### Torrent Client Remove Download Compatibility
 
 - Lidarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
 
@@ -103,7 +103,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 > *Idle Limit* - Transmission internally has an Idle Time check, but Lidarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
-### Completed Download Handling
+## Completed Download Handling
 
 - Completed Download Handling is how Lidarr imports media from your download client to your series folders.
 
@@ -111,7 +111,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Lidarr per the above table.  Torrents must also stay in the same category.
 
-#### Remove Completed Downloads
+### Remove Completed Downloads
 
 - Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
 - Lidarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -124,7 +124,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Lidarr will attempt to hardlink the file or fall back to copy (use double space) if hardlinks are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Lidarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the seed goal reached is supported by Lidarr, and torrent is paused (stopped).
 
-#### Failed Download Handling
+### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
 - Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
@@ -144,18 +144,18 @@ If you download using a BitTorrent client, the process is slightly different:
 - Redownload - Controls whether or not Lidarr will search for the same file after a failure
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
-### Remote Path Mappings
+## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
 - One of our amazing community members have created [an excellent guide](https://trash-guides.info/Lidarr/Lidarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
-## Connections
+# Connections
 
 > Information on supported connection types can be found [here](/lidarr/supported#notifications)
 {.is-info}
 
-## Tags
+# Tags
 
 - The tag section in Lidarr is used to link different aspects of Lidarr.
 - Tags are particularly useful for:
@@ -172,9 +172,9 @@ If you download using a BitTorrent client, the process is slightly different:
 > Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
 {.is-info}
 
-## General
+# General
 
-### Updates
+## Updates
 
 - (Advanced Option) Branch - This is the branch of Lidarr that you are running on.
   - [Please see this FAQ entry for more information](/lidarr/faq#how-do-i-update-lidarr)

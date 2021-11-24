@@ -12,7 +12,7 @@ dateCreated: 2021-06-23T07:55:28.684Z
 
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
-## Download Clients
+# Download Clients
 
 {#downloadclient}
 
@@ -50,7 +50,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Vuze {#vuze}
   - [Refer to the Settings Page](/radarr/settings#download-clients)
 
-## Indexers
+# Indexers
 
 {#indexer}
 
@@ -76,7 +76,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Torznab {#torznab}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 
-## Notifications
+# Notifications
 
 {#notification}
 
@@ -102,7 +102,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Twitter {#twitter}
 - Webhook {#webhook}
 
-## Lists
+# Lists
 
 {#importlist}
 
@@ -135,7 +135,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - Profiles - Profiles from the Readarr instance to import from
   - Tags - Tags from the Readarr instance to import from
 
-## Metadata
+# Metadata
 
 {#metadata}
 

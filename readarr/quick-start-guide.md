@@ -16,7 +16,7 @@ There are a lot more settings you may need or want. They can be found at the [se
 
 After installation and starting up, you open a browser and go to `http://ip_where_installed:8787`
 
-## Media Management
+# Media Management
 
 First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
@@ -24,7 +24,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ![mediamanagement.png](/assets/readarr/mediamanagement.png)
 
-## Book Naming
+# Book Naming
 
 ![booknaming.png](/assets/readarr/booknaming.png)
 
@@ -33,14 +33,14 @@ First we’re going to take a look at the `Media Management` settings where we c
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.
 - `(Advanced Option) This is where you will set the naming convention for the Author folder.`
 
-## Folders
+# Folders
 
 ![folders.png](/assets/readarr/folders.png)
 
 - `(Advanced Option) Enable to create empty author folders when a new author is added to Readarr.`
 - `(Advanced Option) Enable to delete empty author folders when there are no remaining books for that author.`
 
-## Importing
+# Importing
 
 ![importing.png](/assets/readarr/importing.png)
 
@@ -48,7 +48,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 - `(Advanced Option) Enable`Use Hardlinks instead of Copy`more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).`
 - `(Advanced Option) Import matching extra files (nfo, etc) after importing a file.`
 
-## File Management
+# File Management
 
 ![filemanagement.png](/assets/readarr/filemanagement.png)
 
@@ -64,7 +64,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 - `(Advanced Option) Designate a location for deleted files to go to (just in case you want to retrieve them before the bin is taken out).`
 - `(Advanced Option) This is how old a given file can be before it is deleted permanently.`
 
-## Root Folders and Calibre Integration
+# Root Folders and Calibre Integration
 
 ![rootfolders1.png](/assets/readarr/rootfolders1.png)
 
@@ -80,7 +80,7 @@ You may also elect to use Calibre to manage your library on this screen. Doing s
 
 Don’t forget to save your changes.
 
-### Calibre Content Server (Optional)
+## Calibre Content Server (Optional)
 
 If you are going to use Calibre to manage your books, you need to set up the Calibre Content Server. Again, this is not Calibre-Web, but a piece of Calibre itself. You must be running Calibre, and you must set up the Content Server.
 
@@ -100,7 +100,7 @@ Then you will need to restart Calibre. Once back in, configure and start up the 
 
 ![calibreserver.png](/assets/readarr/calibreserver.png)
 
-### Calibre Integration
+## Calibre Integration
 
 ![calibre1.png](/assets/readarr/calibre1.png)
 
@@ -123,7 +123,7 @@ If you have chosen Calibre integration, you will enter more values here.
 - Select the metadata profile to use for authors' books in Calibre.
 - If you want to apply a tag in Readarr for these authors, enter that here.
 
-## Download Clients
+# Download Clients
 
 `Settings` => `Download Clients`
 
@@ -131,9 +131,9 @@ If you have chosen Calibre integration, you will enter more values here.
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-### {.tabset}
+## {.tabset}
 
-#### Usenet
+### Usenet
 
 {#usenet}
 
@@ -145,7 +145,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Readarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
-#### BitTorrent
+### BitTorrent
 
 {#bittorrent}
 

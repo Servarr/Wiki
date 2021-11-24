@@ -8,15 +8,15 @@ editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
 ---
 
-## Series
+# Series
 
 The series page shows your entire library and allows you to select individual series (however, searching can be more efficient in large libraries) and make searches for specific series, as well as being able to edit them.  It also allows you to filter your series.
 
-## Filters
+# Filters
 
 The filters options allows you to narrow your series down and is incredibly helpful.  It can be used to see release dates, names, episode counts, disk size counts, and too much more to list, including custom filters, to fit your every need.  These can also be used in the mass editor.
 
-## Add New
+# Add New
 
 The add new feature allows you to add a new series for Sonarr to monitor and download.
 
@@ -35,7 +35,7 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
 - Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series
 - Start search for cutoff unmet episodes - based on your selected monitor settings and only applicable if you have existing files for your episodes in the series folder, search for all existing and monitored episodes in this series that do not meet or exceed your qualtiy profile's cutoff
 
-## Library Import
+# Library Import
 
 Library Import allows you to import existing, organized series and episode files into Sonarr via existing files in the path directory.  This is especially useful when making a new Sonarr instance and wanting to keep your existing series.
 
@@ -46,10 +46,10 @@ Library Import allows you to import existing, organized series and episode files
   - Adding or Importing one or more files that are not properly named and organized in their own Series Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a series or episode to Sonarr and importing the series and its file(s) from the root (library) folder that was input to Library Import
 
-## Mass Editor
+# Mass Editor
 
 The mass editor allows you to edit series en masse.  You can change any of the previous settings made when you added the series.
 
-## Season Pass
+# Season Pass
 
 This shows information about how many seasons every series has and how many episodes in each season are missing.

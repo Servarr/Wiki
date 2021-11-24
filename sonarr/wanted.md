@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-10T01:40:02.329Z
 ---
 
-## Wanted
+# Wanted
 
 The Wanted => Missing section contains a list of the episodes you have marked to monitor that are missing from your disk (haven't been downloaded yet).
 
@@ -24,7 +24,7 @@ The Wanted => Missing section contains a list of the episodes you have marked to
 > This search process cannot be canceled once started without restarting Sonarr.
 {.is-info}
 
-## Cutoff Unmet
+# Cutoff Unmet
 
 The Wanted => Cutoff Unmet section contains a list of the episodes that have not yet reached their cut off. The cut off is set within your profiles
 

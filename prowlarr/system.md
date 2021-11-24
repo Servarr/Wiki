@@ -8,34 +8,34 @@ editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
 ---
 
-## Status
+# Status
 
-### Health
+## Health
 
 This page contains a list of health checks errors. These health checks are periodically performed performed by Prowlarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.
 
-#### System Warnings
+### System Warnings
 
-##### Branch is not a valid release branch
+#### Branch is not a valid release branch
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
 
-##### Currently installed SQLite version is not supported
+#### Currently installed SQLite version is not supported
 
 - Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
-##### New update is available
+#### New update is available
 
 - Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
-##### Cannot install update because startup folder is not writable by the user
+#### Cannot install update because startup folder is not writable by the user
 
 - This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s Startup directory (the installation directory) to allow Prowlarr to update itself.
 
-##### Updating will not be possible to prevent deleting AppData on Update
+#### Updating will not be possible to prevent deleting AppData on Update
 
 - Prowlarr detected that AppData folder for your Operating System is located inside the directory that contains the Prowlarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
@@ -43,11 +43,11 @@ This page contains a list of health checks errors. These health checks are perio
 - This means Prowlarr will be unable to update itself without risking data-loss.
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
 
-##### Branch is for a previous version
+#### Branch is for a previous version
 
 - The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
-##### Could not connect to signalR
+#### Could not connect to signalR
 
 - signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
 
@@ -84,27 +84,27 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
  }
 ```
 
-##### Failed to resolve the IP Address for the Configured Proxy Host
+#### Failed to resolve the IP Address for the Configured Proxy Host
 
 - Review your proxy settings and ensure they are accurate
 - Ensure your proxy is up, running, and accessible
 
-##### Proxy Failed Test
+#### Proxy Failed Test
 
 - Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
 
-##### System Time is off by more than 1 day
+#### System Time is off by more than 1 day
 
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
-#### Download Clients
+### Download Clients
 
-##### No download client is available
+#### No download client is available
 
 - A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings => Download Client.
 
-##### Unable to communicate with download client
+#### Unable to communicate with download client
 
 - Prowlarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 - This is typically due to improperly configured download client. Things you can typically check:
@@ -112,45 +112,45 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.
 - Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
-##### Download clients are unavailable due to failure
+#### Download clients are unavailable due to failure
 
 - One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 - You should inspect System=>Logs to see what the reason is for the failures.
 - If you no longer use this download client, disable it in Prowlarr to prevent the errors.
 
-##### Bad Download Client Settings
+#### Bad Download Client Settings
 
 - The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from Windows to Linux or Linux to Windows without a remote path map.
 
-#### Indexers
+### Indexers
 
-##### Indexers are Obsolete
+#### Indexers are Obsolete
 
 - Due to code changes the indexer(s) noted is/are obsolete as currently configured. Remove and Re-add the indexer to Prowlarr to resolve.
 - This is typically caused by converting APIs or from YML to C# or vice versa.
 
-##### No indexers are enabled
+#### No indexers are enabled
 
 - Prowlarr requires indexers to be able to discover new releases. Please read the wiki instructions how to add indexers.
 
-##### Indexers are unavailable due to failures
+#### Indexers are unavailable due to failures
 
 - (An) Error(s) occur(s) while Prowlarr tried to use one of your indexers. To limit retries, Prowlarr will not use the indexer for an increasing amount of time (up to 24h).
 - This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
-##### Indexer VIP Expiring
+#### Indexer VIP Expiring
 
 - Your VIP subscription or benefits to your indexer expire within the next 7 days or less based on the expiration date you configured for your indexer in Prowlarr.
 
-##### Indexer VIP Expired
+#### Indexer VIP Expired
 
 - Your VIP subscription or benefits to your indexer have expired based on the expiration date you configured into for indexer in Prowlarr.
 
-#### Applications
+### Applications
 
-##### Applications are unavailable due to failures
+#### Applications are unavailable due to failures
 
 - (An) Error(s) occur(s) while Prowlarr tried to use one of your applications. To limit retries, Prowlarr will not use the application for an increasing amount of time (up to 24h).
 - This mechanism is triggered if Prowlarr was unable to get a response from the application (could be dns, connection, authentication, or application issue). Please inspect the logs to determine what kind of error causes the problem.
@@ -158,16 +158,16 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 - You can prevent the warning by disabling the affected application.
 - Run the Test on the application to force Prowlarr to recheck the application, please note that the Health Check warning will not always disappear immediately.
 
-### Disk Space
+## Disk Space
 
 This section will show you available disk space
 In docker this can be tricky as it will typically show you the available space within your Docker image
 
-### About
+## About
 
 This will tell you about your current install of Prowlarr
 
-### More Info
+## More Info
 
 Home Page: Prowlarr's home page
 Wiki: You're here already
@@ -178,9 +178,9 @@ Donations to Sonarr: If you're feeling generous and would like to donate to the 
 Source: GitHub
 Feature Requests: Got a great idea drop it here
 
-## Tasks
+# Tasks
 
-### Scheduled
+## Scheduled
 
 This page lists all scheduled tasks that Prowlarr runs
 
@@ -197,11 +197,11 @@ This page lists all scheduled tasks that Prowlarr runs
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
-### Queue
+## Queue
 
 The queue will show you upcoming tasks as well as a history of recently ran tasks as well as how long those tasks took.
 
-## Backup
+# Backup
 
 > This section will be more tailored to the buttons and overall point of the page.
 > However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](/prowlarr/faq).
@@ -221,7 +221,7 @@ Off to the right of each of the previous download you have two options.
 - One - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
 - Two - To delete a previous backup
 
-## Updates
+# Updates
 
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
 This page will also display the update notes from the Developers telling you what has been fixed or added to Prowlarr (Rejoice!)
@@ -229,7 +229,7 @@ This page will also display the update notes from the Developers telling you wha
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
 
-## Events
+# Events
 
 The events tab will show you what has been happening within your Prowlarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging. Events are the equivalent of INFO Logs.
 
@@ -240,7 +240,7 @@ The events tab will show you what has been happening within your Prowlarr. This 
   - Refresh - This option will refresh the current page, pulling a new events log
   - Clear - This will clear the current events log allowing you to start from fresh
 
-## Log Files
+# Log Files
 
 This page will allow you to download and see what current log files are available for Prowlarr
 

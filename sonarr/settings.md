@@ -10,7 +10,7 @@ dateCreated: 2021-06-11T23:29:12.300Z
 
 This page will go through all the settings available in Sonarr and how they work.  This is not meant to be a comprehensive "how to set up Sonarr." If you want that, please use the [Quick Start](/sonarr/quick-start-guide) page instead.
 
-## Menu options
+# Menu options
 
 To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
 
@@ -24,19 +24,19 @@ Also, note that for each individual settings page, there are some options at the
 
 - You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
 
-## Media Management
+# Media Management
 
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
 - [Community Suggested Naming Suggestions](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/)
 
-### Episode Naming
+## Episode Naming
 
 - Rename Episodes - If unchecked, Sonarr will use the existing file name if renaming is disabled.
 - Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
-#### Standard Episode Format
+### Standard Episode Format
 
 - Here you will select the naming convention for your standard episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
@@ -51,7 +51,7 @@ Also, note that for each individual settings page, there are some options at the
   - Uppercase - Make title all uppercase
   - Lowercase - Make title all lowercase
 
-#### Series Naming
+### Series Naming
 
 - `{Series Title}` = The Series Name's Title!
 - `{Series CleanTitleYear}` = The Series Names Title! 2010
@@ -61,38 +61,38 @@ Also, note that for each individual settings page, there are some options at the
 - `{Series TitleYear}` = The Series Name's Title (2010)
 - `{Series Year}` = (2010)
 
-#### Series IDs
+### Series IDs
 
 - `{ImdbId}` = tt12345
 - `{Tmdbid}` = 123456
 - `{TvMazeId}`= 54321
 
-#### Seasons
+### Seasons
 
 - `{season:0}` = 1
 - `{season:00}` =  01
 
-#### Episodes
+### Episodes
 
 - `{episode:0}` = 1
 - `{episode:00}` = 01
 
-#### Air Date
+### Air Date
 
 - `{Air-Date}` = 2020-09-03
 - `{Air Date}` = 2020 09 03
 
-#### Episode Title
+### Episode Title
 
 - `{Episode Title}` = Episode Title
 - `{Episode CleanTitle}` =  Episode Title
 
-#### Quality
+### Quality
 
 - `{Quality Full}` = HDTV 720p Proper
 - `{Quality Title}` = HDTV 720p
 
-#### Media Info
+### Media Info
 
 - `{MediaInfo Simple}` = x264 DTS
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
@@ -107,7 +107,7 @@ Also, note that for each individual settings page, there are some options at the
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending `+` (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
 {.is-info}
 
-#### Other
+### Other
 
 - `{Release Group}` = Rls Grp
 - `{Preferred Words}` = iNTERNAL
@@ -115,7 +115,7 @@ Also, note that for each individual settings page, there are some options at the
 > Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
 {.is-info}
 
-#### Original
+### Original
 
 - `{Original Title}` = Series.Title.S01E01.HDTV.x264-EVOLVE
 - `{Original Filename}` = Series.title.s01e01hdtv.x264-EVOLVE
@@ -125,29 +125,29 @@ Also, note that for each individual settings page, there are some options at the
 
 >`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yu7ti`.{.is-warning}
 
-#### Daily Episode Format
+### Daily Episode Format
 
 Here you will select the naming convention for your daily episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
-### Anime Episode Format
+## Anime Episode Format
 
 Here you will select the naming convention for your anime series. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
-#### Absolute Episode Number
+### Absolute Episode Number
 
 - `{absolute:0}` = 1
 - `{absolute:00}` = 01
 - `{absolute:000}` =001
 
-### Series Folder Format
+## Series Folder Format
 
 Here you will set the naming convention for the folder that contains the season folders or episode files. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-#### Series Naming
+### Series Naming
 
 - `{Series Title}` = Series Name!
 - `{Series CleanTitleYear}` = Series Title 2010
@@ -157,22 +157,22 @@ Here you will set the naming convention for the folder that contains the season 
 - `{Series TitleYear}` = Series Title (2010)
 - `{Series Year}` = (2010)
 
-#### Series IDs
+### Series IDs
 
 - `{ImdbId}` = tt12345
 - `{Tmdbid}` = 123456
 - `{TvMazeId}` = 54321
 
-### Season Folder Format
+## Season Folder Format
 
-#### Seasons
+### Seasons
 
 - `{season:0}` = 1
 - `{season:00}` = 01
 
-### Season Folder Format
+## Season Folder Format
 
-#### Specials
+### Specials
 
 Name for the `Specials` (Season) folder
 
@@ -180,7 +180,7 @@ Name for the `Specials` (Season) folder
 
 > It's suggested to use `Specials`{.is-info}
 
-### Multi-Episode Style
+## Multi-Episode Style
 
 - `Extend` = `S01E01-02-03`
 - `Duplicate` = `S01E01.S01E01`
@@ -191,12 +191,12 @@ Name for the `Specials` (Season) folder
 
 > It's suggested to use `Scene`{.is-info}
 
-### Folders
+## Folders
 
 - Create Empty Media Folders - Create missing series folders during disk scan
 - Delete Empty Folders - Delete empty series and season folders during disk scan and when episode files are deleted
 
-### Importing
+## Importing
 
 - Episode Title Required - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
   - Always - Always wait up to 24 hours for a title prior to importing if the episode is TBA
@@ -211,7 +211,7 @@ Name for the `Specials` (Season) folder
 
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 
-### File Management
+## File Management
 
 - Unmonitor Deleted Episodes - Episodes deleted from disk are automatically unmonitored in Sonarr
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
@@ -237,7 +237,7 @@ Name for the `Specials` (Season) folder
 
 > Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
-### Permissions
+## Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
   - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
@@ -251,7 +251,7 @@ Name for the `Specials` (Season) folder
 
 > This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
-### Root Folders
+## Root Folders
 
 - Path - This shows the path to your media library
 - Free Space - This is the free space being reported to Sonarr from the system
@@ -261,9 +261,9 @@ Name for the `Specials` (Season) folder
 
 - Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
-## Profiles
+# Profiles
 
-### Quality Profiles
+## Quality Profiles
 
 - Set profiles for the quality of series you're looking to download.
 
@@ -286,7 +286,7 @@ Name for the `Specials` (Season) folder
 > By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
-### Language Profiles
+## Language Profiles
 
 - Set profiles for the language of series you're looking to download.
 
@@ -301,7 +301,7 @@ Name for the `Specials` (Season) folder
 
 - Languages - Languages higher in the list are more preferred. Only checked languages are wanted
 
-### Delay Profiles
+## Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an episode by adding a delay while Sonarr continues to watch for releases that better match your preferences.
 - Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
@@ -312,13 +312,13 @@ Name for the `Specials` (Season) folder
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
 
-#### Uses
+### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](/sonarr/settings/#example-3))
 
-#### How Delay Profiles Work
+### How Delay Profiles Work
 
 The timer begins as soon as Sonarr detects an episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
@@ -331,11 +331,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 {.is-warning}
 
-##### Examples
+#### Examples
 
 - For each example, assume the user has the follow quality profile active: HDTV 720p and above are allowed WebDL 720p is the quality cutoff * WebDL 1080p is the highest ranked quality
 
-###### Example 1
+##### Example 1
 
 - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
@@ -345,13 +345,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
 
-###### Example 2
+##### Example 2
 
 - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
 - At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
-###### Example 3
+##### Example 3
 
 - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
 
@@ -361,7 +361,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
-### Release Profiles
+## Release Profiles
 
 - Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you will be able to select the preferred releases you're looking for.
 
@@ -384,9 +384,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - [TRaSH maintains a list of WEB-DL Release Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/)
 - [TRaSH Anime Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/)
 
-## Quality
+# Quality
 
-### Quality Table Meanings
+## Quality Table Meanings
 
 - Quality - The scene quality name (hardcoded)
 - Title - The name of the Quality in the GUI (configurable)
@@ -395,7 +395,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Min - The minimum Megabytes per Minute (MB/min) a quality can have.
 - Max - The maximum Megabytes per Minute (MB/min) a quality can have.
 
-### Qualities Defined
+## Qualities Defined
 
 - Unknown - Self Explanatory
 - SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
@@ -418,22 +418,22 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
 - Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
 
-## Indexers
+# Indexers
 
 > Information on supported indexers can be found [here](/sonarr/supported#indexers)
 {.is-info}
 
-### Supported Indexers
+## Supported Indexers
 
 - A list of supported indexers is located [here](/sonarr/supported#indexers)
 
-#### Indexer Settings
+### Indexer Settings
 
 - Once you've clicked the <kb>+</kb> button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
 
 - There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
-#### Usenet Indexer Configuration
+### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
 - Software that works with usenet and integrates quite well with Sonarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
@@ -452,7 +452,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - Tags - Only use this indexer for series with at least one matching tag. Leave blank to use with all series.
 
-#### Torrent Tracker Configuration
+### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
@@ -474,7 +474,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-### Options
+## Options
 
 - Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
 - Retention - Usenet only: Set to zero to set for unlimited retention
@@ -484,18 +484,18 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 > If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
 
-## Download Clients
+# Download Clients
 
 > Information on supported download clients can be found [here](/sonarr/supported#download-clients)
 {.is-info}
 
-### Overview
+## Overview
 
 - Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
 
-### Download Client Processes
+## Download Client Processes
 
-### Usenet
+## Usenet
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
@@ -505,7 +505,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
-### BitTorrent
+## BitTorrent
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
@@ -514,17 +514,17 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
-### Download Clients
+## Download Clients
 
 Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
-#### Supported Download Clients
+### Supported Download Clients
 
 - A list of supported download clients is located [here](/sonarr/supported#downloadclient)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
-#### Usenet Client Settings
+### Usenet Client Settings
 
 - Name - The name of the download client within Sonarr
 - Enable - Enable this Download Client
@@ -540,7 +540,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-#### Torrent Client Settings
+### Torrent Client Settings
 
 - Name - The name of the download client within Sonarr
 - Enable - Enable this Download Client
@@ -557,7 +557,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-#### Torrent Client Remove Download Compatibility
+### Torrent Client Remove Download Compatibility
 
 - Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
 
@@ -575,7 +575,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 > *Idle Limit* - Transmission internally has an Idle Time check, but Sonarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
-### Completed Download Handling
+## Completed Download Handling
 
 - Completed Download Handling is how Sonarr imports media from your download client to your series folders.
 
@@ -583,7 +583,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Sonarr per the above table.  Torrents must also stay in the same category.
 
-#### Remove Completed Downloads
+### Remove Completed Downloads
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -596,7 +596,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Sonarr will attempt to hardlink the file or fall back to copy (use double space) if hardlinks are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Sonarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the seed goal reached is supported by Sonarr, and torrent is paused (stopped).
 
-#### Failed Download Handling
+### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
 - Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
@@ -616,18 +616,18 @@ If you download using a BitTorrent client, the process is slightly different:
 - Redownload - Controls whether or not Sonarr will search for the same file after a failure
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
-### Remote Path Mappings
+## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
 - One of our amazing community members have created [an excellent guide](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
-## Import Lists
+# Import Lists
 
 > Information on supported list types can be found [here](/sonarr/supported#lists)
 {.is-info}
 
-### Lists
+## Lists
 
 - Import lists are a part of Sonarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Sonarr and realize that you do not have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
 
@@ -638,16 +638,16 @@ If you download using a BitTorrent client, the process is slightly different:
 - Once you've selected the list provider that you're looking to pull from (such as IMDb or Trakt) You'll be presented with a new window.
 Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
 
-### List Exclusions
+## List Exclusions
 
 - Import List Exclusion - This allows you to prune your list of movies you do not want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
-## Connect
+# Connect
 
 > Information on supported connection types can be found [here](/sonarr/supported#notifications)
 {.is-info}
 
-### Connections
+## Connections
 
 - Connections are how you want Sonarr to communicate with the outside world.
 
@@ -655,7 +655,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 - A list of supported notifications & connections is located [here](/sonarr/supported#notifications)
 
-### Connection Triggers
+## Connection Triggers
 
 - On Grab - Be notified when episodes are available for download and has been sent to a download client
 - On Import - Be notified when episodes are successfully imported
@@ -667,9 +667,9 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
 
-## Metadata
+# Metadata
 
-### Metadata
+## Metadata
 
 > Information on supported metadata consumers can be found [here](/sonarr/supported#metadata)
 {.is-info}
@@ -678,7 +678,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 - Kodi will be one of the most commonly used options here if that is the software that is being used. This will allow Sonarr to create a NFO file as well as associated movie posters to be scraped into your player
 
-## Tags
+# Tags
 
 - The tag section in Sonarr is used to link different aspects of Sonarr.
 - Tags are particularly useful for:
@@ -695,9 +695,9 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 > Note: Tags do not influence “Must Contain”, “Must Not Contain”, “Preferred” words or any other aspect not mentioned above.
 {.is-info}
 
-## General
+# General
 
-### Host
+## Host
 
 - Bind Address - Valid IP4 address or '*' for all interfaces
   - 0.0.0.0 or `*` - any address can connect
@@ -718,7 +718,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 > Note: Do not use this unless you know what you're doing.
 {.is-warning}
 
-### Security
+## Security
 
 - Authentication - How would you like to authenticate to access your Sonarr instance
   - None - You have no authentication to access your Sonarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Sonarr or your Sonarr is not exposed to the web
@@ -727,22 +727,22 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - API Key - This is how other programs would communicate or have Sonarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
 
-### Proxy
+## Proxy
 
 - Proxy - This option allows you to run the information your Sonarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
-### Logging
+## Logging
 
 - Log level - Probably one of the most useful troubleshooting tools
   - Info - This is the most basic way that Sonarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
   - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
   - Trace - The most advance and detailed logging on Sonarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
-### Analytics
+## Analytics
 
 - Analytics - Send anonymous usage and error information to Sonarr's servers (SkyHook). This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
-### Updates
+## Updates
 
 - (Advanced Option) Branch - This is the branch of Sonarr that you are running on.
   - [Please see this FAQ entry for more information](/sonarr/faq#how-do-i-update-sonarr)
@@ -757,7 +757,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - Built-in - The built-in method will backup Sonarr files and settings, stop Sonarr, update the installation and Start Sonarr, if your system will not handle the stopping of Sonarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Sonarr will be restarted.
 - Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
-### Backups
+## Backups
 
 - The backup section allows you to tell Sonarr how you would like for it to handle backups
 
@@ -765,20 +765,20 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - Interval - How often would you like Sonarr to make a backup
 - Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed
 
-## UI
+# UI
 
-### Calendar
+## Calendar
 
 - First Day of Week - Here you can select what you think the first day of the week should be.
 - Week Column Header - Here you can select the header for the columns
 
-### Dates
+## Dates
 
 - Short Date Format - How do you want Sonarr to display short dates?
 - Long Date Format - How do you want Sonarr to display long format dates?
 - Time Format - Do you want a 12hr or 24hr format?
 - Show Relative Dates - Do you want Sonarr to show relative (Today/Yesterday/etc) or absolute dates?
 
-### Style
+## Style
 
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information

@@ -11,7 +11,7 @@ dateCreated: 2021-05-30T00:00:33.010Z
 >This guide should be used to get configured and running with the basics, and to give you an understanding of how the pieces work together.
 {is-info}
 
-## Indexers
+# Indexers
 
 The first thing to set up in Prowlarr is indexers. You will add each indexer individually to Prowlarr.
 
@@ -40,7 +40,7 @@ Some indexers have special settings, but most are standard as shown.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each indexer you'd like Prowlarr to use. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
-## Apps
+# Apps
 
 After you've added your indexers, we then connect Prowlarr to your other *arr programs.
 
@@ -95,7 +95,7 @@ You should then go into your program, and disable the non-Prowlarr version of th
 Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app settings you **must** use Add and Remove and **must not** use Full Sync.
 {.is-warning}
 
-## Download Clients (for In-Prowlarr searches only!)
+# Download Clients (for In-Prowlarr searches only!)
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
 

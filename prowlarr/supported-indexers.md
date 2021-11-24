@@ -18,9 +18,9 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 
 ---
 
-## Torrents
+# Torrents
 
-### Public Trackers
+## Public Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -220,7 +220,7 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 |[Zooqle](https://zooqle.com/){#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-US|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-HU|
 
-### Private Trackers
+## Private Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -578,15 +578,15 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 |[Zelka\.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-BG|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-ES|
 
-## Usenet
+# Usenet
 
-### Public Indexers
+## Public Indexers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
 |[BinSearch](https://binsearch.info/){#binsearch}|The binary Usenet search engine|en-US|
 
-### Private Indexers
+## Private Indexers
 
 |Indexer|Description|Language|
 |:--|:--|:--|

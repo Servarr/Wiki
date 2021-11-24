@@ -15,9 +15,9 @@ Welcome to the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sona
 
 Contributions are welcome either on the Wiki directly, just authenticate with Github first, or via Pull Requests on our [Repository](https://github.com/Servarr/Wiki).
 
-## Applications
+# Applications
 
-### Media Automation
+## Media Automation
 
 - [![16.png](/assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)
 - [![16.png](/assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
@@ -25,12 +25,12 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 - [![16.png](/assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
 {.links-list}
 
-### Indexer Management
+## Indexer Management
 
 - [![16.png](/assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
 {.links-list}
 
-## Other
+# Other
 
 - [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
 - [<i class="far fa-life-ring"></i>&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)

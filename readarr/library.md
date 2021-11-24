@@ -8,11 +8,11 @@ editor: markdown
 dateCreated: 2021-05-25T15:29:27.457Z
 ---
 
-## Library
+# Library
 
 This section is for managing your library of authors and books.
 
-## Authors
+# Authors
 
 - Library View
   - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
@@ -27,7 +27,7 @@ This section is for managing your library of authors and books.
   - Sort - Sort the current view
   - Filter - Filter the current view
 
-## Books
+# Books
 
 - Library View
   - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
@@ -43,7 +43,7 @@ This section is for managing your library of authors and books.
   - Sort - Sort the current view
   - Filter - Filter the current view
   
-## Add New
+# Add New
 
 ![addnew.png](/assets/readarr/addnew.png)
 
@@ -68,7 +68,7 @@ This section is for managing your library of authors and books.
 {.is-warning}
 
 
-## Unmapped Files
+# Unmapped Files
 
 ![unmappedfiles.png](/assets/readarr/unmappedfiles.png)
 

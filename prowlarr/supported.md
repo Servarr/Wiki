@@ -12,7 +12,7 @@ dateCreated: 2021-06-23T03:06:57.769Z
 
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
-## Applications
+# Applications
 
 {#applications}
 
@@ -24,7 +24,7 @@ Prowlarr can automatically sync indexers with various applications
 - Readarr {#readarr}
 - Sonarr {#sonarr}
 
-## Download Clients
+# Download Clients
 
 {#downloadclient}
 
@@ -64,7 +64,7 @@ Prowlarr can automatically sync indexers with various applications
 - Vuze {#vuze}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
 
-## Indexer Proxies
+# Indexer Proxies
 
 {#indexerproxy}
 
@@ -73,7 +73,7 @@ Prowlarr can automatically sync indexers with various applications
 - Socks4 {#socks4}
 - Socks5 {#socks5}
 
-## Notifications
+# Notifications
 
 {#notification}
 

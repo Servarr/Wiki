@@ -12,41 +12,41 @@ dateCreated: 2021-05-25T02:34:50.549Z
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 
-## Windows
+# Windows
 
 `C:\ProgramData\Radarr`
 
-## Linux
+# Linux
 
 Unless otherwise specified Radarr will store it's application data in the home folder of the user Radarr is running under `/home/$USER/.config/Radarr` or `~/.config/Radarr`
 
 The installation instructions specify `/var/lib/radarr`
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#os-x}
 
 `/Users/$USER/.config/Radarr` or `~/.config/Radarr`
 
-## Synology
+# Synology
 
 `/usr/local/Radarr/var/.config/Radarr`
 
 `/volume1/@appstore/Radarr/var/.config/Radarr`
 
-## QNAP
+# QNAP
 
 `/share/MD0_DATA/homes/admin/.config/Radarr`
 
 `/share/CACHEDEV1_DATA/Radarr_CONFIG`
 
-## Docker
+# Docker
 
 `/config`
 
 - This will vary based on where the user maps `/config` to on their host system
 
-## Arguments
+# Arguments
 
 The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
 

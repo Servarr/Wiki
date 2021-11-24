@@ -8,12 +8,12 @@ editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
 
-## How does Lidarr work?
+# How does Lidarr work?
 
 - Lidarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
 - Lidarr enforces a minimum of 10 minutes on the RSS Sync interval and a maximum of 2 hours. 15 minutes is the minimum recommended by most indexers, though some do allow lower intervals and 2 hours ensures Lidarr is checking frequently enough to not miss a release (even though it can page through the RSS feed on many indexers to help with that). Some indexers allow clients to perform an RSS sync more frequently than 10 minutes, in those scenarios we recommend using Lidarr's Release-Push API endpoint along with an IRC announce channel to push releases to Lidarr for processing which can happen in near real time and with less overhead on the indexer and Lidarr as Lidarr doesn’t need to request the RSS feed too frequently and process the same releases over and over.
 
-## How does Lidarr find releases?
+# How does Lidarr find releases?
 
 - Lidarr does ''not'' regularly search for book files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for ''all'' the newly posted releases, then compares that with its list of releases that are missing or need to be upgraded. Any matches are downloaded. This lets Lidarr cover a library of ''any size'' with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the ''future'' though.
 - So how do you deal with the present and past? When you're adding a book, you will need to set the correct path, profile and monitoring status then use the Start search for missing book checkbox. If the book hasn't been released yet, you do not need to initiate a search.
@@ -21,7 +21,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 - If you've already added the book, but now you want to search for it, you have a few choices. You can go to the book's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see ''all'' the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Lidarr has been offline for an extended period of time, Lidarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Lidarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
 
-## How are possible downloads compared?
+# How are possible downloads compared?
 
 ***Generally Quality Trumps All***
 
@@ -38,55 +38,55 @@ As of 2021-06-09 the logic is as follows:
 1. Age (If Usenet)
 1. Size
 
-## Why can I not add a new release or artist to Lidarr?
+# Why can I not add a new release or artist to Lidarr?
 
 - The release is likely `unknown` type on MusicBrainz
 
-## Why can I not add a various artists album?
+# Why can I not add a various artists album?
 
 - Various Artists and other meta artists on Musicbrainz are due to the number of entries they provide.
 
-## Why does Lidarr only show studio albums, How do I find singles or EPs?
+# Why does Lidarr only show studio albums, How do I find singles or EPs?
 
 - Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist, or for your entire library by utilizing Metadata Profiles.
 
-## Can I add just an album?
+# Can I add just an album?
 
 - Not at the moment.
 
-## Can I download single tracks?
+# Can I download single tracks?
 
 - Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
 
-## Why doesn't artist X show up in search?
+# Why doesn't artist X show up in search?
 
 - Search is still a work in progress. Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
 
-## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
+# Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
 
 - Open the Album details page and select the Edit Icon in the top nav. There you can find a dropdown of all releases tied to that Album.
 
-## I cannot find a release in Lidarr but it is on MusicBrainz
+# I cannot find a release in Lidarr but it is on MusicBrainz
 
 - This is likely due to the release having an `unknown` release status.  Update MusicBrainz.
 
-## How often do Lidarr's and MusicBrainz databases sync?
+# How often do Lidarr's and MusicBrainz databases sync?
 
 - Every hour at 5 after the hour
 
-## How can I add missing artist images?
+# How can I add missing artist images?
 
 - Add art to fanart.tv and wait ~7+ days for it to clear through the cache. Then refresh the metadata.
 
-## How can I get missing album images? (Cover Art)
+# How can I get missing album images? (Cover Art)
 
 - Add coverart to musicbrainz and wait ~1hr+ for it to clear through the cache. Then refresh the metadata.
 
-## I'm having trouble importing my artists, what could it be?
+# I'm having trouble importing my artists, what could it be?
 
 - The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
 
-## How can I rename my artist folders?
+# How can I rename my artist folders?
 
 - Library
 - Mass Editor
@@ -94,11 +94,11 @@ As of 2021-06-09 the logic is as follows:
 - Change Root Folder to the same Root Folder that the artists currently exist in
 - Select "Yes move files"
 
-## How can I mass delete artists from the wanted list?
+# How can I mass delete artists from the wanted list?
 
 - Use Mass Editor => Select artists you want to delete => Delete
 
-## Why doesn't Lidarr work behind a reverse proxy
+# Why doesn't Lidarr work behind a reverse proxy
 
 - Lidarr uses .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Lidarr:
  proxy_http_version 1.1;
@@ -109,7 +109,7 @@ As of 2021-06-09 the logic is as follows:
 - [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
 - If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
-## How do I update Lidarr?
+# How do I update Lidarr?
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -137,11 +137,11 @@ As of 2021-06-09 the logic is as follows:
 |[hotio](https://hotio.dev/containers/lidarr)|`hotio/lidarr:release`|`hotio/lidarr:testing`|
 |[LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr)|`lscr.io/linuxserver/lidarr:latest`|`lscr.io/linuxserver/lidarr:develop`|
 
-## Can I update Lidarr inside my Docker container?
+# Can I update Lidarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
-### Installing a newer version
+## Installing a newer version
 
 If Native:
 
@@ -152,11 +152,11 @@ If Docker:
 
 1. Repull your tag and update your container
 
-## Can I switch from `nightly` back to `develop`?
+# Can I switch from `nightly` back to `develop`?
 
 - See the entry below
 
-## Can I switch between branches?
+# Can I switch between branches?
 
 > You can (almost) always increase your risk.{.is-info}
 
@@ -166,7 +166,7 @@ If Docker:
 - Failure to follow these instructions may result in your Lidarr becoming unusable or throwing errors. You have been warned.
 - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
-## I am getting an error: Database disk image is malformed
+# I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Lidarr is corrupt.
 - Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
@@ -179,7 +179,7 @@ If Docker:
 
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## I use Lidarr on a Mac and it suddenly stopped working. What happened?
+# I use Lidarr on a Mac and it suddenly stopped working. What happened?
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 
@@ -187,7 +187,7 @@ If Docker:
 
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/lidarr](http://reddit.com/r/lidarr) or hop on [our discord](https://lidarr.audio/discord) for help.
 
-## I am using a Pi and Raspbian and Lidarr will not launch
+# I am using a Pi and Raspbian and Lidarr will not launch
 
 Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
 
@@ -217,7 +217,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
   sudo apt update && sudo apt-get -t buster-backports install libseccomp2
   ```
 
-## Why are lists sync times so long and can I change it?
+# Why are lists sync times so long and can I change it?
 
 Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
 
@@ -225,17 +225,17 @@ You can trigger a list refresh manually, script it and trigger it via the API, o
 
 This change was due to not have our server get killed by people updating lists every 10 minutes.
 
-## Can I disable the refresh releases task
+# Can I disable the refresh releases task
 
 No, nor should you through any SQL hackery.  The refresh releases task queries the upstream Servarr proxy and checks to see if the metadata for each release (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Lidarr. If necessary, it will then update the applicable releases.
 
 A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr.  If you delete release files manually or a third party program, do not set this to `Never`.
 
-## Why can Lidarr not see my files on a remote server?
+# Why can Lidarr not see my files on a remote server?
 
 - In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
-### Lidarr runs under the LocalService account by default which doesn't have access to protected remote file shares
+## Lidarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
 - Run Lidarr's service as another user that has access to that share
 - Open the Administrative Tools \> Services window on your Windows server.
@@ -244,12 +244,12 @@ A common complaint is the Refresh task causes heavy I/O usage.  One setting that
 - Change the service user account to the target user account.
 - Run Lidarr.exe using the Startup Folder
 
-### You're using a mapped network drive (not a UNC path)
+## You're using a mapped network drive (not a UNC path)
 
 - Change your paths to UNC paths (`\\server\share`)
 - Run Lidarr.exe via the Startup Folder
 
-## Help I have locked myself out
+# Help I have locked myself out
 
 {#help-i-have-forgotten-my-password}
 
@@ -262,7 +262,7 @@ To disable authentication (to reset your username or password) you will need nee
 1. Restart Lidarr
 1. Lidarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-## How do I stop the browser from launching on startup?
+# How do I stop the browser from launching on startup?
 
 Depending on your OS, there are multiple possible ways.
 
@@ -270,11 +270,11 @@ Depending on your OS, there are multiple possible ways.
 - When invoking Lidarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Lidarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
-## Weird UI Issues
+# Weird UI Issues
 
 - If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
 
-## VPNs, Jackett, and the \*ARRs
+# VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
@@ -282,7 +282,7 @@ Depending on your OS, there are multiple possible ways.
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett works. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett) via a VPN.**
 
-## Jackett's /all Endpoint
+# Jackett's /all Endpoint
 
 {#jackett-all-endpoint}
 
@@ -303,7 +303,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
-## Why are there two files? | Why is there a file left in downloads?
+# Why are there two files? | Why is there a file left in downloads?
 
 This is expected. Below is how the Torrent Process works.
 

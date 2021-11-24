@@ -8,11 +8,11 @@ editor: markdown
 dateCreated: 2021-06-11T23:32:31.144Z
 ---
 
-## Activity
+# Activity
 
 The activity tab is where you can see past and present activities that Sonarr has done.  Including imports, deletes, upgrades, grabs, and failures.
 
-## Queue
+# Queue
 
 The queue shows all items the application can recognize that is in the specified download client's category (Settings => Download Client => Category). To view all releases Options => Show Unknown. This is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
@@ -24,11 +24,11 @@ At the top of the page is `Manual Import` which allows you to abritrarily import
 
 More information about the Queue section Coming Soon - Contributions are Welcome.
 
-## History
+# History
 
 The history tab shows all things that have left the queue by way of the task being finished/ended.  This includes imports, failures, grabs, deletes, and upgrades.
 
-## Blocklist
+# Blocklist
 
 > Blocklist is formerly known as 'Blacklist' {.is-info}
 

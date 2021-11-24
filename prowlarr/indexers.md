@@ -10,7 +10,7 @@ dateCreated: 2021-06-06T11:45:31.974Z
 
 This page will describe how to add and configure indexers in Prowlarr.
 
-## Adding an Indexer
+# Adding an Indexer
 
 To add an indexer, first click on `Indexers` on the left, then <kb>+</kb> `Add Indexer` at the top of the page.
 
@@ -27,11 +27,11 @@ Choose your indexer from the list, or type a partial name in the box to find you
 > If your tracker or indexer is not listed and not on our [supported indexers](/prowlarr/supported-indexers) page, you can request it be added via our [Indexer Requests Site](https://requests.prowlarr.com)
 {.is-info}
 
-## Editing an Indexer
+# Editing an Indexer
 
 To edit an indexer, first click on `Indexers` on the left, then click the wrench icon to the far right of the Indexer you wish to edit.
 
-## Viewing an Indexer Id or URL
+# Viewing an Indexer Id or URL
 
 To view details about an indexer, first click on `Indexers` on the left, then click the i (information) icon to the far right of the Indexer you wish to edit.
 
@@ -44,7 +44,7 @@ Details available may include:
 - Site
 - Newznab/Torznab Prowlarr URL
 
-## Indexer Settings
+# Indexer Settings
 
 Once you've selected your indexer, there will be a pop-up containing further information you will need to configure it. Note that the specific settings will change slightly for each indexer based on their required fields and the type of indexer you're configuring.
 
@@ -90,7 +90,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 - Test your indexer, and if a green checkmark appears, you're okay to save it. When you save it, depending on your sync settings, it will be added to your apps automatically.
 
-### Adding a custom YML definition
+## Adding a custom YML definition
 
 - If you wish to add a custom Cardigann compatible YML definition file for an indexer that is not supported:
   - Navigate to (or create) the Custom Indexer Definition folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](/prowlarr/appdata-directory)
@@ -101,6 +101,6 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
   - Save the [Cardigann compatible YML file](/prowlarr/cardigann-yml-definition) within the folder and ensure Prowlarr has permissions to access it.
 
-## Supported Indexers
+# Supported Indexers
 
 - [See this wiki page for a list of supported indexers as of the latest nightly.](/prowlarr/supported-indexers/)

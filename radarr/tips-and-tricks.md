@@ -8,19 +8,19 @@ editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
 ---
 
-## TRaSH's Custom Formats
+# TRaSH's Custom Formats
 
 - [TRasH has a guide](https://trash-guides.info/Radarr/) on how to use [Radarr => Settings => Custom Formats](/radarr/settings#custom-formats) as well as a shared repository of Custom Formats.
 
-## Renaming Movie Folders
+# Renaming Movie Folders
 
 - [See this FAQ Entry](/radarr/faq#how-can-i-rename-my-movie-folders)
 
-## Creating a Folder for Each Movie
+# Creating a Folder for Each Movie
 
 - This is only needed to cleanup / organize and existing library to facilitate importing into Radarr.  Below are a few different methods.
 
-### Filebot
+## Filebot
 
 > Filebot is supported on Windows, Linux, and MacOS {.is-info}
 
@@ -37,7 +37,7 @@ dateCreated: 2021-08-14T15:12:58.934Z
 
 - Note: You can replace the spaces above with `.` or `_` if you prefer that naming format.
 
-### Files 2 Folder
+## Files 2 Folder
 
 > Files 2 Folder is a Windows Application {.is-info}
 
@@ -52,7 +52,7 @@ Once installed it is only a few clicks to organize all your files into their own
 1. Click OK
 1. Wait a momement and all your files will be in their own folder.
 
-### Linux Bash Script
+## Linux Bash Script
 
 The following script will take all `*.mkv` files within your selected folder and move them into a folder based on their name. Note that this does not go into subfolders within the starting/selected folder.
 
@@ -61,7 +61,7 @@ cd /path/to/your/movies/files/
 find . -maxdepth 1 -type f -iname "*.mkv" -exec sh -c 'mkdir "${1%.*}" ; mv "${1%}" "${1%.*}" ' _ {} \;
 ```
 
-### Windows Command Line
+## Windows Command Line
 
 Drop to a command line in Windows (cmd.exe) `As Administrator`. Navigate to your movie folder. Run these two commands (copy/paste is fine, there is nothing to change):
 

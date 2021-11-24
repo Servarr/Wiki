@@ -19,7 +19,7 @@ You can navigate between time periods by clicking the arrows, or "Today" to get 
 
 Click on *Search for Missing* to search for all missing, monitored books on the current view.
 
-## iCal Link
+# iCal Link
 
 Click on *iCal Link* to get a URL to add to Google Calendar.
 
@@ -31,18 +31,18 @@ Click on *iCal Link* to get a URL to add to Google Calendar.
 - Select a tag to limit the feed to only those authors that have a matching tag.
 - Copy the iCal feed URL or click the subscribe button if you browser supports it.
 
-## Calendar Options
+# Calendar Options
 
 Click on *Options* to change the overall settings for this page.
 
 ![caloptions.png](/assets/readarr/caloptions.png)
 
-### Local
+## Local
 
 - Click to streamline the view by collapsing multiple books releasing on the same day.
 - Click to show an icon when the books exists but the cutoff is not yet met.
 
-### Global
+## Global
 
 - You can change the first day of the week to your local choice.
 - You can change the format of the week's column header to your local choice.

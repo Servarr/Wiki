@@ -13,14 +13,14 @@ dateCreated: 2021-05-24T03:32:41.926Z
 > *Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).*
 {.is-info}
 
-## Getting Started
+# Getting Started
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/prowlarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/prowlarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/prowlarr/faq)
 {.links-list}
 
-## User Guide
+# User Guide
 
 - [<i class="fas fa-play"></i>&emsp;Indexers](/prowlarr/indexers)
 - [<i class="fas fa-search"></i>&emsp;Search](/prowlarr/search)
@@ -32,12 +32,12 @@ dateCreated: 2021-05-24T03:32:41.926Z
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/prowlarr/appdata-directory)
 {.links-list}
 
-## Troubleshooting
+# Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/prowlarr/troubleshooting)
 {.links-list}
 
-## Development
+# Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/prowlarr/contributing)
 - [<i class="fas fa-book-reader"></i>&emsp;Prowlarr (Cardigann) YAML Indexer Definition](/prowlarr/cardigann-yml-definition)
@@ -47,7 +47,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 > Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
 {.is-info}
 
-## Support
+# Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
@@ -55,7 +55,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Prowlarr Subreddit*](https://reddit.com/r/prowlarr)
 {.links-list}
 
-## Links
+# Links
 
 - [prowlarr.com *Website*](https://prowlarr.com)
 - [Open Collective *Donations*](https://opencollective.com/prowlarr)

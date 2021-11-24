@@ -12,41 +12,41 @@ dateCreated: 2021-06-09T15:53:13.142Z
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 
-## Windows
+# Windows
 
 `C:\ProgramData\Lidarr`
 
-## Linux
+# Linux
 
 Unless otherwise specified Lidarr will store it's application data in the home folder of the user Lidarr is running under `/home/$USER/.config/Lidarr` or `~/.config/Lidarr`
 
 The installation instructions specify `/var/lib/lidarr`
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#os-x}
 
 `/Users/$USER/.config/Lidarr` or `~/.config/Lidarr`
 
-## Synology
+# Synology
 
 `/usr/local/Lidarr/var/.config/Lidarr`
 
 `/volume1/@appstore/Lidarr/var/.config/Lidarr`
 
-## QNAP
+# QNAP
 
 `/share/MD0_DATA/homes/admin/.config/Lidarr`
 
 `/share/CACHEDEV1_DATA/Lidarr_CONFIG`
 
-## Docker
+# Docker
 
 `/config`
 
 - This will vary based on where the user maps `/config` to on their host system
 
-## Arguments
+# Arguments
 
 The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
 

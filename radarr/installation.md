@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
 ---
 
-## Windows
+# Windows
 
 Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
@@ -34,7 +34,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 > It is possible to install Radarr manually using the [x64 .zip download](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#OSX}
 
@@ -45,13 +45,13 @@ It's therefore advisable to install Radarr as a system tray application if the u
 1. Open the archive and drag the Radarr icon to your Application folder.
 1. Browse to <http://localhost:7878> to start using Radarr
 
-## Linux
+# Linux
 
-### Debian / Ubuntu
+## Debian / Ubuntu
 
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
-#### Easy Install
+### Easy Install
 
 > **The following is a community written and community maintained unofficial script.** {.is-info}
 
@@ -83,27 +83,27 @@ nano RadarrInstall.sh
 
 ```bash
 #!/bin/bash
-#### Description: Radarr 3.2+ (.NET) Debian install
-#### Originally written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
-#### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
-#### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
-#### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
-#### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
-#### Updates by: The Radarr Community
-#### Thanks to Bakerboy448 for the guidance and improved wiki entry & script
-#### Original author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
-#### Its target is the beginner/novice with 'I know enough to be dangerous' experience.
-#### If you see any errors or improvements please update the script for future users.
+### Description: Radarr 3.2+ (.NET) Debian install
+### Originally written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
+### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
+### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
+### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
+### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
+### Updates by: The Radarr Community
+### Thanks to Bakerboy448 for the guidance and improved wiki entry & script
+### Original author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
+### Its target is the beginner/novice with 'I know enough to be dangerous' experience.
+### If you see any errors or improvements please update the script for future users.
 
-## Am I root?, need root!
+# Am I root?, need root!
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root."
     exit
 fi
 
-## Const
-#### Update these variables as required for your specific instance
+# Const
+### Update these variables as required for your specific instance
 
 app="radarr"                        # App Name
 app_uid="radarr"                    # {Update me if needed} User App will run as and the owner of it's binaries
@@ -116,7 +116,7 @@ bindir="/opt/${app^}"               # Install Location
 branch="master"                     # {Update me if needed} branch to install
 datadir="/var/lib/radarr/"          # {Update me if needed} AppData directory to use
 
-## Create App user if it doesn't exist
+# Create App user if it doesn't exist
 
 PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]; then
@@ -129,27 +129,27 @@ else
     groupadd -f $app_guid
     usermod -a -G $app_guid $app_uid
 fi
-## Stop the App if running
+# Stop the App if running
 
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
     sytemctl disable $app.service
 fi
 
-## Create Appdata Directory
+# Create Appdata Directory
 
-## AppData
+# AppData
 mkdir -p $datadir
 chown -R $app_uid:$app_guid $datadir
 chmod 775 $datadir
 
-## Download and install the App
+# Download and install the App
 
-## prerequisite packages
+# prerequisite packages
 apt install $app_prereq
 
 ARCH=$(dpkg --print-architecture)
-## get arch
+# get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
 case "$ARCH" in
 "amd64") DLURL="${dlbase}&arch=x64" ;;
@@ -165,7 +165,7 @@ wget --content-disposition "$DLURL"
 tar -xvzf ${app^}.*.tar.gz
 echo "Installation files downloaded and extracted"
 
-## remove existing installs
+# remove existing installs
 echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
@@ -203,7 +203,7 @@ echo "Service file created. Attempting to start the app"
 systemctl -q daemon-reload
 systemctl enable --now -q "$app"
 
-## Finish update
+# Finish update
 host=$(hostname -I)
 ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
@@ -227,7 +227,7 @@ bash RadarrInstall.sh
 
 ---
 
-#### Debian / Ubuntu Hands on Install
+### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
@@ -332,7 +332,7 @@ Typically to access the Radarr web GUI browse to `http://{Your server IP Address
 
 ---
 
-#### Uninstall
+### Uninstall
 
 To uninstall and purge:
 > Warning: This will destroy your application data. {.is-danger}
@@ -354,15 +354,15 @@ sudo rm -rf /etc/systemd/system/radarr.service
 systemctl -q daemon-reload
 ```
 
-## Docker
+# Docker
 
 The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Radarr Docker image.
 
-### Avoid Common Pitfalls
+## Avoid Common Pitfalls
 
-#### Volumes and Paths
+### Volumes and Paths
 
 There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
 
@@ -374,7 +374,7 @@ The best solution is to use a single, common volume inside the containers, such 
 
 If this advice is not followed, you may have to configure a Remote Path Mapping in the Radarr web UI (Settings › Download Clients).
 
-#### Ownership and Permissions
+### Ownership and Permissions
 
 Permissions and ownership of files is one of the most common problems for Radarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
@@ -382,7 +382,7 @@ Keep in mind that Radarr will need read and write to the download folders as wel
 > For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
-### Install Radarr
+## Install Radarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
@@ -390,14 +390,14 @@ To install and use these Docker images, you will need to keep the above in mind 
 - [lscr.io/linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
 {.links-list}
 
-## Reverse Proxy Configuration
+# Reverse Proxy Configuration
 
 Sample config examples for configuring Radarr to be accessible through a reverse proxy.
 
 > These examples assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes your web server i.e nginx and Radarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 {.is-info}
 
-### NGINX
+## NGINX
 
 ```none
 location /radarr {
@@ -421,7 +421,7 @@ location /radarr {
  }
 ```
 
-### Apache
+## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `radarr` from the `Location` block and simply use `/` as the location.
 
@@ -449,7 +449,7 @@ If you implement any additional authentication through Apache, you should exclud
 - `/radarr/api/`
 - `/radarr/Content/`
 
-## Multiple Instances
+# Multiple Instances
 
 - It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
 - Note that you can configure Radarr to use a second Radarr as a list.  This is helpful if you wish to keep both in sync.
@@ -464,11 +464,11 @@ The following requirements should be noted:
 - Different root folders must be used.
 - If non-docker, disable automatic updates on all but 1 instance.
 
-### Windows
+## Windows
 
 > [Please see the legacy wiki entry.](https://wikiold.servarr.com/Radarr_Tips_and_Tricks#Installing_multiple_Radarrs_on_Windows) Contributions to convert the entry to this wiki are welcome and encouraged.{.is-info}
 
-### Linux
+## Linux
 
 - [Swizzin Users](https://github.com/ComputerByte/radarr4k)
 - Non-Swizzin Users
@@ -508,6 +508,6 @@ sudo systemctl -q daemon-reload
 sudo systemctl enable --now -q radarr4k
 ```
 
-### Docker
+## Docker
 
 - Simply spin up a second Docker container with a different name, ensuring the above requirements are met.

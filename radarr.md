@@ -12,14 +12,14 @@ dateCreated: 2021-05-16T13:53:17.360Z
 
 Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
-## Getting Started
+# Getting Started
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/radarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/radarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/radarr/faq)
 {.links-list}
 
-## User Guide
+# User Guide
 
 - [<i class="fas fa-play"></i>&emsp;Library](/radarr/library)
 - [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/radarr/calendar)
@@ -31,12 +31,12 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/radarr/appdata-directory)
 {.links-list}
 
-## Troubleshooting
+# Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/radarr/troubleshooting)
 {.links-list}
 
-## Development
+# Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/radarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://radarr.video/docs/api/#/)
@@ -44,7 +44,7 @@ Radarr is a movie collection manager for Usenet and BitTorrent users. It can mon
 
 > Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console. {.is-info}
 
-## Support
+# Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
@@ -52,7 +52,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Radarr Subreddit*](https://reddit.com/r/radarr)
 {.links-list}
 
-## Links
+# Links
 
 - [radarr.video *Website*](https://radarr.video)
 - [Open Collective *Donations*](https://opencollective.com/radarr)

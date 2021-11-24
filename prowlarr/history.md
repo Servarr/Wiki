@@ -10,13 +10,13 @@ dateCreated: 2021-06-08T23:32:35.055Z
 
 This page will show you how to review and search your history, and the various settings available.
 
-## Opening History
+# Opening History
 
 To get into the History screen, click on `History` on the left menu.
 
 ![hist_1_history.png](/assets/prowlarr/hist_1_history.png)
 
-## Menu Items
+# Menu Items
 
 At the top of the screen there are various menu items:
 
@@ -29,7 +29,7 @@ At the top of the screen there are various menu items:
 
 - Filter allows you to filter the history for various types of actions such as searches, grabs, etc.
 
-## RSS Searches
+# RSS Searches
 
 Automated search queries from your Apps look like this:
 
@@ -39,7 +39,7 @@ If you have the columns selected, you can see the indexer searched, the category
 
 ![hist_3_rssquery.png](/assets/prowlarr/hist_3_rssquery.png)
 
-## Query Searches
+# Query Searches
 
 Specific query searches will show exactly what was searched, based on the capabilities of each indexer. As you can see below, the same series/episode was searched on 3 different indexers, and each has different capabilities:
 

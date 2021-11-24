@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
 ---
 
-## Introduction
+# Introduction
 
 Synology only offer a Docker package on their `x64` based NAS. Using this method to install Docker on an `aarch64` NAS is totally unsupported/untested and totally at your own risk. It is entirely possible it will destroy your NAS.
 
@@ -16,7 +16,7 @@ Synology only offer a Docker package on their `x64` based NAS. Using this method
 unsupported/untested** and totally at your own risk. It is entirely
 possible it will destroy your NAS. {.is-danger}
 
-## Summary
+# Summary
 
 The instructions below will:
 
@@ -27,7 +27,7 @@ The instructions below will:
 1. Create a `docker` group
 1. Place a docker-compose script in `/usr/local/bin/`
 
-## Installation
+# Installation
 
 1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet)
 
@@ -50,7 +50,7 @@ Do as it says:
 
 Hopefully you have functioning `docker` and `docker-compose` commands, which should work when logged in as your normal user.
 
-## Caveats
+# Caveats
 
 1. It seems most ARM Synology don't support seccomp, so the Docker
     container has unfettered access to your system (even more so than
@@ -61,7 +61,7 @@ Hopefully you have functioning `docker` and `docker-compose` commands, which sho
 1. Obviously you can only run aarch64 images, but most hotio and
     linuxserver images offer an aarch64 version.
 
-## Setting up a Docker GUI
+# Setting up a Docker GUI
 
 If you want a GUI you can run Portainer using the following example
 compose:
@@ -90,6 +90,6 @@ docker-compose up -d
 
 Visit [`http://ip:9000`](http://ip:9000) to complete setup (where `ip` is the IP address of your synology).
 
-## Setting up Sonarr/Radarr/Lidarr/Readarr
+# Setting up Sonarr/Radarr/Lidarr/Readarr
 
 For guidance setting up Sonarr/Radarr/Lidarr/Readarr, see the [Docker Guide](/docker-guide), and **remember caveat 2 above.**

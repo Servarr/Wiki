@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
 ---
 
-## Quick Start Setup Guide
+# Quick Start Setup Guide
 
 > This page is still in progress and not complete.
 
@@ -20,19 +20,19 @@ In this guide we will try to explain the basic setup you need to do to get start
 > Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 {.is-warning}
 
-## Startup
+# Startup
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:8989`
 
 ![qs_startup.png](/assets/sonarr/qs_startup.png)
 
-## Media Management
+# Media Management
 
 First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
 Click on `Settings` => `Media Management` on the left menu.
 
-### Episode Naming
+## Episode Naming
 
 ![qs_episodenaming.png](/assets/sonarr/qs_episodenaming.png)
 
@@ -41,7 +41,7 @@ Click on `Settings` => `Media Management` on the left menu.
 
 > If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
 
-### Importing
+## Importing
 
 ![mm_importing.png](/assets/sonarr/mm_importing.png)
 
@@ -49,7 +49,7 @@ Click on `Settings` => `Media Management` on the left menu.
 - (Advanced Option) Enable `Use Hardlinks instead of Copy` more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).
 - Check the box to import extra files, and add at least `.srt` to the list.
 
-### Root Folders
+## Root Folders
 
 Here we will add the root folder that Sonarr will be using to import your existing organized media library and where Sonarr will be importing (copy/hardlink/move) your media after your download client has downloaded it. This is the folder where your series and episodes are stored for your media player to play them. It is NOT where you download files to!
 
@@ -58,13 +58,13 @@ Here we will add the root folder that Sonarr will be using to import your existi
 
 Don’t forget to save your changes!
 
-## Profiles
+# Profiles
 
 `Settings` => `Profiles`
 
 We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several prefilled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the appropriate wiki page for that section.
 
-## Indexers
+# Indexers
 
 `Settings` => `Indexers`
 
@@ -80,7 +80,7 @@ Add at least one indexer in order for Sonarr to work properly.
 
 [More Info](/sonarr/supported#indexers)
 
-## Download Clients
+# Download Clients
 
 `Settings` => `Download Clients`
 
@@ -88,9 +88,9 @@ Downloading and importing is where most people experience issues. From a high le
 
 [More Info](/sonarr/supported#download-clients)
 
-### {.tabset}
+## {.tabset}
 
-#### Usenet
+### Usenet
 
 {#usenet}
 
@@ -102,7 +102,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
-#### BitTorrent
+### BitTorrent
 
 {#bittorrent}
 
@@ -113,30 +113,30 @@ Downloading and importing is where most people experience issues. From a high le
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
-## How to import your existing organized media library
+# How to import your existing organized media library
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 Coming soon - Contributions Welcome
 
-### Import episodes
+## Import episodes
 
 Coming soon - Contributions Welcome
 
-#### Importing Existing Media
+### Importing Existing Media
 
 Depending how well your existing series folders are named, Sonarr will try to match it with the correct series. You should review this list carefully before importing.
 
 Coming soon - Contributions Welcome
 
-#### No match found
+### No match found
 
 Coming soon - Contributions Welcome
 
-#### Fix faulty folder name after import
+### Fix faulty folder name after import
 
 Coming soon - Contributions Welcome
 
-## Add New Series
+# Add New Series
 
 [Refer to the Library Page for additional information](/en/sonarr/library#add-new)

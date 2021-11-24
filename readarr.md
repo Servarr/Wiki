@@ -15,14 +15,14 @@ dateCreated: 2021-08-15T13:12:38.327Z
 
 Readarr is an eBook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
-## Getting Started
+# Getting Started
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/readarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/readarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/readarr/faq)
 {.links-list}
 
-## User Guide
+# User Guide
 
 - [<i class="fas fa-play"></i>&emsp;Library](/readarr/library)
 - [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/readarr/calendar)
@@ -35,12 +35,12 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/readarr/appdata-directory)
 {.links-list}
 
-## Troubleshooting
+# Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/readarr/troubleshooting)
 {.links-list}
 
-## Development
+# Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/readarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://readarr.com/docs/api/)
@@ -49,7 +49,7 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 > Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
 {.is-info}
 
-## Support
+# Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
@@ -57,7 +57,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Readarr Subreddit*](https://reddit.com/r/readarr)
 {.links-list}
 
-## Links
+# Links
 
 - [readarr.com *Website*](https://readarr.com)
 - [Open Collective *Donations*](https://opencollective.com/readarr)

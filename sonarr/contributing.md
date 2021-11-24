@@ -8,19 +8,19 @@ editor: markdown
 dateCreated: 2021-06-11T23:10:04.820Z
 ---
 
-## How to Contribute
+# How to Contribute
 
 We're always looking for people to help make Sonarr even better, there are a number of ways to contribute.
 
-### Documentation
+## Documentation
 
 Setup guides, FAQ, the more information we have on the [wiki](/sonarr) the better.
 
-### Development
+## Development
 
-Sonarr is written in C## (backend) and JS (frontend). The backend is built on the .net framework 4.7, while the frontend utilizes Reactjs.
+Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .net framework 4.7, while the frontend utilizes Reactjs.
 
-#### Tools required
+### Tools required
 
 - Visual Studio 2019 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
@@ -37,7 +37,7 @@ Sonarr is written in C## (backend) and JS (frontend). The backend is built on th
 
 - [Yarn](https://yarnpkg.com/) is required to build the frontend
 
-#### Getting started
+### Getting started
 
 1. Fork Sonarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github)
@@ -61,7 +61,7 @@ Sonarr is written in C## (backend) and JS (frontend). The backend is built on th
 1. Next `Debug/Run` the project in Visual Studio to start Sonarr
 1. Open <http://localhost:8989>
 
-#### Contributing Code
+### Contributing Code
 
 - If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Sonarr/Sonarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
 - Rebase from Sonarr's develop branch, do not merge
@@ -73,7 +73,7 @@ Sonarr is written in C## (backend) and JS (frontend). The backend is built on th
 - One feature/bug fix per pull request to keep things clean and easy to understand
 - Use 4 spaces instead of tabs, this is the default for VS 2019 and WebStorm
 
-#### Pull Requesting
+### Pull Requesting
 
 - Only make pull requests to `develop`, never `main`, if you make a PR to `main` we will comment on it and close it
 - You're probably going to get some comments or questions from us, they will be to ensure consistency and maintainability

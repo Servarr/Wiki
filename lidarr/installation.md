@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
 ---
 
-## Windows
+# Windows
 
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
@@ -34,7 +34,7 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 > It is possible to install Lidarr manually using the [x64 .zip download](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#OSX}
 
@@ -45,13 +45,13 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 1. Open the archive and drag the Lidarr icon to your Application folder.
 1. Browse to <http://localhost:8686> to start using Lidarr
 
-## Linux
+# Linux
 
-### Debian / Ubuntu
+## Debian / Ubuntu
 
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
-#### Easy Install
+### Easy Install
 
 > **The following is a community written and community maintained unofficial script.** {.is-info}
 
@@ -83,15 +83,15 @@ nano LidarrInstall.sh
 
 ```bash
 #!/bin/bash
-#### Description: Lidarr Debian install
-#### Originally from the Radarr Community
-## Am I root?, need root!
+### Description: Lidarr Debian install
+### Originally from the Radarr Community
+# Am I root?, need root!
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root."
     exit
 fi
-## Const
-#### Update these variables as required for your specific instance
+# Const
+### Update these variables as required for your specific instance
 app="lidarr"                         # App Name
 app_uid="lidarr"                     # {Update me if needed} User App will run as and the owner of it's binaries
 app_guid="media"                     # {Update me if needed} Group App will run as.
@@ -102,7 +102,7 @@ app_bin=${app^}                      # Binary Name of the app
 bindir="/opt/${app^}"                # Install Location
 branch="master"                     # {Update me if needed} branch to install
 datadir="/var/lib/lidarr/"          # {Update me if needed} AppData directory to use
-## Create App user if it doesn't exist
+# Create App user if it doesn't exist
 PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]; then
     groupadd -f $app_guid
@@ -114,21 +114,21 @@ else
     groupadd -f $app_guid
     usermod -a -G $app_guid $app_uid
 fi
-## Stop the App if running
+# Stop the App if running
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
     sytemctl disable $app.service
 fi
-## Create Appdata Directory
-## AppData
+# Create Appdata Directory
+# AppData
 mkdir -p $datadir
 chown -R $app_uid:$app_uid $datadir
 chmod 775 $datadir
-## Download and install the App
-## prerequisite packages
+# Download and install the App
+# prerequisite packages
 apt install $app_prereq
 ARCH=$(dpkg --print-architecture)
-## get arch
+# get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
 case "$ARCH" in
 "amd64") DLURL="${dlbase}&arch=x64" ;;
@@ -143,7 +143,7 @@ echo "Downloading..."
 wget --content-disposition "$DLURL"
 tar -xvzf ${app^}.*.tar.gz
 echo "Installation files downloaded and extracted"
-## remove existing installs
+# remove existing installs
 echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
@@ -177,7 +177,7 @@ EOF
 echo "Service file created. Attempting to start the app"
 systemctl -q daemon-reload
 systemctl enable --now -q "$app"
-## Finish update
+# Finish update
 host=$(hostname -I)
 ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
@@ -202,7 +202,7 @@ bash LidarrInstall.sh
 
 ---
 
-#### Debian / Ubuntu Hands on Install
+### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
@@ -303,7 +303,7 @@ sudo systemctl enable --now -q lidarr
 rm Lidarr*.linux*.tar.gz
 ```
 
-#### Uninstall
+### Uninstall
 
 To uninstall and purge:
 > Warning: This will destroy your application data. {.is-danger}
@@ -325,15 +325,15 @@ sudo rm -rf /etc/systemd/system/lidarr.service
 systemctl -q daemon-reload
 ```
 
-## Docker
+# Docker
 
 The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Lidarr Docker image.
 
-### Avoid Common Pitfalls
+## Avoid Common Pitfalls
 
-#### Volumes and Paths
+### Volumes and Paths
 
 There are two common problems with Docker volumes: Paths that differ between the Lidarr and download client container and paths that prevent fast moves and hard links.
 
@@ -345,7 +345,7 @@ The best solution is to use a single, common volume inside the containers, such 
 
 If this advice is not followed, you may have to configure a Remote Path Mapping in the Lidarr web UI (Settings › Download Clients).
 
-#### Ownership and Permissions
+### Ownership and Permissions
 
 Permissions and ownership of files is one of the most common problems for Lidarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Lidarr will need read and write to the download folders as well as the final folders.
@@ -353,7 +353,7 @@ Keep in mind that Lidarr will need read and write to the download folders as wel
 > For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
-### Install Lidarr
+## Install Lidarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
@@ -361,7 +361,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 - [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
 {.links-list}
 
-## FreeBSD
+# FreeBSD
 
 {#freebsd}
 
@@ -491,14 +491,14 @@ tcp46      0      0 *.8686                 *.*                    LISTEN
 
 Congratulations!
 
-## Reverse Proxy Configuration
+# Reverse Proxy Configuration
 
 Sample config examples for configuring Lidarr to be accessible through a reverse proxy.
 
 > These examples assumes the default port of `8686` and that you set a baseurl of `lidarr`. It also assumes your web server i.e nginx and Lidarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 {.is-info}
 
-### NGINX
+## NGINX
 
 ```none
 location /lidarr {
@@ -522,7 +522,7 @@ location /lidarr {
  }
 ```
 
-### Apache
+## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `lidarr` from the `Location` block and simply use `/` as the location.
 

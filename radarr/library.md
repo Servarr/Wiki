@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
 ---
 
-## Movies
+# Movies
 
 - Library View
   - Update All - Update metadata for all movies, refresh posters, rescan movie folders, and rescan movie files (if enabled)
@@ -30,7 +30,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
     - Wanted - Movie is missing, monitored, and available
     - Missing - Movie is missing and monitored
 
-## Add New
+# Add New
 
 ![radarr-add-new-empty.png](/assets/radarr/radarr-add-new-empty.png)
 
@@ -39,7 +39,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 - Below the search field, you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](/radarr/quick-start-guide).
 - If you get an error of "path is already configured", [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie).
 
-## Library Import
+# Library Import
 
 Library Import allows you to import existing organized movies and each movie's file via existing files in the path directory. This is especially useful when making a new Radarr instance and wanting to keep your existing series.
 
@@ -52,7 +52,7 @@ Library Import allows you to import existing organized movies and each movie's f
   
 > It is required that movie folders and files have the year in their name to be imported and parsed.{.is-warning}
 
-## Discover
+# Discover
 
 Discover shows recommended Movies
 

@@ -8,40 +8,40 @@ editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
 ---
 
-## Windows
+# Windows
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-windows)
 
-## Linux
+# Linux
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux)
 
-### Debian
+## Debian
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-debian)
 
-### Ubuntu
+## Ubuntu
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-ubuntu)
 
-### ArchLinux
+## ArchLinux
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-archlinux)
 
-### Gentoo
+## Gentoo
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-gentoo)
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#OSX}
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-macos)
 
-## NAS
+# NAS
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-nas)
 
-## Docker
+# Docker
 
 [Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-docker)

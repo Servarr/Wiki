@@ -12,7 +12,7 @@ dateCreated: 2021-06-23T07:55:13.803Z
 
 This page is the disambaguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
-## Download Clients
+# Download Clients
 
 {#downloadclient}
 
@@ -50,7 +50,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Vuze {#vuze}
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 
-## Indexers
+# Indexers
 
 {#indexer}
 
@@ -82,7 +82,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Waffles {#waffles}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 
-## Notifications
+# Notifications
 
 {#notification}
 
@@ -109,7 +109,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Twitter {#twitter}
 - Webhook {#webhook}
 
-## Lists
+# Lists
 
 {#importlist}
 
@@ -123,7 +123,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Spotify Playlists {#spotifyplaylist}
 - Spotify Saved Albums {#spotifysavedalbums}
 
-## Metadata
+# Metadata
 
 {#metadata}
 

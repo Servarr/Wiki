@@ -12,7 +12,7 @@ dateCreated: 2021-06-23T07:55:33.769Z
 
 This page is the disambiguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
-## Download Clients
+# Download Clients
 
 {#downloadclient}
 
@@ -52,11 +52,11 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Vuze {#vuze}
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
 
-## Indexers
+# Indexers
 
 {#indexer}
 
-### Usenet
+## Usenet
 
 - Fanzub {#fanzub}
   - Usenet Indexer for Japanese Media (Anime) exclusively.
@@ -68,7 +68,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - A private usenet indexer.
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 
-### Torrents
+## Torrents
 
 - BroadcasTheNet (BTN) {#broadcasthenet}
   - Private Tracker
@@ -112,7 +112,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 > We’re not responsible if your account is banned for disobeying rules or accruing Hit and Runs (HnRs)/low-ratio.
 {.is-warning}
 
-## Notifications
+# Notifications
 
 {#notification}
 
@@ -147,7 +147,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - See this [Tips and Tricks entry](/useful-tools#twitter)
 - Webhook {#webhook}
 
-## Lists
+# Lists
 
 {#importlist}
 
@@ -156,7 +156,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
 
-## Metadata
+# Metadata
 
 {#metadata}
 

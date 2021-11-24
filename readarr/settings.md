@@ -10,7 +10,7 @@ dateCreated: 2021-05-27T16:47:28.054Z
 
 This page will go through all the settings available in Readarr and how they work.  This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](/readarr/quick-start-guide) page instead.
 
-## Menu options
+# Menu options
 
 To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
 
@@ -25,16 +25,16 @@ Also, note that for each individual settings page, there are some options at the
 - You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
 
 
-## Media Management
+# Media Management
 
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
-### Root Folders
+## Root Folders
 
 - A list of your configured Root Folders (Library Folders) is displayed.
 - Click the <kb>+</kb> button to add a new Root Folder or click an existing's card to edit it.
 
-#### Root Folder Settings
+### Root Folder Settings
 
 - Name - The name of the Root Folder for UI Purposes
 - Path - The folder containing your book library i.e. the final destination as Readarr sees it. Note that this must be different than the location your download client places files.
@@ -69,7 +69,7 @@ Also, note that for each individual settings page, there are some options at the
 - Metadata Profile - Select the Metadata Profile to use for authors detected in this folder.  To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
   
-### Remote Path Mappings
+## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
 
@@ -87,7 +87,7 @@ Commonly used naming schema are:
 - Author Folder Format
   - `{Author Name}` which would then output: `Stephen King`
 
-### Book Naming
+## Book Naming
 
 - Rename Books - If this is toggled off (no check in the box) Readarr will use the existing file name if renaming is disabled.
 
@@ -99,7 +99,7 @@ Commonly used naming schema are:
 
 - Replace Illegal Characters - If disabled Readarr will remove illegal characters. If enabled Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
 
-#### Standard Book Format
+### Standard Book Format
 
 - Select  the naming
 
@@ -114,7 +114,7 @@ Commonly used naming schema are:
     - `Uppercase` - Make title all uppercase
     - `Lowercase` - Make title all lowercase
 
-#### Author
+### Author
 
 - `{Author Name}` = Author's Name
 - `{Author NameThe}` = Author's Name, The
@@ -122,7 +122,7 @@ Commonly used naming schema are:
 - `{Author SortName}` = Name, Author
 - `{Author Disambiguation}` = Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
-#### Book
+### Book
 
 - `{Book Title}` = The Book's Title!: Subtitle!
 - `{Book TitleThe}` = Book's Title!, The: Subtitle!
@@ -142,18 +142,18 @@ Commonly used naming schema are:
 - `{PartCount}` or `{PartCount:0} = 9
 - `{PartCount:00}` = 09
 
-#### Release Date
+### Release Date
 
 - `{Release Year}` = 2016
 - `{Release YearFirst}` = 2015
 - `{Edition Year}` = 2016
 
-#### Quality
+### Quality
 
 - `{Quality Full}` = AZW3 Proper
 - `{Quality Title}` = AZW3
 
-#### Media Info
+### Media Info
 
 - `{MediaInfo AudioCodec}` = MP3
 - `{MediaInfo AudioChannels}` = 2.0
@@ -161,12 +161,12 @@ Commonly used naming schema are:
 - `{MediaInfo AudioBitsPerSample}` = 24bit
 - `{MediaInfo AudioSampleRate}` = 44.1kHz
 
-#### Other
+### Other
 
 - `{Release Group}` = Rls Grp
 - `{Preferred Words}` = iNTERNAL
 
-#### Original
+### Original
 
 - `{Original Title}` = Author.Name.Book.Name.2018.AZW3-EVOLVE
 - `{Original Filename}` = 01-book name
@@ -174,11 +174,11 @@ Commonly used naming schema are:
 > Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
 {.is-info}
   
-### Author Folder Format
+## Author Folder Format
 
 - (Advanced Option) This is where you will set the naming convention for the author folder name.
 
-#### Author
+### Author
 
 - `{Author Name}` = Author's Name
 - `{Author NameThe}` = Author's Name, The
@@ -186,7 +186,7 @@ Commonly used naming schema are:
 - `{Author SortName}` = Name, Author
 - `{Author Disambiguation}` = Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
-### Folders
+## Folders
   
 ![mm_folders.png](/assets/readarr/mm_folders.png)
   
@@ -208,7 +208,7 @@ Commonly used naming schema are:
 
 > If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
   
-### File Management
+## File Management
   
   ![mm_filemgmt.png](/assets/readarr/mm_filemgmt.png)
 
@@ -237,7 +237,7 @@ Commonly used naming schema are:
 
 > It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
 
-## Permissions
+# Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
   - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
@@ -251,9 +251,9 @@ Commonly used naming schema are:
 
 > This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
 
-## Profiles
+# Profiles
 
-### Quality Profiles
+## Quality Profiles
 
 Quality profiles are used to determine what formats of books are acceptable for a book in your library.
   
@@ -283,7 +283,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 > By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
-### Metadata Profiles
+## Metadata Profiles
 
 Metadata profiles are used to determine which books from GoodReads to add under an author when a new author is added.
 
@@ -306,7 +306,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
   
 > You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
   
-### Release Profiles
+## Release Profiles
 
 Release profiles are used to determine if indexer release names qualify for downloading.
 
@@ -326,7 +326,7 @@ Release profiles are used to determine if indexer release names qualify for down
 - Indexer - In this drop-down, you can limit this release profile to a single indexer. This should almost always be left at `(any)`
 - Tags - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
 
-### Delay Profiles
+## Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an book by adding a delay while Readarr continues to watch for releases that better match your preferences.
 - Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
@@ -337,13 +337,13 @@ Release profiles are used to determine if indexer release names qualify for down
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
 
-#### Uses
+### Uses
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Readarr might try to download all of them. With delay profiles, Readarr can be configured to ignore the first few hours of releases.
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
 
-#### How Delay Profiles Work
+### How Delay Profiles Work
 
 The timer begins as soon as Readarr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
@@ -356,11 +356,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 {.is-warning}
 
-##### Examples
+#### Examples
 
 - For each example, assume the user has the follow quality profile active: EPUB and above are allowed MOBI is the quality cutoff * AZW3 is the highest ranked quality
 
-###### Example 1
+##### Example 1
 
 - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
 
@@ -370,13 +370,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - At any point, if a AZW3 release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
 
-###### Example 2
+##### Example 2
 
 - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
 
 - At 11:00pm the first release for an books is detected by Readarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Readarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Readarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
-###### Example 3
+##### Example 3
 
 - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
 
@@ -386,11 +386,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - If the first release is from BitTorrent, Readarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
-## Quality
+# Quality
 
 ![qualitydefinitions.png](/assets/readarr/qualitydefinitions.png)
 
-### Quality Table Meanings
+## Quality Table Meanings
 
 - Quality - The scene quality name (hardcoded)
 - Title - The name of the Quality in the GUI (configurable)
@@ -399,7 +399,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Min - The minimum Bytes or Kilobytes per Second (b/s|kb/s) a quality can have.
 - Max - The maximum Bytes or Kilobytes per Second (b/s|kb/s) a quality can have.
 
-### Qualities Defined
+## Qualities Defined
 
 - Unknown Text - Self Explanatory
 - PDF - Portable Document File
@@ -411,22 +411,22 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - M4B - Common audiobook file format
 - FLAC - Free Lossless Audio Codec, an audio format similar to MP3, but lossless
 
-## Indexers
+# Indexers
 
 > Information on supported indexers can be found [here](/readarr/supported#indexers)
 {.is-info}
 
-### Supported Indexers
+## Supported Indexers
 
 - A list of supported indexers is located [here](/readarr/supported#indexers)
 
-#### Indexer Settings
+### Indexer Settings
 
 - Once you've clicked the <kb>+</kb> button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
 
 - There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
-#### Usenet Indexer Configuration
+### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
 - Software that works with usenet and integrates quite well with Readarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
@@ -445,7 +445,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-#### Torrent Tracker Configuration
+### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
 - One of the best and simplest ways to utilize Torrent trackers with Readarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Readarr as a search indexer that houses all your information and sends it to Readarr.
@@ -470,7 +470,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Discography Seed Time - Ignore, carry over from Lidarr
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 
-### Options
+## Options
 
 - Minimum Age - Usenet only: Minimum age in minutes of NZBs before they are grabbed. Use this to give new releases time to propagate to your usenet provider.
 - Retention - Usenet only: Set to zero to set for unlimited retention
@@ -480,18 +480,18 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 > If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
 
-## Download Clients
+# Download Clients
 
 > Information on supported download clients can be found [here](/readarr/supported#download-clients)
 {.is-info}
 
-### Overview
+## Overview
 
 - Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
 
-### Download Client Processes
+## Download Client Processes
 
-#### Usenet Process
+### Usenet Process
 
 - Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, etc.
 - Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -499,7 +499,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Readarr will scan that completed file location for files that Readarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
 
-#### Torrent Process
+### Torrent Process
 
 - Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, etc.
 - Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
@@ -507,17 +507,17 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
-### Download Clients
+## Download Clients
 
 Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
-#### Supported Download Clients
+### Supported Download Clients
 
 - A list of supported download clients is located [here](/readarr/supported#downloadclient)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
-#### Usenet Client Settings
+### Usenet Client Settings
 
 - Name - The name of the download client within Readarr
 - Enable - Enable this Download Client
@@ -533,7 +533,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-#### Torrent Client Settings
+### Torrent Client Settings
 
 - Name - The name of the download client within Readarr
 - Enable - Enable this Download Client
@@ -550,7 +550,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
-#### Torrent Client Remove Download Compatibility
+### Torrent Client Remove Download Compatibility
 
 - Readarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
 
@@ -568,14 +568,14 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 > *Idle Limit* - Transmission internally has an Idle Time check, but Readarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
-### Completed Download Handling
+## Completed Download Handling
 
 - Completed Download Handling is how Readarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
 - Enable - Automatically import completed downloads from the download client
 - (Advanced Option) Remove  - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
 
-#### Remove Completed Downloads
+### Remove Completed Downloads
 
 - Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
 - Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
@@ -588,7 +588,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Readarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Readarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the seed goal reached is supported by Readarr, and torrent is paused (stopped).
 
-#### Failed Download Handling
+### Failed Download Handling
 
 - Failed Download Handling is only compatible with SABnzbd and NZBGet.
 - Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
@@ -608,13 +608,13 @@ If you download using a BitTorrent client, the process is slightly different:
 - Redownload - Controls whether or not Readarr will search for the same file after a failure
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
-### Remote Path Mappings
+## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
 - One of our amazing community members have created [an excellent guide (for Radarr - same concepts for Readarr)](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
-## Import Lists
+# Import Lists
 
 > Information on supported list types can be found [here](/readarr/supported#lists)
 {.is-info}
@@ -623,15 +623,15 @@ Import lists allow you to add items to Readarr automatically from your GoodReads
 
 ![importlists.png](/assets/readarr/importlists.png)
 
-### Import Lists
+## Import Lists
 
 This shows you the lists you currently have, and allows you to add new lists. Adding lists is covered below in more detail.
 
-### Import List Exclusions
+## Import List Exclusions
 
 Anything on here has been excluded from being added by lists, and will never be added from any list.  You can remove items from this by clicking on it.
 
-## Adding an Import List
+# Adding an Import List
 
 After clicking the `+`, choose what kind of list you'd like to add:
 
@@ -657,12 +657,12 @@ In this instance, we're going to add a GoodReads Bookshelf list.
 
 Lists sync by default every 24 hours, but can be triggered manually from the `Settings` => `Tasks` page. You cannot automate this process any quicker than that.
 
-## Connect
+# Connect
 
 > Information on supported connection types can be found [here](/readarr/supported#notifications)
 {.is-info}
 
-### Connections
+## Connections
 
 Connections are how you want Readarr to communicate with the outside world.
 
@@ -670,7 +670,7 @@ Connections are how you want Readarr to communicate with the outside world.
 
 - A list of supported notifications & connections is located [here](/readarr/supported#notifications)
 
-### Connection Triggers
+## Connection Triggers
 
 - On Grab - Be notified when books are available for download and has been sent to a download client
 - On Release Import - Be notified when books are successfully imported
@@ -682,7 +682,7 @@ Connections are how you want Readarr to communicate with the outside world.
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
 
-## Metadata
+# Metadata
 
 {#write-metadata-to-book-files}
 
@@ -693,7 +693,7 @@ This page allows you to create/update metadata tags/covers.
 
 ![metadata.png](/assets/readarr/metadata.png)
 
-### Calibre Metadata
+## Calibre Metadata
 
 If you are using Calibre to manage your ebook collection, you will use these options to control it.
 
@@ -704,7 +704,7 @@ If you are using Calibre to manage your ebook collection, you will use these opt
 - Update Covers - Enable to tell Calibre Content Server to use the same book covers as Readarr
 - Embed Metadata in Book Files - Enable to tell Calibre Content Server to write and embed metadata into the book files.
 
-### Write Metadata to Audio Files
+## Write Metadata to Audio Files
 
 If you are using audiobooks, you will use these options to control it.
 
@@ -714,7 +714,7 @@ If you are using audiobooks, you will use these options to control it.
   - For new downloads only - Write tags to only new downloads when they are imported
 - Scrub Existing Tags - Enable to remove all tags from files except those added by Readarr
 
-## Tags
+# Tags
 
 - The tag section in Readarr is used to link different aspects of Readarr.
 - Tags are particularly useful for:
@@ -733,11 +733,11 @@ If you are using audiobooks, you will use these options to control it.
 > Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
 {.is-info}
 
-## General
+# General
 
 This page is for general Readarr settings that are not covered in other sections.
 
-### Host
+## Host
 
 ![genhost.png](/assets/readarr/genhost.png)
 
@@ -760,7 +760,7 @@ This page is for general Readarr settings that are not covered in other sections
 > Note: Do not use this unless you know what you're doing.
 {.is-warning}
 
-### Security
+## Security
 
 ![gensecurity.png](/assets/readarr/gensecurity.png)
 
@@ -774,7 +774,7 @@ This page is for general Readarr settings that are not covered in other sections
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
 
-### Proxy
+## Proxy
 
 ![genproxy.png](/assets/readarr/genproxy.png)
 
@@ -789,7 +789,7 @@ This page is for general Readarr settings that are not covered in other sections
 - Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
 - Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses.
 
-### Logging
+## Logging
 
 ![genlogging.png](/assets/readarr/genlogging.png)
 
@@ -798,17 +798,17 @@ This page is for general Readarr settings that are not covered in other sections
   - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
   - Trace - The most advance and detailed logging on Readarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
-### Analytics
+## Analytics
 
 ![genanalytics.png](/assets/readarr/genanalytics.png)
 
 - Analytics - Send anonymous usage and error information to Readarr's servers (Servarr). This includes information on your browser, which Readarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
-### Updates
+## Updates
 
 ![genupdates.png](/assets/readarr/genupdates.png)
 
-### Updates
+## Updates
 
 - (Advanced Option) Branch - This is the branch of Readarr that you are running on.
   - [Please see this FAQ entry for more information](/readarr/faq#how-do-i-update-readarr)
@@ -822,7 +822,7 @@ This page is for general Readarr settings that are not covered in other sections
 - Built-in - The built-in method will backup Readarr files and settings, stop Readarr, update the installation and Start Readarr, if your system will not handle the stopping of Readarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Readarr will be restarted.
 - Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
-### Backups
+## Backups
 
 ![genbackups.png](/assets/readarr/genbackups.png)
 
@@ -834,18 +834,18 @@ This page is for general Readarr settings that are not covered in other sections
 
 By default, backups are performed every 7 days, and the last 4 are kept.
 
-## UI (User Interface)
+# UI (User Interface)
 
 This page allows you to customize the user interface display options.
 
-### Calendar
+## Calendar
 
 ![uicalendar.png](/assets/readarr/uicalendar.png)
 
 - First Day of Week - Here you can select what you think the first day of the week should be.
 - Week Column Header - Here you can select the header for the columns
 
-### Dates
+## Dates
 
 ![caldates.png](/assets/readarr/caldates.png)
 
@@ -854,13 +854,13 @@ This page allows you to customize the user interface display options.
 - Time Format - Do you want a 12hr or 24hr format?
 - Show Relative Dates - Do you want Readarr to show relative (Today/Yesterday/etc) or absolute dates?
 
-### Style
+## Style
 
 ![calstyle.png](/assets/readarr/calstyle.png)
 
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
 
-### Language
+## Language
 
 ![callanguage.png](/assets/readarr/callanguage.png)
 

@@ -12,14 +12,14 @@ dateCreated: 2021-05-16T16:59:52.354Z
 
 Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
-## Getting Started
+# Getting Started
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/sonarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/sonarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
 {.links-list}
 
-## User Guide
+# User Guide
 
 - [<i class="fas fa-play"></i>&emsp;Library](/sonarr/library)
 - [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/sonarr/calendar)
@@ -32,12 +32,12 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/sonarr/appdata-directory)
 {.links-list}
 
-## Troubleshooting
+# Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/sonarr/troubleshooting)
 {.links-list}
 
-## Development
+# Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/sonarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://github.com/Sonarr/Sonarr/wiki/API)
@@ -45,7 +45,7 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 
 > Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. Note that the API Docs are primarily for the legacy API. **Contributions to start to convert the docs to Swagger are welcomed.** The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console. {.is-info}
 
-## Support
+# Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
@@ -54,7 +54,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [<i class="fab fa-wpforms"></i>&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
 {.links-list}
 
-## Links
+# Links
 
 - [sonarr.tv *Website*](https://sonarr.tv)
 - [Open Collective *Donations*](https://opencollective.com/sonarr)

@@ -10,7 +10,7 @@ dateCreated: 2021-06-08T23:31:53.221Z
 
 This page will show you how to perform a search from within Prowlarr. In general, your searches would be via app, but it's possible to do them directly in Prowlarr as well.
 
-## Performing a Search
+# Performing a Search
 
 To initiate a search, click on `Search` on the left menu. There will be a mostly blank page with some options at the bottom of the screen.
 
@@ -26,25 +26,25 @@ You can download the result by clicking on the download icon on the right of the
 
 > Anything downloaded will have the category assignment you've set in Prowlarr. This may require a manual import in your app program from a non-standard directory!
 
-## API Endpoints
+# API Endpoints
 
-### RSS Compatible - Single Indexer Feed
+## RSS Compatible - Single Indexer Feed
 
 - Standard Newznab/Torznab compatible endpoint/parameters.
 
-#### API Key in Query
+### API Key in Query
 
 - <http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q=mike&apikey={yourkey}&cat={comma> separated list}
   - e.g. `http://192.168.1.100:9696/11/api?t=search&q=mike&apikey={yourkey}&cat=5000,2000`
 
-#### API Key in Header
+### API Key in Header
 
 > Pass `X-Api-Key` with the API Key as a header {.is-info}
 
 - <http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q=mike&apikey={yourkey}&cat={comma> separated list}
   - e.g. `http://192.168.1.100:9696/{indexerid}/api?t=search&q=mike&cat=5000,2000`
 
-### Search Feed
+## Search Feed
 
 - <http://{prowlarrhost}:{prowlarrport}/{baseurl}/api/v1/search?query={encoded> term}&indexerIds={comma separated list}&categories={comma separated list}
 - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=black%20hawk%20down&indexerIds=-1&categories=2000`

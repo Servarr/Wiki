@@ -8,44 +8,44 @@ editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
 ---
 
-## The Best Docker Setup
+# The Best Docker Setup
 
 **TL;DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
 
-### Introduction
+## Introduction
 
 This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each Docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but not so easy to understand and explain.
 
-### Multiple users and a shared group
+## Multiple users and a shared group
 
-#### Permissions
+### Permissions
 
 Ideally, each software runs as its own user and they are all part of a shared group with folder permissions set to `775` (`drwxrwxr-x`) and files set to `664` (`-rw-rw-r--`), which is a umask of `002`. A sane alternative to this is a single shared user, which would use `755` and `644` which is a umask of `022`. You can restrict permissions even more by denying read from “other”, which would be a umask of `007` for a user per daemon or `077` for a single shared user. For a deeper explanation, try the Arch Linux wiki articles about [file permissions and attributes](https://wiki.archlinux.org/index.php/File_permissions_and_attributes) and [UMASK](https://wiki.archlinux.org/index.php/Umask).
 
-#### UMASK
+### UMASK
 
 Many Docker images accept `-e UMASK=002` as an environment variable and some software can be configured with a user, group and umask (NZBGet) or folder/file permission (Sonarr/Radarr), inside the container. This will ensure that files and folders created by *one* can be read and written by the others. If you are using existing folders and files, you will need to fix their current ownership and permissions too, but going forward they will be correct because you set each software up right.
 
-#### PUID and PGID
+### PUID and PGID
 
 Many Docker images also take a `-e PUID=123` and `-e PGID=321` that lets you change the UID/GID used inside to that of an account on the outside. If you ever peak in, you’ll find that username is something like `abc`, `nobody` or `hotio`, but because it uses the UID/GID you pass in, on the outside it looks like the expected user. If you’re using storage from another system via NFS or CIFS, it will make your life easier if *that* system also has matching users and group. Perhaps let one system pick the UID/GIDs, then re-use those on the other system, assuming they don’t conflict.
 
-#### Example
+### Example
 
 You run [Sonarr](https://github.com/Sonarr/Sonarr/releases) using [hotio/sonarr](https://github.com/hotio/docker-sonarr), you’ve created a `sonarr` user with uid `123` and a shared group `media` with gid `321` which the `sonarr` user is a member of. You configure the Docker image to run with `-e PUID=123 -e PGID=321 -e UMASK=002`. Sonarr also lets you configure the user, group as well as folder and file permissions. The previous settings should negate these, but you could configure them if you wanted. An UMASK of `002` results in `775` (`drwxrwxr-x`) for folders and `664` (`-rw-rw-r--`) for files. and the user/group are a little tricky because *inside* the container, they have a different name. Typically they are `abc` or `nobody`.
 
-### Single user and optional shared group
+## Single user and optional shared group
 
 Another popular and arguably easier option is a single, shared user. Perhaps even *your* user. It isn’t as secure and doesn’t follow best practices, but in the end it is easier to understand and implement. The UMASK for this is `022` which results in `755` (`drwxr-xr-x`) for folders and `644` (`-rw-r--r--`) for files. The group no longer really matters, so you’ll probably just use the group named after the user. This does make it harder to share with *other* users, so you may still end up wanting a UMASK of `002` even with this setup.
 
-### Ownership and permissions of /config
+## Ownership and permissions of /config
 
 Don’t forget that your `/config` volume will *also* need to have correct ownership and permissions, usually the daemon’s user and that user’s group like `sonarr:sonarr` and a umask of `022` or `077` so *only* that user has access. In a single user setup, this would of course be the one user you’ve chosen.
 
-### Consistent and well planned paths
+## Consistent and well planned paths
 
 > Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
@@ -58,7 +58,7 @@ So pick *one* path layout and use it for all of them. It's suggested to use `/da
 
 It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match and likely update existing torrents.. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr, Plex, etc.
 
-#### Examples
+### Examples
 
 What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|books|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
 
@@ -87,7 +87,7 @@ For the below example `data` is equivalent to the host path `/host/data` and the
 
 The path for each Docker container can be as specific as needed while still maintaining the correct structure:
 
-##### Torrents
+#### Torrents
 
 ```none
     data
@@ -100,7 +100,7 @@ The path for each Docker container can be as specific as needed while still main
 
 Torrents only needs access to torrent files, so pass it `-v /host/data/torrents:/data/torrents`. In the torrent software settings, you’ll need to reconfigure paths and you can sort into subfolders like`/data/torrents/{tv|books|movies|music}`.
 
-##### Usenet
+#### Usenet
 
 ```none
     data
@@ -112,7 +112,7 @@ Torrents only needs access to torrent files, so pass it `-v /host/data/torrents:
 
 Usenet only needs access to usenet files, so pass it `-v /host/data/usenet:/data/usenet`. In the usenet software settings, you’ll need to reconfigure paths and you can sort into subfolders like`/data/usenet/{tv|movies|music}`.
 
-##### Media Server
+#### Media Server
 
 ```none
     data
@@ -124,7 +124,7 @@ Usenet only needs access to usenet files, so pass it `-v /host/data/usenet:/data
 
 Plex/Emby only needs access to your media library, so pass `-v /host/data/media:/data/media`, which can have any number of subfolders like `movies`, `kids movies`, `tv`, `documentary tv` and/or `music` as sub folders.
 
-##### Sonarr, Radarr and Lidarr
+#### Sonarr, Radarr and Lidarr
 
 ```none
     data
@@ -144,7 +144,7 @@ Plex/Emby only needs access to your media library, so pass `-v /host/data/media:
 
 Sonarr, Radarr and Lidarr get everything using `-v /host/data:/data` because the *download* folder(s) and *media* folder will look like and *be* one file system. Hard links will work and moves will be atomic, instead of copy + delete.
 
-#### Issues
+### Issues
 
 There are a couple minor issues with not following the Docker image’s suggested paths.
 
@@ -154,9 +154,9 @@ Another problem is that some images are pre-configured to use the documented vol
 
 If you use the latest version of the abandoned [RadarrSync](https://github.com/Sperryfreak01/RadarrSync) to synchronize two Radarr instances, it *depends* on mapping the *same* path inside to a different path on the outside, for example `/movies` for one instance would point at `/data/media/movies` and the other at `/data/media/movies4k`. This breaks *everything* you’ve read above. There is no good solution, you either use the old version which isn’t as good, do your mapping in a way that is ugly and breaks hard links or just don’t use it at all.
 
-### Running containers using
+## Running containers using
 
-#### Docker Compose
+### Docker Compose
 
 This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is Docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [ghcr.io/red5d/docker-autocompose](#get-docker-compose) to convert `docker run` commands into a single `docker-compose.yml` file.
 
@@ -164,7 +164,7 @@ This is the best option for most users, it lets you control and configure many c
 {.is-warning}
 
 ```yml
-    ## sonarr
+    # sonarr
     Sonarr:
         image: hotio/sonarr
         volumes:
@@ -175,7 +175,7 @@ This is the best option for most users, it lets you control and configure many c
             - PGID=321
             - UMASK=002
 
-    ## deluge
+    # deluge
     Deluge:
         image: binhex/arch-delugevpn
         volumes:
@@ -186,7 +186,7 @@ This is the best option for most users, it lets you control and configure many c
             - PGID=321
             - UMASK=002
 
-    ## SABnzbd
+    # SABnzbd
     SABnzbd:
         image: hotio/sabnzbd
         volumes:
@@ -197,7 +197,7 @@ This is the best option for most users, it lets you control and configure many c
             - PGID=321
             - UMASK=002
 
-    ## plex
+    # plex
     Plex:
         image: hotio/plex
         volumes:
@@ -210,57 +210,57 @@ This is the best option for most users, it lets you control and configure many c
             - UMASK=002
 ```
 
-##### Update all images and containers
+#### Update all images and containers
 
 ```shell
     docker-compose pull
     docker-compose up -d
 ```
 
-##### Update individual image and container
+#### Update individual image and container
 
 ```shell
     docker-compose pull NAME
     docker-compose up -d NAME
 ```
 
-#### docker run
+### docker run
 
 > Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
 {.is-warning}
 
 ```shell
-    ## sonarr
+    # sonarr
     docker run -v /path/to/config/sonarr:/config \
                -v /host/data:/data \
                -e PUID=111 -e PGID=321 -e UMASK=002 \
                hotio/sonarr
 
-    ## deluge
+    # deluge
     docker run -v /path/to/config/deluge:/config \
                -v /host/data/torrents:/data/torrents \
                -e PUID=222 -e PGID=321 -e UMASK=002 \
                binhex/arch-delugevpn
 
-    ## SABnzbd
+    # SABnzbd
     docker run -v /path/to/config/sabnzbd:/config \
                -v /host/data/usenet:/data/usenet \
                -e PUID=333 -e PGID=321 -e UMASK=002 \
                hotio/sabnzbd
 
-    ## plex
+    # plex
     docker run -v /path/to/config/plex:/config \
                -v /host/data/media:/data/media \
                -e PUID=444 -e PGID=321 -e UMASK=002 \
                hotio/plex
 ```
 
-#### Systemd
+### Systemd
 
 For maintaining a few Docker containers just using systemd is an option. It standardizes control and makes dependencies simpler for both native and Docker services. The generic example below can be adapted to any container by adjusting or adding the various values and options.
 
 ```shell
-    ## /etc/systemd/system/thing.service
+    # /etc/systemd/system/thing.service
     [Unit]
     Description=Thing
     Requires=docker.service
@@ -280,15 +280,15 @@ For maintaining a few Docker containers just using systemd is an option. It stan
     WantedBy=default.target
 ```
 
-### Helpful commands
+## Helpful commands
 
-#### List running containers
+### List running containers
 
 ```shell
     docker ps
 ```
 
-#### Shell *inside* a container
+### Shell *inside* a container
 
 ```shell
     docker exec -it CONTAINER_NAME /bin/bash
@@ -296,7 +296,7 @@ For maintaining a few Docker containers just using systemd is an option. It stan
 
 For more information, see the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) documentation.
 
-#### Prune Docker
+### Prune Docker
 
 ```shell
     docker system prune --all --volumes
@@ -305,7 +305,7 @@ For more information, see the [docker exec](https://docs.docker.com/engine/refer
 > Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [Docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
 {.is-warning}
 
-#### Get docker run command
+### Get docker run command
 
 Getting the `docker run` command from GUI managers can be hard, this Docker image makes it easy for a running container ([source](https://stackoverflow.com/questions/32758793/how-to-show-the-run-command-of-a-docker-container)).
 
@@ -313,7 +313,7 @@ Getting the `docker run` command from GUI managers can be hard, this Docker imag
     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike CONTAINER_NAME
 ```
 
-#### Get docker-compose
+### Get docker-compose
 
 > Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/compose/)
 {.is-info}
@@ -330,7 +330,7 @@ For some users this could be:
     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docker-autocompose lidarr prowlarr radarr readarr sonarr qbittorrent
 ```
 
-#### Troubleshoot networking
+### Troubleshoot networking
 
 Most Docker images don’t have many useful tools in them for troubleshooting, but you can [attach a network troubleshooting type image](https://success.docker.com/article/troubleshooting-container-networking) to an existing container to help with that.
 
@@ -338,13 +338,13 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
     docker run -it --rm --network container:CONTAINER_NAME nicolaka/netshoot
 ```
 
-#### Recursively chown user and group
+### Recursively chown user and group
 
 ```shell
     chown -R user:group /some/path/here
 ```
 
-#### Recursively chmod to 775/664
+### Recursively chmod to 775/664
 
 ```shell
     chmod -R a=,a+rX,u+w,g+w /some/path/here
@@ -354,13 +354,13 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
               | sets all to `000`
 ```
 
-#### Find UID/GID for user
+### Find UID/GID for user
 
 ```shell
     id <username>
 ```
 
-#### Examine files for hard links
+### Examine files for hard links
 
 ```shell
     ls -alhi
@@ -379,7 +379,7 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
      Birth: 2020-09-11 11:55:43.803327144 -0500
 ```
 
-### Interesting Docker images
+## Interesting Docker images
 
 - [rasmunk/sshfs](https://hub.docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/docker-volume-sshfs](https://github.com/rasmunk/docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.docker.com/p/vieux/sshfs).
 - [hotio’s](https://hotio.dev/) - The documentation and Dockerfile don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests (except Sonarr which may be useful for testing.
@@ -411,13 +411,13 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
 - [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained. However, avoid their 'recommended' paths.
 
-### Custom Docker Network and DNS
+## Custom Docker Network and DNS
 
 One interesting feature of a [custom Docker network](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks) is that it gets its own DNS server. If you create a bridge network for your containers, you can use their hostnames in your configuration. For example, if you `docker run --network=isolated --hostname=deluge binhex/arch-deluge` and `docker run --network=isolated --hostname=radarr binhex/arch-radarr`, you can then configure the Download Client in Radarr to point at just `deluge` and it’ll work *and* communicate on its own private network. Which means if you wanted to be even more secure, you could *stop* forwarding that port too. If you put your reverse proxy container on the same network, you can even stop forwarding the web interface ports and make them even more secure.
 
-### Common Problems
+## Common Problems
 
-#### Correct *outside* paths, incorrect *inside* paths
+### Correct *outside* paths, incorrect *inside* paths
 
 Many people read this and think they understand, but they end up seeing the outside path correctly to something like `/data/usenet`, but then they miss the point and set the *inside* path to `/downloads` still.
 
@@ -429,14 +429,14 @@ Many people read this and think they understand, but they end up seeing the outs
   - `/host/data:/media`
   - `/data/downloads:/data`
 
-#### Running Docker containers as root or changing users around
+### Running Docker containers as root or changing users around
 
 If you find yourself running your containers as `root:root`, you’re doing something wrong. If you’re not passing in a UID and GID, you’ll be using whatever the default is for the image and *that* will be unlikely to line up with a reasonable user on your system. And if you’re changing the user and group your Docker containers are running as, you’ll probably end up with permissions issues on folders like the `/config` folder which will likely have files and folders in them that got created the first time with the UID/GID you used the first time.
 
-#### Running Docker containers with umask 000
+### Running Docker containers with umask 000
 
 If you find yourself setting a UMASK of `000` (which is 777 for folders and 666 for files), you’re *also* doing something wrong. It leaves your files and folders read/write to *everyone*, which is poor Linux hygiene.
 
-### Getting Help
+## Getting Help
 
 Need some help? For real time, chat style support try the [Sonarr](https://discord.gg/xyRwnyB) or [Radarr](https://radarr.video/discord) Discord servers. If you prefer forum style support, make a post in [/r/sonarr](http://reddit.com/r/sonarr) or [/r/radarr](http://reddit.com/r/radarr).

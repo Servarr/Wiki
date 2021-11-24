@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
 ---
 
-## Setup Guide
+# Setup Guide
 
 > For a more detailed breakdown of all the settings, check [Radarr =>Settings](/radarr/settings) We will cover the following options.
 {.is-info}
@@ -18,13 +18,13 @@ In this guide we will try to explain the basic setup you need to do to get start
 > Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to enable those to make them visible.
 {.is-warning}
 
-## Startup
+# Startup
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:7878`
 
 ![Radarr-start.png](/assets/radarr/Radarr-start.png)
 
-## Media Management
+# Media Management
 
 First we’re going to take a look at the `Media Management` settings where we can setup our preferred naming and file management settings.
 
@@ -32,12 +32,12 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ![Radarr-settings-mm.png](/assets/radarr/Radarr-settings-mm.png)
 
-### Movie Naming
+## Movie Naming
 
 ![Radarr-settings-mm-movie-naming.png](/assets/radarr/Radarr-settings-mm-movie-naming.png)
 
 1. Enable/Disable Renaming of your movies (as opposed to leaving the names that are currently there or as they were when you downloaded them).
-2. If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ ## % & + { }`).
+2. If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ # % & + { }`).
 3. This setting will dictate how Radarr handles colons within the movie file.
 4. Here you will select the naming convention for the actual movie files.
 5. *(Advanced Option) This is where you will set the naming convention for the folder that contains the video file.*
@@ -45,14 +45,14 @@ First we’re going to take a look at the `Media Management` settings where we c
 > If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/).
 {.is-info}
 
-### Importing
+## Importing
 
 ![Radarr-settings-mm-importing.png](/assets/radarr/Radarr-settings-mm-importing.png)
 
 1. *(Advanced Option) Enable `Use Hardlinks instead of Copy` more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).*
 1. *(Advanced Option) Import matching extra files (subtitles, nfo, etc) after importing a file.*
 
-### File Management
+## File Management
 
 ![Radarr-settings-mm-fm.png](/assets/radarr/Radarr-settings-mm-fm.png)
 
@@ -61,7 +61,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 1. *(Advanced Option) Designate a location for deleted files to go to (just in case you want to retrieve them before the bin is taken out).*
 1. *(Advanced Option) This is how old a given file can be before it is deleted permanently.*
 
-### Root Folders
+## Root Folders
 
 ![Radarr-settings-mm-root-folder.png](/assets/radarr/Radarr-settings-mm-root-folder.png)
 
@@ -75,7 +75,7 @@ Here we will add the root folder that Radarr will be using to import your existi
 
 Don’t forget to save your changes
 
-## Profiles
+# Profiles
 
 `Settings` => `Profiles`
 
@@ -91,7 +91,7 @@ We recommend you to create your own profiles and only select the Quality Sources
 > To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}
 
-## Quality
+# Quality
 
 `Settings` => `Quality`
 
@@ -102,7 +102,7 @@ Here you’re able to change/fine tune the min and max size of your wanted media
 > If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/) for a tested example.
 {.is-info}
 
-## Indexers
+# Indexers
 
 `Settings` => `Indexers`
 
@@ -114,7 +114,7 @@ Once you’ve clicked the `+` button to add a new indexer you’ll be presented 
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
 
-## Download Clients
+# Download Clients
 
 `Settings` => `Download Clients`
 
@@ -122,9 +122,9 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-### {.tabset}
+## {.tabset}
 
-#### Usenet
+### Usenet
 
 {#usenet}
 
@@ -136,7 +136,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Radarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Radarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
-#### BitTorrent
+### BitTorrent
 
 {#bittorrent}
 
@@ -147,7 +147,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Radarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
-## How to import your existing organized media library
+# How to import your existing organized media library
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
@@ -157,13 +157,13 @@ After setting up your profiles/quality sizes and added your indexers and downloa
 
 Select `Import Existing Movies` or select `Import` from the sidebar.
 
-### Import movies
+## Import movies
 
 ![Radarr-movies-import.png](/assets/radarr/Radarr-movies-import.png)
 
 Select the root path you added earlier [in the root folders section.](#root-folders)
 
-### Importing Existing Media
+## Importing Existing Media
 
 ![Radarr-importing-existing.png](/assets/radarr/Radarr-importing-existing.png)
 
@@ -188,7 +188,7 @@ Depending how well you got your existing movie folders named Radarr will try to 
 1. Mass select Quality Profile.
 1. Start Importing your existing media library.
 
-#### No match found
+### No match found
 
 If you’re getting a error like this
 
@@ -212,7 +212,7 @@ Or you can just use the tmdb:id or imdb:id and then select the found movie if ma
 
 ![Radarr-importing-existing-no-match-expand-imdb.png](/assets/radarr/Radarr-importing-existing-no-match-expand-imdb.png)
 
-#### Fix faulty folder name after import
+### Fix faulty folder name after import
 
 ![Radarr-wrong-folder-name.png](/assets/radarr/Radarr-wrong-folder-name.png)
 
@@ -246,7 +246,7 @@ Then Magic
 
 As you can see the folder has been renamed to the correct year following your naming scheme.
 
-### How to add a movie
+## How to add a movie
 
 After you imported your existing well organized media library it’s time to add the movies you want.
 

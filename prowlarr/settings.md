@@ -10,7 +10,7 @@ dateCreated: 2021-06-06T15:04:48.057Z
 
 This page will go through all the settings available in Prowlarr and how they work.  This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
-## Menu options
+# Menu options
 
 To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
 
@@ -24,7 +24,7 @@ Also, note that for each individual settings page, there are some options at the
 
 - You must save your changes before leaving the screen. You do that by clicking the disk icon. If you've made no changes, it will show "No Changes" and be grayed out, as shown above.
 
-## Indexer Proxies
+# Indexer Proxies
 
 > Information on supported proxy types can be found [here](/prowlarr/supported#indexer-proxies)
 {.is-info}
@@ -41,7 +41,7 @@ Configuring HTTP, SOCKS4, or SOCKS5 proxies are all the same. Enter a name, the 
 
 Configuring a Flaresolverr server requires you to enter the hostname:port of your Flaresolver installation (which can be found [here](https://github.com/FlareSolverr/FlareSolverr)). Again, applying a TAG allows you to only use Flaresolverr on those indexers which require its use.
 
-## Applications
+# Applications
 
 > Information on supported applications can be found [here](/prowlarr/supported#applications)
 {.is-info}
@@ -86,7 +86,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
-## Download Clients (Prowlarr Searches)
+# Download Clients (Prowlarr Searches)
 
 > Information on supported download clients can be found [here](/prowlarr/supported#download-clients)
 {.is-info}
@@ -126,7 +126,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
 
-## Notifications
+# Notifications
 
 > Information on supported notification providers can be found [here](/prowlarr/supported#notifications)
 {.is-info}
@@ -143,13 +143,13 @@ There are many notification options available:
 
 Each one has different configuration options. If you're using notifications within any of the Applications, these should be set up the same way.
 
-## Tags
+# Tags
 
 Here is where you can maintain any existing tags you've used.
 
 Click on `Settings` => `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
 
-## General
+# General
 
 Here is where you will change generalized application settings such as port and logging level.
 
@@ -158,7 +158,7 @@ Click on `Settings` => `General`.
 > A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are hidden.
 {.is-info}
 
-### Host
+## Host
 
 ![general_host.png](/assets/prowlarr/general_host.png)
 
@@ -168,7 +168,7 @@ Click on `Settings` => `General`.
 - (Advanced Option) Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked.
 - Check this box if you want a (default) browser window to be launched when Prowlarr starts.
 
-### Security
+## Security
 
 ![general_security.png](/assets/prowlarr/general_security.png)
 
@@ -180,7 +180,7 @@ Click on `Settings` => `General`.
 
 - This changes how certificate validation is performed.
 
-### Proxy
+## Proxy
 
 ![general_proxy.png](/assets/prowlarr/general_proxy.png)
 
@@ -193,7 +193,7 @@ Click on `Settings` => `General`.
 - If you want to bypass the proxy for some addresses, you can enter that list here.
 - Check the box to bypass the proxy for local addresses.
 
-### Logging
+## Logging
 
 ![general_logging.png](/assets/prowlarr/general_logging.png)
 
@@ -203,13 +203,13 @@ The default log level is `Info`. This is very basic logging. You can change it h
 - `Debug` logging is a mid-range logging level. Good for some error resolution, but still not extremely detailed.  Contains all Info level logging as well.
 - `Trace` logging is extremely detailed, and what the Developers want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
 
-### Analytics
+## Analytics
 
 ![general_analytics.png](/assets/prowlarr/general_analytics.png)
 
 Check the box to help the Prowlarr development team gather statistics on install types, version, browser, and other information so that they can prioritize development and fixes properly.
 
-### Updates
+## Updates
 
 ![general_updates.png](/assets/prowlarr/general_updates.png)
 
@@ -225,7 +225,7 @@ Check the box to help the Prowlarr development team gather statistics on install
 - Built-in - The built-in method will backup Prowlarr files and settings, stop Prowlarr, update the installation and Start Prowlarr, if your system will not handle the stopping of Prowlarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Prowlarr will be restarted.
 - Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
 
-### Backups
+## Backups
 
 ![general_backups.png](/assets/prowlarr/general_backups.png)
 

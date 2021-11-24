@@ -12,7 +12,7 @@ dateCreated: 2021-06-23T07:55:24.002Z
 
 This page is the disambiguation page for all "supported" wiki links (i.e. typically more info in the UI).
 
-## Download Clients
+# Download Clients
 
 {#downloadclient}
 
@@ -52,11 +52,11 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Vuze {#vuze}
   - [Refer to the Settings Page](/radarr/settings#download-clients)
 
-## Indexers
+# Indexers
 
 {#indexer}
 
-### Usenet
+## Usenet
 
 - Newznab {#newznab}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
@@ -65,7 +65,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - A private usenet indexer.
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
-### Torrents
+## Torrents
 
 - FileList {#filelist}
   - Private Tracker
@@ -105,7 +105,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 > We�re not responsible if your account is banned for disobeying rules or accruing Hit and Runs (HnRs)/low-ratio.
 {.is-warning}
 
-## Notifications
+# Notifications
 
 {#notification}
 
@@ -137,7 +137,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Twitter {#twitter}
 - Webhook {#webhook}
 
-## Lists
+# Lists
 
 {#importlist}
 
@@ -167,7 +167,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
 
-## Metadata
+# Metadata
 
 {#metadata}
 

@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
 ---
 
-## Windows
+# Windows
 
 Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
@@ -40,7 +40,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 > It is possible to install Readarr manually using the [x64 .zip download](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
-## MacOS (OSX)
+# MacOS (OSX)
 
 {#OSX}
 
@@ -54,16 +54,16 @@ It's therefore advisable to install Readarr as a system tray application if the 
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to <http://localhost:8787> to start using Readarr
 
-## Linux
+# Linux
 
-### Debian / Ubuntu
+## Debian / Ubuntu
 
 > Readarr is curretly in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
 {.is-danger}
 
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
-#### Easy Install
+### Easy Install
 
 > **The following is a community written and community maintained unofficial script.** {.is-info}
 
@@ -95,15 +95,15 @@ nano ReadarrInstall.sh
 
 ```bash
 #!/bin/bash
-#### Description: Readarr Debian install
-#### Originally from the Radarr Community
-## Am I root?, need root!
+### Description: Readarr Debian install
+### Originally from the Radarr Community
+# Am I root?, need root!
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root."
     exit
 fi
-## Const
-#### Update these variables as required for your specific instance
+# Const
+### Update these variables as required for your specific instance
 app="readarr"                        # App Name
 app_uid="readarr"                    # {Update me if needed} User App will run as and the owner of it's binaries
 app_guid="media"                     # {Update me if needed} Group App will run as.
@@ -115,7 +115,7 @@ bindir="/opt/${app^}"                # Install Location
 branch="nightly"                     # {Update me if needed} branch to install
 datadir="/var/lib/readarr/"          # {Update me if needed} AppData directory to use
 
-## Create App user if it doesn't exist
+# Create App user if it doesn't exist
 PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
 if [ "$PASSCHK" -ge 1 ]; then
     groupadd -f $app_guid
@@ -127,21 +127,21 @@ else
     groupadd -f $app_guid
     usermod -a -G $app_guid $app_uid
 fi
-## Stop the App if running
+# Stop the App if running
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
     sytemctl disable $app.service
 fi
-## Create Appdata Directory
-## AppData
+# Create Appdata Directory
+# AppData
 mkdir -p $datadir
 chown -R $app_uid:$app_uid $datadir
 chmod 775 $datadir
-## Download and install the App
-## prerequisite packages
+# Download and install the App
+# prerequisite packages
 apt install $app_prereq
 ARCH=$(dpkg --print-architecture)
-## get arch
+# get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
 case "$ARCH" in
 "amd64") DLURL="${dlbase}&arch=x64" ;;
@@ -156,7 +156,7 @@ echo "Downloading..."
 wget --content-disposition "$DLURL"
 tar -xvzf ${app^}.*.tar.gz
 echo "Installation files downloaded and extracted"
-## remove existing installs
+# remove existing installs
 echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
@@ -190,7 +190,7 @@ EOF
 echo "Service file created. Attempting to start the app"
 systemctl -q daemon-reload
 systemctl enable --now -q "$app"
-## Finish update
+# Finish update
 host=$(hostname -I)
 ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
@@ -215,7 +215,7 @@ bash ReadarrInstall.sh
 
 ---
 
-#### Debian / Ubuntu Hands on Install
+### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
 
@@ -321,7 +321,7 @@ Typically to access the Readarr web GUI browse to `http://{Your server IP Addres
 
 ---
 
-#### Uninstall
+### Uninstall
 
 To uninstall and purge:
 > Warning: This will destroy your application data. {.is-danger}
@@ -343,15 +343,15 @@ sudo rm -rf /etc/systemd/system/readarr.service
 systemctl -q daemon-reload
 ```
 
-## Docker
+# Docker
 
 The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Readarr Docker image.
 
-### Avoid Common Pitfalls
+## Avoid Common Pitfalls
 
-#### Volumes and Paths
+### Volumes and Paths
 
 There are two common problems with Docker volumes: Paths that differ between the Readarr and download client container and paths that prevent fast moves and hard links.
 
@@ -363,7 +363,7 @@ The best solution is to use a single, common volume inside the containers, such 
 
 If this advice is not followed, you may have to configure a Remote Path Mapping in the Readarr web UI (Settings › Download Clients).
 
-#### Calibre Integration
+### Calibre Integration
 
 When installing Readarr, you can choose to use Calibre integration or not. This choice can only be made during installation, and if you choose not to utilize Calibre you cannot add it later. If you currently use Calibre to manage your book library, you should choose this option. If you use it, Calibre will name and organize your book files for you.
 
@@ -372,7 +372,7 @@ If you are running Calibre, you must first start the Calibre Content Server (Pre
 > Please note that Calibre Content Server and Calibre are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these programs, and is not required nor used by Readarr in any way.
 {.is-warning}
 
-#### Ownership and Permissions
+### Ownership and Permissions
 
 Permissions and ownership of files is one of the most common problems for Readarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Readarr will need read and write to the download folders as well as the final folders.
@@ -380,7 +380,7 @@ Keep in mind that Readarr will need read and write to the download folders as we
 > For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
-### Install Readarr
+## Install Readarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
@@ -391,14 +391,14 @@ To install and use these Docker images, you will need to keep the above in mind 
 - [lscr.io/linuxserver/readarr](https://github.com/lscr.io/linuxserver/docker-prowlarr/tree/nightly)
 {.links-list}
 
-## Reverse Proxy Configuration
+# Reverse Proxy Configuration
 
 Sample config examples for configuring Readarr to be accessible through a reverse proxy.
 
 > These examples assumes the default port of `8787` and that you set a baseurl of `readarr`. It also assumes your web server i.e nginx and Readarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 {.is-info}
 
-### NGINX
+## NGINX
 
 ```none
 location /readarr {
@@ -422,7 +422,7 @@ location /readarr {
  }
 ```
 
-### Apache
+## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `readarr` from the `Location` block and simply use `/` as the location.
 
@@ -450,7 +450,7 @@ If you implement any additional authentication through Apache, you should exclud
 - `/readarr/api/`
 - `/readarr/Content/`
 
-## Multiple Instances
+# Multiple Instances
 
 - It is possible to run multiple instances of Readarr. This is typically done when one wants a text and audiobook of the same book.
 - Note that you can configure Readarr to use a second Readarr as a list.  This is helpful if you wish to keep both in sync.
@@ -465,11 +465,11 @@ The following requirements should be noted:
 - Different root folders must be used.
 - If non-docker, disable automatic updates on all but 1 instance.
 
-### Windows
+## Windows
 
 > Contributions welcome and encouraged.{.is-info}
 
-### Linux
+## Linux
 
 - Ensure your first instance has the `-data=` argument passed.
 - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
@@ -507,6 +507,6 @@ sudo systemctl -q daemon-reload
 sudo systemctl enable --now -q readarraudio
 ```
 
-### Docker
+## Docker
 
 - Simply spin up a second Docker container with a different name, ensuring the above requirments are met.

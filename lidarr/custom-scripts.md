@@ -10,18 +10,18 @@ dateCreated: 2021-06-23T06:41:39.234Z
 
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Lidarr via the [Connect Settings](/lidarr/settings#connections).
 
-## Overview
+# Overview
 
 Lidarr can execute a custom script.
 
-## Environment Variables
+# Environment Variables
 
 Environment Variables vary based on the event type. The sections below indicate the variables avaiable for each.
 
 > [The sections below need cleanup and organizing. View the source code here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
 {.is-info}
 
-### Test
+## Test
 
 This event type is only sent when clicking the "Test" button in the settings page.
 
@@ -29,7 +29,7 @@ This event type is only sent when clicking the "Test" button in the settings pag
 | -------------------- | ------- |
 | `Lidarr_EventType`   | Test    |
 
-### Grab
+## Grab
 
 | Environment Variable               | Details                                                              |
 | ---------------------------------- | -------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ This event type is only sent when clicking the "Test" button in the settings pag
 | `Lidarr_Download_Client`           | `message.DownloadClient`                                             |
 | `Lidarr_Download_Id`               | `message.DownloadId`                                                 |
 
-### Release Import
+## Release Import
 
 | Environment Variable       | Details                                  |
 | -------------------------- | ---------------------------------------- |
@@ -71,7 +71,7 @@ This event type is only sent when clicking the "Test" button in the settings pag
 | `Lidarr_AddedTrackPaths`   | Pipe separated list of added track paths |
 | `Lidarr_DeletedPaths`      | Pipe separated list of deleted files     |
 
-### Rename
+## Rename
 
 | Environment Variable | Details                                 |
 | -------------------- | --------------------------------------- |
@@ -82,7 +82,7 @@ This event type is only sent when clicking the "Test" button in the settings pag
 | `Lidarr_Artist_MBId` | `artist.Metadata.Value.ForeignArtistId` |
 | `Lidarr_Artist_Type` | `artist.Metadata.Value.Type`            |
 
-### Track Retag
+## Track Retag
 
 | Environment Variable              | Details                                 |
 | --------------------------------- | --------------------------------------- |
@@ -109,7 +109,7 @@ This event type is only sent when clicking the "Test" button in the settings pag
 | `Lidarr_Tags_Diff`                | `message.Diff.ToJson()`                 |
 | `Lidarr_Tags_Scrubbed`            | `message.Scrubbed`                      |
 
-### Health Issue
+## Health Issue
 
 | Environment Variable          | Details                                 |
 | ----------------------------- | --------------------------------------- |
