@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-14T18:36:57.758Z
+date: 2021-11-24T19:02:33.539Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
@@ -72,14 +72,17 @@ Commonly used naming schema are:
 
 - Rename Books - If this is toggled off (no check in the box) Readarr will use the existing file name if renaming is disabled.
 
-> If you leave Rename Books unchecked, then none of the naming stuff below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
+> If you leave Rename Books unchecked, then none of the naming below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
+{.is-info}
+
+> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 {.is-info}
 
 - Replace Illegal Characters - If disabled Readarr will remove illegal characters. If enabled Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
 
 #### Standard Book Format
 
-- Here you will select the naming convention for your books
+- Select  the naming
 
 - Dropdown Box (upper right corner)
   - Left Box - Space Handling
@@ -112,6 +115,9 @@ Commonly used naming schema are:
 - `{Book SubtitleThe}` Subtitle!, The
 - `{Book CleanSubtitle}` = Subtitle
 - `{Book Disambiguation}` = Book Name! (disambiguation title used from GoodReads)
+- `{Book Series}` = Series Title
+- `{Book SeriesPosition}` = 1
+- `{Book SeriesTitle}` = Series Title #1
 - `{PartNumber:0}` or `{PartNumber:0}` = 2
 - `{PartNumber:00}` = 02
 - `{PartCount}` or `{PartCount:0} = 9
