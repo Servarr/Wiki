@@ -871,6 +871,7 @@ search:
       # 7 day (as seconds = 7 x 24 x 60 x 60)
       text: 604800
 ```
+
 # Download
 
 The download block is needed in the following cases:
@@ -972,6 +973,7 @@ download:
     - selector: a[href^="magnet:?xt="]
       attribute: href
 ```
+
 # Template engine
 
 The template engine is very basic, and supports the following statements.

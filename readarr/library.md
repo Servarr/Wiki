@@ -67,7 +67,6 @@ This section is for managing your library of authors and books.
 >If you add an individual book, and select "None" for the metadata profile, only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
 {.is-warning}
 
-
 # Unmapped Files
 
 ![unmappedfiles.png](/assets/readarr/unmappedfiles.png)

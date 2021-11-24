@@ -10,12 +10,12 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 # Radarr Basics
 
-# How does Radarr work?
+## How does Radarr work?
 
 - Radarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
 - Radarr enforces a minimum of 10 minutes on the RSS Sync interval and a maximum of 2 hours. 15 minutes is the minimum recommended by most indexers, though some do allow lower intervals and 2 hours ensures Radarr is checking frequently enough to not miss a release (even though it can page through the RSS feed on many indexers to help with that). Some indexers allow clients to perform an RSS sync more frequently than 10 minutes, in those scenarios we recommend using Radarr's Release-Push API endpoint along with an IRC announce channel to push releases to Radarr for processing which can happen in near real time and with less overhead on the indexer and Radarr as Radarr doesn’t need to request the RSS feed too frequently and process the same releases over and over.
 
-# How does Radarr find movies?
+## How does Radarr find movies?
 
 - Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a movie, you will need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you do not need to initiate a search.
@@ -23,13 +23,13 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
 
-# What is Minimum Availability?
+## What is Minimum Availability?
 
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
 - **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
 
-# How are possible downloads compared?
+## How are possible downloads compared?
 
 - ***Generally Quality Trumps All***
 
@@ -45,7 +45,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 1. Age (If Usenet)
 1. Size
 
-# What are Lists and what can they do for me?
+## What are Lists and what can they do for me?
 
 - Lists are a part of Radarr that allow you to follow a given list creator.
 
@@ -56,7 +56,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - It's suggested that physically look at the list before you even go to Radarr.
 
-# Can all my movie files be stored in one folder?
+## Can all my movie files be stored in one folder?
 
 - No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
@@ -68,11 +68,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
     - it then needs to call the Radarr API and change the movie to unmonitored.
 - If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
 
-# Can I put all my movies in my library into one folder?
+## Can I put all my movies in my library into one folder?
 
 - No, see above.
 
-# How do I update Radarr?
+## How do I update Radarr?
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -100,11 +100,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
 | [hotio](https://hotio.dev/containers/radarr)                       | `hotio/radarr:release`                                                                                                                                                                                                | `hotio/radarr:testing`                                                                                                                                                                                              |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `lscr.io/linuxserver/radarr:latest`                                                                                                                                                                                   | `lscr.io/linuxserver/radarr:develop`                                                                                                                                                                                |
 
-# Can I update Radarr inside my Docker container?
+## Can I update Radarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
-## Installing a newer version
+### Installing a newer version
 
 If Native:
 
@@ -115,11 +115,11 @@ If Docker:
 
 1. Repull your tag and update your container
 
-# Can I switch from `nightly` back to `develop`?
+## Can I switch from `nightly` back to `develop`?
 
 - See the entry below
 
-# Can I switch between branches?
+## Can I switch between branches?
 
 > You can (almost) always increase your risk.{.is-info}
 
@@ -134,17 +134,17 @@ If Docker:
   - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
   - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fradarr-branches.php)
 
-# How do I Backup/Restore Radarr?
+## How do I Backup/Restore Radarr?
 
-## Backing up Radarr
+### Backing up Radarr
 
-### Using built-in backup
+#### Using built-in backup
 
 - Go to System => Backup in the Radarr UI
 - Click the Backup button
 - Download the zip after the backup is created for safekeeping
 
-### Using file system directly
+#### Using file system directly
 
 - Find the location of the AppData directory for Radarr  
   - Via the Radarr UI go to System => About  
@@ -152,12 +152,12 @@ If Docker:
 - Stop Radarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
-## Restoring from Backup
+### Restoring from Backup
 
 > Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 {.is-warning}
 
-### Using zip backup
+#### Using zip backup
 
 - Re-install Radarr
 - Run Radarr
@@ -167,7 +167,7 @@ If Docker:
 - Select your backup zip file
 - Select Restore
 
-### Using file system backup
+#### Using file system backup
 
 - Re-install Radarr
 - Find the location of the AppData directory for Radarr  
@@ -212,7 +212,7 @@ If Docker:
 
 # Radarr Common Problems
 
-# Path is Already Configured for an Existing Movie
+## Path is Already Configured for an Existing Movie
 
 ![existing-movie.png](/assets/radarr/existing-movie.png)
 
@@ -224,7 +224,7 @@ If Docker:
   - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
 
-# How can I rename my movie folders?
+## How can I rename my movie folders?
 
 1. Movies
 1. Movie Editor
@@ -232,7 +232,7 @@ If Docker:
 1. Change Root Folder to the same Root Folder that the movies currently exist in
 1. Select "Yes move files"
 
-# Movie File and Folder Naming
+## Movie File and Folder Naming
 
 - Currently, Radarr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
 
@@ -240,7 +240,7 @@ If Docker:
 
 - See [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
-# Movie Folders Named Incorrectly
+## Movie Folders Named Incorrectly
 
 - Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
 
@@ -260,7 +260,7 @@ If Docker:
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
   - The [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
-# Why are lists sync times so long and can I change it?
+## Why are lists sync times so long and can I change it?
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 
@@ -268,25 +268,25 @@ If Docker:
 
 - This change was due to not have our server get killed by people updating lists every 10 minutes.
 
-# Can I disable the refresh movies task
+## Can I disable the refresh movies task
 
 - No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
 
 - A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 
-# How do I request a feature for Radarr?
+## How do I request a feature for Radarr?
 
 - This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
-# Help, My Mac says Radarr cannot be opened because the developer cannot be verified
+## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
 - This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
 
-# Help, My Mac says Radarr.app is damaged and can’t be opened
+## Help, My Mac says Radarr.app is damaged and can’t be opened
 
 - That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-radarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 
-# I am getting an error: Database disk image is malformed
+## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Radarr is corrupt.
 - Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
@@ -299,7 +299,7 @@ If Docker:
 
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-# I use Radarr on a Mac and it suddenly stopped working. What happened?
+## I use Radarr on a Mac and it suddenly stopped working. What happened?
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 
@@ -307,11 +307,11 @@ If Docker:
 
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
-# Why can Radarr not see my files on a remote server?
+## Why can Radarr not see my files on a remote server?
 
 - In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
 
-## Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
+### Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
 - Run Radarr's service as another user that has access to that share
 - Open the Administrative Tools \> Services window on your Windows server.
@@ -320,19 +320,19 @@ If Docker:
 - Change the service user account to the target user account.
 - Run Radarr.exe using the Startup Folder
 
-## You're using a mapped network drive (not a UNC path)
+### You're using a mapped network drive (not a UNC path)
 
 - Change your paths to UNC paths (`\\server\share`)
 - Run Radarr.exe via the Startup Folder
 
-# How do I change from the Windows Service to a Tray App?
+## How do I change from the Windows Service to a Tray App?
 
 1. Shut down Radarr
 1. Run serviceuninstall.exe that's in the Radarr directory
 1. Run `Radarr.exe` as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 1. (Optional) Drop a shortcut to .exe in the startup folder to auto-start on boot.
 
-# Help I have locked myself out
+## Help I have locked myself out
 
 {#help-i-have-forgotten-my-password}
 
@@ -345,7 +345,7 @@ To disable authentication (to reset your username or password) you will need nee
 1. Restart Radarr
 1. Radarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-# How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup?
 
 Depending on your OS, there are multiple possible ways.
 
@@ -353,33 +353,33 @@ Depending on your OS, there are multiple possible ways.
 - When invoking Radarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Radarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
-# Weird UI Issues
+## Weird UI Issues
 
 - If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
 
-# Web Interface Only Loads at localhost on Windows
+## Web Interface Only Loads at localhost on Windows
 
 - If you can only reach your web interface at <http://localhost:7878/> or <http://127.0.0.1:7878/>, you need to run as administrator at least once.
 
-# Permissions
+## Permissions
 
 - Radarr will need to move files away from where the downloader puts them into the final location, so this means that will need to read/write to both the source and the destination directory and files.
 
 - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and . In umask notation, that would be `002`.
 
-# System & Logs loads forever
+## System & Logs loads forever
 
 - It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
 
-# Finding Cookies
+## Finding Cookies
 
 - Some sites cannot be logged into automatically and require you to login manually then give the cookies to Radarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
-# Unpack Torrents
+## Unpack Torrents
 
 - Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
 
-# uTorrent is no longer working
+## uTorrent is no longer working
 
 - Ensure the Web UI is enabled
 
@@ -387,11 +387,11 @@ Depending on your OS, there are multiple possible ways.
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-# I got a pop-up that said config.xml was corrupt, what now?
+## I got a pop-up that said config.xml was corrupt, what now?
 
 - Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
 
-# Invalid Certificate and other HTTPS or SSL issues
+## Invalid Certificate and other HTTPS or SSL issues
 
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
@@ -399,7 +399,7 @@ Depending on your OS, there are multiple possible ways.
 
 - If your download client and are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
-# VPNs, Jackett, and the \*ARRs
+## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
@@ -409,7 +409,7 @@ Depending on your OS, there are multiple possible ways.
 
 # Radarr and Movie Issues + Metadata
 
-# Why can I not add a new movie to Radarr?
+## Why can I not add a new movie to Radarr?
 
 - Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
@@ -418,22 +418,22 @@ Depending on your OS, there are multiple possible ways.
 
 # Radarr Searching & Downloading Common Problems
 
-# Jackett shows more results than when manually searching
+## Jackett shows more results than when manually searching
   
 - This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
 
-# How does Radarr handle foreign movies or foreign titles?
+## How does Radarr handle foreign movies or foreign titles?
 
 - Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
 - To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages specified as multi.
 
-# How does Radarr handle "multi" in names?
+## How does Radarr handle "multi" in names?
 
 - Radarr by default assumes multi is english and french unless specified in your indexer's advanced settings in Radarr.
 - Note that multi definitions only help for release parsing and not for foreign titles or movies searches.
 
-# Help, Movie Added, But Not Searched
+## Help, Movie Added, But Not Searched
 
 - Neither Radarr nor Sonarr *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
 - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
@@ -443,7 +443,7 @@ Depending on your OS, there are multiple possible ways.
   - Search an existing Movie
 ![searchmovie-movie-page.png](/assets/radarr/searchmovie-movie-page.png)
 
-# Jackett's /all Endpoint
+## Jackett's /all Endpoint
 
 {#jackett-all-endpoint}
 
@@ -464,7 +464,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
 
-# Why are there two files? | Why is there a file left in downloads?
+## Why are there two files? | Why is there a file left in downloads?
 
 This is expected. Below is how the Torrent Process works.
 
@@ -477,7 +477,7 @@ This is expected. Below is how the Torrent Process works.
 
 # Radarr v0.2 => v3+ questions
 
-# I am using a Pi running Raspbian and Radarr will not launch
+## I am using a Pi running Raspbian and Radarr will not launch
 
 - Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base for v3. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
 
@@ -507,13 +507,13 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
   sudo apt update && sudo apt-get -t buster-backports install libseccomp2
   ```
 
-# Why did the GUI / UI Change? Can it be changed back?
+## Why did the GUI / UI Change? Can it be changed back?
 
 - Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
 - No it cannot be changed back to be like v0.2. No it will not be changed back.
 - You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
 
-# Where did Wanted and Cut-off Unmet go?
+## Where did Wanted and Cut-off Unmet go?
 
 - Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
   - Wanted - Movie does not have a file (missing), is monitored, and is available based on your availability settings.
@@ -521,7 +521,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 ![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
 
-# My Custom Script stopped working after upgrading from v0.2
+## My Custom Script stopped working after upgrading from v0.2
 
 You were likely passing arguments in your connection and that is not supported.
 
@@ -529,7 +529,7 @@ You were likely passing arguments in your connection and that is not supported.
 1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
 1. Make sure the pwsh script is executable
 
-# Why doesn't Radarr work behind a reverse proxy
+## Why doesn't Radarr work behind a reverse proxy
 
 - Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
 
