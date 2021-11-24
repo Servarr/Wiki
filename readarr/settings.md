@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-24T19:02:33.539Z
+date: 2021-11-24T19:04:27.656Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-05-27T16:47:28.054Z
