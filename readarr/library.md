@@ -2,7 +2,7 @@
 title: Readarr Library
 description: 
 published: true
-date: 2021-11-24T18:57:22.376Z
+date: 2021-11-24T19:03:41.831Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T15:29:27.457Z
@@ -33,7 +33,7 @@ This section is for managing your library of authors and books.
   - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
   - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
   - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
-  - Search All / Search Filtered / Search Selected - Search all books / search all filtered books / search all selected books on your indexers
+  - Search All / Search Filtered / Search Selected - Search all movies or selected movies in the current view
   - Book Editor / Book Index - Toggle between Mass Editor mode and Book Index (Library) mode
   - Options - Change display options
   - View - Toggle View Type
