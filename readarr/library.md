@@ -2,7 +2,7 @@
 title: Readarr Library
 description: 
 published: true
-date: 2021-08-21T20:57:33.248Z
+date: 2021-11-24T18:57:22.376Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T15:29:27.457Z
@@ -15,18 +15,34 @@ This section is for managing your library of authors and books.
 ## Authors
 
 - Library View
-  - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan author files (if enabled)
+  - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
+  - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
   - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
+  - Author Editor / Author Index - Toggle between Mass Editor mode and Author Index (Library) mode
   - Options - Change display options
-  - View Toggle View Type
-  - Table - Tabular View
-  - Posters - Display Posters (Similar to Plex)
-  - Overview - Display overview information and the poster; the most detailed view
+  - View - Toggle View Type
+    - Table - Tabular View (list view)
+    - Posters - Display Posters (similar to Plex)
+    - Overview - Display overview information and the poster (detailed view)
   - Sort - Sort the current view
   - Filter - Filter the current view
-    - Wanted - Author is missing, monitored, and available
-    - Missing - Author is missing and monitored
 
+## Books
+
+- Library View
+  - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
+  - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
+  - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
+  - Search All / Search Filtered / Search Selected - Search all books / search all filtered books / search all selected books on your indexers
+  - Book Editor / Book Index - Toggle between Mass Editor mode and Book Index (Library) mode
+  - Options - Change display options
+  - View - Toggle View Type
+    - Table - Tabular View (list view)
+    - Posters - Display Posters (similar to Plex)
+    - Overview - Display overview information and the poster (detailed view)
+  - Sort - Sort the current view
+  - Filter - Filter the current view
+  
 ## Add New
 
 ![addnew.png](/assets/readarr/addnew.png)
@@ -51,21 +67,6 @@ This section is for managing your library of authors and books.
 >If you add an individual book, and select "None" for the metadata profile, only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
 {.is-warning}
 
-## Mass Editor
-
-![masseditor.png](/assets/readarr/masseditor.png)
-
-The Sort and Filter options are the same here as the main Library screen and are documented above.
-
-After selecting the authors you want to make mass changes to (you can select, and shift-click further down to select an entire range), you can make changes to monitoring status, quality profile, root folder (do not change this if you use Calibre), rename files (do not change this if you use Calibre), write metadata tags, set Readarr tags, or delete authors by clicking on the correct option at the bottom of the screen.
-
-## Bookshelf
-
-![bookshelf.png](/assets/readarr/bookshelf.png)
-
-The Filter options are the same here as the main Library screen and are documented above.
-
-Here you can do mass updating of the monitored state of individual books as well as authors. A solid flag indicates monitored, and an outline indicates unmonitored.
 
 ## Unmapped Files
 
