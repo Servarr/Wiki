@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-24T02:39:02.384Z
+date: 2021-11-24T02:40:59.716Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -88,7 +88,7 @@ nano RadarrInstall.sh
 #### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 #### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 #### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
-#### Version v2.0.1 2021-11-23 - brightghost (Fixed user creation step to use correct variables.)
+#### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
 #### Updates by: The Radarr Community
 #### Thanks to Bakerboy448 for the guidance and improved wiki entry & script
 #### Original author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
