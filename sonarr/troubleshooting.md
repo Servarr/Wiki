@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-10-12T17:15:21.191Z
+date: 2021-11-24T20:01:57.380Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -240,6 +240,12 @@ For SABnzbd, this is handled with the History Retention setting.
 For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Shown Unknown will display all items not otherwise ignored / already imported within *Arr's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
+
+### Episode Name is TBA
+
+On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache, Skyhook cache and the series refresh interval. 
+
+The [Episode Title Required](/sonarr/settings#importing) setting in Sonarr controls import behavior when the title is TBA, but after 24 hours from the episode's air date  the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files.
 
 ### Connection Timed Out
 
