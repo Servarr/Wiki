@@ -2,11 +2,12 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-24T19:10:40.412Z
+date: 2021-11-25T15:07:27.926Z
 tags: readarr, settings
 editor: markdown
-dateCreated: 2021-05-27T16:47:28.054Z
+dateCreated: 2021-11-25T15:07:27.926Z
 ---
+
 
 This page will go through all the settings available in Readarr and how they work.  This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](/readarr/quick-start-guide) page instead.
 
