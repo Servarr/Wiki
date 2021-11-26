@@ -23,7 +23,7 @@ To initiate a search, click on `Search` on the left menu. There will be a mostly
     - Movie Search - Search using Movie parameters as displayed in the UI including ID based (TMDb id, IMDb id, etc.)
     - Audio Search - Search using Music parameters as displayed in the UI including Artist, Album, Label, etc.
     - Book Search - Search using Book parameters as displayed in the UI including author, title, etc.
-    
+
 > These are generally formatted as `{VariableName:SearchValue}` e.g. For a TV Search of The Simpsons Season 32 the search input would be `{TvdbId:71663} {Season:32}`
 {.is-info}
 
