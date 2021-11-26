@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-20T17:49:18.7163881Z
+date: 2021-11-26T18:57:53.8146566Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-20T17:49:18.7163881Z
+dateCreated: 2021-11-26T18:57:53.8146566Z
 ---
 
-- Supported Indexers as of Build `0.1.4.1117` / [Commit: f69f96695b1262a89ff1ea4ff2de376a55925b99](https://github.com/Prowlarr/Prowlarr/commit/f69f96695b1262a89ff1ea4ff2de376a55925b99)
+- Supported Indexers as of Build `0.1.4.1145` / [Commit: 01fe9904176aeaf71ced982c27517f5d2db63a78](https://github.com/Prowlarr/Prowlarr/commit/01fe9904176aeaf71ced982c27517f5d2db63a78)
 
 ---
 
@@ -18,9 +18,9 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 
 ---
 
-# Torrents
+## Torrents
 
-## Public Trackers
+### Public Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -220,7 +220,7 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 |[Zooqle](https://zooqle.com/){#zooqle}|Zooqle is a Public torrent index providing a huge database of verified torrents|en-US|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-HU|
 
-## Private Trackers
+### Private Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -385,6 +385,7 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|tr-TR|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |[HDZone](https://hdzone.me/){#hdzone}|HDZone is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
+|[Hebits](https://hebits.net/){#hebits}|not here \_ not scene|en-US|
 |[HellasTZ](https://hellastz.com/){#hellastz}|HellasTZ is an Greek Private site for TV / MOVIES / GENERAL|el-GR|
 |[HQSource](https://hqsource.org/){#hqsource}|HQSource (HQS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|pl-PL|
 |[Il Corsaro Verde](https://www.icv-crew.com/){#ilcorsaroverde}|Il Corsaro Verde (iCV-CreW) is a ratioless ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|it-IT|
@@ -578,15 +579,15 @@ dateCreated: 2021-11-20T17:49:18.7163881Z
 |[Zelka\.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-BG|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|es-ES|
 
-# Usenet
+## Usenet
 
-## Public Indexers
+### Public Indexers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
 |[BinSearch](https://binsearch.info/){#binsearch}|The binary Usenet search engine|en-US|
 
-## Private Indexers
+### Private Indexers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
