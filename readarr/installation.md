@@ -123,7 +123,7 @@ if [ "$PASSCHK" -ge 1 ]; then
     echo "User: [$app_uid] seems to exist. Skipping creation, but adding to the group if needed. Ensure the User [$app_uid] and Group [$app_guid] are setup properly.  Specifically the application will need access to your download client and media files."
 else
     echo "User: [$app_uid] created with disabled password."
-    adduser --disabled-password --gecos "" $app_uid
+    adduser --disabled-login --gecos "" $app_uid
     groupadd -f $app_guid
     usermod -a -G $app_guid $app_uid
 fi
