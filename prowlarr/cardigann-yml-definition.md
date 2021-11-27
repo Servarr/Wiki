@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2021-11-27T20:27:51.534Z
+date: 2021-11-27T20:30:00.630Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -423,7 +423,7 @@ The search block contains all the information on how to search and how to extrac
 There are two search method available, which are based on the response type from the web site.
 
 - [Search HTML](/prowlarr/cardigann-yml-definition#search-html) (Default)
-- [Search JSON](/prowlarr/cardigann-yml-definition#search-json)
+- [Search JSON and XML](/prowlarr/cardigann-yml-definition#search-json-and-xml)
   - It is also possible to search `XML` in Prowlarr with the JSON format
 
 ### Search HTML
