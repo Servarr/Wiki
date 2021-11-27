@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2021-11-27T20:09:41.732Z
+date: 2021-11-27T20:27:51.534Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -685,7 +685,7 @@ In the event that you need to provide a default category due to the possibility 
       selector: a.label[href*="type="]
 ```
 
-### Search JSON
+### Search JSON and XML
 
 - This is supported for `XML` as well as `JSON`
 - Note that `XML` has all the standard HTML filters available to it, but JSON does not.
@@ -706,7 +706,7 @@ search:
       method: "{{ if .Keywords }}post{{ else }}get{{ end }}"
       # [REQUIRED] The response block is necessary to define parsing of a JSON response
       response:
-        # [REQUIRED] indicates that a JSON response is expected (A future update may support XML)
+        # [REQUIRED] "json" indicates that a JSON response is expected "xml" is also acceptable.
         type: json
         # [OPTIONAL] If the torrents are in separate subset
         attribute: torrents
