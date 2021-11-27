@@ -1,8 +1,8 @@
 ---
-title: Prowlarr YML Definition
+title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2021-11-27T18:15:40.911Z
+date: 2021-11-27T20:09:41.732Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
