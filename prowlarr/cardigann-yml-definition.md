@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-11-27T18:12:43.894Z
+date: 2021-11-27T18:15:40.911Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -1012,6 +1012,7 @@ search:
 
 The implementation is based on: [go hdr functions](https://golang.org/pkg/text/template/#hdr-Functions)
 These are not true logical OR and AND operators in that they operate on variables that contain a value or are empty.
+Note that the use of round brackets is entirely optional.
 
 Example of: if or ... else ... end
 
