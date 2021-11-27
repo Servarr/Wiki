@@ -46,10 +46,11 @@ To provide good and useful logs for sharing:
 1. Reproduce the Issue (Redo what is breaking things)
 1. [Open the trace log file (sonarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-1. Use [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [Gist](https://gist.github.com/) to share the issue from above
+1. Use [Gist](https://gist.github.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/) or similar sites to share the issue from above
 
 > Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.
 > Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+> When using [0bin](https://0bin.net/) be sure to disable colorize and do not burn after reading.
 {.is-info}
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
