@@ -2,7 +2,7 @@
 title: Prowlarr YML Definition
 description: 
 published: true
-date: 2021-11-27T18:10:34.274Z
+date: 2021-11-27T18:12:43.894Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -923,7 +923,7 @@ download:
         - name: toupper
 ```
 
-## Download Block Infohash Example
+### Download Block Infohash Example
 
 ```yaml
 download:
@@ -959,7 +959,7 @@ download:
         - name: validfilename
 ```
 
-## Example Download Block with "before" pathselector
+### Download Block "before" Pathselector Example
 
 ```yaml
 download:
