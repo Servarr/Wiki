@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-28T18:57:00.785Z
+date: 2021-11-28T19:02:19.834Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -193,7 +193,7 @@ Type=simple
 ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
 TimeoutStopSec=20
 KillMode=process
-Restart=on-failure
+Restart=always
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -304,7 +304,7 @@ Type=simple
 ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=on-failure
+Restart=always
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -451,8 +451,13 @@ If you implement any additional authentication through Apache, you should exclud
 
 # Multiple Instances
 
-- It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
-- Note that you can configure Radarr to use a second Radarr as a list.  This is helpful if you wish to keep both in sync.
+It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
+Note that you can configure Radarr to use a second Radarr as a list.  This is helpful if you wish to keep both in sync.
+
+- [Windows Multiple Instances](#windows-multi)
+- [Linux Multiple Instances](#linux-multi)
+- [Docker Multiple Instances](#docker-multi)
+{.links-list}
 
 The following requirements should be noted:
 
@@ -464,7 +469,10 @@ The following requirements should be noted:
 - Different root folders must be used.
 - If non-docker, disable automatic updates on all but 1 instance.
 
-## Windows {#windows-multi}
+
+## Windows
+
+{#windows-multi}
 
 This guide will show you how to run multiple instances of Radarr on Windows using only one base installation. This guide was put together using Windows 10; if you are using a previous version of Windows (7, 8, etc.) you may need to adjust some things. This guide also assumes that you have installed Radarr to the default directory, and your second instance of Radarr will be called Radarr-4K. Feel free to change things to fit your own installations, though.
 
@@ -544,7 +552,11 @@ separate locations. {.is-warning}
 
 #### Windows Port Checker and Restarter PowerShell Script
 
-- When you use two Radarr instances and one of it is updating, it will kill both instances (by killing all running radarr.console.exe). Only the one which is updating will come back online.
+- When you use two Radarr instances and one of it is updating, it will kill all instances. Only the one which is updating will come back online.
+- The below powershell script should be configured as a scheduled task.
+- It checks the ports and if one is not online, it will (re-)start the scheduled task to launch Radarr.
+
+Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
 
 ```powershell
 ################################################################################################
@@ -552,7 +564,7 @@ separate locations. {.is-warning}
 ################################################################################################
 ### Keeps multiple Radarr Instances up by checking the port                                  ###
 ### Please use Radarr´s Discord or Reddit for support!                                       ###
-### https://github.com/Radarr/Radarr/wiki/Installing-Multiple-Instances-of-Radarr-on-Windows ###
+### https://wiki.servarr.com/en/radarr/installation#windows-1 ###
 ################################################################################################
 ### Version: 1.1                                                                             ###
 ### Updated: 2020-10-22                                                                      ###
@@ -582,7 +594,7 @@ $instances = @(
         Port='7873';         # (string) Server Port where Radarr runs (default: 7873)
     }
     [pscustomobject]@{   # Instance 2
-        Name='Radarr-4K';    # (string) Service or Task name (default: Radarr-V3)
+        Name='Radarr-4K';    # (string) Service or Task name (default: Radarr-4K)
         IP='192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
         Port='7874';         # (string) Server Port where Radarr runs (default: 7874)
     }
@@ -651,7 +663,9 @@ $instances | ForEach-Object {
 Write-Log "END ====================="
 ```
 
-## Linux {#linux-multi}
+## Linux
+
+{#linux-multi}
 
 - [Swizzin Users](https://github.com/ComputerByte/radarr4k)
 - Non-Swizzin Users
@@ -674,7 +688,7 @@ Type=simple
 ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr4k/
 TimeoutStopSec=20
 KillMode=process
-Restart=on-failure
+Restart=always
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -692,6 +706,8 @@ sudo systemctl -q daemon-reload
 sudo systemctl enable --now -q radarr4k
 ```
 
-## Docker  {#docker-multi}
+## Docker
+
+{#docker-multi}
 
 - Simply spin up a second Docker container with a different name, ensuring the above requirements are met.
