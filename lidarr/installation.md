@@ -169,7 +169,7 @@ Type=simple
 ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
 TimeoutStopSec=20
 KillMode=process
-Restart=on-failure
+Restart=always
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -279,7 +279,7 @@ Type=simple
 ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/var/lib/lidarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=on-failure
+Restart=always
 [Install]
 WantedBy=multi-user.target
 EOF
