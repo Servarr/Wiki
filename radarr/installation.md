@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-28T19:10:34.372Z
+date: 2021-11-28T19:13:43.287Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -469,8 +469,7 @@ The following requirements should be noted:
 - Different root folders must be used.
 - If non-docker, disable automatic updates on all but 1 instance.
 
-
-## Windows
+## Windows Multiple Instances
 
 {#windows-multi}
 
@@ -481,17 +480,17 @@ This guide will show you how to run multiple instances of Radarr on Windows usin
 #### Prerequisites (Service)
 
 - [You must have Radarr already installed](#windows)
-- You must have [NSSM (Non-Sucking Service Manager](http://nssm.cc) installed. To install, download the latest release (2.24 at the time of writing) and copy either the 32-bit or 64-bit nssm.exe file to C:/windows/system32. 
+- You must have [NSSM (Non-Sucking Service Manager](http://nssm.cc) installed. To install, download the latest release (2.24 at the time of writing) and copy either the 32-bit or 64-bit nssm.exe file to C:/windows/system32.
   - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
 
 #### Configuring Radarr Service
 
-1.  Open a Command Prompt administrator window. (To run as an admin,
+1. Open a Command Prompt administrator window. (To run as an admin,
     right click on the Command Prompt icon and choose “Run as
     administrator.”)
-1.  If Radarr is running, stop the service by running `nssm stop Radarr`
+1. If Radarr is running, stop the service by running `nssm stop Radarr`
     in Command Prompt.
-1.  Now we have to edit the existing Radarr instance to explicitly point
+1. Now we have to edit the existing Radarr instance to explicitly point
     to its data directory. The default command is as follows:
     `sc config Radarr binpath= "C:\ProgramData\Radarr\bin\Radarr.exe
     -data=C:\ProgramData\Radarr"`
@@ -503,9 +502,9 @@ may have to change your paths here.
 
 #### Creating Radarr-4K Service
 
-1.  Create a new folder where you’d like Radarr-4K to live. Most use a similar place such as
+1. Create a new folder where you’d like Radarr-4K to live. Most use a similar place such as
     `C:\ProgramData\Radarr-4K`
-1.  Back in Command Prompt, create the new Radarr-4K service using `nssm
+1. Back in Command Prompt, create the new Radarr-4K service using `nssm
     install Radarr-4K`. A popup window will open where you can type your
     parameters for the new instance. For this example, we will use the
     following:
@@ -517,7 +516,7 @@ may have to change your paths here.
 This is crucial, as it keeps all the data files from both instances in
 separate locations. {.is-warning}
 
-1.  Click *Install service*. The window should close and the service
+1. Click *Install service*. The window should close and the service
     will now be available to run.
 1. Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
@@ -538,6 +537,7 @@ separate locations. {.is-warning}
 - Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
 ### Configuring Radarr-4k {#windows-multi-config-second}
+
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Radarr-4k (Service or Tray App)
 - Open up Radarr-4k and Navigate within the app to [Settings => General => Host](/radarr/settings/#host)
@@ -558,15 +558,16 @@ separate locations. {.is-warning}
 
 1. Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
 1. Edit the script with your actual service names, IP, and ports.
-2. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
-  - Security Options: Enable `Run with highest privileges`
-    - Otherwise the script will be unable to manipulate services
-  - Trigger: `On Launch`
-  - Repeat task every: `5` or `10` minutes
-  - Action: `Start a Program`
-  - Program/script: `powershell`
-  - Argument: `-File D:\RadarrInstancesChecker.ps1`
-    - Be sure to use the full path to your script's location
+1. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
+
+- Security Options: Enable `Run with highest privileges`
+  - Otherwise the script will be unable to manipulate services
+- Trigger: `On Launch`
+- Repeat task every: `5` or `10` minutes
+- Action: `Start a Program`
+- Program/script: `powershell`
+- Argument: `-File D:\RadarrInstancesChecker.ps1`
+  - Be sure to use the full path to your script's location
 
 ```powershell
 ################################################################################################
@@ -681,7 +682,7 @@ $instances | ForEach-Object {
 Write-Log 'END ====================='
 ```
 
-## Linux
+## Linux Multiple Instances
 
 {#linux-multi}
 
@@ -724,7 +725,7 @@ sudo systemctl -q daemon-reload
 sudo systemctl enable --now -q radarr4k
 ```
 
-## Docker
+## Docker Multiple Instances
 
 {#docker-multi}
 
