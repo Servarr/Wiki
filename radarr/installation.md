@@ -55,7 +55,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 > **The following is a community written and community maintained unofficial script.** {.is-info}
 
-For the Debian / Ubuntu / Raspian beginners there isn't an Apt Repository or Deb package.
+For the Debian / Ubuntu / Raspbian beginners there isn't an Apt Repository or Deb package.
 
 If you want an easy life, follow this community provided and maintained `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
 
@@ -173,13 +173,13 @@ mv "${app^}" /opt/
 chown $app_uid:$app_uid -R $bindir
 rm -rf "${app^}.*.tar.gz"
 echo "App Installed"
-##Configure Autostart
+# Configure Autostart
 
-#Remove any previous app .service
+# Remove any previous app .service
 echo "Removing old service file"
 rm -rf /etc/systemd/system/$app.service
 
-##Create app .service with correct user startup
+# Create app .service with correct user startup
 echo "Creating service file"
 cat << EOF | tee /etc/systemd/system/$app.service >/dev/null
 [Unit]
@@ -198,12 +198,12 @@ Restart=always
 WantedBy=multi-user.target
 EOF
 
-##Start the App
+# Start the App
 echo "Service file created. Attempting to start the app"
 systemctl -q daemon-reload
 systemctl enable --now -q "$app"
 
-# Finish update
+# Finish Update/Installation
 host=$(hostname -I)
 ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
@@ -231,7 +231,7 @@ bash RadarrInstall.sh
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Radarr and install it into `/opt` because it's not an official package yet.
+> The steps below will download Radarr and install it into `/opt`
 > Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
 > Radarr's configuration files will be stored in `/var/lib/radarr`
 {.is-warning}
@@ -250,7 +250,7 @@ sudo apt install curl mediainfo sqlite3
 > \* The user `radarr` is part of the group `media`
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
-> \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it
+> \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
