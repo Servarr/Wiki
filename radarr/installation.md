@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-28T19:02:19.834Z
+date: 2021-11-28T19:10:34.372Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -556,7 +556,17 @@ separate locations. {.is-warning}
 - The below powershell script should be configured as a scheduled task.
 - It checks the ports and if one is not online, it will (re-)start the scheduled task to launch Radarr.
 
-Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
+1. Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
+1. Edit the script with your actual service names, IP, and ports.
+2. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
+  - Security Options: Enable `Run with highest privileges`
+    - Otherwise the script will be unable to manipulate services
+  - Trigger: `On Launch`
+  - Repeat task every: `5` or `10` minutes
+  - Action: `Start a Program`
+  - Program/script: `powershell`
+  - Argument: `-File D:\RadarrInstancesChecker.ps1`
+    - Be sure to use the full path to your script's location
 
 ```powershell
 ################################################################################################
@@ -564,7 +574,7 @@ Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
 ################################################################################################
 ### Keeps multiple Radarr Instances up by checking the port                                  ###
 ### Please use Radarr´s Discord or Reddit for support!                                       ###
-### https://wiki.servarr.com/en/radarr/installation#windows-1 ###
+### https://wiki.servarr.com/radarr/installation#windows-multi                               ###
 ################################################################################################
 ### Version: 1.1                                                                             ###
 ### Updated: 2020-10-22                                                                      ###
@@ -579,7 +589,7 @@ Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
 # (string) The type how Radarr is starting
 # "Service" (default) Service process is used
 # "ScheduledTask" Task Scheduler is used
-$startType = "Service"
+$startType = 'Service'
 
 # (bool) Writes the log to C:\Users\YOURUSERNAME\log.txt when enabled
 # $false (default)
@@ -589,20 +599,20 @@ $logToFile = $false
 
 $instances = @(
     [pscustomobject]@{   # Instance 1
-        Name='Radarr-V3';    # (string) Service or Task name (default: Radarr-V3)
-        IP='192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
-        Port='7873';         # (string) Server Port where Radarr runs (default: 7873)
+        Name = 'Radarr-V3'; # (string) Service or Task name (default: Radarr-V3)
+        IP   = '192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
+        Port = '7873'; # (string) Server Port where Radarr runs (default: 7873)
     }
     [pscustomobject]@{   # Instance 2
-        Name='Radarr-4K';    # (string) Service or Task name (default: Radarr-4K)
-        IP='192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
-        Port='7874';         # (string) Server Port where Radarr runs (default: 7874)
+        Name = 'Radarr-4K'; # (string) Service or Task name (default: Radarr-4K)
+        IP   = '192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
+        Port = '7874'; # (string) Server Port where Radarr runs (default: 7874)
     }
-    # If needed you can add more instances here...
+    # If needed you can add more instances here... by uncommenting out the below lines
     # [pscustomobject]@{   # Instance 3
-        # Name='Radarr-3D';    # (string) Service or Task name (default: Radarr-3D)
-        # IP='192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
-        # Port='7875';         # (string) Server Port where Radarr runs (default: 7875)
+    # Name='Radarr-3D';    # (string) Service or Task name (default: Radarr-3D)
+    # IP='192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
+    # Port='7875';         # (string) Server Port where Radarr runs (default: 7875)
     # }
 )
 
@@ -613,7 +623,8 @@ $instances = @(
 ###
 # This function will write to a log file or in console output
 ###
-function Write-Log {
+function Write-Log
+{
     #Will write to C:\Users\YOURUSERNAME\log.txt
     
     Param(
@@ -621,19 +632,20 @@ function Write-Log {
         $Path = "$env:USERPROFILE\log.txt" 
     )
 
-    function TS {Get-Date -Format 'hh:mm:ss'}
+    function TS { Get-Date -Format 'hh:mm:ss' }
     
     #Console output
     Write-Output "[$(TS)]$Message"
     
     #File Output
-    if($logToFile){
+    if ($logToFile)
+    {
         "[$(TS)]$Message" | Tee-Object -FilePath $Path -Append | Write-Verbose
     }
 }
 
 
-Write-Log "START ====================="
+Write-Log 'START ====================='
 
 
 $instances | ForEach-Object {
@@ -641,26 +653,32 @@ $instances | ForEach-Object {
     
     $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded 
     
-    if (!$PortOpen) {
+    if (!$PortOpen)
+    {
         Write-Log "Port $($_.Port) is closed, restart $($startType) $($_.Name)!"
 
-        if($startType -eq "Service"){
+        if ($startType -eq 'Service')
+        {
             Get-Service -Name $_.Name | Stop-Service
             Get-Service -Name $_.Name | Start-Service
         }
-        elseif($startType -eq "ScheduledTask"){
+        elseif ($startType -eq 'ScheduledTask')
+        {
             Get-ScheduledTask -TaskName $_.Name | Stop-ScheduledTask
             Get-ScheduledTask -TaskName $_.Name | Start-ScheduledTask
         }
-        else{
-            Write-Log "[ERROR] STARTTYPE UNKNOWN! USE Service or ScheduledTask !"
+        else
+        {
+            Write-Log '[ERROR] STARTTYPE UNKNOWN! USE Service or ScheduledTask !'
         }
-    }else{
+    }
+    else
+    {
         Write-Log "Port $($_.Port) is open!"
     }
 }
 
-Write-Log "END ====================="
+Write-Log 'END ====================='
 ```
 
 ## Linux
