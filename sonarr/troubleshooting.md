@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-11-24T20:01:57.380Z
+date: 2021-11-28T21:09:05.767Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -458,7 +458,11 @@ Below are some common problems.
 
 ### Series needs an alias
 
-Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences.  Please see [this FAQ entry](https://wiki.servarr.com/sonarr/faq#why-cannot-sonarr-import-episode-files-for-series-x-why-cannot-sonarr-find-releases-for-series-x)
+Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences.  Please see [this FAQ entry](/sonarr/faq#why-cannot-sonarr-import-episode-files-for-series-x-why-cannot-sonarr-find-releases-for-series-x)
+
+### Series needs an XEM Mapping
+
+Releases may be uploaded as `Series Title S02E45`, but TVDB has this episode as `Series Title S03E01` Please see [this FAQ entry](/sonarr/faq#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
 
 ### Media is Unmonitored
 
