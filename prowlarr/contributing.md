@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-10-05T01:22:01.503Z
+date: 2021-11-29T13:35:34.785Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -18,13 +18,13 @@ Setup guides, [FAQ](/prowlarr/faq), the more information we have on the [wiki](h
 
 # Development
 
-Prowlarr is written in C# (backend) and JS (frontend). The backend is built on the .Net5 framework, while the frontend utilizes Reactjs.
+Prowlarr is written in C# (backend) and JS (frontend). The backend is built on the .Net6 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
-- Visual Studio 2019 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
+- Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2019 V16.9 or higher is recommended as it includes the .net5 SDK
+> VS 2022 V17.0 or higher is recommended as it includes the .net6 SDK
 {.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
@@ -68,7 +68,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Prowlarr.Console` and    framework to `net5.0`
+> Ensure startup project is set to `Prowlarr.Console` and    framework to `net6.0`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
