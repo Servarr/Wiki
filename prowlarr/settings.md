@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T18:31:51.083Z
+date: 2021-11-29T18:33:36.845Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -65,7 +65,7 @@ Proxy Specifc Settings and Supported Proxies:
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
-Click on `Settings` => `Apps`, and then click the <kb>+<kb> to add an *arr program.
+Click on `Settings` => `Apps`, and then click the <kb>+<kb> to add an app.
 
 ![addapps.png](/assets/prowlarr/addapps.png)
 
