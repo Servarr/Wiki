@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2021-11-15T23:39:13.210Z
+date: 2021-11-29T13:32:22.221Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
