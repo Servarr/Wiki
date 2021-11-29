@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-11-29T15:42:24.684Z
+date: 2021-11-29T15:44:10.910Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -93,7 +93,7 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 
 ## Contributing Code
 
-- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Prowlarr/Prowlarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
+- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Prowlarr/Prowlarr/issues) so work is not duplicated (If you want to add something not already on there, please talk to us first)
 - Rebase from Prowlarr's develop branch, do not merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
