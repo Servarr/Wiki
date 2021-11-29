@@ -2,7 +2,7 @@
 title: Readarr Contributing
 description: 
 published: true
-date: 2021-11-29T13:34:51.462Z
+date: 2021-11-29T15:44:07.088Z
 tags: readarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-25T19:21:59.324Z
@@ -18,7 +18,7 @@ Setup guides, [FAQ](/readarr/faq), the more information we have on the [wiki](ht
 
 # Development
 
-Readarr is written in C# (backend) and JS (frontend). The backend is built on the .Net5 framework, while the frontend utilizes Reactjs.
+Readarr is written in C# (backend) and JS (frontend). The backend is built on the .Net6 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
@@ -68,7 +68,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Readarr.Console` and    framework to `net6.0`
+> Ensure startup project is set to `Readarr.Console` and framework to `net6.0`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
@@ -93,7 +93,7 @@ dotnet msbuild -restore src/Readarr.sln -p:Configuration=Debug -p:Platform=Posix
 
 ## Contributing Code
 
-- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Readarr/Readarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
+- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Readarr/Readarr/issues) so work is not duplicated (If you want to add something not already on there, please talk to us first)
 - Rebase from Readarr's develop branch, do not merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
@@ -101,7 +101,7 @@ dotnet msbuild -restore src/Readarr.sln -p:Configuration=Debug -p:Platform=Posix
 - Add tests (unit/integration)
 - Commit with \*nix line endings for consistency (We checkout Windows and commit \*nix)
 - One feature/bug fix per pull request to keep things clean and easy to understand
-- Use 4 spaces instead of tabs, this is the default for VS 2019 and WebStorm
+- Use 4 spaces instead of tabs, this is the default for VS 2022 and WebStorm
 
 ## Pull Requesting
 
