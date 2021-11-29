@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-11-29T19:41:48.342Z
+date: 2021-11-29T19:45:57.754Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -141,7 +141,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### Migration Issues
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/readarr> our subreddit or swing by our [discord](https://readarr.com/discord), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/radarr) or swing by our [discord](https://radarr.video/discord), if there are others with the same issue, then rest assured we are working on it.
 
 > Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
 
