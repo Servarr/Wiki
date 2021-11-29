@@ -2,7 +2,7 @@
 title: Lidarr Contributing
 description: 
 published: true
-date: 2021-11-29T15:42:47.638Z
+date: 2021-11-29T15:44:09.576Z
 tags: lidarr, contributing
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
@@ -93,7 +93,7 @@ dotnet msbuild -restore src/Lidarr.sln -p:Configuration=Debug -p:Platform=Posix 
 
 ## Contributing Code
 
-- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Lidarr/Lidarr/issues "GitHub Issues") so work is not duplicated (If you want to add something not already on there, please talk to us first)
+- If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Lidarr/Lidarr/issues) so work is not duplicated (If you want to add something not already on there, please talk to us first)
 - Rebase from Lidarr's develop branch, do not merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
