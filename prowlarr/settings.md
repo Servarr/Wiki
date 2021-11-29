@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-10-24T01:05:08.362Z
+date: 2021-11-29T18:05:35.329Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -29,17 +29,19 @@ Also, note that for each individual settings page, there are some options at the
 > Information on supported proxy types can be found [here](/prowlarr/supported#indexer-proxies)
 {.is-info}
 
-> Flaresolverr v2.0 is not yet supported by Prowlarr {.is-warning}
-
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
-Click on `Settings` => `Indexer Proxies`, and then click the `+` to add a proxy.
+Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to add a proxy.
 
 ![proxies.png](/assets/prowlarr/proxies.png)
 
-Configuring HTTP, SOCKS4, or SOCKS5 proxies are all the same. Enter a name, the hostname/port/userid/password of your proxy server into the appropriate boxes. If you want this to apply to only a specific subset of your indexers, then enter a TAG name here (and then apply that TAG to your indexers you want it to apply to).
-
-Configuring a Flaresolverr server requires you to enter the hostname:port of your Flaresolver installation (which can be found [here](https://github.com/FlareSolverr/FlareSolverr)). Again, applying a TAG allows you to only use Flaresolverr on those indexers which require its use.
+- Name - Name of the Proxy in Prowlarr
+- Tags - The tags for this proxy.  Proxies apply to all matching (same tag) indexers.  If blank this proxy applies to all indexers.
+- Refer to the supported proxy types for proxy specifc settings
+  - [FlareSolverr](/prowlarr/supported#flaresolverr)
+  - [HTTP](/prowlarr/supported#http)
+  - [Socks4](/prowlarr/supported#socks4)
+  - [Socks5](/prowlarr/supported#socks5)
 
 # Applications
 
