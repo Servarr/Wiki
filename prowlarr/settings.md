@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T18:15:09.360Z
+date: 2021-11-29T18:18:03.220Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -38,7 +38,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 - Name - Name of the Proxy in Prowlarr
 - Tags - The tags for this proxy.  Proxies apply to all matching (same tag) indexers.  If blank this proxy applies to all indexers.
 
-Proxy Specifc Settings & Supported Proxies:
+Proxy Specifc Settings and Supported Proxies:
   
 - FlareSolverr
  - Host - the full host path (include http and the port) to your FlareSolverr instance
