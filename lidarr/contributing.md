@@ -2,7 +2,7 @@
 title: Lidarr Contributing
 description: 
 published: true
-date: 2021-11-29T13:33:28.677Z
+date: 2021-11-29T13:33:55.537Z
 tags: lidarr, contributing
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
@@ -68,7 +68,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Lidarr.Console` and    framework to `net5.0`
+> Ensure startup project is set to `Lidarr.Console` and    framework to `net6.0`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
