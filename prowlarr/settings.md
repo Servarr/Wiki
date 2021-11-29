@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T18:05:35.329Z
+date: 2021-11-29T18:12:04.915Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -37,11 +37,26 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 
 - Name - Name of the Proxy in Prowlarr
 - Tags - The tags for this proxy.  Proxies apply to all matching (same tag) indexers.  If blank this proxy applies to all indexers.
-- Refer to the supported proxy types for proxy specifc settings
-  - [FlareSolverr](/prowlarr/supported#flaresolverr)
-  - [HTTP](/prowlarr/supported#http)
-  - [Socks4](/prowlarr/supported#socks4)
-  - [Socks5](/prowlarr/supported#socks5)
+
+Proxy Specifc Settings & Supported Proxies:
+  
+- FlareSolverr
+ - Host - the full host path (include http and the port) to your FlareSolverr instance
+- HTTP
+  - Host - the host address of your proxy
+  - Port - the port of your proxy
+  - Username - the username of your proxy
+  - Password - the password of your proxy
+- Socks4
+  - Host - the host address of your proxy
+  - Port - the port of your proxy
+  - Username - the username of your proxy
+  - Password - the password of your proxy
+- Socks5
+  - Host - the host address of your proxy
+  - Port - the port of your proxy
+  - Username - the username of your proxy
+  - Password - the password of your proxy
 
 # Applications
 
