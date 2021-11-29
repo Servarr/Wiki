@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-11-29T15:31:37.291Z
+date: 2021-11-29T15:42:24.684Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -101,7 +101,7 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 - Add tests (unit/integration)
 - Commit with \*nix line endings for consistency (We checkout Windows and commit \*nix)
 - One feature/bug fix per pull request to keep things clean and easy to understand
-- Use 4 spaces instead of tabs, this is the default for VS 2019 and WebStorm
+- Use 4 spaces instead of tabs, this is the default for VS 2022 and WebStorm
 
 ### Contributing Indexers
 
