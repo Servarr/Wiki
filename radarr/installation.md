@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-11-28T19:13:43.287Z
+date: 2021-11-29T19:52:10.896Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -392,34 +392,74 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 # Reverse Proxy Configuration
 
-Sample config examples for configuring Radarr to be accessible through a reverse proxy.
+Sample config examples for configuring Radarr to be accessible from the outside world through a reverse proxy.
 
-> These examples assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes your web server i.e nginx and Radarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
+> These examples assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes your web server i.e nginx and Radarr running on the same server accessible at `localhost` (127.0.0.1). If not, use the host IP address or hostname instead for the proxy pass directive.
 {.is-info}
 
 ## NGINX
+Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
 ```none
 location /radarr {
-  proxy_pass        http://127.0.0.1:7878/radarr;
-  proxy_set_header Host $host;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Host $host;
-  proxy_set_header X-Forwarded-Proto https;
-  proxy_redirect off;
+  proxy_pass         http://127.0.0.1:7878/radarr;
+  proxy_set_header   Host $host;
+  proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header   X-Forwarded-Host $host;
+  proxy_set_header   X-Forwarded-Proto $scheme;
+  proxy_redirect     off;
 
   proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection $http_connection;
+  proxy_set_header   Upgrade $http_upgrade;
+  proxy_set_header   Connection $http_connection;
 }
-  location /radarr/api { auth_request off;
-  proxy_pass       http://127.0.0.1:7878/radarr/api;
-}
-
-  location /radarr/Content { auth_request off;
-    proxy_pass http://127.0.0.1:7878/radarr/Content;
- }
 ```
+
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file. 
+To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
+```
+server {
+  listen 80;
+  server_name _;
+  
+  # more configuration
+  
+  include subfolders-enabled/*.conf
+}
+```
+Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Radarr at `yourdomain.tld/radarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+
+### Subdomain
+Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS. 
+> Many free DNS providers do not support this {.warning}
+
+By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
+
+> For this configuration it is recommended to set baseurl to ''. This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.info}
+
+```
+server {
+  listen      80;
+  listen [::]:80;
+
+  server_name radarr.*;
+
+  location / {
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    proxy_set_header   Upgrade $http_upgrade;
+    proxy_set_header   Connection $http_connection;
+
+    proxy_redirect     off;
+    proxy_http_version 1.1;
+    
+    proxy_pass http://127.0.0.1:7878;
+  }
+}
+```
+Now restart Nginx and Radarr should be available at your selected subdomain.
 
 ## Apache
 
