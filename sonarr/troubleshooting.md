@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-11-29T19:45:28.741Z
+date: 2021-11-29T19:45:39.404Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -141,7 +141,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/sonarr) or swing by our [discord](https://discord.gg/M6BvZn5), if there are others with the same issue, then rest assured we are working on it.
 
-> Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
+> Please ensure you did not try to use a database from `develop` on the stable version.  Branch hopping is ill-advised.{.is-info}
 
 ### Permissions Issues
 
