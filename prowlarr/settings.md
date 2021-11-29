@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T19:03:22.164Z
+date: 2021-11-29T19:06:54.783Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -200,26 +200,30 @@ Click on `Settings` => `General`.
 
 ![general_security.png](/assets/prowlarr/general_security.png)
 
-- If you want to require a username/password, change this authentication box and enter them.
-- Your API key is used by outside apps accessing Prowlarr.
-
-> This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
-{.is-danger}
-
-- This changes how certificate validation is performed.
+- Authentication - How would you like to authenticate to access your Prowlarr instance
+  - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web
+  - Basic (Browser pop-up) - This option when accessing your Prowlarr will show a small pop-up allowing you to input a Username and Password
+  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
+- API Key - API key is used by outside apps accessing Prowlarr. This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
+- Certificate Validation - Change how strict HTTPS certification validation is
+  - Enabled - Validate all HTTPS certificates (recommended)
+  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+  - Disabled - Do not validate any HTTPS certificates
 
 ## Proxy
 
 ![general_proxy.png](/assets/prowlarr/general_proxy.png)
 
-- If you wish to use a proxy for all calls that Prowlarr makes, cehck the "Use Proxy" box.  When you do that, the next set of options will appear.
-- Proxy Types supported are HTTP(s), Socks4, or Socks5.
-- Hostname is the proxy hostname of your provider.
-- Port is the port to use for proxy connections from your provider.
-- Username is your proxy username from your provider.
-- Password is your proxy password from your provider.
-- If you want to bypass the proxy for some addresses, you can enter that list here.
-- Check the box to bypass the proxy for local addresses.
+Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
+
+- Use Proxy - Enable to use a Proxy
+- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Hostname - Enter your proxy hostname
+- Port - Enter your proxy port
+- Username - Enter your proxy username if applicable
+- Password - Enter your proxy password if applicable
+- Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
+- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses.
 
 ## Logging
 
