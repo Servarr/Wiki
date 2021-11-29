@@ -2,7 +2,7 @@
 title: Readarr Contributing
 description: 
 published: true
-date: 2021-10-05T01:18:15.947Z
+date: 2021-11-29T13:34:51.462Z
 tags: readarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-25T19:21:59.324Z
@@ -22,9 +22,9 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
 
 ## Tools required
 
-- Visual Studio 2019 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
+- Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2019 V16.9 or higher is recommended as it includes the .net5 SDK
+> VS 2022 V17.0 or higher is recommended as it includes the .net6 SDK
 {.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
@@ -68,7 +68,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Readarr.Console` and    framework to `net5.0`
+> Ensure startup project is set to `Readarr.Console` and    framework to `net6.0`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
