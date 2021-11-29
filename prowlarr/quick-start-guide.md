@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-11-29T18:32:35.879Z
+date: 2021-11-29T18:57:44.944Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -50,7 +50,7 @@ Click on `Settings` => `Apps`, and then click the `+` to add a supported app.
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you must add each of them separately.
 
-> Currently supported can be found [here](/prowlarr/supported#applications)
+> Currently supported Apps can be found [here](/prowlarr/supported#applications)
 {.is-info}
 
 When you add an app, you will need to enter values in the pop-up screen:
@@ -88,49 +88,63 @@ You should then go into your program, and disable the non-Prowlarr version of th
 
 > You may wish to go into your programs and check the categories for the Prowlarr indexers. Categories are not currently editable in Prowlarr, but are pushed over from a capabilities check.
 **Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
-Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app settings you **must** use Add and Remove and **must not** use Full Sync.
+Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app categories you **must** use Add and Remove and **must not** use Full Sync.
 {.is-warning}
 
 # Download Clients
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead. {.is-info}
 
->  Download clients are for Prowlarr in-app searches only! {.is-danger}
+>  Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality. {.is-danger}
 
 Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
-Prowlarr supports integration with the following Usenet download clients:
-
-![usenetclients2.png](/assets/readarr/usenetclients2.png)
-
-And the following Torrent clients:
-
-![torrentclients2.png](/assets/readarr/torrentclients2.png)
-
-Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+> Currently supported Download Clients can be found [here](/prowlarr/supported#downloadclient)
+{.is-info}
 
 ![nzbget.png](/assets/prowlarr/nzbget.png)
 
-- Put in a friendly name for the client entry
-- Click to enable or disable this download client
-- Enter the hostname or IP address of the download client
-- Enter the port of the download client
-- Check this box if you use SSL to connect to your client.
+Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+  
+> Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
+{.is-info}
 
-> If this is an IP address or localhost, you DO NOT HAVE SSL. DO NOT CHECK THIS BOX.
+## Usenet Client Settings
 
-- (Advanced Option) If you're using a reverse proxy, enter the URL Base for the download client.
-- Enter a username if you have one to connect to your client.
-- Enter a password if you have one to connect to your client.
-- Enter a category to be used with the download client for when you do grabs DIRECTLY from Prowlarr.
-- Enter a priority for when you do grabs DIRECTLY from Prowlarr.
-- Check this box to add downloads in a Paused state.
-- (Advanced Option) Enter the client priority.
+- Name - The name of the download client within Prowlarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- API Key - the API key to authenticate to your client
+- Username - the username to authenticate to your client (typically not needed)
+- Password- the password to authenticate to your client (typically not needed)
+- Category - the category within your download client that Prowlarr will use
+- Priority - download client priority for added items
+- Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
->Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
+## Torrent Client Settings
+
+- Name - The name of the download client within Prowlarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- Username - the username to authenticate to your client
+- Password- the password to authenticate to your client
+- Category - the category within your download client that Prowlarr will use
+- Priority - download client priority for added items
+- Initial State - Initial state for torrents
+- Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+## Testing the Download Client
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
+
+# Setup Complete
 
 That's it for the basics! You can then add notifications and other more advanced setup options as needed. Those are documented in the full Settings page.
