@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-11-29T18:15:29.636Z
+date: 2021-11-29T18:29:25.133Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -58,33 +58,30 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-- Enter a name for this indexer.
-- Select your sync level for this indexer.
-
-`Add and Remove Only` - When it is added or removed from Prowlarr, it will update your app.
-
-`Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program (and to any other program that has Full Sync selected!) Any change made remotely will be overridden by Prowlarr on next sync.
->`Full Sync` means Prowlarr will override any in-app customizations including user selected categories.
+- Name - Enter a name for this indexer.
+- Sync Level - Select the sync level to use
+  - `Add and Remove Only` - Sync the Indexer to the app when it is added or removed from Prowlarr. If the indexer is down at the time of sync - it will be removed.
+  - `Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program. Any change made remotely will be overridden by Prowlarr on next sync.
+  - `Disabled` - will keep indexers from syncing with the program entirely.
+>`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals in \*Arrs are not currently factored in to this override.
 {.is-danger}
 
-`Disabled` will keep indexers from syncing with the program entirely.
+- Tags - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
 
-- ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
-
-> **Note: tags for apps are not yet functional**
+> **Note: Tags for apps are not yet functional**
 {.is-warning}
 
-- Prowlarr Server - Enter the Prowlarr server URL here.
+- Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
 
 > Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!{.is-info}
 
-- Application Server -  Enter the URL of your program here. Again, enter the full URL Base if used.
+- Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 
-- API KEnter the API Key of your program here. You can get this from your program in the Settings / General tab, and copy/paste it here.
+- API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
-> When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it.{.is-info}
+> When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`{.is-info}
 
 ![nzbgeek.png](/assets/prowlarr/nzbgeek.png)
 
