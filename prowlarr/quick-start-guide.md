@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-11-29T18:30:29.091Z
+date: 2021-11-29T18:32:35.879Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -42,17 +42,16 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 # Apps
 
-After you've added your indexers, we then connect Prowlarr to your other *arr programs.
+After you've added your indexers, we then connect Prowlarr to your other apps.
 
-Click on `Settings` => `Apps`, and then click the `+` to add an *arr program.
+Click on `Settings` => `Apps`, and then click the `+` to add a supported app.
 
 ![addapps.png](/assets/prowlarr/addapps.png)
 
-All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you should add each of them separately.
+All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you must add each of them separately.
 
-Prowlarr currently supports the addition of these apps:
-
-![prowlarrapps.png](/assets/readarr/prowlarrapps.png)
+> Currently supported can be found [here](/prowlarr/supported#applications)
+{.is-info}
 
 When you add an app, you will need to enter values in the pop-up screen:
 
