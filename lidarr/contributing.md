@@ -2,7 +2,7 @@
 title: Lidarr Contributing
 description: 
 published: true
-date: 2021-11-29T13:33:55.537Z
+date: 2021-11-29T15:42:47.638Z
 tags: lidarr, contributing
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
@@ -18,7 +18,7 @@ Setup guides, [FAQ](/lidarr/faq), the more information we have on the [wiki](htt
 
 # Development
 
-Lidarr is written in C# (backend) and JS (frontend). The backend is built on the .Net5 framework, while the frontend utilizes Reactjs.
+Lidarr is written in C# (backend) and JS (frontend). The backend is built on the .Net6 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
@@ -68,7 +68,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Lidarr.Console` and    framework to `net6.0`
+> Ensure startup project is set to `Lidarr.Console` and framework to `net6.0`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
@@ -101,7 +101,7 @@ dotnet msbuild -restore src/Lidarr.sln -p:Configuration=Debug -p:Platform=Posix 
 - Add tests (unit/integration)
 - Commit with \*nix line endings for consistency (We checkout Windows and commit \*nix)
 - One feature/bug fix per pull request to keep things clean and easy to understand
-- Use 4 spaces instead of tabs, this is the default for VS 2019 and WebStorm
+- Use 4 spaces instead of tabs, this is the default for VS 2022 and WebStorm
 
 ## Pull Requesting
 
