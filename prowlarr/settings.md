@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T18:33:36.845Z
+date: 2021-11-29T18:56:06.579Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -96,6 +96,8 @@ All programs you can add are listed. You should only add programs you currently 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
+  
+## Testing the Application
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
@@ -113,29 +115,44 @@ Click on `Settings` => `Download Clients`, and then click the `+` to add a new d
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
+- A list of supported download clients is located [here](/radarr/supported#downloadclient)
+
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
-
-![nzbget.png](/assets/prowlarr/nzbget.png)
-
-- Put in a friendly name for the client entry
-- Click to enable or disable this download client
-- Enter the hostname or IP address of the download client
-- Enter the port of the download client
-- Check this box if you use SSL to connect to your client.
-
-> If this is an IP address or localhost, you DO NOT HAVE SSL. DO NOT CHECK THIS BOX.
-{.is-info}
-
-- (Advanced Option) If you're using a reverse proxy, enter the URL Base for the download client.
-- Enter a username if you have one to connect to your client.
-- Enter a password if you have one to connect to your client.
-- Enter a category to be used with the download client for when you do grabs DIRECTLY from Prowlarr.
-- Enter a priority for when you do grabs DIRECTLY from Prowlarr.
-- Check this box to add downloads in a Paused state.
-- (Advanced Option) Enter the client priority.
-
+  
 > Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 {.is-info}
+
+## Usenet Client Settings
+
+- Name - The name of the download client within Prowlarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- API Key - the API key to authenticate to your client
+- Username - the username to authenticate to your client (typically not needed)
+- Password- the password to authenticate to your client (typically not needed)
+- Category - the category within your download client that Prowlarr will use
+- Priority - download client priority for added items
+- Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+## Torrent Client Settings
+
+- Name - The name of the download client within Prowlarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- Username - the username to authenticate to your client
+- Password- the password to authenticate to your client
+- Category - the category within your download client that Prowlarr will use
+- Priority - download client priority for added items
+- Initial State - Initial state for torrents
+- Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+
+## Testing the Download Client
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).
 
