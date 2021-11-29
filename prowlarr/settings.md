@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T19:06:54.783Z
+date: 2021-11-29T19:09:06.406Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -230,16 +230,16 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 ![general_logging.png](/assets/prowlarr/general_logging.png)
 
 The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
-
-- `Info` logging is the minimum logging level. Good for day-to-day operations, but not sufficient for reporting errors to the development team.
-- `Debug` logging is a mid-range logging level. Good for some error resolution, but still not extremely detailed.  Contains all Info level logging as well.
-- `Trace` logging is extremely detailed, and what the Developers want when reporting errors. Due to the amount of logging done, a single log file may contain only a few minutes of logs. Contains all Debug and Info level logging as well.
+- Log level - Probably one of the most useful troubleshooting tools
+  - Info - This is the most basic way that Prowlarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+  - Trace - The most advance and detailed logging on Prowlarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
 ## Analytics
 
 ![general_analytics.png](/assets/prowlarr/general_analytics.png)
 
-Check the box to help the Prowlarr development team gather statistics on install types, version, browser, and other information so that they can prioritize development and fixes properly.
+- Analytics - Send anonymous usage and error information to Prowlarr's servers (Servarr). This includes information on your browser, which Prowlarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
 ## Updates
 
