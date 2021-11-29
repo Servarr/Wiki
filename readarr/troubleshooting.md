@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2021-09-09T12:46:58.140Z
+date: 2021-11-29T19:45:54.572Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -129,11 +129,25 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ```
 
+### Permission Issue
+
+- Permissions issues are due to the application being unable to access the the relevant temporary folders and/or the app binary folder.  Fix the permissions so the user/group the application runs as has the appropiate access.
+
+- Synology users may encounter this Synology bug `Access to the path '/proc/{some number}/maps is denied`
+
+- Synology users may also encounter being out of space in `/tmp` on certain NASes. You'll need to specify a different `/tmp` path for the app.  See the SynoCommunity or other Synology support channels for help with this.
+
 ## Resolving the issue
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on <https://reddit.com/r/readarr> our subreddit or swing by our [discord](https://readarr.com/discord), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/readarr) or swing by our [discord](https://readarr.com/discord), if there are others with the same issue, then rest assured we are working on it.
 
 > Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
+
+### Permissions Issues
+
+- Fix the permissions to ensure the user/group the application is running as can access (read and write) to both `/tmp` and the installation directory of the application.
+
+- For Synology users experiencing issues with `/proc/###/maps` stopping Sonarr or the other \*Arr applications and updating should resolve this.  This is an issue with the SynoCommunity package.
 
 ### Manually upgrading
 
