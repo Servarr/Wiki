@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-24T19:52:58.455Z
+date: 2021-11-29T19:06:38.353Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -751,7 +751,7 @@ Kodi will be one of the most commonly used options here if that is the software 
   
 ## Proxy
 
-- Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
+Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
 - Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
