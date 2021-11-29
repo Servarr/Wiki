@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-11-29T13:35:34.785Z
+date: 2021-11-29T15:31:37.291Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-24T03:34:59.943Z
@@ -68,7 +68,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Prowlarr.Console` and    framework to `net6.0`
+> Ensure startup project is set to `Prowlarr.Console` and framework to `net6.0`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
@@ -105,11 +105,17 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 
 ### Contributing Indexers
 
+
+### C# Indexers
+
+- C# Indexers are to be pull requested to the [Prowlarr App Repository](https://github.com/prowlarr/prowlarr) against the `develop` branch
 - If you're contributing a C# indexer please phrase your commit as something like: `New: (Indexer) {Indexer Name}`, `New: (Indexer) {Usenet|Torrent} {Indexer Name}`, `New: (Indexer) {Torznab|Newznab} {Indexer Name}`
 - If you're updating a C# indexer please phrase your commit as something like: `Fixed: (Indexer) {Indexer Name} {changes}` e.g. `Fixed: (Indexer) Changed BHD to use API`
-- For Cardigann/YML Indexers please see [the definition and description of the yml format](/prowlarr/cardigann-yml-definition)
 
-#### Indexer YML Definition
+### Cardigann (YML) Indexers
+
+- Cardigann and YML Indexers are to be pull requested to the [Prowlarr Indexer Repository](https://github.com/prowlarr/indexers) against the `master` branch
+- For Cardigann/YML Indexers details please see [the definition and description of the Prowlarr Cardigann yml format](/prowlarr/cardigann-yml-definition)
 
 ## Pull Requesting
 
