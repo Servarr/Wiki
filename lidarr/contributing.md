@@ -2,7 +2,7 @@
 title: Lidarr Contributing
 description: 
 published: true
-date: 2021-10-05T01:19:11.949Z
+date: 2021-11-29T13:33:28.677Z
 tags: lidarr, contributing
 editor: markdown
 dateCreated: 2021-05-26T02:28:31.770Z
@@ -22,9 +22,9 @@ Lidarr is written in C# (backend) and JS (frontend). The backend is built on the
 
 ## Tools required
 
-- Visual Studio 2019 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
+- Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2019 V16.9 or higher is recommended as it includes the .net5 SDK
+> VS 2022 V17.0 or higher is recommended as it includes the .net6 SDK
 {.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
