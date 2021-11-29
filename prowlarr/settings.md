@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T19:09:06.406Z
+date: 2021-11-29T19:12:02.524Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -245,7 +245,7 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 ![general_updates.png](/assets/prowlarr/general_updates.png)
 
-- Branch - This is the branch of Prowlarr that you are running on.
+- (Advanced Option) Branch - This is the branch of Prowlarr that you are running on.
   - [Please see this FAQ entry for more information](/prowlarr/faq#how-do-i-update-prowlarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Prowlarr built-in updater or a script
@@ -261,9 +261,9 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 ![general_backups.png](/assets/prowlarr/general_backups.png)
 
-- (Advanced Option) Folder is the folder where backups are stored.
-- (Advanced Option) Interval is the number of days between automatic backups.
-- (Advanced Option) This is the number of backups that are retained before being cleaned up.
+- (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
+- (Advanced Option) Interval - How often would you like Prowlarr to make a backup
+- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed
 
-> Manual backups are retained forever, stored in the same folder, and are named differently. It's always advised to make a backup manually before doing anything like updates or branch changes.
+> Manual backups are retained forever, stored in the same folder, and are named differently.
 {.is-info}
