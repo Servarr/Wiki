@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-08-19T21:42:46.105Z
+date: 2021-11-29T18:15:29.636Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -27,11 +27,11 @@ Some indexers have special settings, but most are standard as shown.
 
 ![addnewindexer.png](/assets/prowlarr/addnewindexer.png)
 
-- Enter a name for this indexer.
-- Check to enable this indexer. This setting syncs to your programs.
-- If your indexer requires it, check the box to redirect download requests so it doesn't look like the request is coming from Prowlarr.
-- App Profile is standard for now, as others do not exist.
-- Enter the URL of this indexer's API.
+- Name - Enter a name for this indexer.
+- Enable - Check to enable this indexer. This setting syncs to your programs.
+- Redirect - If your indexer requires it, check the box to redirect download requests so it doesn't look like the request is coming from Prowlarr. This is only needed for one or two Indexers.
+- App Profile - Select your App Profiles as created in [Settings => Apps => App Profiles](/prowlarr/settings#app-profiles)
+- URL - Enter or Select the URL of this indexer's API.
 - (Advanced Option) If the API Path is not /api, change it here.
 - Enter the API Key from your profile page on the indexer's website here.
 - (Advanced Option) If you need additional parameters for the indexer, enter them here.
