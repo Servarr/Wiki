@@ -2,7 +2,7 @@
 title: Sonarr Wanted
 description: 
 published: true
-date: 2021-07-10T16:08:10.024Z
+date: 2021-11-29T22:12:53.399Z
 tags: sonarr, needs-love, wanted
 editor: markdown
 dateCreated: 2021-06-10T01:40:02.329Z
@@ -23,6 +23,13 @@ The Wanted => Missing section contains a list of the episodes you have marked to
 
 > This search process cannot be canceled once started without restarting Sonarr.
 {.is-info}
+
+At the top of the page is `Manual Import` which allows you to abritrarily import media files from any destination Sonarr can access for series that already exist in Sonarr.  
+
+- Move Automatically will attempt to automatically match the files to series/episodes in Sonarr and will move - not copy nor hardlink - them to your library folder
+- Interactive Import will allow you to review the matches and adjust various specifications as needed.  It provides the option (bottom left corner) to `Move` or `Copy/Hardlink` your files.  Be sure to choose the correct option for your needs.
+  
+  > If a directory has more than 100 files in it then Sonarr will not recursively search the directory nor attempt to parse and match the files. {.is-info}
 
 # Cutoff Unmet
 
