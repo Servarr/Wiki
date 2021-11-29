@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-11-29T18:29:25.133Z
+date: 2021-11-29T18:30:29.091Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -92,9 +92,11 @@ You should then go into your program, and disable the non-Prowlarr version of th
 Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app settings you **must** use Add and Remove and **must not** use Full Sync.
 {.is-warning}
 
-# Download Clients (for In-Prowlarr searches only!)
+# Download Clients
 
-> If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+> If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead. {.is-info}
+
+>  Download clients are for Prowlarr in-app searches only! {.is-danger}
 
 Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
