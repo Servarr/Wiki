@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2021-11-18T03:43:20.098Z
+date: 2021-11-30T00:36:04.933Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -55,6 +55,14 @@ dateCreated: 2021-05-16T20:44:27.778Z
 {.is-warning}
 
 - It's suggested that physically look at the list before you even go to Radarr.
+
+## Why are lists sync times so long and can I change it?
+
+- Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
+
+- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
+
+- This change was due to not have our server get killed by people updating lists every 10 minutes.
 
 ## Can all my movie files be stored in one folder?
 
@@ -259,14 +267,6 @@ If Docker:
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
   - The [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
-
-## Why are lists sync times so long and can I change it?
-
-- Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
-
-- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
-
-- This change was due to not have our server get killed by people updating lists every 10 minutes.
 
 ## Can I disable the refresh movies task
 
