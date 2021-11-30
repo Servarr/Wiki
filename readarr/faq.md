@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-11-11T18:05:02.237Z
+date: 2021-11-30T01:36:15.826Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -51,6 +51,11 @@ dateCreated: 2021-05-25T20:01:09.320Z
 - You can also add books and authors by GoodReads ID, ISBN ID, or ASIN ID.
 - The book has an issue with GoodReads API data. Unfortunately this is something we probably cannot solve for you.
 - The book falls below the settings you've chosen (votes, pages, etc.) to appear in Readarr.
+
+## Metadata Profile "None" allowing Foreign Releases
+
+- Using a metadata profile of `None` is useful to only have books explicitly added by the user in Readarr. However, the downside of this is that it opens you up to every edition - including foreign editions - of a book to be available.
+- To work around this issue  create a new Metadata Profile with [the popularity threshold described on the settings page](/readarr/settings#metadata-profiles)
 
 ## Book Match is not Close Enough: XX% vs YY% \[book\]
 
