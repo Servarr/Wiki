@@ -2,7 +2,7 @@
 title: Readarr Library
 description: 
 published: true
-date: 2021-11-30T00:50:59.442Z
+date: 2021-11-30T01:41:54.243Z
 tags: readarr, needs-love, library
 editor: markdown
 dateCreated: 2021-11-30T00:50:59.442Z
@@ -53,18 +53,21 @@ This section is for managing your library of authors and books.
 
 ![poe.png](/assets/readarr/poe.png)
 
-- Click on the author name to add it to Readarr. A box will pop up with options for you.
+- Click on the author or book name to add it to Readarr. A box will pop up with options for you.
 
 ![addauthor.png](/assets/readarr/addauthor.png)
 
-- Select the root folder here. Do not change this if you use Calibre Content Server.
-- Select the monitoring state of all books for this author.
-- Select the Quality Profile to use when looking for books for this author.
-- If you would like a tag applied to this author's books, enter it here.
-- Choose whether to start a historical search of your indexers for all books by this author immediately. If you do not do this, only NEWLY uploaded books will be grabbed from this point forward.
-- Click the Add button to add this author to Readarr and start pulling metadata for all books by this author. This process can take some time, so it would be advisable not to add too many authors too quickly.
+- Root Folder - Select the root folder here. Do not change this if you use Calibre Content Server.
+- Monitor - Select the monitoring state of all books for this author.
+- Quality Profile - Select the Quality Profile to use when looking for books for this author.
+- (Book Only) Metadata Profile - Select the Metadata Profile to use for this book
+- Tags - If you would like a tag applied to this author's books, enter it here.
+- Start Search for Missing Book(s) - Choose whether to start a historical search of your indexers for all books by this author immediately. If you do not do this, only NEWLY uploaded books will be grabbed from this point forward.
+- Add {Author Name} or Add {Book Name} - Click the Add button to add this author to Readarr and start pulling metadata for all books by this author. This process can take some time, so it would be advisable not to add too many authors too quickly.
 
->If you add an individual book, and select "None" for the metadata profile, only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+
+>If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+> \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
 {.is-warning}
 
 # Unmapped Files
