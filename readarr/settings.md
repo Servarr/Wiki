@@ -2,12 +2,11 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-25T15:07:27.926Z
+date: 2021-11-30T00:52:36.548Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
 ---
-
 
 This page will go through all the settings available in Readarr and how they work.  This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](/readarr/quick-start-guide) page instead.
 
@@ -295,6 +294,8 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
 
 > Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
+
+> Set this to `10000000000` to create a profile equivalent to `None` but still allow other filtering of editions {.is-info}
 
 - Minimum Pages - Enter the minimum number of pages a book must have to be added for an author.
 - Skip books with missing release date - Enable to skip books with a missing release date.
