@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-30T00:52:36.548Z
+date: 2021-11-30T00:55:12.806Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -295,7 +295,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 
 > Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
 
-> Set this to `10000000000` to create a profile equivalent to `None` but still allow other filtering of editions {.is-info}
+> Set this to `10000000000` exactly to create a profile equivalent to `None` but still allow other filtering of editions and books. Note that `None` does not apply any metadata filters and you may get foreign editions. {.is-info}
 
 - Minimum Pages - Enter the minimum number of pages a book must have to be added for an author.
 - Skip books with missing release date - Enable to skip books with a missing release date.
