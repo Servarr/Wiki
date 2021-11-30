@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T06:11:18.857Z
+date: 2021-11-30T01:44:52.668Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -28,6 +28,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ![booknaming.png](/assets/readarr/booknaming.png)
 
+
+
 - Enable/Disable Renaming of your books (as opposed to leaving the names that are currently there or as they were when you downloaded them).
 - If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ - % & + { }`).
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.
@@ -37,8 +39,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ![folders.png](/assets/readarr/folders.png)
 
-- `(Advanced Option) Enable to create empty author folders when a new author is added to Readarr.`
-- `(Advanced Option) Enable to delete empty author folders when there are no remaining books for that author.`
+- (Advanced Option) Create Empty Author Folders - Enable to create empty author folders when a new author is added to Readarr.
+- (Advanced Option) Delete Empty Folders - Enable to delete empty author folders when there are no remaining books for that author.
 
 # Importing
 
@@ -123,6 +125,10 @@ If you have chosen Calibre integration, you will enter more values here.
 - Select the metadata profile to use for authors' books in Calibre.
 - If you want to apply a tag in Readarr for these authors, enter that here.
 
+>If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+> \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
+{.is-warning}
+
 # Download Clients
 
 `Settings` => `Download Clients`
@@ -130,6 +136,8 @@ If you have chosen Calibre integration, you will enter more values here.
 ![Readarr-settings-download-clients.png](/assets/readarr/Readarr-settings-download-clients.png)
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+
+[See the Settings Page for details](/readarr/settings#download-clients)
 
 ## {.tabset}
 
