@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-11-30T00:55:12.806Z
+date: 2021-11-30T00:55:24.490Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -293,7 +293,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Name - Enter a **UNIQUE** name for the metadata profile profile
 - Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
 
-> Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
+> Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up. {.is-warning}
 
 > Set this to `10000000000` exactly to create a profile equivalent to `None` but still allow other filtering of editions and books. Note that `None` does not apply any metadata filters and you may get foreign editions. {.is-info}
 
