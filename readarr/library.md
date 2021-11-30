@@ -2,10 +2,10 @@
 title: Readarr Library
 description: 
 published: true
-date: 2021-11-24T19:03:54.948Z
-tags: readarr
+date: 2021-11-30T00:50:59.442Z
+tags: readarr, needs-love, library
 editor: markdown
-dateCreated: 2021-05-25T15:29:27.457Z
+dateCreated: 2021-11-30T00:50:59.442Z
 ---
 
 # Library
