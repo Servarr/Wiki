@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-11-28T20:30:18.3937268Z
+date: 2021-12-02T04:25:50.5758370Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-11-28T20:30:18.3937268Z
+dateCreated: 2021-12-02T04:25:50.5758370Z
 ---
 
-- Supported Indexers as of Build `0.1.5.1159` / [Commit: dbf81a7c9ea603173afd84828b47e5a519e97a7c](https://github.com/Prowlarr/Prowlarr/commit/dbf81a7c9ea603173afd84828b47e5a519e97a7c)
+- Supported Indexers as of Build `0.1.6.1177` / [Commit: c83c8183808b225eda8f1292eafa40643bcc99a0](https://github.com/Prowlarr/Prowlarr/commit/c83c8183808b225eda8f1292eafa40643bcc99a0)
 
 ---
 
@@ -239,6 +239,7 @@ dateCreated: 2021-11-28T20:30:18.3937268Z
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|hu-HU|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a Private Torrent Tracker for Female Japanese Idol related files|en-US|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|en-US|
+|[Alleen Retail](http://www.alleenretail.org/){#alleenretail}|Alleen Retail is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|nl-NL|
 |[AlphaRatio](https://alpharatio.cc/){#alpharatio}|AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL|en-US|
 |[Amigos Share Club](https://cliente.amigos-share.club/){#amigosshare}|Amigos Share Club is a Brazilian Private site for TV / MOVIES / GENERAL|pt-BR|
 |[anasch\.cc](https://anasch.cc/){#anaschcc}|anasch\.cc is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
@@ -444,6 +445,7 @@ dateCreated: 2021-11-28T20:30:18.3937268Z
 |[PolishSource](https://polishsource.cz/){#polishsource}|PolishSource (PS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|pl-PL|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|en-US|
 |[Pornbits](https://pornbits.net/){#pornbits}|Pornbits (PB) is a Private Torrent Tracker for 3X|en-US|
+|[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for Adult content|ru-ru|
 |[Portugas](https://portugas.org/){#portugas}|Portugas is a Private Portoguese Tracker|pt-PT|
 |[PotUK](https://www.potuk.net/){#potuk}|PotUK - Private site for MOVIES / TV / GENERAL|en-US|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker.|en-US|
@@ -483,7 +485,7 @@ dateCreated: 2021-11-28T20:30:18.3937268Z
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|A general italian tracker|it-IT|
 |[SiamBIT](https://www.siambit.me/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|th-TH|
 |[SkipTheCommercials (API)](https://skipthecommericals.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|en-US|
-|[slosoul](http://slosoul.net/){#slosoul}|slosoul is a Slovanian  Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
+|[slosoul](https://slosoul.net/){#slosoul}|slosoul is a Slovanian  Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|zh-CN|
 |[SoulVoice](https://pt.soulvoice.club/){#soulvoice}|SoulVoice is a CHINESE Private Torrent Tracker for Movies, TV, and e-Learning|zh-CN|
 |[SpeedApp](https://speedapp.io){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-RO|
