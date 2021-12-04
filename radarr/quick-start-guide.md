@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2021-11-04T09:37:01.726Z
+date: 2021-12-04T21:26:42.194Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -66,6 +66,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![Radarr-settings-mm-root-folder.png](/assets/radarr/Radarr-settings-mm-root-folder.png)
 
 Here we will add the root folder that Radarr will be using to import your existing organized media library and where Radarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
+
+> **The user and group you configured Radarr to run as must have read & write access to this location.** {.is-info}
 
 > Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 {.is-info}
