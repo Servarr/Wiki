@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-11-30T01:44:52.668Z
+date: 2021-12-04T21:26:30.526Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
@@ -71,6 +71,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![rootfolders1.png](/assets/readarr/rootfolders1.png)
 
 Here we will add the root folder that Readarr will be using to import your existing organized media library and where Readarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
+
+> **The user and group you configured Readarr to run as must have read & write access to this location.** {.is-info}
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
 
