@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-12-04T21:03:32.455Z
+date: 2021-12-04T21:04:07.637Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -79,7 +79,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 
 > This will create the user `readarr` and install Readarr to /opt. It will run Readarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.
-Two things to keep in mind are that Readarr requires read and write access to your download client's download directory and whatever folder you'll configure as your root (library) folder. Ideally each app is running as it's own user and common group of `media` with permissions of `775` and `664` which is a UMask of `002`
+Two things to keep in mind are that Readarr requires read and write access to your download client's download directory and whatever folder you'll configure as your root (library) folder. Ideally each app is running as its own user and common group of `media` with permissions of `775` and `664` which is a UMask of `002`
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
 {.is-info}
