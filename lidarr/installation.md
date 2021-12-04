@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-11-14T02:00:17.281Z
+date: 2021-12-04T21:03:53.358Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -66,7 +66,11 @@ If you want an easy life, follow this community provided and maintained `Easy In
 > Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 
-> This will create the user `lidarr` and install Lidarr to /opt. It will run Lidarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.{.is-info}
+> This will create the user `lidarr` and install Lidarr to /opt. It will run Lidarr as the group `media` You will likely need to modify the group (GUID) in the script to match the common group of your download client and media server to ensure ownership and permissions are sane and all files are accessible.
+Two things to keep in mind are that Lidarr requires read and write access to your download client's download directory and whatever folder you'll configure as your root (library) folder. Ideally each app is running as it's own user and common group of `media` with permissions of `775` and `664` which is a UMask of `002`
+> \* Your download clients and media server run as and are a part of the group `media`
+> \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
+{.is-info}
 
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Lidarr. The script won't delete your settings (application data), but be safe. {.is-danger}
 
