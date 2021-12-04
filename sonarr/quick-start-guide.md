@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-10-24T06:11:31.992Z
+date: 2021-12-04T21:26:15.353Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -52,6 +52,8 @@ Click on `Settings` => `Media Management` on the left menu.
 ## Root Folders
 
 Here we will add the root folder that Sonarr will be using to import your existing organized media library and where Sonarr will be importing (copy/hardlink/move) your media after your download client has downloaded it. This is the folder where your series and episodes are stored for your media player to play them. It is NOT where you download files to!
+
+> **The user and group you configured Sonarr to run as must have read & write access to this location.** {.is-info}
 
 > **Your download folder and media folder can’t be the same location**
 {.is-danger}
