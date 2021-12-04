@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-10-24T06:15:52.793Z
+date: 2021-12-04T16:19:31.835Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -48,7 +48,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located [here](/Lidarr/supported#downloadclient)
+- A list of supported download clients is located [here](/lidarr/supported#downloadclient)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -148,7 +148,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 
-- One of our amazing community members have created [an excellent guide](https://trash-guides.info/Lidarr/Lidarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
+- One of our amazing community members have created [an excellent guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) to help you out if you think remote path mapping is what will work for you here
 
 # Connections
 
