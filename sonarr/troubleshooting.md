@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-12-06T20:57:04.448Z
+date: 2021-12-06T20:57:41.345Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -494,7 +494,7 @@ Sometimes indexers will return completely unrelated results; Sonarr will feed in
 
 If you have results on the site you can find that are not showing in Sonarr then your issue is likely one of several possibiltiies:
  - [Categories are incorrect - See Above](#wrong-categories)
- - An ID (IMDbId, TVDBId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable (ids)
+ - An ID (IMDbId, TVDBId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable ids.
  - Not searching how Sonarr is searching; It's highly likely the terms you are searching on the indexer is not how Sonarr is querying it.  You can see how Sonarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily deocded using any HTML decoding/encoding tool online.
 
 ### Certificate validation
