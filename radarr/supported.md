@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-11-07T22:25:10.740Z
+date: 2021-12-06T14:51:37.596Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -163,7 +163,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - TMDb Popular {#tmdbpopularimport}
 - TMDb User {#tmdbuserimport}
 - Trakt List {#traktlistimport}
-  - Ensure you enter the actual username of the user and not the user's name
+  - Username - Ensure you enter the actual username of the user and not the user's name
+  - List - Ensure you use the list name as presented in the list URL
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
 
