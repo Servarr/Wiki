@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-11-30T01:36:15.826Z
+date: 2021-12-06T23:00:08.310Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -321,3 +321,8 @@ This is expected. Below is how the Torrent Process works.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
+
+## Calibre is saying "Calibre rejected duplicate book" but it's not!
+
+If you're using Calibre integration, Calibre is occasionally going to reject a book, saying it's a duplicate. It's probably not actually a duplicate. If this happens, there's not much Readarr can do, and you will need to unmonitor that book to prevent Readarr from continuing to try to grab it and push it to Calibre. This is just one of the fun downsides to Calibre integration.
+
