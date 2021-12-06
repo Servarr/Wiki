@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-11-07T22:27:39.799Z
+date: 2021-12-06T19:54:49.942Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -153,6 +153,11 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - Sonarr {#sonarrimport}
 - Trakt List {#traktlistimport}
+  - Username - Ensure you enter the actual username of the user and not the user's name
+  - List - Ensure you use the list name as presented in the list URL
+  - Example: `https://trakt.tv/users/some-user-name/lists/trakt-list-name?sort=rank,asc`
+      - Username: `some-user-name`
+      - List: `trakt-list-name`
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
 
