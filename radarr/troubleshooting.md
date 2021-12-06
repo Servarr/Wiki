@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-11-29T19:45:57.754Z
+date: 2021-12-06T20:56:37.995Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -399,11 +399,18 @@ The movie(s) is(are) not monitored.
 
 ### Wrong categories
 
-Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. I find it helpful to have the list visible in one browser window while I edit the entry in.
+Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in.
 
 ### Wrong results
 
-Sometimes indexers will return completely unrelated results, Radarr will feed in parameters to limit the search to a , but the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
+Sometimes indexers will return completely unrelated results, Radarr will feed in parameters to limit the search, but the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
+
+### Missing Results
+
+If you have results on the site you can find that are not showing in Radarr then your issue is likely one of several possibiltiies:
+ - [Categories are incorrect - See Above](#wrong-categories)
+ - An ID (IMDbId, TMDbId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable (ids)
+ - Not searching how Radarr is searching; It's highly likely the terms you are searching on the indexer is not how Radarr is querying it.  You can see how Radarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily deocded using any HTML decoding/encoding tool online.
 
 ### Certificate validation
 
