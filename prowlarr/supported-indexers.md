@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-12-02T04:25:50.5758370Z
+date: 2021-12-06T04:08:54.9021147Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-12-02T04:25:50.5758370Z
+dateCreated: 2021-12-06T04:08:54.9021147Z
 ---
 
-- Supported Indexers as of Build `0.1.6.1177` / [Commit: c83c8183808b225eda8f1292eafa40643bcc99a0](https://github.com/Prowlarr/Prowlarr/commit/c83c8183808b225eda8f1292eafa40643bcc99a0)
+- Supported Indexers as of Build `0.1.6.1196` / [Commit: 3b7b72d4e1439b91470e08335172ab54a8228cfe](https://github.com/Prowlarr/Prowlarr/commit/3b7b72d4e1439b91470e08335172ab54a8228cfe)
 
 ---
 
@@ -24,7 +24,6 @@ dateCreated: 2021-12-02T04:25:50.5758370Z
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[01Torrent](https://www4.01torrent.net/){#01torrent}|01Torrent is a Public tracker|en-US|
 |[0Magnet](https://0magnet.com/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|en-US|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|en-US|
 |[24rolika](http://24rolika.ru/){#24rolika}|24rolika is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
@@ -73,7 +72,6 @@ dateCreated: 2021-12-02T04:25:50.5758370Z
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|en-US|
 |[ExtremlymTorrents](https://extremlymtorrents.ws/){#extremlymtorrents}|ExtremlymTorrents (XTR) is a Semi-Private tracker for MOVIES / TV / GENERAL|en-US|
 |[EZTV](https://eztv.re/){#eztv}|EZTV is a Public torrent site for TV shows|en-US|
-|[Filebase](http://www.filebase.ws/){#filebase}|Filebase is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
 |[FileListing](https://filelisting.com/){#filelisting}|FileListing is a Public Torrent Search Engine|en-US|
 |[FireBit](https://firebit.net/){#firebit}|FireBit is an UKRAINIAN / RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
 |[Fou-Du-Cinema](https://fou-du-cinema.net/){#fouducinema}|Fou-Du-Cinema (FdC) is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
@@ -192,7 +190,7 @@ dateCreated: 2021-12-02T04:25:50.5758370Z
 |[TorrentMax](https://torrentmax2.net/){#torrentmax}|TorrentMax (토렌트맥스) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq118.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq119.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-RU|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir43.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -341,6 +339,7 @@ dateCreated: 2021-12-02T04:25:50.5758370Z
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|fi-FI|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|fi-FI|
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|en-US|
+|[Fuzer](https://www.fuzer.me/){#fuzer}|Another Hebrew tracker|en-US|
 |[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|en-US|
 |[GAYtorrent\.ru](https://www.gaytorrent.ru/){#gaytorrentru}|GayTorrent\.ru is a Private Torrent Tracker for GAY 3X|en-US|
 |[GazelleGames](https://gazellegames.net/){#gazellegames}|GazelleGames (GGn) is a Private Torrent Tracker for GAMES|en-US|
@@ -381,7 +380,7 @@ dateCreated: 2021-12-02T04:25:50.5758370Z
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|tr-TR|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |[HDZone](https://hdzone.me/){#hdzone}|HDZone is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
-|[Hebits](https://hebits.net/){#hebits}|not here \_ not scene|en-US|
+|[Hebits](https://hebits.net/){#hebits}|The Israeli Tracker|he-IL|
 |[HellasTZ](https://hellastz.com/){#hellastz}|HellasTZ is an Greek Private site for TV / MOVIES / GENERAL|el-GR|
 |[HQSource](https://hqsource.org/){#hqsource}|HQSource (HQS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|pl-PL|
 |[Il Corsaro Verde](https://www.icv-crew.com/){#ilcorsaroverde}|Il Corsaro Verde (iCV-CreW) is a ratioless ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|it-IT|
