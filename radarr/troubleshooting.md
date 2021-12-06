@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-12-06T20:56:37.995Z
+date: 2021-12-06T20:57:46.808Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -409,7 +409,7 @@ Sometimes indexers will return completely unrelated results, Radarr will feed in
 
 If you have results on the site you can find that are not showing in Radarr then your issue is likely one of several possibiltiies:
  - [Categories are incorrect - See Above](#wrong-categories)
- - An ID (IMDbId, TMDbId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable (ids)
+ - An ID (IMDbId, TMDbId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable ids.
  - Not searching how Radarr is searching; It's highly likely the terms you are searching on the indexer is not how Radarr is querying it.  You can see how Radarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily deocded using any HTML decoding/encoding tool online.
 
 ### Certificate validation
