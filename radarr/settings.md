@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-07T14:43:33.983Z
+date: 2021-12-07T14:44:58.496Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -658,7 +658,7 @@ Import lists are a part of Radarr that allow you to follow a given list creator.
 - Once you've selected the list provider that you're looking to pull from (such as IMDb or Trakt) You'll be presented with a new window.
 Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
 
-## Options
+## List Options
 
 - (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  [This is a minimum of 6 hours.](/radarr/faq#why-are-lists-sync-times-so-long-and-can-i-change-it)
 - (Advanced Option) Clean Library Level - Movies in library will be removed or unmonitored if not in your list(s)
