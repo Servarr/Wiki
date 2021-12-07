@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-11-29T19:12:01.106Z
+date: 2021-12-07T14:43:33.983Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -657,6 +657,16 @@ Import lists are a part of Radarr that allow you to follow a given list creator.
 - From this new window you are presented with many different options to set up your list from many different list providers. As stated before be careful when doing lists. It is highly recommended to not select the Search on add button before you're absolutely sure the list you select/setup is adding the series that you're looking for.
 - Once you've selected the list provider that you're looking to pull from (such as IMDb or Trakt) You'll be presented with a new window.
 Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
+
+## Options
+
+- (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  [This is a minimum of 6 hours.](/radarr/faq#why-are-lists-sync-times-so-long-and-can-i-change-it)
+- (Advanced Option) Clean Library Level - Movies in library will be removed or unmonitored if not in your list(s)
+  - Disabled - Do not clean the library (Recommended)
+  - Log Only - Only log the movies are not on the list(s) and take no other actions
+  - Keep and Unmonitor Movie - Keep movies that are not on the list(s), but unmonitor them in Radarr.
+  - Remove Movie and Keep Files - Remove movies that are not on the list(s) from Radarr, but do not delete their files
+  - Remove Movie and Delete Files - Remove movies that are not on the list(s) from Radarr and delete their files
 
 ## List Exclusions
 
