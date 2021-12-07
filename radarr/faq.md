@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2021-12-04T05:31:39.440Z
+date: 2021-12-07T14:34:28.620Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -431,6 +431,9 @@ Depending on your OS, there are multiple possible ways.
 - Radarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
 - To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages specified as multi.
+
+> Note that for indexers that support ID based searches - such as many Usenet indexers and elite private Torrent trackers - text queries are not used if results are returned for an ID based search.  Therefore the above about searching does not apply.  Radarr will search the ID and if results are returned will not fall back to a name search.  If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
+{.is-info}
 
 ## How does Radarr handle "multi" in names?
 
