@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-11-11T16:35:18.158Z
+date: 2021-12-07T15:34:20.224Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -306,6 +306,12 @@ If you no longer use this download client, disable it in Radarr to prevent the e
 #### Lists are unavailable due to failures
 
 - Typically this simply means that Radarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
+
+### Notifications
+
+### Discord as Slack Notification
+
+- You have Discord configured to use a Slack webhook. This is not advised and the native Discord functionality should be used instead.  If you're receiving this that likely means you just configured this by following an outdated guide. Please advise the guide author to update their steps. If you're receiving this after an update, please visit our support channels as it appears the automatic migration did not complete as expected.
 
 ## Disk Space
 
