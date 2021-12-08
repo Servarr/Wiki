@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-12-08T17:21:23.057Z
+date: 2021-12-08T23:12:22.970Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -271,6 +271,23 @@ If you no longer use this download client, disable it in Radarr to prevent the e
 - This mechanism is triggered if Radarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error caused the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Radarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+
+#### Jackett All Endpoint Used
+
+- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
+- [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- Using the /all endpoint has no advantages, only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (>= 100000) cannot be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
+  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+
+**Solutions**
+- Add each tracker in Jackett manually as an indexer in \*Arr
+- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr
 
 ### Movie Folders
 
