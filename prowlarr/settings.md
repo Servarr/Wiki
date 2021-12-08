@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-11-29T19:12:02.524Z
+date: 2021-12-08T20:59:50.707Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -76,7 +76,9 @@ All programs you can add are listed. You should only add programs you currently 
 > Note: Indexers are synced based on the capibilities/categories they claim to support. If an indexer supports only `tv` categories it will be synced to Sonarr.
 {.is-info}
 
-- Name - Enter a name for this indexer.
+## Application Settings
+
+- Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
   - `Add and Remove Only` - Sync the Indexer to the app when it is added or removed from Prowlarr. If the indexer is down at the time of sync - it will be removed.
   - `Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program. Any change made remotely will be overridden by Prowlarr on next sync.
@@ -96,6 +98,8 @@ All programs you can add are listed. You should only add programs you currently 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
+
+- (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
   
 ## Testing the Application
 
