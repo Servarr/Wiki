@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-11-29T18:15:00.083Z
+date: 2021-12-08T21:00:24.727Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -18,6 +18,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 Prowlarr can automatically sync indexers with various applications
 
+- LazyLibrarian {#lazylibrarian}
 - Lidarr {#lidarr}
 - Mylar {#mylar}
 - Radarr {#radarr}
