@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-12-06T04:08:54.9021147Z
+date: 2021-12-09T18:20:47.7486298Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-12-06T04:08:54.9021147Z
+dateCreated: 2021-12-09T18:20:47.7486298Z
 ---
 
-- Supported Indexers as of Build `0.1.6.1196` / [Commit: 3b7b72d4e1439b91470e08335172ab54a8228cfe](https://github.com/Prowlarr/Prowlarr/commit/3b7b72d4e1439b91470e08335172ab54a8228cfe)
+- Supported Indexers as of Build `0.1.8.1223` / [Commit: 6ca708f5232b6bb643f3f006123c6e98654f171f](https://github.com/Prowlarr/Prowlarr/commit/6ca708f5232b6bb643f3f006123c6e98654f171f)
 
 ---
 
@@ -129,7 +129,7 @@ dateCreated: 2021-12-06T04:08:54.9021147Z
 |[OnceSearch](http://oncesearch.com/){#oncesearch}|OnceSearch is a Public Torrent Tracker for 3X|en-US|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|en-US|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
-|[OxTorrent](https://www.oxtorrent.vc/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
+|[OxTorrent](https://www.oxtorrent.be/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|ru-RU|
 |[PiratBit](https://piratbit.top/){#piratbit}|PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
@@ -141,7 +141,7 @@ dateCreated: 2021-12-06T04:08:54.9021147Z
 |[PornoRip](https://www.pornorip.biz/){#pornorip}|PornoRip is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[PornosLab](https://pornoslab.com/){#pornoslab}|PornosLab is a Public Tracker for 3X|en-US|
 |[Pornotor](http://pornotor.org/){#pornotor}|Pornotor is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
-|[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|es-ES|
+|[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|en-US|
 |[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Public tracker for 3X|ru-RU|
 |[ProStyleX](https://prostylex.org/){#prostylex}|ProStyleX is a Semi-Private torrent site for 0Day and General|en-US|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|en-US|
@@ -181,8 +181,9 @@ dateCreated: 2021-12-06T04:08:54.9021147Z
 |[Torrent Oyun indir](https://www.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|tr-TR|
 |[Torrent Paradise (ML)](https://torrent-paradise.ml/){#torrent-paradise-ml}|The most innovative torrent site|en-US|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
+|[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|ru-RU|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
-|[Torrent9 clone](https://www.torrent9.pw/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|fr-FR|
+|[Torrent9 clone](https://www.torrent9.si/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|fr-FR|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|en-US|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|en-US|
@@ -196,7 +197,7 @@ dateCreated: 2021-12-06T04:08:54.9021147Z
 |[TorrentSir](https://torrentsir43.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://torrentview46.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentWhiz](https://torrentwiz34.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentWhiz](https://torrentwiz35.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentz2eu](https://torrentz2.club/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|en-GB|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-RU|
@@ -209,8 +210,8 @@ dateCreated: 2021-12-06T04:08:54.9021147Z
 |[xxxAdultTorrent](https://xxxadulttorrent.org/){#xxxadulttorrent}|xxxAdultTorrent is a RUSSIAN Public tracker for 3X|ru-RU|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[xxxtorrents](https://www.xxxtorrents.pro/){#xxxtorrents}|xxxtorrents is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
-|[YGGcookie](https://www3.yggtorrent.nz/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
-|[YGGtorrent](https://www3.yggtorrent.nz/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
+|[YGGcookie](https://www3.yggtorrent.re/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
+|[YGGtorrent](https://www3.yggtorrent.re/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|en-US|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|en-US|
 |[zetorrents](https://www.zetorrents.tv/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-FR|
