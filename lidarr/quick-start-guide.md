@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-10-24T06:10:58.973Z
+date: 2021-12-09T17:46:51.961Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -99,6 +99,9 @@ We will be using the default configuration of settings to configure Lidarr. This
 ## Media Management
 
 First we’re going to take a look at the `Media Management` where we will set the `Root Folder`.  This will be the location that the media files will be stored in.
+
+> Do not store Lidarr media on a cloud storage provider! Because of the way Lidarr uses tags, this will kill any API limits and cause issues. Keep your library on your network.
+{.is-warning}
 
 Click on `Settings` > `Media Management` on the left menu.
 
