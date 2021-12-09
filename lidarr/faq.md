@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-08-15T01:21:13.041Z
+date: 2021-12-09T17:43:23.499Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -313,3 +313,7 @@ This is expected. Below is how the Torrent Process works.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Lidarr's settings, Lidarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
+
+## I keep getting warnings from my cloud storage about API limits!
+
+Lidarr is not like the other Arrs. It uses tags instead of file names for operation. If you keep Lidarr files on cloud storage, it has to download the file to read the tags. This will very quickly blow through any API limits you have on your storage provider. We very much discourage you from keeping your Lidarr library on a cloud storage provider, and any issues you may be experiencing are likely due to that setup.
