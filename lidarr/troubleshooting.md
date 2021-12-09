@@ -333,9 +333,10 @@ Sometimes indexers will return completely unrelated results,  will feed in param
 ### Missing Results
 
 If you have results on the site you can find that are not showing in Lidarr then your issue is likely one of several possibiltiies:
- - [Categories are incorrect - See Above](#wrong-categories)
- - An ID based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable ids.
- - Not searching how Lidarr is searching; It's highly likely the terms you are searching on the indexer is not how Lidarr is querying it.  You can see how Lidarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily deocded using any HTML decoding/encoding tool online.
+
+- [Categories are incorrect - See Above](#wrong-categories)
+- An ID based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable ids.
+- Not searching how Lidarr is searching; It's highly likely the terms you are searching on the indexer is not how Lidarr is querying it.  You can see how Lidarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily deocded using any HTML decoding/encoding tool online.
 
 ### Certificate validation
 

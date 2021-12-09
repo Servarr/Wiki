@@ -41,7 +41,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 Proxy Specifc Settings and Supported Proxies:
   
 - FlareSolverr
- - Host - the full host path (include http and the port) to your FlareSolverr instance
+- Host - the full host path (include http and the port) to your FlareSolverr instance
 - HTTP
   - Host - the host address of your proxy
   - Port - the port of your proxy
@@ -83,6 +83,7 @@ All programs you can add are listed. You should only add programs you currently 
   - `Add and Remove Only` - Sync the Indexer to the app when it is added or removed from Prowlarr. If the indexer is down at the time of sync - it will be removed.
   - `Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program. Any change made remotely will be overridden by Prowlarr on next sync.
   - `Disabled` - will keep indexers from syncing with the program entirely.
+
 >`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals in \*Arrs are not currently factored in to this override.
 {.is-danger}
 
@@ -234,6 +235,7 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 ![general_logging.png](/assets/prowlarr/general_logging.png)
 
 The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
+
 - Log level - Probably one of the most useful troubleshooting tools
   - Info - This is the most basic way that Prowlarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
   - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries

@@ -105,7 +105,6 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 
 ### Contributing Indexers
 
-
 ### C# Indexers
 
 - C# Indexers are to be pull requested to the [Prowlarr App Repository](https://github.com/prowlarr/prowlarr) against the `develop` branch

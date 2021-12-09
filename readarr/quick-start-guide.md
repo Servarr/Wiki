@@ -28,8 +28,6 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ![booknaming.png](/assets/readarr/booknaming.png)
 
-
-
 - Enable/Disable Renaming of your books (as opposed to leaving the names that are currently there or as they were when you downloaded them).
 - If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ - % & + { }`).
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.

@@ -156,8 +156,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Username - Ensure you enter the actual username of the user and not the user's name
   - List - Ensure you use the list name as presented in the list URL
   - Example: `https://trakt.tv/users/some-user-name/lists/trakt-list-name?sort=rank,asc`
-      - Username: `some-user-name`
-      - List: `trakt-list-name`
+    - Username: `some-user-name`
+    - List: `trakt-list-name`
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
 

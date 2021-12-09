@@ -65,7 +65,6 @@ This section is for managing your library of authors and books.
 - Start Search for Missing Book(s) - Choose whether to start a historical search of your indexers for all books by this author immediately. If you do not do this, only NEWLY uploaded books will be grabbed from this point forward.
 - Add {Author Name} or Add {Book Name} - Click the Add button to add this author to Readarr and start pulling metadata for all books by this author. This process can take some time, so it would be advisable not to add too many authors too quickly.
 
-
 >If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
 > \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
 {.is-warning}

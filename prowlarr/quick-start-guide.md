@@ -62,6 +62,7 @@ When you add an app, you will need to enter values in the pop-up screen:
   - `Add and Remove Only` - Sync the Indexer to the app when it is added or removed from Prowlarr. If the indexer is down at the time of sync - it will be removed.
   - `Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program. Any change made remotely will be overridden by Prowlarr on next sync.
   - `Disabled` - will keep indexers from syncing with the program entirely.
+
 >`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals in \*Arrs are not currently factored in to this override.
 {.is-danger}
 
@@ -95,7 +96,7 @@ Please note that full sync means Prowlarr will overwrite any in-app changes you 
 
 > If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead. {.is-info}
 
->  Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality. {.is-danger}
+> Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality. {.is-danger}
 
 Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 

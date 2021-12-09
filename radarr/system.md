@@ -284,7 +284,8 @@ If you no longer use this download client, disable it in Radarr to prevent the e
   - total results are limited to 1000
   - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
-**Solutions**
+##### Solutions
+
 - Add each tracker in Jackett manually as an indexer in \*Arr
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr

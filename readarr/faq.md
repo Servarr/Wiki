@@ -322,7 +322,6 @@ This is expected. Below is how the Torrent Process works.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
 
-## Calibre is saying "Calibre rejected duplicate book" but it's not!
+## Calibre is saying "Calibre rejected duplicate book" but it's not
 
 If you're using Calibre integration, Calibre is occasionally going to reject a book, saying it's a duplicate. It's probably not actually a duplicate. If this happens, there's not much Readarr can do, and you will need to unmonitor that book to prevent Readarr from continuing to try to grab it and push it to Calibre. This is just one of the fun downsides to Calibre integration.
-
