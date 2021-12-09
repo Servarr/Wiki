@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-12-04T21:04:00.360Z
+date: 2021-12-09T17:39:58.013Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -89,6 +89,9 @@ nano LidarrInstall.sh
 #!/bin/bash
 ### Description: Lidarr Debian install
 ### Originally from the Radarr Community
+
+set -euo pipefail
+
 # Am I root?, need root!
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root."
