@@ -109,22 +109,29 @@ app_bin=${app^}                      # Binary Name of the app
 bindir="/opt/${app^}"                # Install Location
 branch="master"                     # {Update me if needed} branch to install
 datadir="/var/lib/lidarr/"          # {Update me if needed} AppData directory to use
-# Create App user if it doesn't exist
-PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
-if [ "$PASSCHK" -ge 1 ]; then
-    groupadd -f $app_guid
-    usermod -a -G $app_guid $app_uid
-    echo "User: [$app_uid] seems to exist. Skipping creation, but adding to the group if needed. Ensure the User [$app_uid] and Group [$app_guid] are setup properly.  Specifically the application will need access to your download client and media files."
-else
-    echo "User: [$app_uid] created with disabled password."
-    adduser --disabled-login --gecos "" $app_uid
-    groupadd -f $app_guid
-    usermod -a -G $app_guid $app_uid
+
+# Create User / Group as needed
+if ! getent group "$app_guid" >/dev/null; then
+  groupadd "$app_guid"
+  echo "Group [$app_guid] created"
 fi
+if ! getent passwd "$app_uid" >/dev/null; then
+  adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
+  echo "User [$app_uid] created and added to Group [$app_guid]"
+else
+  echo "User [$app_uid] already exists"
+fi
+
+if getent group $app_guid | grep -q "\b${app_uid}\b"; then
+  echo "User [$app_uid] did not exist in Group [$app_guid]"
+  usermod -a -G $app_guid $app_uid
+  echo "Added User [$app_uid] to Group [$app_guid]" 
+fi
+
 # Stop the App if running
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
-    sytemctl disable $app.service
+    systemctl disable $app.service
 fi
 # Create Appdata Directory
 # AppData
@@ -157,6 +164,9 @@ echo "Installing..."
 mv "${app^}" /opt/
 chown $app_uid:$app_uid -R $bindir
 rm -rf "${app^}.*.tar.gz"
+# Ensure we check for an update in case user installs older version or different branch
+touch $datadir/update_required
+chown $app_uid:$app_guid $datadir/update_required
 echo "App Installed"
 # Configure Autostart
 # Remove any previous app .service
@@ -190,6 +200,8 @@ ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
 echo "Install complete"
 echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
+# Exit
+exit 0
 ```
 
 - Press <kbd>Ctrl</kbd>+<kbd>O</kbd> (save) then <kbd>Enter</kbd>
@@ -197,7 +209,7 @@ echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
 - Then in your console type:
 
 ```shell
-bash Lida <tab>
+sudo bash LidarrInstall.sh
 ```
 
 - This should autocomplete to LidarrInstall.sh

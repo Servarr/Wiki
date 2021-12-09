@@ -93,11 +93,9 @@ nano RadarrInstall.sh
 ### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 ### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
 ### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
-### Updates by: The Radarr Community
-### Thanks to Bakerboy448 for the guidance and improved wiki entry & script
-### Original author note: For the avoidance of doubt, this script is just to help the next person along and improve the Radarr install experience.
-### Its target is the beginner/novice with 'I know enough to be dangerous' experience.
-### If you see any errors or improvements please update the script for future users.
+### Additional Updates by: The Radarr Community
+
+set -euo pipefail
 
 # Am I root?, need root!
 
@@ -114,30 +112,36 @@ app_uid="radarr"                    # {Update me if needed} User App will run as
 app_guid="media"                    # {Update me if needed} Group App will run as.
 app_port="7878"                     # Default App Port; Modify config.xml after install if needed
 app_prereq="curl mediainfo sqlite3" # Required packages
-app_umask="0002"                    # UMask the Service will run as
+app_umask="0002"                    # UMask the Service will run as 
 app_bin=${app^}                     # Binary Name of the app
 bindir="/opt/${app^}"               # Install Location
 branch="master"                     # {Update me if needed} branch to install
 datadir="/var/lib/radarr/"          # {Update me if needed} AppData directory to use
 
-# Create App user if it doesn't exist
 
-PASSCHK=$(grep -c "$app_uid:" /etc/passwd)
-if [ "$PASSCHK" -ge 1 ]; then
-    groupadd -f $app_guid
-    usermod -a -G $app_guid $app_uid
-    echo "User: [$app_uid] seems to exist. Skipping creation, but adding to the group if needed. Ensure the User [$app_uid] and Group [$app_guid] are setup properly.  Specifically the application will need access to your download client and media files."
-else
-    echo "User: [$app_uid] created with disabled password."
-    adduser --disabled-login --gecos "" $app_uid
-    groupadd -f $app_guid
-    usermod -a -G $app_guid $app_uid
+# Create User / Group as needed
+if ! getent group "$app_guid" >/dev/null; then
+  groupadd "$app_guid"
+  echo "Group [$app_guid] created"
 fi
+if ! getent passwd "$app_uid" >/dev/null; then
+  adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
+  echo "User [$app_uid] created and added to Group [$app_guid]"
+else
+  echo "User [$app_uid] already exists"
+fi
+
+if getent group $app_guid | grep -q "\b${app_uid}\b"; then
+  echo "User [$app_uid] did not exist in Group [$app_guid]"
+  usermod -a -G $app_guid $app_uid
+  echo "Added User [$app_uid] to Group [$app_guid]" 
+fi
+
 # Stop the App if running
 
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
-    sytemctl disable $app.service
+    systemctl disable $app.service
 fi
 
 # Create Appdata Directory
@@ -176,6 +180,9 @@ echo "Installing..."
 mv "${app^}" /opt/
 chown $app_uid:$app_uid -R $bindir
 rm -rf "${app^}.*.tar.gz"
+# Ensure we check for an update in case user installs older version or different branch
+touch $datadir/update_required
+chown $app_uid:$app_guid $datadir/update_required
 echo "App Installed"
 # Configure Autostart
 
@@ -213,6 +220,8 @@ ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
 echo "Install complete"
 echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
+# Exit
+exit 0
 ```
 
 - Press <kbd>Ctrl</kbd>+<kbd>O</kbd> (save) then <kbd>Enter</kbd>
@@ -220,7 +229,7 @@ echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
 - Then in your console type:
 
 ```shell
-bash RadarrInstall.sh
+sudo bash RadarrInstall.sh
 ```
 
 If you need to re-install run again:
@@ -402,6 +411,7 @@ Sample config examples for configuring Radarr to be accessible from the outside 
 {.is-info}
 
 ## NGINX
+
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
 ```none
@@ -419,9 +429,10 @@ location /radarr {
 }
 ```
 
-A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file. 
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
 To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
-```
+
+```nginx
 server {
   listen 80;
   server_name _;
@@ -431,17 +442,19 @@ server {
   include subfolders-enabled/*.conf
 }
 ```
+
 Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Radarr at `yourdomain.tld/radarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
 
 ### Subdomain
-Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS. 
+
+Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
 > Many free DNS providers do not support this {.warning}
 
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
 
 > For this configuration it is recommended to set baseurl to ''. This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.info}
 
-```
+```nginx
 server {
   listen      80;
   listen [::]:80;
@@ -463,6 +476,7 @@ server {
   }
 }
 ```
+
 Now restart Nginx and Radarr should be available at your selected subdomain.
 
 ## Apache
