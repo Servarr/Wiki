@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-05-25T00:08:13.267Z
 ---
 
-In this guide we will try to explain the basic setup you need to do to get started as quickly as possible with Readarr.
+In this guide we will explain the basic setup you need to do to get started as quickly as possible with Readarr.
 
 There are a lot more settings you may need or want. They can be found at the [settings]( /readarr/settings) page.
 
