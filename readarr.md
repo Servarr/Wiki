@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2021-11-30T00:51:13.877Z
+date: 2021-12-10T15:24:16.596Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
@@ -46,7 +46,7 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://readarr.com/docs/api/)
 {.links-list}
 
-> Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
+> Note that the API Docs are a perpetual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
 {.is-info}
 
 # Support
