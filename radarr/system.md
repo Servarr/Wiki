@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-12-09T18:12:34.127Z
+date: 2021-12-11T20:58:57.501Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -318,7 +318,7 @@ If you no longer use this download client, disable it in Radarr to prevent the e
   1. Click Movies from the left menu
   1. Click the dropdown on Filter and select “Custom Filter”
   1. Enter a label, for example “Deleted Movies”
-  1. Make the filter as follows: Status is Deleted
+  1. Make the filter as follows: **Release Status is Deleted**
   1. Click save and select the newly created filter from the filter dropdown menu
 
 #### Lists are unavailable due to failures
