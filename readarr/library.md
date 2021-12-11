@@ -10,7 +10,7 @@ dateCreated: 2021-11-30T00:50:59.442Z
 
 # Library
 
-This section is for managing your library of [authors](#authors) and [books](#books).
+This section is for managing your library of [authors](#authors) and [books](#books)
 
 # Authors
 

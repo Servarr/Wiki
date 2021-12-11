@@ -240,7 +240,7 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 There are a few causes of repeated downloads, but one is related to Custom Formats. It's possible the release name matches a custom format, but the download files do not. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t.  Depending on your custom format you may be able to work around this by including the custom format in your renaming schema. (Enable the Custom Format to be included in renaming & then add Custom Format to you renaming schema)
 
-This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perceptually grabbed and never imported. Please see the various other common problems and troubleshooting steps for this.
+This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpetually grabbed and never imported. Please see the various other common problems and troubleshooting steps for this.
 
 ### Usenet download misses import
 

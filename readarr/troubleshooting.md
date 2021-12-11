@@ -244,7 +244,7 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 There are a few causes of repeated downloads, but one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any preferred word scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Don’t restrict your release profile to an indexer.
 
-This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perceptually grabbed and never imported. Please see the various other common problems and troubleshooting steps for this.
+This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpetually grabbed and never imported. Please see the various other common problems and troubleshooting steps for this.
 
 ### Usenet download misses import
 

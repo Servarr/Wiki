@@ -43,7 +43,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://lidarr.audio/docs/api/)
 {.links-list}
 
-> Note that the API Docs are a perceptual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
+> Note that the API Docs are a perpetual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console.
 {.is-info}
 
 # Support

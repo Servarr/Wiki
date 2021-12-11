@@ -14,7 +14,7 @@ We're always looking for people to help make Prowlarr even better, there are a n
 
 # Documentation
 
-Quick Start guides, [FAQ](/prowlarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
+Setup guides, [FAQ](/prowlarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
 
 # Development
 
