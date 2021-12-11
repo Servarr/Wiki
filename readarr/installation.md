@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-12-11T23:06:50.892Z
+date: 2021-12-11T23:39:55.247Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -112,35 +112,36 @@ fi
 # Const
 ### Update these variables as required for your specific instance
 
-app="readarr"                        # App Name
-app_uid="readarr"                    # {Update me if needed} User App will run as and the owner of it's binaries
-app_guid="media"                     # {Update me if needed} Group App will run as.
-app_port="8787"                      # Default App Port; Modify config.xml after install if needed
-app_prereq="curl sqlite3"            # Required packages
-app_umask="0002"                     # UMask the Service will run as
-app_bin=${app^}                      # Binary Name of the app
-bindir="/opt/${app^}"                # Install Location
-branch="nightly"                     # {Update me if needed} branch to install
-datadir="/var/lib/readarr/"          # {Update me if needed} AppData directory to use
+app="readarr"               # App Name
+app_uid="readarr"           # {Update me if needed} User App will run as and the owner of it's binaries
+app_guid="media"            # {Update me if needed} Group App will run as.
+app_port="8787"             # Default App Port; Modify config.xml after install if needed
+app_prereq="curl sqlite3"   # Required packages
+app_umask="0002"            # UMask the Service will run as
+app_bin=${app^}             # Binary Name of the app
+bindir="/opt/${app^}"       # Install Location
+branch="nightly"            # {Update me if needed} branch to install
+datadir="/var/lib/readarr/" # {Update me if needed} AppData directory to use
 
 # Create User / Group as needed
-if ! getent group "$app_guid" >/dev/null; then
-  groupadd "$app_guid"
-  echo "Group [$app_guid] created"
-fi
-if ! getent passwd "$app_uid" > /dev/null; then
-  useradd --system --groups "$app_guid" "$app_uid"
-  echo "User [$app_uid] created and added to Group [$app_guid]"
-else
-  echo "User [$app_uid] already exists"
+if ! getent group "$app_guid" &>/dev/null; then
+    groupadd "$app_guid"
+    echo "Group [$app_guid] created"
 fi
 
-if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
-  echo "User [$app_uid] did not exist in Group [$app_guid]"
-  usermod -a -G "$app_guid" "$app_uid"
-  echo "Added User [$app_uid] to Group [$app_guid]"
+if ! getent passwd "$app_uid" &>/dev/null; then
+    useradd --system --groups "$app_guid" "$app_uid"
+    echo "User [$app_uid] created and added to Group [$app_guid]"
 else
-  echo "User [$app_uid] already exists in Group [$app_guid]"
+    echo "User [$app_uid] already exists"
+fi
+
+if ! getent group "$app_guid" |& grep -qw "${app_uid}" &>/dev/null; then
+    echo "User [$app_uid] did not exist in Group [$app_guid]"
+    usermod -a -G "$app_guid" "$app_uid"
+    echo "Added User [$app_uid] to Group [$app_guid]"
+else
+    echo "User [$app_uid] already exists in Group [$app_guid]"
 fi
 
 # Stop the App if running
@@ -189,7 +190,7 @@ echo "Removing old service file"
 rm -rf /etc/systemd/system/$app.service
 # Create app .service with correct user startup
 echo "Creating service file"
-cat << EOF | tee /etc/systemd/system/$app.service >/dev/null
+cat <<EOF | tee /etc/systemd/system/$app.service >/dev/null
 [Unit]
 Description=${app^} Daemon
 After=syslog.target network.target
