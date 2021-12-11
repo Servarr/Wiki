@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-07T14:45:02.572Z
+date: 2021-12-11T16:33:31.187Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -442,7 +442,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers with Radarr is to utilize a second program such as [Jackett](https://github.com/Jackett/Jackett) or [Prowlarr](/prowlarr). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
+- One of the best and simplest ways to utilize Torrent trackers with Radarr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
