@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-12-09T18:12:45.821Z
+date: 2021-12-11T23:06:50.892Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -128,17 +128,19 @@ if ! getent group "$app_guid" >/dev/null; then
   groupadd "$app_guid"
   echo "Group [$app_guid] created"
 fi
-if ! getent passwd "$app_uid" >/dev/null; then
-  adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
+if ! getent passwd "$app_uid" > /dev/null; then
+  useradd --system --groups "$app_guid" "$app_uid"
   echo "User [$app_uid] created and added to Group [$app_guid]"
 else
   echo "User [$app_uid] already exists"
 fi
 
-if getent group $app_guid | grep -q "\b${app_uid}\b"; then
+if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
   echo "User [$app_uid] did not exist in Group [$app_guid]"
-  usermod -a -G $app_guid $app_uid
-  echo "Added User [$app_uid] to Group [$app_guid]" 
+  usermod -a -G "$app_guid" "$app_uid"
+  echo "Added User [$app_uid] to Group [$app_guid]"
+else
+  echo "User [$app_uid] already exists in Group [$app_guid]"
 fi
 
 # Stop the App if running
