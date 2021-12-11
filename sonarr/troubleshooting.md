@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-12-09T18:12:57.902Z
+date: 2021-12-11T20:22:14.798Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -476,7 +476,30 @@ Releases may be uploaded as `The Series Name`, but TVDB has the series as `Serie
 
 ### Series needs an XEM Mapping
 
-Releases may be uploaded as `Series Title S02E45`, but TVDB has this episode as `Series Title S03E01` Please see [this FAQ entry](/sonarr/faq#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
+Releases may be uploaded as `Series Title S02E45` or `Other Series Title S2022E42`, but TVDB has this episode as `Series Title S03E01` or `Other Series Title S03E42`  Please see [this FAQ entry](/sonarr/faq#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
+
+### Wrong Series Type
+
+The series type affects how Sonarr searches.
+[See this FAQ entry](/sonarr/faq#whats-the-different-series-types)
+
+#### Daily
+
+  - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
+  - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
+  - DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
+
+#### Standard
+
+  - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
+  - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
+  - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
+
+#### Anime
+
+  - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
+  - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
+  - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
 ### Media is Unmonitored
 
@@ -511,11 +534,6 @@ Rarbg has a tendency to have some sort of rate limiting within their API and dis
 ### IP Ban
 
 Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address.  This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.
-
-### Wrong Series Type
-
-The series type affects how Sonarr searches.
-[See this FAQ entry](/sonarr/faq#whats-the-different-series-types)
 
 ### Using the Jackett /all endpoint
 
