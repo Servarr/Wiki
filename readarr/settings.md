@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-12-09T18:12:48.326Z
+date: 2021-12-11T19:01:16.344Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -632,7 +632,7 @@ This shows you the lists you currently have, and allows you to add new lists. Ad
 
 Anything on here has been excluded from being added by lists, and will never be added from any list.  You can remove items from this by clicking on it.
 
-# Adding an Import List
+## Adding an Import List
 
 After clicking the `+`, choose what kind of list you'd like to add:
 
