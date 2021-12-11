@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-12-11T22:04:57.524Z
+date: 2021-12-11T22:06:15.001Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -43,6 +43,7 @@ Proxy Specifc Settings and Supported Proxies:
 - FlareSolverr
   - Host - the full host path (include http and the port) to your FlareSolverr instance
   - (Advanced Setting) Request Timeout - the [FlareSolver Request `maxTimeout` parameter](https://github.com/FlareSolverr/FlareSolverr#-requestget) (Default: 60 seconds)
+> A FlareSolverr Proxy will only be used for requests if and only if Cloudflare is detected by Prowlarr {.is-info}
 - HTTP
   - Host - the host address of your proxy
   - Port - the port of your proxy
