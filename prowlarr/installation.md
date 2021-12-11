@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-12-11T23:06:43.017Z
+date: 2021-12-11T23:09:05.432Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -71,7 +71,10 @@ If you want an easy life, follow this community provided and maintained `Easy In
 > Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 
-> This will create the user `prowlarr` and install Prowlarr to /opt. It will run Prowlarr as the group `prowlarr`.{.is-info}
+
+> This will create the user `prowlarr` and install Prowlarr to /opt. It will run Prowlarr as the group `prowlarr`.
+> Prowlarr does not require access to your download directory nor media directory.
+{.is-info}
 
 > This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within Prowlarr. The script won't delete your settings (application data), but be safe. {.is-danger}
 
