@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers are available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2021-12-09T18:23:05.496Z
+date: 2021-12-11T19:45:11.4813168Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-09-06T17:37:40.680Z
+dateCreated: 2021-12-11T19:45:11.4813168Z
 ---
 
-- Supported Indexers as of Build `0.1.8.1223` / [Commit: 6ca708f5232b6bb643f3f006123c6e98654f171f](https://github.com/Prowlarr/Prowlarr/commit/6ca708f5232b6bb643f3f006123c6e98654f171f)
+- Supported Indexers as of Build `0.1.8.1232` / [Commit: 62d15536dfe0933cee1d057b5bd2abe8d6a9bba4](https://github.com/Prowlarr/Prowlarr/commit/62d15536dfe0933cee1d057b5bd2abe8d6a9bba4)
 
 ---
 
@@ -271,6 +271,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[Bitspyder](https://bitspyder.net/){#bitspyder}|Bitspyder is a Private site for Educational BOOKS / AUDIO|en-US|
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN tracker|de-DE|
 |[BiTTuRK](http://bitturk.net/){#bitturk}|BiTTuRK is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL. This Indexer is for English only.|en-US|
+|[Bj-Share](https://bj-share.info/){#bjshare}|Private PT-BR torrent|pt-BR|
 |[BlueBird](https://bluebird-hd.org/){#bluebird}|BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES|ru-RU|
 |[Blutopia (API)](https://blutopia.xyz/){#blutopia-api}|Blutopia (BLU) is a Private Torrent Tracker for HD MOVIES / TV|en-US|
 |[Borgzelle](https://borgzelle.borg/){#borgzelle}|Borgzelle is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
@@ -372,6 +373,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[HDDolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[HDME](https://hdme.eu/){#hdme}|HDME is a Private Torrent Tracker for HD MOVIES / TV / GENERAL|en-US|
+|[HDMonkey](https://hdmonkey.org/){#hdmonkey}|HDMonkey is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-RO|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[HDSpace](https://hd-space.org/){#hd-space}|HD-Space (HDS) is a Private Torrent Tracker for HD MOVIES / TV|en-US|
