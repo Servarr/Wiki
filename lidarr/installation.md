@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-12-11T23:06:38.283Z
+date: 2021-12-11T23:41:15.350Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -99,35 +99,35 @@ if [ "$EUID" -ne 0 ]; then
 fi
 # Const
 ### Update these variables as required for your specific instance
-app="lidarr"                         # App Name
-app_uid="lidarr"                     # {Update me if needed} User App will run as and the owner of it's binaries
-app_guid="media"                     # {Update me if needed} Group App will run as.
-app_port="8686"                      # Default App Port; Modify config.xml after install if needed
-app_prereq="curl mediainfo sqlite3 libchromaprint-tools"            # Required packages
-app_umask="0002"                     # UMask the Service will run as
-app_bin=${app^}                      # Binary Name of the app
-bindir="/opt/${app^}"                # Install Location
-branch="master"                     # {Update me if needed} branch to install
-datadir="/var/lib/lidarr/"          # {Update me if needed} AppData directory to use
+app="lidarr"                                             # App Name
+app_uid="lidarr"                                         # {Update me if needed} User App will run as and the owner of it's binaries
+app_guid="media"                                         # {Update me if needed} Group App will run as.
+app_port="8686"                                          # Default App Port; Modify config.xml after install if needed
+app_prereq="curl mediainfo sqlite3 libchromaprint-tools" # Required packages
+app_umask="0002"                                         # UMask the Service will run as
+app_bin=${app^}                                          # Binary Name of the app
+bindir="/opt/${app^}"                                    # Install Location
+branch="master"                                          # {Update me if needed} branch to install
+datadir="/var/lib/lidarr/"                               # {Update me if needed} AppData directory to use
 
 # Create User / Group as needed
 if ! getent group "$app_guid" >/dev/null; then
-  groupadd "$app_guid"
-  echo "Group [$app_guid] created"
+    groupadd "$app_guid"
+    echo "Group [$app_guid] created"
 fi
-if ! getent passwd "$app_uid" > /dev/null; then
-  useradd --system --groups "$app_guid" "$app_uid"
-  echo "User [$app_uid] created and added to Group [$app_guid]"
+if ! getent passwd "$app_uid" >/dev/null; then
+    useradd --system --groups "$app_guid" "$app_uid"
+    echo "User [$app_uid] created and added to Group [$app_guid]"
 else
-  echo "User [$app_uid] already exists"
+    echo "User [$app_uid] already exists"
 fi
 
 if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
-  echo "User [$app_uid] did not exist in Group [$app_guid]"
-  usermod -a -G "$app_guid" "$app_uid"
-  echo "Added User [$app_uid] to Group [$app_guid]"
+    echo "User [$app_uid] did not exist in Group [$app_guid]"
+    usermod -a -G "$app_guid" "$app_uid"
+    echo "Added User [$app_uid] to Group [$app_guid]"
 else
-  echo "User [$app_uid] already exists in Group [$app_guid]"
+    echo "User [$app_uid] already exists in Group [$app_guid]"
 fi
 
 # Stop the App if running
@@ -176,7 +176,7 @@ echo "Removing old service file"
 rm -rf /etc/systemd/system/$app.service
 # Create app .service with correct user startup
 echo "Creating service file"
-cat << EOF | tee /etc/systemd/system/$app.service >/dev/null
+cat <<EOF | tee /etc/systemd/system/$app.service >/dev/null
 [Unit]
 Description=${app^} Daemon
 After=syslog.target network.target
