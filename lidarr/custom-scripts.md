@@ -2,10 +2,10 @@
 title: Lidarr Custom Scripts
 description: 
 published: true
-date: 2021-11-15T21:19:10.301Z
+date: 2021-11-24T19:22:13.480Z
 tags: lidarr, needs-love, custom scripts
 editor: markdown
-dateCreated: 2021-06-23T06:41:39.234Z
+dateCreated: 2021-11-24T19:22:09.331Z
 ---
 
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Lidarr via the [Connect Settings](/lidarr/settings#connections).

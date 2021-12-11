@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2021-10-28T04:55:55.867Z
+date: 2021-11-24T19:22:35.476Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z

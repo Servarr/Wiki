@@ -2,7 +2,7 @@
 title: Readarr Custom Scripts
 description: 
 published: true
-date: 2021-10-23T03:45:12.487Z
+date: 2021-11-25T15:07:38.794Z
 tags: readarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:41:11.792Z

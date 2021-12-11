@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-12-06T23:00:08.310Z
+date: 2021-12-09T18:12:41.508Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z

@@ -2,7 +2,7 @@
 title: Prowlarr Custom Scripts
 description: 
 published: true
-date: 2021-07-10T16:04:48.988Z
+date: 2021-11-24T19:22:59.262Z
 tags: prowlarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:40:30.916Z

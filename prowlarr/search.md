@@ -2,7 +2,7 @@
 title: Prowlarr Search
 description: 
 published: true
-date: 2021-11-26T21:38:14.767Z
+date: 2021-11-26T22:42:35.477Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T23:31:53.221Z

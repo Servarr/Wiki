@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2021-08-03T21:09:34.721Z
+date: 2021-11-24T19:26:00.586Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z

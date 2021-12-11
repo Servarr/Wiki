@@ -2,7 +2,7 @@
 title: Sonarr Wanted
 description: 
 published: true
-date: 2021-11-29T22:12:53.399Z
+date: 2021-11-29T22:12:55.806Z
 tags: sonarr, needs-love, wanted
 editor: markdown
 dateCreated: 2021-06-10T01:40:02.329Z

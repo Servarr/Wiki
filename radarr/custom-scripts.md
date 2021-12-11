@@ -2,7 +2,7 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-10-05T02:09:10.507Z
+date: 2021-11-24T19:24:01.815Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z

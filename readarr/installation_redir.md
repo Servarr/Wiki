@@ -2,10 +2,10 @@
 title: Readarr Installation Redirect
 description: Redirect Page for Readarr Installation
 published: true
-date: 2021-11-15T23:31:34.677Z
+date: 2021-11-24T19:25:04.773Z
 tags: 
 editor: markdown
-dateCreated: 2021-11-15T23:30:35.420Z
+dateCreated: 2021-11-24T19:25:01.067Z
 ---
 
 Redirect page for [Readarr Installation](/readarr/installation/)
