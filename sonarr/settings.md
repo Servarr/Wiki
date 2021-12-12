@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-12-12T01:50:25.769Z
+date: 2021-12-12T01:52:11.673Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -110,7 +110,7 @@ Also, note that for each individual settings page, there are some options at the
 ### Other
 
 - `{Release Group}` = Rls Grp
-- `{Preferred Words}` = iNTERNAL
+- `{Preferred Words}` = iNTERNAL or NF
 
 > \* Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
 \* `{Preferred Words:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
@@ -119,8 +119,8 @@ Also, note that for each individual settings page, there are some options at the
 
 ### Original
 
-- `{Original Title}` = Series.Title.S01E01.HDTV.x264-EVOLVE
-- `{Original Filename}` = Series.title.s01e01hdtv.x264-EVOLVE
+- `{Original Title}` = Series.Title.S01E01.WEBDL.NF.1080P.x264-EVOLVE
+- `{Original Filename}` = Series.title.s01e01.WEBDL.NF.1080P.x264-EVOLVE
 
 > `Original Title` is the release name and it is what is suggested to be used.
 {.is-info}
