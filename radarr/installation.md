@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-12-11T23:40:29.700Z
+date: 2021-12-12T16:50:20.349Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -155,6 +155,8 @@ chmod 775 $datadir
 # Download and install the App
 
 # prerequisite packages
+# Get MediaInfo from MI direct rather than the OS
+wget https://mediaarea.net/repo/deb/repo-mediaarea_1.0-19_all.deb && dpkg -i repo-mediaarea_1.0-19_all.deb && apt-get update
 apt install $app_prereq
 
 ARCH=$(dpkg --print-architecture)
