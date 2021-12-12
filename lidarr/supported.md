@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-12-12T02:29:06.739Z
+date: 2021-12-12T02:35:07.115Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -54,6 +54,15 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 {#indexer}
 
+## Usenet
+
+- Newznab {#newznab}
+  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
+  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilites such as stat tracking.
+
+## Torrents
+
 - FileList {#filelist}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Gazelle API {#gazelle}
@@ -61,23 +70,29 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Headphones VIP {#headphones}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
+  - Private Tracker
+  - > Does not support Search {.is-info}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- Newznab {#newznab}
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
 - Nyaa {#nyaa}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - omgwtfnzbs {#omgwtfnzbs}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Rarbg {#rarbg}
+  - Public Tracker
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Redacted {#redacted}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
+  - Generic torrent RSS feed parser.
+  > The RSS feed must contain a `pubdate`. The release size is recommended as well.
+  {.is-info}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - TorrentLeech {#torrentleech}
+  - Private Indexer
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Torznab {#torznab}
+  - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
+  - This is primarily only supported by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett)
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Waffles {#waffles}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
