@@ -2,10 +2,10 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-12-04T21:26:30.526Z
+date: 2021-12-12T20:06:06.308Z
 tags: readarr
 editor: markdown
-dateCreated: 2021-05-25T00:08:13.267Z
+dateCreated: 2021-12-11T19:42:31.825Z
 ---
 
 In this guide we will try to explain the basic setup you need to do to get started as quickly as possible with Readarr.
@@ -33,6 +33,9 @@ First we’re going to take a look at the `Media Management` settings where we c
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.
 - `(Advanced Option) This is where you will set the naming convention for the Author folder.`
 
+> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
+{.is-info}
+
 # Folders
 
 ![folders.png](/assets/readarr/folders.png)
@@ -40,13 +43,25 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Create Empty Author Folders - Enable to create empty author folders when a new author is added to Readarr.
 - (Advanced Option) Delete Empty Folders - Enable to delete empty author folders when there are no remaining books for that author.
 
+> One of those boxes can be checked, but they should not BOTH be checked. {.is-warning}
+
+> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
+{.is-info}
+
 # Importing
 
 ![importing.png](/assets/readarr/importing.png)
 
-- `(Advanced Option) Designate the required minimum free space that must be available on your drive in order for books to be imported.`
-- `(Advanced Option) Enable`Use Hardlinks instead of Copy`more info how and why with examples [TRaSH's Hardlinks Guide](https://trash-guides.info/hardlinks).`
-- `(Advanced Option) Import matching extra files (nfo, etc) after importing a file.`
+- (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
+- (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
+- (Advanced Option) Use Hardlinks instead of Copy - Check this box to use Hardlinks instead of Copies (for Torrents). Note that this is enabled by default.
+  
+> You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
+  
+- Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
+- (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
+
+> If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
 
 # File Management
 
@@ -54,15 +69,31 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 - Books deleted from disk are automatically unmonitored in Readarr.
 
-- You may want to delete a book, and do not want Readarr to re-download the book later. You would use this option.
 
-- How you want Readarr to handle PROPER and REPACK for replacement of your books.
-- Check to watch root folders for file changes and update Readarr appropriately.
-- Change behavior on how Readarr rescans author folders when a change is detected.
-- Change behavior on how Readarr matches books using fingerprinting. This can impact CPU usage.
-- Change the file date on imports to the book's release date.
-- `(Advanced Option) Designate a location for deleted files to go to (just in case you want to retrieve them before the bin is taken out).`
-- `(Advanced Option) This is how old a given file can be before it is deleted permanently.`
+- Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
+- Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
+  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
+- > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
+- > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
+
+- (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
+- (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
+  - Always - This will rescan author folders based upon Tasks Schedule
+  - After Manual Refresh - You will have to manually rescan the disk
+  - Never - Just as it says, never rescan the author folders.
+- (Advanced Option) Allow Fingerprinting - Choose how to handle fingerprinting, which allows increased accuracy for book matching, at the expense of CPU/disk time.
+  - Always - Always use fingerprinting if possible
+  - For new imports only - Only fingerprint newly imported releases
+  - Never - Just as it says, never use fingerprinting
+- (Advanced Option) Change File Date - Change file date on import/rescan
+  - None - Readarr will not change the date that shows in your given file browser
+  - Book Release Date - The date the book was released.
+- (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
+- (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
+
+> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
 
 # Root Folders and Calibre Integration
 
@@ -106,10 +137,10 @@ Then you will need to restart Calibre. Once back in, configure and start up the 
 
 ![calibre1.png](/assets/readarr/calibre1.png)
 
-If you have chosen Calibre integration, you will enter more values here.
+If you have chosen Calibre integration, you will enter the necessary values here.
 
-- The Calibre Host is where Calibre Content Server is running.
-- The Calinre Port is the port Calibre Content Server uses (default 9900).
+- Calibre Host - Host (e.g. ip or container name) where Calibre Content Server is running.
+- Calibre Port - the port Calibre Content Server uses (default 9900).
 - If you are running with a URL base, enter that here.
 - The username you created for the Content Server goes here.
 - The password you entered for the Content Server goes here.
