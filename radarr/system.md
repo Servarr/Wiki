@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-12-11T20:58:57.501Z
+date: 2021-12-12T04:14:11.458Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -18,7 +18,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 #### Branch is not a valid release branch
 
-- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/radarr/faq#how-do-i-update-radarr).
 
 #### Update to .NET version
 
