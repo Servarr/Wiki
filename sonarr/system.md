@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-11-24T19:26:18.473Z
+date: 2021-12-12T04:14:52.813Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -104,7 +104,7 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 #### Enable Completed Download Handling
 
 - Sonarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling.
-(Completed Download Handling is enabled by default..)
+(Completed Download Handling is enabled by default...)
 
 #### Downloading into Root Folder
 
