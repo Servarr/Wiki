@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-12-12T02:20:25.218Z
+date: 2021-12-12T02:35:24.206Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -19,11 +19,17 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 Prowlarr can automatically sync indexers with various applications
 
 - LazyLibrarian {#lazylibrarian}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Lidarr {#lidarr}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Mylar {#mylar}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Radarr {#radarr}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Readarr {#readarr}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Sonarr {#sonarr}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 
 # Download Clients
 
@@ -84,9 +90,12 @@ Prowlarr can automatically sync indexers with various applications
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - [More Info](/prowlarr/custom-scripts)
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/prowlarr/custom-scripts) for more details.
 - Discord {#discord}
+  - By far one of the most common ways to push notifications of actions happening on your Prowlarr
 - Email {#email}
+  - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
+  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - Gotify {#gotify}
 - Join {#join}
 - Notifiarr {#notifiarr}
