@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-12-12T20:06:06.308Z
+date: 2021-12-12T20:22:17.641Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -141,10 +141,10 @@ If you have chosen Calibre integration, you will enter the necessary values here
 
 - Calibre Host - Host (e.g. ip or container name) where Calibre Content Server is running.
 - Calibre Port - the port Calibre Content Server uses (default 9900).
-- If you are running with a URL base, enter that here.
-- The username you created for the Content Server goes here.
-- The password you entered for the Content Server goes here.
-- You can choose a specific Calibre library to use, or leave it blank for the default.
+- (Advanced Option) Calibre URL Base - the url base for Calibre Content Server, typically only needed with Reverse Proxies
+- Username - username you created for the Content Server goes here.
+- Password - password you entered for the Content Server goes here.
+- Calibre Library - enter a specific Calibre library to use, or leave it blank for the default library
 
 ![calibre2.png](/assets/readarr/calibre2.png)
 
