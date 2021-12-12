@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-12-09T18:12:30.438Z
+date: 2021-12-12T02:35:20.248Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -61,6 +61,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Newznab {#newznab}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
+  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilites such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
   - A private usenet indexer.
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
@@ -79,7 +80,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
-  - > Nyaa frowns upon automation and frequently will ban your API. {.is-info}
+  - > Nyaa frowns upon automation and frequently will ban your IP. {.is-info}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
@@ -97,12 +98,12 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Torznab {#torznab}
   - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
-  - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
+  - This is primarily only supported by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett)
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
 > Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
 > Please review your tracker rules and etiquette, keep your community alive.
-> We�re not responsible if your account is banned for disobeying rules or accruing Hit and Runs (HnRs)/low-ratio.
+> We're not responsible if your account is banned for disobeying rules or accruing Hit and Runs (HnRs)/low-ratio.
 {.is-warning}
 
 # Notifications
@@ -111,9 +112,9 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/sonarr/custom-scripts) for more details.
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/radarr/custom-scripts) for more details.
 - Discord {#discord}
-  - By far one of the most common ways to push notifications of actions happening on your Sonarr
+  - By far one of the most common ways to push notifications of actions happening on your Radarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
   - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
@@ -121,9 +122,10 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Gotify {#gotify}
 - Join {#join}
 - Kodi {#xbmc}
-  - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new episode has been added to Sonarr.
+  - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new movie has been added to Radarr.
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
+  - See the entry on [Useful Tools - Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available.
 - Prowl {#prowl}
@@ -135,6 +137,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Telegram {#telegram}
 - Trakt {#trakt}
 - Twitter {#twitter}
+  - See this [Tips and Tricks entry](/useful-tools#twitter)
 - Webhook {#webhook}
 
 # Lists
