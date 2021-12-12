@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-11-24T19:53:05.486Z
+date: 2021-12-12T01:49:48.066Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -112,8 +112,10 @@ Also, note that for each individual settings page, there are some options at the
 - `{Release Group}` = Rls Grp
 - `{Preferred Words}` = iNTERNAL
 
-> Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
+> \* Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
+\* `{Preferred Words:<Release Profile Name>}` is an additional option
 {.is-info}
+
 
 ### Original
 
