@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-12-12T02:19:15.624Z
+date: 2021-12-12T02:23:00.193Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -68,8 +68,10 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
-Click on `Settings` => `Apps`, and then click the <kb>+<kb> to add an app.
-
+- Click on `Settings` => `Apps`, and then click the <kb>+<kb> to add an app.
+- Sync App Indexers - Trigger a sync of all indexers to all applications
+- Test All Apps - Trigger a test of all applications
+  
 ![addapps.png](/assets/prowlarr/addapps.png)
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you should add each of them separately.
