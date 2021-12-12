@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-12-09T18:12:54.409Z
+date: 2021-12-12T02:35:18.256Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -64,6 +64,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Newznab {#newznab}
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
+  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilites such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
   - A private usenet indexer.
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
@@ -89,7 +90,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Known Issues exist with the native Sonarr version
     - [Nyaa seeders/leechers not parsed properly anymore. #4614](https://github.com/Sonarr/Sonarr/issues/4614)
       - This can be fixed when / if [Pull Request #4637](https://github.com/Sonarr/Sonarr/pull/4637) is merged
-  - > Nyaa frowns upon automation and frequently will ban your IP and API. {.is-warning}
+  - > Nyaa frowns upon automation and frequently will ban your IP. {.is-warning}
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Rarbg {#rarbg}
   - Public Tracker
@@ -104,7 +105,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Torznab {#torznab}
   - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
-  - This is primarily only supported by [Jackett](https://github.com/Jackett/Jackett) and [Prowlarr](/prowlarr)
+  - This is primarily only supported by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett)
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 
 > Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
