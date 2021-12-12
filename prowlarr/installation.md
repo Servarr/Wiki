@@ -71,8 +71,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 > Its target is the beginner/novice with `I know enough to be dangerous` experience.
 > If you see any errors or improvements then please update for the next person by amending the wiki and script.
 
-
-> This will create the user `prowlarr` and install Prowlarr to /opt. It will run Prowlarr as the group `prowlarr`.
+> This will create the user `prowlarr` and install Prowlarr to `/opt`. It will run Prowlarr as the group `prowlarr`.
 > Prowlarr does not require access to your download directory nor media directory.
 {.is-info}
 

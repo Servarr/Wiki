@@ -12,7 +12,7 @@ This page will go through all the settings available in Radarr and how they work
 
 # Menu options
 
-To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
+To get to the Settings page, choose Settings from the sidebar. The following sub-menu options will be available:
 
 ![settings_1_menu.png](/assets/radarr/settings_1_menu.png)
 
@@ -33,6 +33,7 @@ Also, note that for each individual settings page, there are some options at the
 > Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}`
 
 > Movie Folders: `{Movie CleanTitle} ({Release Year})`
+
 ## Movie Naming
 
 - Rename Movies - If unchecked, Radarr will use the existing file name if renaming is disabled

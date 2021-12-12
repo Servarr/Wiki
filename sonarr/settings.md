@@ -8,7 +8,9 @@ editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
 ---
 
-This page will go through all the settings available in Sonarr and how they work.  This is not meant to be a comprehensive "how to set up Sonarr." If you want that, please use the [Quick Start](/sonarr/quick-start-guide) page instead.
+This page will go through all the settings available in Sonarr and how they work. 
+This is not meant to be a comprehensive "how to set up Sonarr." 
+Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
 
 # Menu options
 
@@ -123,7 +125,6 @@ Also, note that for each individual settings page, there are some options at the
 > \* Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
 \* `{Preferred Words:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
 {.is-info}
-
 
 ### Original
 

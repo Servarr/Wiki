@@ -60,8 +60,12 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilites such as stat tracking.
+- omgwtfnzbs {#omgwtfnzbs}
+  - A Private usenet indexer
+  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 
 ## Torrents
+
 - FileList {#filelist}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Gazelle API {#gazelle}
@@ -71,8 +75,6 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - > Does not support Search {.is-info}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Nyaa {#nyaa}
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
-- omgwtfnzbs {#omgwtfnzbs}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Rarbg {#rarbg}
   - Public Tracker

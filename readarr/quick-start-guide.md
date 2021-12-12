@@ -10,7 +10,7 @@ dateCreated: 2021-12-11T19:42:31.825Z
 
 In this guide we will try to explain the basic setup you need to do to get started as quickly as possible with Readarr.
 
-There are a lot more settings you may need or want. They can be found at the [settings]( /readarr/settings) page.
+There are a lot more settings you may need or want. They can be found at the [settings](/readarr/settings) page.
 
 > Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to enable those to make them visible.
 
@@ -68,7 +68,6 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![filemanagement.png](/assets/readarr/filemanagement.png)
 
 - Books deleted from disk are automatically unmonitored in Readarr.
-
 
 - Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks

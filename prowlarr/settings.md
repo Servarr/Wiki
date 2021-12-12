@@ -41,25 +41,33 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 - Tags - The tags for this proxy.  Proxies apply to all matching (same tag) indexers.  If blank this proxy applies to all indexers.
 
 ## FlareSolverr Proxy Settings
-  - Host - the full host path (include http and the port) to your FlareSolverr instance
-  - (Advanced Setting) Request Timeout (seconds) - the [FlareSolver Request `maxTimeout` value](https://github.com/FlareSolverr/FlareSolverr#-requestget) Prowlarr should use for FlareSolverr requests. Must be between `1` second and `180` seconds (Default: `60` seconds)
+
+- Host - the full host path (include http and the port) to your FlareSolverr instance
+- (Advanced Setting) Request Timeout (seconds) - the [FlareSolver Request `maxTimeout` value](https://github.com/FlareSolverr/FlareSolverr#-requestget) Prowlarr should use for FlareSolverr requests. Must be between `1` second and `180` seconds (Default: `60` seconds)
+
 > \* A FlareSolverr Proxy will only be used for requests if and only if Cloudflare is detected by Prowlarr
 > \* A FlareSolverr Proxy will only be used for requests if and only if the Proxy and the Indexer have matching tags {.is-info}
+
 ## HTTP Proxy Settings
-  - Host - the host address of your proxy
-  - Port - the port of your proxy
-  - Username - the username of your proxy
-  - Password - the password of your proxy
+
+- Host - the host address of your proxy
+- Port - the port of your proxy
+- Username - the username of your proxy
+- Password - the password of your proxy
+
 ## Socks4 Proxy Settings
-  - Host - the host address of your proxy
-  - Port - the port of your proxy
-  - Username - the username of your proxy
-  - Password - the password of your proxy
+
+- Host - the host address of your proxy
+- Port - the port of your proxy
+- Username - the username of your proxy
+- Password - the password of your proxy
+
 ## Socks5 Proxy Settings
-  - Host - the host address of your proxy
-  - Port - the port of your proxy
-  - Username - the username of your proxy
-  - Password - the password of your proxy
+
+- Host - the host address of your proxy
+- Port - the port of your proxy
+- Username - the username of your proxy
+- Password - the password of your proxy
 
 # Applications
 

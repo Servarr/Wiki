@@ -315,6 +315,6 @@ This is expected. Below is how the Torrent Process works.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
 
-## I keep getting warnings from my cloud storage about API limits!
+## I keep getting warnings from my cloud storage about API limits
 
 Lidarr is not like the other Arrs. It uses tags instead of file names for operation. If you keep Lidarr files on cloud storage, it has to download the file to read the tags. This will very quickly blow through any API limits you have on your storage provider. We very much discourage you from keeping your Lidarr library on a cloud storage provider, and any issues you may be experiencing are likely due to that setup.

@@ -485,21 +485,21 @@ The series type affects how Sonarr searches.
 
 #### Daily
 
-  - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
-  - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
-  - DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
+- Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
+- A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
+- DailyShow.**2021.03.08**.720p.HDTV.x264-NTb
 
 #### Standard
 
-  - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
-  - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
-  - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
+- The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
+- Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
+- GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
 
 #### Anime
 
-  - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
-  - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
-  - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
+- Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
+- \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
+- \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
 ### Media is Unmonitored
 
