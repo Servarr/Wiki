@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-11-24T19:23:40.513Z
+date: 2021-12-12T04:17:54.116Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -18,7 +18,7 @@ This page contains a list of health checks errors. These health checks are perio
 
 #### Branch is not a valid release branch
 
-- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/prowlarr/faq#how-do-i-update-prowlarr).
 
 #### Currently installed SQLite version is not supported
 
@@ -126,8 +126,15 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 
 #### Indexers are Obsolete
 
+#### Obsolete due to Code Changes
+
 - Due to code changes the indexer(s) noted is/are obsolete as currently configured. Remove and Re-add the indexer to Prowlarr to resolve.
 - This is typically caused by converting APIs or from YML to C# or vice versa.
+
+#### Obsolete due to Site Removals
+
+- Certain sites may be requested to be removed from Prowlarr or Jackett.  These may then be marked as Obsolete.
+  - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
 
 #### No indexers are enabled
 
