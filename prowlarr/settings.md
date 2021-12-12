@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-12-11T22:09:16.914Z
+date: 2021-12-12T02:18:26.883Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -35,26 +35,26 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 
 ![proxies.png](/assets/prowlarr/proxies.png)
 
+## Proxy Settings
+  
 - Name - Name of the Proxy in Prowlarr
 - Tags - The tags for this proxy.  Proxies apply to all matching (same tag) indexers.  If blank this proxy applies to all indexers.
 
-Proxy Specifc Settings and Supported Proxies:
-  
-- FlareSolverr
+## FlareSolverr Proxy Settings
   - Host - the full host path (include http and the port) to your FlareSolverr instance
   - (Advanced Setting) Request Timeout (seconds) - the [FlareSolver Request `maxTimeout` value](https://github.com/FlareSolverr/FlareSolverr#-requestget) Prowlarr should use for FlareSolverr requests. Must be between `1` second and `180` seconds (Default: `60` seconds)
 > A FlareSolverr Proxy will only be used for requests if and only if Cloudflare is detected by Prowlarr {.is-info}
-- HTTP
+## HTTP Proxy Settings
   - Host - the host address of your proxy
   - Port - the port of your proxy
   - Username - the username of your proxy
   - Password - the password of your proxy
-- Socks4
+## Socks4 Proxy Settings
   - Host - the host address of your proxy
   - Port - the port of your proxy
   - Username - the username of your proxy
   - Password - the password of your proxy
-- Socks5
+## Socks5 Proxy Settings
   - Host - the host address of your proxy
   - Port - the port of your proxy
   - Username - the username of your proxy
