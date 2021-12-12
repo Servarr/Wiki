@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-11-24T19:22:32.031Z
+date: 2021-12-12T02:29:06.739Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -88,16 +88,22 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - [More Info](/lidarr/custom-scripts)
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/lidarr/custom-scripts) for more details.
 - Discord {#discord}
+  - By far one of the most common ways to push notifications of actions happening on your Lidarr
 - Email {#email}
+  - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
+  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - Emby (Media Browser) {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
 - Kodi {#xbmc}
+  - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new song has been added to Lidarr.
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
+  - See the entry on [Useful Tools - Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
 - Plex Media Server {#plexserver}
+  - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available.
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
 - Pushover {#pushover}
@@ -107,6 +113,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
 - Synology Indexer {#synologyindexer}
 - Telegram {#telegram}
 - Twitter {#twitter}
+  - See this [Tips and Tricks entry](/useful-tools#twitter)
 - Webhook {#webhook}
 
 # Lists
