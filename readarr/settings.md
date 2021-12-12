@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-12-11T19:01:16.344Z
+date: 2021-12-12T20:03:40.637Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -177,6 +177,9 @@ Commonly used naming schema are:
 
 - (Advanced Option) This is where you will set the naming convention for the author folder name.
 
+> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
+{.is-info}
+
 ### Author
 
 - `{Author Name}` = Author's Name
@@ -192,7 +195,12 @@ Commonly used naming schema are:
 - (Advanced Option) Create empty author folders - Select the box to create empty author folders when a new author is added.
 - (Advanced Option) Delete empty author folders -  Select the box to delete empty author folders if there are no books in it.
   
-> One of those boxes can be checked, but they should not BOTH be checked.
+> One of those boxes can be checked, but they should not BOTH be checked. {.is-warning}
+
+> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
+{.is-info}
+
+## Importing
   
 ![mm_importing.png](/assets/readarr/mm_importing.png)
   
@@ -200,7 +208,7 @@ Commonly used naming schema are:
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
 - (Advanced Option) Use Hardlinks instead of Copy - Check this box to use Hardlinks instead of Copies (for Torrents). Note that this is enabled by default.
   
-> You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points.
+> You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
   
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
