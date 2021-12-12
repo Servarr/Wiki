@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-11T16:33:31.187Z
+date: 2021-12-12T01:58:57.648Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -28,8 +28,11 @@ Also, note that for each individual settings page, there are some options at the
 
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
-- [Community Suggested Naming Suggestions](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/)
+> Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
+> Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}`
+
+> Movie Folders: `{Movie CleanTitle} ({Release Year})`
 ## Movie Naming
 
 - Rename Movies - If unchecked, Radarr will use the existing file name if renaming is disabled
