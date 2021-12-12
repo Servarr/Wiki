@@ -2,16 +2,6 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-12-11T20:30:34.914Z
-tags: sonarr, needs-love, troubleshooting, faq
-editor: markdown
-dateCreated: 2021-06-09T18:39:33.208Z
----
-
----
-title: Sonarr FAQ
-description: 
-published: true
 date: 2021-11-27T01:13:40.408Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
@@ -53,7 +43,9 @@ For the score of the on disk file: The existing name of the file and the "scene 
 
 How are preferred words included in renaming?
 
-For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme. and also check mark `Include Preferred when Renaming` in the release profile. take a look [HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
+For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
+
+As of recent builds, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
 
 Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
 
@@ -194,7 +186,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 ## Why does Sonarr refresh series information so frequently?
 
-- Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TBDb proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
+- Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDb proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
 - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
 - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
 
@@ -317,7 +309,7 @@ If Docker:
 
 ### How Sonarr handles scene numbering issues
 
-- Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTBDb (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTBDb listing that same episode as S2017E01.
+- Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDb (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDb listing that same episode as S2017E01.
 - XEM typically fixes the issues when release groups' numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.  
 - Releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
 - Release groups use a year for the season S2010 and TVDb uses S01.  
@@ -341,7 +333,7 @@ If Docker:
   - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
 - Pawn Stars {#problemshow-pawnstars}
 - Pokémon {#problemshow-pokemon}
-  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TBDb and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 
@@ -349,7 +341,7 @@ If Docker:
 
 There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
 
-- Sonarr does not use aliases from TBDb.
+- Sonarr does not use aliases from TVDb.
 
 - Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
 
@@ -362,42 +354,42 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - *Again, do not request a mapping for Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
 
-- > The series "Helt Perfekt" with TBDb ids of `343189` and `252077` is difficult to automate due to TBDb having the same name for both shows, violating TBDb's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
+- > The series "Helt Perfekt" with TVDb ids of `343189` and `252077` is difficult to automate due to TVDb having the same name for both shows, violating TVDb's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
 {.is-info}
 
-## TBDb is updated why isn't Sonarr?
+## TVDb is updated why isn't Sonarr?
 
 {#tvdb}
 
-- TBDb has a 24 hour cache on their API. TBDb's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
+- TVDb has a 24 hour cache on their API. TVDb's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
-- Therefore for a change on TBDb to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
+- Therefore for a change on TVDb to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
 
-- If a series or episodes are missing on TBDb, they'll take 36 to 48 hours from when they're added to populate into your Sonarr instance.
+- If a series or episodes are missing on TVDb, they'll take 36 to 48 hours from when they're added to populate into your Sonarr instance.
 
 {#missing-episodes}
 
-- If you know a TBDb update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
+- If you know a TVDb update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
 
 ## Why can I not add a new series?
 
-- In the event that TheTBDb is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
-- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TBDb ID that does not have an English title. If no English title exist for that series on TheTBDb it will need to be added (if available).
-- The show must be a TV Series, and not a movie. It must also exist on TBDb. If it is on IMDB, TMDB, or anywhere else, but not on TBDb you cannot add the show.
-- The series must exist on TBDb
+- In the event that TheTVDb is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title. If no English title exist for that series on TheTVDb it will need to be added (if available).
+- The show must be a TV Series, and not a movie. It must also exist on TVDb. If it is on IMDB, TMDB, or anywhere else, but not on TVDb you cannot add the show.
+- The series must exist on TVDb
 - Certain series may actually be considered continuations are and seasons in their primary series.
   - Some series/seasons known are:
   - [Dexter New Blood was Season 9](https://thetvdb.com/series/dexter/seasons/official/9) but it is now [it's own series](https://thetvdb.com/series/dexter-new-blood)
 
-## Why can I not add a new series when I know the TBDb ID?
+## Why can I not add a new series when I know the TVDb ID?
 
-- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TBDb ID that does not have an English title. If no English title exist for that series on TheTBDb it will need to be added (if available).
+- Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title. If no English title exist for that series on TheTVDb it will need to be added (if available).
 
 # Sonarr Common Problems
 
 ## Episode does not have an absolute number
 
-- The episode(s) on TBDb do not have an absolute number assigned.  Update the series on TBDb if required and then wait the 36-48 hours for the update to clear TBDb's internal cache and load into Sonarr
+- The episode(s) on TVDb do not have an absolute number assigned.  Update the series on TVDb if required and then wait the 36-48 hours for the update to clear TVDb's internal cache and load into Sonarr
 
 ## System & Logs loads forever
 
@@ -541,7 +533,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Why wont Sonarr import a TBA episode?
 
-- On TBDb, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TBDb API. Typically, changes to the TBDb website take 24-48 hours to reach Sonarr due to TBDb cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
+- On TVDb, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDb API. Typically, changes to the TVDb website take 24-48 hours to reach Sonarr due to TVDb cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 24 hours the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 
 ## Sonarr says Unknown Series on Searches or Imports
 
