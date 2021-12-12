@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-11-25T15:07:38.794Z
+date: 2021-12-12T04:15:07.432Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -18,7 +18,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
 
 #### Branch is not a valid release branch
 
-- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the current release branches.
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/readarr/faq#how-do-i-update-readarr)
 
 #### Currently installed SQLite version is not supported
 
