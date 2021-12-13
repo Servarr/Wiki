@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-12-12T04:15:07.432Z
+date: 2021-12-13T23:26:53.409Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -154,6 +154,8 @@ The easiest fix for this is CONSISTENCY if you use one scheme in your download c
 - See [TRaSH's Remote Path Guide](https://trash-guides.info/Readarr/Readarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
+
+{#downloads-in-root-folder}
 
 - Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/readarr/settings/#root-folders)
