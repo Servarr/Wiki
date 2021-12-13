@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2021-12-12T04:15:20.443Z
+date: 2021-12-13T23:27:41.569Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -110,14 +110,14 @@ For Apache2 reverse proxy, you need to enable the following modules: proxy, prox
 ```none
 RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
-RewriteRule /(.*) ws://127.0.0.1:8787/$1 [P,L]
+RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 ```
 
 For Caddy (V1) use this:
 Note: you will also need to add the websocket directive to your lidarr configuration
 
 ```none
- proxy /lidarr 127.0.0.1:8787 {
+ proxy /lidarr 127.0.0.1:8686 {
      websocket
      transparent
  }
@@ -212,6 +212,8 @@ There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH
 See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
+
+{#downloads-in-root-folder}
 
 Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/lidarr/settings/#root-folders)
