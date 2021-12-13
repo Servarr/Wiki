@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-12-13T23:26:53.409Z
+date: 2021-12-13T23:27:44.344Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
