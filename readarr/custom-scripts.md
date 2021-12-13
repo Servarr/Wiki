@@ -2,7 +2,7 @@
 title: Readarr Custom Scripts
 description: 
 published: true
-date: 2021-11-25T15:07:38.794Z
+date: 2021-12-13T17:37:16.776Z
 tags: readarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:41:11.792Z
@@ -21,3 +21,5 @@ Readarr can execute a custom script
 Coming Soon
 
 [In the interim or if you wish to contribute to the wiki; refer to the code itself.](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
+
+> Note that variables are output as lowercase.
