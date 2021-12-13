@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-12-12T04:14:52.813Z
+date: 2021-12-13T23:43:45.429Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -20,19 +20,23 @@ This page contains a list of health checks errors. These health checks are perio
 
 Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .Net to be able to use newer versions of Sonarr.
 
-Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
+Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
 
 #### Currently installed .Net Framework is supported but upgrading is recommended
 
 Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
-Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart. Please follow the instructions here.
+Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
 
 #### Currently installed mono version is old and unsupported
 
 Sonarr is written in .Net and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
 Mono 5.8 is the absolute minimum for Sonarr, but Mono 5.20 is currently recommended.
 The upgrade procedure for Mono varies per platform.
+
+#### Package Maintainer Message
+
+Your package maintainer has a message for you.  This is controllered by your maintainer and not Sonarr.
 
 #### New update is available
 
@@ -44,6 +48,8 @@ Rejoice, the developers have released a new update. This generally means awesome
 #### Cannot install update because startup folder and/or UI folder are not writable by the user
 
 {#cannot-install-update-because-UI-folder-is-not-writable-by-the-user}
+
+{#cannot-install-update-because-startup-folder-is-not-writable-by-the-user}
 
 This means Sonarr will be unable to update itself. You'll have to update Sonarr manually or set the permissions on Sonarr's Startup directory (the installation directory) to allow Sonarr to update itself.
 
@@ -75,9 +81,11 @@ Review your system time and ensure it is synced to an authoritative time server 
 
 #### MediaInfo Library Could not be Loaded
 
-MediaInfo Library could not be loaded.
+MediaInfo Library could not be loaded.  Sonarr requires MediaInfo (`libmediainfo`) to evaluate the video attributes of files.
 
 #### Mono Legacy TLS enabled
+
+{#sonarr-mono-4.x-tls-workaround-still-enabled-consider-removing-mono_tls_provider-legacy-environment-option}
 
 Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option.
 
@@ -108,15 +116,17 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 
 #### Downloading into Root Folder
 
+{#downloads-in-root-folder}
+
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
  [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
 
-### Completed/Failed Download Handling
-
 #### Completed Download Handling is disabled
+
+{#completedfailed-download-handling}
 
 > (This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.) {.is-info}
 
@@ -133,6 +143,9 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically
 
+{#no-indexers-available-with-rss-sync-enabled,-sonarr-will-not-grab-new-releases-automatically}
+{#all-rss-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
+
 - Sonarr uses the RSS feed to pick up new releases as they come along. [See the FAQ for more information](/sonarr/faq#how-does-sonarr-find-episodes)
 - To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync.
 
@@ -142,11 +155,15 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 ### Enabled indexers do not support searching
 
-- None of the indexers you have enabled support searching. This means Sonarr will only be able to find new releases via the RSS feeds. But searching for series (either Automatic Search or Manual Search) will never return any results. The only way to remedy it is to add another indexer.
+{#all-search-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
+
+- None of the indexers you have enabled and available support searching. This means Sonarr will only be able to find new releases via the RSS feeds. But searching for series (either Automatic Search or Manual Search) will never return any results. The only way to remedy it is to add another indexer.
 
 #### No indexers available with Interactive Search Enabled
 
-- None of the indexers you have enabled support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
+{#no-indexers-available-with-interactive-search-enabled-sonarr-will-not-provide-any-interactive-search-results}
+
+- None of the indexers you have enabled and avaiaible support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
 
 #### Indexers are unavailable due to failures
 
@@ -155,15 +172,32 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 - You can prevent this warning by disabling the affected indexer.
 - Run a `Test` on the indexer to force Sonarr to recheck the indexer; please note that the Health Check warning will not always disappear immediately and you may need to run the `Check Health` Task
 
-### Media
+### Media & Lists
 
 #### Series Removed from TheTVDB
 
-- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. To correct this you will need to remove the affected series and add the correct series.
+- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Movie; hopefully TMDb does as well so [Radarr](/radarr) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
 
 #### Lists are unavailable due to failures
 
+{#import-lists-are-unavailable-due-to-failures}
+
 - Typically this simply means that Sonarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
+
+#### Import List Missing Root Folder
+
+- One or more of your import lists are configured to a root folder that is not accessible to Sonarr.
+- This may be permissions issues, a missing mount, or simply needing to update the lists after reorganzing your setup.
+
+#### Missing Root Folder
+
+- One or more of your root folders are not accessible to Sonarr.
+- This may be permissions issues, a missing mount, or simply needing to update the series assigned root folders after reorganzing your setup.
+
+#### Series Path Mount is Read Only
+
+{#series-mount-ro}
+A mount containing a series path is read only and is not writable by the user Sonarr is running as.
 
 ## Disk Space
 
