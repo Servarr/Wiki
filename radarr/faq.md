@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2021-12-12T22:15:49.552Z
+date: 2021-12-13T13:36:46.624Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -415,6 +415,8 @@ Depending on your OS, there are multiple possible ways.
 # Radarr and Movie Issues + Metadata
 
 ## Why can I not add a new movie to Radarr?
+
+{#why-cant-i-add-a-new-movie-to-radarr}
 
 - Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
