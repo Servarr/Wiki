@@ -352,7 +352,7 @@ sudo rm -rf /etc/systemd/system/prowlarr.service
 systemctl -q daemon-reload
 ```
 
-# BSD
+# FreeBSD
 
 The Prowlarr team only provides builds for BSD. Plugins and Ports are maintained and created by the BSD community.
 
@@ -364,28 +364,28 @@ Instructions for BSD installations are also maintained by the BSD community and 
 
 1. From the main screen select Jails
 
-2. Click ADD
+1. Click ADD
 
-3. Click Advanced Jail Creation
+1. Click Advanced Jail Creation
 
-4. Name (any name will work): Prowlarr
+1. Name (any name will work): Prowlarr
 
-5. Jail Type: Default (Clone Jail)
+1. Jail Type: Default (Clone Jail)
 
-6. Release: 12.2-Release (or newer)
+1. Release: 12.2-Release (or newer)
 
-7. Configure Basic Properties to your liking
+1. Configure Basic Properties to your liking
 
-8. Configure Jail Properties to your liking but add
+1. Configure Jail Properties to your liking but add
 
 - [x] allow_raw_sockets
 - [x] allow_mlock
 
-9. Configure Network Properties to your liking
+1. Configure Network Properties to your liking
 
-10. Configure Custom Properties to your liking
+1. Configure Custom Properties to your liking
 
-11. Click Save
+1. Click Save
 
 ## Prowlarr Installation
 
