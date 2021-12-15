@@ -2,7 +2,7 @@
 title: Readarr Custom Scripts
 description: 
 published: true
-date: 2021-12-15T09:51:56.415Z
+date: 2021-12-15T09:52:34.107Z
 tags: readarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:41:11.792Z
@@ -13,8 +13,6 @@ If you're looking to trigger a custom script, you can find more details here. Sc
 # Overview
 
 Readarr can execute a custom script when a book is newly imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
-
-- Docs coming soon(tm)
 
 # Environment Variables
 
