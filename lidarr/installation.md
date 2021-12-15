@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-12-11T23:41:15.350Z
+date: 2021-12-15T18:26:54.776Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -106,7 +106,8 @@ app_port="8686"                                          # Default App Port; Mod
 app_prereq="curl mediainfo sqlite3 libchromaprint-tools" # Required packages
 app_umask="0002"                                         # UMask the Service will run as
 app_bin=${app^}                                          # Binary Name of the app
-bindir="/opt/${app^}"                                    # Install Location
+installdir="/opt"                                        # {Update me if needed} Install Location
+bindir="${installdir}/${app^}"                                    # Full Path to Install Location
 branch="master"                                          # {Update me if needed} branch to install
 datadir="/var/lib/lidarr/"                               # {Update me if needed} AppData directory to use
 
@@ -163,7 +164,7 @@ echo "Installation files downloaded and extracted"
 echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
-mv "${app^}" /opt/
+mv "${app^}" "$installdir"
 chown $app_uid:$app_uid -R $bindir
 rm -rf "${app^}.*.tar.gz"
 # Ensure we check for an update in case user installs older version or different branch
