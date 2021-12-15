@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-12-15T12:32:34.772Z
+date: 2021-12-15T13:40:14.789Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -565,12 +565,14 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 |      Client       | Ratio |      Time      |
 | :---------------: | :---: | :------------: |
+|      Aria2        |  Yes  |       No       |
 |      Deluge       |  Yes  |       No       |
+| Download Station  |  No   |       No       |
+|       Flood       |  Yes  |      Yes       |
 |     Hadouken      |  No   |       No       |
 |    qBittorrent    |  Yes  |      Yes       |
-|     rTorrent      |  Yes   |       Yea       |
+|     rTorrent      |  Yes  |      Yes       |
 | Torrent Blackhole |  No   |       No       |
-| Download Station  |  No   |       No       |
 |   Transmission    |  Yes  | *Idle Limit*\* |
 |     uTorrent      |  Yes  |      Yes       |
 |       Vuze        |  Yes  |      Yes       |
