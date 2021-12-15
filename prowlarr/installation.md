@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-12-11T23:41:42.709Z
+date: 2021-12-15T18:26:49.895Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -109,7 +109,8 @@ app_port="9696"              # Default App Port; Modify config.xml after install
 app_prereq="curl sqlite3"    # Required packages
 app_umask="0002"             # UMask the Service will run as
 app_bin=${app^}              # Binary Name of the app
-bindir="/opt/${app^}"        # Install Location
+installdir="/opt"            # {Update me if needed} Install Location
+bindir="${installdir}/${app^}" # Full Path to Install Location
 branch="develop"             # {Update me if needed} branch to install
 datadir="/var/lib/prowlarr/" # {Update me if needed} AppData directory to use
 
@@ -166,7 +167,7 @@ echo "Installation files downloaded and extracted"
 echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
-mv "${app^}" /opt/
+mv "${app^}" $installdir
 chown $app_uid:$app_uid -R $bindir
 rm -rf "${app^}.*.tar.gz"
 # Ensure we check for an update in case user installs older version or different branch
