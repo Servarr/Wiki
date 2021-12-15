@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-12-12T01:57:46.374Z
+date: 2021-12-15T13:40:57.505Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -579,6 +579,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 |      Client       | Ratio |      Time      |
 | :---------------: | :---: | :------------: |
+|      Aria2        |  Yes  |       No       |
 |      Deluge       |  Yes  |       No       |
 | Download Station  |  No   |       No       |
 |       Flood       |  Yes  |      Yes       |
