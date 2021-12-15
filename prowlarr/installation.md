@@ -361,6 +361,7 @@ Instructions for BSD installations are also maintained by the BSD community and 
 [Freshport Prowlarr Link](https://www.freshports.org/net-p2p/prowlarr/)
 
 ## Jail Setup
+
 1. From the main screen select Jails
 
 2. Click ADD
@@ -376,6 +377,7 @@ Instructions for BSD installations are also maintained by the BSD community and 
 7. Configure Basic Properties to your liking
 
 8. Configure Jail Properties to your liking but add
+
 - [x] allow_raw_sockets
 - [x] allow_mlock
 
@@ -429,10 +431,10 @@ If everything went according to plan then prowlarr should be up and running on t
 
 (You can now safely close the shell)
 
-
 ## Troubleshooting
- - `System.Net.Sockets.SocketException (43): Protocol not supported`
-   - Make sure you have `VNET` turned on for your jail.
+
+- `System.Net.Sockets.SocketException (43): Protocol not supported`
+  - Make sure you have `VNET` turned on for your jail.
 
 # Docker
 
