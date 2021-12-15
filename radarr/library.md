@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-11-24T19:24:12.163Z
+date: 2021-12-15T21:54:45.974Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -16,6 +16,8 @@ dateCreated: 2021-05-25T01:24:18.386Z
   - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
   - Search All / Search Filtered / Search Selected - Search all movies or selected movies in the current view
   - Manual Import (Movie Index) - Manually import a movie file for a movie you have added to Radarr from any folder that Radarr can access
+    - Move Automatically -  Automatically attempt to match a file to a Movie in Radarr and import by moving it.
+    - Interactive Import -  Review all files within the path and attempt to match to a Movie in Radarr allowing the user to review the results.  Move or Copy/Hardlink is a selectable option in the bottom left corner.
   - Manual Import (Movie) - Manually import a movie file for a movie you have added to Radarr from the assigned movie's folder
     - Move Automatically -  Automatically attempt to match a file to a Movie in Radarr and import by moving it.
     - Interactive Import -  Review all files within the path and attempt to match to a Movie in Radarr allowing the user to review the results.  Move or Copy/Hardlink is a selectable option in the bottom left corner.
