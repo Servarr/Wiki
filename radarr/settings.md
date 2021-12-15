@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-12T01:58:57.648Z
+date: 2021-12-15T13:39:43.821Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -585,6 +585,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 |      Client       | Ratio |      Time      |
 | :---------------: | :---: | :------------: |
+|      Aria2        |  Yes  |       No       |
 |      Deluge       |  Yes  |       No       |
 | Download Station  |  No   |       No       |
 |       Flood       |  Yes  |      Yes       |
