@@ -16,7 +16,6 @@ Readarr can execute a custom script when a book is newly imported or renamed. De
 
 # Environment Variables
 
-
 ## On Grab
 
 | Environment Variable                    | Details                                                                                      |
@@ -24,20 +23,20 @@ Readarr can execute a custom script when a book is newly imported or renamed. De
 | `readarr_eventtype`                     | `Grab`                                                                                       |
 | `readarr_author_id`                     | Internal ID of the author                                                                    |
 | `readarr_author_name`                   | Name of the author                                                                           |
-| `readarr_author_grid`                   | Author goodreads id                                                                      	 |
+| `readarr_author_grid`                   | Author goodreads id                                                                        |
 | `readarr_release_bookcount`             | Number of books in the release                                                               |
-| `readarr_release_bookreleasedates`      | Release date of the book                                                				     |
-| `readarr_release_booktitles`            | Book titles of the release                  							                     |
-| `readarr_release_bookids`               | Book id                                                         							 |
-| `readarr_release_grids      `           | Goodreads ids of the release                                                                 |
-| `readarr_release_title`                 | Title of the book                                                      						 |
-| `readarr_release_indexer`				  | Indexer from which the release was grabbed                 									 |
-| `readarr_release_size`		          | Release size											                                     |
-| `readarr_release_quality`			      | Release quality							                                                     |
-| `readarr_release_qualityVersion`        | Release quality version                   				                                     |
+| `readarr_release_bookreleasedates`      | Release date of the book                                                         |
+| `readarr_release_booktitles`            | Book titles of the release                                              |
+| `readarr_release_bookids`               | Book id                                                                 |
+| `readarr_release_grids`           | Goodreads ids of the release                                                                 |
+| `readarr_release_title`                 | Title of the book                                                             |
+| `readarr_release_indexer`      | Indexer from which the release was grabbed                           |
+| `readarr_release_size`            | Release size                                                |
+| `readarr_release_quality`         | Release quality                                                            |
+| `readarr_release_qualityVersion`        | Release quality version                                                            |
 | `readarr_release_releasegroup`          | Release group (empty if unknown)                                                             |
 | `readarr_download_client`               | Download client use to download the release                                                  |
-| `readarr_download_id`                   | Download id                                              									 |
+| `readarr_download_id`                   | Download id                                                        |
 
 ## On Download/On Upgrade
 
@@ -47,14 +46,13 @@ Readarr can execute a custom script when a book is newly imported or renamed. De
 | `readarr_author_id`                     | Internal ID of the author                                                                    |
 | `readarr_author_name`                   | Name of the author                                                                           |
 | `readarr_author_path`                   | Path of the Author                                                                           |
-| `readarr_author_grid`                   | Author goodreads id                                                                      	 |
-| `readarr_book_id`                       | Book's id				                                                                     |
-| `readarr_book_title`                    | Book's title 				                                                                 |
-| `readarr_book_grid`	                  | Book's Goodreads id                                 					                     |
-| `readarr_book_releasedate`              | Release date of the book							                                         |
+| `readarr_author_grid`                   | Author goodreads id                                                                        |
+| `readarr_book_id`                       | Book's id                                                                         |
+| `readarr_book_title`                    | Book's title                                                                      |
+| `readarr_book_grid`                   | Book's Goodreads id                                                           |
+| `readarr_book_releasedate`              | Release date of the book                                                |
 | `readarr_download_client`               | Download client use to download the release                                                  |
-| `readarr_download_id`                   | Download id                                              									 |
-
+| `readarr_download_id`                   | Download id                                                        |
 
 ## On Rename
 
@@ -66,7 +64,6 @@ Readarr can execute a custom script when a book is newly imported or renamed. De
 | `readarr_author_path`    | Path of the Author                                   |
 | `readarr_author_grid`    | Author goodreads id                                  |
 
-
 ## On Book Retag
 
 | Environment Variable                    | Details                                                                          |
@@ -75,18 +72,18 @@ Readarr can execute a custom script when a book is newly imported or renamed. De
 | `readarr_author_id`                     | Internal ID of the author                                                        |
 | `readarr_author_name`                   | Name of the author                                                               |
 | `readarr_author_path`                   | Path of the Author                                                               |
-| `readarr_author_grid`                   | Author goodreads id                                                           	 |
-| `readarr_book_id`                       | Book's id				                                                         |
-| `readarr_book_title`                    | Book's title 				                                                     |
-| `readarr_book_grid`	                  | Book's Goodreads id                                 					         |
-| `readarr_book_releasedate`              | Release date of the book							                             |
-| `readarr_bookfile_id`                   | Book file id				                                                     |
-| `readarr_bookfile_path` 			      | Path to the book    									                         |
-| `readarr_bookfile_quality`              | Book file quality                                         			             |
-| `readarr_bookfile_qualityversion`       | Book file quality version		                                                 |
+| `readarr_author_grid`                   | Author goodreads id                                                             |
+| `readarr_book_id`                       | Book's id                                                             |
+| `readarr_book_title`                    | Book's title                                                          |
+| `readarr_book_grid`                   | Book's Goodreads id                                               |
+| `readarr_book_releasedate`              | Release date of the book                                    |
+| `readarr_bookfile_id`                   | Book file id                                                         |
+| `readarr_bookfile_path`          | Path to the book                                      |
+| `readarr_bookfile_quality`              | Book file quality                                                         |
+| `readarr_bookfile_qualityversion`       | Book file quality version                                                   |
 | `readarr_bookfile_releasegroup`         | Release group of the book                                                        |
-| `readarr_bookfile_scenename`            | Scene name of the book			                                                 |
-| `readarr_tags_diff`                     | Tags differences									                             |
+| `readarr_bookfile_scenename`            | Scene name of the book                                                    |
+| `readarr_tags_diff`                     | Tags differences                                      |
 | `readarr_tags_scrubbed`                 | Tags scrubbed                                         |
 
 ## On Health Issue

@@ -61,7 +61,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 | |`master` (stable)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json)|
 |---|---|---|---|
-|[hotio](https://hotio.dev/containers/prowlarr)|no stable release yet|`hotio/prowlarr:testing`|`hotio/prowlarr:nightly`|
+|[hotio](https://hotio.dev/containers/prowlarr)|no stable release yet|`cr.hotio.dev/hotio/prowlarr:testing`|`cr.hotio.dev/hotio/prowlarr:nightly`|
 |[LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr)|no stable release yet|`lscr.io/linuxserver/prowlarr:develop`|`lscr.io/linuxserver/prowlarr:nightly`|
 
 ### Installing a newer version

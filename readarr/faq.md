@@ -117,7 +117,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 | |`master` (stable)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
 |---|---|---|---|
-|[hotio](https://hotio.dev/containers/readarr)|no stable release yet|no beta release yet|`hotio/readarr:nightly`|
+|[hotio](https://hotio.dev/containers/readarr)|no stable release yet|no beta release yet|`cr.hotio.dev/hotio/readarr:nightly`|
 
 ## Can I update Readarr inside my Docker container?
 

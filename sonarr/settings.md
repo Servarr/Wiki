@@ -8,8 +8,8 @@ editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
 ---
 
-This page will go through all the settings available in Sonarr and how they work. 
-This is not meant to be a comprehensive "how to set up Sonarr." 
+This page will go through all the settings available in Sonarr and how they work.
+This is not meant to be a comprehensive "how to set up Sonarr."
 Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
 
 # Menu options
