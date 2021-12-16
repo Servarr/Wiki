@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-12-12T02:35:18.256Z
+date: 2021-12-16T14:14:52.905Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -153,6 +153,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 {#importlist}
 
 - Sonarr {#sonarrimport}
+- Plex Watch List {#pleximport}
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name
   - List - Ensure you use the list name as presented in the list URL
