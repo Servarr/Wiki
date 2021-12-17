@@ -593,11 +593,11 @@ Select the download client you wish to add, and there will be a pop-up box to en
 |    qBittorrent    |  Yes  |      Yes       |
 |     rTorrent      |  Yes  |      Yes       |
 | Torrent Blackhole |  No   |       No       |
-|   Transmission    |  Yes  | [![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue)]\* |
+|   Transmission    |  Yes  | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue)\* |
 |     uTorrent      |  Yes  |      Yes       |
 |       Vuze        |  Yes  |      Yes       |
 
-> [![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue)] - Transmission internally has an Idle Time check, but Radarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
+> ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Radarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
 ## Completed Download Handling
 
