@@ -2,7 +2,7 @@
 title: Prowlarr Custom Scripts
 description: 
 published: true
-date: 2021-11-24T19:22:59.262Z
+date: 2021-12-20T16:37:36.538Z
 tags: prowlarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:40:30.916Z
@@ -12,8 +12,19 @@ If you're looking to trigger a custom script, you can find more details here. Sc
 
 # Overview
 
-Prowlarr can execute a custom script (coming soon)
+Prowlarr can execute a custom script when an episode is newly imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
+
+## Prowlarr Logs
+
+Note that the following will only be logged for custom scripts:
+
+- Script `stdout` output will be logged as `Debug`
+- Script `stderr` output will be logged as `Info`
+- The trigger of the script will be logged in `Trace`
 
 # Environment Variables
 
-Coming Soon
+Environment Variables vary based on the event type. Details coming soon^tm^
+
+> [The code to review is here in the interim. Wiki contributions welcome](https://github.com/Prowlarr/Prowlarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
+{.is-info}
