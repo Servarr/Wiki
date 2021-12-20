@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-11-24T19:25:53.100Z
+date: 2021-12-20T16:37:50.857Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -13,6 +13,14 @@ If you're looking to trigger a custom script, you can find more details here. Sc
 # Overview
 
 Sonarr can execute a custom script when an episode is newly imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
+
+## Sonarr Logs
+
+Note that the following will only be logged for custom scripts:
+
+- Script `stdout` output will be logged as `Debug`
+- Script `stderr` output will be logged as `Info`
+- The trigger of the script will be logged in `Trace`
 
 # Environment Variables
 
