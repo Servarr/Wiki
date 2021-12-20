@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: 
 published: true
-date: 2021-12-20T16:38:13.960Z
+date: 2021-12-20T16:40:05.425Z
 tags: lidarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -28,14 +28,6 @@ Environment Variables vary based on the event type. The sections below indicate 
 
 > [The sections below need cleanup, organizing, and details enhanced. View the source code here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
 {.is-info}
-
-## Test
-
-This event type is only sent when clicking the "Test" button in the settings page.
-
-| Environment Variable | Details |
-| -------------------- | ------- |
-| `Lidarr_EventType`   | Test    |
 
 ## Grab
 
@@ -126,3 +118,12 @@ This event type is only sent when clicking the "Test" button in the settings pag
 | `Lidarr_Health_Issue_Message` | `healthCheck.Message`                   |
 | `Lidarr_Health_Issue_Type`    | `healthCheck.Source.Name`               |
 | `Lidarr_Health_Issue_Wiki`    | Wiki URL for the health issue help page |
+
+
+## On Test
+
+When adding the script to Readarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
+
+| Environment Variable | Details |
+| -------------------- | ------- |
+| `Lidarr_EventType`   | Test    |
