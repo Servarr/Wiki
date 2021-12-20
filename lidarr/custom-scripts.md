@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: 
 published: true
-date: 2021-11-24T19:22:13.480Z
+date: 2021-12-20T16:38:13.960Z
 tags: lidarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -12,13 +12,21 @@ If you're looking to trigger a custom script, you can find more details here. Sc
 
 # Overview
 
-Lidarr can execute a custom script.
+Lidarr can execute a custom script when an episode is newly imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
+
+## Lidarr Logs
+
+Note that the following will only be logged for custom scripts:
+
+- Script `stdout` output will be logged as `Debug`
+- Script `stderr` output will be logged as `Info`
+- The trigger of the script will be logged in `Trace`
 
 # Environment Variables
 
 Environment Variables vary based on the event type. The sections below indicate the variables avaiable for each.
 
-> [The sections below need cleanup and organizing. View the source code here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
+> [The sections below need cleanup, organizing, and details enhanced. View the source code here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
 {.is-info}
 
 ## Test
