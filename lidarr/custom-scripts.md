@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: 
 published: true
-date: 2021-12-20T16:40:05.425Z
+date: 2021-12-20T16:40:16.640Z
 tags: lidarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -122,7 +122,7 @@ Environment Variables vary based on the event type. The sections below indicate 
 
 ## On Test
 
-When adding the script to Readarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
+When adding the script to Lidarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
 
 | Environment Variable | Details |
 | -------------------- | ------- |
