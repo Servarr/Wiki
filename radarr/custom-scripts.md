@@ -2,7 +2,7 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-12-20T16:39:18.128Z
+date: 2021-12-21T23:43:13.383Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
@@ -101,6 +101,15 @@ Note that the following will only be logged for custom scripts:
 | `radarr_health_issue_message` | Message from the health issue                                |
 | `radarr_health_issue_type`    | Area that failed and triggered the health issue              |
 | `radarr_health_issue_wiki`    | Wiki URL (empty if does not exist)                           |
+
+## On Application Update
+
+| Environment Variable            	| Details                              	|
+|---------------------------------	|--------------------------------------	|
+| `radarr_eventype`               	| `ApplicationUpdate`                  	|
+| `radarr_update_message`         	| Message from Update                  	|
+| `radarr_update_newversion`      	| Version Radarr updated to (string)   	|
+| `radarr_update_previousversion` 	| Version Radarr updated from (string) 	|
 
 ## On Test
 
