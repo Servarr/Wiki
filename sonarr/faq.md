@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-12-21T02:24:44.150Z
+date: 2021-12-21T02:26:20.483Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -200,9 +200,13 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 ## What's the different Series Types?
 
+- Series Type impacts how Sonarr searches for series. A series type is based on how the series is released on one's indexers and is not necessarily the true 'type' of the series.
+
 - Most shows should be `Standard`. For daily shows which are typically released with a date, `Daily` should be used. Finally, there is anime where using `Anime` is *usually* right, but sometimes `Standard` can work better, so try the *other* one if you're having issues.
 
 - Please note that if the series type is set to anime and if none of your enabled indexers have any anime categories configured then it effectively skips the indexer and may appear that it is not searching.
+
+- Please note that the Anime type does not have any concept of Season Packs or Seasons and will cause each episode individually to be searched.
 
 - Please note that not all indexers support season/episode (standard) searches.
 
