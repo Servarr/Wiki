@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-12-17T00:16:58.961Z
+date: 2021-12-21T02:23:06.276Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -490,10 +490,12 @@ Releases may be uploaded as `Series Title S02E45` or `Other Series Title S2022E4
 
 ### Wrong Series Type
 
-The series type affects how Sonarr searches.
-[See this FAQ entry](/sonarr/faq#whats-the-different-series-types)
+The series type affects how Sonarr searches.  The series type should be selected based on how the series is being released on the indexers.
+[See this FAQ entry for more details](/sonarr/faq#whats-the-different-series-types)
 
 #### Daily
+
+Logs will show `Searching indexers for [The Witcher : 2021-12-20]`
 
 - Some.Daily.Show.**2021.03.04**.1080p.HDTV.x264-DARKSPORT
 - A.Daily.Show.with.Some.Guy.**2021.03.03**.1080p.CC.WEB-DL.AAC2.0.x264-null
@@ -501,11 +503,15 @@ The series type affects how Sonarr searches.
 
 #### Standard
 
+Logs will show `Searching indexers for [The Witcher : S01E09]`
+
 - The.Show.**S20E03**.Episode.Title.Part.3.1080p.HULU.WEB-DL.DDP5.1.H.264-NTb
 - Another.Show.**S03E08**.1080p.WEB.H264-GGEZ
 - GreatShow.**S17E02**.1080p.HDTV.x264-DARKFLiX
 
 #### Anime
+
+Logs will show `Searching indexers for [The Witcher : 09]`
 
 - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
 - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
