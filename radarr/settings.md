@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-15T13:39:43.821Z
+date: 2021-12-21T05:00:36.465Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -701,6 +701,7 @@ Connections are how you want Radarr to communicate with the outside world.
 - On Movie File Delete For Upgrade - Be notified when movie files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Application Update - Be notified when Radarr gets updated to a new version
 
 # Metadata
 
