@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-12-12T04:17:54.116Z
+date: 2021-12-21T06:06:04.505Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -111,6 +111,7 @@ RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
 - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.
 - Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+- Using rutorrent requires special settings changes as it requires https.
 
 #### Download clients are unavailable due to failure
 
