@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-21T05:00:36.465Z
+date: 2021-12-21T19:18:41.619Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -705,7 +705,11 @@ Connections are how you want Radarr to communicate with the outside world.
 
 # Metadata
 
-## Metadata
+## Options
+
+- Certification Country - Select the country to use for Movie Certifications (e.g. R (US) or 12A (UK))
+
+## Metadata Consumers
 
 > Information on supported metadata consumers can be found [here](/radarr/supported#metadata)
 {.is-info}
