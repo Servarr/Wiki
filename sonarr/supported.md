@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-12-16T14:14:52.905Z
+date: 2021-12-21T19:14:21.164Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -168,5 +168,22 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 {#metadata}
 
 - Kodi (XBMC) / Emby {#xbmcmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Series Metadata - Create a `tvshow.nfo` with full series metadata
+  - (Advanced Option) Series Metadata URL - Create tvshow.nfo with TheTVDb series URL
+  - Episode Metadata - Create `<filename>.nfo` for each episode
+  - Series Images - Create various Series images including posters and banners named as `poster.jpg` and `banner.jpg`
+  - Season Images - Create various Season images including posters and banners named as `season##-poster.jpg` and `season##-banner.jpg`
+  - Episode Images - Create various Episode images such as thumnbnails named as named as `<filename>-thumb.jpg`
 - Roksbox {#roksboxmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Episode Metadata - Create `Season##\<filename>.xml` for each episode
+  - Series Images - Create `Series Title.jpg`
+  - Season Images - Create `Season ##.jpg`
+  - Episode Images - Create `Season##\<filename>.jpg`
 - WDTV {#wdtvmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Episode Metadata - Create `Season##\<filename>.xml` for each episode
+  - Series Images - Create `folder.jpg`
+  - Season Images - Create `Season ##\folder.jpg`
+  - Episode Images - Create `Season##\<filename>.metathumb`
