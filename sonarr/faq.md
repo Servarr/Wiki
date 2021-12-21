@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-12-12T22:07:51.416Z
+date: 2021-12-21T02:24:44.150Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -205,6 +205,8 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Please note that if the series type is set to anime and if none of your enabled indexers have any anime categories configured then it effectively skips the indexer and may appear that it is not searching.
 
 - Please note that not all indexers support season/episode (standard) searches.
+
+- Series types can be modified from Mass Editor or from `Edit` when viewing a series.  Note that the series type is selectable at import.
 
 ### Series Types
 
