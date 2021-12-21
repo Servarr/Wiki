@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-12-12T02:35:20.248Z
+date: 2021-12-21T20:09:53.932Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -179,6 +179,20 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 {#metadata}
 
 - Emby (Legacy) {#mediabrowsermetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Movie Metadata - Enable metadata file creation for this metadata type
 - Kodi (XBMC) / Emby {#xbmcmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Movie Metadata - Create a `<filename>.nfo` with the movie metadata
+  - (Advanced Option) Movie Metadata URL - Create movie.nfo with TMDb and IMDb movie URLs
+  - Metadata Language - Select the language Radarr should use to write the metadata if available in that language
+  - Movie Images - Create various Season images including posters and banners
+  - Use Movie.nfo - Write the nfo file as `movie.nfo` rather than the default
 - Roksbox {#roksboxmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Movie Metadata - Create xml file for each movie
+  - Movie Images - Create `Movie.jpg`
 - WDTV {#wdtvmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Movie Metadata - Create `<filename>.xml` for each episode
+  - Movie Images - Create `folder.jpg`
