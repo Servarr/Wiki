@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-12-21T20:10:08.977Z
+date: 2021-12-22T19:55:50.157Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -155,6 +155,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
 - Radarr {#radarrimport}
+  - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
 - StevenLu Custom {#stevenluimport}
 - StevenLu List {#stevenlu2import}
