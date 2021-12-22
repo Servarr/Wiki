@@ -2,7 +2,7 @@
 title: Radarr Tips and Tricks
 description: 
 published: true
-date: 2021-11-24T19:24:32.068Z
+date: 2021-12-22T19:56:34.503Z
 tags: radarr, needs-love, tips-and-tricks
 editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
@@ -11,6 +11,10 @@ dateCreated: 2021-08-14T15:12:58.934Z
 # TRaSH's Custom Formats
 
 - [TRasH has a guide](https://trash-guides.info/Radarr/) on how to use [Radarr => Settings => Custom Formats](/radarr/settings#custom-formats) as well as a shared repository of Custom Formats.
+
+# Syncing Two Radarr Instances
+
+- TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 
 # Renaming Movie Folders
 
