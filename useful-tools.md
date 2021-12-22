@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2021-11-24T19:26:35.600Z
+date: 2021-12-22T21:03:07.005Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -22,7 +22,7 @@ Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidar
 
 > Note this effectively does the same as `.recover` | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
-1. Make a copy of your corrupt DB
+1. Make a copy of your corrupt DB and copy any .wal files with it
 1. Open your corrupt DB in DB Browser for SQLite
 1. File => Export => Export DB to SQL file
 1. Select all tables
