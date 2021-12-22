@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-12-21T19:15:39.500Z
+date: 2021-12-22T19:55:48.803Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -153,6 +153,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 {#importlist}
 
 - Sonarr {#sonarrimport}
+  - TRaSH has [a guide](https://trash-guides.info/Sonarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - Plex Watch List {#pleximport}
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name
