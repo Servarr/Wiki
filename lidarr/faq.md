@@ -132,10 +132,10 @@ As of 2021-06-09 the logic is as follows:
 
 - Note: If your install is through Docker append `:testing` or `:develop` if needed to the end of your container tag depending on who makes your builds.
 
-| |`master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/release/VERSION.json)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/testing/VERSION.json)|
-|---|---|---|
-|[hotio](https://hotio.dev/containers/lidarr)|`cr.hotio.dev/hotio/lidarr:release`|`cr.hotio.dev/hotio/lidarr:testing`|
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr)|`lscr.io/linuxserver/lidarr:latest`|`lscr.io/linuxserver/lidarr:develop`|
+|                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/lidarr/testing/VERSION.json) |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/lidarr)                       | `cr.hotio.dev/hotio/lidarr:release`                                                                                                                                                                                   | `cr.hotio.dev/hotio/lidarr:testing`                                                                                                                                                                                 |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr) | `lscr.io/linuxserver/lidarr:latest`                                                                                                                                                                                   | `lscr.io/linuxserver/lidarr:develop`                                                                                                                                                                                |
 
 ## Can I update Lidarr inside my Docker container?
 
@@ -169,8 +169,8 @@ If Docker:
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Lidarr is corrupt.
-- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-lidarr)
 
 - This error may show if the database file is not writable by the user/group Lidarr is running as.

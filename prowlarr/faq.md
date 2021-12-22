@@ -59,10 +59,10 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
-| |`master` (stable)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json)|
-|---|---|---|---|
-|[hotio](https://hotio.dev/containers/prowlarr)|no stable release yet|`cr.hotio.dev/hotio/prowlarr:testing`|`cr.hotio.dev/hotio/prowlarr:nightly`|
-|[LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr)|no stable release yet|`lscr.io/linuxserver/prowlarr:develop`|`lscr.io/linuxserver/prowlarr:nightly`|
+|                                                                      | `master` (stable)     | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/testing/VERSION.json) | `nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/nightly/VERSION.json) |
+| -------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/prowlarr)                       | no stable release yet | `cr.hotio.dev/hotio/prowlarr:testing`                                                                                                                                                                                 | `cr.hotio.dev/hotio/prowlarr:nightly`                                                                                                                                                                                      |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr) | no stable release yet | `lscr.io/linuxserver/prowlarr:develop`                                                                                                                                                                                | `lscr.io/linuxserver/prowlarr:nightly`                                                                                                                                                                                     |
 
 ### Installing a newer version
 
@@ -96,8 +96,8 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Prowlarr is corrupt.
-- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-prowlarr)
 
 - This error may show if the database file is not writable by the user/group Prowlarr is running as.

@@ -115,9 +115,9 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
-| |`master` (stable)|`develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json)|`nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json)|
-|---|---|---|---|
-|[hotio](https://hotio.dev/containers/readarr)|no stable release yet|no beta release yet|`cr.hotio.dev/hotio/readarr:nightly`|
+|                                               | `master` (stable)     | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json) | `nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json) |
+| --------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/readarr) | no stable release yet | no beta release yet                                                                                                                                                                                                  | `cr.hotio.dev/hotio/readarr:nightly`                                                                                                                                                                                      |
 
 ## Can I update Readarr inside my Docker container?
 
@@ -151,8 +151,8 @@ If Docker:
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Readarr is corrupt.
-- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-readarr)
 
 - This error may show if the database file is not writable by the user/group Readarr is running as.

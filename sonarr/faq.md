@@ -270,7 +270,7 @@ Below are some example release names for each show type. The specific differenti
 
 |                                                                    | `main` (stable) ![Current Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/sonarr/nightly/VERSION.json) |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [hotio](https://hotio.dev/containers/sonarr)                       | `cr.hotio.dev/hotio/sonarr:release`                                                                                                                                                                                            | `cr.hotio.dev/hotio/sonarr:nightly`                                                                                                                                                                                              |
+| [hotio](https://hotio.dev/containers/sonarr)                       | `cr.hotio.dev/hotio/sonarr:release`                                                                                                                                                                               | `cr.hotio.dev/hotio/sonarr:nightly`                                                                                                                                                                                 |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `lscr.io/linuxserver/sonarr:latest`                                                                                                                                                                               | `lscr.io/linuxserver/sonarr:develop`                                                                                                                                                                                |
 
 ### Installing a newer version
@@ -321,7 +321,7 @@ If Docker:
 - Release groups use a year for the season S2010 and TVDb uses S01.  
 - [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.
 
-> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). If this is observered, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). If this is observed, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
 
 ### Problematic Shows
 
@@ -470,8 +470,8 @@ Depending on your OS, there are multiple possible ways.
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Sonarr is corrupt.
-- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-sonarr)
 
 - This error may show if the database file is not writable by the user/group Sonarr is running as.

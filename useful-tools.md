@@ -18,7 +18,7 @@ The following apps are companions to the \*ARR Suite of Applications or media ho
 
 Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory).
 
-### Recovering a Corrupt DB
+### Recovering a Corrupt DB (UI)
 
 > Note this effectively does the same as `.recover` | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
@@ -34,6 +34,18 @@ Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidar
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
 1. Run a pragma check on the new DB
 1. Save the DB and point the application at it
+
+# Recovering a Corrupt DB
+
+Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal.
+
+## Windows
+
+Coming Soon^tm^
+
+## \*Nix
+
+Coming Soon^tm^
 
 # Finding Cookies
 
@@ -83,7 +95,7 @@ Firefox
 
 ## AMD
 
-[Automated Music Downlaoder](https://github.com/RandomNinjaAtk/docker-amd) RandomNinjaAtk/amd is a Lidarr companion script to automatically download music for Lidarr
+[Automated Music Downloader](https://github.com/RandomNinjaAtk/docker-amd) RandomNinjaAtk/amd is a Lidarr companion script to automatically download music for Lidarr
 
 ## AMVD
 
@@ -130,7 +142,7 @@ Firefox
 Highlights
 
 - Application Status
-- Requests and Approvals (\~Ombi, Requesterr)
+- Requests and Approvals (\~Ombi)
 - Customizable *ARR application notifications
 - Request System with approvals
 - Follow system for users to monitor a series or movie and be notified (via @mentions)
@@ -150,6 +162,10 @@ Highlights
 [Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
+
+## Plex Meta Manager
+
+[Plex Meta Manager (PMM)](https://github.com/meisnate12/Plex-Meta-Manager) is a Python script to update metadata information for movies, shows, and collections as well as automatically build collections.
 
 ## qBit Management
 
@@ -173,7 +189,7 @@ Add new movies/shows to your system easily with your phone. App available at [Go
 
 ## Tdarr
 
-[Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](/sonarr)/[Radarr](/radarr) and built with the aim of modularisation, parallelisation and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
+[Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](/sonarr)/[Radarr](/radarr) and built with the aim of modularization, parallelization and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
 
 ## Unpackerr
 

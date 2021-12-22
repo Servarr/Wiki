@@ -109,7 +109,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 |                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [hotio](https://hotio.dev/containers/radarr)                       | `cr.hotio.dev/hotio/radarr:release`                                                                                                                                                                                                | `cr.hotio.dev/hotio/radarr:testing`                                                                                                                                                                                              |
+| [hotio](https://hotio.dev/containers/radarr)                       | `cr.hotio.dev/hotio/radarr:release`                                                                                                                                                                                   | `cr.hotio.dev/hotio/radarr:testing`                                                                                                                                                                                 |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `lscr.io/linuxserver/radarr:latest`                                                                                                                                                                                   | `lscr.io/linuxserver/radarr:develop`                                                                                                                                                                                |
 
 ## Can I update Radarr inside my Docker container?
@@ -293,8 +293,8 @@ If Docker:
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Radarr is corrupt.
-- Try the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database)
-- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db)
+- Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
+- If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
 
 - This error may show if the database file is not writable by the user/group Radarr is running as.
