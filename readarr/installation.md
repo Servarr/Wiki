@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-12-15T18:26:53.349Z
+date: 2021-12-22T15:04:41.085Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -120,7 +120,7 @@ app_prereq="curl sqlite3"   # Required packages
 app_umask="0002"            # UMask the Service will run as
 app_bin=${app^}             # Binary Name of the app
 installdir="/opt"           # {Update me if needed} Install Location
-bindir="${installdir}/${app^}"# Full Path to Install Location
+bindir="${installdir}/${app^}" # Full Path to Install Location
 branch="nightly"            # {Update me if needed} branch to install
 datadir="/var/lib/readarr/" # {Update me if needed} AppData directory to use
 
