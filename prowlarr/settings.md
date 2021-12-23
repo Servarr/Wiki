@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-12-12T02:23:00.193Z
+date: 2021-12-23T00:22:34.935Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -177,17 +177,19 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 > Information on supported notification providers can be found [here](/prowlarr/supported#notifications)
 {.is-info}
 
-Notifications are used for notifications from Prowlarr.
+## Connections
 
-![settings_connect.png](/assets/prowlarr/settings_connect.png)
+Connections are how you want Prowlarr to communicate with the outside world.
 
-Click on `Settings` => `Notifications`, and then click the `+` to add a new connection.
+- By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-There are many notification options available:
+- A list of supported notifications & connections is located [here](/prowlarr/supported#notifications)
 
-![settings_notifications.png](/assets/prowlarr/settings_notifications.png)
+## Notification Triggers
 
-Each one has different configuration options. If you're using notifications within any of the Applications, these should be set up the same way.
+- On Health Issue - Be notified on health check failures
+  - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Application Update - Be notified when Prowlarr gets updated to a new version
 
 # Tags
 
