@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-12-13T23:27:45.764Z
+date: 2021-12-23T17:52:26.821Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -65,6 +65,13 @@ dateCreated: 2021-05-25T02:28:35.194Z
 Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
 > Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 {.is-info}
+
+### Database Failed Integrity Check
+
+- Your database(s) failed a [SQLite Pragma Integrity Check](https://www.sqlite.org/pragma.html#pragma_integrity_check) and have some corruption.
+- If `Radarr.db` is corrupt [please see this FAQ Entry](/radarr/faq#i-am-getting-an-error-database-disk-image-is-malformed)
+- If `logs.db` is corrupt: Stop Radarr, delete `logs.db` and any `logs.wal` files.
+- If both are corrupt, review the respective processes above.
 
 #### New update is available
 
