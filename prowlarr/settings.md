@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2021-12-23T00:22:34.935Z
+date: 2021-12-23T00:47:27.877Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -193,9 +193,14 @@ Connections are how you want Prowlarr to communicate with the outside world.
 
 # Tags
 
-Here is where you can maintain any existing tags you've used.
+- The tag section in Prowlarr is used to link different aspects of Prowlarr.
+- Tags are particularly useful for:
 
-Click on `Settings` => `Tags`. If you have any tags, they will appear here and you can delete them or edit them. If you have not applied tags anywhere in Prowlarr yet, this will show "no tags have been added yet" and there will be nothing to do in this page.
+  - Enabling Flaresolverr Proxy for use with an indexer; Note that Flaresolverr Proxies are disabled without a tag
+  - Enabling a HTTP or SOCKS Proxy for use with an indexer
+
+> Note: Tags do not influence what indexers sync to what application, what indexers are used with what clients, anything related to tags in any other application, nor anything other than what is explictly noted above.
+{.is-info}
 
 # General
 
