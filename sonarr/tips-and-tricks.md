@@ -14,4 +14,4 @@ Contributions Welcome
 
 # Syncing Two Sonarr Instances
 
-- TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
+- TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) on how to sync two (or more) instances

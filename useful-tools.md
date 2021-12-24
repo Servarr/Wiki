@@ -16,11 +16,11 @@ The following apps are companions to the \*ARR Suite of Applications or media ho
 
 [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 
-Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory).
-
 ### Recovering a Corrupt DB (UI)
 
 > Note this effectively does the same as `.recover` | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
+
+Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
 1. Stop the application
 1. Make a copy of your corrupt DB and copy any .wal files with it
@@ -36,9 +36,13 @@ Open the `{*arr}.db` which can be found in the [Lidarr Appdata Directory](/lidar
 1. Run a pragma check on the new DB
 1. Save the DB and point the application at it
 
-# Recovering a Corrupt DB
+## Recovering a Corrupt DB
+
+Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
 Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal.
+
+> Warning the below instructions are a draft and are untested {.is-warning}
 
 ## Windows
 
@@ -47,13 +51,11 @@ Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_d
 1. Double click `sqlite3.exe`
 1. Enter `.recover <path to database>`
 
-
 ## \*Nix
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `.recover <path to database>`
-
+1. Enter `sqlite3 .recover <path to database>`
 
 # Finding Cookies
 

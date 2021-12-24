@@ -104,12 +104,12 @@ Note that the following will only be logged for custom scripts:
 
 ## On Application Update
 
-| Environment Variable            	| Details                              	|
-|---------------------------------	|--------------------------------------	|
-| `radarr_eventype`               	| `ApplicationUpdate`                  	|
-| `radarr_update_message`         	| Message from Update                  	|
-| `radarr_update_newversion`      	| Version Radarr updated to (string)   	|
-| `radarr_update_previousversion` 	| Version Radarr updated from (string) 	|
+| Environment Variable             | Details                               |
+|--------------------------------- |-------------------------------------- |
+| `radarr_eventype`                | `ApplicationUpdate`                   |
+| `radarr_update_message`          | Message from Update                   |
+| `radarr_update_newversion`       | Version Radarr updated to (string)    |
+| `radarr_update_previousversion`  | Version Radarr updated from (string)  |
 
 ## On Test
 

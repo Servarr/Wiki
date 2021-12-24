@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
 ---
 
-If you're looking to trigger a custom script, you can find more details here. Scripts are added to Lidarr via the [Connect Settings](/lidarr/settings#connections).
+If you're looking to trigger a custom script, you can find more details on this page. Scripts are added to Lidarr via the [Connect Settings](/lidarr/settings#connections).
 
 # Overview
 
@@ -118,7 +118,6 @@ Environment Variables vary based on the event type. The sections below indicate 
 | `Lidarr_Health_Issue_Message` | `healthCheck.Message`                   |
 | `Lidarr_Health_Issue_Type`    | `healthCheck.Source.Name`               |
 | `Lidarr_Health_Issue_Wiki`    | Wiki URL for the health issue help page |
-
 
 ## On Test
 
