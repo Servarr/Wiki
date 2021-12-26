@@ -38,6 +38,7 @@ If you're linked here for support remember to get them the information from the 
 >- **Do ensure [Logging](/prowlarr/settings#logging) is set to Trace (or Debug if requested).**
 >- **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
 >- **Do ensure the logs you provide capture the issue**
+{.is-info}
 
 To provide good and useful logs for sharing:
 
