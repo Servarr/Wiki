@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-12-17T00:16:53.862Z
+date: 2021-12-26T16:42:00.446Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -339,6 +339,12 @@ Incorrect categories is probably the most common cause of results showing in man
 ### Wrong results
 
 Sometimes indexers will return completely unrelated results,  will feed in parameters to limit the search, but the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
+
+### Query Successful - No Results returned
+
+You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.` 
+
+This is caused by your Indexer failing to return any results that are within the categories you configured for the Indexer.
 
 ### Missing Results
 
