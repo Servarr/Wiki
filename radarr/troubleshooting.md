@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2021-12-17T00:17:44.130Z
+date: 2021-12-26T16:33:30.575Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -410,6 +410,12 @@ The movie(s) is(are) not monitored.
 ### Wrong categories
 
 Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in.
+
+### Query Successful - No Results returned
+
+You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.` 
+
+This is caused by your Indexer failing to return any results that are within the categories you configured for the Indexer.
 
 ### Wrong results
 
