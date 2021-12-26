@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2021-12-21T02:23:06.276Z
+date: 2021-12-26T16:33:16.895Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -520,6 +520,12 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 ### Media is Unmonitored
 
 The series/season/episode(s) is(are) not monitored.
+
+### Query Successful - No Results returned
+
+You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.` 
+
+This is caused by your Indexer failing to return any results that are within the categories you configured for the Indexer.
 
 ### Wrong categories
 
