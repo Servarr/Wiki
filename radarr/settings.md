@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-21T19:18:41.619Z
+date: 2021-12-26T16:32:00.918Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -401,9 +401,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - [Please see TRaSH's Guides for how to setup and use custom formats](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/)
 
-#### Importing/Exporting Custom Formats
+#### Importing / Exporting Custom Formats
 
 - [Please see TRaSH's Guides for how to import/export custom formats.](https://trash-guides.info/Radarr/Radarr-import-custom-formats/) However, one is able to import and export custom formats.
+
+#### Importing / Updating Existing Custom Formats
+
+- [Please see TRaSH's Guides for how to import or update existing custom formats.](https://trash-guides.info/Radarr/Radarr-how-to-update-custom-formats/)
 
 ### Collection of Custom Formats
 
