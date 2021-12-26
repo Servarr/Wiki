@@ -48,7 +48,7 @@ To provide good and useful logs for sharing:
 1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
 1. Use [Gist](https://gist.github.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/) or similar sites to share the issue from above
 
-> Do not use [pastebin](https://pastebin.com) as their filters have a tendency to block the logs.
+> Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 > Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
 > When using [0bin](https://0bin.net/) be sure to disable colorize and do not burn after reading.
 {.is-info}
