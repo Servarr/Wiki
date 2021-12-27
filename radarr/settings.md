@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2021-12-26T16:32:00.918Z
+date: 2021-12-27T01:10:46.499Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -446,6 +446,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 
 ### Torrent Tracker Configuration
 
@@ -482,6 +483,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
   | `G_Freeleech75`  | ⇩⬇     | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
   | `G_Freeleech25`  | ⇩      | Similar to `G_Freeleech`, `G_Freeleech25` signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                              |
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 
 ## Options
 
