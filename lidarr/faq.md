@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-12-12T22:07:00.866Z
+date: 2021-12-28T01:29:18.183Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -230,7 +230,7 @@ This change was due to not have our server get killed by people updating lists e
 
 No, nor should you through any SQL hackery.  The refresh releases task queries the upstream Servarr proxy and checks to see if the metadata for each release (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Lidarr. If necessary, it will then update the applicable releases.
 
-A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr.  If you delete release files manually or a third party program, do not set this to `Never`.
+A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Artist Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr.  If you delete release files manually or a third party program, do not set this to `Never`.
 
 ## Why can Lidarr not see my files on a remote server?
 
