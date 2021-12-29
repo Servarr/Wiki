@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2021-12-15T18:26:51.544Z
+date: 2021-12-29T18:34:35.428Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -179,6 +179,7 @@ echo "Installation files downloaded and extracted"
 
 # remove existing installs
 echo "Removing existing installation"
+# If you happen to run this script in the installdir the line below will delete the extracted files and cause the mv some lines below to fail.
 rm -rf $bindir
 echo "Installing..."
 mv "${app^}" $installdir
