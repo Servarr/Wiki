@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2021-12-15T13:40:57.505Z
+date: 2021-12-29T16:18:35.866Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -113,8 +113,12 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
+- `{MediaInfo VideoDynamicRangeType}` = DV HDR10
 
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending `+` (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
+{.is-info}
+
+> `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, HDR10, HDR10Plus, HLG, PQ, and HDR
 {.is-info}
 
 ### Other
