@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-12-30T15:26:08.396Z
+date: 2021-12-30T15:26:37.709Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -347,7 +347,7 @@ If Docker:
 
 There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
 
-- Sonarr does not use aliases from TVDb.
+- Sonarr does not use aliases nor translations from TVDb.
 
 - Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
 
