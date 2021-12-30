@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-12-21T02:26:20.483Z
+date: 2021-12-30T15:26:08.396Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -350,6 +350,9 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - Sonarr does not use aliases from TVDb.
 
 - Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
+
+> Note that the above applies for any foreign language titles as well
+{.is-info}
 
 - **For anime, it will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below.
 
