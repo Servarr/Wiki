@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-12-31T04:33:16.305Z
+date: 2021-12-31T04:36:36.709Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-14T21:36:07.513Z
 
 # Settings
 
-This page is a work in progress.
+This page is a work in progress and contributions - based on the other \*Arr pages are both welcome and strongly encouraged.
 
 # Download Clients
 
