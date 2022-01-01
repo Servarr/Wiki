@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-01T23:28:34.076Z
+date: 2022-01-01T23:30:25.058Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -36,7 +36,7 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 1. Run a pragma check on the new DB
 1. Save the DB and point the application at it
 
-## Recovering a Corrupt DB
+# Recovering a Corrupt DB
 
 Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
@@ -44,14 +44,14 @@ Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_d
 
 > Warning the below instructions are a draft and are untested {.is-warning}
 
-### Windows
+## Windows
 
 1. Stop the application
 1. Download the [Sqlite CLI](https://sqlite.org/2021/sqlite-tools-win32-x86-3370000.zip)
 1. Double click `sqlite3.exe`
 1. Enter `.recover <path to database>`
 
-### \*Nix
+## \*Nix
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
