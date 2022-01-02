@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2021-11-27T20:30:03.843Z
+date: 2022-01-02T23:03:57.703Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -127,9 +127,9 @@ caps:
   # the tracker supports searching with them, especially imdbid, tvdbid, tmdbid and rid (TVRage).
   modes:
     search: [q]
-    tv-search: [q, season, ep, imdbid, tvdbid, rid]
-    movie-search: [q, imdbid, tmdbid]
-    music-search: [q, album, artist, label, year]
+    tv-search: [q, season, ep, imdbid, tvdbid, rid, tmdbid]
+    movie-search: [q, imdbid, tmdbid, genre]
+    music-search: [q, album, artist, label, year, genre]
     book-search: [q, author, title]
 ```
 
