@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2021-12-15T13:40:14.789Z
+date: 2022-01-02T23:01:34.479Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -689,6 +689,10 @@ Connections are how you want Readarr to communicate with the outside world.
 - On Download Failure - Be notified when a book download fails (usenet only)
 - On Import Failure - Be notified when a book download fails to import
 - On Rename - Be notified when books are renamed
+- On Author Delete - Be notified when an author is deleted
+- On Book Delete - Be notified when a book is deleted
+- On Book File Delete - Be notified when a book file is deleted
+- On Book File Delete For Upgrade  - Be notified when a book file is deleted for an upgrade
 - On Book Retag - Be notified when books are retagged
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
