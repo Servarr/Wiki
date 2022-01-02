@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-01-02T23:03:57.703Z
+date: 2022-01-02T23:14:36.881Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -127,7 +127,7 @@ caps:
   # the tracker supports searching with them, especially imdbid, tvdbid, tmdbid and rid (TVRage).
   modes:
     search: [q]
-    tv-search: [q, season, ep, imdbid, tvdbid, rid, tmdbid]
+    tv-search: [q, season, ep, imdbid, tvdbid, rid, tmdbid, traktid]
     movie-search: [q, imdbid, tmdbid, genre]
     music-search: [q, album, artist, label, year, genre]
     book-search: [q, author, title]
@@ -1132,30 +1132,31 @@ Generated based on the settings section
 ```yaml
 .Query.Type
 .Query.Q
-.Query.Series      # not supported (Cardigann compatibility)
-.Query.Ep
-.Query.Season
-.Query.Movie       # not supported (Cardigann compatibility)
-.Query.Year
 .Query.Limit
 .Query.Offset
 .Query.Extended
 .Query.Categories
 .Query.APIKey
-.Query.TVDBID
-.Query.TVRageID
+.Query.Movie       # not supported (Cardigann compatibility)
+.Query.Year
 .Query.IMDBID      # e.g. tt12345678
 .Query.IMDBIDShort # e.g. 12345678
 .Query.TMDBID
+.Query.Series      # not supported (Cardigann compatibility)
+.Query.Ep
+.Query.Season
 .Query.TVMazeID    # not supported (Cardigann compatibility)
-.Query.TraktID     # not supported (Cardigann compatibility)
+.Query.TraktID
+.Query.TVDBID
+.Query.TVRageID
+.Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd
 .Query.Album 
 .Query.Artist
 .Query.Label
 .Query.Track
-.Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd
 .Query.Author
 .Query.BookTitle
+.Query.Genre
 .Categories        # MappedCategories
 .Query.Keywords    # original keywords
 .Keywords          # keywords after applying the keywordsfilters
