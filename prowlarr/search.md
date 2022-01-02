@@ -2,7 +2,7 @@
 title: Prowlarr Search
 description: 
 published: true
-date: 2021-11-26T22:42:35.477Z
+date: 2022-01-02T23:05:56.758Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T23:31:53.221Z
@@ -19,13 +19,15 @@ To initiate a search, click on `Search` on the left menu. There will be a mostly
 - Query - Enter your search terms in the Query field.
   - Click the magnifying glass to change the search type, available options are:
     - Basic Search - Basic Text Query
-    - TV Search - Search using TV parameters as displayed in the UI including ID based (TVDb id, IMDb id, etc.) and season/episode searches
-    - Movie Search - Search using Movie parameters as displayed in the UI including ID based (TMDb id, IMDb id, etc.)
-    - Audio Search - Search using Music parameters as displayed in the UI including Artist, Album, Label, etc.
+    - TV Search - Search using TV parameters as displayed in the UI including ID based (TVDbId, IMDbId, TMDbID, etc.) and season/episode searches
+    - Movie Search - Search using Movie parameters as displayed in the UI including ID based (TMDbId, IMDbId, Genre, etc.)
+    - Audio Search - Search using Music parameters as displayed in the UI including Artist, Album, Label, Genre, etc.
     - Book Search - Search using Book parameters as displayed in the UI including author, title, etc.
 
 > These are generally formatted as `{VariableName:SearchValue}` e.g. For a TV Search of The Simpsons Season 32 the search input would be `{TvdbId:71663} {Season:32}`
 {.is-info}
+
+> Note that not all Indexers upport all query types {.is-info}
 
 - Indexers - Choose your indexers in the Indexers drop-down.  You can check "Usenet" or "Torrents" to select all of the indexers in those categories automatically, or you can select specific indexers for your search from either group.
 - Category - Choose the categories you want to search on your indexers from the drop-down. You can select top-level categories (TV, Movies, etc.) to select all of the sub-categories automatically, or you can select specific categories from any of the groups.
@@ -36,7 +38,7 @@ You can download the result by clicking on the download icon on the right of the
 
 You can bulk grab results at once by checking the select boxes on the left side and hitting the `Grab Releases` button.
 
-> Anything downloaded will have the category assignment you've set in Prowlarr. This may require a manual import in your app program from a non-standard directory!
+> Anything downloaded will have the category assignment you've set in Prowlarr. This may require a manual import in your app program from a non-standard directory! {.is-info}
 
 # API Endpoints
 
