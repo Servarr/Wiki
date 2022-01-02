@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-02T00:33:58.120Z
+date: 2022-01-02T00:39:22.744Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -46,8 +46,8 @@ Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_d
 
 1. Stop the application
 1. Download the [Sqlite CLI](https://sqlite.org/2021/sqlite-tools-win32-x86-3370000.zip)
-1. Double click `sqlite3.exe`
-1. Enter `.open <path to database>`
+1. Extract it to the database location and double click `sqlite3.exe`
+1. Enter `.open <file name with .db>`
 1. Enter `.recover`
 
 ## \*Nix
