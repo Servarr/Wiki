@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-03T23:41:34.205Z
+date: 2022-01-03T23:53:23.588Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -393,7 +393,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk. (Note: Radarr only considers text after the movie title and year which means anything preceding the title is ignored.)
 - Edition - This tag is matched against any Editions Radarr may parse. You can put any value Radarr will try to match that against what it parsed (case-insensitive).
 - Language - This language is matched against any language(s) Radarr parses. All languages previously selectable in profiles work here.
-- Indexer Flag - This tag is matched against any Indexer Flags that Radarr may parse.
+- [Indexer Flag](/radarr/settings#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
 - Source - The source where a release was ripped from (e.g. BLURAY).
 - Resolution - The resolution parsed from either the release name or mediainfo (if available).
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
