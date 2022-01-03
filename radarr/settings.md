@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-03T23:40:18.857Z
+date: 2022-01-03T23:41:03.079Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -475,6 +475,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
 
 {#indexer-flags}
+
 - Required Flags - What indexer flags are required?
   | Flag             | Symbol | Description                                                                                                                                                                                                                 |
   | ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
