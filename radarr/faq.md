@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-03T22:46:57.045Z
+date: 2022-01-03T22:58:33.258Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -459,7 +459,7 @@ Depending on your OS, there are multiple possible ways.
 
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
-- **January 1 2022 Update: Jackett `/all` endpoint is no longer supported as of 4.0.0.5730 due to the fact it only causes issues.**
+- **January 1 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 4.0.0.5730 due to the fact it only causes issues.**
 
 - [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
