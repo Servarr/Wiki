@@ -269,7 +269,7 @@ sudo apt install curl sqlite3
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
     - AMD64 use `arch=x64`
-    - ARM and armh use `arch=arm`
+    - ARM, armf, and armh use `arch=arm`
     - ARM64 use `arch=arm64`
 
 ```shell
