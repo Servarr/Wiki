@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-02T00:39:22.744Z
+date: 2022-01-04T08:42:37.165Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -18,7 +18,7 @@ The following apps are companions to the \*ARR Suite of Applications or media ho
 
 ### Recovering a Corrupt DB (UI)
 
-> Note this effectively does the same as `.recover` | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
+> Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
 Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
@@ -40,7 +40,8 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 
 Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
-Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal.
+Using the [sqlite3 `.recover` command}
+](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
 ## Windows
 
@@ -54,7 +55,7 @@ Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_d
 > Warning the below instructions are a draft and are untested {.is-warning}
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `sqlite3 .recover <path to database>`
+1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
 
 # Finding Cookies
 
