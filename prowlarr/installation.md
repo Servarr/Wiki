@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2021-12-15T18:56:08.570Z
+date: 2022-01-05T08:27:42.887Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -451,7 +451,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 {.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
-- [lscr.io/linuxserver/prowlarr](https://github.com/lscr.io/linuxserver/docker-prowlarr/tree/develop)
+- [linuxserver/docker-prowlarr](https://github.com/linuxserver/docker-prowlarr)
 {.links-list}
 
 # Reverse Proxy Configuration
