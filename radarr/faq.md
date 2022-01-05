@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-03T22:58:33.258Z
+date: 2022-01-05T23:58:12.240Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -431,9 +431,10 @@ Depending on your OS, there are multiple possible ways.
 
 ## How does Radarr handle foreign movies or foreign titles?
 
-- Radarr uses both Alt Titles and Translations for parsing. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
-- To get a movie in a foreign language set your Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
-- Note that this does not include any indexer languages specified as multi.
+- Radarr uses both Alt Titles and Translations for parsing. Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats. Parsing looks for a match in all Translations and Alternative Titles.
+- To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
+- Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
+- Note that `multi` by default is assumed English+French
 
 > Note that for indexers that support ID based searches - such as many Usenet indexers and elite private Torrent trackers - text queries are not used if results are returned for an ID based search.  Therefore the above about searching does not apply.  Radarr will search the ID and if results are returned will not fall back to a name search.  If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
 {.is-warning}
