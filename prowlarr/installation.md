@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-01-05T13:38:19.322Z
+date: 2022-01-07T16:05:44.698Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -126,13 +126,14 @@ else
     echo "User [$app_uid] already exists"
 fi
 
-if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
-    echo "User [$app_uid] did not exist in Group [$app_guid]"
-    usermod -a -G "$app_guid" "$app_uid"
-    echo "Added User [$app_uid] to Group [$app_guid]"
-else
-    echo "User [$app_uid] already exists in Group [$app_guid]"
-fi
+# Not needed as Prowlarr uses its own group
+#if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
+#    echo "User [$app_uid] did not exist in Group [$app_guid]"
+#    usermod -a -G "$app_guid" "$app_uid"
+#    echo "Added User [$app_uid] to Group [$app_guid]"
+#else
+#    echo "User [$app_uid] already exists in Group [$app_guid]"
+#fi
 
 # Stop the App if running
 if service --status-all | grep -Fq "$app"; then
