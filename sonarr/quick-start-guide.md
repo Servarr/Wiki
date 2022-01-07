@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2021-12-04T21:26:17.888Z
+date: 2022-01-07T19:38:37.325Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -12,10 +12,10 @@ dateCreated: 2021-09-03T19:14:22.283Z
 
 > This page is still in progress and not complete.
 
-> For a more detailed breakdown of all the settings, check [Sonarr =>Settings](/sonarr/settings) We will cover the following options.
+> For a more detailed breakdown of all the settings, check [Sonarr =>Settings](/sonarr/settings)
 {.is-info}
 
-In this guide we will try to explain the basic setup you need to do to get started with Sonarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ for a full explanation.
+In this guide we will try to explain the basic setup you need to do to get started with Sonarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
 > Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 {.is-warning}
@@ -86,9 +86,9 @@ Add at least one indexer in order for Sonarr to work properly.
 
 `Settings` => `Download Clients`
 
-Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups, there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-[More Info](/sonarr/supported#download-clients)
+> See the [settings page](/sonarr/settings#download-clients), [the supported page](/sonarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
 
 ## {.tabset}
 
