@@ -2,7 +2,7 @@
 title: Readarr Supported
 description: 
 published: true
-date: 2021-12-15T13:38:52.103Z
+date: 2022-01-07T19:44:47.143Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:28.684Z
@@ -48,7 +48,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/readarr/settings#download-clients)
 - uTorrent {#utorrent}
   - [Refer to the Settings Page](/readarr/settings#download-clients)
-  - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent
+  - Due to uTorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent
 - Vuze {#vuze}
   - [Refer to the Settings Page](/readarr/settings#download-clients)
 
@@ -74,9 +74,11 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  - > Does not support Search {.is-info}
+  > IP Torrents' native implementation does not support Search {.is-info}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Nyaa {#nyaa}
+  - Torrent Tracker for Japanese Media (Anime) exclusively.
+  > Nyaa frowns upon automation and frequently will ban your IP. {.is-info}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Rarbg {#rarbg}
   - Public Tracker
@@ -105,7 +107,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - By far one of the most common ways to push notifications of actions happening on your Readarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
-  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+ > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - GoodReads Bookshelves {#goodreadsbookshelf}
 - GoodReads Owned Books {#goodreadsownedbooks}
 - Gotify {#gotify}
