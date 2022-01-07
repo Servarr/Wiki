@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2021-12-22T19:55:50.157Z
+date: 2022-01-07T19:44:48.594Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -76,11 +76,11 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  - > Does not support Search {.is-info}
+  > IP Torrents' native implementation does not support Search {.is-info}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
-  - > Nyaa frowns upon automation and frequently will ban your IP. {.is-info}
+  > Nyaa frowns upon automation and frequently will ban your IP. {.is-info}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
