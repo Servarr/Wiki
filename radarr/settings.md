@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-07T22:32:47.221Z
+date: 2022-01-07T22:40:28.481Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -29,6 +29,8 @@ Also, note that for each individual settings page, there are some options at the
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
+
+> Starting from v4.0.0.5720, Radarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` {.is-warning}
 
 - Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
 
