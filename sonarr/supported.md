@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2021-12-22T19:55:48.803Z
+date: 2022-01-07T19:42:16.836Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -48,7 +48,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
 - uTorrent {#utorrent}
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
-  - Due to utorrent being adware and formerly spyware, it is not recommended. Most users use Qbittorrent
+  - Due to uTorrent being adware and formerly spyware, it is not recommended. Most users use Qbittorrent
 - Vuze {#vuze}
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
 
@@ -82,7 +82,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  - > Does not support Search {.is-info}
+  > IP Torrents' native implementation does not support Search {.is-info}
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
@@ -124,7 +124,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - By far one of the most common ways to push notifications of actions happening on your Sonarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
-  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+ > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - Emby {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
