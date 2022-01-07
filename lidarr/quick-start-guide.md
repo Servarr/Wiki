@@ -2,15 +2,25 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2021-12-09T17:46:56.212Z
+date: 2022-01-07T19:39:19.551Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
 ---
 
-> This page is still in progress and not complete. Items to be updated are denoted with //
+# Quick Start Setup Guide
 
-# Quick Start Guide
+> This page is still in progress and not complete.
+
+> For a more detailed breakdown of all the settings, check [Lidarr =>Settings](/lidarr/settings)
+{.is-info}
+
+In this guide we will try to explain the basic setup you need to do to get started with Lidarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
+
+> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
+{.is-warning}
+
+# Caveats
 
 In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found at the following page [installation](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
 
@@ -155,6 +165,8 @@ Understanding the configuration/concepts behind `Indexers` are beyond the scope 
 ![Lidarr-settings-download-clients.png](/assets/lidarr/Lidarr-settings-download-clients.png)
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+
+> See the [settings page](/lidarr/settings#download-clients), [the supported page](/lidarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
 
 ### {.tabset}
 
