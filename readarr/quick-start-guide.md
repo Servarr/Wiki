@@ -2,19 +2,29 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2021-12-12T20:22:17.641Z
+date: 2022-01-07T19:38:53.445Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
 ---
 
-In this guide we will try to explain the basic setup you need to do to get started as quickly as possible with Readarr.
+# Quick Start Setup Guide
 
-There are a lot more settings you may need or want. They can be found at the [settings](/readarr/settings) page.
+> This page is still in progress and not complete.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to enable those to make them visible.
+> For a more detailed breakdown of all the settings, check [Readarr =>Settings](/readarr/settings)
+{.is-info}
 
-After installation and starting up, you open a browser and go to `http://ip_where_installed:8787`
+In this guide we will try to explain the basic setup you need to do to get started with Readarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
+
+> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
+{.is-warning}
+
+# Startup
+
+After installation and starting up, you open a browser and go to `http://{your_ip_here}:8787`
+
+![qs_startup.png](/assets/sonarr/qs_startup.png)
 
 # Media Management
 
@@ -167,7 +177,7 @@ If you have chosen Calibre integration, you will enter the necessary values here
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-[See the Settings Page for details](/readarr/settings#download-clients)
+> See the [settings page](/readarr/settings#download-clients), [the supported page](/readarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
 
 ## {.tabset}
 
