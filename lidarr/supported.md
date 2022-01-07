@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2021-12-12T02:35:07.115Z
+date: 2022-01-07T19:44:46.260Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -46,7 +46,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - uTorrent {#utorrent}
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
-  - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent.
+  - Due to uTorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent.
 - Vuze {#vuze}
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 
@@ -71,7 +71,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  - > Does not support Search {.is-info}
+  > IP Torrents' native implementation does not support Search {.is-info}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
@@ -108,7 +108,7 @@ This page is the disambaguation page for all "supported" wiki links (i.e. typica
   - By far one of the most common ways to push notifications of actions happening on your Lidarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
-  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+ > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - Emby (Media Browser) {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
