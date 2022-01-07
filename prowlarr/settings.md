@@ -26,7 +26,7 @@ Also, note that for each individual settings page, there are some options at the
 
 # Indexer Proxies
 
-> Information on supported proxy types can be found [here](/prowlarr/supported#indexer-proxies)
+> Information on supported proxy types can be found at the following page [supported](/prowlarr/supported#indexer-proxies)
 {.is-info}
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
@@ -71,7 +71,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 
 # Applications
 
-> Information on supported applications can be found [here](/prowlarr/supported#applications)
+> Information on supported applications can be found at the following page [supported](/prowlarr/supported#applications)
 {.is-info}
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
@@ -86,7 +86,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-> Note: Indexers are synced based on the capibilities/categories they claim to support. If an indexer supports only `tv` categories it will be synced to Sonarr.
+> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will be synced to Sonarr.
 {.is-info}
 
 ## Application Settings
@@ -121,7 +121,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 # Download Clients (Prowlarr Searches)
 
-> Information on supported download clients can be found [here](/prowlarr/supported#download-clients)
+> Information on supported download clients can be found at the following page [supported](/prowlarr/supported#download-clients)
 {.is-info}
 
 If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
@@ -174,7 +174,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 # Notifications
 
-> Information on supported notification providers can be found [here](/prowlarr/supported#notifications)
+> Information on supported notification providers can be found at the following page [supported](/prowlarr/supported#notifications)
 {.is-info}
 
 ## Connections
@@ -199,7 +199,7 @@ Connections are how you want Prowlarr to communicate with the outside world.
   - Enabling Flaresolverr Proxy for use with an indexer; Note that Flaresolverr Proxies are disabled without a tag
   - Enabling a HTTP or SOCKS Proxy for use with an indexer
 
-> Note: Tags do not influence what indexers sync to what application, what indexers are used with what clients, anything related to tags in any other application, nor anything other than what is explictly noted above.
+> Note: Tags do not influence what indexers sync to what application, what indexers are used with what clients, anything related to tags in any other application, nor anything other than what is explicitly noted above.
 {.is-info}
 
 # General

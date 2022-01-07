@@ -14,7 +14,7 @@ This page is a work in progress and contributions - based on the other \*Arr pag
 
 # Download Clients
 
-> Information on supported download clients can be found [here](/lidarr/supported#download-clients)
+> Information on supported download clients can be found at the following page [supported](/lidarr/supported#download-clients)
 {.is-info}
 
 ## Overview
@@ -89,19 +89,19 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Lidarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
 
-|      Client       | Ratio |      Time      |
-| :---------------: | :---: | :------------: |
-|      Aria2        |![Supported](https://img.shields.io/badge/Supported-Yes-success)|     ![Not Supported](https://img.shields.io/badge/Supported-no-critical)     |
-|      Deluge       |![Supported](https://img.shields.io/badge/Supported-Yes-success)|     ![Not Supported](https://img.shields.io/badge/Supported-no-critical)     |
-| Download Station  |![Not Supported](https://img.shields.io/badge/Supported-no-critical) |     ![Not Supported](https://img.shields.io/badge/Supported-no-critical)     |
-|       Flood       |![Supported](https://img.shields.io/badge/Supported-Yes-success)|    ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
-|     Hadouken      |![Not Supported](https://img.shields.io/badge/Supported-no-critical) |     ![Not Supported](https://img.shields.io/badge/Supported-no-critical)     |
-|    qBittorrent    |![Supported](https://img.shields.io/badge/Supported-Yes-success)|    ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
-|     rTorrent      |![Supported](https://img.shields.io/badge/Supported-Yes-success)|    ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
-| Torrent Blackhole |![Not Supported](https://img.shields.io/badge/Supported-no-critical) |     ![Not Supported](https://img.shields.io/badge/Supported-no-critical)     |
-|   Transmission    |![Supported](https://img.shields.io/badge/Supported-Yes-success)| ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
-|     uTorrent      |![Supported](https://img.shields.io/badge/Supported-Yes-success)|    ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
-|       Vuze        |![Supported](https://img.shields.io/badge/Supported-Yes-success)|    ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
+|      Client       |                                Ratio                                 |                                   Time                                   |
+| :---------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------: |
+|       Aria2       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |   ![Not Supported](https://img.shields.io/badge/Supported-No-critical)   |
+|      Deluge       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |   ![Not Supported](https://img.shields.io/badge/Supported-No-critical)   |
+| Download Station  | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |   ![Not Supported](https://img.shields.io/badge/Supported-No-critical)   |
+|       Flood       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |     ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
+|     Hadouken      | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |   ![Not Supported](https://img.shields.io/badge/Supported-No-critical)   |
+|    qBittorrent    |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |     ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
+|     rTorrent      |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |     ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
+| Torrent Blackhole | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |   ![Not Supported](https://img.shields.io/badge/Supported-No-critical)   |
+|   Transmission    |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
+|     uTorrent      |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |     ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
+|       Vuze        |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |     ![Supported](https://img.shields.io/badge/Supported-Yes-success)     |
 
 > ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Lidarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
@@ -154,7 +154,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 # Connections
 
-> Information on supported connection types can be found [here](/lidarr/supported#notifications)
+> Information on supported connection types can be found at the following page [supported](/lidarr/supported#notifications)
 {.is-info}
 
 # Tags

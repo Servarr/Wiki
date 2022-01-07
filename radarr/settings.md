@@ -419,7 +419,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Indexers
 
-> Information on supported indexers can be found [here](/radarr/supported#indexers)
+> Information on supported indexers can be found at the following page [supported](/radarr/supported#indexers)
 {.is-info}
 
 ## Supported Indexers
@@ -479,16 +479,16 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 #### Indexer Flags
 
 | Flag             | Symbol | Description                                                                                                                                                                                                                 |
-  | ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | `G_Freeleech`    | ⬇⬇     | Sometimes, torrent sites set a torrent to be freeleech. This means, that the download of this torrent will not count towards your download quota or ratio. This is really useful if you have not built up a good ratio yet. |
-  | `G_Halfleech`    | ⇩⇩     | Similar to `G_Freeleech`, `G_Halfleech` signifies that only half of the size of this torrent will count towards your download quota or ratio.                                                                               |
-  | `G_DoubleUpload` | ⬆      | Similar to `G_Freeleech`, `G_DoubleUpload` signifies that any amount of data you upload via seeding is counted twice towards your upload quota and ratio. This is very useful, if you want to build up a ratio buffer.      |
-  | `PTP_Golden`     | 🌟      | On PassThePopcorn, some torrents are given the _Golden_ tag, when they meet certain encoding standards. These are usually the best encodes, with almost no perceptible quality loss. You can learn more on their wiki page. |
-  | `PTP_Approved`   | ✔      | On PassThePopcorn, some torrents are approved, when they meet the minimum standards for encoding (e.g., no low bitrates). See their wiki for more information.                                                              |
-  | `HDB_Internal`   | 🚪      | Releases on HDBits receive this tag, when the release was uploaded by one of the release groups of HDBits themselves.                                                                                                       |
-  | `G_Scene`        | ☠      | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
-  | `G_Freeleech75`  | ⇩⬇     | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
-  | `G_Freeleech25`  | ⇩      | Similar to `G_Freeleech`, `G_Freeleech25` signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                              |
+| ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `G_Freeleech`    | ⬇⬇     | Sometimes, torrent sites set a torrent to be freeleech. This means, that the download of this torrent will not count towards your download quota or ratio. This is really useful if you have not built up a good ratio yet. |
+| `G_Halfleech`    | ⇩⇩     | Similar to `G_Freeleech`, `G_Halfleech` signifies that only half of the size of this torrent will count towards your download quota or ratio.                                                                               |
+| `G_DoubleUpload` | ⬆      | Similar to `G_Freeleech`, `G_DoubleUpload` signifies that any amount of data you upload via seeding is counted twice towards your upload quota and ratio. This is very useful, if you want to build up a ratio buffer.      |
+| `PTP_Golden`     | 🌟      | On PassThePopcorn, some torrents are given the _Golden_ tag, when they meet certain encoding standards. These are usually the best encodes, with almost no perceptible quality loss. You can learn more on their wiki page. |
+| `PTP_Approved`   | ✔      | On PassThePopcorn, some torrents are approved, when they meet the minimum standards for encoding (e.g., no low bitrates). See their wiki for more information.                                                              |
+| `HDB_Internal`   | 🚪      | Releases on HDBits receive this tag, when the release was uploaded by one of the release groups of HDBits themselves.                                                                                                       |
+| `G_Scene`        | ☠      | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
+| `G_Freeleech75`  | ⇩⬇     | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
+| `G_Freeleech25`  | ⇩      | Similar to `G_Freeleech`, `G_Freeleech25` signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                              |
 
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
@@ -520,7 +520,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Download Clients
 
-> Information on supported download clients can be found [here](/radarr/supported#download-clients)
+> Information on supported download clients can be found at the following page [supported](/radarr/supported#download-clients)
 {.is-info}
 
 ## Overview
@@ -599,14 +599,14 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 |      Client       |                                Ratio                                 |                                    Time                                    |
 | :---------------: | :------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-|       Aria2       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |    ![Not Supported](https://img.shields.io/badge/Supported-no-critical)    |
-|      Deluge       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |    ![Not Supported](https://img.shields.io/badge/Supported-no-critical)    |
-| Download Station  | ![Not Supported](https://img.shields.io/badge/Supported-no-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-no-critical)    |
+|       Aria2       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
+|      Deluge       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
+| Download Station  | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
 |       Flood       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
-|     Hadouken      | ![Not Supported](https://img.shields.io/badge/Supported-no-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-no-critical)    |
+|     Hadouken      | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
 |    qBittorrent    |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
 |     rTorrent      |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
-| Torrent Blackhole | ![Not Supported](https://img.shields.io/badge/Supported-no-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-no-critical)    |
+| Torrent Blackhole | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
 |   Transmission    |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue)\* |
 |     uTorrent      |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
 |       Vuze        |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
@@ -663,7 +663,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 # Import Lists
 
-> Information on supported list types can be found [here](/radarr/supported#lists)
+> Information on supported list types can be found at the following page [supported](/radarr/supported#lists)
 {.is-info}
 
 ## Lists
@@ -693,7 +693,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 # Connect
 
-> Information on supported connection types can be found [here](/radarr/supported#notifications)
+> Information on supported connection types can be found at the following page [supported](/radarr/supported#notifications)
 {.is-info}
 
 ## Connections
@@ -725,7 +725,7 @@ Connections are how you want Radarr to communicate with the outside world.
 
 ## Metadata Consumers
 
-> Information on supported metadata consumers can be found [here](/radarr/supported#metadata)
+> Information on supported metadata consumers can be found at the following page [supported](/radarr/supported#metadata)
 {.is-info}
 
 Here you can select the type of metadata that will be consumed by your media player

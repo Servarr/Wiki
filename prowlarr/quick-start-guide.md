@@ -50,7 +50,7 @@ Click on `Settings` => `Apps`, and then click the `+` to add a supported app.
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you must add each of them separately.
 
-> Currently supported Apps can be found [here](/prowlarr/supported#applications)
+> Currently supported Apps can be found at the following page [supported](/prowlarr/supported#applications)
 {.is-info}
 
 When you add an app, you will need to enter values in the pop-up screen:
@@ -102,7 +102,7 @@ Click on `Settings` => `Download Clients`, and then click the `+` to add a new d
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
-> Currently supported Download Clients can be found [here](/prowlarr/supported#downloadclient)
+> Currently supported Download Clients can be found at the following page [supported](/prowlarr/supported#downloadclient)
 {.is-info}
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.

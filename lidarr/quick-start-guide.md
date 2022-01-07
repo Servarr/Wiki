@@ -12,7 +12,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 # Quick Start Guide
 
-In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found [here](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
+In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found at the following page [installation](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
 
 - Existing library or files
 - Improper use case
