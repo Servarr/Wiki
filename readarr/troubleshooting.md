@@ -351,7 +351,7 @@ Sometimes indexers will return completely unrelated results, Readarr will feed i
 
 ### Query Successful - No Results returned
 
-You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.` 
+You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
 
 This is caused by your Indexer failing to return any results that are within the categories you configured for the Indexer.
 

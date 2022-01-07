@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
 ---
 
-The following apps are companions to the \*ARR Suite of Applications or media hoarding in general. They are neither maintained, developed, nor supported by the \*ARR Development Team. Please direct any specific support questions to the respective application development team.
+The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
 # Common  Software
 
@@ -52,7 +52,9 @@ Using the [sqlite3 `.recover` command}
 1. Enter `.recover`
 
 ## \*Nix
+
 > Warning the below instructions are a draft and are untested {.is-warning}
+
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
 1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
