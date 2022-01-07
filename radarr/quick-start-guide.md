@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-01-07T19:38:16.009Z
+date: 2022-01-07T19:38:29.651Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -126,7 +126,7 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/sonarr/settings#download-clients), [the supported page](/sonarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
+> See the [settings page](/radarr/settings#download-clients), [the supported page](/radarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
 
 ## {.tabset}
 
