@@ -203,7 +203,7 @@ Type=simple
 ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -315,7 +315,7 @@ Type=simple
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarr/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -729,7 +729,7 @@ Type=simple
 ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/Readarr-audiobooks/
 TimeoutStopSec=20
 KillMode=process
-Restart=always
+Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
