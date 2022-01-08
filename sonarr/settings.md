@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-01-07T22:39:18.430Z
+date: 2022-01-08T16:44:33.579Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -40,7 +40,11 @@ Also, note that for each individual settings page, there are some options at the
 
 - Anime Series: `{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} { Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}`
 
-> Series Folders: `{Series TitleYear} [imdb-{ImdbId}]`
+- Season Folders: `Season {season:00}`
+
+- Multi-Episode Style: `Scene`
+
+- Series Folders: `{Series TitleYear} [imdb-{ImdbId}]`
 
 ## Episode Naming
 
