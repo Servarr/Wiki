@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-04T08:42:37.165Z
+date: 2022-01-08T05:12:19.675Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -34,7 +34,10 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 1. New DB => File => Import => import that file
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
 1. Run a pragma check on the new DB
-1. Save the DB and point the application at it
+1. Remove all Wal, Sh, and Db files from the config folder
+1. Save the new DB in the config folder and point the application at it
+
+![dbrecover.gif](/dbrecover.gif)
 
 # Recovering a Corrupt DB
 
