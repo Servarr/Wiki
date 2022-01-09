@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2021-12-21T06:06:04.505Z
+date: 2022-01-09T21:26:54.172Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -72,6 +72,14 @@ RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
 RewriteRule /(.*) ws://127.0.0.1:9696/$1 [P,L]
 ```
+
+If you have a reverse proxy under a subdirectory, the RewriteRule should include your basepath e.g.
+
+```
+RewriteRule /prowlarr/(.*) ws://127.0.0.1:9696/prowlarr/$1 [P,L]
+```
+
+If Prowlarr is not running on the same machine as your reverse proxy. Replace 127.0.0.1 with the appropriate IP address/DNS name of your Prowlarr app.
 
 - For Caddy (V1) use this:
 
