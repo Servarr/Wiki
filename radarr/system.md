@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2021-12-23T17:52:51.427Z
+date: 2022-01-09T21:28:23.106Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -126,6 +126,14 @@ RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
 RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
 ```
+
+If you have a reverse proxy under a subdirectory, the RewriteRule should include your basepath e.g.
+
+```
+RewriteRule /radarr/(.*) ws://127.0.0.1:7878/radarr/$1 [P,L]
+```
+
+If Radarr is not running on the same machine as your reverse proxy. Replace 127.0.0.1 with the appropriate IP address/DNS name of your Radarr app.
 
 ##### Caddy
 
