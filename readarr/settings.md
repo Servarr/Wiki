@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2022-01-02T23:01:34.479Z
+date: 2022-01-09T23:21:35.087Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -547,7 +547,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Name - The name of the download client within Readarr
 - Enable - Enable this Download Client
 - Host - The URL of your download client
-- Port - The port of your download client
+- Port - The port of your download client; this is typically the webgui port
 - Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
 - URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
 - Username - the username to authenticate to your client
