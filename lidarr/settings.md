@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2021-12-31T04:36:36.709Z
+date: 2022-01-09T23:22:26.757Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -73,7 +73,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Name - The name of the download client within Lidarr
 - Enable - Enable this Download Client
 - Host - The URL of your download client
-- Port - The port of your download client
+- Port - The port of your download client; this is typically the webgui port
 - Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
 - URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
 - Username - the username to authenticate to your client
