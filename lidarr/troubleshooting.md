@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2021-12-27T05:10:26.404Z
+date: 2022-01-09T18:48:34.926Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -182,6 +182,10 @@ Incorrect path issues are possible too, though less common in normal setups. The
 ## Common Problems
 
 Below are some common problems.
+
+### Using qBittorrent v4.4.0
+
+Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Lidarr.  Rollback to v4.3.9 or hope qBittorrent has hotfixed the issue in a future release (e.g. v4.4.1) if it exists.
 
 ### Download Client's WebUI is not enabled
 
