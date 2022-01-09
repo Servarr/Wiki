@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-01-08T16:44:33.579Z
+date: 2022-01-09T23:23:22.861Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -550,7 +550,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Name - The name of the download client within Sonarr
 - Enable - Enable this Download Client
 - Host - The URL of your download client
-- Port - The port of your download client
+- Port - The port of your download client; this is typically the webgui port
 - Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
 - URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
 - API Key - the API key to authenticate to your client
