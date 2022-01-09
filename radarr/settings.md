@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-07T22:40:28.481Z
+date: 2022-01-09T23:17:28.250Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -580,7 +580,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Name - The name of the download client within Radarr
 - Enable - Enable this Download Client
 - Host - The URL of your download client
-- Port - The port of your download client
+- Port - The port of your download client; this is typically the webgui port
 - Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
 - URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
 - Username - the username to authenticate to your client
