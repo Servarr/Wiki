@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2021-11-24T19:21:51.662Z
+date: 2022-01-10T21:56:21.413Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -14,6 +14,22 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
+
+## Portainer
+
+> **Portainer should be avoided for setting up docker containers** {.is-danger}
+
+- Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
+- Portainer should only for viewing docker container logs / container status. - It's strongly suggested to use Docker compose and to not use Portainer. 
+- Portainer has many issues, such as:
+  - Incorrect order of source and target of mounts
+  - Inconsistent case-sensitivity
+  - No automatically created custom networks for inter-container communication
+  - Inconsistent compose implementations on different architectures
+  - Pulls every tag on update when you don't set a specific tag
+  - Capabilities are hidden and some don't work at all on ARM platforms
+
+See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 ## Introduction
 
