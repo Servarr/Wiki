@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2021-12-13T23:27:44.344Z
+date: 2022-01-10T17:35:51.650Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -238,9 +238,9 @@ The easiest fix for this is CONSISTENCY if you use one scheme in your download c
   - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these books to be moved to.
   - You will receive a pop-up that states Would you like to move the book folders to 'root path' ? This will also state This will also rename the book folder per the book folder format in settings. Simply select No if the you do not want Readarr to move your files
 
-### Books
+### Import Lists
 
-#### Lists are unavailable due to failures
+#### Import Lists are unavailable due to failures
 
 - Typically this simply means that Readarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 
