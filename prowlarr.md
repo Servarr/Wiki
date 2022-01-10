@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2021-12-09T18:12:15.174Z
+date: 2022-01-10T15:40:58.139Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -29,7 +29,8 @@ dateCreated: 2021-05-24T03:32:41.926Z
 - [<i class="fas fa-laptop"></i>&emsp;System](/prowlarr/system)
 - [<i class="fas fa-info-circle"></i>&emsp;Supported Indexers](/prowlarr/supported-indexers)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/prowlarr/custom-scripts)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/prowlarr/appdata-directory)
+- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/prowlarr/appdata-directory)
+- [<i class="fas fa-server"></i>&emsp; Configure Prowlarr with a PostgreSQL Database](/prowlarr/postgres-setup)
 {.links-list}
 
 # Troubleshooting
