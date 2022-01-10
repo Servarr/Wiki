@@ -29,7 +29,7 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 - [<i class="fas fa-laptop"></i>&emsp;System](/sonarr/system)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/sonarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/sonarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/sonarr/appdata-directory)
+- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/sonarr/appdata-directory)
 {.links-list}
 
 # Troubleshooting

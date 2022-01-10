@@ -32,7 +32,7 @@ Readarr is an eBook collection manager for Usenet and BitTorrent users. It can m
 - [<i class="fas fa-laptop"></i>&emsp;System](/readarr/system)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/readarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/readarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/readarr/appdata-directory)
+- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/readarr/appdata-directory)
 {.links-list}
 
 # Troubleshooting

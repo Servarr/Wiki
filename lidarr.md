@@ -29,7 +29,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 - [<i class="fas fa-laptop"></i>&emsp;System](/lidarr/system)
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/lidarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/lidarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/lidarr/appdata-directory)
+- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/lidarr/appdata-directory)
 {.links-list}
 
 # Troubleshooting

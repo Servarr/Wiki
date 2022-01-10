@@ -10,7 +10,7 @@ dateCreated: 2021-06-23T07:55:33.769Z
 
 > This page is a work in progress and requires additional effort. {.is-warning}
 
-This page is the disambiguation page for all "supported" wiki links (i.e. typically more info in the UI).
+This page is the disambiguation page for all "supported" wiki links (i.e. typically `More Info` in the UI).
 
 # Download Clients
 
@@ -124,7 +124,9 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - By far one of the most common ways to push notifications of actions happening on your Sonarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
+
  > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+
 - Emby {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
