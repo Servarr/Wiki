@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2021-12-28T01:29:18.183Z
+date: 2022-01-11T16:04:10.492Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -88,11 +88,13 @@ As of 2021-06-09 the logic is as follows:
 
 ## How can I rename my artist folders?
 
-- Library
-- Mass Editor
-- Select what artists need their folder renamed
-- Change Root Folder to the same Root Folder that the artists currently exist in
-- Select "Yes move files"
+{#rename-folders}
+
+1. Library
+1. Mass Editor
+1. Select what artists need their folder renamed
+1. Change Root Folder to the same Root Folder that the artists currently exist in
+1. Select "Yes move files"
 
 ## How can I mass delete artists from the wanted list?
 
