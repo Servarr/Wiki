@@ -2,27 +2,27 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-01-10T15:42:47.749Z
+date: 2022-01-11T15:04:12.960Z
 tags: 
 editor: markdown
-dateCreated: 2022-01-10T15:38:53.538Z
+dateCreated: 2022-01-10T15:42:34.178Z
 ---
 
 # Radarr and Postgres
 
-This document will go over the key items for migrating and setting up Postgres support in Radarr.
+This document will go over the key points of migrating and setting up Postgres support in Radarr.
 
-This guide has been created by [Roxedus](https://github.com/Roxedus)
+This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
 ## Creation of initial database
 
-- We do this also when migrating, this is to ensure Radarr sets up the required schema.
+ - We do this when migrating as well, to ensure Radarr sets up the required schema.
 
 ### Setting up Postgres
 
-Firstly we need a Postgres instance, this guide is written for using the postgres:14 docker image.
+ First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
-> Do not even think about using the latest tag {.is-danger}
+ > Do not even think about using the `latest` tag! {.is-danger}
 
 ```bash
 docker create --name=postgres14 \
@@ -39,11 +39,11 @@ Radarr needs two databases:
 - `radarr-main`   This is used to store all configuration and history
 - `radarr-log`    This is used to store events that produce a logentry
 
-Create these databases using your favorite method, with the same username and password. Roxedus used Adminer as he already had that set up.
+Create these databases using your favorite method, with the same username and password. Roxedus used Adminer, as he already had that set up.
 
 ### Schema creation
 
-We need to tell Radarr to use Postgres, the `config.xml` should already be populated with the entries we need.
+ We need to tell Radarr to use Postgres. The `config.xml` should already be populated with the entries we need:
 
 ```xml
 <PostgresUser>qstick</PostgresUser>
@@ -54,21 +54,21 @@ We need to tell Radarr to use Postgres, the `config.xml` should already be popul
 
 ## Migrate data
 
-> If you do not want to migrate a existing SQLite database to Postgres, you can are finished with this guide.{.is-info}
+If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
 
-To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader), it does however have some gotchas:
+To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
 - By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
-- The version packaged in Debian and Ubuntu's apt repo are tested as too old for newer versions of Postgres (Roxedus has not tested the packages in other distros)
-  Roxedus have [re-built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (No code-modification needed, just need to be built with updated dependencies)
+- The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
+  Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
-Once these handled, it's pretty straight forward, after telling it to not mess with the scheme using `--with "data only"`.
+With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
 
 ```bash
 pgloader --with "quote identifiers" --with "data only" radarr.db 'postgresql://qstick:qstick@localhost/radarr-main'
 ```
 
-Or alternatively using the dockerimage producing the binary:
+Or alternatively, using the Docker image producing the binary:
 
 ```bash
 docker run -v ..radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
