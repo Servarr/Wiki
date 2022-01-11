@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2021-12-10T13:38:44.887Z
+date: 2022-01-11T21:19:39.403Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -32,10 +32,24 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 
 # Other
 
-- [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
+## General Troubleshooting
+
 - [<i class="far fa-life-ring"></i>&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)
+{.links-list}
+
+## Docker
+
+- [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
 - [<i class="fas fa-box-open"></i>&emsp;Installing Docker on an ARM-based Synology NAS](/docker-arm-synology)
-- [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
-- [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides](https://trash-guides.info/)
+{.links-list}
+
+## XEM
+
 - [<i class="fab fa-xing"></i>&emsp;XEM Moderation Guide *Guide for how to map various scenarios in XEM*](/sonarr/xem-guide)
+{.links-list}
+
+## Guides & Tools
+
+- [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
+- [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
 {.links-list}
