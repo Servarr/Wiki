@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2021-12-12T22:07:19.610Z
+date: 2022-01-11T16:04:22.372Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -66,11 +66,13 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## How can I rename my author folders?
 
-- Library
-- Mass Editor
-- Select what authors need their folder renamed
-- Change Root Folder to the same Root Folder that the authors currently exist in
-- Select "Yes move files"
+{#rename-folders}
+
+1. Library
+1. Mass Editor
+1. Select what authors need their folder renamed
+1. Change Root Folder to the same Root Folder that the authors currently exist in
+1. Select "Yes move files"
 
 ## How can I mass delete authors from the wanted list?
 
