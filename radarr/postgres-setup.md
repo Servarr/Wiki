@@ -16,7 +16,7 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
 
 ## Creation of initial database
 
- - We do this when migrating as well, to ensure Radarr sets up the required schema.
+- We do this when migrating as well, to ensure Radarr sets up the required schema.
 
 ### Setting up Postgres
 
