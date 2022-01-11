@@ -2,7 +2,7 @@
 title: Networking and Permissions Troubleshooting Guide
 description: 
 published: true
-date: 2021-11-28T19:32:05.676Z
+date: 2022-01-11T15:51:01.452Z
 tags: troubleshooting
 editor: markdown
 dateCreated: 2021-11-13T21:09:50.099Z
@@ -53,3 +53,7 @@ sudo netstat -tnlp | grep ':8989'
 ```
 
 - App named `Radarr`
+
+```bash
+sudo netstat -tnlp | grep 'Radarr'
+```
