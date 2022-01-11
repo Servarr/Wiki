@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2021-12-30T15:26:37.709Z
+date: 2022-01-11T16:07:13.017Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -241,6 +241,8 @@ Below are some example release names for each show type. The specific differenti
 - \[KaiDubs\] Series x Title (2011) - **142** \[1080p\] \[English Dub\] \[CC\] \[AS-DL\] \[A24AB2E5\]
 
 ## How can I rename my series folders?
+
+{#rename-folders}
 
 1. Series
 1. Mass Editor
