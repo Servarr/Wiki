@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-01-11T06:17:38.953Z
+date: 2022-01-11T14:59:45.674Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -54,7 +54,7 @@ We need to tell Prowlarr to use Postgres. The `config.xml` should already be pop
 
 ## Migrate data
 
-> If you do not want to migrate a existing SQLite database to Postgres, you can are finished with this guide.{.is-info}
+> If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
