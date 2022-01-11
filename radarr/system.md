@@ -107,7 +107,7 @@ Rejoice, the developers have released a new update. This generally means awesome
 
 - Nginx requires the following addition to the location block for the app:
 
-```none
+```nginx
  proxy_http_version 1.1;
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
@@ -129,7 +129,7 @@ RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
 
 If you have a reverse proxy under a subdirectory, the RewriteRule should include your basepath e.g.
 
-```
+```none
 RewriteRule /radarr/(.*) ws://127.0.0.1:7878/radarr/$1 [P,L]
 ```
 

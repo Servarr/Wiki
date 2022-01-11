@@ -20,7 +20,8 @@ dateCreated: 2021-05-16T20:23:46.192Z
 > **Portainer should be avoided for setting up docker containers** {.is-danger}
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
-- Portainer should only for viewing docker container logs / container status. - It's strongly suggested to use Docker compose and to not use Portainer. 
+- Portainer should only for viewing docker container logs / container status.
+- It's strongly suggested to use Docker compose and to not use Portainer.
 - Portainer has many issues, such as:
   - Incorrect order of source and target of mounts
   - Inconsistent case-sensitivity
