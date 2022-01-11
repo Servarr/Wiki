@@ -295,7 +295,7 @@ This is typically caused by:
 
 ## Problem Not Listed
 
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 # Searches Indexers and Trackers
 
@@ -598,7 +598,7 @@ There are a few causes why it may appear your profiles are being ignored. The mo
 
 ### Problem Not Listed
 
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 ## Errors
 
@@ -640,4 +640,4 @@ This can also be caused by:
 
 ### Problem Not Listed
 
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.

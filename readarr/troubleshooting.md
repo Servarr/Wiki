@@ -295,7 +295,7 @@ This is typically caused by:
 
 ## Problem Not Listed
 
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 # Searches Indexers and Trackers
 
@@ -403,7 +403,7 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Readarr for
 
 ### Problem Not Listed
 
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 ## Errors
 
@@ -445,4 +445,4 @@ This can also be caused by:
 
 ### Problem Not Listed
 
-Please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
