@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-05T23:59:01.920Z
+date: 2022-01-11T16:04:24.141Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -237,6 +237,8 @@ If Docker:
   - Sort and find the movie at the noted problematic path.
 
 ## How can I rename my movie folders?
+
+{#rename-folders}
 
 1. Movies
 1. Movie Editor
