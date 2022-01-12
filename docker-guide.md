@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2022-01-12T02:10:35.510Z
+date: 2022-01-12T02:20:07.767Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -396,16 +396,17 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
      Birth: 2020-09-11 11:55:43.803327144 -0500
 ```
 
-# Interesting Docker images
+# Interesting Docker Images
 
-- [rasmunk/sshfs](https://hub.docker.com/r/rasmunk/sshfs) let you create an sshfs volume, *perfect* for a seedbox setup using a remote mount instead of sync. Better documentation, including examples can be found at the github [rasmunk/docker-volume-sshfs](https://github.com/rasmunk/docker-volume-sshfs) repository. This is a more recently maintained fork of [vieux/sshfs](https://hub.docker.com/p/vieux/sshfs).
-- [hotio’s](https://hotio.dev/) - The documentation and Dockerfile don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests (except Sonarr which may be useful for testing.
+
+- [rasmunk/sshfs](https://github.com/rasmunk/docker-volume-sshfs)
+{.links-list}
+- [hotio’s](https://hotio.dev/) The documentation and Dockerfile don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests (except Sonarr) which may be useful for testing.
   - [sonarr](https://hotio.dev/containers/sonarr)
   - [radarr](https://hotio.dev/containers/radarr)
   - [lidarr](https://hotio.dev/containers/lidarr)
   - [readarr](https://hotio.dev/containers/readarr)
   - [prowlarr](https://hotio.dev/containers/prowlarr) for usenet and torrent tracker searching
-- Some of hotio's other containers include:
   - [qbittorrent](https://hotio.dev/containers/qbittorrent/)
   - [NZBGet](https://hotio.dev/containers/nzbget/)
   - [SABnzbd](https://hotio.dev/containers/sabnzbd/)
@@ -417,7 +418,18 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [bazarr](https://hotio.dev/containers/bazarr) for subtitles
   - [pullio](https://hotio.dev/pullio/) for auto updating containers
   - [unpackerr](https://hotio.dev/containers/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
-- [binhex’s](https://hub.docker.com/u/binhex) offers many containers as well
+{.links-list}
+- [linuxserver.io](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained. However, avoid their 'suggested (optional)' paths.
+  - [SWAG Proxy](https://hub.docker.com/r/linuxserver/swag)
+  - [qbittorrent](https://hub.docker.com/r/linuxserver/qbittorrent/)
+  - [deluge](https://hub.docker.com/r/linuxserver/deluge/)
+  - [rtorrent](https://hub.docker.com/r/linuxserver/rutorrent/)
+  - [SABnzbd](https://hub.docker.com/r/linuxserver/sabnzbd/)
+  - [NZBGet](https://hub.docker.com/r/linuxserver/nzbget/)
+  - [sonarr](https://hub.docker.com/r/linuxserver/sonarr/)
+  - [radarr](https://hub.docker.com/r/linuxserver/radarr/)
+  - [lidarr](https://hub.docker.com/r/linuxserver/lidarr/)
+- [binhex](https://hub.docker.com/u/binhex) another popular maintainer
   - [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/)
   - [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/)
   - [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/)
@@ -426,7 +438,7 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/)
   - [radarr](https://hub.docker.com/r/binhex/arch-radarr/)
   - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
-- [linuxserver.io’s](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained. However, avoid their 'recommended' paths.
+{.links-list}
 
 # Custom Docker Network and DNS
 
