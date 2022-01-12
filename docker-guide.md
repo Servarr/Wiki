@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2022-01-12T02:09:06.679Z
+date: 2022-01-12T02:10:35.510Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -456,4 +456,14 @@ If you find yourself setting a UMASK of `000` (which is 777 for folders and 666 
 
 # Getting Help
 
-Need some help? For real time, chat style support try the [Sonarr](https://discord.gg/xyRwnyB) or [Radarr](https://radarr.video/discord) Discord servers. If you prefer forum style support, make a post in [/r/sonarr](http://reddit.com/r/sonarr) or [/r/radarr](http://reddit.com/r/radarr).
+## Chat Support (Discord)
+
+- [Sonarr Discord](https://discord.gg/xyRwnyB)
+- [Radarr Discord](https://radarr.video/discord)
+{.links-list}
+
+## Forum Support (Reddit)
+
+- [/r/sonarr](http://reddit.com/r/sonarr)
+- [/r/radarr](http://reddit.com/r/radarr)
+{.links-list}
