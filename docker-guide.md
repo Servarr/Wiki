@@ -12,7 +12,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 **TL;DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
 
-> Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/Misc/how-to-set-up-hardlinks-and-atomic-moves/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
+> Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
 
 # Portainer
@@ -35,6 +35,9 @@ See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://tra
 # Introduction
 
 This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each Docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but not so easy to understand and explain.
+
+> Reminder that many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
+{.is-warning}
 
 # Multiple users and a shared group
 
@@ -397,7 +400,6 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 ```
 
 # Interesting Docker Images
-
 
 - [rasmunk/sshfs](https://github.com/rasmunk/docker-volume-sshfs)
 {.links-list}
