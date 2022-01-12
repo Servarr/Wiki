@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2022-01-09T21:26:54.172Z
+date: 2022-01-12T00:13:31.327Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -152,6 +152,7 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 #### Indexers are unavailable due to failures
 
 - (An) Error(s) occur(s) while Prowlarr tried to use one of your indexers. To limit retries, Prowlarr will not use the indexer for an increasing amount of time (up to 24h).
+- Check Events and filter for Warnings to get a quick idea of what issues have occurred historically
 - This mechanism is triggered if Prowlarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
@@ -170,6 +171,7 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 - (An) Error(s) occur(s) while Prowlarr tried to use one of your applications. To limit retries, Prowlarr will not use the application for an increasing amount of time (up to 24h).
 - This mechanism is triggered if Prowlarr was unable to get a response from the application (could be dns, connection, authentication, or application issue). Please inspect the logs to determine what kind of error causes the problem.
+- Check Events and filter for Warnings to get a quick idea of what issues have occurred historically
 - Prowlarr will be unable to sync to the application and it is more than likely the application will be unable to use Prowlarr's indexers.
 - You can prevent the warning by disabling the affected application.
 - Run the Test on the application to force Prowlarr to recheck the application, please note that the Health Check warning will not always disappear immediately.
