@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2022-01-09T18:47:49.172Z
+date: 2022-01-15T18:44:28.539Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -413,6 +413,14 @@ Full section of Trace Log for a Manual Search Needed
 ## Common Problems
 
 Below are some common problems.
+
+### Tracker needs RawSearch Caps
+
+- Radarr is searching for `9 1 1` but your tracker only has results for `9-1-1` or `John s Show` and `Jon's Show`
+- This is due to your tracker not supporting normal standardized searches.
+- The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Radarr/Radarr/issues/4502#issuecomment-981143905)
+- Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilties flag.
+- Prowlarr supports the flag, but the capabilites need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Media is Unmonitored
 
