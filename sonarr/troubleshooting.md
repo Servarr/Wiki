@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-01-09T18:47:32.154Z
+date: 2022-01-15T18:40:15.565Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -490,6 +490,14 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 ## Common Problems
 
 Below are some common problems.
+
+### Tracker needs RawSearch
+
+- Sonarr is searching for `9 1 1` but your tracker only has results for `9-1-1` or `John s Show` and `Jon's Show`
+- This is due to your tracker not supporting normal standardized searches.
+- The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Sonarr/Sonarr/issues/1225#issuecomment-981153943)
+- Jackett does not support this capabilties flag.
+- Prowlarr supports the flag, but the capabilites need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Series needs an alias
 
