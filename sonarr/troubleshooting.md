@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-01-15T18:42:08.645Z
+date: 2022-01-16T19:59:15.835Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -493,7 +493,7 @@ Below are some common problems.
 
 ### Tracker needs RawSearch Caps
 
-- Sonarr is searching for `9 1 1` but your tracker only has results for `9-1-1` or `John s Show` and `Jon's Show`
+- Sonarr is searching for `9 1 1` but your tracker only has results for `9-1-1` or `John s Show` and `John's Show`
 - This is due to your tracker not supporting normal standardized searches.
 - The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Sonarr/Sonarr/issues/1225#issuecomment-981153943)
 - Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilties flag.
