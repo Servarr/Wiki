@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-17T18:58:42.486Z
+date: 2022-01-17T19:02:16.441Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -39,6 +39,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 {.is-info}
 
 - The current logic [can always be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
+
 ***As of 2021-11-06 the logic is as follows***
 
 1. Quality
@@ -50,7 +51,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 1. Age (If Usenet)
 1. Size
 
-> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Media Management => File Management `Download Proper & Repacks` Do Not Prefer](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
+> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
 
 ## What are Lists and what can they do for me?
 
