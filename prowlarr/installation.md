@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-01-07T16:15:53.295Z
+date: 2022-01-17T00:01:15.633Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -379,6 +379,7 @@ Instructions for BSD installations are also maintained by the BSD community and 
 1. Configure Jail Properties to your liking but add
 
 - [x] allow_raw_sockets
+> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement as long as the program does not use those or create raw sockets itself {.is-info}
 - [x] allow_mlock
 
 1. Configure Network Properties to your liking
@@ -435,6 +436,9 @@ If everything went according to plan then prowlarr should be up and running on t
 
 - `System.Net.Sockets.SocketException (43): Protocol not supported`
   - Make sure you have `VNET` turned on for your jail.
+
+> The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
+{.is-info}
 
 # Docker
 
