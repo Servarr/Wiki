@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-01-11T19:03:48.350Z
+date: 2022-01-17T03:54:11.583Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -14,7 +14,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 - Prowlarr Cardigann supports regular standard Cardigann scraping (HTML), parsing JSON responses, and parsing XML responses (exclusive to Prowlarr).
 
-- In order to add support for a new Cardigann/YML tracker or indexer submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
+- In order to add support for a new Cardigann (YML) tracker or indexer submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
 
 - You may test out your definition locally or create one for your own needs by using the [Custom Definition Folder](/prowlarr/indexers#adding-a-custom-yml-definition)
 
@@ -26,7 +26,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 # Format
 
-- Cardigann is quite fussy about indentation. Ensure you maintain the 2 space indentation per level as shown in the examples here. Getting it wrong could lead to errors during a run, or perhaps worse, a silent ignore of the clause altogether!
+- Cardigann YML is very strict about indentation. Ensure you maintain the 2 space indentation per level as shown in the examples here. Getting it wrong will lead to errors during a run, or perhaps worse, a silent ignore of the clause altogether!
 - Text following a `#` (Hash) is a comment, and the ones in the examples below do not have to be included in your code.
 
 ## Header
@@ -38,7 +38,7 @@ Each definition must start with a header like this:
 # [REQUIRED] Internal name of the indexer, must be unique. Usually its the name of the
 # web site, in lower case, stripped of any special characters and space
 id: thepiratebay
-  
+
 # [REQUIRED]  Display name (The full name of the tracker)
 name: The Pirate Bay
 
@@ -54,7 +54,7 @@ language: en-US
 # public (no registration required)
 # semi-private (registration required, but always open)
 # private (registration required. Invite/application needed)
-type: public 
+type: public
 
 # [REQUIRED] Website encoding used by the tracker
 # usually you get this from the sites html <meta charset=utf-8"> tag.
@@ -63,6 +63,11 @@ encoding: UTF-8
 # [OPTIONAL] Can be true or false (default is false)
 # Enable/Disable automatic update of the URL in case of a redirect to a different domain
 followredirect: false
+
+# [OPTIONAL] Can be true or false (default is false)
+# Enable/Disable redirect of downloads to not be proxied via Prowlarr
+# Cardigann v4
+allowdownloadredirect: false
 
 # [OPTIONAL] Can be true or false (default is true)
 # Enable/Disable the pre-testing of the .torrent files when attempting a download (indexers
@@ -76,14 +81,14 @@ requestDelay: 2.5
 
 # [REQUIRED] List of known domains
 # (the first one is the default, must end with /)
-links: 
+links:
   - https://thepiratebay.org/
   - https://thepiratesbay.pw/
   - https://tproxy.pro/
 
 # [OPTIONAL] List of old domains which no longer work
 # If one of these URLs is configured it will be automatically replaced with the default one
-legacylinks: 
+legacylinks:
   - https://thepiratebay.sw/
 
 # [OPTIONAL] If the tracker uses untrusted HTTPS certificates (self signed, expired, etc)
@@ -113,13 +118,13 @@ Next you've to specify the capabilities of the indexer.
 #            contain any categories).
 caps:
   categorymappings:
-    - {id: 101, cat: Audio, desc: "Music", default: false}
-    - {id: 201, cat: Movies, desc: "Movies", default: false}
-    - {id: 299, cat: Movies/Other, desc: "Video Other", default: false}
-    - {id: 302, cat: PC/Mac, desc: "Mac", default: false}
-    - {id: 901, cat: XXX, desc: "Porn SD", default: false}
-    - {id: 902, cat: XXX, desc: "Porn HD", default: false}
-   
+    - { id: 101, cat: Audio, desc: "Music", default: false }
+    - { id: 201, cat: Movies, desc: "Movies", default: false }
+    - { id: 299, cat: Movies/Other, desc: "Video Other", default: false }
+    - { id: 302, cat: PC/Mac, desc: "Mac", default: false }
+    - { id: 901, cat: XXX, desc: "Porn SD", default: false }
+    - { id: 902, cat: XXX, desc: "Porn HD", default: false }
+
   # Specify one or more torznab search modes and attributes that are supported by the indexer.
   # Implementation note: Prowlarr doesn't care very much about this, but you should still
   # specify the correct modes, as most apps calling Prowlarr via the Torznab API depend on them.
@@ -434,6 +439,9 @@ Example of a complex search block explaining all available options:
 
 ```yaml
 search:
+  # [OPTIONAL] Enable/Disable if inputs can be sent as empty parameters
+  # can be true or false (default is false)
+  ignoreblankinputs: false
   # list of paths which should be searched
   # For the most trackers just a single path is needed. But some trackers use
   # different pages for e.g. porn or scene and non scene releases.
@@ -447,12 +455,12 @@ search:
       followredirect: false
       # [OPTIONAL] list of tracker categories
       # If specified the path will be only used if at least one category from the list is included in
-      # the search categories list. A "!" as first entry negates the matching logic (include the path 
+      # the search categories list. A "!" as first entry negates the matching logic (include the path
       # in any other than the specified categories is in the search categories list)
       categories: ["!", 901, 902]
       # [OPTIONAL] list of (extra) arguments which should be added for this path
       inputs:
-        scene: 0 
+        scene: 0
       # [OPTIONAL] boolean option to disable input inheritance from the search level inputs list.
       # If set to true the "inputs" from the search level list will be used as the base for the path specific inputs
       # Default is true
@@ -466,13 +474,13 @@ search:
       # only use it if we're searching for porn
       categories: [901, 902]
   # list of HTTP arguments which are used by all paths
-  inputs: 
+  inputs:
     # Generate the category[] arguments list
     # The $raw input is special, the result will be included in the HTTP arguments list
     # without further escaping (only variables are escaped).
-    $raw: "{{ range .Categories }}category[]={{.}}&{{end}}" 
+    $raw: "{{ range .Categories }}category[]={{.}}&{{end}}"
     # If an IMDB ID has been specified use it. Otherwise use the search keywords.
-    search: "{{ if .Query.IMDBID }}{{ .Query.IMDBID }}{{ else }}{{ .Keywords }}{{ end }}" 
+    search: "{{ if .Query.IMDBID }}{{ .Query.IMDBID }}{{ else }}{{ .Keywords }}{{ end }}"
     imdb_search: "{{ if .Query.IMDBID }}yes{{ else }}{{ end }}"
     searchin: title
     incldead: 1
@@ -483,7 +491,11 @@ search:
   # The result is available in the .Keywords variable
   keywordsfilters:
     - name: re_replace # remove words <= 3 characters and surrounding special characters
-      args: ["(?:^|\\s)[_\\+\\/\\.\\-\\(\\)]*[\\S]{0,3}[_\\+\\/\\.\\-\\(\\)]*(?:\\s|$)", " "]
+      args:
+        [
+          "(?:^|\\s)[_\\+\\/\\.\\-\\(\\)]*[\\S]{0,3}[_\\+\\/\\.\\-\\(\\)]*(?:\\s|$)",
+          " ",
+        ]
     - name: re_replace # replace special characters with "*" (wildcard)
       args: ["[^a-zA-Z0-9]+", "*"]
   # [OPTIONAL] list of selectors to check for errors on the search result page
@@ -505,17 +517,17 @@ search:
     filters:
       # The andmatch filter will make sure that only torrents which contain all words from the search string are
       # returned. This is helpful if the tracker returns a lot of unrelated search results.
-      - name: andmatch 
+      - name: andmatch
         # [OPTIONAL] argument, the maximum length of the search string which should be compared. Specify this if the
         # trackers cuts of the torrent name after a certain amount of characters.
-        args: 66 
+        args: 66
       # [OPTIONAL] dump the HTML of each row to the log (for debugging purposes)
       - name: strdump
     # [OPTIONAL] selector for rows containing dates.
     # Use this if the torrent result rows don't contain a publish date but a previous row contains the date.
     # The indexer will go back and parse the first sibling element matching the selector as date for that torrent.
     dateheaders:
-      selector: ":has(td.colhead[title]:contains(\"Torrents from\") > b)"
+      selector: ':has(td.colhead[title]:contains("Torrents from") > b)'
       filters:
         - name: dateparse
           args: "Mon 02 Jan"
@@ -528,14 +540,18 @@ search:
   fields:
     # [OPTIONAL] tracker category id (id field from from caps/categorymappings)
     # While not required, it is usual to return a category for Torznab apps to use,
-    # so if the site does not provide one in its results then use category Other. 
+    # so if the site does not provide one in its results then use category Other.
     category:
       selector: a[href^="browse.php?cat="]
       attribute: href
       filters:
         # extract the "cat" parameter from the query string
         - name: querystring
-           args: cat
+          args: cat
+    # [ALTERNATIVE] if the site does not provide a category id for results,
+    # but it does provide the category name we use for descriptions, use categorydesc instead of category
+    categorydesc:
+      selector: div.kat_cat_pic
     # [REQUIRED] the title of the torrent
     title:
       selector: a[href^="details.php?id="]
@@ -548,7 +564,7 @@ search:
     download:
       selector: a[href^="download.php?torrent="]
       attribute: href
-    # [OPTIONAL] magnet link
+      # [OPTIONAL] magnet link
       magnet:
         selector: a[href^="magnet:"]
         attribute: href
@@ -602,7 +618,7 @@ search:
         # append the timezone used by the tracker
         - name: append
           args: " +08:00"
-        - name: dateparse 
+        - name: dateparse
           args: "2006-01-02 15:04:05 -07:00"
     # [OPTIONAL] size of the torrent (units are handled automatically). if the site does not provide a size for all
     # results then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
@@ -621,7 +637,7 @@ search:
           # get the first number from the result
           args: (\d+)
     # [OPTIONAL] number of seeders (if the site does not provide seeders for all results,
-    # then a default of "1" is preferred). 
+    # then a default of "1" is preferred).
     seeders:
       selector: td:nth-child(9)
     # [OPTIONAL] number of leechers (if the site does not provide leechers for all results,
@@ -630,7 +646,7 @@ search:
       selector: td:nth-child(10)
     # [OPTIONAL] Factor for the download volume. In most cases it should be set to "1"
     # Set to "0" if a torrent is freeleech, "0.5" if only 50% is counted, "0.75" if only 75% is counted.
-    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted). 
+    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted).
     downloadvolumefactor:
       case:
         img.pro_free: 0
@@ -755,6 +771,10 @@ search:
     # While not required, it is usual to return a category for Torznab apps to use,
     # so if the site does not provide one in its results then use category Other.     
     category:
+      selector: category
+    # [ALTERNATIVE] if the site does not provide a category id for results,
+    # but it does provide the category name we use for descriptions, use categorydesc instead of category
+    categorydesc:
       selector: category
     year:
       selector: ..year
@@ -887,7 +907,10 @@ Example of the download block explaining all options:
 ```yaml
 download:
   # [OPTIONAL] use HTTP POST instead of GET to download the torrent file (default is get)
-  method: post 
+  method: post
+  # [OPTIONAL] error message handling
+  error:
+    - selector: #errormessage > span.warning
   # [OPTIONAL] HTTP request which needs to be done before downloading the file
   before:
     # request target
@@ -948,7 +971,7 @@ download:
       filters:
         - name: regexp
           args: ([A-F|a-f|0-9]{40})
-    # [REQUIRED] Use this selector to provide the title for the &dn parameter of the magnet URI 
+    # [REQUIRED] Use this selector to provide the title for the &dn parameter of the magnet URI
     title:
       # [REQUIRED] The selector used to find the title
       selector: meta[property="og:title"]
@@ -974,7 +997,7 @@ download:
       attribute: href
 ```
 
-# Template engine
+# Template Engine
 
 The template engine is very basic, and supports the following statements.
 
