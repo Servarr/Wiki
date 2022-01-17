@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-17T18:58:14.533Z
+date: 2022-01-17T18:58:42.486Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -35,7 +35,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How are possible downloads compared?
 
-- ***Generally Quality Trumps All***
+>Generally Quality Trumps All
+{.is-info}
 
 - The current logic [can always be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 ***As of 2021-11-06 the logic is as follows***
