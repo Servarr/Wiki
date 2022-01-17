@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-01-11T16:07:13.017Z
+date: 2022-01-17T19:02:05.063Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -21,10 +21,11 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ## How are possible downloads compared?
 
 >Generally Quality Trumps All
-{-is.info}
+{.is-info}
 
-The current logic [can be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L40s).
-***As of 2021-06-09 the logic is as follows***
+- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L40s).
+
+***As of 2021-11-06 the logic is as follows***
 
 1. Quality
 1. Language
@@ -36,6 +37,9 @@ The current logic [can be found here](https://github.com/Sonarr/Sonarr/blob/deve
 1. Seeds/Peers (If Torrent)
 1. Age (If Usenet)
 1. Size
+
+> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/radarr/settings#file-management) and use a preferred word regex of `/\b(repack|proper)\b/i` with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#p2p-groups-repackproper)
+{.is-warning}
 
 ## Preferred Words FAQs
 
