@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-01-17T03:54:11.583Z
+date: 2022-01-17T03:55:56.351Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -68,6 +68,11 @@ followredirect: false
 # Enable/Disable redirect of downloads to not be proxied via Prowlarr
 # Cardigann v4
 allowdownloadredirect: false
+
+# [OPTIONAL] Can be `torrent` or `usenet` (default is torrent)
+# Set to configure the Indexer type
+# Cardigann v4
+protocol: torrent
 
 # [OPTIONAL] Can be true or false (default is true)
 # Enable/Disable the pre-testing of the .torrent files when attempting a download (indexers
