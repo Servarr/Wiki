@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-01-17T00:43:12.581Z
+date: 2022-01-17T00:43:35.452Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -479,7 +479,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as utilize a second program such as utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
-- Choose from the presets or add a custom indexer (such as Jackett or PRowlarr)
+- Choose from the presets or add a custom indexer (such as Jackett or Prowlarr)
 - Name - The name of the indexer in Sonarr
 - Enable RSS - If enabled, use this indexer to watch for files that are wanted and missing or have not yet reached their cutoff.
 - Enable Automatic Search - If enabled, use this indexer for automatic searches including Search on Add
