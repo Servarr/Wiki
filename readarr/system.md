@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2022-01-10T17:35:51.650Z
+date: 2022-01-17T19:20:32.005Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -103,10 +103,6 @@ Note: you will also need to add the websocket directive to your readarr configur
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
-#### MediaInfo Library Could not be Loaded
-
-MediaInfo Library could not be loaded.
-
 ### Download Clients
 
 #### No download client is available
@@ -119,30 +115,30 @@ MediaInfo Library could not be loaded.
 - This is typically due to improperly configured download client. Things you can typically check:
 - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
 - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Readarr.
-Ensure SSL encryption is not turned on if you're using both your Readarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+- Ensure SSL encryption is not turned on if you're using both your Readarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 #### Download clients are unavailable due to failure
 
 {#download-clients-are-unavailable-due-to-failures}
 
-One or more of your download clients is not responding to requests made by Readarr. Therefore Readarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Readarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
-You should inspect System=>Logs to see what the reason is for the failures.
-If you no longer use this download client, disable it in Readarr to prevent the errors.
+- One or more of your download clients is not responding to requests made by Readarr. Therefore Readarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Readarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
+- You should inspect System=>Logs to see what the reason is for the failures.
+- If you no longer use this download client, disable it in Readarr to prevent the errors.
 
 #### Enable Completed Download Handling
 
-Readarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling.
-(Completed Download Handling is enabled by default for new users.)
+- Readarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling.
+- (Completed Download Handling is enabled by default for new users.)
 
 #### Docker bad remote path mapping
 
-This error is typically associated with bad docker paths within either your download client or Readarr
+- This error is typically associated with bad docker paths within either your download client or Readarr
 
-An example of this would be:
-Download client: Download Path: /downloads:/mnt/user/downloads
-Readarr: Download Path: /data:/mnt/user/downloads
-Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished book is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
-The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
+- An example of this would be:
+  - Download client: Download Path: /downloads:/mnt/user/downloads
+  - Readarr: Download Path: /data:/mnt/user/downloads
+- Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished book is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
+- The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Readarr is a big fan of simply using /data.
   - Download client: /data:/mnt/user/data
@@ -173,6 +169,12 @@ The easiest fix for this is CONSISTENCY if you use one scheme in your download c
 #### Permissions Error
 
 - Readarr or the user readarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
+
+#### Author Mount is Read Only
+
+{#author-mount-ro}
+
+- Mount containing a author path is mounted read-only. Check your mount settings and ownership/permissions.
 
 #### Remote File was removed part way through processing
 
