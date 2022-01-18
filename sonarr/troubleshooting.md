@@ -249,7 +249,7 @@ This frequently causes other random import issues as well.
 
 ### Incorrect category
 
-Sonarr should be setup to use a category so that it only tris to process its own downloads. It is rare that a torrent submitted by gets added without the correct category, but it can happen. If you’re adding torrents manually and want to process them, they’ll need to have the correct category. It can be set at any time, since tries to process downloads every minute.
+Sonarr should be setup to use a category so that it only tries to process its own downloads. It is rare that a torrent submitted by gets added without the correct category, but it can happen. If you’re adding torrents manually and want to process them, they’ll need to have the correct category. It can be set at any time, since tries to process downloads every minute.
 
 ### Packed torrents
 
