@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-01-11T21:17:28.624Z
+date: 2022-01-18T15:52:59.265Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -371,6 +371,10 @@ sudo rm -rf /opt/Radarr
 sudo rm -rf /etc/systemd/system/radarr.service
 systemctl -q daemon-reload
 ```
+
+# BSD
+
+- [See TheFrank's Port Sooners documentation](https://github.com/Thefrank/freebsd-port-sooners/blob/main/Radarr_Installation_TrueNAS_GUI.md)
 
 # Docker
 
