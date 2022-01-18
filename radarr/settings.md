@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-09T23:17:28.250Z
+date: 2022-01-18T18:16:04.571Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -453,6 +453,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
+- Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all series.
+
 
 ### Torrent Tracker Configuration
 
@@ -494,6 +496,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
+- Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all series.
 
 ## Options
 
@@ -741,9 +744,11 @@ Kodi will be one of the most commonly used options here if that is the software 
 
   - Delay Profiles
   - Restrictions
+  - Indexers
 
-- Tags can be used to link Delay Profiles and Restrictions and Movies together.
+- Tags can be used to link Delay Profiles, Indexers, and Restrictions and Movies together.
 - For Example:
+  - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
   - You want a specific Restrictions to only apply to a specific movie. You would create a tag and assign the Restrictions and Movie that tag.
   - This process is the same for Delay Profiles.
 
