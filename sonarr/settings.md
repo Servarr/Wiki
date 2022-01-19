@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-01-18T18:16:16.311Z
+date: 2022-01-19T20:10:04.551Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -29,6 +29,8 @@ Also, note that for each individual settings page, there are some options at the
 # Media Management
 
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
+
+## Community Naming Suggestions
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) {.is-info}
 
