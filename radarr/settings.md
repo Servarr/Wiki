@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-18T18:16:04.571Z
+date: 2022-01-19T20:10:13.669Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -27,6 +27,8 @@ Also, note that for each individual settings page, there are some options at the
 # Media Management
 
 > Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
+
+## Community Naming Suggestions
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
