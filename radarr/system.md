@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-01-09T21:28:23.106Z
+date: 2022-01-20T20:22:29.803Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -207,13 +207,13 @@ If you no longer use this download client, disable it in Radarr to prevent the e
 - This error is typically associated with bad docker paths within either your download client or Radarr
 
 - An example of this would be:
-  - Download client: Download Path: /downloads:/mnt/user/downloads
-  - Radarr: Download Path: /data:/mnt/user/downloads
+  - Download client: Download Path: /mnt/user/downloads:/downloads
+  - Radarr: Download Path: /mnt/user/downloads:/data
 - Within this example the download client places its downloads into /downloads and therefore tells Radarr when its complete that the finished movie is in /downloads. Radarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Radarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Radarr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downloads:/data/downloads
+  - Download client: /mnt/user/data/downnloads:/data/downloads
   - Radarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
