@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2021-12-13T23:27:41.569Z
+date: 2022-01-20T20:22:06.309Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -196,20 +196,20 @@ Lidarr requires Completed Download Handling to be able to import files that were
 
 This error is typically associated with bad docker paths within either your download client or Lidarr
 
-An example of this would be:
-Download client: Download Path: /downloads:/mnt/user/downloads
-Lidarr: Download Path: /data:/mnt/user/downloads
-Within this example the download client places its downloads into /downloads and therefore tells Lidarr when its complete that the finished movie is in /downloads. Lidarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Lidarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
-The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
+- An example of this would be:
+  - Download client: Download Path: /mnt/user/downloads:/downloads
+  - Lidarr: Download Path: /mnt/user/downloads:/data
+- Within this example the download client places its downloads into /downloads and therefore tells Lidarr when its complete that the finished book is in /downloads. Lidarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Lidarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
+- The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 Team Lidarr is a big fan of simply using /data.
-Download client: /data:/mnt/user/data
-Lidarr: /data:/mnt/user/data
+  - Download client: /mnt/user/data/downnloads:/data/downloads
+  - Lidarr: /mnt/user/data:/data
 
-Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
-There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+- Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
+- There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*arrs](https://trash-guides.info/radarr/radarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 
