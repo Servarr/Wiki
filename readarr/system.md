@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2022-01-17T19:20:32.005Z
+date: 2022-01-20T15:44:30.451Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -222,6 +222,24 @@ Note: you will also need to add the websocket directive to your readarr configur
 - This mechanism is triggered if Readarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Readarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+
+#### Jackett All Endpoint Used
+
+- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
+- [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- Using the /all endpoint has no advantages, only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (>= 100000) cannot be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
+  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+
+##### Solutions
+
+- Add each tracker in Jackett manually as an indexer in \*Arr
+- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr
 
 ### Book Folders
 
