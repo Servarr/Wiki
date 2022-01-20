@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2022-01-20T15:44:30.451Z
+date: 2022-01-20T20:22:10.117Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -135,19 +135,19 @@ Note: you will also need to add the websocket directive to your readarr configur
 - This error is typically associated with bad docker paths within either your download client or Readarr
 
 - An example of this would be:
-  - Download client: Download Path: /downloads:/mnt/user/downloads
-  - Readarr: Download Path: /data:/mnt/user/downloads
+  - Download client: Download Path: /mnt/user/downloads:/downloads
+  - Readarr: Download Path: /mnt/user/downloads:/data
 - Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished book is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Readarr is a big fan of simply using /data.
-  - Download client: /data:/mnt/user/data
-  - Readarr: /data:/mnt/user/data
+  - Download client: /mnt/user/data/downnloads:/data/downloads
+  - Readarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-- See [TRaSH's Remote Path Guide](https://trash-guides.info/Readarr/Readarr-remote-path-mapping/) for more information.
+- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*arrs](https://trash-guides.info/radarr/radarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 
