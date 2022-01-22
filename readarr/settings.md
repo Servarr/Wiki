@@ -597,7 +597,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 If you download using a BitTorrent client, the process is slightly different:
 
 - Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Readarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
-- If the "Completed Download Handling - Remove" option is enabled in settings, Readarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the seed goal reached is supported by Readarr, and torrent is paused (stopped).
+- If the "Completed Download Handling - Remove" option is enabled in settings, Readarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the torrent is in the same category (i.e. not using a post-import category), the seed goal reached is supported by Readarr, and torrent is paused (stopped).
 
 ### Failed Download Handling
 
