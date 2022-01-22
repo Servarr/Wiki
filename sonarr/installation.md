@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-01-08T17:23:40.153Z
+date: 2022-01-22T20:02:53.616Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -301,7 +301,7 @@ User=sonarr
 Group=media
 Type=simple
 
-ExecStart=/usr/bin/mono --debug /opt/Sonarr/Sonarr.exe -nobrowser -data==/var/lib/sonarr4k/
+ExecStart=/usr/bin/mono --debug /opt/Sonarr/Sonarr.exe -nobrowser -data=/var/lib/sonarr4k/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
