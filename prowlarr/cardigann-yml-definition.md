@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-01-17T03:56:09.981Z
+date: 2022-01-22T18:56:26.191Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -553,7 +553,7 @@ search:
         # extract the "cat" parameter from the query string
         - name: querystring
           args: cat
-    # [ALTERNATIVE] if the site does not provide a category id for results,
+    # [ALTERNATIVE] if the site does not provide a category id for results, (Cardigann v4)
     # but it does provide the category name we use for descriptions, use categorydesc instead of category
     categorydesc:
       selector: div.kat_cat_pic
@@ -1173,8 +1173,8 @@ Generated based on the settings section
 .Query.Series      # not supported (Cardigann compatibility)
 .Query.Ep
 .Query.Season
-.Query.TVMazeID    # not supported (Cardigann compatibility)
-.Query.TraktID
+.Query.TVMazeID    # Cardigann v4
+.Query.TraktID     # Cardigann v4
 .Query.TVDBID
 .Query.TVRageID
 .Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd
@@ -1184,7 +1184,7 @@ Generated based on the settings section
 .Query.Track
 .Query.Author
 .Query.BookTitle
-.Query.Genre
+.Query.Genre       # Cardigann v4
 .Categories        # MappedCategories
 .Query.Keywords    # original keywords
 .Keywords          # keywords after applying the keywordsfilters
