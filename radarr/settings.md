@@ -457,7 +457,6 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 - Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all series.
 
-
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.

@@ -203,8 +203,9 @@ This error is typically associated with bad docker paths within either your down
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 Team Lidarr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downnloads:/data/downloads
-  - Lidarr: /mnt/user/data:/data
+
+- Download client: /mnt/user/data/downnloads:/data/downloads
+- Lidarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.

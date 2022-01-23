@@ -378,9 +378,11 @@ Instructions for BSD installations are also maintained by the BSD community and 
 
 1. Configure Jail Properties to your liking but add
 
-- [x] allow_raw_sockets
+- [x] allow\_raw\_sockets
+
 > `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement as long as the program does not use those or create raw sockets itself {.is-info}
-- [x] allow_mlock
+
+- [x] allow\_mlock
 
 1. Configure Network Properties to your liking
 
