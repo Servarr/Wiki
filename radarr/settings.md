@@ -572,7 +572,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - API Key - the API key to authenticate to your client
 - Username - the username to authenticate to your client (typically not needed)
 - Password- the password to authenticate to your client (typically not needed)
-- Category - the category within your download client that Radarr will use
+- Category - the category within your download client that \*arr will use. To avoid unrelated downloads showing in Activity it is strongly recommended to set a category.
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
@@ -589,7 +589,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
 - Username - the username to authenticate to your client
 - Password- the password to authenticate to your client
-- Category - the category within your download client that Radarr will use
+- Category - the category within your download client that \*arr will use. To avoid unrelated downloads showing in Activity it is strongly recommended to set a category.
 - Post-Import Category - the category to set after the release is downloaded and imported. Please note that this breaks completed download handling removal.
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
