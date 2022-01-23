@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-01-17T19:02:05.063Z
+date: 2022-01-23T22:05:52.245Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -215,6 +215,8 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Please note that not all indexers support season/episode (standard) searches.
 
 - Series types can be modified from Mass Editor or from `Edit` when viewing a series.  Note that the series type is selectable at import.
+
+- If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
 
 ### Series Types
 
