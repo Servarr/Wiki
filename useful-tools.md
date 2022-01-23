@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-08T05:12:19.675Z
+date: 2022-01-23T14:51:14.227Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -139,6 +139,8 @@ Firefox
 ## JDupes
 
 [Jdupes](https://github.com/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
+
+> TRaSH [has a guide](https://trash-guides.info/jdupes) as well {.is-info}
 
 - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files
 
