@@ -23,10 +23,12 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## How are possible downloads compared?
 
-- ***Generally Quality Trumps All***
+> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
+{.is-info}
 
 - The current logic [can be found here](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
-***As of 2021-07-08 the logic is as follows***
+
+- As of 2022-01-23 the logic is as follows:
 
 1. Quality
 1. Preferred Word Score

@@ -35,12 +35,12 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How are possible downloads compared?
 
->Generally Quality Trumps All
+> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 {.is-info}
 
 - The current logic [can always be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
-***As of 2021-11-06 the logic is as follows***
+- As of 2022-01-23 the logic is as follows:
 
 1. Quality
 1. Custom Format Score
