@@ -225,7 +225,7 @@ Don’t forget to check permissions and ownership of the *destination*. It is ea
   - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
   - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer.  See the FAQ for how to convert from a service to tray app.
 
-- For Synology Users ensure that you have to give the "system internal user" from the packages you want to give access to those folders the correct permissions yourself via the control panel, shared folders, select folder, click permissions, select "System internal users" and give the `sc-radarr`, `sc-nzbdrone`, `sc-download`, etc. users the correct permission on applicable share(s).
+- For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
 ### Permissions on the Downloads Folder
 
@@ -235,7 +235,7 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
   - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
   - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer.  See the FAQ for how to convert from a service to tray app.
 
-- For Synology Users ensure that you have to give the "system internal user" from the packages you want to give access to those folders the correct permissions yourself via the control panel, shared folders, select folder, click permissions, select "System internal users" and give the `sc-radarr`, `sc-nzbdrone`, `sc-download`, etc. users the correct permission on applicable share(s).
+- For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
 ### Download folder and library folder not different folders
 

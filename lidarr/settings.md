@@ -82,7 +82,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Post-Import Category - the category to set after the release is downloaded and imported. Please note that this breaks completed download handling removal.
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
-- Initial State - Initial state for torrents
+- Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
 ### Torrent Client Remove Download Compatibility
