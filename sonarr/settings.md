@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-01-19T20:10:04.551Z
+date: 2022-01-23T20:59:39.387Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -473,6 +473,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 - Tags - Only use this indexer for series with at least one matching tag. Leave blank to use with all series.
 
 ### Torrent Tracker Configuration
@@ -496,6 +497,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
 - (Advanced Option) Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
+- (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 - Tags - Only use this indexer for series with at least one matching tag. Leave blank to use with all series.
 
 ## Options
