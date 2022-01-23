@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-01-16T19:59:15.835Z
+date: 2022-01-23T22:07:00.136Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -511,6 +511,9 @@ Releases may be uploaded as `Series Title S02E45` or `Other Series Title S2022E4
 
 The series type affects how Sonarr searches.  The series type should be selected based on how the series is being released on the indexers.
 [See this FAQ entry for more details](/sonarr/faq#whats-the-different-series-types)
+
+> If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
+{.is-info}
 
 #### Daily
 
