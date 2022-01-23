@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-23T14:51:14.227Z
+date: 2022-01-23T14:51:44.747Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -142,7 +142,7 @@ Firefox
 
 > TRaSH [has a guide](https://trash-guides.info/jdupes) as well {.is-info}
 
-- `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files
+- `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
 
 - `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
 
