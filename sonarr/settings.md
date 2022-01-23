@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-01-23T22:04:34.509Z
+date: 2022-01-23T22:12:40.524Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -701,6 +701,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - On Episode File Delete For Upgrade - Be notified when episode files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Application Update - Be notified when Sonarr gets updated to a new version
 
 # Metadata
 
