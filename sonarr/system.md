@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2021-12-13T23:43:45.429Z
+date: 2022-01-23T23:25:19.104Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -171,6 +171,24 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 - This mechanism is triggered if Sonarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or was unable to fetch the nzb/torrent file from the indexer. Please inspect the logs to determine what kind of error caused the problem.
 - You can prevent this warning by disabling the affected indexer.
 - Run a `Test` on the indexer to force Sonarr to recheck the indexer; please note that the Health Check warning will not always disappear immediately and you may need to run the `Check Health` Task
+
+#### Jackett All Endpoint Used
+
+- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
+- [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- Using the /all endpoint has no advantages, only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (>= 100000) cannot be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
+  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+
+##### Solutions
+
+- Add each tracker in Jackett manually as an indexer in \*Arr
+- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr
 
 ### Media & Lists
 
