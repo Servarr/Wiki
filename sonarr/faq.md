@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-01-24T01:56:59.701Z
+date: 2022-01-24T01:57:10.759Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -564,7 +564,7 @@ First, make sure you read and understand the section above called ["How does Son
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
-- **January 2022 Update: \*Arr Support will be discontinued for the jackett `\all` endpoint. Jackett /all endpoint will be no longer supported (e.g. warnings will occur) as of TBD due to the fact it only causes issues.
+- **January 2022 Update: \*Arr Support will be discontinued for the jackett `\all` endpoint. Jackett /all endpoint will be no longer supported (e.g. warnings will occur) as of TBD due to the fact it only causes issues.**
 
 - [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
