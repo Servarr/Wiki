@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-01-24T06:26:48.610Z
+date: 2022-01-24T06:27:58.273Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -12,7 +12,9 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 - Below are the Prowlarr Cardigann  Versions
 
-## V2
+## Supported
+
+### V2
 
 - Regex removal for Size parsing
 - Multiple Download Selectors
@@ -22,13 +24,15 @@ dateCreated: 2021-08-14T18:19:59.428Z
 - AllowRawSearch property in caps
 - All new indexers shall be added to v2 as of 2021-10-13
 
-## V3
+### V3
 - Prowlarr Cardigann v3 includes support for APIs and JSON
 - Replace imdb: selector with imdbid:
 - Makes Description an optional by default
 - All new Indexers using APIs shall be in v3 as of 2021-10-21
 
-## V4
+## Latest
+
+### V4
 
 > V4.0 is currenntly in [DRAFT](https://github.com/Prowlarr/Prowlarr/pull/644) form
 {.is-warning}
@@ -49,7 +53,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 ## Depreciated Versions
 
-# V1
+### V1
 - Prowlarr Cardigann v1 are base level standard YML
   - No new indexers are to be added to v1 as of 2021-10-13
   - No new updates backported to v1 as of 2021-10-17
