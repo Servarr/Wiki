@@ -210,7 +210,7 @@ Team Lidarr is a big fan of simply using /data.
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*arrs](https://trash-guides.info/radarr/radarr-remote-path-mapping/) for more information.
+- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*Arrs](https://trash-guides.info/radarr/radarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 

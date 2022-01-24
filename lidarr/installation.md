@@ -389,7 +389,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although in this case more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
 
-- Create a user/group for Lidarr. I prefer to use just one user for all my \*arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion, but feel free to use "lidarr" or any other if you want. Just make things accordingly:
+- Create a user/group for Lidarr. I prefer to use just one user for all my \*Arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion, but feel free to use "lidarr" or any other if you want. Just make things accordingly:
 
 ```bash
 pw add group plex
