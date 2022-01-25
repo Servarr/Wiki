@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-01-23T22:07:00.136Z
+date: 2022-01-25T20:20:14.189Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -552,6 +552,9 @@ This is caused by your Indexer failing to return any results that are within the
 ### Wrong categories
 
 Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in.
+
+> Note that if you have `Anime Categories` blank in your Indexer settings then the Indexer will not be used for Anime Series Type searches.  Similarly, if you have `Categories` blank in your Indexer settings then the Indexer will not be used for Standard nor Daily Series Type searches.
+{.is-info}
 
 ### Wrong results
 
