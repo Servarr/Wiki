@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-01-25T20:20:14.189Z
+date: 2022-01-25T20:21:38.318Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -543,20 +543,20 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 
 The series/season/episode(s) is(are) not monitored.
 
-### Query Successful - No Results returned
+### Query Successful - No Results Returned
 
 You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
 
 This is caused by your Indexer failing to return any results that are within the categories you configured for the Indexer.
 
-### Wrong categories
+### Wrong Categories
 
 Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in.
 
 > Note that if you have `Anime Categories` blank in your Indexer settings then the Indexer will not be used for Anime Series Type searches.  Similarly, if you have `Categories` blank in your Indexer settings then the Indexer will not be used for Standard nor Daily Series Type searches.
 {.is-info}
 
-### Wrong results
+### Wrong Results
 
 Sometimes indexers will return completely unrelated results; Sonarr will feed in parameters to limit the search to an series. Sometimes the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
 
