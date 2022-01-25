@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-01-25T15:14:11.644Z
+date: 2022-01-25T15:15:27.030Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -30,6 +30,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
   - Ensure your branch is correct for your provider and repull your container
 - Fixing BSD installs
   - Simply update the Radarr Port with `pkg update && pkg upgrade`
+  - (Optional) Remove the mono package if you wish
 - Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
   - This should only happen on Linux hosts. Do not install .Net runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
