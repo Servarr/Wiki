@@ -113,8 +113,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 |                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [hotio](https://hotio.dev/containers/radarr)                       | `cr.hotio.dev/hotio/radarr:release`                                                                                                                                                                                   | `cr.hotio.dev/hotio/radarr:testing`                                                                                                                                                                                 |
-| [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `lscr.io/linuxserver/radarr:latest`                                                                                                                                                                                   | `lscr.io/linuxserver/radarr:develop`                                                                                                                                                                                |
+| [hotio](https://hotio.dev/containers/radarr)                       | `release`                                                                                                                                                                                                             | `testing`                                                                                                                                                                                                           |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `latest`                                                                                                                                                                                                              | `develop`                                                                                                                                                                                                           |
 
 ## Can I update Radarr inside my Docker container?
 
@@ -492,63 +492,9 @@ This is expected. Below is how the Torrent Process works.
 
 > Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
 
-# Radarr v0.2 => v3+ questions
-
-## I am using a Pi running Raspbian and Radarr will not launch
-
-- Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base for v3. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
-
-**Solution:**
-
-Managed to fix the issue by installing the backport from debian repo. Generally not recommended to use backport in blanket upgrade mode. Installation of a single package may be ok but may also cause issues. So got to understand what you are doing.
-
-Steps to fix:
-
-First ensure you are running Raspbian buster e.g using `lsb_release -a`
-
-> Distributor ID: Raspbian
-> Description: Raspbian GNU/Linux 10 (buster)
-> Release: 10
-> Codename: buster
-
-- If you are using buster:
-  - Run the following to add the backports to your sources
-
-  ```shell
-   echo "deb <http://deb.debian.org/debian> buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
-   ```
-
-  - Install the backport of libseccomp2
-
-  ```shell
-  sudo apt update && sudo apt-get -t buster-backports install libseccomp2
-  ```
-
-## Why did the GUI / UI Change? Can it be changed back?
-
-- Radarr is a fork of [Sonarr](/sonarr) which has the new UI.
-- No it cannot be changed back to be like v0.2. No it will not be changed back.
-- You may, however, check out [Theme Park](https://github.com/gilbN/theme.park)
-
-## Where did Wanted and Cut-off Unmet go?
-
-- Movie Index (AKA 'Movies') => Filter (top right corner) => `Wanted` and `Cut-off Unmet`
-  - Wanted - Movie does not have a file (missing), is monitored, and is available based on your availability settings.
-  - Missing - Movie is Missing and Monitored
-
-![radarr-filter-cutoff-wanted.png](/assets/radarr/radarr-filter-cutoff-wanted.png)
-
-## My Custom Script stopped working after upgrading from v0.2
-
-You were likely passing arguments in your connection and that is not supported.
-
-1. Change your argument to be your path
-1. Make sure the shebang in your script maps to your pwsh path (if you do not have a shebang definition in there, add it)
-1. Make sure the pwsh script is executable
-
 ## Why doesn't Radarr work behind a reverse proxy
 
-- Starting with V3 Radarr has switched to .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
+- Starting with V3 Radarr has switched to .NET and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
 
 ```none
 proxy_http_version 1.1;
