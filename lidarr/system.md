@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-01-26T13:32:57.644Z
+date: 2022-01-26T13:34:59.819Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -29,11 +29,14 @@ The branch you have set is not a valid release branch. You will not receive upda
 
 Newer versions of Lidarr are targeted for .NET. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
 
-- Fixing Docker installs
-  - Re-pull your container
-- Fixing Standalone installs
+##### Fixing Docker installs
+
+- Re-pull your container
+
+##### Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
-  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
+  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from Microsoft.
+   - To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
   - In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
 
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
@@ -55,36 +58,36 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 
 #### Currently installed mono version is old and unsupported
 
-Lidarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after v1.0
-Mono 5.20 is the absolute minimum for Lidarr.
-The upgrade procedure for Mono varies per platform.
+- Lidarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after v1.0
+- Mono 5.20 is the absolute minimum for Lidarr.
+- The upgrade procedure for Mono varies per platform.
 
 #### Currently installed SQLite version is not supported
 
-Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+- Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 #### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
+- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
 #### Cannot install update because startup folder is not writable by the user
 
-This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
+- This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
-Lidarr detected that AppData folder for your Operating System is located inside the directory that contains the Lidarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
+- Lidarr detected that AppData folder for your Operating System is located inside the directory that contains the Lidarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
 
-Please look at System => Info to see the current AppData & Startup directories.
-This means Lidarr will be unable to update itself without risking data-loss.
-If you’re on linux, you’ll probably have to change the home directory for the user that is running Lidarr and copy the current contents of the ~/.config/Lidarr directory to preserve your database.
+- Please look at System => Info to see the current AppData & Startup directories.
+- This means Lidarr will be unable to update itself without risking data-loss.
+- If you’re on linux, you’ll probably have to change the home directory for the user that is running Lidarr and copy the current contents of the ~/.config/Lidarr directory to preserve your database.
 
 #### Branch is for a previous version
 
-The update branch setup in Settings/General is for a previous version of Lidarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
+- The update branch setup in Settings/General is for a previous version of Lidarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
 #### Could not connect to signalR
 
