@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-26T16:49:02.926Z
+date: 2022-01-26T16:50:53.607Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -10,13 +10,14 @@ dateCreated: 2021-06-05T20:51:53.183Z
 
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
-# Common  Software
+# Recovering a Corrupt DB
 
-## DB Browser for SQLite
+Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
-[DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
+Using the [sqlite3 `.recover` command}
+](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
-### Recovering a Corrupt DB (UI) (Windows)
+## Recovering a Corrupt DB (UI) (Windows)
 
 {#windows}
 {#recovering-a-corrupt-db-ui}
@@ -25,9 +26,13 @@ The following apps are companions to the \*Arr Suite of Applications or media ho
 
 Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
+> [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
+{.is-info}
+
+
 1. Stop the application
 1. Make a copy of your corrupt DB and copy any .wal files with it
-1. Open your corrupt DB in DB Browser for SQLite
+1. Open your corrupt DB in [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/)
 1. File => Export => Export DB to SQL file
 1. Select all tables
 1. Check/Enable "Keep column names in INSERT INTO"
@@ -41,13 +46,6 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 1. Save the new DB in the config folder and point the application at it
 
 ![dbrecover.gif](/dbrecover.gif)
-
-# Recovering a Corrupt DB
-
-Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
-
-Using the [sqlite3 `.recover` command}
-](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
 ## \*Nix DB Recovery
 
