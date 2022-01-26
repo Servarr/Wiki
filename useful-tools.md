@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-26T16:21:01.926Z
+date: 2022-01-26T16:49:02.926Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -16,7 +16,10 @@ The following apps are companions to the \*Arr Suite of Applications or media ho
 
 [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 
-### Recovering a Corrupt DB (UI)
+### Recovering a Corrupt DB (UI) (Windows)
+
+{#windows}
+{#recovering-a-corrupt-db-ui}
 
 > Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
@@ -45,16 +48,6 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 
 Using the [sqlite3 `.recover` command}
 ](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
-
-## Windows DB Recovery
-
-{#windows}
-
-1. Stop the application
-1. Download the [Sqlite CLI](https://sqlite.org/2021/sqlite-tools-win32-x86-3370000.zip)
-1. Extract it to the database location and double click `sqlite3.exe`
-1. Enter `.open <file name with .db>`
-1. Enter `.recover`
 
 ## \*Nix DB Recovery
 
