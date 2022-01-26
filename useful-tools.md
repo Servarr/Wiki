@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-23T14:51:44.747Z
+date: 2022-01-26T16:21:01.926Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -46,7 +46,9 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 Using the [sqlite3 `.recover` command}
 ](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
-## Windows
+## Windows DB Recovery
+
+{#windows}
 
 1. Stop the application
 1. Download the [Sqlite CLI](https://sqlite.org/2021/sqlite-tools-win32-x86-3370000.zip)
@@ -54,9 +56,9 @@ Using the [sqlite3 `.recover` command}
 1. Enter `.open <file name with .db>`
 1. Enter `.recover`
 
-## \*Nix
+## \*Nix DB Recovery
 
-> Warning the below instructions are a draft and are untested {.is-warning}
+{#nix}
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
