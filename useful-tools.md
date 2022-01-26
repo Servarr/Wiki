@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-26T16:50:53.607Z
+date: 2022-01-26T16:51:07.433Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -28,7 +28,6 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 
 > [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 {.is-info}
-
 
 1. Stop the application
 1. Make a copy of your corrupt DB and copy any .wal files with it
