@@ -436,7 +436,7 @@ If everything went according to plan then prowlarr should be up and running on t
 
 ## Troubleshooting
 
-- `System.Net.Sockets.SocketException (43): Protocol not supported`
+- `System.NET.Sockets.SocketException (43): Protocol not supported`
   - Make sure you have `VNET` turned on for your jail.
 
 > The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit

@@ -27,7 +27,7 @@ The branch you have set is not a valid release branch. You will not receive upda
 
 {#update-to-net-core-version}
 
-Newer versions of Lidarr are targeted for .NET. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
+Newer versions of Lidarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
 
 ##### Fixing Docker installs
 
@@ -35,7 +35,7 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 
 ##### Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
-  - This should only happen on Linux hosts. Do not install .net core runtime or SDK from Microsoft.
+  - This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
    - To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
   - In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
 
@@ -43,7 +43,7 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 > YOU MUST DELETE THE OLD ONES FIRST.
 {.is-warning}
 
-- Download the .net binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
+- Download the .NET binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM (armhf) use `arch=arm` and for ARM64 use `arch=arm64`
 - Stop Lidarrr `sudo systemctl stop lidarr`
 - Backup the old Binaries `sudo mv /opt/Lidarr /opt/Lidarr.old`
@@ -58,7 +58,7 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 
 #### Currently installed mono version is old and unsupported
 
-- Lidarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after v1.0
+- Lidarr is written in .NET and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after v1.0
 - Mono 5.20 is the absolute minimum for Lidarr.
 - The upgrade procedure for Mono varies per platform.
 

@@ -87,7 +87,7 @@ nano RadarrInstall.sh
 
 ```bash
 #!/bin/bash
-### Description: Radarr 3.2+ (.NET) Debian install
+### Description: Radarr 3.2+ (.net) Debian install
 ### Originally written by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 ### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 ### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)

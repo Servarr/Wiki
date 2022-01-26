@@ -18,13 +18,13 @@ Setup guides, [FAQ](/prowlarr/faq), the more information we have on the [wiki](h
 
 # Development
 
-Prowlarr is written in C# (backend) and JS (frontend). The backend is built on the .Net6 framework, while the frontend utilizes Reactjs.
+Prowlarr is written in C# (backend) and JS (frontend). The backend is built on the .NET6 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
 - Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2022 V17.0 or higher is recommended as it includes the .net6 SDK
+> VS 2022 V17.0 or higher is recommended as it includes the .NET6 SDK
 {.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)

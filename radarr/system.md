@@ -24,7 +24,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 {#update-to-net-core-version}
 
-- Newer versions of Radarr are targeted for .NET. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
+- Newer versions of Radarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
 
 - Fixing Docker installs
   - Ensure your branch is correct for your provider and repull your container
@@ -33,14 +33,14 @@ dateCreated: 2021-05-25T02:28:35.194Z
   - (Optional) Remove the mono package if you wish
 - Fixing Standalone installs
   - Back-Up your existing configuration before the next step.
-  - This should only happen on Linux hosts. Do not install .Net runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
+  - This should only happen on Linux hosts. Do not install .NET runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
   - You will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace them with the contents of the .tar.gz you just downloaded.
 
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
 > YOU MUST DELETE THE OLD ONES FIRST.
 {.is-warning}
 
-- Download the .Net binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
+- Download the .NET binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
   - For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM use `arch=arm` and for ARM64 use `arch=arm64`
 - Stop Radarr `sudo systemctl stop radarr`
 - Backup the old Binaries `sudo mv /opt/Radarr /opt/Radarr.old`
@@ -55,7 +55,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 #### Currently installed mono version is old and unsupported
 
-- Radarr is written in .Net and requires Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
+- Radarr is written in .NET and requires Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
 - The upgrade procedure for Mono varies per platform.
 
 > Mono is no longer supported starting in Radarr version 4.0

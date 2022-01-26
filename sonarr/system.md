@@ -16,13 +16,13 @@ This page contains a list of health checks errors. These health checks are perio
 
 ### System Warnings
 
-#### Currently installed .Net Framework is old and unsupported
+#### Currently installed .NET Framework is old and unsupported
 
-Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .Net to be able to use newer versions of Sonarr.
+Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .NET to be able to use newer versions of Sonarr.
 
 Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
 
-#### Currently installed .Net Framework is supported but upgrading is recommended
+#### Currently installed .NET Framework is supported but upgrading is recommended
 
 Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
@@ -30,7 +30,7 @@ Upgrading the .NET Framework is very straightforward on Windows, although it oft
 
 #### Currently installed mono version is old and unsupported
 
-Sonarr is written in .Net and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
+Sonarr is written in .NET and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
 Mono 5.8 is the absolute minimum for Sonarr, but Mono 5.20 is currently recommended.
 The upgrade procedure for Mono varies per platform.
 

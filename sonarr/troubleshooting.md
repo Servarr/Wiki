@@ -16,7 +16,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
 {.links-list}
 
-But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .Net/Mono, version of Sonarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .net/Mono, version of Sonarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
@@ -624,7 +624,7 @@ These are some of the common errors you may see when adding an indexer
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .Net Version found in [Sonarr => System => Status](/sonarr/system#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Sonarr => System => Status](/sonarr/system#status).
 
 ### The request timed out
 
@@ -633,7 +633,7 @@ Sonarr is getting no response from the indexer.
 Sonarr seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
 
 ```none
-    System.Net.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.Net.WebException: The request timed out
+    System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
 ```
 
 And you can see the following in the trace log file:

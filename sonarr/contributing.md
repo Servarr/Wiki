@@ -18,7 +18,7 @@ Setup guides, FAQ, the more information we have on the [wiki](/sonarr) the bette
 
 ## Development
 
-Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .net framework 4.7, while the frontend utilizes Reactjs.
+Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET framework 4.7, while the frontend utilizes Reactjs.
 
 ### Tools required
 
