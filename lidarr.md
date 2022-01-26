@@ -57,6 +57,6 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 # Links
 
 - [lidarr.audio *Website*](https://lidarr.audio)
-- [Open Collective *Donations*](https://opencollective.com/lidarr)
+- [Donate *Donations*](https://lidarr.audio/donate)
 - [GitHub *Source Code*](https://github.com/lidarr/lidarr)
 {.links-list}

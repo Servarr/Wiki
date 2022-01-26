@@ -59,6 +59,6 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 # Links
 
 - [prowlarr.com *Website*](https://prowlarr.com)
-- [Open Collective *Donations*](https://opencollective.com/prowlarr)
+- [Donate *Donations*](https://prowlarr.com/donate)
 - [GitHub *Source Code*](https://github.com/prowlarr/prowlarr)
 {.links-list}

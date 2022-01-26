@@ -56,6 +56,6 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 # Links
 
 - [radarr.video *Website*](https://radarr.video)
-- [Open Collective *Donations*](https://opencollective.com/radarr)
+- [Donate *Donations*](https://radarr.video/donate)
 - [GitHub *Source Code*](https://github.com/radarr/radarr)
 {.links-list}

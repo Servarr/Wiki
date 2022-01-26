@@ -60,6 +60,6 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 # Links
 
 - [readarr.com *Website*](https://readarr.com)
-- [Open Collective *Donations*](https://opencollective.com/readarr)
+- [Donate *Donations*](https://readarr.com/donate)
 - [GitHub *Source Code*](https://github.com/readarr/readarr)
 {.links-list}
