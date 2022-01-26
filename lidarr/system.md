@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-01-20T20:22:06.309Z
+date: 2022-01-26T13:32:57.644Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -41,7 +41,7 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 {.is-warning}
 
 - Download the .net binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
-  - For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM use `arch=arm` and for ARM64 use `arch=arm64`
+  - For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM (armhf) use `arch=arm` and for ARM64 use `arch=arm64`
 - Stop Lidarrr `sudo systemctl stop lidarr`
 - Backup the old Binaries `sudo mv /opt/Lidarr /opt/Lidarr.old`
 - Extract the Lidarr Tarball `tar -xvzf Lidarr*.linux-core-x64.tar.gz`
@@ -55,7 +55,7 @@ Newer versions of Lidarr are targeted for .NET. We will no longer be providing l
 
 #### Currently installed mono version is old and unsupported
 
-Lidarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after 3.2.
+Lidarr is written in .Net and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after v1.0
 Mono 5.20 is the absolute minimum for Lidarr.
 The upgrade procedure for Mono varies per platform.
 
