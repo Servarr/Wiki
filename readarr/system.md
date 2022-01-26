@@ -141,7 +141,7 @@ Note: you will also need to add the websocket directive to your readarr configur
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Readarr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downnloads:/data/downloads
+  - Download client: /mnt/user/data/downloads:/data/downloads
   - Readarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
@@ -153,10 +153,13 @@ Note: you will also need to add the websocket directive to your readarr configur
 
 {#downloads-in-root-folder}
 
-- Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
+- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/readarr/settings/#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+
+> Your download folder and your root/library folder MUST be separate
+{.is-warning}
 
 #### Bad Download Client Settings
 
@@ -212,7 +215,7 @@ Note: you will also need to add the websocket directive to your readarr configur
 
 - None of the indexers you have enabled support searching. This means Readarr will only be able to find new releases via the RSS feeds. But searching for books (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
 
-#### No indexers avaiable with Interactive Search Enabled
+#### No indexers available with Interactive Search Enabled
 
 - None of the indexers you have enabled support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
 

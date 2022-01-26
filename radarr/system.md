@@ -26,32 +26,70 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 - Newer versions of Radarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
 
-- Fixing Docker installs
-  - Ensure your branch is correct for your provider and repull your container
-- Fixing BSD installs
-  - Simply update the Radarr Port with `pkg update && pkg upgrade`
-  - (Optional) Remove the mono package if you wish
-- Fixing Standalone installs
-  - Back-Up your existing configuration before the next step.
-  - This should only happen on Linux hosts. Do not install .NET runtime or SDK from microsoft. To remedy, download the correct build for your architecture. Please note that the links are for the master branch. If you are on develop or nightly you will need to adjust `/master/` in the URL.
-  - You will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace them with the contents of the .tar.gz you just downloaded.
+##### Fixing Docker installs
+
+- Ensure your branch is correct for your provider and repull your container
+
+##### Fixing BSD installs
+
+- Simply update the Radarr Port with `pkg update && pkg upgrade`
+- (Optional) Remove the mono package if you wish
+
+##### Fixing Standalone installs
+
+- Back-Up your existing configuration before the next step.
+- This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
+- To remedy, download the correct build for your architecture and replace your existing binaries (application)
+- In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded.
 
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
 > YOU MUST DELETE THE OLD ONES FIRST.
 {.is-warning}
 
-- Download the .NET binaries. The example is for a x64 (AMD64) installation. `wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'`
-  - For most users (x64 or AMD64), this would be .linux-core-x64.tar.gz selected via `arch=x64` in the url. For ARM use `arch=arm` and for ARM64 use `arch=arm64`
-- Stop Radarr `sudo systemctl stop radarr`
-- Backup the old Binaries `sudo mv /opt/Radarr /opt/Radarr.old`
-- Extract the Radarr Tarball `tar -xvzf Radarr*.linux-core-x64.tar.gz`
-- Move the new Radarr Binaries `sudo mv Radarr/ /opt`
-- Ensure Radarr has permissions to its directory, this assumes it runs as the user radarr `sudo chown -R radarr:radarr /opt/Radarr`
-- Remove the old binaries `sudo rm -rf /opt/Radarr.old`
-- Remove the Tarball `sudo rm -rf Radarr*.linux-core-x64.tar.gz`
-- Update your startup script and replace `mono --debug /opt/Radarr/Radarr.exe` with `/opt/Radarr/Radarr`. To edit the script the command is likely: `sudo nano -e /etc/systemd/system/radarr.service`
-- Reload the Systemd Files `sudo systemctl daemon-reload`
-- Restart Radarr `sudo systemctl start radarr.service`
+- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
+- This assumes you are on the `master` Radarr branch update the variable if needed
+- This assumes that Radarr runs as the user `radarr` update the variables if needed
+- This assumes Radarr is installed at `/opt/Radarr` update the variables if needed
+
+```bash
+#!/bin/bash
+## User Variables
+installdir="/opt/Radarr"
+APPUSER="radarr"
+branch="master"
+## /User Variables
+app="radarr"
+ARCH=$(dpkg --print-architecture)
+# Stop \*arr
+sudo systemctl stop $app
+# get arch
+dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
+case "$ARCH" in
+"amd64") DLURL="${dlbase}&arch=x64" ;;
+"armhf") DLURL="${dlbase}&arch=arm" ;;
+"arm64") DLURL="${dlbase}&arch=arm64" ;;
+*)
+    echo_error "Arch not supported"
+    exit 1
+    ;;
+esac
+echo "Downloading..."
+wget --content-disposition "$DLURL"
+tar -xvzf ${app^}.*.tar.gz
+echo "Installation files downloaded and extracted"
+echo "Moving existing installation"
+sudo mv "$installdir/" "$installdir.old/"
+echo "Installing..."
+sudo mv "${app^}" "$installdir"
+chown $APPUSER:$APPUSER -R $installdir
+sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/
+sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
+sudo systemctl daemon-reload
+echo "App Installed"
+sudo rm -rf "$installdir.old/"
+rm -rf "${app^}.*.tar.gz"
+sudo systemctl start $app
+```
 
 #### Currently installed mono version is old and unsupported
 
@@ -63,7 +101,8 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 #### Currently installed SQLite version is not supported
 
-Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
+- Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
+
 > Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 {.is-info}
 
@@ -76,7 +115,7 @@ Radarr stores its data in an SQLite database. The SQLite3 library installed on y
 
 #### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
+- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -100,7 +139,6 @@ Rejoice, the developers have released a new update. This generally means awesome
 #### Could not connect to signalR
 
 - signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
-
 - The most common occurrence of this is use of a reverse proxy or cloudflare
 - Cloudflare needs websockets enabled.
 
@@ -186,22 +224,21 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Unable to communicate with download client
 
-Radarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
-This is typically due to improperly configured download client. Things you can typically check:
-Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Radarr.
-Ensure SSL encryption is not turned on if you're using both your Radarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+- Radarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
+- This is typically due to improperly configured download client. Things you can typically check:
+  - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
+  - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Radarr.
+  - Ensure SSL encryption is not turned on if you're using both your Radarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 #### Download clients are unavailable due to failure
 
-One or more of your download clients is not responding to requests made by Radarr. Therefore Radarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Radarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
-You should inspect System=>Logs to see what the reason is for the failures.
-If you no longer use this download client, disable it in Radarr to prevent the errors.
+- One or more of your download clients is not responding to requests made by Radarr. Therefore Radarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Radarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
+- You should inspect System=>Logs to see what the reason is for the failures.
+- If you no longer use this download client, disable it in Radarr to prevent the errors.
 
 #### Enable Completed Download Handling
 
-- Radarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling.
-(Completed Download Handling is enabled by default for new users.)
+- Radarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling. (Completed Download Handling is enabled by default for new users.)
 
 #### Docker bad remote path mapping
 
@@ -214,7 +251,7 @@ If you no longer use this download client, disable it in Radarr to prevent the e
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Radarr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downnloads:/data/downloads
+  - Download client: /mnt/user/data/downloads:/data/downloads
   - Radarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
@@ -226,10 +263,13 @@ If you no longer use this download client, disable it in Radarr to prevent the e
 
 {#downloads-in-root-folder}
 
-- Within the application, a root folder is defined as the configured media library folder. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
+- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/radarr/settings/#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+
+> Your download folder and your root/library folder MUST be separate
+{.is-warning}
 
 #### Bad Download Client Settings
 
@@ -268,7 +308,7 @@ If you no longer use this download client, disable it in Radarr to prevent the e
 
 #### No indexers available with RSS sync enabled, Radarr will not grab new releases automatically
 
-- So Radarr uses the RSS feed to pick up new releases as they come along. More info on that here
+- Radarr uses the RSS feed to pick up new releases as they come along. More info on that here
 - To correct this issue go to Settings => Indexers, select an indexer you have and enable RSS Sync
 
 #### No indexers are enabled
@@ -336,7 +376,7 @@ If you no longer use this download client, disable it in Radarr to prevent the e
   1. Click Movies from the left menu
   1. Click the dropdown on Filter and select “Custom Filter”
   1. Enter a label, for example “Deleted Movies”
-  1. Make the filter as follows: **Release Status is Deleted**
+  1. Make the filter as follows: `Release Status` is `Deleted`
   1. Click save and select the newly created filter from the filter dropdown menu
 
 #### Lists are unavailable due to failures

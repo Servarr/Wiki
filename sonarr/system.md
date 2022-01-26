@@ -12,35 +12,35 @@ dateCreated: 2021-09-08T17:58:43.288Z
 
 ## Health
 
-This page contains a list of health checks errors. These health checks are periodically performed performed by Sonarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.
+- This page contains a list of health checks errors. These health checks are periodically performed performed by Sonarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.
 
 ### System Warnings
 
 #### Currently installed .NET Framework is old and unsupported
 
-Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .NET to be able to use newer versions of Sonarr.
+- Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .NET to be able to use newer versions of Sonarr.
 
-Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
+- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
 
 #### Currently installed .NET Framework is supported but upgrading is recommended
 
-Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
+- Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
-Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
+- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
 
 #### Currently installed mono version is old and unsupported
 
-Sonarr is written in .NET and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
+- Sonarr is written in .NET and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
 Mono 5.8 is the absolute minimum for Sonarr, but Mono 5.20 is currently recommended.
 The upgrade procedure for Mono varies per platform.
 
 #### Package Maintainer Message
 
-Your package maintainer has a message for you.  This is controllered by your maintainer and not Sonarr.
+- Your package maintainer has a message for you.  This is controlled by your maintainer and not Sonarr.
 
 #### New update is available
 
-Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you do not have Auto-Updating enabled, so you will have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
+- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you do not have Auto-Updating enabled, so you will have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -121,8 +121,10 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
-It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
- [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
+- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+
+> Your download folder and your root/library folder MUST be separate
+{.is-warning}
 
 #### Completed Download Handling is disabled
 
@@ -163,7 +165,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 {#no-indexers-available-with-interactive-search-enabled-sonarr-will-not-provide-any-interactive-search-results}
 
-- None of the indexers you have enabled and avaiaible support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
+- None of the indexers you have enabled and available support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
 
 #### Indexers are unavailable due to failures
 
@@ -205,12 +207,12 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 #### Import List Missing Root Folder
 
 - One or more of your import lists are configured to a root folder that is not accessible to Sonarr.
-- This may be permissions issues, a missing mount, or simply needing to update the lists after reorganzing your setup.
+- This may be permissions issues, a missing mount, or simply needing to update the lists after reorganizing your setup.
 
 #### Missing Root Folder
 
 - One or more of your root folders are not accessible to Sonarr.
-- This may be permissions issues, a missing mount, or simply needing to update the series assigned root folders after reorganzing your setup.
+- This may be permissions issues, a missing mount, or simply needing to update the series assigned root folders after reorganizing your setup.
 
 #### Series Path Mount is Read Only
 
