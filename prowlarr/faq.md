@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2021-12-12T22:09:18.098Z
+date: 2022-01-26T14:43:56.010Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -193,30 +193,9 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
         chmod -R 0644 *
     ```
 
-- Start Radarr
+- Start Prowlarr
 
-## Help I have locked myself out
-
-To disable authentication (to reset your username or password) you will need need to edit config.xml which will be inside the Prowlarr Appdata Directory.
-
-Open config.xml in a text editor, and find the authentication method. The line will be
-
-`<AuthenticationMethod>Basic</AuthenticationMethod>`
-or
-`<AuthenticationMethod>Forms</AuthenticationMethod>`
-
-Change the AuthenticationMethod line to
-`<AuthenticationMethod>None</AuthenticationMethod>`
-
-Restart Prowlarr
-
-Prowlarr will now be accessible without a password, and then you can go to `Settings: General` in the Prowlarr UI and set your username and password again.
-
-## Weird UI Issues
-
-If you experience any weird UI issues like a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain.
-
-## Web Interface Only Loads at localhost on Windows
+## WebUI only Loads at localhost on Windows
 
 If you can only reach your web interface at `http://localhost:9696/` or `http://127.0.0.1:9696`, you need to run Prowlarr as Administrator at least once, maybe even always.
 
