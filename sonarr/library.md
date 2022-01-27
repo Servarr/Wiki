@@ -10,11 +10,11 @@ dateCreated: 2021-06-11T23:31:01.289Z
 
 # Series
 
-The series page shows your entire library and allows you to select individual series (however, searching can be more efficient in large libraries) and make searches for specific series, as well as being able to edit them.  It also allows you to filter your series.
+The series page shows your entire library and allows you to select individual series (however, searching can be more efficient in large libraries) and make searches for specific series, as well as being able to edit them. It also allows you to filter your series.
 
 # Filters
 
-The filters options allows you to narrow your series down and is incredibly helpful.  It can be used to see release dates, names, episode counts, disk size counts, and too much more to list, including custom filters, to fit your every need.  These can also be used in the mass editor.
+The filters options allows you to narrow your series down and is incredibly helpful. It can be used to see release dates, names, episode counts, disk size counts, and too much more to list, including custom filters, to fit your every need. These can also be used in the mass editor.
 
 # Add New
 
@@ -37,7 +37,7 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
 
 # Library Import
 
-Library Import allows you to import existing, organized series and episode files into Sonarr via existing files in the path directory.  This is especially useful when making a new Sonarr instance and wanting to keep your existing series.
+Library Import allows you to import existing, organized series and episode files into Sonarr via existing files in the path directory. This is especially useful when making a new Sonarr instance and wanting to keep your existing series.
 
 - Library import is for adding and importing an existing organized library of  series into Sonarr.
 
@@ -48,7 +48,7 @@ Library Import allows you to import existing, organized series and episode files
 
 # Mass Editor
 
-The mass editor allows you to edit series en masse.  You can change any of the previous settings made when you added the series.
+The mass editor allows you to edit series en masse. You can change any of the previous settings made when you added the series.
 
 # Season Pass
 

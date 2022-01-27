@@ -40,7 +40,7 @@ curl https://gist.githubusercontent.com/ta264/2b7fb6e6466b109b9bf9b0a1d91ebedc/
 If all goes well you should see the message:
 
 ```none
-Done.  Please add your user to the Docker group in the Synology GUI and reboot your NAS.
+Done. Please add your user to the Docker group in the Synology GUI and reboot your NAS.
 ```
 
 Do as it says:

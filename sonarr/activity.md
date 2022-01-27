@@ -10,7 +10,7 @@ dateCreated: 2021-06-11T23:32:31.144Z
 
 # Activity
 
-The activity tab is where you can see past and present activities that Sonarr has done.  Including imports, deletes, upgrades, grabs, and failures.
+The activity tab is where you can see past and present activities that Sonarr has done. Including imports, deletes, upgrades, grabs, and failures.
 
 # Queue
 
@@ -20,7 +20,7 @@ More information about the Queue section Coming Soon - Contributions are Welcome
 
 # History
 
-The history tab shows all things that have left the queue by way of the task being finished/ended.  This includes imports, failures, grabs, deletes, and upgrades.
+The history tab shows all things that have left the queue by way of the task being finished/ended. This includes imports, failures, grabs, deletes, and upgrades.
 
 # Blocklist
 

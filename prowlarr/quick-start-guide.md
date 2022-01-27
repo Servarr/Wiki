@@ -89,7 +89,7 @@ You should then go into your program, and disable the non-Prowlarr version of th
 
 > You may wish to go into your programs and check the categories for the Prowlarr indexers. Categories are not currently editable in Prowlarr, but are pushed over from a capabilities check.
 **Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
-Please note that full sync means Prowlarr will overwrite any in-app changes you make.  If you wish to use customized in-app categories you **must** use Add and Remove and **must not** use Full Sync.
+Please note that full sync means Prowlarr will overwrite any in-app changes you make. If you wish to use customized in-app categories you **must** use Add and Remove and **must not** use Full Sync.
 {.is-warning}
 
 # Download Clients
@@ -105,7 +105,7 @@ Click on `Settings` => `Download Clients`, and then click the `+` to add a new d
 > Currently supported Download Clients can be found at the following page [supported](/prowlarr/supported#downloadclient)
 {.is-info}
 
-Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 ![nzbget.png](/assets/prowlarr/nzbget.png)
 
 > Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.

@@ -118,7 +118,7 @@ Firefox
 
 ## Cross-Seed
 
-[Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention.  It supports Jackett and Qbittorrent/rTorrent at this time.
+[Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
 
 ## Filebot
 

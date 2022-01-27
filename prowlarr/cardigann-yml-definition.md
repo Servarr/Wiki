@@ -824,7 +824,7 @@ search:
     #
     # [OPTIONAL] tracker category id (id field from from caps/categorymappings)
     # While not required, it is usual to return a category for Torznab apps to use,
-    # so if the site does not provide one in its results then use category Other.     
+    # so if the site does not provide one in its results then use category Other.    
     category:
       selector: category
     # [ALTERNATIVE] if the site does not provide a category id for results,
@@ -1151,7 +1151,7 @@ Special variables .True and .False are available
 
 ## join
 
-A simple loop over a list variable building a concatenated string with items joined by a delimiter.  
+A simple loop over a list variable building a concatenated string with items joined by a delimiter. 
 
 Syntax: `{{ join .Variable "<delimiter>"}}{{end}}`
 
@@ -1166,7 +1166,7 @@ Example:
 
 ## range
 
-A simple loop over a list variable building a concatenated string.  
+A simple loop over a list variable building a concatenated string. 
 
 Syntax: `{{ range .Variable }}<prefix>{{.}}<suffix>{{end}}`
 
@@ -1181,7 +1181,7 @@ Example:
 
 # Variable Substitution
 
-The basic variable substitution operation.  
+The basic variable substitution operation. 
 
 Syntax: `{{ .Variable }}`
 

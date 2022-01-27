@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
 ---
 
-This page will go through all the settings available in Readarr and how they work.  This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](/readarr/quick-start-guide) page instead.
+This page will go through all the settings available in Readarr and how they work. This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](/readarr/quick-start-guide) page instead.
 
 # Menu options
 
@@ -65,7 +65,7 @@ Also, note that for each individual settings page, there are some options at the
   - Latest Book - Monitor the latest book and future books
   - None - No books will be monitored unless explicitly added
 - Quality Profile - Default Quality Profile for books and authors detected within this folder
-- Metadata Profile - Select the Metadata Profile to use for authors detected in this folder.  To only load books that were explicitly added or detected select None.
+- Metadata Profile - Select the Metadata Profile to use for authors detected in this folder. To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
   
 ## Remote Path Mappings
@@ -524,7 +524,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 - A list of supported download clients is located [here](/readarr/supported#downloadclient)
 
-Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
 ### Usenet Client Settings
 
@@ -640,7 +640,7 @@ This shows you the lists you currently have, and allows you to add new lists. Ad
 
 ## Import List Exclusions
 
-Anything on here has been excluded from being added by lists, and will never be added from any list.  You can remove items from this by clicking on it.
+Anything on here has been excluded from being added by lists, and will never be added from any list. You can remove items from this by clicking on it.
 
 ## Adding an Import List
 

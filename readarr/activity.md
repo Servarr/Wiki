@@ -24,7 +24,7 @@ In the image above, the ebook is downloading, and not yet complete. The arrow is
 
 ![queue2.png](/assets/readarr/queue2.png)
 
-If an item needs a human to review it and make a decision, it will be orange on the left icon. Hovering over it will show you the specific error. If you think you can manually import it anyway, click the "person" icon on the right.  In the example above, the book is correct, but the matching percentage is too low to be sure, so Readarr needs your help to decide if it's really the book it thinks it is.  Since it is, I will click on the person icon.
+If an item needs a human to review it and make a decision, it will be orange on the left icon. Hovering over it will show you the specific error. If you think you can manually import it anyway, click the "person" icon on the right. In the example above, the book is correct, but the matching percentage is too low to be sure, so Readarr needs your help to decide if it's really the book it thinks it is. Since it is, I will click on the person icon.
 
 ![queue3.png](/assets/readarr/queue3.png)
 

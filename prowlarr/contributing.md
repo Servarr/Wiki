@@ -22,7 +22,7 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 
 ## Tools required
 
-- Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>).  The community version is free and works (<https://www.visualstudio.com/downloads/>).
+- Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>). The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
 > VS 2022 V17.0 or higher is recommended as it includes the .NET6 SDK
 {.is-info}

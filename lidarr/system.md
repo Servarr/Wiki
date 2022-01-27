@@ -91,7 +91,7 @@ sudo systemctl start $app
 
 #### Currently installed mono version is old and unsupported
 
-- Lidarr is written in .NET and requires Mono to run on very old ARM processors.  Please note that Mono builds are no longer supported after v1.0
+- Lidarr is written in .NET and requires Mono to run on very old ARM processors. Please note that Mono builds are no longer supported after v1.0
 - Mono 5.20 is the absolute minimum for Lidarr.
 - The upgrade procedure for Mono varies per platform.
 

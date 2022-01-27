@@ -286,7 +286,7 @@ sudo chown prowlarr:prowlarr -R /opt/Prowlarr
 
 - Configure systemd so Prowlarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/prowlarr`.  Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument.  Note: that `$USER` is the User Prowlarr runs as and is defined below.
+> The below systemd creation script will use a data directory of `/var/lib/prowlarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Prowlarr` simply remove the `-data` argument. Note: that `$USER` is the User Prowlarr runs as and is defined below.
 {.is-danger}
 
 ```shell

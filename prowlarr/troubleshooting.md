@@ -53,7 +53,7 @@ To provide good and useful logs for sharing:
 
 > Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 > Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
-> Do not use [JustPasteIt](https://justpaste.it/) as their site does not faciliate reviewing logs.
+> Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
 > Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
 {.is-info}
 
@@ -138,23 +138,23 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### Permission Issue
 
-- Permissions issues are due to the application being unable to access the the relevant temporary folders and/or the app binary folder.  Fix the permissions so the user/group the application runs as has the appropiate access.
+- Permissions issues are due to the application being unable to access the the relevant temporary folders and/or the app binary folder. Fix the permissions so the user/group the application runs as has the appropriate access.
 
 - Synology users may encounter this Synology bug `Access to the path '/proc/{some number}/maps is denied`
 
-- Synology users may also encounter being out of space in `/tmp` on certain NASes. You'll need to specify a different `/tmp` path for the app.  See the SynoCommunity or other Synology support channels for help with this.
+- Synology users may also encounter being out of space in `/tmp` on certain NASes. You'll need to specify a different `/tmp` path for the app. See the SynoCommunity or other Synology support channels for help with this.
 
 ## Resolving the issue
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/prowlarr) or swing by our [discord](https://prowlarr.com/discord). If there are others with the same issue, then rest assured we are working on it.
 
-> Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
+> Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
 
 ### Permissions Issues
 
 - Fix the permissions to ensure the user/group the application is running as can access (read and write) to both `/tmp` and the installation directory of the application.
 
-- For Synology users experiencing issues with `/proc/###/maps` stopping Sonarr or the other \*Arr applications and updating should resolve this.  This is an issue with the SynoCommunity package.
+- For Synology users experiencing issues with `/proc/###/maps` stopping Sonarr or the other \*Arr applications and updating should resolve this. This is an issue with the SynoCommunity package.
 
 ### Manually upgrading
 

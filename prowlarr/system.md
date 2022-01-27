@@ -142,7 +142,7 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 #### Obsolete due to Site Removals
 
-- Certain sites may be requested to be removed from Prowlarr or Jackett.  These may then be marked as Obsolete.
+- Certain sites may be requested to be removed from Prowlarr or Jackett. These may then be marked as Obsolete.
   - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
 
 #### No indexers are enabled

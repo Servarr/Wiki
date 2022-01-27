@@ -551,7 +551,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 - A list of supported download clients is located [here](/sonarr/supported#downloadclient)
 
-Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
 ### Usenet Client Settings
 
@@ -589,7 +589,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 - Completed Download Handling
   - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
-    - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Sonarr per the below table.  Torrents must also stay in the same category.
+    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the below table. Torrents must also stay in the same category.
   
 ### Torrent Client Remove Download Compatibility
 
@@ -617,7 +617,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
 - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
-  - For torrents this requires your download client to pause upon hitting the seed goals.  It also requires the seed goals to be supported by Sonarr per the above table.  Torrents must also stay in the same category.
+  - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the above table. Torrents must also stay in the same category.
 
 ### Remove Completed Downloads
 

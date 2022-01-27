@@ -36,7 +36,7 @@ The upgrade procedure for Mono varies per platform.
 
 #### Package Maintainer Message
 
-- Your package maintainer has a message for you.  This is controlled by your maintainer and not Sonarr.
+- Your package maintainer has a message for you. This is controlled by your maintainer and not Sonarr.
 
 #### New update is available
 
@@ -81,7 +81,7 @@ Review your system time and ensure it is synced to an authoritative time server 
 
 #### MediaInfo Library Could not be Loaded
 
-MediaInfo Library could not be loaded.  Sonarr requires MediaInfo (`libmediainfo`) to evaluate the video attributes of files.
+MediaInfo Library could not be loaded. Sonarr requires MediaInfo (`libmediainfo`) to evaluate the video attributes of files.
 
 #### Mono Legacy TLS enabled
 

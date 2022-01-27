@@ -49,7 +49,7 @@ dateCreated: 2021-07-10T16:07:37.425Z
 # Multiple Instances
 
 It is possible to run multiple instances of Sonarr. This is typically done when one wants a 4K and 1080p copy of a movie.
-Note that you can configure Sonarr to use a second Sonarr as a list.  This is helpful if you wish to keep both in sync.
+Note that you can configure Sonarr to use a second Sonarr as a list. This is helpful if you wish to keep both in sync.
 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)

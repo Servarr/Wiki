@@ -24,4 +24,4 @@ Please ensure to markdown is formatted properly.
 
 - Install Markdownlint `npm install -g markdownlint-cli`
 - Run the linting to attempt to fix issues. `markdownlint -f '**/*.md' -c .markdownlint.jsonc`
-  - Note any errors and correct them.  This command should be ran from your local repo.
+  - Note any errors and correct them. This command should be ran from your local repo.

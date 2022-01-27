@@ -69,7 +69,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 ## I cannot find a release in Lidarr but it is on MusicBrainz
 
-- This is likely due to the release having an `unknown` release status.  Update MusicBrainz.
+- This is likely due to the release having an `unknown` release status. Update MusicBrainz.
 
 ## How often do Lidarr's and MusicBrainz databases sync?
 
@@ -85,7 +85,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 ## I'm having trouble importing my artists, what could it be?
 
-- The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future.  To this end, the user account that Lidarr runs under needs both read and write to your data directory.
+- The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future. To this end, the user account that Lidarr runs under needs both read and write to your data directory.
 
 ## How can I rename my artist folders?
 
@@ -231,9 +231,9 @@ This change was due to not have our server get killed by people updating lists e
 
 ## Can I disable the refresh releases task
 
-No, nor should you through any SQL hackery.  The refresh releases task queries the upstream Servarr proxy and checks to see if the metadata for each release (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Lidarr. If necessary, it will then update the applicable releases.
+No, nor should you through any SQL hackery. The refresh releases task queries the upstream Servarr proxy and checks to see if the metadata for each release (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Lidarr. If necessary, it will then update the applicable releases.
 
-A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Artist Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr.  If you delete release files manually or a third party program, do not set this to `Never`.
+A common complaint is the Refresh task causes heavy I/O usage. One setting that can cause issues is "Rescan Artist Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr. If you delete release files manually or a third party program, do not set this to `Never`.
 
 ## Why can Lidarr not see my files on a remote server?
 
@@ -290,7 +290,7 @@ Depending on your OS, there are multiple possible ways.
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 

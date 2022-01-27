@@ -29,7 +29,7 @@ To initiate a search, click on `Search` on the left menu. There will be a mostly
 
 > Note that not all Indexers upport all query types {.is-info}
 
-- Indexers - Choose your indexers in the Indexers drop-down.  You can check "Usenet" or "Torrents" to select all of the indexers in those categories automatically, or you can select specific indexers for your search from either group.
+- Indexers - Choose your indexers in the Indexers drop-down. You can check "Usenet" or "Torrents" to select all of the indexers in those categories automatically, or you can select specific indexers for your search from either group.
 - Category - Choose the categories you want to search on your indexers from the drop-down. You can select top-level categories (TV, Movies, etc.) to select all of the sub-categories automatically, or you can select specific categories from any of the groups.
 
 Then click the `Search` button. Your results may take a few seconds to appear. Once they do, you can add or remove columns using the `Options` button, and you can sort and filter your results by either clicking on the column headers or using the `Filter` button.

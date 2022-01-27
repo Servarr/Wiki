@@ -274,7 +274,7 @@ tar -xvzf Lidarr*.linux*.tar.gz
 sudo mv Lidarr/ /opt
 ```
 
-> This assumes you have created the user and will run as the user `lidarr` and group `media`.  You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
+> This assumes you have created the user and will run as the user `lidarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
 {.is-danger}
 
 - Ensure ownership of the binary directory.
@@ -285,7 +285,7 @@ sudo chown -R lidarr:lidarr /opt/Lidarr
 
 - Configure systemd so Lidarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument.  Note: that `$USER` is the User Lidarr runs as and is defined below.
+> The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument. Note: that `$USER` is the User Lidarr runs as and is defined below.
 {.is-danger}
 
 ```shell

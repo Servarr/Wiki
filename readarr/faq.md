@@ -61,10 +61,10 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## Book Match is not Close Enough: XX% vs YY% \[book\]
 
-- Readarr has a hardcoded minimum percent match threshold when comparing the to-be-imported file against the book and author.  Matches below this threshold will need to be manually imported.
+- Readarr has a hardcoded minimum percent match threshold when comparing the to-be-imported file against the book and author. Matches below this threshold will need to be manually imported.
 - This is not user configurable.
 - Currently this is 80% [1-_bookThreshold](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/MediaFiles/BookImport/Specifications/CloseAlbumMatchSpecification.cs#L11)
-- The development team is considering lowering this to somewhere in the 70%s.  If you have false negative matches between 70% and 80% please share them with us on discord.
+- The development team is considering lowering this to somewhere in the 70%s. If you have false negative matches between 70% and 80% please share them with us on discord.
 
 ## How can I rename my author folders?
 
@@ -232,9 +232,9 @@ This change was due to not have our server get killed by people updating lists e
 
 ## Can I disable the refresh books task
 
-- No, nor should you through any SQL hackery.  The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
+- No, nor should you through any SQL hackery. The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
 
-- A common complaint is the Refresh task causes heavy I/O usage.  One setting that can cause issues is "Rescan Author Folder after Refresh".  If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.  Do not change this to `Never` unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr.  If you delete book files manually or a third party program, do not set this to `Never`.
+- A common complaint is the Refresh task causes heavy I/O usage. One setting that can cause issues is "Rescan Author Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr. If you delete book files manually or a third party program, do not set this to `Never`.
 
 ## Can I have BOTH an ebook and an audiobook version of the same book?
 
@@ -299,7 +299,7 @@ Depending on your OS, there are multiple possible ways.
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **January 20 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 0.1.0.1188 due to the fact it only causes issues.**
 

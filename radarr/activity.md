@@ -20,10 +20,10 @@ More information about the Queue section Coming Soon - Contributions are Welcome
 
 # History
 
-The history tab shows all previous operations that Radarr has completed (regardless of successison).  This includes any operation that Radarr can do via user input, such as failures, grabs, imports, upgrades, and human input requiring completed downloads (seen as a yellow import icon).
+The history tab shows all previous operations that Radarr has completed (regardless of successison). This includes any operation that Radarr can do via user input, such as failures, grabs, imports, upgrades, and human input requiring completed downloads (seen as a yellow import icon).
 
 # Blocklist
 
 > Blocklist is formerly known as 'Blacklist' {.is-info}
 
-The blocklist tab shows all blocklisted releases that have failed and have been automatically blocklisted, or via user input in the queue tab.  You are able to remove individual blocklists or clear the entire list.
+The blocklist tab shows all blocklisted releases that have failed and have been automatically blocklisted, or via user input in the queue tab. You are able to remove individual blocklists or clear the entire list.

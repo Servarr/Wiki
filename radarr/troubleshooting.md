@@ -51,7 +51,7 @@ To provide good and useful logs for sharing:
 
 > Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 > Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
-> Do not use [JustPasteIt](https://justpaste.it/) as their site does not faciliate reviewing logs.
+> Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
 > Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
 {.is-info}
 
@@ -136,11 +136,11 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### Permission Issue
 
-- Permissions issues are due to the application being unable to access the the relevant temporary folders and/or the app binary folder.  Fix the permissions so the user/group the application runs as has the appropiate access.
+- Permissions issues are due to the application being unable to access the the relevant temporary folders and/or the app binary folder. Fix the permissions so the user/group the application runs as has the appropriate access.
 
 - Synology users may encounter this Synology bug `Access to the path '/proc/{some number}/maps is denied`
 
-- Synology users may also encounter being out of space in `/tmp` on certain NASes. You'll need to specify a different `/tmp` path for the app.  See the SynoCommunity or other Synology support channels for help with this.
+- Synology users may also encounter being out of space in `/tmp` on certain NASes. You'll need to specify a different `/tmp` path for the app. See the SynoCommunity or other Synology support channels for help with this.
 
 ## Resolving the issue
 
@@ -148,13 +148,13 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/radarr) or swing by our [discord](https://radarr.video/discord), if there are others with the same issue, then rest assured we are working on it.
 
-> Please ensure you did not try to use a database from `nightly` on the stable version.  Branch hopping is ill-advised.{.is-info}
+> Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
 
 ### Permissions Issues
 
 - Fix the permissions to ensure the user/group the application is running as can access (read and write) to both `/tmp` and the installation directory of the application.
 
-- For Synology users experiencing issues with `/proc/###/maps` stopping Sonarr or the other \*Arr applications and updating should resolve this.  This is an issue with the SynoCommunity package.
+- For Synology users experiencing issues with `/proc/###/maps` stopping Sonarr or the other \*Arr applications and updating should resolve this. This is an issue with the SynoCommunity package.
 
 ### Manually upgrading
 
@@ -191,7 +191,7 @@ Below are some common problems.
 
 ### Using qBittorrent v4.4.0
 
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Radarr.  Rollback to v4.3.9 or hope qBittorrent has hotfixed the issue in a future release (e.g. v4.4.1) if it exists.
+Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Radarr. Rollback to v4.3.9 or hope qBittorrent has hotfixed the issue in a future release (e.g. v4.4.1) if it exists.
 
 ### Download Client's WebUI is not enabled
 
@@ -215,7 +215,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 ### Remote Path Mapping
 
-A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Readarr doesn't address that folder.  It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Readarr doesn't address that folder. A remote path map is required if your download client is on Linux when \*Arr is on Windows or vice versa. It is also likely needed if mixing Docker and Native clients or if using a remote server. It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
 
 ### Permissions on the Library Folder
 
@@ -223,7 +223,7 @@ Don’t forget to check permissions and ownership of the *destination*. It is ea
 
 - For Windows Users this may be due to running as a service:
   - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
-  - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer.  See the FAQ for how to convert from a service to tray app.
+  - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
@@ -233,7 +233,7 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 - For Windows Users this may be due to running as a service:
   - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
-  - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer.  See the FAQ for how to convert from a service to tray app.
+  - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
@@ -259,7 +259,7 @@ If your torrent is packed in `.rar` files, you’ll need to setup extraction. We
 
 ### Repeated downloads
 
-There are a few causes of repeated downloads, but one is related to Custom Formats. It's possible the release name matches a custom format, but the download files do not. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t.  Depending on your custom format you may be able to work around this by including the custom format in your renaming schema. (Enable the Custom Format to be included in renaming & then add Custom Format to you renaming schema)
+There are a few causes of repeated downloads, but one is related to Custom Formats. It's possible the release name matches a custom format, but the download files do not. This gets you into a loop where you download the items again and again because it looks like an upgrade, then isn’t, then shows up again and looks like an upgrade, then isn’t. Depending on your custom format you may be able to work around this by including the custom format in your renaming schema. (Enable the Custom Format to be included in renaming & then add Custom Format to you renaming schema)
 
 This may also be due to the fact that the download never actually imports and then is missing from the queue, so a new download is perpetually grabbed and never imported. Please see the various other common problems and troubleshooting steps for this.
 
@@ -419,7 +419,7 @@ Below are some common problems.
 - Radarr is searching for `Kikis Delivery Service` but your tracker only has results for `Kiki's Delivery Service`
 - This is due to your tracker not supporting normal standardized searches.
 - The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Radarr/Radarr/issues/4502#issuecomment-981143905)
-- Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilties flag.
+- Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilities flag.
 - Prowlarr supports the flag, but the capabilites need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Media is Unmonitored
@@ -432,7 +432,7 @@ Incorrect categories is probably the most common cause of results showing in man
 
 ### Query Successful - No Results returned
 
-You recieve a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
+You receive a message similar to `Query successful, but no results were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
 
 This is caused by your Indexer failing to return any results that are within the categories you configured for the Indexer.
 
@@ -442,11 +442,11 @@ Sometimes indexers will return completely unrelated results, Radarr will feed in
 
 ### Missing Results
 
-If you have results on the site you can find that are not showing in Radarr then your issue is likely one of several possibiltiies:
+If you have results on the site you can find that are not showing in Radarr then your issue is likely one of several possibilities:
 
 - [Categories are incorrect - See Above](#wrong-categories)
-- An ID (IMDbId, TMDbId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve.  They need to ensure the release is mapped to the correct applicable ids.
-- Not searching how Radarr is searching; It's highly likely the terms you are searching on the indexer is not how Radarr is querying it.  You can see how Radarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily deocded using any HTML decoding/encoding tool online.
+- An ID (IMDbId, TMDbId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve. They need to ensure the release is mapped to the correct applicable ids.
+- Not searching how Radarr is searching; It's highly likely the terms you are searching on the indexer is not how Radarr is querying it. You can see how Radarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily decoded using any HTML decoding/encoding tool online.
 - [See the FAQ for how Foreign Movie Titles are handled & when Radarr would search them](/radarr/faq#how-does-radarr-handle-foreign-movies-or-foreign-titles)
 
 ### Certificate validation
@@ -461,7 +461,7 @@ Rarbg has a tendency to have some sort of rate limiting within their API and dis
 
 ### IP Ban
 
-Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address.  This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.
+Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address. This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.
 
 ### Year doesn't match
 
@@ -473,7 +473,7 @@ Radarr will not grab a release if the release name doesn't contain a year. This 
 
 ### Using the Jackett /all endpoint
 
-The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 

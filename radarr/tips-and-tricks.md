@@ -22,7 +22,7 @@ dateCreated: 2021-08-14T15:12:58.934Z
 
 # Creating a Folder for Each Movie
 
-- This is only needed to cleanup / organize and existing library to facilitate importing into Radarr.  Below are a few different methods.
+- This is only needed to cleanup / organize and existing library to facilitate importing into Radarr. Below are a few different methods.
 
 ## Filebot
 

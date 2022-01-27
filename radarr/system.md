@@ -387,7 +387,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 ### Discord as Slack Notification
 
-- You have Discord configured to use a Slack webhook. This is not advised and the native Discord functionality should be used instead.  If you're receiving this that likely means you just configured this by following an outdated guide. Please advise the guide author to update their steps.
+- You have Discord configured to use a Slack webhook. This is not advised and the native Discord functionality should be used instead. If you're receiving this that likely means you just configured this by following an outdated guide. Please advise the guide author to update their steps.
 
 ## Disk Space
 

@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
 
-This page will go through all the settings available in Prowlarr and how they work.  This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
+This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
 # Menu options
 
@@ -38,7 +38,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 ## Proxy Settings
   
 - Name - Name of the Proxy in Prowlarr
-- Tags - The tags for this proxy.  Proxies apply to all matching (same tag) indexers.  If blank this proxy applies to all indexers.
+- Tags - The tags for this proxy. Proxies apply to all matching (same tag) indexers. If blank this proxy applies to all indexers.
 
 ## FlareSolverr Proxy Settings
 
@@ -133,7 +133,7 @@ Click on `Settings` => `Download Clients`, and then click the `+` to add a new d
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
-Select the download client you wish to add, and there will be a pop-up box to enter connection details.  These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
+Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
   
 > Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 {.is-info}

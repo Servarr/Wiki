@@ -214,7 +214,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - Please note that not all indexers support season/episode (standard) searches.
 
-- Series types can be modified from Mass Editor or from `Edit` when viewing a series.  Note that the series type is selectable at import.
+- Series types can be modified from Mass Editor or from `Edit` when viewing a series. Note that the series type is selectable at import.
 
 - If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
 
@@ -311,7 +311,7 @@ If Docker:
 - **October 8 2021 Update**
   - `3.0.6.1342` has been released as main/stable
   - For those on develop and are still on `3.0.6.1343` or lower you can safely downgrade to main
-  - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut.  If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
+  - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut. If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
 ## How do I request a feature for Sonarr?
 
@@ -324,9 +324,9 @@ If Docker:
 ### How Sonarr handles scene numbering issues
 
 - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDb (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDb listing that same episode as S2017E01.
-- XEM typically fixes the issues when release groups' numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.  
+- XEM typically fixes the issues when release groups' numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at. 
 - Releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
-- Release groups use a year for the season S2010 and TVDb uses S01.  
+- Release groups use a year for the season S2010 and TVDb uses S01. 
 - [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.
 
 > Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). If this is observed, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
@@ -406,7 +406,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Episode does not have an absolute number
 
-- The episode(s) on TVDb do not have an absolute number assigned.  Update the series on TVDb if required and then wait the 36-48 hours for the update to clear TVDb's internal cache and load into Sonarr
+- The episode(s) on TVDb do not have an absolute number assigned. Update the series on TVDb if required and then wait the 36-48 hours for the update to clear TVDb's internal cache and load into Sonarr
 
 ## System & Logs loads forever
 
@@ -561,7 +561,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 - **January 2022 Update: \*Arr Support will be discontinued for the jackett `\all` endpoint. Jackett /all endpoint will be no longer supported (e.g. warnings will occur) as of TBD due to the fact it only causes issues.**

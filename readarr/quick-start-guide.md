@@ -114,7 +114,7 @@ Here we will add the root folder that Readarr will be using to import your exist
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
 
-> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**.  Books within the folder and not in Calibre will be ignored.
+> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored.
 > **Note that you cannot add Calibre integration to a root folder after it's created.**
 {.is-danger}
 

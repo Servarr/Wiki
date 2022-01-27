@@ -255,7 +255,7 @@ dateCreated: 2022-01-26T15:56:56.6015482Z
 |[CrazyHD](https://www.chd4.com/){#crazyhd}|CrazyHD is a BANGLADESHI Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[CrazySpirits](https://www.crazyspirits.com/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|sr-SP|
-|[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV.  Cookie Login for 2FA use.|en-GB|
+|[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV. Cookie Login for 2FA use.|en-GB|
 |[CrypticHaven](http://www.cryptichaven.org/){#cryptichaven}|CrypticHaven Comedy Club (CCC) is a Private Torrent Tracker dedicated to sharing the joy of Comedy.|en-US|
 |[DanishBytes](https://danishbytes.club/){#danishbytes}|DanishBytes is a Private Danish Tracker|en-US|
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|hu-HU|

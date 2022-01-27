@@ -288,7 +288,7 @@ tar -xvzf Readarr*.linux*.tar.gz
 sudo mv Readarr/ /opt
 ```
 
-> Note: This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr.  Please note that if use wish to use Calibre - Readarr will need permissions for that directory.
+> Note: This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr. Please note that if use wish to use Calibre - Readarr will need permissions for that directory.
 {.is-danger}
 
 - Ensure ownership of the binary directory.
@@ -299,7 +299,7 @@ sudo chown readarr:readarr -R /opt/Readarr
 
 - Configure systemd so Readarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument.  Note: that `$USER` is the User Readarr runs as and is defined below.
+> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument. Note: that `$USER` is the User Readarr runs as and is defined below.
 {.is-danger}
 
 ```shell
@@ -475,7 +475,7 @@ If you implement any additional authentication through Apache, you should exclud
 # Multiple Instances
 
 - It is possible to run multiple instances of Readarr. This is typically done when one wants a text and audiobook of the same book.
-- Note that you can configure Readarr to use a second Readarr as a list.  This is helpful if you wish to keep both in sync.
+- Note that you can configure Readarr to use a second Readarr as a list. This is helpful if you wish to keep both in sync.
 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)

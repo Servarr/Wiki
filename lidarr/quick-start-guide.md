@@ -108,7 +108,7 @@ We will be using the default configuration of settings to configure Lidarr. This
 
 ## Media Management
 
-First we’re going to take a look at the `Media Management` where we will set the `Root Folder`.  This will be the location that the media files will be stored in.
+First we’re going to take a look at the `Media Management` where we will set the `Root Folder`. This will be the location that the media files will be stored in.
 
 > Do not store Lidarr media on a cloud storage provider! Because of the way Lidarr uses tags, this will kill any API limits and cause issues. Keep your library on your network.
 {.is-warning}

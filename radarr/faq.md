@@ -74,7 +74,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Can all my movie files be stored in one folder?
 
-- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version.  Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
+- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
 - A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
 
@@ -109,7 +109,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-danger}
 
-- Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.  Please note that `nightly` branches are intentionally not listed below.
+- Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds. Please note that `nightly` branches are intentionally not listed below.
 
 |                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/radarr/testing/VERSION.json) |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -442,7 +442,7 @@ Depending on your OS, there are multiple possible ways.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
 - Note that `multi` by default is assumed English+French
 
-> Note that for indexers that support ID based searches - such as many Usenet indexers and elite private Torrent trackers - text queries are not used if results are returned for an ID based search.  Therefore the above about searching does not apply.  Radarr will search the ID and if results are returned will not fall back to a name search.  If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
+> Note that for indexers that support ID based searches - such as many Usenet indexers and elite private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Radarr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
 {.is-warning}
 
 ## How does Radarr handle "multi" in names?
@@ -464,7 +464,7 @@ Depending on your OS, there are multiple possible ways.
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended.  Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **January 1 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 4.0.0.5730 due to the fact it only causes issues.**
 
