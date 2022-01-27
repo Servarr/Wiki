@@ -215,7 +215,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 ### Remote Path Mapping
 
-A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Readarr doesn't address that folder. A remote path map is required if your download client is on Linux when \*Arr is on Windows or vice versa. It is also likely needed if mixing Docker and Native clients or if using a remote server. It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Radarr doesn't address that folder. A remote path map is required if your download client is on Linux when \*Arr is on Windows or vice versa. It is also likely needed if mixing Docker and Native clients or if using a remote server. It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
 
 ### Permissions on the Library Folder
 
@@ -395,8 +395,8 @@ In this test, you’ll be looking for obvious errors and running some simple tes
 
 ***Images needed***
 
-![searches-indexers-and-trackers1.png](/assets/readarr/searches-indexers-and-trackers1.png)
-![searches-indexers-and-trackers2.png](/assets/readarr/searches-indexers-and-trackers2.png)
+![searches-indexers-and-trackers1.png](/assets/radarr/searches-indexers-and-trackers1.png)
+![searches-indexers-and-trackers2.png](/assets/radarr/searches-indexers-and-trackers2.png)
 
 - Trace Log Snippet
 

@@ -289,17 +289,17 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Uses
 
-Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Readarr might try to download all of them. With delay profiles, Readarr can be configured to ignore the first few hours of releases.
+Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Radarr might try to download all of them. With delay profiles, Radarr can be configured to ignore the first few hours of releases.
 
 Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See Example 3)
 
 ### How Delay Profiles Work
 
-The timer begins as soon as Readarr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
+The timer begins as soon as Radarr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
-> The clock starts from the releases uploaded time and not from the time Readarr sees it. {.is-info}
+> The clock starts from the releases uploaded time and not from the time Radarr sees it. {.is-info}
 
-During the delay period, any new releases that become available will be noted by Readarr. When the delay timer expires, Readarr will download the single release which best matches your quality preferences.
+During the delay period, any new releases that become available will be noted by Radarr. When the delay timer expires, Radarr will download the single release which best matches your quality preferences.
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
