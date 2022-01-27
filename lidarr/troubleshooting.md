@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2022-01-09T18:48:34.926Z
+date: 2022-01-27T04:34:25.074Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -237,15 +237,16 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 ### Download folder and library folder not different folders
 
-The download client should download into a folder accessible by and that is not your root/library folder; should import from that separate download folder into your Library folder.
+- The download client should download into a folder accessible by \*Arr and that is not your root/library folder; should import from that separate download folder into your Library folder.
+- You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
+- [**This will also cause a healthcheck in System as well**](/lidarr/system#downloading-into-root-folder)
+- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the \*Arr application.
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/lidarr/settings/#root-folders)
+- One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
+- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
-You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
-
-If you download right into your library folder, you’ll end up with multiple copies of your media and when there are import issues, which there will be, you may not notice because your media server will see the download client copy.
-
-The download folder will also be a hot mess of poorly named folders and files while your library folder will be nice and neat.
-
-This frequently causes other random import issues as well.
+> Your download folder and your root/library folder MUST be separate
+{.is-warning}
 
 ### Incorrect category
 
