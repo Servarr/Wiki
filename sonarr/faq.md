@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-01-24T01:57:10.759Z
+date: 2022-01-28T01:03:48.452Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -43,7 +43,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 ## Preferred Words FAQs
 
-For the score of the on disk file: The existing name of the file and the "scene name" of the release are evaluated for preferred words. The ​​higher score of the two is taken.
+For the score of the on disk file: The existing name of the file and the "scene name" of the release are evaluated for preferred words. The higher score of the two is taken.
 
 How are preferred words included in renaming?
 
@@ -105,7 +105,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 - Start Sonarr
 - As long as the paths are the same, everything will pick up where it left off
 
-- **Restore for Synology NAS**
+#### Restore on Synology NAS
 
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}
@@ -179,14 +179,6 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 ## How do I access Sonarr from another computer?
 
 - By default Sonarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Sonarr uses integrates with Windows (this also applies for current alternatives). If Sonarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
-
-## Why doesn't Sonarr automatically search for missing episodes?
-
-- There are two times when we would want to have missing episodes searched for, when a new series with existing aired episodes is added and when  Sonarr has been offline and unable to find episodes as it normally would. Endlessly searching for episodes that have aired that are missing is a waste of resources, both in terms of local processing power and on the indexers and in our experience catches users off guard, wasting bandwidth.
-
-- In v1 of Sonarr we had an opt in backlog search option, often people would turn it on and then get a bunch of old episodes and ask us why, we also had indexers ask why they saw an increase in API calls, which was due to the backlog searching.
-
-- In v2 we sat back and thought about it and realized the benefit is not really there, we could try to throttle the searching, but that just draws it out and still does the same thing; hammer the indexer with useless requests. If the episode wasn't there the last time the search was performed, why would it be there now? It would be if it was reposted, but if it was reposted, the automatic process that gets new episodes would see it was posted and act on it.
 
 ## Why does Sonarr refresh series information so frequently?
 
@@ -283,18 +275,14 @@ Below are some example release names for each show type. The specific differenti
 
 ### Installing a newer version
 
-If Native:
+#### Native
 
 1. Go to System and then the Updates tab
 1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
 
-If Docker:
+#### Docker
 
 1. Repull your tag and update your container
-
-## Can I update Sonarr inside my Docker container?
-
-- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ## Can I switch from `develop` back to `main`?
 
@@ -355,12 +343,9 @@ If Docker:
 
 There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
 
-- Sonarr does not use aliases nor translations from TVDb.
+> Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb. {.is-warning}
 
 - Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
-
-> Note that the above applies for any foreign language titles as well
-{.is-info}
 
 - **For anime, it will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below.
 
@@ -378,7 +363,10 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 {#tvdb}
 
-- TVDb has a 24 hour cache on their API. TVDb's API then needs to populate through their CDN cache which takes several hours. Sonarr's Skyhook has a much smaller few hour cache on top of that. Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
+- TVDb has a 24 hour cache on their API. 
+- TVDb's API then needs to populate through their CDN cache which takes several hours. 
+- Sonarr's Skyhook has a much smaller few hour cache on top of that. 
+- Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
 - Therefore for a change on TVDb to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
 
