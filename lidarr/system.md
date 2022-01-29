@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-01-26T13:34:59.819Z
+date: 2022-01-29T21:45:06.897Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -80,7 +80,7 @@ sudo mv "$installdir/" "$installdir.old/"
 echo "Installing..."
 sudo mv "${app^}" "$installdir"
 chown $APPUSER:$APPUSER -R $installdir
-sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/
+sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
 sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
 sudo systemctl daemon-reload
 echo "App Installed"
