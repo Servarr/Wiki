@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-01-07T19:38:53.445Z
+date: 2022-01-29T15:30:49.893Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -125,6 +125,8 @@ Don’t forget to save your changes.
 ## Calibre Content Server (Optional)
 
 If you are going to use Calibre to manage your books, you need to set up the Calibre Content Server. Again, this is not Calibre-Web, but a piece of Calibre itself. You must be running Calibre, and you must set up the Content Server.
+
+If you're using docker, your Calibre mounted book directory and your Readarr mounted book directory must be the same.
 
 > Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. {.is-info}
 
