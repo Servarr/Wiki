@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2022-01-09T23:21:35.087Z
+date: 2022-01-29T15:32:49.884Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -36,7 +36,9 @@ Also, note that for each individual settings page, there are some options at the
 ### Root Folder Settings
 
 - Name - The name of the Root Folder for UI Purposes
-- Path - The folder containing your book library i.e. the final destination as Readarr sees it. Note that this must be different than the location your download client places files.
+- Path - The folder containing your book library i.e. the final destination as Readarr sees it.
+   - Note that this must be different than the location your download client places files.
+   - If you are using docker and Calibre integration, the mounts must the same to your books folder.
 - Calibre Specific Settings (Only if Use Calibre is enabled)
   - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
     - Note that this **cannot be enabled on an existing root folder**.
