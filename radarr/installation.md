@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-01-30T04:45:26.426Z
+date: 2022-01-30T05:11:30.564Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -374,13 +374,13 @@ systemctl -q daemon-reload
 
 # FreeBSD
 
-The Radarr team only provides builds for BSD. Plugins and Ports are maintained and created by the BSD community.
+The Radarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.
 
-Instructions for BSD installations are also maintained by the BSD community and anyone with a GitHub account may update the wiki as needed.
+Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
 
-[Freshport Radarr Link](https://www.freshports.org/net-p2p/radarr/)
+[Freshports Prowlarr Link](https://www.freshports.org/net-p2p/prowlarr/)
 
-## Jail Setup
+## Jail Setup Using TrueNAS GUI
 
 1. From the main screen select Jails
 
@@ -398,11 +398,11 @@ Instructions for BSD installations are also maintained by the BSD community and 
 
 1. Configure Jail Properties to your liking but add
 
+- [x] allow_mlock
+
 - [x] allow_raw_sockets
 
-> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement as long as the program does not use those or create raw sockets itself {.is-info}
-
-- [x] allow_mlock
+> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. {.is-info}
 
 1. Configure Network Properties to your liking
 
@@ -428,7 +428,8 @@ Now that we have it installed a few more steps are required.
 
 Time to enable the service but before we do, a note:
 
-The service file uses `chown` to make sure Radarr can update itself. This can break things like `pkg check -s` and `pkg remove` for Radarr when the built-in updater replaces files.
+The updater is disabled by default. The `pkg-message` gives instructions on how to enable the updater but keep in mind: this can break things like `pkg check -s` and `pkg remove` for Radarr when the built-in updater replaces files.
+
 
 To enable the service:
 
@@ -456,8 +457,11 @@ If everything went according to plan then radarr should be up and running on the
 
 ## Troubleshooting
 
+- The service appears to be running but the UI is not loading or the page is timing out
+	- Double check that `allow_mlock` is enabled in the jail
+  
 - `System.NET.Sockets.SocketException (43): Protocol not supported`
-  - Make sure you have `VNET` turned on for your jail.
+  - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
 
 > The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
 {.is-info}
