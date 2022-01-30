@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2022-01-30T05:18:39.103Z
+date: 2022-01-30T05:19:03.657Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -18,6 +18,7 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 # Wiki
 
 - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Wiki Repository *Github*](https://github.com/Servarr/Wiki)
+{.links-list}
 
 # Applications
 
