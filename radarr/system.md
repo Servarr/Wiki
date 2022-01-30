@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-01-29T21:44:33.670Z
+date: 2022-01-30T05:05:27.723Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -30,7 +30,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 - Ensure your branch is correct for your provider and repull your container
 
-##### Fixing BSD installs
+##### Fixing FreeBSD installs
 
 - Simply update the Radarr Port with `pkg update && pkg upgrade`
 - (Optional) Remove the mono package if you wish
