@@ -372,9 +372,95 @@ sudo rm -rf /etc/systemd/system/radarr.service
 systemctl -q daemon-reload
 ```
 
-# BSD
+# FreeBSD
 
-- [See TheFrank's Port Sooners documentation](https://github.com/Thefrank/freebsd-port-sooners/blob/main/Radarr_Installation_TrueNAS_GUI.md)
+The Radarr team only provides builds for BSD. Plugins and Ports are maintained and created by the BSD community.
+
+Instructions for BSD installations are also maintained by the BSD community and anyone with a GitHub account may update the wiki as needed.
+
+[Freshport Radarr Link](https://www.freshports.org/net-p2p/radarr/)
+
+## Jail Setup
+
+1. From the main screen select Jails
+
+1. Click ADD
+
+1. Click Advanced Jail Creation
+
+1. Name (any name will work): Radarr
+
+1. Jail Type: Default (Clone Jail)
+
+1. Release: 12.2-Release (or newer)
+
+1. Configure Basic Properties to your liking
+
+1. Configure Jail Properties to your liking but add
+
+- [x] allow\_raw\_sockets
+
+> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement as long as the program does not use those or create raw sockets itself {.is-info}
+
+- [x] allow\_mlock
+
+1. Configure Network Properties to your liking
+
+1. Configure Custom Properties to your liking
+
+1. Click Save
+
+## Radarr Installation
+
+Back on the jails list find your newly created jail for `radarr` and click "Shell"
+
+To install Radarr
+
+`pkg install radarr`
+
+Don't close the shell out yet we still have a few more things!
+
+## Configuring Radarr
+
+Now that we have it installed a few more steps are required.
+
+### Service Setup
+
+Time to enable the service but before we do, a note:
+
+The service file uses `chown` to make sure Radarr can update itself. This can break things like `pkg check -s` and `pkg remove` for Radarr when the built-in updater replaces files.
+
+To enable the service:
+
+`sysrc radarr_enable=TRUE`
+
+If you do not want to use user/group `radarr` you will need to tell the service file what user/group it should be running under
+
+`sysrc radarr_user="USER_YOU_WANT"`
+
+`sysrc radarr_group="GROUP_YOU_WANT"`
+
+`radarr` stores its data, config, logs, and PID files in `/usr/local/radarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
+
+`sysrc radarr_data_dir="DIR_YOU_WANT"`
+
+Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `radarr` uses AND/OR add `radarr` to a GID that has write access.
+
+Almost done, let's start the service:
+
+`service radarr start`
+
+If everything went according to plan then radarr should be up and running on the IP of the jail (port 7878)!
+
+(You can now safely close the shell)
+
+## Troubleshooting
+
+- `System.NET.Sockets.SocketException (43): Protocol not supported`
+  - Make sure you have `VNET` turned on for your jail.
+
+> The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
+{.is-info}
 
 # Docker
 
