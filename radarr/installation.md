@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-01-18T15:53:57.763Z
+date: 2022-01-30T04:45:26.426Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -398,11 +398,11 @@ Instructions for BSD installations are also maintained by the BSD community and 
 
 1. Configure Jail Properties to your liking but add
 
-- [x] allow\_raw\_sockets
+- [x] allow_raw_sockets
 
 > `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement as long as the program does not use those or create raw sockets itself {.is-info}
 
-- [x] allow\_mlock
+- [x] allow_mlock
 
 1. Configure Network Properties to your liking
 
