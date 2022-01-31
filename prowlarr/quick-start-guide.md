@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2021-12-09T18:12:20.925Z
+date: 2022-01-31T15:07:57.443Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -57,7 +57,13 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-- Name - Enter a name for this indexer.
+
+> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.
+{.is-info}
+
+## Application Settings
+
+- Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
   - `Add and Remove Only` - Sync the Indexer to the app when it is added or removed from Prowlarr. If the indexer is down at the time of sync - it will be removed.
   - `Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program. Any change made remotely will be overridden by Prowlarr on next sync.
@@ -77,20 +83,21 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 
-- API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General.
+- API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
 
-Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
+- (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
 
-> When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`{.is-info}
+> When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`
+{.is-info}
 
 ![nzbgeek.png](/assets/prowlarr/nzbgeek.png)
 
 You should then go into your program, and disable the non-Prowlarr version of the indexer. Once everything is running smoothly, you can delete those entries and leave just the (Prowlarr) versions in place.
 
-> You may wish to go into your programs and check the categories for the Prowlarr indexers. Categories are not currently editable in Prowlarr, but are pushed over from a capabilities check.
-**Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
-Please note that full sync means Prowlarr will overwrite any in-app changes you make. If you wish to use customized in-app categories you **must** use Add and Remove and **must not** use Full Sync.
-{.is-warning}
+You may wish to go into your programs and check the categories for the Prowlarr indexers. Default categories to be mapped into the App are configurable as an advanced setting for the App in Prowlarr.
+
+> **Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
+{.is-info}
 
 # Download Clients
 
