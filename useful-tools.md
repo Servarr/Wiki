@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-26T16:51:07.433Z
+date: 2022-01-31T18:08:52.523Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -14,8 +14,7 @@ The following apps are companions to the \*Arr Suite of Applications or media ho
 
 Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
-Using the [sqlite3 `.recover` command}
-](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
+Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
 ## Recovering a Corrupt DB (UI) (Windows)
 
@@ -24,7 +23,13 @@ Using the [sqlite3 `.recover` command}
 
 > Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
-Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
+Note that the application's database can be found in the Application Data Directory
+- [Lidarr Appdata Directory](/lidarr/appdata-directory)
+- [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
+- [Radarr Appdata Directory](/radarr/appdata-directory)
+- [Readarr Appdata Directory](/readarr/appdata-directory)
+- [Sonarr Appdata Directory](/sonarr/appdata-directory)
+{.links-list}
 
 > [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 {.is-info}
@@ -40,9 +45,11 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 1. Save
 1. New DB => File => Import => import that file
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
-1. Run a pragma check on the new DB
-1. Remove all Wal, Sh, and Db files from the config folder
-1. Save the new DB in the config folder and point the application at it
+1. Run a pragma check on the new database
+1. Remove all `wal`, `sh`, and `db` files from the config folder
+1. Save the new database in the config folder and point the application at it. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
+1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
+1. Start the application
 
 ![dbrecover.gif](/dbrecover.gif)
 
@@ -50,9 +57,15 @@ Note that the application's database can be found in the [Lidarr Appdata Directo
 
 {#nix}
 
+> Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system {.is-info}
+
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
 1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
+1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
+1. Remove or move/rename the old corrupt database and any `wal` or `sh` in the folder
+1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
+1. Start the application
 
 # Finding Cookies
 
