@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-17T19:02:16.441Z
+date: 2022-01-31T17:39:16.614Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -299,15 +299,12 @@ If Docker:
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Radarr is corrupt.
+- This error may show if the database file is not writable by the user/group \*Arr is running as. This will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
 - If your sqlite does not have `.recover` or you wish a more GUI friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - [Try restoring from a backup](#how-do-i-backup-and-restore-radarr)
-
-- This error may show if the database file is not writable by the user/group \*Arr is running as. This will only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group *arr run as.
-
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you're trying to restore your database you can check out our Backup/Restore guide [here](#how-do-i-backup-and-restore-radarr).
-
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
 ## I use Radarr on a Mac and it suddenly stopped working. What happened?
