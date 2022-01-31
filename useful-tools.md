@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-31T19:17:52.274Z
+date: 2022-01-31T19:28:50.779Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -47,7 +47,7 @@ Note that the application's database can be found in the Application Data Direct
 1. New DB => File => Import => import that file
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
 1. Run a pragma check on the new database
-1. Remove all `wal`, `sh`, and `db` files from the config folder
+1. Remove all `wal`, `shm`, and `db` files from the config folder
 1. Save the new database in the config folder and point the application at it. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Start the application
