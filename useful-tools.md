@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-31T18:08:52.523Z
+date: 2022-01-31T19:17:52.274Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -36,7 +36,7 @@ Note that the application's database can be found in the Application Data Direct
 {.is-info}
 
 1. Stop the application
-1. Make a copy of your corrupt DB and copy any .wal files with it
+1. Make a copy of your corrupt DB and copy any .shm and .wal files with it
 1. Open your corrupt DB in [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/)
 1. File => Export => Export DB to SQL file
 1. Select all tables
