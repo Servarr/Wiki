@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-31T19:28:50.779Z
+date: 2022-01-31T19:43:56.218Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -11,17 +11,6 @@ dateCreated: 2021-06-05T20:51:53.183Z
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
 # Recovering a Corrupt DB
-
-Note that the application's database can be found in the [Lidarr Appdata Directory](/lidarr/appdata-directory), [Prowlarr Appdata Directory](/prowlarr/appdata-directory), [Radarr Appdata Directory](/radarr/appdata-directory), [Readarr Appdata Directory](/readarr/appdata-directory), or [Sonarr Appdata Directory](/sonarr/appdata-directory)
-
-Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
-
-## Recovering a Corrupt DB (UI) (Windows)
-
-{#windows}
-{#recovering-a-corrupt-db-ui}
-
-> Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
 Note that the application's database can be found in the Application Data Directory which are linked below. The directory may also be passed as a datadir argument.
 
@@ -32,19 +21,31 @@ Note that the application's database can be found in the Application Data Direct
 - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 {.links-list}
 
+> There are two options to recover the database.{.is-info}
+- [Using DB Browser for SQLite and using the UI](#recovering-a-corrupt-db-ui)
+- [Using Sqlite's `.recover` function](#command-line-db-recovery)
+{.links-list}
+
+## Recovering a Corrupt DB (UI) (Windows)
+
+{#windows}
+{#recovering-a-corrupt-db-ui}
+
+> Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database). The steps to do so are linked below {.is-info}
+
 > [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 {.is-info}
 
 1. Stop the application
-1. Make a copy of your corrupt DB and copy any .shm and .wal files with it
-1. Open your corrupt DB in [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/)
-1. File => Export => Export DB to SQL file
+1. Make a copy of your corrupt database (`.db`) and copy any `.shm` and `.wal` files with it
+1. Open your corrupt database in [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/)
+1. File => Export => Export database to SQL file
 1. Select all tables
 1. Check/Enable "Keep column names in INSERT INTO"
 1. Export Everything
 1. Overwrite old schema
 1. Save
-1. New DB => File => Import => import that file
+1. New Database => File => Import => import that file
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
 1. Run a pragma check on the new database
 1. Remove all `wal`, `shm`, and `db` files from the config folder
@@ -54,9 +55,14 @@ Note that the application's database can be found in the Application Data Direct
 
 ![dbrecover.gif](/dbrecover.gif)
 
-## \*Nix DB Recovery
+## Command Line DB Recovery
 
 {#nix}
+
+The below instructions are for \*Nix Operating Systems, but the concept will be similar on Windows Command Line.
+
+> This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
+{.is-info}
 
 > Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system {.is-info}
 
@@ -64,7 +70,7 @@ Note that the application's database can be found in the Application Data Direct
 1. SSH into your box or otherwise get a shell up
 1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
-1. Remove or move/rename the old corrupt database and any `wal` or `sh` in the folder
+1. Remove or move/rename the old corrupt database and any `wal` or `shm` in the folder
 1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
 1. Start the application
 
