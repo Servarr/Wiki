@@ -2,14 +2,21 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-01-31T15:07:57.443Z
+date: 2022-01-31T18:11:47.945Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
 ---
 
->This guide should be used to get configured and running with the basics, and to give you an understanding of how the pieces work together.
-{is-info}
+> This page is still in progress and not complete.
+
+> For a more detailed breakdown of all the settings, check [Prowlarr =>Settings](/prowlarr/settings)
+{.is-info}
+
+In this guide we will try to explain the basic setup you need to do to get started with Prowlarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
+
+> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
+{.is-warning}
 
 # Indexers
 
