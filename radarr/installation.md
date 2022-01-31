@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-01-31T04:06:05.240Z
+date: 2022-01-31T05:06:36.383Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -376,7 +376,7 @@ The Radarr team only provides builds for FreeBSD. Plugins and Ports are maintain
 
 Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
 
-[Freshports Prowlarr Link](https://www.freshports.org/net-p2p/prowlarr/)
+[Freshports Radarr Link](https://www.freshports.org/net-p2p/radarr/)
 
 ## Jail Setup Using TrueNAS GUI
 
