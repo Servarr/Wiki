@@ -312,9 +312,9 @@ Below are some example release names for each show type. The specific differenti
 ### How Sonarr handles scene numbering issues
 
 - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDb (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDb listing that same episode as S2017E01.
-- XEM typically fixes the issues when release groups' numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at. 
+- XEM typically fixes the issues when release groups' numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.
 - Releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
-- Release groups use a year for the season S2010 and TVDb uses S01. 
+- Release groups use a year for the season S2010 and TVDb uses S01.
 - [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.
 
 > Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). If this is observed, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
@@ -363,9 +363,9 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 {#tvdb}
 
-- TVDb has a 24 hour cache on their API. 
-- TVDb's API then needs to populate through their CDN cache which takes several hours. 
-- Sonarr's Skyhook has a much smaller few hour cache on top of that. 
+- TVDb has a 24 hour cache on their API.
+- TVDb's API then needs to populate through their CDN cache which takes several hours.
+- Sonarr's Skyhook has a much smaller few hour cache on top of that.
 - Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
 - Therefore for a change on TVDb to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
@@ -469,13 +469,12 @@ Depending on your OS, there are multiple possible ways.
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Sonarr is corrupt.
-- This error may show if the database file is not writable by the user/group \*Arr is running as. This will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
-- [Try restoring from a backup](#how-do-i-backup-and-restore-sonarr)
-- Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
-- If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
+- This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
+- Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-sonarr)
+- You can also try recovering your database.  This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
+  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
-
 
 ## I use Sonarr on a Mac and it suddenly stopped working. What happened?
 

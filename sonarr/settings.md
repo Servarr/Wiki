@@ -9,7 +9,7 @@ dateCreated: 2021-06-11T23:29:12.300Z
 ---
 
 This page will go through all the settings available in Sonarr and how they work.
-This is not meant to be a comprehensive "how to set up Sonarr."
+This is not meant to be a comprehensive "How to set up Sonarr."
 Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
 
 # Menu options
@@ -308,7 +308,6 @@ Name for the `Specials` (Season) folder
 
 > By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
-
 
 ## Language Profiles
 

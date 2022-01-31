@@ -428,7 +428,6 @@ Time to enable the service but before we do, a note:
 
 The updater is disabled by default. The `pkg-message` gives instructions on how to enable the updater but keep in mind: this can break things like `pkg check -s` and `pkg remove` for Radarr when the built-in updater replaces files.
 
-
 To enable the service:
 
 `sysrc radarr_enable=TRUE`
@@ -456,7 +455,7 @@ If everything went according to plan then radarr should be up and running on the
 ## Troubleshooting
 
 - The service appears to be running but the UI is not loading or the page is timing out
-	- Double check that `allow_mlock` is enabled in the jail
+  - Double check that `allow_mlock` is enabled in the jail
   
 - `System.NET.Sockets.SocketException (43): Protocol not supported`
   - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new

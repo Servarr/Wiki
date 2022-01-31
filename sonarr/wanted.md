@@ -24,7 +24,7 @@ The Wanted => Missing section contains a list of the episodes you have marked to
 > This search process cannot be canceled once started without restarting Sonarr.
 {.is-info}
 
-At the top of the page is `Manual Import` which allows you to abritrarily import media files from any destination Sonarr can access for series that already exist in Sonarr. 
+At the top of the page is `Manual Import` which allows you to abritrarily import media files from any destination Sonarr can access for series that already exist in Sonarr.
 
 - Move Automatically will attempt to automatically match the files to series/episodes in Sonarr and will move - not copy nor hardlink - them to your library folder
 - Interactive Import will allow you to review the matches and adjust various specifications as needed. It provides the option (bottom left corner) to `Move` or `Copy/Hardlink` your files. Be sure to choose the correct option for your needs.

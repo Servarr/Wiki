@@ -64,7 +64,6 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-
 > Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.
 {.is-info}
 
@@ -81,7 +80,7 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 - Tags - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
 
-> **Note: Tags for apps are not yet functional**
+> **Tags for apps are not yet functional**
 {.is-warning}
 
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.

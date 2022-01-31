@@ -437,7 +437,7 @@ If everything went according to plan then prowlarr should be up and running on t
 ## Troubleshooting
 
 - The service appears to be running but the UI is not loading or the page is timing out
-	- Double check that `allow_mlock` is enabled in the jail
+  - Double check that `allow_mlock` is enabled in the jail
   
 - `System.NET.Sockets.SocketException (43): Protocol not supported`
   - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
