@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-01-09T23:24:04.608Z
+date: 2022-01-31T15:06:42.918Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -86,7 +86,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will be synced to Sonarr.
+> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.
 {.is-info}
 
 ## Application Settings
@@ -120,6 +120,8 @@ All programs you can add are listed. You should only add programs you currently 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
 # Download Clients (Prowlarr Searches)
+
+{#download-clients}
 
 > Information on supported download clients can be found at the following page [supported](/prowlarr/supported#download-clients)
 {.is-info}
