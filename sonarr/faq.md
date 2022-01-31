@@ -85,7 +85,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 #### Using zip backup
 
-- Re-install Sonarr
+- Re-install Sonarr (if applicable / not already installed)
 - Run Sonarr
 - Navigate to System => Backup
 - Select Restore Backup
@@ -95,7 +95,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 
 #### Using file system backup
 
-- Re-install Sonarr
+- Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr  
   - Running Sonarr once and via the UI go to System => About  
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
@@ -110,7 +110,7 @@ Preferred Words always upgrade a release even if the quality and/or language cut
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}
 
-- Re-install Sonarr
+- Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr  
   - Running Sonarr once and via the UI go to System => About  
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)

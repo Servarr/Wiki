@@ -179,6 +179,82 @@ If Docker:
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
+## How do I Backup/Restore my Lidarr?
+
+### Backing up Lidarr
+
+#### Using built-in backup
+
+- Go to System => Backup in the Lidarr UI
+- Click the Backup button
+- Download the zip after the backup is created for safekeeping
+
+#### Using file system directly
+
+- Find the location of the AppData directory for Lidarr  
+  - Via the Lidarr UI go to System => About  
+  - [Lidarr Appdata Directory](/lidarr/appdata-directory)
+- Stop Lidarr - This will prevent the database from being corrupted
+- Copy the contents to a safe location
+
+### Restoring from Backup
+
+> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
+{.is-warning}
+
+#### Using zip backup
+
+- Re-install Lidarr (if applicable / not already installed)
+- Run Lidarr
+- Navigate to System => Backup
+- Select Restore Backup
+- Select Choose File
+- Select your backup zip file
+- Select Restore
+
+#### Using file system backup
+
+- Re-install Lidarr (if applicable / not already installed)
+- Find the location of the AppData directory for Lidarr  
+  - Running Lidarr once and via the UI go to System => About  
+  - [Lidarr Appdata Directory](/lidarr/appdata-directory)
+- Stop Lidarr
+- Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
+- Restore from your backup
+- Start Lidarr
+- As long as the paths are the same, everything will pick up where it left off
+
+#### Restore on Synology NAS
+
+> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
+{.is-warning}
+
+- Re-install Lidarr (if applicable / not already installed)
+- Find the location of the AppData directory for Lidarr  
+  - Running Lidarr once and via the UI go to System => About  
+  - [Lidarr Appdata Directory](/lidarr/appdata-directory)
+- Stop Lidarr
+- Connect to the Synology NAS through SSH and log in as root  
+
+> On some installations, the user is different than the below commands: `chown -R sc-Lidarr:Lidarr *` {.is-info}
+
+- Execute the following commands:
+
+```shell
+rm -r /usr/local/Lidarr/var/.config/Lidarr/Lidarr.db
+cp -f /tmp/Lidarr_backup/* /usr/local/Lidarr/var/.config/Lidarr/
+```
+
+- Update permissions on the files:
+
+ ```shell
+cd /usr/local/Lidarr/var/.config/Lidarr/
+chown -R Lidarr:users *
+chmod -R 0644 *
+```
+
+- Start Lidarr
+
 ## I use Lidarr on a Mac and it suddenly stopped working. What happened?
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
@@ -278,7 +354,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
+- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 

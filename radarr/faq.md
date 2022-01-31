@@ -175,7 +175,7 @@ If Docker:
 
 #### Using zip backup
 
-- Re-install Radarr
+- Re-install Radarr (if applicable / not already installed)
 - Run Radarr
 - Navigate to System => Backup
 - Select Restore Backup
@@ -185,7 +185,7 @@ If Docker:
 
 #### Using file system backup
 
-- Re-install Radarr
+- Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr  
   - Running Radarr once and via the UI go to System => About  
   - [Radarr Appdata Directory](/radarr/appdata-directory)
@@ -200,7 +200,7 @@ If Docker:
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}
 
-- Re-install Radarr
+- Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr  
   - Running Radarr once and via the UI go to System => About  
   - [Radarr Appdata Directory](/radarr/appdata-directory)

@@ -139,7 +139,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 #### Using zip backup
 
-- Re-install Prowlarr
+- Re-install Prowlarr (if applicable / not already installed)
 - Run Prowlarr
 - Navigate to System => Backup
 - Select Restore Backup
@@ -149,7 +149,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 #### Using file system backup
 
-- Re-install Prowlarr
+- Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr  
   - Running Prowlarr once and via the UI go to System => About  
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
@@ -164,7 +164,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}
 
-- Re-install Prowlarr
+- Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr  
   - Running Prowlarr once and via the UI go to System => About  
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
