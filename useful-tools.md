@@ -23,7 +23,7 @@ Using the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_d
 
 > Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) {.is-info}
 
-Note that the application's database can be found in the Application Data Directory which are linked below.  The directory may also be passed as a datadir argument.
+Note that the application's database can be found in the Application Data Directory which are linked below. The directory may also be passed as a datadir argument.
 
 - [Lidarr Appdata Directory](/lidarr/appdata-directory)
 - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
