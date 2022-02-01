@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-02-01T17:57:50.597Z
+date: 2022-02-01T17:59:04.148Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -309,7 +309,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 {#rename-folders}
 
-> The same process applies for moving/changing Movie paths as well.{.is-info}
+> The same process applies for moving/changing Movie paths as well{.is-info}
 
 1. Movies
 1. Movie Editor
