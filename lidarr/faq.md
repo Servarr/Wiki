@@ -146,12 +146,12 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 ### Installing a newer version
 
-If Native:
+#### Native
 
 1. Go to System and then the Updates tab
 1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
 
-If Docker:
+#### Docker
 
 1. Repull your tag and update your container
 
