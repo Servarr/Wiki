@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-01-31T18:10:20.936Z
+date: 2022-02-01T17:58:53.712Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -320,11 +320,13 @@ Below are some example release names for each show type. The specific differenti
 
 {#rename-folders}
 
+> The same process applies for moving/changing Series paths as well{.is-info}
+
 1. Series
 1. Mass Editor
 1. Select what series need their folder renamed
 1. Change Root Folder to the same Root Folder that the series currently exist in
-1. Select "Yes move files"
+1. Select "Yes move files" to have
 
 > If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 {.is-warning}
