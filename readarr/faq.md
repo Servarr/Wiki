@@ -8,6 +8,55 @@ editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [How does Readarr work?](#how-does-readarr-work)
+  - [How does Readarr find books?](#how-does-readarr-find-books)
+  - [How are possible downloads compared?](#how-are-possible-downloads-compared)
+  - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
+  - [Why can I not add a new book or author to Readarr?](#why-can-i-not-add-a-new-book-or-author-to-readarr)
+  - [Metadata Profile "None" allowing Foreign Releases](#metadata-profile-none-allowing-foreign-releases)
+  - [Book Match is not Close Enough: XX% vs YY% \[book\]](#book-match-is-not-close-enough-xx-vs-yy-book)
+  - [How can I rename my author folders?](#how-can-i-rename-my-author-folders)
+  - [How can I mass delete authors from the wanted list?](#how-can-i-mass-delete-authors-from-the-wanted-list)
+  - [Why doesn't Readarr work behind a reverse proxy](#why-doesnt-readarr-work-behind-a-reverse-proxy)
+  - [How do I update Readarr?](#how-do-i-update-readarr)
+  - [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
+    - [Installing a newer version](#installing-a-newer-version)
+      - [Native](#native)
+      - [Docker](#docker)
+  - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
+  - [Can I switch between branches?](#can-i-switch-between-branches)
+  - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
+  - [How do I Backup/Restore my Readarr?](#how-do-i-backuprestore-my-readarr)
+    - [Backing up Readarr](#backing-up-readarr)
+      - [Using built-in backup](#using-built-in-backup)
+      - [Using file system directly](#using-file-system-directly)
+    - [Restoring from Backup](#restoring-from-backup)
+      - [Using zip backup](#using-zip-backup)
+      - [Using file system backup](#using-file-system-backup)
+      - [Restore on Synology NAS](#restore-on-synology-nas)
+  - [How does Readarr handle foreign books or foreign titles?](#how-does-readarr-handle-foreign-books-or-foreign-titles)
+  - [Help, Book Added, But Not Searched](#help-book-added-but-not-searched)
+  - [Root path for authors imported from lists becomes “C:” or other weird paths](#root-path-for-authors-imported-from-lists-becomes-c-or-other-weird-paths)
+  - [Book Imported, But Source File And Torrent Not Deleted](#book-imported-but-source-file-and-torrent-not-deleted)
+  - [I am using a Pi and Raspbian and Readarr will not launch](#i-am-using-a-pi-and-raspbian-and-readarr-will-not-launch)
+  - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
+  - [Can I disable the refresh books task](#can-i-disable-the-refresh-books-task)
+  - [Can I have BOTH an ebook and an audiobook version of the same book?](#can-i-have-both-an-ebook-and-an-audiobook-version-of-the-same-book)
+  - [Do I need to use Calibre?](#do-i-need-to-use-calibre)
+  - [Why can Readarr not see my files on a remote server?](#why-can-readarr-not-see-my-files-on-a-remote-server)
+    - [Readarr runs under the LocalService account by default which doesn't have access to protected remote file shares](#readarr-runs-under-the-localservice-account-by-default-which-doesnt-have-access-to-protected-remote-file-shares)
+    - [You're using a mapped network drive (not a UNC path)](#youre-using-a-mapped-network-drive-not-a-unc-path)
+  - [Help I have locked myself out](#help-i-have-locked-myself-out)
+  - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
+  - [Weird UI Issues](#weird-ui-issues)
+  - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
+  - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
+  - [Calibre is saying "Calibre rejected duplicate book" but it's not](#calibre-is-saying-calibre-rejected-duplicate-book-but-its-not)
+
 ## How does Readarr work?
 
 - Readarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
@@ -119,10 +168,10 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
-|                                                           | `master` (stable) ![Current Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/release/VERSION.json)     | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json) | `nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json) |
-|-----------------------------------------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [hotio](https://hotio.dev/containers/readarr)             | no stable release yet | no beta release yet                                                                                                                                                                                                  | `nightly`                                                                                                                                                                                                                 |
-| [lsio](https://docs.linuxserver.io/images/docker-readarr) | no stable release yet | no beta release yet                                                                                                                                                                                                  | `nightly`                                                                                                                                                                                                                 |
+|                                                           | `master` (stable) ![Current Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json) | `nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/nightly/VERSION.json) |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/readarr)             | no stable release yet                                                                                                                                                                                           | no beta release yet                                                                                                                                                                                                  | `nightly`                                                                                                                                                                                                                 |
+| [lsio](https://docs.linuxserver.io/images/docker-readarr) | no stable release yet                                                                                                                                                                                           | no beta release yet                                                                                                                                                                                                  | `nightly`                                                                                                                                                                                                                 |
 
 ## Can I update Readarr inside my Docker container?
 

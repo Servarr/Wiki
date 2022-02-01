@@ -8,6 +8,42 @@ editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
+  - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
+  - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
+  - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
+  - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
+    - [Installing a newer version](#installing-a-newer-version)
+      - [Native](#native)
+      - [Docker](#docker)
+  - [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
+  - [Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified](#help-my-mac-says-prowlarr-cannot-be-opened-because-the-developer-cannot-be-verified)
+  - [Help, my Mac says Prowlarr.app is damaged and can’t be opened](#help-my-mac-says-prowlarrapp-is-damaged-and-cant-be-opened)
+  - [How do I request a feature for Prowlarr?](#how-do-i-request-a-feature-for-prowlarr)
+  - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
+  - [I use Prowlarr on a Mac and it suddenly stopped working. What happened?](#i-use-prowlarr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
+  - [How do I change from the Windows Service to a Tray App?](#how-do-i-change-from-the-windows-service-to-a-tray-app)
+  - [How do I Backup/Restore Prowlarr?](#how-do-i-backuprestore-prowlarr)
+    - [Backing up Prowlarr](#backing-up-prowlarr)
+      - [Using built-in backup](#using-built-in-backup)
+      - [Using file system directly](#using-file-system-directly)
+    - [Restoring from Backup](#restoring-from-backup)
+      - [Using zip backup](#using-zip-backup)
+      - [Using file system backup](#using-file-system-backup)
+  - [WebUI only Loads at localhost on Windows](#webui-only-loads-at-localhost-on-windows)
+  - [Finding Cookies](#finding-cookies)
+  - [uTorrent is no longer working](#utorrent-is-no-longer-working)
+  - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
+  - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
+  - [Help I have locked myself out](#help-i-have-locked-myself-out)
+  - [Weird UI Issues](#weird-ui-issues)
+  - [VPNs, Prowlarr, and the \*ARRs](#vpns-prowlarr-and-the-arrs)
+  - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
+  - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
+
 ## Can I add any (generic) Torznab or Newznab indexer?
 
 - Yes.
