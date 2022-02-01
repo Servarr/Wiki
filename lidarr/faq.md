@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2022-01-31T18:10:00.916Z
+date: 2022-02-01T17:58:17.517Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -142,6 +142,8 @@ dateCreated: 2021-06-14T14:33:41.344Z
 ## How can I rename my artist folders?
 
 {#rename-folders}
+
+> The same process applies for moving/changing Artist paths as well.{.is-info}
 
 1. Library
 1. Mass Editor
