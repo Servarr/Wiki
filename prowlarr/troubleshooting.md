@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2021-11-29T19:45:03.894Z
+date: 2022-02-01T23:11:05.263Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -200,6 +200,10 @@ This is typically caused by:
 - This is typically due to running an end of life (EOL) version of Sonarr which does not have the v3 API endpoints
 - Prowlarr does not support Sonarr v2
 - Prowlarr only supports Sonarr v3
+
+### 503 HTTP Service Unavailable
+
+- This is typically due to your tracker blocking you via Cloudflare and require FlareSolverr
 
 ## Invalid Torrents
 
