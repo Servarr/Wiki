@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-02-01T17:57:49.102Z
+date: 2022-02-01T17:58:59.364Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -119,7 +119,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 {#rename-folders}
 
-> The same process applies for moving/changing Author paths as well.{.is-info}
+> The same process applies for moving/changing Author paths as well{.is-info}
 
 1. Library
 1. Mass Editor
