@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-01-24T00:04:00.296Z
+date: 2022-02-01T13:13:55.812Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -390,7 +390,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Modifiers
 
 - Negate - the match is inverted, so the condition is satisfied if and only if the non-negated condition is not satisfied
-- Required - only applies to formats with more than one condition of the same type and changes the matching rules for type groups. Enabling this option means that this specific condition must be satisfied for the whole custom format to apply regardless of if another condition of the same type would otherwise satisfy the type group. Note: You only use this if you use a condition more than once.
+- Required - only applies to formats with more than one condition of the same type and changes the matching rules for type groups. Enabling this option means that this specific condition must be satisfied for the whole custom format to apply regardless of if another condition of the same type would otherwise satisfy the type group. Note: You only use this if you use a condition more than once. In other words, if you have a custom format with 2 required release title conditions and 3 non required language conditions, then it MUST meet BOTH of the required release title conditions and it MUST meet ONE OF the 3 language conditions. Similarly, if you have a custom format with 4 release title conditions and none are required, then the custom format will apply if ANY of the conditions are met.
 
 ### Conditions
 
