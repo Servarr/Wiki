@@ -2,11 +2,12 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-01-31T18:09:33.837Z
+date: 2022-02-01T17:57:50.597Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -308,11 +309,16 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 {#rename-folders}
 
+> The same process applies for moving/changing Movie paths as well.{.is-info}
+
 1. Movies
 1. Movie Editor
 1. Select what movies need their folder renamed
 1. Change Root Folder to the same Root Folder that the movies currently exist in
 1. Select "Yes move files"
+
+> If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
+{.is-warning}
 
 ## Movie File and Folder Naming
 
