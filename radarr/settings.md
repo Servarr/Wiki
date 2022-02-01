@@ -376,7 +376,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - Ensure you get the right release every time! Custom formats allows fine control over release prioritization and selection. As simple as a single preferred word or as complex as you want with multiple criteria and regex.
 
-- Custom formats have been reworked significantly in Radarr V3. They are now calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
+- Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
 
 - Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
 
