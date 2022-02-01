@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2021-12-22T15:04:41.085Z
+date: 2022-02-01T15:13:27.939Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -410,7 +410,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 {.is-warning}
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
-- [lscr.io/linuxserver/readarr](https://github.com/lscr.io/linuxserver/docker-readarr/tree/nightly)
+- [lscr.io/linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
 {.links-list}
 
 # Reverse Proxy Configuration
