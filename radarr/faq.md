@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-02-02T15:37:13.707Z
+date: 2022-02-02T15:39:39.651Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -368,13 +368,13 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## I am getting an error: Database disk image is malformed
 
-> \* For Radarr users experiencing this after upgrading to v4. v4 does several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Radarr) the migration will bomb out and fail. This will cause Radarr to fail to start.
+> \* For Radarr users experiencing this after upgrading to v4. v4 does several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Radarr) the migration will bomb out and fail. This will cause Radarr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue. 
 > \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Radarr with the recovered backup file. It should then migrate without issues then.
 {.is-warning}
 
 - This means your SQLite database that stores most of the information for Radarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
-- Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-radarr). However, for users recieving this after upgrading to v4 it is highly unlikely the backup itself will work and youll need to try the other recovery methods.
+- Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-radarr). However, for users recieving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
   - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
@@ -566,9 +566,9 @@ This is expected. Below is how the Torrent Process works.
 
 - Starting with V3 Radarr has switched to .NET and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Radarr:
 
-```none
+```nginx
 proxy_http_version 1.1;
-proxy_set_header Upgrade $http_upgrade; 
+proxy_set_header Upgrade $http_upgrade;
 proxy_set_header Connection $http_connection;
 ```
 
