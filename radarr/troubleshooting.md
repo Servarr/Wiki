@@ -2,11 +2,12 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2022-01-27T04:32:40.482Z
+date: 2022-02-02T18:16:57.716Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -180,11 +181,16 @@ When Trace log level is enabled, additional `radarr.trace.txt` rolling log files
 
 # Recovering from a Failed Update
 
-We do everything we can to prevent issues when upgrading, but if they do occur this will walk you through the steps to take to recover your installation.
+- We do everything we can to prevent issues when upgrading, but if they do occur this will walk you through the steps to take to recover your installation.
+- This section also covers common post-update issues.
 
 ## Determine the issue
 
 - The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/radarr/settings#logging) and [Log Files](/radarr/system#log-files) to find them and increase the log level.
+
+### Database disk image is malformed
+
+- See our [FAQ Entry](/radarr/faq#i-am-getting-an-error-database-disk-image-is-malformed)
 
 ### Migration Issue
 
@@ -198,6 +204,12 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ```
+
+### UI Migration Issues
+
+- If you switch between [unsupported versions/branches](/radarr/faq#can-i-switch-between-branches) then you may experience a migration issue that looks like the below.  The solution is to [go back to the branch or higher version you were on previously](/radarr/faq#how-do-i-update-radarr), or [restore a back-up](/radarr/faq#how-do-i-backuprestore-radarr) for your current version.
+
+![radarr-migration-error-ui.png](/assets/radarr/radarr-migration-error-ui.png)
 
 ### Permission Issue
 
