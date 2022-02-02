@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-02-02T04:10:53.226Z
+date: 2022-02-02T04:12:18.990Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -53,7 +53,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 - Yes.
 
-1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexers)
+1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexer-proxies)
 1. Add a tag to the created flaresovlerr proxy
 1. Add the same tag to your [Indexer](/prowlarr/indexers)
 
