@@ -7,7 +7,35 @@ tags:
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
+# Table of Contents
 
+- [Table of Contents](#table-of-contents)
+- [Menu options](#menu-options)
+- [Indexer Proxies](#indexer-proxies)
+  - [Proxy Settings](#proxy-settings)
+  - [FlareSolverr Proxy Settings](#flaresolverr-proxy-settings)
+  - [HTTP Proxy Settings](#http-proxy-settings)
+  - [Socks4 Proxy Settings](#socks4-proxy-settings)
+  - [Socks5 Proxy Settings](#socks5-proxy-settings)
+- [Applications](#applications)
+  - [Application Settings](#application-settings)
+  - [Testing the Application](#testing-the-application)
+- [Download Clients (Prowlarr Searches)](#download-clients-prowlarr-searches)
+  - [Usenet Client Settings](#usenet-client-settings)
+  - [Torrent Client Settings](#torrent-client-settings)
+  - [Testing the Download Client](#testing-the-download-client)
+- [Notifications](#notifications)
+  - [Connections](#connections)
+  - [Notification Triggers](#notification-triggers)
+- [Tags](#tags)
+- [General](#general)
+  - [Host](#host)
+  - [Security](#security)
+  - [Proxy](#proxy)
+  - [Logging](#logging)
+  - [Analytics](#analytics)
+  - [Updates](#updates)
+  - [Backups](#backups)
 This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
 # Menu options

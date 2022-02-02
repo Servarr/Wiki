@@ -7,6 +7,48 @@ tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
 ---
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Status](#status)
+  - [Health](#health)
+    - [System Warnings](#system-warnings)
+      - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
+      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
+      - [New update is available](#new-update-is-available)
+      - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+      - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
+      - [Branch is for a previous version](#branch-is-for-a-previous-version)
+      - [Could not connect to signalR](#could-not-connect-to-signalr)
+      - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
+      - [Proxy Failed Test](#proxy-failed-test)
+      - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+    - [Download Clients](#download-clients)
+      - [No download client is available](#no-download-client-is-available)
+      - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
+      - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
+      - [Bad Download Client Settings](#bad-download-client-settings)
+    - [Indexers](#indexers)
+      - [Indexers Have No Definition](#indexers-have-no-definition)
+      - [Indexers are Obsolete](#indexers-are-obsolete)
+      - [Obsolete due to Code Changes](#obsolete-due-to-code-changes)
+      - [Obsolete due to Site Removals](#obsolete-due-to-site-removals)
+      - [No indexers are enabled](#no-indexers-are-enabled)
+      - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+      - [Indexer VIP Expiring](#indexer-vip-expiring)
+      - [Indexer VIP Expired](#indexer-vip-expired)
+    - [Applications](#applications)
+      - [Applications are unavailable due to failures](#applications-are-unavailable-due-to-failures)
+  - [Disk Space](#disk-space)
+  - [About](#about)
+  - [More Info](#more-info)
+- [Tasks](#tasks)
+  - [Scheduled](#scheduled)
+  - [Queue](#queue)
+- [Backup](#backup)
+- [Updates](#updates)
+- [Events](#events)
+- [Log Files](#log-files)
 
 # Status
 

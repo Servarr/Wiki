@@ -7,6 +7,30 @@ tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
 ---
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Asking for Help](#asking-for-help)
+- [Logging and Log Files](#logging-and-log-files)
+  - [Standard Logs Location](#standard-logs-location)
+  - [Update Logs Location](#update-logs-location)
+  - [Sharing Logs](#sharing-logs)
+  - [Trace/Debug Logs](#tracedebug-logs)
+  - [Clearing Logs](#clearing-logs)
+- [Multiple Log Files](#multiple-log-files)
+- [Recovering from a Failed Update](#recovering-from-a-failed-update)
+  - [Determine the issue](#determine-the-issue)
+    - [Migration Issue](#migration-issue)
+    - [Permission Issue](#permission-issue)
+  - [Resolving the issue](#resolving-the-issue)
+    - [Permissions Issues](#permissions-issues)
+    - [Manually upgrading](#manually-upgrading)
+- [NGINX errors](#nginx-errors)
+- [Indexer, Application, and Download Client Issues](#indexer-application-and-download-client-issues)
+  - [Connection Timed Out](#connection-timed-out)
+    - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
+    - [503 HTTP Service Unavailable](#503-http-service-unavailable)
+  - [Invalid Torrents](#invalid-torrents)
 
 # Asking for Help
 
@@ -208,5 +232,5 @@ This is typically caused by:
 ## Invalid Torrents
 
 - Try downloading the link via the URL and variables Prowlarr used
-- Try downloading thr torrent proxided via prowlarr (i.e. use the prowlarr link the app that grabbed the file use)
+- Try downloading the torrent proxied via prowlarr (i.e. use the prowlarr link the app that grabbed the file use)
 - If the issue is Prowlarr caused then please file a bug report.

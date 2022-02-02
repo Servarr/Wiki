@@ -7,6 +7,71 @@ tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
 ---
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Asking for Help](#asking-for-help)
+- [Logging and Log Files](#logging-and-log-files)
+  - [Standard Logs Location](#standard-logs-location)
+  - [Update Logs Location](#update-logs-location)
+  - [Sharing Logs](#sharing-logs)
+  - [Trace/Debug Logs](#tracedebug-logs)
+  - [Clearing Logs](#clearing-logs)
+- [Multiple Log Files](#multiple-log-files)
+- [Recovering from a Failed Update](#recovering-from-a-failed-update)
+  - [Determine the issue](#determine-the-issue)
+    - [Migration Issue](#migration-issue)
+    - [Permission Issue](#permission-issue)
+  - [Resolving the issue](#resolving-the-issue)
+    - [Migration Issues](#migration-issues)
+    - [Permissions Issues](#permissions-issues)
+    - [Manually upgrading](#manually-upgrading)
+- [Downloads and Importing](#downloads-and-importing)
+  - [Testing the Download Client](#testing-the-download-client)
+  - [Testing a Download](#testing-a-download)
+  - [Testing an Import](#testing-an-import)
+  - [Common Problems](#common-problems)
+    - [Using qBittorrent v4.4.0](#using-qbittorrent-v440)
+    - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
+    - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
+    - [Can’t see share on Windows](#cant-see-share-on-windows)
+    - [Mapped network drives are not reliable](#mapped-network-drives-are-not-reliable)
+    - [Docker and user, group, ownership, permissions and paths](#docker-and-user-group-ownership-permissions-and-paths)
+    - [Remote Path Mapping](#remote-path-mapping)
+    - [Permissions on the Library Folder](#permissions-on-the-library-folder)
+    - [Permissions on the Downloads Folder](#permissions-on-the-downloads-folder)
+    - [Download folder and library folder not different folders](#download-folder-and-library-folder-not-different-folders)
+    - [Incorrect category](#incorrect-category)
+    - [Packed torrents](#packed-torrents)
+    - [Repeated downloads](#repeated-downloads)
+    - [Usenet download misses import](#usenet-download-misses-import)
+    - [Download client clearing items](#download-client-clearing-items)
+    - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
+    - [Connection Timed Out](#connection-timed-out)
+  - [Problem Not Listed](#problem-not-listed)
+- [Searches Indexers and Trackers](#searches-indexers-and-trackers)
+  - [Turn logging up to trace](#turn-logging-up-to-trace)
+  - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
+  - [Testing a Search](#testing-a-search)
+  - [Common Problems](#common-problems-1)
+    - [Tracker needs RawSearch Caps](#tracker-needs-rawsearch-caps)
+    - [Media is Unmonitored](#media-is-unmonitored)
+    - [Wrong categories](#wrong-categories)
+    - [Query Successful - No Results returned](#query-successful---no-results-returned)
+    - [Wrong results](#wrong-results)
+    - [Missing Results](#missing-results)
+    - [Certificate validation](#certificate-validation)
+    - [Hitting rate limits](#hitting-rate-limits)
+    - [IP Ban](#ip-ban)
+    - [Year doesn't match](#year-doesnt-match)
+    - [Missing year](#missing-year)
+    - [Using the Jackett /all endpoint](#using-the-jackett-all-endpoint)
+    - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
+    - [Problem Not Listed](#problem-not-listed-1)
+  - [Errors](#errors)
+    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
+    - [The request timed out](#the-request-timed-out)
+    - [Problem Not Listed](#problem-not-listed-2)
 
 # Asking for Help
 
@@ -421,7 +486,7 @@ Below are some common problems.
 - This is due to your tracker not supporting normal standardized searches.
 - The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Radarr/Radarr/issues/4502#issuecomment-981143905)
 - Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilities flag.
-- Prowlarr supports the flag, but the capabilites need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
+- Prowlarr supports the flag, but the capabilities need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Media is Unmonitored
 

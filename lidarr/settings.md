@@ -7,6 +7,28 @@ tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
 ---
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Settings](#settings)
+- [Download Clients](#download-clients)
+  - [Overview](#overview)
+  - [Download Client Processes](#download-client-processes)
+  - [Usenet](#usenet)
+  - [BitTorrent](#bittorrent)
+  - [Download Clients](#download-clients-1)
+    - [Supported Download Clients](#supported-download-clients)
+    - [Usenet Client Settings](#usenet-client-settings)
+    - [Torrent Client Settings](#torrent-client-settings)
+    - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
+  - [Completed Download Handling](#completed-download-handling)
+    - [Remove Completed Downloads](#remove-completed-downloads)
+    - [Failed Download Handling](#failed-download-handling)
+  - [Remote Path Mappings](#remote-path-mappings)
+- [Connections](#connections)
+- [Tags](#tags)
+- [General](#general)
+  - [Updates](#updates)
 
 # Settings
 
