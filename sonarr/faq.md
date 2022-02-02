@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-02-01T17:58:53.712Z
+date: 2022-02-02T02:50:55.651Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -406,8 +406,8 @@ Below are some example release names for each show type. The specific differenti
 
 - This is an incomplete list of the known shows and how/why they're problematic:  
 - American Dad {#problemshow-americandad}
-  - American Dad is currently on S18 based on TVDb or S17 based on Scene at the time of this writing. So searching in Sonarr for season 18 will **only** return S17 results because of the XEM map.
-  > If you have an indexer / release groups with S18 episodes, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+  - American Dad is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
+  > If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
 - Arrested Development {#problemshow-arresteddevelopment}
 - Kitchen Nightmares (US) {#problemshow-kitchennightmaresus}
 - Mythbusters {#problemshow-mythbusters}
