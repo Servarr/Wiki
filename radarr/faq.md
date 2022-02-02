@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-02-02T15:39:39.651Z
+date: 2022-02-02T15:39:55.403Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -369,7 +369,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## I am getting an error: Database disk image is malformed
 
 > \* For Radarr users experiencing this after upgrading to v4. v4 does several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Radarr) the migration will bomb out and fail. This will cause Radarr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue. 
-> \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Radarr with the recovered backup file. It should then migrate without issues then.
+> \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Radarr with the recovered backup file. It should then migrate without issues.
 {.is-warning}
 
 - This means your SQLite database that stores most of the information for Radarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
