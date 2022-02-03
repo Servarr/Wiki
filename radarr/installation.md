@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-01-31T05:06:36.383Z
+date: 2022-02-03T15:54:43.846Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -255,7 +255,7 @@ You'll need to install the binaries using the below commands.
 - Ensure you have the required prerequisite packages:
 
 ```shell
-sudo apt install curl mediainfo sqlite3
+sudo apt install curl sqlite3
 ```
 
 > Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
@@ -358,7 +358,7 @@ sudo systemctl stop radarr
 sudo rm -rf /opt/Radarr
 sudo rm -rf /var/lib/radarr
 sudo rm -rf /etc/systemd/system/radarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 To uninstall and keep your application data:
@@ -367,7 +367,7 @@ To uninstall and keep your application data:
 sudo systemctl stop radarr
 sudo rm -rf /opt/Radarr
 sudo rm -rf /etc/systemd/system/radarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 # FreeBSD
