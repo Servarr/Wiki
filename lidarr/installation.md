@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-02-03T15:55:31.280Z
+date: 2022-02-03T16:22:13.201Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -413,7 +413,7 @@ fetch "https://github.com/Lidarr/Lidarr/releases/download/v0.8.1.2135/Lidarr.mas
 - Create a folder in /usr/local/share with the name "Lidar-\<version\>". In our case:
 
 ```bash
-mkir /usr/local/share/Lidarr-0.8.1.2135
+mkdir /usr/local/share/Lidarr-0.8.1.2135
 ```
 
 - Uncompress the Lidarr package inside this new created folder, and change its permissions to the user/group "plex/plex":
