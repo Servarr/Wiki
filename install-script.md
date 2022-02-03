@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:29:55.659Z
+date: 2022-02-03T15:33:04.714Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -150,19 +150,21 @@ fi
 echo "Continue with the installation [Yes/No]?"
 select yn in "Yes" "No"; do
     case $yn in
-    Yes) break;;
+    Yes) break ;;
     No) exit 0 ;;
     esac
 done
 
 # Create User / Group as needed
-if ! getent group "$app_guid" >/dev/null; then
-    groupadd "$app_guid"
-    echo "Group [$app_guid] created"
+if [[ $app != 'prowlarr' ]]; then
+    if ! getent group "$app_guid" >/dev/null; then
+        groupadd "$app_guid"
+        echo "Group [$app_guid] created"
+    fi
 fi
 if ! getent passwd "$app_uid" >/dev/null; then
-    useradd --system --groups "$app_guid" "$app_uid"
-    echo "User [$app_uid] created and added to Group [$app_guid]"
+    useradd --system "$app_uid"
+    echo "User [$app_uid] created"
 else
     echo "User [$app_uid] already exists"
 fi
