@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-01-30T05:00:01.728Z
+date: 2022-02-03T15:54:06.402Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -340,7 +340,7 @@ sudo systemctl stop prowlarr
 sudo rm -rf /opt/Prowlarr
 sudo rm -rf /var/lib/prowlarr
 sudo rm -rf /etc/systemd/system/prowlarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 To uninstall and keep your application data:
@@ -349,7 +349,7 @@ To uninstall and keep your application data:
 sudo systemctl stop prowlarr
 sudo rm -rf /opt/Prowlarr
 sudo rm -rf /etc/systemd/system/prowlarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 # FreeBSD
