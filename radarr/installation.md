@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-02-03T15:54:43.846Z
+date: 2022-02-03T20:08:11.559Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -120,15 +120,29 @@ branch="master"                     # {Update me if needed} branch to install
 datadir="/var/lib/radarr/"          # {Update me if needed} AppData directory to use
 
 # Create User / Group as needed
+if ! getent group "$app_uid" >/dev/null; then
+    groupadd "$app_uid"
+    echo "Group [$app_uid] created"
+fi
+
 if ! getent group "$app_guid" >/dev/null; then
     groupadd "$app_guid"
     echo "Group [$app_guid] created"
 fi
+
 if ! getent passwd "$app_uid" >/dev/null; then
     useradd --system --groups "$app_guid" "$app_uid"
     echo "User [$app_uid] created and added to Group [$app_guid]"
 else
     echo "User [$app_uid] already exists"
+fi
+
+if ! getent group "$app_uid" | grep -qw "${app_uid}"; then
+    echo "User [$app_uid] did not exist in Group [$app_uid]"
+    usermod -a -G "$app_uid" "$app_uid"
+    echo "Added User [$app_uid] to Group [$app_uid]"
+else
+    echo "User [$app_uid] already exists in Group [$app_uid]"
 fi
 
 if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
@@ -138,7 +152,6 @@ if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
 else
     echo "User [$app_uid] already exists in Group [$app_guid]"
 fi
-
 # Stop the App if running
 
 if service --status-all | grep -Fq "$app"; then
