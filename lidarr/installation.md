@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-02-03T16:22:13.201Z
+date: 2022-02-03T16:51:50.980Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -20,7 +20,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Lidarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
+> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml` is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 1. Download the latest version of Lidarr for your architecture linked below.
@@ -88,7 +88,7 @@ nano LidarrInstall.sh
 ```bash
 #!/bin/bash
 ### Description: Lidarr Debian install
-### Originally from the Radarr Community
+### Originally from the Lidarr Community
 
 set -euo pipefail
 
@@ -385,133 +385,96 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 # FreeBSD
 
-{#freebsd}
+The Lidarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.
 
-This instructions work for FreeBSD 12.2 and jails in TrueNAS CORE (although in this case more work is required in order to setup the bind between folders, which is beyond the scope of this instructions)
+Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
 
-- Create a user/group for Lidarr. I prefer to use just one user for all my \*Arr apps, in order to avoid the "Permission War from Hell". As this is generally used in conjunction with Plex, here is my suggestion, but feel free to use "lidarr" or any other if you want. Just make things accordingly:
+[Freshports Lidarr Link](https://www.freshports.org/net-p2p/lidarr/)
 
-```bash
-pw add group plex
-pw add user plex
-```
+## Jail Setup Using TrueNAS GUI
 
-- Install the required packages:
+1. From the main screen select Jails
 
-```bash
-pkg install mono6.8 curl mediainfo sqlite3 chromaprint
-```
+1. Click ADD
 
-- Get the latest & greatest Lidarr version for Linux, but not the "-core" ones. Right now, while I'm writing, the latest version is "0.8.1.2135". Change things accordingly from now on if you got a different version number:
+1. Click Advanced Jail Creation
 
-```bash
+1. Name (any name will work): Lidarr
 
-cd /root
-fetch "https://github.com/Lidarr/Lidarr/releases/download/v0.8.1.2135/Lidarr.master.0.8.1.2135.linux.tar.gz"
-```
+1. Jail Type: Default (Clone Jail)
 
-- Create a folder in /usr/local/share with the name "Lidar-\<version\>". In our case:
+1. Release: 12.2-Release (or newer)
 
-```bash
-mkdir /usr/local/share/Lidarr-0.8.1.2135
-```
+1. Configure Basic Properties to your liking
 
-- Uncompress the Lidarr package inside this new created folder, and change its permissions to the user/group "plex/plex":
+1. Configure Jail Properties to your liking but add
 
-```bash
-tar xvfz /root/Lidarr.master.0.8.1.2135.linux.tar.gz -C /usr/local/share/Lidarr-0.8.1.2135
-chown -R plex:plex /usr/local/share/Lidarr-0.8.1.2135
-```
+- [x] allow_mlock
 
-- Make a simbolic link to this folder:
+- [x] allow_raw_sockets
 
-```bash
-ln -s /usr/local/share/Lidarr-0.8.1.2135/Lidarr /usr/local/share/lidarr
-```
+> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. {.is-info}
 
-> This will make easier to switch back and forth versions if something went wrong with updates...
+1. Configure Network Properties to your liking
+
+1. Configure Custom Properties to your liking
+
+1. Click Save
+
+## Lidarr Installation
+
+Back on the jails list find your newly created jail for `lidarr` and click "Shell"
+
+To install Lidarr
+
+`pkg install lidarr`
+
+Don't close the shell out yet we still have a few more things!
+
+## Configuring Lidarr
+
+Now that we have it installed a few more steps are required.
+
+### Service Setup
+
+Time to enable the service but before we do, a note:
+
+The updater is disabled by default. The `pkg-message` gives instructions on how to enable the updater but keep in mind: this can break things like `pkg check -s` and `pkg remove` for Lidarr when the built-in updater replaces files.
+
+To enable the service:
+
+`sysrc lidarr_enable=TRUE`
+
+If you do not want to use user/group `lidarr` you will need to tell the service file what user/group it should be running under
+
+`sysrc lidarr_user="USER_YOU_WANT"`
+
+`sysrc lidarr_group="GROUP_YOU_WANT"`
+
+`lidarr` stores its data, config, logs, and PID files in `/usr/local/lidarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
+
+`sysrc lidarr_data_dir="DIR_YOU_WANT"`
+
+Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `lidarr` uses AND/OR add `lidarr` to a GID that has write access.
+
+Almost done, let's start the service:
+
+`service lidarr start`
+
+If everything went according to plan then lidarr should be up and running on the IP of the jail (port 8686)!
+
+(You can now safely close the shell)
+
+## Troubleshooting
+
+- The service appears to be running but the UI is not loading or the page is timing out
+  - Double check that `allow_mlock` is enabled in the jail
+  
+- `System.NET.Sockets.SocketException (43): Protocol not supported`
+  - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
+
+> The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
 {.is-info}
-
-- Create a file in "/usr/local/etc/rc.d" with the name "lidarr" and the following content:
-
-```bash
-#!/bin/sh
-#
-# Author: Michiel van Baak <michiel@vanbaak.eu>
-
-# PROVIDE: lidarr
-# REQUIRE: LOGIN
-# KEYWORD: shutdown
-
-# Add the following lines to /etc/rc.conf to enable lidarr:
-# lidarr_enable="YES"
-
-. /etc/rc.subr
-
-name="lidarr"
-rcvar=lidarr_enable
-
-load_rc_config $name
-
-: ${lidarr_enable="NO"}
-: ${lidarr_user:="lidarr"}
-: ${lidarr_data_dir:="/usr/local/lidarr"}
-
-pidfile="${lidarr_data_dir}/lidarr.pid"
-procname="/usr/local/bin/mono"
-command="/usr/sbin/daemon"
-command_args="-f ${procname} /usr/local/share/lidarr/Lidarr.exe --nobrowser --data=${lidarr_data_dir}"
-start_precmd=lidarr_precmd
-
-lidarr_precmd()
-{
-        export XDG_CONFIG_HOME=${lidarr_data_dir}
-
-        if [ ! -d ${lidarr_data_dir} ]; then
-                install -d -o ${lidarr_user} ${lidarr_data_dir}
-        fi
-}
-
-run_rc_command "$1"
-```
-
-- Enable the execution flags for this file:
-
-```bash
-chmod +x /usr/local/etc/rc.d/lidarr
-```
-
-- Now turn on the automatic execution of the Lidarr process and set the user under wich it will be ran:
-
-```bash
-sysrc lidarr_enable=YES
-sysrc lidarr_user=plex
-```
-
-- Create the folder where the config files and data will be kept, and change the user/group of this folder so that the user "plex" can write on it:
-
-```bash
-mkdir /usr/local/lidarr
-chown -R plex:plex /usr/local/lidarr
-```
-
-- Now, execute the following command to run Lidarr:
-
-```bash
-service start lidarr
-```
-
-- And check that it is really running and listening on port 8686:
-
-```bash
-$ service lidarr status
-lidarr is running as pid 94896 # your number will be different...
-
-$ netstat -an | grep -iw listen
-tcp46      0      0 *.8686                 *.*                    LISTEN
-```
-
-Congratulations!
 
 # Reverse Proxy Configuration
 
