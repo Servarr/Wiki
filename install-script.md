@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:22:58.528Z
+date: 2022-02-03T15:29:55.659Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -150,7 +150,7 @@ fi
 echo "Continue with the installation [Yes/No]?"
 select yn in "Yes" "No"; do
     case $yn in
-    Yes) continue ;;
+    Yes) break;;
     No) exit 0 ;;
     esac
 done
