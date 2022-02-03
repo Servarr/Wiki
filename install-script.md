@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:17:21.312Z
+date: 2022-02-03T15:20:37.306Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -74,7 +74,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-PS3="Select the application to install: "
+echo "Select the application to install: \n"
 
 select app in lidarr prowlarr radarr readarr quit; do
 
