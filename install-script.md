@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:12:29.483Z
+date: 2022-02-03T15:17:21.312Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -162,13 +162,14 @@ if ! getent passwd "$app_uid" >/dev/null; then
 else
     echo "User [$app_uid] already exists"
 fi
-
-if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
-    echo "User [$app_uid] did not exist in Group [$app_guid]"
-    usermod -a -G "$app_guid" "$app_uid"
-    echo "Added User [$app_uid] to Group [$app_guid]"
-else
-    echo "User [$app_uid] already exists in Group [$app_guid]"
+if [[ $app != 'prowlarr' ]]; then
+    if ! getent group "$app_guid" | grep -qw "${app_uid}"; then
+        echo "User [$app_uid] did not exist in Group [$app_guid]"
+        usermod -a -G "$app_guid" "$app_uid"
+        echo "Added User [$app_uid] to Group [$app_guid]"
+    else
+        echo "User [$app_uid] already exists in Group [$app_guid]"
+    fi
 fi
 
 # Stop the App if running
