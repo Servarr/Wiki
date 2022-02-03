@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:41:08.158Z
+date: 2022-02-03T15:46:26.848Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -171,10 +171,10 @@ if ! getent group "$app_guid" | grep -qw "$app_uid}"; then
 fi
 
 # Stop the App if running
-
 if service --status-all | grep -Fq "$app"; then
     systemctl stop $app
     systemctl disable $app.service
+    echo "Stopped existing $app"
 fi
 
 # Create Appdata Directory
@@ -183,13 +183,15 @@ fi
 mkdir -p "$datadir"
 chown -R "$app_uid":"$app_guid" "$datadir"
 chmod 775 "$datadir"
-
+echo "Directories created"
 # Download and install the App
 
 # prerequisite packages
 # shellcheck disable=SC2086
-apt install $app_prereq
-
+echo ""
+echo "Installing PreReqs"
+apt update && apt install $app_prereq
+echo ""
 ARCH=$(dpkg --print-architecture)
 # get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
@@ -198,13 +200,15 @@ case "$ARCH" in
 "armhf") DLURL="${dlbase}&arch=arm" ;;
 "arm64") DLURL="${dlbase}&arch=arm64" ;;
 *)
-    echo_error "Arch not supported"
+    echo "Arch not supported"
     exit 1
     ;;
 esac
+echo ""
 echo "Downloading..."
 wget --content-disposition "$DLURL"
 tar -xvzf ${app^}.*.tar.gz
+echo ""
 echo "Installation files downloaded and extracted"
 
 # remove existing installs
