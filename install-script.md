@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:20:37.306Z
+date: 2022-02-03T15:22:58.528Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -74,7 +74,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-echo "Select the application to install: \n"
+echo "Select the application to install: "
 
 select app in lidarr prowlarr radarr readarr quit; do
 
@@ -84,24 +84,28 @@ select app in lidarr prowlarr radarr readarr quit; do
         app_prereq="curl sqlite3 libchromaprint-tools mediainfo" # Required packages
         app_umask="0002"                                         # UMask the Service will run as
         branch="master"                                          # {Update me if needed} branch to install
+        break
         ;;
     prowlarr)
         app_port="9696"           # Default App Port; Modify config.xml after install if needed
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
         branch="develop"          # {Update me if needed} branch to install
+        break
         ;;
     radarr)
         app_port="7878"           # Default App Port; Modify config.xml after install if needed
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
         branch="master"           # {Update me if needed} branch to install
+        break
         ;;
     readarr)
         app_port="8787"           # Default App Port; Modify config.xml after install if needed
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
         branch="nightly"          # {Update me if needed} branch to install
+        break
         ;;
     quit)
         exit 0
