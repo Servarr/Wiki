@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-01T15:13:27.939Z
+date: 2022-02-03T15:55:09.180Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -353,7 +353,7 @@ sudo systemctl stop readarr
 sudo rm -rf /opt/Readarr
 sudo rm -rf /var/lib/readarr
 sudo rm -rf /etc/systemd/system/readarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 To uninstall and keep your application data:
@@ -362,7 +362,7 @@ To uninstall and keep your application data:
 sudo systemctl stop readarr
 sudo rm -rf /opt/Readarr
 sudo rm -rf /etc/systemd/system/readarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 # Docker
