@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2021-12-15T18:26:54.776Z
+date: 2022-02-03T15:55:31.280Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -335,7 +335,7 @@ sudo systemctl stop lidarr
 sudo rm -rf /opt/Lidarr
 sudo rm -rf /var/lib/lidarr
 sudo rm -rf /etc/systemd/system/lidarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 To uninstall and keep your application data:
@@ -344,7 +344,7 @@ To uninstall and keep your application data:
 sudo systemctl stop lidarr
 sudo rm -rf /opt/Lidarr
 sudo rm -rf /etc/systemd/system/lidarr.service
-systemctl -q daemon-reload
+sudo systemctl -q daemon-reload
 ```
 
 # Docker
