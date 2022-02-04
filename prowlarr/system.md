@@ -2,11 +2,12 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2022-01-31T22:56:53.126Z
+date: 2022-02-04T23:12:46.002Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -177,18 +178,18 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 #### Indexers Have No Definition
 
-- TBD
+- Your indexer(s) do not have (an) existing definition (file) this is typically due to your indexer being no longer supported and removed or the Cardigann YML definition no longer is accessible.
 
 #### Indexers are Obsolete
 
-- Your indexer(s)'s definition is obsolete and out of date. This has one of two causes
+- Your indexer(s)'s definition is obsolete and out of date. This has one of two causes which are noted below
 
-#### Obsolete due to Code Changes
+##### Obsolete due to Code Changes
 
 - Due to code changes the indexer(s) noted is/are obsolete as currently configured. Remove and Re-add the indexer to Prowlarr to resolve.
 - This is typically caused by converting APIs or from YML to C# or vice versa.
 
-#### Obsolete due to Site Removals
+##### Obsolete due to Site Removals
 
 - Certain sites may be requested to be removed from Prowlarr or Jackett. These may then be marked as Obsolete.
   - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
