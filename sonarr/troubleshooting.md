@@ -2,11 +2,12 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-01-27T04:32:53.182Z
+date: 2022-02-04T13:35:16.237Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -298,6 +299,12 @@ Don’t forget to check permissions and ownership of the *destination*. It is ea
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
 ### Permissions on the Downloads Folder
+
+You'll see an error similar to
+
+```none
+2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume1/THE VOID/Downloads/Usenet Downloads/complete/Resident.Alien.S02E02.720p.WEB.H264-CAKES.1/a4187f6c3c4445f98e85da52b83c84e8.mkv. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
+```
 
 Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that runs as needs to be able to read and write the downloads folder.
 
