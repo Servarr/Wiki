@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-03T15:46:26.848Z
+date: 2022-02-04T20:49:45.939Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -61,7 +61,7 @@ nano ArrInstall.sh
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 scriptversion="3.0.0"
-scriptdate="2021-02-03"
+scriptdate="2021-02-04"
 
 set -euo pipefail
 
@@ -156,15 +156,16 @@ select yn in "Yes" "No"; do
 done
 
 # Create User / Group as needed
-
-if ! getent group "$app_guid" >/dev/null; then
-    groupadd "$app_guid"
+if [ "$app_guid" != "$app_uid" ]; then
+    if ! getent group "$app_guid" >/dev/null; then
+        groupadd "$app_guid"
+    fi
 fi
 if ! getent passwd "$app_uid" >/dev/null; then
     adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
     echo "Created and added User [$app_uid] to Group [$app_guid]"
 fi
-if ! getent group "$app_guid" | grep -qw "$app_uid}"; then
+if ! getent group "$app_guid" | grep -qw "$app_uid"; then
     echo "User [$app_uid] did not exist in Group [$app_guid]"
     usermod -a -G "$app_guid" "$app_uid"
     echo "Added User [$app_uid] to Group [$app_guid]"
@@ -187,9 +188,9 @@ echo "Directories created"
 # Download and install the App
 
 # prerequisite packages
-# shellcheck disable=SC2086
 echo ""
-echo "Installing PreReqs"
+echo "Installing pre-requisite Packages"
+# shellcheck disable=SC2086
 apt update && apt install $app_prereq
 echo ""
 ARCH=$(dpkg --print-architecture)
