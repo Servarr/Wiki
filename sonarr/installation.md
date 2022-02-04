@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-01-22T20:02:53.616Z
+date: 2022-02-04T22:30:25.660Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -10,41 +10,286 @@ dateCreated: 2021-07-10T16:07:37.425Z
 
 # Windows
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-windows)
+Sonarr is supported natively on Windows. Sonarr can be installed on Windows as Windows Service or system tray application.
+> Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
+{.is-warning}
 
-# Linux
+A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives or \\\server\share UNC paths) without special configuration steps.
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux)
+Additionally the Windows Service runs under the 'Local Service' account, by default this account **does not have permissions to access your user's home directory unless permissions have been assigned manually**. This is particularly relevant when using download clients that are configured to download to your home directory.
 
-## Debian
+It's therefore advisable to install Sonarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-debian)
+> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Sonarr\config.xml` is denied -- or you use mapped network drives. This gives Sonarr the permissions it needs. You should not need to run As Administrator every time.
+{.is-warning}
 
-## Ubuntu
+1. Download the latest version of Sonarr for your architecture linked below.
+1. Run the installer
+1. Browse to <http://localhost:8989> to start using Sonarr
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-ubuntu)
+- [Windows x32 Installer](https://services.sonarr.tv/v1/download/main/latest?version=3&os=windows&installer=true)
+{.links-list}
 
-## ArchLinux
-
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-archlinux)
-
-## Gentoo
-
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-linux-gentoo)
+> It is possible to install Sonarr manually using the [x32 .zip download](https://services.sonarr.tv/v1/download/main/latest?version=3&os=windows). However in that case you must manually deal with dependencies, installation and permissions.
+{.is-info}
 
 # MacOS (OSX)
 
 {#OSX}
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-macos)
+> Sonarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+{.is-warning}
 
-# NAS
+1. Download the [MacOS App](https://services.sonarr.tv/v1/download/main/latest?version=3&os=macos&installer=true)
+1. Open the archive and drag the Sonarr icon to your Application folder.
+1. Browse to <http://localhost:8989> to start using Sonarr
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-nas)
+# Linux
+
+- [Please see the website for instructions](https://sonarr.tv/#downloads-v3-linux)
+
+# FreeBSD
+
+The Sonarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.
+
+Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
+
+[Freshports Sonarr Link](https://www.freshports.org/net-p2p/sonarr/)
+
+## Jail Setup Using TrueNAS GUI
+
+1. From the main screen select Jails
+
+1. Click ADD
+
+1. Click Advanced Jail Creation
+
+1. Name (any name will work): Sonarr
+
+1. Jail Type: Default (Clone Jail)
+
+1. Release: 12.2-Release (or newer)
+
+1. Configure Basic Properties to your liking
+
+1. Configure Jail Properties to your liking but add
+
+- [x] allow_mlock
+
+- [x] allow_raw_sockets
+
+> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. {.is-info}
+
+1. Configure Network Properties to your liking
+
+1. Configure Custom Properties to your liking
+
+1. Click Save
+
+## Sonarr Installation
+
+Back on the jails list find your newly created jail for `sonarr` and click "Shell"
+
+To install Sonarr
+
+`pkg install sonarr`
+
+Don't close the shell out yet we still have a few more things!
+
+## Configuring Sonarr
+
+Now that we have it installed a few more steps are required.
+
+### Service Setup
+
+Time to enable the service but before we do, a note:
+
+The updater is disabled by default. The `pkg-message` gives instructions on how to enable the updater but keep in mind: this can break things like `pkg check -s` and `pkg remove` for Sonarr when the built-in updater replaces files.
+
+To enable the service:
+
+`sysrc sonarr_enable=TRUE`
+
+If you do not want to use user/group `sonarr` you will need to tell the service file what user/group it should be running under
+
+`sysrc sonarr_user="USER_YOU_WANT"`
+
+`sysrc sonarr_group="GROUP_YOU_WANT"`
+
+`sonarr` stores its data, config, logs, and PID files in `/usr/local/sonarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
+
+`sysrc sonarr_data_dir="DIR_YOU_WANT"`
+
+Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `sonarr` uses AND/OR add `sonarr` to a GID that has write access.
+
+Almost done, let's start the service:
+
+`service sonarr start`
+
+If everything went according to plan then sonarr should be up and running on the IP of the jail (port 8989)!
+
+(You can now safely close the shell)
+
+## Troubleshooting
+
+- The service appears to be running but the UI is not loading or the page is timing out
+  - Double check that `allow_mlock` is enabled in the jail
+  
+- `System.NET.Sockets.SocketException (43): Protocol not supported`
+  - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
+
+> The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
+{.is-info}
+
+# Synology
+
+- [The SynoCommunity creates, supports, and maintains a Synology NAS Package](https://synocommunity.com/package/nzbdrone)
+
+> The NAS package is poorly maintained and frequently out of date. If your NAS supports docker it is strongly recommended to run docker instead.  You will not be able to reinstall Sonarr without wiping your database manually due to the NAS package being out of date and not configured to update itself on startup. {.is-info}
+
+- [SynoCommunity also creates, supports, and maintains the required Mono Package](https://synocommunity.com/package/mono)
+
+> Due to a bug introduced by SynoCommunity's poorly maintained Mono package. Sonarr will fail to connect after updating Mono or after a fresh installation.  This can be resolved by following the instructions on [this SynoCommunity Bug Report](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1009758625)
 
 # Docker
 
-[Please see the instructions on the main site.](https://sonarr.tv/#downloads-v3-docker)
+The Sonarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
+
+These instructions provide generic guidance that should apply to any Sonarr Docker image.
+
+## Avoid Common Pitfalls
+
+### Volumes and Paths
+
+There are two common problems with Docker volumes: Paths that differ between the Sonarr and download client container and paths that prevent fast moves and hard links.
+
+The first is a problem because the download client will report a download's path as `/torrents/My.Series.2018/`, but in the Sonarr container that might be at `/downloads/My.Series.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+
+Most Docker images suggest paths like `/tv` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Sonarr container, like /torrents.
+
+The best solution is to use a single, common volume inside the containers, such as /data. Your Series would be in `/data/Series`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Sonarr web UI (Settings › Download Clients).
+
+### Ownership and Permissions
+
+Permissions and ownership of files is one of the most common problems for Sonarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Sonarr will need read and write to the download folders as well as the final folders.
+
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
+{.is-info}
+
+## Install Sonarr
+
+To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+
+- [hotio/sonarr](https://hotio.dev/containers/sonarr/)
+- [lscr.io/linuxserver/sonarr](https://docs.linuxserver.io/images/docker-sonarr)
+{.links-list}
+
+# Reverse Proxy Configuration
+
+Sample config examples for configuring Sonarr to be accessible from the outside world through a reverse proxy.
+
+> These examples assumes the default port of `8989` and that you set a baseurl of `sonarr`. It also assumes your web server i.e nginx and Sonarr running on the same server accessible at `localhost` (127.0.0.1). If not, use the host IP address or hostname instead for the proxy pass directive.
+{.is-info}
+
+## NGINX
+
+Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
+
+```none
+location /sonarr {
+  proxy_pass         http://127.0.0.1:8989/sonarr;
+  proxy_set_header   Host $host;
+  proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header   X-Forwarded-Host $host;
+  proxy_set_header   X-Forwarded-Proto $scheme;
+  proxy_redirect     off;
+
+  proxy_http_version 1.1;
+  proxy_set_header   Upgrade $http_upgrade;
+  proxy_set_header   Connection $http_connection;
+}
+```
+
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
+To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
+
+```nginx
+server {
+  listen 80;
+  server_name _;
+  
+  # more configuration
+  
+  include subfolders-enabled/*.conf
+}
+```
+
+Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Sonarr at `yourdomain.tld/sonarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+
+### Subdomain
+
+Alternatively you can use a subdomain for sonarr. In this case you would visit `sonarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
+> Many free DNS providers do not support this {.is-warning}
+
+By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
+
+> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8989` and Sonarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `sonarr` is chosen (line 5). {.is-info}
+
+```nginx
+server {
+  listen      80;
+  listen [::]:80;
+
+  server_name sonarr.*;
+
+  location / {
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    proxy_set_header   Upgrade $http_upgrade;
+    proxy_set_header   Connection $http_connection;
+
+    proxy_redirect     off;
+    proxy_http_version 1.1;
+    
+    proxy_pass http://127.0.0.1:8989;
+  }
+}
+```
+
+Now restart Nginx and Sonarr should be available at your selected subdomain.
+
+## Apache
+
+This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `sonarr` from the `Location` block and simply use `/` as the location.
+
+Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
+
+```none
+<Location /sonarr>
+  ProxyPreserveHost on
+    ProxyPass http://127.0.0.1:8989/sonarr connectiontimeout=5 timeout=300
+    ProxyPassReverse http://127.0.0.1:8989/sonarr
+</Location>
+```
+
+`ProxyPreserveHost on` prevents apache2 from redirecting to localhost when using a reverse proxy.
+
+Or for making an entire VirtualHost for Sonarr:
+
+```none
+ProxyPass / http://127.0.0.1:8989/sonarr/
+ProxyPassReverse / http://127.0.0.1:8989/sonarr/
+```
+
+If you implement any additional authentication through Apache, you should exclude the following paths:
+
+- `/sonarr/api/`
+- `/sonarr/Content/`
 
 # Multiple Instances
 
@@ -138,7 +383,7 @@ separate locations. {.is-warning}
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Sonarr-4k (Service or Tray App)
 - Open up Sonarr-4k and Navigate within the app to [Settings => General => Host](/sonarr/settings/#host)
-- Change `Port Number` from `8686` to a different port e.g. `7879` so Sonarr and Sonarr4k do not conflict
+- Change `Port Number` from `8989` to a different port e.g. `7879` so Sonarr and Sonarr4k do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)
 
@@ -175,8 +420,8 @@ separate locations. {.is-warning}
 ### https://wiki.servarr.com/sonarr/installation#windows-multi                               ###
 ################################################################################################
 ### Version: 1.1                                                                             ###
-### Updated for Sonarr: 2022-01-08                                                                      ###
-### Original Author:  reloxx13                                                                        ###
+### Updated: 2020-10-22                                                                      ###
+### Author:  reloxx13                                                                        ###
 ################################################################################################
 
 
@@ -199,12 +444,12 @@ $instances = @(
     [pscustomobject]@{   # Instance 1
         Name = 'Sonarr-V3'; # (string) Service or Task name (default: Sonarr-V3)
         IP   = '192.168.178.12'; # (string) Server IP where Sonarr runs (default: 192.168.178.12)
-        Port = '8686'; # (string) Server Port where Sonarr runs (default: 8686)
+        Port = '7873'; # (string) Server Port where Sonarr runs (default: 7873)
     }
     [pscustomobject]@{   # Instance 2
         Name = 'Sonarr-4K'; # (string) Service or Task name (default: Sonarr-4K)
         IP   = '192.168.178.12'; # (string) Server IP where Sonarr runs (default: 192.168.178.12)
-        Port = '8687'; # (string) Server Port where Sonarr runs (default: 8687)
+        Port = '7874'; # (string) Server Port where Sonarr runs (default: 7874)
     }
     # If needed you can add more instances here... by uncommenting out the below lines
     # [pscustomobject]@{   # Instance 3
@@ -301,7 +546,7 @@ User=sonarr
 Group=media
 Type=simple
 
-ExecStart=/usr/bin/mono --debug /opt/Sonarr/Sonarr.exe -nobrowser -data=/var/lib/sonarr4k/
+ExecStart=mono --debug /opt/Sonarr/Sonarr.exe -nobrowser -data=/var/lib/sonarr4k/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
