@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2021-12-15T21:54:45.974Z
+date: 2022-02-04T04:57:23.801Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -29,8 +29,41 @@ dateCreated: 2021-05-25T01:24:18.386Z
     - Overview - Display overview information and the poster (detailed view)
   - Sort - Sort the current view
   - Filter - Filter the current view
-    - Wanted - Movie is missing, monitored, and available
-    - Missing - Movie is missing and monitored
+    - Monitored Only - Titles being monitored for updates.
+    - Unmonitored - Titles NOT being monitored for updates.
+    - Missing - In the database, but missing from the filesystem.
+    - Wanted - In the database, monitored, missing, but should be available.
+    - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
+    - Custom Filters
+      - Monitored (boolean)
+      - Considered Available (boolean)
+      - Minimum Availability (Enum)
+        - Announced
+        - In Cinemas
+        - Released
+      - Title \[contains\] (String)
+      - Release Status (Enum)
+        - TBA
+        - Announced
+        - In Cinemas
+        - Released
+        - Deleted
+      - Studio (Enum Studios)
+      - Collection (Enum Collections)
+      - Quality Profile (Enum QualityProfiles)
+      - Added (static DateTime, relative TimeDelta)
+      - Year (Int)
+      - In Cinemas (static DateTime, relative TimeDelta)
+      - Physical Release (static DateTime, relative TimeDelta)
+      - Digital Release (static DateTime, relative TimeDelta)
+      - Runtime (Int)
+      - Path \[contains\] (String)
+      - Size on Disk (Int)
+      - Genres \[contains\] (Enum Genres)
+      - TMDB Rating (Float)
+      - TMDB Votes (Int)
+      - Certification (Enum Rating (PG-13, R, etc))
+      - Tags \[contain\] (Enum Tags)
 
 # Add New
 
