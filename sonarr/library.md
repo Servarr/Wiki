@@ -2,7 +2,7 @@
 title: Sonarr Library
 description: 
 published: true
-date: 2021-11-24T19:26:03.714Z
+date: 2022-02-04T04:45:51.299Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
@@ -32,8 +32,9 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
 - Quality Profile - The [quality profile](/sonarr/settings#quality-profiles) to use for this series
 - Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](/sonarr/faq#whats-the-different-series-types)
 - Season Folder - Enable or disable creation and usage of Season folders for this series
-- Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series
-- Start search for cutoff unmet episodes - based on your selected monitor settings and only applicable if you have existing files for your episodes in the series folder, search for all existing and monitored episodes in this series that do not meet or exceed your qualtiy profile's cutoff
+- Tags - Used to assign series to release profiles, delay profiles, indexers, or just to organize your series
+- [ ] Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series
+-[ ] Start search for cutoff unmet episodes - based on your selected monitor settings and only applicable if you have existing files for your episodes in the series folder, search for all existing and monitored episodes in this series that do not meet or exceed your qualtiy profile's cutoff
 
 # Library Import
 
