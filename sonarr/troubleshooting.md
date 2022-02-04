@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-02-04T13:37:26.687Z
+date: 2022-02-04T14:12:48.587Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -685,6 +685,8 @@ Using the all endpoint has no advantages (besides reduced management overhead), 
 - indexer specific categories (\>= 100000) cannot be used.
 - slow indexers will slow down the overall result
 - total results are limited to 1000
+- unrelated results
+- missing results
 
 Adding each indexer separately It allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In , each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you’re more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error,  will disable it and now you don’t get any results.
 
