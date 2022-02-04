@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-02-04T22:30:25.660Z
+date: 2022-02-04T22:31:08.760Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -150,6 +150,7 @@ If everything went according to plan then sonarr should be up and running on the
 - [SynoCommunity also creates, supports, and maintains the required Mono Package](https://synocommunity.com/package/mono)
 
 > Due to a bug introduced by SynoCommunity's poorly maintained Mono package. Sonarr will fail to connect after updating Mono or after a fresh installation.  This can be resolved by following the instructions on [this SynoCommunity Bug Report](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1009758625)
+{.is-danger}
 
 # Docker
 
