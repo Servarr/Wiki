@@ -21,7 +21,8 @@ Note that the application's database can be found in the Application Data Direct
 - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 {.links-list}
 
-> There are two options to recover the database.{.is-info}
+> There are two options to recover the database which are listed below.{.is-info}
+
 - [Using DB Browser for SQLite and using the UI](#recovering-a-corrupt-db-ui)
 - [Using Sqlite's `.recover` function](#command-line-db-recovery)
 {.links-list}
