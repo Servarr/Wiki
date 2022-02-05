@@ -8,6 +8,40 @@ editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Windows](#windows)
+- [MacOS (OSX)](#macos-osx)
+- [Linux](#linux)
+  - [Debian / Ubuntu](#debian--ubuntu)
+    - [Easy Install](#easy-install)
+    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
+    - [Uninstall](#uninstall)
+- [Docker](#docker)
+  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
+    - [Volumes and Paths](#volumes-and-paths)
+    - [Calibre Integration](#calibre-integration)
+    - [Ownership and Permissions](#ownership-and-permissions)
+  - [Install Readarr](#install-readarr)
+- [Reverse Proxy Configuration](#reverse-proxy-configuration)
+  - [NGINX](#nginx)
+  - [Apache](#apache)
+- [Multiple Instances](#multiple-instances)
+  - [Windows Multiple Instances](#windows-multiple-instances)
+    - [Service (Windows)](#service-windows)
+      - [Prerequisites (Service)](#prerequisites-service)
+      - [Configuring Readarr Service](#configuring-readarr-service)
+      - [Creating Readarr-audiobooks Service](#creating-readarr-audiobooks-service)
+    - [Tray App (Windows)](#tray-app-windows)
+      - [Prerequisites (Tray App)](#prerequisites-tray-app)
+      - [Creating Readarr-audiobooks Tray App](#creating-readarr-audiobooks-tray-app)
+    - [Configuring Readarr-audiobooks {#windows-multi-config-second}](#configuring-readarr-audiobooks-windows-multi-config-second)
+    - [Dealing with Updates](#dealing-with-updates)
+      - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
+  - [Linux Multiple Instances](#linux-multiple-instances)
+  - [Docker Multiple Instances](#docker-multiple-instances)
+
 # Windows
 
 Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.

@@ -46,7 +46,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - uTorrent {#utorrent}
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
-  - Due to uTorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent.
+  - Due to uTorrent being adware and formerly spyware, it is not reconmended. Most users use qBittorrent.
 - Vuze {#vuze}
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 
@@ -59,7 +59,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Newznab {#newznab}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
-  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilites such as stat tracking.
+  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
 
 ## Torrents
 

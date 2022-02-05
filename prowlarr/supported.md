@@ -67,7 +67,7 @@ Prowlarr can automatically sync indexers with various applications
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
 - uTorrent {#utorrent}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
-  - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use Qbitorrent
+  - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use qBittorrent
 - Vuze {#vuze}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
 

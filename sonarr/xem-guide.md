@@ -8,6 +8,29 @@ editor: markdown
 dateCreated: 2021-10-03T16:48:28.241Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [TheXEM Moderation Guide](#thexem-moderation-guide)
+- [Naming](#naming)
+- [The different Entity types](#the-different-entity-types)
+- [Mapping types](#mapping-types)
+  - [!SxxExx mapping SxxExx mapping](#-sxxexx-mapping)
+  - [!Absolute mapping Absolute mapping](#-absolute-mapping)
+  - [!Full mapping Full mapping](#-full-mapping)
+  - [!Direct mapping Direct mapping](#-direct-mapping)
+- [Examples](#examples)
+  - [Basic Anime mapping](#basic-anime-mapping)
+  - [Complex anime mapping](#complex-anime-mapping)
+  - [Short-format Western cartoon shows](#short-format-western-cartoon-shows)
+  - [Complex individual mapping](#complex-individual-mapping)
+- [Limitations](#limitations)
+  - [Only one scene numbering scheme per series is supported](#only-one-scene-numbering-scheme-per-series-is-supported)
+  - [Only one master entity is supported](#only-one-master-entity-is-supported)
+  - [Deleting the master column or individual seasons in it](#deleting-the-master-column-or-individual-seasons-in-it)
+  - [Some things just simply cannot be mapped](#some-things-just-simply-cannot-be-mapped)
+- [Need help?](#need-help)
+
 # TheXEM Moderation Guide
 
 [TheXEM](https://thexem.info) is a service that allows making connections between other services/entities that use different numbering and naming schemes for TV series releases. Sonarr uses TVDB as a data source for its episode information and sometimes scene and other release groups will use a different naming or numbering scheme. With the proper mapping it is possible to make sure that episode 1 of season 1 by TVDB's reckoning matches episode 5 of season 1 by the scene's reckoning, so that Sonarr is able to download the correct episode despite the numbering being different.

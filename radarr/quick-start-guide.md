@@ -8,6 +8,30 @@ editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Quick Start Setup Guide](#quick-start-setup-guide)
+- [Startup](#startup)
+- [Media Management](#media-management)
+  - [Movie Naming](#movie-naming)
+  - [Importing](#importing)
+  - [File Management](#file-management)
+  - [Root Folders](#root-folders)
+- [Profiles](#profiles)
+- [Quality](#quality)
+- [Indexers](#indexers)
+- [Download Clients](#download-clients)
+  - [{.tabset}](#tabset)
+    - [Usenet](#usenet)
+    - [BitTorrent](#bittorrent)
+- [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
+  - [Import movies](#import-movies)
+  - [Importing Existing Media](#importing-existing-media)
+    - [No match found](#no-match-found)
+    - [Fix faulty folder name after import](#fix-faulty-folder-name-after-import)
+  - [How to add a movie](#how-to-add-a-movie)
+
 # Quick Start Setup Guide
 
 > This page is still in progress and not complete.

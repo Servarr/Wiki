@@ -8,6 +8,8 @@ editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
 ---
 
+# Table of Contents
+
 > This page is a work in progress and requires additional effort.{.is-warning}
 
 This page is the disambiguation page for all "supported" wiki links (i.e. typically more info in the UI).
@@ -61,7 +63,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Newznab {#newznab}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
-  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilites such as stat tracking.
+  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
   - A private usenet indexer.
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)

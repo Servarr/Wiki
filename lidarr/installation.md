@@ -8,6 +8,31 @@ editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Windows](#windows)
+- [MacOS (OSX)](#macos-osx)
+- [Linux](#linux)
+  - [Debian / Ubuntu](#debian--ubuntu)
+    - [Easy Install](#easy-install)
+    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
+    - [Uninstall](#uninstall)
+- [Docker](#docker)
+  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
+    - [Volumes and Paths](#volumes-and-paths)
+    - [Ownership and Permissions](#ownership-and-permissions)
+  - [Install Lidarr](#install-lidarr)
+- [FreeBSD](#freebsd)
+  - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
+  - [Lidarr Installation](#lidarr-installation)
+  - [Configuring Lidarr](#configuring-lidarr)
+    - [Service Setup](#service-setup)
+  - [Troubleshooting](#troubleshooting)
+- [Reverse Proxy Configuration](#reverse-proxy-configuration)
+  - [NGINX](#nginx)
+  - [Apache](#apache)
+
 # Windows
 
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.

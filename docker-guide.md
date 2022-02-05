@@ -8,6 +8,53 @@ editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [The Best Docker Setup](#the-best-docker-setup)
+- [Portainer](#portainer)
+- [Introduction](#introduction)
+- [Multiple users and a shared group](#multiple-users-and-a-shared-group)
+  - [Permissions](#permissions)
+  - [UMASK](#umask)
+  - [PUID and PGID](#puid-and-pgid)
+  - [Example](#example)
+- [Single user and optional shared group](#single-user-and-optional-shared-group)
+- [Ownership and permissions of /config](#ownership-and-permissions-of-config)
+- [Consistent and well planned paths](#consistent-and-well-planned-paths)
+  - [Examples](#examples)
+    - [Torrents](#torrents)
+    - [Usenet](#usenet)
+    - [Media Server](#media-server)
+    - [Sonarr, Radarr and Lidarr](#sonarr-radarr-and-lidarr)
+  - [Issues](#issues)
+- [Running containers using](#running-containers-using)
+  - [Docker Compose](#docker-compose)
+    - [Update all images and containers](#update-all-images-and-containers)
+    - [Update individual image and container](#update-individual-image-and-container)
+  - [docker run](#docker-run)
+  - [Systemd](#systemd)
+- [Helpful commands](#helpful-commands)
+  - [List running containers](#list-running-containers)
+  - [Shell *inside* a container](#shell-inside-a-container)
+  - [Prune Docker](#prune-docker)
+  - [Get docker run command](#get-docker-run-command)
+  - [Get docker-compose](#get-docker-compose)
+  - [Troubleshoot networking](#troubleshoot-networking)
+  - [Recursively chown user and group](#recursively-chown-user-and-group)
+  - [Recursively chmod to 775/664](#recursively-chmod-to-775664)
+  - [Find UID/GID for user](#find-uidgid-for-user)
+  - [Examine files for hard links](#examine-files-for-hard-links)
+- [Interesting Docker Images](#interesting-docker-images)
+- [Custom Docker Network and DNS](#custom-docker-network-and-dns)
+- [Common Problems](#common-problems)
+  - [Correct *outside* paths, incorrect *inside* paths](#correct-outside-paths-incorrect-inside-paths)
+  - [Running Docker containers as root or changing users around](#running-docker-containers-as-root-or-changing-users-around)
+  - [Running Docker containers with umask 000](#running-docker-containers-with-umask-000)
+- [Getting Help](#getting-help)
+  - [Chat Support (Discord)](#chat-support-discord)
+  - [Forum Support (Reddit)](#forum-support-reddit)
+
 # The Best Docker Setup
 
 **TL;DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!

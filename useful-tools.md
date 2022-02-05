@@ -8,6 +8,41 @@ editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Recovering a Corrupt DB](#recovering-a-corrupt-db)
+  - [Recovering a Corrupt DB (UI) (Windows)](#recovering-a-corrupt-db-ui-windows)
+  - [Command Line DB Recovery](#command-line-db-recovery)
+- [Finding Cookies](#finding-cookies)
+  - [Chrome](#chrome)
+  - [Firefox](#firefox)
+- [Clearing Cookies and Local Storage](#clearing-cookies-and-local-storage)
+  - [Chrome](#chrome-1)
+  - [Firefox](#firefox-1)
+  - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
+- [Other Projects and Programs](#other-projects-and-programs)
+  - [AMD](#amd)
+  - [AMVD](#amvd)
+  - [AMTD](#amtd)
+  - [Bazarr](#bazarr)
+  - [Cross-Seed](#cross-seed)
+  - [Filebot](#filebot)
+  - [LunaSea](#lunasea)
+  - [JDupes](#jdupes)
+  - [NZB360](#nzb360)
+  - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
+  - [Ombi](#ombi)
+  - [Overseerr](#overseerr)
+  - [Petio](#petio)
+  - [Plex Meta Manager](#plex-meta-manager)
+  - [qBit Management](#qbit-management)
+  - [Radarr & Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
+  - [Tautulli](#tautulli)
+  - [Tdarr](#tdarr)
+  - [Unpackerr](#unpackerr)
+- [Scripts & Things](#scripts--things)
+- [Twitter Connect](#twitter-connect)
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
 # Recovering a Corrupt DB

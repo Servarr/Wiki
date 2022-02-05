@@ -8,6 +8,72 @@ editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Cardigann Versions](#cardigann-versions)
+  - [Supported Versions](#supported-versions)
+    - [V2](#v2)
+    - [V3](#v3)
+  - [Latest Version](#latest-version)
+    - [V4](#v4)
+  - [Depreciated Versions](#depreciated-versions)
+    - [V1](#v1)
+- [General](#general)
+- [Format](#format)
+  - [Header](#header)
+  - [Caps](#caps)
+  - [Categories](#categories)
+  - [Settings](#settings)
+  - [Login](#login)
+    - [Simple POST Login](#simple-post-login)
+    - [Complex POST Login](#complex-post-login)
+    - [COOKIE Login](#cookie-login)
+  - [Search](#search)
+    - [Search HTML](#search-html)
+    - [Providing the category field with a default value](#providing-the-category-field-with-a-default-value)
+    - [Search JSON and XML](#search-json-and-xml)
+  - [Download](#download)
+    - [Download Block Infohash Example](#download-block-infohash-example)
+    - [Download Block "before" Pathselector Example](#download-block-before-pathselector-example)
+- [Template Engine](#template-engine)
+  - [re_replace](#re_replace)
+  - [if ... else ... end](#if--else--end)
+  - [if or/and ... else ... end](#if-orand--else--end)
+  - [if eq/ne ... else ... end](#if-eqne--else--end)
+  - [join](#join)
+  - [range](#range)
+- [Variable Substitution](#variable-substitution)
+  - [Variables](#variables)
+  - [Config Variables](#config-variables)
+  - [Special Variables](#special-variables)
+  - [Search Query Variables](#search-query-variables)
+  - [Download Variables](#download-variables)
+- [Filters](#filters)
+  - [querystring](#querystring)
+  - [prepend](#prepend)
+  - [append](#append)
+  - [tolower](#tolower)
+  - [toupper](#toupper)
+  - [replace](#replace)
+  - [split](#split)
+  - [trim](#trim)
+  - [regexp](#regexp)
+  - [re_replace](#re_replace-1)
+  - [dateparse](#dateparse)
+  - [timeparse](#timeparse)
+  - [timeago](#timeago)
+  - [reltime](#reltime)
+  - [fuzzytime](#fuzzytime)
+  - [urldecode](#urldecode)
+  - [urlencode](#urlencode)
+  - [validfilename](#validfilename)
+  - [diacritics](#diacritics)
+  - [jsonjoinarray](#jsonjoinarray)
+  - [hexdump](#hexdump)
+  - [strdump](#strdump)
+- [Credit](#credit)
+
 # Cardigann Versions
 
 - Below are the Prowlarr Cardigann  Versions
@@ -35,22 +101,14 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 ### V4
 
-> V4.0 is currenntly in [DRAFT](https://github.com/Prowlarr/Prowlarr/pull/644) form
+> V4.0 is currently in [DRAFT](https://github.com/Prowlarr/Prowlarr/pull/828) form
 {.is-warning}
 
-- Prowlarr Cardigann v4 includes support for Newznab Indexers (Usenet)
-- Better SearchBlock and DownloadBlock header support and use
-- Cardigann v4 additionally includes the following changes:
-  - Search Caps and Release Response
+- Cardigann v4 includes the following changes:
   - TMDBId
   - Genre
   - TraktID
   - CategoryDescr
-  - Protocol
-  - ignoreblankinputs (defined as SupportsEmptyInputs)
-  - allowdownloadredirect (defined as SupportsRedirect)
-  - SearchBlock Error
-  - DownloadBlock Error
 
 ## Depreciated Versions
 

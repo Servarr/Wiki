@@ -8,6 +8,18 @@ editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Indexers](#indexers)
+- [Apps](#apps)
+  - [Application Settings](#application-settings)
+- [Download Clients](#download-clients)
+  - [Usenet Client Settings](#usenet-client-settings)
+  - [Torrent Client Settings](#torrent-client-settings)
+  - [Testing the Download Client](#testing-the-download-client)
+- [Setup Complete](#setup-complete)
+
 > This page is still in progress and not complete.
 
 > For a more detailed breakdown of all the settings, check [Prowlarr =>Settings](/prowlarr/settings)

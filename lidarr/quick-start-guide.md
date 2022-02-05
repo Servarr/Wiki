@@ -8,6 +8,37 @@ editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Quick Start Setup Guide](#quick-start-setup-guide)
+- [Caveats](#caveats)
+- [Concept](#concept)
+  - [Releases (Metadata)](#releases-metadata)
+  - [Artist (Metadata)](#artist-metadata)
+- [First Start](#first-start)
+- [Settings](#settings)
+  - [Media Management](#media-management)
+  - [Profiles](#profiles)
+  - [Quality](#quality)
+  - [Indexers](#indexers)
+  - [Download Clients](#download-clients)
+    - [{.tabset}](#tabset)
+      - [Usenet](#usenet)
+      - [BitTorrent](#bittorrent)
+- [First Artist](#first-artist)
+- [First Download/Import](#first-downloadimport)
+- [Quick Start - Advanced](#quick-start---advanced)
+  - [Lidarr Use Case](#lidarr-use-case)
+    - [Loose Files](#loose-files)
+    - [Specialty Libraries](#specialty-libraries)
+  - [Importing existing library or files](#importing-existing-library-or-files)
+    - [Preparing your existing files](#preparing-your-existing-files)
+      - [Folder Structure](#folder-structure)
+      - [Tagging](#tagging)
+    - [Pre-Import Considerations](#pre-import-considerations)
+    - [Begin Import](#begin-import)
+
 # Quick Start Setup Guide
 
 > This page is still in progress and not complete.
@@ -254,7 +285,7 @@ Finally the download will be imported to your `Root Folder`. If everything is su
 
 ![lidarr_qs_dylansucess.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylansuccess.png)
 
-You can find your downloaded files in your `Root Folder` and are able to consume utlizing your media player of choice.
+You can find your downloaded files in your `Root Folder` and are able to consume utilizing your media player of choice.
 
 ![lidarr_qs_dylanfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
 
@@ -267,7 +298,7 @@ This advanced section is intended for setups that may have special consideration
 
 ## Lidarr Use Case
 
-As stated ealier in the Concept section. Lidarr should not be used if your intended use does not match Lidarr's management system of `Releases`. Lidarr will NOT work with the following use cases:
+As stated earlier in the Concept section. Lidarr should not be used if your intended use does not match Lidarr's management system of `Releases`. Lidarr will NOT work with the following use cases:
 
 - Loose collection of files - Files from multiple artists (Not Compilations) or multiple `Releases`
 - Specialty based music libraries: Classical, Singles, Electronic
@@ -276,9 +307,9 @@ As stated ealier in the Concept section. Lidarr should not be used if your inten
 
 Low to no curation of loose files will not work with Lidarr. Best to not attempt utilizing these files with Lidarr.
 
-### Speciality Libraries
+### Specialty Libraries
 
-Speciality libraries create unique issues for any management system. These situations may work with Lidarr but it may require extensive work on your part, pretty much foregoing the automations built in. For example:
+Specialty libraries create unique issues for any management system. These situations may work with Lidarr but it may require extensive work on your part, pretty much foregoing the automations built in. For example:
 
 - **Classical Music** - Usually has extensive tagging requirements or desires. `Releases` metadata will likely not exist or be incorrect.
 - **Singles** - Singles may not be actual `Releases`. 3rd party data services will return no metadata. They will not be automated and Lidarr will not be able to apply management.
@@ -292,9 +323,9 @@ Do NOT add a `Root Folder` with existing files until you have reviewed this sect
 
 Lidarr utilizes an automated system of adding `Release Artists` and `Releases` located in your `Root Folder`.
 
-If Lidarr's use case matches and you do not have unique or speciality libraries. You can proceed with importing your existing library.
+If Lidarr's use case matches and you do not have unique or specialty libraries. You can proceed with importing your existing library.
 
-It is imperative that your existing library files are structured and follow Lidarrs management system of `Releases`. This means the following will not work:
+It is imperative that your existing library files are structured and follow Lidarr's management system of `Releases`. This means the following will not work:
 
 - Improper folder structure - Files located in a singular folder - Refer to Preparing>Folder Structure section
 - Improper or extremely complicated tagging - Refer to Preparing>Tagging section
@@ -333,8 +364,8 @@ Once files are properly tagged and named the following items should be verified 
 - **System Architecture** - Recommended x64 / 64 Bit - Importing large libraries requires the system to access large amounts of RAM and compute more efficiently. x86 / 32 Bit is supported but will not be as efficient and take substantially more time.
 - **System Memory Requirement (RAM)** - Minimum 4GB, Recommended 8GB - The import process is memory intensive and having Lidarr importing and a browser open will result in substantial amounts of RAM usage.
 - **`Release` Disc/Track Limits** - Releases that have substantial amounts of tracks or discs should be removed from the import process. They can be manually imported utilizing the built in procedures. There is no exact limit but to be safe releases larger then 25 discs or 250 tracks should be removed.
-- **`Release Artist` with many `Releases`** - Lidarrs automated process compares releases to your files. Though not likely to fail, having these files go through the automated procedure will result in a substantial increase in import time. There are singular artists with 1000's of releases.
-- **Time** - The automated import procedure takes time. A resonable estimation would be 1 hour for 500 properly tagged `Releases`. This is highly variable based on your storage, internet speed and system performance.
+- **`Release Artist` with many `Releases`** - Lidarr's automated process compares releases to your files. Though not likely to fail, having these files go through the automated procedure will result in a substantial increase in import time. There are singular artists with 1000's of releases.
+- **Time** - The automated import procedure takes time. A reasonable estimation would be 1 hour for 500 properly tagged `Releases`. This is highly variable based on your storage, internet speed and system performance.
 
 ### Begin Import
 

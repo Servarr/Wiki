@@ -8,6 +8,46 @@ editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Windows](#windows)
+- [MacOS (OSX)](#macos-osx)
+- [Linux](#linux)
+  - [Debian / Ubuntu](#debian--ubuntu)
+    - [Easy Install](#easy-install)
+    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
+    - [Uninstall](#uninstall)
+- [FreeBSD](#freebsd)
+  - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
+  - [Radarr Installation](#radarr-installation)
+  - [Configuring Radarr](#configuring-radarr)
+    - [Service Setup](#service-setup)
+  - [Troubleshooting](#troubleshooting)
+- [Docker](#docker)
+  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
+    - [Volumes and Paths](#volumes-and-paths)
+    - [Ownership and Permissions](#ownership-and-permissions)
+  - [Install Radarr](#install-radarr)
+- [Reverse Proxy Configuration](#reverse-proxy-configuration)
+  - [NGINX](#nginx)
+    - [Subdomain](#subdomain)
+  - [Apache](#apache)
+- [Multiple Instances](#multiple-instances)
+  - [Windows Multiple Instances](#windows-multiple-instances)
+    - [Service (Windows)](#service-windows)
+      - [Prerequisites (Service)](#prerequisites-service)
+      - [Configuring Radarr Service](#configuring-radarr-service)
+      - [Creating Radarr-4K Service](#creating-radarr-4k-service)
+    - [Tray App (Windows)](#tray-app-windows)
+      - [Prerequisites (Tray App)](#prerequisites-tray-app)
+      - [Creating Radarr-4K Tray App](#creating-radarr-4k-tray-app)
+    - [Configuring Radarr-4k {#windows-multi-config-second}](#configuring-radarr-4k-windows-multi-config-second)
+    - [Dealing with Updates](#dealing-with-updates)
+      - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
+  - [Linux Multiple Instances](#linux-multiple-instances)
+  - [Docker Multiple Instances](#docker-multiple-instances)
+
 # Windows
 
 Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.

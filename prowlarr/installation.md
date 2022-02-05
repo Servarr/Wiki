@@ -8,6 +8,28 @@ editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Windows](#windows)
+- [MacOS (OSX)](#macos-osx)
+- [Linux](#linux)
+  - [Debian / Ubuntu](#debian--ubuntu)
+    - [Easy Install](#easy-install)
+    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
+    - [Uninstall](#uninstall)
+- [FreeBSD](#freebsd)
+  - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
+  - [Prowlarr Installation](#prowlarr-installation)
+  - [Configuring Prowlarr](#configuring-prowlarr)
+    - [Service Setup](#service-setup)
+  - [Troubleshooting](#troubleshooting)
+- [Docker](#docker)
+  - [Install Prowlarr](#install-prowlarr)
+- [Reverse Proxy Configuration](#reverse-proxy-configuration)
+  - [NGINX](#nginx)
+  - [Apache](#apache)
+
 # Windows
 
 Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.

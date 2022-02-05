@@ -8,6 +8,24 @@ editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
 ---
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Quick Start Setup Guide](#quick-start-setup-guide)
+- [Startup](#startup)
+- [Media Management](#media-management)
+- [Book Naming](#book-naming)
+- [Folders](#folders)
+- [Importing](#importing)
+- [File Management](#file-management)
+- [Root Folders and Calibre Integration](#root-folders-and-calibre-integration)
+  - [Calibre Content Server (Optional)](#calibre-content-server-optional)
+  - [Calibre Integration](#calibre-integration)
+- [Download Clients](#download-clients)
+  - [{.tabset}](#tabset)
+    - [Usenet](#usenet)
+    - [BitTorrent](#bittorrent)
+
 # Quick Start Setup Guide
 
 > This page is still in progress and not complete.
