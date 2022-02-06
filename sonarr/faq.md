@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-02-06T03:45:01.141Z
+date: 2022-02-06T17:07:08.823Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -505,6 +505,11 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
 - Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](/sonarr/appdata-directory) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
+
+## Sonarr on Synology Stopped Working (SSL)
+
+- This is likely due to Mono's certs needing to be synced.
+- [See this sectiom for details](/sonarr/installation#synology-mono-ssl-errors)
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
