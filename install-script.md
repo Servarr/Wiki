@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-06T03:48:07.251Z
+date: 2022-02-06T06:46:00.701Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -50,7 +50,7 @@ nano ArrInstall.sh
 ### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
 ### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all \*Arrs)
 ### Version v3.0.1 2022-02-05 - aeramor (typo fix line 179: 'chown "$app_uid":"$app_uid" -R "$bindir"' -> 'chown "$app_uid":"$app_guid" -R "$bindir"')
-### Version v3.0.1a 2022-02-05 - Bakerboy448 (revert line 179 - not s typo; the group should not own the application binaries)
+### Version v3.0.3 2022-02-06 - Bakerboy448 fixup ownership
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -62,8 +62,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.2a"
-scriptdate="2021-02-05"
+scriptversion="3.0.3"
+scriptdate="2021-02-06"
 
 set -euo pipefail
 
@@ -184,7 +184,7 @@ fi
 
 # AppData
 mkdir -p "$datadir"
-chown -R "$app_uid":"$app_uid" "$datadir"
+chown -R "$app_uid":"$app_guid" "$datadir"
 chmod 775 "$datadir"
 echo "Directories created"
 # Download and install the App
@@ -220,11 +220,12 @@ echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
 mv "${app^}" $installdir
-chown "$app_uid":"$app_uid" -R "$bindir"
+chown "$app_uid":"$app_guid" -R "$bindir"
+chmod 775 "$bindir"
 rm -rf "${app^}.*.tar.gz"
 # Ensure we check for an update in case user installs older version or different branch
 touch "$datadir"/update_required
-chown "$app_uid":"$app_uid" "$datadir"/update_required
+chown "$app_uid":"$app_guid" "$datadir"/update_required
 echo "App Installed"
 # Configure Autostart
 
