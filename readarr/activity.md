@@ -2,7 +2,7 @@
 title: Readarr Activity
 description: 
 published: true
-date: 2021-11-24T19:24:42.439Z
+date: 2022-02-06T09:05:37.496Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T16:14:58.862Z
@@ -10,31 +10,40 @@ dateCreated: 2021-05-25T16:14:58.862Z
 
 # Activity
 
-This set of screens show current and past activity performed by Readarr.
+The activity tab is where you can see past and present activities that \*Arr  has done. Including imports, deletes, upgrades, grabs, renames, and failures.
 
 # Queue
 
-When something is actively downloading and not yet imported into Readarr, it will show in the Queue page.
+When something is actively downloading and not yet imported into \*Arr, it will show in the Queue page.
 
-![queue1.png](/assets/readarr/queue1.png)
+The queue shows all items the application can recognize that is in the specified download client's category (Settings => Download Client => Category). To view all releases Options => Show Unknown. The queue is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
-In the image above, the ebook is downloading, and not yet complete. The arrow is black, which means it has no current issues, and the progress bar is still filling in. You can cancel the download by clicking on the `X` on the right.
+> For Usenet Clients, \*Arr will only look 60 items deep in the queue for potential imports! It is important not to exceed this, or you will need to clean up with manual imports when your system gets overloaded and starts missing items!.
+> Remove Completed Downloads should be enabled for your Download Client as well. {.is-warning}
 
-> For Usenet indexers, Readarr will only look 60 items deep in the queue for potential imports! It is important not to exceed this, or you will need to clean up with manual imports when your system gets overloaded and starts missing items!
+## Queue Action Icons
 
-![queue2.png](/assets/readarr/queue2.png)
+- X - Remove Item from Queue
+  - Remove Release From Download Client - Remove Release from Download Client. Mandatory for unmatched release items
+  - Blocklist Release - Add Release to Blocklist
+- Human Icon - Manual Import Release
+- Grab Icon - Send Release to Download Client
 
-If an item needs a human to review it and make a decision, it will be orange on the left icon. Hovering over it will show you the specific error. If you think you can manually import it anyway, click the "person" icon on the right. In the example above, the book is correct, but the matching percentage is too low to be sure, so Readarr needs your help to decide if it's really the book it thinks it is. Since it is, I will click on the person icon.
+## Queue Statuses
 
-![queue3.png](/assets/readarr/queue3.png)
+> Note the below is incomplete {.is-warning}
 
-Make sure the author and book match, and click `Import`.
+| Icon       | Status                   | Description                                                                                     | Resolution Steps                                          |
+|------------|--------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                       |
+| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](/readarr/troubleshooting) |
+| purple     | Download Importing       | Download is Importing                                                                           | N/A                                                       |
+|            |                          |                                                                                                 |                                                           |
+|            |                          |                                                                                                 |                                                           |
 
 # History
 
-The History page shows you everything that Readarr has done with your media. The default sorting is from newest to oldest.
-
-![history1.png](/assets/readarr/history1.png)
+The history tab shows all things that have left the queue by way of the task being finished/ended. This includes imports, failures, grabs, deletes, and upgrades.
 
 The left icon is the action that was taken (the list of possible actions is shown below). You can filter these by clicking on the Filter icon on the right side. You can also show more columns by clicking on Options.
 
@@ -57,3 +66,9 @@ Clicking on the `i` icon on the far right shows you more details about the block
 ![blocklist2.png](/assets/readarr/blocklist2.png)
 
 Clicking on the `x` on the far right removes the item from the blocklist, so that you can potentially grab it again, if it was added in error.
+
+## Common Blocklist Reasons
+
+- User Marked Download as Failed Manually
+- User Selected "Add to Blocklist" when removing from queue
+- Usenet Download Client reported release download failure
