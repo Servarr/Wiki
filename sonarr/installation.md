@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-02-06T17:04:38.749Z
+date: 2022-02-06T17:09:01.946Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -209,11 +209,11 @@ If everything went according to plan then sonarr should be up and running on the
 
 - [The SynoCommunity creates, supports,and maintains a Synology NAS Package](https://synocommunity.com/package/nzbdrone)
 
-> The NAS package is poorly maintained and frequently out of date. If your NAS supports docker it is strongly recommended to run docker instead.  You will not be able to reinstall Sonarr without wiping your database manually due to the NAS package being out of date and not configured to update itself on startup. {.is-info}
+> The NAS package is poorly maintained and frequently out of date. If your NAS supports docker it is strongly recommended [to run docker](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/) instead. You will not be able to reinstall Sonarr without wiping your database manually due to the NAS package being out of date and not configured to update itself on startup. {.is-info}
 
 - [SynoCommunity also creates, supports, and maintains the required Mono Package](https://synocommunity.com/package/mono)
 
-## Mono SSL Errors
+## Synology Mono SSL Errors
 
 > Due to a bug introduced by SynoCommunity's poorly maintained Mono package. Sonarr will fail to connect after updating Mono or after a fresh installation.  This can be resolved by following the instructions on [this SynoCommunity Bug Report](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1009758625)
 {.is-danger}
