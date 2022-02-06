@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2022-01-07T19:44:45.269Z
+date: 2022-02-06T22:10:16.017Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -165,6 +165,9 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
     - List: `trakt-list-name`
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
+
+> Trakt lists should contain shows, not individual episodes. Sonarr will only match and add shows.
+{.is-info}
 
 # Metadata
 
