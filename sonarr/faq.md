@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-02-06T03:44:22.491Z
+date: 2022-02-06T03:45:01.141Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -646,7 +646,8 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Jackett shows more results than Sonarr when manually searching
 
-This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
+- Check your configured categories for your tracker in Sonarr 
+- This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
 
 ## Finding Cookies
 
