@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-04T20:49:45.939Z
+date: 2022-02-06T03:48:07.251Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -49,6 +49,7 @@ nano ArrInstall.sh
 ### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
 ### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
 ### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all \*Arrs)
+### Version v3.0.1 2022-02-05 - aeramor (typo fix line 179: 'chown "$app_uid":"$app_uid" -R "$bindir"' -> 'chown "$app_uid":"$app_guid" -R "$bindir"') 
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -218,7 +219,7 @@ echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
 mv "${app^}" $installdir
-chown "$app_uid":"$app_uid" -R "$bindir"
+chown "$app_uid":"$app_guid" -R "$bindir"
 rm -rf "${app^}.*.tar.gz"
 # Ensure we check for an update in case user installs older version or different branch
 touch "$datadir"/update_required
