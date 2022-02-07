@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-02-06T17:09:01.946Z
+date: 2022-02-07T20:49:30.334Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -275,7 +275,7 @@ Sample config examples for configuring Sonarr to be accessible from the outside 
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-```none
+```nginx
 location /sonarr {
   proxy_pass         http://127.0.0.1:8989/sonarr;
   proxy_set_header   Host $host;
