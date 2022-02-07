@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-02-03T16:51:50.980Z
+date: 2022-02-07T20:50:07.691Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -347,7 +347,7 @@ Sample config examples for configuring Lidarr to be accessible through a reverse
 
 ## NGINX
 
-```none
+```nginx
 location /lidarr {
   proxy_pass        http://127.0.0.1:8686/lidarr;
   proxy_set_header Host $host;
