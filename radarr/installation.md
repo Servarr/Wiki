@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-02-03T20:08:11.559Z
+date: 2022-02-07T20:48:02.351Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -368,7 +368,7 @@ Sample config examples for configuring Radarr to be accessible from the outside 
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-```none
+```nginx
 location /radarr {
   proxy_pass         http://127.0.0.1:7878/radarr;
   proxy_set_header   Host $host;
