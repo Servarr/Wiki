@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-02-05T16:54:52.713Z
+date: 2022-02-07T03:51:57.227Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -43,6 +43,10 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [VPNs, Prowlarr, and the \*ARRs](#vpns-prowlarr-and-the-arrs)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
+
+## Category Not Available or Missing
+
+- Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones. Review your specific Indexer's category mapping definition for details.
 
 ## Can I add any (generic) Torznab or Newznab indexer?
 
