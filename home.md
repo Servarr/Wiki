@@ -18,7 +18,7 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 # Wiki
 
 - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Wiki Repository *Github*](https://github.com/Servarr/Wiki)
-- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unoffical Community Script*](/install-script)
+- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script*](/install-script)
 {.links-list}
 
 # Applications

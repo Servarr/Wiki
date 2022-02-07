@@ -33,13 +33,13 @@ The queue shows all items the application can recognize that is in the specified
 
 > Note the below is incomplete {.is-warning}
 
-| Icon       | Status                   | Description                                                                                     | Resolution Steps                                          |
-|------------|--------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                       |
+| Icon       | Status                   | Description                                                                                     | Resolution Steps                                         |
+| ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                      |
 | yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](/lidarr/troubleshooting) |
-| purple     | Download Importing       | Download is Importing                                                                           | N/A                                                       |
-|            |                          |                                                                                                 |                                                           |
-|            |                          |                                                                                                 |                                                           |
+| purple     | Download Importing       | Download is Importing                                                                           | N/A                                                      |
+|            |                          |                                                                                                 |                                                          |
+|            |                          |                                                                                                 |                                                          |
 
 # History
 

@@ -21,6 +21,7 @@ dateCreated: 2021-07-10T16:07:37.425Z
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
 - [Synology](#synology)
+  - [Synology Mono SSL Errors](#synology-mono-ssl-errors)
 - [Docker](#docker)
   - [Avoid Common Pitfalls](#avoid-common-pitfalls)
     - [Volumes and Paths](#volumes-and-paths)
@@ -218,13 +219,13 @@ If everything went according to plan then sonarr should be up and running on the
 > Due to a bug introduced by SynoCommunity's poorly maintained Mono package. Sonarr will fail to connect after updating Mono or after a fresh installation.  This can be resolved by following the instructions on [this SynoCommunity Bug Report](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1009758625)
 {.is-danger}
 
-1. Within DSM, enable SSH service in _Control Panel > Terminal & SNMP_ and click apply
+1. Within DSM, enable SSH service in *Control Panel => Terminal & SNMP* and click apply
 1. Using [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) (MacOS) connect to the NAS using `ssh -l [admin username] [NAS address]` or using [Putty](https://www.putty.org/) (Windows) connect to the network address of your NAS
 1. Enter the required admin password and press enter
 1. Enter the following command: `sudo /var/packages/mono/target/bin/cert-sync /etc/ssl/certs/ca-certificates.crt` and press enter
-1. Enter the required admin password and press enter. When complete you should see the line _Import process completed_
+1. Enter the required admin password and press enter. When complete you should see the line *Import process completed*
 1. Disconnect the SSH session by typing `exit` and press enter
-1. Within DSM, disable the SSH service in _Control Panel > Terminal & SNMP_ and click apply
+1. Within DSM, disable the SSH service in *Control Panel => Terminal & SNMP* and click apply
 1. Once complete the errors in Sonarr should disappear on their own in a few minutes.
 
 # Docker

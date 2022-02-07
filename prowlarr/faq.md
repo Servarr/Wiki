@@ -11,6 +11,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
+  - [Category Not Available or Missing](#category-not-available-or-missing)
   - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
   - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
   - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)

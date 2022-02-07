@@ -61,6 +61,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [uTorrent is no longer working](#utorrent-is-no-longer-working)
   - [Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?](#does-sonarr-require-a-sabnzbd-post-processing-script-to-import-downloaded-episodes)
   - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
+  - [Sonarr on Synology Stopped Working (SSL)](#sonarr-on-synology-stopped-working-ssl)
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
@@ -509,7 +510,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 ## Sonarr on Synology Stopped Working (SSL)
 
 - This is likely due to Mono's certs needing to be synced.
-- [See this sectiom for details](/sonarr/installation#synology-mono-ssl-errors)
+- [See this section for details](/sonarr/installation#synology-mono-ssl-errors)
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -651,7 +652,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Jackett shows more results than Sonarr when manually searching
 
-- Check your configured categories for your tracker in Sonarr 
+- Check your configured categories for your tracker in Sonarr
 - This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
 
 ## Finding Cookies
