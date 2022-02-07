@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-03T15:55:09.180Z
+date: 2022-02-07T20:49:50.898Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -292,7 +292,7 @@ Sample config examples for configuring Readarr to be accessible through a revers
 
 ## NGINX
 
-```none
+```nginx
 location /readarr {
   proxy_pass        http://127.0.0.1:8787/readarr;
   proxy_set_header Host $host;
