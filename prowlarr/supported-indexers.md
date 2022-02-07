@@ -2,10 +2,10 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-02-07T22:53:28.1375264Z
+date: 2022-02-07T23:12:19.6670962Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-02-07T22:53:28.1375264Z
+dateCreated: 2022-02-07T23:12:19.6670962Z
 ---
 
 - Supported Trackers and Indexers as of Build `0.2.0.1519` / [Commit: 64c9bb42312122afa4f876c6607b26271618c6cd](https://github.com/Prowlarr/Prowlarr/commit/64c9bb42312122afa4f876c6607b26271618c6cd)
@@ -19,6 +19,8 @@ dateCreated: 2022-02-07T22:53:28.1375264Z
 ---
 
 ## Torrents
+
+> Torrent capabilities vary by Tracker and are determined upon Tracker add. This table will be corrected to be accurate with Prowlarr Cardigann v5 and the switch to YML{.is-danger}
 
 ### Public Trackers
 
@@ -152,6 +154,7 @@ dateCreated: 2022-02-07T22:53:28.1375264Z
 |[Solid Torrents](https://solidtorrents.net/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|en-US|False|Text Query|Not Supported|Not Supported|Not Supported|Not Supported|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|en-US|False|Text Query|Not Supported|Not Supported|Not Supported|Not Supported|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|en-US|False|Text Query|Not Supported|Not Supported|Not Supported|Not Supported|
+|[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|False|Text Query|Not Supported|Not Supported|Not Supported|Not Supported|
 |[Rarbg](https://torrentapi.org){#rarbg}|RARBG is a Public torrent site for MOVIES / TV / GENERAL|en-US|False|Text Query|Text Query, Season, Episode, IMDb ID, TVDb Id|Text Query, IMDb ID, TMDb Id|Text Query|Not Supported|
 |[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|False|Text Query|Text Query, Season, Episode|Text Query|Not Supported|Not Supported|
 |[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|False|Text Query|Text Query, Season, Episode|Not Supported|Not Supported|Not Supported|
@@ -578,7 +581,7 @@ dateCreated: 2022-02-07T22:53:28.1375264Z
 
 ## Usenet
 
-> Usenet capabilities vary by Indexer and are determined upon Indexer add. These will be corrected to be accurate with Prowlarr Cardigann v5 and the switch to YML{.is-danger}
+> Usenet capabilities vary by Indexer and are determined upon Indexer add. This table will be corrected to be accurate with Prowlarr Cardigann v5 and the switch to YML{.is-danger}
 
 ### Public Indexers
 
