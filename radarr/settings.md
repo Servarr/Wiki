@@ -2,11 +2,12 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-02-01T13:13:55.812Z
+date: 2022-02-12T16:15:11.826Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -497,7 +498,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Profiling Settings and Ranking
 
-- Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded. A score of 0 results in the custom format being informational only. The Minimum score requires releases to reach this threshold otherwise they will be rejected. Custom formats that match with undesirable attributes should be given a negative score to lower their appeal. Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
+- Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded. - A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
+- The Minimum score requires releases to reach this threshold otherwise they will be rejected. Custom formats that match with undesirable attributes should be given a negative score to lower their appeal. Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
 
 - [Please see TRaSH's Guides for how to setup and use custom formats](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/)
 
