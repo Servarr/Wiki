@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-02-02T18:19:59.747Z
+date: 2022-02-12T16:12:59.469Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -507,7 +507,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## How does Radarr handle foreign movies or foreign titles?
 
-- Radarr uses both Alt Titles and Translations for parsing. Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats. Parsing looks for a match in all Translations and Alternative Titles.
+- Radarr uses both Alt Titles and Translations for parsing. Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in thr quality profile greater than zero. Parsing looks for a match in all Translations and Alternative Titles.
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
 - Note that `multi` by default is assumed English+French
