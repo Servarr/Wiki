@@ -2,11 +2,12 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-01-31T15:07:58.851Z
+date: 2022-02-15T22:40:44.500Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -121,8 +122,8 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
-  - `Add and Remove Only` - Sync the Indexer to the app when it is added or removed from Prowlarr. If the indexer is down at the time of sync - it will be removed.
-  - `Full Sync` - Full Sync will keep your app and Prowlarr fully in sync. Any change made in Prowlarr is then synced to the other program. Any change made remotely will be overridden by Prowlarr on next sync.
+  - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
+  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to indexers remotely within this app will be overridden by Prowlarr on the next sync.
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
 >`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals in \*Arrs are not currently factored in to this override.
