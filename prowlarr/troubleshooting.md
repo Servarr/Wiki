@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-02-15T20:21:20.173Z
+date: 2022-02-15T20:22:41.686Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -29,8 +29,9 @@ dateCreated: 2021-06-20T20:05:25.223Z
 - [NGINX errors](#nginx-errors)
 - [Indexer, Application, and Download Client Issues](#indexer-application-and-download-client-issues)
   - [Connection Timed Out](#connection-timed-out)
-    - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
-    - [503 HTTP Service Unavailable](#503-http-service-unavailable)
+  - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
+  - [\*Arr HTTP 400 Errors](#arr-http-400-errors)
+  - [503 HTTP Service Unavailable](#503-http-service-unavailable)
   - [Invalid Torrents](#invalid-torrents)
 
 # Asking for Help
@@ -228,17 +229,18 @@ This is typically caused by:
 
 ## \*Arr HTTP 400 Errors
 
-- Note: Indexers are synced based on the capabilities/categories they claim to support. 
-- If an indexer supports only tv categories it will not be synced to Lidarr, Radarr, and Readarr. 
-- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. 
+- Note: Indexers are synced based on the capabilities/categories they claim to support.
+- If an indexer supports only tv categories it will not be synced to Lidarr, Radarr, and Readarr.
+- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis.
 - The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to Readarr and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
 
 ## 503 HTTP Service Unavailable
 
-- This is typically due to your tracker blocking you via Cloudflare and require FlareSolverr
+- This is typically due to your tracker blocking you via Cloudflare and requiring FlareSolverr
 
 ## Invalid Torrents
 
 - Try downloading the link via the URL and variables Prowlarr used
 - Try downloading the torrent proxied via prowlarr (i.e. use the prowlarr link the app that grabbed the file use)
+- Ensure that your cookie or other credentials for your indexer are not expired and are valid
 - If the issue is Prowlarr caused then please file a bug report.
