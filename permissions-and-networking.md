@@ -2,7 +2,7 @@
 title: Networking and Permissions Troubleshooting Guide
 description: 
 published: true
-date: 2022-01-11T15:51:01.452Z
+date: 2022-02-15T18:28:00.297Z
 tags: troubleshooting
 editor: markdown
 dateCreated: 2021-11-13T21:09:50.099Z
@@ -34,6 +34,14 @@ netstat -ab
 
 ```bash
 netsh http show urlacl
+```
+
+## Windows Creating URL Reservations
+
+- Use netsh to create the urlacl - the below example is for radarr which uses port `7878`
+
+```bash
+http add urlacl http://*:7878/ sddl=D:(A;;GX;;;S-1-1-0)
 ```
 
 ## Linux Check Ports in Use
