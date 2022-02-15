@@ -2,11 +2,12 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2022-01-29T15:38:46.405Z
+date: 2022-02-15T21:42:00.181Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -151,7 +152,11 @@ Also, note that for each individual settings page, there are some options at the
 - Quality Profile - Default Quality Profile for books and authors detected within this folder
 - Metadata Profile - Select the Metadata Profile to use for authors detected in this folder. To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
-  
+
+> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* If you're using an SMB mount ensure `nobrl` is enabled.
+{.is-warning}
+
 ## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
