@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-01-29T15:30:49.893Z
+date: 2022-02-15T21:44:45.699Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -131,6 +131,10 @@ Here we will add the root folder that Readarr will be using to import your exist
 > **The user and group you configured Readarr to run as must have read & write access to this location.** {.is-info}
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
+
+> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* If you're using an SMB mount ensure `nobrl` is enabled.
+{.is-warning}
 
 > If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored.
 > **Note that you cannot add Calibre integration to a root folder after it's created.**
