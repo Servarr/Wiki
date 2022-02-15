@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-02-12T16:15:11.826Z
+date: 2022-02-15T21:41:44.956Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -316,6 +316,10 @@ Unmapped Folders - These are folders that do not have a Movie associated to it
 >The `X` at the end will remove this root path{.is-warning}
 
 Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Radarr to scan existing media.
+
+> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* If you're using an SMB mount ensure `nobrl` is enabled.
+{.is-warning}
 
 # Profiles
 
