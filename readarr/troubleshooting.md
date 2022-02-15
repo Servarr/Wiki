@@ -2,11 +2,12 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2022-01-27T04:33:56.027Z
+date: 2022-02-15T21:40:15.365Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -293,6 +294,9 @@ Don’t forget to check permissions and ownership of the *destination*. It is ea
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
+- If you're using an NFS mount ensure `nolock` is enabled.
+- If you're using an SMB mount ensure `nobrl` is enabled.
+
 ### Permissions on the Downloads Folder
 
 Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that runs as needs to be able to read and write the downloads folder.
@@ -302,6 +306,9 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
   - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
+
+- If you're using an NFS mount ensure `nolock` is enabled.
+- If you're using an SMB mount ensure `nobrl` is enabled.
 
 ### Download folder and library folder not different folders
 
