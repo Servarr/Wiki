@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-02-06T03:49:13.628Z
+date: 2022-02-15T21:40:36.795Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -300,6 +300,9 @@ Don’t forget to check permissions and ownership of the *destination*. It is ea
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
+- If you're using an NFS mount ensure `nolock` is enabled.
+- If you're using an SMB mount ensure `nobrl` is enabled.
+
 ### Permissions on the Downloads Folder
 
 You'll see an error similar to the following
@@ -323,6 +326,9 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
   - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
+
+- If you're using an NFS mount ensure `nolock` is enabled.
+- If you're using an SMB mount ensure `nobrl` is enabled.
 
 ### Download folder and library folder not different folders
 
