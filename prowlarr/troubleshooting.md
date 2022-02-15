@@ -2,11 +2,12 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-02-01T23:11:05.263Z
+date: 2022-02-15T20:21:20.173Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -219,13 +220,20 @@ This is typically caused by:
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
 
-### Sonarr HTTP 404 Errors
+## Sonarr HTTP 404 Errors
 
 - This is typically due to running an end of life (EOL) version of Sonarr which does not have the v3 API endpoints
 - Prowlarr does not support Sonarr v2
 - Prowlarr only supports Sonarr v3
 
-### 503 HTTP Service Unavailable
+## \*Arr HTTP 400 Errors
+
+- Note: Indexers are synced based on the capabilities/categories they claim to support. 
+- If an indexer supports only tv categories it will not be synced to Lidarr, Radarr, and Readarr. 
+- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. 
+- The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to Readarr and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
+
+## 503 HTTP Service Unavailable
 
 - This is typically due to your tracker blocking you via Cloudflare and require FlareSolverr
 
