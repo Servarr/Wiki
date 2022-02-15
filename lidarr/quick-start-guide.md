@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2022-01-07T19:39:19.551Z
+date: 2022-02-15T21:44:22.922Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -158,6 +158,10 @@ You'll be presented with the following window:
 - **Path** - This is the actual `Path` to the data storage location. The system/user must have the proper permissions to this storage path. This folder cannot be your download location!
 
 Leave the other options at their defaults.
+
+> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* If you're using an SMB mount ensure `nobrl` is enabled.
+{.is-warning}
 
 > If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
 {.is-warning}
