@@ -361,7 +361,7 @@ For SABnzbd, this is handled with the History Retention setting.
 
 ### Download cannot be matched to a library item
 
-For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Shown Unknown will display all items not otherwise ignored / already imported within \*Arr's download client category. These will typically need to be manually mapped and imported.
+For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Show Unknown (this is now enabled by default in recent builds) will display all items not otherwise ignored / already imported within \*Arr's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 
