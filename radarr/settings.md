@@ -261,7 +261,7 @@ Here you will set the naming convention for the folder that contains the season 
 
   - For more information on this click [here](https://trash-guides.info/hardlinks)
 
- > Occasionally, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.{.is-warning}
+ > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.{.is-warning}
 
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 

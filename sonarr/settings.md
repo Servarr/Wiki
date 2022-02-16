@@ -319,7 +319,7 @@ Name for the `Specials` (Season) folder
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
   - For more information on this click [here](https://trash-guides.info/hardlinks)
 
- > Occasionally, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.{.is-warning}
+ > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.{.is-warning}
 
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 
