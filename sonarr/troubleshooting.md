@@ -63,7 +63,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
       - [Standard](#standard)
       - [Anime](#anime)
     - [Media is Unmonitored](#media-is-unmonitored)
-    - [Query Successful - No Results Returned](#query-successful---no-results-returned)
+    - [Query Successful - No Results Returned](#query-successful-no-results-returned)
     - [Wrong Categories](#wrong-categories)
     - [Wrong Results](#wrong-results)
     - [Missing Results](#missing-results)

@@ -57,7 +57,7 @@ dateCreated: 2021-06-14T21:36:46.193Z
     - [Media is Unmonitored](#media-is-unmonitored)
     - [Wrong categories](#wrong-categories)
     - [Wrong results](#wrong-results)
-    - [Query Successful - No Results returned](#query-successful---no-results-returned)
+    - [Query Successful - No Results returned](#query-successful-no-results-returned)
     - [Missing Results](#missing-results)
     - [Certificate validation](#certificate-validation)
     - [Hitting rate limits](#hitting-rate-limits)

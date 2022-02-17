@@ -60,7 +60,7 @@ dateCreated: 2021-08-03T21:05:52.988Z
     - [Tracker needs RawSearch Caps](#tracker-needs-rawsearch-caps)
     - [Media is Unmonitored](#media-is-unmonitored)
     - [Wrong categories](#wrong-categories)
-    - [Query Successful - No Results returned](#query-successful---no-results-returned)
+    - [Query Successful - No Results returned](#query-successful-no-results-returned)
     - [Wrong results](#wrong-results)
     - [Missing Results](#missing-results)
     - [Certificate validation](#certificate-validation)

@@ -42,7 +42,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
         - [Solutions](#solutions)
-    - [Media & Lists](#media--lists)
+    - [Media & Lists](#media-lists)
       - [Series Removed from TheTVDB](#series-removed-from-thetvdb)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
       - [Import List Missing Root Folder](#import-list-missing-root-folder)

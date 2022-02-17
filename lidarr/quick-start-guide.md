@@ -28,7 +28,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
       - [BitTorrent](#bittorrent)
 - [First Artist](#first-artist)
 - [First Download/Import](#first-downloadimport)
-- [Quick Start - Advanced](#quick-start---advanced)
+- [Quick Start - Advanced](#quick-start-advanced)
   - [Lidarr Use Case](#lidarr-use-case)
     - [Loose Files](#loose-files)
     - [Specialty Libraries](#specialty-libraries)

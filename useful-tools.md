@@ -37,11 +37,11 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Petio](#petio)
   - [Plex Meta Manager](#plex-meta-manager)
   - [qBit Management](#qbit-management)
-  - [Radarr & Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
+  - [Radarr & Sonarr Companion - Android App](#radarr--sonarr-companion-android-app)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
   - [Unpackerr](#unpackerr)
-- [Scripts & Things](#scripts--things)
+- [Scripts & Things](#scripts-things)
 - [Twitter Connect](#twitter-connect)
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
