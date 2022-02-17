@@ -2,11 +2,12 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-01-30T05:05:27.723Z
+date: 2022-02-17T23:21:09.716Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -150,7 +151,7 @@ echo "Moving existing installation"
 sudo mv "$installdir/" "$installdir.old/"
 echo "Installing..."
 sudo mv "${app^}" "$installdir"
-chown $APPUSER:$APPUSER -R $installdir
+sudo chown $APPUSER:$APPUSER -R $installdir
 sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
 sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
 sudo systemctl daemon-reload
