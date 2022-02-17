@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-02-17T23:42:32.040Z
+date: 2022-02-17T23:43:39.107Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -95,6 +95,8 @@ dateCreated: 2021-05-25T02:28:35.194Z
 {#update-to-net-core-version}
 
 - Newer versions of Radarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
+
+See the below entries for how to switch from unsupported, end of life mono versions to dotnet.
 
 - [Fixing Docker installs](#fixing-docker-installs)
 - [Fixing FreeBSD installs](#fixing-freebsd-installs)
