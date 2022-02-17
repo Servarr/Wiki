@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-02-08T11:51:58.799Z
+date: 2022-02-17T18:24:19.470Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -114,6 +114,12 @@ You'll need to install the binaries using the below commands.
 
 ```shell
 sudo apt install curl sqlite3
+```
+
+- Create the radarr user
+
+```shell
+sudo useradd -r -s /bin/false radarr
 ```
 
 > Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
