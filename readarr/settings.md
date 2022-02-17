@@ -629,7 +629,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Category - the category within your download client that \*Arr will use. To avoid unrelated downloads showing in Activity it is strongly recommended to set a category.
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
-- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 
 ### Torrent Client Settings
 
@@ -646,7 +646,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
-- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 
 ### Torrent Client Remove Download Compatibility
 
