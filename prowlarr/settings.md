@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-02-15T22:40:44.500Z
+date: 2022-02-19T15:11:50.961Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -126,7 +126,7 @@ All programs you can add are listed. You should only add programs you currently 
   - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to indexers remotely within this app will be overridden by Prowlarr on the next sync.
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
->`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals in \*Arrs are not currently factored in to this override.
+>`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals and tags in \*Arrs are not currently factored in to this comparison. However, just about every other factor of changed will trigger a sync and overwrite all settings in \*Arr
 {.is-danger}
 
 - Tags - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
