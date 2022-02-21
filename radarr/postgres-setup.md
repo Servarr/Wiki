@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-01-11T15:04:12.960Z
+date: 2022-02-21T16:20:22.082Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -61,6 +61,7 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 - By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
+- The existing data in the `Profiles` table will need to be deleted before migrating as there is no way to overwrite this yet. If you do not delete this existing data your profiles with scoring from your custom formats will not be migrated over. Meaning you will have to redo this. (Honestly it is easier to just delete the data rather then setting it all up again)
 
 With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
 
