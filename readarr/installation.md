@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-21T12:12:42.385Z
+date: 2022-02-21T22:25:16.239Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -413,7 +413,7 @@ separate locations. {.is-warning}
 
 - Right click and Create New Shortcut
 - Path: `C:\ProgramData\Readarr\bin\Readarr.exe /data=C:\ProgramData\Readarr-audiobooks`
-- Give the shortcut a unique name such as `Readarr-audiobooks` and finish the wizard.
+- Give the shortcut a unique name such as `Readarr-audiobooks` and finish the shortcut wizard.
 - Double click the new shortcut to run and test.
 - Continue to [Configuring Readarr-audiobooks](#windows-multi-config-second)
 
