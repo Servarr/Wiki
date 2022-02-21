@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-21T22:25:16.239Z
+date: 2022-02-21T22:26:27.346Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -36,7 +36,7 @@ dateCreated: 2021-05-25T00:22:15.328Z
     - [Tray App (Windows)](#tray-app-windows)
       - [Prerequisites (Tray App)](#prerequisites-tray-app)
       - [Creating Readarr-audiobooks Tray App](#creating-readarr-audiobooks-tray-app)
-    - [Configuring Readarr-audiobooks {#windows-multi-config-second}](#configuring-readarr-audiobooks-windows-multi-config-second)
+    - [Configuring Readarr-audiobooks](#configuring-readarr-audiobooks-windows-multi-config-second)
     - [Dealing with Updates](#dealing-with-updates)
       - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
   - [Linux Multiple Instances](#linux-multiple-instances)
