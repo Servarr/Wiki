@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-07T20:49:50.898Z
+date: 2022-02-21T12:12:42.385Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -60,9 +60,6 @@ It's therefore advisable to install Readarr as a system tray application if the 
 > Warning: If you run Plex as a service via [PmsService](https://github.com/cjmurph/PmsService) you will either need to change PMsService's port from `8787` or you will need to modify the port Readarr runs on in the `config.xml` file.
 {.is-info}
 
-> Readarr is currently in beta testing and thus using the `nightly` branch. It is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
-{.is-danger}
-
 1. Download the latest version of Readarr for your architecture linked below.
 1. Run the installer
 1. Browse to <http://localhost:8787> to start using Readarr
@@ -81,9 +78,6 @@ It's therefore advisable to install Readarr as a system tray application if the 
 > Readarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
 {.is-warning}
 
-> Readarr is currently in beta testing and thus using the `nightly` branch. It is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
-{.is-danger}
-
 1. Download the [MacOS App](https://readarr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Readarr icon to your Application folder.
 1. Browse to <http://localhost:8787> to start using Readarr
@@ -91,9 +85,6 @@ It's therefore advisable to install Readarr as a system tray application if the 
 # Linux
 
 ## Debian / Ubuntu
-
-> Readarr is currently in beta testing and thus using the `nightly` branch. It is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
-{.is-danger}
 
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
 
@@ -143,7 +134,7 @@ sudo apt install curl sqlite3
     - ARM64 use `arch=arm64`
 
 ```shell
-wget --content-disposition 'http://readarr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=x64'
+wget --content-disposition 'http://readarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
 - Uncompress the files:
@@ -275,9 +266,6 @@ Keep in mind that Readarr will need read and write to the download folders as we
 ## Install Readarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
-
-> Temporarily, you will need to use the `:nightly` tag with docker images, as there is no `master` nor `develop` branch.
-{.is-warning}
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
 - [lscr.io/linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
