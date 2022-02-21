@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-06T06:46:00.701Z
+date: 2022-02-21T13:13:39.999Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -62,8 +62,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.3"
-scriptdate="2021-02-06"
+scriptversion="3.0.3a"
+scriptdate="2021-02-21"
 
 set -euo pipefail
 
@@ -106,7 +106,7 @@ select app in lidarr prowlarr radarr readarr quit; do
         app_port="8787"           # Default App Port; Modify config.xml after install if needed
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
-        branch="nightly"          # {Update me if needed} branch to install
+        branch="develop"          # {Update me if needed} branch to install
         break
         ;;
     quit)
