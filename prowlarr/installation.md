@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-02-03T15:54:06.402Z
+date: 2022-02-22T00:28:42.704Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -25,6 +25,9 @@ dateCreated: 2021-05-24T05:07:51.882Z
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
 - [Docker](#docker)
+  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
+    - [Volumes and Paths](#volumes-and-paths)
+    - [Ownership and Permissions](#ownership-and-permissions)
   - [Install Prowlarr](#install-prowlarr)
 - [Reverse Proxy Configuration](#reverse-proxy-configuration)
   - [NGINX](#nginx)
@@ -305,12 +308,13 @@ If everything went according to plan then prowlarr should be up and running on t
 
 # Docker
 
-## Install Prowlarr
 
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
+
+## Install Prowlarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
@@ -330,36 +334,70 @@ Sample config examples for configuring Prowlarr to be accessible through a rever
 
 ## NGINX
 
+Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
+
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+
 ```nginx
 location /prowlarr {
   proxy_pass    http://127.0.0.1:9696/prowlarr;
   proxy_set_header Host              $host;
   proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
   proxy_set_header X-Forwarded-Host  $host;
-  proxy_set_header X-Forwarded-Proto https;
+  proxy_set_header X-Forwarded-Proto $scheme;
   proxy_redirect  off;
 
   proxy_http_version 1.1;
   proxy_set_header  Upgrade     $http_upgrade;
   proxy_set_header  Connection  $http_connection;
 }
-
+# Allow the API External Access
 location /prowlarr/api {
   auth_request off;
-  proxy_pass  http://127.0.0.1:9696/prowlarr/api;
 }
-
+# Allow Indexer External Access
 location ~ /prowlarr/[0-9]+/api {
- auth_request off;
-  proxy_pass  http://127.0.0.1:9696;
-}
-
-location /prowlarr/Content {
- auth_request off;
- proxy_pass  http://127.0.0.1:9696/prowlarr/Content;
+ auth_request off;}
+```
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
+To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
+```nginx
+server {
+  listen 80;
+  server_name _;
+  
+  # more configuration
+  
+  include subfolders-enabled/*.conf
 }
 ```
-
+Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Radarr at `yourdomain.tld/radarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+### Subdomain
+Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
+> Many free DNS providers do not support this {.is-warning}
+By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
+> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.is-info}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+```nginx
+server {
+  listen      80;
+  listen [::]:80;
+  server_name prowlarr.*;
+  location / {
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    proxy_set_header   Upgrade $http_upgrade;
+    proxy_set_header   Connection $http_connection;
+    proxy_redirect     off;
+    proxy_http_version 1.1;
+    
+    proxy_pass http://127.0.0.1:9696;
+  }
+}
+```
+Now restart Nginx and Prowlarr should be available at your selected subdomain.
 ## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `prowlarr` from the `Location` block and simply use `/` as the location.
@@ -386,4 +424,3 @@ ProxyPassReverse / http://127.0.0.1:9696/prowlarr/
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
 - `/prowlarr/api/`
-- `/prowlarr/Content/`
