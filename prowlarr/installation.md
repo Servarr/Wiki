@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-02-22T00:28:42.704Z
+date: 2022-02-22T01:05:41.561Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -340,24 +340,21 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 
 ```nginx
 location /prowlarr {
-  proxy_pass    http://127.0.0.1:9696/prowlarr;
-  proxy_set_header Host              $host;
-  proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Host  $host;
-  proxy_set_header X-Forwarded-Proto $scheme;
-  proxy_redirect  off;
-
-  proxy_http_version 1.1;
-  proxy_set_header  Upgrade     $http_upgrade;
-  proxy_set_header  Connection  $http_connection;
+    proxy_pass http://127.0.0.1:9696;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $http_connection;
 }
-# Allow the API External Access
-location /prowlarr/api {
-  auth_request off;
+# Allow the API/Indexer External Access via NGINX
+location ~ /prowlarr(/[0-9]+)?/api {
+    auth_request off;
+    proxy_pass http://127.0.0.1:9696;
 }
-# Allow Indexer External Access
-location ~ /prowlarr/[0-9]+/api {
- auth_request off;}
 ```
 A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
 To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
