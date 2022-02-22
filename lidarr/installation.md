@@ -46,7 +46,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Lidarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml` is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
+> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml` is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 1. Download the latest version of Lidarr for your architecture linked below.
@@ -214,7 +214,6 @@ sudo rm -rf /etc/systemd/system/lidarr.service
 sudo systemctl -q daemon-reload
 ```
 
-
 # FreeBSD
 
 The Lidarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.
@@ -343,6 +342,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 - [hotio/lidarr](https://hotio.dev/containers/lidarr/)
 - [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
 {.links-list}
+
 # Reverse Proxy Configuration
 
 Sample config examples for configuring Lidarr to be accessible through a reverse proxy.
@@ -386,12 +386,15 @@ server {
 ```
 
 Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Lidarr at `yourdomain.tld/lidarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+
 ### Subdomain
+
 Alternatively you can use a subdomain for lidarr. In this case you would visit `lidarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
 > Many free DNS providers do not support this {.is-warning}
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
 > For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8686` and Lidarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `lidarr` is chosen (line 5). {.is-info}
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+
 ```nginx
 server {
   listen      80;
@@ -411,7 +414,9 @@ server {
   }
 }
 ```
+
 Now restart Nginx and Lidarr should be available at your selected subdomain.
+
 ## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `lidarr` from the `Location` block and simply use `/` as the location.

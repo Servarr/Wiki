@@ -45,7 +45,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Prowlarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Prowlarr\config.xml` is denied -- or you use mapped network drives. This gives Prowlarr the permissions it needs. You should not need to run As Administrator every time.
+> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Prowlarr\config.xml` is denied -- or you use mapped network drives. This gives Prowlarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 1. Download the latest version of Prowlarr for your architecture linked below.
@@ -308,7 +308,6 @@ If everything went according to plan then prowlarr should be up and running on t
 
 # Docker
 
-
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
@@ -356,8 +355,10 @@ location ~ /prowlarr(/[0-9]+)?/api {
     proxy_pass http://127.0.0.1:9696;
 }
 ```
+
 A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
 To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
+
 ```nginx
 server {
   listen 80;
@@ -368,13 +369,17 @@ server {
   include subfolders-enabled/*.conf
 }
 ```
+
 Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Radarr at `yourdomain.tld/radarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+
 ### Subdomain
+
 Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
 > Many free DNS providers do not support this {.is-warning}
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
 > For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.is-info}
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+
 ```nginx
 server {
   listen      80;
@@ -394,7 +399,9 @@ server {
   }
 }
 ```
+
 Now restart Nginx and Prowlarr should be available at your selected subdomain.
+
 ## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `prowlarr` from the `Location` block and simply use `/` as the location.
