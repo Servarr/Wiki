@@ -2,11 +2,12 @@
 title: Sonarr System
 description: 
 published: true
-date: 2022-01-23T23:25:19.104Z
+date: 2022-02-22T20:41:03.681Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -262,8 +263,6 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 - This may be permissions issues, a missing mount, or simply needing to update the lists after reorganizing your setup.
 
 #### Missing Root Folder
-
-#### Missing root folder
 
 - This error is typically identified if a Series is looking for a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
