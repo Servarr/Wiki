@@ -2,8 +2,8 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-22T01:08:24.312Z
-tags: readarr
+date: 2022-02-22T01:10:25.518Z
+tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
 ---
@@ -18,31 +18,25 @@ dateCreated: 2021-05-25T00:22:15.328Z
     - [Easy Install](#easy-install)
     - [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install)
     - [Uninstall](#uninstall)
-- [FreeBSD](#freebsd)
-  - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
-  - [Radarr Installation](#radarr-installation)
-  - [Configuring Radarr](#configuring-radarr)
-    - [Service Setup](#service-setup)
-  - [Troubleshooting](#troubleshooting)
 - [Docker](#docker)
   - [Avoid Common Pitfalls](#avoid-common-pitfalls)
     - [Volumes and Paths](#volumes-and-paths)
+    - [Calibre Integration](#calibre-integration)
     - [Ownership and Permissions](#ownership-and-permissions)
-  - [Install Radarr](#install-radarr)
+  - [Install Readarr](#install-readarr)
 - [Reverse Proxy Configuration](#reverse-proxy-configuration)
   - [NGINX](#nginx)
-    - [Subdomain](#subdomain)
   - [Apache](#apache)
 - [Multiple Instances](#multiple-instances)
   - [Windows Multiple Instances](#windows-multiple-instances)
     - [Service (Windows)](#service-windows)
       - [Prerequisites (Service)](#prerequisites-service)
-      - [Configuring Radarr Service](#configuring-radarr-service)
-      - [Creating Radarr-4K Service](#creating-radarr-4k-service)
+      - [Configuring Readarr Service](#configuring-readarr-service)
+      - [Creating Readarr-audiobooks Service](#creating-readarr-audiobooks-service)
     - [Tray App (Windows)](#tray-app-windows)
       - [Prerequisites (Tray App)](#prerequisites-tray-app)
-      - [Creating Radarr-4K Tray App](#creating-radarr-4k-tray-app)
-    - [Configuring Radarr-4k {#windows-multi-config-second}](#configuring-radarr-4k-windows-multi-config-second)
+      - [Creating Readarr-audiobooks Tray App](#creating-readarr-audiobooks-tray-app)
+    - [Configuring Readarr-audiobooks](#configuring-readarr-audiobooks-windows-multi-config-second)
     - [Dealing with Updates](#dealing-with-updates)
       - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
   - [Linux Multiple Instances](#linux-multiple-instances)
@@ -50,7 +44,7 @@ dateCreated: 2021-05-25T00:22:15.328Z
 
 # Windows
 
-Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
+Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
@@ -58,32 +52,35 @@ A Windows Service runs even when the user is not logged in, but special care mus
 
 Additionally the Windows Service runs under the 'Local Service' account, by default this account **does not have permissions to access your user's home directory unless permissions have been assigned manually**. This is particularly relevant when using download clients that are configured to download to your home directory.
 
-It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Radarr\config.xml` is denied -- or you use mapped network drives. This gives Radarr the permissions it needs. You should not need to run As Administrator every time.
+> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Readarr\config.xml` is denied -- or you use mapped network drives. This gives Readarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
-1. Download the latest version of Radarr for your architecture linked below.
-1. Run the installer
-1. Browse to <http://localhost:7878> to start using Radarr
+> Warning: If you run Plex as a service via [PmsService](https://github.com/cjmurph/PmsService) you will either need to change PMsService's port from `8787` or you will need to modify the port Readarr runs on in the `config.xml` file.
+{.is-info}
 
-- [Windows x64 Installer](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
-- [Windows x32 Installer](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+1. Download the latest version of Readarr for your architecture linked below.
+1. Run the installer
+1. Browse to <http://localhost:8787> to start using Readarr
+
+- [Windows x64 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+- [Windows x32 Installer](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
 {.links-list}
 
-> It is possible to install Radarr manually using the [x64 .zip download](https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+> It is possible to install Readarr manually using the [x64 .zip download](https://readarr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
 # MacOS (OSX)
 
 {#OSX}
 
-> Radarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+> Readarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
 {.is-warning}
 
-1. Download the [MacOS App](https://radarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
-1. Open the archive and drag the Radarr icon to your Application folder.
-1. Browse to <http://localhost:7878> to start using Radarr
+1. Download the [MacOS App](https://readarr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
+1. Open the archive and drag the Readarr icon to your Application folder.
+1. Browse to <http://localhost:8787> to start using Readarr
 
 # Linux
 
@@ -105,9 +102,9 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Radarr and install it into `/opt`
-> Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
-> Radarr's configuration files will be stored in `/var/lib/radarr`
+> The steps below will download Readarr and install it into `/opt`
+> Readarr will run under the user `readarr` and group `media`
+> Readarr's configuration files will be stored in `/var/lib/readarr`
 {.is-warning}
 
 - Ensure you have the required prerequisite packages:
@@ -120,11 +117,12 @@ sudo apt install curl sqlite3
 
 > **Installation Prerequisites**
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
-> \* The user `radarr` is created
-> \* The user `radarr` is part of the group `media`
+> \* The user `readarr` is created
+> \* The user `readarr` is part of the group `media`
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
-> \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
+> \* If Calibre will be used, Calibre runs as the group `media` and the Calibre library has read/write permissions for `media`
+> \* You created the directory `/var/lib/readarr` and ensured the user `readarr` has read/write permissions for it
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
@@ -136,46 +134,46 @@ sudo apt install curl sqlite3
     - ARM64 use `arch=arm64`
 
 ```shell
-wget --content-disposition 'http://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
+wget --content-disposition 'http://readarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
 - Uncompress the files:
 
 ```shell
-tar -xvzf Radarr*.linux*.tar.gz
+tar -xvzf Readarr*.linux*.tar.gz
 ```
 
 - Move the files to `/opt/`
 
 ```shell
-sudo mv Radarr /opt/
+sudo mv Readarr/ /opt
 ```
 
-> Note: This assumes you will run as the user `radarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Radarr.
+> Note: This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr. Please note that if use wish to use Calibre - Readarr will need permissions for that directory.
 {.is-danger}
 
 - Ensure ownership of the binary directory.
 
 ```shell  
-sudo chown radarr:radarr -R /opt/Radarr
+sudo chown readarr:readarr -R /opt/Readarr
 ```
 
-- Configure systemd so Radarr can autostart at boot.
+- Configure systemd so Readarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/radarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument. Note: that `$USER` is the User Radarr runs as and is defined below.
+> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument. Note: that `$USER` is the User Readarr runs as and is defined below.
 {.is-danger}
 
 ```shell
-cat << EOF | sudo tee /etc/systemd/system/radarr.service > /dev/null
+cat << EOF | sudo tee /etc/systemd/system/readarr.service > /dev/null
 [Unit]
-Description=Radarr Daemon
+Description=Readarr Daemon
 After=syslog.target network.target
 [Service]
-User=radarr
+User=readarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr/
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarr/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
@@ -190,19 +188,19 @@ EOF
 sudo systemctl -q daemon-reload
 ```
 
-- Enable the Radarr service:
+- Enable the Readarr service:
 
 ```shell
-sudo systemctl enable --now -q radarr
+sudo systemctl enable --now -q readarr
 ```
 
 - (Optional) Remove the tarball:
 
 ```shell
-rm Radarr*.linux*.tar.gz
+rm Readarr*.linux*.tar.gz
 ```
 
-Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:7878`
+Typically to access the Readarr web GUI browse to `http://{Your server IP Address}:8787`
 
 ---
 
@@ -212,266 +210,130 @@ To uninstall and purge:
 > Warning: This will destroy your application data. {.is-danger}
 
 ```bash
-sudo systemctl stop radarr
-sudo rm -rf /opt/Radarr
-sudo rm -rf /var/lib/radarr
-sudo rm -rf /etc/systemd/system/radarr.service
+sudo systemctl stop readarr
+sudo rm -rf /opt/Readarr
+sudo rm -rf /var/lib/readarr
+sudo rm -rf /etc/systemd/system/readarr.service
 sudo systemctl -q daemon-reload
 ```
 
 To uninstall and keep your application data:
 
 ```bash
-sudo systemctl stop radarr
-sudo rm -rf /opt/Radarr
-sudo rm -rf /etc/systemd/system/radarr.service
+sudo systemctl stop readarr
+sudo rm -rf /opt/Readarr
+sudo rm -rf /etc/systemd/system/readarr.service
 sudo systemctl -q daemon-reload
 ```
 
-# FreeBSD
-
-The Radarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.
-
-Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
-
-[Freshports Radarr Link](https://www.freshports.org/net-p2p/radarr/)
-
-## Jail Setup Using TrueNAS GUI
-
-1. From the main screen select Jails
-
-1. Click ADD
-
-1. Click Advanced Jail Creation
-
-1. Name (any name will work): Radarr
-
-1. Jail Type: Default (Clone Jail)
-
-1. Release: 12.2-Release (or newer)
-
-1. Configure Basic Properties to your liking
-
-1. Configure Jail Properties to your liking but add
-
-- [x] allow_mlock
-
-- [x] allow_raw_sockets
-
-> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. {.is-info}
-
-1. Configure Network Properties to your liking
-
-1. Configure Custom Properties to your liking
-
-1. Click Save
-
-## Radarr Installation
-
-Back on the jails list find your newly created jail for `radarr` and click "Shell"
-
-To install Radarr
-
-`pkg install radarr`
-
-Don't close the shell out yet we still have a few more things!
-
-## Configuring Radarr
-
-Now that we have it installed a few more steps are required.
-
-### Service Setup
-
-Time to enable the service but before we do, a note:
-
-The updater is disabled by default. The `pkg-message` gives instructions on how to enable the updater but keep in mind: this can break things like `pkg check -s` and `pkg remove` for Radarr when the built-in updater replaces files.
-
-To enable the service:
-
-`sysrc radarr_enable=TRUE`
-
-If you do not want to use user/group `radarr` you will need to tell the service file what user/group it should be running under
-
-`sysrc radarr_user="USER_YOU_WANT"`
-
-`sysrc radarr_group="GROUP_YOU_WANT"`
-
-`radarr` stores its data, config, logs, and PID files in `/usr/local/radarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
-
-`sysrc radarr_data_dir="DIR_YOU_WANT"`
-
-Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `radarr` uses AND/OR add `radarr` to a GID that has write access.
-
-Almost done, let's start the service:
-
-`service radarr start`
-
-If everything went according to plan then radarr should be up and running on the IP of the jail (port 7878)!
-
-(You can now safely close the shell)
-
-## Troubleshooting
-
-- The service appears to be running but the UI is not loading or the page is timing out
-  - Double check that `allow_mlock` is enabled in the jail
-  
-- `System.NET.Sockets.SocketException (43): Protocol not supported`
-  - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
-
-> The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
-{.is-info}
-
 # Docker
 
-The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
+The Readarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
-These instructions provide generic guidance that should apply to any Radarr Docker image.
+These instructions provide generic guidance that should apply to any Readarr Docker image.
 
 ## Avoid Common Pitfalls
 
 ### Volumes and Paths
 
-There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.
+There are two common problems with Docker volumes: Paths that differ between the Readarr and download client container and paths that prevent fast moves and hard links.
 
-The first is a problem because the download client will report a download's path as `/torrents/My.Movie.2018/`, but in the Radarr container that might be at `/downloads/My.Movie.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+The first is a problem because the download client will report a download's path as `/torrents/My.Book.2018.epub/`, but in the Readarr container that might be at `/downloads/My.Book.2018.epub/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
 
-Most Docker images suggest paths like `/movies` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Radarr container, like /torrents.
+Most Docker images suggest paths like `/books` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Readarr container, like /torrents.
 
-The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+The best solution is to use a single, common volume inside the containers, such as /data. Your books would be in `/data/Books`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
 
-If this advice is not followed, you may have to configure a Remote Path Mapping in the Radarr web UI (Settings › Download Clients).
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Readarr web UI (Settings › Download Clients).
+
+### Calibre Integration
+
+When installing Readarr, you can choose to use Calibre integration or not. This choice can only be made during installation, and if you choose not to utilize Calibre you cannot add it later. If you currently use Calibre to manage your book library, you should choose this option. If you use it, Calibre will name and organize your book files for you.
+
+If you are running Calibre, you must first start the Calibre Content Server (Preferences / Sharing over the net), and also set up a user and password. This will require a Calibre restart.
+
+> Please note that Calibre Content Server and Calibre are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these programs, and is not required nor used by Readarr in any way.
+{.is-warning}
 
 ### Ownership and Permissions
 
-Permissions and ownership of files is one of the most common problems for Radarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
-Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
+Permissions and ownership of files is one of the most common problems for Readarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Readarr will need read and write to the download folders as well as the final folders.
 
 > For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
 
-## Install Radarr
+## Install Readarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
-- [hotio/radarr](https://hotio.dev/containers/radarr/)
-- [lscr.io/linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
+- [hotio/readarr](https://hotio.dev/containers/readarr/)
+- [lscr.io/linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
 {.links-list}
 
 # Reverse Proxy Configuration
 
-Sample config examples for configuring Radarr to be accessible from the outside world through a reverse proxy.
+Sample config examples for configuring Readarr to be accessible through a reverse proxy.
 
-> These examples assumes the default port of `7878` and that you set a baseurl of `radarr`. It also assumes your web server i.e nginx and Radarr running on the same server accessible at `localhost` (127.0.0.1). If not, use the host IP address or hostname instead for the proxy pass directive.
+> These examples assumes the default port of `8787` and that you set a baseurl of `readarr`. It also assumes your web server i.e nginx and Readarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 {.is-info}
 
 ## NGINX
 
-Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
-
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
-
 ```nginx
-location /radarr {
-    proxy_pass http://127.0.0.1:7878;
-    proxy_set_header Host $host;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Host $host;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_redirect off;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection $http_connection;
+location /readarr {
+  proxy_pass        http://127.0.0.1:8787/readarr;
+  proxy_set_header Host $host;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Host $host;
+  proxy_set_header X-Forwarded-Proto https;
+  proxy_redirect off;
+
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection $http_connection;
 }
-# Allow the API External Access via NGINX
-location ~ /radarr/api {
-    auth_request off;
-    proxy_pass http://127.0.0.1:7878;
+  location /readarr/api { auth_request off;
+  proxy_pass       http://127.0.0.1:8787/readarr/api;
 }
+
+  location /readarr/Content { auth_request off;
+    proxy_pass http://127.0.0.1:8787/readarr/Content;
+ }
 ```
-
-A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
-To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
-
-```nginx
-server {
-  listen 80;
-  server_name _;
-  
-  # more configuration
-  
-  include subfolders-enabled/*.conf
-}
-```
-
-Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Radarr at `yourdomain.tld/radarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
-
-### Subdomain
-
-Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
-> Many free DNS providers do not support this {.is-warning}
-
-By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
-
-> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.is-info}
-
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
-
-```nginx
-server {
-  listen      80;
-  listen [::]:80;
-
-  server_name radarr.*;
-
-  location / {
-    proxy_set_header   Host $host;
-    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header   X-Forwarded-Host $host;
-    proxy_set_header   X-Forwarded-Proto $scheme;
-    proxy_set_header   Upgrade $http_upgrade;
-    proxy_set_header   Connection $http_connection;
-
-    proxy_redirect     off;
-    proxy_http_version 1.1;
-    
-    proxy_pass http://127.0.0.1:7878;
-  }
-}
-```
-
-Now restart Nginx and Radarr should be available at your selected subdomain.
 
 ## Apache
 
-This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `radarr` from the `Location` block and simply use `/` as the location.
+This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `readarr` from the `Location` block and simply use `/` as the location.
 
 Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
 
 ```none
-<Location /radarr>
+<Location /readarr>
   ProxyPreserveHost on
-    ProxyPass http://127.0.0.1:7878/radarr connectiontimeout=5 timeout=300
-    ProxyPassReverse http://127.0.0.1:7878/radarr
+    ProxyPass http://127.0.0.1:8787/readarr connectiontimeout=5 timeout=300
+    ProxyPassReverse http://127.0.0.1:8787/readarr
 </Location>
 ```
 
 `ProxyPreserveHost on` prevents apache2 from redirecting to localhost when using a reverse proxy.
 
-Or for making an entire VirtualHost for Radarr:
+Or for making an entire VirtualHost for Readarr:
 
 ```none
-ProxyPass / http://127.0.0.1:7878/radarr/
-ProxyPassReverse / http://127.0.0.1:7878/radarr/
+ProxyPass / http://127.0.0.1:8787/readarr/
+ProxyPassReverse / http://127.0.0.1:8787/readarr/
 ```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
-- `/radarr/api/`
+- `/readarr/api/`
+- `/readarr/Content/`
 
 # Multiple Instances
 
-It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
-Note that you can configure Radarr to use a second Radarr as a list. This is helpful if you wish to keep both in sync.
+- It is possible to run multiple instances of Readarr. This is typically done when one wants a text and audiobook of the same book.
+- Note that you can configure Readarr to use a second Readarr as a list. This is helpful if you wish to keep both in sync.
 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
@@ -492,44 +354,44 @@ The following requirements should be noted:
 
 {#windows-multi}
 
-This guide will show you how to run multiple instances of Radarr on Windows using only one base installation. This guide was put together using Windows 10; if you are using a previous version of Windows (7, 8, etc.) you may need to adjust some things. This guide also assumes that you have installed Radarr to the default directory, and your second instance of Radarr will be called Radarr-4K. Feel free to change things to fit your own installations, though.
+This guide will show you how to run multiple instances of Readarr on Windows using only one base installation. This guide was put together using Windows 10; if you are using a previous version of Windows (7, 8, etc.) you may need to adjust some things. This guide also assumes that you have installed Readarr to the default directory, and your second instance of Readarr will be called Readarr-audiobooks. Feel free to change things to fit your own installations, though.
 
 ### Service (Windows)
 
 #### Prerequisites (Service)
 
-- [You must have Radarr already installed](#windows)
+- [You must have Readarr already installed](#windows)
 - You must have [NSSM (Non-Sucking Service Manager](http://nssm.cc) installed. To install, download the latest release (2.24 at the time of writing) and copy either the 32-bit or 64-bit nssm.exe file to C:/windows/system32.
   - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
 
-#### Configuring Radarr Service
+#### Configuring Readarr Service
 
 1. Open a Command Prompt administrator window. (To run as an admin,
     right click on the Command Prompt icon and choose “Run as
     administrator.”)
-1. If Radarr is running, stop the service by running `nssm stop Radarr`
+1. If Readarr is running, stop the service by running `nssm stop Readarr`
     in Command Prompt.
-1. Now we have to edit the existing Radarr instance to explicitly point
+1. Now we have to edit the existing Readarr instance to explicitly point
     to its data directory. The default command is as follows:
-    `sc config Radarr binpath= "C:\ProgramData\Radarr\bin\Radarr.exe
-    -data=C:\ProgramData\Radarr"`
+    `sc config Readarr binpath= "C:\ProgramData\Readarr\bin\Readarr.exe
+    -data=C:\ProgramData\Readarr"`
 
-This command tells the original instance of Radarr to explicitly use
-`C:\ProgramData\Radarr` for its data directory. If you didn't use the
-default Radarr install, or if your data folder is somewhere else, you
+This command tells the original instance of Readarr to explicitly use
+`C:\ProgramData\Readarr` for its data directory. If you didn't use the
+default Readarr install, or if your data folder is somewhere else, you
 may have to change your paths here.
 
-#### Creating Radarr-4K Service
+#### Creating Readarr-audiobooks Service
 
-1. Create a new folder where you’d like Radarr-4K to live. Most use a similar place such as
-    `C:\ProgramData\Radarr-4K`
-1. Back in Command Prompt, create the new Radarr-4K service using `nssm
-    install Radarr-4K`. A popup window will open where you can type your
+1. Create a new folder where you’d like Readarr-audiobooks to live. Most use a similar place such as
+    `C:\ProgramData\Readarr-audiobooks`
+1. Back in Command Prompt, create the new Readarr-audiobooks service using `nssm
+    install Readarr-audiobooks`. A popup window will open where you can type your
     parameters for the new instance. For this example, we will use the
     following:
-      - Path: `C:\ProgramData\Radarr\bin\Radarr.exe`
-      - Startup directory: `C:\ProgramData\Radarr\bin`
-      - Arguments: `-data=C:\ProgramData\Radarr-4K`
+      - Path: `C:\ProgramData\Readarr\bin\Readarr.exe`
+      - Startup directory: `C:\ProgramData\Readarr\bin`
+      - Arguments: `-data=C:\ProgramData\Readarr-audiobooks`
 
 > Note that **Arguments** points to the *new* folder created in step 1.
 This is crucial, as it keeps all the data files from both instances in
@@ -537,45 +399,45 @@ separate locations. {.is-warning}
 
 1. Click *Install service*. The window should close and the service
     will now be available to run.
-1. Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+1. Continue to [Configuring Readarr-audiobooks](#windows-multi-config-second)
 
 ### Tray App (Windows)
 
 #### Prerequisites (Tray App)
 
-- [You must have Radarr already installed](#windows)
-- Radarr must be configured with a `/data=` argument to allow multiple instances
+- [You must have Readarr already installed](#windows)
+- Readarr must be configured with a `/data=` argument to allow multiple instances
 - Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
 
-#### Creating Radarr-4K Tray App
+#### Creating Readarr-audiobooks Tray App
 
 - Right click and Create New Shortcut
-- Path: `C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K`
-- Give the shortcut a unique name such as `Radarr-4K` and finish the wizard.
+- Path: `C:\ProgramData\Readarr\bin\Readarr.exe /data=C:\ProgramData\Readarr-audiobooks`
+- Give the shortcut a unique name such as `Readarr-audiobooks` and finish the shortcut wizard.
 - Double click the new shortcut to run and test.
-- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+- Continue to [Configuring Readarr-audiobooks](#windows-multi-config-second)
 
-### Configuring Radarr-4k {#windows-multi-config-second}
+### Configuring Readarr-audiobooks {#windows-multi-config-second}
 
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
-- Start Radarr-4k (Service or Tray App)
-- Open up Radarr-4k and Navigate within the app to [Settings => General => Host](/radarr/settings/#host)
-- Change `Port Number` from `7878` to a different port e.g. `7879` so Radarr and Radarr4k do not conflict
+- Start Readarr-audiobooks (Service or Tray App)
+- Open up Readarr-audiobooks and Navigate within the app to [Settings => General => Host](/readarr/settings/#host)
+- Change `Port Number` from `8787` to a different port e.g. `8789` so Readarr and Readarr-audiobooks do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)
 
 ### Dealing with Updates
 
 - Disable automatic updates in one of your instances
-- If one Radarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
+- If one Readarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
 #### Windows Port Checker and Restarter PowerShell Script
 
-- When you use two Radarr instances and one of it is updating, it will kill all instances. Only the one which is updating will come back online.
+- When you use two Readarr instances and one of it is updating, it will kill all instances. Only the one which is updating will come back online.
 - The below powershell script should be configured as a scheduled task.
-- It checks the ports and if one is not online, it will (re-)start the scheduled task to launch Radarr.
+- It checks the ports and if one is not online, it will (re-)start the scheduled task to launch Readarr.
 
-1. Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
+1. Create a new File and name it ReadarrInstancesChecker.ps1 with the below code.
 1. Edit the script with your actual service names, IP, and ports.
 1. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
 
@@ -585,16 +447,16 @@ separate locations. {.is-warning}
 - Repeat task every: `5` or `10` minutes
 - Action: `Start a Program`
 - Program/script: `powershell`
-- Argument: `-File D:\RadarrInstancesChecker.ps1`
+- Argument: `-File D:\ReadarrInstancesChecker.ps1`
   - Be sure to use the full path to your script's location
 
 ```powershell
 ################################################################################################
-### RadarrInstancesChecker.ps1                                                               ###
+### ReadarrInstancesChecker.ps1                                                               ###
 ################################################################################################
-### Keeps multiple Radarr Instances up by checking the port                                  ###
-### Please use Radarr´s Discord or Reddit for support!                                       ###
-### https://wiki.servarr.com/radarr/installation#windows-multi                               ###
+### Keeps multiple Readarr Instances up by checking the port                                  ###
+### Please use Readarr´s Discord or Reddit for support!                                       ###
+### https://wiki.servarr.com/readarr/installation#windows-multi                               ###
 ################################################################################################
 ### Version: 1.1                                                                             ###
 ### Updated: 2020-10-22                                                                      ###
@@ -606,7 +468,7 @@ separate locations. {.is-warning}
 ### SET YOUR CONFIGURATION HERE ###
 # Set your host ip and port correctly and use your service or scheduledtask names!
 
-# (string) The type how Radarr is starting
+# (string) The type how Readarr is starting
 # "Service" (default) Service process is used
 # "ScheduledTask" Task Scheduler is used
 $startType = 'Service'
@@ -619,20 +481,20 @@ $logToFile = $false
 
 $instances = @(
     [pscustomobject]@{   # Instance 1
-        Name = 'Radarr-V3'; # (string) Service or Task name (default: Radarr-V3)
-        IP   = '192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
-        Port = '7873'; # (string) Server Port where Radarr runs (default: 7873)
+        Name = 'Readarr'; # (string) Service or Task name (default: Readarr)
+        IP   = '192.168.178.12'; # (string) Server IP where Readarr runs (default: 192.168.178.12)
+        Port = '8873'; # (string) Server Port where Readarr runs (default: 8873)
     }
     [pscustomobject]@{   # Instance 2
-        Name = 'Radarr-4K'; # (string) Service or Task name (default: Radarr-4K)
-        IP   = '192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
-        Port = '7874'; # (string) Server Port where Radarr runs (default: 7874)
+        Name = 'Readarr-audiobooks'; # (string) Service or Task name (default: Readarr-audiobooks)
+        IP   = '192.168.178.12'; # (string) Server IP where Readarr runs (default: 192.168.178.12)
+        Port = '8874'; # (string) Server Port where Readarr runs (default: 8874)
     }
     # If needed you can add more instances here... by uncommenting out the below lines
     # [pscustomobject]@{   # Instance 3
-    # Name='Radarr-3D';    # (string) Service or Task name (default: Radarr-3D)
-    # IP='192.168.178.12'; # (string) Server IP where Radarr runs (default: 192.168.178.12)
-    # Port='7875';         # (string) Server Port where Radarr runs (default: 7875)
+    # Name='Readarr-3D';    # (string) Service or Task name (default: Readarr-3D)
+    # IP='192.168.178.12'; # (string) Server IP where Readarr runs (default: 192.168.178.12)
+    # Port='8875';         # (string) Server Port where Readarr runs (default: 8875)
     # }
 )
 
@@ -705,25 +567,24 @@ Write-Log 'END ====================='
 
 {#linux-multi}
 
-- [Swizzin Users](https://github.com/ComputerByte/radarr4k)
 - Non-Swizzin Users
   - Ensure your first instance has the `-data=` argument passed.
-  - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop radarr`
-  - Disable automatic updates on one of your Radarr Instances`
+  - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
+  - Disable automatic updates on one of your Readarr Instances`
 
-> Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of `/var/lib/radarr4k/`. Ensure the directory exists or modify it as needed.{.is-danger}
+> Below is an example script to create a Readarr-audiobooks instance. The below systemd creation script will use a data directory of `/var/lib/Readarr-audiobooks/`. Ensure the directory exists or modify it as needed.{.is-danger}
 
 ```shell
-cat << EOF | sudo tee /etc/systemd/system/radarr4k.service > /dev/null
+cat << EOF | sudo tee /etc/systemd/system/Readarr-audiobooks.service > /dev/null
 [Unit]
-Description=Radarr4k Daemon
+Description=Readarr-audiobooks Daemon
 After=syslog.target network.target
 [Service]
-User=radarr
+User=readarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Radarr/Radarr -nobrowser -data=/var/lib/radarr4k/
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/Readarr-audiobooks/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
@@ -738,10 +599,10 @@ EOF
 sudo systemctl -q daemon-reload
 ```
 
-- Enable the Radarr4k service:
+- Enable the Readarr-audiobooks service:
 
 ```shell
-sudo systemctl enable --now -q radarr4k
+sudo systemctl enable --now -q Readarr-audiobooks
 ```
 
 ## Docker Multiple Instances
