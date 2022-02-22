@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-02-12T07:59:58.557Z
+date: 2022-02-22T01:17:12.941Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -18,19 +18,20 @@ dateCreated: 2021-05-24T05:12:27.036Z
     - [Easy Install](#easy-install)
     - [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install)
     - [Uninstall](#uninstall)
-- [Docker](#docker)
-  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
-    - [Volumes and Paths](#volumes-and-paths)
-    - [Ownership and Permissions](#ownership-and-permissions)
-  - [Install Lidarr](#install-lidarr)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
   - [Lidarr Installation](#lidarr-installation)
   - [Configuring Lidarr](#configuring-lidarr)
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
+- [Docker](#docker)
+  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
+    - [Volumes and Paths](#volumes-and-paths)
+    - [Ownership and Permissions](#ownership-and-permissions)
+  - [Install Lidarr](#install-lidarr)
 - [Reverse Proxy Configuration](#reverse-proxy-configuration)
   - [NGINX](#nginx)
+    - [Subdomain](#subdomain)
   - [Apache](#apache)
 
 # Windows
@@ -187,6 +188,10 @@ sudo systemctl enable --now -q lidarr
 rm Lidarr*.linux*.tar.gz
 ```
 
+Typically to access the Lidarr web GUI browse to `http://{Your server IP Address}:8686`
+
+---
+
 ### Uninstall
 
 To uninstall and purge:
@@ -209,41 +214,6 @@ sudo rm -rf /etc/systemd/system/lidarr.service
 sudo systemctl -q daemon-reload
 ```
 
-# Docker
-
-The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
-
-These instructions provide generic guidance that should apply to any Lidarr Docker image.
-
-## Avoid Common Pitfalls
-
-### Volumes and Paths
-
-There are two common problems with Docker volumes: Paths that differ between the Lidarr and download client container and paths that prevent fast moves and hard links.
-
-The first is a problem because the download client will report a download's path as `/torrents/My.Music.2018/`, but in the Lidarr container that might be at `/downloads/My.Music.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
-
-Most Docker images suggest paths like `/music` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Lidarr container, like /torrents.
-
-The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
-
-If this advice is not followed, you may have to configure a Remote Path Mapping in the Lidarr web UI (Settings › Download Clients).
-
-### Ownership and Permissions
-
-Permissions and ownership of files is one of the most common problems for Lidarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
-Keep in mind that Lidarr will need read and write to the download folders as well as the final folders.
-
-> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
-{.is-info}
-
-## Install Lidarr
-
-To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
-
-- [hotio/lidarr](https://hotio.dev/containers/lidarr/)
-- [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
-{.links-list}
 
 # FreeBSD
 
@@ -338,6 +308,41 @@ If everything went according to plan then lidarr should be up and running on the
 > The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
 {.is-info}
 
+# Docker
+
+The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
+
+These instructions provide generic guidance that should apply to any Lidarr Docker image.
+
+## Avoid Common Pitfalls
+
+### Volumes and Paths
+
+There are two common problems with Docker volumes: Paths that differ between the Lidarr and download client container and paths that prevent fast moves and hard links.
+
+The first is a problem because the download client will report a download's path as `/torrents/My.Music.2018/`, but in the Lidarr container that might be at `/downloads/My.Music.2018/`. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+
+Most Docker images suggest paths like `/music` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Lidarr container, like /torrents.
+
+The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+
+If this advice is not followed, you may have to configure a Remote Path Mapping in the Lidarr web UI (Settings › Download Clients).
+
+### Ownership and Permissions
+
+Permissions and ownership of files is one of the most common problems for Lidarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
+Keep in mind that Lidarr will need read and write to the download folders as well as the final folders.
+
+> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
+{.is-info}
+
+## Install Lidarr
+
+To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+
+- [hotio/lidarr](https://hotio.dev/containers/lidarr/)
+- [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
+{.links-list}
 # Reverse Proxy Configuration
 
 Sample config examples for configuring Lidarr to be accessible through a reverse proxy.
@@ -349,26 +354,64 @@ Sample config examples for configuring Lidarr to be accessible through a reverse
 
 ```nginx
 location /lidarr {
-  proxy_pass        http://127.0.0.1:8686/lidarr;
-  proxy_set_header Host $host;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Host $host;
-  proxy_set_header X-Forwarded-Proto https;
-  proxy_redirect off;
-
-  proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection $http_connection;
+    proxy_pass http://127.0.0.1:8686;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $http_connection;
 }
-  location /lidarr/api { auth_request off;
-  proxy_pass       http://127.0.0.1:8686/lidarr/api;
+# Allow the API External Access via NGINX
+location ~ /lidarr/api {
+    auth_request off;
+    proxy_pass http://127.0.0.1:9696;
 }
-
-  location /lidarr/Content { auth_request off;
-    proxy_pass http://127.0.0.1:8686/lidarr/Content;
- }
 ```
 
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
+To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
+
+```nginx
+server {
+  listen 80;
+  server_name _;
+  
+  # more configuration
+  
+  include subfolders-enabled/*.conf
+}
+```
+
+Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Lidarr at `yourdomain.tld/lidarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+### Subdomain
+Alternatively you can use a subdomain for lidarr. In this case you would visit `lidarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
+> Many free DNS providers do not support this {.is-warning}
+By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
+> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8686` and Lidarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `lidarr` is chosen (line 5). {.is-info}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+```nginx
+server {
+  listen      80;
+  listen [::]:80;
+  server_name lidarr.*;
+  location / {
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    proxy_set_header   Upgrade $http_upgrade;
+    proxy_set_header   Connection $http_connection;
+    proxy_redirect     off;
+    proxy_http_version 1.1;
+    
+    proxy_pass http://127.0.0.1:8686;
+  }
+}
+```
+Now restart Nginx and Lidarr should be available at your selected subdomain.
 ## Apache
 
 This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `lidarr` from the `Location` block and simply use `/` as the location.
@@ -395,4 +438,3 @@ ProxyPassReverse / http://127.0.0.1:8686/lidarr/
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
 - `/lidarr/api/`
-- `/lidarr/Content/`
