@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-02-17T18:27:33.237Z
+date: 2022-02-22T01:10:50.294Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -372,16 +372,20 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 
 ```nginx
 location /radarr {
-  proxy_pass         http://127.0.0.1:7878/radarr;
-  proxy_set_header   Host $host;
-  proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header   X-Forwarded-Host $host;
-  proxy_set_header   X-Forwarded-Proto $scheme;
-  proxy_redirect     off;
-
-  proxy_http_version 1.1;
-  proxy_set_header   Upgrade $http_upgrade;
-  proxy_set_header   Connection $http_connection;
+    proxy_pass http://127.0.0.1:7878;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $http_connection;
+}
+# Allow the API External Access via NGINX
+location ~ /radarr/api {
+    auth_request off;
+    proxy_pass http://127.0.0.1:7878;
 }
 ```
 
@@ -463,7 +467,6 @@ ProxyPassReverse / http://127.0.0.1:7878/radarr/
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
 - `/radarr/api/`
-- `/radarr/Content/`
 
 # Multiple Instances
 
