@@ -42,11 +42,12 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
         - [Solutions](#solutions)
-    - [Media & Lists](#media-lists)
+    - [Media & Lists](#media--lists)
       - [Series Removed from TheTVDB](#series-removed-from-thetvdb)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
       - [Import List Missing Root Folder](#import-list-missing-root-folder)
       - [Missing Root Folder](#missing-root-folder)
+      - [Missing root folder](#missing-root-folder-1)
       - [Series Path Mount is Read Only](#series-path-mount-is-read-only)
   - [Disk Space](#disk-space)
   - [About](#about)
@@ -247,7 +248,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### Series Removed from TheTVDB
 
-- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Movie; hopefully TMDb does as well so [Radarr](/radarr) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
+- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Series; hopefully TMDb does as well so [Radarr](/radarr) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
 
 #### Lists are unavailable due to failures
 
@@ -262,12 +263,24 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### Missing Root Folder
 
-- One or more of your root folders are not accessible to Sonarr.
-- This may be permissions issues, a missing mount, or simply needing to update the series assigned root folders after reorganizing your setup.
+#### Missing root folder
+
+- This error is typically identified if a Series is looking for a root folder but that root folder is no longer available.
+- This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
+- If you would like to remove this warning simply find the album that is still using the old root folder and edit it to the correct root folder.
+
+- Easiest way to find the problem series is to:
+
+  - Go to the Mass Editor Tab
+  - Create a custom filter with the old root folder path
+  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these series to be moved to.
+  - Next you will receive a pop-up that states Would you like to move the Series folders to 'root path' ? This will also state This will also rename the Series folder per the Series folder format in settings. Simply select No if the you do not want Lidarr to move your files
+  - Run the Check Health Task in System => Tasks
 
 #### Series Path Mount is Read Only
 
 {#series-mount-ro}
+
 A mount containing a series path is read only and is not writable by the user Sonarr is running as.
 
 ## Disk Space

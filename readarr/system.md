@@ -49,7 +49,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
         - [Solutions](#solutions)
     - [Book Folders](#book-folders)
-      - [Missing root folder](#missing-root-folder)
+      - [Missing Root Folder](#missing-root-folder)
     - [Import Lists](#import-lists)
       - [Import Lists are unavailable due to failures](#import-lists-are-unavailable-due-to-failures)
   - [Disk Space](#disk-space)
@@ -301,20 +301,19 @@ Note: you will also need to add the websocket directive to your readarr configur
 
 ### Book Folders
 
-#### Missing root folder
+#### Missing Root Folder
 
-- This error is typically identified if a book is looking for a root folder but that root folder is no longer available.
-
+- This error is typically identified if a Author is looking for a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
+- If you would like to remove this warning simply find the album that is still using the old root folder and edit it to the correct root folder.
 
-- If you would like to remove this warning simply find the book that is still using the old root folder and edit it to the correct root folder
+- Easiest way to find the problem author is to:
 
-- Easiest way to find this is to:
-
-  - Go to the Authors (Library) Tab
+  - Go to the Author (Library) Tab
   - Create a custom filter with the old root folder path
-  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these books to be moved to.
-  - You will receive a pop-up that states Would you like to move the book folders to 'root path' ? This will also state This will also rename the book folder per the book folder format in settings. Simply select No if the you do not want Readarr to move your files
+  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these author to be moved to.
+  - Next you will receive a pop-up that states Would you like to move the Author folders to 'root path' ? This will also state This will also rename the Author folder per the Author folder format in settings. Simply select No if the you do not want Lidarr to move your files
+  - Run the Check Health Task in System => Tasks
 
 ### Import Lists
 

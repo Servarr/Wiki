@@ -56,7 +56,7 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [No indexers Available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
     - [Artist Folders](#artist-folders)
-      - [Missing root folder](#missing-root-folder)
+      - [Missing Root Folder](#missing-root-folder)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
   - [Disk Space](#disk-space)
   - [About](#about)
@@ -377,19 +377,19 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 ### Artist Folders
 
-#### Missing root folder
+#### Missing Root Folder
 
 - This error is typically identified if a Artist is looking for a root folder but that root folder is no longer available.
+- This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
+- If you would like to remove this warning simply find the album that is still using the old root folder and edit it to the correct root folder.
 
-- If you would like to remove this warning simply find the movie that is still using the old root folder and edit it to the correct root folder
-
-- Easiest way to find this is to:
+- Easiest way to find the problem artist is to:
 
   - Go to the Artist (Library) Tab
   - Create a custom filter with the old root folder path
   - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these artist to be moved to.
-
   - Next you will receive a pop-up that states Would you like to move the Artist folders to 'root path' ? This will also state This will also rename the Artist folder per the Artist folder format in settings. Simply select No if the you do not want Lidarr to move your files
+  - Run the Check Health Task in System => Tasks
 
 #### Lists are unavailable due to failures
 

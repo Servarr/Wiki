@@ -5,5 +5,7 @@
   "MD024": false,
   "MD025": false,
   "MD028": false,
-  "MD046": fenced
+  "MD046": {
+    "style": "fenced"
+  }
 }
