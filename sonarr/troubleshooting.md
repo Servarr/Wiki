@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-02-23T04:40:12.467Z
+date: 2022-02-23T09:39:25.308Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -667,6 +667,13 @@ If you have results on the site you can find that are not showing in Sonarr then
 - [Categories are incorrect - See Above](#wrong-categories)
 - An ID (IMDbId, TVDBId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve. They need to ensure the release is mapped to the correct applicable ids.
 - Not searching how Sonarr is searching; It's highly likely the terms you are searching on the indexer is not how Sonarr is querying it. You can see how Sonarr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily decoded using any HTML decoding/encoding tool online.
+- Missed chunks of RSS Feed of new uploads. Logs will appear as follows and an Event of Warning will be noted.
+
+```
+2022-02-22 08:03:38.7|Debug|Torznab|Downloading Feed http://jackett:9117/api/v2.0/indexers/torrentdownloads/results/torznab?t=tvsearch&cat=5000,100008&extended=1&apikey=(removed)&offset=2900&limit=100
+
+2022-02-22 08:03:40.7|Warn|Torznab|Indexer TorrentDownloads rss sync didn't cover the period between 2/21/2022 8:32:06 PM and 2/21/2022 9:02:42 PM UTC. Search may be required.
+```
 
 ### Certificate validation
 
