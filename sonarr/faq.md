@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-02-12T20:49:37.354Z
+date: 2022-02-23T22:54:51.764Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -108,29 +108,35 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 1. Quality
 1. Language
-1. Preferred Word Score
+1. Preferred Word Score\*
 1. Protocol
-1. Episode Count
+1. Episode Count\*
 1. Episode Number
 1. Indexer Priority
 1. Seeds/Peers (If Torrent)
 1. Age (If Usenet)
 1. Size
 
-> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/radarr/settings#file-management) and use a preferred word regex of `/\b(repack|proper)\b/i` with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#p2p-groups-repackproper)
+> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/sonarr/settings#file-management) and use a preferred word regex of `/\b(repack|proper)\b/i` with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#p2p-groups-repackproper)
 {.is-warning}
+
+> Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
+{.is-info}
 
 ## Preferred Words FAQs
 
-For the score of the on disk file: The existing name of the file and the "scene name" of the release are evaluated for preferred words. The higher score of the two is taken.
+- For the score of the on disk file: The existing name of the file and the "original scene name" of the release are evaluated for preferred words. The higher score of the two is taken.
 
-How are preferred words included in renaming?
+- How are preferred words included in renaming?
 
-For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
+  - For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
 
-As of recent builds, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
+- As of recent builds, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
 
-Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
+- Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
+
+> Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
+{.is-info}
 
 ## How do I change from the Windows Service to a Tray App?
 
