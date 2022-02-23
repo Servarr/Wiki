@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2022-02-15T21:40:53.094Z
+date: 2022-02-23T04:42:07.217Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -276,6 +276,9 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 ### Remote Path Mapping
 
 A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Lidarr doesn't address that folder. A remote path map is required if your download client is on Linux when \*Arr is on Windows or vice versa. It is also likely needed if mixing Docker and Native clients or if using a remote server. It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+
+> If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+{.is-info}
 
 ### Permissions on the Library Folder
 
