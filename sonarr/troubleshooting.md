@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-02-23T09:39:25.308Z
+date: 2022-02-23T19:27:34.112Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -589,6 +589,23 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 ## Common Problems
 
 Below are some common problems that are the solution for almost all issues experienced.
+
+### Poorly Named Releases
+
+- Series Packs are not supported
+- Multiple Season Packs are not supported
+- In many cases, Sonarr is simply unable to match the returned result to a known series. In these cases your logs will look similar to below.  These would need to be grabbed and likely imported manually. The key phrase to see in the logs is `|Debug|DownloadDecisionMaker|Release rejected for the following reasons: [Permanent] Unable to identify correct episode(s) using release name and scene mappings`
+
+```none
+2022-02-23 14:11:09.7|Debug|Parser|Parsing string 'Johnny Bravo 1997 Season 1 4 S01 S04 Specials 576p Mixed x265 HEVC 10bit AAC 2 0 Ghost QxR'
+2022-02-23 14:11:09.7|Trace|Parser|^(?<title>.+?)[-_. ]+?(?:S|Season|Saison|Series)[-_. ]?(?<season>\d{1,2}(?![-_. ]?\d+))(\W+|_|$)(?<extras>EXTRAS|SUBPACK)?(?!\\)
+2022-02-23 14:11:09.7|Debug|Parser|Episode Parsed. Johnny Bravo 1997 Season 1 4 - Season 01 
+2022-02-23 14:11:09.7|Debug|Parser|Language parsed: English
+2022-02-23 14:11:09.7|Debug|QualityParser|Trying to parse quality for Johnny Bravo 1997 Season 1 4 S01 S04 Specials 576p Mixed x265 HEVC 10bit AAC 2 0 Ghost QxR
+2022-02-23 14:11:09.7|Debug|Parser|Quality parsed: SDTV v1
+2022-02-23 14:11:09.7|Debug|Parser|Release Group parsed: 
+2022-02-23 14:11:09.8|Debug|DownloadDecisionMaker|Release rejected for the following reasons: [Permanent] Unable to identify correct episode(s) using release name and scene mappings
+```
 
 ### Tracker needs RawSearch Caps
 
