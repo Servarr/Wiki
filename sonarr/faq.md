@@ -652,7 +652,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 - **February 5 2022 Update: \*Arr Support has been discontinued for the jackett `\all` endpoint. Jackett /all endpoint is no longer supported (e.g. warnings will occur) as of v3.0.6.1457 due to the fact it only causes issues.**
 
-- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- [Even Jackett says /all should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
 - Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)

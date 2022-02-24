@@ -539,7 +539,7 @@ Depending on your OS, there are multiple possible ways.
 
 - **January 1 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 4.0.0.5730 due to the fact it only causes issues.**
 
-- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- [Even Jackett says /all should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
 - Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)

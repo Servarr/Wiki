@@ -420,7 +420,7 @@ Depending on your OS, there are multiple possible ways.
 
 - **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
 
-- [Even Jackett says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- [Even Jackett says /all should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
 - Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
