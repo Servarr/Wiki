@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-01-31T21:35:32.200Z
+date: 2022-02-28T17:15:24.378Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -21,27 +21,32 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Chrome](#chrome-1)
   - [Firefox](#firefox-1)
   - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
-- [Other Projects and Programs](#other-projects-and-programs)
-  - [AMD](#amd)
-  - [AMVD](#amvd)
-  - [AMTD](#amtd)
-  - [Bazarr](#bazarr)
-  - [Cross-Seed](#cross-seed)
-  - [Filebot](#filebot)
-  - [LunaSea](#lunasea)
-  - [JDupes](#jdupes)
-  - [NZB360](#nzb360)
+- [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs-request-apps-arrs)
   - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
   - [Petio](#petio)
-  - [Plex Meta Manager](#plex-meta-manager)
+- [Other Projects and Programs - \*Arr Related](#other-projects-and-programs-arr-related)
+  - [Remote Control](#remote-control)
+    - [LunaSea](#lunasea)
+  - [Radarr & Sonarr Companion - Android App](#radarr-sonarr-companion-android-app)
+  - [Lidarr](#lidarr)
+    - [AMD](#amd)
+    - [AMVD](#amvd)
+  - [Radarr](#radarr)
+  - [AMTD](#amtd)
+  - [Radarr & Sonarr](#radarr-sonarr)
+  - [Bazarr](#bazarr)
+- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs-torrentsdownloading)
+  - [Cross-Seed](#cross-seed)
+  - [Unpackerr](#unpackerr)
   - [qBit Management](#qbit-management)
-  - [Radarr & Sonarr Companion - Android App](#radarr--sonarr-companion-android-app)
+- [Other Projects and Programs](#other-projects-and-programs)
+  - [Filebot](#filebot)
+  - [JDupes](#jdupes)
+  - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
-  - [Unpackerr](#unpackerr)
-- [Scripts & Things](#scripts-things)
 - [Twitter Connect](#twitter-connect)
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
@@ -157,49 +162,7 @@ Firefox
 1. Click the arrow for the site
 1. Click the trash icon for the site
 
-# Other Projects and Programs
-
-## AMD
-
-[Automated Music Downloader](https://github.com/RandomNinjaAtk/docker-amd) RandomNinjaAtk/amd is a Lidarr companion script to automatically download music for Lidarr
-
-## AMVD
-
-[Automated Music Video Downloader](https://github.com/RandomNinjaAtk/docker-amvd) RandomNinjaAtk/amvd is a Lidarr companion script to automatically download and tag Music Videos for use in other video applications (plex/kodi/jellyfin/emby)
-
-## AMTD
-
-[Automated Movie Trailer Downloader](https://github.com/RandomNinjaAtk/docker-amtd) RandomNinjaAtk/amtd is a Radarr companion script to automatically download movie trailers and extras for use in other video applications (plex/kodi/jellyfin/emby)
-
-## Bazarr
-
-[Bazarr](https://github.com/morpheus65535/bazarr) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
-
-## Cross-Seed
-
-[Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
-
-## Filebot
-
-[FileBot](https://www.filebot.net/) is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime as well as fetching subtitles and artwork. It's smart and just works.
-
-## LunaSea
-
-[LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
-
-## JDupes
-
-[Jdupes](https://github.com/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
-
-> TRaSH [has a guide](https://trash-guides.info/jdupes) as well {.is-info}
-
-- `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
-
-- `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
-
-## NZB360
-
-[NZB360](https://nzb360.com/) is a full-featured NZB manager that focuses on providing the best experience possible for controlling all of your usenet needs.
+# Other Projects and Programs - Request Apps \*Arrs
 
 ## Notifiarr (fka Discord Notifier)
 
@@ -231,9 +194,51 @@ Highlights
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
 
-## Plex Meta Manager
+# Other Projects and Programs - \*Arr Related
 
-[Plex Meta Manager (PMM)](https://github.com/meisnate12/Plex-Meta-Manager) is a Python script to update metadata information for movies, shows, and collections as well as automatically build collections.
+## Remote Control
+
+### LunaSea
+
+[LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
+
+## Radarr & Sonarr Companion - Android App
+
+Add new movies/shows to your system easily with your phone. App available at [Google Play](https://play.google.com/store/apps/details?id=easy.radarr)
+
+## Lidarr
+
+### AMD
+
+[Automated Music Downloader](https://github.com/RandomNinjaAtk/docker-amd) RandomNinjaAtk/amd is a Lidarr companion script to automatically download music for Lidarr
+
+### AMVD
+
+[Automated Music Video Downloader](https://github.com/RandomNinjaAtk/docker-amvd) RandomNinjaAtk/amvd is a Lidarr companion script to automatically download and tag Music Videos for use in other video applications (plex/kodi/jellyfin/emby)
+
+## Radarr
+
+## AMTD
+
+[Automated Movie Trailer Downloader](https://github.com/RandomNinjaAtk/docker-amtd) RandomNinjaAtk/amtd is a Radarr companion script to automatically download movie trailers and extras for use in other video applications (plex/kodi/jellyfin/emby)
+
+## Radarr & Sonarr
+
+## Bazarr
+
+[Bazarr](https://github.com/morpheus65535/bazarr) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+
+# Other Projects and Programs - Torrents/Downloading
+
+## Cross-Seed
+
+[Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
+
+## Unpackerr
+
+[Unpackerr](https://github.com/davidnewhall/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
+
+There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so He wrote my own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
 
 ## qBit Management
 
@@ -247,9 +252,25 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 - Remove orphaned files from your root directory that are not referenced by qBittorrent
 - Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded
 
-## Radarr & Sonarr Companion - Android App
+# Other Projects and Programs
 
-Add new movies/shows to your system easily with your phone. App available at [Google Play](https://play.google.com/store/apps/details?id=easy.radarr)
+## Filebot
+
+[FileBot](https://www.filebot.net/) is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime as well as fetching subtitles and artwork. It's smart and just works.
+
+## JDupes
+
+[Jdupes](https://github.com/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
+
+> TRaSH [has a guide](https://trash-guides.info/jdupes) as well {.is-info}
+
+- `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
+
+- `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
+
+## Plex Meta Manager
+
+[Plex Meta Manager (PMM)](https://github.com/meisnate12/Plex-Meta-Manager) is a Python script to update metadata information for movies, shows, and collections as well as automatically build collections.
 
 ## Tautulli
 
@@ -259,15 +280,7 @@ Add new movies/shows to your system easily with your phone. App available at [Go
 
 [Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](/sonarr)/[Radarr](/radarr) and built with the aim of modularization, parallelization and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
 
-## Unpackerr
-
-[Unpackerr](https://github.com/davidnewhall/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so Radarr and/or Sonarr and/or Lidarr may import them.
-
-There are a handful of options out there for extracting and deleting files after your client downloads them. I just didn't care for any of them, so I wrote my own. I wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
-
-# Scripts & Things
-
-# Twitter Connect
+## Twitter Connect
 
 Create a Twitter application (if you haven't already) at <https://apps.twitter.com/>
 
