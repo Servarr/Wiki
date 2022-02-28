@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-02-15T21:41:44.956Z
+date: 2022-02-28T20:23:34.671Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -858,7 +858,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 
 ## Host
 
-- Bind Address - Valid IP4 address or '*' for all interfaces
+- Bind Address - Valid IPv4 address or '*' for all interfaces
   - 0.0.0.0 or `*` - any address can connect
   - 127.0.0.1 or localhost - only localhost applications can connect
   - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
