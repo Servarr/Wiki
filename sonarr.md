@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2021-11-24T19:25:36.716Z
+date: 2022-02-28T17:24:19.055Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -31,6 +31,7 @@ dateCreated: 2021-05-16T16:59:52.354Z
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/sonarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/sonarr/tips-and-tricks)
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/sonarr/appdata-directory)
+- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/sonarr/supported)
 {.links-list}
 
 # Troubleshooting
