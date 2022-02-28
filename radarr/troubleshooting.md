@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2022-02-23T04:41:04.793Z
+date: 2022-02-28T20:06:52.035Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -294,10 +294,23 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 ### Remote Path Mapping
 
-A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Radarr doesn't address that folder. A remote path map is required if your download client is on Linux when \*Arr is on Windows or vice versa. It is also likely needed if mixing Docker and Native clients or if using a remote server. It is a DUMB search/replace (where you find this value, replace it with this value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
+A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that Radarr doesn't address that folder. A remote path map is required if your download client is on Linux when \*Arr is on Windows or vice versa. It is also likely needed if mixing Docker and Native clients or if using a remote server. It is a DUMB search/replace (where you find the REMOTE value, replace it with LOCAL value). If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect. For further information regarding remote path mapping, please [click here](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/).
 
 > If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 {.is-info}
+
+#### Remote Mount or Remote Sync (Syncthing)
+
+- You need it to be syncing the whole time it is downloading. And you need that local sync destination to be able to be hard links when \*Arr import, which means same file system and look like it.
+  - Sync at a lower, common folder that contains both incomplete and complete.
+  - Sync to a location that is on the same file system locally as your library and looks like it (docker and network shares make this easy to misconfigure)
+  - You want to sync the incomplete and complete so that when the torrent client does the move, that is reflected locally and all the files are already "there" (even if they're still downloading). Then you want to use hard links because even if it imports before its done, they'll still finish.
+  - This way the whole time it downloads, it is syncing, then torrent client moves to tv sub-folder and sync reflects that. That way downloads are mostly there when declared finished. And even if they're not totally done, having the hardlink possible means that is still okay.
+  - (Optional - if applicable and/or required (e.g. remote usenet client)) Configure a custom script to run on import/download/upgrade to remove the remote file
+- Alternatively a remote mount rather than a remote sync setup is signifcantly less complicated to configure, but typically slowly.
+  - Mount your remote storage with sshfs or another network file system protocol
+  - Ensure the user and group \*Arr is configured to run as has read or write access.
+  - Configure a remote path map to find the REMOTE path and replace it with the LOCAL equivalent
 
 ### Permissions on the Library Folder
 
