@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-01-30T05:26:56.082Z
+date: 2022-02-28T02:50:36.399Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -17,6 +17,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
     - [V3](#v3)
   - [Latest Version](#latest-version)
     - [V4](#v4)
+    - [V5](#v5)
   - [Depreciated Versions](#depreciated-versions)
     - [V1](#v1)
 - [General](#general)
@@ -101,15 +102,18 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 ### V4
 
-> V4.0 is currently in [DRAFT](https://github.com/Prowlarr/Prowlarr/pull/828) form
-{.is-warning}
-
 - Cardigann v4 includes the following changes:
   - TMDBId
   - Genre
   - TraktID
   - CategoryDescr
 
+### V5
+
+- Cardigann v5includes the following changes:
+  - Adds support for filters on json response parsing
+  - Adds Attribute and Multiple property
+  
 ## Depreciated Versions
 
 ### V1
@@ -808,10 +812,7 @@ In the event that you need to provide a default category due to the possibility 
 
 ### Search JSON and XML
 
-- This is supported for `XML` as well as `JSON`
-- Note that `XML` has all the standard HTML filters available to it, but JSON does not.
-
-Example of a complex search block explaining all available options:
+- This is supported for `XML` as well as `JSON` just by changing the response type
 
 ```yaml
 search:
@@ -827,12 +828,8 @@ search:
       method: "{{ if .Keywords }}post{{ else }}get{{ end }}"
       # [REQUIRED] The response block is necessary to define parsing of a JSON response
       response:
-        # [REQUIRED] "json" indicates that a JSON response is expected "xml" is also acceptable.
+        # [REQUIRED] "json" indicates that a JSON response is expected and "xml" indicates an XML response is expected.
         type: json
-        # [OPTIONAL] If the torrents are in separate subset
-        attribute: torrents
-        # [OPTIONAL] If there are multiple torrents per title
-        multiple: true
         # [OPTIONAL] In the event that a server responds to a query-not-found with a message instead of
         # the more common empty json object or a Count set to 0, you can code the message here and prevent
         # the "Exception (indexer): Object reference not set to an instance of an object." error and have 
@@ -857,14 +854,17 @@ search:
       # [REQUIRED] IF you have defined the Count block then you need to provide the field that has the count.
       # You can use the $ symbol to refer to a root object field, for example: $[0].id
       selector: data.movie_count
-
+      # [OPTIONAL] If the torrents are in separate subset
+      attribute: torrents
+      # [OPTIONAL] If there are multiple torrents per title
+      multiple: true
   # [REQUIRED] list of attributes which are extracted for each row
   fields:
     # All the regular filters are available as described elsewhere in the Wiki. I've included some examples.
     #
-    # If you have not defined an attribute in the response block above, then all the fields are extracted
+    # If you have not defined an attribute in the rows block above, then all the fields are extracted
     # from the rows set.
-    # If you have defined an attribute in the response block above, then a prefix of .. means that this field
+    # If you have defined an attribute in the rows block above, then a prefix of .. means that this field
     # is extracted directly from the rows set, and without a .. prefix you are indicating that the field is 
     # to be extracted from the attribute subset.
     #
@@ -995,6 +995,30 @@ search:
     minimumseedtime:
       # 7 day (as seconds = 7 x 24 x 60 x 60)
       text: 604800
+```
+
+### Search Row Selectors
+
+The use of `:has()`, `:not()` and `:contains()` are supported by the rows selector and fields selectors.
+
+```yaml
+ rows:
+    selector: data:has(attributes.size):has(attributes.name:contains(1080)):has(attributes.poster:contains(.jpg)):not(attributes.fake_att):not(attributes.uploader:contains(DarkSwan2001))
+  fields:
+    title_dts:
+      selector: name:contains(DTS)
+      optional: true
+      filters:
+        - name: re_replace
+          args: ["DTS", "DTSSS"]
+    title_notdts:
+      selector: name:not(:contains(DTS))
+      optional: true
+    title:
+      text: "{{ if .Result.title_dts }}{{ .Result.title_dts }}{{ else }}{{ .Result.title_notdts }}{{ end }}"
+      filters:
+        - name: re_replace
+          args: ["\\[", " "]
 ```
 
 ## Download
