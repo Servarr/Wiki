@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2022-02-20T12:29:54.418Z
+date: 2022-02-28T17:23:15.281Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -31,6 +31,7 @@ dateCreated: 2021-05-16T23:39:16.456Z
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/lidarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/lidarr/tips-and-tricks)
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/lidarr/appdata-directory)
+- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/lidarr/supported)
 {.links-list}
 
 # Troubleshooting
