@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2021-11-24T19:23:46.736Z
+date: 2022-02-28T17:23:49.487Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -31,6 +31,7 @@ dateCreated: 2021-05-16T13:53:17.360Z
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/radarr/tips-and-tricks)
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/radarr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp; Configure Radarr with a PostgreSQL Database](/radarr/postgres-setup)
+- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/lidarr/supported)
 {.links-list}
 
 # Troubleshooting
