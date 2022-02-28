@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2022-02-21T12:08:52.126Z
+date: 2022-02-28T17:24:11.827Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
@@ -31,6 +31,7 @@ dateCreated: 2021-08-15T13:12:38.327Z
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/readarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/readarr/tips-and-tricks)
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/readarr/appdata-directory)
+- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/readarr/supported)
 {.links-list}
 
 # Troubleshooting
