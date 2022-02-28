@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2022-01-18T01:41:20.804Z
+date: 2022-02-28T17:23:41.149Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -31,6 +31,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/prowlarr/custom-scripts)
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/prowlarr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp; Configure Prowlarr with a PostgreSQL Database](/prowlarr/postgres-setup)
+- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/lidarr/supported)
 {.links-list}
 
 # Troubleshooting
