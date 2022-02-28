@@ -2,11 +2,12 @@
 title: Readarr System
 description: 
 published: true
-date: 2022-01-20T20:22:10.117Z
+date: 2022-02-28T17:50:50.938Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -203,6 +204,8 @@ Note: you will also need to add the websocket directive to your readarr configur
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
 - If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*Arrs](https://trash-guides.info/radarr/radarr-remote-path-mapping/) for more information.
+
+- If you are getting this error with Calibre then Redarr is unable to access Calibre's Library.  The resolution is the same - correct the inconsistent mounts for your containers.  Alternatively, create a remote path mapping to map the Calibre Library path to the Readarr accessible path.  A remote path map is only ever needed if crossing operating systems or servers.  If everything is in Docker it is preferred to correct your mounts instead.
 
 #### Downloading into Root Folder
 
