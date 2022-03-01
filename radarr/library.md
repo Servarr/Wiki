@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2022-02-04T04:57:23.801Z
+date: 2022-03-01T23:38:03.566Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -76,7 +76,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 
 # Library Import
 
-Library Import allows you to import existing organized movies and each movie's file via existing files in the path directory. This is especially useful when making a new Radarr instance and wanting to keep your existing series.
+Library Import allows you to import existing organized movies and each movie's file via existing files in the path directory. This is especially useful when making a new Radarr instance and wanting to keep your existing movies.
 
 - Library import is for adding and importing an existing organized library of movies into Radarr.
 - Library Import shall not be used for:
@@ -86,6 +86,18 @@ Library Import allows you to import existing organized movies and each movie's f
 - If you get an error of "path is already configured", [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie).
   
 > It is required that movie folders and files have the year in their name to be imported and parsed.{.is-warning}
+
+> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* If you're using an SMB mount ensure `nobrl` is enabled.
+{.is-warning}
+
+> **The user and group you configured Radarr to run as must have read & write access to this location.** {.is-info}
+
+> Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
+{.is-info}
+
+> **Your download folder and media folder can’t be the same location**
+{.is-danger}
 
 # Discover
 
