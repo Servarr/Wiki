@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-03-01T16:27:53.343Z
+date: 2022-03-01T16:50:51.287Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -264,7 +264,14 @@ Back on the jails list find your newly created jail for `lidarr` and click "Shel
 
 To install Lidarr
 
-`pkg install lidarr`
+> \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
+> \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
+>   \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
+{.is-warning}
+
+```shell
+pkg install lidarr
+```
 
 Don't close the shell out yet we still have a few more things!
 
@@ -280,27 +287,37 @@ The updater is disabled by default. The `pkg-message` gives instructions on how 
 
 To enable the service:
 
-`sysrc lidarr_enable=TRUE`
+```shell
+sysrc lidarr_enable=TRUE
+```
 
 If you do not want to use user/group `lidarr` you will need to tell the service file what user/group it should be running under
 
-`sysrc lidarr_user="USER_YOU_WANT"`
+```shell
+sysrc lidarr_user="USER_YOU_WANT"
+```
 
-`sysrc lidarr_group="GROUP_YOU_WANT"`
+```shell
+sysrc lidarr_group="GROUP_YOU_WANT"
+```
 
 `lidarr` stores its data, config, logs, and PID files in `/usr/local/lidarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
 
-`sysrc lidarr_data_dir="DIR_YOU_WANT"`
+```shell
+sysrc lidarr_data_dir="DIR_YOU_WANT"
+```
 
 Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `lidarr` uses AND/OR add `lidarr` to a GID that has write access.
 
 Almost done, let's start the service:
 
-`service lidarr start`
+```shell
+service lidarr start
+```
 
 If everything went according to plan then lidarr should be up and running on the IP of the jail (port 8686)!
 
-(You can now safely close the shell)
+You can now safely close the shell.
 
 ## Troubleshooting
 
