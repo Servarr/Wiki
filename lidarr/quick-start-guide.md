@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2022-02-15T21:44:22.922Z
+date: 2022-03-01T23:40:04.160Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -159,14 +159,19 @@ You'll be presented with the following window:
 
 Leave the other options at their defaults.
 
+> If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
+{.is-warning}
+
 > \* If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
-> If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
-{.is-warning}
+> **The user and group you configured Lidarr to run as must have read & write access to this location.** {.is-info}
 
-> Your `Root Folder` and `Download Folder` cannot be the same location!
+> Your download client downloads to a download folder and Lidarr imports it to your media folder (final destination) that your media server uses.
+{.is-info}
+
+> **Your download folder and media folder can’t be the same location**
 {.is-danger}
 
 ## Profiles
