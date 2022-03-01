@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-02-21T13:13:39.999Z
+date: 2022-03-01T16:32:07.522Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -51,6 +51,8 @@ nano ArrInstall.sh
 ### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all \*Arrs)
 ### Version v3.0.1 2022-02-05 - aeramor (typo fix line 179: 'chown "$app_uid":"$app_uid" -R "$bindir"' -> 'chown "$app_uid":"$app_guid" -R "$bindir"')
 ### Version v3.0.3 2022-02-06 - Bakerboy448 fixup ownership
+### Version v3.0.3a Readarr to develop
+### Version v3.0.4 2022-03-01 - Add sleep before checking service status
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -62,8 +64,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.3a"
-scriptdate="2021-02-21"
+scriptversion="3.0.4"
+scriptdate="2022-03-01"
 
 set -euo pipefail
 
@@ -262,6 +264,7 @@ host=$(hostname -I)
 ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
 echo "Install complete"
+sleep 10
 STATUS="$(systemctl is-active $app)"
 if [ "${STATUS}" = "active" ]; then
     echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
