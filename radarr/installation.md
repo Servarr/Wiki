@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-03-01T16:27:23.305Z
+date: 2022-03-01T16:48:34.802Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -274,11 +274,18 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 
 ## Radarr Installation
 
-Back on the jails list find your newly created jail for `radarr` and click "Shell"
+Back on the jails list find your newly created jail for `radarr` and click `Shell`
 
 To install Radarr
 
-`pkg install radarr`
+> \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
+> \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
+>   \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
+{.is-warning}
+
+```shell
+pkg install radarr
+```
 
 Don't close the shell out yet we still have a few more things!
 
@@ -294,27 +301,37 @@ The updater is disabled by default. The `pkg-message` gives instructions on how 
 
 To enable the service:
 
-`sysrc radarr_enable=TRUE`
+```shell
+sysrc radarr_enable=TRUE
+```
 
 If you do not want to use user/group `radarr` you will need to tell the service file what user/group it should be running under
 
-`sysrc radarr_user="USER_YOU_WANT"`
+```shell
+sysrc radarr_user="USER_YOU_WANT"
+```
 
-`sysrc radarr_group="GROUP_YOU_WANT"`
+```shell
+sysrc radarr_group="GROUP_YOU_WANT"
+```
 
 `radarr` stores its data, config, logs, and PID files in `/usr/local/radarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
 
-`sysrc radarr_data_dir="DIR_YOU_WANT"`
+```shell
+sysrc radarr_data_dir="DIR_YOU_WANT"
+```
 
 Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `radarr` uses AND/OR add `radarr` to a GID that has write access.
 
 Almost done, let's start the service:
 
-`service radarr start`
+```shell
+service radarr start
+```
 
 If everything went according to plan then radarr should be up and running on the IP of the jail (port 7878)!
 
-(You can now safely close the shell)
+You can now safely close the shell
 
 ## Troubleshooting
 
