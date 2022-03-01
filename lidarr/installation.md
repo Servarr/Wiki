@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-02-22T01:17:12.941Z
+date: 2022-03-01T16:27:53.343Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -189,6 +189,12 @@ rm Lidarr*.linux*.tar.gz
 ```
 
 Typically to access the Lidarr web GUI browse to `http://{Your server IP Address}:8686`
+
+If Lidarr did not appear to start, then check the status of the service:
+
+```shell
+sudo journalctl --since today -u lidarr
+```
 
 ---
 
