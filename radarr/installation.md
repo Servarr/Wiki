@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-03-01T16:50:48.056Z
+date: 2022-03-01T19:55:01.474Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -493,8 +493,7 @@ If you implement any additional authentication through Apache, you should exclud
 
 # Multiple Instances
 
-It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie.
-Note that you can configure Radarr to use a second Radarr as a list. This is helpful if you wish to keep both in sync.
+It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie. Note that you can (and probably should) [review TRaSH's guide and configure Radarr to use a second Radarr as a list](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/). This is helpful if you wish to keep both in sync.
 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
