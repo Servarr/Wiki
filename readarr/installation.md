@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-02-23T03:00:02.452Z
+date: 2022-03-01T16:30:26.170Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -208,6 +208,12 @@ rm Readarr*.linux*.tar.gz
 ```
 
 Typically to access the Readarr web GUI browse to `http://{Your server IP Address}:8787`
+
+If Readarr did not appear to start, then check the status of the service:
+
+```shell
+sudo journalctl --since today -u readarr
+```
 
 ---
 
