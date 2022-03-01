@@ -2,7 +2,7 @@
 title: Sonarr Library
 description: 
 published: true
-date: 2022-02-04T04:46:35.628Z
+date: 2022-03-01T23:38:36.574Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
@@ -46,6 +46,18 @@ Library Import allows you to import existing, organized series and episode files
   - Importing files from a download folder
   - Adding or Importing one or more files that are not properly named and organized in their own Series Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a series or episode to Sonarr and importing the series and its file(s) from the root (library) folder that was input to Library Import
+
+> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* If you're using an SMB mount ensure `nobrl` is enabled.
+{.is-warning}
+
+> **The user and group you configured Sonarr to run as must have read & write access to this location.** {.is-info}
+
+> Your download client downloads to a download folder and Sonarr imports it to your media folder (final destination) that your media server uses.
+{.is-info}
+
+> **Your download folder and media folder can’t be the same location**
+{.is-danger}
 
 # Mass Editor
 
