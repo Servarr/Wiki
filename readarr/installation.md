@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-03-01T16:30:26.170Z
+date: 2022-03-01T16:49:46.961Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -283,7 +283,14 @@ Back on the jails list find your newly created jail for `readarr` and click "She
 
 To install Readarr
 
-`pkg install readarr`
+> \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
+> \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
+>   \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
+{.is-warning}
+
+```shell
+pkg install readarr
+```
 
 Don't close the shell out yet we still have a few more things!
 
@@ -299,27 +306,37 @@ The updater is disabled by default. The `pkg-message` gives instructions on how 
 
 To enable the service:
 
-`sysrc readarr_enable=TRUE`
+```shell
+sysrc readarr_enable=TRUE
+```
 
 If you do not want to use user/group `readarr` you will need to tell the service file what user/group it should be running under
 
-`sysrc readarr_user="USER_YOU_WANT"`
+```shell
+sysrc readarr_user="USER_YOU_WANT"
+```
 
-`sysrc readarr_group="GROUP_YOU_WANT"`
+```shell
+sysrc readarr_group="GROUP_YOU_WANT"
+```
 
 `readarr` stores its data, config, logs, and PID files in `/usr/local/readarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
 
-`sysrc readarr_data_dir="DIR_YOU_WANT"`
+```shell
+sysrc readarr_data_dir="DIR_YOU_WANT"
+```
 
 Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `readarr` uses AND/OR add `readarr` to a GID that has write access.
 
 Almost done, let's start the service:
 
-`service readarr start`
+```shell
+service readarr start
+```
 
 If everything went according to plan then readarr should be up and running on the IP of the jail (port 8787)!
 
-(You can now safely close the shell)
+You can now safely close the shell
 
 ## Troubleshooting
 
