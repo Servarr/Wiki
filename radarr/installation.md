@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-02-22T01:12:44.164Z
+date: 2022-03-01T16:27:23.305Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -203,6 +203,12 @@ rm Radarr*.linux*.tar.gz
 ```
 
 Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:7878`
+
+If Radarr did not appear to start, then check the status of the service:
+
+```shell
+sudo journalctl --since today -u radarr
+```
 
 ---
 
