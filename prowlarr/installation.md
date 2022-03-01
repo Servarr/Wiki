@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-02-22T01:05:41.561Z
+date: 2022-03-01T16:27:10.274Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -187,7 +187,13 @@ sudo systemctl enable --now -q prowlarr
 rm Prowlarr*.linux*.tar.gz
 ```
 
-Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:9696`
+Typically to access the Prowlarr web GUI browse to `http://{Your server IP Address}:9696`
+
+If Prowlarr did not appear to start, then check the status of the service:
+
+```shell
+sudo journalctl --since today -u prowlarr
+```
 
 ---
 
