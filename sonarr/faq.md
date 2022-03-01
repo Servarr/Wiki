@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-02-23T22:54:51.764Z
+date: 2022-03-01T17:15:40.417Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -397,10 +397,6 @@ Logs will show `Searching indexers for [The Witcher : 09]`
   - For those on develop and are still on `3.0.6.1343` or lower you can safely downgrade to main
   - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut. If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
-## How do I request a feature for Sonarr?
-
-- This is an easy one click [add a feature request on our GitHub](https://github.com/Sonarr/Sonarr/)
-
 # Sonarr and Series Issues + Metadata
 
 ## How does Sonarr handle scene numbering issues (American Dad!, etc)?
@@ -408,12 +404,17 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 ### How Sonarr handles scene numbering issues
 
 - Sonarr relies on [TheXEM](http://thexem.info/), a community driven site that lets users create mappings of shows that the scene (the people that post the files) and TheTVDb (which typically follows the network's numbering). There are a number of shows on there already, but it is easy to add another and typically the changes are accepted within a couple days (if they're correct). TheXEM is used to correct differences in episode numbering (disagreement whether an episode is a special or not) as well as season number differences, such as episodes being released as S10E01, but TheTVDb listing that same episode as S2017E01.
-- XEM typically fixes the issues when release groups' numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.
+- XEM typically fixes the issues when release groups' (colloquially known as 'the scene') numbering does not match TVDb numbering so Sonarr doesn't work. Well enter [XEM](http://thexem.info) which creates a map for Sonarr to look at.
 - Releases double episodes in a single file since that is how they air but TVDb marks each episode individually.
 - Release groups use a year for the season S2010 and TVDb uses S01.
 - [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.
 
-> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). If this is observed, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). 
+> If this is observed, please submit them via the scene mapping form.
+{.is-info}
+- [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+- [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+{.links-list}
 
 ### Problematic Shows
 
@@ -423,7 +424,10 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 - This is an incomplete list of the known shows and how/why they're problematic:  
 - American Dad {#problemshow-americandad}
   - American Dad is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
-  > If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform){.is-info}
+  - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
+    - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+    - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+   {.links-list}
 - Arrested Development {#problemshow-arresteddevelopment}
 - Kitchen Nightmares (US) {#problemshow-kitchennightmaresus}
 - Mythbusters {#problemshow-mythbusters}
@@ -431,31 +435,41 @@ Logs will show `Searching indexers for [The Witcher : 09]`
   - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
 - Pawn Stars {#problemshow-pawnstars}
 - Pokémon {#problemshow-pokemon}
-  - On TheXem, [pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please please submit them via the scene mapping form. Make sure it hasn't already been requested: [Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) and Make a new request here: [Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+  - On TheXem, [Pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please submit them via the scene mapping form and ensure they are not already requested
+    - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+    - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+   {.links-list}
+
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 
 ## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
-There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series:
+There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series.
 
 > Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb. {.is-warning}
 
 - Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
+- You may also wish to review the [FAQ Entry for Problematic Shows and Release Group vs. TVDb numbering issues](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
 
 > **For all Japanese Anime, aliases will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below. {.is-danger}
 
-1. Make sure the alias and release hasn't already been requested. [Services Requested Mappings](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-1. Make a new request here by filling out the form completely: [Services Scene Mapping Request Form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+- [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+- [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+{.links-list}
 
-- *Typically Services requests are added within 1-5 days.*
+> Typically Services requests are added within 1-5 days
+{.is-info}
 
-- *Again, do not request a mapping for Japanese Anime; use XEM for that.* Further information can be found with some of the XEM folks that hangout in our [\#XEM discord channel](https://discord.gg/an9rnEdWs5).
+> Again, do not request a mapping for Japanese Anime; use XEM for that.
+> Further information can be found with some of the XEM folks that hangout in the [\#XEM discord channel on the Sonarr Discord](https://discord.gg/an9rnEdWs5)
+{.is-danger}
 
 > If a Non-Japanese Anime Series requires Season mapping (e.g. released as S25E26 but TVDB is S26E2 then an XEM mapping will be required. This cannot be done with Services mapping. {.is-info}
 
 > The series "Helt Perfekt" with TVDb ids of `343189` and `252077` is difficult to automate due to TVDb having the same name for both shows, violating TVDb's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
 {.is-info}
+
 
 ## TVDb is updated why isn't Sonarr?
 
