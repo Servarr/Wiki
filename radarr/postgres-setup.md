@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T12:59:00.268Z
+date: 2022-03-04T12:59:59.204Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -51,12 +51,13 @@ Create these databases using your favorite method, with the same username and pa
 ```
 
 You can now run Radarr using the postgres database. 
+
 ## Migrate data
 
 If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
-
+- Radarr should create the table structure as some data columns are different types as compared to SQLite
 - By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
