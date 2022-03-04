@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T13:07:45.150Z
+date: 2022-03-04T13:08:12.808Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -37,7 +37,7 @@ Radarr needs two databases, the default names of these are:
 - `radarr-main`   This is used to store all configuration and history
 - `radarr-log`    This is used to store events that produce a logentry
 
-These can be named whatever you want
+These can be named whatever you want them to be
 
 Create these databases using your favorite method, with the same username and password. Roxedus used Adminer, as he already had that set up.
 
