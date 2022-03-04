@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T12:59:59.204Z
+date: 2022-03-04T13:05:20.010Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -50,7 +50,7 @@ Create these databases using your favorite method, with the same username and pa
 <PostgresHost>postgres14</PostgresHost>
 ```
 
-You can now run Radarr using the postgres database. 
+You can now run Radarr using the postgres database. We do this when migrating as well, to ensure Radarr sets up the required schema.
 
 ## Migrate data
 
