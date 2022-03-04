@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T13:05:20.010Z
+date: 2022-03-04T13:06:56.246Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -32,10 +32,12 @@ docker create --name=postgres14 \
 
 ## Creation of database
 
-Radarr needs two databases:
+Radarr needs two databases, the default names of these are:
 
 - `radarr-main`   This is used to store all configuration and history
 - `radarr-log`    This is used to store events that produce a logentry
+
+These can be named whatever you want
 
 Create these databases using your favorite method, with the same username and password. Roxedus used Adminer, as he already had that set up.
 
@@ -50,18 +52,23 @@ Create these databases using your favorite method, with the same username and pa
 <PostgresHost>postgres14</PostgresHost>
 ```
 
-You can now run Radarr using the postgres database. We do this when migrating as well, to ensure Radarr sets up the required schema.
+If you want to specify a database name then should also include
+```xml
+<PostgresMainDb>MainDbName</PostgresMainDb>
+<PostgresLogDb>LogDbName</PostgresLogDb>
+```
+
+You can now run Radarr using the postgres database. 
 
 ## Migrate data
 
-If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
+> If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
-- Radarr should create the table structure as some data columns are different types as compared to SQLite
 - By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
-- The existing data in the `Profiles` table will need to be deleted before migrating as there is no way to overwrite this yet. If you do not delete this existing data your profiles with scoring from your custom formats will not be migrated over. Meaning you will have to redo this. (Honestly it is easier to just delete the data rather then setting it all up again)
+- The existing data in the `Profiles` table will need to be deleted before migrating as there is no way to overwrite this yet. If you do not delete this existing data your profiles with scoring from your custom formats will not be migrated over. Meaning you will have to redo this.
 
 With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
 
