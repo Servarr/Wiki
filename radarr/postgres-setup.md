@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T13:12:49.616Z
+date: 2022-03-04T13:13:49.487Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -60,7 +60,7 @@ If you want to specify a database name then should also include the following co
 
 You can now run Radarr using the Postgres databases. 
 
-## Migrate data
+## Migrating data
 
 > If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
 
