@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T13:06:56.246Z
+date: 2022-03-04T13:07:15.025Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -52,7 +52,7 @@ Create these databases using your favorite method, with the same username and pa
 <PostgresHost>postgres14</PostgresHost>
 ```
 
-If you want to specify a database name then should also include
+If you want to specify a database name then should also include the following configuration
 ```xml
 <PostgresMainDb>MainDbName</PostgresMainDb>
 <PostgresLogDb>LogDbName</PostgresLogDb>
