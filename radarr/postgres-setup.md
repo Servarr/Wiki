@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-02-21T16:20:22.082Z
+date: 2022-03-04T12:59:00.268Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -14,11 +14,7 @@ This document will go over the key points of migrating and setting up Postgres s
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-## Creation of initial database
-
-- We do this when migrating as well, to ensure Radarr sets up the required schema.
-
-### Setting up Postgres
+## Setting up Postgres
 
  First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
@@ -33,6 +29,8 @@ docker create --name=postgres14 \
     -v ..appdata/postgres14:/var/lib/postgresql/data \
     postgres:14
 ```
+
+## Creation of database
 
 Radarr needs two databases:
 
@@ -52,6 +50,7 @@ Create these databases using your favorite method, with the same username and pa
 <PostgresHost>postgres14</PostgresHost>
 ```
 
+You can now run Radarr using the postgres database. 
 ## Migrate data
 
 If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
