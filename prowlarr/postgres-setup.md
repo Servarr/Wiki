@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-01-11T14:59:45.674Z
+date: 2022-03-04T13:08:13.347Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -51,6 +51,8 @@ We need to tell Prowlarr to use Postgres. The `config.xml` should already be pop
 <PostgresPort>5432</PostgresPort>
 <PostgresHost>postgres14</PostgresHost>
 ```
+You can now run Prowlarr using the postgres database. We do this when migrating as well, to ensure Prowlarr sets up the required schema.
+
 
 ## Migrate data
 
