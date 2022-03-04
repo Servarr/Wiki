@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-03-04T13:08:13.347Z
+date: 2022-03-04T13:17:07.019Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -51,7 +51,7 @@ We need to tell Prowlarr to use Postgres. The `config.xml` should already be pop
 <PostgresPort>5432</PostgresPort>
 <PostgresHost>postgres14</PostgresHost>
 ```
-You can now run Prowlarr using the postgres database. We do this when migrating as well, to ensure Prowlarr sets up the required schema.
+You can now run Prowlarr using the postgres database.
 
 
 ## Migrate data
@@ -63,6 +63,8 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 - By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
+  
+> Before migrating please ensure that you have run Prowlarr against the created Postgres databases {.is-warning}
 
 With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
 
