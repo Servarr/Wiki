@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-02-22T18:32:34.761Z
+date: 2022-03-05T03:27:07.447Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -91,9 +91,20 @@ dateCreated: 2021-05-25T20:01:09.320Z
 ## What are Lists and what can they do for me?
 
 - Lists are a part of Readarr that allow you to follow a given list creator.
-- Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
-- `CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save.
-- ie. physically look at the list before you even go to Readarr.
+- Let's say that you follow a given list creator on GoodReads and really like their collection of Great Books and want to add every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
+
+>`CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save.
+{.is-warning}
+
+- It's suggested that physically look at the list before you even go to Readarr.
+
+## Why are lists sync times so long and can I change it?
+
+Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
+
+You can trigger a list refresh manually, script it and trigger it via the API, or add the books directly to Readarr.
+
+This change was due to not have our server get killed by people updating lists every 10 minutes.
 
 ## Why can I not add a new book or author to Readarr?
 
@@ -345,14 +356,6 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
   ```shell
   sudo apt update && sudo apt-get -t buster-backports install libseccomp2
   ```
-
-## Why are lists sync times so long and can I change it?
-
-Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
-
-You can trigger a list refresh manually, script it and trigger it via the API, or add the books directly to Readarr.
-
-This change was due to not have our server get killed by people updating lists every 10 minutes.
 
 ## Can I disable the refresh books task
 
