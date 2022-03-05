@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-03-05T03:27:07.447Z
+date: 2022-03-05T03:29:07.403Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -15,6 +15,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
   - [How does Readarr find books?](#how-does-readarr-find-books)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
   - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
+  - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
   - [Why can I not add a new book or author to Readarr?](#why-can-i-not-add-a-new-book-or-author-to-readarr)
   - [Metadata Profile "None" allowing Foreign Releases](#metadata-profile-none-allowing-foreign-releases)
   - [Book Match is not Close Enough: XX% vs YY% \[book\]](#book-match-is-not-close-enough-xx-vs-yy-book)
@@ -42,7 +43,6 @@ dateCreated: 2021-05-25T20:01:09.320Z
   - [Root path for authors imported from lists becomes “C:” or other weird paths](#root-path-for-authors-imported-from-lists-becomes-c-or-other-weird-paths)
   - [Book Imported, But Source File And Torrent Not Deleted](#book-imported-but-source-file-and-torrent-not-deleted)
   - [I am using a Pi and Raspbian and Readarr will not launch](#i-am-using-a-pi-and-raspbian-and-readarr-will-not-launch)
-  - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
   - [Can I disable the refresh books task](#can-i-disable-the-refresh-books-task)
   - [Can I have BOTH an ebook and an audiobook version of the same book?](#can-i-have-both-an-ebook-and-an-audiobook-version-of-the-same-book)
   - [Do I need to use Calibre?](#do-i-need-to-use-calibre)
@@ -102,7 +102,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
 
-You can trigger a list refresh manually, script it and trigger it via the API, or add the books directly to Readarr.
+You can trigger a list refresh manually, script it and trigger it via the API, or add the books directly to Readarr. Lists will otherwise refresh every 24 hours.
 
 This change was due to not have our server get killed by people updating lists every 10 minutes.
 
