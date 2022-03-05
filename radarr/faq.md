@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-02-12T16:18:10.365Z
+date: 2022-03-05T03:30:28.545Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -136,6 +136,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
 
 - This change was due to not have our server get killed by people updating lists every 10 minutes.
+
+- This interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
 
 ## Can all my movie files be stored in one folder?
 
