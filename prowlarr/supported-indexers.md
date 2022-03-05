@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-03-05T15:16:29.1208219Z
+date: 2022-03-05T15:33:59.5944615Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-03-05T15:16:29.1208219Z
+dateCreated: 2022-03-05T15:33:59.5944615Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.2.0.1564` / [Commit: 855f8d35f28cacc55a342ae1f83c249839128914](https://github.com/Prowlarr/Prowlarr/commit/855f8d35f28cacc55a342ae1f83c249839128914)
+- Supported Trackers and Indexers as of Build `0.2.0.1560` / [Commit: 855f8d35f28cacc55a342ae1f83c249839128914](https://github.com/Prowlarr/Prowlarr/commit/855f8d35f28cacc55a342ae1f83c249839128914)
 
 ---
 
@@ -48,6 +48,7 @@ dateCreated: 2022-03-05T15:16:29.1208219Z
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|zh-CN|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|en-US|
 |[cpasbien clone](https://www.cpasbien.gg/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
+|[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|en-US|
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|zh-TW|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga.|en-US|
 |[EliteTorrent\.biz](https://elitetorrent.la/){#elitetorrent-biz}|EliteTorrent\.biz is a Public torrent site for TV, movies and documentaries|es-ES|
@@ -114,8 +115,8 @@ dateCreated: 2022-03-05T15:16:29.1208219Z
 |[Sexxi](https://sexxi.club/){#sexxi}|Sexxi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[Sexy-Pics](https://www.sexy-pics.us/){#sexypics}|Sexy-Pics is a Public Magnet Links site for 3X MP4|en-US|
 |[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
-|[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
+|[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|en-US|
 |[sosulki](http://sosulki.net/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|en-US|
@@ -137,13 +138,13 @@ dateCreated: 2022-03-05T15:16:29.1208219Z
 |[TorrentMax](https://torrentmax2.net/){#torrentmax}|TorrentMax (토렌트맥스) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq132.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq133.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir50.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://torrentview52.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz39.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[Torrentz2eu](https://torrentz2.club/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
+|[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-RU|
 |[Underverse](https://underver.se/){#underverse}|Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-RU|
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-RU|
@@ -258,6 +259,7 @@ dateCreated: 2022-03-05T15:16:29.1208219Z
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV.  Cookie Login for 2FA use.|en-GB|
 |[CrypticHaven](http://www.cryptichaven.org/){#cryptichaven}|CrypticHaven Comedy Club (CCC) is a Private Torrent Tracker dedicated to sharing the joy of Comedy.|en-US|
 |[DanishBytes](https://danishbytes.club/){#danishbytes}|DanishBytes is a Private Danish Tracker|en-US|
+|[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|en-US|
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|hu-HU|
 |[Dark Tracker](https://darkos.club/){#darktracker}|Dark Tracker is a RUSSIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|ru-RU|
 |[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a German Private site for TV / MOVIES / GENERAL|de-DE|
@@ -303,7 +305,6 @@ dateCreated: 2022-03-05T15:16:29.1208219Z
 |[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|en-US|
 |[GAYtorrent\.ru](https://www.gaytorrent.ru/){#gaytorrentru}|GayTorrent\.ru is a Private Torrent Tracker for GAY 3X|en-US|
 |[GazelleGames](https://gazellegames.net/){#gazellegames}|GazelleGames (GGn) is a Private Torrent Tracker for GAMES|en-US|
-|[Generation-Free](https://generation-free.biz/){#generationfree}|Generation-Free is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[Generation-Free (API)](https://generation-free.org/){#generationfree-api}|Generation-Free (GF-Free) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |Generic Torznab{#torznab}|A Newznab-like api for torrents.|en-US|
 |[Genesis-Movement](https://torrent.genesis-movement.org/){#genesismovement}|Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC|en-US|
