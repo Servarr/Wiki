@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-03-05T21:10:04.526Z
+date: 2022-03-08T10:35:16.753Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -478,7 +478,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
-- Radarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
+- Radarr validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
 - If your download client and are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
@@ -509,8 +509,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## How does Radarr handle foreign movies or foreign titles?
 
-- Radarr uses both Alt Titles and Translations for parsing.
-- Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero. - Parsing looks for a match in all Translations and Alternative Titles.
+- Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero. - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
   - Note that `multi` by default is assumed English and French
