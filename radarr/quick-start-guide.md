@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-02-15T21:44:54.177Z
+date: 2022-03-08T10:31:15.441Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -102,7 +102,7 @@ Here we will add the root folder that Radarr will be using to import your existi
 > Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 {.is-info}
 
-> **Your download folder and media folder can’t be the same location**
+> **Your download folder and media (library / root) folder can’t be the same location**
 {.is-danger}
 
 Don’t forget to save your changes
@@ -113,13 +113,13 @@ Don’t forget to save your changes
 
 ![Radarr-settings-profiles.png](/assets/radarr/Radarr-settings-profiles.png)
 
-Here you’ll be allowed to set profiles for which you can have for the quality of movie you’re looking to download Here you will be allowed to set profiles for the quality of movie you're looking to download
+Here you’ll be allowed to configure profiles for which you can have for the quality, preferred language, and custom format scoring of a movie you’re looking to download.
 
-More info [Settings => Profiles](/radarr/settings#profiles).
+We recommend you to create your own profiles and only select the Quality Sources and Languages you actually want.
 
-We recommend you to create your own profiles and only select the Quality Sources you actually want.
+For more information on foreign titles and languages see [this FAQ entry](/radarr/faq#how-does-radarr-handle-foreign-movies-or-foreign-titles)
 
-> More info [Settings => Profiles](/radarr/settings#profiles).
+> More info at [Settings => Profiles](/radarr/settings#profiles).
 > To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}
 
@@ -152,9 +152,9 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 ![Radarr-settings-download-clients.png](/assets/radarr/Radarr-settings-download-clients.png)
 
-Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
+Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/radarr/settings#download-clients), [the supported page](/radarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
+> See the [settings page](/radarr/settings#download-clients), [the supported clients page](/radarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
 
 ## {.tabset}
 
@@ -315,4 +315,4 @@ When you see the movie you want click on it.
 6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
 7. Click on `Add Movie` to add the movie to Radarr.
 
-- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
+- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-mqovie)
