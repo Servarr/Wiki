@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-03-08T10:35:16.753Z
+date: 2022-03-10T19:03:24.602Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -133,9 +133,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 
-- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, or any similar app that adds them right away
+- You can trigger a list refresh manually, script it and trigger it via the API, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
 
-- This change was due to not have our server get killed by people updating lists every 10 minutes.
+- This restriction is to not have our server get killed by people updating lists every 10 minutes.
 
 - This interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
 
