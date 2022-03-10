@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-01-07T19:44:48.594Z
+date: 2022-03-10T17:36:48.959Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -119,7 +119,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - By far one of the most common ways to push notifications of actions happening on your Radarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
-  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+> You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - Emby {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
@@ -130,6 +130,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - See the entry on [Useful Tools - Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available.
+> Note that this will trigger a full library scan for the library/root folder the movie is in.  It is strongly suggested to use the native Plex functionality that just watches the file system or to use a tool like [plexautoscan](https://github.com/l3uddz/plex_autoscan)
+{.is-warning}
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
 - Pushover {#pushover}
