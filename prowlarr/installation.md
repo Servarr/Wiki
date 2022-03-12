@@ -66,7 +66,7 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 
 {#OSX}
   
-> Prowlarr not compatible with OSX versions < 10.15 (Catalina) due to netcore incompatibilities.
+> Prowlarr not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)

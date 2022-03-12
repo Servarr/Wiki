@@ -76,7 +76,7 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 
 {#OSX}
 
-> Sonarr will eventually be no longer compatible with OSX versions < 10.15 (Catalina) due to netcore incompatibilities.
+> Sonarr will eventually be no longer compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://services.sonarr.tv/v1/download/main/latest?version=3&os=macos&installer=true)

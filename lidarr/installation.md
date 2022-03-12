@@ -64,7 +64,7 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 {#OSX}
 
-> Lidarr not compatible with OSX versions < 10.15 (Catalina) due to netcore incompatibilities.
+> Lidarr not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://lidarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
