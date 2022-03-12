@@ -64,11 +64,12 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 {#OSX}
 
-> Lidarr not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
+> Lidarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://lidarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Lidarr icon to your Application folder.
+1. Self-sign Lidarr `codesign --force --deep -s - Lidarr.app`
 1. Browse to <http://localhost:8686> to start using Lidarr
 
 # Linux

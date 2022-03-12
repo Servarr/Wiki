@@ -81,6 +81,7 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 
 1. Download the [MacOS App](https://services.sonarr.tv/v1/download/main/latest?version=3&os=macos&installer=true)
 1. Open the archive and drag the Sonarr icon to your Application folder.
+1. Self-sign Sonarr `codesign --force --deep -s - Sonarr.app`
 1. Browse to <http://localhost:8989> to start using Sonarr
 
 # Linux
