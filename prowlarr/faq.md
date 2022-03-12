@@ -124,7 +124,8 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
-This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
+- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
+- Alternatively, you may need to self-sign Prowlarr `codesign --force --deep -s - Prowlarr.app`
 
 ![faq_1_mac.png](/assets/general/faq_1_mac.png)
 

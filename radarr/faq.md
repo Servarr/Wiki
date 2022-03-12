@@ -363,6 +363,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
 - This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
+- Alternatively, you may need to self-sign Radarr `codesign --force --deep -s - Radarr.app`
 
 ## Help, My Mac says Radarr.app is damaged and can’t be opened
 
