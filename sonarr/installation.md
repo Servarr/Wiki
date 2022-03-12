@@ -49,6 +49,7 @@ dateCreated: 2021-07-10T16:07:37.425Z
 # Windows
 
 Sonarr is supported natively on Windows. Sonarr can be installed on Windows as Windows Service or system tray application.
+
 > Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration
 {.is-warning}
 
@@ -75,7 +76,7 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 
 {#OSX}
 
-> Sonarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+> Sonarr will eventually be no longer compatible with OSX versions < 10.15 (Catalina) due to netcore incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://services.sonarr.tv/v1/download/main/latest?version=3&os=macos&installer=true)

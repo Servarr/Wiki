@@ -78,7 +78,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 
 {#OSX}
 
-> Radarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+> Radarr not compatible with OSX versions < 10.15 (Catalina) due to netcore incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://radarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)

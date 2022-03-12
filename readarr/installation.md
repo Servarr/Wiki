@@ -82,7 +82,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 {#OSX}
 
-> Readarr not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
+> Readarr not compatible with OSX versions < 10.15 (Catalina) due to netcore incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://readarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
