@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-03-12T20:28:21.222Z
+date: 2022-03-12T20:28:34.389Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-03T15:12:29.483Z
 
 # \*Arr Installation Script
 
-This is a community created and supported unofficial script to handle installation of Lidarr/Prowlarr/Radarr/Readarr on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
+This is a community created and community supported **unofficial** script to handle installation of Lidarr/Prowlarr/Radarr/Readarr on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
 
 > This will install the selected application to /opt. It will run application as the user and group you configure.
 > For Lidarr/Radarr/Readarr - you should use a common group that is the same that your download client runs as and media server runs as to ensure ownership and permissions are sane and all files are accessible.
