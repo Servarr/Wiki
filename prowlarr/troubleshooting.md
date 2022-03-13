@@ -211,7 +211,7 @@ Below are some common causes
 
 `The request timed out`
 
-Prowlarr is getting no response from the client.
+Prowlarr is getting no response from the client. [See our General Network & Permissions Troubleshooting guide](/permissions-and-networking)
 
 This is typically caused by:
 

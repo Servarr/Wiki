@@ -296,8 +296,8 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 - [Settings => Download Clients => Remote Path Mappings](/radarr/settings#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
-- Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server. 
-- A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host). 
+- Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
+- A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
 - If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
@@ -318,6 +318,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
   - Configure a remote path map to find the REMOTE path and replace it with the LOCAL equivalent
 
 ### Permissions on the Library Folder
+
 Logs will look like
 
 ```none
@@ -401,7 +402,7 @@ This can also occur if you have a release in your download client but that media
 
 `The request timed out`
 
-Radarr is getting no response from the client.
+Radarr is getting no response from the client. [See our General Network & Permissions Troubleshooting guide](/permissions-and-networking)
 
 This is typically caused by:
 
@@ -413,7 +414,7 @@ This is typically caused by:
 
 ## Problem Not Listed
 
-You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 # Searches Indexers and Trackers
 
@@ -611,7 +612,7 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Radarr for 
 
 ### Problem Not Listed
 
-You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 ## Errors
 
@@ -653,4 +654,4 @@ This can also be caused by:
 
 ### Problem Not Listed
 
-You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking. Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.

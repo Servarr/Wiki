@@ -51,8 +51,8 @@ We need to tell Prowlarr to use Postgres. The `config.xml` should already be pop
 <PostgresPort>5432</PostgresPort>
 <PostgresHost>postgres14</PostgresHost>
 ```
-You can now run Prowlarr using the postgres database.
 
+You can now run Prowlarr using the postgres database.
 
 ## Migrate data
 

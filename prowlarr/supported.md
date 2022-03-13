@@ -10,7 +10,7 @@ dateCreated: 2021-06-23T03:06:57.769Z
 
 > This page is a work in progress and requires additional effort.{.is-warning}
 
-This page is the disambiguation page for all "supported" wiki links (i.e. typically more info in the UI).
+This page is the disambiguation page for all `supported` wiki links (i.e. typically "more info" in the UI).
 
 # Applications
 

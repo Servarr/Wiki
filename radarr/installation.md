@@ -281,7 +281,7 @@ To install Radarr
 
 > \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
 > \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
->   \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
+> \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
 {.is-warning}
 
 ```shell

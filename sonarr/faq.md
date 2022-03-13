@@ -409,9 +409,10 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 - Release groups use a year for the season S2010 and TVDb uses S01.
 - [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.
 
-> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM). 
+> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM).
 > If this is observed, please submit them via the scene mapping form.
 {.is-info}
+
 - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
 - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
 {.links-list}
@@ -469,7 +470,6 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 > The series "Helt Perfekt" with TVDb ids of `343189` and `252077` is difficult to automate due to TVDb having the same name for both shows, violating TVDb's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
 {.is-info}
-
 
 ## TVDb is updated why isn't Sonarr?
 
