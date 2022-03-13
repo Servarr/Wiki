@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-03-01T17:15:40.417Z
+date: 2022-03-13T14:50:29.957Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -51,8 +51,8 @@ dateCreated: 2021-06-09T18:39:33.208Z
     - [Problematic Shows](#problematic-shows)
   - [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)
   - [TVDb is updated why isn't Sonarr?](#tvdb-is-updated-why-isnt-sonarr)
-  - [Why can I not add a new series?](#why-can-i-not-add-a-new-series)
-  - [Why can I not add a new series when I know the TVDb ID?](#why-can-i-not-add-a-new-series-when-i-know-the-tvdb-id)
+  - [Why can I not add a series?](#why-can-i-not-add-a-series)
+  - [Why can I not add a series when I know the TVDb ID?](#why-can-i-not-add-a-series-when-i-know-the-tvdb-id)
 - [Sonarr Common Problems](#sonarr-common-problems)
   - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
   - [System & Logs loads forever](#system-logs-loads-forever)
@@ -488,7 +488,9 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - If you know a TVDb update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
 
-## Why can I not add a new series?
+## Why can I not add a series?
+
+{#why-can-i-not-add-a-new-series}
 
 - In the event that TheTVDb is unavailable Sonarr is unable to get search results and you will be unable to add any new series by searching. You may be able to add a new series by the TVDbID if you know what it is, the UI explains how to add it by an ID.
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title. If no English title exist for that series on TheTVDb it will need to be added (if available).
@@ -498,7 +500,9 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
   - Some series/seasons known are:
   - [Dexter New Blood was Season 9](https://thetvdb.com/series/dexter/seasons/official/9) but it is now [it's own series](https://thetvdb.com/series/dexter-new-blood)
 
-## Why can I not add a new series when I know the TVDb ID?
+## Why can I not add a series when I know the TVDb ID?
+
+{#why-can-i-not-add-a-new-series-when-i-know-the-tvdb-id}
 
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title. If no English title exist for that series on TheTVDb it will need to be added (if available).
 
