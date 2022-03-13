@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-03-07T03:50:16.678Z
+date: 2022-03-13T13:41:00.953Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -795,7 +795,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 ## Connection Triggers
 
 - On Grab - Be notified when episodes are available for download and has been sent to a download client
-- On Import - Be notified when episodes are successfully imported
+- On Download - Be notified when episodes are successfully imported
 - On Upgrade - Be notified when episodes are upgraded to a better quality
 - On Rename - Be notified when episodes are renamed
 - On Series Delete - Be notified when series are deleted
