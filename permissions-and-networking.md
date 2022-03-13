@@ -2,7 +2,7 @@
 title: Networking and Permissions Troubleshooting Guide
 description: 
 published: true
-date: 2022-02-15T18:28:00.297Z
+date: 2022-03-13T15:12:02.123Z
 tags: troubleshooting
 editor: markdown
 dateCreated: 2021-11-13T21:09:50.099Z
@@ -11,6 +11,17 @@ dateCreated: 2021-11-13T21:09:50.099Z
 # Network Troubleshooting
 
 - Generally `curl` will be needed for much of the troubleshooting
+- For SSL then `openssl` will be needed for troubleshooting
+
+## SSL Issues
+
+- curl does not validate SSL certificates like \*Arrs do, so openssl needs to be used
+
+- Test the connection/site using openssl to see if the certificates are valid
+
+```bash
+openssl s_client -showcerts -connect <url>:443
+```
 
 ## Not connectable IPv6 IP
 
