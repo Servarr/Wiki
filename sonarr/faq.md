@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-03-13T14:53:04.838Z
+date: 2022-03-13T15:25:02.700Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -392,9 +392,9 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 - See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
 - Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned.
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **October 8 2021 Update**
-  - `3.0.6.1342` has been released as main/stable
-  - For those on develop and are still on `3.0.6.1343` or lower you can safely downgrade to main
+- **March 4 2022 Update**
+  - `3.0.7.1477` has been released as main/stable
+  - For those on develop and are still on `3.0.7.1477` or lower you can safely downgrade to main
   - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut. If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
 # Sonarr and Series Issues + Metadata
