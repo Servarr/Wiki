@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2022-02-28T17:24:06.986Z
+date: 2022-03-14T03:22:15.199Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -45,7 +45,7 @@ dateCreated: 2021-05-16T13:53:17.360Z
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://radarr.video/docs/api/#/)
 {.links-list}
 
-> Note that the API Docs are a perpetual work-in-progress and may not be complete. Contributions welcome. The best way to view see the API is to watch the network calls the frontend makes via the browser development network call console. {.is-info}
+> Note that the API Docs are now auto-generated in the build pipeline for the nightly (GitHub develop) branch {.is-info}
 
 # Support
 
