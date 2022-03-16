@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-02-28T17:15:24.378Z
+date: 2022-03-16T23:38:21.202Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -128,9 +128,11 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
 - Hit F12
 
-- Under the Application tab at the top, there will be "Storage" on the left side. You will see a "Cookies" subsection, and under that you will see IPT's url. Click on that.
+- Under the Application tab at the top, there will be "Storage" on the left side. You will see a "Cookies" subsection, and under that you will see your tracker's url. Click on that.
 
-- Click on "Pass" on that screen, and it will pop up a box that says "Cookie Value" with a string about 25-30 chars long. Copy that and paste it into the application that needs it.
+- Click on "Pass" on that tab or a similar entry, and it will pop up a box that says "Cookie Value" with a string about 25-30 chars long. Copy that and paste it into the application that needs it.
+
+  - If the string looks similar to `cid=cid-that-you-got-from-the-browser; sid=sid-that-you-got-from-the-browser` then the entire entry should be used.
 
 ![cookie_chrome.png](/assets/prowlarr/cookie_chrome.png)
 Firefox
