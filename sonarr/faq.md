@@ -109,7 +109,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 1. Quality
 1. Language
 1. Preferred Word Score\*
-1. Protocol
+1. Protocol (as configured in the relevant Delay Profile)
 1. Episode Count\*
 1. Episode Number
 1. Indexer Priority

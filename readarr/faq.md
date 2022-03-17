@@ -81,7 +81,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 1. Quality
 1. Preferred Word Score
-1. Protocol
+1. Protocol (as configured in the relevant Delay Profile)
 1. Indexer Priority
 1. Seeds/Peers (If Torrent)
 1. Book Count

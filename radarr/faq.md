@@ -109,7 +109,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 1. Quality
 1. Custom Format Score
-1. Protocol
+1. Protocol (as configured in the relevant Delay Profile)
 1. Indexer Priority
 1. Indexer Flags
 1. Seeds/Peers (If Torrent)

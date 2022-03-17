@@ -84,7 +84,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 1. Quality
 1. Preferred Word Score
-1. Protocol
+1. Protocol (as configured in the relevant Delay Profile)
 1. Indexer Priority
 1. Seeds/Peers (If Torrent)
 1. Album Count
