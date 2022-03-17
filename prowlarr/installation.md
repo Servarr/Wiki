@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-03-01T16:51:50.390Z
+date: 2022-03-17T17:48:28.842Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -452,3 +452,14 @@ ProxyPassReverse / http://127.0.0.1:9696/prowlarr/
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
 - `/prowlarr/api/`
+
+### Using SSL on the reverse proxy
+
+If the reverse proxy does SSL termination (i.e. the URL to access the reverse proxy is using the `https://` protocol), then you need to tell Prowlarr that it should use `https://` for its API responses by setting the `X-Forwarded-Proto` correctly. The common way is to add the following lines under the `ProxyPassReverse` configuration:
+
+```none
+RequestHeader set "X-Forwarded-Proto" expr=%{REQUEST_SCHEME}
+RequestHeader set "X-Forwarded-SSL" expr=%{HTTPS}
+```
+
+This configuration requires enabling the `mod_header` Apache module, which is often not enabled by default.
