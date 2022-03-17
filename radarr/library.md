@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2022-03-01T23:38:03.566Z
+date: 2022-03-17T12:55:49.087Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -10,7 +10,8 @@ dateCreated: 2021-05-25T01:24:18.386Z
 
 # Movies
 
-- Library View
+## Library View
+
   - Update All - Update metadata for all movies, refresh posters, rescan movie folders, and rescan movie files (if enabled)
   - Refresh & Scan - Refresh the currently viewed movie's metadata and rescan its folder
   - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
@@ -28,6 +29,9 @@ dateCreated: 2021-05-25T01:24:18.386Z
     - Posters - Display Posters (similar to Plex)
     - Overview - Display overview information and the poster (detailed view)
   - Sort - Sort the current view
+
+### Filters
+
   - Filter - Filter the current view
     - Monitored Only - Titles being monitored for updates.
     - Unmonitored - Titles NOT being monitored for updates.
