@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-03-17T15:01:10.173Z
+date: 2022-03-17T15:01:23.653Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -182,7 +182,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
     - List: `trakt-list-name`
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
-  - This includes using your own watchlist
+  - This type should be used when using your own watchlist
 
 # Metadata
 
