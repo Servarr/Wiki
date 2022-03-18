@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-03-18T17:09:56.044Z
+date: 2022-03-18T17:11:44.374Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -22,9 +22,8 @@ dateCreated: 2021-12-11T19:42:31.825Z
   - [Calibre Content Server (Optional)](#calibre-content-server-optional)
   - [Calibre Integration](#calibre-integration)
 - [Download Clients](#download-clients)
-  - [{.tabset}](#tabset)
-    - [Usenet](#usenet)
-    - [BitTorrent](#bittorrent)
+  - [Usenet](#usenet)
+  - [BitTorrent](#bittorrent)
 
 # Quick Start Setup Guide
 
