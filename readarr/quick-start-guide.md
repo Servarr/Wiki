@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-03-18T17:17:35.677Z
+date: 2022-03-18T19:22:51.687Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -101,9 +101,8 @@ First we’re going to take a look at the `Media Management` settings where we c
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
-- > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
-- > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
-
+> `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
+> `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
   - Always - This will rescan author folders based upon Tasks Schedule
@@ -119,7 +118,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
-> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
+> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.{.is-warning}
 
 # Root Folders and Calibre Integration
 
@@ -169,24 +168,29 @@ Then you will need to restart Calibre. Once back in, configure and start up the 
 
 ![calibre1.png](/assets/readarr/calibre1.png)
 
-If you have chosen Calibre integration, you will enter the necessary values here.
+The below are Calibre Specific Settings and only display if `Use Calibre` is enabled
 
-- Calibre Host - Host (e.g. ip or container name) where Calibre Content Server is running.
-- Calibre Port - the port Calibre Content Server uses (default 9900).
-- (Advanced Option) Calibre URL Base - the url base for Calibre Content Server, typically only needed with Reverse Proxies
-- Username - username you created for the Content Server goes here.
-- Password - password you entered for the Content Server goes here.
-- Calibre Library - enter a specific Calibre library to use, or leave it blank for the default library
+- Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
 
-![calibre2.png](/assets/readarr/calibre2.png)
+> \* Note that this **cannot be enabled on an existing root folder**.
+> \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
+> \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
+> \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
+>  \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
+{.is-warning}
 
-- When a book is sent to Calibre, the option is available to run an auto-convert process in Calibre to your desired format(s).
-- You can change the output profile for Calibre here if you need to.
-- If Calibre Content Server is running on an https address, check this box.
-- When you connect Calibre, it will import all of your authors. This determines the monitor flag for those authors' books.
-- Select the quality profile to use for authors' books in Calibre.
-- Select the metadata profile to use for authors' books in Calibre.
-- If you want to apply a tag in Readarr for these authors, enter that here.
+- Calibre Host - The IP/domain of the host of the Calibre Content Server
+- Calibre Port - The Port that Calibre Content Server is listening on
+- (Advanced) Calibre URL Base - Add a prefix to the Calibre URL e.g. `http://[host]:[port]/[urlBase]`
+- Calibre Username - Username to use to access Calibre Content Server
+- Calibre Password - Password to use to access Calibre Content Server
+- Calibre Library - Calibre Content Server library name. Leave blank for default
+- Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a  comma separated list.
+  - Review the (i) icon within the app for a current list of options.
+  - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
+- Calibre Output Profile - Select the Calibre Content Server Output Profile to use
+  - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
+- Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 
 >If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
 > \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
@@ -195,8 +199,6 @@ If you have chosen Calibre integration, you will enter the necessary values here
 # Download Clients
 
 `Settings` => `Download Clients`
-
-![Readarr-settings-download-clients.png](/assets/readarr/Readarr-settings-download-clients.png)
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
