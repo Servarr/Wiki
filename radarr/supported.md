@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-03-18T08:11:57.027Z
+date: 2022-03-18T08:12:58.823Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -131,7 +131,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Notifiarr {#notifiarr}
   - See the entry on [Useful Tools - Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
 - Plex Media Server {#plexserver}
-  - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available.
+  - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
   - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
   - In the handful of situations where Plex is unable to watch the file system - such as certain types of remote mounts and a handful of older network mounts - it is suggested to use the app plexautoscan rather than the Plex connectiom
 
