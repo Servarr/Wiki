@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-03-18T08:29:03.950Z
+date: 2022-03-18T08:29:26.231Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -133,7 +133,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
   - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
-  - In the handful of situations where Plex is unable to watch the file system - such as certain types of remote mounts and a handful of older network mounts - it is suggested to use the app plexautoscan rather than the Plex connectiom
+  - In the handful of situations where Plex is unable to watch the file system using ionotift - such as certain types of remote mounts and a handful of older network mounts - it is suggested to use the app plexautoscan rather than the Plex connection
 
 > Note that this may trigger a full library scan for the library/root folder the movie is in.  It is strongly suggested to use the native Plex functionality that just watches the file system or to use a tool like [plexautoscan](https://github.com/l3uddz/plex_autoscan)
 {.is-warning}
