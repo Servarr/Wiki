@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2022-03-18T19:16:37.345Z
+date: 2022-03-18T19:17:03.286Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -132,7 +132,7 @@ Also, note that for each individual settings page, there are some options at the
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
->  \* Failure to have that Requre setting enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
+>  \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
 
   - Calibre Host - The IP/domain of the host of the Calibre Content Server
