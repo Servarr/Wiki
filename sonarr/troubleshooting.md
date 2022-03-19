@@ -264,7 +264,7 @@ Below are some common problems.
 
 ### Using qBittorrent v4.4.0
 
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. Rollback to v4.3.9 or hope qBittorrent has hotfixed the issue in a future release (e.g. v4.4.1) if it exists.
+Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. It is strongly suggest to rollback to v4.3.9.  Some bugs including the broken API were fixed in v4.4.1, but users are reporting additional issues with v4.4.1.
 
 ### Download Client's WebUI is not enabled
 
