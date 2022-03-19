@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-02-17T23:43:49.050Z
+date: 2022-03-19T00:33:35.557Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -431,7 +431,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - This error is typically identified if a Movie is looking for a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
-- If you would like to remove this warning simply find the album that is still using the old root folder and edit it to the correct root folder.
+- If you would like to remove this warning simply find the Movie that is still using the old root folder and edit it to the correct root folder.
 
 - Easiest way to find the problem movie is to:
 
