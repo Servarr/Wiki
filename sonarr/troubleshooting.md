@@ -31,6 +31,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
   - [Testing a Download](#testing-a-download)
   - [Testing an Import](#testing-an-import)
   - [Common Problems](#common-problems)
+    - [Using Sonarr v2](#using-sonarr-v2)
     - [Using qBittorrent v4.4.0](#using-qbittorrent-v440)
     - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
     - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
@@ -261,6 +262,10 @@ Incorrect path issues are possible too, though less common in normal setups. The
 ## Common Problems
 
 Below are some common problems.
+
+### Using Sonarr v2
+
+Sonarr v2 has been end of life and not supported since 3/2021. It is not compatible with qBittorrent v4.3.0 or newer. Upgrade to Sonarr v3
 
 ### Using qBittorrent v4.4.0
 
