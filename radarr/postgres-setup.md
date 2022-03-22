@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-04T13:28:57.223Z
+date: 2022-03-22T18:08:45.637Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -71,7 +71,7 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
-> Before migrating please ensure that you have run Radarr against the created Postgres databases and then delete any data within the `Profiles` table on the new Postgres database. {.is-warning}
+> Before migrating please ensure that you have run Radarr against the created Postgres databases and then delete any data within the `Profiles`, `QualityDefinitions` & `DelayProfiles` tables on the new Postgres database. {.is-warning}
 
 With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
 
