@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-03-01T19:55:01.474Z
+date: 2022-03-22T21:09:10.919Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -553,6 +553,10 @@ may have to change your paths here.
       - Path: `C:\ProgramData\Radarr\bin\Radarr.exe`
       - Startup directory: `C:\ProgramData\Radarr\bin`
       - Arguments: `-data=C:\ProgramData\Radarr-4K`
+      - Exit Actions Tab
+        - Restart: Restart Application
+        - Delay: 120000 ms 
+        (2 minutes, can be longer if update fails to complete in time)
 
 > Note that **Arguments** points to the *new* folder created in step 1.
 This is crucial, as it keeps all the data files from both instances in
@@ -590,7 +594,13 @@ separate locations. {.is-warning}
 ### Dealing with Updates
 
 - Disable automatic updates in one of your instances
+  - In config.xml change update branch to `<Branch>nonexistent</Branch>`
 - If one Radarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
+
+> Configuring the [NSSM Exit Action](#creating-radarr-4k-service) correctly should allow Radarr to update and restart multiple instances with no additional scripts. 
+If the restart delay is not configured by default it will restart the instance immediately. 
+This can prevent updates from being applied and can result in the following error `Radarr was restarted prematurely by external process.`
+{.is-info}
 
 #### Windows Port Checker and Restarter PowerShell Script
 
