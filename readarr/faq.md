@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-03-05T03:29:07.403Z
+date: 2022-03-22T15:55:59.230Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -132,15 +132,15 @@ This change was due to not have our server get killed by people updating lists e
 
 > The same process applies for moving/changing Author paths as well{.is-info}
 
-1. Library
-1. Mass Editor
+1. Author
+1. Author Editor
 1. Select what authors need their folder renamed
 1. Change Root Folder to the same Root Folder that the authors currently exist in
 1. Select "Yes move files"
 
 ## How can I mass delete authors from the wanted list?
 
-- Use Mass Editor => Select authors you want to delete => Delete
+- Use Author Editor from the Author tab => Select authors you want to delete => Delete
 
 ## Why doesn't Readarr work behind a reverse proxy
 
