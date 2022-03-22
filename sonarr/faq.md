@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-03-13T15:25:29.187Z
+date: 2022-03-22T17:25:12.327Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -129,14 +129,18 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 - How are preferred words included in renaming?
 
-  - For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [HERE](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
+  - For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [at TRaSH's recommended naming scheme](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
 
-- As of recent builds, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
+- As of v3.0.7, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
 
 - Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
 
 > Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
 {.is-info}
+
+- Tags can be used to control what Series a Release Profile applies to; refer to the settings entry for Release Profiles for more information
+
+- For additional information on Preferred Words and Release Profiles [see the settings page](/sonarr/settings#release-profiles)
 
 ## How do I change from the Windows Service to a Tray App?
 
