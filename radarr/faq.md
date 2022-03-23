@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-03-10T19:03:24.602Z
+date: 2022-03-23T14:38:55.693Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -107,7 +107,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - As of 2022-01-23 the logic is as follows:
 
-1. Quality
+1. Quality\*
 1. Custom Format Score
 1. Protocol (as configured in the relevant Delay Profile)
 1. Indexer Priority
@@ -116,7 +116,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 1. Age (If Usenet)
 1. Size
 
-> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
+> \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
 
 ## What are Lists and what can they do for me?
 
