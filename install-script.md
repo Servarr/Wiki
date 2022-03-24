@@ -2,8 +2,8 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-03-24T20:31:27.026Z
-tags: radarr, lidarr, readarr, prowlarr, installation
+date: 2022-03-24T20:32:54.041Z
+tags: radarr, sonarr, lidarr, readarr, prowlarr, installation, bazarr
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
 ---
