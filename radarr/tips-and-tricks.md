@@ -2,7 +2,7 @@
 title: Radarr Tips and Tricks
 description: 
 published: true
-date: 2021-12-22T19:56:34.503Z
+date: 2022-03-24T02:53:26.272Z
 tags: radarr, needs-love, tips-and-tricks
 editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
@@ -80,3 +80,15 @@ This will move all of your files into the new directories.
 If you need to clean up empty directories, this command will do that:
 
 `for /f "usebackq delims=" %d in ("dir /ad/b/s | sort /R") do rd "%d"`
+
+## Windows Powershell
+
+Alternatively in Windows you can run the following script in Powershell to iterate over each file in a directory, and move it to a folder with the same name. 
+
+```powershell
+Get-ChildItem -File 
+  | ForEach-Object {
+    $dir = New-Item -ItemType Directory -Name $_.BaseName -Force
+    $_ | Move-Item -Destination $dir
+  }
+```
