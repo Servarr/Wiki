@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-03-12T20:28:34.389Z
+date: 2022-03-24T15:02:38.678Z
 tags: radarr, lidarr, readarr, prowlarr, installation
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -56,6 +56,7 @@ nano ArrInstall.sh
 ### Version v3.0.3a Readarr to develop
 ### Version v3.0.4 2022-03-01 - Add sleep before checking service status
 ### Additional Updates by: The \*Arr Community
+### Version v3.0.5 2022-03-24 - fud18 (added Sonarr installation)
 
 ### Boilerplate Warning
 #THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -82,7 +83,7 @@ fi
 
 echo "Select the application to install: "
 
-select app in lidarr prowlarr radarr readarr quit; do
+select app in lidarr prowlarr radarr readarr sonarr quit; do
 
     case $app in
     lidarr)
@@ -113,6 +114,13 @@ select app in lidarr prowlarr radarr readarr quit; do
         branch="develop"          # {Update me if needed} branch to install
         break
         ;;
+    sonarr)
+        app_port="8989"                                          # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 mediainfo gnupg ca-certificates" # Required packages
+        app_umask="0002"                                         # UMask the Service will run as
+        branch="master"                                          # {Update me if needed} branch to install
+        break
+        ;;
     quit)
         exit 0
         ;;
@@ -124,10 +132,10 @@ done
 
 # Constants
 ### Update these variables as required for your specific instance
-installdir="/opt"              # {Update me if needed} Install Location
-bindir="${installdir}/${app^}" # Full Path to Install Location
-datadir="/var/lib/$app/"       # {Update me if needed} AppData directory to use
-app_bin=${app^}                # Binary Name of the app
+installdir="/opt"              			# {Update me if needed} Install Location
+bindir="${installdir}/${app^}" 			# Full Path to Install Location
+datadir="/var/lib/$app/"       			# {Update me if needed} AppData directory to use
+app_bin=${app^}                			# Binary Name of the app
 
 if [[ $app != 'prowlarr' ]]; then
     echo "It is critical that the user and group you select to run ${app^} as will have READ and WRITE access to your Media Library and Download Client Completed Folders"
@@ -194,29 +202,58 @@ echo "Directories created"
 # Download and install the App
 
 # prerequisite packages
-echo ""
-echo "Installing pre-requisite Packages"
-# shellcheck disable=SC2086
-apt update && apt install $app_prereq
-echo ""
-ARCH=$(dpkg --print-architecture)
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo "Arch not supported"
-    exit 1
-    ;;
-esac
-echo ""
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo ""
-echo "Installation files downloaded and extracted"
+if [[ $app == 'sonarr' ]]; then
+	echo ""
+	echo "Installing pre-requisite Packages"
+	# shellcheck disable=SC2086
+	# Add the Sonarr repository
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 2009837CBFFD68F45BC180471F4F90DE2A9B4BF8
+	echo "deb https://apt.sonarr.tv/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/sonarr.list
+	sudo apt update && apt install $app_prereq
+	echo ""
+	ARCH=$(dpkg --print-architecture)
+	# get arch
+	dlbase="https://services.sonarr.tv/v1/download/main/latest?version=3&os=linux"
+	case "$ARCH" in
+	"amd64") DLURL="${dlbase}&arch=x64" ;;
+	"armhf") DLURL="${dlbase}&arch=arm" ;;
+	"arm64") DLURL="${dlbase}&arch=arm64" ;;
+	*)
+		echo "Arch not supported"
+		exit 1
+		;;
+	esac
+	echo ""
+	echo "Downloading..."
+	wget --content-disposition "$DLURL"
+	tar -xvzf ${app^}.*.tar.gz
+	echo ""
+	echo "Installation files downloaded and extracted"
+else
+	echo ""
+	echo "Installing pre-requisite Packages"
+	# shellcheck disable=SC2086
+	apt update && apt install $app_prereq
+	echo ""
+	ARCH=$(dpkg --print-architecture)
+	# get arch
+	dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
+	case "$ARCH" in
+	"amd64") DLURL="${dlbase}&arch=x64" ;;
+	"armhf") DLURL="${dlbase}&arch=arm" ;;
+	"arm64") DLURL="${dlbase}&arch=arm64" ;;
+	*)
+		echo "Arch not supported"
+		exit 1
+		;;
+	esac
+	echo ""
+	echo "Downloading..."
+	wget --content-disposition "$DLURL"
+	tar -xvzf ${app^}.*.tar.gz
+	echo ""
+	echo "Installation files downloaded and extracted"
+fi
 
 # remove existing installs
 echo "Removing existing installation"
