@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-02-07T03:51:57.227Z
+date: 2022-03-26T14:39:52.960Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -78,6 +78,22 @@ dateCreated: 2021-11-03T03:01:18.079Z
 ## Prowlarr will not sync to Sonarr
 
 - Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
+
+## What \*Arr Indexer Settings are Compared for App Full Sync
+
+- App/Prowlarr: Indexer Name
+- App/Prowlarr: Enable/Disable RSS
+- App/Prowlarr: Enable/Disable Auto Search
+- App/Prowlarr: Enable/Disable Interactive Search
+- App/Prowlarr: Indexer Priority
+- App/Prowlarr: API Key
+- App/Prowlarr: Url
+- App/Prowlarr: Baseurl
+- App/Prowlarr: Port
+- App/Prowlarr: Categories
+- Prowlarr: Implementation (e.g. YML or C#)
+
+With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr
 
 ## How do I update Prowlarr?
 
