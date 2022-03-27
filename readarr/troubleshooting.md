@@ -300,7 +300,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
   - You want to sync the incomplete and complete so that when the torrent client does the move, that is reflected locally and all the files are already "there" (even if they're still downloading). Then you want to use hard links because even if it imports before its done, they'll still finish.
   - This way the whole time it downloads, it is syncing, then torrent client moves to tv sub-folder and sync reflects that. That way downloads are mostly there when declared finished. And even if they're not totally done, having the hardlink possible means that is still okay.
   - (Optional - if applicable and/or required (e.g. remote usenet client)) Configure a custom script to run on import/download/upgrade to remove the remote file
-- Alternatively a remote mount rather than a remote sync setup is signifcantly less complicated to configure, but typically slowly.
+- Alternatively a remote mount rather than a remote sync setup is significantly less complicated to configure, but typically slowly.
   - Mount your remote storage with sshfs or another network file system protocol
   - Ensure the user and group \*Arr is configured to run as has read or write access.
   - Configure a remote path map to find the REMOTE path and replace it with the LOCAL equivalent
@@ -315,7 +315,7 @@ Don’t forget to check permissions and ownership of the *destination*. It is ea
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
-- If you're using an NFS mount ensure `nolock` is enabled.
+- Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 - If you're using an SMB mount ensure `nobrl` is enabled.
 
 ### Permissions on the Downloads Folder
@@ -328,7 +328,7 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
-- If you're using an NFS mount ensure `nolock` is enabled.
+- Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 - If you're using an SMB mount ensure `nobrl` is enabled.
 
 ### Download folder and library folder not different folders

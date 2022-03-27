@@ -413,7 +413,7 @@ location ~ /radarr/api {
 }
 ```
 
-A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
 To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
 
 ```nginx
@@ -555,7 +555,7 @@ may have to change your paths here.
       - Arguments: `-data=C:\ProgramData\Radarr-4K`
       - Exit Actions Tab
         - Restart: Restart Application
-        - Delay: 120000 ms 
+        - Delay: 120000 ms
         (2 minutes, can be longer if update fails to complete in time)
 
 > Note that **Arguments** points to the *new* folder created in step 1.
@@ -597,8 +597,8 @@ separate locations. {.is-warning}
   - In config.xml change update branch to `<Branch>nonexistent</Branch>`
 - If one Radarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
-> Configuring the [NSSM Exit Action](#creating-radarr-4k-service) correctly should allow Radarr to update and restart multiple instances with no additional scripts. 
-If the restart delay is not configured by default it will restart the instance immediately. 
+> Configuring the [NSSM Exit Action](#creating-radarr-4k-service) correctly should allow Radarr to update and restart multiple instances with no additional scripts.
+If the restart delay is not configured by default it will restart the instance immediately.
 This can prevent updates from being applied and can result in the following error `Radarr was restarted prematurely by external process.`
 {.is-info}
 

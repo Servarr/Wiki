@@ -132,21 +132,21 @@ Also, note that for each individual settings page, there are some options at the
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
->  \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
+> \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
 
-  - Calibre Host - The IP/domain of the host of the Calibre Content Server
-  - Calibre Port - The Port that Calibre Content Server is listening on
-  - (Advanced) Calibre URL Base - Add a prefix to the Calibre URL e.g. `http://[host]:[port]/[urlBase]`
-  - Calibre Username - Username to use to access Calibre Content Server
-  - Calibre Password - Password to use to access Calibre Content Server
-  - Calibre Library - Calibre Content Server library name. Leave blank for default
-  - Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a comma separated list.
-    - Review the (i) icon within the app for a current list of options.
-    - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
-  - Calibre Output Profile - Select the Calibre Content Server Output Profile to use
-    - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
-  - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
+- Calibre Host - The IP/domain of the host of the Calibre Content Server
+- Calibre Port - The Port that Calibre Content Server is listening on
+- (Advanced) Calibre URL Base - Add a prefix to the Calibre URL e.g. `http://[host]:[port]/[urlBase]`
+- Calibre Username - Username to use to access Calibre Content Server
+- Calibre Password - Password to use to access Calibre Content Server
+- Calibre Library - Calibre Content Server library name. Leave blank for default
+- Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a comma separated list.
+  - Review the (i) icon within the app for a current list of options.
+  - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
+- Calibre Output Profile - Select the Calibre Content Server Output Profile to use
+  - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
+- Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 - Monitor - Configure your monitoring options for books detected in this folder
   - All Books - Monitor all books
   - Future Books - Monitor books that have not released yet
@@ -159,7 +159,7 @@ Also, note that for each individual settings page, there are some options at the
 - Metadata Profile - Select the Metadata Profile to use for authors detected in this folder. To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
 
-> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 

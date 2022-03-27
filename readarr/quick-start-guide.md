@@ -101,8 +101,10 @@ First we’re going to take a look at the `Media Management` settings where we c
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
+
 > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
 > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
+
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
   - Always - This will rescan author folders based upon Tasks Schedule
@@ -130,7 +132,7 @@ Here we will add the root folder that Readarr will be using to import your exist
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
 
-> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
@@ -176,7 +178,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
->  \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
+> \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
 
 - Calibre Host - The IP/domain of the host of the Calibre Content Server

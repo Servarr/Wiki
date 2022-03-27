@@ -395,7 +395,7 @@ location ~ /lidarr/api {
 }
 ```
 
-A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
 To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
 
 ```nginx

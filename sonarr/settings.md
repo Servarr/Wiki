@@ -376,7 +376,7 @@ Name for the `Specials` (Season) folder
 
 - Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
-> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 

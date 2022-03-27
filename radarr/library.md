@@ -12,62 +12,62 @@ dateCreated: 2021-05-25T01:24:18.386Z
 
 ## Library View
 
-  - Update All - Update metadata for all movies, refresh posters, rescan movie folders, and rescan movie files (if enabled)
-  - Refresh & Scan - Refresh the currently viewed movie's metadata and rescan its folder
-  - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
-  - Search All / Search Filtered / Search Selected - Search all movies or selected movies in the current view
-  - Manual Import (Movie Index) - Manually import a movie file for a movie you have added to Radarr from any folder that Radarr can access
-    - Move Automatically -  Automatically attempt to match a file to a Movie in Radarr and import by moving it.
-    - Interactive Import -  Review all files within the path and attempt to match to a Movie in Radarr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
-  - Manual Import (Movie) - Manually import a movie file for a movie you have added to Radarr from the assigned movie's folder
-    - Move Automatically -  Automatically attempt to match a file to a Movie in Radarr and import by moving it.
-    - Interactive Import -  Review all files within the path and attempt to match to a Movie in Radarr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
-  - Movie Editor / Movie Index - Toggle between Mass Editor mode and Movie Index (Library) mode
-  - Options - Change display options
-  - View - Toggle View Type
-    - Table - Tabular View (list view)
-    - Posters - Display Posters (similar to Plex)
-    - Overview - Display overview information and the poster (detailed view)
-  - Sort - Sort the current view
+- Update All - Update metadata for all movies, refresh posters, rescan movie folders, and rescan movie files (if enabled)
+- Refresh & Scan - Refresh the currently viewed movie's metadata and rescan its folder
+- RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
+- Search All / Search Filtered / Search Selected - Search all movies or selected movies in the current view
+- Manual Import (Movie Index) - Manually import a movie file for a movie you have added to Radarr from any folder that Radarr can access
+  - Move Automatically -  Automatically attempt to match a file to a Movie in Radarr and import by moving it.
+  - Interactive Import -  Review all files within the path and attempt to match to a Movie in Radarr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
+- Manual Import (Movie) - Manually import a movie file for a movie you have added to Radarr from the assigned movie's folder
+  - Move Automatically -  Automatically attempt to match a file to a Movie in Radarr and import by moving it.
+  - Interactive Import -  Review all files within the path and attempt to match to a Movie in Radarr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
+- Movie Editor / Movie Index - Toggle between Mass Editor mode and Movie Index (Library) mode
+- Options - Change display options
+- View - Toggle View Type
+  - Table - Tabular View (list view)
+  - Posters - Display Posters (similar to Plex)
+  - Overview - Display overview information and the poster (detailed view)
+- Sort - Sort the current view
 
 ### Filters
 
-  - Filter - Filter the current view
-    - Monitored Only - Titles being monitored for updates.
-    - Unmonitored - Titles NOT being monitored for updates.
-    - Missing - In the database, but missing from the filesystem.
-    - Wanted - In the database, monitored, missing, but should be available.
-    - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
-    - Custom Filters
-      - Monitored (boolean)
-      - Considered Available (boolean)
-      - Minimum Availability (Enum)
-        - Announced
-        - In Cinemas
-        - Released
-      - Title \[contains\] (String)
-      - Release Status (Enum)
-        - TBA
-        - Announced
-        - In Cinemas
-        - Released
-        - Deleted
-      - Studio (Enum Studios)
-      - Collection (Enum Collections)
-      - Quality Profile (Enum QualityProfiles)
-      - Added (static DateTime, relative TimeDelta)
-      - Year (Int)
-      - In Cinemas (static DateTime, relative TimeDelta)
-      - Physical Release (static DateTime, relative TimeDelta)
-      - Digital Release (static DateTime, relative TimeDelta)
-      - Runtime (Int)
-      - Path \[contains\] (String)
-      - Size on Disk (Int)
-      - Genres \[contains\] (Enum Genres)
-      - TMDB Rating (Float)
-      - TMDB Votes (Int)
-      - Certification (Enum Rating (PG-13, R, etc))
-      - Tags \[contain\] (Enum Tags)
+- Filter - Filter the current view
+  - Monitored Only - Titles being monitored for updates.
+  - Unmonitored - Titles NOT being monitored for updates.
+  - Missing - In the database, but missing from the filesystem.
+  - Wanted - In the database, monitored, missing, but should be available.
+  - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
+  - Custom Filters
+    - Monitored (boolean)
+    - Considered Available (boolean)
+    - Minimum Availability (Enum)
+      - Announced
+      - In Cinemas
+      - Released
+    - Title \[contains\] (String)
+    - Release Status (Enum)
+      - TBA
+      - Announced
+      - In Cinemas
+      - Released
+      - Deleted
+    - Studio (Enum Studios)
+    - Collection (Enum Collections)
+    - Quality Profile (Enum QualityProfiles)
+    - Added (static DateTime, relative TimeDelta)
+    - Year (Int)
+    - In Cinemas (static DateTime, relative TimeDelta)
+    - Physical Release (static DateTime, relative TimeDelta)
+    - Digital Release (static DateTime, relative TimeDelta)
+    - Runtime (Int)
+    - Path \[contains\] (String)
+    - Size on Disk (Int)
+    - Genres \[contains\] (Enum Genres)
+    - TMDB Rating (Float)
+    - TMDB Votes (Int)
+    - Certification (Enum Rating (PG-13, R, etc))
+    - Tags \[contain\] (Enum Tags)
 
 # Add New
 
@@ -91,7 +91,7 @@ Library Import allows you to import existing organized movies and each movie's f
   
 > It is required that movie folders and files have the year in their name to be imported and parsed.{.is-warning}
 
-> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 

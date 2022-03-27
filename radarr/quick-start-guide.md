@@ -93,7 +93,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 Here we will add the root folder that Radarr will be using to import your existing organized media library and where Radarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
-> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 

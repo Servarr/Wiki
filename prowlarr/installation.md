@@ -14,9 +14,9 @@ dateCreated: 2021-05-24T05:07:51.882Z
 - [Windows](#windows)
 - [MacOS (OSX)](#macos-osx)
 - [Linux](#linux)
-  - [Debian / Ubuntu](#debian-ubuntu)
+  - [Debian / Ubuntu](#debian--ubuntu)
     - [Easy Install](#easy-install)
-    - [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install)
+    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
     - [Uninstall](#uninstall)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
@@ -25,13 +25,12 @@ dateCreated: 2021-05-24T05:07:51.882Z
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
 - [Docker](#docker)
-  - [Avoid Common Pitfalls](#avoid-common-pitfalls)
-    - [Volumes and Paths](#volumes-and-paths)
-    - [Ownership and Permissions](#ownership-and-permissions)
   - [Install Prowlarr](#install-prowlarr)
 - [Reverse Proxy Configuration](#reverse-proxy-configuration)
   - [NGINX](#nginx)
+    - [Subdomain](#subdomain)
   - [Apache](#apache)
+    - [Using SSL on the reverse proxy](#using-ssl-on-the-reverse-proxy)
 
 # Windows
 
@@ -59,7 +58,7 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 > It is possible to install Prowlarr manually using the [x64 .zip download](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
-> If you use [Cerify The Web](https://docs.certifytheweb.com/docs/backgroundservice/) for LetsEncrypt certificate management for IIS and are installing Prowlarr on the same machine, port `9696` is used by the background service. You will need to either change the listening port of Prowlarr in your `config.xml` to something else or change the port of the Certify The Web background service.
+> If you use [Certify The Web](https://docs.certifytheweb.com/docs/backgroundservice/) for LetsEncrypt certificate management for IIS and are installing Prowlarr on the same machine, port `9696` is used by the background service. You will need to either change the listening port of Prowlarr in your `config.xml` to something else or change the port of the Certify The Web background service.
 {.is-info}
 
 # MacOS (OSX)
@@ -380,7 +379,7 @@ location ~ /prowlarr(/[0-9]+)?/api {
 }
 ```
 
-A better way to organize your configuration files for Nginx would be to store the configuration for each site in a seperate file.
+A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
 To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
 
 ```nginx
@@ -462,4 +461,4 @@ RequestHeader set "X-Forwarded-Proto" expr=%{REQUEST_SCHEME}
 RequestHeader set "X-Forwarded-SSL" expr=%{HTTPS}
 ```
 
-This configuration requires enabling the `mod_header` Apache module, which is often not enabled by default.
+Note that this configuration requires enabling the `mod_header` Apache module, which is often not enabled by default.

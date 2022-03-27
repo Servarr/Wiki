@@ -44,7 +44,6 @@ dateCreated: 2021-06-09T18:39:33.208Z
       - [Docker](#docker)
   - [Can I switch from `develop` back to `main`?](#can-i-switch-from-develop-back-to-main)
   - [Can I switch between branches?](#can-i-switch-between-branches)
-  - [How do I request a feature for Sonarr?](#how-do-i-request-a-feature-for-sonarr)
 - [Sonarr and Series Issues + Metadata](#sonarr-and-series-issues-metadata)
   - [How does Sonarr handle scene numbering issues (American Dad!, etc)?](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
     - [How Sonarr handles scene numbering issues](#how-sonarr-handles-scene-numbering-issues)

@@ -54,7 +54,7 @@ Once installed it is only a few clicks to organize all your files into their own
 1. Select the `files 2 folder` option in the menu
 1. In the Files 2 Folder window select `Move each file to individual subfolders based on their names`
 1. Click OK
-1. Wait a momement and all your files will be in their own folder.
+1. Wait a moment and all your files will be in their own folder.
 
 ## Linux Bash Script
 
@@ -83,7 +83,7 @@ If you need to clean up empty directories, this command will do that:
 
 ## Windows Powershell
 
-Alternatively in Windows you can run the following script in Powershell to iterate over each file in a directory, and move it to a folder with the same name. 
+Alternatively in Windows you can run the following script in Powershell to iterate over each file in a directory, and move it to a folder with the same name.
 
 ```powershell
 Get-ChildItem -File 

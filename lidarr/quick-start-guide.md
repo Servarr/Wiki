@@ -162,7 +162,7 @@ Leave the other options at their defaults.
 > If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
 {.is-warning}
 
-> \* If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
