@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2022-03-30T22:51:56.351Z
+date: 2022-03-30T22:55:21.278Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -38,7 +38,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-sonarr-will-not-grab-new-releases-automatically)
       - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
+      - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
       - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
