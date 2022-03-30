@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2022-02-23T20:12:07.582Z
+date: 2022-03-30T22:51:56.351Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -208,7 +208,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 - Sonarr requires indexers to be able to discover new releases. All your indexers are disabled or you do not have any indexers added.
 
-### Enabled indexers do not support searching
+#### Enabled indexers do not support searching
 
 {#all-search-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
 
