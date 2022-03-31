@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-03-06T22:17:55.296Z
+date: 2022-03-31T18:21:37.355Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -152,6 +152,16 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 1. Configure Custom Properties to your liking
 
 1. Click Save
+
+4. After the jail is created it will start automatically.
+One more property is required to be set in order for Sonarr to see the storage space of your mounted media locations.
+Open a root shell on the server and enter these commands:
+
+```shell
+iocage stop <jailname>
+iocage set enforce_statfs=1 <jailname>
+iocage start <jailname>
+```
 
 ## Sonarr Installation
 
