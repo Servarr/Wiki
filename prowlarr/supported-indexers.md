@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-03-27T16:11:18.4949752Z
+date: 2022-03-31T18:55:59.0184104Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-03-27T16:11:18.4949752Z
+dateCreated: 2022-03-31T18:55:59.0184104Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.2.0.1617` / [Commit: 627da14a326b875fa46474e36d660c1f352b62f1](https://github.com/Prowlarr/Prowlarr/commit/627da14a326b875fa46474e36d660c1f352b62f1)
+- Supported Trackers and Indexers as of Build `0.2.0.1632` / [Commit: a81d632878d0eb188e45fc2d35a4e68002d0806e](https://github.com/Prowlarr/Prowlarr/commit/a81d632878d0eb188e45fc2d35a4e68002d0806e)
 
 ---
 
@@ -112,7 +112,6 @@ dateCreated: 2022-03-27T16:11:18.4949752Z
 |[Rus-media](http://rus-media.org/){#rus-media}|Rus-media is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
 |[RuTor](http://rutor.info/){#rutor}|RuTor is a RUSSIAN Public site for MOVIES / TV / GENERAL|ru-RU|
 |[RuTracker\.RU](http://rutracker.ru/){#rutracker-ru}|RuTracker\.RU is a RUSSIAN Public Torrent Tracker for MOVIES / GENERAL|ru-RU|
-|[Sexxi](https://sexxi.club/){#sexxi}|Sexxi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[Sexy-Pics](https://www.sexy-pics.us/){#sexypics}|Sexy-Pics is a Public Magnet Links site for 3X MP4|en-US|
 |[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
 |[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
@@ -205,7 +204,6 @@ dateCreated: 2022-03-27T16:11:18.4949752Z
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a private site for eBooks and audiobooks|en-US|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|hu-HU|
 |[Bit-City Reloaded](https://bc-reloaded.net/){#bitcityreloaded}|Bit-City Reloaded is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
-|[BiT-TiTAN](https://bit-titan.net/){#bit-titan}|BiT-TiTAN is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
 |[BitBR](https://bitbr.cc/){#bitbr}|BitBR is a BRAZILIAN Private Torrent Tracker for HD MOVIES / TV|pt-BR|
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|th-TH|
 |[BitHDTV](https://www.bit-hdtv.com/){#bithdtv}|BIT-HDTV - Home of High Definition|en-US|
@@ -381,7 +379,7 @@ dateCreated: 2022-03-27T16:11:18.4949752Z
 |[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / XXX|zh-CN|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|de-DE|
 |[magic-heaven](https://magic-heaven.info/){#magicheaven}|magic-heaven is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
-|[Magico](https://trelas.club/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|el-GR|
+|[Magico](https://trellas.net/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|el-GR|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|hu-HU|
 |[Marine Tracker](https://seatracker.ru/){#marinetracker}|Marine Tracker is a RUSSIAN Semi-Private Torrent Tracker for MARITIME E-LEARNING|ru-RU|
 |[MediaMaatjes](https://www.mediamaatjes.org/){#mediamaatjes}|MediaMaatjes is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|nl-NL|
