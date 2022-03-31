@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-03-01T16:50:51.287Z
+date: 2022-03-31T18:22:24.300Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -258,6 +258,16 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 1. Configure Custom Properties to your liking
 
 1. Click Save
+
+4. After the jail is created it will start automatically.
+One more property is required to be set in order for Lidarr to see the storage space of your mounted media locations.
+Open a root shell on the server and enter these commands:
+
+```shell
+iocage stop <jailname>
+iocage set enforce_statfs=1 <jailname>
+iocage start <jailname>
+```
 
 ## Lidarr Installation
 
