@@ -273,9 +273,7 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 
 1. Click Save
 
-4. After the jail is created it will start automatically.
-One more property is required to be set in order for Radarr to see the storage space of your mounted media locations.
-Open a root shell on the server and enter these commands:
+1. After the jail is created it will start automatically. One more property is required to be set in order for Radarr to see the storage space of your mounted media locations. Open a root shell on the server and enter these commands:
 
 ```shell
 iocage stop <jailname>
