@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-03-31T18:55:59.0184104Z
+date: 2022-04-01T15:54:08.0299038Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-03-31T18:55:59.0184104Z
+dateCreated: 2022-04-01T15:54:08.0299038Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.2.0.1632` / [Commit: a81d632878d0eb188e45fc2d35a4e68002d0806e](https://github.com/Prowlarr/Prowlarr/commit/a81d632878d0eb188e45fc2d35a4e68002d0806e)
+- Supported Trackers and Indexers as of Build `0.2.0.1632` / [Commit: 3a896fc43eddc142f586fe35fff7e334cba24d16](https://github.com/Prowlarr/Prowlarr/commit/3a896fc43eddc142f586fe35fff7e334cba24d16)
 
 ---
 
@@ -137,10 +137,10 @@ dateCreated: 2022-03-31T18:55:59.0184104Z
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
 |[TorrentQQ](https://torrentqq136.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
-|[TorrentSir](https://torrentsir52.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir53.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
-|[TorrentView](https://torrentview53.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentWhiz](https://torrentwiz40.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentView](https://torrentview57.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentWhiz](https://torrentwiz41.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-RU|
 |[Underverse](https://underver.se/){#underverse}|Underverse is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-RU|
