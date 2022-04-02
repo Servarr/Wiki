@@ -656,7 +656,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 ### Torrent Client Remove Download Compatibility
 
-- Readarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. See the table below for client compatibility.
+- Readarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. Seed goals can be set globally in the client itself or per tracker in \*Arr settings for each indexer. See the table below for client compatibility.
 
 |      Client       |                                Ratio                                 |                                   Time                                   |
 | :---------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------: |
