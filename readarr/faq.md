@@ -445,7 +445,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
-This is expected. Below is how the Torrent Process works.
+This is expected. With a setup that supports [hardlinks](https://trash-guides.info/hardlinks), double space will not be used. Below is how the Torrent Process works.
 
 1. Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 1. Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
