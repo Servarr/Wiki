@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-02-28T21:04:29.863Z
+date: 2022-04-02T14:57:00.494Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -682,7 +682,17 @@ Logs will show `Searching indexers for [The Witcher : 09]`
 
 ### Media is Unmonitored
 
-The series/season/episode(s) is(are) not monitored.
+Logs will show something similar to
+
+```none
+2022-03-30 13:46:03.0|Debug|MonitoredEpisodeSpecification|No episodes in the release are monitored. Rejecting
+2022-03-30 13:46:03.0|Debug|DownloadDecisionMaker|Release rejected for the following reasons: [Permanent] One or more episodes is not monitored
+```
+
+The series/season/episode(s) is(are) not monitored. Check the monitoring status of the Series, Season, and Episode(s).
+
+> Season Packs will only be grabbed if all episodes in the season are monitored and the season pack upgrades all existing episodes or all episodes are missing.
+{.is-info}
 
 ### Query Successful - No Results Returned
 
