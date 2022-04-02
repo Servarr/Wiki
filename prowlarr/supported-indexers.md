@@ -2,10 +2,10 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-04-01T15:54:08.0299038Z
+date: 2022-04-02T17:53:28.9294876Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-04-01T15:54:08.0299038Z
+dateCreated: 2022-04-02T17:53:28.9294876Z
 ---
 
 - Supported Trackers and Indexers as of Build `0.2.0.1632` / [Commit: 3a896fc43eddc142f586fe35fff7e334cba24d16](https://github.com/Prowlarr/Prowlarr/commit/3a896fc43eddc142f586fe35fff7e334cba24d16)
@@ -114,8 +114,8 @@ dateCreated: 2022-04-01T15:54:08.0299038Z
 |[RuTracker\.RU](http://rutracker.ru/){#rutracker-ru}|RuTracker\.RU is a RUSSIAN Public Torrent Tracker for MOVIES / GENERAL|ru-RU|
 |[Sexy-Pics](https://www.sexy-pics.us/){#sexypics}|Sexy-Pics is a Public Magnet Links site for 3X MP4|en-US|
 |[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
-|[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
+|[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|en-US|
 |[sosulki](http://sosulki.net/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|en-US|
@@ -403,6 +403,7 @@ dateCreated: 2022-04-01T15:54:08.0299038Z
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker.|en-US|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|en-US|
 |[NBTorrents](https://www.nbtorrents.com/){#nbtorrents}|NBTorrents is an INDIAN Private site for MOVIES / TV / MUSIC|en-US|
+|[Ncore](https://ncore.pro/){#ncore}|Ncore is a Hungarian Private Torrent Tracker for Movies/Series/General|hu-HU|
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|en-US|
 |[NetCosmo](http://netcosmo.it/){#netcosmo}|NetCosmo is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|it-IT|
 |[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|vi-VN|
