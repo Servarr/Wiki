@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-03-19T00:33:35.557Z
+date: 2022-04-03T12:29:43.868Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -94,7 +94,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 {#update-to-net-core-version}
 
-- Newer versions of Radarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
+- Newer versions of Radarr are targeted for .NET6 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
 
 See the below entries for how to switch from unsupported, end-of-life mono versions to dotnet.
 
