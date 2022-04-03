@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-03-22T18:08:45.637Z
+date: 2022-04-03T18:03:27.244Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -37,9 +37,11 @@ Radarr needs two databases, the default names of these are:
 - `radarr-main`   This is used to store all configuration and history
 - `radarr-log`    This is used to store events that produce a logentry
 
-These can be named whatever you want them to be if you update the corresponding variables (see [Schema creation](/radarr/postgres-setup#schema-creation)).
+> Radarr will not create the databases for you. Make sure you create them ahead of time{.is-warning}
 
-Create these databases using your favorite method, with the same username and password. Roxedus used Adminer, as he already had that set up.
+Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
+
+You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](/radarr/postgres-setup#schema-creation).
 
 ### Schema creation
 
@@ -59,7 +61,7 @@ If you want to specify a database name then should also include the following co
 <PostgresLogDb>LogDbName</PostgresLogDb>
 ```
 
-You can now run Radarr using the Postgres databases.
+Only **after creating** both databases you can start the Radarr migration from SQLite to Postgres.
 
 ## Migrating data
 
@@ -71,16 +73,34 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
-> Before migrating please ensure that you have run Radarr against the created Postgres databases and then delete any data within the `Profiles`, `QualityDefinitions` & `DelayProfiles` tables on the new Postgres database. {.is-warning}
+> Do not drop any tables in the Postgres instance {.is-danger}
 
-With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
+Before starting a migration please ensure that you have run Radarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 
-```bash
-pgloader --with "quote identifiers" --with "data only" radarr.db 'postgresql://qstick:qstick@localhost/radarr-main'
-```
+1. Stop Radarr
+1. Open your preferred database management tool and connect to the Postgres database instance 
+1. Run the following commands:
 
-Or alternatively, using the Docker image producing the binary:
+    - ```SQL
+        DELETE FROM "Profiles"
+        ```
 
-```bash
-docker run -v ..radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
-```
+    - ```SQL
+        DELETE FROM "QualityDefinitions"
+        ```
+
+    - ```SQL
+        DELETE FROM "DelayProfiles"
+        ```
+
+1. Start the migration by using either of these options:
+
+> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
+
+    - ```bash
+      pgloader --with "quote identifiers" --with "data only" radarr.db 'postgresql://qstick:qstick@localhost/radarr-main'
+      ```
+
+    - ```bash
+      docker run -v /absolute/path/to/radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
+      ```
