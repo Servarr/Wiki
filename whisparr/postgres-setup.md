@@ -2,7 +2,7 @@
 title: Whisparr Configuring PostgreSQL Database
 description: Configuring Whisparr with a Postgres Database
 published: true
-date: 2022-04-03T22:10:52.203Z
+date: 2022-04-03T22:13:15.118Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:34.975Z
@@ -103,4 +103,6 @@ Before starting a migration please ensure that you have run Whisparr against the
       docker run -v /absolute/path/to/whisparr.db:/whisparr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /whisparr.db "postgresql://qstick:qstick@localhost/whisparr-main"
       ```
 
-> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
+> With these handled, it is pretty straightforward after telling it to not mess with the scheme      using `--with "data only"` {.is-info}
+
+5. Start Whisparr back up
