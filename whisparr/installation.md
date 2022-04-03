@@ -1,11 +1,11 @@
 ---
 title: Whisparr Installation
-description:
+description: 
 published: true
-date: 2022-03-31T18:19:53.991Z
-tags:
+date: 2022-04-03T11:46:06.223Z
+tags: 
 editor: markdown
-dateCreated: 2021-05-17T01:14:47.863Z
+dateCreated: 2022-04-03T03:49:24.491Z
 ---
 
 # Table of Contents
@@ -42,7 +42,7 @@ dateCreated: 2021-05-17T01:14:47.863Z
     - [Tray App (Windows)](#tray-app-windows)
       - [Prerequisites (Tray App)](#prerequisites-tray-app)
       - [Creating Whisparr-4K Tray App](#creating-whisparr-4k-tray-app)
-    - [Configuring Whisparr-4k {#windows-multi-config-second}](#configuring-whisparr-4k-windows-multi-config-second)
+    - [Configuring Whisparr-4k](#configuring-whisparr-4k-windows-multi-config-second)
     - [Dealing with Updates](#dealing-with-updates)
       - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
   - [Linux Multiple Instances](#linux-multiple-instances)
@@ -241,6 +241,9 @@ The Whisparr team only provides builds for FreeBSD. Plugins and Ports are mainta
 
 Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
 
+> Currently the BSD Community does not have any package or port available
+{.is-danger}
+
 [Freshports Whisparr Link](https://www.freshports.org/net-p2p/whisparr/)
 
 ## Jail Setup Using TrueNAS GUI
@@ -291,6 +294,9 @@ To install Whisparr
 > \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
 > \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
 {.is-warning}
+
+> Currently the BSD Community does not have any package or port available
+{.is-danger}
 
 ```shell
 pkg install whisparr
