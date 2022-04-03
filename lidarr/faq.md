@@ -416,9 +416,9 @@ Depending on your OS, there are multiple possible ways.
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
-- **May 2021 Update: It is likely \*Arr support will be phased out for the jackett `/all` endpoint in the future due to the fact it only causes issues.**
+- **April 2022 Update: \*Arr support has been removed out for the jackett `/all` due to the fact it only causes issues.**
 
 - [Even Jackett says /all should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 

@@ -426,7 +426,7 @@ Depending on your OS, there are multiple possible ways.
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **January 20 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 0.1.0.1188 due to the fact it only causes issues.**
 

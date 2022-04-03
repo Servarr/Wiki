@@ -670,7 +670,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is strongly recommended. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
 
 - **February 5 2022 Update: \*Arr Support has been discontinued for the jackett `\all` endpoint. Jackett /all endpoint is no longer supported (e.g. warnings will occur) as of v3.0.6.1457 due to the fact it only causes issues.**
 
