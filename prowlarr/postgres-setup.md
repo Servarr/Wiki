@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-04-03T22:13:44.349Z
+date: 2022-04-03T23:25:26.917Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -13,6 +13,8 @@ dateCreated: 2022-01-10T15:38:53.538Z
 This document will go over the key points of migrating and setting up Postgres support in Prowlarr.
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
+
+> Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user {.is-danger}
 
 ## Setting up Postgres
 
