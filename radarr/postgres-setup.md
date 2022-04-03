@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-04-03T18:04:28.807Z
+date: 2022-04-03T18:04:53.478Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -102,4 +102,5 @@ Before starting a migration please ensure that you have run Radarr against the c
     - ```bash
       docker run -v /absolute/path/to/radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
       ```
+
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
