@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-03-04T13:17:07.019Z
+date: 2022-04-03T18:08:35.044Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -12,17 +12,13 @@ dateCreated: 2022-01-10T15:38:53.538Z
 
 This document will go over the key points of migrating and setting up Postgres support in Prowlarr.
 
-This guide was created by the amazing [Roxedus](https://github.com/Roxedus).
+This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-## Creation of initial database
+## Setting up Postgres
 
-- We do this when migrating as well, to ensure Prowlarr sets up the required schema.
+ First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
-### Setting up Postgres
-
-First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
-
-> Do not even think about using the `latest` tag! {.is-danger}
+ > Do not even think about using the `latest` tag! {.is-danger}
 
 ```bash
 docker create --name=postgres14 \
@@ -30,20 +26,26 @@ docker create --name=postgres14 \
     -e POSTGRES_USER=qstick \
     -e POSTGRES_DB=prowlarr-main \
     -p 5432:5432/tcp \
-    -v ..appdata/postgres14:/var/lib/postgresql/data \
+    -v /path/to/appdata/postgres14:/var/lib/postgresql/data \
     postgres:14
 ```
 
-Prowlarr needs two databases:
+## Creation of database
+
+Prowlarr needs two databases, the default names of these are:
 
 - `prowlarr-main`   This is used to store all configuration and history
 - `prowlarr-log`    This is used to store events that produce a logentry
 
-Create these databases using your favorite method, with the same username and password. Roxedus used Adminer, as he already had that set up.
+> Prowlarr will not create the databases for you. Make sure you create them ahead of time{.is-warning}
+
+Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
+
+You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](/prowlarr/postgres-setup#schema-creation).
 
 ### Schema creation
 
-We need to tell Prowlarr to use Postgres. The `config.xml` should already be populated with the entries we need:
+ We need to tell Prowlarr to use Postgres. The `config.xml` should already be populated with the entries we need:
 
 ```xml
 <PostgresUser>qstick</PostgresUser>
@@ -52,28 +54,39 @@ We need to tell Prowlarr to use Postgres. The `config.xml` should already be pop
 <PostgresHost>postgres14</PostgresHost>
 ```
 
-You can now run Prowlarr using the postgres database.
+If you want to specify a database name then should also include the following configuration:
 
-## Migrate data
+```xml
+<PostgresMainDb>MainDbName</PostgresMainDb>
+<PostgresLogDb>LogDbName</PostgresLogDb>
+```
 
-> If you do not want to migrate a existing SQLite database to Postgres, you are already finished with this guide! {.is-info}
+Only **after creating** both databases you can start the Prowlarr migration from SQLite to Postgres.
+
+## Migrating data
+
+> If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
 - By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
-  
-> Before migrating please ensure that you have run Prowlarr against the created Postgres databases {.is-warning}
 
-With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`:
+> Do not drop any tables in the Postgres instance {.is-danger}
 
-```bash
-pgloader --with "quote identifiers" --with "data only" prowlarr.db 'postgresql://qstick:qstick@localhost/prowlarr-main'
-```
+Before starting a migration please ensure that you have run Prowlarr against the created Postgres databases **at least once successfully**. Begin the migration by doing the following:
 
-Or alternatively, using the Docker image producing the binary:
+1. Stop Prowlarr
+1. Open your preferred database management tool and connect to the Postgres database instance
+1. Start the migration by using either of these options:
 
-```bash
-docker run -v ..prowlarr.db:/prowlarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /prowlarr.db "postgresql://qstick:qstick@localhost/prowlarr-main"
-```
+    - ```bash
+      pgloader --with "quote identifiers" --with "data only" prowlarr.db 'postgresql://qstick:qstick@localhost/prowlarr-main'
+      ```
+
+    - ```bash
+      docker run -v /absolute/path/to/prowlarr.db:/prowlarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /prowlarr.db "postgresql://qstick:qstick@localhost/prowlarr-main"
+      ```
+
+> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
