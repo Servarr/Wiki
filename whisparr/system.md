@@ -1,12 +1,13 @@
 ---
 title: Whisparr System
-description:
+description: 
 published: true
-date: 2022-03-19T00:33:35.557Z
-tags: whisparr, needs-love
+date: 2022-04-03T13:54:08.418Z
+tags: needs-love, whisparr
 editor: markdown
-dateCreated: 2021-05-25T02:28:35.194Z
+dateCreated: 2022-04-03T03:49:55.636Z
 ---
+
 
 # Table of Contents
 
@@ -15,11 +16,6 @@ dateCreated: 2021-05-25T02:28:35.194Z
   - [Health](#health)
     - [System Warnings](#system-warnings)
       - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Update to .NET version](#update-to-net-version)
-        - [Fixing Docker installs](#fixing-docker-installs)
-        - [Fixing FreeBSD installs](#fixing-freebsd-installs)
-        - [Fixing Standalone installs](#fixing-standalone-installs)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
       - [Database Failed Integrity Check](#database-failed-integrity-check)
       - [New update is available](#new-update-is-available)
@@ -89,92 +85,6 @@ dateCreated: 2021-05-25T02:28:35.194Z
 #### Branch is not a valid release branch
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/whisparr/faq#how-do-i-update-whisparr).
-
-#### Update to .NET version
-
-{#update-to-net-core-version}
-
-- Newer versions of Whisparr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after version 3.2.2. You are running one of these legacy mono builds, but your platform supports .NET.
-
-See the below entries for how to switch from unsupported, end-of-life mono versions to dotnet.
-
-- [Fixing Docker installs](#fixing-docker-installs)
-- [Fixing FreeBSD installs](#fixing-freebsd-installs)
-- [Fixing Standalone installs](#fixing-standalone-installs)
-{.links-list}
-
-##### Fixing Docker installs
-
-- Ensure your branch is correct for your provider and repull your container
-
-##### Fixing FreeBSD installs
-
-- Simply update the Whisparr Port with `pkg update && pkg upgrade`
-- (Optional) Remove the mono package if you wish
-
-##### Fixing Standalone installs
-
-- Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
-- To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Whisparr) and replace with the contents of the .tar.gz you just downloaded.
-
-> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
-
-- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Whisparr branch update the variable if needed
-- This assumes that Whisparr runs as the user `whisparr` update the variables if needed
-- This assumes Whisparr is installed at `/opt/Whisparr` update the variables if needed
-
-```bash
-#!/bin/bash
-## User Variables
-installdir="/opt/Whisparr"
-APPUSER="whisparr"
-branch="master"
-## /User Variables
-app="whisparr"
-ARCH=$(dpkg --print-architecture)
-# Stop \*arr
-sudo systemctl stop $app
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo_error "Arch not supported"
-    exit 1
-    ;;
-esac
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo "Installation files downloaded and extracted"
-echo "Moving existing installation"
-sudo mv "$installdir/" "$installdir.old/"
-echo "Installing..."
-sudo mv "${app^}" "$installdir"
-sudo chown $APPUSER:$APPUSER -R $installdir
-sudo sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo systemctl daemon-reload
-echo "App Installed"
-sudo rm -rf "$installdir.old/"
-rm -rf "${app^}.*.tar.gz"
-sudo systemctl start $app
-```
-
-#### Currently installed mono version is old and unsupported
-
-- Whisparr is written in .NET and requires Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Whisparr.
-- The upgrade procedure for Mono varies per platform.
-
-> Mono is no longer supported starting in Whisparr version 4.0
-{.is-warning}
 
 #### Currently installed SQLite version is not supported
 
