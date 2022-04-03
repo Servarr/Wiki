@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-02-17T23:21:44.607Z
+date: 2022-04-03T18:56:07.241Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -55,6 +55,8 @@ dateCreated: 2021-06-14T21:36:28.225Z
     - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
       - [No indexers Available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+      - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
+        - [Solutions](#solutions)
     - [Artist Folders](#artist-folders)
       - [Missing Root Folder](#missing-root-folder)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
@@ -374,6 +376,24 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 - Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Lidarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+
+#### Jackett All Endpoint Used
+
+- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
+- [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- Using the /all endpoint has no advantages, only disadvantages:
+  - you lose control over indexer specific settings (categories, search modes, etc.)
+  - mixing search modes (IMDB, query, etc.) might cause low-quality results
+  - indexer specific categories (>= 100000) cannot be used.
+  - slow indexers will slow down the overall result
+  - total results are limited to 1000
+  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+
+##### Solutions
+
+- Add each tracker in Jackett manually as an indexer in \*Arr
+- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr
 
 ### Artist Folders
 
