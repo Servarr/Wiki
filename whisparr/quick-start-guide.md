@@ -46,7 +46,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 # Startup
 
-After installation and starting up, you open a browser and go to `http://{your_ip_here}:7878`
+After installation and starting up, you open a browser and go to `http://{your_ip_here}:6969`
 
 ![Whisparr-start.png](/assets/whisparr/Whisparr-start.png)
 

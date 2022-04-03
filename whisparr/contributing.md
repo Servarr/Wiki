@@ -73,7 +73,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Whisparr
-1. Open <http://localhost:7878>
+1. Open <http://localhost:6969>
 
 #### Command line
 
