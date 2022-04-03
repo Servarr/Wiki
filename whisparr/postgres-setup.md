@@ -2,7 +2,7 @@
 title: Whisparr Configuring PostgreSQL Database
 description: Configuring Whisparr with a Postgres Database
 published: true
-date: 2022-04-03T22:07:05.916Z
+date: 2022-04-03T22:10:52.203Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:34.975Z
@@ -75,9 +75,9 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 
 > Do not drop any tables in the Postgres instance {.is-danger}
 
-Before starting a migration please ensure that you have run Radarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
+Before starting a migration please ensure that you have run Whisparr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 
-1. Stop Radarr
+1. Stop Whisparr
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
@@ -96,11 +96,11 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Start the migration by using either of these options:
 
     - ```bash
-      pgloader --with "quote identifiers" --with "data only" radarr.db 'postgresql://qstick:qstick@localhost/radarr-main'
+      pgloader --with "quote identifiers" --with "data only" whisparr.db 'postgresql://qstick:qstick@localhost/whisparr-main'
       ```
 
     - ```bash
-      docker run -v /absolute/path/to/radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
+      docker run -v /absolute/path/to/whisparr.db:/whisparr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /whisparr.db "postgresql://qstick:qstick@localhost/whisparr-main"
       ```
 
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
