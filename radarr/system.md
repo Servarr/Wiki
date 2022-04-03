@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-04-03T12:29:43.868Z
+date: 2022-04-03T12:30:04.561Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -105,7 +105,7 @@ See the below entries for how to switch from unsupported, end-of-life mono versi
 
 ##### Fixing Docker installs
 
-- Ensure your branch is correct for your provider and repull your container
+- Ensure your branch is correct for your docker maintainer and repull your container
 
 ##### Fixing FreeBSD installs
 
