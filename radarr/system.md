@@ -414,7 +414,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 - Using the /all endpoint has no advantages, only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
   - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (>= 100000) cannot be used.
+  - indexer specific categories (\>= 100000) cannot be used.
   - slow indexers will slow down the overall result
   - total results are limited to 1000
   - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
@@ -423,7 +423,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
-- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ### Movie Folders
 

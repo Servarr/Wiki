@@ -541,18 +541,21 @@ Depending on your OS, there are multiple possible ways.
 
 - **January 1 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 4.0.0.5730 due to the fact it only causes issues.**
 
-- [Even Jackett says /all should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
-
-- Using the `/all` endpoint has no advantages (besides reduced management overhead), only disadvantages:
+- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
+- [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- Using the /all endpoint has no advantages, only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
   - mixing search modes (IMDB, query, etc.) might cause low-quality results
   - indexer specific categories (\>= 100000) cannot be used.
   - slow indexers will slow down the overall result
   - total results are limited to 1000
+  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
-- Note that using NZBHydra2 as a single aggregate entry has the same issues as Jackett's `/all`
+### Jackett /All Solutions
 
-- Add each indexer separately. This allows for fine tuning of categories on a per indexer basis, which can be a problem with the `/all` end point if using the wrong category causes errors on some trackers. In \*Arr, each indexer is limited to 1000 results if pagination is supported or 100 if not, which means as you add more and more trackers to Jackett, you're more and more likely to clip results. Finally, if *one* of the trackers in `/all` returns an error, \*Arr will disable it and now you do not get any results.
+- Add each tracker in Jackett manually as an indexer in \*Arr
+- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ## Why are there two files? | Why is there a file left in downloads?
 
