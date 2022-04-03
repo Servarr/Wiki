@@ -55,6 +55,7 @@ nano ArrInstall.sh
 ### Version v3.0.3 2022-02-06 - Bakerboy448 fixup ownership
 ### Version v3.0.3a Readarr to develop
 ### Version v3.0.4 2022-03-01 - Add sleep before checking service status
+### Version v3.0.5 2022-04-03 - VP-EN (Added Whisparr)
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -66,8 +67,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.4"
-scriptdate="2022-03-01"
+scriptversion="3.0.5"
+scriptdate="2022-04-03"
 
 set -euo pipefail
 
@@ -82,7 +83,7 @@ fi
 
 echo "Select the application to install: "
 
-select app in lidarr prowlarr radarr readarr quit; do
+select app in lidarr prowlarr radarr readarr whisparr quit; do
 
     case $app in
     lidarr)
@@ -111,6 +112,13 @@ select app in lidarr prowlarr radarr readarr quit; do
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
         branch="develop"          # {Update me if needed} branch to install
+        break
+        ;;
+    whisparr)
+        app_port="6969"           # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3" # Required packages
+        app_umask="0002"          # UMask the Service will run as
+        branch="nightly"          # {Update me if needed} branch to install
         break
         ;;
     quit)
