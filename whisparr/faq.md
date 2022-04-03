@@ -438,7 +438,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Web Interface Only Loads at localhost on Windows
 
-- If you can only reach your web interface at <http://localhost:7878/> or <http://127.0.0.1:7878/>, you need to run as administrator at least once.
+- If you can only reach your web interface at <http://localhost:6969/> or <http://127.0.0.1:6969/>, you need to run as administrator at least once.
 
 ## Permissions
 
@@ -468,7 +468,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I got a pop-up that said config.xml was corrupt, what now?
 
-- Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/whisparr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
+- Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/whisparr/appdata-directory), once deleted start and it will start on the default port (6969), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 

@@ -65,7 +65,7 @@ It's therefore advisable to install Whisparr as a system tray application if the
 
 1. Download the latest version of Whisparr for your architecture linked below.
 1. Run the installer
-1. Browse to <http://localhost:7878> to start using Whisparr
+1. Browse to <http://localhost:6969> to start using Whisparr
 
 - [Windows x64 Installer](https://whisparr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
 - [Windows x32 Installer](https://whisparr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
@@ -84,7 +84,7 @@ It's therefore advisable to install Whisparr as a system tray application if the
 1. Download the [MacOS App](https://whisparr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Whisparr icon to your Application folder.
 1. Self-sign Whisparr `codesign --force --deep -s - Whisparr.app`
-1. Browse to <http://localhost:7878> to start using Whisparr
+1. Browse to <http://localhost:6969> to start using Whisparr
 
 # Linux
 
@@ -201,7 +201,7 @@ sudo systemctl enable --now -q whisparr
 rm Whisparr*.linux*.tar.gz
 ```
 
-Typically to access the Whisparr web GUI browse to `http://{Your server IP Address}:7878`
+Typically to access the Whisparr web GUI browse to `http://{Your server IP Address}:6969`
 
 If Whisparr did not appear to start, then check the status of the service:
 
@@ -336,7 +336,7 @@ Almost done, let's start the service:
 service whisparr start
 ```
 
-If everything went according to plan then whisparr should be up and running on the IP of the jail (port 7878)!
+If everything went according to plan then whisparr should be up and running on the IP of the jail (port 6969)!
 
 You can now safely close the shell
 
@@ -391,7 +391,7 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 Sample config examples for configuring Whisparr to be accessible from the outside world through a reverse proxy.
 
-> These examples assumes the default port of `7878` and that you set a baseurl of `whisparr`. It also assumes your web server i.e nginx and Whisparr running on the same server accessible at `localhost` (127.0.0.1). If not, use the host IP address or hostname instead for the proxy pass directive.
+> These examples assumes the default port of `6969` and that you set a baseurl of `whisparr`. It also assumes your web server i.e nginx and Whisparr running on the same server accessible at `localhost` (127.0.0.1). If not, use the host IP address or hostname instead for the proxy pass directive.
 {.is-info}
 
 ## NGINX
@@ -402,7 +402,7 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 
 ```nginx
 location /whisparr {
-    proxy_pass http://127.0.0.1:7878;
+    proxy_pass http://127.0.0.1:6969;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Host $host;
@@ -415,7 +415,7 @@ location /whisparr {
 # Allow the API External Access via NGINX
 location ~ /whisparr/api {
     auth_request off;
-    proxy_pass http://127.0.0.1:7878;
+    proxy_pass http://127.0.0.1:6969;
 }
 ```
 
@@ -442,7 +442,7 @@ Alternatively you can use a subdomain for whisparr. In this case you would visit
 
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
 
-> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Whisparr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `whisparr` is chosen (line 5). {.is-info}
+> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `6969` and Whisparr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `whisparr` is chosen (line 5). {.is-info}
 
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
 
@@ -464,7 +464,7 @@ server {
     proxy_redirect     off;
     proxy_http_version 1.1;
 
-    proxy_pass http://127.0.0.1:7878;
+    proxy_pass http://127.0.0.1:6969;
   }
 }
 ```
@@ -480,8 +480,8 @@ Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want 
 ```none
 <Location /whisparr>
   ProxyPreserveHost on
-    ProxyPass http://127.0.0.1:7878/whisparr connectiontimeout=5 timeout=300
-    ProxyPassReverse http://127.0.0.1:7878/whisparr
+    ProxyPass http://127.0.0.1:6969/whisparr connectiontimeout=5 timeout=300
+    ProxyPassReverse http://127.0.0.1:6969/whisparr
 </Location>
 ```
 
@@ -490,8 +490,8 @@ Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want 
 Or for making an entire VirtualHost for Whisparr:
 
 ```none
-ProxyPass / http://127.0.0.1:7878/whisparr/
-ProxyPassReverse / http://127.0.0.1:7878/whisparr/
+ProxyPass / http://127.0.0.1:6969/whisparr/
+ProxyPassReverse / http://127.0.0.1:6969/whisparr/
 ```
 
 If you implement any additional authentication through Apache, you should exclude the following paths:
@@ -593,7 +593,7 @@ separate locations. {.is-warning}
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Whisparr-4k (Service or Tray App)
 - Open up Whisparr-4k and Navigate within the app to [Settings => General => Host](/whisparr/settings/#host)
-- Change `Port Number` from `7878` to a different port e.g. `7879` so Whisparr and Whisparr4k do not conflict
+- Change `Port Number` from `6969` to a different port e.g. `6970` so Whisparr and Whisparr4k do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)
 

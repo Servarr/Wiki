@@ -240,13 +240,13 @@ For Apache2 reverse proxy, you need to enable the following modules: proxy, prox
 ```none
 RewriteEngine On
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
-RewriteRule /(.*) ws://127.0.0.1:7878/$1 [P,L]
+RewriteRule /(.*) ws://127.0.0.1:6969/$1 [P,L]
 ```
 
 If you have a reverse proxy under a subdirectory, the RewriteRule should include your basepath e.g.
 
 ```none
-RewriteRule /whisparr/(.*) ws://127.0.0.1:7878/whisparr/$1 [P,L]
+RewriteRule /whisparr/(.*) ws://127.0.0.1:6969/whisparr/$1 [P,L]
 ```
 
 If Whisparr is not running on the same machine as your reverse proxy. Replace 127.0.0.1 with the appropriate IP address/DNS name of your Whisparr app.
@@ -257,7 +257,7 @@ For Caddy (V1) use this:
 Note: you will also need to add the websocket directive to your whisparr configuration
 
 ```none
- proxy /whisparr 127.0.0.1:7878 {
+ proxy /whisparr 127.0.0.1:6969 {
      websocket
      transparent
  }
