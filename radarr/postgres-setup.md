@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-04-03T18:08:27.961Z
+date: 2022-04-03T22:14:12.137Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -104,3 +104,5 @@ Before starting a migration please ensure that you have run Radarr against the c
       ```
 
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
+
+5. Start Radarr back up
