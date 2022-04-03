@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-04-03T12:31:00.687Z
+date: 2022-04-03T12:31:14.313Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -170,7 +170,7 @@ sudo systemctl start $app
 
 #### Currently installed mono version is old and unsupported
 
-- Radarr is written in .NET and requires Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
+- Radarr is written in .NET and required Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
 - The upgrade procedure for Mono varies per platform.
 
 > Mono is no longer supported starting in Radarr version 4.0
