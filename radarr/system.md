@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-04-03T12:30:04.561Z
+date: 2022-04-03T12:31:00.687Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -124,9 +124,9 @@ See the below entries for how to switch from unsupported, end-of-life mono versi
 {.is-warning}
 
 - The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Radarr branch update the variable if needed
-- This assumes that Radarr runs as the user `radarr` update the variables if needed
-- This assumes Radarr is installed at `/opt/Radarr` update the variables if needed
+- This assumes you are on the `master` Radarr branch, so update the variable if needed
+- This assumes that Radarr runs as the user `radarr`, so update the variables if needed
+- This assumes Radarr is installed at `/opt/Radarr`, so update the variables if needed
 
 ```bash
 #!/bin/bash
