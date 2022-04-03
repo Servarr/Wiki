@@ -100,6 +100,8 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
+[Please see the \*Arr Community Installation Script](/install-script)
+
 ### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
