@@ -2,7 +2,7 @@
 title: Whisparr Configuring PostgreSQL Database
 description: Configuring Whisparr with a Postgres Database
 published: true
-date: 2022-04-03T22:13:15.118Z
+date: 2022-04-03T23:25:52.135Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:34.975Z
@@ -13,6 +13,8 @@ dateCreated: 2022-04-03T03:49:34.975Z
 This document will go over the key points of migrating and setting up Postgres support in Whisparr.
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
+
+> Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user {.is-danger}
 
 ## Setting up Postgres
 
