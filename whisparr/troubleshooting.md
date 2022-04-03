@@ -81,7 +81,7 @@ dateCreated: 2021-08-03T21:05:52.988Z
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Whisparr Discord*](https://whisparr.video/discord)
+- [<i class="fab fa-discord"></i>&emsp;Discord *Official Whisparr Discord*](https://whisparr.com/discord)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Whisparr Subreddit*](https://reddit.com/r/whisparr)
 {.links-list}
 
@@ -226,7 +226,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### Migration Issues
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/whisparr) or swing by our [discord](https://whisparr.video/discord), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/whisparr) or swing by our [discord](https://whisparr.com/discord), if there are others with the same issue, then rest assured we are working on it.
 
 > Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
 

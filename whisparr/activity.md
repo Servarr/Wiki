@@ -55,8 +55,6 @@ On `Grabbed` statuses, you can click on the `i` icon on the right to see more de
 
 # Blocklist
 
-> Blocklist is formerly known as 'Blacklist' {.is-info}
-
 The blocklist page shows you items that are blocklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blocklist forever unless you manually remove them.
 
 ![blocklist1.png](/assets/whisparr/blocklist1.png)

@@ -55,22 +55,22 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Weird UI Issues](#weird-ui-issues)
   - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
   - [Permissions](#permissions)
-  - [System & Logs loads forever](#system-logs-loads-forever)
+  - [System & Logs loads forever](#system--logs-loads-forever)
   - [Finding Cookies](#finding-cookies)
   - [Unpack Torrents](#unpack-torrents)
   - [uTorrent is no longer working](#utorrent-is-no-longer-working)
   - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-- [Whisparr and Movie Issues + Metadata](#whisparr-and-movie-issues-metadata)
+- [Whisparr and Movie Issues + Metadata](#whisparr-and-movie-issues--metadata)
   - [Why can I not add a new movie to Whisparr?](#why-can-i-not-add-a-new-movie-to-whisparr)
-- [Whisparr Searching & Downloading Common Problems](#whisparr-searching-downloading-common-problems)
+- [Whisparr Searching & Downloading Common Problems](#whisparr-searching--downloading-common-problems)
   - [Jackett shows more results than when manually searching](#jackett-shows-more-results-than-when-manually-searching)
   - [How does Whisparr handle foreign movies or foreign titles?](#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
   - [How does Whisparr handle "multi" in names?](#how-does-whisparr-handle-multi-in-names)
   - [Help, Movie Added, But Not Searched](#help-movie-added-but-not-searched)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
-  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
+  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [Why doesn't Whisparr work behind a reverse proxy](#why-doesnt-whisparr-work-behind-a-reverse-proxy)
 
 # Whisparr Basics
@@ -164,9 +164,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/release/VERSION.json) - (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
+- `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/release/VERSION.json) -    (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Prowlarr does not yet have a stable release.**
 
-- `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/testing/VERSION.json) - (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first. This version will receive updates either weekly or biweekly depending on development.
+- `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/readarr/testing/VERSION.json) -  (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first.
 
 > **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time.
 {.is-warning}
@@ -206,16 +206,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 > You can (almost) always increase your risk.{.is-info}
 
-- See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
-- Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned
-  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- Master
-  - ![Master to Develop](https://img.shields.io/badge/From%20Master%20to%20Develop-yes-informational)
-  - ![Develop to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Develop%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-develop%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fwhisparr-branches.php)
-  - ![Nightly to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fwhisparr-branches.php)
-- Develop
-  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
-  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fwhisparr-branches.php)
+- `master` can go to `develop` or `nightly`
+- `develop` can go to `nightly`
+- Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned.
+- The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
 ## How do I Backup/Restore Whisparr?
 
@@ -389,7 +384,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - See the above database is malformed entry.
 
-- Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/whisparr](http://reddit.com/r/whisparr) or hop on [our discord](https://whisparr.video/discord) for help.
+- Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/whisparr](http://reddit.com/r/whisparr) or hop on [our discord](https://whisparr.com/discord) for help.
 
 ## Why can Whisparr not see my files on a remote server?
 

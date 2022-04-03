@@ -14,9 +14,9 @@ dateCreated: 2021-05-17T01:14:47.863Z
 - [Windows](#windows)
 - [MacOS (OSX)](#macos-osx)
 - [Linux](#linux)
-  - [Debian / Ubuntu](#debian-ubuntu)
+  - [Debian / Ubuntu](#debian--ubuntu)
     - [Easy Install](#easy-install)
-    - [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install)
+    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
     - [Uninstall](#uninstall)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
@@ -100,8 +100,6 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
-[Please see the \*Arr Community Installation Script](/install-script)
-
 ### Debian / Ubuntu Hands on Install
 
 You'll need to install the binaries using the below commands.
@@ -137,7 +135,7 @@ sudo apt install curl sqlite3
     - ARM64 use `arch=arm64`
 
 ```shell
-wget --content-disposition 'http://whisparr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64'
+wget --content-disposition 'http://whisparr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=x64'
 ```
 
 - Uncompress the files:
