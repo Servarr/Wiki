@@ -393,7 +393,7 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
-- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ### Artist Folders
 
