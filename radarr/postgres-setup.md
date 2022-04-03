@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-04-03T18:04:53.478Z
+date: 2022-04-03T18:08:27.961Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -78,7 +78,7 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 Before starting a migration please ensure that you have run Radarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 
 1. Stop Radarr
-1. Open your preferred database management tool and connect to the Postgres database instance 
+1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
     - ```SQL
