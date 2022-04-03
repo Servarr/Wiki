@@ -2,10 +2,10 @@
 title: Whisparr
 description: Whisparr wiki homepage
 published: true
-date: 2022-03-14T03:22:15.199Z
+date: 2022-04-03T11:28:45.166Z
 tags: whisparr
 editor: markdown
-dateCreated: 2021-05-16T13:53:17.360Z
+dateCreated: 2022-04-03T00:57:35.371Z
 ---
 
 ![128.png](/assets/whisparr/logos/128.png)
