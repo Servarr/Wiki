@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-03-31T18:19:53.991Z
+date: 2022-04-03T11:46:38.975Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -42,7 +42,7 @@ dateCreated: 2021-05-17T01:14:47.863Z
     - [Tray App (Windows)](#tray-app-windows)
       - [Prerequisites (Tray App)](#prerequisites-tray-app)
       - [Creating Radarr-4K Tray App](#creating-radarr-4k-tray-app)
-    - [Configuring Radarr-4k {#windows-multi-config-second}](#configuring-radarr-4k-windows-multi-config-second)
+    - [Configuring Radarr-4k](#configuring-radarr-4k-windows-multi-config-second)
     - [Dealing with Updates](#dealing-with-updates)
       - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
   - [Linux Multiple Instances](#linux-multiple-instances)
