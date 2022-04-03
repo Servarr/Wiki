@@ -67,11 +67,11 @@ It's therefore advisable to install Whisparr as a system tray application if the
 1. Run the installer
 1. Browse to <http://localhost:6969> to start using Whisparr
 
-- [Windows x64 Installer](https://whisparr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
-- [Windows x32 Installer](https://whisparr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+- [Windows x64 Installer](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
+- [Windows x32 Installer](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
 {.links-list}
 
-> It is possible to install Whisparr manually using the [x64 .zip download](https://whisparr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
+> It is possible to install Whisparr manually using the [x64 .zip download](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
 
 # MacOS (OSX)
@@ -81,7 +81,7 @@ It's therefore advisable to install Whisparr as a system tray application if the
 > Whisparr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
-1. Download the [MacOS App](https://whisparr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
+1. Download the [MacOS App](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
 1. Open the archive and drag the Whisparr icon to your Application folder.
 1. Self-sign Whisparr `codesign --force --deep -s - Whisparr.app`
 1. Browse to <http://localhost:6969> to start using Whisparr
