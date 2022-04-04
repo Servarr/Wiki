@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-04-04T14:25:21.840Z
+date: 2022-04-04T14:26:40.233Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -136,7 +136,8 @@ Here we will add the root folder that Readarr will be using to import your exist
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+> Non-Windows Users:
+> \* If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
