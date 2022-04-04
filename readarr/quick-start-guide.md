@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-03-18T19:22:51.687Z
+date: 2022-04-04T14:25:21.840Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -70,7 +70,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Create Empty Author Folders - Enable to create empty author folders when a new author is added to Readarr.
 - (Advanced Option) Delete Empty Folders - Enable to delete empty author folders when there are no remaining books for that author.
 
-> One of those boxes can be checked, but they should not BOTH be checked. {.is-warning}
+> One of those boxes can be checked, but they should not BOTH be checked.
+{.is-warning}
 
 > This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 {.is-info}
@@ -89,6 +90,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
 
 > If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
+{.is-info}
 
 # File Management
 
@@ -102,8 +104,9 @@ First we’re going to take a look at the `Media Management` settings where we c
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
 
-> `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
-> `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
+> \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
+> \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
+{.is-info}
 
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
@@ -120,7 +123,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
-> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.{.is-warning}
+> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
+{.is-warning}
 
 # Root Folders and Calibre Integration
 
@@ -147,6 +151,9 @@ Don’t forget to save your changes.
 ## Calibre Content Server (Optional)
 
 If you are going to use Calibre to manage your books, you need to set up the Calibre Content Server. Again, this is not Calibre-Web, but a piece of Calibre itself. You must be running Calibre, and you must set up the Content Server.
+
+> If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over
+{.is-danger}
 
 If you're using docker, your Calibre mounted book directory and your Readarr mounted book directory must be the same.
 
@@ -180,6 +187,9 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
 > \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
+
+> If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over
+{.is-danger}
 
 - Calibre Host - The IP/domain of the host of the Calibre Content Server
 - Calibre Port - The Port that Calibre Content Server is listening on
