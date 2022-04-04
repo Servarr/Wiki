@@ -14,7 +14,8 @@ This document will go over the key points of migrating and setting up Postgres s
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-> Postgres databases are NOT backed up by Whisparr, any backups must be implemented and maintained by the user {.is-danger}
+> Postgres databases are NOT backed up by Whisparr, any backups must be implemented and maintained by the user
+{.is-danger}
 
 ## Setting up Postgres
 
@@ -105,6 +106,7 @@ Before starting a migration please ensure that you have run Whisparr against the
       docker run -v /absolute/path/to/whisparr.db:/whisparr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /whisparr.db "postgresql://qstick:qstick@localhost/whisparr-main"
       ```
 
-> With these handled, it is pretty straightforward after telling it to not mess with the scheme      using `--with "data only"` {.is-info}
+> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
+{.is-info}
 
-5. Start Whisparr back up
+1. Start Whisparr

@@ -14,7 +14,8 @@ This document will go over the key points of migrating and setting up Postgres s
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-> Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user {.is-danger}
+> Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user
+{.is-danger}
 
 ## Setting up Postgres
 
@@ -91,6 +92,7 @@ Before starting a migration please ensure that you have run Prowlarr against the
       docker run -v /absolute/path/to/prowlarr.db:/prowlarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /prowlarr.db "postgresql://qstick:qstick@localhost/prowlarr-main"
       ```
 
-> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"` {.is-info}
+> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
+{.is-info}
 
-4. Start Prowlarr back up
+1. Start Prowlarr
