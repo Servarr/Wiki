@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-03-13T13:41:00.953Z
+date: 2022-04-04T14:28:06.941Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -376,7 +376,8 @@ Name for the `Specials` (Season) folder
 
 - Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+> Non-Windows Users:
+> \* If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
