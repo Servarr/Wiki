@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-04-04T14:28:32.932Z
+date: 2022-04-04T14:28:59.173Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -341,7 +341,7 @@ Name for the `Specials` (Season) folder
 {.is-info}
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
-- Rescan Series Folder after Refresh` - Rescan the series folder after refreshing the series
+- Rescan Series Folder after Refresh - Rescan the series folder after refreshing the series
   - Always - This will rescan series folder based upon Tasks Schedule
   - After Manual Refresh - You will have to manually rescan the disk
   - Never - Just as it says, never rescan the series folder.
