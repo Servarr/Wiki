@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-04-03T11:46:38.975Z
+date: 2022-04-04T05:39:49.000Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -86,6 +86,9 @@ It's therefore advisable to install Radarr as a system tray application if the u
 1. Self-sign Radarr `codesign --force --deep -s - Radarr.app`
 1. Browse to <http://localhost:7878> to start using Radarr
 
+> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
+{.is-info}
+
 # Linux
 
 ## Debian / Ubuntu
@@ -101,6 +104,9 @@ If you want an easy life, follow this community provided and maintained `Easy In
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
 [Please see the \*Arr Community Installation Script](/install-script)
+
+> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
+{.is-info}
 
 ### Debian / Ubuntu Hands on Install
 
@@ -204,6 +210,9 @@ rm Radarr*.linux*.tar.gz
 ```
 
 Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:7878`
+
+> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
+{.is-info}
 
 If Radarr did not appear to start, then check the status of the service:
 
