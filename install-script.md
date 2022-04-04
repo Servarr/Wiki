@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-04T06:26:26.855Z
+date: 2022-04-04T06:26:35.718Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -26,7 +26,8 @@ Please be aware of the following common mistake around permissions.
 
 Be aware of the following:
 
-> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within the app (System => Backup). The script won't delete your settings (application data), but be safe. {.is-danger}
+> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within the app (System => Backup). The script won't delete your settings (application data), but be safe.
+{.is-danger}
 
 - (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
 - SSH into your Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or login as root.
