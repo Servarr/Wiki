@@ -209,7 +209,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - `master` can go to `develop` or `nightly`
 - `develop` can go to `nightly`
 - Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
-- Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned.
+- Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned.
 - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
 ## How do I Backup/Restore Whisparr?
@@ -448,7 +448,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## System & Logs loads forever
 
-- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
+- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Whisparr is running on. But I still recommend checking the list.
 
 ## Finding Cookies
 

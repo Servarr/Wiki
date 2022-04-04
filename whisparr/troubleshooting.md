@@ -234,7 +234,7 @@ In the event of a migration issue there is not much you can do immediately, if t
 
 - Fix the permissions to ensure the user/group the application is running as can access (read and write) to both `/tmp` and the installation directory of the application.
 
-- For Synology users experiencing issues with `/proc/###/maps` stopping Sonarr or the other \*Arr applications and updating should resolve this. This is an issue with the SynoCommunity package.
+- For Synology users experiencing issues with `/proc/###/maps` stopping Whisparr or the other \*Arr applications and updating should resolve this. This is an issue with the SynoCommunity package.
 
 ### Manually upgrading
 

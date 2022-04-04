@@ -14,7 +14,7 @@ This document will go over the key points of migrating and setting up Postgres s
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-> Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user {.is-danger}
+> Postgres databases are NOT backed up by Whisparr, any backups must be implemented and maintained by the user {.is-danger}
 
 ## Setting up Postgres
 
