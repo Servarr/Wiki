@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-02-28T21:05:22.507Z
+date: 2022-04-04T14:30:23.648Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -101,6 +101,7 @@ dateCreated: 2021-05-29T15:57:25.304Z
   - [Dates](#dates)
   - [Style](#style)
   - [Language](#language)
+
 This page will go through all the settings available in Radarr and how they work. This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](/radarr/quick-start-guide) page instead.
 
 # Menu options
@@ -261,7 +262,8 @@ Here you will set the naming convention for the folder that contains the season 
 
   - For more information on this click [here](https://trash-guides.info/hardlinks)
 
- > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.{.is-warning}
+> Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.
+{.is-warning}
 
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 
@@ -273,10 +275,13 @@ Here you will set the naming convention for the folder that contains the season 
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
-- > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
-- > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
 
-> [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/) {.is-info}
+> \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
+> \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
+{.is-info}
+
+> [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/)
+{.is-info}
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Radarr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Movie Folder after Refresh - Rescan the series folder after refreshing the series
@@ -309,15 +314,17 @@ Here you will set the naming convention for the folder that contains the season 
 
 ## Root Folders
 
-Path - This shows the path to your media library
-Free Space - This is the free space being reported to Radarr from the system
-Unmapped Folders - These are folders that do not have a Movie associated to it
+- Path - This shows the path to your media library
+- Free Space - This is the free space being reported to Radarr from the system
+- Unmapped Folders - These are folders that do not have a Movie associated to it
 
->The `X` at the end will remove this root path{.is-warning}
+> The `X` at the end will remove this root path
+{.is-info}
 
-Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Radarr to scan existing media.
+- Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Radarr to scan existing media.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+> Non-Windows Users:
+> \* If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
