@@ -2,7 +2,7 @@
 title: Whisparr
 description: Whisparr wiki homepage
 published: true
-date: 2022-04-05T05:47:36.127Z
+date: 2022-04-05T05:47:45.593Z
 tags: whisparr
 editor: markdown
 dateCreated: 2022-04-03T00:57:35.371Z
@@ -42,7 +42,7 @@ dateCreated: 2022-04-03T00:57:35.371Z
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/whisparr/contributing)
-- [<i class="fas fa-book"></i>&emsp;API Docs](https://whisparr.video/docs/api/#/)
+- [<i class="fas fa-book"></i>&emsp;API Docs](https://whisparr.com/docs/api/#/)
 {.links-list}
 
 > Note that the API Docs are now auto-generated in the build pipeline for the nightly (GitHub develop) branch {.is-info}
