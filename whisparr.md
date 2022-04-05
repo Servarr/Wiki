@@ -2,7 +2,7 @@
 title: Whisparr
 description: Whisparr wiki homepage
 published: true
-date: 2022-04-03T11:28:45.166Z
+date: 2022-04-05T05:47:36.127Z
 tags: whisparr
 editor: markdown
 dateCreated: 2022-04-03T00:57:35.371Z
@@ -57,7 +57,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 
 # Links
 
-- [whisparr.video *Website*](https://whisparr.video)
-- [Donate *Donations*](https://whisparr.video/donate)
+- [whisparr.com *Website*](https://whisparr.com)
+- [Donate *Donations*](https://whisparr.com/donate)
 - [GitHub *Source Code*](https://github.com/whisparr/whisparr)
 {.links-list}
