@@ -2,7 +2,7 @@
 title: Whisparr Installation
 description: 
 published: true
-date: 2022-04-03T11:46:06.223Z
+date: 2022-04-05T03:44:36.241Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:24.491Z
@@ -392,7 +392,6 @@ Keep in mind that Whisparr will need read and write to the download folders as w
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 - [hotio/whisparr](https://hotio.dev/containers/whisparr/)
-- [lscr.io/linuxserver/whisparr](https://docs.linuxserver.io/images/docker-whisparr)
 {.links-list}
 
 # Reverse Proxy Configuration
