@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-03-22T17:25:12.327Z
+date: 2022-04-06T23:23:56.224Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -550,6 +550,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - [See this section for details](/sonarr/installation#synology-mono-ssl-errors)
 
 ## Invalid Certificate and other HTTPS or SSL issues
+
+- If you're on non-Windows, Mmost likely your mono's certificates are out of date and need to be synced. [See the sections about mono ssl in the installation article for details](/sonarr/installation)
 
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
 
