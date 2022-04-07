@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-03-31T18:21:37.355Z
+date: 2022-04-07T19:24:48.417Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -40,7 +40,7 @@ dateCreated: 2021-07-10T16:07:37.425Z
     - [Tray App (Windows)](#tray-app-windows)
       - [Prerequisites (Tray App)](#prerequisites-tray-app)
       - [Creating Sonarr-4K Tray App](#creating-sonarr-4k-tray-app)
-    - [Configuring Sonarr-4k {#windows-multi-config-second}](#configuring-sonarr-4k-windows-multi-config-second)
+    - [Configuring Sonarr-4k](#configuring-sonarr-4k-windows-multi-config-second)
     - [Dealing with Updates](#dealing-with-updates)
       - [Windows Port Checker and Restarter PowerShell Script](#windows-port-checker-and-restarter-powershell-script)
   - [Linux Multiple Instances](#linux-multiple-instances)
