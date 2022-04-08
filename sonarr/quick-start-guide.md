@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2022-02-15T21:44:31.495Z
+date: 2022-04-08T16:33:26.654Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -20,9 +20,8 @@ dateCreated: 2021-09-03T19:14:22.283Z
 - [Profiles](#profiles)
 - [Indexers](#indexers)
 - [Download Clients](#download-clients)
-  - [{.tabset}](#tabset)
-    - [Usenet](#usenet)
-    - [BitTorrent](#bittorrent)
+  - [Usenet](#usenet)
+  - [BitTorrent](#bittorrent)
 - [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
   - [Import episodes](#import-episodes)
     - [Importing Existing Media](#importing-existing-media)
