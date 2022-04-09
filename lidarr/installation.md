@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-03-31T18:22:24.300Z
+date: 2022-04-09T09:12:15.550Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -385,7 +385,7 @@ Sample config examples for configuring Lidarr to be accessible through a reverse
 ## NGINX
 
 ```nginx
-location /lidarr {
+location ^~ /lidarr {
     proxy_pass http://127.0.0.1:8686;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -398,8 +398,8 @@ location /lidarr {
 }
 # Allow the API External Access via NGINX
 location ~ /lidarr/api {
-    auth_request off;
-    proxy_pass http://127.0.0.1:9696;
+    auth_basic off;
+    proxy_pass http://127.0.0.1:8686;
 }
 ```
 
