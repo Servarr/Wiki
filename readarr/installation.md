@@ -2,7 +2,7 @@
 title: Readarr Installation
 description: 
 published: true
-date: 2022-03-31T18:22:49.263Z
+date: 2022-04-09T09:14:55.768Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-25T00:22:15.328Z
@@ -417,7 +417,7 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
 
 ```nginx
-location /readarr {
+location ^~ /readarr {
     proxy_pass http://127.0.0.1:8787;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -429,8 +429,8 @@ location /readarr {
     proxy_set_header Connection $http_connection;
 }
 # Allow the API External Access via NGINX
-location ~ /readarr/api {
-    auth_request off;
+location ^~ /readarr/api {
+    auth_basic off;
     proxy_pass http://127.0.0.1:8787;
 }
 ```
