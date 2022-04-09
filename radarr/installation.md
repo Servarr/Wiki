@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-04-04T05:39:49.000Z
+date: 2022-04-09T09:13:39.665Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -412,7 +412,7 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
 
 ```nginx
-location /radarr {
+location ^~ /radarr {
     proxy_pass http://127.0.0.1:7878;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -424,8 +424,8 @@ location /radarr {
     proxy_set_header Connection $http_connection;
 }
 # Allow the API External Access via NGINX
-location ~ /radarr/api {
-    auth_request off;
+location ^~ /radarr/api {
+    auth_basic off;
     proxy_pass http://127.0.0.1:7878;
 }
 ```
