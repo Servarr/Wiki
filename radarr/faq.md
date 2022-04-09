@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-04-09T10:08:36.087Z
+date: 2022-04-09T10:11:47.209Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -515,7 +515,8 @@ Depending on your OS, there are multiple possible ways.
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
   - Note that `multi` by default is assumed English and French
-  - Note that in `nightly` for starting with some v4.1 versions of Radarr `multi` by default is assumed Original and French
+  - Note that in `nightly` for starting with some ]v4.1 versions](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
+  - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
 
 > Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Radarr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
 {.is-warning}
