@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-03-17T17:48:28.842Z
+date: 2022-04-09T09:09:57.468Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -361,7 +361,7 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
 
 ```nginx
-location /prowlarr {
+location ~ /prowlarr {
     proxy_pass http://127.0.0.1:9696;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -373,8 +373,8 @@ location /prowlarr {
     proxy_set_header Connection $http_connection;
 }
 # Allow the API/Indexer External Access via NGINX
-location ~ /prowlarr(/[0-9]+)?/api {
-    auth_request off;
+location ^~ /prowlarr(/[0-9]+)?/api {
+    auth_basic off;
     proxy_pass http://127.0.0.1:9696;
 }
 ```
@@ -400,8 +400,10 @@ Adding this line will include all files that end with `.conf` to the Nginx confi
 Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
 > Many free DNS providers do not support this {.is-warning}
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
-> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.is-info}
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5).
+{.is-info}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port`
+{.is-warning}
 
 ```nginx
 server {
