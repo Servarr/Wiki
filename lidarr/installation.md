@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-04-09T09:12:15.550Z
+date: 2022-04-09T09:14:21.981Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
