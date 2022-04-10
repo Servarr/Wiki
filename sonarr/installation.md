@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-04-09T09:16:37.464Z
+date: 2022-04-10T07:53:40.551Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -310,22 +310,23 @@ Sample config examples for configuring Sonarr to be accessible from the outside 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
 ```nginx
-location ^~ /sonarr {
+location /sonarr {
   proxy_pass         http://127.0.0.1:8989/sonarr;
   proxy_set_header   Host $host;
   proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header   X-Forwarded-Host $host;
   proxy_set_header   X-Forwarded-Proto $scheme;
   proxy_redirect     off;
-
   proxy_http_version 1.1;
   proxy_set_header   Upgrade $http_upgrade;
   proxy_set_header   Connection $http_connection;
 }
-  location ^~ / sonarr/api{
-    auth_request off;
-    proxy_pass http: //127.0.0.1:8989;
+# Allow the API External Access via NGINX
+location ~ /sonarr/api {
+    auth_request      off;
+    proxy_pass        http://127.0.0.1:8989;
 }
+
 ```
 
 A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
