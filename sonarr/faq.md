@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-04-06T23:23:56.224Z
+date: 2022-04-11T16:23:54.642Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -132,7 +132,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 - As of v3.0.7, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
 
-- Preferred Words always upgrade a release even if the quality and/or language cutoff has been met.
+- Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has `Upgrades` disabled 
 
 > Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
 {.is-info}
