@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2022-03-18T08:29:59.712Z
+date: 2022-04-11T17:41:38.205Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -162,7 +162,9 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - Sonarr {#sonarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Sonarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
-- Plex Watch List {#pleximport}
+- Plex Watchlist {#pleximport}
+  - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.
+  - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name
   - List - Ensure you use the list name as presented in the list URL
