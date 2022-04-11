@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-03-18T08:29:26.231Z
+date: 2022-04-11T17:41:21.621Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -163,7 +163,10 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
     1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
     1. Use the `ls` number within the URL
 
-- ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
+  ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
+- Plex Watchlist {#plex}
+  - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.
+  - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
 - Radarr {#radarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
