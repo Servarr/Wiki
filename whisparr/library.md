@@ -83,7 +83,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 Library Import allows you to import existing organized movies and each movie's file via existing files in the path directory. This is especially useful when making a new Whisparr instance and wanting to keep your existing movies.
 
 - Library import is for adding and importing an existing organized library of movies into Whisparr.
-- Library Import shall not be used for:
+- Library Import cannot be used for:
   - Importing files from a download folder
   - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a movie to Whisparr and importing the movie and its file from the root (library) folder that was input to Library Import

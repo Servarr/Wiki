@@ -42,7 +42,7 @@ Library Import allows you to import existing, organized series and episode files
 
 - Library import is for adding and importing an existing organized library of  series into Sonarr.
 
-- Library Import shall not be used for:
+- Library Import cannot be used for:
   - Importing files from a download folder
   - Adding or Importing one or more files that are not properly named and organized in their own Series Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a series or episode to Sonarr and importing the series and its file(s) from the root (library) folder that was input to Library Import
