@@ -84,20 +84,21 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
-    - ```SQL
-        DELETE FROM "Profiles"
-        ```
+```SQL
+DELETE FROM "Profiles"
+```
 
-    - ```SQL
-        DELETE FROM "QualityDefinitions"
-        ```
+```SQL
+DELETE FROM "QualityDefinitions"
+```
 
-    - ```SQL
-        DELETE FROM "DelayProfiles"
-        ```
-    - ```SQL
-        DELETE FROM "Metadata"
-        ```
+```SQL
+DELETE FROM "DelayProfiles"
+```
+
+```SQL
+DELETE FROM "Metadata"
+```
 
 1. Start the migration by using either of these options:
 

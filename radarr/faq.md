@@ -70,6 +70,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [How does Radarr handle "multi" in names?](#how-does-radarr-handle-multi-in-names)
   - [Help, Movie Added, But Not Searched](#help-movie-added-but-not-searched)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+    - [Jackett /All Solutions](#jackett-all-solutions)
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
   - [Why doesn't Radarr work behind a reverse proxy](#why-doesnt-radarr-work-behind-a-reverse-proxy)
 

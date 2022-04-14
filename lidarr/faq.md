@@ -57,6 +57,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [Weird UI Issues](#weird-ui-issues)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+    - [Jackett /All Solutions](#jackett-all-solutions)
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
   - [I keep getting warnings from my cloud storage about API limits](#i-keep-getting-warnings-from-my-cloud-storage-about-api-limits)
 

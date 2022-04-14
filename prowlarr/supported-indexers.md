@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-04-04T05:52:38.3163711Z
+date: 2022-04-14T18:16:05.0960045Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-04-04T05:52:38.3163711Z
+dateCreated: 2022-04-14T18:16:05.0960045Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.2.0.1660` / [Commit: 4f8311641376f8304112e565ad980ab9679c286f](https://github.com/Prowlarr/Prowlarr/commit/4f8311641376f8304112e565ad980ab9679c286f)
+- Supported Trackers and Indexers as of Build `0.3.0.1683` / [Commit: b85cd92cca626b95fa07a7d63287e6bfcbe18388](https://github.com/Prowlarr/Prowlarr/commit/b85cd92cca626b95fa07a7d63287e6bfcbe18388)
 
 ---
 
@@ -135,7 +135,7 @@ dateCreated: 2022-04-04T05:52:38.3163711Z
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq136.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq137.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir53.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
@@ -518,7 +518,7 @@ dateCreated: 2022-04-04T05:52:38.3163711Z
 |[The Show](https://theshow.click/){#theshow}|Entertainment E-Learning|en-US|
 |[The Vault](https://thevault.click/){#thevault}|Business/Marketing E-Learning|en-US|
 |[The-Crazy-Ones](https://thecrazyones.hopto.org/){#the-crazy-ones}|The-Crazy-Ones (T-C-O) is a Private GERMAN tracker for MOVIES / TV / MUSIC|de-DE|
-|[The-Devils-Lounge](https://the-devils-lounge.xyz/){#the-devils-lounge}|The-Devils-Lounge is a Private torrent site for MOVIES / TV / GENERAL|en-US|
+|[The-New-Fun](https://the-new-fun.spdns.eu/){#thenewfun}|The-New-Fun is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
 |[TheAudioScene](https://theaudioscene.net/){#theaudioscene}|TheAudioScene is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|en-US|
 |[TheLeachZone](https://tlz.digital/){#theleachzone}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|en-US|
@@ -578,8 +578,8 @@ dateCreated: 2022-04-04T05:52:38.3163711Z
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|en-US|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|en-US|
 |[YDYPT](https://pt.hdbd.us/){#ydypt}|YDYPT is a CHINESE Private Torrent Tracker for 3X|zh-CN|
-|[YGGcookie](https://www3.yggtorrent.re/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
-|[YGGtorrent](https://www3.yggtorrent.re/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
+|[YGGcookie](https://www5.yggtorrent.la/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
+|[YGGtorrent](https://www5.yggtorrent.la/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|fr-FR|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-BG|
 |[Zelka\.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|bg-BG|
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|en-US|

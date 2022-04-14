@@ -57,7 +57,7 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
 > Ensure startup project is set to `Sonarr.Console` and    framework to `x86`
 {.is-info}
 
-1. First `Build` the solution in Visual Studio, this will ensure all proects correctly built and dependencies restored
+1. First `Build` the solution in Visual Studio, this will ensure all projects correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Sonarr
 1. Open <http://localhost:8989>
 

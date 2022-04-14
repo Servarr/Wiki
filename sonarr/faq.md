@@ -81,6 +81,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [Why wont Sonarr import a TBA episode?](#why-wont-sonarr-import-a-tba-episode)
   - [Sonarr says Unknown Series on Searches or Imports](#sonarr-says-unknown-series-on-searches-or-imports)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+    - [Jackett /All Solutions](#jackett-all-solutions)
   - [Jackett shows more results than Sonarr when manually searching](#jackett-shows-more-results-than-sonarr-when-manually-searching)
   - [Finding Cookies](#finding-cookies)
   - [Unpack Torrents](#unpack-torrents)
@@ -132,7 +133,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 
 - As of v3.0.7, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
 
-- Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has `Upgrades` disabled 
+- Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has `Upgrades` disabled
 
 > Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
 {.is-info}
