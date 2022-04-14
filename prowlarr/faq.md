@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-03-26T14:39:52.960Z
+date: 2022-04-14T18:19:31.882Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -16,6 +16,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
   - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
+  - [What \*Arr Indexer Settings are Compared for App Full Sync](#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
