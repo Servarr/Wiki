@@ -163,7 +163,7 @@ sudo mv Readarr /opt/
 - Ensure ownership of the binary directory.
 
 ```shell  
-sudo chown readarr:media -R /opt/Readarr
+sudo chown readarr:readarr -R /opt/Readarr
 ```
 
 - Configure systemd so Readarr can autostart at boot.
