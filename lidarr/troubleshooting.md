@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2022-02-28T21:04:52.030Z
+date: 2022-04-15T13:47:12.581Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -87,9 +87,9 @@ The more we know, the easier it is to help you.
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
->- **Do not simply provide the whole log file unless explicitly asked.**
->- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
->- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
+>\* **Do not simply provide the whole log file unless explicitly asked.**
+>\* **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
+>\* When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
 >
 >````none
 >   ```
@@ -97,10 +97,10 @@ If you're linked here for support remember to get them the information from the 
 >   ```
 >````
 >
->- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
->- **Do ensure [Logging](/lidarr/settings#logging) is set to Trace (or Debug if requested).**
->- **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
->- **Do ensure the logs you provide capture the issue**
+>\* **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
+>\* **Do ensure [Logging](/lidarr/settings#logging) is set to Trace (or Debug if requested).**
+>\* **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
+>\* **Do ensure the logs you provide capture the issue**
 {.is-info}
 
 To provide good and useful logs for sharing:
