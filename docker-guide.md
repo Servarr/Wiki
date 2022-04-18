@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2022-01-12T02:20:07.767Z
+date: 2022-04-18T23:13:23.747Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -98,7 +98,7 @@ Many Docker images accept `-e UMASK=002` as an environment variable and some sof
 
 ## PUID and PGID
 
-Many Docker images also take a `-e PUID=123` and `-e PGID=321` that lets you change the UID/GID used inside to that of an account on the outside. If you ever peak in, you’ll find that username is something like `abc`, `nobody` or `hotio`, but because it uses the UID/GID you pass in, on the outside it looks like the expected user. If you’re using storage from another system via NFS or CIFS, it will make your life easier if *that* system also has matching users and group. Perhaps let one system pick the UID/GIDs, then re-use those on the other system, assuming they don’t conflict.
+Many Docker images also take a `-e PUID=123` and `-e PGID=321` that lets you change the UID/GID used inside to that of an account on the outside. If you ever peek in, you’ll find that username is something like `abc`, `nobody` or `hotio`, but because it uses the UID/GID you pass in, on the outside it looks like the expected user. If you’re using storage from another system via NFS or CIFS, it will make your life easier if *that* system also has matching users and group. Perhaps let one system pick the UID/GIDs, then re-use those on the other system, assuming they don’t conflict.
 
 ## Example
 
