@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-04-16T22:14:14.5206642Z
+date: 2022-04-19T15:42:36.5546093Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-04-16T22:14:14.5206642Z
+dateCreated: 2022-04-19T15:42:36.5546093Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.3.0.1698` / [Commit: d11e043270706ee32d5381bce64544401a3bb204](https://github.com/Prowlarr/Prowlarr/commit/d11e043270706ee32d5381bce64544401a3bb204)
+- Supported Trackers and Indexers as of Build `0.3.0.1711` / [Commit: 9d3ee4af6d19776ba25e2da17707d5c23829ce95](https://github.com/Prowlarr/Prowlarr/commit/9d3ee4af6d19776ba25e2da17707d5c23829ce95)
 
 ---
 
@@ -82,7 +82,6 @@ dateCreated: 2022-04-16T22:14:14.5206642Z
 |[MegaPeer](http://megapeer.ru/){#megapeer}|MegaPeer is a RUSSIAN Public Torrent Tracker for MOVIES / TV|ru-RU|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|zh-CN|
 |[MioBT](https://miobt.com/){#miobt}|MioBT is a CHINESE Public torrent index|zh-CN|
-|[MioBT](https://miobt.com/){#kisssub}|MioBT is a CHINESE Public torrent index|zh-CN|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|en-US|
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|es-ES|
 |[MovieTorrent](https://movietorrent.co/){#movietorrent}|MovieTorrent is a Public site for Bollywood, Hollywood, Hindi Dubbed, Tamil , Punjabi, Pakistani MOVIES|en-US|
@@ -137,9 +136,9 @@ dateCreated: 2022-04-16T22:14:14.5206642Z
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq138.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq139.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
-|[TorrentSir](https://torrentsir53.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir55.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://torrentview57.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz41.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -471,6 +470,7 @@ dateCreated: 2022-04-16T22:14:14.5206642Z
 |[RUDUB](http://rudub.tv/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|ru-RU|
 |[Rustorka](http://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|ru-RU|
 |[RuTracker](https://rutracker.org/){#rutracker}|RuTracker is a Semi-Private Russian torrent site with a thriving file-sharing community|ru-org|
+|[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|en-US|
 |[ScenePalace](https://scenepalace.info/){#scenepalace}|ScenePalace (SP) is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|pt-PT|
 |[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|en-US|
@@ -576,7 +576,7 @@ dateCreated: 2022-04-16T22:14:14.5206642Z
 |[World-In-HD](https://world-in-hd.net/){#wihd}|Your world in HD|fr-FR|
 |[x-ite\.me](https://x-ite.me/){#x-ite.me}|Tracker for LGBTQ movies, TV, books, magazines, anime, PC and XXX.|en-US|
 |[XbytesV2](http://xbytesv2.li/){#xbytes2}|xbytesV2 is a SPANISH site for HD content|es-ES|
-|[Xthor (API)](https://xthor.tk){#xthor-api}|General French Private Tracker|fr-FR|
+|[Xthor (API)](https://xthor.tk/){#xthor-api}|General French Private Tracker|fr-FR|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|en-US|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|en-US|
 |[YDYPT](https://pt.hdbd.us/){#ydypt}|YDYPT is a CHINESE Private Torrent Tracker for 3X|zh-CN|
