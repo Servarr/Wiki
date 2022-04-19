@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-04-04T14:30:23.648Z
+date: 2022-04-19T00:21:43.650Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -479,15 +479,14 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 {#custom-formats-2}
 
 - Ensure you get the right release every time! Custom formats allows fine control over release prioritization and selection. As simple as a single preferred word or as complex as you want with multiple criteria and regex.
-
 - Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
-
 - Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
 
 - Name - The Name of the Custom Format
 - Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
 
-> Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses. {.is-info}
+> Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses.
+{.is-info}
 
 ## Custom Format Conditions
 
@@ -509,8 +508,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Profiling Settings and Ranking
 
-- Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded. - A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
-- The Minimum score requires releases to reach this threshold otherwise they will be rejected. Custom formats that match with undesirable attributes should be given a negative score to lower their appeal. Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
+- Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded.
+- A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
+- The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected. 
+  - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
+  - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
 
 - [Please see TRaSH's Guides for how to setup and use custom formats](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/)
 
