@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-04-20T12:55:42.640Z
+date: 2022-04-20T13:10:18.643Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -117,7 +117,7 @@ All programs you can add are listed. You should only add programs you currently 
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.
+> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.**
 {.is-info}
 
 ## Application Settings
@@ -128,7 +128,7 @@ All programs you can add are listed. You should only add programs you currently 
   - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
->`Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals and tags in \*Arrs are not currently factored in to this comparison to trigger a sync. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite all settings in \*Arr
+> `Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals and tags in \*Arrs are not currently factored in to this comparison to trigger a sync. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite all settings in \*Arr
 {.is-danger}
 
 - Tags - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
