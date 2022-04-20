@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-04T17:53:50.369Z
+date: 2022-04-20T01:06:34.411Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -197,7 +197,7 @@ fi
 
 # AppData
 mkdir -p "$datadir"
-chown -R "$app_uid":"$app_guid" "$datadir"
+chown -R "$app_uid":"$app_uid" "$datadir"
 chmod 775 "$datadir"
 echo "Directories created"
 # Download and install the App
