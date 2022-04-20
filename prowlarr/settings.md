@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-04-20T12:52:33.216Z
+date: 2022-04-20T12:55:42.640Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -75,7 +75,9 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to 
 - (Advanced Setting) Request Timeout (seconds) - the [FlareSolver Request `maxTimeout` value](https://github.com/FlareSolverr/FlareSolverr#-requestget) Prowlarr should use for FlareSolverr requests. Must be between `1` second and `180` seconds (Default: `60` seconds)
 
 > \* A FlareSolverr Proxy will only be used for requests if and only if Cloudflare is detected by Prowlarr
-> \* A FlareSolverr Proxy will only be used for requests if and only if the Proxy and the Indexer have matching tags {.is-info}
+> \* A FlareSolverr Proxy will only be used for requests if and only if the Proxy and the Indexer have matching tags
+> \* **A Flaresolverr Proxy configured without any tags or has no indexers with matching tags it will be disabled.**
+{.is-info}
 
 ## HTTP Proxy Settings
 
