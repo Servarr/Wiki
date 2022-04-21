@@ -197,7 +197,9 @@ fi
 
 # AppData
 mkdir -p "$datadir"
-chown -R "$app_uid":"$app_guid" "$datadir"
+## only the user the app runs as requires access to its appdata
+## do not modify this to be guid. The group media does not require access to appdata
+chown -R "$app_uid":"$app_uid" "$datadir"
 chmod 775 "$datadir"
 echo "Directories created"
 # Download and install the App
