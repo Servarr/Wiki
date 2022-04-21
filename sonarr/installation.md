@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-04-10T07:53:40.551Z
+date: 2022-04-21T19:33:53.121Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -14,12 +14,14 @@ dateCreated: 2021-07-10T16:07:37.425Z
 - [Windows](#windows)
 - [MacOS (OSX)](#macos-osx)
 - [Linux](#linux)
+  - [Mono SSL Issues](#mono-ssl-issues)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
   - [Sonarr Installation](#sonarr-installation)
   - [Configuring Sonarr](#configuring-sonarr)
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
+    -[BSD Mono SSL Issues](#bsd-mono-ssl-issues)
 - [Synology](#synology)
   - [Synology Mono SSL Errors](#synology-mono-ssl-errors)
 - [Docker](#docker)
@@ -108,6 +110,8 @@ sudo apt update
 # Install Sonarr
 sudo apt install sonarr
 ```
+
+### Mono SSL Issues
 
 - A common issue experienced by users after installing is related to SSL Certificate Validation issues. This can be resolved by syncing mono's certs
 
@@ -232,6 +236,8 @@ You can now safely close the shell
 
 > The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
 {.is-info}
+
+### BSD Mono SSL Issues
 
 - SSL or other Certificate issues (i.e. `unable to verify SSL certificate`)
   - See [this TrueNAS forum post as you'll need to update and sync mono's certs](https://www.truenas.com/community/threads/sonarr-radarr-probably-other-arr-jails-unable-to-verify-ssl-certificates-after-latest-update.96008/)
