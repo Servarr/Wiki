@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-22T12:51:14.688Z
+date: 2022-04-22T12:51:42.497Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
