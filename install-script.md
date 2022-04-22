@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-21T13:12:41.746Z
+date: 2022-04-22T12:51:14.688Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -26,7 +26,7 @@ Please be aware of the following common mistake around permissions.
 
 Be aware of the following:
 
-> This will remove any existing Installations; please ensure you have a backup of your settings using Backup from within the app (System => Backup). The script won't delete your settings (application data), but be safe.
+> This will remove any existing Installations installed to /opt. it will not uninstall existing installations from any other location; please ensure you have a backup of your settings using Backup from within the app (System => Backup). The script won't delete your settings (application data), but be safe.
 {.is-danger}
 
 - (Optional) Ensure you have [set a static IP Address](https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/), it'll will make your life easier.
@@ -40,7 +40,7 @@ Be aware of the following:
 nano ArrInstall.sh
 ```
 
-- Copy (top right corner of the script) and Paste into your SSH console
+- Copy (top right corner of the script) and Paste into your SSH console. Review the variables woth comments and update if necessary.
   - If you are in an GUI OS such as Windows or MacOS (OSX): pasting could be as simple as 'right clicking' in your ssh client.
 
 ```bash
@@ -197,9 +197,7 @@ fi
 
 # AppData
 mkdir -p "$datadir"
-## only the user the app runs as requires access to its appdata
-## do not modify this to be guid. The group media does not require access to appdata
-chown -R "$app_uid":"$app_uid" "$datadir"
+chown -R "$app_uid":"$app_guid" "$datadir"
 chmod 775 "$datadir"
 echo "Directories created"
 # Download and install the App
