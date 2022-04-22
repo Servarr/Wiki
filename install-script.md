@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-22T12:51:42.497Z
+date: 2022-04-22T12:52:34.869Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -233,7 +233,7 @@ echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
 mv "${app^}" $installdir
-chown "$app_uid":"$app_guid" -R "$bindir"
+chown "$app_uid":"$app_uid" -R "$bindir"
 chmod 775 "$bindir"
 rm -rf "${app^}.*.tar.gz"
 # Ensure we check for an update in case user installs older version or different branch
