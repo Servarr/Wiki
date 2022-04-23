@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-04-19T00:21:43.650Z
+date: 2022-04-23T18:15:53.729Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -166,10 +166,11 @@ Also, note that for each individual settings page, there are some options at the
 ### Movie Naming
 
 - `{Movie Title}` = The Movie's Title!
-- `{Movie Title:DE}` = FileTitle
+- `{Movie Title:DE}` = Titel des Films
 - `{Movie CleanTitle}` = The Movies Title!
 - `{Movie TitleThe}` = Movie's Title!, The
 - `{Movie OriginalTitle}` = Τίτλος ταινίας
+- `{Movie CleanOriginalTitle}` = Τίτλος ταινίας
 - `{Movie TitleFirstCharacter}` = S
 - `{Movie Collection}` = The Movie Collection
 - `{Movie Certification}` = R
