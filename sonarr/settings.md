@@ -872,6 +872,15 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 - Proxy - This option allows you to run the information your Sonarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
+- Use Proxy - Enable to use a Proxy
+- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
+- Port - Enter your proxy port
+- Username - Enter your proxy username if applicable
+- Password - Enter your proxy password if applicable
+- Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
+- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses.
+
 ## Logging
 
 - Log level - Probably one of the most useful troubleshooting tools

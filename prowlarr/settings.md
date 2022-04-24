@@ -276,7 +276,7 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 
 - Use Proxy - Enable to use a Proxy
 - Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
-- Hostname - Enter your proxy hostname
+- Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable
 - Password - Enter your proxy password if applicable
