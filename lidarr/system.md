@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-04-03T18:56:07.241Z
+date: 2022-04-24T17:28:08.577Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -252,7 +252,11 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### FPcalc needs updating
 
-- Lidarr can use chromaprint audio fingerprinting to identify tracks. This depends on an external binary, which is distributed with Lidarr for Windows and macOS, but must be provided independently on Linux.
+- Lidarr can use chromaprint audio fingerprinting to identify tracks. This depends on an external binary, which is distributed with Lidarr v1 for Windows, Linux and macOS, but must be provided independently on freeBSD.
+- Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). This would be found in Lidarr's installation directory (e.g. `/opt/Lidarr/fpcalc` )
+
+> The below information is for legacy v0.8.0 builds only.
+{.is-info}
 
 - To fix this on a native Linux instance, install the appropriate package using your package manager and make sure that fpcalc is on your PATH (this can be checked using which fpcalc and verifying that the correct location of fpcalc is returned):
 
