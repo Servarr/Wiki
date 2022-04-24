@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-04-04T14:28:59.173Z
+date: 2022-04-24T20:41:25.219Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -752,7 +752,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ## Remote Path Mappings
 
-- Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
+- Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This  is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
 - Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
 - A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
@@ -798,7 +798,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 ## Connection Triggers
 
 - On Grab - Be notified when episodes are available for download and has been sent to a download client
-- On Download - Be notified when episodes are successfully imported
+- On Import - {Formerly Known as On Download} Be notified when episodes are successfully imported
 - On Upgrade - Be notified when episodes are upgraded to a better quality
 - On Rename - Be notified when episodes are renamed
 - On Series Delete - Be notified when series are deleted
