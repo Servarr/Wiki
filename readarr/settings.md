@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2022-04-04T14:27:36.073Z
+date: 2022-04-25T02:32:39.275Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -167,6 +167,9 @@ Also, note that for each individual settings page, there are some options at the
 ## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
+- For more information see the section in [Download Clients => Remore Parh Mapping](#remote-path-mappings-1) replace `<Download Client>` with `<Calibre>`
+
+## Book File Naming
 
 ![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
 
@@ -342,6 +345,7 @@ Commonly used naming schema are:
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
 > It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
+{.is-warning}
 
 # Permissions
 
@@ -351,11 +355,13 @@ Commonly used naming schema are:
 > The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 {.is-info}
 
-> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
+{.is-warning}
 
 - chown Group - Group name or GID. Use GID for remote file systems
 
-> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
+{.is-warning}
 
 # Profiles
 
@@ -367,8 +373,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 
 - Set profiles for the quality of books you're looking to download.
 
-> When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
-
+> When selecting an existing profile or adding an additional profile a new window will appear
 > Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
 
@@ -381,12 +386,12 @@ Quality profiles are used to determine what formats of books are acceptable for 
 > Note: This is only applicable if you have `AZW3` higher than `EPUB` within the `Qualities` section
 {.is-warning}
 
-- Qualities - Qualities higher in the list are more preferred. Qualities within the same group are equal. Only checked qualities are wanted.
+- Qualities - Qualities higher in the list are more preferred for ranking regardless of enabled status. Qualities within the same group are equal. Only checked (enabled) qualities are wanted (allowed)
   - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 
   - [See Qualities](#qualities-defined)
 
-> By default the qualities are set from lowest (bottom) to highest (top)
+> By default the qualities are set from "worst" (bottom) to "best" (top)
 {.is-info}
 
 ## Metadata Profiles
@@ -400,9 +405,11 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Name - Enter a **UNIQUE** name for the metadata profile profile
 - Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
 
-> Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up. {.is-warning}
+> Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
+{.is-warning}
 
-> Set this to `10000000000` exactly to create a profile equivalent to `None` but still allow other filtering of editions and books. Note that `None` does not apply any metadata filters and you may get foreign editions. {.is-info}
+> Set this to `10000000000` exactly to create a profile equivalent to `None` but still allow other filtering of editions and books. Note that `None` does not apply any metadata filters and you may get foreign editions.
+{.is-info}
 
 - Minimum Pages - Enter the minimum number of pages a book must have to be added for an author.
 - Skip books with missing release date - Enable to skip books with a missing release date.
@@ -413,6 +420,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Must Not Contain - Enter words or phrases that a book title must not contain in order to be added.
   
 > You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
+{.is-info}
   
 ## Release Profiles
 
@@ -425,11 +433,13 @@ Release profiles are used to determine if indexer release names qualify for down
 - Must Not Contain - Add a list of words or phrases that MUST NOT be in the release name in order to be considered valid.
 - Preferred (Words) - Here you can add terms or regex with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
   
-> Releases with a higher preferred word score than the existing file are ALWAYS an upgrade! {.is-info}
+> Releases with a higher preferred word score than the existing file are ALWAYS an upgrade!
+{.is-info}
   
 - Include Preferred when Renaming Check this box to include your preferred words (or regex matches) in the `{Preferred Words}` file naming assignment token.
   
 > You should include `{Preferred Words}` in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
+{.is-warning}
 
 - Indexer - In this drop-down, you can limit this release profile to a single indexer. This should almost always be left at `(any)`
 - Tags - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
