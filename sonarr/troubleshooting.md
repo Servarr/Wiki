@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-04-15T13:46:58.088Z
+date: 2022-04-25T00:57:09.487Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -614,6 +614,30 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 ## Common Problems
 
 Below are some common problems that are the solution for almost all issues experienced.
+
+### Indexers not being Searched
+
+- Logs will look like
+
+```none
+2022-04-24 20:14:26.7|Info|ReleaseSearchService|Searching indexers for [Fairy Tail : S02E91 (91)]. **0 active indexers**
+2022-04-24 20:14:26.7|Debug|ReleaseSearchService|Total of0 reports were found for [Fairy Tail : S02E91 (91)] from **0 indexers**
+2022-04-24 20:14:26.7|Info|DownloadDecisionMaker|No results found
+```
+
+- Note that in the above case there are 0 indexers being searched. This number may very based on your specific setup. If the number is not the same as the number of indexers configured then the following are likely causes:
+  - [Health Checks (System => Status)](/sonarr/system#health)
+    - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](/sonarr/system#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
+    - [No indexers are enabled](/sonarr/system#no-indexers-are-enabled)
+    - [Enabled indexers do not support searching](/sonarr/system#enabled-indexers-do-not-support-searching)
+    - [No indexers available with Interactive Search Enabled](/sonarr/system#no-indexers-available-with-interactive-search-enabled)
+    - [Indexers are unavailable due to failures](/sonarr/system#indexers-are-unavailable-due-to-failures)
+  - Searching a Series Type of Anime and no anime categories are configured for your tracker(s)
+  - Searching a Series Type of Daily or Standard are no standard (non-anime) categories are configured for your tracker(s)
+  - The Indexer's Capabilties do not support the query type (e.g. Season/Episode, etc.):
+    - Within Prowlarr, an indexer's capabilities can be located in the (I) icon for the indexer
+    - Jackett does not display a tracker's capabiltiies within its UI.
+  - Trace logs will display information as to why indexers are being ignored if a search is conducted after ***restarting Sonarr***.
 
 ### Poorly Named Releases
 
