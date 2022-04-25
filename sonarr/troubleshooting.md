@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-04-25T00:58:51.829Z
+date: 2022-04-25T00:59:19.396Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -620,8 +620,8 @@ Below are some common problems that are the solution for almost all issues exper
 - Logs will look like
 
 ```none
-2022-04-24 20:14:26.7|Info|ReleaseSearchService|Searching indexers for [Fairy Tail : S02E91 (91)]. **0 active indexers**
-2022-04-24 20:14:26.7|Debug|ReleaseSearchService|Total of0 reports were found for [Fairy Tail : S02E91 (91)] from **0 indexers**
+2022-04-24 20:14:26.7|Info|ReleaseSearchService|Searching indexers for [Fairy Tail : S02E91 (91)]. 0 active indexers
+2022-04-24 20:14:26.7|Debug|ReleaseSearchService|Total of 0 reports were found for [Fairy Tail : S02E91 (91)] from 0 indexers
 2022-04-24 20:14:26.7|Info|DownloadDecisionMaker|No results found
 ```
 
