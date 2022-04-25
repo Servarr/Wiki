@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-04-25T00:59:19.396Z
+date: 2022-04-25T12:47:12.476Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -265,13 +265,18 @@ Incorrect path issues are possible too, though less common in normal setups. The
 
 Below are some common problems.
 
+### One or More Episodes expected in the releasee were not imported or missing
+
+- If all episodes were imported then  the most common cause is a Season Pack was downloaded, but does not contain all episodes in the season. Click the `X` to remove and ignore the release.
+- For all other issues, one or more episodes waa not able to be imported. Review the information in the UI and other common problems.
+
 ### Using Sonarr v2
 
 Sonarr v2 has been end of life and not supported since 3/2021. It is not compatible with qBittorrent v4.3.0 or newer. Upgrade to Sonarr v3
 
 ### Using qBittorrent v4.4.0
 
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. It is strongly suggest to rollback to v4.3.9.  Some bugs including the broken API were fixed in v4.4.1, but users are reporting additional issues with v4.4.1.
+Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. It is strongly suggest to rollback to v4.3.9. Qbit v4.4.1+ resolved this undocumented change, but has other bugs.
 
 ### Download Client's WebUI is not enabled
 
@@ -347,7 +352,7 @@ or
 [v3.0.6.1342] System.UnauthorizedAccessException: Access to the path '/volume1/THE VOID/Downloads/Usenet Downloads/complete/Resident.Alien.S02E02.720p.WEB.H264-CAKES' is denied.
 ```
 
-Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that runs as needs to be able to read and write the downloads folder.
+Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that Sonarr runs as needs to be able to read and write the downloads files.
 
 - For Windows Users this may be due to running as a service:
   - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
