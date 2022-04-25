@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-04-25T00:57:09.487Z
+date: 2022-04-25T00:58:51.829Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -632,8 +632,10 @@ Below are some common problems that are the solution for almost all issues exper
     - [Enabled indexers do not support searching](/sonarr/system#enabled-indexers-do-not-support-searching)
     - [No indexers available with Interactive Search Enabled](/sonarr/system#no-indexers-available-with-interactive-search-enabled)
     - [Indexers are unavailable due to failures](/sonarr/system#indexers-are-unavailable-due-to-failures)
-  - Searching a Series Type of Anime and no anime categories are configured for your tracker(s)
+  - Searching a Series Type of Anime and no anime categories are configured for your tracker(s). Indexers have [two different configurable category types](/sonarr/settings#indexers).
   - Searching a Series Type of Daily or Standard are no standard (non-anime) categories are configured for your tracker(s)
+    - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+   - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
   - The Indexer's Capabilties do not support the query type (e.g. Season/Episode, etc.):
     - Within Prowlarr, an indexer's capabilities can be located in the (I) icon for the indexer
     - Jackett does not display a tracker's capabiltiies within its UI.
