@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-04-25T12:47:12.476Z
+date: 2022-04-26T01:23:53.906Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -405,6 +405,11 @@ For SABnzbd, this is handled with the History Retention setting.
 For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Show Unknown (this is now enabled by default in recent builds) will display all items not otherwise ignored / already imported within \*Arr's download client category. These will typically need to be manually mapped and imported.
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
+
+#### Found matching series via grab history, but series was matched by series ID. Automatic import is not possible
+
+- This import error is similar to the above can't be matched error. The release was grabbed from your indexer by ID, but the downloaded file does not match series id of the grab.
+- Depending on the series title and release name Sonarr will probably need an alias added, [this FAQ entry has some more info](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)on requesting one to be added.
 
 ### Episode Name is TBA
 
