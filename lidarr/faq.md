@@ -364,7 +364,11 @@ A common complaint is the Refresh task causes heavy I/O usage. One setting that 
 
 ## Why can Lidarr not see my files on a remote server?
 
-- In short: the user is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is,  is running as a service, which causes one of two things:
+- For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
+- For Linux ensure:
+  - If you're using an NFS mount ensure nolock is enabled.
+  - If you're using an SMB mount ensure nobrl is enabled.
+- For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Lidarr runs under the LocalService account by default which doesn't have access to protected remote file shares
 
