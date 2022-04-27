@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-22T12:52:34.869Z
+date: 2022-04-27T03:55:10.290Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -57,6 +57,7 @@ nano ArrInstall.sh
 ### Version v3.0.3a Readarr to develop
 ### Version v3.0.4 2022-03-01 - Add sleep before checking service status
 ### Version v3.0.5 2022-04-03 - VP-EN (Added Whisparr)
+### Version v3.0.6 2022-04-26 - Bakerboy448 - binaries to group
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -233,7 +234,7 @@ echo "Removing existing installation"
 rm -rf $bindir
 echo "Installing..."
 mv "${app^}" $installdir
-chown "$app_uid":"$app_uid" -R "$bindir"
+chown "$app_uid":"$app_guid" -R "$bindir"
 chmod 775 "$bindir"
 rm -rf "${app^}.*.tar.gz"
 # Ensure we check for an update in case user installs older version or different branch
