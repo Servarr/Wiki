@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-27T03:55:10.290Z
+date: 2022-04-27T03:55:34.816Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -69,8 +69,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.5"
-scriptdate="2022-04-03"
+scriptversion="3.0.6"
+scriptdate="2022-04-26"
 
 set -euo pipefail
 
