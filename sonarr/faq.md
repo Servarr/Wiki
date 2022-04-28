@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-04-11T16:23:54.642Z
+date: 2022-04-28T18:17:04.327Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -52,6 +52,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [TVDb is updated why isn't Sonarr?](#tvdb-is-updated-why-isnt-sonarr)
   - [Why can I not add a series?](#why-can-i-not-add-a-series)
   - [Why can I not add a series when I know the TVDb ID?](#why-can-i-not-add-a-series-when-i-know-the-tvdb-id)
+  - [Title Slug in Use](#title-slug-in-use)
 - [Sonarr Common Problems](#sonarr-common-problems)
   - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
   - [System & Logs loads forever](#system-logs-loads-forever)
@@ -510,6 +511,13 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title then the series will not be found. If no English title exists for that series on TheTVDb it will need to be added (if available).
 - Check the URL / series - Sonarr does not support movies; use [Radarr](/radarr) for movies
+
+## Title Slug in Use
+
+- This error occurs when a user tries to add a series that violates TVDb Rules. The first series does not get a year in the title. Any future series with the same name require the year in the title.
+  - Series A
+  - Series A (2021)
+- To rectify this, wait for someone to eventually (maybe) update TVDb or update TVDb yourself. Once corrected, due to [TVDb's API issues](#tvdb-is-updated-why-isnt-sonarr), once updated you'll need to wait 30+ hours before the corrected title can be used in Sonarr.
 
 # Sonarr Common Problems
 
