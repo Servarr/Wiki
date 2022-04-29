@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-04-19T15:42:36.5546093Z
+date: 2022-04-29T21:40:25.7133554Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-04-19T15:42:36.5546093Z
+dateCreated: 2022-04-29T21:40:25.7133554Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.3.0.1711` / [Commit: 9d3ee4af6d19776ba25e2da17707d5c23829ce95](https://github.com/Prowlarr/Prowlarr/commit/9d3ee4af6d19776ba25e2da17707d5c23829ce95)
+- Supported Trackers and Indexers as of Build `0.3.0.1711` / [Commit: f9bd842d41da5972a1bd7a51e71cc4c66ae2a9bc](https://github.com/Prowlarr/Prowlarr/commit/f9bd842d41da5972a1bd7a51e71cc4c66ae2a9bc)
 
 ---
 
@@ -136,7 +136,7 @@ dateCreated: 2022-04-19T15:42:36.5546093Z
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq139.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq140.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir55.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
@@ -193,6 +193,7 @@ dateCreated: 2022-04-19T15:42:36.5546093Z
 |[ArabP2P](https://www.arabp2p.com/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|ar-AR|
 |[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|bg-BG|
 |[AsianCinema](https://asiancinema.me/){#asiancinema}|Tracker Movies/TV/Music|en-US|
+|[Audiences](https://audiences.me/){#audiences}|Audiences is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|zh-CN|
 |[AudioNews](https://audionews.org/){#audionews}|AudioNews (AN) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|en-US|
 |[Aussierul\.es](https://aussierul.es/){#aussierules}|Aussierul\.es is a torrent site for Aussie Rules Football played in Australia|en-AU|
 |[AvistaZ](https://avistaz.to/){#avistaz}|Aka AsiaTorrents|en-US|
@@ -403,7 +404,6 @@ dateCreated: 2022-04-19T15:42:36.5546093Z
 |[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES. This definition is for the Main Tracker site.|en-US|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker.|en-US|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|en-US|
-|[NBTorrents](https://www.nbtorrents.com/){#nbtorrents}|NBTorrents is an INDIAN Private site for MOVIES / TV / MUSIC|en-US|
 |[Ncore](https://ncore.pro/){#ncore}|Ncore is a Hungarian Private Torrent Tracker for Movies/Series/General|hu-HU|
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|en-US|
 |[NetCosmo](http://netcosmo.it/){#netcosmo}|NetCosmo is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|it-IT|
