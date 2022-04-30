@@ -2,7 +2,7 @@
 title: Whisparr Installation
 description: 
 published: true
-date: 2022-04-05T03:44:36.241Z
+date: 2022-04-30T22:08:32.094Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:24.491Z
@@ -16,7 +16,7 @@ dateCreated: 2022-04-03T03:49:24.491Z
 - [Linux](#linux)
   - [Debian / Ubuntu](#debian--ubuntu)
     - [Easy Install](#easy-install)
-    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
+    - [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install)
     - [Uninstall](#uninstall)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
@@ -390,6 +390,9 @@ Keep in mind that Whisparr will need read and write to the download folders as w
 ## Install Whisparr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
+
+> Temporarily, you will need to use the :nightly ~~or :develop~~ tags with docker images, as there is no master nor develop branch. [See this FAQ entey for the meaning of the branches](/whisparr/faq#how-do-i-update-readarr)
+{.is-whisparr}
 
 - [hotio/whisparr](https://hotio.dev/containers/whisparr/)
 {.links-list}
