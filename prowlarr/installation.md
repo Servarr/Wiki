@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-04-09T09:09:57.468Z
+date: 2022-04-30T22:04:38.731Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -14,9 +14,9 @@ dateCreated: 2021-05-24T05:07:51.882Z
 - [Windows](#windows)
 - [MacOS (OSX)](#macos-osx)
 - [Linux](#linux)
-  - [Debian / Ubuntu](#debian--ubuntu)
+  - [Debian / Ubuntu](#debian-ubuntu)
     - [Easy Install](#easy-install)
-    - [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install)
+    - [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install)
     - [Uninstall](#uninstall)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
@@ -340,7 +340,7 @@ The Prowlarr team does not offer an official Docker image. However, a number of 
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
-> Temporarily, you will need to use the `:nightly` or `:develop` tags with docker images, as there is no `master` branch.
+> Temporarily, you will need to use the `:nightly` or `:develop` tags with docker images, as there is no `master` branch. [See this FAQ entey for the meaning of the branches](/prowlarr/faq#how-do-i-update-prowlarr)
 {.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
