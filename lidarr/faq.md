@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2022-05-01T19:42:57.255Z
+date: 2022-05-01T19:46:10.674Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -14,7 +14,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How does Lidarr work?](#how-does-lidarr-work)
   - [How does Lidarr find releases?](#how-does-lidarr-find-releases)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
-  - [Lidarr stopped working after uodating to Ubuntu 22.04](#lidarr-stopped-working-after-updating-to-ubuntu-2204)
+  - [Lidarr stopped working after updating to Ubuntu 22.04 / Lidarr won't run on Ubuntu 22.04](#lidarr-stopped-working-after-updating-to-ubuntu-2204)
   - [Why can I not add a new release or artist to Lidarr?](#why-can-i-not-add-a-new-release-or-artist-to-lidarr)
   - [Why can I not add a various artists album?](#why-can-i-not-add-a-various-artists-album)
   - [Why does Lidarr only show studio albums, How do I find singles or EPs?](#why-does-lidarr-only-show-studio-albums-how-do-i-find-singles-or-eps)
