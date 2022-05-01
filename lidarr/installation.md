@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-04-09T09:14:21.981Z
+date: 2022-05-01T19:44:39.764Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -77,6 +77,9 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 ## Debian / Ubuntu
 
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
+
+> Lidarr v0.8 is not compatible nor supported on Ubuntu 22.04 [See this FAQ Entry for details](/lidarr/faq#lidarr-stopped-working-after-updating-to-ubuntu-2204)
+{.is-warning}
 
 ### Easy Install
 
