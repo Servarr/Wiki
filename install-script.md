@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-04-27T03:55:34.816Z
+date: 2022-05-01T19:45:05.260Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -15,6 +15,9 @@ This is a community created and community supported **unofficial** script to han
 > This will install the selected application to /opt. It will run application as the user and group you configure.
 > For Lidarr/Radarr/Readarr/Whisparr - you should use a common group that is the same that your download client runs as and media server runs as to ensure ownership and permissions are sane and all files are accessible.
 {.is-info}
+
+> Lidarr v0.8 is not compatible nor supported on Ubuntu 22.04 [See this FAQ Entry for details](/lidarr/faq#lidarr-stopped-working-after-updating-to-ubuntu-2204)
+{.is-warning}
 
 Please be aware of the following common mistake around permissions.
 
