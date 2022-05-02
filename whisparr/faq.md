@@ -2,7 +2,7 @@
 title: Whisparr FAQ
 description: Reorganized Whisparr FAQ
 published: true
-date: 2022-05-02T23:47:29.532Z
+date: 2022-05-02T23:57:50.629Z
 tags: needs-love, troubleshooting, faq, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:19.500Z
@@ -22,7 +22,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
   - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
   - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
   - [How do I update Whisparr?](#how-do-i-update-whisparr)
-  - [Can I update Whisparr inside my Docker container?](#can-i-update-whisparr-inside-my-docker-container)
+  	- [Can I update Whisparr inside my Docker container?](#can-i-update-whisparr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -183,7 +183,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 | [hotio](https://hotio.dev/containers/whisparr)                       | `release`                                                                                                                                                                                                             | `testing`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                             |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-whisparr) | `latest`                                                                                                                                                                                                              | `develop`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                             |
 
-## Can I update Whisparr inside my Docker container?
+### Can I update Whisparr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
