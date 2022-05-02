@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2022-05-02T23:43:42.486Z
+date: 2022-05-02T23:56:20.383Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -31,7 +31,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How can I mass delete artists from the wanted list?](#how-can-i-mass-delete-artists-from-the-wanted-list)
   - [Why doesn't Lidarr work behind a reverse proxy](#why-doesnt-lidarr-work-behind-a-reverse-proxy)
   - [How do I update Lidarr?](#how-do-i-update-lidarr)
-  - [Can I update Lidarr inside my Docker container?](#can-i-update-lidarr-inside-my-docker-container)
+  	- [Can I update Lidarr inside my Docker container?](#can-i-update-lidarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -202,7 +202,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 | [hotio](https://hotio.dev/containers/lidarr)                       | `release`                                                                                                                                                                                                             | `testing`                                                                                                                                                                                                           |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr) | `latest`                                                                                                                                                                                                              | `develop`                                                                                                                                                                                                           |
 
-## Can I update Lidarr inside my Docker container?
+### Can I update Lidarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
