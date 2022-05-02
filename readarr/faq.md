@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-05-02T23:45:29.049Z
+date: 2022-05-02T23:56:55.178Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -23,7 +23,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
   - [How can I mass delete authors from the wanted list?](#how-can-i-mass-delete-authors-from-the-wanted-list)
   - [Why doesn't Readarr work behind a reverse proxy](#why-doesnt-readarr-work-behind-a-reverse-proxy)
   - [How do I update Readarr?](#how-do-i-update-readarr)
-  - [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
+  	- [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -187,7 +187,7 @@ This change was due to not have our server get killed by people updating lists e
 | [hotio](https://hotio.dev/containers/readarr)             | no stable release yet                                                                                                                                                                                           | `testing`                                                                                                                                                                                                            | `nightly`                                                                                                                                                                                                                 |
 | [lsio](https://docs.linuxserver.io/images/docker-readarr) | no stable release yet                                                                                                                                                                                           | `develop`                                                                                                                                                                                                            | `nightly`                                                                                                                                                                                                                 |
 
-## Can I update Readarr inside my Docker container?
+### Can I update Readarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
