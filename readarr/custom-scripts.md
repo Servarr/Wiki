@@ -2,7 +2,7 @@
 title: Readarr Custom Scripts
 description: 
 published: true
-date: 2021-12-20T16:38:38.281Z
+date: 2022-05-02T03:36:38.595Z
 tags: readarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-23T06:41:11.792Z
@@ -46,7 +46,7 @@ Note that the following will only be logged for custom scripts:
 | `readarr_download_client`          | Download client use to download the release |
 | `readarr_download_id`              | Download id                                 |
 
-## On Download/On Upgrade
+## On Import/On Upgrade
 
 | Environment Variable       | Details                                     |
 | -------------------------- | ------------------------------------------- |
