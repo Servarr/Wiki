@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-04-20T00:22:27.513Z
+date: 2022-05-02T23:32:28.190Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -212,11 +212,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 - Master
   - ![Master to Develop](https://img.shields.io/badge/From%20Master%20to%20Develop-yes-informational)
-  - ![Develop to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Develop%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-develop%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fradarr-branches.php)
-  - ![Nightly to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fradarr-branches.php)
+  - ![Develop to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Develop%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-develop%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=radarr)
+  - ![Nightly to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=radarr)
 - Develop
   - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
-  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fradarr-branches.php)
+  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=radarr)
 
 ## How do I Backup/Restore Radarr?
 
