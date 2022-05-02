@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-02T23:32:28.190Z
+date: 2022-05-02T23:52:50.000Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -22,7 +22,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
   - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
   - [How do I update Radarr?](#how-do-i-update-radarr)
-  - [Can I update Radarr inside my Docker container?](#can-i-update-radarr-inside-my-docker-container)
+  	- [Can I update Radarr inside my Docker container?](#can-i-update-radarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
