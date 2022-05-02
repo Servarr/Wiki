@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: 
 published: true
-date: 2021-12-20T16:40:16.640Z
+date: 2022-05-02T03:37:28.132Z
 tags: lidarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -51,7 +51,7 @@ Environment Variables vary based on the event type. The sections below indicate 
 | `Lidarr_Download_Client`           | `message.DownloadClient`                                             |
 | `Lidarr_Download_Id`               | `message.DownloadId`                                                 |
 
-## Release Import
+## On Import / On Upgrade
 
 | Environment Variable       | Details                                  |
 | -------------------------- | ---------------------------------------- |
