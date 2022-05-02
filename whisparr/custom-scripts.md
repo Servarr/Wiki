@@ -1,11 +1,11 @@
 ---
 title: Whisparr Custom Scripts
-description:
+description: 
 published: true
-date: 2021-12-21T23:43:13.383Z
-tags: whisparr, needs-love, custom scripts
+date: 2022-05-02T03:37:47.889Z
+tags: needs-love, custom scripts, whisparr
 editor: markdown
-dateCreated: 2021-06-16T15:55:44.765Z
+dateCreated: 2022-04-03T03:49:14.966Z
 ---
 
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Whisparr via the [Connect Settings](/whisparr/settings#connections).
@@ -45,7 +45,7 @@ Note that the following will only be logged for custom scripts:
 | `whisparr_release_size`                | Size of the release, as reported by the indexer                                              |
 | `whisparr_release_title`               | Torrent/NZB title                                                                            |
 
-## On Download/On Upgrade
+## On Import/On Upgrade
 
 | Environment Variable                 | Details                                                                                      |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- |
