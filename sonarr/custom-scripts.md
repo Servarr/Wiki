@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2021-12-20T16:37:50.857Z
+date: 2022-05-02T03:36:57.663Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -51,7 +51,7 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_download_client`                | Download client                                                                              |
 | `sonarr_download_id`                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
 
-## On Download/On Upgrade
+## On Import/On Upgrade
 
 | Environment Variable                    | Details                                                                                      |
 | --------------------------------------- | -------------------------------------------------------------------------------------------- |
