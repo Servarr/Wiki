@@ -2,7 +2,7 @@
 title: Radarr Custom Scripts
 description: 
 published: true
-date: 2021-12-21T23:43:13.383Z
+date: 2022-05-02T03:36:09.625Z
 tags: radarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
@@ -45,7 +45,7 @@ Note that the following will only be logged for custom scripts:
 | `radarr_release_size`                | Size of the release, as reported by the indexer                                              |
 | `radarr_release_title`               | Torrent/NZB title                                                                            |
 
-## On Download/On Upgrade
+## On Import/On Upgrade
 
 | Environment Variable                 | Details                                                                                      |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- |
