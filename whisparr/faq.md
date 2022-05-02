@@ -2,7 +2,7 @@
 title: Whisparr FAQ
 description: Reorganized Whisparr FAQ
 published: true
-date: 2022-05-02T23:47:18.220Z
+date: 2022-05-02T23:47:29.532Z
 tags: needs-love, troubleshooting, faq, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:19.500Z
@@ -207,7 +207,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 > You can (almost) always increase your risk.{.is-info}
 
 - See below or otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
-- Failure to follow these instructions may result in your whisparr becoming unusable or throwing errors. You have been warned
+- Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
 - Develop
