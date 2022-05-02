@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-05-02T23:48:16.646Z
+date: 2022-05-02T23:55:17.514Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -18,12 +18,12 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
   - [What \*Arr Indexer Settings are Compared for App Full Sync](#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
+  	- [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
   - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
   - [Can I switch between branches?](#can-i-switch-between-branches)
-  - [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
   - [Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified](#help-my-mac-says-prowlarr-cannot-be-opened-because-the-developer-cannot-be-verified)
   - [Help, my Mac says Prowlarr.app is damaged and can’t be opened](#help-my-mac-says-prowlarrapp-is-damaged-and-cant-be-opened)
   - [How do I request a feature for Prowlarr?](#how-do-i-request-a-feature-for-prowlarr)
@@ -125,6 +125,9 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 | -------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [hotio](https://hotio.dev/containers/prowlarr)                       | no stable release yet | `testing`                                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                                  |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr) | no stable release yet | `develop`                                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                                  |
+### Can I update Prowlarr inside my Docker container?
+
+- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ### Installing a newer version
 
@@ -151,10 +154,6 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 - Develop
   - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
   - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=prowlarr)
-
-## Can I update Prowlarr inside my Docker container?
-
-- *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
