@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-03-22T15:55:59.230Z
+date: 2022-05-02T23:45:29.049Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -210,12 +210,16 @@ This change was due to not have our server get killed by people updating lists e
 
 > You can (almost) always increase your risk.{.is-info}
 
-- `master` can go to `develop` or `nightly`
-- `develop` can go to `nightly`
-- Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
-- Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned.
-- The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-
+- See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned
+  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+- Master
+  - ![Master to Develop](https://img.shields.io/badge/From%20Master%20to%20Develop-yes-informational)
+  - ![Develop to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Develop%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-develop%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
+  - ![Nightly to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
+- Develop
+  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
+  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Readarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
