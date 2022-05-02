@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-04-03T23:25:26.917Z
+date: 2022-05-02T14:51:50.538Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -43,6 +43,8 @@ Prowlarr needs two databases, the default names of these are:
 > Prowlarr will not create the databases for you. Make sure you create them ahead of time{.is-warning}
 
 Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
+
+> In order for the `Housekeeping` task to run, this user has to be a superuser, as it performs the vaccum task{.is-info}
 
 You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](/prowlarr/postgres-setup#schema-creation).
 
