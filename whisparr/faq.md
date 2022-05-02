@@ -2,10 +2,10 @@
 title: Whisparr FAQ
 description: Reorganized Whisparr FAQ
 published: true
-date: 2022-03-23T14:38:55.693Z
-tags: whisparr, needs-love, troubleshooting, faq
+date: 2022-05-02T23:47:18.220Z
+tags: needs-love, troubleshooting, faq, whisparr
 editor: markdown
-dateCreated: 2021-05-16T20:44:27.778Z
+dateCreated: 2022-04-03T03:49:19.500Z
 ---
 
 # Table of Contents
@@ -206,11 +206,13 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 > You can (almost) always increase your risk.{.is-info}
 
-- `master` can go to `develop` or `nightly`
-- `develop` can go to `nightly`
-- Check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
-- Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned.
-- The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+- See below or otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
+- Failure to follow these instructions may result in your whisparr becoming unusable or throwing errors. You have been warned
+  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+
+- Develop
+  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
+  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=whisparr)
 
 ## How do I Backup/Restore Whisparr?
 
