@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-04-26T01:23:53.906Z
+date: 2022-05-04T12:06:19.822Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -265,10 +265,10 @@ Incorrect path issues are possible too, though less common in normal setups. The
 
 Below are some common problems.
 
-### One or More Episodes expected in the releasee were not imported or missing
+### One or More Episodes expected in the release were not imported or missing
 
 - If all episodes were imported then  the most common cause is a Season Pack was downloaded, but does not contain all episodes in the season. Click the `X` to remove and ignore the release.
-- For all other issues, one or more episodes waa not able to be imported. Review the information in the UI and other common problems.
+- For all other issues, one or more episodes were not able to be imported. Review the information in the UI and other common problems.
 
 ### Using Sonarr v2
 
@@ -408,8 +408,11 @@ This can also occur if you have a release in your download client but that media
 
 #### Found matching series via grab history, but series was matched by series ID. Automatic import is not possible
 
-- This import error is similar to the above can't be matched error. The release was grabbed from your indexer by ID, but the downloaded file does not match series id of the grab.
-- Depending on the series title and release name Sonarr will probably need an alias added, [this FAQ entry has some more info](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)on requesting one to be added.
+- This import error is similar to the above can't be matched error.
+- Sonarr grabbed the release due to your indexer or tracker reporting that the release had the TVDb Id (or IMDb Id) for a series you wanted.
+- The series of the downloaded file does not match the id reported, so Sonarr will not import the file.
+- Depending on the series title and release name - assuming the release is correct for the series id it is associated with - Sonarr will probably need an alias added, [this FAQ entry has some more info](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) on requesting one to be added.
+- Alternatively, the release is mislabled and not for the series id that was reported. This should be reported to your indexer so they can take corrective action.
 
 ### Episode Name is TBA
 
