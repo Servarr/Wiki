@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-04-24T17:28:08.577Z
+date: 2022-05-05T12:52:54.788Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -315,12 +315,15 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 {#downloads-in-root-folder}
 
-- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
+-- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted drive. You're downloading directly into your root (library) folder.
+- This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder.
+- Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/lidarr/settings/#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+- Review our [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
-> Your download folder and your root/library folder MUST be separate
+> Your download folder where your download client places the downloads and your root/library folder MUST be separate
 {.is-warning}
 
 #### Bad Download Client Settings
