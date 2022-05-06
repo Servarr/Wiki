@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-06T15:44:21.221Z
+date: 2022-05-06T15:45:07.653Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -18,6 +18,5 @@ Due to the restrictions in DSM 7.0, some manual steps are required after install
 1. Log in via ssh
 1. Execute 
 ```
-sudo chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
-sudo chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
+BWRAP=/volume1/@appstore/bubblewrap/bin/bwrap && sudo chown root:root $BWRAP && sudo chmod u+s $BWRAP
 ```
