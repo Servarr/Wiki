@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-06T16:11:30.429Z
+date: 2022-05-06T17:49:17.272Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -26,5 +26,6 @@ To be written
 1. Log in via ssh
 1. Execute 
 ```bash
-BWRAP=/volume1/@appstore/bubblewrap/bin/bwrap && sudo chown root:root $BWRAP && sudo chmod u+s $BWRAP
+sudo chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
+sudo chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
 ```
