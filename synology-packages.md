@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-06T18:23:12.833Z
+date: 2022-05-06T18:23:44.503Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -13,6 +13,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 - The Servarr Team now creates and maintains Synology Packages
 - Installation instructions are noted below for the specific DSM versions
 - ToDo - add blurb/instructions for migrating from SynoComm package
+- ToDo - add blurb or link to identify NAS Architecture / Package
 
 ## DSM 6.x
 
