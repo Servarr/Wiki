@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-06T18:06:08.401Z
+date: 2022-05-06T18:23:12.833Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -10,21 +10,27 @@ dateCreated: 2022-05-06T13:45:19.731Z
 
 # Synology Packages
 
-The Servarr Team now creates and maintains Synology Packages
+- The Servarr Team now creates and maintains Synology Packages
+- Installation instructions are noted below for the specific DSM versions
+- ToDo - add blurb/instructions for migrating from SynoComm package
 
 ## DSM 6.x
 
-The packages should "just work", download from github and install via package manager
+- The Lidarr, Prowlarr, Radarr, Readarr, and Sonarr packages should _just work_.
+- Download the release for your NAS's archetecture from [the Servarr Syno Package GitHub](https://github.com/Servarr/spksrc/releases) and [manually install it](https://kb.synology.com/en-us/DSM/tutorial/How_to_install_applications_with_Package_Center#x_anchor_id6) via package manager.
 
 ## DSM 7.x
 
-The Radarr, Lidarr, Readarr and Prowlarr apps should just work (unless you are on a `comcerto2k` NAS).
+- The Lidarr, Prowlarr, Radarr, and Readar packages should _just work_ for most architectures.
+  - A NAS with `comcerto2k` requires additional steps
+- The Sonarr package requires additional steps for all architectures.
 
-For `comcerto2k` (all packages) and Sonarr (all NAS versions), you first need to install the Bubblewrap package and perform the manual step it guides you through.
+> For NAS with `comcerto2k` (all packages) and Sonarr (all NAS architectures), you first need to install the Bubblewrap package and perform the manual step it guides you through.
+{.is-warning}
 
-Once the one-time bubblewrap setup is complete, you can install / upgrade the other packages as normal.
+- Once the one-time bubblewrap setup is complete, you can install / upgrade the other packages as normal.
 
-### Bubblewrap installation on DSM 7
+### Bubblewrap Installation on DSM 7
 
 Bubblewrap allows us to run programs in a basic container so that we can use new enough libraries to run .NET 6.
 
