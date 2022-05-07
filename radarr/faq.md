@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-02T23:53:52.978Z
+date: 2022-05-07T04:52:34.464Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -116,6 +116,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
 1. Seeds/Peers (If Torrent)
 1. Age (If Usenet)
 1. Size
+
+> This ranking applies to both releases that would be Quality and/or Custom  Format upgrades.
+{.is-info}
 
 > \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
 
