@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-05-05T12:52:54.788Z
+date: 2022-05-07T01:12:52.949Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -190,7 +190,7 @@ sudo systemctl start $app
 - signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
 
 - The most common occurrence of this is use of a reverse proxy or cloudflare
-Cloudflare needs websockets enabled.
+- Cloudflare needs websockets enabled.
 
 ##### NGINX
 
@@ -252,8 +252,15 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### FPcalc needs updating
 
-- Lidarr can use chromaprint audio fingerprinting to identify tracks. This depends on an external binary, which is distributed with Lidarr v1 for Windows, Linux and macOS, but must be provided independently on freeBSD.
-- Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). This would be found in Lidarr's installation directory (e.g. `/opt/Lidarr/fpcalc` )
+{#fpcalc-upgrade}
+
+- Lidarr useschromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`, which is distributed with Lidarr v1 for Windows, Linux and macOS, but must be provided independently on freeBSD.
+- Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). This would be found in Lidarr's installation directory (e.g.`/opt/Lidarr/fpcalc`) If it is not executable, then correct it's permissions with the below command and then restart Ldarr.
+  - Note that for the fix `sudo` may be required or your path to Lidarr's binary folder may be different depending on your environment and setup.
+
+```bash
+chmod +x /opt/Lidarr/fpcalc
+```
 
 > The below information is for legacy v0.8.0 builds only.
 {.is-info}
