@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2022-05-05T12:53:49.330Z
+date: 2022-05-07T13:58:22.859Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -186,9 +186,14 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 
 {#completedfailed-download-handling}
 
-> (This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.) {.is-info}
-
-- It's recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Sonarr will only import a download once the download client reports it as ready.
+- It's required to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Sonarr will only import a download once the download client reports it as ready.
+- If completed download handling is disabled:
+  - All imports must be handled manually
+  - This healthcheck will persist and cannot be dismissed or disabled
+  - Episodes will always be missing in Sonarr and eligble to be grabbed in perpetuity
+    - Episodes manually moved and renamed by the user into the series' folder in Sonarr's library folder will possibly be picked up by the twice daily rescan if named properly and thus not be missing at that point.
+  - The user will need to manually unmonitor or configure an On Grab custom script to unmonitor episodes.
+  - FlexGet is likely a better tools for one's usecase if they do not wish to use Sonarr's media library mangement functionalites and simply require something to parse rss feeds and send releases to the download client  
 
 > Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.{.is-warning}
 
