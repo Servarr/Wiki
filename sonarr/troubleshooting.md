@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-05-04T12:08:18.810Z
+date: 2022-05-07T19:26:45.463Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -49,7 +49,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
     - [Usenet download misses import](#usenet-download-misses-import)
     - [Download client clearing items](#download-client-clearing-items)
     - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
-    - [Found matching series via grab history, but series was matched by series id. Automatic Import is not possible(#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
+    - [Found matching series via grab history, but series was matched by series id. Automatic Import is not possible](#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
     - [Episode Name is TBA](#episode-name-is-tba)
     - [Connection Timed Out](#connection-timed-out)
   - [Problem Not Listed](#problem-not-listed)
