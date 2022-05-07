@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2022-05-07T13:58:22.859Z
+date: 2022-05-07T13:59:35.331Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -195,7 +195,9 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
   - The user will need to manually unmonitor or configure an On Grab custom script to unmonitor episodes.
   - FlexGet is likely a better tools for one's usecase if they do not wish to use Sonarr's media library mangement functionalites and simply require something to parse rss feeds and send releases to the download client  
 
-> Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.{.is-warning}
+> \* Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
+> \* Completed Download Handling requires Sonarr has read and write access to the completed download directory
+{.is-warning}
 
 ### Indexers
 
