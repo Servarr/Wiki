@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-06T18:23:44.503Z
+date: 2022-05-09T13:55:24.436Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -35,7 +35,22 @@ dateCreated: 2022-05-06T13:45:19.731Z
 
 Bubblewrap allows us to run programs in a basic container so that we can use new enough libraries to run .NET 6.
 
-Due to the restrictions in DSM 7.0+, some manual setup is required after installation:
+Due to the restrictions in DSM 7.0+, some manual setup is required after installation
+
+## Recommended option
+
+1. Create a scheduled task:
+	- User: `root`
+  	- Event: `Boot-up`
+![create_task1.png](/create_task1.png)
+1. For the `Run Command` enter:
+```bash
+chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
+chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
+```
+![create_task2.png](/create_task2.png)
+
+## Advanced option
 
 1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet)
 1. Execute 
