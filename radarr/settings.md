@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-05-10T03:49:15.715Z
+date: 2022-05-10T04:09:02.859Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -365,7 +365,7 @@ See [Custom Formats](#custom-formats) for more details.
 ## Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an movie by adding a delay while Radarr continues to watch for releases that better match your preferences.
-- Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
+- Preferred Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
