@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-04-04T14:26:40.233Z
+date: 2022-05-10T20:51:46.728Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -41,7 +41,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:8787`
 
-![qs_startup.png](/assets/sonarr/qs_startup.png)
+![qs_startup.png](/assets/readarr/qs_startup.png)
 
 # Media Management
 
