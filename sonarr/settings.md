@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-04-24T20:41:25.219Z
+date: 2022-05-10T03:45:32.441Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -658,14 +658,14 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Host - The URL of your download client
 - Port - The port of your download client; this is typically the webgui port
 - Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
-- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- (Advanced Option) URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
 - API Key - the API key to authenticate to your client
 - Username - the username to authenticate to your client (typically not needed)
 - Password- the password to authenticate to your client (typically not needed)
 - Category - the category within your download client that \*Arr will use. To avoid unrelated downloads showing in Activity it is strongly recommended to set a category.
 - Recent Priority - download client priority for recently released media
 - Older Priority - download client priority for media released not recently
-- Client Priority - Priority of the download Client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
+- (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
   - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
 
