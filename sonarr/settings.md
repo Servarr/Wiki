@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-05-10T03:49:54.317Z
+date: 2022-05-10T04:08:42.277Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -426,7 +426,7 @@ Name for the `Specials` (Season) folder
 ## Delay Profiles
 
 - Delay profiles allow you to reduce the number of releases that will be downloaded for an episode by adding a delay while Sonarr continues to watch for releases that better match your preferences.
-- Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
+- Preferred Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
