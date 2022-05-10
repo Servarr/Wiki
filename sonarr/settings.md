@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-05-10T03:45:57.862Z
+date: 2022-05-10T03:49:37.748Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -713,8 +713,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Completed Download Handling is how Sonarr imports media from your download client to your series folders.
 
-- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
-- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
+- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the above table. Torrents must also stay in the same category.
 
 ### Remove Completed Downloads
