@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-09T13:55:24.436Z
+date: 2022-05-10T20:53:39.305Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -42,6 +42,7 @@ Due to the restrictions in DSM 7.0+, some manual setup is required after install
 1. Create a scheduled task:
 	- User: `root`
   	- Event: `Boot-up`
+
 ![create_task1.png](/create_task1.png)
 1. For the `Run Command` enter:
 ```bash
