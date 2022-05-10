@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-10T20:51:46.728Z
+date: 2022-05-10T20:53:19.546Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -85,6 +85,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Use Hardlinks instead of Copy - Check this box to use Hardlinks instead of Copies (for Torrents). Note that this is enabled by default.
   
 > You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
+{.is-info}
   
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
@@ -145,7 +146,8 @@ You may also elect to use Calibre to manage your library on this screen. Doing s
 > **Note that you cannot add Calibre integration to a root folder after it's created.**
 {.is-danger}
 
-> Your download client downloads to a download folder, and Readarr imports it to your media folder (final destination) that your media server uses. Your download folder and media folder can’t be the same location! {.is-warning}
+> Your download client downloads to a download folder, and Readarr imports it to your media folder (final destination) that your media server uses. Your download folder and media folder can’t be the same location!
+{.is-warning}
 
 Don’t forget to save your changes.
 
@@ -158,7 +160,8 @@ If you are going to use Calibre to manage your books, you need to set up the Cal
 
 If you're using docker, your Calibre mounted book directory and your Readarr mounted book directory must be the same.
 
-> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. {.is-info}
+> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through.
+{.is-info}
 
 To do this, open Calibre, and click `Preferences / Sharing over the net`
 
@@ -171,6 +174,7 @@ First, add a user account. The account DOES need "make changes" access.
 Then you will need to restart Calibre. Once back in, configure and start up the content server. It should show you that it's running. Set it to run automatically on startup. After saving, you will again need to restart Calibre. Make sure the sever is started when it comes back up, then you can move to the next section.
 
 > You must select "Require username and password to access the content server" in order for Readarr to properly work. If you do not, you will get an error that says "Anonymous users are not allowed to make changes" when Readarr import a book!
+{.is-info}
 
 ![calibreserver.png](/assets/readarr/calibreserver.png)
 
@@ -205,7 +209,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
   - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
 - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 
->If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+> If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
 > \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
 {.is-warning}
 
@@ -215,7 +219,8 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/readarr/settings#download-clients), [the supported page](/readarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
+> See the [settings page](/readarr/settings#download-clients), [the supported page](/readarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+{.is-info}
 
 ## {.tabset}
 
