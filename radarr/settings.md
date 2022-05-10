@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-05-10T03:48:16.415Z
+date: 2022-05-10T03:49:15.715Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -731,9 +731,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Completed Download Handling is how Radarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
-- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
+- (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
 - (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues and refresh monitored downloads, minimum 1 minute
-- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the above table. Torrents must also stay in the same category.
 
 ### Remove Completed Downloads
