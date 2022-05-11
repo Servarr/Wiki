@@ -23,7 +23,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 ## DSM 6.x
 
 - The Lidarr-Official, Prowlarr-Official, Radarr-Official, Readarr-Official, and Sonarr packages should _just work_. 
-- Note that Sonarr requires additional package and is bundled within the package. 
+- Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 - Download the release of the application for your NAS's archetecture from [the Servarr Syno Package GitHub](https://github.com/Servarr/spksrc/releases) and [manually install the package](https://kb.synology.com/en-us/DSM/tutorial/How_to_install_applications_with_Package_Center#x_anchor_id6) via package manager.
 
 ## DSM 7.x
@@ -31,7 +31,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 - The Lidarr-Official, Prowlarr-Official, Radarr-Official, and Readarr-Official packages should _just work_ for most architectures.
   - Note that a NAS with `comcerto2k` requires additional steps, [see below](#bubblewrap-manual-step-recommended-option).
 - Note that the Sonarr package requires additional steps for **all** architectures.
-- Note that Sonarr requires additional package installation and is bundled within the package.
+- Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 
 > For NAS running on a `comcerto2k` (*all packages*) and Sonarr (*all NAS architectures*), you will need to install the Bubblewrap package and perform the manual steps noted. **Bubblewrap must be installed prior to attempting to install the \*Arr Packages**
 {.is-warning}
