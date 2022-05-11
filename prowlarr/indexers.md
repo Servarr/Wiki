@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2022-05-11T00:35:33.249Z
+date: 2022-05-11T00:55:22.964Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -43,6 +43,7 @@ Details available may include:
 - Language
 - Site
 - Newznab/Torznab Prowlarr URL
+- Site Capabilities
 
 # Indexer Settings
 
@@ -51,24 +52,19 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 ![ind_3_indexer2.png](/assets/prowlarr/ind_3_indexer2.png)
 
 - Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
-
 - Enable - Check the box to enable this indexer.
-
 - Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
 
 > Redirect is typically only needed for a handful of very specific indexers
 {.is-info}
 
-- App Profile - Select your App Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
+- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 
 - URL - The URL for Prowlarr to use.
-
 - Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
-
 - API Path - (Advanced Option) - Path to the Indexer's API. Typically `/api`
-
 - Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
   - API Key
   - RSS Key
@@ -76,18 +72,14 @@ Once you've selected your indexer, there will be a pop-up containing further inf
   - Cookie
   - Username/Password
   - etc.
-
 - Additional Parameters - (Advanced Options) - Additional parameters to add to the requests for this indexer.
-
 - VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
-
 - Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
-
-- Query Limit - (Advanced Option) If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
-
-- Grab Limit - (Advanced Option) If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
-
-- (Advanced Option) Indexer Priority - (Advanced Option) Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
+- (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
+- (Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
+- (Advanced Option) Seed Ratio - The ratio a torrent should reach before stopping, empty is app's default
+- (Advanced Option) Seed Time - The time a torrent should be seeded before stopping, empty is app's default
+- (Advanced Option) Indexer Priority - Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
 
 - Test your indexer, and if a green checkmark appears, you're okay to save it. When you save it, depending on your sync settings, it will be added to your apps automatically.
 
