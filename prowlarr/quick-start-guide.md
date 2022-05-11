@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T01:04:09.999Z
+date: 2022-05-11T01:13:24.090Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -54,6 +54,9 @@ Some indexers have special settings, but most are standard as shown.
 {.is-info}
 
 - Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
+
+> You can have different settings per app by creating multiple instances of the indexer
+{.is-info}
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 
