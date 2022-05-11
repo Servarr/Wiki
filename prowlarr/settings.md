@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-05-11T01:05:15.940Z
+date: 2022-05-11T01:12:27.856Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -107,7 +107,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the `+` to add a 
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
-- Click on `Settings` => `Apps`, and then click the <kb>+<kb> to add an app.
+- Click on `Settings` => `Apps`, and then click the <kb>+</kb> to add an app.
 - Sync App Indexers - Trigger a sync of all indexers to all applications
 - Test All Apps - Trigger a test of all applications
   
@@ -149,6 +149,9 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 ## Sync Profiles
 
 Configure the sync profiles for to use for (an) application(s)
+
+> You can have different settings per app by creating multiple instances of the indexer
+{.is-info}
 
 - Name - Unique name of the Sync Profile
 - Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the \*Arr App
