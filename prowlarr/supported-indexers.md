@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-05-03T19:44:13.6910890Z
+date: 2022-05-11T01:30:17.0984134Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-05-03T19:44:13.6910890Z
+dateCreated: 2022-05-11T01:30:17.0984134Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.3.0.1726` / [Commit: a0f7d5e30918854bb07625e9690613cbd288bb76](https://github.com/Prowlarr/Prowlarr/commit/a0f7d5e30918854bb07625e9690613cbd288bb76)
+- Supported Trackers and Indexers as of Build `0.4.0.1761` / [Commit: ac7896b67b4a8633a47f7f492939f9217f844e12](https://github.com/Prowlarr/Prowlarr/commit/ac7896b67b4a8633a47f7f492939f9217f844e12)
 
 ---
 
@@ -51,7 +51,7 @@ dateCreated: 2022-05-03T19:44:13.6910890Z
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|en-US|
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|zh-TW|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga.|en-US|
-|[EliteTorrent\.biz](https://www.elitetorrent.wtf/){#elitetorrent-biz}|EliteTorrent\.biz is a Public torrent site for TV, movies and documentaries|es-ES|
+|[EliteTorrent\.biz](https://www.elitetorrent.dev/){#elitetorrent-biz}|EliteTorrent\.biz is a Public torrent site for TV, movies and documentaries|es-ES|
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|en-US|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|en-US|
 |[EZTV](https://eztv.re/){#eztv}|EZTV is a Public torrent site for TV shows|en-US|
@@ -75,7 +75,7 @@ dateCreated: 2022-05-03T19:44:13.6910890Z
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|en-US|
 |[Legit Torrents](http://www.legittorrents.info/){#legittorrents}|Legit Torrents is a Public site for free and legal torrents|en-US|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|en-US|
-|[LimeTorrents](https://www.limetorrents.pro/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|en-US|
+|[LimeTorrents](https://www.limetorrents.lol/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|en-US|
 |[LimeTorrents clone](https://www.limetorrents.to/){#limetorrentsclone}|LimeTorrents clone is a Public LimeTorrents clone for TV / MOVIES / GENERAL|en-US|
 |[LinuxTracker](https://linuxtracker.org/){#linuxtracker}|LinuxTracker is a Public Linux ISO Torrent Repository|en-US|
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|en-US|
@@ -137,7 +137,7 @@ dateCreated: 2022-05-03T19:44:13.6910890Z
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq141.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq142.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir56.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
@@ -374,7 +374,6 @@ dateCreated: 2022-05-03T19:44:13.6910890Z
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|hu-HU|
 |[LastFiles](https://www.lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|ro-RO|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|es-ES|
-|[LatTeam](https://lat-team.com/){#lat-team}|Lat-Team is a Private Torrent Tracker for HD MOVIES / TV|es|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|en-US|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|en-US|
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
