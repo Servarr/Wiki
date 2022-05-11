@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-04-20T13:10:18.643Z
+date: 2022-05-11T00:35:13.472Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -131,10 +131,7 @@ All programs you can add are listed. You should only add programs you currently 
 > `Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals and tags in \*Arrs are not currently factored in to this comparison to trigger a sync. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite all settings in \*Arr
 {.is-danger}
 
-- Tags - ~~If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.~~
-
-> **Note: Tags for apps are not yet functional**
-{.is-warning}
+- Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
 
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
 
@@ -216,7 +213,7 @@ Connections are how you want Prowlarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located [here](/prowlarr/supported#notifications)
+- A list of supported notifications and connections is located [here](/prowlarr/supported#notifications)
 
 ## Notification Triggers
 
@@ -228,12 +225,9 @@ Connections are how you want Prowlarr to communicate with the outside world.
 
 - The tag section in Prowlarr is used to link different aspects of Prowlarr.
 - Tags are particularly useful for:
-
   - Enabling Flaresolverr Proxy for use with an indexer; Note that Flaresolverr Proxies are disabled without a tag
   - Enabling a HTTP or SOCKS Proxy for use with an indexer
-
-> Note: Tags do not influence what indexers sync to what application, what indexers are used with what clients, anything related to tags in any other application, nor anything other than what is explicitly noted above.
-{.is-info}
+  - Specifying Indexers to certain apps
 
 # General
 
