@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T00:57:06.033Z
+date: 2022-05-11T01:04:09.999Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -108,18 +108,14 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 > `Full Sync` means Prowlarr will override any all including user selected categories. However, tags in \*Arrs are not currently factored in to this comparison to trigger a sync. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite all settings in \*Arr
 {.is-danger}
-
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
-
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
 
 > Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
 {.is-info}
 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
-
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
-
 - (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
 
 > When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`
@@ -134,11 +130,25 @@ You may wish to go into your programs and check the categories for the Prowlarr 
 > **Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones**
 {.is-info}
 
-# Download Clients
+## Sync Profiles
 
-> If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead. {.is-info}
+Configure the sync profiles for to use for (an) application(s)
 
-> Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality. {.is-danger}
+- Name - Unique name of the Sync Profile
+- Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the \*Arr App
+- Enable Interactive Search - For Indexers with this profile, Enable Interactive (Manual) Searches for the \*Arr App
+- Enable Automatic Search - For Indexers with this profile, Enable Automatic Searches for the \*Arr App
+- Minimum Seeders - For Indexers with this profile, the minimum seeders required for \*Arr to grab a torrent
+
+# Download Clients (Prowlarr Searches)
+
+{#download-clients}
+
+> If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
+{.is-info}
+
+> Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality.
+{.is-danger}
 
 Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
 
