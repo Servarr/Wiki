@@ -122,6 +122,8 @@ All programs you can add are listed. You should only add programs you currently 
 
 ## Application Settings
 
+Application Settings are where Sync Profiles are configured
+
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
   - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
