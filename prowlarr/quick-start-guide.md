@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T00:47:19.390Z
+date: 2022-05-11T00:56:08.698Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -46,16 +46,35 @@ Some indexers have special settings, but most are standard as shown.
 
 ![addnewindexer.png](/assets/prowlarr/addnewindexer.png)
 
-- Name - Enter a name for this indexer.
-- Enable - Check to enable this indexer. This setting syncs to your programs.
-- Redirect - If your indexer requires it, check the box to redirect download requests so it doesn't look like the request is coming from Prowlarr. This is only needed for one or two Indexers.
-- Sync Profile - Select your Sync Profiles as created in [Settings => Apps => Sync Profiles](/prowlarr/settings#app-profiles)
-- URL - Enter or Select the URL of this indexer's API.
-- (Advanced Option) If the API Path is not /api, change it here.
-- Enter the API Key from your profile page on the indexer's website here.
-- (Advanced Option) If you need additional parameters for the indexer, enter them here.
-- If you enter a date for VIP expiration here, Prowlarr will warn you 1 week before it expires.
-- (Advanced Option) Enter an indexer priority here from 1 (highest) to 50 (lowest). If there are identical results on multiple indexers during a search, the indexer with the highest priority will get the download. This setting syncs to your programs.
+- Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
+- Enable - Check the box to enable this indexer.
+- Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
+
+> Redirect is typically only needed for a handful of very specific indexers
+{.is-info}
+
+- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
+
+![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
+
+- URL - The URL for Prowlarr to use.
+- Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
+- API Path - (Advanced Option) - Path to the Indexer's API. Typically `/api`
+- Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
+  - API Key
+  - RSS Key
+  - Session ID
+  - Cookie
+  - Username/Password
+  - etc.
+- Additional Parameters - (Advanced Options) - Additional parameters to add to the requests for this indexer.
+- VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
+- Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
+- (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
+- (Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
+- (Advanced Option) Seed Ratio - The ratio a torrent should reach before stopping, empty is app's default
+- (Advanced Option) Seed Time - The time a torrent should be seeded before stopping, empty is app's default
+- (Advanced Option) Indexer Priority - Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each indexer you'd like Prowlarr to use. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
