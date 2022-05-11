@@ -29,7 +29,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 ## DSM 7.x
 
 - The Lidarr-Official, Prowlarr-Official, Radarr-Official, and Readarr-Official packages should _just work_ for most architectures.
-  - Note that a NAS with `comcerto2k` requires additional steps, [see below](https://wiki.servarr.com/en/synology-packages#bubblewrap-manual-step-recommended-option).
+  - Note that a NAS with `comcerto2k` requires additional steps, [see below](#bubblewrap-manual-step-recommended-option).
 - Note that the Sonarr package requires additional steps for **all** architectures.
 - Note that Sonarr requires additional package installation and is bundled within the package.
 
@@ -53,14 +53,14 @@ Bubblewrap allows us to run programs in a basic container so that we can use new
 1. Create a triggered task within DSM:
 	- User: `root`
   	- Event: `Boot-up`
-2. For the `Run Command` enter:
+1. For the `Run Command` enter:
 
 ```bash
 chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
 chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
 ```
 
-3. Save triggered task, and run it once.
+1. Save triggered task, and run it once.
 
 ![triggered_task.png](/assets/synology/triggered_task.png)
 
@@ -73,7 +73,7 @@ chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
 ## Bubblewrap Manual Step - Advanced Option
 
 1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet)
-2. Execute following commands:
+1. Execute following commands:
 
 ```bash
 sudo chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
