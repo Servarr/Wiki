@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T00:56:08.698Z
+date: 2022-05-11T00:57:06.033Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -72,8 +72,8 @@ Some indexers have special settings, but most are standard as shown.
 - Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
 - (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
 - (Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
-- (Advanced Option) Seed Ratio - The ratio a torrent should reach before stopping, empty is app's default
-- (Advanced Option) Seed Time - The time a torrent should be seeded before stopping, empty is app's default
+- (Advanced Option) Seed Ratio - For Torrent Indexers Only: The ratio a torrent should reach before stopping, empty is app's default
+- (Advanced Option) Seed Time - For Torrent Indexers Only: The time a torrent should be seeded before stopping, empty is app's default
 - (Advanced Option) Indexer Priority - Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each indexer you'd like Prowlarr to use. If it fails, you will need to check your log for the error (URL, API Key, etc.).
