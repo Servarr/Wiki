@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-11T00:05:36.303Z
+date: 2022-05-11T00:09:56.401Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -44,11 +44,13 @@ Due to the restrictions in DSM 7.0+, some manual setup is required after install
   	- Event: `Boot-up`
 
 ![create_task1.png](/create_task1.png)
+
 1. For the `Run Command` enter:
 ```bash
 chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
 chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
 ```
+
 ![create_task2.png](/create_task2.png)
 
 ## Advanced option
