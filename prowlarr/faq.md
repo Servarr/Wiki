@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-05-11T00:47:59.725Z
+date: 2022-05-11T00:57:37.992Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -95,6 +95,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - App/Prowlarr: Port
 - App/Prowlarr: Categories
 - App/Prowlarr: Seed Ratio and Seed Time
+- App/Prowlarr: Minimum Seeders
 - Prowlarr: Implementation (e.g. YML or C#)
 
 With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr
