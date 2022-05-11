@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T01:13:24.090Z
+date: 2022-05-11T01:16:34.933Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -62,7 +62,7 @@ Some indexers have special settings, but most are standard as shown.
 
 - URL - The URL for Prowlarr to use.
 - Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
-- API Path - (Advanced Option) - Path to the Indexer's API. Typically `/api`
+- (Advanced Option) API Path - Path to the Indexer's API. Typically `/api`
 - Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
   - API Key
   - RSS Key
@@ -70,7 +70,7 @@ Some indexers have special settings, but most are standard as shown.
   - Cookie
   - Username/Password
   - etc.
-- Additional Parameters - (Advanced Options) - Additional parameters to add to the requests for this indexer.
+- (Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.
 - VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
 - Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
 - (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
