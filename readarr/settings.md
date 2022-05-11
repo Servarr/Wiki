@@ -114,7 +114,7 @@ Also, note that for each individual settings page, there are some options at the
 ## Root Folders
 
 - A list of your configured Root Folders (Library Folders) is displayed.
-- Click the <kb>+</kb> button to add a new Root Folder or click an existing's card to edit it.
+- Click the `+` button to add a new Root Folder or click an existing's card to edit it.
 
 ### Root Folder Settings
 
@@ -377,7 +377,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 > Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
 
-- Plus icon (<kb>+</kb>) - Create a new quality profile
+- Plus icon (`+`) - Create a new quality profile
 
 - Name - Enter a **UNIQUE** name for the quality profile you are creating
 - Upgrades Allowed - When this option is checked and you tell Readarr to download a `EPUB` as it is the first release of a specific book then later somebody is able to upload a `AZW3` Readarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
@@ -398,7 +398,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 
 Metadata profiles are used to determine which books from GoodReads to add under an author when a new author is added.
 
-- Plus icon (<kb>+</kb>) - Create a new Metadata profile
+- Plus icon (`+`) - Create a new Metadata profile
 
 ![metaprofiles.png](/assets/readarr/metaprofiles.png)
   
@@ -453,7 +453,7 @@ Release profiles are used to determine if indexer release names qualify for down
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
 - Tags - With giving this delay profile a tag you will be able to tag a given movie to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
-- Plus icon (<kb>+</kb>) - Create a new delay profile
+- Plus icon (`+`) - Create a new delay profile
 
 ### Uses
 
@@ -540,7 +540,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Indexer Settings
 
-- Once you've clicked the <kb>+</kb> button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
+- Once you've clicked the `+` button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Readarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
 
 - There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
@@ -627,7 +627,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Download Clients
 
-Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
+Click on `Settings =>`Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured and running.
 
 ### Supported Download Clients
 
@@ -792,7 +792,7 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Se
 
 Connections are how you want Readarr to communicate with the outside world.
 
-- By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
+- By pressing the `+` button you will be presented with a new window which will allow you to configure many different endpoints
 
 - A list of supported notifications & connections is located [here](/readarr/supported#notifications)
 

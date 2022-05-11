@@ -220,7 +220,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 Connections are how you want Prowlarr to communicate with the outside world.
 
-- By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
+- By pressing the `+` button you will be presented with a new window which will allow you to configure many different endpoints
 
 - A list of supported notifications and connections is located [here](/prowlarr/supported#notifications)
 

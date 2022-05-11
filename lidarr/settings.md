@@ -67,7 +67,7 @@ This page is a work in progress and contributions - based on the other \*Arr pag
 
 ## Download Clients
 
-Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
+Click on `Settings =>`Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured and running.
 
 ### Supported Download Clients
 
