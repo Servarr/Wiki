@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T00:36:09.542Z
+date: 2022-05-11T00:39:45.126Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -49,7 +49,7 @@ Some indexers have special settings, but most are standard as shown.
 - Name - Enter a name for this indexer.
 - Enable - Check to enable this indexer. This setting syncs to your programs.
 - Redirect - If your indexer requires it, check the box to redirect download requests so it doesn't look like the request is coming from Prowlarr. This is only needed for one or two Indexers.
-- App Profile - Select your App Profiles as created in [Settings => Apps => App Profiles](/prowlarr/settings#app-profiles)
+- Sync Profile - Select your Sync Profiles as created in [Settings => Apps => App Profiles](/prowlarr/settings#app-profiles)
 - URL - Enter or Select the URL of this indexer's API.
 - (Advanced Option) If the API Path is not /api, change it here.
 - Enter the API Key from your profile page on the indexer's website here.
