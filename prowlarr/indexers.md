@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2021-11-24T19:23:09.011Z
+date: 2022-05-11T00:35:33.249Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -56,7 +56,8 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 - Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
 
-> Redirect is typically only needed for a handful of very specific indexers {.is-info}
+> Redirect is typically only needed for a handful of very specific indexers
+{.is-info}
 
 - App Profile - Select your App Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
 
@@ -80,7 +81,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 - VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
 
-- Tags - Use tags to specify default download clients, specify Indexer Proxies, or just to organize your indexers.
+- Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
 
 - Query Limit - (Advanced Option) If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
 
