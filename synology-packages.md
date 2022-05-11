@@ -2,7 +2,7 @@
 title: Synology Packages
 description: 
 published: true
-date: 2022-05-11T00:10:35.011Z
+date: 2022-05-11T00:10:53.663Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -56,6 +56,7 @@ chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
 
 1. [Login to your Synology via SSH and elevate to `root`](https://kb.synology.com/en-global/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet)
 1. Execute 
+
 ```bash
 chown root:root /volume1/@appstore/bubblewrap/bin/bwrap
 chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
