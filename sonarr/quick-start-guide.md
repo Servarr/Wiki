@@ -97,7 +97,7 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 Here you’ll be adding the indexer/trackers that you’ll be using to actually download any of your files.
 
-Once you’ve clicked the `+` button to add a new indexer, you’ll be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers as “Indexers”.
+Once you’ve clicked the <kb>+</kb> button to add a new indexer, you’ll be presented with a new window with many different options. For the purposes of this wiki Sonarr considers both Usenet Indexers and Torrent Trackers as “Indexers”.
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
 

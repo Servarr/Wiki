@@ -199,7 +199,7 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo VideoDynamicRange}` = HDR
 - `{MediaInfo VideoDynamicRangeType}` = DV HDR10
 
-> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending `+` (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.
+> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.
 {.is-info}
 
 > `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
@@ -340,7 +340,7 @@ Here you will set the naming convention for the folder that contains the season 
 > Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
 
-- Plus icon (`+`) - Create a new quality profile
+- Plus icon (<kb>+</kb>) - Create a new quality profile
 
 - Name - Select a **UNIQUE** name for the quality profile you are creating
 - Upgrades Allowed - When this option is checked and you tell Radarr to download a `WEB 1080p` as it is the first release of a specific movie then later somebody is able to upload a `Bluray-1080p` Radarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
@@ -371,7 +371,7 @@ See [Custom Formats](#custom-formats) for more details.
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
 - Tags - With giving this delay profile a tag you will be able to tag a given movie to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
-- Plus icon (`+`) - Create a new delay profile
+- Plus icon (<kb>+</kb>) - Create a new delay profile
 
 ### Uses
 
@@ -540,7 +540,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Indexer Settings
 
-- Once you've clicked the `+` button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Radarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
+- Once you've clicked the <kb>+</kb> button to add a new indexer you will be presented with a new window with many different options. For the purposes of this wiki Radarr considers both Usenet Indexers and Torrent Trackers to be "Indexers".
 
 - There are two sections here: Usenet and Torrents. Based upon what download client you will be using you will want to select the type of indexer you will be going with.
 
@@ -627,7 +627,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ## Restrictions
 
 - Here you will be able to set global restrictions based upon a couple of parameters
-- Click the `+` and a new window will open
+- Click the <kb>+</kb> and a new window will open
 - Must Contain - Within this field you can tell Radarr that if a release does not contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
 - Must Not Contain - Within this field you can tell Radarr that if a release does contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
 - Tags - Here you can apply these settings to movies with at least one of the given [tag](#tags).
@@ -661,7 +661,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Download Clients
 
-Click on `Settings =>`Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured and running.
+Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
 ### Supported Download Clients
 
@@ -792,7 +792,7 @@ Import lists are a part of Radarr that allow you to follow a given list creator.
 
 - CAUTION: If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save. ie. physically look at the list before you even go to Radarr.
 
-- Here you can select the `+` button to open a new pop up window
+- Here you can select the <kb>+</kb> button to open a new pop up window
 - From this new window you are presented with many different options to set up your list from many different list providers. As stated before be careful when doing lists. It is highly recommended to not select the Search on add button before you're absolutely sure the list you select/setup is adding the series that you're looking for.
 - Once you've selected the list provider that you're looking to pull from (such as IMDb or Trakt) You'll be presented with a new window.
 Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
@@ -820,7 +820,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 Connections are how you want Radarr to communicate with the outside world.
 
-- By pressing the `+` button you will be presented with a new window which will allow you to configure many different endpoints
+- By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
 - A list of supported notifications & connections is located [here](/radarr/supported#notifications)
 

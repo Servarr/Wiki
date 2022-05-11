@@ -55,7 +55,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 ## Can I add any (generic) Torznab or Newznab indexer?
 
 - Yes.
-- Go to `Indexers` => `Add Indexer` (`+`) => `Generic Torznab` or `Generic Newznab`
+- Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
 ## Can I use flaresolverr indexers?
 

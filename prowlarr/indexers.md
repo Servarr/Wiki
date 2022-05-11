@@ -12,7 +12,7 @@ This page will describe how to add and configure indexers in Prowlarr.
 
 # Adding an Indexer
 
-To add an indexer, first click on `Indexers` on the left, then `+` `Add Indexer` at the top of the page.
+To add an indexer, first click on `Indexers` on the left, then <kb>+</kb> `Add Indexer` at the top of the page.
 
 ![ind_1_addindexer.png](/assets/prowlarr/ind_1_addindexer.png)
 

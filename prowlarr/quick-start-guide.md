@@ -34,7 +34,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 The first thing to set up in Prowlarr is indexers. You will add each indexer individually to Prowlarr.
 
-Click on `Indexers`, and then click the `+` to add a new indexer.
+Click on `Indexers`, and then click the <kb>+</kb> to add a new indexer.
 
 ![addindexer.png](/assets/prowlarr/addindexer.png)
 
@@ -85,7 +85,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 After you've added your indexers, we then connect Prowlarr to your other apps.
 
-Click on `Settings` => `Apps`, and then click the `+` to add a supported app.
+Click on `Settings` => `Apps`, and then click the <kb>+</kb> to add a supported app.
 
 ![addapps.png](/assets/prowlarr/addapps.png)
 
@@ -153,7 +153,7 @@ Configure the sync profiles for to use for (an) application(s)
 > Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality.
 {.is-danger}
 
-Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings` => `Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 

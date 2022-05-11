@@ -60,7 +60,7 @@ Also, note that for each individual settings page, there are some options at the
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
-Navigate to on `Settings` => `Indexer Proxies`, and then click the `+` to add a proxy.
+Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to add a proxy.
 
 ![proxies.png](/assets/prowlarr/proxies.png)
 
@@ -171,7 +171,7 @@ If you intend to do searches directly within Prowlarr, you need to add Download 
 > Prowlarr does not sync Download Clients to the Applications.
 {.is-info}
 
-Click on `Settings` => `Download Clients`, and then click the `+` to add a new download client. Your download client should already be configured to follow this guide.
+Click on `Settings` => `Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured to follow this guide.
 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
@@ -223,7 +223,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 Connections are how you want Prowlarr to communicate with the outside world.
 
-- By pressing the `+` button you will be presented with a new window which will allow you to configure many different endpoints
+- By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
 - A list of supported notifications and connections is located [here](/prowlarr/supported#notifications)
 
