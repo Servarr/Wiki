@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-05-11T00:47:06.251Z
+date: 2022-05-11T01:05:15.940Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -60,7 +60,7 @@ Also, note that for each individual settings page, there are some options at the
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
-Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+<kb> to add a proxy.
+Navigate to on `Settings` => `Indexer Proxies`, and then click the `+` to add a proxy.
 
 ![proxies.png](/assets/prowlarr/proxies.png)
 
@@ -134,20 +134,27 @@ Application Settings are where Sync Profiles are configured
 {.is-danger}
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
-
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
 
 > Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!{.is-info}
 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
-
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
-
 - (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
   
 ## Testing the Application
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
+
+## Sync Profiles
+
+Configure the sync profiles for to use for (an) application(s)
+
+- Name - Unique name of the Sync Profile
+- Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the \*Arr App
+- Enable Interactive Search - For Indexers with this profile, Enable Interactive (Manual) Searches for the \*Arr App
+- Enable Automatic Search - For Indexers with this profile, Enable Automatic Searches for the \*Arr App
+- Minimum Seeders - For Indexers with this profile, the minimum seeders required for \*Arr to grab a torrent
 
 # Download Clients (Prowlarr Searches)
 
