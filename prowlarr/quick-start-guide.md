@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T00:39:45.126Z
+date: 2022-05-11T00:47:19.390Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -87,7 +87,7 @@ When you add an app, you will need to enter values in the pop-up screen:
   - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
-> `Full Sync` means Prowlarr will override any all including user selected categories. However, seed goals and tags in \*Arrs are not currently factored in to this comparison to trigger a sync. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite all settings in \*Arr
+> `Full Sync` means Prowlarr will override any all including user selected categories. However, tags in \*Arrs are not currently factored in to this comparison to trigger a sync. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite all settings in \*Arr
 {.is-danger}
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
