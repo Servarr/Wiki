@@ -2,7 +2,7 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-11T01:16:34.933Z
+date: 2022-05-11T13:45:03.458Z
 tags: prowlarr, quickstart
 editor: markdown
 dateCreated: 2021-05-30T00:00:33.010Z
@@ -60,7 +60,7 @@ Some indexers have special settings, but most are standard as shown.
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 
-- URL - The URL for Prowlarr to use.
+- URL - Select the URL for Prowlarr to use. If blank, the default/first url is used.
 - Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
 - (Advanced Option) API Path - Path to the Indexer's API. Typically `/api`
 - Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
