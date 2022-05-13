@@ -249,8 +249,7 @@ Note: you will also need to add the websocket directive to your whisparr configu
 
 {#downloads-in-root-folder}
 
--- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted Your download client has an incomplete or complete (or is moving completed downloads)  into your root (library) folder.
-
+- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mounted Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
 - This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder.
 - Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/whisparr/settings/#root-folders)
