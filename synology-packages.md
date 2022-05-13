@@ -20,7 +20,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 - The Servarr Team now creates and maintains Synology Packages
 - Installation instructions are noted below for the specific DSM versions
 
-> Generally the existing SynoCommunity versions are likely not compatible with the Servarr versions without some hoop jumping. This means it would be wise te delete the old package after doing a [backup of your database](https://wiki.servarr.com/en/radarr/faq#how-do-i-backuprestore-radarr). Which can be done through the web interface of the starr app.
+> Generally the existing SynoCommunity versions are not compatible with the Servarr versions without some hoop jumping. This means it would be required to delete the old package after doing a [backup of your database *the link is for a Radarr example, but the instructions/concepts are the same*](/radarr/faq#how-do-i-backuprestore-radarr). Which can be done through the web interface of the \*Arr app.
 {.is-warning}
 
 > SynoCommunity has a list of [NAS by Architecture](https://github.com/SynoCommunity/spksrc/wiki/Architecture-per-Synology-model) which will assist you in identifying the correct package.
@@ -35,7 +35,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 # DSM 7.x
 
 - The Lidarr-Official, Prowlarr-Official, Radarr-Official, and Readarr-Official packages should _just work_ for most architectures.
-  - Note that a NAS with `comcerto2k` requires additional steps, [see below](#bubblewrap-manual-step-recommended-option).
+  - Note that a NAS with `comcerto2k` requires additional steps for Lidarr, Prowlarr, Radarr, and Readarr; [see the instructions](#bubblewrap-installation-on-dsm-7x).
 - Note that the Sonarr package requires additional steps for **all** architectures.
 - Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 
