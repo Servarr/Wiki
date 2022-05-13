@@ -649,7 +649,7 @@ Below are some common problems that are the solution for almost all issues exper
   - Searching a Series Type of Anime and no anime categories are configured for your tracker(s). Indexers have [two different configurable category types](/sonarr/settings#indexers).
   - Searching a Series Type of Daily or Standard are no standard (non-anime) categories are configured for your tracker(s)
     - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-   - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
+  - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
   - The Indexer's Capabilties do not support the query type (e.g. Season/Episode, etc.):
     - Within Prowlarr, an indexer's capabilities can be located in the (I) icon for the indexer
     - Jackett does not display a tracker's capabiltiies within its UI.

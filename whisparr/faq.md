@@ -22,7 +22,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
   - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
   - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
   - [How do I update Whisparr?](#how-do-i-update-whisparr)
-  	- [Can I update Whisparr inside my Docker container?](#can-i-update-whisparr-inside-my-docker-container)
+    - [Can I update Whisparr inside my Docker container?](#can-i-update-whisparr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -70,6 +70,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
   - [How does Whisparr handle "multi" in names?](#how-does-whisparr-handle-multi-in-names)
   - [Help, Movie Added, But Not Searched](#help-movie-added-but-not-searched)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+    - [Jackett /All Solutions](#jackett-all-solutions)
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [Why doesn't Whisparr work behind a reverse proxy](#why-doesnt-whisparr-work-behind-a-reverse-proxy)
 
@@ -178,10 +179,10 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds. Please note that `nightly` branches are intentionally not listed below.
 
-|                                                                    | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/testing/VERSION.json) | `nightly` (alpha) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/nightly/VERSION.json) |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [hotio](https://hotio.dev/containers/whisparr)                       | `release`                                                                                                                                                                                                             | `testing`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                             |
-| [LinuxServer.io](https://docs.linuxserver.io/images/docker-whisparr) | `latest`                                                                                                                                                                                                              | `develop`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                             |
+|                                                                      | `master` (stable) ![Current Master/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/release/VERSION.json) | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/testing/VERSION.json) | `nightly` (alpha) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/whisparr/nightly/VERSION.json) |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/whisparr)                       | `release`                                                                                                                                                                                                               | `testing`                                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                               |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-whisparr) | `latest`                                                                                                                                                                                                                | `develop`                                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                               |
 
 ### Can I update Whisparr inside my Docker container?
 
@@ -392,8 +393,8 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure nolock is enabled.
-  - If you're using an SMB mount ensure nobrl is enabled.
+  - If you're using an NFS mount ensure nolock is enabled for your mount.
+  - If you're using an SMB mount ensure nobrl is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Whisparr runs under the LocalService account by default which doesn't have access to protected remote file shares

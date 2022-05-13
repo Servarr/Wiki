@@ -18,7 +18,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
   - [What \*Arr Indexer Settings are Compared for App Full Sync](#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
-  	- [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
+    - [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -127,6 +127,7 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 | -------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [hotio](https://hotio.dev/containers/prowlarr)                       | no stable release yet | `testing`                                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                                  |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr) | no stable release yet | `develop`                                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                                  |
+
 ### Can I update Prowlarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).

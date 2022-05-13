@@ -23,7 +23,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
   - [How can I mass delete authors from the wanted list?](#how-can-i-mass-delete-authors-from-the-wanted-list)
   - [Why doesn't Readarr work behind a reverse proxy](#why-doesnt-readarr-work-behind-a-reverse-proxy)
   - [How do I update Readarr?](#how-do-i-update-readarr)
-  	- [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
+    - [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -220,6 +220,7 @@ This change was due to not have our server get killed by people updating lists e
 - Develop
   - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
   - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
+
 ## I am getting an error: Database disk image is malformed
 
 - This means your SQLite database that stores most of the information for Readarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
@@ -380,8 +381,8 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure nolock is enabled.
-  - If you're using an SMB mount ensure nobrl is enabled.
+  - If you're using an NFS mount ensure nolock is enabled for your mount.
+  - If you're using an SMB mount ensure nobrl is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Readarr runs under the LocalService account by default which doesn't have access to protected remote file shares

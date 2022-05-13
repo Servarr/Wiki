@@ -511,7 +511,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded.
 - A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
-- The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected. 
+- The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected.
   - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
   - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
 

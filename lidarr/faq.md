@@ -14,7 +14,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How does Lidarr work?](#how-does-lidarr-work)
   - [How does Lidarr find releases?](#how-does-lidarr-find-releases)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
-  - [Lidarr stopped working after updating to Ubuntu 22.04 / Lidarr won't run on Ubuntu 22.04](#lidarr-stopped-working-after-updating-to-ubuntu-2204)
+  - [Lidarr stopped working after updating to Ubuntu 22.04](#lidarr-stopped-working-after-updating-to-ubuntu-2204)
   - [Why can I not add a new release or artist to Lidarr?](#why-can-i-not-add-a-new-release-or-artist-to-lidarr)
   - [Why can I not add a various artists album?](#why-can-i-not-add-a-various-artists-album)
   - [Why does Lidarr only show studio albums, How do I find singles or EPs?](#why-does-lidarr-only-show-studio-albums-how-do-i-find-singles-or-eps)
@@ -31,7 +31,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How can I mass delete artists from the wanted list?](#how-can-i-mass-delete-artists-from-the-wanted-list)
   - [Why doesn't Lidarr work behind a reverse proxy](#why-doesnt-lidarr-work-behind-a-reverse-proxy)
   - [How do I update Lidarr?](#how-do-i-update-lidarr)
-  	- [Can I update Lidarr inside my Docker container?](#can-i-update-lidarr-inside-my-docker-container)
+    - [Can I update Lidarr inside my Docker container?](#can-i-update-lidarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -59,7 +59,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
     - [Jackett /All Solutions](#jackett-all-solutions)
-  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
+  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [I keep getting warnings from my cloud storage about API limits](#i-keep-getting-warnings-from-my-cloud-storage-about-api-limits)
 
 ## How does Lidarr work?
@@ -201,6 +201,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [hotio](https://hotio.dev/containers/lidarr)                       | `release`                                                                                                                                                                                                             | `testing`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                             |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr) | `latest`                                                                                                                                                                                                              | `develop`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                             |
+
 ### Can I update Lidarr inside my Docker container?
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
@@ -378,8 +379,8 @@ A common complaint is the Refresh task causes heavy I/O usage. One setting that 
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure nolock is enabled.
-  - If you're using an SMB mount ensure nobrl is enabled.
+  - If you're using an NFS mount ensure nolock is enabled for your mount.
+  - If you're using an SMB mount ensure nobrl is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Lidarr runs under the LocalService account by default which doesn't have access to protected remote file shares

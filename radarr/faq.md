@@ -22,7 +22,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
   - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
   - [How do I update Radarr?](#how-do-i-update-radarr)
-  	- [Can I update Radarr inside my Docker container?](#can-i-update-radarr-inside-my-docker-container)
+    - [Can I update Radarr inside my Docker container?](#can-i-update-radarr-inside-my-docker-container)
     - [Installing a newer version](#installing-a-newer-version)
       - [Native](#native)
       - [Docker](#docker)
@@ -399,8 +399,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure nolock is enabled.
-  - If you're using an SMB mount ensure nobrl is enabled.
+  - If you're using an NFS mount ensure nolock is enabled for your mount.
+  - If you're using an SMB mount ensure nobrl is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
