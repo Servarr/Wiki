@@ -123,7 +123,7 @@ If you’re wondering why hardlinks aren’t working or why a simple move is tak
 
 So pick *one* path layout and use it for all of them. It's suggested to use `/data`, but there are other  common names like `/shared`, `/media` or `/dvr`. Keeping this the same on the outside *and* inside will make your setup simpler: one path to remember or if integrating Docker and native software. For example, Synology might use `/Volume1/data` and unRAID might use `/mnt/user/data` on the outside, but `/data` on the inside is fine.
 
-It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match and likely update existing torrents.. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr, Plex, etc.
+It is also important to remember that you’ll need to setup or re-configure paths in the software running *inside* these Docker containers. If you change the paths for your download client, you’ll need to edit its settings to match and likely update existing torrents. If you change your library path, you’ll need to change those settings in Sonarr, Radarr, Lidarr, Plex, etc.
 
 ## Examples
 

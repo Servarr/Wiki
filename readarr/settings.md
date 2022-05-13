@@ -386,7 +386,7 @@ Quality profiles are used to determine what formats of books are acceptable for 
 > Note: This is only applicable if you have `AZW3` higher than `EPUB` within the `Qualities` section
 {.is-warning}
 
-- Qualities - Qualities higher in the list are more preferred for ranking regardless of enabled status. Qualities within the same group are equal. Only checked (enabled) qualities are wanted (allowed)
+- Qualities - Qualities higher in the list are more preferred regardless of wanted (enabled/checked) status. for ranking regardless of enabled status. Qualities within the same group are equal. Only checked (enabled) qualities are wanted (allowed)
   - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 
   - [See Qualities](#qualities-defined)

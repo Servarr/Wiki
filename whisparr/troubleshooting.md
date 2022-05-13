@@ -164,9 +164,9 @@ If you're unable to access the UI to set the logging level you can do so by edit
 
 ```xml
  <Config>
-  [...]
+  [..]
   <LogLevel>debug</LogLevel>
-  [...]
+  [..]
  </Config>
 ```
 

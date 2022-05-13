@@ -304,7 +304,7 @@ When you see the movie you want click on it.
     > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
     > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.{.is-info}
     >
-3. When Radarr shall consider a movie is available..
+3. When Radarr shall consider a movie is available.
 
     > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
     > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
