@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-05-11T01:30:17.0984134Z
+date: 2022-05-13T13:09:18.0654219Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-05-11T01:30:17.0984134Z
+dateCreated: 2022-05-13T13:09:18.0654219Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.0.1761` / [Commit: ac7896b67b4a8633a47f7f492939f9217f844e12](https://github.com/Prowlarr/Prowlarr/commit/ac7896b67b4a8633a47f7f492939f9217f844e12)
+- Supported Trackers and Indexers as of Build `0.4.0.1765` / [Commit: 52075277168854db3cceb922390e507dedaa0508](https://github.com/Prowlarr/Prowlarr/commit/52075277168854db3cceb922390e507dedaa0508)
 
 ---
 
@@ -95,7 +95,7 @@ dateCreated: 2022-05-11T01:30:17.0984134Z
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|en-US|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|en-US|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
-|[OxTorrent](https://www.torrent911.com/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
+|[OxTorrent](https://www.torrent911.net/){#oxtorrent}|OxTorrent is a French Public site for TV / MOVIES / GENERAL|fr-FR|
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|ru-RU|
 |[PiratBit](https://pb.wtf/){#piratbit}|PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|ru-RU|
@@ -115,9 +115,10 @@ dateCreated: 2022-05-11T01:30:17.0984134Z
 |[RuTracker\.RU](http://rutracker.ru/){#rutracker-ru}|RuTracker\.RU is a RUSSIAN Public Torrent Tracker for MOVIES / GENERAL|ru-RU|
 |[Seedoff](https://seedoff.zannn.top/){#seedoff}|Seedoff is a RUSSIAN Public tracker for MOVIES / TV / GENERAL|ru-RU|
 |[Sexy-Pics](https://www.sexy-pics.us/){#sexypics}|Sexy-Pics is a Public Magnet Links site for 3X MP4|en-US|
+|[Shana Project](https://www.shanaproject.com/){#shanaproject}|Shana Project is a Public torrent site for ANIME|en-US|
 |[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
-|[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[ShowRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
+|[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|en-US|
 |[sosulki](http://sosulki.net/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|en-US|
@@ -184,7 +185,6 @@ dateCreated: 2022-05-11T01:30:17.0984134Z
 |[Anidub](https://tr.anidub.com/){#anidub}|Anidub is russian anime voiceover group and eponymous anime tracker.|ru-RU|
 |[Anime-Free](https://anime-free.biz/){#anime-free}|Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games|ru-RU|
 |[AnimeBytes](https://animebytes.tv/){#animebytes}|AnimeBytes (AB) is the largest private torrent tracker that specialises in anime and anime-related content.|en-US|
-|[AnimeItalia](https://animeitalia.org/){#animeitalia}|AnimeItalia is an ITALIAN Private Torrent Tracker for ANIME|it-IT|
 |[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|ru-RU|
 |[AnimeTorrents](https://animetorrents.me/){#animetorrents}|Definitive source for anime and manga|en-US|
 |AnimeTosho{#torznab}|A Newznab-like api for torrents.|en-US|
