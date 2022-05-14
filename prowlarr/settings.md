@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-05-11T01:12:27.856Z
+date: 2022-05-14T21:15:57.820Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -247,18 +247,20 @@ Here is where you will change generalized application settings such as port and 
 
 Click on `Settings` => `General`.
 
-> A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are hidden.
+> A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are only shown when show advanced is enabled.
 {.is-info}
 
 ## Host
 
 ![general_host.png](/assets/prowlarr/general_host.png)
 
-- (Advanced Option) Bind Address - Leave this as `*` unless you need to change it.
-- Port Number is the port that Prowlarr runs on. It must be unique and defaults to 9696.
-- Enter a URL base here if you are using a reverse proxy.
-- (Advanced Option) Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked.
-- Check this box if you want a (default) browser window to be launched when Prowlarr starts.
+- (Advanced Option) Bind Address - Leave this as `*` unless you need to change it. The IPv4 address/host on the system Prowlarr will listen on. (default: `*`)
+  - Note that `*` is any/all addresses
+- Port Number - the port that Prowlarr runs on. It must be unique. (default: 9696)
+- BaseUrl - Enter a URL base here if you are using a reverse proxy. (restart required) (default: blank)
+- (Advanced Option) Instance Name - Name to use for Browser Tab and SysLog (if enabled) (restart required) (default: Prowlarr)
+- (Advanced Option) Use SSL - Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked. (default: false)
+- Launch Browser (Windows Only) - Check this box if you want a browser window to be launched when Prowlarr starts. (default: yes)
 
 ## Security
 
@@ -278,7 +280,7 @@ Click on `Settings` => `General`.
 
 ![general_proxy.png](/assets/prowlarr/general_proxy.png)
 
-Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
+Proxy - This option allows you to run the information your Prowlarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
 - Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
@@ -304,7 +306,7 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 ![general_analytics.png](/assets/prowlarr/general_analytics.png)
 
-- Analytics - Send anonymous usage and error information to Prowlarr's servers (Servarr). This includes information on your browser, which Prowlarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
+- Analytics - Send anonymous usage and error information to Prowlarr's servers (Servarr). This includes information on your browser, which Prowlarr WebUI pages you use, error reporting as well as OS, runtime version, and related information. We will use this information to prioritize features and bug fixes.
 
 ## Updates
 
