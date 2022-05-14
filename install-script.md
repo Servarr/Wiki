@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-05-01T19:45:05.260Z
+date: 2022-05-14T17:46:14.603Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -151,13 +151,9 @@ read -r -p "What user should ${app^} run as? (Default: $app): " app_uid
 app_uid=$(echo "$app_uid" | tr -d ' ')
 app_uid=${app_uid:-$app}
 # Prompt Group
-if [[ $app == 'prowlarr' ]]; then
-    app_guid="prowlarr"
-else
-    read -r -p "What group should ${app^} run as? (Default: media): " app_guid
-    app_guid=$(echo "$app_guid" | tr -d ' ')
-    app_guid=${app_guid:-media}
-fi
+read -r -p "What group should ${app^} run as? (Default: media): " app_guid
+app_guid=$(echo "$app_guid" | tr -d ' ')
+app_guid=${app_guid:-media}
 
 echo "${app^} selected"
 echo "This will install [${app^}] to [$bindir] and use [$datadir] for the AppData Directory"
