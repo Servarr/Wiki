@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-05-10T04:09:02.859Z
+date: 2022-05-14T01:10:14.199Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -563,7 +563,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
-- Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all series.
+- Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all movies.
 
 ### Torrent Tracker Configuration
 
@@ -605,7 +605,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
-- Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all series.
+- Tags - Only use this indexer for movies with at least one matching tag. Leave blank to use with all movies.
 
 ## Options
 
