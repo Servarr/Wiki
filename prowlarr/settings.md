@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-05-14T21:15:57.820Z
+date: 2022-05-15T13:09:16.050Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -37,6 +37,7 @@ dateCreated: 2021-06-06T15:04:48.057Z
   - [Analytics](#analytics)
   - [Updates](#updates)
   - [Backups](#backups)
+
 This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
 # Menu options
