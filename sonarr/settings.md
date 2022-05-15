@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-05-10T04:08:42.277Z
+date: 2022-05-15T13:10:16.607Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -97,9 +97,8 @@ dateCreated: 2021-06-11T23:29:12.300Z
   - [Calendar](#calendar)
   - [Dates](#dates)
   - [Style](#style)
-This page will go through all the settings available in Sonarr and how they work.
-This is not meant to be a comprehensive "How to set up Sonarr."
-Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
+  
+This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
 
 # Menu options
 
