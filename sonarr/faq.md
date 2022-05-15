@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-05-15T21:37:28.051Z
+date: 2022-05-15T21:45:42.015Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -477,7 +477,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 > Further information can be found with some of the XEM folks that hangout in the [\#XEM discord channel on the Sonarr Discord](https://discord.gg/an9rnEdWs5)
 {.is-danger}
 
-> If a Non-Japanese Anime Series requires Season mapping (e.g. released as S25E26 but TVDB is S26E2 then an XEM mapping will be required. This cannot be done with Services mapping. {.is-info}
+> If a Non-Japanese Anime Series requires Season mapping (e.g. released as S25E26 but TVDB is S26E2 then an XEM mapping will be required. This cannot be done with Services mapping.
+{.is-info}
 
 > The series "Helt Perfekt" with TVDb ids of `343189` and `252077` is difficult to automate due to TVDb having the same name for both shows, violating TVDb's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
 {.is-info}
@@ -520,10 +521,18 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Title Slug in Use
 
-- This error often occurs when two series are named with the same title on TheTVDB, if this is the case the second series should have the year appended to the series title. It will also happen with two similarly named series that may only differ by punctuation, if this case please report this on the Sonarr discord.
+## Duplicate Names No Year
+
+- This error often occurs when two series are named with the same title on TheTVDB, if this is the case the second series should have the year appended to the series title.
   - Series A
   - Series A (2021)
 - To rectify this, wait for someone to eventually (maybe) update TVDb or update TVDb yourself. Once corrected, due to [TVDb's API issues](#tvdb-is-updated-why-isnt-sonarr), once updated you'll need to wait 30+ hours before the corrected title can be used in Sonarr.
+
+## Duplicate Names Punctuation
+
+- It will also happen with two similarly named series that may only differ by punctuation, if this is the case please report this on the [Sonarr Discord](https://discord.gg/73QUuf3bgA).
+  - Joe's Show (2022)
+  - Joes Show (2022)
 
 # Sonarr Common Problems
 
