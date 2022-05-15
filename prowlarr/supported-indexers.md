@@ -2,10 +2,10 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-05-13T13:09:18.0654219Z
+date: 2022-05-15T10:06:44.536Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-05-13T13:09:18.0654219Z
+dateCreated: 2021-09-06T17:37:40.680Z
 ---
 
 - Supported Trackers and Indexers as of Build `0.4.0.1765` / [Commit: 52075277168854db3cceb922390e507dedaa0508](https://github.com/Prowlarr/Prowlarr/commit/52075277168854db3cceb922390e507dedaa0508)
@@ -544,6 +544,7 @@ dateCreated: 2022-05-13T13:09:18.0654219Z
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
 |[TorrentHR](https://www.torrenthr.org/){#torrenthr}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|hr-HR|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private site for MOVIES / TV / GENERAL|en-US|
+|[TorrentDownload](https://www.torrentdownload.online/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
 |[Torrentland](https://torrentland.li/){#torrentland}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|es-ES|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|es-ES|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|not here \_ not scene|en-US|
