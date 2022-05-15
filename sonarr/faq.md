@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-05-12T15:13:57.544Z
+date: 2022-05-15T21:37:28.051Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -520,7 +520,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Title Slug in Use
 
-- This error occurs when a user tries to add a series that violates TVDb Rules. The first series does not get a year in the title. Any future series with the same name require the year in the title.
+- This error often occurs when two series are named with the same title on TheTVDB, if this is the case the second series should have the year appended to the series title. It will also happen with two similarly named series that may only differ by punctuation, if this case please report this on the Sonarr discord.
   - Series A
   - Series A (2021)
 - To rectify this, wait for someone to eventually (maybe) update TVDb or update TVDb yourself. Once corrected, due to [TVDb's API issues](#tvdb-is-updated-why-isnt-sonarr), once updated you'll need to wait 30+ hours before the corrected title can be used in Sonarr.
