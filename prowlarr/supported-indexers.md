@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-05-15T10:06:44.536Z
+date: 2022-05-15T14:25:11.6091168Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-09-06T17:37:40.680Z
+dateCreated: 2022-05-15T14:25:11.6091168Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.0.1765` / [Commit: 52075277168854db3cceb922390e507dedaa0508](https://github.com/Prowlarr/Prowlarr/commit/52075277168854db3cceb922390e507dedaa0508)
+- Supported Trackers and Indexers as of Build `0.4.0.1787` / [Commit: 86f2f074e7a9c9e64e57de1d8174bc5e6245452f](https://github.com/Prowlarr/Prowlarr/commit/86f2f074e7a9c9e64e57de1d8174bc5e6245452f)
 
 ---
 
@@ -138,9 +138,9 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq142.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq143.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
-|[TorrentSir](https://torrentsir56.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir57.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://torrentview60.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz42.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -497,7 +497,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[SpeedCD](https://speed.cd/){#speedcd}|Your home now!|en-US|
 |[Speedmaster HD](https://speedmaster-hd.net/){#speedmasterhd}|Speedmaster HD is a German Time based tracker for MOVIES / TV|de-DE|
 |[SpeedTorrent Reloaded](https://st-tracker.eu/){#speedtorrentreloaded}|SpeedTorrent Reloaded is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
-|[SpiderTK](https://spidertk.xyz/){#spidertk}|SpiderTK is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
+|[SpiderTK](https://spidertk.top/){#spidertk}|SpiderTK is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[Spirit of Revolution](https://sor-next.tk/){#spiritofrevolution}|Spirit of Revolution is a German Time based tracker for 0DAY|de-DE|
 |[SportHD](http://satsporthd.org/){#sporthd}|SportHD is a Private Torrent Tracker for HD SPORTS|en-US|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|en-US|
@@ -544,7 +544,6 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
 |[TorrentHR](https://www.torrenthr.org/){#torrenthr}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|hr-HR|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private site for MOVIES / TV / GENERAL|en-US|
-|[TorrentDownload](https://www.torrentdownload.online/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
 |[Torrentland](https://torrentland.li/){#torrentland}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|es-ES|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|es-ES|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|not here \_ not scene|en-US|
