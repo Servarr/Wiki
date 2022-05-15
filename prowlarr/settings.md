@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2022-05-15T13:09:16.050Z
+date: 2022-05-15T14:28:08.121Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -37,7 +37,11 @@ dateCreated: 2021-06-06T15:04:48.057Z
   - [Analytics](#analytics)
   - [Updates](#updates)
   - [Backups](#backups)
-
+- [UI](#ui)
+  - [Dates](#dates)
+  - [Style](#style)
+  - [Language](#language)
+  
 This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
 # Menu options
@@ -335,3 +339,21 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 > Manual backups are retained forever, stored in the same folder, and are named differently.
 {.is-info}
+
+# UI
+
+## Dates
+
+- Short Date Format - How do you want Prowlarr to display short dates?
+- Long Date Format - How do you want Prowlarr to display long format dates?
+- Time Format - Do you want a 12hr or 24hr format?
+- Show Relative Dates - Do you want Prowlarr to show relative (Today/Yesterday/etc) or absolute dates?
+
+## Style
+
+- Theme - Select the color theme Prowlarr should use inspired by [Theme.Park](https://github.com/GilbN/theme.park)
+- Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
+
+## Language
+
+- UI Language - Select the Language for Prowlarr to use within the application UI
