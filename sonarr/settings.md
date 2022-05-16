@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-05-15T13:10:16.607Z
+date: 2022-05-16T11:13:29.986Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -204,7 +204,8 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
-- `{MediaInfo AudioLanguages}` = \[EN+DE\]
+- `{MediaInfo AudioLanguagesAll}` = \[DE\]
+- `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
@@ -214,7 +215,7 @@ Also, note that for each individual settings page, there are some options at the
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
 {.is-info}
 
-> `AudioLanguages` will not display a language for audio if only one language exists and it is EN (english).
+> `AudioLanguages` will not display a language for audio if only one language exists and it is EN (English). To get the desired behavior and as an example display German and English, use {MediaInfo AudioLanguagesAll:DE+EN} instead.
 {.is-info}
 
 > `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, HDR10, HDR10Plus, HLG, PQ, and HDR
