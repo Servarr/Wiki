@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2022-05-16T01:20:57.624Z
+date: 2022-05-16T01:23:23.484Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -35,8 +35,8 @@ dateCreated: 2021-05-25T01:24:18.386Z
 - Filter - Filter the current view
   - Monitored Only - Titles being monitored for updates.
   - Unmonitored - Titles NOT being monitored for updates.
-  - Missing - In the database  and monitored, but missing fromthefilesystem.
-  - Wanted - In the database, monitored, missing, but should be available.
+  - Missing - In the database, monitored, but missing from the filesystem.
+  - Wanted - In the database, monitored, missing, but should be available based on the availability settings
   - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
   - Custom Filters
     - Monitored (boolean)
@@ -52,6 +52,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
       - In Cinemas
       - Released
       - Deleted
+        - Deleted from TMDb
     - Studio (Enum Studios)
     - Collection (Enum Collections)
     - Quality Profile (Enum QualityProfiles)
@@ -95,7 +96,8 @@ Library Import allows you to import existing organized movies and each movie's f
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
-> **The user and group you configured Radarr to run as must have read & write access to this location.** {.is-info}
+> **The user and group you configured Radarr to run as must have read & write access to this location.**
+{.is-info}
 
 > Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 {.is-info}
@@ -109,11 +111,13 @@ Discover shows recommended Movies
 
 - If you do not have list(s), it will show the top 90 most recommended movies based on the TMDb movies recommended for the movies in your library in addition to the 10 recommendations from your most recent additions.
 
-> Tip: You can disable Radarr recommended movies and view only movies from your lists in `Options`.{.is-info}
+> Tip: You can disable Radarr recommended movies and view only movies from your lists in `Options`.
+{.is-info}
 
 - If you have list(s), it will show the recommendations noted above AND entries from your list(s).
 
-> Tip: Change the `Filter` to `New Non-Excluded` to only show movies that are not in your library.{.is-info}
+> Tip: Change the `Filter` to `New Non-Excluded` to only show movies that are not in your library.
+{.is-info}
 
 ![radarr-discover-empty.png](/assets/radarr/radarr-discover-empty.png)
 
