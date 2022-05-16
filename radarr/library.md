@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2022-03-17T12:55:49.087Z
+date: 2022-05-16T01:20:57.624Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -35,7 +35,7 @@ dateCreated: 2021-05-25T01:24:18.386Z
 - Filter - Filter the current view
   - Monitored Only - Titles being monitored for updates.
   - Unmonitored - Titles NOT being monitored for updates.
-  - Missing - In the database, but missing from the filesystem.
+  - Missing - In the database  and monitored, but missing fromthefilesystem.
   - Wanted - In the database, monitored, missing, but should be available.
   - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
   - Custom Filters
