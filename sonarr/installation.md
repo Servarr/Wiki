@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-05-18T01:30:47.530Z
+date: 2022-05-18T02:52:03.235Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -319,7 +319,7 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 
 ```nginx
 location /sonarr {
-  proxy_pass         http://127.0.0.1:8989/sonarr;
+  proxy_pass ^~      http://127.0.0.1:8989/sonarr;
   proxy_set_header   Host $proxy_host;
   proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header   X-Forwarded-Host $host;
@@ -330,7 +330,7 @@ location /sonarr {
   proxy_set_header   Connection $http_connection;
 }
 # Allow the API External Access via NGINX
-location ~ /sonarr/api {
+location ^~ /sonarr/api {
     auth_request      off;
     proxy_pass        http://127.0.0.1:8989;
 }
