@@ -2,7 +2,7 @@
 title: Installing Docker on a Synology ARM NAS
 description: 
 published: true
-date: 2021-11-24T19:21:48.410Z
+date: 2022-05-18T15:47:17.201Z
 tags: docker, synology
 editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
@@ -34,7 +34,7 @@ The instructions below will:
 1. Execute the following command:
 
 ```bash
-curl https://gist.githubusercontent.com/ta264/2b7fb6e6466b109b9bf9b0a1d91ebedc/raw/7b11f25c3dce181faa5206aed8051f176cc4e406/get-docker.sh | sh
+curl https://gist.githubusercontent.com/ta264/2b7fb6e6466b109b9bf9b0a1d91ebedc/raw/b76a28d25d0abd0d27a0c9afaefa0d499eb87d3d/get-docker.sh | sh
 ```
 
 If all goes well you should see the message:
