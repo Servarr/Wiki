@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2022-04-18T23:13:23.747Z
+date: 2022-05-18T17:13:38.980Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -399,7 +399,7 @@ For some users this could be:
 
 ## Troubleshoot networking
 
-Most Docker images don’t have many useful tools in them for troubleshooting, but you can [attach a network troubleshooting type image](https://success.docker.com/article/troubleshooting-container-networking) to an existing container to help with that.
+Most Docker images don’t have many useful tools in them for troubleshooting, but you can [attach a network troubleshooting type image](https://hub.docker.com/r/nicolaka/netshoot) to an existing container to help with that.
 
 ```shell
     docker run -it --rm --network container:CONTAINER_NAME nicolaka/netshoot
