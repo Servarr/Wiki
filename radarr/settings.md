@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-05-14T01:10:14.199Z
+date: 2022-05-22T21:47:48.504Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -866,6 +866,9 @@ Kodi will be one of the most commonly used options here if that is the software 
   - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
   - You want a specific Restrictions to only apply to a specific movie. You would create a tag and assign the Restrictions and Movie that tag.
   - This process is the same for Delay Profiles.
+
+> A Movie will use both indexers that matching tags and that have no tags. 
+{.is-warning}
 
 > Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
 {.is-info}
