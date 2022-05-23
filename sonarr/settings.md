@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-05-22T21:48:50.236Z
+date: 2022-05-23T00:24:51.108Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -313,9 +313,9 @@ Name for the `Specials` (Season) folder
 
 ## Importing
 
-- Episode Title Required - Prevent importing for up to 24 hours if the episode title is in the naming format and the episode title is TBA. After 24 hours the release will be imported even if still TBA.
-  - Always - Always wait up to 24 hours for a title prior to importing if the episode is TBA
-  - Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 hours for a title prior to importing if the episode is TBA. <- This is recommended.
+- Episode Title Required - Prevent importing for up to 24 (48 in newer Sonarr versions) hours if the episode title is in the naming format and the episode title is TBA. After 24 (48 in newer Sonarr versions) hours the release will be imported even if the title is still TBA.
+  - Always - Always wait up to 24 (48 in newer versions) hours for a title prior to importing if the episode is TBA
+  - Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 (48 in newer versions) hours for a title prior to importing if the episode is TBA. <- This is recommended.
   - Never - Do not delay importing if the episode is TBA.
 - Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
