@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-05-16T09:47:45.783Z
+date: 2022-05-23T01:24:32.9096907Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-09-06T17:37:40.680Z
+dateCreated: 2022-05-23T01:24:32.9096907Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.0.1787` / [Commit: 86f2f074e7a9c9e64e57de1d8174bc5e6245452f](https://github.com/Prowlarr/Prowlarr/commit/86f2f074e7a9c9e64e57de1d8174bc5e6245452f)
+- Supported Trackers and Indexers as of Build `0.4.0.1793` / [Commit: 95a2bd3d03a2c66563e31c243e4e54dff2e5be1a](https://github.com/Prowlarr/Prowlarr/commit/95a2bd3d03a2c66563e31c243e4e54dff2e5be1a)
 
 ---
 
@@ -550,7 +550,6 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[Torrentleech\.pl](https://torrentleech.pl/){#torrentleech-pl}|Torrentleech\.pl is a POLISH Private Torrent Tracker for 0DAY / GENERAL|pl-PL|
 |[TorrentMasters](https://torrentmasters.info/){#torrentmasters}|TorrentMasters is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|hu-HU|
 |[TorrentPotato](http://127.0.0.1){#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|en-US|
-|[TorrentDownload](https://www.torrentdownload.online/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|ru-RU|
 |[TorrentSeeds (API)](https://torrentseeds.org/){#torrentseeds-api}|TorrentSeeds is a Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|en-US|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|de-DE|
