@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-07T04:52:34.464Z
+date: 2022-05-24T16:46:13.823Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -64,6 +64,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
 - [Radarr and Movie Issues + Metadata](#radarr-and-movie-issues-metadata)
   - [Why can I not add a new movie to Radarr?](#why-can-i-not-add-a-new-movie-to-radarr)
+  - [How does Radarr determine the year of a movie?](#how-does-radarr-determine-the-year-of-a-movie)
 - [Radarr Searching & Downloading Common Problems](#radarr-searching-downloading-common-problems)
   - [Jackett shows more results than when manually searching](#jackett-shows-more-results-than-when-manually-searching)
   - [How does Radarr handle foreign movies or foreign titles?](#how-does-radarr-handle-foreign-movies-or-foreign-titles)
@@ -515,6 +516,11 @@ Depending on your OS, there are multiple possible ways.
 ## Jackett shows more results than when manually searching
   
 - This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
+
+## How does Radarr determine the year of a movie?
+
+- Radarr gets metadata from [TMDb](https://www.themoviedb.org/)
+- Radarr uses the year of the oldest **Theatrical Release** date and the oldest **Premier** date for matching.
 
 ## How does Radarr handle foreign movies or foreign titles?
 
