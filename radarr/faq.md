@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-24T16:46:13.823Z
+date: 2022-05-24T16:48:11.505Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -62,10 +62,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-- [Radarr and Movie Issues + Metadata](#radarr-and-movie-issues-metadata)
+- [Radarr Searching & Downloading Common Problems](#radarr-searching-downloading-common-problems)
   - [Why can I not add a new movie to Radarr?](#why-can-i-not-add-a-new-movie-to-radarr)
   - [How does Radarr determine the year of a movie?](#how-does-radarr-determine-the-year-of-a-movie)
-- [Radarr Searching & Downloading Common Problems](#radarr-searching-downloading-common-problems)
   - [Jackett shows more results than when manually searching](#jackett-shows-more-results-than-when-manually-searching)
   - [How does Radarr handle foreign movies or foreign titles?](#how-does-radarr-handle-foreign-movies-or-foreign-titles)
   - [How does Radarr handle "multi" in names?](#how-does-radarr-handle-multi-in-names)
@@ -500,7 +499,7 @@ Depending on your OS, there are multiple possible ways.
 
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
-# Radarr and Movie Issues + Metadata
+# Radarr Searching & Downloading Common Problems
 
 ## Why can I not add a new movie to Radarr?
 
@@ -510,8 +509,6 @@ Depending on your OS, there are multiple possible ways.
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
-
-# Radarr Searching & Downloading Common Problems
 
 ## Jackett shows more results than when manually searching
   
@@ -584,7 +581,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
-> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
+> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
+{.is-info}
 
 ## Why doesn't Radarr work behind a reverse proxy
 
