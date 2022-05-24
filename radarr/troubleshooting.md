@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2022-04-15T13:46:20.170Z
+date: 2022-05-24T16:51:24.885Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -585,7 +585,10 @@ Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an 
 
 ### Year doesn't match
 
-Sometimes a movie won't be grabbed, because it's release year was pushed back. So on TMDB, the movie listed as 2021, for example, but the release names all have 2020. The only way to get these movies is with a manual download/import. There is no "fix" to be made. Eventually, someone will usually upload a movie with the correct year and Radarr will grab it without issue, but until they do, you can only manually manage it.
+- [See this FAQ Entry](/radarr/faq#how-does-radarr-determine-the-year-of-a-movie)
+  - Radarr gets metadata from TMDb
+  - Radarr uses the year of the oldest **Theatrical Release** date and the oldest **Premier** date for matching
+- In some cases, the movie was pushed or shifted around and the year being used by the release groups do not match neither the oldest Premier date year nor the oldest Theatrical date year. In these situations, you must grab and import manually.
 
 ### Missing year
 
