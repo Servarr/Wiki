@@ -61,7 +61,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Readarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You will likely have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Readarr\config.xml` is denied -- or you use mapped network drives. This gives Readarr the permissions it needs. You should not need to run As Administrator every time.
+> You may have to run once "As Administrator" after installing if you get an access error -- such as Access to the path `C:\ProgramData\Readarr\config.xml` is denied -- or you use mapped network drives. This gives Readarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 > Warning: If you run Plex as a service via [PmsService](https://github.com/cjmurph/PmsService) you will either need to change PMsService's port from `8787` or you will need to modify the port Readarr runs on in the `config.xml` file.

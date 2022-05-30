@@ -44,7 +44,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Prowlarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Prowlarr\config.xml` is denied -- or you use mapped network drives. This gives Prowlarr the permissions it needs. You should not need to run As Administrator every time.
+> You may have to run once "As Administrator" after installing if you get an access error such as Access to the path `C:\ProgramData\Prowlarr\config.xml` is denied -- or you use mapped network drives. This gives Prowlarr the permissions it needs. You should not need to run As Administrator every time.
 {.is-warning}
 
 1. Download the latest version of Prowlarr for your architecture linked below.
