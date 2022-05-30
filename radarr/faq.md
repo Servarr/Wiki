@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-24T16:48:11.505Z
+date: 2022-05-30T12:28:44.800Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -358,7 +358,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
 
-- A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+- A common complaint is the Refresh task causes heavy I/O usage.
+- The main setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.
+  - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. 
+  - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+- This other setting that can be chanhed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
 ## How do I request a feature for Radarr?
 
@@ -390,9 +394,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## I use Radarr on a Mac and it suddenly stopped working. What happened?
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
-
 - See the above database is malformed entry.
-
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
 ## Why can Radarr not see my files on a remote server?
@@ -456,16 +458,11 @@ Depending on your OS, there are multiple possible ways.
 ## Permissions
 
 - Radarr will need to move files away from where the downloader puts them into the final location, so this means that will need to read/write to both the source and the destination directory and files.
-
 - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and . In umask notation, that would be `002`.
 
 ## System & Logs loads forever
 
-- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Sonarr is running on. But I still recommend checking the list.
-
-## Finding Cookies
-
-- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Radarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
+- It's the easy-privacy blocklist. They basically block any url with /api/log? in it. Look over the list and tell me if you think that blocking all the urls in that list is a sensible idea, there are dozens of urls in there that potentially break sites. You selected that in your adblocker. Easy solution is to whitelist the domain Radarr is running on. But I still recommend checking the list.
 
 ## Unpack Torrents
 
@@ -474,9 +471,7 @@ Depending on your OS, there are multiple possible ways.
 ## uTorrent is no longer working
 
 - Ensure the Web UI is enabled
-
 - Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections)
-
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
 ## I got a pop-up that said config.xml was corrupt, what now?
@@ -486,7 +481,6 @@ Depending on your OS, there are multiple possible ways.
 ## Invalid Certificate and other HTTPS or SSL issues
 
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
-
 - Radarr validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
 
 - If your download client and are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
@@ -496,7 +490,6 @@ Depending on your OS, there are multiple possible ways.
 - Unless you're in a repressive country like China or Australia, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
 - In other words, putting the \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
 # Radarr Searching & Downloading Common Problems
@@ -533,8 +526,8 @@ Depending on your OS, there are multiple possible ways.
 
 ## How does Radarr handle "multi" in names?
 
-- Radarr by default assumes multi is English and French unless specified in your indexer's advanced settings in Radarr.
-- Note that starting with some [v4.1 versions](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
+- Radarr assumes multi is French unless otherwise specified in your indexer's advanced settings in Radarr.
+- In recent Radarr builds, `multi` is no longer assumed to include English
   - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
 - Note that `multi` definitions only help for release parsing and not for foreign titles or movies searches.
 
