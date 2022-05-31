@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-31T11:56:54.317Z
+date: 2022-05-31T18:20:14.671Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -311,7 +311,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 {#rename-folders}
 
-> The same process applies for moving/changing Movie paths as well
+> The same process applies for moving/changing Movie paths as well. If you're just updating paths in Radarr and do not need to move the files, then do not select "Yes Move files" in Step 5. 
 {.is-info}
 
 1. Movies
@@ -333,6 +333,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Movie Folders Named Incorrectly
 
+- Movie Folder naming is based on the metadata (name/year) at the time the movie was added. If you added a movie before it was released, you may need to use the rename folder trick noted above to update the movie folded naming to reflect the new current data.
 - Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
 
   - Examples that will work well:
