@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-30T12:28:44.800Z
+date: 2022-05-31T11:56:06.667Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -96,8 +96,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## What is Minimum Availability?
 
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
-- **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
-- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
+- **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical date on TMDb) This option is not recommended.
+- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
 
 ## How are possible downloads compared?
 
@@ -125,7 +125,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## What are Lists and what can they do for me?
 
 - Lists are a part of Radarr that allow you to follow a given list creator.
-
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
 
 > **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
@@ -136,11 +135,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## Why are lists sync times so long and can I change it?
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
-
 - You can trigger a list refresh manually, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
-
 - This restriction is to not have our server and list providers get killed by people updating lists every 10 minutes.
-
 - This interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
 
 ## Can all my movie files be stored in one folder?
@@ -148,7 +144,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
 - A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
-
   - Use a Custom Script
     - the script should be triggered on import
     - it should be designed to move the file whenever you want it
@@ -208,7 +203,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.{.is-info}
+> You can (almost) always increase your risk.
+{.is-info}
 
 - See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned
@@ -315,7 +311,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 {#rename-folders}
 
-> The same process applies for moving/changing Movie paths as well{.is-info}
+> The same process applies for moving/changing Movie paths as well
+{.is-info}
 
 1. Movies
 1. Movie Editor
@@ -357,7 +354,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## Can I disable the refresh movies task
 
 - No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
-
 - A common complaint is the Refresh task causes heavy I/O usage.
 - The main setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.
   - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. 
@@ -488,7 +484,6 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China or Australia, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
-
 - In other words, putting the \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
@@ -511,6 +506,14 @@ Depending on your OS, there are multiple possible ways.
 
 - Radarr gets metadata from [TMDb](https://www.themoviedb.org/)
 - Radarr uses the year of the oldest **Theatrical Release** date and the oldest **Premier** date for matching.
+  - Note that if a Theatrical Release does not exist then logic will fall back to physical or digital.
+- If a movie is missing a digital, physical, theatrical, or premier release date then TMDb should be updated. 
+- [TMDb's Contribution Bible](https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000009#59f73d3c9251416e71000013) notes the following about their release types.
+  - **Premiere** - A premiere screening can take the form of a festival screening (e.g. TIFF) or a premiere event filled with the cast and crew in a big city (e.g. LA, London, Toronto).
+  - **Theatrical** - Can be used for the original release and any subsequent official releases. Used for wide or saturation releases. In the United States, 600-1,999 screens is considered a wide release and 2000+ is considered a saturation release.
+  - **Theatrical (limited)** - Limited theatrical release is a film distribution strategy of releasing a new film in a few theaters across a country, typically in major metropolitan markets. In the United States, the number of theaters is fewer than 600.
+  - **Physical** - Includes all VHS, DVD and Blu-ray releases.
+  - **Digital** - All and any relevant releases can be added including streaming platforms, VOD rental or purchase. Digital screenings including online film festivals and virtual cinema releases also count as digital releases.
 
 ## How does Radarr handle foreign movies or foreign titles?
 
