@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-04-17T19:42:12.519Z
+date: 2022-05-31T16:34:37.118Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -173,6 +173,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - StevenLu Custom {#stevenluimport}
 - StevenLu List {#stevenlu2import}
 - TMDb Collection {#tmdbcollectionimport}
+  - Collection Lists are no longer supported in Radarr v4.2 and have been migrated to collections within Radarr. See the [Collections](/radarr/collections) page for more details. 
 - TMDb Company {#tmdbcompanyimport}
 - TMDb Keyword {#tmdbkeywordimport}
 - TMDb List {#tmdblistimport}
