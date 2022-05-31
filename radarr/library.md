@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2022-05-16T01:23:23.484Z
+date: 2022-05-31T16:35:36.089Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -104,6 +104,11 @@ Library Import allows you to import existing organized movies and each movie's f
 
 > **Your download folder and media folder can’t be the same location**
 {.is-danger}
+
+# Collections
+
+The wiki is developed and maintained by the community.
+This section has not had any contributions made to it to reflect and describe the collections page in Radarr.
 
 # Discover
 
