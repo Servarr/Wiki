@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-05-31T11:56:06.667Z
+date: 2022-05-31T11:56:54.317Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -506,7 +506,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Radarr gets metadata from [TMDb](https://www.themoviedb.org/)
 - Radarr uses the year of the oldest **Theatrical Release** date and the oldest **Premier** date for matching.
-  - Note that if a Theatrical Release does not exist then logic will fall back to physical or digital.
+  - Note that if a Theatrical Release does not exist then the logic will fall back to the oldest physical or digital release date.
 - If a movie is missing a digital, physical, theatrical, or premier release date then TMDb should be updated. 
 - [TMDb's Contribution Bible](https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000009#59f73d3c9251416e71000013) notes the following about their release types.
   - **Premiere** - A premiere screening can take the form of a festival screening (e.g. TIFF) or a premiere event filled with the cast and crew in a big city (e.g. LA, London, Toronto).
