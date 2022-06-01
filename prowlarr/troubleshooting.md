@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-04-15T13:46:08.377Z
+date: 2022-06-01T02:35:11.742Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -236,7 +236,7 @@ This is typically caused by:
 
 ## 503 HTTP Service Unavailable
 
-- This is typically due to your tracker blocking you via Cloudflare and requiring FlareSolverr
+- This is typically due to your tracker blocking you via Cloudflare and requiring [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr)
 
 ## Invalid Torrents
 
