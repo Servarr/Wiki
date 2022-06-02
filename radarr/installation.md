@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-04-09T09:13:39.665Z
+date: 2022-06-02T22:10:51.702Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -81,7 +81,7 @@ It's therefore advisable to install Radarr as a system tray application if the u
 > Radarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
-1. Download the [MacOS App](https://radarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
+1. Download the [MacOS App](https://radarr.servarr.com/v1/master/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://radarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system
 1. Open the archive and drag the Radarr icon to your Application folder.
 1. Self-sign Radarr `codesign --force --deep -s - Radarr.app`
 1. Browse to <http://localhost:7878> to start using Radarr
