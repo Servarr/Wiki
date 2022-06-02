@@ -2,7 +2,7 @@
 title: Whisparr Installation
 description: 
 published: true
-date: 2022-04-30T22:08:45.818Z
+date: 2022-06-02T22:11:49.312Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:24.491Z
@@ -81,7 +81,7 @@ It's therefore advisable to install Whisparr as a system tray application if the
 > Whisparr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
-1. Download the [MacOS App](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
+1. Download the [MacOS App](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system
 1. Open the archive and drag the Whisparr icon to your Application folder.
 1. Self-sign Whisparr `codesign --force --deep -s - Whisparr.app`
 1. Browse to <http://localhost:6969> to start using Whisparr
