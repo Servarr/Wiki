@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2022-04-30T22:04:38.731Z
+date: 2022-06-02T22:11:28.505Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -68,7 +68,7 @@ It's therefore advisable to install Prowlarr as a system tray application if the
 > Prowlarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
-1. Download the [MacOS App](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
+1. Download the [MacOS App](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system
 1. Open the archive and drag the Prowlarr icon to your Application folder.
 1. Self-sign Prowlarr `codesign --force --deep -s - Prowlarr.app`
 1. Browse to <http://localhost:9696> to start using Prowlarr
