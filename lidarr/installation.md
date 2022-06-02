@@ -2,7 +2,7 @@
 title: Lidarr Installation
 description: 
 published: true
-date: 2022-05-01T19:44:39.764Z
+date: 2022-06-02T22:11:17.812Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
@@ -67,7 +67,7 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 > Lidarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
-1. Download the [MacOS App](https://lidarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true)
+1. Download the [MacOS App](https://lidarr.servarr.com/v1/develop/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://lidarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system
 1. Open the archive and drag the Lidarr icon to your Application folder.
 1. Self-sign Lidarr `codesign --force --deep -s - Lidarr.app`
 1. Browse to <http://localhost:8686> to start using Lidarr
