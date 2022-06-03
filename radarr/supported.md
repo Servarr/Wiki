@@ -173,7 +173,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - StevenLu Custom {#stevenluimport}
 - StevenLu List {#stevenlu2import}
 - TMDb Collection {#tmdbcollectionimport}
-  - Collection Lists are no longer supported in Radarr v4.2 and have been migrated to collections within Radarr. See the [Collections](/radarr/library#collections) section for more details. 
+  - Collection Lists are no longer supported in Radarr v4.2 and have been migrated to collections within Radarr. See the [Collections](/radarr/library#collections) section for more details.
 - TMDb Company {#tmdbcompanyimport}
 - TMDb Keyword {#tmdbkeywordimport}
 - TMDb List {#tmdblistimport}

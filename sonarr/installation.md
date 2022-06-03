@@ -111,7 +111,7 @@ sudo apt update
 sudo apt install sonarr
 ```
 
-### Mono SSL Issues
+## Mono SSL Issues
 
 - A common issue experienced by users after installing is related to SSL Certificate Validation issues. This can be resolved by syncing mono's certs
 

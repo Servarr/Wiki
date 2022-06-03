@@ -311,7 +311,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 {#rename-folders}
 
-> The same process applies for moving/changing Movie paths as well. If you're just updating paths in Radarr and do not need to move the files, then do not select "Yes Move files" in Step 5. 
+> The same process applies for moving/changing Movie paths as well. If you're just updating paths in Radarr and do not need to move the files, then do not select "Yes Move files" in Step 5.
 {.is-info}
 
 1. Movies
@@ -357,7 +357,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - No, nor should you through any SQL hackery. The refresh movies task queries the upstream Servarr proxy and checks to see if the metadata for each movie (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Radarr. If necessary, it will then update the applicable movies.
 - A common complaint is the Refresh task causes heavy I/O usage.
 - The main setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.
-  - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr. 
+  - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr.
   - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 - This other setting that can be chanhed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
@@ -508,7 +508,7 @@ Depending on your OS, there are multiple possible ways.
 - Radarr gets metadata from [TMDb](https://www.themoviedb.org/)
 - Radarr uses the year of the oldest **Theatrical Release** date and the oldest **Premier** date for matching.
   - Note that if a Theatrical Release does not exist then the logic will fall back to the oldest physical or digital release date.
-- If a movie is missing a digital, physical, theatrical, or premier release date then TMDb should be updated. 
+- If a movie is missing a digital, physical, theatrical, or premier release date then TMDb should be updated.
 - [TMDb's Contribution Bible](https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000009#59f73d3c9251416e71000013) notes the following about their release types.
   - **Premiere** - A premiere screening can take the form of a festival screening (e.g. TIFF) or a premiere event filled with the cast and crew in a big city (e.g. LA, London, Toronto).
   - **Theatrical** - Can be used for the original release and any subsequent official releases. Used for wide or saturation releases. In the United States, 600-1,999 screens is considered a wide release and 2000+ is considered a saturation release.

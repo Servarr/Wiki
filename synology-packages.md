@@ -28,18 +28,18 @@ dateCreated: 2022-05-06T13:45:19.731Z
 
 # DSM 6.x
 
-- The Lidarr-Official, Prowlarr-Official, Radarr-Official, Readarr-Official, and Sonarr packages should _just work_.
+- The Lidarr-Official, Prowlarr-Official, Radarr-Official, Readarr-Official, and Sonarr packages should *just work*.
 - Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 - Download the release of the application for your NAS's architecture from [the Servarr Synology Package GitHub](https://github.com/Servarr/spksrc/releases) and [manually install the package](https://kb.synology.com/en-us/DSM/tutorial/How_to_install_applications_with_Package_Center#x_anchor_id6) via package manager.
 
 # DSM 7.x
 
-- The Lidarr-Official, Prowlarr-Official, Radarr-Official, and Readarr-Official packages should _just work_ for most architectures.
+- The Lidarr-Official, Prowlarr-Official, Radarr-Official, and Readarr-Official packages should *just work* for most architectures.
   - Note that a NAS with `comcerto2k` requires additional steps for Lidarr, Prowlarr, Radarr, and Readarr; [see the instructions](#bubblewrap-installation-on-dsm-7x).
 - Note that the Sonarr package requires additional steps for **all** architectures.
 - Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 
-> For NAS running on a `comcerto2k` (_all packages_) and Sonarr (_all NAS architectures_), you will need to install the Bubblewrap package and perform the manual steps noted. **Bubblewrap must be installed prior to attempting to install the \*Arr Packages**
+> For NAS running on a `comcerto2k` (*all packages*) and Sonarr (*all NAS architectures*), you will need to install the Bubblewrap package and perform the manual steps noted. **Bubblewrap must be installed prior to attempting to install the \*Arr Packages**
 {.is-warning}
 
 - Download the release of Bubblewrap for your NAS's architecture from [the Servarr Synology Package GitHub](https://github.com/Servarr/spksrc/releases) and [manually install the package](https://kb.synology.com/en-us/DSM/tutorial/How_to_install_applications_with_Package_Center#x_anchor_id6) via package manager.
