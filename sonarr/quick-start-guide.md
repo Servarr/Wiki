@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2022-04-08T16:33:26.654Z
+date: 2022-06-03T13:08:24.453Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -74,7 +74,7 @@ Click on `Settings` => `Media Management` on the left menu.
 
 Here we will add the root folder that Sonarr will be using to import your existing organized media library and where Sonarr will be importing (copy/hardlink/move) your media after your download client has downloaded it. This is the folder where your series and episodes are stored for your media player to play them. It is NOT where you download files to!
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+> \* Non-Windows Users: If you're using an NFS mount ensure `nolock` is enabled.
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
@@ -89,7 +89,7 @@ Don’t forget to save your changes!
 
 `Settings` => `Profiles`
 
-We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several prefilled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the appropriate wiki page for that section.
+We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several prefilled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the [appropriate wiki page](/sonarr/settings#profiles) for that section.
 
 # Indexers
 
@@ -103,9 +103,14 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Most usenet indexers require an API key, which can be found in your Profile page on the indexer's website.
 
+Most torrent trackers require [Prowlarr](/prowlarr) or Jackett to be used in Sonarr
+
 Add at least one indexer in order for Sonarr to work properly.
 
-[More Info](/sonarr/supported#indexers)
+> See the [settings page](/sonarr/settings#indexers) and [the supported page](/sonarr/supported#indexers) for more information.
+{.is-info}
+
+[Supported Indexers](/sonarr/supported#indexers)
 
 # Download Clients
 
@@ -113,7 +118,8 @@ Add at least one indexer in order for Sonarr to work properly.
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/sonarr/settings#download-clients), [the supported page](/sonarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information. {.is-info}
+> See the [settings page](/sonarr/settings#download-clients), [the supported page](/sonarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+{.is-info}
 
 ## {.tabset}
 
@@ -154,15 +160,23 @@ Coming soon - Contributions Welcome
 
 Depending how well your existing series folders are named, Sonarr will try to match it with the correct series. You should review this list carefully before importing.
 
-Coming soon - Contributions Welcome
+1. Navigate to Library Import
+1. Read and understand the Library Import Help Text
+1. Select or add the root (library) folder to import series from
+1. Review Sonarr's mapping/matching of Series Folders to TVDb series
+1. Set your monitoring settings and quality profile as appropriate
+1. Click Start Import
 
 ### No match found
 
-Coming soon - Contributions Welcome
+1. Search the series name or TVDbId in the series selection box
+1. See [this FAQ entry](/sonarr/faq#why-can-i-not-add-a-series) if the series cannot be found 
 
 ### Fix faulty folder name after import
 
-Coming soon - Contributions Welcome
+1. Remove the Series from Sonarr
+1. Library Import
+1. Ensure the series is mapped correctly
 
 # Add New Series
 
