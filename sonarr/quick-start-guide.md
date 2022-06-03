@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2022-06-03T13:08:24.453Z
+date: 2022-06-03T13:10:35.971Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -152,13 +152,11 @@ After setting up your profiles/quality sizes and added your indexers and downloa
 
 Coming soon - Contributions Welcome
 
-## Import episodes
-
-Coming soon - Contributions Welcome
-
 ### Importing Existing Media
 
 Depending how well your existing series folders are named, Sonarr will try to match it with the correct series. You should review this list carefully before importing.
+
+Library Import is only to be used on an existing organized library and shall not be used on a download folder or to ad-hoc import media.
 
 1. Navigate to Library Import
 1. Read and understand the Library Import Help Text
@@ -181,3 +179,9 @@ Depending how well your existing series folders are named, Sonarr will try to ma
 # Add New Series
 
 [Refer to the Library Page for additional information](/en/sonarr/library#add-new)
+
+# Import Episodes
+
+- Use Wanted => Manual Import to import episode files to their series folders on an ad-hoc basis
+- Use Manage Episodes on a series' page to remap or map existing episode files in a series folder
+
