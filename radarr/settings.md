@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-05-22T21:48:14.181Z
+date: 2022-06-04T03:55:35.417Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -830,6 +830,7 @@ Connections are how you want Radarr to communicate with the outside world.
 - On Import - Be notified when movies are successfully imported
 - On Upgrade - Be notified when movies are upgraded to a better quality
 - On Rename - Be notified when movies are renamed
+- On Movie Added - Be notified when movies are added to Radarr's library to manage or monitor
 - On Movie Delete - Be notified when movies are deleted
 - On Movie File Delete - Be notified when movies files are deleted
 - On Movie File Delete For Upgrade - Be notified when movie files are deleted for upgrades
