@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-06-03T12:12:40.2037396Z
+date: 2022-06-04T15:44:43.8305407Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-06-03T12:12:40.2037396Z
+dateCreated: 2022-06-04T15:44:43.8305407Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.0.1796` / [Commit: 3c913eac24acc3615f0f0020a8c4e690b88922ca](https://github.com/Prowlarr/Prowlarr/commit/3c913eac24acc3615f0f0020a8c4e690b88922ca)
+- Supported Trackers and Indexers as of Build `0.4.0.1802` / [Commit: f0abfae9785cdb9ecb694c5c9c725027721fc519](https://github.com/Prowlarr/Prowlarr/commit/f0abfae9785cdb9ecb694c5c9c725027721fc519)
 
 ---
 
@@ -42,6 +42,7 @@ dateCreated: 2022-06-03T12:12:40.2037396Z
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|en-US|
 |[BT4G](https://bt4g.org/){#bt4g}|BT4G is a Public metadata crawler for magnets|en-US|
 |[BTDigg](https://btdig.com/){#btdigg}|BTDigg is a Public BitTorrent DHT search engine.|en-US|
+|[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|en-US|
 |[BTmirror](https://btsao.com/){#btmirror}|BTmirror is a Public BitTorrent DHT search engine.|en-US|
 |[BTSOW](https://btsow.bar/){#btsow}|BTSOW is a Public torrent indexer|en-US|
 |[Byrutor](https://byrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|ru-RU|
@@ -139,7 +140,7 @@ dateCreated: 2022-06-03T12:12:40.2037396Z
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentParadise](https://torrentparadise.cc/){#torrentparadise}|Torrent Paradise is a Public magnet indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq145.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq146.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir58.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
