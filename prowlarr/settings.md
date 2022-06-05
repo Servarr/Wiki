@@ -230,7 +230,7 @@ Connections are how you want Prowlarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications and connections is located [here](/prowlarr/supported#notifications)
+- A list of supported notifications and connections is located at the [More Info Supported]
 
 ## Notification Triggers
 

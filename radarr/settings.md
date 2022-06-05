@@ -536,7 +536,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located [here](/radarr/supported#indexers)
+- A list of supported indexers is located at the [More Info Supported]
 
 ### Indexer Settings
 
@@ -665,7 +665,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located [here](/radarr/supported#downloadclient)
+- A list of supported download clients is located at the [More Info Supported]
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -822,7 +822,7 @@ Connections are how you want Radarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located [here](/radarr/supported#notifications)
+- A list of supported notifications & connections is located at the [More Info Supported]
 
 ## Connection Triggers
 

@@ -61,6 +61,7 @@ Click on `Settings` => `Media Management` on the left menu.
 - Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/).
 
 > If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
+{.is-info}
 
 ## Importing
 
@@ -78,7 +79,8 @@ Here we will add the root folder that Sonarr will be using to import your existi
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
-> **The user and group you configured Sonarr to run as must have read & write access to this location.** {.is-info}
+> **The user and group you configured Sonarr to run as must have read & write access to this location.**
+{.is-info}
 
 > **Your download folder and media folder can’t be the same location**
 {.is-danger}
@@ -107,10 +109,8 @@ Most torrent trackers require [Prowlarr](/prowlarr) or Jackett to be used in Son
 
 Add at least one indexer in order for Sonarr to work properly.
 
-> See the [settings page](/sonarr/settings#indexers) and [the supported page](/sonarr/supported#indexers) for more information.
+> See the [settings page](/sonarr/settings#indexers) and at the [More Info Supported](/sonarr/supported#indexers) page for this section for more information.
 {.is-info}
-
-[Supported Indexers](/sonarr/supported#indexers)
 
 # Download Clients
 
@@ -118,7 +118,7 @@ Add at least one indexer in order for Sonarr to work properly.
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/sonarr/settings#download-clients), [the supported page](/sonarr/supported#download-clients), and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+> See the [settings page](/sonarr/settings#download-clients), at the [More Info Supported](/sonarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 {.is-info}
 
 ## {.tabset}
@@ -178,7 +178,7 @@ Library Import is only to be used on an existing organized library and shall not
 
 # Add New Series
 
-[Refer to the Library Page for additional information](/en/sonarr/library#add-new)
+[Refer to the Library Page for additional information](/sonarr/library#add-new)
 
 # Import Episodes
 

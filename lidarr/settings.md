@@ -71,7 +71,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located [here](/lidarr/supported#downloadclient)
+- A list of supported download clients is located at the [More Info Supported](/lidarr/supported#downloadclient) page for this section
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
