@@ -152,7 +152,7 @@ After setting up your profiles/quality sizes and added your indexers and downloa
 
 Coming soon - Contributions Welcome
 
-### Importing Existing Media
+## Importing Existing Media
 
 Depending how well your existing series folders are named, Sonarr will try to match it with the correct series. You should review this list carefully before importing.
 
@@ -168,7 +168,7 @@ Library Import is only to be used on an existing organized library and shall not
 ### No match found
 
 1. Search the series name or TVDbId in the series selection box
-1. See [this FAQ entry](/sonarr/faq#why-can-i-not-add-a-series) if the series cannot be found 
+1. See [this FAQ entry](/sonarr/faq#why-can-i-not-add-a-series) if the series cannot be found
 
 ### Fix faulty folder name after import
 
@@ -184,4 +184,3 @@ Library Import is only to be used on an existing organized library and shall not
 
 - Use Wanted => Manual Import to import episode files to their series folders on an ad-hoc basis
 - Use Manage Episodes on a series' page to remap or map existing episode files in a series folder
-

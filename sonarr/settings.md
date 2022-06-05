@@ -542,7 +542,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Indexers
 
-> Information on supported indexers can be found at the following page [supported](/sonarr/supported#indexers)
+> Information on supported indexers can be found at the [More Info (Supported)](/sonarr/supported#indexers) page for this section
 {.is-info}
 
 ## Supported Indexers
@@ -613,7 +613,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Download Clients
 
-> Information on supported download clients can be found at the following page [supported](/sonarr/supported#download-clients)
+> Information on supported download clients can be found at the [More Info (Supported)](/sonarr/supported#download-clients) page for this section
 {.is-info}
 
 ## Overview
@@ -764,7 +764,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 # Import Lists
 
-> Information on supported list types can be found at the following page [supported](/sonarr/supported#lists)
+> Information on supported list types can be found at the [More Info (Supported)](/sonarr/supported#lists) page for this section
 {.is-info}
 
 ## Lists
@@ -784,7 +784,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 # Connect
 
-> Information on supported connection types can be found at the following page [supported](/sonarr/supported#notifications)
+> Information on supported connection types can be found at the [More Info (Supported)](/sonarr/supported#notifications) page for this section
 {.is-info}
 
 ## Connections
@@ -812,7 +812,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ## Metadata
 
-> Information on supported metadata consumers can be found at the following page [supported](/sonarr/supported#metadata)
+> Information on supported metadata consumers can be found at the [More Info (Supported)](/sonarr/supported#metadata) page for this section
 {.is-info}
 
 - Here you can select the type of metadata that will be consumed by your media player

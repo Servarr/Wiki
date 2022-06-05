@@ -37,7 +37,7 @@ This page is a work in progress and contributions - based on the other \*Arr pag
 
 # Download Clients
 
-> Information on supported download clients can be found at the following page [supported](/lidarr/supported#download-clients)
+> Information on supported download clients can be found at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section
 {.is-info}
 
 ## Overview
@@ -183,7 +183,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 # Connections
 
-> Information on supported connection types can be found at the following page [supported](/lidarr/supported#notifications)
+> Information on supported connection types can be found at the [More Info (Supported)](/lidarr/supported#notifications) page for this section
 {.is-info}
 
 # Tags

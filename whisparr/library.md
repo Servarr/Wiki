@@ -120,7 +120,7 @@ Discover shows recommended Movies
 - Chances are that your Discover recommendations will be sparse if you have a new installation with few or no movies. You will need to add library content to fuel recommendation direction. You have several options:
   1. Click on the [Add New Movie](/whisparr/library#add-new) button to add movies by hand.
   1. Click on the [Import Existing Library](/whisparr/library#library-import) button to import an existing library.
-  1. Click on the [Add Lists](/whisparr/settings#lists) button to add a list to Whisparr. Additional information about lists can be found at the following page [supported](/whisparr/faq#what-are-lists-and-what-can-they-do-for-me).
+  1. Click on the [Add Lists](/whisparr/settings#lists) button to add a list to Whisparr. Additional information about lists can be found at the [More Info (Supported)](/whisparr/faq#what-are-lists-and-what-can-they-do-for-me) page for this section.
 
 ![whisparr-discover-add-new-movies.png](/assets/whisparr/whisparr-discover-add-new-movies.png)
 

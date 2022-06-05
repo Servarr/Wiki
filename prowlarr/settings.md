@@ -60,7 +60,7 @@ Also, note that for each individual settings page, there are some options at the
 
 # Indexer Proxies
 
-> Information on supported proxy types can be found at the following page [supported](/prowlarr/supported#indexer-proxies)
+> Information on supported proxy types can be found at the [More Info (Supported)](/prowlarr/supported#indexer-proxies) page for this section
 {.is-info}
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
@@ -107,7 +107,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to
 
 # Applications
 
-> Information on supported applications can be found at the following page [supported](/prowlarr/supported#applications)
+> Information on supported applications can be found at the [More Info (Supported)](/prowlarr/supported#applications) page for this section
 {.is-info}
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
@@ -168,7 +168,7 @@ Configure the sync profiles for to use for (an) application(s)
 
 {#download-clients}
 
-> Information on supported download clients can be found at the following page [supported](/prowlarr/supported#download-clients)
+> Information on supported download clients can be found at the [More Info (Supported)](/prowlarr/supported#download-clients) page for this section
 {.is-info}
 
 If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
@@ -221,7 +221,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 # Notifications
 
-> Information on supported notification providers can be found at the following page [supported](/prowlarr/supported#notifications)
+> Information on supported notification providers can be found at the [More Info (Supported)](/prowlarr/supported#notifications) page for this section
 {.is-info}
 
 ## Connections
