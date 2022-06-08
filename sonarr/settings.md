@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-05-23T00:24:51.108Z
+date: 2022-06-08T11:00:04.309Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -868,6 +868,10 @@ Most of the lists settings are fairly self explanatory, some lists require you t
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
 - API Key - This is how other programs would communicate or have Sonarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
+  - Enabled - Validate all HTTPS certificates (recommended)
+  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+  - Disabled - Do not validate any HTTPS certificates
+
 
 ## Proxy
 
