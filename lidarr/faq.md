@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2022-05-08T11:58:41.808Z
+date: 2022-06-08T12:04:50.939Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -151,7 +151,8 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 {#rename-folders}
 
-> The same process applies for moving/changing Artist paths as well.{.is-info}
+> The same process applies for moving/changing Artist paths as well.
+{.is-info}
 
 1. Library
 1. Mass Editor
@@ -165,7 +166,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 ## Why doesn't Lidarr work behind a reverse proxy
 
-- Lidarr uses .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Lidarr:
+- Lidarr uses .NET and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Lidarr:
  proxy_http_version 1.1;
  proxy_set_header Upgrade $http_upgrade;
  proxy_set_header Connection $http_connection;
@@ -427,7 +428,6 @@ Depending on your OS, there are multiple possible ways.
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
 - In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
-
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
 ## Jackett's /all Endpoint
@@ -435,9 +435,7 @@ Depending on your OS, there are multiple possible ways.
 {#jackett-all-endpoint}
 
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
-
 - **April 2022 Update: \*Arr support has been removed out for the jackett `/all` due to the fact it only causes issues.**
-
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
@@ -463,7 +461,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Lidarr's settings, Lidarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
-> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
+> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
+{.is-info}
 
 ## I keep getting warnings from my cloud storage about API limits
 
