@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-05-02T23:56:55.178Z
+date: 2022-06-08T12:03:32.602Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -288,7 +288,8 @@ This change was due to not have our server get killed by people updating lists e
 - Stop Readarr
 - Connect to the Synology NAS through SSH and log in as root  
 
-> On some installations, the user is different than the below commands: `chown -R sc-Readarr:Readarr *` {.is-info}
+> On some installations, the user is different than the below commands: `chown -R sc-Readarr:Readarr *`
+{.is-info}
 
 - Execute the following commands:
 
@@ -307,30 +308,20 @@ chmod -R 0644 *
 
 - Start Readarr
 
-## How does Readarr handle foreign books or foreign titles?
-
-- Readarr uses both Alt Titles and Translations for parsing and searching. Search will use the Original Title, English Title, and Translated Title from whatever languages you have preferred (in profile and CFs). Parsing should look for a match in all Translations and Alt Titles.
-
-- To get a book in a foreign language set your Profile Language to Original (Book's Original Language), a specific language for that profile, or any and use custom formats to determine which language to grab.
-- Note that this does not include any indexer languages specified as multi.
-
 ## Help, Book Added, But Not Searched
 
-- Neither Readarr *actively* search for missing books automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet book shows up in that list, it gets downloaded. This means that until a book is posted (or reposted), it won’t get downloaded.
+- Readarr does not *actively* search for missing books automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet book shows up in that list, it gets downloaded. This means that until a book is posted (or reposted), it won’t get downloaded.
 - If you’re adding an author with books that you want now, the best option is to check the “Start search for missing books” box, to the left of the *Add Author* button. You can also go to the page for an author you’ve added and click the magnifying glass *Search* button next to the book you want, or use the Wanted view to search for Missing or Cutoff Unmet books.
 
 ## Root path for authors imported from lists becomes “C:” or other weird paths
 
 - Sometimes you can get a problem that authors that are imported from your lists, gets imported with the root path set to “C:” or other weird paths.
-
 - This is a known issue for when the root path is either not setup during the creation of the list, or if the root path has been deleted after the list was created. Note that this problem can still occur even if the list is `edited` and the correct root path is set.
-
 - Use the Mass Editor to fix paths of existing authors.
 
 ## Book Imported, But Source File And Torrent Not Deleted
 
-- Check if you have Completed Download Handling - Remove turned on. (This does not work if you are using rtorrent.)
-
+- Check if you have Completed Download Handling - Remove turned on.
 - If you are using deluge make sure auto-managed is turned on. And that torrents get paused when they reach specified seeding quota.
 
 ## I am using a Pi and Raspbian and Readarr will not launch
@@ -366,7 +357,6 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 ## Can I disable the refresh books task
 
 - No, nor should you through any SQL hackery. The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
-
 - A common complaint is the Refresh task causes heavy I/O usage. One setting that can cause issues is "Rescan Author Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr. If you delete book files manually or a third party program, do not set this to `Never`.
 
 ## Can I have BOTH an ebook and an audiobook version of the same book?
@@ -427,9 +417,7 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
-
 - In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Readarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
-
 - In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
 ## Jackett's /all Endpoint
@@ -437,9 +425,7 @@ Depending on your OS, there are multiple possible ways.
 {#jackett-all-endpoint}
 
 - The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
-
 - **January 20 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 0.1.0.1188 due to the fact it only causes issues.**
-
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
@@ -465,7 +451,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
-> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file. {.is-info}
+> Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then will fall back and copy the file.
+{.is-info}
 
 ## Calibre is saying "Calibre rejected duplicate book" but it's not
 
