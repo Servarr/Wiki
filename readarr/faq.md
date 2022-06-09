@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-06-08T12:03:32.602Z
+date: 2022-06-09T17:46:28.768Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -38,7 +38,6 @@ dateCreated: 2021-05-25T20:01:09.320Z
       - [Using zip backup](#using-zip-backup)
       - [Using file system backup](#using-file-system-backup)
       - [Restore on Synology NAS](#restore-on-synology-nas)
-  - [How does Readarr handle foreign books or foreign titles?](#how-does-readarr-handle-foreign-books-or-foreign-titles)
   - [Help, Book Added, But Not Searched](#help-book-added-but-not-searched)
   - [Root path for authors imported from lists becomes “C:” or other weird paths](#root-path-for-authors-imported-from-lists-becomes-c-or-other-weird-paths)
   - [Book Imported, But Source File And Torrent Not Deleted](#book-imported-but-source-file-and-torrent-not-deleted)
