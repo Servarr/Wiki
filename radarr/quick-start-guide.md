@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-03-08T10:31:15.441Z
+date: 2022-06-10T16:50:51.015Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -205,19 +205,15 @@ Select the root path you added earlier [in the root folders section.](#root-fold
 Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](/radarr/tips-and-tricks#creating-a-folder-for-each-movie)
 
 1. Your movie folder name.
-1. How you want the movie to be added to Radarr.
-
-    > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-    > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
-
-1. When will Radarr consider a movie is available.
-
-    > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
-    > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-    > - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
-
-1. Select your preferred profile to use.
-1. What Radarr thinks the movie matched for. (if you got to many wrong matched you might need to name your folders better).
+1. Monitor - How you want the movie to be added to Radarr.
+  - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+  - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
+1. Availability - When will Radarr consider a movie is available.
+  - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+  -  **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+  - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+1. Quality Profile - Select your preferred profile to use.
+1. Movie - What Radarr thinks the movie matched for. It is imperative that you review this and edit/search if the match is not correct. Mismatches are often caused by poorly named folders.
 1. Mass select Monitor status.
 1. Mass select Minimum Availability.
 1. Mass select Quality Profile.
@@ -299,21 +295,16 @@ When you see the movie you want click on it.
 
 ![Radarr-movie-add.png](/assets/radarr/Radarr-movie-add.png)
 
-1. Radarr will add the Root Folder you’ve setup [in the root folders section](#root-folders)
-2. How you want the movie to be added to Radarr.
-
-    > - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-    > - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.{.is-info}
-    >
-3. When Radarr shall consider a movie is available.
-
-    > - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
-    > - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-    > - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
-
-4. Select your preferred profile to use.
-5. Here you can add certain tags for advanced usage.
-6. Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
-7. Click on `Add Movie` to add the movie to Radarr.
-
-- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-mqovie)
+1. Root Folder - Radarr will add the movie to the Root Folder you’ve setup [in the root folders section](#root-folders)
+1. Monitor - How you want the movie to be added to Radarr.
+  - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+  - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  
+1. Availability - When Radarr shall consider a movie is available.
+  - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+  - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+  - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+1. Quality Profile - Select your profile to use for this movie
+1. Tags - Here you can add certain tags for advanced usage.
+1. Search on Add - Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
+1. Click on `Add Movie` to add the movie to Radarr.
+  - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
