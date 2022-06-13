@@ -2,7 +2,7 @@
 title: Sonarr Custom Scripts
 description: 
 published: true
-date: 2022-05-02T03:36:57.663Z
+date: 2022-06-13T15:52:03.477Z
 tags: sonarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
@@ -102,7 +102,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable                    | Details                                                                          |
 | --------------------------------------- | -------------------------------------------------------------------------------- |
-| `sonarr_eventtype`                      | `EpisodeDeleted`                                                                 |
+| `sonarr_eventtype`                      | `EpisodeFileDelete`                                                              |
 | `sonarr_series_id`                      | Internal ID of the series                                                        |
 | `sonarr_series_title`                   | Title of the series                                                              |
 | `sonarr_series_path`                    | Full path to the series                                                          |
@@ -129,7 +129,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable         | Details                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------ |
-| `sonarr_eventtype`           | `SeriesDeleted`                                                          |
+| `sonarr_eventtype`           | `SeriesDelete`                                                           |
 | `sonarr_series_id`           | Internal ID of the series                                                |
 | `sonarr_series_title`        | Title of the series                                                      |
 | `sonarr_series_path`         | Full path to the series                                                  |
@@ -147,6 +147,15 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_health_issue_message` | Message from the health issue                                |
 | `sonarr_health_issue_type`    | Area that failed and triggered the health issue              |
 | `sonarr_health_issue_wiki`    | Wiki URL (empty if does not exist)                           |
+
+## On Application Update
+
+| Environment Variable             | Details                               |
+|--------------------------------- |-------------------------------------- |
+| `sonarr_eventype`                | `ApplicationUpdate`                   |
+| `sonarr_update_message`          | Message from Update                   |
+| `sonarr_update_newversion`       | Version Sonarr updated to (string)    |
+| `sonarr_update_previousversion`  | Version Sonarr updated from (string)  |
 
 ## On Test
 
