@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-05-02T15:19:58.101Z
+date: 2022-06-17T00:14:23.493Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -100,7 +100,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 ### V5
 
-- Cardigann v5 includes the following changes:
+- [Cardigann v5](https://github.com/Prowlarr/Prowlarr/pull/866)includes the following changes:
   - Adds support for filters on json response parsing
   - Adds Attribute and Multiple property
   
