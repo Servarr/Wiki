@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2022-01-07T19:44:46.260Z
+date: 2022-06-17T08:57:21.618Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -93,8 +93,6 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Torznab {#torznab}
   - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
   - This is primarily only supported by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett)
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-- Waffles {#waffles}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 
 # Notifications
