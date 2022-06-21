@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-06-21T10:27:48.042Z
+date: 2022-06-21T10:31:34.144Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -238,7 +238,8 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 > `Original Title` is the release name and it is what is suggested to be used.
 {.is-info}
 
->`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yu7ti`.{.is-warning}
+>`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yu7ti`.
+{.is-warning}
 
 ## Daily Episode Format
 
@@ -293,7 +294,8 @@ Name for the `Specials` (Season) folder
 
 - `Specials`
 
-> It's suggested to use `Specials`{.is-info}
+> It's suggested to use `Specials`
+{.is-info}
 
 ## Multi-Episode Style
 
@@ -304,7 +306,8 @@ Name for the `Specials` (Season) folder
 - `Range` = `S01E01-03`
 - `Prefixed Range` = `S01E01-E03`
 
-> It's suggested to use `Scene`{.is-info}
+> It's suggested to use `Scene`
+{.is-info}
 
 ## Folders
 
@@ -315,14 +318,15 @@ Name for the `Specials` (Season) folder
 
 - Episode Title Required - Prevent importing for up to 24 (48 in newer Sonarr versions) hours if the episode title is in the naming format and the episode title is TBA. After 24 (48 in newer Sonarr versions) hours the release will be imported even if the title is still TBA.
   - Always - Always wait up to 24 (48 in newer versions) hours for a title prior to importing if the episode is TBA
-  - Only for Bulk Season Release`s - Only if a season pack or bulk release is found wait up to 24 (48 in newer versions) hours for a title prior to importing if the episode is TBA. <- This is recommended.
+  - Only for Bulk Season Releases - Only if a season pack or bulk release is found wait up to 24 (48 in newer versions) hours for a title prior to importing if the episode is TBA. <- This is recommended.
   - Never - Do not delay importing if the episode is TBA.
 - Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
   - For more information on this click [here](https://trash-guides.info/hardlinks)
 
- > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.{.is-warning}
+ > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
+{.is-warning}
 
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 
@@ -335,7 +339,8 @@ Name for the `Specials` (Season) folder
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Release Profiles (Preferred Words)](#release-profiles).
 
 > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
-> `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
+> `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
+{.is-info}
 
 > [Use preferred words for automatic upgrades to propers/repacks](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#propers-and-repacks)
 {.is-info}
@@ -362,11 +367,13 @@ Name for the `Specials` (Season) folder
 > The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 {.is-info}
 
-> This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+> This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
+{.is-warning}
 
 - chown Group - Group name or GID. Use GID for remote file systems
 
-> This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+> This only works if the user running `Sonarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
+{.is-warning}
 
 ## Root Folders
 
@@ -374,7 +381,8 @@ Name for the `Specials` (Season) folder
 - Free Space - This is the free space being reported to Sonarr from the system
 - Unmapped Folders - These are folders that do not have a Series associated to it
 
->The `X` at the end will remove this root path{.is-warning}
+>The `X` at the end will remove this root path
+{.is-info}
 
 - Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
@@ -389,7 +397,8 @@ Name for the `Specials` (Season) folder
 
 - Set profiles for the quality of series you're looking to download.
 
-> When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
+> When selecting an existing profile or adding an additional profile a new window will appear
+{.is-info}
 
 > Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 {.is-info}
@@ -444,7 +453,8 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 
 The timer begins as soon as Sonarr detects an episode has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
-> The clock starts from the releases uploaded time and not from the time Sonarr sees it. {.is-info}
+> The clock starts from the releases uploaded time and not from the time Sonarr sees it.
+{.is-info}
 
 During the delay period, any new releases that become available will be noted by Sonarr. When the delay timer expires, Sonarr will download the single release which best matches your quality preferences.
 
@@ -499,7 +509,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Include Preferred when Renaming - When utilizing the {Preferred Words} tag in the naming scheme
 - Indexer - Specify what indexer the profile applies to.
 
-> This is useful if you only want specific releases from a given indexer/tracker{.is-info}
+> This is useful if you only want specific releases from a given indexer/tracker
+{.is-info}
 
 - Tags - With giving this release profile a tag you will be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
