@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-06-08T11:00:04.309Z
+date: 2022-06-21T10:27:48.042Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -26,7 +26,7 @@ dateCreated: 2021-06-11T23:29:12.300Z
     - [Media Info](#media-info)
     - [Other](#other)
     - [Original](#original)
-    - [Daily Episode Format](#daily-episode-format)
+  - [Daily Episode Format](#daily-episode-format)
   - [Anime Episode Format](#anime-episode-format)
     - [Absolute Episode Number](#absolute-episode-number)
   - [Series Folder Format](#series-folder-format)
@@ -144,7 +144,7 @@ Also, note that for each individual settings page, there are some options at the
 
 ### Standard Episode Format
 
-- Here you will select the naming convention for your standard episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
+Standard Episode Format - Set the naming convention for your Standard Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 - Dropdown Box (upper right corner)
   - Left Box - Space Handling
@@ -240,15 +240,15 @@ Also, note that for each individual settings page, there are some options at the
 
 >`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yu7ti`.{.is-warning}
 
-### Daily Episode Format
+## Daily Episode Format
 
-Here you will select the naming convention for your daily episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
+Daily Episode Format - Set the naming convention for your Daily Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
 ## Anime Episode Format
 
-Here you will select the naming convention for your anime series. Click on the `?` to bring up the `File Name Tokens` dialog box.
+Anime Episode Format - Set the naming convention for your Anime Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
 
@@ -260,7 +260,7 @@ See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more
 
 ## Series Folder Format
 
-Here you will set the naming convention for the folder that contains the season folders or episode files. Click on the `?` to bring up the `File Name Tokens` dialog box.
+(Advanced Option) - Series Folder - Set the naming convention for the folder. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
 ### Series Naming
 
