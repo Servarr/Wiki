@@ -2,8 +2,8 @@
 title: Synology Packages
 description: Servarr Synology Packages
 published: true
-date: 2022-05-11T05:10:59.582Z
-tags: synology, lidarr, prowlarr, radarr,readarr,sonarr
+date: 2022-06-23T19:58:34.255Z
+tags: lidarr, prowlarr, synology, radarr,readarr,sonarr
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
 ---
@@ -16,6 +16,9 @@ dateCreated: 2022-05-06T13:45:19.731Z
     - [Manual Bubblewrap Installation](#manual-bubblewrap-installation)
 
 # Servarr Synology Packages
+
+> These packages can be considered "beta"
+{.is-danger}
 
 - The Servarr Team now creates and maintains Synology Packages
 - Installation instructions are noted below for the specific DSM versions
