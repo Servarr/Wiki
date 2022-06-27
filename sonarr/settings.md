@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-06-21T10:31:34.144Z
+date: 2022-06-27T19:52:58.976Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -722,7 +722,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 ## Completed Download Handling
 
-- Completed Download Handling is how Radarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
+- Completed Download Handling is how Sonarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
 - (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
 - (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
