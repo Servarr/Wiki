@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-07-04T23:03:46.903Z
+date: 2022-07-04T23:06:35.935Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -83,6 +83,17 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 Each Cardigann Version has a YML Schema for it contained within the definitions's respective folder named `schema.json`
 For more specific details between versions the schema files can be compared.
+
+### Schema Validation
+
+Schemas can be validated as follows. It is assumed the commands are ran from the local Prowlarr/Indexers repository directory.
+
+> Note that the following npm packages are required `ajv-cli-servarr ajv-formats`  These can be installed globally on your system with `npm install -g ajv-cli-servarr ajv-formats`
+{.is-info}
+
+```bash
+ ajv test -d "definitions/v{VERSION}/{INDEXER FILE NAME}.yml" -s "definitions/v{VERSION}/schema.json" --valid -c ajv-formats
+ ```
 
 ## Active Versions
 
