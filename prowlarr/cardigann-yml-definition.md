@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-06-17T00:14:23.493Z
+date: 2022-07-04T23:03:46.903Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -13,12 +13,12 @@ dateCreated: 2021-08-14T18:19:59.428Z
 - [Table of Contents](#table-of-contents)
 - [Cardigann Versions](#cardigann-versions)
   - [Supported Versions](#supported-versions)
-    - [V2](#v2)
     - [V3](#v3)
-  - [Latest Version](#latest-version)
     - [V4](#v4)
     - [V5](#v5)
+    - [V6](#v6)
   - [Depreciated Versions](#depreciated-versions)
+    - [V2](#v2)
     - [V1](#v1)
 - [General](#general)
 - [Format](#format)
@@ -79,47 +79,69 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 - Below are the Prowlarr Cardigann  Versions
 
-## Supported Versions
+## Schemas
 
-### V3
+Each Cardigann Version has a YML Schema for it contained within the definitions's respective folder named `schema.json`
+For more specific details between versions the schema files can be compared.
+
+## Active Versions
+
+### V3 Indexers
+
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v3/schema.json)
+{.is-info}
 
 - Prowlarr Cardigann v3 includes support for APIs and JSON
-- Replace imdb: selector with imdbid:
-- Makes Description an optional by default
-- All new Indexers shall be in v3 as of 2022-04-18
+- Replace `imdb:` selector with `imdbid:`
+- Makes `Description` an optional by default
+- All new Indexers using shall be in v3 as of 2021-10-21
+  - Indexers utilizing CategoryDescr or any v4 features MUST be in v4
 
-## Latest Version
+### [V4 Indexers](https://github.com/Prowlarr/Prowlarr/pull/828)
 
-### V4
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v4/schema.json)
+{.is-info}
 
-- Cardigann v4 includes the following changes:
+- Prowlarr Cardigann v4 includes several changes such as
   - TMDBId
   - Genre
   - TraktID
   - CategoryDescr
 
-### V5
+### [V5 Indexers](https://github.com/Prowlarr/Prowlarr/commit/76afb70b01f4a670d8e402d9a3de05c09611b7ab)
 
-- [Cardigann v5](https://github.com/Prowlarr/Prowlarr/pull/866)includes the following changes:
-  - Adds support for filters on json response parsing
-  - Adds Attribute and Multiple property
-  
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v5/schema.json)
+{.is-info}
+
+- Prowlarr Cardigann v5 includes several changes such as
+  - Allow JSON Filters
+
+### [V6 Indexers](https://github.com/Prowlarr/Prowlarr/commit/5ee95e3cc29d1307192320eb82b5a8f1287f00d6)
+
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v6/schema.json)
+{.is-info}
+
+- Prowlarr Cardigann v6 includes several changes such as
+  - `doubanid` support
+  - `tmdbid` TV Search Support
+
 ## Depreciated Versions
 
-### V1
+### V1 Indexers
 
 - Prowlarr Cardigann v1 are base level standard YML
-  - No new indexers are to be added to v1 as of 2021-10-13
-  - No new updates backported to v1 as of 2021-10-17
+- No new indexers are to be added to v1 as of 2021-10-13
+- No new updates backported to v1 as of 2021-10-17
 
-### V2
+### V2 Indexers
 
-- Regex removal for Size parsing
-- Multiple Download Selectors
-- Optional Selectors
-- Testlink Torrents
-- InfoHash links
-- AllowRawSearch property in caps
+- Prowlarr Cardigann v2 include several changes such as
+  - Regex removal for Size parsing
+  - Multiple Download Selectors
+  - Optional Selectors
+  - Testlink Torrents
+  - InfoHash links
+  - AllowRawSearch property in caps
 - No new indexers are to be added to v2 as of 2022-04-18
 - No new updates backported to v2 as of 2022-04-18
 
