@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-06-27T19:52:58.976Z
+date: 2022-07-11T13:47:21.562Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -497,7 +497,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you will be able to select the preferred releases you're looking for.
 
-> You can use regex (default case sensitive) in the `Must Contain`, `Must Not Contain`, and `Preferred` words values
+> You can use regex (default case sensitive) in the `Must Contain`, `Must Not Contain`, and `Preferred` words values. Regex needs to be like `/regex-here/i`
 {.is-info}
 
 - Name - Select a **UNIQUE** name for the release profile you are creating
