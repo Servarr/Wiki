@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: 
 published: true
-date: 2022-03-01T23:40:04.160Z
+date: 2022-07-14T14:10:13.343Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -41,7 +41,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 # Quick Start Setup Guide
 
-> This page is still in progress and not complete.
+> This page is still in progress and not complete. Contributions are welcome
 
 > For a more detailed breakdown of all the settings, check [Lidarr =>Settings](/lidarr/settings)
 {.is-info}
@@ -326,6 +326,10 @@ Specialty libraries create unique issues for any management system. These situat
 - **Electronic** - This does NOT apply to `Releases` in the Electronic genre. This is in relation to libraries of mixes, beats, samples etc. (Beatport). 3rd party data sources do not recognize these as `Releases`. They will not be automated and Lidarr will not be able to apply management.
 
 ## Importing existing library or files
+
+> Note that Lidarr does not regularly search for Releases.  See these two FAQ Entries for details to understand how Readarr works.
+[How does Lidarr find releases?](/lidarr/faq#how-does-lidarr-find-releases) and [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work)
+{.is-info}
 
 > Automated Import is a scheduled process and cannot be stopped once started
 Do NOT add a `Root Folder` with existing files until you have reviewed this section in full
