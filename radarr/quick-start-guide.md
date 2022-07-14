@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-06-10T16:50:51.015Z
+date: 2022-07-14T14:02:30.259Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -34,7 +34,7 @@ dateCreated: 2021-06-20T20:05:44.814Z
 
 # Quick Start Setup Guide
 
-> This page is still in progress and not complete.
+> This page is still in progress and not complete. Contributions are welcome
 
 > For a more detailed breakdown of all the settings, check [Radarr =>Settings](/radarr/settings)
 {.is-info}
@@ -183,6 +183,10 @@ Downloading and importing is where most people experience issues. From a high le
 - If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
+
+> Note that Radarr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Radarr works.
+[How does Radarr find movies?](https://wiki.servarr.com/radarr/faq#how-does-radarr-find-movies) and [How does Radarr work?](https://wiki.servarr.com/radarr/faq#how-does-radarr-work)
+{.is-info}
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
