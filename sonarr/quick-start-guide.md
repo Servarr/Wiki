@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2022-06-03T13:10:35.971Z
+date: 2022-07-14T14:04:11.167Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -31,7 +31,7 @@ dateCreated: 2021-09-03T19:14:22.283Z
 
 # Quick Start Setup Guide
 
-> This page is still in progress and not complete.
+> This page is still in progress and not complete. Contributions are welcome
 
 > For a more detailed breakdown of all the settings, check [Sonarr =>Settings](/sonarr/settings)
 {.is-info}
@@ -147,6 +147,10 @@ Downloading and importing is where most people experience issues. From a high le
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
+
+> Note that Sonarr does not regularly search for Episodes.  See these two FAQ Entries for details to understand how Sonarr works.
+[How does Sonarr find episodes?](https://wiki.servarr.com/sonarr/faq#how-does-sonarr-find-episodes)
+{.is-info}
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
