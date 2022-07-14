@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2022-07-14T14:04:11.167Z
+date: 2022-07-14T14:06:05.833Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -148,7 +148,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 # How to import your existing organized media library
 
-> Note that Sonarr does not regularly search for Episodes.  See these two FAQ Entries for details to understand how Sonarr works.
+> Note that Sonarr does not regularly search for Episodes.  See the FAQ Entry for details to understand how Sonarr works.
 [How does Sonarr find episodes?](https://wiki.servarr.com/sonarr/faq#how-does-sonarr-find-episodes)
 {.is-info}
 
