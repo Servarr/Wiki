@@ -1,11 +1,11 @@
 ---
 title: Whisparr Quick Start Guide
-description:
+description: 
 published: true
-date: 2022-03-08T10:31:15.441Z
-tags: whisparr, quickstart
+date: 2022-07-14T14:11:06.333Z
+tags: quickstart, whisparr
 editor: markdown
-dateCreated: 2021-06-20T20:05:44.814Z
+dateCreated: 2022-04-03T03:49:38.922Z
 ---
 
 # Table of Contents
@@ -34,7 +34,7 @@ dateCreated: 2021-06-20T20:05:44.814Z
 
 # Quick Start Setup Guide
 
-> This page is still in progress and not complete.
+> This page is still in progress and not complete. Contributions are welcome
 
 > For a more detailed breakdown of all the settings, check [Whisparr =>Settings](/whisparr/settings)
 {.is-info}
@@ -183,6 +183,10 @@ Downloading and importing is where most people experience issues. From a high le
 - If the "Completed Download Handling - Remove" option is enabled in Whisparr's settings, Whisparr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
+
+> Note that Whisparr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Whisparr works.
+[How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) and [How does Whisparr work?](/whisparr/faq#how-does-whisparr-work)
+{.is-info}
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
