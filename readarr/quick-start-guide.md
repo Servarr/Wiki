@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-05-10T20:53:19.546Z
+date: 2022-07-14T14:08:03.446Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -27,7 +27,7 @@ dateCreated: 2021-12-11T19:42:31.825Z
 
 # Quick Start Setup Guide
 
-> This page is still in progress and not complete.
+> This page is still in progress and not complete. Contributions are welcome
 
 > For a more detailed breakdown of all the settings, check [Readarr =>Settings](/readarr/settings)
 {.is-info}
@@ -246,3 +246,22 @@ Downloading and importing is where most people experience issues. From a high le
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
+
+
+# How to import your existing organized media library
+
+> Note that Readarr does not regularly search for Books.  See these two FAQ Entries for details to understand how Readarr works.
+[How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) and [How does Readarr work?](/readarr/faq#how-does-readarr-work)
+{.is-info}
+
+After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
+
+Coming soon - Contributions Welcome
+
+## Importing Existing Media
+
+Coming soon - Contributions Welcome
+
+# Add New Books
+
+[Refer to the Library Page for additional information](/readarr/library#add-new)
