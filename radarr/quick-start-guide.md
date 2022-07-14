@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-07-14T14:02:30.259Z
+date: 2022-07-14T14:07:14.649Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -185,7 +185,7 @@ Downloading and importing is where most people experience issues. From a high le
 # How to import your existing organized media library
 
 > Note that Radarr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Radarr works.
-[How does Radarr find movies?](https://wiki.servarr.com/radarr/faq#how-does-radarr-find-movies) and [How does Radarr work?](https://wiki.servarr.com/radarr/faq#how-does-radarr-work)
+[How does Radarr find movies?](/radarr/faq#how-does-radarr-find-movies) and [How does Radarr work?](/radarr/faq#how-does-radarr-work)
 {.is-info}
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
