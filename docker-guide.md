@@ -2,7 +2,7 @@
 title: Docker Guide
 description: 
 published: true
-date: 2022-07-06T17:25:04.213Z
+date: 2022-07-19T17:21:56.511Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -360,8 +360,37 @@ For maintaining a few Docker containers just using systemd is an option. It stan
 
 ## Shell *inside* a container
 
+Exec into a container will typically log you in as root
+
 ```shell
     docker exec -it CONTAINER_NAME /bin/bash
+```
+
+Once inside, you can switch users with
+
+```shell
+    su - <username>
+```
+
+To exec in as a specific user, add `-u` as an argument and pass the username or id
+
+
+```shell
+    docker exec -u USER -it CONTAINER_NAME /bin/bash
+```
+
+### Examples as Specifc Users
+
+#### LSIO Radarr
+
+```shell
+    docker exec -u abc -it radarr bash
+```
+
+#### Hotio Sonarr
+
+```shell
+    docker exec -u hotio -it sonarr bash
 ```
 
 For more information, see the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) documentation.
