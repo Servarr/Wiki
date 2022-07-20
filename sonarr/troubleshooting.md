@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-05-07T19:26:45.463Z
+date: 2022-07-20T22:34:18.550Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -275,9 +275,9 @@ Below are some common problems.
 
 Sonarr v2 has been end of life and not supported since 3/2021. It is not compatible with qBittorrent v4.3.0 or newer. Upgrade to Sonarr v3
 
-### Using qBittorrent v4.4.0
+### Using qBittorrent v4.4.X
 
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. It is strongly suggest to rollback to v4.3.9. Qbit v4.4.1+ resolved this undocumented change, but has other bugs.
+Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. It is strongly suggest to rollback to v4.3.9. Qbit v4.4.1+ resolved this undocumented change, but has other bugs.  qBittorrent 4.3.9 is suggested.
 
 ### Download Client's WebUI is not enabled
 
