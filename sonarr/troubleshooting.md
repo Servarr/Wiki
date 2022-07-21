@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T19:20:57.593Z
+date: 2022-07-21T19:47:09.050Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -300,6 +300,16 @@ While mapped network drives like `X:\` are convenient, they aren’t as reliable
 Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/docker-guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
 
 ### Remote Path Mapping
+
+If you have Sonarr in Docker and the Download Client in non-Docker (or vice versa) or have the programs on different servers then you may need a remote path map.
+
+Logs will indicate something similar to. 
+
+```none
+2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/torrents/tv/The.Orville.S03E08.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
+```
+
+Thus `/volume3/data` does not exist within Sonarr's container or is not accessible.
 
 - [Settings => Download Clients => Remote Path Mappings](/sonarr/settings#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
