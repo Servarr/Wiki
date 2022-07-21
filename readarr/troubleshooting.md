@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T19:55:39.667Z
+date: 2022-07-21T19:58:18.131Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -290,9 +290,7 @@ Logs will indicate something similar to.
 2022-02-03 14:03:54.3|Error|DownloadedBooksImportService|Import failed, path does not exist or is not accessible by Readarr: /volume3/data/torrents/audiobooks/Party of Two - Jasmine Guillory.mp3. Ensure the path exists and the user running Readarr has the correct permissions to access this file/folder
 ```
 
-Thus `/volume3/data` does not exist within Radarr's container or is not accessible.
-
-- [Settings => Download Clients => Rem
+Thus `/volume3/data` does not exist within Readarr's container or is not accessible.
 
 - [Settings => Download Clients => Remote Path Mappings](/readarr/settings#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
