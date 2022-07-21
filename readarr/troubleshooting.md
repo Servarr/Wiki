@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T19:58:18.131Z
+date: 2022-07-21T20:01:30.171Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -284,7 +284,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 If you have Readarr in Docker and the Download Client in non-Docker (or vice versa) or have the programs on different servers then you may need a remote path map.
 
-Logs will indicate something similar to. 
+Logs will look like
 
 ```none
 2022-02-03 14:03:54.3|Error|DownloadedBooksImportService|Import failed, path does not exist or is not accessible by Readarr: /volume3/data/torrents/audiobooks/Party of Two - Jasmine Guillory.mp3. Ensure the path exists and the user running Readarr has the correct permissions to access this file/folder
