@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T19:47:09.050Z
+date: 2022-07-21T19:54:21.879Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -303,7 +303,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 If you have Sonarr in Docker and the Download Client in non-Docker (or vice versa) or have the programs on different servers then you may need a remote path map.
 
-Logs will indicate something similar to. 
+Logs will look like
 
 ```none
 2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/torrents/tv/The.Orville.S03E08.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
@@ -335,6 +335,12 @@ Thus `/volume3/data` does not exist within Sonarr's container or is not accessib
   - Configure a remote path map to find the REMOTE path and replace it with the LOCAL equivalent
 
 ### Permissions on the Library Folder
+
+Logs will look like
+
+```none
+2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/tv/The Orville/Season 03/The.Orville.S03E08.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
+```
 
 Don’t forget to check permissions and ownership of the *destination*. It is easy to get fixated on the download’s ownership and permissions and that is *usually* the cause of permissions related issues, but it *could* be the destination as well. Check that the destination folder(s) exist. Check that a destination *file* doesn’t already exist or can’t be deleted or moved to recycle bin. Check that ownership and permissions allow the downloaded file to be copied, hard linked or moved. The user or group that runs as needs to be able to read and write the root folder.
 
