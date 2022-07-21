@@ -1,11 +1,11 @@
 ---
 title: Whisparr Troubleshooting
-description:
+description: 
 published: true
-date: 2022-03-02T01:45:44.095Z
-tags: whisparr, troubleshooting
+date: 2022-07-21T19:59:19.285Z
+tags: troubleshooting, whisparr
 editor: markdown
-dateCreated: 2021-08-03T21:05:52.988Z
+dateCreated: 2022-04-03T03:50:06.989Z
 ---
 
 # Table of Contents
@@ -294,6 +294,16 @@ While mapped network drives like `X:\` are convenient, they aren’t as reliable
 Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/docker-guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
 
 ### Remote Path Mapping
+
+If you have Whisparr in Docker and the Download Client in non-Docker (or vice versa) or have the programs on different servers then you may need a remote path map.
+
+Logs will indicate something similar to. 
+
+```none
+2022-02-03 14:03:54.3|Error|DownloadedMovieImportService|Import failed, path does not exist or is not accessible by Whisparr: /volume3/data/torrents/movies/The.Orville.2022.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Whisparr has the correct permissions to access this file/folder
+```
+
+Thus `/volume3/data` does not exist within Whisparr's container or is not accessible.
 
 - [Settings => Download Clients => Remote Path Mappings](/whisparr/settings#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
