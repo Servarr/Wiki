@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-06-09T16:39:55.513Z
+date: 2022-07-21T19:21:15.292Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -337,7 +337,7 @@ Logs will show `Searching indexers for [The Witcher : S01E09]`
 
 #### Anime
 
-Logs will show `Searching indexers for [The Witcher : 09]`
+Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 
 - Anime.Origins.**E04**.File.4\_.Monkey.WEB-DL.H.264.1080p.AAC2.0.AC3.5.1.Srt.EngCC-Pikanet128.1272903A
 - \[Coalgirls\] Human X Monkey **148** (1920x1080 Blu-ray FLAC) \[63B8AC67\]
