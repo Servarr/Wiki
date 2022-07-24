@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2022-05-10T03:52:33.584Z
+date: 2022-07-24T14:17:12.157Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -180,6 +180,49 @@ If you download using a BitTorrent client, the process is slightly different:
 
 > If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 {.is-info}
+
+# Import Lists
+
+> Information on supported list types can be found at the [More Info (Supported)](/lidarr/supported#lists) page for this section
+{.is-info}
+
+Import lists allow you to add items to Lidarr from Spotify or Last .fm. This has the potential to add a lot of unexpected items to your Lidarr database, so please use it with care.
+
+<!-- ![importlists.png](/assets/readarr/importlists.png) -->
+
+## Import Lists
+
+This shows you the lists you currently have, and allows you to add new lists. Adding lists is covered below in more detail.
+
+## Import List Exclusions
+
+Anything on here has been excluded from being added by lists, and will never be added from any list. You can remove items from this by clicking on it.
+
+## Adding an Import List
+
+After clicking the <kb>+</kb>, choose what kind of list you'd like to add:
+
+<!-- ![addlist.png](/assets/readarr/addlist.png) -->
+
+In this instance, we're going to add a Spotify Saved Albums list.
+
+<!-- ![bookshelflist.png](/assets/readarr/bookshelflist.png) -->
+
+- Name - Enter a name for this list.
+- Enable Automatic Add - If enabled have anything on the list automatically add to Lidarr.
+
+> This is going to add ALL ALBUMS from that artist to Lidarr!
+
+- Monitor - Select your monitoring level for things added. Valid options are `None`, `Specific Album`, and `All Artist Albums`. All albums are added to Lidarr, but will be monitored or unmonitored based on this selection.
+- Root Folder - Choose the root folder for artists added from this list
+- Monitor New Albums - Choose what Lidarr should do with future albums of the added artist. Valid options are `All Albums`, `None`, `New`.
+- Quality Profile - Choose your quality profile for artists added from this list
+- Metadata Profile - Choose your metadata profile for artists added from this list
+- Lidarr Tags - Choose what tags apply for artists added from this list
+
+> It is highly recommended that you add a descriptive tag here. Otherwise, you will not know what list added these items to Lidarr, and once they're added you can never get this information again! This info is not logged!
+
+Lists sync by default every 24 hours, but can be triggered manually from the `System` => `Tasks` page. You cannot automate this process any quicker than that.
 
 # Connections
 
