@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: 
 published: true
-date: 2022-07-24T14:17:12.157Z
+date: 2022-07-24T14:21:19.994Z
 tags: lidarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -26,6 +26,10 @@ dateCreated: 2021-06-14T21:36:07.513Z
     - [Remove Completed Downloads](#remove-completed-downloads)
     - [Failed Download Handling](#failed-download-handling)
   - [Remote Path Mappings](#remote-path-mappings)
+- [Import Lists](#import-lists)
+	- [Import Lists](#import-lists-1)
+	- [Import List Exclusions](#import-list-exclusions)
+  - [Adding an Import List](#adding-an-import-list)
 - [Connections](#connections)
 - [Tags](#tags)
 - [General](#general)
