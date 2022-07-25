@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2022-05-03T13:32:39.242Z
+date: 2022-07-25T22:50:59.026Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
@@ -31,6 +31,7 @@ dateCreated: 2021-08-15T13:12:38.327Z
 - [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/readarr/custom-scripts)
 - [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/readarr/tips-and-tricks)
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/readarr/appdata-directory)
+- [<i class="fas fa-server"></i>&emsp; Configure Readarr with a PostgreSQL Database](/readarr/postgres-setup)
 - [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/readarr/supported)
 {.links-list}
 
