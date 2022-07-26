@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-07-25T22:49:56.668Z
+date: 2022-07-26T12:58:53.259Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -86,7 +86,7 @@ Before starting a migration please ensure that you have run Readarr against the 
 1. Run the following commands:
 
 ```SQL
-DELETE FROM "Profiles";
+DELETE FROM "QualityProfiles";
 ```
 
 ```SQL
@@ -98,7 +98,7 @@ DELETE FROM "DelayProfiles";
 ```
 
 ```SQL
-DELETE FROM "Metadata";
+DELETE FROM "MetadataProfiles";
 ```
 
 1. Start the migration by using either of these options:
