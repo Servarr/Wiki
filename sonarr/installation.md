@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-05-18T02:52:03.235Z
+date: 2022-07-26T20:45:18.953Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -252,21 +252,30 @@ You can now safely close the shell
 
 ## Synology Mono SSL Errors
 
-> Due to a bug introduced by SynoCommunity's poorly maintained Mono package. Sonarr will fail to connect after updating Mono or after a fresh installation.  This can be resolved by following the instructions on [this SynoCommunity Bug Report](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1009758625)
+> Due to a bug introduced by SynoCommunity's poorly maintained Mono package. Sonarr will fail to connect after updating Mono or after a fresh installation. This can be resolved by following the instructions on [SynoCommunity Bug Report #5051](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1009758625). Note that based on [this comment](https://github.com/SynoCommunity/spksrc/issues/5051#issuecomment-1153245799) DSM7 users have an extra step.
 {.is-danger}
 
 1. Within DSM, enable SSH service in *Control Panel => Terminal & SNMP* and click apply
 1. Using [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) (MacOS) connect to the NAS using `ssh -l [admin username] [NAS address]` or using [Putty](https://www.putty.org/) (Windows) connect to the network address of your NAS
 1. Enter the required admin password and press enter
-1. Enter the following command noted below and press enter
-
-- DSM6 `sudo /var/packages/mono/target/bin/cert-sync /etc/ssl/certs/ca-certificates.crt`
-- DSM7 `sudo /volume1/@appstore/mono/bin/cert-sync /etc/ssl/certs/ca-certificates.crt`
-
+1. Enter the appropaite command(s) for your DSM version noted below and press enter
 1. Enter the required admin password and press enter. When complete you should see the line *Import process completed*
 1. Disconnect the SSH session by typing `exit` and press enter
 1. Within DSM, disable the SSH service in *Control Panel => Terminal & SNMP* and click apply
 1. Once complete the errors in Sonarr should disappear on their own in a few minutes.
+
+### Synology DSM6 Mono Fix Command
+
+```bash
+sudo /var/packages/mono/target/bin/cert-sync /etc/ssl/certs/ca-certificates.crt
+```
+
+### Synology DSM7 Mono Fix Command
+
+```bash
+sudo /volume1/@appstore/mono/bin/cert-sync /etc/ssl/certs/ca-certificates.crt
+sudo chmod -R a+rX /usr/share/.mono
+```
 
 # Docker
 
