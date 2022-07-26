@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-07-26T12:58:53.259Z
+date: 2022-07-26T13:08:10.592Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -63,6 +63,7 @@ If you want to specify a database name then should also include the following co
 ```xml
 <PostgresMainDb>MainDbName</PostgresMainDb>
 <PostgresLogDb>LogDbName</PostgresLogDb>
+<PostgresCacheDb>CacheDbName</PostgresCacheDb>
 ```
 
 Only **after creating** both databases you can start the Readarr migration from SQLite to Postgres.
