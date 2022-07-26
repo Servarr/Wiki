@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-07-26T20:45:18.953Z
+date: 2022-07-26T20:47:37.884Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -258,7 +258,7 @@ You can now safely close the shell
 1. Within DSM, enable SSH service in *Control Panel => Terminal & SNMP* and click apply
 1. Using [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) (MacOS) connect to the NAS using `ssh -l [admin username] [NAS address]` or using [Putty](https://www.putty.org/) (Windows) connect to the network address of your NAS
 1. Enter the required admin password and press enter
-1. Enter the appropaite command(s) for your DSM version noted below and press enter
+1. Enter the appropriate command(s) for your DSM version noted below and press enter
 1. Enter the required admin password and press enter. When complete you should see the line *Import process completed*
 1. Disconnect the SSH session by typing `exit` and press enter
 1. Within DSM, disable the SSH service in *Control Panel => Terminal & SNMP* and click apply
@@ -266,13 +266,13 @@ You can now safely close the shell
 
 ### Synology DSM6 Mono Fix Command
 
-```bash
+```shell
 sudo /var/packages/mono/target/bin/cert-sync /etc/ssl/certs/ca-certificates.crt
 ```
 
 ### Synology DSM7 Mono Fix Command
 
-```bash
+```shell
 sudo /volume1/@appstore/mono/bin/cert-sync /etc/ssl/certs/ca-certificates.crt
 sudo chmod -R a+rX /usr/share/.mono
 ```
