@@ -693,7 +693,7 @@ Below are some common problems that are the solution for almost all issues exper
 - Sonarr is searching for `9 1 1` but your tracker only has results for `9-1-1` or `John s Show` and `John's Show`
 - This is due to your tracker not supporting normal standardized searches.
 - The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Sonarr/Sonarr/issues/1225#issuecomment-981153943)
-- Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilities flag.
+- Jackett [does support](https://github.com/Jackett/Jackett/pull/13409) this capabilities flag.
 - Prowlarr supports the flag, but the capabilities need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Series needs an alias

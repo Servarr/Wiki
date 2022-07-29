@@ -548,8 +548,8 @@ Below are some common problems.
 
 - Whisparr is searching for `Kikis Delivery Service` but your tracker only has results for `Kiki's Delivery Service`
 - This is due to your tracker not supporting normal standardized searches.
-- The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Whisparr/Whisparr/issues/4502#issuecomment-981143905)
-- Jackett [does not support](https://github.com/Jackett/Jackett/pull/11889) this capabilities flag.
+- The solution is that your tracker's definition's search capabilities need to be updates to indicate it [requires and supports `RawSearch`](https://github.com/Radarr/Radarr/issues/4502#issuecomment-981143905)
+- Jackett [does support](https://github.com/Jackett/Jackett/pull/13409) this capabilities flag.
 - Prowlarr supports the flag, but the capabilities need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Media is Unmonitored

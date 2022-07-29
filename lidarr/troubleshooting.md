@@ -456,6 +456,14 @@ Below are some common problems.
 
 The song(s) is(are) not monitored.
 
+### Tracker needs RawSearch Caps
+
+- Lidarr is searching for `Kikis Delivery Service` but your tracker only has results for `Kiki's Delivery Service`
+- This is due to your tracker not supporting normal standardized searches.
+- The solution is that your tracker's definition's search capabilities need to be updates to indicate it requires and supports `RawSearch`
+- Jackett [does support](https://github.com/Jackett/Jackett/pull/13409) this capabilities flag.
+- Prowlarr supports the flag, but the capabilities need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
+
 ### Wrong categories
 
 Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in.
