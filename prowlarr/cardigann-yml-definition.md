@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-07-04T23:06:35.935Z
+date: 2022-07-31T19:34:52.578Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -13,11 +13,12 @@ dateCreated: 2021-08-14T18:19:59.428Z
 - [Table of Contents](#table-of-contents)
 - [Cardigann Versions](#cardigann-versions)
   - [Supported Versions](#supported-versions)
-    - [V3](#v3)
     - [V4](#v4)
     - [V5](#v5)
     - [V6](#v6)
+    - [V7](#v7)
   - [Depreciated Versions](#depreciated-versions)
+    - [V3](#v3)
     - [V2](#v2)
     - [V1](#v1)
 - [General](#general)
@@ -97,17 +98,6 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
 
 ## Active Versions
 
-### V3 Indexers
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v3/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v3 includes support for APIs and JSON
-- Replace `imdb:` selector with `imdbid:`
-- Makes `Description` an optional by default
-- All new Indexers using shall be in v3 as of 2021-10-21
-  - Indexers utilizing CategoryDescr or any v4 features MUST be in v4
-
 ### [V4 Indexers](https://github.com/Prowlarr/Prowlarr/pull/828)
 
 > The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v4/schema.json)
@@ -136,6 +126,14 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
   - `doubanid` support
   - `tmdbid` TV Search Support
 
+### [V7 Indexers](https://github.com/Prowlarr/Prowlarr/commit/ee6467073f64cfaa5ef0de2225f39f0fd0eb5c05)
+
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v7/schema.json)
+{.is-info}
+
+- Prowlarr Cardigann v7 includes several changes such as
+  - `Publisher`, `Year`, `Genre`, Query support
+
 ## Depreciated Versions
 
 ### V1 Indexers
@@ -155,6 +153,17 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
   - AllowRawSearch property in caps
 - No new indexers are to be added to v2 as of 2022-04-18
 - No new updates backported to v2 as of 2022-04-18
+
+### V3 Indexers
+
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v3/schema.json)
+{.is-info}
+
+- Prowlarr Cardigann v3 includes support for APIs and JSON
+- Replace `imdb:` selector with `imdbid:`
+- Makes `Description` an optional by default
+- All new Indexers using shall be in v3 as of 2021-10-21
+  - Indexers utilizing CategoryDescr or any v4 features MUST be in v4
 
 # General
 
