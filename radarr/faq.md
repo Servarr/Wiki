@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-06-08T12:01:12.989Z
+date: 2022-08-04T00:35:15.010Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -299,6 +299,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ![existing-movie.png](/assets/radarr/existing-movie.png)
 
+- Library Import shows "Existing" or you get an error of "Path is configured for an existing movie"
 - This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
 - Likely this was caused by not correcting a mismatched movie when the user imported their library.
 - Locate and correct the movie that is already assigned to that movie's path.
@@ -306,6 +307,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - Table View
   - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
+-  Alternatively, delete the movie using the existing path from Radarr
 
 ## How can I rename my movie folders?
 
