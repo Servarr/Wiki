@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2022-04-03T13:49:16.232Z
+date: 2022-08-13T21:10:50.719Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -14,12 +14,6 @@ dateCreated: 2021-05-16T02:37:25.239Z
 Welcome to the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sonarr. Collectively they are referred to as "\*Arr" or "\*Arrs". They are designed to automatically grab, sort, organize, and monitor your Music, Movie, E-Book, or TV Show collections for Lidarr, Radarr, Readarr, and Sonarr; and to manage your indexers and keep them in sync with the aforementioned apps for Prowlarr.
 
 Contributions are welcome either on the Wiki directly, just authenticate with Github first, or via Pull Requests on our repository.
-
-# Wiki
-
-- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Wiki Repository *Github*](https://github.com/Servarr/Wiki)
-- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script*](/install-script)
-{.links-list}
 
 # Applications
 
@@ -60,4 +54,6 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 
 - [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
 - [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
+- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script*](/install-script)
 {.links-list}
+
