@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-06-07T18:20:12.221Z
+date: 2022-08-17T03:40:25.503Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -179,6 +179,8 @@ Also, note that for each individual settings page, there are some options at the
 - `{ImdbId}` = tt12345
 - `{Tmdbid}` = 123456
 
+> Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}` {.is-info}
+
 ### Quality
 
 - `{Quality Full}` = HDTV 720p Proper
@@ -210,6 +212,7 @@ Also, note that for each individual settings page, there are some options at the
 ### Edition
 
 - `{Edition Tags}` = IMAX
+> Edition Tags used in Plex naming format will conditionally hide when value is blank `{edition-{Edition Tags}}` {.is-info}
 
 ### Custom Formats (Naming)
 
