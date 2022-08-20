@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-08-18T01:46:54.267Z
+date: 2022-08-20T16:14:27.840Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -124,8 +124,6 @@ Also, note that for each individual settings page, there are some options at the
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
-> Starting from v4.0.0.5720, Radarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` {.is-warning}
-
 - Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
 
 - Movie Folders: `{Movie CleanTitle} ({Release Year})`
@@ -213,7 +211,9 @@ Also, note that for each individual settings page, there are some options at the
 ### Edition
 
 - `{Edition Tags}` = IMAX
-> Edition Tags used in Plex naming format will conditionally hide when value is blank `{edition-{Edition Tags}}` {.is-info}
+
+> As of v4.2.2.6489, Edition Tags used in Radarr following Plex's naming format of `{edition-{Edition Tags}}` will conditionally hide like `{-Group}` does when the Edition Tags value is blank
+{.is-info}
 
 ### Custom Formats (Naming)
 
