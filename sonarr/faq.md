@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-07-26T20:40:02.502Z
+date: 2022-08-22T02:21:33.651Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -98,10 +98,16 @@ dateCreated: 2021-06-09T18:39:33.208Z
 - If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](/sonarr/wanted) tab and search from there.
 - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
 
-> \*If a new episode is added to Sonarr that aired in the last 14 days or within 1 day into the future (to cover those series that may release a bit early) Sonarr **will search** for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr).
-{.is-info}
+### Instances When Auto Searching Does Occur
 
-Same rules as normal apply, series + episode must be monitored, episodes without an airdate are skipped
+Active searching (via the indexer's API) is only done in the below situations. Note that the same rules as normal apply: series + episode must be monitored and episodes without an airdate are skipped
+
+- Triggered Automatic or Manual Search
+  - User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific episode, season, or series.
+- Adding a show using the Add and Search button
+- Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches
+- Recently Aired Episodes added after airing
+  - If a new episode is added to Sonarr that aired in the last 14 days or within 1 day into the future (to cover those series that may release a bit early) Sonarr **will search** for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr)
 
 ## How are possible downloads compared?
 
