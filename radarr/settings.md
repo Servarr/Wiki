@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-08-20T16:14:27.840Z
+date: 2022-08-23T20:13:03.129Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -124,9 +124,19 @@ Also, note that for each individual settings page, there are some options at the
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
-- Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
+### Movie Files 
 
-- Movie Folders: `{Movie CleanTitle} ({Release Year})`
+- Radarr v4.2.2.6489 or newer
+
+`{Movie CleanTitle} {(Release Year)} {imdb-{ImdbId}} {edition-{Edition Tags}} {[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{MediaInfo AudioLanguages}[{Mediainfo VideoCodec}]{-Release Group}`
+
+- Older Radarr Versions
+
+`{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
+
+### Movie Folders
+
+`{Movie CleanTitle} ({Release Year})`
 
 ## Movie Naming
 
