@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-05-31T16:35:53.802Z
+date: 2022-08-26T21:02:40.961Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -205,6 +205,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - Metadata Language - Select the language Radarr should use to write the metadata if available in that language
   - Movie Images - Create various Season images including posters and banners
   - Use Movie.nfo - Write the nfo file as `movie.nfo` rather than the default
+  - Collection Name - Radarr will write the collection name to the .nfo file
 - Roksbox {#roksboxmetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Movie Metadata - Create xml file for each movie
