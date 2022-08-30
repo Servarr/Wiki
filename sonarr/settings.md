@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-08-08T05:32:56.151Z
+date: 2022-08-30T20:19:58.286Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -866,6 +866,10 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 > Note: If using a reverse proxy (example: mydomain.com/sonarr) you would enter '/sonarr' for URL Base.
 {.is-info}
+
+- Instance Name - Instance name in tab and for Syslog app name
+
+> If you are running multiple instances, this will add the instance name to the web browser tab name. {.is-info}
 
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Sonarr enable this option.
 
