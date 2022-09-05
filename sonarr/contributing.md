@@ -2,7 +2,7 @@
 title: Sonarr Contributing
 description: 
 published: true
-date: 2021-11-24T19:25:49.430Z
+date: 2022-09-05T23:13:38.358Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:10:04.820Z
@@ -18,7 +18,7 @@ Setup guides, FAQ, the more information we have on the [wiki](/sonarr) the bette
 
 ## Development
 
-Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET framework 4.7, while the frontend utilizes Reactjs.
+Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET 6, while the frontend utilizes Reactjs.
 
 ### Tools required
 
