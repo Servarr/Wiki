@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-05-07T14:01:49.482Z
+date: 2022-09-06T15:28:14.011Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -11,6 +11,9 @@ dateCreated: 2022-01-10T15:42:34.178Z
 # Radarr and Postgres
 
 This document will go over the key points of migrating and setting up Postgres support in Radarr.
+
+> Radarr v4.1.0.6133 or newer required
+{.is-info}
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
