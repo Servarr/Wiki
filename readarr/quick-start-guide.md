@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2022-07-14T14:08:03.446Z
+date: 2022-09-07T23:19:05.590Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -142,7 +142,7 @@ You may also elect to use Calibre to manage your library on this screen. Doing s
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
-> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored.
+> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored. Hardlinks are not used when adding Calibre integration.
 > **Note that you cannot add Calibre integration to a root folder after it's created.**
 {.is-danger}
 
@@ -189,6 +189,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 > \* Note that this **cannot be enabled on an existing root folder**.
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
+> \* Note that hardlinks do not work with Calibre integration.
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
 > \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
