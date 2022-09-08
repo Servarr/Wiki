@@ -1,8 +1,8 @@
 ---
 title: Docker Guide
-description: 
+description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts; and Linux Ownership and Permissions
 published: true
-date: 2022-07-19T17:21:56.511Z
+date: 2022-09-08T04:36:18.275Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
