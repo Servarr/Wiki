@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-08-26T21:02:40.961Z
+date: 2022-09-08T20:28:40.992Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -165,6 +165,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
   ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
 - Plex Watchlist {#plex}
+  - Requires: v4.1.0.6176+
   - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.
   - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
 - Radarr {#radarrimport}
