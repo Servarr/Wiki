@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-08-22T02:22:09.199Z
+date: 2022-09-09T15:27:21.549Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -408,10 +408,13 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 - `main` can go to `develop`
 - See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
 - Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned.
-  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- **April 24 2022 Update**
-  - `3.0.8.1507` has been released as main/stable
-  - For those on develop and are still on `3.0.7.1506` or lower you can safely downgrade to main
+  - Example Error Messages:
+    - `Error parsing column 45 (Language=31 - Int64)`
+    - `The DataMapper was unable to load the following field: 'Languages' value`
+    -  Orher similar database errors around missing columns or tables.
+- **August 7 2022 Update**
+  - `3.0.9.1549` has been released as main/stable
+  - For those on develop and are still on `3.0.9.1549` or lower you can safely downgrade to main
   - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut. If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
 # Sonarr and Series Issues + Metadata
