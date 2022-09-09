@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-08-09T17:37:15.335Z
+date: 2022-09-09T16:29:06.748Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -230,11 +230,7 @@ This is typically caused by:
 
 ## \*Arr HTTP 400 Errors
 
-- Note: Indexers are synced based on the capabilities/categories they claim to support.
-- If an indexer supports only tv categories it will not be synced to Lidarr, Radarr, and Readarr.
-- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis.
-- The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to Readarr and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
-  - The specific error will be `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
+- See this FAQ Entry: [Prowlarr will not sync X Indexer to App](/prowlarr/faq#prowlarr-will-not-sync-x-indexer-to-app)
 
 ## 503 HTTP Service Unavailable
 
