@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-05-11T00:57:37.992Z
+date: 2022-09-09T16:27:22.443Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -16,6 +16,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
   - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
+  - [Prowlarr will not sync X Indexer to App](#prowlarr-will-not-sync-x-indexer-to-app)
   - [What \*Arr Indexer Settings are Compared for App Full Sync](#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
     - [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
@@ -80,7 +81,21 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 ## Prowlarr will not sync to Sonarr
 
-- Prowlarr only talks to Sonarr V3. V3 is the current branch, which everyone should be running. If you have not upgraded, you should do so immediately. V2 is EOL, and it is fully expected that some integration doesn't work with V2, Prowlarr included.
+- Prowlarr only supports Sonarr v3+
+- Sonarr v2 (fka nzbdrone) is not supported by Prowlarr nor supported in general and has been end-of-life since March 2021
+
+## Prowlarr will not sync X Indexer to App
+
+- Prowlarr only syncs if Add and Remove or Full Sync is enabled for the app.
+- Only in instances where an App and Indexer have matching tags or no tags at all will an indexer be synced to an app
+- Indexers are synced based on the capabilities/categories they claim to support.
+  - If an indexer supports only TV categories it will not be synced to Lidarr, Radarr, and Readarr.
+- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis.
+- The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to Readarr and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
+- The specific error will be be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
+  - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
+  - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
+  - Try again later
 
 ## What \*Arr Indexer Settings are Compared for App Full Sync
 
