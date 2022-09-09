@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-09T15:33:43.077Z
+date: 2022-09-09T22:22:28.936Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -464,6 +464,9 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
+  
+- Kamen Rider
+  - This show has both an anthology entry (collecting all seasons) and the individual seasons listed as seperate entries on TVDb. As the anthology entry also has individual season name mapping on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases. The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
 
 ## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
