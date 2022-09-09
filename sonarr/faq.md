@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-09T15:27:21.549Z
+date: 2022-09-09T15:31:27.322Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -407,10 +407,11 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 
 - `main` can go to `develop`
 - See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
-- Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned.
+- Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned. If the below errors are encountered then you are using a newer database with an older \*Arr version which is not supported. Upgrade \*Arr to the version you were previously on or newer.
   - Example Error Messages:
     - `Error parsing column 45 (Language=31 - Int64)`
     - `The DataMapper was unable to load the following field: 'Languages' value`
+    - `ID does not match a known language Parameter name: id`
     -  Orher similar database errors around missing columns or tables.
 - **August 7 2022 Update**
   - `3.0.9.1549` has been released as main/stable
