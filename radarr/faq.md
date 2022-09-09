@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-09-09T15:35:29.301Z
+date: 2022-09-09T15:36:10.339Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -86,7 +86,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How does Radarr find movies?
 
-> Legacy FAQ Entry. See [How does Radarr work?](#how-does-radarr-work)
+> This FAQ item is a legacy FAQ Entry. Refer to [How does Radarr work?](#how-does-radarr-work)
+{.is-info}
 
 ## How do I access Radarr from another computer?
 
