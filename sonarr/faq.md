@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-10T10:23:47.924Z
+date: 2022-09-10T16:50:35.439Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -445,7 +445,8 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 
 - This is an incomplete list of the known shows and how/why they're problematic:  
 - American Dad {#problemshow-americandad}
-  - American Dad is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
+  - Due to network season changes, American Dad is typically off by 1 season between releases and TVDb. Refer to the XEM map for details
+  - [American Dad](https://thexem.info/xem/show/4948) is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map. 
   - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
