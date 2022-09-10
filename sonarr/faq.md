@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-09T22:22:28.936Z
+date: 2022-09-10T10:23:47.924Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -450,23 +450,20 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
    {.links-list}
-- Arrested Development {#problemshow-arresteddevelopment}
-- Kitchen Nightmares (US) {#problemshow-kitchennightmaresus}
-- Mythbusters {#problemshow-mythbusters}
 - Paw Patrol {#problemshow-pawpatrol}
   - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
-- Pawn Stars {#problemshow-pawnstars}
 - Pokémon {#problemshow-pokemon}
   - On TheXem, [Pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
    {.links-list}
-
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
-  
-- Kamen Rider
-  - This show has both an anthology entry (collecting all seasons) and the individual seasons listed as seperate entries on TVDb. As the anthology entry also has individual season name mapping on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases. The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
+- Kamen Rider {#problemshow-kamenrider}
+  - The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
+ as this show has both an anthology entry (collecting all seasons) and the individual seasons listed as seperate entries on TVDb. Due to the anthology entry having individual season name mappings on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases.
+
+Some examples of other shows that commonly have issues, most of which may be resolved by TheXEM mappings are: Arrested Development, Kitchen Nightmares (US), Mythbusters, Pawn Stars.
 
 ## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
