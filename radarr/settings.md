@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-08-23T20:13:03.129Z
+date: 2022-09-12T19:14:07.125Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -492,9 +492,12 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ### Conditions
 
+> **Different Condition Types** act as `and` within the same Custom Format.  **Multiple Conditions of the same type** act as `or` unless Required is used
+{.is-info}
+
 - **Any conditions that use RegEx are case insensitive**
 - Note the following GitHub Issues
-  - [Custom Formats do not - [Custom Formats do not apply before the Movie Year in release titles #4859](https://github.com/Radarr/Radarr/issues/4859)
+  - [Custom Formats do not apply before the Movie Year in release titles #4859](https://github.com/Radarr/Radarr/issues/4859)
   - [Custom Format doesn't match for term "xvid" at end of release name #6824](https://github.com/Radarr/Radarr/issues/6824)
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk.
   - Note: Radarr only considers text after the movie title and year which means anything preceding the title is ignored.
