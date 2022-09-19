@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-07-26T13:08:10.592Z
+date: 2022-09-19T15:56:18.294Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -35,7 +35,7 @@ docker create --name=postgres14 \
 
 ## Creation of database
 
-Readarr needs two databases, the default names of these are:
+Readarr needs three databases, the default names of these are:
 
 - `readarr-main`   This is used to store all configuration and history
 - `readarr-log`    This is used to store events that produce a logentry
