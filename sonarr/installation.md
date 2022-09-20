@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-07-26T20:47:37.884Z
+date: 2022-09-20T08:11:19.981Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -327,8 +327,8 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 - Note that $proxy_host is needed rather than the typical $host due to mono.
 
 ```nginx
-location /sonarr {
-  proxy_pass ^~      http://127.0.0.1:8989/sonarr;
+location ^~ /sonarr {
+  proxy_pass         http://127.0.0.1:8989/sonarr;
   proxy_set_header   Host $proxy_host;
   proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header   X-Forwarded-Host $host;
