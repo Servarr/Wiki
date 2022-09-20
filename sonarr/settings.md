@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-09-15T23:25:48.755Z
+date: 2022-09-20T18:55:18.515Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -559,7 +559,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info Supported]
+- A list of supported indexers is located at the [More Info Supported](/sonarr/supported#indexers) page
 
 ### Indexer Settings
 
@@ -655,11 +655,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Download Clients
 
-Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
+Click on `Settings` =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info Supported]
+- A list of supported download clients is located at the [More Info Supported](/sonarr/supported#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
