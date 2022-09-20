@@ -14,6 +14,8 @@ dateCreated: 2021-05-29T15:57:25.304Z
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
   - [Community Naming Suggestions](#community-naming-suggestions)
+    - [Movie Files](#movie-files)
+    - [Movie Folders](#movie-folders)
   - [Movie Naming](#movie-naming)
     - [Standard Movie Format](#standard-movie-format)
     - [Movie Naming](#movie-naming-1)
@@ -124,7 +126,7 @@ Also, note that for each individual settings page, there are some options at the
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
-### Movie Files 
+### Movie Files
 
 - Radarr v4.2.2.6489 or newer
 
@@ -545,7 +547,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info Supported]
+- A list of supported indexers is located at the [More Info (Supported)](/radarr/supported#indexers) page
 
 ### Indexer Settings
 
@@ -674,7 +676,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info Supported]
+- A list of supported download clients is located at the [More Info (Supported)](/radarr/supported#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -799,7 +801,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 Import lists are a part of Radarr that allow you to follow a given list creator. Let's say that you follow a given list creator on Trakt/TMDb and really like their ArrowVerse Collection section and want to watch every show on their list. You look in your Radarr and realize that you do not have those series. Well instead of searching one by one and adding those items and then searching your indexers for those series. You can do this all at once with a List. The Lists can be set to import all the series on that curator's list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that series.
 
-- CAUTION: If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save. ie. physically look at the list before you even go to Radarr.
+- CAUTION: If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save. i.e. physically look at the list before you even go to Radarr.
 
 - Here you can select the <kb>+</kb> button to open a new pop up window
 - From this new window you are presented with many different options to set up your list from many different list providers. As stated before be careful when doing lists. It is highly recommended to not select the Search on add button before you're absolutely sure the list you select/setup is adding the series that you're looking for.
@@ -831,7 +833,7 @@ Connections are how you want Radarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info Supported]
+- A list of supported notifications & connections is located at the [More Info (Supported)](/radarr/supported#notifications) page
 
 ## Connection Triggers
 

@@ -297,7 +297,7 @@ Docker adds another layer of complexity that is easy to get wrong, but still end
 
 If you have Radarr in Docker and the Download Client in non-Docker (or vice versa) or have the programs on different servers then you may need a remote path map.
 
-Logs will indicate something similar to. 
+Logs will indicate something similar to.
 
 ```none
 2022-02-03 14:03:54.3|Error|DownloadedMovieImportService|Import failed, path does not exist or is not accessible by Radarr: /volume3/data/torrents/movies/The.Orville.2022.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Radarr has the correct permissions to access this file/folder

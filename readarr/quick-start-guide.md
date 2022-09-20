@@ -22,8 +22,12 @@ dateCreated: 2021-12-11T19:42:31.825Z
   - [Calibre Content Server (Optional)](#calibre-content-server-optional)
   - [Calibre Integration](#calibre-integration)
 - [Download Clients](#download-clients)
-  - [Usenet](#usenet)
-  - [BitTorrent](#bittorrent)
+  - [{.tabset}](#tabset)
+    - [Usenet](#usenet)
+    - [BitTorrent](#bittorrent)
+- [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
+  - [Importing Existing Media](#importing-existing-media)
+- [Add New Books](#add-new-books)
 
 # Quick Start Setup Guide
 
@@ -220,7 +224,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/readarr/settings#download-clients), at the [More Info Supported](/readarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+> See the [settings page](/readarr/settings#download-clients), at the [More Info (Supported)](/readarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 {.is-info}
 
 ## {.tabset}
@@ -246,8 +250,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
-- If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
-
+- If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
 

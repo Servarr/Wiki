@@ -31,8 +31,9 @@ dateCreated: 2021-06-20T19:13:01.108Z
   - [Testing a Download](#testing-a-download)
   - [Testing an Import](#testing-an-import)
   - [Common Problems](#common-problems)
+    - [One or More Episodes expected in the release were not imported or missing](#one-or-more-episodes-expected-in-the-release-were-not-imported-or-missing)
     - [Using Sonarr v2](#using-sonarr-v2)
-    - [Using qBittorrent v4.4.0](#using-qbittorrent-v440)
+    - [Using qBittorrent v4.4.X](#using-qbittorrent-v44x)
     - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
     - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
     - [Can’t see share on Windows](#cant-see-share-on-windows)
@@ -49,7 +50,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
     - [Usenet download misses import](#usenet-download-misses-import)
     - [Download client clearing items](#download-client-clearing-items)
     - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
-    - [Found matching series via grab history, but series was matched by series id. Automatic Import is not possible](#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
+      - [Found matching series via grab history, but series was matched by series ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
     - [Episode Name is TBA](#episode-name-is-tba)
     - [Connection Timed Out](#connection-timed-out)
   - [Problem Not Listed](#problem-not-listed)
@@ -58,6 +59,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
   - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
   - [Testing a Search](#testing-a-search)
   - [Common Problems](#common-problems-1)
+    - [Indexers not being Searched](#indexers-not-being-searched)
     - [Poorly Named Releases](#poorly-named-releases)
     - [Tracker needs RawSearch Caps](#tracker-needs-rawsearch-caps)
     - [Series needs an alias](#series-needs-an-alias)
@@ -666,9 +668,9 @@ Below are some common problems that are the solution for almost all issues exper
   - Searching a Series Type of Daily or Standard are no standard (non-anime) categories are configured for your tracker(s)
     - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
   - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-  - The Indexer's Capabilties do not support the query type (e.g. Season/Episode, etc.):
+  - The Indexer's Capabilities do not support the query type (e.g. Season/Episode, etc.):
     - Within Prowlarr, an indexer's capabilities can be located in the (I) icon for the indexer
-    - Jackett does not display a tracker's capabiltiies within its UI.
+    - Jackett does not display a tracker's capabilities within its UI.
   - Trace logs will display information as to why indexers are being ignored if a search is conducted after ***restarting Sonarr***.
 
 ### Poorly Named Releases

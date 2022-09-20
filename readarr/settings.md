@@ -16,6 +16,7 @@ dateCreated: 2021-11-25T15:07:27.926Z
   - [Root Folders](#root-folders)
     - [Root Folder Settings](#root-folder-settings)
   - [Remote Path Mappings](#remote-path-mappings)
+  - [Book File Naming](#book-file-naming)
   - [Book Naming](#book-naming)
     - [Standard Book Format](#standard-book-format)
     - [Author](#author)
@@ -168,7 +169,7 @@ Also, note that for each individual settings page, there are some options at the
 ## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
-- For more information see the section in [Download Clients => Remore Parh Mapping](#remote-path-mappings-1) replace `<Download Client>` with `<Calibre>`
+- For more information see the section in [Download Clients => Remore Path Mapping](#remote-path-mappings-1) replace `<Download Client>` with `<Calibre>`
 
 ## Book File Naming
 
@@ -537,7 +538,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info Supported]
+- A list of supported indexers is located at the [More Info (Supported)](/readarr/supported#indexers) page
 
 ### Indexer Settings
 
@@ -632,7 +633,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info Supported]
+- A list of supported download clients is located at the [More Info (Supported)](/readarr/supported#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -795,7 +796,7 @@ Connections are how you want Readarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info Supported]
+- A list of supported notifications & connections is located at the [More Info (Supported)](/readarr/supported#notifications) page
 
 ## Connection Triggers
 

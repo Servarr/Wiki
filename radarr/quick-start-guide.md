@@ -154,7 +154,7 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/radarr/settings#download-clients), at the [More Info Supported](/radarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+> See the [settings page](/radarr/settings#download-clients), at the [More Info (Supported)](/radarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 {.is-info}
 
 ## {.tabset}
@@ -180,7 +180,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
 - Hardlinks are enabled by default. A hardlink will allow not use any additional disk space. The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Radarr will fall back and copy the file.
-- If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
+- If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
 
@@ -210,12 +210,17 @@ Depending how well you got your existing movie folders named Radarr will try to 
 
 1. Your movie folder name.
 1. Monitor - How you want the movie to be added to Radarr.
-  - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-  - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
+
+- None - Do not monitor the movie nor collection for new releases
+- Movie Only - Only Monitor the movie for new releases
+- Movie & Collection - Monitor both the movie for new releases & add and monitor any movies in the movie's collection (if exists)
+
 1. Availability - When will Radarr consider a movie is available.
-  - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
-  -  **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-  - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+
+- **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+- **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+- **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+
 1. Quality Profile - Select your preferred profile to use.
 1. Movie - What Radarr thinks the movie matched for. It is imperative that you review this and edit/search if the match is not correct. Mismatches are often caused by poorly named folders.
 1. Mass select Monitor status.
@@ -301,14 +306,19 @@ When you see the movie you want click on it.
 
 1. Root Folder - Radarr will add the movie to the Root Folder you’ve setup [in the root folders section](#root-folders)
 1. Monitor - How you want the movie to be added to Radarr.
-  - Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-  - No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  
+
+- Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+- No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  
+
 1. Availability - When Radarr shall consider a movie is available.
-  - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
-  - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-  - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+
+- **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+- **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+- **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+
 1. Quality Profile - Select your profile to use for this movie
 1. Tags - Here you can add certain tags for advanced usage.
 1. Search on Add - Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
 1. Click on `Add Movie` to add the movie to Radarr.
-  - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
+
+- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)

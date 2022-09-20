@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-09-20T18:55:18.515Z
+date: 2022-08-30T20:19:58.286Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -328,7 +328,7 @@ Name for the `Specials` (Season) folder
  > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
 {.is-warning}
 
-- Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file. 
+- Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file.
   If a subtitle filename contains additional tags such as `cc` or `forced`, they will be preserved as long as they are recognized (currently in develop version).
 
 ## File Management
@@ -559,7 +559,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info Supported](/sonarr/supported#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](/sonarr/supported#indexers) page
 
 ### Indexer Settings
 
@@ -805,7 +805,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info Supported]
+- A list of supported notifications & connections is located at the [More Info (Supported)](/sonarr/supported#notifications)
 
 ## Connection Triggers
 
@@ -887,7 +887,6 @@ Most of the lists settings are fairly self explanatory, some lists require you t
   - Enabled - Validate all HTTPS certificates (recommended)
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
-
 
 ## Proxy
 

@@ -812,7 +812,7 @@ Connections are how you want Whisparr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info Supported]
+- A list of supported notifications & connections is located at the [More Info (Supported)]
 
 ## Connection Triggers
 
