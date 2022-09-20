@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-09-12T19:14:07.125Z
+date: 2022-09-20T14:45:48.652Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -187,7 +187,8 @@ Also, note that for each individual settings page, there are some options at the
 - `{ImdbId}` = tt12345
 - `{Tmdbid}` = 123456
 
-> Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}` {.is-info}
+> Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}`
+{.is-info}
 
 ### Quality
 
@@ -229,7 +230,8 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{Custom Formats}` = Surround Sound x264
 
-> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming {.is-info}
+> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming
+{.is-info}
 
 ### Original
 
@@ -256,6 +258,11 @@ Here you will set the naming convention for the folder that contains the season 
 - `{Movie Collection}` = The Movie Collection
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
+
+> If you choose to use `{Movie Collection}` (e.g. `{Movie Collection}/{Movie Title} {Release Year}`) note the following:
+> \- If a movie has no collection then the collection is ignored and Radarr creates the movie folder as normal
+> \- This is generally suggested to be avoided as Library Import - if you need to reimport your library - does not support nested folders within a root folder
+{.is-info}
 
 ### Movie ID
 
