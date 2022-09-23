@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-09-20T14:49:03.899Z
+date: 2022-09-12T19:14:07.125Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -14,8 +14,6 @@ dateCreated: 2021-05-29T15:57:25.304Z
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
   - [Community Naming Suggestions](#community-naming-suggestions)
-    - [Movie Files](#movie-files)
-    - [Movie Folders](#movie-folders)
   - [Movie Naming](#movie-naming)
     - [Standard Movie Format](#standard-movie-format)
     - [Movie Naming](#movie-naming-1)
@@ -126,7 +124,7 @@ Also, note that for each individual settings page, there are some options at the
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
-### Movie Files
+### Movie Files 
 
 - Radarr v4.2.2.6489 or newer
 
@@ -189,8 +187,7 @@ Also, note that for each individual settings page, there are some options at the
 - `{ImdbId}` = tt12345
 - `{Tmdbid}` = 123456
 
-> Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}`
-{.is-info}
+> Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}` {.is-info}
 
 ### Quality
 
@@ -232,8 +229,7 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{Custom Formats}` = Surround Sound x264
 
-> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming
-{.is-info}
+> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming {.is-info}
 
 ### Original
 
@@ -260,11 +256,6 @@ Here you will set the naming convention for the folder that contains the season 
 - `{Movie Collection}` = The Movie Collection
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
-
-> If you choose to use `{Movie Collection}` (e.g. `{Movie Collection}/{Movie Title} {Release Year}`) note the following:
-> \- If a movie has no collection then the collection is ignored and Radarr creates the movie folder as normal
-> \- This is generally suggested to be avoided as Library Import - if you need to reimport your library - does not support nested folders within a root folder
-{.is-info}
 
 ### Movie ID
 
@@ -367,7 +358,7 @@ Here you will set the naming convention for the folder that contains the season 
 - Upgrades Allowed - When this option is checked and you tell Radarr to download a `WEB 1080p` as it is the first release of a specific movie then later somebody is able to upload a `Bluray-1080p` Radarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
 - Upgrade Until - Once this quality is reached Radarr will no longer download movies
 
-> Note: This example is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
+> Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
 {.is-warning}
 
 - Qualities - Qualities higher in the list are more preferred regardless of wanted (enabled/checked) status. Qualities within the same group are equal. Only checked qualities are wanted.
@@ -547,7 +538,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](/radarr/supported#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](/radarr/supported#indexers) page 
 
 ### Indexer Settings
 
@@ -579,7 +570,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers with Radarr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
+- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Radarr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
@@ -676,7 +667,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](/radarr/supported#download-clients) page
+- A list of supported download clients is located at the [More Info (Supported)](/radarr/supported#download-clients) page 
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 

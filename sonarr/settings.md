@@ -591,7 +591,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers with Sonarr is to utilize a second program such as utilize a second program such as utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
+- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Sonarr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett or Prowlarr)
