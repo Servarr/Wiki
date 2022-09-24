@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-08-30T20:19:58.286Z
+date: 2022-09-24T16:39:38.057Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -792,7 +792,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ## List Exclusions
 
-- Import List Exclusion - This allows you to prune your list of movies you do not want to see again. An example of this is if your list just so happens to contain a movie that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a movie from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
+- Import List Exclusion - This allows you to prune your list of series you do not want to see again. An example of this is if your list just so happens to contain a series that is in a foreign language and it is not likely for you to ever find this movie in your native language and do not want to watch it with subtitles. You can exclude a series from being added in the future. However, in the list exclusion section you can add it back to the list so that when the list runs again it will be readded to your library.
 
 # Connect
 
