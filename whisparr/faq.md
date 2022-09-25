@@ -2,7 +2,7 @@
 title: Whisparr FAQ
 description: Reorganized Whisparr FAQ
 published: true
-date: 2022-05-02T23:57:50.629Z
+date: 2022-09-25T03:01:32.421Z
 tags: needs-love, troubleshooting, faq, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:19.500Z
@@ -200,20 +200,11 @@ dateCreated: 2022-04-03T03:49:19.500Z
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`?
-
-- See the entry below
-
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.{.is-info}
-
-- See below or otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
+- If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
 - Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-
-- Develop
-  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
-  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=whisparr)
 
 ## How do I Backup/Restore Whisparr?
 
