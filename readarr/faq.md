@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-06-09T17:46:28.768Z
+date: 2022-09-25T03:00:41.713Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -202,23 +202,11 @@ This change was due to not have our server get killed by people updating lists e
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`?
-
-- See the entry below
-
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.{.is-info}
-
-- See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- Master
-  - ![Master to Develop](https://img.shields.io/badge/From%20Master%20to%20Develop-yes-informational)
-  - ![Develop to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Develop%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-develop%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
-  - ![Nightly to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
-- Develop
-  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
-  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=readarr)
 
 ## I am getting an error: Database disk image is malformed
 
