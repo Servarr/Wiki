@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-09-09T16:27:22.443Z
+date: 2022-09-25T02:59:43.599Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -159,19 +159,11 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`?
-
-- See the entry below
-
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.{.is-info}
-
-- See below or otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
+- If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
 - Failure to follow these instructions may result in your Prowlarr becoming unusable or throwing errors. You have been warned
-  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
-- Develop
-  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
-  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=prowlarr)
+  - The most common errors are database errors around missing columns or tables.
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
