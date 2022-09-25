@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-05-05T12:50:45.255Z
+date: 2022-09-25T16:06:08.988Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -291,7 +291,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Mono and x86 builds are ending
 
-- Mono and x86 builds will no longer be supported in the next build of the application. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
+- Mono and x86 builds are no longer be supported with v4. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
 
 ### Download Clients
 
@@ -395,7 +395,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - Radarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.
 
-### Enabled indexers do not support searching
+#### Enabled indexers do not support searching
 
 - None of the indexers you have enabled support searching. This means Radarr will only be able to find new releases via the RSS feeds. But searching for movies (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
 
@@ -439,9 +439,11 @@ Note: you will also need to add the websocket directive to your radarr configura
 - Easiest way to find the problem movie is to:
 
   - Go to the Movies (Library) Tab
+  - Table View & Enable the Path column then sort by path
+  - Alternatively some users may wish to filter:
   - Create a custom filter with the old root folder path
   - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movie to be moved to.
-  - Next you will receive a pop-up that states Would you like to move the Movie folders to 'root path' ? This will also state This will also rename the Movie folder per the Movie folder format in settings. Simply select No if the you do not want Lidarr to move your files
+  - Next you will receive a pop-up that states Would you like to move the Movie folders to 'root path' ? This will also state This will also rename the Movie folder per the Movie folder format in settings. Simply select No if the you do not want Radarr to move your files
   - Run the Check Health Task in System => Tasks
 
 ### Movies
