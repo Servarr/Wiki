@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-09-09T15:36:10.339Z
+date: 2022-09-25T02:57:29.013Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -198,28 +198,15 @@ dateCreated: 2021-05-16T20:44:27.778Z
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`?
-
-- See the entry below
-
 ## Can I switch between branches?
 
-> You can (almost) always increase your risk.
-{.is-info}
-
-- See below or otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
+- If version is identical you are able to switch, otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned. If the below errors are encountered then you are using a newer database with an older \*Arr version which is not supported. Upgrade \*Arr to the version you were previously on or newer.
   - Example Error Messages:
     - `Error parsing column 45 (Language=31 - Int64)`
     - `The DataMapper was unable to load the following field: 'Languages' value`
     - `ID does not match a known language Parameter name: id`
     -  Orher similar database errors around missing columns or tables.
-- Master
-  - ![Master to Develop](https://img.shields.io/badge/From%20Master%20to%20Develop-yes-informational)
-  - ![Develop to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Develop%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-develop%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=radarr)
-  - ![Nightly to Master](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Master&query=%24%5B%27branchJumping%27%5D%5B%27master-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=radarr)
-- Develop
-  - ![Develop to Nightly](https://img.shields.io/badge/From%20Develop%20to%20Nightly-yes-informational)
-  - ![Nightly to Develop](https://img.shields.io/badge/dynamic/json?color=informational&label=From%20Nightly%20to%20Develop&query=%24%5B%27branchJumping%27%5D%5B%27develop-nightly%27%5D%5B%27back%27%5D&url=https%3A%2F%2Fnotifiarr.com%2Fbranches.php?app=radarr)
 
 ## How do I Backup/Restore Radarr?
 
