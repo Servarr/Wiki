@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-09-26T15:28:30.170Z
+date: 2022-09-26T15:28:40.559Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -12,7 +12,7 @@ dateCreated: 2022-07-25T22:49:56.668Z
 
 This document will go over the key points of migrating and setting up Postgres support in Readarr.
 
-> Readarr v0.1.1.1409 or newer required
+> Readarr v0.1.1.1408 or newer required
 {.is-info}
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
