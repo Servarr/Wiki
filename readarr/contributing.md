@@ -2,7 +2,7 @@
 title: Readarr Contributing
 description: 
 published: true
-date: 2021-11-29T15:44:11.323Z
+date: 2022-09-26T15:56:42.368Z
 tags: readarr, development, contributing
 editor: markdown
 dateCreated: 2021-05-25T19:21:59.324Z
@@ -32,12 +32,15 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
   - **12.0** or later
   - **14.0** or later
+  - **16.0** or later
 {.grid-list}
 
 > Readarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
-- [Yarn](https://yarnpkg.com/) is required to build the frontend
+- [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
+  - Yarn is included with **Node 16.10**+ by default. Enable it with `corepack enable`
+  - For other Node versions, install it with `npm i -g corepack`
 
 ## Getting started
 
