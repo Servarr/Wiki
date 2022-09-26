@@ -2,10 +2,10 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2021-11-29T15:44:10.910Z
+date: 2022-09-26T15:56:32.842Z
 tags: prowlarr, development, contributing
 editor: markdown
-dateCreated: 2021-05-24T03:34:59.943Z
+dateCreated: 2021-12-11T19:42:15.627Z
 ---
 
 # How to Contribute
@@ -32,12 +32,15 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
   - **12.0** or later
   - **14.0** or later
+  - **16.0** or later
 {.grid-list}
 
 > Prowlarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
-- [Yarn](https://yarnpkg.com/) is required to build the frontend
+- [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
+  - Yarn is included with **Node 16.10**+ by default. Enable it with `corepack enable`
+  - For other Node versions, install it with `npm i -g corepack`
 
 ## Getting started
 
@@ -45,7 +48,8 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 > Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
-For css changes `yarn stylelint-windows --fix` {.is-info}
+For css changes `yarn stylelint-windows --fix`
+{.is-info}
 
 ### Building the frontend
 
