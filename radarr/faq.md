@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-09-26T20:00:29.221Z
+date: 2022-09-26T20:01:34.151Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -373,7 +373,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 > \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Radarr with the recovered backup file. It should then migrate without issues.
 {.is-warning}
 
-- **Errors of `Error creating log database` indicate issues with log.db**
+- **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` indicate issues with radarr.db**
   - Continue with the steps noted below
