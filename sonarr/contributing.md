@@ -2,7 +2,7 @@
 title: Sonarr Contributing
 description: 
 published: true
-date: 2022-09-05T23:13:38.358Z
+date: 2022-09-26T15:56:45.199Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:10:04.820Z
@@ -22,20 +22,25 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
 
 ### Tools required
 
-- Visual Studio 2019 or higher is recommended (<https://www.visualstudio.com/vs/>). The community version is free and works (<https://www.visualstudio.com/downloads/>).
+- Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>). The community version is free and works (<https://www.visualstudio.com/downloads/>).
+
+> VS 2022 V17.0 or higher is recommended as it includes the .NET6 SDK
+{.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
-  - **10.0** or later
   - **12.0** or later
   - **14.0** or later
+  - **16.0** or later
 {.grid-list}
 
-> Sonarr will **NOT** run on older versions such as `8.x`, `6.x` or any version below 10.0!
+> Sonarr will **NOT** run on older versions such as `10.x`, `8.x`, `6.x`, or any version below 12.0!
 {.is-warning}
 
-- [Yarn](https://yarnpkg.com/) is required to build the frontend
+- [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
+  - Yarn is included with **Node 16.10**+ by default. Enable it with `corepack enable`
+  - For other Node versions, install it with `npm i -g corepack`
 
 ### Getting started
 
@@ -54,7 +59,7 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
    yarn start
    ```
 
-> Ensure startup project is set to `Sonarr.Console` and    framework to `x86`
+> Ensure startup project is set to `Sonarr.Console` and framework to `x86`
 {.is-info}
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects correctly built and dependencies restored
