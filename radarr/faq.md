@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-09-26T19:58:25.042Z
+date: 2022-09-26T20:00:29.221Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -374,7 +374,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
 {.is-warning}
 
 - **Errors of `Error creating log database` indicate issues with log.db**
+  - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` indicate issues with radarr.db**
+  - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Radarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-radarr). However, for users receiving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
