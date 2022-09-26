@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2022-09-26T20:03:05.222Z
+date: 2022-09-26T20:03:17.129Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -227,7 +227,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 ## I am getting an error: Database disk image is malformed
 
-- **Errors of `Error creating log database` indicate issues with log.db**
+- **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` indicate issues with lidarr.db**
   - Continue with the steps noted below
