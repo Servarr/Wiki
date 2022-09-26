@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-09-26T20:02:24.049Z
+date: 2022-09-26T20:03:13.047Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -182,7 +182,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 ## I am getting an error: Database disk image is malformed
 
-- **Errors of `Error creating log database` indicate issues with log.db**
+- **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` indicate issues with prowlarr.db**
   - Continue with the steps noted below
