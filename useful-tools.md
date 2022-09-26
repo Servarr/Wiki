@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-03-16T23:38:21.202Z
+date: 2022-09-26T17:45:03.759Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -122,6 +122,30 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
 - Some sites cannot be logged into automatically and require you to login manually then give the cookies to to work. The pages below describe how you do that.
 
+## General Instructions
+
+1. Login to the Web Site with your browser using the Site Link address you have chosen to use from the Prowlarr indexer config
+1. Open the DevTools panel by pressing F12
+1. Select the Network tab
+1. Click on the Doc button (Chrome Browser) or HTML button (Firefox Browser)
+1. Refresh the page by pressing F5
+1. Click on the first row entry
+1. Select the Headers tab on the right panel
+1. Find 'cookie:' in the Request Headers section. Refer to the helptext within the UI for your tracker for details
+1. Select and Copy the whole cookie string (everything after the cookie: )
+1. Delete anything already in the Prowlarr indexer config cookie box
+1. Paste your copied cookie string to that box
+1. Click Save
+
+> If user agent is required for your tracker, it can be found in the Request Headers
+{.is-info}
+
+### Notes
+
+- Be sure to use the Browser from the same machine that is running Prowlarr, as cookies will rarely work from other platforms.
+- On the login page for the Web site do not tick any options that restrict your session to one IP address, or logout after a short time. If there is a Remember me option, use it.
+- Make sure that before fetching the cookie you can access the Site's torrent search page, as anything the site does to prevent this (alerts, unread notices or unread PM, or a low ratio warning) will stop Prowlarr from having a successful test after using the cookie.
+
 ## Chrome
 
 - Go to the torrent tracker website and log in.
@@ -135,15 +159,14 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
   - If the string looks similar to `cid=cid-that-you-got-from-the-browser; sid=sid-that-you-got-from-the-browser` then the entire entry should be used.
 
 ![cookie_chrome.png](/assets/prowlarr/cookie_chrome.png)
-Firefox
-
-![faq_3_cookies.png](/assets/general/faq_3_cookies.png)
 
 - You may also reference Chrome's documents [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
 
 ## Firefox
 
 - [Please see Mozilla's documentation](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
+
+![faq_3_cookies.png](/assets/general/faq_3_cookies.png)
 
 # Clearing Cookies and Local Storage
 
