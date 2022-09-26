@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-09-25T03:00:41.713Z
+date: 2022-09-26T20:02:00.179Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -210,6 +210,10 @@ This change was due to not have our server get killed by people updating lists e
 
 ## I am getting an error: Database disk image is malformed
 
+- **Errors of `Error creating log database` indicate issues with log.db**
+  - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
+- **Errors of `Error creating main database` indicate issues with readarr.db**
+  - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Readarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-readarr)
