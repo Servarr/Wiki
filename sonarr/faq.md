@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-26T20:02:05.455Z
+date: 2022-09-30T18:11:37.670Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -54,6 +54,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [Why can I not add a series when I know the TVDb ID?](#why-can-i-not-add-a-series-when-i-know-the-tvdb-id)
   - [Title Slug in Use](#title-slug-in-use)
 - [Sonarr Common Problems](#sonarr-common-problems)
+  - [Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
   - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
   - [System & Logs loads forever](#system-logs-loads-forever)
   - [Weird UI Issues](#weird-ui-issues)
@@ -547,6 +548,10 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
   - Joes Show (2022)
 
 # Sonarr Common Problems
+
+## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
+
+- See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
 
 ## Episode does not have an absolute number
 
