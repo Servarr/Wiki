@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-30T18:11:37.670Z
+date: 2022-09-30T18:14:46.228Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -54,7 +54,6 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [Why can I not add a series when I know the TVDb ID?](#why-can-i-not-add-a-series-when-i-know-the-tvdb-id)
   - [Title Slug in Use](#title-slug-in-use)
 - [Sonarr Common Problems](#sonarr-common-problems)
-  - [Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
   - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
   - [System & Logs loads forever](#system-logs-loads-forever)
   - [Weird UI Issues](#weird-ui-issues)
@@ -80,6 +79,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [My Custom Script stopped working after upgrading from v2](#my-custom-script-stopped-working-after-upgrading-from-v2)
 - [Sonarr Searching & Downloading Common Problems](#sonarr-searching-downloading-common-problems)
   - [Why didn't Sonarr grab an episode I was expecting?](#why-didnt-sonarr-grab-an-episode-i-was-expecting)
+  - [Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-release-was-matched-to-series-by-id-automatic-import-is-not-possible)
   - [Why wont Sonarr import a TBA episode?](#why-wont-sonarr-import-a-tba-episode)
   - [Sonarr says Unknown Series on Searches or Imports](#sonarr-says-unknown-series-on-searches-or-imports)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
@@ -549,10 +549,6 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 # Sonarr Common Problems
 
-## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
-
-- See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
-
 ## Episode does not have an absolute number
 
 - The episode(s) on TVDb do not have an absolute number assigned. Update the series on TVDb if required and then wait the 36-48 hours for the update to clear TVDb's internal cache and load into Sonarr
@@ -705,6 +701,10 @@ First, make sure you read and understand the section above called ["How does Son
 1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
 1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
 1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
+
+## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
+
+- See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
 
 ## Why wont Sonarr import a TBA episode?
 
