@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T19:54:21.879Z
+date: 2022-09-30T18:16:00.398Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -458,6 +458,10 @@ This is typically caused by:
 You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 # Searches Indexers and Trackers
+
+The [Why didn't Sonarr grab an episode I was expecting?](/sonarr/faq#why-didnt-sonarr-grab-an-episode-i-was-expecting) FAQ entry is likely helpful as well.
+
+The troubleshooting steps are below
 
 ## Turn logging up to trace
 
