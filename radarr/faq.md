@@ -395,8 +395,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure nolock is enabled for your mount.
-  - If you're using an SMB mount ensure nobrl is enabled for your mount.
+  - If you're using an NFS mount ensure `nolock` is enabled for your mount.
+  - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Radarr runs under the LocalService account by default which doesn't have access to protected remote file shares
