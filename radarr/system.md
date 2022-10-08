@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-09-25T17:08:18.146Z
+date: 2022-10-08T03:45:10.548Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -114,10 +114,15 @@ See the below entries for how to switch from unsupported, end-of-life mono versi
 
 ##### Fixing Standalone installs
 
+Errors such as:
+```none
+Cannot open assembly '/opt/Radarr/Radarr': File does not contain a valid CIL image
+```
+
 - Back-Up your existing configuration before the next step.
 - This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
 - To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded.
+- In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded and then update your service file to not use mono.
 
 > DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
 > YOU MUST DELETE THE OLD ONES FIRST.
