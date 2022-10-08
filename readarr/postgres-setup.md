@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-09-26T15:28:40.559Z
+date: 2022-10-08T17:03:11.263Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -112,7 +112,7 @@ DELETE FROM "MetadataProfiles";
       ```
 
     - ```bash
-      docker run -v /absolute/path/to/readarr.db:/readarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /readarr.db "postgresql://qstick:qstick@localhost/readarr-main"
+      docker run --rm -v /absolute/path/to/readarr.db:/readarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /readarr.db "postgresql://qstick:qstick@localhost/readarr-main"
       ```
 
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
