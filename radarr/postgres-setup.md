@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-09-06T15:28:14.011Z
+date: 2022-10-08T17:03:34.013Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -110,7 +110,7 @@ DELETE FROM "Metadata";
       ```
 
     - ```bash
-      docker run -v /absolute/path/to/radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
+      docker run --rm -v /absolute/path/to/radarr.db:/radarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
       ```
 
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
