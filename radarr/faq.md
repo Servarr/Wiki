@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-10-08T17:55:01.361Z
+date: 2022-10-08T17:56:07.197Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -526,8 +526,8 @@ Depending on your OS, there are multiple possible ways.
 
 ## How does Radarr handle "multi" in names?
 
-- Radarr assumes multi is French unless otherwise specified in your indexer's advanced settings in Radarr.
-- In recent Radarr builds, `multi` is no longer assumed to include English
+- With Radarr v4.1+, Radarr assumes 
+`multi` is only the movie's language and **NOT** English as in previous versions.
   - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
 - Note that `multi` definitions only help for release parsing and not for foreign titles or movies searches.
 
