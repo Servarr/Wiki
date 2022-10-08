@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-09-26T20:01:34.151Z
+date: 2022-10-08T17:55:01.361Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -516,9 +516,9 @@ Depending on your OS, there are multiple possible ways.
 
 - Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero.
 - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
-- To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
+- To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and create snd score greater than 0 Custom Formats with Language Conditions to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
-  - Note that starting with some [v4.1 versions](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
+  - Note that starting with [Radarr v4.1](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
   - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
 
 > Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Radarr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
