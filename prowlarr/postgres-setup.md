@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-07-31T17:10:22.975Z
+date: 2022-10-08T17:04:30.874Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -91,7 +91,7 @@ Before starting a migration please ensure that you have run Prowlarr against the
       ```
 
     - ```bash
-      docker run -v /absolute/path/to/prowlarr.db:/prowlarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /prowlarr.db "postgresql://qstick:qstick@localhost/prowlarr-main"
+      docker run --rm -v /absolute/path/to/prowlarr.db:/prowlarr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /prowlarr.db "postgresql://qstick:qstick@localhost/prowlarr-main"
       ```
 
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
