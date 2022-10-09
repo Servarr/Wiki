@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-09-26T17:45:03.759Z
+date: 2022-10-09T14:06:22.871Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -230,6 +230,10 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 ## Radarr & Sonarr Companion - Android App
 
 Add new movies/shows to your system easily with your phone. App available at [Google Play](https://play.google.com/store/apps/details?id=easy.radarr)
+
+## nzb360 - Android App
+
+nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and other services. App available at [Google Play](https://play.google.com/store/apps/details?id=com.kevinforeman.nzb360) Check [official website](https://nzb360.com/) for more info.
 
 ## Lidarr
 
