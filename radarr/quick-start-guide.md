@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-07-14T14:07:14.649Z
+date: 2022-10-10T02:04:48.476Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -307,8 +307,9 @@ When you see the movie you want click on it.
 1. Root Folder - Radarr will add the movie to the Root Folder you’ve setup [in the root folders section](#root-folders)
 1. Monitor - How you want the movie to be added to Radarr.
 
-- Yes = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-- No = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  
+- Movie Only  = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+- Movie & Collection = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality. It will also add all movies in this movie's collection (if any) with your selected settings. 
+- None = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  All searches for unmonitored movies must be manually triggered searches or interactive searches.
 
 1. Availability - When Radarr shall consider a movie is available.
 
