@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-09-30T18:16:00.398Z
+date: 2022-10-11T14:09:35.711Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -432,6 +432,10 @@ This can also occur if you have a release in your download client but that media
 - The series of the downloaded file does not match the id reported, so Sonarr will not import the file.
 - Depending on the series title and release name - assuming the release is correct for the series id it is associated with - Sonarr will probably need an alias added, [this FAQ entry has some more info](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) on requesting one to be added.
 - Alternatively, the release is mislabled and not for the series id that was reported. This should be reported to your indexer so they can take corrective action.
+- To handle this error:
+  1. Verify the series of the file
+  1. Request an alias (if applicable)
+  1. Manual Import the file (Human Icon to the right) from the Activity => Queue  OR click the `X` in queue to ignore the release in your client and optionally blocklist it / optionally remove it from the client 
 
 ### Episode Name is TBA
 
