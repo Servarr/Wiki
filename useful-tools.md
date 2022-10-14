@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-10-09T14:06:22.871Z
+date: 2022-10-14T21:59:46.529Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -30,6 +30,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Remote Control](#remote-control)
     - [LunaSea](#lunasea)
   - [Radarr & Sonarr Companion - Android App](#radarr-sonarr-companion-android-app)
+  - [nzb360 - Android App](#nzb360- android-app)
   - [Lidarr](#lidarr)
     - [AMD](#amd)
     - [AMVD](#amvd)
