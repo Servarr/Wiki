@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-09-30T18:14:46.228Z
+date: 2022-10-15T18:25:27.711Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -355,6 +355,8 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 {#rename-folders}
 
 > The same process applies for moving/changing Series paths as well{.is-info}
+
+If you have adjusted your your Series Name format after Sonarr has already created some Series folders, Sonarr will not automatically rename existing folders. In order to trigger a rename of these folders the following steps should be taken:
 
 1. Series
 1. Mass Editor
