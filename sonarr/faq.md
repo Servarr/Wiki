@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-10-15T18:25:27.711Z
+date: 2022-10-17T17:35:13.899Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -473,7 +473,11 @@ Some examples of other shows that commonly have issues, most of which may be res
 
 There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series.
 
-> Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb. {.is-warning}
+> Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb.
+{.is-warning}
+
+> **For indexers that support ID based searches**, the series TVDbID or IMDbID are used for searching. Series titles and any aliases are only used if ID based searches return no results.
+{.is-info}
 
 - Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
 - You may also wish to review the [FAQ Entry for Problematic Shows and Release Group vs. TVDb numbering issues](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
