@@ -111,12 +111,12 @@ If you're linked here for support remember to get them the information from the 
 
 To provide good and useful logs for sharing:
 
-1. [Turn Logging up to Trace](#tracedebug-logs)
-1. [Clear Logs](#clearing-logs)
+1. [Turn Logging up to Trace (Settings => General => (Advanced) Log Level or Edit The Config File)](#tracedebug-logs)
+1. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
 1. Reproduce the Issue (Redo what is breaking things)
 1. [Open the trace log file (radarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-1. Use [Gist](https://gist.github.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), [0bin](https://0bin.net/), [PrivateBin](https://privatebin.net/) or similar sites to share the issue from above
+1. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
 
 > Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 > Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
