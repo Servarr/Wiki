@@ -71,7 +71,7 @@ To provide good and useful logs for sharing:
 > If asked to provide the indexer response for development or debugging continue reading this blue section...otherwise continue to the steps below. For debugging indexer responses, it is likely helpful to go to `settings/development` (hidden page) in Prowlarr and temporarily enable Enhanced Indexer Logging to log the Indexer's Response.  It should not be kept on all the time
 {.is-info}
 
-1. [Turn Logging up to Trace (Settings => General => (Advanced) Log Level or Edit The Config File)](#tracedebug-logs)
+1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
 1. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
 1. Reproduce the Issue (Redo what is breaking things)
 1. [Open the trace log file (prowlarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
