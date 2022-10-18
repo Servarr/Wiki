@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-10-11T14:09:35.711Z
+date: 2022-10-18T16:45:27.169Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -463,9 +463,9 @@ You can also review some common permissions and networking troubleshooting comma
 
 # Searches Indexers and Trackers
 
-The [Why didn't Sonarr grab an episode I was expecting?](/sonarr/faq#why-didnt-sonarr-grab-an-episode-i-was-expecting) FAQ entry is likely helpful as well.
-
-The troubleshooting steps are below
+- The [Why didn't Sonarr grab an episode I was expecting?](/sonarr/faq#why-didnt-sonarr-grab-an-episode-i-was-expecting) FAQ entry is likely helpful as well.
+- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr recieved and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
+- The troubleshooting steps are otherwise below
 
 ## Turn logging up to trace
 
