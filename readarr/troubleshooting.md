@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2022-10-18T16:47:16.890Z
+date: 2022-10-18T16:50:34.848Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -183,6 +183,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 ## Determine the issue
 
 - The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/readarr/settings#logging) and [Log Files](/readarr/system#log-files) to find them and increase the log level.
+- The most frequently seen issue is that the system the app is installed on messed with the `/tmp` directory and deleted critical \*Arr files during the upgrade thus causing both the upgrade and rollback to fail. In this case, simply reinstall in-place over the existing borked installation.
 
 ### Migration Issue
 
