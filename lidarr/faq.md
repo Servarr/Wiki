@@ -45,7 +45,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
     - [Restoring from Backup](#restoring-from-backup)
       - [Using zip backup](#using-zip-backup)
       - [Using file system backup](#using-file-system-backup)
-      - [Restore on Synology NAS](#restore-on-synology-nas)
+      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
   - [I use Lidarr on a Mac and it suddenly stopped working. What happened?](#i-use-lidarr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
   - [I am using a Pi and Raspbian and Lidarr will not launch](#i-am-using-a-pi-and-raspbian-and-lidarr-will-not-launch)
   - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
@@ -284,7 +284,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 - Start Lidarr
 - As long as the paths are the same, everything will pick up where it left off
 
-#### Restore on Synology NAS
+#### File System Restore on Synology NAS
 
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}

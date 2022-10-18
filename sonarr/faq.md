@@ -23,7 +23,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
     - [Restoring from Backup](#restoring-from-backup)
       - [Using zip backup](#using-zip-backup)
       - [Using file system backup](#using-file-system-backup)
-      - [Restore on Synology NAS](#restore-on-synology-nas)
+      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
   - [Help I have locked myself out](#help-i-have-locked-myself-out)
   - [Why are there two files? \| Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
   - [I see that feature/bug X was fixed, Why can I not see it?](#i-see-that-featurebug-x-was-fixed-why-can-i-not-see-it)
@@ -208,7 +208,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Start Sonarr
 - As long as the paths are the same, everything will pick up where it left off
 
-#### Restore on Synology NAS
+#### File System Restore on Synology NAS
 
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}

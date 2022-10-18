@@ -38,6 +38,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
     - [Restoring from Backup](#restoring-from-backup)
       - [Using zip backup](#using-zip-backup)
       - [Using file system backup](#using-file-system-backup)
+      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
   - [WebUI only Loads at localhost on Windows](#webui-only-loads-at-localhost-on-windows)
   - [Finding Cookies](#finding-cookies)
   - [uTorrent is no longer working](#utorrent-is-no-longer-working)
@@ -254,7 +255,7 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 - Start Prowlarr
 - As long as the paths are the same, everything will pick up where it left off
 
-- **Restore for Synology NAS**
+#### File System Restore on Synology NAS
 
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}

@@ -35,6 +35,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
     - [Restoring from Backup](#restoring-from-backup)
       - [Using zip backup](#using-zip-backup)
       - [Using file system backup](#using-file-system-backup)
+      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
 - [Radarr Common Problems](#radarr-common-problems)
   - [Path is Already Configured for an Existing Movie](#path-is-already-configured-for-an-existing-movie)
   - [How can I rename my movie folders?](#how-can-i-rename-my-movie-folders)
@@ -253,7 +254,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - Start Radarr
 - As long as the paths are the same, everything will pick up where it left off
 
-- **Restore for Synology NAS**
+#### File System Restore on Synology NAS
 
 > CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 {.is-warning}
