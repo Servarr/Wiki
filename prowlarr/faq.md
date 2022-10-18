@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-09-26T20:03:13.047Z
+date: 2022-10-18T19:44:27.802Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -66,7 +66,11 @@ dateCreated: 2021-11-03T03:01:18.079Z
 1. Add a tag to the created flaresovlerr proxy
 1. Add the same tag to your [Indexer](/prowlarr/indexers)
 
-> The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used. {.is-warning}
+> The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used.
+{.is-warning}
+
+> [See TRaSH's Guides on "How to setup Flaresolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/) for more details
+{.is-info}
 
 ## How can I add an indexer that is down or not functional?
 
