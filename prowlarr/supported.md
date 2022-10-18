@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: 
 published: true
-date: 2021-12-12T02:35:24.206Z
+date: 2022-10-18T19:43:50.037Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -77,13 +77,16 @@ Prowlarr can automatically sync indexers with various applications
 
 - FlareSolverr {#flaresolverr}
   - [Refer to the Settings Page](/prowlarr/settings#flaresolverr-proxy-settings)
+  - [See TRaSH's Guides on "How to setup Flaresolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/)
 - Http {#http}
   - [Refer to the Settings Page](/prowlarr/settings#http-proxy-settings)
+  - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
 - Socks4 {#socks4}
   - [Refer to the Settings Page](/prowlarr/settings#socks4-proxy-settings)
+  - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
 - Socks5 {#socks5}
   - [Refer to the Settings Page](/prowlarr/settings#socks5-proxy-settings)
-
+  - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
 # Notifications
 
 {#notification}
