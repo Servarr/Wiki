@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T20:01:21.065Z
+date: 2022-10-18T16:48:29.225Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -409,6 +409,8 @@ This is typically caused by:
 You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 # Searches Indexers and Trackers
+
+- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr recieved and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
 
 ## Turn logging up to trace
 
