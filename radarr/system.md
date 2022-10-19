@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-10-08T03:45:10.548Z
+date: 2022-10-19T22:59:06.531Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -33,9 +33,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [MediaInfo Library Could not be Loaded](#mediainfo-library-could-not-be-loaded)
       - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
-      - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
       - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
@@ -282,17 +280,9 @@ Note: you will also need to add the websocket directive to your radarr configura
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
-#### MediaInfo Library Could not be Loaded
-
-- MediaInfo Library could not be loaded.
-
 #### PTP Indexer Settings Out of Date
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
-
-#### Mono Legacy TLS enabled
-
-- Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option
 
 #### Mono and x86 builds are ending
 
@@ -311,6 +301,8 @@ Note: you will also need to add the websocket directive to your radarr configura
   - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
   - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Radarr.
   - Ensure SSL encryption is not turned on if you're using both your Radarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+  - Ensure IPv6 is disabled on the system if it is not functional
+  - Ensure a DNS server (e.g. pihole) is not rate limiting queries
 
 #### Download clients are unavailable due to failure
 
@@ -437,20 +429,30 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Missing Root Folder
 
-- This error is typically identified if a Movie is looking for a root folder but that root folder is no longer available.
-- This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
-- If you would like to remove this warning simply find the Movie that is still using the old root folder and edit it to the correct root folder.
+{#movie-collection-missing-root-folder}
 
-- Easiest way to find the problem movie is to:
+- This error is typically identified if a Movie or Collection is assigned a root folder but that root folder is no longer available.
+- This error may also be if a list is still pointed at a root folder and that root folder is no longer available.
+- If you would like to remove this warning simply find the Movie(s) or Collection(s) that is(are) still using the old root folder and edit it to the correct root folder. 
 
-  - Go to the Movies (Library) Tab
-  - Table View & Enable the Path column then sort by path
-  - Alternatively some users may wish to filter:
-  - Create a custom filter with the old root folder path
-  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movie to be moved to.
-  - Next you will receive a pop-up that states Would you like to move the Movie folders to 'root path' ? This will also state This will also rename the Movie folder per the Movie folder format in settings. Simply select No if the you do not want Radarr to move your files
-  - Run the Check Health Task in System => Tasks
+##### Movies Table View
 
+1. Go to the Movies (Library) Tab
+1. Table View & Enable the Path column then sort by path
+
+##### Movies Custom Filter
+
+1. Create a custom filter with the old root folder path
+1. Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movie to be moved to.
+1. Next you will receive a pop-up that states "Would you like to move the Movie folders to 'root path'?" This will also state This will also rename the Movie folder per the Movie folder format in settings. Simply select No if the you do not want Radarr to move your files
+1. Run the Check Health Task in System => Tasks
+
+#### Collections Custom Filter
+
+1. Create a custom filter in Collections with the old root folder path
+1. Select the collections  and from the Root Paths drop down select the new root path that you want these collections' future movies to be assigned to.
+1. Run the Check Health Task in System => Tasks
+ 
 ### Movies
 
 #### Movie was removed from TMDb
