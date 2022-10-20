@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-10-20T12:47:58.664Z
+date: 2022-10-20T12:50:00.097Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -31,15 +31,16 @@ dateCreated: 2021-06-05T20:51:53.183Z
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs-arr-related)
   - [Remote Control](#remote-control)
     - [LunaSea](#lunasea)
-  - [Radarr & Sonarr Companion - Android App](#radarr-sonarr-companion-android-app)
-  - [nzb360 - Android App](#nzb360-android-app)
+    - [Radarr & Sonarr Companion - Android App](#radarr-sonarr-companion-android-app)
+    - [nzb360 - Android App](#nzb360-android-app)
+    {.links-list}
   - [Lidarr](#lidarr)
     - [AMD](#amd)
     - [AMVD](#amvd)
   - [Radarr](#radarr)
-  - [AMTD](#amtd)
+    - [AMTD](#amtd)
   - [Subtitles](#subtitles)
-  - [Bazarr](#bazarr)
+    - [Bazarr](#bazarr)
 - [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs-torrentsdownloading)
   - [Cross-Seed](#cross-seed)
   - [Unpackerr](#unpackerr)
@@ -52,9 +53,9 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
-  - 
   {.links-list}
-- [Twitter Connect](#twitter-connect)
+- [Twitter Connect Instructions](#twitter-connect)
+
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
 # Recovering a Corrupt DB
@@ -234,11 +235,11 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 [LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
 
-## Radarr & Sonarr Companion - Android App
+### Radarr & Sonarr Companion - Android App
 
 Add new movies/shows to your system easily with your phone. App available at [Google Play](https://play.google.com/store/apps/details?id=easy.radarr)
 
-## nzb360 - Android App
+### nzb360 - Android App
 
 nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and other services. App available at [Google Play](https://play.google.com/store/apps/details?id=com.kevinforeman.nzb360) Check [official website](https://nzb360.com/) for more info.
 
