@@ -415,7 +415,7 @@ If you have adjusted your your Series Name format after Sonarr has already creat
     - `Error parsing column 45 (Language=31 - Int64)`
     - `The DataMapper was unable to load the following field: 'Languages' value`
     - `ID does not match a known language Parameter name: id`
-    -  Orher similar database errors around missing columns or tables.
+    - Other similar database errors around missing columns or tables.
 - **August 7 2022 Update**
   - `3.0.9.1549` has been released as main/stable
   - For those on develop and are still on `3.0.9.1549` or lower you can safely downgrade to main
@@ -449,7 +449,7 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 - This is an incomplete list of the known shows and how/why they're problematic:  
 - American Dad {#problemshow-americandad}
   - Due to network season changes, American Dad is typically off by 1 season between releases and TVDb. Refer to the XEM map for details
-  - [American Dad](https://thexem.info/xem/show/4948) is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map. 
+  - [American Dad](https://thexem.info/xem/show/4948) is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
   - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
@@ -641,7 +641,7 @@ Depending on your OS, there are multiple possible ways.
   - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Sonarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
-- Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-sonarr)
+- Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-sonarr)
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
   - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).

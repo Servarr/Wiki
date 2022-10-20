@@ -17,7 +17,7 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 
 # Wiki
 
- - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Wiki Repository *Github*](https://github.com/Servarr/Wiki)
+- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Wiki Repository *Github*](https://github.com/Servarr/Wiki)
  {.links-list}
 
 # Applications
@@ -61,4 +61,3 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 - [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
 - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script*](/install-script)
 {.links-list}
-

@@ -113,6 +113,7 @@ See the below entries for how to switch from unsupported, end-of-life mono versi
 ##### Fixing Standalone installs
 
 Errors such as:
+
 ```none
 Cannot open assembly '/opt/Radarr/Radarr': File does not contain a valid CIL image
 ```

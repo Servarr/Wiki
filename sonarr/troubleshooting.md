@@ -435,7 +435,7 @@ This can also occur if you have a release in your download client but that media
 - To handle this error:
   1. Verify the series of the file
   1. Request an alias (if applicable)
-  1. Manual Import the file (Human Icon to the right) from the Activity => Queue  OR click the `X` in queue to ignore the release in your client and optionally blocklist it / optionally remove it from the client 
+  1. Manual Import the file (Human Icon to the right) from the Activity => Queue  OR click the `X` in queue to ignore the release in your client and optionally blocklist it / optionally remove it from the client
 
 ### Episode Name is TBA
 

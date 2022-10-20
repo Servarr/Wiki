@@ -87,6 +87,7 @@ Prowlarr can automatically sync indexers with various applications
 - Socks5 {#socks5}
   - [Refer to the Settings Page](/prowlarr/settings#socks5-proxy-settings)
   - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
+
 # Notifications
 
 {#notification}

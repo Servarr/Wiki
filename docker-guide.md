@@ -1,6 +1,6 @@
 ---
 title: Docker Guide
-description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts; and Linux Ownership and Permissions
+description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
 date: 2022-09-08T04:36:18.275Z
 tags: 
@@ -373,7 +373,6 @@ Once inside, you can switch users with
 ```
 
 To exec in as a specific user, add `-u` as an argument and pass the username or id
-
 
 ```shell
     docker exec -u USER -it CONTAINER_NAME /bin/bash

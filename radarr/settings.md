@@ -124,7 +124,7 @@ Also, note that for each individual settings page, there are some options at the
 
 > Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) {.is-info}
 
-### Movie Files 
+### Movie Files
 
 - Radarr v4.2.2.6489 or newer
 
@@ -538,7 +538,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](/radarr/supported#indexers) page 
+- A list of supported indexers is located at the [More Info (Supported)](/radarr/supported#indexers) page
 
 ### Indexer Settings
 
@@ -667,7 +667,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](/radarr/supported#download-clients) page 
+- A list of supported download clients is located at the [More Info (Supported)](/radarr/supported#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 

@@ -201,6 +201,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`?
+
 ## Can I switch between branches?
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
@@ -367,7 +368,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - This means your SQLite database that stores most of the information for Whisparr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
-- Your best and first option is to [try restoring from a backup](#how-do-i-backup-and-restore-whisparr). However, for users receiving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
+- Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-whisparr). However, for users receiving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
   - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
