@@ -434,7 +434,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - This error is typically identified if a Movie or Collection is assigned a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder and that root folder is no longer available.
-- If you would like to remove this warning simply find the Movie(s) or Collection(s) that is(are) still using the old root folder and edit it to the correct root folder. 
+- If you would like to remove this warning simply find the Movie(s) or Collection(s) that is(are) still using the old root folder and edit it to the correct root folder.
 
 ##### Movies Table View
 
@@ -453,7 +453,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 1. Create a custom filter in Collections with the old root folder path
 1. Select the collections  and from the Root Paths drop down select the new root path that you want these collections' future movies to be assigned to.
 1. Run the Check Health Task in System => Tasks
- 
+
 ### Movies
 
 #### Movie was removed from TMDb
