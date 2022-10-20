@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-10-14T22:01:31.414Z
+date: 2022-10-20T05:49:21.295Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -21,11 +21,13 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Chrome](#chrome-1)
   - [Firefox](#firefox-1)
   - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
+  {.links-list}
 - [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs-request-apps-arrs)
-  - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
+  - [Notifiarr_](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
   - [Petio](#petio)
+  {.links-list}
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs-arr-related)
   - [Remote Control](#remote-control)
     - [LunaSea](#lunasea)
@@ -36,7 +38,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
     - [AMVD](#amvd)
   - [Radarr](#radarr)
   - [AMTD](#amtd)
-  - [Radarr & Sonarr](#radarr-sonarr)
+  - [Subtitles](#subtitles)
   - [Bazarr](#bazarr)
 - [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs-torrentsdownloading)
   - [Cross-Seed](#cross-seed)
@@ -45,9 +47,13 @@ dateCreated: 2021-06-05T20:51:53.183Z
 - [Other Projects and Programs](#other-projects-and-programs)
   - [Filebot](#filebot)
   - [JDupes](#jdupes)
+  - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-start-scripts)
+  - [Just A Bunch Of Plex Scripts (JBOPS)](#just-a-bunch-of-plex-scripts)
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
+  - 
+  {.links-list}
 - [Twitter Connect](#twitter-connect)
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
@@ -252,7 +258,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 [Automated Movie Trailer Downloader](https://github.com/RandomNinjaAtk/docker-amtd) RandomNinjaAtk/amtd is a Radarr companion script to automatically download movie trailers and extras for use in other video applications (plex/kodi/jellyfin/emby)
 
-## Radarr & Sonarr
+## Subtitles
 
 ## Bazarr
 
@@ -297,6 +303,16 @@ There are a handful of options out there for extracting and deleting files after
 - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
 
 - `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
+
+## Just A Bunch Of Start Scripts
+
+- [Just A Bunch Of Starr Scripts](https://github.com/angrycuban13/Just-A-Bunch-Of-Starr-Scripts)
+- [Upgradinatorr](is a powershell script to manually search n items that are not tagged with a specific tag in your Radarr/Sonarr media library. n is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
+
+## Just A Bunch Of Plex Scripts
+
+- [Just A Bunch Of Plex Scripts (JBOPS)](https://github.com/blacktwin/JBOPS)
+- [TRaSH Guides JBOPS 4K Transcode Stopping with Tautulli](https://trash-guides.info/Plex/Tips/4k-transcoding/)
 
 ## Plex Meta Manager
 
