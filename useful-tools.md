@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2022-10-20T05:49:21.295Z
+date: 2022-10-20T12:47:58.664Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -23,7 +23,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
   {.links-list}
 - [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs-request-apps-arrs)
-  - [Notifiarr_](#notifiarr-fka-discord-notifier)
+  - [Notifiarr](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
   - [Petio](#petio)
