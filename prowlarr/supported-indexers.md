@@ -2,19 +2,19 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-09-15T17:09:18.2471897Z
+date: 2022-10-23T18:38:27.7466978Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-09-15T17:09:18.2471897Z
+dateCreated: 2022-10-23T18:38:27.7466978Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.6.1969` / [Commit: d292d086ee6fd33ed1c5ac26deb3247bf0aa8a7f](https://github.com/Prowlarr/Prowlarr/commit/d292d086ee6fd33ed1c5ac26deb3247bf0aa8a7f)
+- Supported Trackers and Indexers as of Build `0.4.7.2016` / [Commit: 4be41ff3fbde6b76b8517905e82067fac463dd99](https://github.com/Prowlarr/Prowlarr/commit/4be41ff3fbde6b76b8517905e82067fac463dd99)
 
 ---
 
-- Current Master Version | ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https://raw.githubusercontent.com/hotio/prowlarr/latest/VERSION.json)
+- Current Master Version | ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/master/changes
 - Current Develop Version | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/develop/changes)
-- Current Nightly Version | ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes)
+- Current Nightly Version | ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes)
 
 ---
 
@@ -44,11 +44,12 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[BTDigg](https://btdig.com/){#btdigg}|BTDigg is a Public BitTorrent DHT search engine.|en-US|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|en-US|
 |[BTmirror](https://btsao.com/){#btmirror}|BTmirror is a Public BitTorrent DHT search engine.|en-US|
-|[BTSOW](https://btsow.click/){#btsow}|BTSOW is a Public torrent indexer|en-US|
+|[BTSOW](https://btsow.sbs/){#btsow}|BTSOW is a Public torrent indexer|en-US|
 |[Byrutor](https://byrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|ru-RU|
 |[CloudTorrents](https://cloudtorrents.com/){#cloudtorrents}|CloudTorrents is a Public Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|zh-CN|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|en-US|
+|[cpasbien](https://cpasbiens3.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
 |[cpasbien clone](https://www.cpasbien.tw/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|en-US|
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|zh-TW|
@@ -139,13 +140,14 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|en-US|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq221.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq226.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
-|[TorrentSir](https://torrentsir74.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir76.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
-|[TorrentView](https://torrentview67.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
-|[TorrentWhiz](https://torrentwiz48.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentView](https://torrentview68.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentWhiz](https://torrentwiz49.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentz2eu](https://torrentz2.pics/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|en-US|
+|[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|en-US|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|ru-RU|
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|ru-RU|
 |[VST Torrents](https://looptorrent.net/){#vsttorrents}|VST Torrents is a Public site for AUDIO apps, plugins and samples|en-US|
@@ -155,7 +157,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[xxxtorrents](https://www.xxxtorrents.pro/){#xxxtorrents}|xxxtorrents is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|en-US|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|en-US|
-|[zetorrents](https://www.zetorrents.nl/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-FR|
+|[zetorrents](https://www.zetorrents.biz/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|fr-FR|
 
 ### Private & Semi-Private Trackers
 
@@ -187,8 +189,8 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|ru-RU|
 |[AnimeTorrents](https://animetorrents.me/){#animetorrents}|Definitive source for anime and manga|en-US|
 |AnimeTosho{#torznab}|A Newznab-like api for torrents.|en-US|
+|[AnimeTracker (API)](https://animetracker.cc/){#animetracker}|AnimeTracker is a Private Torrent Tracker for HD ANIME / MANGA / HENTAI|en-US|
 |[AnimeWorld (API)](https://animeworld.cx/){#animeworld-api}|AnimeWorld (AW) is a GERMAN Private site for ANIME / MANGA / HENTAI|de-DE|
-|[Anthelion](https://anthelion.me/){#anthelion}|A movies tracker|en-US|
 |[Anthelion (API)](https://anthelion.me/){#anthelion-api}|Anthelion is a Private MOVIES tracker|en-US|
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private site for TV / MOVIES / GENERAL|it-IT|
 |[ArabP2P](https://www.arabp2p.net/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|ar-AR|
@@ -251,7 +253,6 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[Classix](http://classix-unlimited.co.uk/){#classix}|Classic movie tracker|en-US|
 |[Coastal-Crew](https://coastal-crew.bounceme.net/){#coastalcrew}|Coastal-Crew is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
 |[Concertos](https://concertos.live/){#concertos}|Concertos - Private site for Live Concerts with Strict Quality Control|en-US|
-|[cpasbien](https://vwwvwvwvvw.cpasbien-fr.nz/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
 |[CrazyHD](https://www.chd4.com/){#crazyhd}|CrazyHD is a BANGLADESHI Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[CrazySpirits](https://www.crazyspirits.com/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|sr-SP|
@@ -264,7 +265,6 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[DataTalli](https://datatalli.net/){#datatalli}|DataTalli is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|fi-FI|
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|is-IS|
 |[Demonoid](https://www.demonoid.is/){#demonoid}|Demonoid is a Semi-Private torrent site for MOVIES / TV / GENERAL|en-US|
-|[DesiReleasers](https://desireleasers.be/){#desireleasers}|DesiReleasers is an INDIAN Private Torrent Tracker for INDIAN MOVIES|en-US|
 |[DesiTorrents (API)](https://desitorrents.tv/){#desitorrents-api}|Desitorrents is a Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / MUSIC|en-US|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}| Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL|hu-HU|
 |[DigitalCore](https://digitalcore.club/){#digitalcore}|DigitalCore is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
@@ -326,6 +326,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH site for HD content|es-ES|
 |[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|fr-FR|
 |[HD-Spain](https://www.hd-spain.com/){#hdspain}|HD-Spain is a SPANISH site for HD content|es-ES|
+|[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|en-US|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |HD4Free\.xyz{#torznab}|A Newznab-like api for torrents.|en-US|
 |[HDAI](https://www.hd.ai/){#hdai}|HDAI is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
@@ -338,7 +339,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[HDCity](https://hdcity.li/){#hdcity}|HDCity is a SPANISH site for HD content|es-ES|
 |[HDDolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|zh-CN|
-|[HDGalaKtik](https://hdgalaktik.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for TV / MOVIES / GENERAL|ru-RU|
+|[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for TV / MOVIES / GENERAL|ru-RU|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[HDMonkey](https://hdmonkey.org/){#hdmonkey}|HDMonkey is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-RO|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
@@ -438,10 +439,12 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[Pixelados (API)](https://pixelados.tv/){#pixelados}|Pixelados is a Spanish Private Torrent Tracker for HD MOVIES / TV|es-ES|
 |[PixelCove](https://www.pixelcove.me/){#pixelcove}|PixelCove (Ultimate Gamer) is a Private Torrent Tracker for GAMES|en-US|
 |[PolishSource](https://polishsource.cz/){#polishsource}|PolishSource (PS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|pl-PL|
+|[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private site for 0DAY / MOVIES / GENERAL|pl-PL|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|en-US|
 |[Pornbits](https://pornbits.net/){#pornbits}|Pornbits (PB) is a Private Torrent Tracker for 3X|en-US|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for Adult content|ru-RU|
 |[Portugas](https://portugas.org/){#portugas}|Portugas is a Private Portuguese Tracker|pt-PT|
+|[Portugas (API)](https://portugas.org/){#portugas-api}|Portugas is a Private Portoguese Tracker|pt-PT|
 |[PotUK](https://www.potuk.net/){#potuk}|PotUK - Private site for MOVIES / TV / GENERAL|en-US|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker.|en-US|
 |[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeTorrents|en-US|
@@ -469,6 +472,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[RedBits (API)](https://red-bits.com/){#redbits-api}|RedBits is a SPANISH site for classic content|es-ES|
 |[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|en-US|
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|en-US|
+|[RetroFlix](https://retroflix.net/){#retroflix}|Private Torrent Tracker for Classic Movies / TV / General Releases|en-US|
 |[RevolutionTT](https://revolutiontt.me/){#revolutiontt}|The Revolution has begun|en-US|
 |[RGFootball](http://rgfootball.net/){#rgfootball}|RGFootball is a Russian Sports torrent tracker.|ru-RU|
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|ru-RU|
@@ -540,6 +544,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[Torrent Sector Crew](https://tsctracker.org/){#torrentsectorcrew}|Torrent Sector Crew (TSC) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
 |[Torrent Surf](https://torrentsurf.net/){#torrentsurf}|Torrent Surf is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[Torrent-Explosiv](https://torrent-explosiv.hopto.org/){#torrent-explosiv}|Torrent-Explosiv is a German Private site for TV / MOVIES / GENERAL|de-DE|
+|[Torrent-Town](https://torrent-town.hopto.org/){#torrent-town}|Torrent-Town (T-T) is a German Private site for TV / MOVIES / GENERAL|de-DE|
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL|tr-TR|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|lt-LT|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|A general Bangladesh tracker|en-US|
@@ -565,7 +570,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private site for MUSIC|en-US|
 |[Trezzor](https://tracker.czech-server.com/){#trezzor}|Trezzor is a CZECH Private site for TV / MOVIES / GENERAL|cs-CZ|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|en-GB|
-|[TurkSeed](https://turkseed.com/){#turkseed}|TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|tr-TR|
+|[TurkSeed](https://trendfilm.net/){#turkseed}|TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|tr-TR|
 |[TurkTorrent](https://turktorrent.us/){#turktorrent}|TurkTorrent (TT) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|tr-TR|
 |[turktracker](https://turktracker.net/){#turktracker}|turktracker is a TURKISH Private Torrent Tracker for MOVIES / TV|tr-TR|
 |[TVChaosUK](https://tvchaosuk.com/){#tvchaosuk}|TV Chaos UK (TVCUK) is a Private Torrent Tracker for UK TV|en-GB|
@@ -628,6 +633,7 @@ dateCreated: 2022-09-15T17:09:18.2471897Z
 |[NZBCat](https://nzb.cat){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[NZBFinder](https://nzbfinder.ws){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[NZBgeek](https://nzbgeek.info){#newznab}|Newznab is an API search specification for Usenet|en-US|
+|[NzbIndex](https://nzbindex.com/){#nzbindex}|A Usenet Indexer|en-US|
 |[NZBNDX](https://www.nzbndx.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[NzbNoob](https://www.nzbnoob.com){#newznab}|Newznab is an API search specification for Usenet|en-US|
 |[NzbPlanet](https://nzbplanet.net){#newznab}|Newznab is an API search specification for Usenet|en-US|
