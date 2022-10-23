@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-10-17T17:35:13.899Z
+date: 2022-10-23T14:58:56.037Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -466,6 +466,10 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 - Kamen Rider {#problemshow-kamenrider}
   - The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
  as this show has both an anthology entry (collecting all seasons) and the individual seasons listed as seperate entries on TVDb. Due to the anthology entry having individual season name mappings on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases.
+- Bleach: Thousand-Year Blood War (#problemshow-bleach)
+  - The newest season of Bleach: Thousand-Year Blood War is being released with a variety of different naming schemes making it difficult to automate and potentially overwriting some of your existing episodes. It can only be automated if your release group is either:
+    - Releasing the episodes as S17Exx numbering, or 
+  	- Releasing them with the correct Season 2 series title (found here https://thexem.info/xem/show/5476) and have began this new arc at absolute episode number 1.
 
 Some examples of other shows that commonly have issues, most of which may be resolved by TheXEM mappings are: Arrested Development, Kitchen Nightmares (US), Mythbusters, Pawn Stars.
 
