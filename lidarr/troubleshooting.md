@@ -56,6 +56,7 @@ dateCreated: 2021-06-14T21:36:46.193Z
   - [Testing a Search](#testing-a-search)
   - [Common Problems](#common-problems-1)
     - [Media is Unmonitored](#media-is-unmonitored)
+    - [Tracker needs RawSearch Caps](#tracker-needs-rawsearch-caps)
     - [Wrong categories](#wrong-categories)
     - [Wrong results](#wrong-results)
     - [Query Successful - No Results returned](#query-successful-no-results-returned)
@@ -87,36 +88,27 @@ The more we know, the easier it is to help you.
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
->\* **Do not simply provide the whole log file unless explicitly asked.**
->\* **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
->\* When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
->
->````none
->   ```
->   words here
->   ```
->````
->
->\* **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
->\* **Do ensure [Logging](/lidarr/settings#logging) is set to Trace (or Debug if requested).**
->\* **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
->\* **Do ensure the logs you provide capture the issue**
+> \* **Do not simply provide the whole log file unless explicitly asked.**
+> \* **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
 {.is-info}
 
 To provide good and useful logs for sharing:
 
-1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
-1. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
-1. Reproduce the Issue (Redo what is breaking things)
-1. [Open the trace log file (lidarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
-1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-1. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
+> Ensure a spammy task is NOT running such as an RSS refresh
+{.is-warning}
 
-> Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
-> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
-> Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
-> Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
-{.is-info}
+1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
+2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
+3. Reproduce the Issue (Redo what is breaking things)
+4. [Open the trace log file (Lidarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
+6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
+
+> \* Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
+> \* Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+> \* Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
+> \* Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
+{.is-danger}
 
 > When using [0bin](https://0bin.net/) be sure to disable colorize and do not burn after reading.
 {.is-warning}
@@ -411,7 +403,7 @@ You can also review some common permissions and networking troubleshooting comma
 
 # Searches Indexers and Trackers
 
-- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr recieved and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
+- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr received and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
 
 ## Turn logging up to trace
 

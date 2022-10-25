@@ -103,36 +103,27 @@ The more we know, the easier it is to help you.
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
->\* **Do not simply provide the whole log file unless explicitly asked.**
->\* **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
->\* When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
->
->````none
->   ```
->   words here
->   ```
->````
->
->\* **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
->\* **Do ensure [Logging](/sonarr/settings#logging) is set to Trace (or Debug if requested).**
->\* **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
->\* **Do ensure the logs you provide capture the issue**
+> \* **Do not simply provide the whole log file unless explicitly asked.**
+> \* **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
 {.is-info}
 
 To provide good and useful logs for sharing:
 
-1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
-1. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
-1. Reproduce the Issue (Redo what is breaking things)
-1. [Open the trace log file (sonarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
-1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-1. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
+> Ensure a spammy task is NOT running such as an RSS refresh
+{.is-warning}
 
-> Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
-> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
-> Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
-> Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
-{.is-info}
+1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
+2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
+3. Reproduce the Issue (Redo what is breaking things)
+4. [Open the trace log file (sonarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
+6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
+
+> \* Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
+> \* Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+> \* Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
+> \* Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
+{.is-danger}
 
 > When using [0bin](https://0bin.net/) be sure to disable colorize and do not burn after reading.
 {.is-warning}
@@ -431,7 +422,7 @@ This can also occur if you have a release in your download client but that media
 - Sonarr grabbed the release due to your indexer or tracker reporting that the release had the TVDb Id (or IMDb Id) for a series you wanted.
 - The series of the downloaded file does not match the id reported, so Sonarr will not import the file.
 - Depending on the series title and release name - assuming the release is correct for the series id it is associated with - Sonarr will probably need an alias added, [this FAQ entry has some more info](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) on requesting one to be added.
-- Alternatively, the release is mislabled and not for the series id that was reported. This should be reported to your indexer so they can take corrective action.
+- Alternatively, the release is mislabeled and not for the series id that was reported. This should be reported to your indexer so they can take corrective action.
 - To handle this error:
   1. Verify the series of the file
   1. Request an alias (if applicable)
@@ -464,7 +455,7 @@ You can also review some common permissions and networking troubleshooting comma
 # Searches Indexers and Trackers
 
 - The [Why didn't Sonarr grab an episode I was expecting?](/sonarr/faq#why-didnt-sonarr-grab-an-episode-i-was-expecting) FAQ entry is likely helpful as well.
-- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr recieved and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
+- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr received and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
 - The troubleshooting steps are otherwise below
 
 ## Turn logging up to trace
