@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-09-08T20:28:40.992Z
+date: 2022-10-28T14:56:26.460Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -181,6 +181,10 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - TMDb Person {#tmdbpersonimport}
   - If the TMDb Person url is `https://www.themoviedb.org/person/500-tom-cruise` then the Person ID is `500`
 - TMDb Popular {#tmdbpopularimport}
+  - Top uses https://developers.themoviedb.org/3/movies/get-top-rated-movies
+  - Popular uses https://developers.themoviedb.org/3/movies/get-popular-movies
+  - Theaters  uses https://developers.themoviedb.org/3/movies/get-now-playing
+  - Upcoming uses https://developers.themoviedb.org/3/movies/get-upcoming
 - TMDb User {#tmdbuserimport}
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name
