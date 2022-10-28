@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-10-23T14:58:56.037Z
+date: 2022-10-28T17:27:52.173Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -55,6 +55,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [Title Slug in Use](#title-slug-in-use)
 - [Sonarr Common Problems](#sonarr-common-problems)
   - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
+  - [Episode Air Times](#episode-air-times)
   - [System & Logs loads forever](#system-logs-loads-forever)
   - [Weird UI Issues](#weird-ui-issues)
   - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
@@ -562,6 +563,16 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 ## Episode does not have an absolute number
 
 - The episode(s) on TVDb do not have an absolute number assigned. Update the series on TVDb if required and then wait the 36-48 hours for the update to clear TVDb's internal cache and load into Sonarr
+
+## Episode Air Times
+
+And ah it's browser time for UI
+
+- Within Sonarr, Episode Air Date and Times shown in the browser are based of the client's time/timezone, all times are sent from Sonarr to the browser as UTC times (ISO-8601 formatted to be exact)
+- TVDb dictates - with exceptions for streaming services - that the airtime and date is based on the Primary Airing Network's local time in the country's most popular city. [See TVDb's FAQ entry for details](https://support.thetvdb.com/kb/faq.php?id=29)
+- Episode Air Dates and Air Time on TVDb is converted to UTC and uses Sonarr's Timezone that is mapped in Skyhook by the Sonarr team for the Network TVDb has for the series.
+  - In the rare case a network is not mapped then the time in TVDb will be assumed to be US EST (UTC-5).
+  - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.gg/73QUuf3bgA) for support with updating the Network's timezone.  
 
 ## System & Logs loads forever
 
