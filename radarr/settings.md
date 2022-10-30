@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-09-12T19:14:07.125Z
+date: 2022-10-30T19:46:43.108Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -297,11 +297,10 @@ Here you will set the naming convention for the folder that contains the season 
 {.is-info}
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Radarr to read parts of the file which may cause high disk or network activity during scans.
-- Rescan Movie Folder after Refresh - Rescan the series folder after refreshing the series
-
-  - Always - This will rescan movie folders based upon Tasks Schedule
-  - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the movie folders.
+- Rescan Movie Folder after Refresh
+  - Always - This will rescan movie folders based upon Tasks Schedule. This is recommended for most cases including if one uses Bazarr.
+  - After Manual Refresh - You will have to manually rescan the disk. This is recommended for users of cloud storage.
+  - Never - Just as it says, never rescan the movie folders. This is not recommended.
 - Change File Date - Change file date on import/rescan
   - None - Radarr will not change the date that shows in your given file browser
   - In Cinemas Date - The date the movie was released in theaters.
@@ -508,6 +507,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Resolution - The resolution parsed from either the release name or mediainfo (if available).
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
 - Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
+- Group - This is matched against the group that Radarr parses based on Radarr's group detection logic.
 
 ### Profiling Settings and Ranking
 
@@ -516,7 +516,6 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected.
   - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
   - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
-
 - [Please see TRaSH's Guides for how to setup and use custom formats](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/)
 
 #### Importing / Exporting Custom Formats
