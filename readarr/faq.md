@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-10-30T06:41:55.382Z
+date: 2022-10-30T06:44:03.179Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -93,7 +93,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 - Lists are a part of Readarr that allow you to follow a given list creator.
 - Let's say that you follow a given list creator on GoodReads and really like their collection of Great Books and want to add every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
 
->`CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of watching. So make sure of what you're importing before you click save.
+>`CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of reading. So make sure of what you're importing before you click save.
 {.is-warning}
 
 - It's suggested that physically look at the list before you even go to Readarr.
