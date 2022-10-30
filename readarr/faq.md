@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-10-30T06:44:03.179Z
+date: 2022-10-30T06:49:16.623Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -96,7 +96,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 >`CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of reading. So make sure of what you're importing before you click save.
 {.is-warning}
 
-- It's suggested that physically look at the list before you even go to Readarr.
+- It is suggested that you read through the list before you import it into Readarr.
 
 ## Why are lists sync times so long and can I change it?
 
