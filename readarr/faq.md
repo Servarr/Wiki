@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-09-26T20:02:00.179Z
+date: 2022-10-30T06:41:55.382Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -352,7 +352,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
 
 ## Can I have BOTH an ebook and an audiobook version of the same book?
 
-- No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Readarr or Radarr for 1080p and 4K versions of their media).
+- No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4K versions of their media).
 
 ## Do I need to use Calibre?
 
