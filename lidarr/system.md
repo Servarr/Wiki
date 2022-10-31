@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-05-07T01:12:52.949Z
+date: 2022-10-31T04:35:13.645Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -164,7 +164,7 @@ sudo systemctl start $app
 
 #### New update is available
 
-- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
+- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the `System => Updates` page is probably a good starting point.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -175,15 +175,15 @@ sudo systemctl start $app
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
-- Lidarr detected that AppData folder for your Operating System is located inside the directory that contains the Lidarr binaries. Normally it would be C:\ProgramData for Windows and, ~/.config for linux.
+- Lidarr detected that AppData folder for your Operating System is located inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and, `~/.config` for linux.
 
-- Please look at System => Info to see the current AppData & Startup directories.
-- This means Lidarr will be unable to update itself without risking data-loss.
-- If you’re on linux, you’ll probably have to change the home directory for the user that is running Lidarr and copy the current contents of the ~/.config/Lidarr directory to preserve your database.
+- Please look at `System => Info` to see the current AppData & Startup directories.
+- This means Lidarr will be unable to update itself without risking data loss.
+- If you’re on linux, you’ll probably have to change the home directory for the user that is running Lidarr and copy the current contents of the `~/.config/Lidarr` directory to preserve your database.
 
 #### Branch is for a previous version
 
-- The update branch setup in Settings/General is for a previous version of Lidarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
+- The update branch setup in `Settings => General` is for a previous version of Lidarr, therefore the instance will not see correct update information in the `System => Updates` feed and may not receive new updates when released.
 
 #### Could not connect to signalR
 
@@ -202,7 +202,7 @@ sudo systemctl start $app
  proxy_set_header Connection $http_connection;
 ```
 
-> Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
+> Make sure you do not include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. THIS WILL NOT WORK
 > See <https://github.com/aspnet/AspNetCore/issues/17081>
 {.is-warning}
 
@@ -244,7 +244,7 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### Mono Legacy TLS enabled
 
-- Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option
+- Mono 4.x tls workaround still enabled, consider removing `MONO_TLS_PROVIDER=legacy` environment option
 
 #### Mono and x86 builds are ending
 
@@ -279,20 +279,20 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### No download client is available
 
-- A properly configured and enabled download client is required for Lidarr to be able to download media. Since Lidarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Lidarr to use it and create a category. See Settings => Download Client.
+- A properly configured and enabled download client is required for Lidarr to be able to download media. Since Lidarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Lidarr to use it and create a category. See `Settings=>Download Client`.
 
 #### Unable to communicate with download client
 
-- Lidarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
+- Lidarr was unable to communicate with the configured download client. Please verify the download client is operational and double-check the URL. This could also indicate an authentication error.
 - This is typically due to improperly configured download client. Things you can typically check:
-  - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-  - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Lidarr.
-  - Ensure SSL encryption is not turned on if you're using both your Lidarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+  - Your download client's IP Address - if it's all on the same bare metal machine, this is typically `127.0.0.1`
+  - The Port number that your download client is using - these are filled out with the default port number but if you've changed it you will need to have the same one entered into Lidarr.
+   - Ensure that SSL encryption is not turned on if you're using both your Lidarr instance and your download client on a local network (i.e., over plain HTTP). See the SSL FAQ entry for more information.
 
 #### Download clients are unavailable due to failure
 
 - One or more of your download clients is not responding to requests made by Lidarr. Therefore Lidarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Lidarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
-- You should inspect System=>Logs to see what the reason is for the failures.
+- You should inspect `System=>Logs` to see what the reason is for the failures.
 - If you no longer use this download client, disable it in Lidarr to prevent the errors.
 
 #### Enable Completed Download Handling
@@ -303,20 +303,20 @@ chmod +x /opt/Lidarr/fpcalc
 
 - This error is typically associated with bad docker paths within either your download client or Lidarr
 
-- An example of this would be:
-  - Download client: Download Path: /mnt/user/downloads:/downloads
-  - Lidarr: Download Path: /mnt/user/downloads:/data
-- Within this example the download client places its downloads into /downloads and therefore tells Lidarr when its complete that the finished book is in /downloads. Lidarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Lidarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
-- The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
+- An example of bad (inconsistent) paths would be:
+  - Download client:  `/mnt/user/downloads:/downloads`
+  - Lidarr:   `/mnt/user/downloads:/data`
+- In this example the download client places its downloads into `/downloads` and tells Lidarr when its complete that the finished book is in `/downloads`. Lidarr then comes along and says "Okay, cool, let me check in `/downloads`." Well, inside Lidarr you did not allocate a `/downloads` path you allocated a `/data` path so it throws this error.
+- The easiest fix for this is CONSISTENCY - if you use one scheme in your download client, use it across the board. 
 
 - Team Lidarr is a big fan of simply using /data.
 
-- Download client: /mnt/user/data/downloads:/data/downloads
-- Lidarr: /mnt/user/data:/data
+  - Download client: `/mnt/user/data/downloads:/data/downloads`
+  - Lidarr: `/mnt/user/data:/data`
 
-- Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
+- Now within the download client you can specify where in `/data` you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah, download client, place my files into `/data/downloads/movies`" and since you used `/data` in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a `/data` and I also can see `/data/downloads/movies`, all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
-- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*Arrs](https://trash-guides.info/radarr/radarr-remote-path-mapping/) for more information.
+- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) and [Sonarr](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 
@@ -343,7 +343,7 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Permissions Error
 
-- Lidarr or the user lidarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
+- Lidarr (or the user lidarr is running as) cannot access the location your download client is downloading files to. This is typically a permission issue.
 
 #### Remote File was removed part way through processing
 
@@ -351,25 +351,25 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Remote Path is Used and Import Failed
 
-- Check your logs for more info; Refer to our [Troubleshooting Guides](/lidarr/troubleshooting)
+- Check your logs for more info. Refer to our [Troubleshooting Guides](/lidarr/troubleshooting).
 
 ### Completed/Failed Download Handling
 
 #### Completed Download Handling is disabled
 
-- Lidarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling. (Completed Download Handling is enabled by default for new users.)
+- Lidarr requires `Completed Download Handling` to be able to import files that were downloaded by the download client. It is recommended to enable `Completed Download Handling`. (It is enabled by default for new users.)
 
 ### Indexers
 
 #### No indexers available with automatic search enabled, Lidarr will not provide any automatic search results
 
 - Simply put you do not have any of your indexers set to allow automatic searches
-- Go into Settings > Indexers, select an indexer you'd like to allow Automatic Searches and then click save.
+- Go into `Settings => Indexers`, select an indexer you'd like to allow Automatic Searches and then click save.
 
 #### No indexers available with RSS sync enabled, Lidarr will not grab new releases automatically
 
 - Lidarr uses the RSS feed to pick up new releases as they come along. More info on that here
-- To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync
+- To correct this issue go to `Settings => Indexers`, select an indexer you have and enable RSS Sync
 
 #### No indexers are enabled
 
@@ -386,22 +386,22 @@ chmod +x /opt/Lidarr/fpcalc
 #### Indexers are unavailable due to failures
 
 - Errors occurs while Lidarr tried to use one of your indexers. To limit retries, Lidarr will not use the indexer for an increasing amount of time (up to 24h).
-- This mechanism is triggered if Lidarr was unable to get a response from the indexer (could be caused DNS, proxy/vpn connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer.
+- This mechanism is triggered if Lidarr was unable to get a response from the indexer (could be caused DNS, proxy/VPN connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer.
 - Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Lidarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
 #### Jackett All Endpoint Used
 
-- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
-- Using the /all endpoint has no advantages, only disadvantages:
+- Using the `/all` endpoint has no advantages, only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
   - mixing search modes (IMDB, query, etc.) might cause low-quality results
   - indexer specific categories (>= 100000) cannot be used.
   - slow indexers will slow down the overall result
   - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+  - if one of the trackers returns an error, \*Arr will disable it and now you will not get any results.
 
 ##### Solutions
 
