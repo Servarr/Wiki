@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2022-10-18T16:50:16.329Z
+date: 2022-11-01T17:36:26.386Z
 tags: lidarr, needs-love, troubleshooting
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -383,19 +383,31 @@ For various reasons, releases cannot be parsed once grabbed and sent to the down
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 
-### Connection Timed Out
+### The underlying connection was closed: An unexpected error occurred on a send
 
-`The request timed out`
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Radarr => System => Status](/radarr/system#status).
 
-Lidarr is getting no response from the client. [See our General Network & Permissions Troubleshooting guide](/permissions-and-networking)
+### The request timed out
 
-This is typically caused by:
+Lidarr is getting no response from the client.
+
+```none
+    System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
+```
+
+```
+2022-11-01 10:16:54.3|Warn|Newznab|Unable to connect to indexer
+
+[v4.3.0.6671] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+```
+
+This can also be caused by:
 
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
-- the use of Privoxy
+- the use of Privoxy and it being improperly configured
 
 ## Problem Not Listed
 
@@ -531,22 +543,14 @@ This is caused by the indexer using a SSL protocol not supported by the current 
 
 Lidarr is getting no response from the indexer.
 
-Lidarr seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
-
 ```none
     System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
 ```
 
-And you can see the following in the trace log file:
-
-```none
-    <DATE&TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
 ```
+2022-11-01 10:16:54.3|Warn|Newznab|Unable to connect to indexer
 
-You might fix it by installing libcurl3. On Ubuntu/Debian use;
-
-```shell
-    sudo apt install libcurl3
+[v4.3.0.6671] System.Threading.Tasks.TaskCanceledException: A task was canceled.
 ```
 
 This can also be caused by:
@@ -555,7 +559,7 @@ This can also be caused by:
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
-- the use of Privoxy
+- the use of Privoxy and it being improperly configured
 
 ### Problem Not Listed
 
