@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2022-11-01T17:36:16.056Z
+date: 2022-11-01T17:37:24.149Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -413,7 +413,7 @@ Radarr is getting no response from the client.
     System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
 ```
 
-```
+```none
 2022-11-01 10:16:54.3|Warn|Newznab|Unable to connect to indexer
 
 [v4.3.0.6671] System.Threading.Tasks.TaskCanceledException: A task was canceled.
@@ -650,7 +650,7 @@ Radarr is getting no response from the indexer.
     System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
 ```
 
-```
+```none
 2022-11-01 10:16:54.3|Warn|Newznab|Unable to connect to indexer
 
 [v4.3.0.6671] System.Threading.Tasks.TaskCanceledException: A task was canceled.
