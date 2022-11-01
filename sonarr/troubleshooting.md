@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-10-18T16:45:27.169Z
+date: 2022-11-01T17:39:08.133Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -434,19 +434,31 @@ On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 
 
 The [Episode Title Required](/sonarr/settings#importing) setting in Sonarr controls import behavior when the title is TBA, but after 24 hours from the episode's air date  the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files.
 
-### Connection Timed Out
+### The underlying connection was closed: An unexpected error occurred on a send
 
-`The request timed out`
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Sonarr => System => Status](/sonarr/system#status).
 
-Sonarr is getting no response from the client. [See our General Network & Permissions Troubleshooting guide](/permissions-and-networking)
+### The request timed out
 
-This is typically caused by:
+Sonarr is getting no response from the client.
+
+```none
+    System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
+```
+
+```none
+2022-11-01 10:16:54.3|Warn|Newznab|Unable to connect to indexer
+
+[v4.3.0.6671] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+```
+
+This can also be caused by:
 
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
-- the use of Privoxy
+- the use of Privoxy and it being improperly configured
 
 ## Problem Not Listed
 
@@ -847,22 +859,14 @@ This is caused by the indexer using a SSL protocol not supported by the current 
 
 Sonarr is getting no response from the indexer.
 
-Sonarr seems to have issues with certain TLS versions or configurations. If you get the following error messages in your log:
-
 ```none
     System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
 ```
 
-And you can see the following in the trace log file:
-
 ```none
-    <DATE&TIME>|Trace|FallbackHttpDispatcher|Curl not available, using default WebClient. 
-```
+2022-11-01 10:16:54.3|Warn|Newznab|Unable to connect to indexer
 
-You might fix it by installing libcurl3. On Ubuntu/Debian use;
-
-```shell
-    sudo apt install libcurl3
+[v4.3.0.6671] System.Threading.Tasks.TaskCanceledException: A task was canceled.
 ```
 
 This can also be caused by:
@@ -871,7 +875,7 @@ This can also be caused by:
 - improperly configured or use of a proxy
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
-- the use of Privoxy
+- the use of Privoxy and it being improperly configured
 
 ### Problem Not Listed
 
