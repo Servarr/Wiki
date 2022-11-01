@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-10-28T17:32:13.700Z
+date: 2022-11-01T12:13:17.484Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -466,6 +466,8 @@ If you have adjusted your your Series Name format after Sonarr has already creat
   - The newest season of Bleach: Thousand-Year Blood War is being released with a variety of different naming schemes making it difficult to automate and potentially overwriting some of your existing episodes. It can only be automated if your release group is either:
     - Releasing the episodes as S17Exx numbering, or 
   	- Releasing them with the correct Season 2 series title (found here https://thexem.info/xem/show/5476) and have began this new arc at absolute episode number 1.
+- Great Asian Railway Journeys
+	- Great Asian Railway Journeys was first aired as 20 smaller episodes, but was later re-aired as 10 long episodes.
 
 Some examples of other shows that commonly have issues, most of which may be resolved by TheXEM mappings are: Arrested Development, Kitchen Nightmares (US), Mythbusters, Pawn Stars.
 
