@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-11-01T13:29:02.184Z
+date: 2022-11-01T13:33:14.103Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -921,7 +921,7 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 - Username - Enter your proxy username if applicable
 - Password - Enter your proxy password if applicable
 - Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
-- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses. Local requests are identified by the lack of a period (.) in the URI, as in http://webserver/, or access the local server, including http://localhost, http://loopback, or http://127.0.0.1. When BypassProxyOnLocal is false, all Internet requests are made through the proxy server.
+- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses. Local requests are identified by the lack of a period (.) in the URI, as in http://webserver/, or access the local server, including http://localhost, http://loopback, or http://127.0.0.1. When this is unchecked, all Internet requests are made through the proxy server.
 
 
 ## Logging
