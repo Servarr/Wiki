@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: 
 published: true
-date: 2022-11-01T17:35:13.553Z
+date: 2022-11-01T17:36:16.056Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -407,7 +407,7 @@ This is caused by the indexer using a SSL protocol not supported by the current 
 
 ### The request timed out
 
-Radarr is getting no response from the indexer.
+Radarr is getting no response from the client.
 
 ```none
     System.NET.WebException: The request timed out: ’https://example.org/api?t=caps&apikey=(removed) —> System.NET.WebException: The request timed out
