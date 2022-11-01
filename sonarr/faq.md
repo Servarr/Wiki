@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-01T16:11:02.527Z
+date: 2022-11-01T16:42:30.649Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -549,7 +549,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - This error often occurs when two series are named with the same title on TheTVDB, if this is the case the second series should have the year appended to the series title.
   - Series A
   - Series A (2021)
-- To rectify this, wait for someone to eventually (maybe) update TVDb or update TVDb yourself. Once corrected, due to [TVDb's API issues](#tvdb-is-updated-why-isnt-sonarr), once updated you'll need to wait 30+ hours before the corrected title can be used in Sonarr.
+- To rectify this, wait for someone to eventually (maybe) update TVDb or update TVDb yourself. Once corrected **and once approved by TVDb's moderators**, due to [TVDb's API issues](#tvdb-is-updated-why-isnt-sonarr), once updated you'll need to wait 30+ hours before the corrected title can be used in Sonarr.
 
 ## Duplicate Names Punctuation
 
