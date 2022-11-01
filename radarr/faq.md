@@ -354,7 +354,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - The main setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.
   - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr.
   - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
-- This other setting that can be chanhed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
+- The other setting that can be changed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
 ## How do I request a feature for Radarr?
 
