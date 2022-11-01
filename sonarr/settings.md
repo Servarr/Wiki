@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-11-01T13:32:25.723Z
+date: 2022-11-01T13:34:19.571Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
