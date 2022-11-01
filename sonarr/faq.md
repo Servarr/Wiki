@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-01T12:55:37.852Z
+date: 2022-11-01T16:11:02.527Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -541,6 +541,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - Check the URL / series - Sonarr does not support movies; use [Radarr](/radarr) for movies
 
 ## Title Slug in Use
+
+- There are two primary causes of this error that are listed below.
 
 ## Duplicate Names No Year
 
