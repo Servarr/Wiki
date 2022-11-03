@@ -360,7 +360,7 @@ Here you will set the naming convention for the folder that contains the season 
 > Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
 {.is-warning}
 
-- Qualities - Qualities higher in the list are more preferred regardless of wanted (enabled/checked) status. Qualities within the same group are equal. Only checked qualities are wanted.
+- Qualities - Qualities higher in the list are more preferred even if not checked. Qualities within the same group are equal. Only checked qualities are wanted.
   - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSh's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
 
   - [See Qualities](#qualities-defined)
