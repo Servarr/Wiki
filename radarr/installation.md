@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-09-27T00:20:29.118Z
+date: 2022-11-04T18:14:09.017Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -626,7 +626,7 @@ This can prevent updates from being applied and can result in the following erro
 - It checks the ports and if one is not online, it will (re-)start the scheduled task to launch Radarr.
 
 1. Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
-1. Edit the script with your actual service names, IP, and ports.
+1. Edit the script with your actual service names, IP, and ports. *If you are running in Tray mode, you must create Scheduled tasks to start each Radarr instance and use those Task names in the script below.*
 1. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
 
 - Security Options: Enable `Run with highest privileges`
