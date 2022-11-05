@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-01T16:42:30.649Z
+date: 2022-11-05T15:18:21.560Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -535,7 +535,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Why can I not add a series when I know the TVDb ID?
 
-{#why-can-i-not-add-a-new-series-when-i-know-the-tvdb-id}
+{#why-cant-i-add-a-new-series-when-i-know-the-tvdb-id}
 
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title then the series will not be found. If no English title exists for that series on TheTVDb it will need to be added (if available).
 - Check the URL / series - Sonarr does not support movies; use [Radarr](/radarr) for movies
