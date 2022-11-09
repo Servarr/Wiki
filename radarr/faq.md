@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-10-15T01:46:54.143Z
+date: 2022-11-09T13:09:06.712Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -37,6 +37,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
       - [Using file system backup](#using-file-system-backup)
       - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
 - [Radarr Common Problems](#radarr-common-problems)
+  - [Error of a task was canceled](#a-task-was-canceled)
   - [Path is Already Configured for an Existing Movie](#path-is-already-configured-for-an-existing-movie)
   - [How can I rename my movie folders?](#how-can-i-rename-my-movie-folders)
   - [Movie File and Folder Naming](#movie-file-and-folder-naming)
@@ -287,6 +288,16 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - Start Radarr
 
 # Radarr Common Problems
+
+## A Task was Canceled
+
+- Radarr recieved no response from the server the request was made to after 100 seconds.
+- This is often caused by:
+  - improperly configured or use of a VPN
+  - improperly configured or use of a proxy
+  - local DNS issues
+  - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
+  - the use of Privoxy and it being improperly configured
 
 ## Path is Already Configured for an Existing Movie
 
