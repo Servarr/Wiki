@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2022-11-09T13:09:06.712Z
+date: 2022-11-09T13:11:21.958Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -298,6 +298,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - local DNS issues
   - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
   - the use of Privoxy and it being improperly configured
+  - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
 
 ## Path is Already Configured for an Existing Movie
 
