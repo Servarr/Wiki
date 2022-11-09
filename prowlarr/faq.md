@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-10-18T19:44:27.802Z
+date: 2022-11-09T08:42:50.943Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -96,7 +96,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - Indexers are synced based on the capabilities/categories they claim to support.
   - If an indexer supports only TV categories it will not be synced to Lidarr, Radarr, and Readarr.
 - A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis.
-- The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to Readarr and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
+- The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to an App and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
 - The specific error will be be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
   - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
   - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
