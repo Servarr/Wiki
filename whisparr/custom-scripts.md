@@ -96,7 +96,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable          | Details                                                      |
 | ----------------------------- | ------------------------------------------------------------ |
-| `whisparr_eventype`             | `HealthIssue`                                                |
+| `whisparr_eventtype`            | `HealthIssue`                                                |
 | `whisparr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
 | `whisparr_health_issue_message` | Message from the health issue                                |
 | `whisparr_health_issue_type`    | Area that failed and triggered the health issue              |
@@ -106,7 +106,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable             | Details                               |
 |--------------------------------- |-------------------------------------- |
-| `whisparr_eventype`                | `ApplicationUpdate`                   |
+| `whisparr_eventtype`               | `ApplicationUpdate`                   |
 | `whisparr_update_message`          | Message from Update                   |
 | `whisparr_update_newversion`       | Version Whisparr updated to (string)    |
 | `whisparr_update_previousversion`  | Version Whisparr updated from (string)  |

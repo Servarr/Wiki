@@ -98,7 +98,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable           | Details                                                      |
 | ------------------------------ | ------------------------------------------------------------ |
-| `readarr_eventype`             | `HealthIssue`                                                |
+| `readarr_eventtype`            | `HealthIssue`                                                |
 | `readarr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
 | `readarr_health_issue_message` | Message from the health issue                                |
 | `readarr_health_issue_type`    | Area that failed and triggered the health issue              |

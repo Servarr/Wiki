@@ -142,7 +142,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable          | Details                                                      |
 | ----------------------------- | ------------------------------------------------------------ |
-| `sonarr_eventype`             | `HealthIssue`                                                |
+| `sonarr_eventtype`            | `HealthIssue`                                                |
 | `sonarr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
 | `sonarr_health_issue_message` | Message from the health issue                                |
 | `sonarr_health_issue_type`    | Area that failed and triggered the health issue              |
@@ -152,7 +152,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable             | Details                               |
 |--------------------------------- |-------------------------------------- |
-| `sonarr_eventype`                | `ApplicationUpdate`                   |
+| `sonarr_eventtype`               | `ApplicationUpdate`                   |
 | `sonarr_update_message`          | Message from Update                   |
 | `sonarr_update_newversion`       | Version Sonarr updated to (string)    |
 | `sonarr_update_previousversion`  | Version Sonarr updated from (string)  |

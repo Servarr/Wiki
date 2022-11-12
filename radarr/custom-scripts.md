@@ -96,7 +96,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable          | Details                                                      |
 | ----------------------------- | ------------------------------------------------------------ |
-| `radarr_eventype`             | `HealthIssue`                                                |
+| `radarr_eventtype`            | `HealthIssue`                                                |
 | `radarr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
 | `radarr_health_issue_message` | Message from the health issue                                |
 | `radarr_health_issue_type`    | Area that failed and triggered the health issue              |
@@ -106,7 +106,7 @@ Note that the following will only be logged for custom scripts:
 
 | Environment Variable             | Details                               |
 |--------------------------------- |-------------------------------------- |
-| `radarr_eventype`                | `ApplicationUpdate`                   |
+| `radarr_eventtype`               | `ApplicationUpdate`                   |
 | `radarr_update_message`          | Message from Update                   |
 | `radarr_update_newversion`       | Version Radarr updated to (string)    |
 | `radarr_update_previousversion`  | Version Radarr updated from (string)  |
