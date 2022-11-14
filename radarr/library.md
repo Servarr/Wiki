@@ -2,7 +2,7 @@
 title: Radarr Library
 description: 
 published: true
-date: 2022-05-31T16:35:36.089Z
+date: 2022-11-14T15:01:56.699Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -67,6 +67,9 @@ dateCreated: 2021-05-25T01:24:18.386Z
     - Genres \[contains\] (Enum Genres)
     - TMDB Rating (Float)
     - TMDB Votes (Int)
+    - IMDb Rating
+    - Tomato Rating
+    - IMDb Votes
     - Certification (Enum Rating (PG-13, R, etc))
     - Tags \[contain\] (Enum Tags)
 
