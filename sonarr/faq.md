@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-14T14:11:24.117Z
+date: 2022-11-14T16:50:24.542Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -79,6 +79,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [Sonarr will not work on Big Sur](#sonarr-will-not-work-on-big-sur)
   - [My Custom Script stopped working after upgrading from v2](#my-custom-script-stopped-working-after-upgrading-from-v2)
 - [Sonarr Searching & Downloading Common Problems](#sonarr-searching-downloading-common-problems)
+  - [Query Successful - No Results Returned](#query-successful-no-results-returned)
   - [Why didn't Sonarr grab an episode I was expecting?](#why-didnt-sonarr-grab-an-episode-i-was-expecting)
   - [Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-release-was-matched-to-series-by-id-automatic-import-is-not-possible)
   - [Why wont Sonarr import a TBA episode?](#why-wont-sonarr-import-a-tba-episode)
@@ -710,6 +711,10 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
   1. Make sure the pwsh script is executable
 
 # Sonarr Searching & Downloading Common Problems
+
+### Query Successful - No Results Returned
+
+- [See this troubleshooting entry](/sonarr/troubleshooting#query-successful-no-results-returned)
 
 ## Why didn't Sonarr grab an episode I was expecting?
 
