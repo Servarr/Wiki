@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-11-01T17:39:08.133Z
+date: 2022-11-15T13:47:32.744Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -33,7 +33,6 @@ dateCreated: 2021-06-20T19:13:01.108Z
   - [Common Problems](#common-problems)
     - [One or More Episodes expected in the release were not imported or missing](#one-or-more-episodes-expected-in-the-release-were-not-imported-or-missing)
     - [Using Sonarr v2](#using-sonarr-v2)
-    - [Using qBittorrent v4.4.X](#using-qbittorrent-v44x)
     - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
     - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
     - [Can’t see share on Windows](#cant-see-share-on-windows)
@@ -268,10 +267,6 @@ Below are some common problems.
 
 Sonarr v2 has been end of life and not supported since 3/2021. It is not compatible with qBittorrent v4.3.0 or newer. Upgrade to Sonarr v3
 
-### Using qBittorrent v4.4.X
-
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Sonarr. It is strongly suggest to rollback to v4.3.9. Qbit v4.4.1+ resolved this undocumented change, but has other bugs.  qBittorrent 4.3.9 is suggested.
-
 ### Download Client's WebUI is not enabled
 
 Sonarr talks to you download client via it's API and accesses it via the client's webui. You must ensure the client's webui is enabled and the port it is using does not conflict with any other client ports in use or ports in use on your system.
@@ -392,7 +387,15 @@ Sonarr should be setup to use a category so that it only tries to process its ow
 
 ### Packed torrents
 
-If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr). One issue to look out for with packed torrents is that the video file will be copied or hard linked like normal, but it isn’t needed since the `.rar` files are seeding. That means if you’re using a *copy* setup, the torrent will be consuming double the space. And if you’re using a hard link setup, your torrent folder will be a little messier because of the unneeded file. This can be mitigated with a [cleanup script](https://gist.github.com/fryfrog/94716e7e27ba38dff57c7631d9f58bed).
+Logs will indicate errors like
+
+```none
+No files found are eligible for import
+```
+
+If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/davidnewhall/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
+
+The error by also be seen if there is no valid media file in the folder.
 
 ### Repeated downloads
 
