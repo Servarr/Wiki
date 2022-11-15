@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2022-11-15T13:46:51.541Z
+date: 2022-11-15T13:48:56.687Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -34,7 +34,6 @@ dateCreated: 2021-08-03T21:05:52.988Z
   - [Testing a Download](#testing-a-download)
   - [Testing an Import](#testing-an-import)
   - [Common Problems](#common-problems)
-    - [Using qBittorrent v4.4.0](#using-qbittorrent-v440)
     - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
     - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
     - [Can’t see share on Windows](#cant-see-share-on-windows)
@@ -260,10 +259,6 @@ Incorrect path issues are possible too, though less common in normal setups. The
 ## Common Problems
 
 Below are some common problems.
-
-### Using qBittorrent v4.4.0
-
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Radarr. It is strongly suggest to rollback to v4.3.9.  Some bugs including the broken API were fixed in v4.4.1, but users are reporting additional issues with v4.4.1.
 
 ### Download Client's WebUI is not enabled
 
