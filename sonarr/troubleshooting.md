@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-11-15T13:47:32.744Z
+date: 2022-11-15T16:03:16.672Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -783,6 +783,8 @@ Incorrect categories is probably the most common cause of results showing in man
 ### Wrong Results
 
 Sometimes indexers will return completely unrelated results; Sonarr will feed in parameters to limit the search to an series. Sometimes the results returned are completely unrelated. Or sometimes, mostly related with a few incorrect results. The first is usually an indexer problem and you’ll be able to tell from the trace logs which is causing it. You can disable that indexer and report the problem. The other is usually categorized releases which should be reportable on the indexer/tracker.
+
+Certain trackers - such as EZTV an other publics - return random results if they do not have an exact match for the series/season/episode being queried.  There is no resolution for this.
 
 ### Missing Results
 
