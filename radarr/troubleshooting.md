@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2022-11-13T16:27:45.864Z
+date: 2022-11-15T13:46:51.541Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -377,7 +377,15 @@ Radarr should be setup to use a category so that it only tries to process its ow
 
 ### Packed torrents
 
-If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr). One issue to look out for with packed torrents is that the video file will be copied or hard linked like normal, but it isn’t needed since the `.rar` files are seeding. That means if you’re using a *copy* setup, the torrent will be consuming double the space. And if you’re using a hard link setup, your torrent folder will be a little messier because of the unneeded file. This can be mitigated with a [cleanup script](https://gist.github.com/fryfrog/94716e7e27ba38dff57c7631d9f58bed).
+Logs will indicate errors like
+
+```none
+No files found are eligible for import
+```
+
+If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/davidnewhall/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
+
+The error by also be seen if there is no valid media file in the folder.
 
 ### Repeated downloads
 
