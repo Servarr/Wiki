@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2022-11-01T17:37:56.389Z
+date: 2022-11-15T13:49:28.527Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -31,7 +31,6 @@ dateCreated: 2021-06-20T20:06:25.552Z
   - [Testing a Download](#testing-a-download)
   - [Testing an Import](#testing-an-import)
   - [Common Problems](#common-problems)
-    - [Using qBittorrent v4.4.0](#using-qbittorrent-v440)
     - [You prefer one format, but it imported another format instead](#you-prefer-one-format-but-it-imported-another-format-instead)
     - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
     - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
@@ -243,10 +242,6 @@ Incorrect path issues are possible too, though less common in normal setups. The
 
 Below are some common problems.
 
-### Using qBittorrent v4.4.0
-
-Due to undocumented api changes made by qBittorrent - qBittorrent v4.4.0 is not compatible with Readarr. It is strongly suggest to rollback to v4.3.9.  Some bugs including the broken API were fixed in v4.4.1, but users are reporting additional issues with v4.4.1.
-
 ### You prefer one format, but it imported another format instead
 
 When Readarr imports, it imports in order of your priorities in your quality profile, regardless of whether they are checked or not. To resolve this issue, you need to drag your checked formats to the top of the quality list. For example, in the options below, even though only EPUB is wanted, if the download has an AZW3 in it along with the EPUB, it will get imported with priority over the EPUB, causing unwanted formats to be imported.
@@ -365,7 +360,15 @@ Readarr should be setup to use a category so that it only tries to process its o
 
 ### Packed torrents
 
-If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr). One issue to look out for with packed torrents is that the video file will be copied or hard linked like normal, but it isn’t needed since the `.rar` files are seeding. That means if you’re using a *copy* setup, the torrent will be consuming double the space. And if you’re using a hard link setup, your torrent folder will be a little messier because of the unneeded file. This can be mitigated with a [cleanup script](https://gist.github.com/fryfrog/94716e7e27ba38dff57c7631d9f58bed).
+Logs will indicate errors like
+
+```none
+No files found are eligible for import
+```
+
+If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/davidnewhall/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
+
+The error by also be seen if there is no valid media file in the folder.
 
 ### Repeated downloads
 
