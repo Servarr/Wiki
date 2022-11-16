@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2022-11-13T20:46:03.647Z
+date: 2022-11-16T20:17:46.918Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -88,6 +88,7 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 ## Adding a custom YML definition
 
+- Note that the yml definition is cached for a short period and if you make changes for development purposes you will need to wait out the cache or restart Prowlarr.
 - If you wish to add a custom Cardigann compatible YML definition file for an indexer that is not supported or to test changes to an existing definition:
   - Navigate to (or create) the Custom Indexer Definition folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](/prowlarr/appdata-directory)
     - Example paths:
