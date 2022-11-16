@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-07-31T19:34:52.578Z
+date: 2022-11-16T19:35:45.235Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -79,6 +79,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
 # Cardigann Versions
 
 - Below are the Prowlarr Cardigann  Versions
+
+- For testing custom yml definitions please see [the custom yml section in the Indexer page](/prowlarr/indexers#adding-a-custom-yml-definition)
 
 ## Schemas
 
