@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-14T16:50:24.542Z
+date: 2022-11-16T17:20:53.757Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -56,6 +56,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
   - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
   - [Episode Air Times](#episode-air-times)
 - [Sonarr Common Problems](#sonarr-common-problems)
+  - [Path is Already Configured for an Existing Series](#path-is-already-configured-for-an-existing-series)
   - [Episode does not have an forever](#system-logs-loads-forever)
   - [Weird UI Issues](#weird-ui-issues)
   - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
@@ -571,6 +572,18 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
   - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.gg/73QUuf3bgA) for support with updating the Network's timezone.  
 
 # Sonarr Common Problems
+
+## Path is Already Configured for an Existing Series
+
+- Library Import shows "Existing" or you get an error of "Path is configured for an existing series"
+- This occurs when trying to add a series or edit an existing series's path that already is assigned to a different series.
+- Likely this was caused by not correcting a mismatched series when the user imported their library.
+- Locate and correct the movie that is already assigned to that series's path.
+  - Series Index
+  - Table View
+  - Options => Add path as a column
+  - Sort and find the movie at the noted problematic path.
+- Alternatively, delete the series using the existing path from Sonarr
 
 ## System & Logs loads forever
 
