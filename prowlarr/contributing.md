@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: 
 published: true
-date: 2022-09-26T15:56:32.842Z
+date: 2022-11-16T19:35:23.515Z
 tags: prowlarr, development, contributing
 editor: markdown
 dateCreated: 2021-12-11T19:42:15.627Z
@@ -119,6 +119,7 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 
 - Cardigann and YML Indexers are to be pull requested to the [Prowlarr Indexer Repository](https://github.com/prowlarr/indexers) against the `master` branch
 - For Cardigann/YML Indexers details please see [the definition and description of the Prowlarr Cardigann yml format](/prowlarr/cardigann-yml-definition)
+- For testing custom yml definitions please see [the custom yml section in the Indexer page](/prowlarr/indexers#adding-a-custom-yml-definition)
 
 ## Pull Requesting
 
