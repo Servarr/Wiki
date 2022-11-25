@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-11-09T08:42:50.943Z
+date: 2022-11-25T18:28:57.457Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -11,6 +11,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
+  - [How do I reset Stats?](#how-do-i-reset-stats)
   - [Category Not Available or Missing](#category-not-available-or-missing)
   - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
   - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
@@ -49,6 +50,18 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [VPNs, Prowlarr, and the \*ARRs](#vpns-prowlarr-and-the-arrs)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
+  
+## How do I reset Stats?
+
+- To reset your stats and clear history do the following:
+
+1. History => Options
+1. Set History Cleanup to `1`. This will keep only through yesterday's History and Stats
+1. Navigate to System => Tasks
+1. Run the `Clean Up History` Task
+1. Run the `Housekeeping` Task
+1. Return to History => Options
+1. Set History Cleanup to your desired retention period for History and Stats
 
 ## Category Not Available or Missing
 
