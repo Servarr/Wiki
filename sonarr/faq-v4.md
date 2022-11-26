@@ -2,13 +2,16 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2022-11-26T17:49:27.444Z
+date: 2022-11-26T17:55:21.838Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
 ---
 
 # Sonarr v4 Beta FAQ
+
+> Sonarr v4 is currently in beta, and as such errors and issues are to be expected. Please use our support channels to ask questions, report issues or provide feedback with the v4 beta. If necessary you may be asked to open an issue on Github, if you're asked to open an issue on [Github](https://github.com/Sonarr/Sonarr). Please provide a link to the original discussion along with all other requested information. {.is-warning}
+
 
 ## Can I disable forced authentication?
 
