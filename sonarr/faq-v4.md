@@ -1,8 +1,8 @@
 ---
 title: Sonarr v4 Beta FAQ
-description: Unlinked Sonarr v4 Beta FAQ
+description: Sonarr v4 Beta FAQ
 published: true
-date: 2022-11-25T14:02:10.493Z
+date: 2022-11-26T17:49:27.444Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -16,3 +16,28 @@ dateCreated: 2022-11-25T14:02:10.493Z
   - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by adding `<AuthenticationMethod>External</AuthenticationMethod>` to the config file
 - If you do not expose Sonarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>
+  
+## Where have language profiles gone?
+
+- Languages are handled differently in Sonarr v4. They are no longer managed via the old Langauge Profiles system, but are now part of custom formats. You will need to create custom formats for langauges that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
+
+### Only English
+
+- If you only want to grab releases in English then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as English.
+```
+{
+  "name": "Reject Non English",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "Non English",
+      "implementation": "LanguageSpecification",
+      "negate": true,
+      "required": false,
+      "fields": {
+        "value": 1
+      }
+    }
+  ]
+}  
+```
