@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-11-21T22:25:15.8944621Z
+date: 2022-11-26T18:46:43.3631728Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-11-21T22:25:15.8944621Z
+dateCreated: 2022-11-26T18:46:43.3631728Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.10.2089` / [Commit: 25596fc2e828138737194c5c03d009af98c85f70](https://github.com/Prowlarr/Prowlarr/commit/25596fc2e828138737194c5c03d009af98c85f70)
+- Supported Trackers and Indexers as of Build `0.4.10.2099` / [Commit: a352c053abeb5e79c5ca0d8a6032d39b58c6be7f](https://github.com/Prowlarr/Prowlarr/commit/a352c053abeb5e79c5ca0d8a6032d39b58c6be7f)
 
 ---
 
@@ -326,7 +326,6 @@ dateCreated: 2022-11-21T22:25:15.8944621Z
 |[HD-Spain](https://www.hd-spain.com/){#hdspain}|HD-Spain is a SPANISH site for HD content|es-ES|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|en-US|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
-|HD4Free\.xyz{#torznab}|A Newznab-like api for torrents.|en-US|
 |[HDAI](https://www.hd.ai/){#hdai}|HDAI is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |[HDArea](https://www.hdarea.co/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[HDAtmos](https://hdatmos.club/){#hdatmos}|HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
