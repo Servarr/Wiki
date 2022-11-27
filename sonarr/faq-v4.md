@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2022-11-26T17:58:55.301Z
+date: 2022-11-27T21:05:49.408Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -44,3 +44,14 @@ dateCreated: 2022-11-25T14:02:10.493Z
   ]
 }  
 ```
+
+## My Nginx doesn't work anymore?
+
+- Due to changes in the backend of Sonarr (migration from mono to donnet) your Nginx conf file will need changing. Replace this line:
+  ```nginx
+     proxy_set_header   Host $proxy_host;
+   ```
+  with this line:
+  ```nginx
+    proxy_set_header   Host $host;
+  ```
