@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-10-25T16:59:43.395Z
+date: 2022-11-28T02:43:48.679Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -33,6 +33,7 @@ dateCreated: 2021-06-20T20:05:25.223Z
   - [\*Arr HTTP 400 Errors](#arr-http-400-errors)
   - [503 HTTP Service Unavailable](#503-http-service-unavailable)
   - [Invalid Torrents](#invalid-torrents)
+  - [Searching & Indexers](#searches-indexers-and-trackers)
 
 # Asking for Help
 
@@ -234,3 +235,11 @@ This is typically caused by:
 - Try downloading the torrent proxied via prowlarr (i.e. use the prowlarr link the app that grabbed the file use)
 - Ensure that your cookie or other credentials for your indexer are not expired and are valid
 - If the issue is Prowlarr caused then please file a bug report.
+
+## Searching & Indexers
+
+- [Lidarr Searching & Indexers](/lidarr/troubleshooting#searches-indexers-and-trackers)
+- [Radarr Searching & Indexers](/radarr/troubleshooting#searches-indexers-and-trackers)
+- [Readarr Searching & Indexers](/readarr/troubleshooting#searches-indexers-and-trackers)
+- [Sonarr Searching & Indexers](/sonarr/troubleshooting#searches-indexers-and-trackers)
+{.links-list}
