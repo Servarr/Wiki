@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-28T18:36:20.648Z
+date: 2022-11-28T18:38:25.515Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -398,6 +398,9 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 
 1. Go to System and then the Updates tab
 1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
+
+> v3 cannot be updated to beta v4 and requires manually installing. Refer to the [v4 Beta Announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/)
+{.is-info}
 
 #### Docker
 
