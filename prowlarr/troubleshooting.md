@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-11-28T02:43:48.679Z
+date: 2022-11-28T02:46:00.353Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -236,7 +236,7 @@ This is typically caused by:
 - Ensure that your cookie or other credentials for your indexer are not expired and are valid
 - If the issue is Prowlarr caused then please file a bug report.
 
-## Searching & Indexers
+## Searching Indexers
 
 - [Lidarr Searching & Indexers](/lidarr/troubleshooting#searches-indexers-and-trackers)
 - [Radarr Searching & Indexers](/radarr/troubleshooting#searches-indexers-and-trackers)
