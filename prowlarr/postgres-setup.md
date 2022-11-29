@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-11-29T13:17:06.193Z
+date: 2022-11-29T13:19:38.953Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -98,4 +98,4 @@ Before starting a migration please ensure that you have run Prowlarr against the
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 {.is-info}
 
-1. Start Prowlarr
+4. Start Prowlarr
