@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-11-29T13:16:41.453Z
+date: 2022-11-29T13:20:41.943Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -119,4 +119,4 @@ DELETE FROM "MetadataProfiles";
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 {.is-info}
 
-1. Start Readarr
+4. Start Readarr
