@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-30T00:21:51.975Z
+date: 2022-11-30T00:23:11.092Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -384,6 +384,9 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 
 > **Warning: You are not able to go back to (v3) `main` or (v3) `develop` after switching to the v4 branch without reinstalling and locating a v3 backup.** On GitHub, this is the `develop` branch.
 {.is-danger}
+
+> v3 **non-docker** installs **cannot** be upgraded directly to v4 and require installing Sonarr v4
+{.is-info}
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
 
