@@ -2,7 +2,7 @@
 title: LIdarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2022-11-29T13:20:21.217Z
+date: 2022-12-04T23:17:54.631Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -89,21 +89,9 @@ Before starting a migration please ensure that you have run Lidarr against the c
 
 ```SQL
 DELETE FROM "QualityProfiles";
-```
-
-```SQL
 DELETE FROM "QualityDefinitions";
-```
-
-```SQL
 DELETE FROM "DelayProfiles";
-```
-
-```SQL
 DELETE FROM "Metadata";
-```
-
-```SQL
 DELETE FROM "MetadataProfiles";
 ```
 
