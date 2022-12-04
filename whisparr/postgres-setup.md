@@ -2,7 +2,7 @@
 title: Whisparr Configuring PostgreSQL Database
 description: Configuring Whisparr with a Postgres Database
 published: true
-date: 2022-10-08T17:04:06.518Z
+date: 2022-12-04T23:19:18.612Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-03T03:49:34.975Z
@@ -84,17 +84,11 @@ Before starting a migration please ensure that you have run Whisparr against the
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
-    - ```SQL
-        DELETE FROM "Profiles"
-        ```
-
-    - ```SQL
-        DELETE FROM "QualityDefinitions"
-        ```
-
-    - ```SQL
-        DELETE FROM "DelayProfiles"
-        ```
+```SQL
+DELETE FROM "Profiles"
+DELETE FROM "QualityDefinitions"
+DELETE FROM "DelayProfiles"
+```
 
 1. Start the migration by using either of these options:
 
