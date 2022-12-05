@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-11-30T00:23:11.092Z
+date: 2022-12-05T17:15:13.881Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -245,6 +245,8 @@ chmod -R 0644 *
 ## Help I have locked myself out
 
 {#help-i-have-forgotten-my-password}
+
+> If you are using v4 of Sonarr the `AuthenticationMethod` type `None` is no longer valid - please see this [FAQ](/sonarr/faq-v4) {.is-info}
 
 To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
