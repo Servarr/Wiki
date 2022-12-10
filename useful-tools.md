@@ -305,7 +305,7 @@ There are a handful of options out there for extracting and deleting files after
 
 - `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
 
-## Just A Bunch Of Start Scripts
+## Just A Bunch Of Starr Scripts
 
 - [Just A Bunch Of Starr Scripts](https://github.com/angrycuban13/Just-A-Bunch-Of-Starr-Scripts)
 - [Upgradinatorr](is a powershell script to manually search n items that are not tagged with a specific tag in your Radarr/Sonarr media library. n is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
