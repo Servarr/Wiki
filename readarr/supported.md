@@ -138,7 +138,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Bookshelves - Select which bookshelves to import from GoodReads
   - Authenticate with GoodReads - Click the button to authenticate with GoodReads.
 
-> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with GoodReads to fetch the user's shelves.
+> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authenticate with GoodReads to fetch the user's shelves.
 {.is-info}
 
 - GoodReads Owned Books {#goodreadsownedbooks}
@@ -146,7 +146,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Bookshelves - Select which bookshelves to import from GoodReads
   - Authenticate with GoodReads - Click the button to authenticate with GoodReads.
 
-> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authetnicate with GoodReads to fetch the user's shelves.
+> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authenticate with GoodReads to fetch the user's shelves.
 {.is-info}
 
 - GoodReads Lists {#goodreadslistimportlist}
