@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-11-13T20:22:59.775Z
+date: 2022-12-16T14:26:07.072Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -587,6 +587,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
 - Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Radarr (Requires Completed Download Handling - Remove enabled)
+**Leaving both of the above options blank will result in complete download handling not removing the torrent even if set to do so. Seed ratio and Seed time are an OR statement:whichever is met first will apply**
 
 - Required Flags - What indexer flags are required?
 
