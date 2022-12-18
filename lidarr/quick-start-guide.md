@@ -327,7 +327,7 @@ Specialty libraries create unique issues for any management system. These situat
 
 ## Importing existing library or files
 
-> Note that Lidarr does not regularly search for Releases.  See these two FAQ Entries for details to understand how Readarr works.
+> Note that Lidarr does not regularly search for Releases.  See these two FAQ Entries for details to understand how Lidarr works.
 [How does Lidarr find releases?](/lidarr/faq#how-does-lidarr-find-releases) and [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work)
 {.is-info}
 
