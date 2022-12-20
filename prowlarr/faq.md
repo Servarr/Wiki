@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-12-20T20:31:31.418Z
+date: 2022-12-20T20:32:26.670Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -50,6 +50,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [VPNs, Prowlarr, and the \*ARRs](#vpns-prowlarr-and-the-arrs)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
+  - [Can I disable forced authentication?](#can-i-disable-forced-authentication)
   
 ## How do I reset Stats?
 
