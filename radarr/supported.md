@@ -181,10 +181,10 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - TMDb Person {#tmdbpersonimport}
   - If the TMDb Person url is `https://www.themoviedb.org/person/500-tom-cruise` then the Person ID is `500`
 - TMDb Popular {#tmdbpopularimport}
-  - Top uses https://developers.themoviedb.org/3/movies/get-top-rated-movies
-  - Popular uses https://developers.themoviedb.org/3/movies/get-popular-movies
-  - Theaters  uses https://developers.themoviedb.org/3/movies/get-now-playing
-  - Upcoming uses https://developers.themoviedb.org/3/movies/get-upcoming
+  - Top uses <https://developers.themoviedb.org/3/movies/get-top-rated-movies>
+  - Popular uses <https://developers.themoviedb.org/3/movies/get-popular-movies>
+  - Theaters  uses <https://developers.themoviedb.org/3/movies/get-now-playing>
+  - Upcoming uses <https://developers.themoviedb.org/3/movies/get-upcoming>
 - TMDb User {#tmdbuserimport}
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name

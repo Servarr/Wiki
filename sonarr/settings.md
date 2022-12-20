@@ -900,9 +900,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 - Username - Enter your proxy username if applicable
 - Password - Enter your proxy password if applicable
 - Ignored Addresses - Enter a comma-separated list of addresses that bypass the proxy
-- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses. Local requests are identified by the lack of a period (.) in the URI, as in http://webserver/, or access the local server, including http://localhost, http://loopback, or http://127.0.0.1. When this is unchecked, all Internet requests are made through the proxy server.
-
-
+- Bypass Proxy for Local Addresses - Check the box to bypass the proxy for local addresses. Local requests are identified by the lack of a period (.) in the URI, as in <http://webserver/>, or access the local server, including <http://localhost>, <http://loopback>, or <http://127.0.0.1>. When this is unchecked, all Internet requests are made through the proxy server.
 
 ## Logging
 

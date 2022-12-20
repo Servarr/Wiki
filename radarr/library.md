@@ -67,9 +67,9 @@ dateCreated: 2021-05-25T01:24:18.386Z
     - Genres \[contains\] (Enum Genres)
     - TMDB Rating (Float)
     - TMDB Votes (Int)
-    - IMDb Rating 
-    - Tomato Rating 
-    - IMDb Votes 
+    - IMDb Rating
+    - Tomato Rating
+    - IMDb Votes
     - Certification (Enum Rating (PG-13, R, etc))
     - Tags \[contain\] (Enum Tags)
 

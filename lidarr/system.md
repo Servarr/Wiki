@@ -287,7 +287,7 @@ chmod +x /opt/Lidarr/fpcalc
 - This is typically due to improperly configured download client. Things you can typically check:
   - Your download client's IP Address - if it's all on the same bare metal machine, this is typically `127.0.0.1`
   - The Port number that your download client is using - these are filled out with the default port number but if you've changed it you will need to have the same one entered into Lidarr.
-   - Ensure that SSL encryption is not turned on if you're using both your Lidarr instance and your download client on a local network (i.e., over plain HTTP). See the SSL FAQ entry for more information.
+  - Ensure that SSL encryption is not turned on if you're using both your Lidarr instance and your download client on a local network (i.e., over plain HTTP). See the SSL FAQ entry for more information.
 
 #### Download clients are unavailable due to failure
 
@@ -307,7 +307,7 @@ chmod +x /opt/Lidarr/fpcalc
   - Download client:  `/mnt/user/downloads:/downloads`
   - Lidarr:   `/mnt/user/downloads:/data`
 - In this example the download client places its downloads into `/downloads` and tells Lidarr when its complete that the finished book is in `/downloads`. Lidarr then comes along and says "Okay, cool, let me check in `/downloads`." Well, inside Lidarr you did not allocate a `/downloads` path you allocated a `/data` path so it throws this error.
-- The easiest fix for this is CONSISTENCY - if you use one scheme in your download client, use it across the board. 
+- The easiest fix for this is CONSISTENCY - if you use one scheme in your download client, use it across the board.
 
 - Team Lidarr is a big fan of simply using /data.
 

@@ -12,7 +12,6 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 > Sonarr v4 is currently in beta, and as such errors and issues are to be expected. Please use our support channels to ask questions, report issues or provide feedback with the v4 beta. If necessary you may be asked to open an issue on Github, if you're asked to open an issue on [Github](https://github.com/Sonarr/Sonarr). Please provide a link to the original discussion along with all other requested information. {.is-warning}
 
-
 ## Can I disable forced authentication?
 
 - If Sonarr is exposed externally then you are required - including increasingly required by most Trackers and Indexers - to have authentication in front of Sonarr.
@@ -27,6 +26,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 ### Only English
 
 - If you only want to grab releases in English then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as English.
+
 ```
 {
   "name": "Reject Non English",
@@ -48,10 +48,13 @@ dateCreated: 2022-11-25T14:02:10.493Z
 ## My Nginx doesn't work anymore?
 
 - Due to changes in the backend of Sonarr (migration from mono to donnet) your Nginx conf file will need changing. Replace this line:
+
   ```nginx
      proxy_set_header   Host $proxy_host;
    ```
+
   with this line:
+
   ```nginx
     proxy_set_header   Host $host;
   ```
