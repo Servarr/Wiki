@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-11-29T01:05:57.270Z
+date: 2022-12-20T20:31:31.418Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -371,3 +371,10 @@ Depending on your OS, there are multiple possible ways.
 ## Can I easily add all indexers at once?
 
 No. This would not be a good thing to do, and this functionality will not be added. It is much better to choose your indexers wisely, pay attention to the stats to remove indexers that are too slow or not producing grabs. Proper pruning and maintenance of your indexers will result in much better results overall, and quicker results on searches from your apps.
+
+## Can I disable forced authentication?
+
+- If Prowlarr is exposed externally then you are required - including increasingly required by most Trackers and Indexers - to have authentication in front of Prowlarr.
+  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by adding `<AuthenticationMethod>External</AuthenticationMethod>` to the config file
+- If you do not expose Prowlarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
