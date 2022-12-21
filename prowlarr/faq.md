@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2022-12-20T20:32:26.670Z
+date: 2022-12-21T13:19:03.548Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -134,6 +134,9 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - Prowlarr: Implementation (e.g. YML or C#)
 
 With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr
+
+> As of Prowlarr `v0.4.11.2145` settings not compared by Prowlarr are not overwrote when full sync is enabled
+{.is-info}
 
 ## How do I update Prowlarr?
 
