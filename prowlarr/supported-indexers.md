@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-12-20T00:06:42.3336143Z
+date: 2022-12-22T18:47:03.4668129Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-12-20T00:06:42.3336143Z
+dateCreated: 2022-12-22T18:47:03.4668129Z
 ---
 
-- Supported Trackers and Indexers as of Build `0.4.11.2142` / [Commit: 57dcd861a9dc5178e6975d3ef1d534c1accb79a0](https://github.com/Prowlarr/Prowlarr/commit/57dcd861a9dc5178e6975d3ef1d534c1accb79a0)
+- Supported Trackers and Indexers as of Build `1.0.0.2160` / [Commit: 7303cdf555de46e2cb31286b027dffb0a922048e](https://github.com/Prowlarr/Prowlarr/commit/7303cdf555de46e2cb31286b027dffb0a922048e)
 
 ---
 
@@ -386,7 +386,7 @@ dateCreated: 2022-12-20T00:06:42.3336143Z
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|de-DE|
 |[MOJBLiNK](https://www.mojblink.si/){#mojblink}|MOJBLiNK is a Private SLOVENIAN Torrent Tracker for MOVIES / TV / GENERAL|sl-SI|
 |[Mononoké-BT](http://mononoke-bt.org/){#mononokebt}|Mononoke-BT is a FRENCH Private Torrent Tracker for ANIME|fr-FR|
-|[MoreThanTV](https://www.morethantv.me/){#morethantv}|Private torrent tracker for TV / MOVIES|en-US|
+|MoreThanTV{#torznab}|A Newznab-like api for torrents.|en-US|
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|en-US|
 |[Movie-Torrentz](https://m2g.link/){#movietorrentz}|Movie-Torrentz is a Private Torrent Tracker for MOVIES / TV|en-US|
 |[Moviesite](http://moviesite.info.hu/){#moviesite}|Moviesite is a HUNGARIAN Semi-Private tracker for MOVIES / TV / GENERAL|hu-HU|
@@ -523,6 +523,7 @@ dateCreated: 2022-12-20T00:06:42.3336143Z
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL|tr-TR|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|lt-LT|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|A general Bangladesh tracker|en-US|
+|[TorrentBytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|en-US|
 |[TorrentCCF](https://et8.org/){#torrentccf}|TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[TorrentDay](https://torrentday.cool/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|en-US|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|en-US|
