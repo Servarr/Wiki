@@ -379,6 +379,6 @@ No. This would not be a good thing to do, and this functionality will not be add
 ## Can I disable forced authentication?
 
 - If Prowlarr is exposed externally then you are required - including increasingly required by most Trackers and Indexers - to have authentication in front of Prowlarr.
-  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by adding `<AuthenticationMethod>External</AuthenticationMethod>` to the config file
+  - If you use an **external authentication** such as Authelia, Authentik, NGINX Basic auth, etc. you can prevent needing to double authenticate by adding `<AuthenticationMethod>External</AuthenticationMethod>` to the config file
 - If you do not expose Prowlarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
