@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-01-01T17:39:08.255Z
+date: 2023-01-01T18:13:09.597Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -480,13 +480,13 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 - Bleach: Thousand-Year Blood War {#problemshow-bleach}
   - The newest season of Bleach: Thousand-Year Blood War is being released with a variety of different naming schemes making it difficult to automate and potentially overwriting some of your existing episodes. It can only be automated if your release group is either:
     - Releasing the episodes as S17Exx numbering, or
-  - Releasing them with the correct Season 2 series title (found here <https://thexem.info/xem/show/5476>) and have began this new arc at absolute episode number 1.
+    - Releasing them with the correct Season 2 series title (found here <https://thexem.info/xem/show/5476>) and have began this new arc at absolute episode number 1.
 - Great Asian Railway Journeys {#problemshow-greatasianrail}
   - Great Asian Railway Journeys was first aired as 20 smaller episodes, but was later re-aired as 10 long episodes. These longer combined episodes were added as Specials, and should be named accordingly. (S00E01, etc, ...)
 - Horizon {#problemshow-horizon}
   - A show that sporadically airs episodes since 1964. This makes mapping particularly difficult, as you can see on [TheXEM](https://thexem.info/xem/show/5495). Those interested can find the original discussion on the Sonarr discord [here](https://discord.com/channels/383686866005917708/649018968559845376/1046898050909622312).
-- Kaleidoscope 2023 {#problemshow-kaleidoscope}
-  - Kaleidoscope 2023 was released on Netflix as a Non-Linear show meaning that every user got a different order when watching the series. This obviously causes a big issue for Sonarr as release groups will have different orders for the show, Sonarr will not auto grab episodes for this show and will require it to be done manually
+- Kaleidoscope (2023) {#problemshow-kaleidoscope}
+  - Kaleidoscope (2023) was released on Netflix as a non-linear show meaning that every user got a different order when watching the series. This causes an issue for Sonarr as release groups have different episode orders for the show. In order to prevent incorrect mapping of episodes Sonarr will not automaticaly grab episodes and you will need to grab and import the episodes manually. You can match them based on episode title, or by previewing the first few seconds and seeing the episode 'color' matching the title.
 
 Some examples of other shows that commonly have issues, most of which may be resolved by TheXEM mappings are: Arrested Development, Kitchen Nightmares (US), Mythbusters, Pawn Stars.
 
