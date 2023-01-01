@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2022-12-05T17:15:13.881Z
+date: 2023-01-01T17:39:08.255Z
 tags: sonarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -485,6 +485,8 @@ If you have adjusted your your Series Name format after Sonarr has already creat
   - Great Asian Railway Journeys was first aired as 20 smaller episodes, but was later re-aired as 10 long episodes. These longer combined episodes were added as Specials, and should be named accordingly. (S00E01, etc, ...)
 - Horizon {#problemshow-horizon}
   - A show that sporadically airs episodes since 1964. This makes mapping particularly difficult, as you can see on [TheXEM](https://thexem.info/xem/show/5495). Those interested can find the original discussion on the Sonarr discord [here](https://discord.com/channels/383686866005917708/649018968559845376/1046898050909622312).
+- Kaleidoscope 2023 {#problemshow-kaleidoscope}
+  - Kaleidoscope 2023 was released on Netflix as a Non-Linear show meaning that every user got a different order when watching the series. This obviously causes a big issue for Sonarr as release groups will have different orders for the show, Sonarr will not auto grab episodes for this show and will require it to be done manually
 
 Some examples of other shows that commonly have issues, most of which may be resolved by TheXEM mappings are: Arrested Development, Kitchen Nightmares (US), Mythbusters, Pawn Stars.
 
