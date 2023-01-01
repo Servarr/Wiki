@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2022-10-30T06:49:16.623Z
+date: 2023-01-01T17:57:59.124Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -14,6 +14,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
   - [How does Readarr work?](#how-does-readarr-work)
   - [How does Readarr find books?](#how-does-readarr-find-books)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
+  - [Error of a task was canceled](#a-task-was-canceled)
   - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
   - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
   - [Why can I not add a new book or author to Readarr?](#why-can-i-not-add-a-new-book-or-author-to-readarr)
@@ -87,6 +88,17 @@ dateCreated: 2021-05-25T20:01:09.320Z
 1. Book Count
 1. Age (If Usenet)
 1. Size
+
+## A Task was Canceled
+
+- Readarr recieved no response from the server the request was made to after 100 seconds.
+- This is often caused by:
+  - improperly configured or use of a VPN
+  - improperly configured or use of a proxy
+  - local DNS issues
+  - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
+  - the use of Privoxy and it being improperly configured
+  - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
 
 ## What are Lists and what can they do for me?
 
