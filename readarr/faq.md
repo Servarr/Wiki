@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-01-01T17:57:59.124Z
+date: 2023-01-03T21:58:36.327Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -42,7 +42,6 @@ dateCreated: 2021-05-25T20:01:09.320Z
   - [Help, Book Added, But Not Searched](#help-book-added-but-not-searched)
   - [Root path for authors imported from lists becomes “C:” or other weird paths](#root-path-for-authors-imported-from-lists-becomes-c-or-other-weird-paths)
   - [Book Imported, But Source File And Torrent Not Deleted](#book-imported-but-source-file-and-torrent-not-deleted)
-  - [I am using a Pi and Raspbian and Readarr will not launch](#i-am-using-a-pi-and-raspbian-and-readarr-will-not-launch)
   - [Can I disable the refresh books task](#can-i-disable-the-refresh-books-task)
   - [Can I have BOTH an ebook and an audiobook version of the same book?](#can-i-have-both-an-ebook-and-an-audiobook-version-of-the-same-book)
   - [Do I need to use Calibre?](#do-i-need-to-use-calibre)
@@ -328,36 +327,6 @@ chmod -R 0644 *
 - Check if you have Completed Download Handling - Remove turned on.
 - If you are using deluge make sure auto-managed is turned on. And that torrents get paused when they reach specified seeding quota.
 
-## I am using a Pi and Raspbian and Readarr will not launch
-
-Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
-
-**Possible Solution:**
-
-Managed to fix the issue by installing the backport from debian repo. Generally not recommended to use backport in blanket upgrade mode. Installation of a single package may be ok but may also cause issues. So got to understand what you are doing.
-
-Steps to fix:
-
-First ensure you are running Raspbian buster e.g using `lsb_release -a`
-
-> Distributor ID: Raspbian
-> Description: Raspbian GNU/Linux 10 (buster)
-> Release: 10
-> Codename: buster
-
-- If you are using buster:
-  - Run the following to add the backports to your sources
-
-  ```shell
-   echo "deb <http://deb.debian.org/debian> buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
-   ```
-
-  - Install the backport of libseccomp2
-
-  ```shell
-  sudo apt update && sudo apt-get -t buster-backports install libseccomp2
-  ```
-
 ## Can I disable the refresh books task
 
 - No, nor should you through any SQL hackery. The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
@@ -421,8 +390,20 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
-- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Readarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of arr servers (updates, metadata, etc.) and liable to block you too**
-- In addition, some private trackers **ban** for browsing from a VPN, which is how Jackett and Prowlarr work. In some cases (i.e. certain UK ISPs) it may be needed to use a VPN for public trackers, in which case you should then be putting only Jackett behind the VPN. However, you should not do that if you have private trackers without checking their rules first. **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
+- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. 
+> **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
+{.is-warning}
+- **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
+
+### Use of a VPN
+
+- If a VPN is required and Docker is used it is recommended to use Hotio or Binhex's Download Client + VPN Containers.
+- If a VPN is required and Docker is not used your VPN client ***must*** support split tunneling so only the required (Download Client) apps are behind the VPN.
+- Many issues with accessing trackers can be resolved by using Google or Cloudflare's DNS servers in lieu of your ISP's DNS servers.
+- In some cases (i.e. UK ISPs) you may need to put your torrent download client behind a VPN and Jackett/Prowlarr as follows:
+  - put Jackett behind the VPN and ensure split tunneling allows local access
+  - for Prowlarr configure your vpn client to provide a proxy and add the proxy in Settings => Indexers. Give the proxy a tag and any indexers that need to use it the same tag.
+    - If absolutely required and if your vpn does not provide a way to create a proxy you may put Prowlarr behind the VPN and ensure split tunneling allows local access.
 
 ## Jackett's /all Endpoint
 
