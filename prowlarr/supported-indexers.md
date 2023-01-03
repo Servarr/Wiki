@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2022-12-27T00:36:43.0946688Z
+date: 2023-01-03T16:45:11.4205918Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2022-12-27T00:36:43.0946688Z
+dateCreated: 2023-01-03T16:45:11.4205918Z
 ---
 
-- Supported Trackers and Indexers as of Build `1.0.0.2171` / [Commit: 518c85dee2bf05ccc840c1e2f87ff696f77672af](https://github.com/Prowlarr/Prowlarr/commit/518c85dee2bf05ccc840c1e2f87ff696f77672af)
+- Supported Trackers and Indexers as of Build `1.0.1.2219` / [Commit: 6e1bef13e2d24c46babafcd75d27cd17be4c19f6](https://github.com/Prowlarr/Prowlarr/commit/6e1bef13e2d24c46babafcd75d27cd17be4c19f6)
 
 ---
 
@@ -118,7 +118,7 @@ dateCreated: 2022-12-27T00:36:43.0946688Z
 |[Shizaproject](https://shiza-project.com/){#shizaproject}|Shizaproject is russian anime voiceover group and eponymous anime tracker.|ru-RU|
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|en-US|
 |[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|en-US|
-|[sosulki](http://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
+|[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|en-US|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|en-US|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|en-US|
@@ -135,8 +135,8 @@ dateCreated: 2022-12-27T00:36:43.0946688Z
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|en-US|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|en-US|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
-|[TorrentProject2](https://torrentproject2.com/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq236.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
+|[TorrentQQ](https://torrentqq237.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
 |[TorrentSir](https://torrentsir87.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
@@ -365,6 +365,7 @@ dateCreated: 2022-12-27T00:36:43.0946688Z
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[LemonHD](https://lemonhd.org/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[LeSaloon](https://lesaloonv2-0.net/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|fr-FR|
+|[Libble](https://libble.me/){#libble}|Libble is a Private Torrent Tracker for MUSIC|en-US|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|hu-HU|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL|lt-LT|
 |[Locadora](https://locadora.cc/){#locadora}|Locadora is a Brazilian tracker for Movies and TV Shows|pt-BR|
