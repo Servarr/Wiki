@@ -248,7 +248,7 @@ chmod -R 0644 *
 
 > If you are using v4 of Sonarr the `AuthenticationMethod` type `None` is no longer valid - please see this [FAQ](/sonarr/faq-v4) {.is-info}
 
-To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
 1. Open config.xml in a text editor
 1. Find the authentication method line will be

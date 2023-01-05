@@ -415,7 +415,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](/whisparr/appdata-directory)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](/whisparr/appdata-directory)
 
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
