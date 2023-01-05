@@ -471,7 +471,7 @@ The song(s) is(are) not monitored.
 - Lidarr is searching for `Kikis Delivery Service` but your tracker only has results for `Kiki's Delivery Service`
 - This is due to your tracker not supporting normal standardized searches.
 - The solution is that your tracker's definition's search capabilities need to be updates to indicate it requires and supports `RawSearch`
-- Jackett [does support](https://github.com/Jackett/Jackett/pull/13409) this capabilities flag.
+- Jackett supports the flag, but the capabilities need to be updated on a per-indexer basis. Open a feature request for Jackett to add this functionality for your indexer.
 - Prowlarr supports the flag, but the capabilities need to be updated on a per-indexer basis. Open a feature request for Prowlarr to add this functionality for your indexer.
 
 ### Wrong categories
