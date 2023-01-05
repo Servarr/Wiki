@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2022-08-15T19:14:51.480Z
+date: 2023-01-05T19:39:51.151Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -58,6 +58,7 @@ nano ArrInstall.sh
 ### Version v3.0.4 2022-03-01 - Add sleep before checking service status
 ### Version v3.0.5 2022-04-03 - VP-EN (Added Whisparr)
 ### Version v3.0.6 2022-04-26 - Bakerboy448 - binaries to group
+### Version v3.0.7 2023-01-05 - Bakerboy448 - Prowlarr to master
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -69,8 +70,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.6"
-scriptdate="2022-04-26"
+scriptversion="3.0.7"
+scriptdate="2023-01-05"
 
 set -euo pipefail
 
@@ -99,7 +100,7 @@ select app in lidarr prowlarr radarr readarr whisparr quit; do
         app_port="9696"           # Default App Port; Modify config.xml after install if needed
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
-        branch="develop"          # {Update me if needed} branch to install
+        branch="master"          # {Update me if needed} branch to install
         break
         ;;
     radarr)
