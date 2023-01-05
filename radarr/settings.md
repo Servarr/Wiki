@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: 
 published: true
-date: 2022-12-16T14:39:53.205Z
+date: 2023-01-05T19:38:58.480Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -475,12 +475,20 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Ensure you get the right release every time! Custom formats allows fine control over release prioritization and selection. As simple as a single preferred word or as complex as you want with multiple criteria and regex.
 - Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
 - Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
+- It's strongly recommmended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
+  - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
+  - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
+
+---
+
 
 - Name - The Name of the Custom Format
 - Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
 
 > Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses.
 {.is-info}
+
+Profiles is where Custom Format Scores are configured.  
 
 ## Custom Format Conditions
 
