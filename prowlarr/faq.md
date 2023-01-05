@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-01-03T21:57:18.899Z
+date: 2023-01-05T20:41:21.636Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -47,7 +47,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
   - [Help I have locked myself out](#help-i-have-locked-myself-out)
   - [Weird UI Issues](#weird-ui-issues)
-  - [VPNs, Prowlarr, and the \*ARRs](#vpns-prowlarr-and-the-arrs)
+  - [VPNs, Prowlarr, and the \*ARRs](#vpns-jackett-and-the-arrs)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
   - [Can I disable forced authentication?](#can-i-disable-forced-authentication)
