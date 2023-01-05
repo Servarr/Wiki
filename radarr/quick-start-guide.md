@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2022-11-28T17:27:14.292Z
+date: 2023-01-05T19:37:50.216Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -119,6 +119,12 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 For more information on foreign titles and languages see [this FAQ entry](/radarr/faq#how-does-radarr-handle-foreign-movies-or-foreign-titles)
 
+Profiles is also where Custom Format Scores are configured.  It's strongly recommmended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
+
+- [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
+- [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
+
+
 > More info at [Settings => Profiles](/radarr/settings#profiles).
 > To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}
@@ -157,7 +163,7 @@ Downloading and importing is where most people experience issues. From a high le
 > See the [settings page](/radarr/settings#download-clients), at the [More Info (Supported)](/radarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 {.is-info}
 
-## {.tabset}
+## Download Protocols {.tabset}
 
 ### Usenet
 
