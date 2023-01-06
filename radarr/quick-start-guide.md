@@ -124,7 +124,6 @@ Profiles is also where Custom Format Scores are configured.  It's strongly recom
 - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
 - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
-
 > More info at [Settings => Profiles](/radarr/settings#profiles).
 > To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 {.is-info}

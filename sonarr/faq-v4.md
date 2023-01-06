@@ -27,7 +27,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 - If you only want to grab releases in English then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as English.
 
-```
+```json
 {
   "name": "Reject Non English",
   "includeCustomFormatWhenRenaming": false,

@@ -653,9 +653,11 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
-- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. 
+- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible.
+
 > **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 {.is-warning}
+
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
 ### Use of a VPN
@@ -752,7 +754,7 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
 
 # Sonarr Searching & Downloading Common Problems
 
-### Query Successful - No Results Returned
+## Query Successful - No Results Returned
 
 - [See this troubleshooting entry](/sonarr/troubleshooting#query-successful-no-results-returned)
 

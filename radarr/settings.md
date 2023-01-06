@@ -1,6 +1,6 @@
 ---
 title: Radarr Settings
-description: 
+description: Description of Radarr's Settings Menus
 published: true
 date: 2023-01-05T19:38:58.480Z
 tags: radarr, needs-love, settings
@@ -480,7 +480,6 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
   - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
 ---
-
 
 - Name - The Name of the Custom Format
 - Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
