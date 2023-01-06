@@ -428,6 +428,8 @@ chmod +x /opt/Lidarr/fpcalc
 #### Lists are unavailable due to failures
 
 - Typically this simply means that Lidarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
+- Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
+- Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
 
 ## Disk Space
 
