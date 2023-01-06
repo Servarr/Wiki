@@ -2,10 +2,10 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-01-06T17:53:04.7044034Z
+date: 2023-01-06T18:04:13.6806385Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-01-06T17:53:04.7044034Z
+dateCreated: 2023-01-06T18:04:13.6806385Z
 ---
 
 - Supported Trackers and Indexers as of Build `1.1.0.2246` / [Commit: c28f9b6bcd07a516cfcf082685c8e8cfe1818347](https://github.com/Prowlarr/Prowlarr/commit/c28f9b6bcd07a516cfcf082685c8e8cfe1818347)
@@ -128,7 +128,7 @@ dateCreated: 2023-01-06T17:53:04.7044034Z
 |[Torrent Oyun indir](https://www.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|tr-TR|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|ru-RU|
-|[Torrent\[CORE\]](https://torrentcore.xyz){#torrentcore}|Torrent\[CORE] is a Public DHT Crawler|en-US|
+|[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE] is a Public DHT Crawler|en-US|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
 |[Torrent9 clone](https://ww2.torrent9.re/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|fr-FR|
 |[Torrent911](https://www.torrent911.tv/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|fr-FR|
