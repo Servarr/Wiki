@@ -1,6 +1,6 @@
 ---
 title: Useful Tools
-description: 
+description:
 published: true
 date: 2022-10-20T12:50:00.097Z
 tags: useful-tools
@@ -53,6 +53,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
+  - [tdarr_inform](#tdarr_inform)
   {.links-list}
 - [Twitter Connect Instructions](#twitter-connect)
 
@@ -326,6 +327,10 @@ There are a handful of options out there for extracting and deleting files after
 ## Tdarr
 
 [Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](/sonarr)/[Radarr](/radarr) and built with the aim of modularization, parallelization and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
+
+## tdarr_inform
+
+[tdarr_inform](https://github.com/deathbybandaid/tdarr_inform) is a custom script for Sonarr and Radarr to inform Tdarr of new/changed/deleted files without relying on filesystem events or frequent disk scanning.
 
 ## Twitter Connect
 
