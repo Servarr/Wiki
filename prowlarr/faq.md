@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-01-05T20:41:21.636Z
+date: 2023-01-09T09:11:11.995Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -116,6 +116,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
   - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
   - Try again later
+  - If the issue persist you may have a corrupted database. Check your logs for instances of `Database disk image is malformed` or `Error creating main database`. See [this heading](https://wiki.servarr.com/prowlarr/faq#i-am-getting-an-error-database-disk-image-is-malformed) for possible solutions.
 
 ## What \*Arr Indexer Settings are Compared for App Full Sync
 
