@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2023-01-03T21:58:57.131Z
+date: 2023-01-09T04:54:46.137Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -292,6 +292,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## A Task was Canceled
 
 - Radarr recieved no response from the server the request was made to after 100 seconds.
+- Logs will contain `System.Threading.Tasks.TaskCanceledException: A task was canceled.`
 - This is often caused by:
   - improperly configured or use of a VPN
   - improperly configured or use of a proxy
@@ -299,6 +300,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
   - the use of Privoxy and it being improperly configured
   - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
+- You can troubleshoot with DNS `nslookup <domain.tld from trace logs>` and ipv6 with `curl -sv -6 "<url from trace logs>"` / all other connectivity with `curl -sv -4 "<url from trace logs>"`
 
 ## Path is Already Configured for an Existing Movie
 
