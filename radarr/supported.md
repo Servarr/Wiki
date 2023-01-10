@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2022-10-28T14:56:26.460Z
+date: 2023-01-10T19:27:21.018Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -78,7 +78,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  > IP Torrents' native implementation does not support Search {.is-info}
+  > IP Torrents' native implementation does not support Search. Use it via Prowlarr or Jackett as torznab instead {.is-info}
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
@@ -134,9 +134,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
   - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
   - In the handful of situations where Plex is unable to watch the file system using ionotift - such as certain types of remote mounts and a handful of older network mounts - it is suggested to use the app plexautoscan rather than the Plex connection
-
-> Note that this may trigger a full library scan for the library/root folder the movie is in.  It is strongly suggested to use the native Plex functionality that just watches the file system or to use a tool like [plexautoscan](https://github.com/l3uddz/plex_autoscan)
-{.is-warning}
+- A use a tool like [plexautoscan](https://github.com/l3uddz/plex_autoscan) is another option.
 
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
