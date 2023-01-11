@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2023-01-05T19:38:58.480Z
+date: 2023-01-11T00:54:03.338Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -181,6 +181,12 @@ Also, note that for each individual settings page, there are some options at the
 - `{Movie Collection}` = The Movie Collection
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
+
+`CleanTitle` [does the following](https://github.com/Radarr/Radarr/blob/5948f564827eabb7afc1e89bf4a5987e3c71dc74/src/NzbDrone.Core/Organizer/FileNameBuilder.cs#L207):
+- Replace `&` with `and`
+- Replace `/` and `\` with ` `
+- Remove `,`,`<`,`>`,`/`,`\`,`;`,`:`,`'`,`|`, `~`,`!`,`?`,`@`,`$`,`%`,`^`,`*`,`-`,`_`,`=`
+
 
 ### Movie IDs
 
