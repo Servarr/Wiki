@@ -68,7 +68,7 @@ To provide good and useful logs for sharing:
 3. Reproduce the Issue (Redo what is breaking things)
 4. [Open the trace log file (prowlarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
+6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
 > \* Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 > \* Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
