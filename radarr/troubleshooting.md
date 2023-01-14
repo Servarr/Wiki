@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2022-11-15T13:48:56.687Z
+date: 2023-01-14T16:44:40.436Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -244,7 +244,7 @@ When you reach out for help, be sure to read [asking for help](#asking-for-help)
 
 ## Testing the Download Client
 
-Ensure your download client(s) are running. Start by testing the download client, if it doesn’t work you’ll be able to see details in the trace level logs. You should find a URL you can put into your browser and see if it works. It could be a connection problem, which could indicate a wrong ip, hostname, port or even a firewall blocking access. It might be obvious, like an authentication problem where you’ve gotten the username, password or apikey wrong.
+Ensure your download client(s) are running. Start by testing the download client, if it doesn’t work you’ll be able to see details in the trace level logs. You should find a URL you can put into your browser and see if it works. It could be a connection problem, which could indicate a wrong ip, hostname, port or even a firewall blocking access. It might be obvious, like an authentication problem where you’ve gotten the username, password or apikey wrong. Note that some seedboxes require the use of https, port 443, and a URL Base (advanced options), instead of your download client's real port.
 
 ## Testing a Download
 
