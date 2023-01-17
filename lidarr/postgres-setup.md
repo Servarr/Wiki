@@ -2,7 +2,7 @@
 title: LIdarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2022-12-04T23:17:54.631Z
+date: 2023-01-17T14:31:36.037Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -12,7 +12,7 @@ dateCreated: 2022-11-25T01:35:56.796Z
 
 This document will go over the key points of migrating and setting up Postgres support in Lidarr.
 
-> Lidarr v4.1.0.6133 or newer required
+> Lidarr v1.1.2.2890 or newer required
 {.is-info}
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
