@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Reorganized Radarr FAQ
 published: true
-date: 2023-01-09T04:54:46.137Z
+date: 2023-01-25T13:57:53.075Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -385,7 +385,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## I am getting an error: Database disk image is malformed
 
-> \* For Radarr users experiencing this after upgrading to v4.0, v4.1, or v4.2. These versions do several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Radarr) the migration will bomb out and fail. This will cause Radarr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue.
+> \* For Radarr users experiencing this after upgrading to v4.X versions. v4 versions do several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Radarr) the migration will bomb out and fail. This will cause Radarr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue.
 > \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Radarr with the recovered backup file. It should then migrate without issues.
 {.is-warning}
 
@@ -476,7 +476,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Unpack Torrents
 
-- Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
+- Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/unpackerr/unpackerr).
 
 ## uTorrent is no longer working
 
@@ -543,6 +543,8 @@ Depending on your OS, there are multiple possible ways.
   - **Digital** - All and any relevant releases can be added including streaming platforms, VOD rental or purchase. Digital screenings including online film festivals and virtual cinema releases also count as digital releases.
 
 ## How does Radarr handle foreign movies or foreign titles?
+
+> [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) may be useful for helping get movies in the language(s) you want.{.is-info}
 
 - Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero.
 - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
