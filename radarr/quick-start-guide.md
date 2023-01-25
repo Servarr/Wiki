@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2023-01-25T14:04:59.850Z
+date: 2023-01-25T14:05:21.976Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -256,7 +256,7 @@ and check on the [themoviedb](https://www.themoviedb.org/) if the year or title 
 
 ![radarr-importing-existing-no-match-expand-refresh.png](/assets/radarr/radarr-importing-existing-no-match-expand-refresh.png)
 
-Or you can just use the tmdb:id or imdb:id and then select the found movie if matched.
+Or you can just use the tmdb:id or imdb:id (if tmdb is linked to imdb) and then select the found movie if matched.
 
 ![Radarr-importing-existing-no-match-expand-tmdb.png](/assets/radarr/Radarr-importing-existing-no-match-expand-tmdb.png)
 
