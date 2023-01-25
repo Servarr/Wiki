@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2023-01-25T14:01:47.522Z
+date: 2023-01-25T14:04:59.850Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -235,6 +235,8 @@ Depending how well you got your existing movie folders named Radarr will try to 
 1. Mass select Minimum Availability.
 1. Mass select Quality Profile.
 1. Start Importing your existing media library.
+
+Once a movie is added to Radarr, Radarr will scan the movie's folder and attempt to match a video file in the folder to the movie. The most common cause for Radarr not matching the file and the movie thus having a Radarr Status of Missing is the filename does not have the year in it. Radarr requires the year in the filename for it to be parsable.  
 
 ### No match found
 
