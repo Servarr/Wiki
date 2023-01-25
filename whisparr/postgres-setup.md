@@ -97,7 +97,7 @@ DELETE FROM "DelayProfiles"
       ```
 
     - ```bash
-      docker run --rm -v /absolute/path/to/whisparr.db:/whisparr.db --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /whisparr.db "postgresql://qstick:qstick@localhost/whisparr-main"
+      docker run --rm -v /absolute/path/to/whisparr.db:/whisparr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /whisparr.db "postgresql://qstick:qstick@localhost/whisparr-main"
       ```
 
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
