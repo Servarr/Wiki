@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2023-01-05T19:37:50.216Z
+date: 2023-01-25T14:01:47.522Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -119,6 +119,8 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 For more information on foreign titles and languages see [this FAQ entry](/radarr/faq#how-does-radarr-handle-foreign-movies-or-foreign-titles)
 
+Many users find [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) helpful to specify the languages of movies they want.
+
 Profiles is also where Custom Format Scores are configured.  It's strongly recommmended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
 
 - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
@@ -150,6 +152,8 @@ Here you’ll be adding the indexer/tracker that you’ll be using to actually d
 Once you’ve clicked the <kb>+</kb> button to add a new indexer you’ll be presented with a new window with many different options. For the purposes of this wiki Radarr considers both Usenet Indexers and Torrent Trackers as “Indexers”.
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
+
+For torrent trackers - almost all require the use of [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett).
 
 # Download Clients
 
