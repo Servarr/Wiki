@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2022-11-16T21:56:36.706Z
+date: 2023-01-25T17:22:07.665Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -13,15 +13,15 @@ dateCreated: 2021-08-14T18:19:59.428Z
 - [Table of Contents](#table-of-contents)
 - [Cardigann Versions](#cardigann-versions)
   - [Supported Versions](#supported-versions)
-    - [V7](#v7)
+    - [V8](#v8-indexers)
+    - [V7](#v7-indexers)
   - [Depreciated Versions](#depreciated-versions)
-    - [V1](#v1)
-    - [V2](#v2)
-    - [V3](#v3)
-    - [V4](#v4)
-    - [V5](#v5)
-    - [V6](#v6)
-
+    - [V1](#v1-indexers)
+    - [V2](#v2-indexers)
+    - [V3](#v3-indexers)
+    - [V4](#v4-indexers)
+    - [V5](#v5-indexers)
+    - [V6](#v6-indexers)
 - [General](#general)
 - [Format](#format)
   - [Header](#header)
@@ -100,6 +100,14 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
  ```
 
 ## Active Versions
+
+### [V8 Indexers](https://github.com/Prowlarr/Prowlarr/commit/1529527af9d2bf09dcd1b540b4c6f95a7dd00bd1)
+
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v8/schema.json)
+{.is-info}
+
+- Prowlarr Cardigann v8 includes several changes such as
+  - HtmlEncode and HtmlDecode filters
 
 ### [V7 Indexers](https://github.com/Prowlarr/Prowlarr/commit/ee6467073f64cfaa5ef0de2225f39f0fd0eb5c05)
 
