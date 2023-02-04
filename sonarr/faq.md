@@ -2,8 +2,8 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-02-04T06:13:42.200Z
-tags: sonarr, needs-love, troubleshooting, faq
+date: 2023-02-04T06:14:34.491Z
+tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
@@ -819,4 +819,4 @@ First, make sure you read and understand the section above called ["How does Son
 ## Permissions
 
 - Sonarr will need to move files away from where the downloader puts them into the final location, so this means that Sonarr will need to read/write to both the source and the destination directory and files.
-- On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`. (innocuous-test-edit, will revert if this applies, please reject if it creates a request)
+- On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
