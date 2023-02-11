@@ -274,7 +274,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Unpackerr
 
-[Unpackerr](https://github.com/davidnewhall/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
+[Unpackerr](https://github.com/unpackerr/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
 
 There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so He wrote my own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
 

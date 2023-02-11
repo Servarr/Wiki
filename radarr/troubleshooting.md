@@ -378,7 +378,7 @@ Logs will indicate errors like
 No files found are eligible for import
 ```
 
-If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/davidnewhall/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
+If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/unpackerr/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
 
 The error by also be seen if there is no valid media file in the folder.
 

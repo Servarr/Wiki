@@ -101,7 +101,7 @@ To provide good and useful logs for sharing:
 3. Reproduce the Issue (Redo what is breaking things)
 4. [Open the trace log file (Readarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites to share the copied logs from above
+6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
 > \* Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 > \* Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
@@ -366,7 +366,7 @@ Logs will indicate errors like
 No files found are eligible for import
 ```
 
-If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/davidnewhall/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
+If your torrent is packed in `.rar` files, you’ll need to setup extraction. We recommend [Unpackerr](https://github.com/unpackerr/unpackerr) as it does unpacking right: preventing corrupt partial imports and cleans up the unpacked files after import.
 
 The error by also be seen if there is no valid media file in the folder.
 

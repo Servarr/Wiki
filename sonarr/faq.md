@@ -814,7 +814,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Unpack Torrents
 
-- Most torrent clients doesn't come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/davidnewhall/unpackerr).
+- Most torrent clients doesn't come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/unpackerr/unpackerr).
 
 ## Permissions
 
