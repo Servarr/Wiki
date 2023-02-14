@@ -546,7 +546,7 @@ Depending on your OS, there are multiple possible ways.
 
 > [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) may be useful for helping get movies in the language(s) you want.{.is-info}
 
-> Starting 2023-02-12, Radarr's metadata cache will begin to consider a Movie's Original Language to be the TMDb Spoken Language if and only if only 1 spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used. 
+> Starting 2023-02-12, Radarr's metadata cache will begin to consider a Movie's Original Language to be the TMDb Spoken Language if and only if only 1 spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used.
 {.is-warning}
 
 - Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero.

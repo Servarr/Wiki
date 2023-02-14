@@ -183,10 +183,10 @@ Also, note that for each individual settings page, there are some options at the
 - `{Release Year}` = 2009
 
 `CleanTitle` [does the following](https://github.com/Radarr/Radarr/blob/5948f564827eabb7afc1e89bf4a5987e3c71dc74/src/NzbDrone.Core/Organizer/FileNameBuilder.cs#L207):
+
 - Replace `&` with `and`
 - Replace `/` and `\` with ` `
 - Remove `,`,`<`,`>`,`/`,`\`,`;`,`:`,`'`,`|`, `~`,`!`,`?`,`@`,`$`,`%`,`^`,`*`,`-`,`_`,`=`
-
 
 ### Movie IDs
 
