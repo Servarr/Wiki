@@ -21,7 +21,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
   
 ## Where have language profiles gone?
 
-- Languages are handled differently in Sonarr v4. They are no longer managed via the old Langauge Profiles system, but are now part of custom formats. You will need to create custom formats for langauges that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
+- Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of custom formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
 
 ### Only English
 

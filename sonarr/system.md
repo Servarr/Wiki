@@ -193,7 +193,7 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
   - Episodes will always be missing in Sonarr and eligble to be grabbed in perpetuity
     - Episodes manually moved and renamed by the user into the series' folder in Sonarr's library folder will possibly be picked up by the twice daily rescan if named properly and thus not be missing at that point.
   - The user will need to manually unmonitor or configure an On Grab custom script to unmonitor episodes.
-  - FlexGet is likely a better tools for one's usecase if they do not wish to use Sonarr's media library mangement functionalites and simply require something to parse rss feeds and send releases to the download client  
+  - FlexGet is likely a better tools for one's usecase if they do not wish to use Sonarr's media library management functionalites and simply require something to parse rss feeds and send releases to the download client  
 
 > \* Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
 > \* Completed Download Handling requires Sonarr has read and write access to the completed download directory

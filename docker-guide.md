@@ -378,7 +378,7 @@ To exec in as a specific user, add `-u` as an argument and pass the username or 
     docker exec -u USER -it CONTAINER_NAME /bin/bash
 ```
 
-### Examples as Specifc Users
+### Examples as Specific Users
 
 #### LSIO Radarr
 

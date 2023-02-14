@@ -46,7 +46,7 @@ You can bulk grab results at once by checking the select boxes on the left side 
 
 - Standard Newznab/Torznab compatible endpoint/parameters. You can adjust the queries accordingly for your needs per the defined standards.
 
-> An aggregate multi-indexer endpoint will not be added due to the signifcant drawbacks of said functionaliy {.is-info}
+> An aggregate multi-indexer endpoint will not be added due to the significant drawbacks of said functionaliy {.is-info}
 
 ### API Key in Query
 

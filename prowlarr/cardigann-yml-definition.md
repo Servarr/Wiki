@@ -645,7 +645,7 @@ search:
     # If an IMDB ID has been specified use it. Otherwise use the search keywords.
     search: "{{ if .Query.IMDBID }}{{ .Query.IMDBID }}{{ else }}{{ .Keywords }}{{ end }}"
     imdb_search: "{{ if .Query.IMDBID }}yes{{ else }}{{ end }}"
-    searchin: title
+    searching: title
     incldead: 1
   # [OPTIONAL] extra headers which should be included in search requests
   headers:

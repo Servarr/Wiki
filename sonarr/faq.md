@@ -476,7 +476,7 @@ If you have adjusted your your Series Name format after Sonarr has already creat
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 - Kamen Rider {#problemshow-kamenrider}
   - The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
- as this show has both an anthology entry (collecting all seasons) and the individual seasons listed as seperate entries on TVDb. Due to the anthology entry having individual season name mappings on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases.
+ as this show has both an anthology entry (collecting all seasons) and the individual seasons listed as separate entries on TVDb. Due to the anthology entry having individual season name mappings on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases.
 - Bleach: Thousand-Year Blood War {#problemshow-bleach}
   - The newest season of Bleach: Thousand-Year Blood War is being released with a variety of different naming schemes making it difficult to automate and potentially overwriting some of your existing episodes. It can only be automated if your release group is either:
     - Releasing the episodes as S17Exx numbering, or
@@ -691,11 +691,11 @@ Depending on your OS, there are multiple possible ways.
 ## I am getting an error: Database disk image is malformed
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
-  - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
+  - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` indicate issues with sonarr.db**
   - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Sonarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
-- This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
+- This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-sonarr)
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
   - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)

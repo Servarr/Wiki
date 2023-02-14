@@ -40,7 +40,7 @@ Be aware of the following:
 nano ArrInstall.sh
 ```
 
-- Copy (top right corner of the script) and Paste into your SSH console. Review the variables woth comments and update if necessary.
+- Copy (top right corner of the script) and Paste into your SSH console. Review the variables worth comments and update if necessary.
   - If you are in an GUI OS such as Windows or MacOS (OSX): pasting could be as simple as 'right clicking' in your ssh client.
 
 ```bash
