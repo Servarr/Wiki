@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-02-11T18:27:52.6200226Z
+date: 2023-02-14T15:42:00.8491648Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-02-11T18:27:52.6200226Z
+dateCreated: 2023-02-14T15:42:00.8491648Z
 ---
 
-- Supported Trackers and Indexers as of Build `1.2.0.2582` / [Commit: 4517f271c4c7b79a67b8ea992bdc6673d2ac20aa](https://github.com/Prowlarr/Prowlarr/commit/4517f271c4c7b79a67b8ea992bdc6673d2ac20aa)
+- Supported Trackers and Indexers as of Build `1.2.1.2599` / [Commit: 4fb5d3432bcc77eea3b36bf7b51323effddb8082](https://github.com/Prowlarr/Prowlarr/commit/4fb5d3432bcc77eea3b36bf7b51323effddb8082)
 
 ---
 
@@ -30,7 +30,6 @@ dateCreated: 2023-02-11T18:27:52.6200226Z
 |[ACGsou](https://www.36dm.club/){#acgsou}|ACGsou (36DM) is a CHINESE Public torrent tracker for ANIME|zh-CN|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|en-US|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|ru-RU|
-|[AnimeClipse](http://www.animeclipse.com/){#animeclipse}|AnimeClipse is a Public site for Hellenic Fansubs Anime.|el-GR|
 |[Animedia](https://tt.animedia.tv/){#animedia}|Animedia is russian anime voiceover group and eponymous anime tracker.|ru-RU|
 |[AniRena](https://www.anirena.com/){#anirena}|AniRena is a Public torrent tracker for the latest anime and Japanese related torrents|en-US|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws.|en-US|
@@ -381,6 +380,7 @@ dateCreated: 2023-02-11T18:27:52.6200226Z
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a Romanian Private site for High Quality Music|ru-RU|
 |[LST](https://lst.gg/){#lst}|LST is an English Private tracker for MOVIES / TV / GENERAL|en-US|
 |[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|zh-CN|
+|[M-Team - TP (2FA)](https://kp.m-team.cc/){#mteamtp2fa}|This indexer uses a cookie login for M-Team TP (MTTP) for those that want to use 2FA|zh-CN|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|de-DE|
 |[magic-heaven](https://magic-heaven.info/){#magicheaven}|magic-heaven is a Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[Magico](https://trellas.net/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|el-GR|
@@ -399,7 +399,6 @@ dateCreated: 2023-02-11T18:27:52.6200226Z
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|en-US|
 |[Movie-Torrentz](https://m2g.link/){#movietorrentz}|Movie-Torrentz is a Private Torrent Tracker for MOVIES / TV|en-US|
 |[Moviesite](http://moviesite.info.hu/){#moviesite}|Moviesite is a HUNGARIAN Semi-Private tracker for MOVIES / TV / GENERAL|hu-HU|
-|[MTeamTP2FA](https://kp.m-team.cc/){#mteamtp2fa}|this indexer uses a cookie login for MTeamTP for those that want to use 2FA|zh-CN|
 |[MuziekFabriek](https://www.muziekfabriek.org/){#muziekfabriek}|MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC|nl-NL|
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES. This definition is for the Forum Tracker site.|en-US|
 |[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES. This definition is for the Main Tracker site.|en-US|
@@ -446,6 +445,7 @@ dateCreated: 2023-02-11T18:27:52.6200226Z
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH site for General content|es-ES|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|en-US|
 |[PuTao](https://pt.sjtu.edu.cn/){#putao}|葡萄 (PuTao) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|zh-CN|
+|[Puur-Hollands](https://www.puur-hollands.org/){#puurhollands}|Puur-Hollands is a DUTCH Private Torrent Tracker for MUSIC|nl-NL|
 |[PWTorrents](https://pwtorrents.net/){#pwtorrents}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING|en-US|
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private site for MOVIES / TV / GENERAL|en-US|
 |[Racing4Everyone (API)](https://racing4everyone.eu/){#racing4everyone-api}|Racing4Everyone (R4E) is a Private Torrent Tracker for RACING|en-US|
@@ -484,6 +484,7 @@ dateCreated: 2023-02-11T18:27:52.6200226Z
 |[SkipTheTrailers](https://skipthetrailers.xyz/){#skipthetrailers}|SkipTheTrailers (STT) is a Private Torrent Tracker for MOVIES|en-US|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|cs-CZ|
 |[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|en-US|
+|[slosoul](https://slosoul.net/){#slosoul}|slosoul is a Slovanian  Private Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|zh-CN|
 |[SoulVoice](https://pt.soulvoice.club/){#soulvoice}|SoulVoice is a CHINESE Private Torrent Tracker for Movies, TV, and e-Learning|zh-CN|
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|ro-RO|
