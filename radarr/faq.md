@@ -391,7 +391,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
-- **Errors of `Error creating main database` indicate issues with radarr.db**
+- **Errors of `Error creating main database` or generic `database disk image is malformed` with no specified database indicate issues with radarr.db**
   - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Radarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
