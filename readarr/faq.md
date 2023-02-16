@@ -90,7 +90,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 ## A Task was Canceled
 
-- Readarr recieved no response from the server the request was made to after 100 seconds.
+- Readarr received no response from the server the request was made to after 100 seconds.
 - This is often caused by:
   - improperly configured or use of a VPN
   - improperly configured or use of a proxy
@@ -223,11 +223,11 @@ This change was due to not have our server get killed by people updating lists e
 ## I am getting an error: Database disk image is malformed
 
 - **Errors of `Error creating log database` indicate issues with log.db**
-  - This can quickly be resolved by renaming or removing the datbase. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
+  - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` indicate issues with readarr.db**
   - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Readarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
-- This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modifed your appdata directory permissions, or if you changed the user and group \*Arr run as.
+- This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-readarr)
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
   - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
@@ -390,9 +390,11 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 - Unless you're in a repressive country like China, Australia or South Africa, your torrent client is typically the only thing that needs to be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
-- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible. 
+- In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Lidarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible.
+
 > **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 {.is-warning}
+
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
 ### Use of a VPN

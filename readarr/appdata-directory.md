@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-09T15:54:32.028Z
 ---
 
-> Below are the default paths for the application data directiory {.is-info}
+> Below are the default paths for the application data directory {.is-info}
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
 

@@ -169,7 +169,7 @@ Also, note that for each individual settings page, there are some options at the
 ## Remote Path Mappings
 
 - Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client or Calibre are not on the same server.
-- For more information see the section in [Download Clients => Remore Path Mapping](#remote-path-mappings-1) replace `<Download Client>` with `<Calibre>`
+- For more information see the section in [Download Clients => Remote Path Mapping](#remote-path-mappings-1) replace `<Download Client>` with `<Calibre>`
 
 ## Book File Naming
 
