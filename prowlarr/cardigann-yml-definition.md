@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2023-01-25T17:22:07.665Z
+date: 2023-02-18T13:57:12.093Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -280,7 +280,7 @@ Next you've to specify the capabilities of the indexer.
 # Mapping between the tracker categories and the Newznab categories.
 # - id:      [REQUIRED] The tracker specific category ID.
 #            Can be a string too.
-# - cat:     [REQUIRED] The corresponding newznab predefined category.
+# - cat:     [REQUIRED] The corresponding newznab predefined category - this must conform to the standard categories.
 #            See this list for valid options
 #            https://wiki.servarr.com/prowlarr/cardigann-yml-definition#categories
 # - desc:    [OPTIONAL] The tracker category name.
@@ -312,6 +312,8 @@ caps:
 ```
 
 ## Categories
+
+The `cat:` of a definition **must** be one of the newznabcat defined below.
 
 ```tsv
 id newznabcat
