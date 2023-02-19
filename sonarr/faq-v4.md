@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-02-19T18:15:41.587Z
+date: 2023-02-19T18:15:56.400Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -21,7 +21,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 ## Preferred Words to Custom Formats Migration
 
-- Preferred words used the terms matched on the regex entry for naming in files.
+- Preferred words used the term matched on the regex entry for naming in files.
 - Custom Formats use the Custom Format Name for naming in files.
 
 ## Where have language profiles gone?
