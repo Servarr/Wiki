@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-02-19T18:15:56.400Z
+date: 2023-02-19T18:20:37.995Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -26,19 +26,27 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 ## Where have language profiles gone?
 
-- Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of custom formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
+- Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of Custom Formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
+
+> See TRaSH Guide's [How to setup Language Custom Formats](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/) for more information
+{.is-info}
 
 ### Only English
+
+**From [TRaSH => Language: English Only](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/#language-english-only)**
 
 - If you only want to grab releases in English then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as English.
 
 ```json
 {
-  "name": "Reject Non English",
+  "trash_id": "guide-only",
+  "trash_score": "-10000",
+  "trash_description": "Language: English Only",
+  "name": "Language: Not English",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
     {
-      "name": "Non English",
+      "name": "Not English Language",
       "implementation": "LanguageSpecification",
       "negate": true,
       "required": false,
@@ -47,7 +55,34 @@ dateCreated: 2022-11-25T14:02:10.493Z
       }
     }
   ]
-}  
+}
+```
+
+### Only Original
+
+**From [TRaSH => Language: Original Only](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/#language-original-only)**
+
+- If you only want to grab releases in The Series's TVDb Original Language then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as The Series's TVDb Original Language.
+
+```json
+{
+  "trash_id": "guide-only",
+  "trash_score": "-10000",
+  "trash_description": "Language: Original Only",
+  "name": "Language: Not Original",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "Not Original Language",
+      "implementation": "LanguageSpecification",
+      "negate": true,
+      "required": false,
+      "fields": {
+        "value": -2
+      }
+    }
+  ]
+}
 ```
 
 ## My Nginx doesn't work anymore?
