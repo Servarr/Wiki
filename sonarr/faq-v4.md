@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2022-12-29T12:48:11.121Z
+date: 2023-02-19T18:15:41.587Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -18,7 +18,12 @@ dateCreated: 2022-11-25T14:02:10.493Z
   - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/sonarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
 - If you do not expose Sonarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
-  
+
+## Preferred Words to Custom Formats Migration
+
+- Preferred words used the terms matched on the regex entry for naming in files.
+- Custom Formats use the Custom Format Name for naming in files.
+
 ## Where have language profiles gone?
 
 - Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of custom formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
