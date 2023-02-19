@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2023-02-16T18:25:08.680Z
+date: 2023-02-19T21:17:07.360Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -233,6 +233,8 @@ Connections are how you want Prowlarr to communicate with the outside world.
 
 ## Notification Triggers
 
+- On Release Grab - Be notified on release grab from within Prowlarr or from the API
+  - Include Manual Grabs - Be notified on grabs triggered manually within Prowlarr UI
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
 - On Application Update - Be notified when Prowlarr gets updated to a new version
