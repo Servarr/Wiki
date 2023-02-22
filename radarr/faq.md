@@ -1,8 +1,8 @@
 ---
 title: Radarr FAQ
-description: Reorganized Radarr FAQ
+description: Radarr FAQ
 published: true
-date: 2023-02-12T16:15:35.937Z
+date: 2023-02-22T03:57:16.012Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
