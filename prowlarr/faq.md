@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-01-09T09:11:11.995Z
+date: 2023-02-22T13:13:47.184Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -143,7 +143,7 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
-1. Under the Updates section change the branch name to `develop` or `nightly`
+1. Under the Updates section change the branch name to `master`, `develop`, or `nightly`
 1. Save
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
@@ -160,7 +160,7 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 > **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-danger}
 
-- Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
+- Note: If your install is through Docker append `:latest`, `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
 |                                                                      | `master` (stable) ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/master/changes)    | `develop` (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/develop/changes) | `nightly` (unstable) ![Current Nightly/Alpha](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes) |
 | -------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
