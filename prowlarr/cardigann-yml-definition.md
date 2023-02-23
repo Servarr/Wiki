@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2023-02-18T13:57:12.093Z
+date: 2023-02-23T20:27:44.920Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -604,9 +604,6 @@ Example of a complex search block explaining all available options:
 
 ```yaml
 search:
-  # [OPTIONAL] Enable/Disable if inputs can be sent as empty parameters
-  # can be true or false (default is false)
-  ignoreblankinputs: false
   # list of paths which should be searched
   # For the most trackers just a single path is needed. But some trackers use
   # different pages for e.g. porn or scene and non scene releases.
