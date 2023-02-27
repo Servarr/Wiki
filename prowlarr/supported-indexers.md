@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-02-21T17:44:37.4207774Z
+date: 2023-02-27T15:26:35.2687708Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-02-21T17:44:37.4207774Z
+dateCreated: 2023-02-27T15:26:35.2687708Z
 ---
 
-- Supported Trackers and Indexers as of Build `1.3.0.2725` / [Commit: 95497480a2ff73b0220e47932c3bec5ea8a06f2a](https://github.com/Prowlarr/Prowlarr/commit/95497480a2ff73b0220e47932c3bec5ea8a06f2a)
+- Supported Trackers and Indexers as of Build `1.3.2.2827` / [Commit: db84e82779e574846ef3d877a4351ac85e8f2878](https://github.com/Prowlarr/Prowlarr/commit/db84e82779e574846ef3d877a4351ac85e8f2878)
 
 ---
 
@@ -46,7 +46,6 @@ dateCreated: 2023-02-21T17:44:37.4207774Z
 |[BTSOW](https://btsow.mom/){#btsow}|BTSOW is a Public torrent indexer|en-US|
 |[BullTorrent](https://www.bulltorrent.com/){#bulltorrent}|BullTorrent (formerly TOROS) is a Public torrent index|en-US|
 |[Byrutor](https://byrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|ru-RU|
-|[CloudTorrents](https://cloudtorrents.com/){#cloudtorrents}|CloudTorrents is a Public Torrent Tracker for MOVIES / TV / GENERAL|en-US|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|zh-CN|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|en-US|
 |[cpasbien](https://cpasbiens911.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
@@ -78,7 +77,6 @@ dateCreated: 2023-02-21T17:44:37.4207774Z
 |[kickasstorrents\.to](https://kickasstorrents.to/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|en-US|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|en-US|
 |[Knaben](https://knaben.eu/){#knaben}|Knaben is a Public torrent meta-search engine|en-US|
-|[Legit Torrents](http://www.legittorrents.info/){#legittorrents}|Legit Torrents is a Public site for free and legal torrents|en-US|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|en-US|
 |[LimeTorrents](https://www.limetorrents.lol/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|en-US|
 |[LimeTorrents clone](https://www.limetorrents.to/){#limetorrentsclone}|LimeTorrents clone is a Public LimeTorrents clone for TV / MOVIES / GENERAL|en-US|
@@ -123,20 +121,20 @@ dateCreated: 2023-02-21T17:44:37.4207774Z
 |[Tokyo Toshokan](https://www.tokyotosho.info/){#tokyotosho}|A BitTorrent Library for Japanese Media|en-US|
 |[Torlock](https://www.torlock2.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|en-US|
 |[Torrent Downloads](https://www.torrentdownloads.info/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|en-US|
-|[Torrent Oyun indir](https://www.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|tr-TR|
+|[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|tr-TR|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|ru-RU|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|ru-RU|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE] is a Public DHT Crawler|en-US|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|fr-FR|
 |[Torrent9 clone](https://torrent9.cm/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|fr-FR|
-|[Torrent911](https://www.torrent911.tv/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|fr-FR|
+|[Torrent911](https://torrent911.ws/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|fr-FR|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|en-US|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|en-US|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|en-US|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|en-US|
-|[TorrentQQ](https://torrentqq244.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentQQ](https://torrentqq245.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|en-US|
-|[TorrentSir](https://torrentsir92.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
+|[TorrentSir](https://torrentsir93.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[Torrentv](https://torrentv.org/){#torrentv}|Torrentv is a Public tracker for MOVIES|en-US|
 |[TorrentView](https://viewtorrent5.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media.|ko-KR|
 |[TorrentWhiz](https://torrentwiz54.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media.|ko-KR|
@@ -344,7 +342,7 @@ dateCreated: 2023-02-21T17:44:37.4207774Z
 |[HHanClub](https://hhanclub.top/){#hhanclub}|HHanClub (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|de-DE|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|en-US|
-|[HunTorrent](https://huntorrent.net/){#huntorrent}|HunTorrent is a Hungarian Semi-Private site for MOVIES / TV / GENERAL|hu-HU|
+|[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a Hungarian Semi-Private site for MOVIES / TV / GENERAL|hu-HU|
 |[ICC2022](https://www.icc2022.com/){#icc2022}|ICC2022 (冰淇淋) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|zh-CN|
 |[iHDBits](https://ihdbits.me/){#ihdbits}|iHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|zh-CN|
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private site for TV / MOVIES / GENERAL|it-IT|
