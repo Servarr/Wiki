@@ -275,7 +275,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### Missing Root Folder
 
-- A root folder is added to Sonarr and dies nor exist or is nit accessible
+- A root folder is added to Sonarr and dies nor exist or is not accessible
 - This error is typically identified if a Series is looking for a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
 - If you would like to remove this warning simply find the series that is still using the old root folder and edit it to the correct root folder.
