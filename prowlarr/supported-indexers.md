@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-02-27T15:26:35.2687708Z
+date: 2023-02-28T21:29:53.1922646Z
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-02-27T15:26:35.2687708Z
+dateCreated: 2023-02-28T21:29:53.1922646Z
 ---
 
-- Supported Trackers and Indexers as of Build `1.3.2.2827` / [Commit: db84e82779e574846ef3d877a4351ac85e8f2878](https://github.com/Prowlarr/Prowlarr/commit/db84e82779e574846ef3d877a4351ac85e8f2878)
+- Supported Trackers and Indexers as of Build `1.3.2.2843` / [Commit: bb1ebda753157a96154095e0c1e32703f2a68d1a](https://github.com/Prowlarr/Prowlarr/commit/bb1ebda753157a96154095e0c1e32703f2a68d1a)
 
 ---
 
@@ -374,7 +374,7 @@ dateCreated: 2023-02-27T15:26:35.2687708Z
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|hu-HU|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL|lt-LT|
 |[Locadora](https://locadora.cc/){#locadora}|Locadora is a Brazilian tracker for Movies and TV Shows|pt-BR|
-|[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a Romanian Private site for High Quality Music|ru-RU|
+|[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private site for High Quality Music|ru-RU|
 |[LST](https://lst.gg/){#lst}|LST is an English Private tracker for MOVIES / TV / GENERAL|en-US|
 |[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|zh-CN|
 |[M-Team - TP (2FA)](https://kp.m-team.cc/){#mteamtp2fa}|This indexer uses a cookie login for M-Team TP (MTTP) for those that want to use 2FA|zh-CN|
