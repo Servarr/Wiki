@@ -163,7 +163,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Sonarr {#sonarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Sonarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - Plex Watchlist {#pleximport}
-  - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.
+  - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain shows on it.
   - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name
