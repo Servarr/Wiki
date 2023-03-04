@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-03-02T20:02:54.649Z
+date: 2023-03-04T15:01:37.742Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -11,6 +11,19 @@ dateCreated: 2022-11-25T14:02:10.493Z
 # Sonarr v4 Beta FAQ
 
 > Sonarr v4 is currently in beta, and as such errors and issues are to be expected. Please use our support channels to ask questions, report issues or provide feedback with the v4 beta. If necessary you may be asked to open an issue on Github, if you're asked to open an issue on [Github](https://github.com/Sonarr/Sonarr). Please provide a link to the original discussion along with all other requested information. {.is-warning}
+
+## What Changed?
+
+- See some of the entries below for common upgrade questions and notes.
+- Refer to the [v4 beta announcment](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
+  - Forced Authentication
+  - Mono => Dotnet (more speed; no more mono)
+    - Reverse Proxy conf updates are likely required
+  - Preferred Words are gone and replaced with Custom Formats (see details below)
+  - Language Profiles are gone and replaced with Custom Formats (dee details below)
+  - Dark/Light Theme
+  - SysLog and Instance Name Support
+  - Much much more
 
 ## Can I disable forced authentication?
 
