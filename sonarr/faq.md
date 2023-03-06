@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-02-04T06:14:34.491Z
+date: 2023-03-06T16:13:06.655Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -689,6 +689,9 @@ Depending on your OS, there are multiple possible ways.
 - That is either due to a corrupt download so try again or [security issues, please see this related FAQ entry.](#help-my-mac-says-sonarr-cannot-be-opened-because-the-developer-cannot-be-verified)
 
 ## I am getting an error: Database disk image is malformed
+
+> \*BSD Users You may recieve this after upgrading sqlite3 to 3.41 Sonarr v3 does not support sqlite3 3.41 at this time due to a breaking default change. A [workaround has been provided](https://github.com/Sonarr/Sonarr/issues/5464#issuecomment-1455105098) by the \*BSD Community, but in essence you must revert to sqlite3 3.40 or rebuild sqlite3 3.41 with DQS enabled. Follow [Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464) for more information on when/if a fix occurs.
+{.is-warning}
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
