@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2022-09-27T00:21:02.572Z
+date: 2023-03-07T02:10:13.304Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -165,7 +165,7 @@ iocage set enforce_statfs=1 <jailname>
 iocage start <jailname>
 ```
 
-## Sonarr Installation
+## Sonarr V3 Installation
 
 Back on the jails list find your newly created jail for `sonarr` and click "Shell"
 
@@ -181,6 +181,104 @@ pkg install sonarr
 ```
 
 Don't close the shell out yet we still have a few more things!
+
+## Sonarr V4 Installation (Beta)
+
+Back on the jails list find your newly created jail for `sonarr` and click "Shell"
+
+To install Sonarr
+
+> \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
+> \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
+> \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
+{.is-warning}
+
+Install the following libraries to support sonarr
+
+```shell
+pkg install icu libunwind krb5-120 libnotify libinotify sqlite3
+```
+
+Create Sonarr User and Group
+
+```shell
+pw user add sonarr -c sonarr -u 351 -d /nonexistent -s /usr/bin/nologin
+```
+
+Download the latest version from https://services.sonarr.tv/v1/download/develop/latest?version=4&os=freebsd&arch=x64 and set its permissions (sonarr user/group can be changed to desired group)
+
+```shell
+tar -xvf Sonarr.develop.<version>.freebsd-x64.tar.gz -C /usr/local/share
+chown -R sonarr:sonarr /usr/local/share/Sonarr
+```
+
+Create a rc.subr script to run Sonarr as a daemon in an editor of your choice (you may be able to skip line 1 if the folder already exists) and use the contents of sonarr rc.subr below
+```shell
+mkdir -p /usr/local/etc/rc.d
+vi /usr/local/etc/rc.d/sonarr
+chmod +x /usr/local/etc/rc.d/sonarr
+```
+
+```shell
+#!/bin/sh
+
+# PROVIDE: sonarr
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# sonarr_enable:   Set to yes to enable the sonarr service.
+#                       Default: no
+# sonarr_user:     The user account used to run the sonarr daemon.
+#                       This is optional, however do not specifically set this to an
+#                       empty string as this will cause the daemon to run as root.
+#                       Default: sonarr
+# sonarr_group:    The group account used to run the sonarr daemon.
+#                       This is optional, however do not specifically set this to an
+#                       empty string as this will cause the daemon to run with group wheel.
+#                       Default: sonarr
+# sonarr_data_dir: Directory where sonarr configuration data is stored.
+#                       Default: /var/db/sonarr
+# sonarr_pid:      Name of the pid file.
+#                       Default: sonarr.pid
+# sonarr_pid_dir:  Path of the pid file.
+#                       Default: /var/run/sonarr
+
+. /etc/rc.subr
+name=sonarr
+rcvar=${name}_enable
+load_rc_config ${name}
+
+: ${sonarr_enable:="no"}
+: ${sonarr_user:="sonarr"}
+: ${sonarr_group:="sonarr"}
+: ${sonarr_data_dir:="/var/db/sonarr"}
+: ${sonarr_pid:="sonarr.pid"}
+: ${sonarr_pid_dir:="/var/run/sonarr"}
+
+pidfile="${sonarr_pid_dir}/${sonarr_pid}"
+command="/usr/sbin/daemon"
+command_args="-r -f -P ${pidfile} /usr/local/share/Sonarr/Sonarr --debug --data=${sonarr_data_dir} --nobrowser"
+
+start_precmd=sonarr_start_precmd
+sonarr_start_precmd()
+{
+        [ -d ${sonarr_pid_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_pid_dir}
+        [ -d ${sonarr_data_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_data_dir}
+
+        # .NET 6+ uses dual mode sockets to avoid the separate AF handling.
+        # disable .NET use of V6 if no ipv6 is configured.
+        # See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259194#c17
+        ifconfig | grep -q inet6
+        if [ $? == 1 ]; then
+                export DOTNET_SYSTEM_NET_DISABLEIPV6=1
+        fi
+}
+
+run_rc_command "$1"
+```
 
 ## Configuring Sonarr
 
