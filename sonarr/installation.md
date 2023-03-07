@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-07T17:10:41.746Z
+date: 2023-03-07T18:28:02.909Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -164,6 +164,21 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 iocage stop <jailname>
 iocage set enforce_statfs=1 <jailname>
 iocage start <jailname>
+```
+
+## Jail Setup via Shell
+
+Assumes iocage is installed and configured (https://iocage.readthedocs.io/en/latest/install.html)
+Assumes iocage network bridge (vnet) is configured (https://iocage.readthedocs.io/en/latest/networking.html)
+
+Replace "10.0.0.100" with an open IPV4 address on your network
+Replace "13.1-RELEASE" with preferred FreeBSD version
+Replace "sonarr" with your preferred jail name
+Replace "accept_rtadv" or remove ip6_addr if you do not want auto configure IPV6
+
+```shell
+iocage create -n "sonarr" -r 13.1-RELEASE ip4_addr="vnet0|10.0.0.100/24" vnet="on" allow_raw_sockets="1" boot="on" allow_mlock="1" ip6_addr='vnet0|accept_rtadv' enforce_statfs="1"
+iocage console sonarr
 ```
 
 ## Sonarr V3 Installation
