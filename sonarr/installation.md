@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-07T02:55:38.653Z
+date: 2023-03-07T17:10:41.746Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -209,7 +209,8 @@ pw user add sonarr -c sonarr -u 351 -d /nonexistent -s /usr/bin/nologin
 Download the latest version from https://services.sonarr.tv/v1/download/develop/latest?version=4&os=freebsd&arch=x64 and set its permissions
 
 ```shell
-tar -xvf Sonarr.develop.<version>.freebsd-x64.tar.gz -C /usr/local/share
+curl -J -L "https://services.sonarr.tv/v1/download/develop/latest?version=4&os=freebsd&arch=x64" -o Sonarr.develop.freebsd-x64.tar.gz
+tar -xvf Sonarr.develop.freebsd-x64.tar.gz -C /usr/local/share
 chown -R sonarr:sonarr /usr/local/share/Sonarr
 ```
 
