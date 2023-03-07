@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-07T18:28:53.590Z
+date: 2023-03-07T18:29:10.922Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -17,7 +17,7 @@ dateCreated: 2021-07-10T16:07:37.425Z
   - [Mono SSL Issues](#mono-ssl-issues)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
-  - [Jail Setup using CLI](#jail-setup-using-cli)
+  - [Jail Setup Using CLI](#jail-setup-using-cli)
   - [Sonarr V3 Installation](#sonarr-v3-installation)
   - [Sonarr V4 Installation (Beta)](#sonarr-v4-installation-beta)
   - [Configuring Sonarr](#configuring-sonarr)
@@ -167,7 +167,7 @@ iocage set enforce_statfs=1 <jailname>
 iocage start <jailname>
 ```
 
-## Jail Setup using CLI
+## Jail Setup Using CLI
 
 Assumes iocage is installed and configured (https://iocage.readthedocs.io/en/latest/install.html)
 Assumes iocage network bridge (vnet) is configured (https://iocage.readthedocs.io/en/latest/networking.html)
