@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-07T02:13:03.267Z
+date: 2023-03-07T02:13:32.655Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -280,6 +280,8 @@ sonarr_start_precmd()
 
 run_rc_command "$1"
 ```
+
+Don't close the shell out yet we still have a few more things!
 
 ## Configuring Sonarr
 
