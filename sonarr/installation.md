@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-07T02:10:13.304Z
+date: 2023-03-07T02:11:55.030Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -17,7 +17,8 @@ dateCreated: 2021-07-10T16:07:37.425Z
   - [Mono SSL Issues](#mono-ssl-issues)
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
-  - [Sonarr Installation](#sonarr-installation)
+  - [Sonarr V3 Installation](#sonarr-v3-installation)
+  - [Sonarr V4 Installation (Beta)](#sonarr-installation)
   - [Configuring Sonarr](#configuring-sonarr)
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
