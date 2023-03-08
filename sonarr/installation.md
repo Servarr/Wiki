@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-08T02:44:12.005Z
+date: 2023-03-08T02:45:41.191Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -19,7 +19,7 @@ dateCreated: 2021-07-10T16:07:37.425Z
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
   - [Jail Setup Using CLI](#jail-setup-using-cli)
   - [Sonarr Mono Installation](#sonarr-mono-installation)
-  - [Sonarr .NET Installation (Beta)](#sonarr-net-installation-beta)
+  - [Sonarr .NET Installation](#sonarr-net-installation)
   - [Configuring Sonarr](#configuring-sonarr)
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
