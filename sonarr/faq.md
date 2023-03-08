@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-03-06T16:13:06.655Z
+date: 2023-03-08T19:12:02.848Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -395,7 +395,7 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 |                                                                    | `main` (stable) ![Current Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v3-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v3) (beta) ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v3-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v4) (v4 beta) ![Current v4 Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=v4-preview&query=%24%5B%27v4-preview%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [hotio](https://hotio.dev/containers/sonarr)                       | `release`                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                   | `v4`                                                                                                                                                                                                            |
-| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `latest`                                                                                                                                                                                              | `3.0.9`                                                                                                                                                                                                     | `develop`                                                                                                                                                                                                       |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `latest`                                                                                                                                                                                              | `3.0.10`                                                                                                                                                                                                     | `develop`                                                                                                                                                                                                       |
 
 ### Installing a newer version
 
@@ -690,7 +690,8 @@ Depending on your OS, there are multiple possible ways.
 
 ## I am getting an error: Database disk image is malformed
 
-> \*BSD Users You may recieve this after upgrading sqlite3 to 3.41 Sonarr v3 does not support sqlite3 3.41 at this time due to a breaking default change. A [workaround has been provided](https://github.com/Sonarr/Sonarr/issues/5464#issuecomment-1455105098) by the \*BSD Community, but in essence you must revert to sqlite3 3.40 or rebuild sqlite3 3.41 with DQS enabled. Follow [Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464) for more information on when/if a fix occurs.
+> Users You may recieve this after upgrading sqlite3 to 3.41 Sonarr v3.0.9 does not support sqlite3 3.4 due to a breaking default change. [Details on the bug can be found in Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464)
+> This is resolved with Sonarr v3.0.10
 {.is-warning}
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
