@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-07T18:29:10.922Z
+date: 2023-03-08T02:44:12.005Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -18,8 +18,8 @@ dateCreated: 2021-07-10T16:07:37.425Z
 - [FreeBSD](#freebsd)
   - [Jail Setup Using TrueNAS GUI](#jail-setup-using-truenas-gui)
   - [Jail Setup Using CLI](#jail-setup-using-cli)
-  - [Sonarr V3 Installation](#sonarr-v3-installation)
-  - [Sonarr V4 Installation (Beta)](#sonarr-v4-installation-beta)
+  - [Sonarr Mono Installation](#sonarr-mono-installation)
+  - [Sonarr .NET Installation (Beta)](#sonarr-net-installation-beta)
   - [Configuring Sonarr](#configuring-sonarr)
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
@@ -178,11 +178,11 @@ Replace "sonarr" with your preferred jail name
 Replace "accept_rtadv" or remove ip6_addr if you do not want auto configure IPV6
 
 ```shell
-iocage create -n "sonarr" -r 13.1-RELEASE ip4_addr="vnet0|10.0.0.100/24" vnet="on" allow_raw_sockets="1" boot="on" allow_mlock="1" ip6_addr='vnet0|accept_rtadv' enforce_statfs="1"
+iocage create -n "sonarr" -r 13.1-RELEASE ip4_addr="vnet0|10.0.0.100/24" vnet="on" allow_raw_sockets="1" boot="on" allow_mlock="1" ip6_addr="vnet0|accept_rtadv" enforce_statfs="1"
 iocage console sonarr
 ```
 
-## Sonarr V3 Installation
+## Sonarr Mono Installation
 
 Back on the jails list find your newly created jail for `sonarr` and click "Shell"
 
@@ -199,7 +199,7 @@ pkg install sonarr
 
 Don't close the shell out yet we still have a few more things!
 
-## Sonarr V4 Installation (Beta)
+## Sonarr .NET Installation
 
 Back on the jails list find your newly created jail for `sonarr` and click "Shell"
 
