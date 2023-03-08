@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-08T02:45:41.191Z
+date: 2023-03-08T18:49:34.457Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -213,7 +213,7 @@ To install Sonarr
 Install the following libraries to support sonarr
 
 ```shell
-pkg install icu libunwind krb5-120 libnotify libinotify sqlite3
+pkg install icu libunwind krb5 libnotify libinotify sqlite3
 ```
 
 Create Sonarr User and Group (If you do not want to use user/group 'sonarr' it can be changed based on preference)
