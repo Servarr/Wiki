@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-03-08T19:12:02.848Z
+date: 2023-03-09T14:24:35.546Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -614,26 +614,9 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 - If you can only reach your web interface at <http://localhost:8989/> or <http://127.0.0.1:8989>, you need to run Sonarr as administrator at least once.
 
-## uTorrent is no longer working
-
-- Ensure the Web UI is enabled
-
-- Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections)
-
-- We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
-
-## Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?
-
-- No. Sonarr will talk to your download client to determine where the files have been downloaded and will import them automatically. If Sonarr and your download client are on different machines you will need to use Remote Path Mapping to link the remote path to a local one so Sonarr knows where to find the files.
-
 ## I got a pop-up that said config.xml was corrupt, what now?
 
 - Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](/sonarr/appdata-directory) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
-
-## Sonarr on Synology Stopped Working (SSL)
-
-- This is likely due to Mono's certs needing to be synced.
-- [See this section for details](/sonarr/installation#synology-mono-ssl-errors)
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -690,8 +673,8 @@ Depending on your OS, there are multiple possible ways.
 
 ## I am getting an error: Database disk image is malformed
 
-> Users You may recieve this after upgrading sqlite3 to 3.41 Sonarr v3.0.9 does not support sqlite3 3.4 due to a breaking default change. [Details on the bug can be found in Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464)
-> This is resolved with Sonarr v3.0.10
+> You may recieve this after upgrading sqlite3 to 3.41. Sonarr v3.0.9 does not support sqlite3 3.41 due to a breaking default change. [Details on the issue can be found in Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464)
+> This is resolved with Sonarr v3.0.10 and users should upgrade Sonarr accordingly.
 {.is-warning}
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
