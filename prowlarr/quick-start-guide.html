@@ -1,0 +1,198 @@
+<!--
+title: Prowlarr Quick Start Guide
+description: 
+published: true
+date: 2023-03-17T13:28:26.062Z
+tags: prowlarr, quickstart
+editor: ckeditor
+dateCreated: 2021-05-30T00:00:33.010Z
+-->
+
+<h1 class="toc-header" id="table-of-contents"> Table of Contents</h1>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#indexers">Indexers</a></li>
+<li><a href="#apps">Apps</a>
+<ul>
+<li><a href="#application-settings">Application Settings</a></li>
+</ul>
+</li>
+<li><a href="#download-clients">Download Clients</a>
+<ul>
+<li><a href="#usenet-client-settings">Usenet Client Settings</a></li>
+<li><a href="#torrent-client-settings">Torrent Client Settings</a></li>
+<li><a href="#testing-the-download-client">Testing the Download Client</a></li>
+</ul>
+</li>
+<li><a href="#setup-complete">Setup Complete</a></li>
+</ul>
+<blockquote>
+<p>This page is still in progress and not complete.</p>
+</blockquote>
+<blockquote class="is-info">
+<p>For a more detailed breakdown of all the settings, check <a class="is-internal-link is-valid-page" href="/prowlarr/settings">Prowlarr =&gt;Settings</a></p>
+</blockquote>
+<p>In this guide we will try to explain the basic setup you need to do to get started with Prowlarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.</p>
+<blockquote class="is-warning">
+<p>Please note that within the screenshots and GUI settings in <code>orange</code> are advanced options, so you will need to click <code>Show Advanced</code> at the top of the page to make them visible.</p>
+</blockquote>
+<h1 class="toc-header" id="indexers"> Indexers</h1>
+<p>The first thing to set up in Prowlarr is indexers. You will add each indexer individually to Prowlarr.</p>
+<p>Click on <code>Indexers</code>, and then click the + to add a new indexer.</p>
+<p><img alt="addindexer.png" src="/assets/prowlarr/addindexer.png"></p>
+<p>All indexers you can add (usenet and torrent) are listed, and you can type to partially match any existing entry. If the indexer you want to add doesn't exist in the list, you can add "Generic Newznab" (for usenet) or "Generic Torznab" (for torrents).</p>
+<p><img alt="addgeneric.png" src="/assets/prowlarr/addgeneric.png"></p>
+<p>Some indexers have special settings, but most are standard as shown.</p>
+<p><img alt="addnewindexer.png" src="/assets/prowlarr/addnewindexer.png"></p>
+<ul>
+<li>Name - Select a name for this indexer. When it syncs to your apps, it will add <code>(Prowlarr)</code> behind it.</li>
+<li>Enable - Check the box to enable this indexer.</li>
+<li>Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.</li>
+</ul>
+<blockquote class="is-info">
+<p>Redirect is typically only needed for a handful of very specific indexers</p>
+</blockquote>
+<ul>
+<li>Sync Profile - Select your Sync Profile here. These can be created in <a class="is-internal-link is-valid-page" href="/prowlarr/settings#applications"><code>Settings</code> =&gt; <code>Apps</code></a>. The Standard default, profile already exists, and looks like this:</li>
+</ul>
+<blockquote class="is-info">
+<p>You can have different settings per app by creating multiple instances of the indexer</p>
+</blockquote>
+<p><img alt="ind_3_settingsapps.png" src="/assets/prowlarr/ind_3_settingsapps.png"></p>
+<ul>
+<li>URL - Select the URL for Prowlarr to use. If blank, the default/first url is used.</li>
+<li>Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.</li>
+<li>(Advanced Option) API Path - Path to the Indexer's API. Typically <code>/api</code></li>
+<li>Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
+<ul>
+<li>API Key</li>
+<li>RSS Key</li>
+<li>Session ID</li>
+<li>Cookie</li>
+<li>Username/Password</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>(Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.</li>
+<li>VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank</li>
+<li>Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.</li>
+<li>(Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.</li>
+<li>(Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in *Arr Apps. Other apps may very.</li>
+<li>(Advanced Option) Seed Ratio - For Torrent Indexers Only: The ratio a torrent should reach before stopping, empty is app's default</li>
+<li>(Advanced Option) Seed Time - For Torrent Indexers Only: The time a torrent should be seeded before stopping, empty is app's default</li>
+<li>(Advanced Option) Indexer Priority - Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.</li>
+</ul>
+<p>Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each indexer you'd like Prowlarr to use. If it fails, you will need to check your log for the error (URL, API Key, etc.).</p>
+<h1 class="toc-header" id="apps"> Apps</h1>
+<p>After you've added your indexers, we then connect Prowlarr to your other apps.</p>
+<p>Click on <code>Settings</code> =&gt; <code>Apps</code>, and then click the + to add a supported app.</p>
+<p><img alt="addapps.png" src="/assets/prowlarr/addapps.png"></p>
+<p>All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you must add each of them separately.</p>
+<blockquote class="is-info">
+<p>Currently supported Apps can be found at the <a class="is-internal-link is-valid-page" href="/prowlarr/supported#applications">More Info (Supported)</a> page for this section</p>
+</blockquote>
+<p>When you add an app, you will need to enter values in the pop-up screen:</p>
+<p><img alt="addlidarr.png" src="/assets/prowlarr/addlidarr.png"></p>
+<blockquote class="is-info">
+<p>Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only <code>tv</code> categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. <strong>Also note that the *Arrs only accept indexers whose test queries return results containing at least one of the configured categories.</strong></p>
+</blockquote>
+<h2 class="toc-header" id="application-settings"> Application Settings</h2>
+<ul>
+<li>Name - Enter a name for this App.</li>
+<li>Sync Level - Select the sync level to use
+<ul>
+<li><code>Add and Remove Only</code> - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.</li>
+<li><code>Full Sync</code> - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settinngs on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the <a class="is-internal-link is-valid-page" href="/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync">FAQ</a></li>
+<li><code>Disabled</code> - will keep indexers from syncing with the program entirely.</li>
+</ul>
+</li>
+</ul>
+<blockquote class="is-warning">
+<p><code>Full Sync</code> means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, tags in *Arrs are not currently factored in to this comparison to trigger a sync. However, <a class="is-internal-link is-valid-page" href="/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync">just about every other factor of changes</a> will trigger a sync and overwrite all settings in *Arr</p>
+</blockquote>
+<ul>
+<li>Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.</li>
+<li>Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.</li>
+</ul>
+<blockquote class="is-info">
+<p>Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!</p>
+</blockquote>
+<ul>
+<li>Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.</li>
+<li>API Key - Enter the API Key of your program here. For *Arrs this can be found in Settings =&gt; General. You can get this from your program in the <code>Settings</code> =&gt; <code>General</code> tab, and copy/paste it here.</li>
+<li>(Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
+<ul>
+<li>Indexer Custom Categories get mapped into the Standard Torznab/Newznab  categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.</li>
+</ul>
+</li>
+</ul>
+<blockquote class="is-info">
+<p>When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. <code>{Indexer Name} (Prowlarr)</code></p>
+</blockquote>
+<p><img alt="nzbgeek.png" src="/assets/prowlarr/nzbgeek.png"></p>
+<p>You should then go into your program, and disable the non-Prowlarr version of the indexer. Once everything is running smoothly, you can delete those entries and leave just the (Prowlarr) versions in place.</p>
+<p>You may wish to go into your programs and check the categories for the Prowlarr indexers. Default categories to be mapped into the App are configurable as an advanced setting for the App in Prowlarr.</p>
+<blockquote class="is-info">
+<p><strong>Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones</strong></p>
+</blockquote>
+<h2 class="toc-header" id="sync-profiles"> Sync Profiles</h2>
+<p>Configure the sync profiles for to use for (an) application(s)</p>
+<ul>
+<li>Name - Unique name of the Sync Profile</li>
+<li>Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the *Arr App</li>
+<li>Enable Interactive Search - For Indexers with this profile, Enable Interactive (Manual) Searches for the *Arr App</li>
+<li>Enable Automatic Search - For Indexers with this profile, Enable Automatic Searches for the *Arr App</li>
+<li>Minimum Seeders - For Indexers with this profile, the minimum seeders required for *Arr to grab a torrent</li>
+</ul>
+<h1 class="toc-header" id="download-clients-prowlarr-searches"> Download Clients (Prowlarr Searches)</h1>
+<p id="download-clients"></p>
+<blockquote class="is-info">
+<p>If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.</p>
+</blockquote>
+<blockquote class="is-danger">
+<p>Download clients are for Prowlarr in-app searches only and do not sync to apps. There are no plans to add any such functionality.</p>
+</blockquote>
+<p>Click on <code>Settings</code> =&gt; <code>Download Clients</code>, and then click the + to add a new download client. Your download client should already be configured to follow this guide.</p>
+<p><img alt="downloadclients.png" src="/assets/prowlarr/downloadclients.png"></p>
+<blockquote class="is-info">
+<p>Currently supported Download Clients can be found at the <a class="is-internal-link is-valid-page" href="/prowlarr/supported#downloadclient">More Info (Supported)</a> page for this section</p>
+</blockquote>
+<p>Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.<br>
+<img alt="nzbget.png" src="/assets/prowlarr/nzbget.png"></p>
+<blockquote class="is-info">
+<p>Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.</p>
+</blockquote>
+<h2 class="toc-header" id="usenet-client-settings"> Usenet Client Settings</h2>
+<ul>
+<li>Name - The name of the download client within Prowlarr</li>
+<li>Enable - Enable this Download Client</li>
+<li>Host - The URL of your download client</li>
+<li>Port - The port of your download client</li>
+<li>Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.</li>
+<li>URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.</li>
+<li>API Key - the API key to authenticate to your client</li>
+<li>Username - the username to authenticate to your client (typically not needed)</li>
+<li>Password- the password to authenticate to your client (typically not needed)</li>
+<li>Category - the category within your download client that Prowlarr will use</li>
+<li>Priority - download client priority for added items</li>
+<li>Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.</li>
+</ul>
+<h2 class="toc-header" id="torrent-client-settings"> Torrent Client Settings</h2>
+<ul>
+<li>Name - The name of the download client within Prowlarr</li>
+<li>Enable - Enable this Download Client</li>
+<li>Host - The URL of your download client</li>
+<li>Port - The port of your download client</li>
+<li>Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.</li>
+<li>URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.</li>
+<li>Username - the username to authenticate to your client</li>
+<li>Password- the password to authenticate to your client</li>
+<li>Category - the category within your download client that Prowlarr will use</li>
+<li>Priority - download client priority for added items</li>
+<li>Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)</li>
+<li>Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.</li>
+</ul>
+<h2 class="toc-header" id="testing-the-download-client"> Testing the Download Client</h2>
+<p>Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each download client you'd like Prowlarr to use. If it fails, you will need to check your log for the error (connection, credentials, etc.).</p>
+<h1 class="toc-header" id="setup-complete"> Setup Complete</h1>
+<p>That's it for the basics! You can then add notifications and other more advanced setup options as needed. Those are documented in the full Settings page.</p>
