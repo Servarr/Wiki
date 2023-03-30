@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: 
 published: true
-date: 2022-11-16T20:17:46.918Z
+date: 2023-03-30T14:04:26.292Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -33,7 +33,7 @@ To edit an indexer, first click on `Indexers` on the left, then click the wrench
 
 # Viewing an Indexer Id or URL
 
-To view details about an indexer, first click on `Indexers` on the left, then click the i (information) icon to the far right of the Indexer you wish to edit.
+To view details about an indexer, first click on `Indexers` on the left, then click the Indexer Link in the Indexer Name Column. (Formerly the (i) icon to the right)
 
 Details available may include:
 
