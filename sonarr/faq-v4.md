@@ -15,7 +15,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 ## What Changed?
 
 - See some of the entries below for common upgrade questions and notes.
-- Refer to the [v4 beta announcment](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
+- Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
   - Forced Authentication
   - Mono => Dotnet (more speed; no more mono)
     - Reverse Proxy conf updates are likely required

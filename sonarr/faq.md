@@ -673,7 +673,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I am getting an error: Database disk image is malformed
 
-> You may recieve this after upgrading sqlite3 to 3.41. Sonarr v3.0.9 does not support sqlite3 3.41 due to a breaking default change. [Details on the issue can be found in Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464)
+> You may receive this after upgrading sqlite3 to 3.41. Sonarr v3.0.9 does not support sqlite3 3.41 due to a breaking default change. [Details on the issue can be found in Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464)
 > This is resolved with Sonarr v3.0.10 and users should upgrade Sonarr accordingly.
 {.is-warning}
 
@@ -758,7 +758,6 @@ First, make sure you read and understand the section above called ["How does Son
 
 - See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
 
-## Why wont Sonarr import a TBA episode?
 
 - On TVDb, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDb API. Typically, changes to the TVDb website take 24-48 hours to reach Sonarr due to TVDb cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 
