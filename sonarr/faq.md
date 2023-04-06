@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-03-09T14:24:35.546Z
+date: 2023-04-06T20:42:40.137Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -752,7 +752,7 @@ First, make sure you read and understand the section above called ["How does Son
 1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
 1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
 1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
-1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This is a common problem that is most frequently caused by having an insufficient number of indexers. Different indexers index different content, and not all shows on your indexer may be tagged properly, which would cause Sonarr's search to fail. Having several indexers active is the best solution to this problem.
+1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This can be caused by a number of reasons, for example the release is not properly tagged on your indexer causing it to not be returned to sonarr in an automatic search. This [troubleshooting entry](/sonarr/troubleshooting#searches-indexers-and-trackers) provides some tips on how to determine the cause. Having several indexers active can help solve this by providing more sources to the same content.
 
 ## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
