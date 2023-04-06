@@ -2,10 +2,10 @@
 title: Prowlarr Quick Start Guide
 description: 
 published: true
-date: 2023-03-30T14:07:29.939Z
-tags: prowlarr, quickstart
+date: 2023-04-06T16:04:33.682Z
+tags: 
 editor: markdown
-dateCreated: 2021-05-30T00:00:33.010Z
+dateCreated: 2023-04-06T16:04:33.682Z
 ---
 
 # Table of Contents
