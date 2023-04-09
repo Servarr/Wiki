@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: 
 published: true
-date: 2022-05-02T03:37:28.132Z
+date: 2023-04-09T23:23:38.475Z
 tags: lidarr, needs-love, custom scripts
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -14,13 +14,15 @@ If you're looking to trigger a custom script, you can find more details on this 
 
 Lidarr can execute a custom script when an episode is newly imported or renamed. Depending on the action, different parameters are supplied. Parameters are passed to the script through environment variables.
 
+A custom script can be any executable accessible by the user Lidarr is running as.
+
 ## Lidarr Logs
 
 Note that the following will only be logged for custom scripts:
 
-- Script `stdout` output will be logged as `Debug`
-- Script `stderr` output will be logged as `Info`
-- The trigger of the script will be logged in `Trace`
+- Script `stdout` output will be logged as `Debug` in config/logs/Lidarr.debug.txt
+- Script `stderr` output will be logged as `Info`  in config/logs/Lidarr.txt
+- The trigger of the script will be logged in `Trace` in config/logs/Lidarr.trace.txt
 
 # Environment Variables
 
@@ -33,91 +35,91 @@ Environment Variables vary based on the event type. The sections below indicate 
 
 | Environment Variable               | Details                                                              |
 | ---------------------------------- | -------------------------------------------------------------------- |
-| `Lidarr_EventType`                 | Grab                                                                 |
-| `Lidarr_Artist_Id`                 | `artist.Id`                                                          |
-| `Lidarr_Artist_Name`               | `artist.Metadata.Value.Name`                                         |
-| `Lidarr_Artist_MBId`               | `artist.Metadata.Value.ForeignArtistId`                              |
-| `Lidarr_Artist_Type`               | `artist.Metadata.Value.Type`                                         |
-| `Lidarr_Release_AlbumCount`        | `remoteAlbum.Albums.Count`                                           |
-| `Lidarr_Release_AlbumReleaseDates` | Comma separated list of album release dates                          |
-| `Lidarr_Release_AlbumTitles`       | Pipe separated list of album titles                                  |
-| `Lidarr_Release_AlbumMBIds`        | Pipe separated list of album external service IDs (e.g. MusicBrainz) |
-| `Lidarr_Release_Title`             | `remoteAlbum.Release.Title`                                          |
-| `Lidarr_Release_Indexer`           | `remoteAlbum.Release.Indexer`                                        |
-| `Lidarr_Release_Size`              | `remoteAlbum.Release.Size`                                           |
-| `Lidarr_Release_Quality`           | `remoteAlbum.ParsedAlbumInfo.Quality.Quality.Name`                   |
-| `Lidarr_Release_QualityVersion`    | `remoteAlbum.ParsedAlbumInfo.Quality.Revision.Version`               |
-| `Lidarr_Release_ReleaseGroup`      | `releaseGroup`                                                       |
-| `Lidarr_Download_Client`           | `message.DownloadClient`                                             |
-| `Lidarr_Download_Id`               | `message.DownloadId`                                                 |
+| `lidarr_eventtype`                 | Grab                                                                 |
+| `lidarr_artist_id`                 | `artist.Id`                                                          |
+| `lidarr_artist_name`               | `artist.Metadata.Value.Name`                                         |
+| `lidarr_artist_mbid`               | `artist.Metadata.Value.ForeignArtistId`                              |
+| `lidarr_artist_type`               | `artist.Metadata.Value.Type`                                         |
+| `lidarr_release_albumcount`        | `remoteAlbum.Albums.Count`                                           |
+| `lidarr_release_albumreleasedates` | Comma separated list of album release dates                          |
+| `lidarr_release_albumtitles`       | Pipe separated list of album titles                                  |
+| `lidarr_release_albummbids`        | Pipe separated list of album external service IDs (e.g. MusicBrainz) |
+| `lidarr_release_title`             | `remoteAlbum.Release.Title`                                          |
+| `lidarr_release_indexer`           | `remoteAlbum.Release.Indexer`                                        |
+| `lidarr_release_size`              | `remoteAlbum.Release.Size`                                           |
+| `lidarr_release_quality`           | `remoteAlbum.ParsedAlbumInfo.Quality.Quality.Name`                   |
+| `lidarr_release_qualityversion`    | `remoteAlbum.ParsedAlbumInfo.Quality.Revision.Version`               |
+| `lidarr_release_releasegroup`      | `releaseGroup`                                                       |
+| `lidarr_download_client`           | `message.DownloadClient`                                             |
+| `lidarr_download_id`               | `message.DownloadId`                                                 |
 
 ## On Import / On Upgrade
 
 | Environment Variable       | Details                                  |
 | -------------------------- | ---------------------------------------- |
-| `Lidarr_EventType`         | AlbumDownload                            |
-| `Lidarr_Artist_Id`         | `artist.Id`                              |
-| `Lidarr_Artist_Name`       | `artist.Metadata.Value.Name`             |
-| `Lidarr_Artist_Path`       | `artist.Path`                            |
-| `Lidarr_Artist_MBId`       | `artist.Metadata.Value.ForeignArtistId`  |
-| `Lidarr_Artist_Type`       | `artist.Metadata.Value.Type`             |
-| `Lidarr_Album_Id`          | `album.Id`                               |
-| `Lidarr_Album_Title`       | `album.Title`                            |
-| `Lidarr_Album_MBId`        | `album.ForeignAlbumId`                   |
-| `Lidarr_AlbumRelease_MBId` | `release.ForeignReleaseId`               |
-| `Lidarr_Album_ReleaseDate` | `album.ReleaseDate`                      |
-| `Lidarr_Download_Client`   | `message.DownloadClient`                 |
-| `Lidarr_Download_Id`       | `message.DownloadId`                     |
-| `Lidarr_AddedTrackPaths`   | Pipe separated list of added track paths |
-| `Lidarr_DeletedPaths`      | Pipe separated list of deleted files     |
+| `lidarr_eventtype`         | AlbumDownload                            |
+| `lidarr_artist_id`         | `artist.Id`                              |
+| `lidarr_artist_name`       | `artist.Metadata.Value.Name`             |
+| `lidarr_artist_path`       | `artist.Path`                            |
+| `lidarr_artist_mbid`       | `artist.Metadata.Value.ForeignArtistId`  |
+| `lidarr_artist_type`       | `artist.Metadata.Value.Type`             |
+| `lidarr_album_id`          | `album.Id`                               |
+| `lidarr_album_title`       | `album.Title`                            |
+| `lidarr_album_mbid`        | `album.ForeignAlbumId`                   |
+| `lidarr_albumrelease_mbid` | `release.ForeignReleaseId`               |
+| `lidarr_album_releasedate` | `album.ReleaseDate`                      |
+| `lidarr_download_client`   | `message.DownloadClient`                 |
+| `lidarr_download_id`       | `message.DownloadId`                     |
+| `lidarr_addedtrackpaths`   | Pipe separated list of added track paths |
+| `lidarr_deletedpaths`      | Pipe separated list of deleted files     |
 
 ## Rename
 
 | Environment Variable | Details                                 |
 | -------------------- | --------------------------------------- |
-| `Lidarr_EventType`   | Rename                                  |
-| `Lidarr_Artist_Id`   | `artist.Id`                             |
-| `Lidarr_Artist_Name` | `artist.Metadata.Value.Name`            |
-| `Lidarr_Artist_Path` | `artist.Path`                           |
-| `Lidarr_Artist_MBId` | `artist.Metadata.Value.ForeignArtistId` |
-| `Lidarr_Artist_Type` | `artist.Metadata.Value.Type`            |
+| `lidarr_eventtype`   | Rename                                  |
+| `lidarr_artist_id`   | `artist.Id`                             |
+| `lidarr_artist_name` | `artist.Metadata.Value.Name`            |
+| `lidarr_artist_path` | `artist.Path`                           |
+| `lidarr_artist_mbid` | `artist.Metadata.Value.ForeignArtistId` |
+| `lidarr_artist_type` | `artist.Metadata.Value.Type`            |
 
 ## Track Retag
 
 | Environment Variable              | Details                                 |
 | --------------------------------- | --------------------------------------- |
-| `Lidarr_EventType`                | TrackRetag                              |
-| `Lidarr_Artist_Id`                | `artist.Id`                             |
-| `Lidarr_Artist_Name`              | `artist.Metadata.Value.Name`            |
-| `Lidarr_Artist_Path`              | `artist.Path`                           |
-| `Lidarr_Artist_MBId`              | `artist.Metadata.Value.ForeignArtistId` |
-| `Lidarr_Artist_Type`              | `artist.Metadata.Value.Type`            |
-| `Lidarr_Album_Id`                 | `album.Id`                              |
-| `Lidarr_Album_Title`              | `album.Title`                           |
-| `Lidarr_Album_MBId`               | `album.ForeignAlbumId`                  |
-| `Lidarr_AlbumRelease_MBId`        | `release.ForeignReleaseId`              |
-| `Lidarr_Album_ReleaseDate`        | `album.ReleaseDate`                     |
-| `Lidarr_TrackFile_Id`             | `trackFile.Id`                          |
-| `Lidarr_TrackFile_TrackCount`     | `trackFile.Tracks.Value.Count`          |
-| `Lidarr_TrackFile_Path`           | `trackFile.Path`                        |
-| `Lidarr_TrackFile_TrackNumbers`   | Comma separated list of track numbers   |
-| `Lidarr_TrackFile_TrackTitles`    | Pipe separated list of track titles     |
-| `Lidarr_TrackFile_Quality`        | `trackFile.Quality.Quality.Name`        |
-| `Lidarr_TrackFile_QualityVersion` | `trackFile.Quality.Revision.Version`    |
-| `Lidarr_TrackFile_ReleaseGroup`   | `trackFile.ReleaseGroup`                |
-| `Lidarr_TrackFile_SceneName`      | `trackFile.SceneName`                   |
-| `Lidarr_Tags_Diff`                | `message.Diff.ToJson()`                 |
-| `Lidarr_Tags_Scrubbed`            | `message.Scrubbed`                      |
+| `lidarr_eventtype`                | TrackRetag                              |
+| `lidarr_artist_id`                | `artist.Id`                             |
+| `lidarr_artist_name`              | `artist.Metadata.Value.Name`            |
+| `lidarr_artist_path`              | `artist.Path`                           |
+| `lidarr_artist_mbid`              | `artist.Metadata.Value.ForeignArtistId` |
+| `lidarr_artist_type`              | `artist.Metadata.Value.Type`            |
+| `lidarr_album_id`                 | `album.Id`                              |
+| `lidarr_album_title`              | `album.Title`                           |
+| `lidarr_album_mbid`               | `album.ForeignAlbumId`                  |
+| `lidarr_albumrelease_mbid`        | `release.ForeignReleaseId`              |
+| `lidarr_album_releasedate`        | `album.ReleaseDate`                     |
+| `lidarr_trackfile_id`             | `trackFile.Id`                          |
+| `lidarr_trackfile_trackcount`     | `trackFile.Tracks.Value.Count`          |
+| `lidarr_trackfile_path`           | `trackFile.Path`                        |
+| `lidarr_trackfile_tracknumbers`   | Comma separated list of track numbers   |
+| `lidarr_trackfile_tracktitles`    | Pipe separated list of track titles     |
+| `lidarr_trackfile_quality`        | `trackFile.Quality.Quality.Name`        |
+| `lidarr_trackfile_qualityversion` | `trackFile.Quality.Revision.Version`    |
+| `lidarr_trackfile_releasegroup`   | `trackFile.ReleaseGroup`                |
+| `lidarr_trackfile_scenename`      | `trackFile.SceneName`                   |
+| `lidarr_tags_diff`                | `message.Diff.ToJson()`                 |
+| `lidarr_tags_scrubbed`            | `message.Scrubbed`                      |
 
 ## Health Issue
 
 | Environment Variable          | Details                                 |
 | ----------------------------- | --------------------------------------- |
-| `Lidarr_EventType`            | HealthIssue                             |
-| `Lidarr_Health_Issue_Level`   | `nameof(healthCheck.Type)`              |
-| `Lidarr_Health_Issue_Message` | `healthCheck.Message`                   |
-| `Lidarr_Health_Issue_Type`    | `healthCheck.Source.Name`               |
-| `Lidarr_Health_Issue_Wiki`    | Wiki URL for the health issue help page |
+| `lidarr_eventtype`            | HealthIssue                             |
+| `lidarr_health_issue_level`   | `nameof(healthCheck.Type)`              |
+| `lidarr_health_issue_message` | `healthCheck.Message`                   |
+| `lidarr_health_issue_type`    | `healthCheck.Source.Name`               |
+| `lidarr_health_issue_wiki`    | Wiki URL for the health issue help page |
 
 ## On Test
 
@@ -125,4 +127,4 @@ When adding the script to Lidarr and clicking 'Test,' the script will be invoked
 
 | Environment Variable | Details |
 | -------------------- | ------- |
-| `Lidarr_EventType`   | Test    |
+| `lidarr_eventtype`   | Test    |
