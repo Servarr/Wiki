@@ -176,7 +176,61 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - Sonarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling.
 (Completed Download Handling is enabled by default...)
 
+#### Docker bad remote path mapping
+
+- This error is typically associated with bad docker paths within either your download client or Sonarr
+
+- An example of this would be:
+  - Download client: Download Path: /mnt/user/downloads:/downloads
+  - Radarr: Download Path: /mnt/user/downloads:/data
+- Within this example the download client places its downloads into /downloads and therefore tells Radarr when its complete that the finished movie is in /downloads. Sonarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Radarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
+- The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
+
+- Team Sonarr is a big fan of simply using /data.
+  - Download client: /mnt/user/data/downloads:/data/downloads
+  - Radarr: /mnt/user/data:/data
+
+- Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
+- There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+
+- See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+
 #### Downloading into Root Folder
+
+{#downloads-in-root-folder}
+
+- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
+- This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
+- Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
+- One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
+- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+- Review our [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
+
+> Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
+{.is-warning}
+
+#### Bad Download Client Settings
+
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
+
+#### Bad Remote Path Mapping
+
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+
+#### Permissions Error
+
+- Sonarr or the user sonarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
+
+#### Remote File was removed part way through processing
+
+- A file accessible via a remote path map appears to have been removed prior to processing completing.
+
+#### Remote Path is Used and Import Failed
+
+- Check your logs for more info; Refer to our Troubleshooting Guides
+
+### Downloading into Root Folder
 
 {#downloads-in-root-folder}
 
