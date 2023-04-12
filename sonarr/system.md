@@ -79,13 +79,22 @@ dateCreated: 2021-09-08T17:58:43.288Z
 
 - Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
-- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
+- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a 
 
 #### Currently installed mono version is old and unsupported
 
-- Sonarr is written in .NET and requires Mono to run. Various versions of Sonarr have different minimum versions of Mono to operate correctly. The ideal version of Mono varies per platform.
-Mono 5.8 is the absolute minimum for Sonarr, but Mono 5.20 is currently recommended.
-The upgrade procedure for Mono varies per platform.
+- Sonarr v4 is written in .NET and v3 required Mono. Mono 5.20 is the absolute minimum for Sonarr.
+- The upgrade procedure for Mono varies per platform.
+
+> Mono is no longer supported starting in Sonarr version 4.0
+{.is-warning}
+
+#### Currently installed SQLite version is not supported
+
+- Sonarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Sonarr requires at least version 3.9.0.
+
+> Note that Sonarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+{.is-info}
 
 #### Package Maintainer Message
 
