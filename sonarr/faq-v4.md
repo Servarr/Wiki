@@ -119,7 +119,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 - When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
   - Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Sonarr decide which client to use.
-  - Override Sonarrs parsing of the release title incase Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
+  - Override Sonarrs parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
       - Series
       - Season Number
       - Episode(s)
