@@ -588,11 +588,13 @@ separate locations. {.is-warning}
 #### Prerequisites (Tray App)
 
 - [You must have Radarr already installed](#windows)
-- Radarr must be configured with a `/data=` argument to allow multiple instances
+- Radarr's shortcut must be configured with a `/data=` argument in the 'target' field to allow multiple instances
 - Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
 
 #### Creating Radarr-4K Tray App
 
+- Create a new folder for Radarr-4K's configuration files. Most use a similar place such as 
+    `C:\ProgramData\Radarr-4K`
 - Right click and Create New Shortcut
 - Path: `C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K`
 - Give the shortcut a unique name such as `Radarr-4K` and finish the wizard.
