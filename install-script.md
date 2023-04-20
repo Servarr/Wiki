@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2023-01-05T19:39:51.151Z
+date: 2023-04-20T15:09:02.666Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -40,7 +40,7 @@ Be aware of the following:
 nano ArrInstall.sh
 ```
 
-- Copy (top right corner of the script) and Paste into your SSH console. Review the variables worth comments and update if necessary.
+- Copy (top right corner of the script) and Paste into your SSH console. Review the variables woth comments and update if necessary.
   - If you are in an GUI OS such as Windows or MacOS (OSX): pasting could be as simple as 'right clicking' in your ssh client.
 
 ```bash
@@ -59,6 +59,7 @@ nano ArrInstall.sh
 ### Version v3.0.5 2022-04-03 - VP-EN (Added Whisparr)
 ### Version v3.0.6 2022-04-26 - Bakerboy448 - binaries to group
 ### Version v3.0.7 2023-01-05 - Bakerboy448 - Prowlarr to master
+### Version v3.0.8 2023-04-20 - Bakerboy448 - Shellcheck fixes & remove prior tarballs
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -70,8 +71,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.7"
-scriptdate="2023-01-05"
+scriptversion="3.0.8"
+scriptdate="2023-04-20"
 
 set -euo pipefail
 
@@ -186,8 +187,8 @@ fi
 
 # Stop the App if running
 if service --status-all | grep -Fq "$app"; then
-    systemctl stop $app
-    systemctl disable $app.service
+    systemctl stop "$app"
+    systemctl disable "$app".service
     echo "Stopped existing $app"
 fi
 
@@ -219,16 +220,19 @@ case "$ARCH" in
     ;;
 esac
 echo ""
+echo "Removing previous tarballs"
+rm "${app^}".*.tar.gz
+echo ""
 echo "Downloading..."
 wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
+tar -xvzf "${app^}".*.tar.gz
 echo ""
 echo "Installation files downloaded and extracted"
 
 # remove existing installs
 echo "Removing existing installation"
 # If you happen to run this script in the installdir the line below will delete the extracted files and cause the mv some lines below to fail.
-rm -rf $bindir
+rm -rf "$bindir"
 echo "Installing..."
 mv "${app^}" $installdir
 chown "$app_uid":"$app_guid" -R "$bindir"
@@ -242,11 +246,11 @@ echo "App Installed"
 
 # Remove any previous app .service
 echo "Removing old service file"
-rm -rf /etc/systemd/system/$app.service
+rm -rf /etc/systemd/system/"$app".service
 
 # Create app .service with correct user startup
 echo "Creating service file"
-cat <<EOF | tee /etc/systemd/system/$app.service >/dev/null
+cat <<EOF | tee /etc/systemd/system/"$app".service >/dev/null
 [Unit]
 Description=${app^} Daemon
 After=syslog.target network.target
@@ -274,7 +278,7 @@ ip_local=$(grep -oP '^\S*' <<<"$host")
 echo ""
 echo "Install complete"
 sleep 10
-STATUS="$(systemctl is-active $app)"
+STATUS="$(systemctl is-active "$app")"
 if [ "${STATUS}" = "active" ]; then
     echo "Browse to http://$ip_local:$app_port for the ${app^} GUI"
 else

@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-03-04T15:01:37.742Z
+date: 2023-04-17T18:42:30.831Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -18,7 +18,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 - Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
   - Forced Authentication
   - Mono => Dotnet (more speed; no more mono)
-    - Reverse Proxy conf updates are likely required
+    - Reverse Proxy [conf updates](#my-nginx-doesnt-work-anymore) are likely required
   - Preferred Words are gone and replaced with Custom Formats (see details below)
   - Language Profiles are gone and replaced with Custom Formats (dee details below)
   - Dark/Light Theme
@@ -114,3 +114,14 @@ dateCreated: 2022-11-25T14:02:10.493Z
   ```nginx
     proxy_set_header   Host $host;
   ```
+
+## What is this new "*Override and add to download queue*" button?
+
+- When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
+  - Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Sonarr decide which client to use.
+  - Override Sonarrs parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
+      - Series
+      - Season Number
+      - Episode(s)
+      - Quality
+      - Language
