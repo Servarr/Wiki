@@ -534,6 +534,9 @@ The following requirements should be noted:
 
 This guide will show you how to run multiple instances of Radarr on Windows using only one base installation. This guide was put together using Windows 10; if you are using a previous version of Windows (7, 8, etc.) you may need to adjust some things. This guide also assumes that you have installed Radarr to the default directory, and your second instance of Radarr will be called Radarr-4K. Feel free to change things to fit your own installations, though.
 
+> Note: You should run Radarr as **either** a [tray app](#tray-app-windows) or [as a service](#service-windows). Running an app and a service is unnecessary and likely to cause issues.
+
+
 ### Service (Windows)
 
 #### Prerequisites (Service)
