@@ -221,7 +221,7 @@ case "$ARCH" in
 esac
 echo ""
 echo "Removing previous tarballs"
-rm "${app^}".*.tar.gz
+rm "${app^}".*.tar.gz || true
 echo ""
 echo "Downloading..."
 wget --content-disposition "$DLURL"
