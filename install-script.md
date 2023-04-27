@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2023-04-27T03:12:27.831Z
+date: 2023-04-20T15:09:02.666Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -60,6 +60,7 @@ nano ArrInstall.sh
 ### Version v3.0.6 2022-04-26 - Bakerboy448 - binaries to group
 ### Version v3.0.7 2023-01-05 - Bakerboy448 - Prowlarr to master
 ### Version v3.0.8 2023-04-20 - Bakerboy448 - Shellcheck fixes & remove prior tarballs
+### Version v3.0.9 2023-04-25 - ntkzwane - Ensure install script doesn't fail on tar cleanup step 
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -71,8 +72,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.8"
-scriptdate="2023-04-20"
+scriptversion="3.0.9"
+scriptdate="2023-04-25"
 
 set -euo pipefail
 
@@ -221,7 +222,7 @@ case "$ARCH" in
 esac
 echo ""
 echo "Removing previous tarballs"
-rm "${app^}".*.tar.gz ||:
+rm "${app^}".*.tar.gz || true
 echo ""
 echo "Downloading..."
 wget --content-disposition "$DLURL"
