@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2022-09-07T23:20:49.360Z
+date: 2023-04-29T18:17:11.930Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -175,7 +175,7 @@ Also, note that for each individual settings page, there are some options at the
 
 ![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
 
-If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.
+**If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.**
 
 > Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. `{.is-info}
 
@@ -190,6 +190,10 @@ Commonly used naming schema are:
 ## Book Naming
 
 - Rename Books - If this is toggled off (no check in the box) Readarr will use the existing file name if renaming is disabled.
+  - If unchecked:
+    - Download Client Import
+      - Download Client's Release Title is used
+    - Manual (Ad-Hoc) Import: Original File Name
 
 > If you leave Rename Books unchecked, then none of the naming below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
 {.is-info}
