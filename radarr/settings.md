@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2023-01-11T00:54:03.338Z
+date: 2023-04-29T18:16:34.463Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -140,7 +140,11 @@ Also, note that for each individual settings page, there are some options at the
 
 ## Movie Naming
 
-- Rename Movies - If unchecked, Radarr will use the existing file name if renaming is disabled
+- Rename Movies - If unchecked, Radarr will use the existing name if renaming is disabled
+  - If unchecked:
+    - Download Client Import
+      - Download Client's Release Title is used
+    - Manual (Ad-Hoc) Import: Original File Name
 - Replace Illegal` Characters - If unchecked, Radarr will remove them instead.
 
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
