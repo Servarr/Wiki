@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2022-11-01T13:34:19.571Z
+date: 2023-04-29T18:16:05.634Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -138,8 +138,13 @@ Also, note that for each individual settings page, there are some options at the
 
 ## Episode Naming
 
-- Rename Episodes - Check to enable Sonaff to rename files
-  - If unchecked the original release title is used if it qualified as a so-called "scene title".  If the release title is a "scene title" then the original file name of the download is used.
+- Rename Episodes - Check to enable Sonarr to rename files
+  - If unchecked:
+    - Download Client Import
+      - Non-Season Pack: Download Client's Release Title is used
+      - Season Pack: Original File Name
+    - Manual (Ad-Hoc) Import: Original File Name
+    
 - Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
