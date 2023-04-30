@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2023-04-30T22:57:15.280Z
+date: 2023-04-30T22:57:34.064Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -13,7 +13,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
 - [Table of Contents](#table-of-contents)
 - [Cardigann Versions](#cardigann-versions)
   - [Supported Versions](#supported-versions)
-    - [V9[(#v9-indexers)
+    - [V9](#v9-indexers)
     - [V8](#v8-indexers)
     - [V7](#v7-indexers)
   - [Depreciated Versions](#depreciated-versions)
