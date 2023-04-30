@@ -2,11 +2,12 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2023-02-23T20:27:44.920Z
+date: 2023-04-30T22:55:46.260Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
 ---
+
 
 # Table of Contents
 
@@ -203,10 +204,10 @@ Each definition must start with a header like this:
 
 ```yaml
 ---
-# [REQUIRED] Internal name of the indexer, must be unique. Usually its the name of the
+# [REQUIRED] Internal name of the indexer, must be unique. Usually it's the name of the
 # web site, in lower case, stripped of any special characters and space
 id: thepiratebay
-
+  
 # [REQUIRED]  Display name (The full name of the tracker)
 name: The Pirate Bay
 
@@ -232,16 +233,6 @@ encoding: UTF-8
 # Enable/Disable automatic update of the URL in case of a redirect to a different domain
 followredirect: false
 
-# [OPTIONAL] Can be true or false (default is false)
-# Enable/Disable redirect of downloads to not be proxied via Prowlarr
-# Cardigann v4
-allowdownloadredirect: false
-
-# [OPTIONAL] Protocol for the indexer can be `torrent` or `usenet` (default is torrent)
-# Set to configure the Indexer type
-# Cardigann v4
-protocol: torrent
-
 # [OPTIONAL] Can be true or false (default is true)
 # Enable/Disable the pre-testing of the .torrent files when attempting a download (indexers
 # that support fallback downloading need true). Some web sites do not allow performing two
@@ -264,16 +255,16 @@ links:
 legacylinks:
   - https://thepiratebay.sw/
 
-# [OPTIONAL] If the tracker uses untrusted HTTPS certificates (self signed, expired, etc)
-# you can specify a list of thumbprint hashes which should be accepted as valid anyway.
-# This shouldn't be needed in most cases.
+# [OPTIONAL] If the tracker uses untrusted HTTPS certificates (self-signed, expired, etc)
+# you can specify a list of SHA-1 Fingerprint (thumbprint) hashes which should be accepted
+#  as valid anyway. This shouldn't be needed in most cases.
 certificates:
   - D40789207A75EA36B02E255BF7162C8DF9637751
 ```
 
 ## Caps
 
-Next you've to specify the capabilities of the indexer.
+Next, you've to specify the capabilities of the indexer.
 
 ```yaml
 # Capabilities of the indexer:
@@ -305,10 +296,10 @@ caps:
   # the tracker supports searching with them, especially imdbid, tvdbid, tmdbid and rid (TVRage).
   modes:
     search: [q]
-    tv-search: [q, season, ep, imdbid, tvdbid, rid, tmdbid, traktid]
-    movie-search: [q, imdbid, tmdbid, genre]
-    music-search: [q, album, artist, label, year, genre]
-    book-search: [q, author, title]
+    tv-search: [q, season, ep, imdbid, tvdbid, rid, tvmaze, traktid, doubanid, year, genre]
+    movie-search: [q, imdbid, tmdbid, traktid, doubanid, year, genre]
+    music-search: [q, album, artist, label, track, year, genre]
+    book-search: [q, author, title, publisher, year, genre]
 ```
 
 ## Categories
@@ -452,7 +443,7 @@ If it's a public tracker and no config settings are needed then set `settings: [
 
 ## Login
 
-If the tracker requires a login you've to include a login block. First you've to pick one of the following login methods:
+If the tracker requires a login, you've to include a login block. First, you've to pick one of the following login methods:
 
 - post: The input values are transmitted as a HTTP POST request. This will work for many trackers which require only static login information (username, password, ...).
 - get: Same as post but HTTP GET is used
@@ -461,11 +452,12 @@ If the tracker requires a login you've to include a login block. First you've to
 
 After sending the actual login request the resulting HTML document is checked for error messages (`error` section). If one of the specified selectors matches the login is considered as failed and the matching text is returned as error message.
 
-After checking for error messages a login test is performed (`test` section). The specified path will be requested. If a redirect is returned the login is considered as failed. Optionally it's possible to specify an selector which must match for a successful login. Typically the `path` is set to the same path as the torrent search path. Most trackers will redirect users to the login page if a login is required. If a tracker will just show the login form (no redirect) you'll have to specify a selector too.
+After checking for error messages, a login test is performed (`test` section). The specified path will be requested. If a redirect is returned the login is considered as failed. Optionally it's possible to specify a selector which must match for a successful login. Typically, the `path` is set to the same path as the torrent search path. Most trackers will redirect users to the login page if a login is required. If a tracker will just show the login form (no redirect) you'll have to specify a selector too.
 
 ### Simple POST Login
 
 ```yaml
+login:
   # use simple post login
   method: post
   # target of the POST request
@@ -491,7 +483,7 @@ After checking for error messages a login test is performed (`test` section). Th
 
 ```yaml
 login:
-  # Using a form based login
+  # Using a form-based login
   method: form
   # Location of the document containing the form
   path: login.php
@@ -590,7 +582,7 @@ login:
 ## Search
 
 The search block contains all the information on how to search and how to extract the necessary information from the various trackers.
-There are two search method available, which are based on the response type from the web site.
+There are three search method available, which are based on the response type from the web site.
 
 - [Search HTML](#search-html) (Default)
 - [Search JSON and XML](#search-json-and-xml)
@@ -598,7 +590,7 @@ There are two search method available, which are based on the response type from
 
 ### Search HTML
 
-It's possible to do some optional pre-processing of the search keywords first using the `keywordsfilters` list (e.g. to remove short search words or replace special characters with wildcards. After that the search URLs will be constructed based on the provided `paths` and `inputs`. All resulting paths will be requested. Each result is checked for error messages based on the `error` selector list. After that the rows are extracted based on the selector, etc. provided in the `rows` block. Finally each row is parsed based on the `fields` list.
+It's possible to do some optional pre-processing of the search keywords first using the `keywordsfilters` list (e.g. to remove short search words or replace special characters with wildcards. After that the search URLs will be constructed based on the provided `paths` and `inputs`. All resulting paths will be requested. Each result is checked for error messages based on the `error` selector list. After that the rows are extracted based on the selector, etc. provided in the `rows` block. Finally, each row is parsed based on the `fields` list.
 
 Example of a complex search block explaining all available options:
 
@@ -606,7 +598,7 @@ Example of a complex search block explaining all available options:
 search:
   # list of paths which should be searched
   # For the most trackers just a single path is needed. But some trackers use
-  # different pages for e.g. porn or scene and non scene releases.
+  # different pages for e.g. porn or scene and non-scene releases.
   paths:
     - path: torrents.php
       # [OPTIONAL] HTTP method (get or post) (default is get)
@@ -644,7 +636,7 @@ search:
     # If an IMDB ID has been specified use it. Otherwise use the search keywords.
     search: "{{ if .Query.IMDBID }}{{ .Query.IMDBID }}{{ else }}{{ .Keywords }}{{ end }}"
     imdb_search: "{{ if .Query.IMDBID }}yes{{ else }}{{ end }}"
-    searching: title
+    searchin: title
     incldead: 1
   # [OPTIONAL] extra headers which should be included in search requests
   headers:
@@ -653,11 +645,7 @@ search:
   # The result is available in the .Keywords variable
   keywordsfilters:
     - name: re_replace # remove words <= 3 characters and surrounding special characters
-      args:
-        [
-          "(?:^|\\s)[_\\+\\/\\.\\-\\(\\)]*[\\S]{0,3}[_\\+\\/\\.\\-\\(\\)]*(?:\\s|$)",
-          " ",
-        ]
+      args: ["(?:^|\\s)[_\\+\\/\\.\\-\\(\\)]*[\\S]{0,3}[_\\+\\/\\.\\-\\(\\)]*(?:\\s|$)", " "]
     - name: re_replace # replace special characters with "*" (wildcard)
       args: ["[^a-zA-Z0-9]+", "*"]
   # [OPTIONAL] list of selectors to check for errors on the search result page
@@ -689,10 +677,10 @@ search:
     # Use this if the torrent result rows don't contain a publish date but a previous row contains the date.
     # The indexer will go back and parse the first sibling element matching the selector as date for that torrent.
     dateheaders:
-      selector: ':has(td.colhead[title]:contains("Torrents from") > b)'
+      selector: ":has(td.colhead[title]:contains(\"Torrents from\") > b)"
       filters:
         - name: dateparse
-          args: "Mon 02 Jan"
+          args: "ddd dd MMM"
     # [OPTIONAL] row merging. Use this if the tracker uses multiple row elements for each torrent
     # (e.g. hidden tooltip or collapsed rows) The specified number of elements from the rows selector result will be
     # merged into the previous element. In this example (1) two rows will be merged together.
@@ -700,9 +688,9 @@ search:
 
   # [REQUIRED] list of attributes which are extracted for each row
   fields:
-    # [OPTIONAL] tracker category id (id field from from caps/categorymappings)
+    # [OPTIONAL] tracker category id (id field from caps/categorymappings)
     # While not required, it is usual to return a category for Torznab apps to use,
-    # so if the site does not provide one in its results then use category Other.
+    # so if the site does not provide one in its results, then use category Other.
     category:
       selector: a[href^="browse.php?cat="]
       attribute: href
@@ -710,7 +698,7 @@ search:
         # extract the "cat" parameter from the query string
         - name: querystring
           args: cat
-    # [ALTERNATIVE] if the site does not provide a category id for results, (Cardigann v4)
+    # [ALTERNATIVE] if the site does not provide a category id for results,
     # but it does provide the category name we use for descriptions, use categorydesc instead of category
     categorydesc:
       selector: div.kat_cat_pic
@@ -726,14 +714,15 @@ search:
     download:
       selector: a[href^="download.php?torrent="]
       attribute: href
-      # [OPTIONAL] magnet link
+    # [OPTIONAL] magnet link
       magnet:
         selector: a[href^="magnet:"]
         attribute: href
-    # [OPTIONAL] auto-generated magnet URI using the infohash
+    # [OPTIONAL] Loads the infohash, and for Pubic or Semi-Private Indexers auto-generates a magnet URI
     # When neither the .torrent link or a magnet URI is available, use the infohash statement to auto-generate a
     # magnet URI from an infohash. The magnet's &dn= will be loaded from the .Result.title, and a set of ten of
     # the currently most useful trackers will be added for the &tr= sequence.
+    # Note that for Private Indexers the auto-generation is disabled.
     infohash:
       selector: a[href^="index.php?page=torrent-details&id="][title]
       attribute: href
@@ -765,12 +754,27 @@ search:
     # [OPTIONAL] id for themoviedb.org if a link is returned then the number is extracted automatically
     # If the selector does not match it is ignored.
     tmdbid:
-      selector: a[href*="themoviedb.org/movie/"]
+      selector: a[href*="themoviedb.org/movie/"], a[href*="themoviedb.org/tv/"]
+      attribute: href
+    # [OPTIONAL] id for tvmaze.com if a link is returned then the number is extracted automatically
+    # If the selector does not match it is ignored.
+    tvmazeid:
+      selector: a[href*="tvmaze.com/shows/"]
       attribute: href
     # [OPTIONAL] id for thetvdb.com if a link is returned then the number is extracted automatically
     # If the selector does not match it is ignored.
     tvdbid:
       selector: a[href*="thetvdb.com/"]
+      attribute: href
+    # [OPTIONAL] id for trakt.tv if a link is returned then the number is extracted automatically
+    # If the selector does not match it is ignored.
+    traktid:
+      selector: a[href*="trakt.tv/movies/"], a[href*="trakt.tv/shows/"]
+      attribute: href
+    # [OPTIONAL] id for movie.douban.com if a link is returned then the number is extracted automatically
+    # If the selector does not match it is ignored.
+    doubanid:
+      selector: a[href*="movie.douban.com/subject/"]
       attribute: href
     # [OPTIONAL] publish date (if the site does not provide a date for all results, then a default of "now" is preferred)
     date:
@@ -780,10 +784,10 @@ search:
         # append the timezone used by the tracker
         - name: append
           args: " +08:00"
-        - name: dateparse
-          args: "2006-01-02 15:04:05 -07:00"
+        - name: dateparse 
+          args: "yyyy-MM-ss HH:mm:ss zzz"
     # [OPTIONAL] size of the torrent (units are handled automatically). if the site does not provide a size for all
-    # results then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
+    # results, then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
     # Side note: For Sites using European numbering schemes (1,024.4MB or 1.024,4MB etc.) there is no need to remove
     # commas or extra dots as these are automatically dealt with.
     size:
@@ -806,9 +810,18 @@ search:
     # then a default of "1" is preferred).
     leechers:
       selector: td:nth-child(10)
+    # [OPTIONAL] genre. A list of one or more genre categories.
+    # You should aim to load genre with a comma delimited list, for example: "Action, Drama, Thriller"
+    # and use filters to massage the list into the requisite layout if required.
+    # If the selector does not match it is ignored.
+    genre:
+      selector: div i
+      filters:
+        - name: regexp
+          args: "\\((.+?)\\)"
     # [OPTIONAL] Factor for the download volume. In most cases it should be set to "1"
     # Set to "0" if a torrent is freeleech, "0.5" if only 50% is counted, "0.75" if only 75% is counted.
-    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted).
+    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted). 
     downloadvolumefactor:
       case:
         img.pro_free: 0
@@ -844,24 +857,71 @@ If the `text` keyword is specified the keys value is used. This can be used for 
 If a fixed text value is not specified then the presence of the selector keyword is checked. If it's found then it's applied to the row. This allows you to extract more specific details such as the title or download link using CSS selectors.
 After that the selector specified in the `remove` keyword is applied. With this, it's possible to remove unwanted elements (See the `description` example above). Any removed elements will be removed for good, they won't be available to following fields. Due to that you should put fields using the remove keyword at the end of the list.
 Now it's possible to set the value based on the existence of elements using the `case` keyword. If the corresponding selector matches the field value is set to the specified case value. Processing ends after the first case selector matches. This is commonly used for `downloadvolumefactor` and `uploadvolumefactor`.
-Finally the resulting value will be processed by the template engine and filter engine (see below).
+Finally, the resulting value will be processed by the template engine and filter engine (see below).
 
 ### Providing the category field with a default value
 
-In the event that you need to provide a default category due to the possibility that a site may not provide one consistently, you can use the `noappend` modifier, as shown in this example:
+In the event that a field might not be reliably present from the site results, you can use the `default` statement, as shown in these examples:
 
 ```yaml
     category:
-      text: "Other"
-    category|noappend:
-      # try category=
+      selector: a[href^="browse.php?cat="]
+      attribute: href
       optional: true
-      selector: a.label[href*="category="]
-    category|noappend:
-      # try type=
+      default: 38
+      filters:
+        - name: querystring
+          args: cat
+    title_default:
+      # this title may be abbreviated
+      selector: a[href^="details.php?id="]
+    title:
+      # this title if present is full length
+      selector: a[title][href^="details.php?id="]
+      attribute: title
       optional: true
-      selector: a.label[href*="type="]
+      default: "{{ .Result.title_default }}"
+    seeders:
+      # seeders may be missing
+      selector: a[href$="toseeders=1"]
+      optional: true
+      default: 0
 ```
+Note that the use of the `noappend` modifier is deprecated for the category field. 
+So if you have an old category block like 
+```yaml
+    category:
+      selector: td:nth-child(1)
+      optional: true
+      filters:
+        - name: replace
+          args: ["---", 4]
+    category|noappend:
+      selector: a[href^="browse.php?cat="]
+      attribute: href
+      optional: true
+      filters:
+        - name: querystring
+          args: cat
+```
+then you will see warnings on your log, and you should covert to 
+```yaml
+    category_default:
+      selector: td:nth-child(1)
+      optional: true
+      filters:
+        - name: replace
+          args: ["---", 4]
+    category:
+      selector: a[href^="browse.php?cat="]
+      attribute: href
+      optional: true
+      default: "{{ .Result.category_default }}"
+      filters:
+        - name: querystring
+          args: cat
+```
+as at some point support for the category:noappend will be removed.
 
 ### Search JSON and XML
 
@@ -874,7 +934,7 @@ search:
     x-milkie-auth: ["{{ .Config.apikey }}"]
 
   paths:
-    # [REQUIRED] If the API has different paths for some queries you can use conditionals to define them
+    # [REQUIRED] If the API has different paths for some queries, you can use conditionals to define them
     - path: "{{ if .Keywords }}api/v2/torrent/search{{ else }}api/torrent/latest{{ end }}"
       # [OPTIONAL] The default is to send the query as a http get, the other choice is http post
       #            You can use conditionals to select the method for different path requirements 
@@ -883,10 +943,11 @@ search:
       response:
         # [REQUIRED] "json" indicates that a JSON response is expected and "xml" indicates an XML response is expected.
         type: json
-        # [OPTIONAL] In the event that a server responds to a query-not-found with a message instead of
-        # the more common empty json object or a Count set to 0, you can code the message here and prevent
-        # the "Exception (indexer): Object reference not set to an instance of an object." error and have 
-        # the more traditional "Found 0 releases" state instead.
+        # [OPTIONAL] In the event that a server does not return an empty JSON object or a Count set to 0
+        # in response to a query-no-found state, you can code the exception here.
+        # If the string you provide is contained in the response, or the server returns an empty response
+        # and you coded an empty string here, then this will return the traditional "Found 0 releases" instead
+        # of the default "Exception (indexer): Object reference not set to an instance of an object." error.
         noResultsMessage: "nothing found message from server"
 
   inputs:
@@ -899,6 +960,12 @@ search:
     # [REQUIRED] This is the where you define how to find the row sets that contain the torrent fields
     # You can use the $ symbol to refer to the root object.
     selector: data.movies
+    # [OPTIONAL] If the torrents are in separate subset
+    attribute: torrents
+    # [OPTIONAL] When the attribute is missing, this option allows you to suppress the error and return a no-results-found
+    missingAttributeEqualsNoResults: true
+    # [OPTIONAL] If there are multiple torrents per title
+    multiple: true
     # [OPTIONAL] If the response contains a field that indicates the number of hits returned,
     # then you define that field in the count block selector, so that if the response had a
     # count of 0 if would indicate a results not found condition.
@@ -907,10 +974,7 @@ search:
       # [REQUIRED] IF you have defined the Count block then you need to provide the field that has the count.
       # You can use the $ symbol to refer to a root object field, for example: $[0].id
       selector: data.movie_count
-      # [OPTIONAL] If the torrents are in separate subset
-      attribute: torrents
-      # [OPTIONAL] If there are multiple torrents per title
-      multiple: true
+
   # [REQUIRED] list of attributes which are extracted for each row
   fields:
     # All the regular filters are available as described elsewhere in the Wiki. I've included some examples.
@@ -925,9 +989,9 @@ search:
     # You give them a name and use them to extract additional data from the row sets, which you can use in
     # conditionals for setting strings for other fields, or as direct values for concatenating into strings. 
     #
-    # [OPTIONAL] tracker category id (id field from from caps/categorymappings)
+    # [OPTIONAL] tracker category id (id field from caps/categorymappings)
     # While not required, it is usual to return a category for Torznab apps to use,
-    # so if the site does not provide one in its results then use category Other.    
+    # so if the site does not provide one in its results, then use category Other.     
     category:
       selector: category
     # [ALTERNATIVE] if the site does not provide a category id for results,
@@ -936,9 +1000,9 @@ search:
       selector: category
     year:
       selector: ..year
-    quality:
+    _quality:
       selector: quality
-    type:
+    _type:
       selector: type
     # [REQUIRED] the title of the torrent
     title:
@@ -950,13 +1014,13 @@ search:
         - name: replace
           args: [" ", "."]
         - name: append
-          args: ".{{ .Result.year }}.{{ .Result.quality }}.{{ if eq .Result.type \"web\" }}WEBRip{{ else }}BRRip{{ end }}-YTS"
-    id:
+          args: ".{{ .Result.year }}.{{ .Result._quality }}.{{ if eq .Result._type \"web\" }}WEBRip{{ else }}BRRip{{ end }}-YTS"
+    _id:
       selector: id
     # [REQUIRED] link to the site's details page for the torrent
     # If not available from the response then its usual to use the .Config.sitelink as a default.
     details:
-      text: "{{ .Config.sitelink }}browse/{{ .Result.id }}"
+      text: "{{ .Config.sitelink }}browse/{{ .Result._id }}"
     apikey:
       text: "{{ .Config.apikey }}"
       filters:
@@ -964,14 +1028,15 @@ search:
     # [OPTIONAL] download link for the torrent file.
     # if a download link is not available you should provide a magnet URI, or if neither is available an infohash.
     download:
-      text: "{{ .Config.sitelink }}api/v1/torrents/{{ .Result.id }}/torrent?key={{ .Result.apikey }}"
+      text: "{{ .Config.sitelink }}api/v1/torrents/{{ .Result._id }}/torrent?key={{ .Result.apikey }}"
     # [OPTIONAL] magnet link
     magnet:
       selector: magnet_uri
-    # [OPTIONAL] auto-generated magnet URI using the infohash
+    # [OPTIONAL] Loads the infohash, and for Public and Semi-Private Indexers auto-generates a magnet URI
     # When neither the .torrent link or a magnet URI is available, use the infohash statement to auto-generate a
     # magnet URI from an infohash. The magnet's &dn= will be loaded from the .Result.title, and a set of ten
     # currently most useful trackers will be added for the &tr= sequence.
+    # Note that the auto-generation is disabled for Private Indexers.
     infohash:
       selector: hash
     # [OPTIONAL] link to a poster image (cover, banner, etc.)
@@ -981,12 +1046,16 @@ search:
     # [OPTIONAL] description (any other available/relevant information)
     # If the selector does not match it is ignored.
     description:
-      text: "{{ .Result.year }} - {{ .Result.quality }} - {{ .Result.type }}"
+      text: "{{ .Result.year }} - {{ .Result._quality }} - {{ .Result._type }}"
     # [OPTIONAL] id for imdb.com if e.g. a link is returned then the number is extracted automatically
     # An alias named imdb is also valid here.
     # If the selector does not match it is ignored.
     imdbid:
       selector: ..imdb_id
+    # [OPTIONAL] id for tvrage.com if a link is returned then the number is extracted automatically
+    # If the selector does not match it is ignored.
+    rageid:
+      selector: ..rage_id
     # [OPTIONAL] id for themoviedb.org if a link is returned then the number is extracted automatically
     # If the selector does not match it is ignored.
     tmdbid:
@@ -995,15 +1064,23 @@ search:
     # If the selector does not match it is ignored.
     tvdbid:
       selector: ..tvdb_id
-    # [OPTIONAL] id for tvrage.com if a link is returned then the number is extracted automatically
+    # [OPTIONAL] id for tvmaze.com if a link is returned then the number is extracted automatically
     # If the selector does not match it is ignored.
-    rageid:
-      selector: ..rage_id
-    # [OPTIONAL] publish date (if the site does not provide a date for all results then "now" is preferred)
+    tvmazeid:
+      selector: ..tvmaze_id
+    # [OPTIONAL] id for trakt.tv if a link is returned then the number is extracted automatically
+    # If the selector does not match it is ignored.
+    traktid:
+      selector: ..trakt_id
+    # [OPTIONAL] id for movie.douban.com if a link is returned then the number is extracted automatically
+    # If the selector does not match it is ignored.
+    doubanid:
+      selector: ..douban_id
+    # [OPTIONAL] publish date (if the site does not provide a date for all results, then "now" is preferred)
     date:
       selector: ..date_uploaded_unix
     # [OPTIONAL] size of the torrent (units are handled automatically). if the site does not provide a size for all
-    # results then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
+    # results, then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
     # Side note: For Sites using European numbering schemes (1,024.4MB or 1.024,4MB etc.) there is no need to remove
     # commas or extra dots as these are automatically dealt with.
     size:
@@ -1022,6 +1099,12 @@ search:
     # then a default of "1" is preferred).
     leechers:
       selector: peers
+    # [OPTIONAL] genre. A list of one or more genre categories.
+    # You should aim to load genre with a comma delimited list, for example: "Action, Drama, Thriller"
+    # and use filters to massage the list into the requisite layout if required.
+    # If the selector does not match it is ignored.
+    genre:
+      selector: genres
     # [OPTIONAL] Factor for the download volume. In most cases it should be set to "1"
     # Set to "0" if a torrent is freeleech, "0.5" if only 50% is counted, "0.75" if only 75% is counted.
     # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted). 
@@ -1044,7 +1127,7 @@ search:
     # [OPTIONAL] minimum ratio the torrent client must seed to avoid Hit & Run penalties
     minimumratio:
       text: 0.4
-    # [OPTIONAL] minimum number of seconds the client must seed to release  the MR requirement
+    # [OPTIONAL] minimum number of seconds the client must seed to release the MR requirement
     minimumseedtime:
       # 7 day (as seconds = 7 x 24 x 60 x 60)
       text: 604800
@@ -1073,6 +1156,14 @@ The use of `:has()`, `:not()` and `:contains()` are supported by the rows select
         - name: re_replace
           args: ["\\[", " "]
 ```
+### Search XML
+
+This is similar to the JSON method except you code type xml:
+```
+      response:
+        # [REQUIRED] indicates that an XML response is expected
+        type: xml
+```
 
 ## Download
 
@@ -1082,7 +1173,7 @@ The download block is needed in the following cases:
 - The download request must be done via HTTP POST instead of GET
 - You've to access another page first before downloading the file (e.g. you've to click on the "Thank you" button first).
 
-Note: Some trackers just omit the download link from the search results but it still can be easily generated from the available information (e.g. use the details link and replace "details.php" with "download.php"). In this case the download block isn't needed.
+Note: Some trackers just omit the download link from the search results, but it still can be easily generated from the available information (e.g. use the details link and replace "details.php" with "download.php"). In this case the download block isn't needed.
 
 Example of the download block explaining all options:
 
@@ -1090,9 +1181,6 @@ Example of the download block explaining all options:
 download:
   # [OPTIONAL] use HTTP POST instead of GET to download the torrent file (default is get)
   method: post
-  # [OPTIONAL] error message handling
-  error:
-    - selector: #errormessage > span.warning
   # [OPTIONAL] HTTP request which needs to be done before downloading the file
   before:
     # request target
@@ -1139,6 +1227,9 @@ download:
       action: 2
       id: "{{ .DownloadUri.Query.id }}"
   # [OPTIONAL] If you only have a magnet hash then this method will allow you to automatically generate a magnet URI
+  # For use with Public or Semi-Private Indexers.
+  # Note that this option is not suitable for Private sites which may require ONLY the use of their own tracker and 
+  # have DHT DISABLED and no other PUBLIC trackers on the magnet.
   infohash:
     # [OPTIONAL] Can be true or false (default is false)
     # Set to true if you want the infohash and title to come from the page generated by the previous BEFORE block.
@@ -1198,7 +1289,7 @@ Example:
 
 ## if ... else ... end
 
-A basic if/else condition. Only boolean true (non empty)/false (empty) operations on variables are supported.
+A basic if/else condition. Only boolean true (non-empty)/false (empty) operations on variables are supported.
 
 Syntax: `{{ if .Variable }}on true result{{ else }}on false result{{ end }}`
 
@@ -1256,10 +1347,10 @@ Example of: if eq ... else ... end
 
 ```yaml
     size:
-      # when the variable .Result.cat contains the string "series"
+      # when the variable .Result._cat contains the string "series"
       # then the text string will be set to "512 MB"
       # otherwise it will be set to "2 GB"
-      text: "{{ if eq .Result.cat \"series\" }}512 MB{{ else }}2 GB{{ end }}"
+      text: "{{ if eq .Result._cat \"series\" }}512 MB{{ else }}2 GB{{ end }}"
 ```
 
 Nesting is supported.
@@ -1280,14 +1371,14 @@ Special variables .True and .False are available
 
 A simple loop over a list variable building a concatenated string with items joined by a delimiter.
 
-Syntax: `{{ join .Variable "<delimiter>"}}{{end}}`
+Syntax: `{{ join .Variable "<delimiter>"}}`
 
 Example:
 
 ```yaml
 # build a query string by concatenating all the categories with a comma
 # input: [101,201,301]
-"{{join .Categories \",\"}}{{end}}"
+"{{join .Categories \",\"}}"
 # output: "101,201,301"
 ```
 
@@ -1302,11 +1393,26 @@ Example:
 ```yaml
 # build a query string argument list for the selected categories
 # input: [101,201,301]
-"{{range .Categories}}&cat{{.}}=1{{end}}"
+"{{ range .Categories }}&cat{{.}}=1{{end}}"
 # output: "&cat101=1&cat201=1&cat301=1"
 ```
 
-# Variable Substitution
+## range (with indexing)
+
+If a parameter requires indexing then use the following to generate an incremental index starting with zero.  
+
+Syntax: `{{ range $i, $e := .Variable }}<prefix[{{$i}}]>{{.}}<suffix>{{end}}`
+
+Example:
+
+```none
+# build a query string argument list for the selected categories with indexing
+# input: [101,201,301]
+"{{ range $i, $e := .Categories }}&categories[{{$i}}]={{.}}{{end}}"
+# output: "&categories[0]=101&categories[1]=201&categories[2]=301"
+```
+
+## Variable substitution
 
 The basic variable substitution operation.
 
@@ -1318,6 +1424,7 @@ TODO: more explanation
 
 ## Config Variables
 
+Note that these are always available.
 Generated based on the settings section
 
 ```yaml
@@ -1326,42 +1433,45 @@ Generated based on the settings section
 
 ## Special Variables
 
+Note that these are always available.
+
 ```yaml
 .True contains "True" (which represents a non-empty variable)
 .False contains null (which represents an empty variable)
-.Today.Year contains "2020" (or whatever the current year is)
+.Today.Year contains "2022" (or whatever the current year is)
 ```
 
 ## Search Query Variables
 
+Note that these are only available during search queries.
 ```yaml
 .Query.Type
 .Query.Q
+.Query.Series      # not supported (Cardigann compatibility)
+.Query.Ep
+.Query.Season
+.Query.Movie       # not supported (Cardigann compatibility)
+.Query.Year
 .Query.Limit
 .Query.Offset
 .Query.Extended
 .Query.Categories
 .Query.APIKey
-.Query.Movie       # not supported (Cardigann compatibility)
-.Query.Year
+.Query.TVDBID
+.Query.TVRageID
 .Query.IMDBID      # e.g. tt12345678
 .Query.IMDBIDShort # e.g. 12345678
 .Query.TMDBID
-.Query.Series      # not supported (Cardigann compatibility)
-.Query.Ep
-.Query.Season
-.Query.TVMazeID    # Cardigann v4
-.Query.TraktID     # Cardigann v4
-.Query.TVDBID
-.Query.TVRageID
-.Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd
+.Query.TVMazeID
+.Query.TraktID
+.Query.DoubanID
 .Query.Album 
 .Query.Artist
 .Query.Label
 .Query.Track
+.Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd
 .Query.Author
-.Query.BookTitle
-.Query.Genre       # Cardigann v4
+.Query.Title
 .Categories        # MappedCategories
 .Query.Keywords    # original keywords
 .Keywords          # keywords after applying the keywordsfilters
@@ -1376,28 +1486,29 @@ For example:
   fields:
     title:
       selector: h3 a
-    subcat:
+    _subcat:
       selector: div.box ul li:first-child
     year:
       selector: div.box ul li:contains("Year:")
-    quality:
+    _quality:
       selector: div.box ul li:contains("Quality:")
     description:
-      text: "{{ .Result.subcat }} {{ .Result.year }} {{ .Result.quality }}"
+      text: "{{ .Result._subcat }} {{ .Result.year }} {{ .Result._quality }}"
 ```
+Temporary variables used to help build release results should contain an underscore in their variable names, such as `title_phase1` or `_quality`.
 
 ## Download Variables
 
 Based on the download search field result the following variables are available:
 
 ```yaml
-.DownloadUri.AbsoluteUri
-.DownloadUri.AbsolutePath
-.DownloadUri.Scheme
-.DownloadUri.Host
-.DownloadUri.Port
-.DownloadUri.PathAndQuery
-.DownloadUri.Query
+.DownloadUri.AbsoluteUri        example: https://domain.to/torrent/1234567/A-Torrent-Name-1080p/
+.DownloadUri.AbsolutePath       example: /torrent/1234567/A-Torrent-Name-1080p/
+.DownloadUri.Scheme             example: https
+.DownloadUri.Host               example: domain.to
+.DownloadUri.Port               example: 443
+.DownloadUri.PathAndQuery       example: /torrent/1234567/A-Torrent-Name-1080p/
+.DownloadUri.Query              example: 
 ```
 
 For each query string argument of the URI a corresponding `.DownloadUri.Query.$Key` variable is generated.
@@ -1532,7 +1643,7 @@ filters:
 
 Removes all leading and trailing occurrences of a set of specified *characters*.
 Used without an argument removes all leading and trailing *white-space characters*.
-If a set of *characters* are supplied in an argument then those will be removed from all leading and trailing occurrences.
+If a set of *characters* are supplied in an argument, then those will be removed from all leading and trailing occurrences.
 
 Example:
 
@@ -1559,7 +1670,7 @@ filters:
 
 ## regexp
 
-Perform pattern-matching and "search-and-replace" functions on a *string* using a[Regular Expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
+Perform pattern-matching and "search-and-replace" functions on a *string* using a [Regular Expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 Example:
 
@@ -1590,58 +1701,62 @@ filters:
   # result: S12E45
 ```
 
-## dateparse
+## validate
 
-Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z") using a GoLang layout.
-Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *layout* to use for the conversion.
-The GoLang layout converts as follows:
+Given a list of words, delimited by any one of `, /.)(;[]"|:` this filter will return a comma delimited list of only the words that 
+are in the args. Useful for removing non-genre types from an open tag list.
+
+Note: to preserve a double word (for example `Science Fiction` or `Sci-Fi & Fantasy`) replace the spaces with underscores. These will be auto-restored in results.
+
+Example:
 
 ```yaml
-// year
-Replace("2006", "yyyy")
-Replace("06", "yy")
-
-// month
-Replace("January", "MMMM")
-Replace("Jan", "MMM")
-Replace("01", "MM")
-Replace("1", "M")
-
-// day
-Replace("Monday", "dddd")
-Replace("Mon", "ddd")
-Replace("02", "dd")
-Replace("2", "d")
-
-// hours/minutes/seconds
-Replace("15", "HH")
-Replace("03", "hh")
-Replace("3", "h")
-Replace("04", "mm")
-Replace("4", "m")
-Replace("05", "ss")
-Replace("5", "s")
-
-// fractional seconds
-Replace(".0000", "ffff")
-Replace(".000", "fff")
-Replace(".00", "ff")
-Replace(".0", "f")
-Replace(".9999", "FFFF")
-Replace(".999", "FFF")
-Replace(".99", "FF")
-Replace(".9", "F")
-
-// AM/PM
-Replace("PM", "tt")
-Replace("pm", "tt") 
-
-// timezones
-Replace("Z07:00", "'Z'zzz")
-Replace("Z07", "'Z'zz")
-Replace("-07:00", "zzz")
-Replace("-07", "zz")
+# remove any tags that are not standard genre types
+selector: div.tags
+filters:
+  - name: re_replace
+    args: ["(?i)(Science Fiction)", "Science_Fiction"]
+  # input: crime, x264, 1080p, (music), pack, comedy, Science_Fiction, dd5.1, Hip/Hop
+  - name: validate
+    args: "Action, Adventure, Crime, Comedy, Science_Fiction, War"
+  # result: crime, comedy, scence fiction
 ```
+
+## dateparse
+
+Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
+Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *format* to use for the conversion.
+For a full breakdown of the format specifiers see https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+
+Here are the more common format specifiers used by Jackett
+
+format specifier|description|example
+---|---|---
+yyyy|The year as a four-digit number.|2009-06-15T13:45:30.6175 -> 2009
+yy|The year, from 00 to 99.|2009-06-15T13:45:30.6175 -> 09
+MMMM|The full name of the month.|2009-06-15T13:45:30.6175 -> June
+MMM|The abbreviated name of the month.|2009-06-15T13:45:30.6175 -> Jun
+MM|The month, from 01 through 12.|2009-06-15T13:45:30.6175 -> 06
+M|The month, from 1 through 12.|2009-06-15T13:45:30.6175 -> 6
+dddd|The full name of the day of the week.|2009-06-15T13:45:30.6175 -> Monday
+ddd|The abbreviated name of the day of the week.|2009-06-15T13:45:30.6175 -> Mon
+dd|The day of the month, from 01 through 31.|2009-06-15T13:45:30.6175 -> 15
+d|The day of the month, from 1 through 31.|2009-06-15T13:45:30.6175 -> 15
+HH|The hour, using a 24-hour clock from 00 to 23.|2009-06-15T13:45:30.6175 -> 13
+H|The hour, using a 24-hour clock from 0 to 23.|2009-06-15T13:45:30.6175 -> 13
+hh|The hour, using a 12-hour clock from 01 to 12.|2009-06-15T13:45:30.6175 -> 01
+h|The hour, using a 12-hour clock from 1 to 12.|2009-06-15T13:45:30.6175 -> 1
+mm|The minute, from 00 through 59.|2009-06-15T13:45:30.6175 -> 45
+m|The minute, from 0 through 59.|2009-06-15T13:45:30.6175 -> 45
+ss|The second, from 00 through 59.|2009-06-15T13:45:30.6175 -> 30
+s|The second, from 0 through 59.|2009-06-15T13:45:30.6175 -> 30
+ffff|The ten thousandths of a second in a date and time value.|2009-06-15T13:45:30.6175 -> 6175
+fff|The milliseconds in a date and time value.|2009-06-15T13:45:30.6175 -> 617
+ff|The hundredths of a second in a date and time value.|2009-06-15T13:45:30.6175 -> 61
+f|The tenths of a second in a date and time value.|2009-06-15T13:45:30.6175 -> 6
+tt|The AM/PM designator.|2009-06-15T13:45:30.6175 -> PM
+zzz|Hours and minutes offset from UTC.|2009-06-15T13:45:30-07:00 -> -07:00
+zz|Hours offset from UTC, with a leading zero for a single-digit value.|2009-06-15T13:45:30-07:00 -> -07
 
 Example:
 
@@ -1649,9 +1764,9 @@ Example:
 # get the DateTime
 selector: td.torrent_table_dateAdded
 filters:
-  # input: 2017-09-18 19:17:24 UTC
+  # input: 2017-09-18 19:17:24 +00:00
   - name: dateparse
-    args: "2006-01-02 15:04:05 -07:00"
+    args: "yyyy-MMM-dd HH:mm:ss zzz"
   # result: Mon, 18 Sep 2017 19:17:24 GMT
 ```
 
@@ -1717,6 +1832,24 @@ filters:
   # input: Yesterday
   - name: fuzzytime
   # result: Sun, 17 Sep 2017 19:17:24 GMT
+```
+
+## htmldecode
+
+Converts a *string* that has been HTML-encoded for HTTP transmission into a decoded *string*.
+
+Example:
+
+```yaml
+# decode the HTML
+selector: td:nth-child(2) a
+attribute: href
+filters:
+  - name: querystring
+    args: f
+  # input: Anne+Rice%26%23039%3Bs+Mayfair+Witches+S01E01+1080p+WEB-DL+DD%2B+5.1+H.264-GGEZ
+  - name: htmldecode
+  # result: Anne Rice's Mayfair Witches S01E01 1080p WEB-DL DD+ 5.1 H.264-GGEZ
 ```
 
 ## urldecode
@@ -1809,7 +1942,7 @@ selector: div[class="resultdivbotton"] div[class="resulttime"] div[class="result
 filters:
   # input: Tue, 19 Sep 2017 21:21:52 +12
   - name: hexdump
-  # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: T(54)u(75)e(65),(2C) (20)1(31)9(39) (20)S(53)e(65)p(70) (20)2(32)0(30)1(31)7(37) (20)2(32)1(31):(3A)2(32)1(31):(3A)5(35)2(32) (20)+(2B)1(31)2(32) 
+  # result in the log: MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: T(54)u(75)e(65),(2C) (20)1(31)9(39) (20)S(53)e(65)p(70) (20)2(32)0(30)1(31)7(37) (20)2(32)1(31):(3A)2(32)1(31):(3A)5(35)2(32) (20)+(2B)1(31)2(32) 
 ```
 
 ## strdump
@@ -1825,7 +1958,7 @@ selector: div[class="resultdivbotton"] div[id^="hideinfohash"]
 filters:
   # input: dbbde2fc0c299c1d1aa43280b57dafc3fbf0bd39
   - name: strdump
-  # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: dbbde2fc0c299c1d1aa43280b57dafc3fbf0bd39
+  # result in the log: MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: dbbde2fc0c299c1d1aa43280b57dafc3fbf0bd39
 ```
 
 ```yaml
@@ -1836,7 +1969,7 @@ fields:
       # input: Star Trek 1080p
       - name: strdump
         args: title 
-      # result in the log: # mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(title): Star Trek 1080p
+      # result in the log: # MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(title): Star Trek 1080p
   download:
     selector: a[href^="details.php/?id="]
     attribute: href
@@ -1844,14 +1977,19 @@ fields:
       # input: http://tracker.btnext.com/details.php/?id=123456
       - name: strdump
         args: dl_href_in
-      # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(dl_href_in): http://tracker.btnext.com/details.php/?id=123456
+      # result in the log: MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(dl_href_in): http://tracker.btnext.com/details.php/?id=123456
       - name: replace
         args: ["/details.php/", "/download.php/"]
       - name: strdump
         args: dl_href_out
-      # result in the log: mm-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(dl_href_out): http://tracker.btnext.com/download.php/?id=123456
+      # result in the log: MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(dl_href_out): http://tracker.btnext.com/download.php/?id=123456
 ```
 
-# Credit
+## Proposed changes
 
-- This page is based on [Jackett's wiki entry](https://github.com/Jackett/Jackett/wiki/Definition-format) by [garfield69](https://github.com/garfield69) and others.
+- Add support for a more powerful and cross platform template engine (JavaScript?)
+- Add support for multi row parsing as described in <https://github.com/cardigann/cardigann/pull/336#issuecomment-277645749>
+
+## Credit
+- [Jackett Wiki Contributors](https://github.com/Jackett/Jackett/wiki/Definition-format)
+- [Prowlarr Wiki Contributors](https://wiki.servarr.com/prowlarr/cardigann-yml-definition)
