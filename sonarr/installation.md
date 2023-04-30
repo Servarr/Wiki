@@ -23,9 +23,11 @@ dateCreated: 2021-07-10T16:07:37.425Z
   - [Configuring Sonarr](#configuring-sonarr)
     - [Service Setup](#service-setup)
   - [Troubleshooting](#troubleshooting)
-    -[BSD Mono SSL Issues](#bsd-mono-ssl-issues)
+    - [BSD Mono SSL Issues](#bsd-mono-ssl-issues)
 - [Synology](#synology)
   - [Synology Mono SSL Errors](#synology-mono-ssl-errors)
+    - [Synology DSM6 Mono Fix Command](#synology-dsm6-mono-fix-command)
+    - [Synology DSM7 Mono Fix Command](#synology-dsm7-mono-fix-command)
 - [Docker](#docker)
   - [Avoid Common Pitfalls](#avoid-common-pitfalls)
     - [Volumes and Paths](#volumes-and-paths)
@@ -169,8 +171,8 @@ iocage start <jailname>
 
 ## Jail Setup Using CLI
 
-Assumes iocage is installed and configured (https://iocage.readthedocs.io/en/latest/install.html)
-Assumes iocage network bridge (vnet) is configured (https://iocage.readthedocs.io/en/latest/networking.html)
+Assumes iocage is installed and configured (<https://iocage.readthedocs.io/en/latest/install.html>)
+Assumes iocage network bridge (vnet) is configured (<https://iocage.readthedocs.io/en/latest/networking.html>)
 
 Replace "10.0.0.100" with an open IPV4 address on your network
 Replace "13.1-RELEASE" with preferred FreeBSD version
@@ -222,7 +224,7 @@ Create Sonarr User and Group (If you do not want to use user/group 'sonarr' it c
 pw user add sonarr -c sonarr -u 351 -d /nonexistent -s /usr/bin/nologin
 ```
 
-Download the latest version from https://services.sonarr.tv/v1/download/develop/latest?version=4&os=freebsd&arch=x64 and set its permissions
+Download the latest version from <https://services.sonarr.tv/v1/download/develop/latest?version=4&os=freebsd&arch=x64> and set its permissions
 
 ```shell
 curl -J -L "https://services.sonarr.tv/v1/download/develop/latest?version=4&os=freebsd&arch=x64" -o Sonarr.develop.freebsd-x64.tar.gz
@@ -231,6 +233,7 @@ chown -R sonarr:sonarr /usr/local/share/Sonarr
 ```
 
 Create a rc.subr script to run Sonarr as a daemon in an editor of your choice (you may be able to skip line 1 if the folder already exists) and use the contents of sonarr rc.subr below
+
 ```shell
 mkdir -p /usr/local/etc/rc.d
 vi /usr/local/etc/rc.d/sonarr
@@ -283,16 +286,16 @@ command_args="-r -f -P ${pidfile} /usr/local/share/Sonarr/Sonarr --debug --data=
 start_precmd=sonarr_start_precmd
 sonarr_start_precmd()
 {
-	[ -d ${sonarr_pid_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_pid_dir}
-	[ -d ${sonarr_data_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_data_dir}
+ [ -d ${sonarr_pid_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_pid_dir}
+ [ -d ${sonarr_data_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_data_dir}
 
-	# .NET 6+ uses dual mode sockets to avoid the separate AF handling.
-	# disable .NET use of V6 if no ipv6 is configured.
-	# See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259194#c17
-	ifconfig | grep -q inet6
-	if [ $? == 1 ]; then
-		export DOTNET_SYSTEM_NET_DISABLEIPV6=1
-	fi
+ # .NET 6+ uses dual mode sockets to avoid the separate AF handling.
+ # disable .NET use of V6 if no ipv6 is configured.
+ # See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259194#c17
+ ifconfig | grep -q inet6
+ if [ $? == 1 ]; then
+  export DOTNET_SYSTEM_NET_DISABLEIPV6=1
+ fi
 }
 
 run_rc_command "$1"

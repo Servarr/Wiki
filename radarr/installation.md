@@ -536,7 +536,6 @@ This guide will show you how to run multiple instances of Radarr on Windows usin
 
 > Note: You should run Radarr as **either** [a service](#service-windows) or as a [tray app](#tray-app-windows). Running both an app and a service is unnecessary and likely to cause issues.
 
-
 ### Service (Windows)
 
 #### Prerequisites (Service)
@@ -596,7 +595,7 @@ separate locations. {.is-warning}
 
 #### Creating Radarr-4K Tray App
 
-- Create a new folder for Radarr-4K's configuration files. Most use a similar place such as 
+- Create a new folder for Radarr-4K's configuration files. Most use a similar place such as
     `C:\ProgramData\Radarr-4K`
 - Right click and Create New Shortcut
 - Path: `C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K`
