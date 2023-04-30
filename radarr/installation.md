@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2022-12-03T01:24:12.182Z
+date: 2023-04-30T22:35:30.871Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -115,7 +115,7 @@ You'll need to install the binaries using the below commands.
 > The steps below will download Radarr and install it into `/opt`
 > Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
 > Radarr's configuration files will be stored in `/var/lib/radarr`
-{.is-warning}
+{.is-success}
 
 - Ensure you have the required prerequisite packages:
 
@@ -134,7 +134,7 @@ sudo apt install curl sqlite3
 > \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
 {.is-danger}
 
-> By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
+> By continuing below, you acknowledge that you have read and met the above requirements. {.is-success}
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
