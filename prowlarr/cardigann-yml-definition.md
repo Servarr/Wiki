@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2023-04-30T22:57:34.064Z
+date: 2023-04-30T23:03:37.294Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -108,7 +108,9 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
 {.is-info}
 
 - Prowlarr Cardigann v9 includes several changes such as
-  - TBD
+  - AllowEmptyInputs
+  - default values
+  - MissingAttributeEqualsNoResults
 
 ### [V8 Indexers](https://github.com/Prowlarr/Prowlarr/commit/1529527af9d2bf09dcd1b540b4c6f95a7dd00bd1)
 
