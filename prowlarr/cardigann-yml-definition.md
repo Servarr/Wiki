@@ -2,18 +2,18 @@
 title: Prowlarr Cardigann YML Definition
 description: 
 published: true
-date: 2023-04-30T22:55:46.260Z
+date: 2023-04-30T22:57:15.280Z
 tags: prowlarr, needs-love, development
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
 ---
-
 
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Cardigann Versions](#cardigann-versions)
   - [Supported Versions](#supported-versions)
+    - [V9[(#v9-indexers)
     - [V8](#v8-indexers)
     - [V7](#v7-indexers)
   - [Depreciated Versions](#depreciated-versions)
@@ -101,6 +101,14 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
  ```
 
 ## Active Versions
+
+### [V9 Indexers](https://github.com/Prowlarr/Prowlarr/commit/bceebc34c134db8140a307e25312cb15e0ff5d63)
+
+> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v9/schema.json)
+{.is-info}
+
+- Prowlarr Cardigann v9 includes several changes such as
+  - TBD
 
 ### [V8 Indexers](https://github.com/Prowlarr/Prowlarr/commit/1529527af9d2bf09dcd1b540b4c6f95a7dd00bd1)
 
