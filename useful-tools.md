@@ -1,8 +1,8 @@
 ---
 title: Useful Tools
-description:
+description: 
 published: true
-date: 2022-10-20T12:50:00.097Z
+date: 2023-05-04T03:40:48.958Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -271,6 +271,10 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 ## Cross-Seed
 
 [Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
+
+## Toolbarr
+
+[Toolbarr](https://github.com/Notifiarr/toolbarr) provides a suite of utilities to fix problems with Starr applications. Toolbarr allows you to perform various actions against your Starr apps and their SQLite3 databases.
 
 ## Unpackerr
 
