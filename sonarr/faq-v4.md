@@ -19,6 +19,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
   - Forced Authentication
   - Mono => Dotnet (more speed; no more mono)
     - Reverse Proxy [conf updates](#my-nginx-doesnt-work-anymore) are likely required
+    - Reverse Proxy [conf updates](#my-apache-doesnt-work-anymore) are likely required
   - Preferred Words are gone and replaced with Custom Formats (see details below)
   - Language Profiles are gone and replaced with Custom Formats (dee details below)
   - Dark/Light Theme
@@ -114,6 +115,12 @@ dateCreated: 2022-11-25T14:02:10.493Z
   ```nginx
     proxy_set_header   Host $host;
   ```
+  
+  ## My Apache doesn't work anymore?
+  - Due to changes in the backend of Sonarr (migration from mono to donnet) your apache virtualhost conf file will need changing. Add this line:
+   ```apache2
+      ProxyPreserveHost On
+    ``` 
 
 ## What is this new "*Override and add to download queue*" button?
 
