@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-05-08T18:18:25.408Z
+date: 2023-05-08T18:22:17.443Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -17,15 +17,15 @@ dateCreated: 2022-11-25T14:02:10.493Z
 Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
 
 Below are some of the highlights and more prominent changes: 
-- [Forced Authentication](#Forced-Authenication)
+- [Forced Authentication](#Forced-Authentication)
 - Mono => Dotnet (more speed; no more mono). Due to this change Reverse Proxy conf updates are likely required:
-    - [Nginx](#my-nginx-doesnt-work-anymore)
-    - [Apache](#my-apache-doesnt-work-anymore)
+    - [Nginx](#nginx)
+    - [Apache](#apache)
 - [Preferred Words are gone](#preferred-words-to-custom-formats-migration) and replaced with Custom Formats
-- [Language Profiles are gone](#where-have-language-profiles-gone?) and replaced with Custom Formats
+- [Language Profiles are gone](#where-have-language-profiles-gone) and replaced with Custom Formats
 - Dark/Light Theme
 - SysLog and Instance Name Support
-- Merger of Mass Editor into [Series Overview](#where-has-the-mass-editor-gone?)
+- Merger of Mass Editor into [Series Overview](#where-has-the-mass-editor-gone)
 - Much much more
 
 ## Forced Authentication
