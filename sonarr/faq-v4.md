@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-05-08T16:48:34.305Z
+date: 2023-05-08T18:18:25.408Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -14,42 +14,51 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 ## What Changed?
 
-- See some of the entries below for common upgrade questions and notes.
-- Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
-  - Forced Authentication
-  - Mono => Dotnet (more speed; no more mono)
-    - Reverse Proxy [conf updates](#my-nginx-doesnt-work-anymore) are likely required
-    - Reverse Proxy [conf updates](#my-apache-doesnt-work-anymore) are likely required
-  - Preferred Words are gone and replaced with Custom Formats (see details below)
-  - Language Profiles are gone and replaced with Custom Formats (dee details below)
-  - Dark/Light Theme
-  - SysLog and Instance Name Support
-  - Much much more
+Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
 
-## Episodes showing runtimes of 0
+Below are some of the highlights and more prominent changes: 
+- [Forced Authentication](#Forced-Authenication)
+- Mono => Dotnet (more speed; no more mono). Due to this change Reverse Proxy conf updates are likely required:
+    - [Nginx](#my-nginx-doesnt-work-anymore)
+    - [Apache](#my-apache-doesnt-work-anymore)
+- [Preferred Words are gone](#preferred-words-to-custom-formats-migration) and replaced with Custom Formats
+- [Language Profiles are gone](#where-have-language-profiles-gone?) and replaced with Custom Formats
+- Dark/Light Theme
+- SysLog and Instance Name Support
+- Merger of Mass Editor into [Series Overview](#where-has-the-mass-editor-gone?)
+- Much much more
 
-- v4 uses a per episode run time from TVDb
-- If the runtime for the episode is 0 it will try to fall back to the series’ runtime
-- If the series runtime is 0 then Sonarr will use a runtime of 45 for any episode that aired within 24 hours of the first episode
+## Forced Authentication
 
-## Can I disable forced authentication?
+If Sonarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers. 
 
-- If Sonarr is exposed externally then you are required - including increasingly required by most Trackers and Indexers - to have authentication in front of Sonarr.
-  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/sonarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
+As of v4 Sonarr will automatically enforce this by enabling its internal authenitication system.
+
+- If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/sonarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
+
 - If you do not expose Sonarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 
 ## Preferred Words to Custom Formats Migration
 
-- Preferred words used the term matched on the regex entry for naming in files.
-- Custom Formats use the Custom Format Name for naming in files.
+The Preferred Words system has been replaced with the Custom Formats system. This allows for much more granularity in the decisions sonarr can make. Whereas preferred words were applicable to all quality profiles, custom formats can be given different levels of importance for each quality profile.
+
+Custom Formats can also be given a cutoff level so that upgrades stop happening once a desired level of preference is reached, whereas the old preferred words system upgraded always if a better release was found.
+
+### Must (not) contain
+
+Must Contain and Must Not Contain remain in the release profile settings as was in v3.
+
+### File Naming Tokens
+The `{Preferred Words}` naming token used the term matched on the regex entry for naming in files.
+The `{Custom Formats}` naming token uses the Custom Format Name for naming in files.
 
 > It's recommended to screenshot or remove your Preferred Words release profiles PRIOR to upgrading.  Every Preferred Word line will become it's own Custom Format post migration.
-{.is-danger}
+{.is-warning}
 
 ## Where have language profiles gone?
 
-- Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of Custom Formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
+Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of Custom Formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
 
 > See TRaSH Guide's [How to setup Language Custom Formats](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/) for more information
 {.is-info}
@@ -58,7 +67,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 **From [TRaSH => Language: English Only](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/#language-english-only)**
 
-- If you only want to grab releases in English then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as English.
+If you only want to grab releases in English then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as English.
 
 ```json
 {
@@ -85,7 +94,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 **From [TRaSH => Language: Original Only](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/#language-original-only)**
 
-- If you only want to grab releases in The Series's TVDb Original Language then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as The Series's TVDb Original Language.
+If you only want to grab releases in The Series's TVDb Original Language then you can use the following custom format. Import this custom format, and then assign it to each of your quality profiles with a score of -10000. Assuming your minimum custom format score is 0 then this will reject all releases that are not parsed as The Series's TVDb Original Language.
 
 ```json
 {
@@ -108,29 +117,30 @@ dateCreated: 2022-11-25T14:02:10.493Z
 }
 ```
 
-## My Nginx doesn't work anymore?
+## My Reverse Proxy doesn't work anymore?
 
-- Due to changes in the backend of Sonarr (migration from mono to donnet) your Nginx conf file will need changing. Replace this line:
+Due to changes in the backend of Sonarr (migration from mono to donnet) your may not work any more.
 
+  ### Nginx 
+  Your Nginx conf file will need changing. Replace this line:
+  
   ```nginx
      proxy_set_header   Host $proxy_host;
-   ```
-
+  ```
   with this line:
-
   ```nginx
     proxy_set_header   Host $host;
   ```
-  
-  ## My Apache doesn't work anymore?
-  - Due to changes in the backend of Sonarr (migration from mono to donnet) your apache virtualhost conf file will need changing. Add this line:
-   ```apache2
+  ### Apache
+  Your apache virtualhost conf file will need changing. Add this line:
+ ```apache2
       ProxyPreserveHost On
-    ``` 
+ ``` 
+
 
 ## What is this new "*Override and add to download queue*" button?
 
-- When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
+When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
   - Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Sonarr decide which client to use.
   - Override Sonarrs parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
       - Series
@@ -138,3 +148,15 @@ dateCreated: 2022-11-25T14:02:10.493Z
       - Episode(s)
       - Quality
       - Language
+      
+## Where has the Mass Editor gone?
+
+The Mass Editor standalone page has been removed and the functionality has been merged into the series overview page. To mass edit shows first click the `Select Series` button at the top of the series overview and select the shows you want to edit.
+
+The Season Pass page has also been retired. Part of the functionality remains in the Series Overview editor, choose the table view and  press `Select Series`. Once in select mode hover over the number in the seasons column to access the season pass popover for that show.
+
+
+## Episodes showing runtimes of 0
+
+v4 uses a per episode run time from TVDb. If the runtime for the episode is 0 it will try to fall back to the series’ runtime.
+If the series runtime is also 0 then Sonarr will use a runtime of 45 for any episode that aired within 24 hours of the first episode.
