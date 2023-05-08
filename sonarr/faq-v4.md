@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-05-08T18:22:17.443Z
+date: 2023-05-08T18:23:03.312Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -17,7 +17,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
 
 Below are some of the highlights and more prominent changes: 
-- [Forced Authentication](#Forced-Authentication)
+- [Forced Authentication](#forced-authentication)
 - Mono => Dotnet (more speed; no more mono). Due to this change Reverse Proxy conf updates are likely required:
     - [Nginx](#nginx)
     - [Apache](#apache)
