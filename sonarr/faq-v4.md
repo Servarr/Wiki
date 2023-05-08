@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-04-17T18:42:30.831Z
+date: 2023-05-08T16:48:34.305Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -25,6 +25,12 @@ dateCreated: 2022-11-25T14:02:10.493Z
   - Dark/Light Theme
   - SysLog and Instance Name Support
   - Much much more
+
+## Episodes showing runtimes of 0
+
+- v4 uses a per episode run time from TVDb
+- If the runtime for the episode is 0 it will try to fall back to the series’ runtime
+- If the series runtime is 0 then Sonarr will use a runtime of 45 for any episode that aired within 24 hours of the first episode
 
 ## Can I disable forced authentication?
 
