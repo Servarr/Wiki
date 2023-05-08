@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2022-12-03T16:02:07.580Z
+date: 2023-05-08T12:30:56.893Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -193,6 +193,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 - Certain sites may be requested to be removed from Prowlarr or Jackett. These may then be marked as Obsolete.
   - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
+  - Audiobookbay
+  - Ebookbay
 
 #### No indexers are enabled
 
