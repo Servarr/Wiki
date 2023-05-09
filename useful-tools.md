@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-05-04T03:40:48.958Z
+date: 2023-05-09T12:27:08.098Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -313,7 +313,7 @@ There are a handful of options out there for extracting and deleting files after
 ## Just A Bunch Of Starr Scripts
 
 - [Just A Bunch Of Starr Scripts](https://github.com/angrycuban13/Just-A-Bunch-Of-Starr-Scripts)
-- [Upgradinatorr](is a powershell script to manually search n items that are not tagged with a specific tag in your Radarr/Sonarr media library. n is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
+- [Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md) is a powershell script to manually search n items that are not tagged with a specific tag in your Radarr/Sonarr media library. n is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
 
 ## Just A Bunch Of Plex Scripts
 
