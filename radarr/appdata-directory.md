@@ -2,7 +2,7 @@
 title: Radarr Appdata Directory
 description: 
 published: true
-date: 2021-11-24T19:23:52.023Z
+date: 2023-05-09T17:51:34.896Z
 tags: radarr, appdata
 editor: markdown
 dateCreated: 2021-05-25T02:34:50.549Z
@@ -32,7 +32,9 @@ The installation instructions specify `/var/lib/radarr`
 
 `/usr/local/Radarr/var/.config/Radarr`
 
-`/volume1/@appstore/Radarr/var/.config/Radarr`
+`/volume1/@appstore/Radarr/var/.config/Radarr'
+
+'/volume1/@appdata/radarr/.config/Radarr'
 
 # QNAP
 
