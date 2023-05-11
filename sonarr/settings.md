@@ -144,13 +144,13 @@ Also, note that for each individual settings page, there are some options at the
       - Non-Season Pack: Download Client's Release Title is used
       - Season Pack: Original File Name
     - Manual (Ad-Hoc) Import: Original File Name
-    
+
 - Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
 ### Standard Episode Format
 
-Standard Episode Format - Set the naming convention for your Standard Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
+Standard Episode Format - Set the naming convention for your Standard Series Type episodes. Click on the `?` icon to bring up the `File Name Tokens` dialog box.
 
 - Dropdown Box (upper right corner)
   - Left Box - Space Handling

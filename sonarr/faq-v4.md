@@ -16,11 +16,12 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
 
-Below are some of the highlights and more prominent changes: 
+Below are some of the highlights and more prominent changes:
+
 - [Forced Authentication](#forced-authentication)
 - Mono => Dotnet (more speed; no more mono). Due to this change Reverse Proxy conf updates are likely required:
-    - [Nginx](#nginx)
-    - [Apache](#apache)
+  - [Nginx](#nginx)
+  - [Apache](#apache)
 - [Preferred Words are gone](#preferred-words-to-custom-formats-migration) and replaced with Custom Formats
 - [Language Profiles are gone](#where-have-language-profiles-gone) and replaced with Custom Formats
 - Dark/Light Theme
@@ -30,9 +31,9 @@ Below are some of the highlights and more prominent changes:
 
 ## Forced Authentication
 
-If Sonarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers. 
+If Sonarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
-As of v4 Sonarr will automatically enforce this by enabling its internal authenitication system.
+As of v4 Sonarr will automatically enforce this by enabling its internal authentication system.
 
 - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/sonarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
 
@@ -50,6 +51,7 @@ Custom Formats can also be given a cutoff level so that upgrades stop happening 
 Must Contain and Must Not Contain remain in the release profile settings as was in v3.
 
 ### File Naming Tokens
+
 The `{Preferred Words}` naming token used the term matched on the regex entry for naming in files.
 The `{Custom Formats}` naming token uses the Custom Format Name for naming in files.
 
@@ -121,40 +123,45 @@ If you only want to grab releases in The Series's TVDb Original Language then yo
 
 Due to changes in the backend of Sonarr (migration from mono to donnet) your may not work any more.
 
-  ### Nginx 
+### Nginx
+
   Your Nginx conf file will need changing. Replace this line:
   
   ```nginx
      proxy_set_header   Host $proxy_host;
   ```
+
   with this line:
+
   ```nginx
     proxy_set_header   Host $host;
   ```
-  ### Apache
+
+### Apache
+
   Your apache virtualhost conf file will need changing. Add this line:
+
  ```apache2
       ProxyPreserveHost On
- ``` 
-
+ ```
 
 ## What is this new "*Override and add to download queue*" button?
 
 When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
-  - Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Sonarr decide which client to use.
-  - Override Sonarrs parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
-      - Series
-      - Season Number
-      - Episode(s)
-      - Quality
-      - Language
-      
+
+- Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Sonarr decide which client to use.
+- Override Sonarrs parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
+  - Series
+  - Season Number
+  - Episode(s)
+  - Quality
+  - Language
+
 ## Where has the Mass Editor gone?
 
 The Mass Editor standalone page has been removed and the functionality has been merged into the series overview page. To mass edit shows first click the `Select Series` button at the top of the series overview and select the shows you want to edit.
 
 The Season Pass page has also been retired. Part of the functionality remains in the Series Overview editor, choose the table view and  press `Select Series`. Once in select mode hover over the number in the seasons column to access the season pass popover for that show.
-
 
 ## Episodes showing runtimes of 0
 

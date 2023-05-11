@@ -10,15 +10,15 @@ dateCreated: 2023-04-06T16:04:33.682Z
 
 # Table of Contents
 
--   [Table of Contents](#table-of-contents)
--   [Indexers](#indexers)
--   [Apps](#apps)
-    -   [Application Settings](#application-settings)
--   [Download Clients](#download-clients)
-    -   [Usenet Client Settings](#usenet-client-settings)
-    -   [Torrent Client Settings](#torrent-client-settings)
-    -   [Testing the Download Client](#testing-the-download-client)
--   [Setup Complete](#setup-complete)
+- [Table of Contents](#table-of-contents)
+- [Indexers](#indexers)
+- [Apps](#apps)
+  - [Application Settings](#application-settings)
+- [Download Clients](#download-clients)
+  - [Usenet Client Settings](#usenet-client-settings)
+  - [Torrent Client Settings](#torrent-client-settings)
+  - [Testing the Download Client](#testing-the-download-client)
+- [Setup Complete](#setup-complete)
 
 > This page is still in progress and not complete.
 
@@ -44,36 +44,36 @@ Some indexers have special settings, but most are standard as shown.
 
 ![addnewindexer.png](/assets/prowlarr/addnewindexer.png)
 
--   Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
--   Enable - Check the box to enable this indexer.
--   Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
+- Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
+- Enable - Check the box to enable this indexer.
+- Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
 
 > Redirect is typically only needed for a handful of very specific indexers
 
--   Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
+- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
 
 > You can have different settings per app by creating multiple instances of the indexer
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 
--   URL - Select the URL for Prowlarr to use. If blank, the default/first url is used.
--   Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
--   (Advanced Option) API Path - Path to the Indexer's API. Typically `/api`
--   Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
-    -   API Key
-    -   RSS Key
-    -   Session ID
-    -   Cookie
-    -   Username/Password
-    -   etc.
--   (Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.
--   VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
--   Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
--   (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
--   (Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
--   (Advanced Option) Seed Ratio - For Torrent Indexers Only: The ratio a torrent should reach before stopping, empty is app's default
--   (Advanced Option) Seed Time - For Torrent Indexers Only: The time a torrent should be seeded before stopping, empty is app's default
--   (Advanced Option) Indexer Priority - Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
+- URL - Select the URL for Prowlarr to use. If blank, the default/first url is used.
+- Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
+- (Advanced Option) API Path - Path to the Indexer's API. Typically `/api`
+- Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
+  - API Key
+  - RSS Key
+  - Session ID
+  - Cookie
+  - Username/Password
+  - etc.
+- (Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.
+- VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
+- Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
+- (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
+- (Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
+- (Advanced Option) Seed Ratio - For Torrent Indexers Only: The ratio a torrent should reach before stopping, empty is app's default
+- (Advanced Option) Seed Time - For Torrent Indexers Only: The time a torrent should be seeded before stopping, empty is app's default
+- (Advanced Option) Indexer Priority - Select the indexer priority here from 1-50 (1 being highest). These priorities will sync to your apps.
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each indexer you'd like Prowlarr to use. If it fails, you will need to check your log for the error (URL, API Key, etc.).
 
@@ -106,15 +106,15 @@ When you add an app, you will need to enter values in the pop-up screen:
 > `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
 {.is-warning}
 
--   Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
--   Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
+- Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
+- Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
 
 > Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
 
--   Application Server - Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
--   API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
--   (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
-    -   Indexer Custom Categories get mapped into the Standard Torznab/Newznab categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
+- Application Server - Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
+- API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
+- (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
+  - Indexer Custom Categories get mapped into the Standard Torznab/Newznab categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
 
 > When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`
 
@@ -130,11 +130,11 @@ You may wish to go into your programs and check the categories for the Prowlarr 
 
 Configure the sync profiles for to use for (an) application(s)
 
--   Name - Unique name of the Sync Profile
--   Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the \*Arr App
--   Enable Interactive Search - For Indexers with this profile, Enable Interactive (Manual) Searches for the \*Arr App
--   Enable Automatic Search - For Indexers with this profile, Enable Automatic Searches for the \*Arr App
--   Minimum Seeders - For Indexers with this profile, the minimum seeders required for \*Arr to grab a torrent
+- Name - Unique name of the Sync Profile
+- Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the \*Arr App
+- Enable Interactive Search - For Indexers with this profile, Enable Interactive (Manual) Searches for the \*Arr App
+- Enable Automatic Search - For Indexers with this profile, Enable Automatic Searches for the \*Arr App
+- Minimum Seeders - For Indexers with this profile, the minimum seeders required for \*Arr to grab a torrent
 
 # Download Clients (Prowlarr Searches)
 
@@ -155,33 +155,33 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 ## Usenet Client Settings
 
--   Name - The name of the download client within Prowlarr
--   Enable - Enable this Download Client
--   Host - The URL of your download client
--   Port - The port of your download client
--   Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
--   URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
--   API Key - the API key to authenticate to your client
--   Username - the username to authenticate to your client (typically not needed)
--   Password- the password to authenticate to your client (typically not needed)
--   Category - the category within your download client that Prowlarr will use
--   Priority - download client priority for added items
--   Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Name - The name of the download client within Prowlarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- API Key - the API key to authenticate to your client
+- Username - the username to authenticate to your client (typically not needed)
+- Password- the password to authenticate to your client (typically not needed)
+- Category - the category within your download client that Prowlarr will use
+- Priority - download client priority for added items
+- Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
 ## Torrent Client Settings
 
--   Name - The name of the download client within Prowlarr
--   Enable - Enable this Download Client
--   Host - The URL of your download client
--   Port - The port of your download client
--   Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
--   URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
--   Username - the username to authenticate to your client
--   Password- the password to authenticate to your client
--   Category - the category within your download client that Prowlarr will use
--   Priority - download client priority for added items
--   Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
--   Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
+- Name - The name of the download client within Prowlarr
+- Enable - Enable this Download Client
+- Host - The URL of your download client
+- Port - The port of your download client
+- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
+- URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
+- Username - the username to authenticate to your client
+- Password- the password to authenticate to your client
+- Category - the category within your download client that Prowlarr will use
+- Priority - download client priority for added items
+- Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
+- Client Priority - Priority of the download client within Prowlarr. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority.
 
 ## Testing the Download Client
 

@@ -79,7 +79,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
 
 - Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
 
-- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a 
+- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a
 
 #### Currently installed mono version is old and unsupported
 

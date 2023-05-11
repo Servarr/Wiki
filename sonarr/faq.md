@@ -111,7 +111,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Adding a show using the Add and Search button
 - Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches
 - Recently Aired Episodes added after airing
-  - If a new episode is added to Sonarr that aired in the last 14 days or within 1 day into the future (to cover those series that may release a bit early) Sonarr **will search** for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr)
+  - If a new episode is added to Sonarr that aired in the last 14 days or within 1 day into the future (to cover those episodes that may release a bit early) Sonarr **will search** for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr)
 
 ## How are possible downloads compared?
 
@@ -757,7 +757,6 @@ First, make sure you read and understand the section above called ["How does Son
 ## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
 - See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
-
 
 - On TVDb, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDb API. Typically, changes to the TVDb website take 24-48 hours to reach Sonarr due to TVDb cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 

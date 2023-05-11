@@ -897,8 +897,10 @@ In the event that a field might not be reliably present from the site results, y
       optional: true
       default: 0
 ```
-Note that the use of the `noappend` modifier is deprecated for the category field. 
-So if you have an old category block like 
+
+Note that the use of the `noappend` modifier is deprecated for the category field.
+So if you have an old category block like
+
 ```yaml
     category:
       selector: td:nth-child(1)
@@ -914,7 +916,9 @@ So if you have an old category block like
         - name: querystring
           args: cat
 ```
-then you will see warnings on your log, and you should covert to 
+
+then you will see warnings on your log, and you should convert to
+
 ```yaml
     category_default:
       selector: td:nth-child(1)
@@ -931,6 +935,7 @@ then you will see warnings on your log, and you should covert to
         - name: querystring
           args: cat
 ```
+
 as at some point support for the category:noappend will be removed.
 
 ### Search JSON and XML
@@ -1166,9 +1171,11 @@ The use of `:has()`, `:not()` and `:contains()` are supported by the rows select
         - name: re_replace
           args: ["\\[", " "]
 ```
+
 ### Search XML
 
 This is similar to the JSON method except you code type xml:
+
 ```
       response:
         # [REQUIRED] indicates that an XML response is expected
@@ -1454,6 +1461,7 @@ Note that these are always available.
 ## Search Query Variables
 
 Note that these are only available during search queries.
+
 ```yaml
 .Query.Type
 .Query.Q
@@ -1505,6 +1513,7 @@ For example:
     description:
       text: "{{ .Result._subcat }} {{ .Result.year }} {{ .Result._quality }}"
 ```
+
 Temporary variables used to help build release results should contain an underscore in their variable names, such as `title_phase1` or `_quality`.
 
 ## Download Variables
@@ -1713,7 +1722,7 @@ filters:
 
 ## validate
 
-Given a list of words, delimited by any one of `, /.)(;[]"|:` this filter will return a comma delimited list of only the words that 
+Given a list of words, delimited by any one of `, /.)(;[]"|:` this filter will return a comma delimited list of only the words that
 are in the args. Useful for removing non-genre types from an open tag list.
 
 Note: to preserve a double word (for example `Science Fiction` or `Sci-Fi & Fantasy`) replace the spaces with underscores. These will be auto-restored in results.
@@ -1736,7 +1745,7 @@ filters:
 
 Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
 Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *format* to use for the conversion.
-For a full breakdown of the format specifiers see https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+For a full breakdown of the format specifiers see <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
 
 Here are the more common format specifiers used by Jackett
 
@@ -2001,5 +2010,6 @@ fields:
 - Add support for multi row parsing as described in <https://github.com/cardigann/cardigann/pull/336#issuecomment-277645749>
 
 ## Credit
+
 - [Jackett Wiki Contributors](https://github.com/Jackett/Jackett/wiki/Definition-format)
 - [Prowlarr Wiki Contributors](https://wiki.servarr.com/prowlarr/cardigann-yml-definition)
