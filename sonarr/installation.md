@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-03-08T18:49:34.457Z
+date: 2023-05-11T18:39:02.362Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -95,20 +95,21 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 - [Please see the website for instructions](https://sonarr.tv/#downloads-v3-linux)
 - Put together the instructions should be:
   - [Add the Mono Repository](https://www.mono-project.com/download/stable/#download-lin-ubuntu)
-  - [Add the MediaInfo Repository](/lidarr/installation)
+  - [Add the MediaInfo Repository](https://mediaarea.net/en/Repos)
   - [Install Sonarr](https://sonarr.tv/#downloads-v3-linux)
 - For Ubuntu 20.04 this will *likely* look like
 
 ```bash
 # Add Mono Repo (20.04)
 sudo apt install gnupg ca-certificates
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo gpg --homedir /tmp --no-default-keyring --keyring /usr/share/keyrings/mono-official-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb [signed-by=/usr/share/keyrings/mono-official-archive-keyring.gpg] https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
 # Get MediaInfo
 wget https://mediaarea.net/repo/deb/repo-mediaarea_1.0-19_all.deb && sudo dpkg -i repo-mediaarea_1.0-19_all.deb
 # Add the Sonarr Repo
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 2009837CBFFD68F45BC180471F4F90DE2A9B4BF8
-echo "deb https://apt.sonarr.tv/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/sonarr.list
+sudo gpg --homedir /tmp --no-default-keyring --keyring /usr/share/keyrings/sonarr-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 2009837CBFFD68F45BC180471F4F90DE2A9B4BF8
+echo "deb [signed-by=/usr/share/keyrings/sonarr-keyring.gpg] https://apt.sonarr.tv/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/sonarr.list
+
 # Apt Update
 sudo apt update
 # Install Sonarr
