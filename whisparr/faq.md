@@ -354,7 +354,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 ## Help, My Mac says Whisparr cannot be opened because the developer cannot be verified
 
 - This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
-- Alternatively, you may need to self-sign Whisparr `codesign --force --deep -s - Whisparr.app`
+- Alternatively, you may need to self-sign Whisparr `codesign --force --deep -s - /Applications/Whisparr.app && xattr -rd com.apple.quarantine`
 
 ## Help, My Mac says Whisparr.app is damaged and can’t be opened
 

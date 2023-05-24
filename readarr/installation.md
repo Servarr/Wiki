@@ -87,7 +87,7 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 1. Download the [MacOS App](https://readarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://readarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system
 1. Open the archive and drag the Readarr icon to your Application folder.
-1. Self-sign Readarr `codesign --force --deep -s - Readarr.app`
+1. Self-sign Readarr `codesign --force --deep -s - /Applications/Readarr.app && xattr -rd com.apple.quarantine`
 1. Browse to <http://localhost:8787> to start using Readarr
 
 # Linux
