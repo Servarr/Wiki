@@ -2,10 +2,10 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-05-25T04:11:08.339738
+date: 2023-05-25T04:15:22.678290
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-05-25T04:11:08.339738
+dateCreated: 2023-05-25T04:15:22.678290
 ---
 
 - Supported Trackers and Indexers as of Build `1.5.1.3405` / [Commit: d8c73612051e8e8f8afab5c96ed872148882b433](https://github.com/Prowlarr/Prowlarr/commit/d8c73612051e8e8f8afab5c96ed872148882b433)
@@ -181,8 +181,8 @@ dateCreated: 2023-05-25T04:11:08.339738
 |[AnimeWorld (API)](https://animeworld.cx/){#animeworld-api}|AnimeWorld (AW) is a GERMAN Private site for ANIME / MANGA / HENTAI|German (Germany)|
 |[Anthelion (API)](https://anthelion.me/){#anthelion-api}|Anthelion is a Private MOVIES tracker|English (United States)|
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private site for TV / MOVIES / GENERAL|Italian (Italy)|
-|[ArabP2P](https://www.arabp2p.net/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Language(part3='ara', part2b='ara', part2t='ara', part1='ar', scope='M', type='L', status='A', name='Arabic', comment=None, other_names=None, macrolanguage=None, retire_reason=None, retire_change_to=None, retire_remedy=None, retire_date=None) (Argentina)|
-|[ArabTorrents](https://arab-torrents.net/){#arabtorrents}|ArabTorrents is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Language(part3='ara', part2b='ara', part2t='ara', part1='ar', scope='M', type='L', status='A', name='Arabic', comment=None, other_names=None, macrolanguage=None, retire_reason=None, retire_change_to=None, retire_remedy=None, retire_date=None) (Argentina)|
+|[ArabP2P](https://www.arabp2p.net/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (Argentina)|
+|[ArabTorrents](https://arab-torrents.net/){#arabtorrents}|ArabTorrents is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (Argentina)|
 |[AsianCinema](https://asiancinema.me/){#asiancinema}|Tracker Movies/TV/Music|English (United States)|
 |[AsianDVDClub](https://asiandvdclub.org/){#asiandvdclub}|AsianDVDClub (ADC) is a Private Torrent Tracker for Asian DVD and BluRay|English (United States)|
 |[Audiences](https://audiences.me/){#audiences}|Audiences is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -221,7 +221,7 @@ dateCreated: 2023-05-25T04:11:08.339738
 |[Central Torrent](http://central-torrent.eu/){#centraltorrent}|Central Torrent is a POLISH Private Torrent Tracker for MOVIES / MUSIC|Polish (Poland)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Language(part3='spa', part2b='spa', part2t='spa', part1='es', scope='I', type='L', status='A', name='Spanish', comment=None, other_names=[Name(print='Castilian', inverted='Castilian')], macrolanguage=None, retire_reason=None, retire_change_to=None, retire_remedy=None, retire_date=None) (Unknown)|
+|[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Unknown)|
 |[CiNEFiLHD](http://cinefilhd.sytes.net/){#cinefilhd}|CiNEFiLHD is a Private Torrent Tracker for MOVIES / TV /  MUSIC|English (United States)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|B-movie tracker|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -310,7 +310,7 @@ dateCreated: 2023-05-25T04:11:08.339738
 |[KamePT](https://kamept.com/){#kamept}|KamePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Karagarga](https://karagarga.in/){#karagarga}|Karagarga tracks non-hollywood, rare and obscure movies, music and literature|English (United States)|
 |[Keep Friends](https://pt.keepfrds.com/){#keepfriends}|Keep Friends is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[Korsar](http://filbi1976.org/){#korsar}|Korsar is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Language(part3='rus', part2b='rus', part2t='rus', part1='ru', scope='I', type='L', status='A', name='Russian', comment=None, other_names=None, macrolanguage=None, retire_reason=None, retire_change_to=None, retire_remedy=None, retire_date=None) (Russian Federation)|
+|[Korsar](http://filbi1976.org/){#korsar}|Korsar is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russian Federation)|
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
 |[LastFiles](https://www.last-torrents.org/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
@@ -407,7 +407,7 @@ dateCreated: 2023-05-25T04:11:08.339738
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[SugoiMusic](https://sugoimusic.me/){#sugoimusic}|SugoiMusic is a Private Torrent Tracker for Asian MUSIC / TV|English (United States)|
-|[Superbits](https://superbits.org/){#superbits}|Superbits is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Language(part3='swe', part2b='swe', part2t='swe', part1='sv', scope='I', type='L', status='A', name='Swedish', comment=None, other_names=None, macrolanguage=None, retire_reason=None, retire_change_to=None, retire_remedy=None, retire_date=None) (Unknown)|
+|[Superbits](https://superbits.org/){#superbits}|Superbits is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Unknown)|
 |[Swarmazon (API)](https://swarmazon.club/){#swarmazon-api}|Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Tapochek](https://tapochek.net/){#tapochek}|Tapochek is a RUSSIAN Private Torrent Tracker for 0DAY / GENERAL|Russian (Russia)|
 |[Tasmanit](https://tasmanit.es/){#tasmanit}|Tasmanit\.es is a AUSTRALIAN / NEW ZEALAND Private Torrent Tracker for AUS / NZ TV|English (Australia)|
