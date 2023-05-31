@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-05-29T10:50:33.955Z
+date: 2023-05-31T18:47:08.209Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -364,7 +364,7 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 1. Change Root Folder to the same Root Folder that the series currently exist in
 1. Select "Yes move files" to have
 
-> If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
+> If you are using Plex or Emby, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 {.is-warning}
 
 ## How do I update Sonarr?
