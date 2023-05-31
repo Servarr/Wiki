@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-05-26T12:10:48.299860
+date: 2023-05-31T12:04:34.475435
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-05-26T12:10:48.299860
+dateCreated: 2023-05-31T12:04:34.475435
 ---
 
-- Supported Trackers and Indexers as of Build `1.5.1.3413` / [Commit: ce34940287cd980607816abd2531a8e4d186766a](https://github.com/Prowlarr/Prowlarr/commit/ce34940287cd980607816abd2531a8e4d186766a)
+- Supported Trackers and Indexers as of Build `1.5.2.3443` / [Commit: b59d89f3086a1588e60d8ff2e323d6d49156aeff](https://github.com/Prowlarr/Prowlarr/commit/b59d89f3086a1588e60d8ff2e323d6d49156aeff)
 
 ---
 
@@ -20,6 +20,8 @@ dateCreated: 2023-05-26T12:10:48.299860
 ## Torrents
 
 ### Public Trackers
+
+- [Rarbg](https://torrentapi.org/){#rarbg} was a Public torrent site for MOVIES / TV / GENERAL and [has shutdown effective 2023-05-31](https://torrentfreak.com/iconic-torrent-site-rarbg-shuts-down-all-content-releases-stop-230531/)
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -122,8 +124,8 @@ dateCreated: 2023-05-26T12:10:48.299860
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq257.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir105.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq258.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir106.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent10.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz58.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -132,7 +134,8 @@ dateCreated: 2023-05-26T12:10:48.299860
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Russian (Russia)|
 |[VSTHouse](http://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
-|[VST Torrents](https://vsttorrentz.net/){#vsttorrents}|VST Torrents is a Public site for AUDIO apps, plugins and samples|English (United States)|
+|[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
+|[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[xxxAdultTorrent](https://xxxadulttorrent.org/){#xxxadulttorrent}|xxxAdultTorrent is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -140,7 +143,6 @@ dateCreated: 2023-05-26T12:10:48.299860
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://www.zetorrents.pw/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
-|[Rarbg](https://torrentapi.org/){#rarbg}|RARBG is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 
@@ -453,7 +455,8 @@ dateCreated: 2023-05-26T12:10:48.299860
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) A Chinese tracker|Chinese (China)|
 |[ToTheGloryCookie](https://totheglory.im/){#totheglorycookie}|ToTheGlory (TTG) A Chinese tracker\. This uses the cookie method for access|Chinese (China)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private site for MUSIC|English (United States)|
-|[Trezzor](https://tracker.czech-server.com/){#trezzor}|Trezzor is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
+|[TreZzoR](https://tracker.czech-server.com/){#trezzor}|TreZzoR is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
+|[TreZzoRCookie](https://tracker.czech-server.com/){#trezzorcookie}|TreZzoR is a CZECH Private site for TV / MOVIES / GENERAL\. This uses the cookie method for access|Czech (Czech Republic)|
 |[TurkSeed](https://trendfilm.net/){#turkseed}|TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TurkTorrent](https://turktorrent.us/){#turktorrent}|TurkTorrent (TT) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TVChaosUK](https://tvchaosuk.com/){#tvchaosuk}|TV Chaos UK (TVCUK) is a Private Torrent Tracker for UK TV|English (United Kingdom)|
