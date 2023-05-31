@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2023-05-08T12:30:56.893Z
+date: 2023-05-31T11:54:59.064Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -193,8 +193,9 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 - Certain sites may be requested to be removed from Prowlarr or Jackett. These may then be marked as Obsolete.
   - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
-  - Audiobookbay
-  - Ebookbay
+  - Audiobookbay has requested that Prowlarr not access their API
+  - Ebookbay has requested that Prowlarr not access their API
+  - Rarbg has [shutdown effective 2023-05-31](https://torrentfreak.com/iconic-torrent-site-rarbg-shuts-down-all-content-releases-stop-230531/)
 
 #### No indexers are enabled
 
