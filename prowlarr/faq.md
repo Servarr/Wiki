@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-06-02T15:04:37.642Z
+date: 2023-06-02T15:17:27.218Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -73,9 +73,17 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 Yes. Use "TorrentRSS".
 
-The following attributes are required:
+The following attributes are mandatory:
 
-*Coming Soon*
+- guid
+- title
+- infohash
+- enclosure or link
+
+The following attributes are optional, but recommended:
+
+- size
+- pubDate
 
 ## Can I add any (generic) Torznab or Newznab indexer?
 
