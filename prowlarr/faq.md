@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-02-22T13:13:47.184Z
+date: 2023-06-02T15:04:37.642Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -14,6 +14,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [How do I reset Stats?](#how-do-i-reset-stats)
   - [Category Not Available or Missing](#category-not-available-or-missing)
   - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
+  - [Can I add any (generic) Torrent RSS Feed?](#can-i-add-any-generic-torrent-rss-feed)
   - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
   - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
@@ -67,6 +68,14 @@ dateCreated: 2021-11-03T03:01:18.079Z
 ## Category Not Available or Missing
 
 - Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones. Review your specific Indexer's category mapping definition for details.
+
+## Can I add any (generic) Torrent RSS Feed?
+
+Yes. Use "TorrentRSS".
+
+The following attributes are required:
+
+*Coming Soon*
 
 ## Can I add any (generic) Torznab or Newznab indexer?
 
@@ -132,12 +141,10 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - App/Prowlarr: Categories
 - App/Prowlarr: Seed Ratio and Seed Time
 - App/Prowlarr: Minimum Seeders
+- App/Prowlarr: *Any Other Settings configurable/controlled in Prowlarr*
 - Prowlarr: Implementation (e.g. YML or C#)
 
-With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr
-
-> As of Prowlarr `v0.4.11.2145` settings not compared by Prowlarr are not overwrote when full sync is enabled
-{.is-info}
+With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr.
 
 ## How do I update Prowlarr?
 
