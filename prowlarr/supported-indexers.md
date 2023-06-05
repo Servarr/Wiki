@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-05-31T12:04:34.475435
+date: 2023-06-05T14:20:18.770722
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-05-31T12:04:34.475435
+dateCreated: 2023-06-05T14:20:18.770722
 ---
 
-- Supported Trackers and Indexers as of Build `1.5.2.3443` / [Commit: b59d89f3086a1588e60d8ff2e323d6d49156aeff](https://github.com/Prowlarr/Prowlarr/commit/b59d89f3086a1588e60d8ff2e323d6d49156aeff)
+- Supported Trackers and Indexers as of Build `1.6.0.3489` / [Commit: ed1fb58242eb80c802b6448c652f1a3feefa6c7a](https://github.com/Prowlarr/Prowlarr/commit/ed1fb58242eb80c802b6448c652f1a3feefa6c7a)
 
 ---
 
@@ -20,8 +20,6 @@ dateCreated: 2023-05-31T12:04:34.475435
 ## Torrents
 
 ### Public Trackers
-
-- [Rarbg](https://torrentapi.org/){#rarbg} was a Public torrent site for MOVIES / TV / GENERAL and [has shutdown effective 2023-05-31](https://torrentfreak.com/iconic-torrent-site-rarbg-shuts-down-all-content-releases-stop-230531/)
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -124,7 +122,7 @@ dateCreated: 2023-05-31T12:04:34.475435
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq258.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq259.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir106.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent10.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz58.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -224,7 +222,7 @@ dateCreated: 2023-05-31T12:04:34.475435
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
-|[CiNEFiLHD](http://cinefilhd.sytes.net/){#cinefilhd}|CiNEFiLHD is a Private Torrent Tracker for MOVIES / TV /  MUSIC|English (United States)|
+|[CiNEFiLHD](http://cinefilhd.xyz/){#cinefilhd}|CiNEFiLHD is a Private Torrent Tracker for MOVIES / TV /  MUSIC|English (United States)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|B-movie tracker|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Cinematik](https://www.cinematik.net/){#cinematik}|A tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse|English (United States)|
@@ -488,6 +486,7 @@ dateCreated: 2023-05-31T12:04:34.475435
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
+|[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[Uploads](http://uploads.ltd/){#uploads}|Uploads is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
