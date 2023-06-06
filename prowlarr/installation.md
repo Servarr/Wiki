@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2023-06-06T14:25:40.812Z
+date: 2023-06-06T14:25:53.273Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -338,9 +338,6 @@ Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info
 ## Install Prowlarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
-
-> Temporarily, you will need to use the `:nightly` or `:develop` tags with docker images, as there is no `master` branch. [See this FAQ entey for the meaning of the branches](/prowlarr/faq#how-do-i-update-prowlarr)
-{.is-warning}
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
 - [lscr.io/linuxserver/prowlarr](https://docs.linuxserver.io/images/docker-prowlarr)
