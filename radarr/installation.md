@@ -2,7 +2,7 @@
 title: Radarr Installation
 description: 
 published: true
-date: 2023-04-30T22:35:30.871Z
+date: 2023-06-06T14:24:37.650Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
@@ -367,6 +367,8 @@ You can now safely close the shell
 The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Radarr Docker image.
+
+Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/)
 
 ## Avoid Common Pitfalls
 
