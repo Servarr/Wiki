@@ -2,7 +2,7 @@
 title: Prowlarr Installation
 description: 
 published: true
-date: 2023-01-03T04:11:28.549Z
+date: 2023-06-06T14:25:40.812Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
@@ -332,6 +332,8 @@ The Prowlarr team does not offer an official Docker image. However, a number of 
 
 > For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 {.is-info}
+
+Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/)
 
 ## Install Prowlarr
 
