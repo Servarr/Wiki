@@ -2,7 +2,7 @@
 title: Sonarr Installation
 description: 
 published: true
-date: 2023-05-11T18:39:02.362Z
+date: 2023-06-06T14:25:10.072Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
@@ -404,6 +404,8 @@ sudo chmod -R a+rX /usr/share/.mono
 The Sonarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Sonarr Docker image.
+
+Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/)
 
 ## Avoid Common Pitfalls
 
