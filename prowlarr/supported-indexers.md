@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-05T14:20:18.770722
+date: 2023-06-08T15:57:45.815956
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-05T14:20:18.770722
+dateCreated: 2023-06-08T15:57:45.815956
 ---
 
-- Supported Trackers and Indexers as of Build `1.6.0.3489` / [Commit: ed1fb58242eb80c802b6448c652f1a3feefa6c7a](https://github.com/Prowlarr/Prowlarr/commit/ed1fb58242eb80c802b6448c652f1a3feefa6c7a)
+- Supported Trackers and Indexers as of Build `1.6.0.3516` / [Commit: 3a4c8db98c41454cfa3706b036ce11707a8d76b2](https://github.com/Prowlarr/Prowlarr/commit/3a4c8db98c41454cfa3706b036ce11707a8d76b2)
 
 ---
 
@@ -142,6 +142,8 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://www.zetorrents.pw/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
+|showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
+|Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 
 ### Private & Semi-Private Trackers
@@ -170,7 +172,6 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN tracker|German (Germany)|
 |[Abnormal](https://abn.lol/){#abnormal}|General French Private Tracker|French (France)|
 |[ABtorrents](https://abtorrents.me/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
-|[Acervos (API)](https://acervos.cc/){#acervos-api}|Acervos is a Brazilian tracker for movies, tv shows, and others|Portuguese (Brazil)|
 |[Acid-Lounge](https://www.acid-lounge.org.uk/){#acidlounge}|Acid Lounge (A-L) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|English (Australia)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
@@ -217,7 +218,6 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[CarPT](https://carpt.net/){#carpt}|CarPT (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[CartoonChaos](http://www.cartoonchaos.org/){#cartoonchaos}|CartoonChaos (CC) is a Private Torrent Tracker for ANIMATED MOVIES / TV|English (United States)|
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
-|[CCFBits](https://ccfbits.org/){#ccfbits}|CCFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Central Torrent](http://central-torrent.eu/){#centraltorrent}|Central Torrent is a POLISH Private Torrent Tracker for MOVIES / MUSIC|Polish (Poland)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -255,6 +255,7 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fantastic Heaven](https://fantastic-heaven.eu/){#fantasticheaven}|Fantastic Heaven is a German Time based tracker|German (Germany)|
 |[Fantastiko](https://fantastiko.space/){#fantastiko}|Fantastiko is a GREEK Private Torrent Tracker for SCI-FI / FANTASY / HORROR MOVIES / TV / GENERAL|Greek (Greece)|
+|[Fappaizuri](https://fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
@@ -291,7 +292,6 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDtime](https://hdtime.org/){#hdtime}|HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDTorrents\.it](https://hdtorrents.xyz/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private site for TV / MOVIES|Italian (Italy)|
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDZone](https://hdzone.me/){#hdzone}|HDZone is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -320,7 +320,7 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LemonHD](https://lemonhd.org/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Les-Cinephiles](https://les-cinephiles.nl/){#les-cinephiles}|Les-Cinephiles is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[LeSaloon](https://lesaloonv2-0.net/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
+|[LeSaloon](https://lesaloonv2-0.xyz/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|Hungarian (Hungary)|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL|Lithuanian (Lithuania)|
 |[Locadora](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Tracker for MOVIES and TV|Portuguese (Brazil)|
@@ -486,6 +486,7 @@ dateCreated: 2023-06-05T14:20:18.770722
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
+|[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
