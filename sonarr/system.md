@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2022-05-07T13:59:35.331Z
+date: 2023-06-09T22:53:05.263Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -368,14 +368,13 @@ A mount containing a series path is read only and is not writable by the user So
 
 ## More Info
 
-- Home Page: Sonarr's home page
+- Home Page: Sonarr's [home page](https://www.sonarr.tv)
 - Wiki: You're here already.
-- Reddit: r/sonarr
-- Discord: Join our discord
-- Donations: If you're feeling generous and would like to donate, click here.
-- Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all, click here.
-- Source: GitHub
-- Feature Requests: Got a great idea drop it here.
+- Reddit: [r/sonarr](https://www.reddit.com/r/sonarr)
+- Discord: Join our [discord](https://discord.sonarr.tv/)
+- Donations: If you're feeling generous and would like to donate, click [here](https://sonarr.tv/donate).
+- Source: [GitHub](https://www.github.com/sonarr/sonarr)
+- Feature Requests: Got a great idea drop it [here](https://www.github.com/sonarr/sonarr/issues).
 
 # Tasks
 
