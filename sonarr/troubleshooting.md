@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2022-11-15T16:03:16.672Z
+date: 2023-06-09T22:49:45.418Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -90,7 +90,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.gg/73QUuf3bgA)
+- [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
 {.links-list}
 
@@ -213,7 +213,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ## Resolving the issue
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/sonarr) or swing by our [discord](https://discord.gg/M6BvZn5), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/sonarr) or swing by our [discord](https://discord.sonarr.tv/), if there are others with the same issue, then rest assured we are working on it.
 
 > Please ensure you did not try to use a database from `develop` on the stable version. Branch hopping is ill-advised.{.is-info}
 
