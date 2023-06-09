@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-08T15:57:45.815956
+date: 2023-06-09T16:15:05.801205
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-08T15:57:45.815956
+dateCreated: 2023-06-09T16:15:05.801205
 ---
 
-- Supported Trackers and Indexers as of Build `1.6.0.3516` / [Commit: 3a4c8db98c41454cfa3706b036ce11707a8d76b2](https://github.com/Prowlarr/Prowlarr/commit/3a4c8db98c41454cfa3706b036ce11707a8d76b2)
+- Supported Trackers and Indexers as of Build `1.6.0.3523` / [Commit: 0b610ff9c80384ebbe74775a9c2b560cd21f1ede](https://github.com/Prowlarr/Prowlarr/commit/0b610ff9c80384ebbe74775a9c2b560cd21f1ede)
 
 ---
 
@@ -122,7 +122,7 @@ dateCreated: 2023-06-08T15:57:45.815956
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq259.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq260.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir106.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent10.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz58.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
