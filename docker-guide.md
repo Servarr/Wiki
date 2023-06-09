@@ -2,7 +2,7 @@
 title: Docker Guide
 description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
-date: 2022-12-03T10:47:34.160Z
+date: 2023-06-09T22:50:05.022Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -550,7 +550,7 @@ If you find yourself setting a UMASK of `000` (which is 777 for folders and 666 
 
 ## Chat Support (Discord)
 
-- [Sonarr Discord](https://discord.gg/xyRwnyB)
+- [Sonarr Discord](https://discord.sonarr.tv/)
 - [Radarr Discord](https://radarr.video/discord)
 {.links-list}
 
