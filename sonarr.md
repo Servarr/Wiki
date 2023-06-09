@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2022-11-26T17:53:02.278Z
+date: 2023-06-09T22:43:55.805Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -54,7 +54,7 @@ dateCreated: 2021-05-16T16:59:52.354Z
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.gg/M6BvZn5)
+- [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
 - [<i class="fab fa-wpforms"></i>&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
 {.links-list}
