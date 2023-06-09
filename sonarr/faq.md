@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-05-31T18:47:08.209Z
+date: 2023-06-09T22:47:20.005Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -514,7 +514,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 {.is-info}
 
 > Again, do not request a mapping for Japanese Anime; use XEM for that.
-> Further information can be found with some of the XEM folks that hangout in the [\#XEM discord channel on the Sonarr Discord](https://discord.gg/an9rnEdWs5)
+> Further information can be found with some of the XEM folks that hangout in the [\#XEM discord channel on the Sonarr Discord](https://discord.gg/Z3D6u5hBJb)
 {.is-danger}
 
 > If a Non-Japanese Series requires Season mapping (e.g. released as S25E26 but TVDB is S26E2 then an XEM mapping will be required. This cannot be done with Services mapping.
@@ -538,7 +538,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 {#missing-episodes}
 
-- If you know a TVDb update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.gg/M6BvZn5).
+- If you know a TVDb update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.sonarr.tv/).
 
 ## Why can I not add a series?
 
@@ -572,7 +572,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Duplicate Names Punctuation
 
-- It will also happen with two similarly named series that may only differ by punctuation, if this is the case please report this on the [Sonarr Discord](https://discord.gg/73QUuf3bgA).
+- It will also happen with two similarly named series that may only differ by punctuation, if this is the case please report this on the [Sonarr Discord](https://discord.sonarr.tv/).
   - Joe's Show (2022)
   - Joes Show (2022)
 
@@ -586,7 +586,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - TVDb dictates - with exceptions for streaming services - that the airtime and date is based on the Primary Airing Network's local time in the country's most popular city. [See TVDb's FAQ entry for details](https://support.thetvdb.com/kb/faq.php?id=29)
 - Episode Air Dates and Air Time on TVDb is converted to UTC and uses Sonarr's Timezone that is mapped in Skyhook by the Sonarr team for the Network TVDb has for the series.
   - In the rare case a network is not mapped then the time in TVDb will be assumed to be US EST (UTC-5).
-  - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.gg/73QUuf3bgA) for support with updating the Network's timezone.  
+  - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.sonarr.tv/) for support with updating the Network's timezone.  
 
 # Sonarr Common Problems
 
@@ -693,7 +693,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Most likely this is due to a MacOS bug which caused one of the Sonarr databases to be corrupted.
 - [Follow these steps to resolve](#i-am-getting-an-error-database-disk-image-is-malformed)
-- Then attempt to launch Sonarr and see if it works. If it does not work, you will need further support. Post in our [reddit](http://reddit.com/r/Sonarr) or hop on [discord](https://discord.gg/M6BvZn5) for help.
+- Then attempt to launch Sonarr and see if it works. If it does not work, you will need further support. Post in our [reddit](http://reddit.com/r/Sonarr) or hop on [discord](https://discord.sonarr.tv/) for help.
 
 ## Why can Sonarr not see my files on a remote server?
 
