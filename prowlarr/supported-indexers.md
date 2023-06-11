@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-09T16:15:05.801205
+date: 2023-06-11T04:13:14.893480
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-09T16:15:05.801205
+dateCreated: 2023-06-11T04:13:14.893480
 ---
 
-- Supported Trackers and Indexers as of Build `1.6.0.3523` / [Commit: 0b610ff9c80384ebbe74775a9c2b560cd21f1ede](https://github.com/Prowlarr/Prowlarr/commit/0b610ff9c80384ebbe74775a9c2b560cd21f1ede)
+- Supported Trackers and Indexers as of Build `1.6.0.3527` / [Commit: 31c2917bad63a817b932a6fe298616a72ac3771d](https://github.com/Prowlarr/Prowlarr/commit/31c2917bad63a817b932a6fe298616a72ac3771d)
 
 ---
 
@@ -146,7 +146,12 @@ dateCreated: 2023-06-09T16:15:05.801205
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
 |[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 
-### Private & Semi-Private Trackers
+### Semi-Private Trackers
+
+|Indexer|Description|Language|
+|:--|:--|:--|
+
+### Private Trackers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
@@ -542,7 +547,12 @@ dateCreated: 2023-06-09T16:15:05.801205
 |:--|:--|:--|
 |[BinSearch](https://binsearch.info/){#binsearch}|The binary Usenet search engine|English (United States)|
 
-### Private & Semi-Private Indexers
+### Semi-Private Indexers
+
+|Indexer|Description|Language|
+|:--|:--|:--|
+
+### Private Indexers
 
 |Indexer|Description|Language|
 |:--|:--|:--|
