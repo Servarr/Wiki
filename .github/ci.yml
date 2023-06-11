@@ -1,0 +1,61 @@
+name: Daily Update Prowlarr Supported Indexers
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install xmltodict json logging sys argparse requests iso639 pycountry datetime
+
+      - name: Extract API Key from Prowlarr config
+        id: extract-api-key
+        run: |
+          API_KEY=$(python -c "import xmltodict; \
+            with open('prowlarr/config.xml') as f: \
+              data = xmltodict.parse(f.read()); \
+            print(data['Config']['ApiKey'])")
+          echo "::add-mask::${API_KEY}"
+          echo "API_KEY=$API_KEY" >> $GITHUB_ENV
+
+      - name: Run Python script
+        run: |
+          python scripts/convert_prowlarr_supported_indexers_to_markdown.py -k ${{ env.API_KEY }} -u "http://localhost:9696" -o "prowlarr/supported-indexers.md"
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "Servarr"
+          git config --global user.email "development@lidarr.audio"
+
+      - name: Create Branch
+        run: |
+          git checkout -b update-wiki
+          git add prowlarr/supported-indexers.md
+          git commit -m "[script] supported indexers $(date --iso-8601=seconds)"
+          git push origin update-wiki
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update-wiki
+          title: "[script] supported indexers $(date --iso-8601=seconds)"
+          labels: "[script]"
+          body: |
+            Prowlarr version: $(docker run --rm -v ${{ github.workspace }}:/app -w /app hotio/prowlarr:nightly prowlarr --version)
+            This PR updates the supported indexers in the prowlarr/supported-indexers.md file.
