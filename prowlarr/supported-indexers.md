@@ -2,10 +2,10 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-11T04:13:14.893480
+date: 2023-06-11T04:29:33.250596
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-11T04:13:14.893480
+dateCreated: 2023-06-11T04:29:33.250596
 ---
 
 - Supported Trackers and Indexers as of Build `1.6.0.3527` / [Commit: 31c2917bad63a817b932a6fe298616a72ac3771d](https://github.com/Prowlarr/Prowlarr/commit/31c2917bad63a817b932a6fe298616a72ac3771d)
@@ -150,6 +150,75 @@ dateCreated: 2023-06-11T04:13:14.893480
 
 |Indexer|Description|Language|
 |:--|:--|:--|
+|[Anidub](https://tr.anidub.com/){#anidub}|Anidub is russian anime voiceover group and eponymous anime tracker|Russian (Russia)|
+|[Anime-Free](https://anime-free.one/){#anime-free}|Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games|Russian (Russia)|
+|[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
+|[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[BitNova](https://bitnova.info/){#bitnova}|BitNova is a POLISH Semi-Private Torrent Tracker for 0DAY / GENERAL|Polish (Poland)|
+|[BookTracker](https://booktracker.org/){#booktracker}|BookTracker is a RUSSIAN Semi-Private Torrent Tracker for EBOOKS|Russian (Russia)|
+|[BootyTape](https://ssl.bootytape.com/){#bootytape}|BootyTape is a Semi-Private site for 3X|English (United States)|
+|[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|Russian (Russia)|
+|[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|Icelandic (Iceland)|
+|[Demonoid](https://www.demonoid.is/){#demonoid}|Demonoid is a Semi-Private torrent site for MOVIES / TV / GENERAL|English (United States)|
+|[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
+|[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles|Russian (Russia)|
+|[Electro-Torrent](http://electro-torrent.pl/){#electro-torrent}|Electro-Torrent is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[EliteTorrent-pl](https://elitetorrent.pl/){#elitetorrent-pl}|EliteTorrent-pl is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[EniaHD](https://eniatv.com/){#eniahd}|EniaHD is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
+|[Ex-torrenty](https://ex-torrenty.org/){#ex-torrenty}|Ex-torrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[ExKinoRay](http://exkinoray.fun/){#exkinoray}|ExKinoRay is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
+|[ExtremlymTorrents](https://extremlymtorrents.ws/){#extremlymtorrents}|ExtremlymTorrents (XTR) is a Semi-Private tracker for MOVIES / TV / GENERAL|English (United States)|
+|[Fenyarnyek-Tracker](http://tracker.fenyarnyek.com/){#fenyarnyek-tracker}|Fenyarnyek-Tracker is a HUNGARIAN semi private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
+|[File-Tracker](https://file-tracker.net/){#file-tracker}|File Tracker is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|Russian (Russia)|
+|[Gay-Torrents\.net](https://www.gay-torrents.net/){#gay-torrents}|Gay-Torrents\.net is a Private Torrent Tracker for GAY 3X|English (United States)|
+|[Genesis-Movement](https://torrent.genesis-movement.org/){#genesismovement}|Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC|English (United States)|
+|[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH semi private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
+|[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
+|[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a Hungarian Semi-Private site for MOVIES / TV / GENERAL|Hungarian (Hungary)|
+|[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private site for TV / MOVIES / GENERAL|Italian (Italy)|
+|[Kinorun](http://kinorun.top/){#kinorun}|Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
+|[Kinozal](https://kinozal.tv/){#kinozal}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC|Russian (Russia)|
+|[Marine Tracker](https://seatracker.ru/){#marinetracker}|Marine Tracker is a RUSSIAN Semi-Private Torrent Tracker for MARITIME E-LEARNING|Russian (Russia)|
+|[Masters-TB](https://masters-tb.com/){#masters-tb}|Masters-TB is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[Mazepa](https://mazepa.to/){#mazepa}|Mazepa is a UKRAINIAN Semi-Private Torrent Tracker for Videos with Ukrainian soundtracks|Ukrainian (Ukraine)|
+|[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private site dedicated to HEAVY METAL MUSIC\. This definition is for the English site|English (United States)|
+|[Moviesite](http://moviesite.info.hu/){#moviesite}|Moviesite is a HUNGARIAN Semi-Private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
+|[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES\. This definition is for the Forum Tracker site|English (United States)|
+|[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES\. This definition is for the Main Tracker site|English (United States)|
+|[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|Vietnamese (Viet Nam)|
+|[NewStudioL](http://newstudio.tv/){#newstudiol}|NewStudio is a RUSSIAN Public site for TV\. This supports login|Russian (Russia)|
+|[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
+|[PiratBitL](https://pb.wtf/){#piratbitl}|PirateBit is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL\. This supports login|Russian (Russia)|
+|[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
+|[Rainbow Tracker](https://gaytracker.ru/){#rainbowtracker}|Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV|Russian (Russia)|
+|[RGFootball](http://rgfootball.net/){#rgfootball}|RGFootball is a Russian Sports torrent tracker|Russian (Russia)|
+|[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
+|[RiperAM](http://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
+|[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
+|[RUDUB](http://rudub.co/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[Rustorka](http://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
+|[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Semi-Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
+|[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
+|[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
+|[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
+|[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
+|[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
+|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
+|[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|Russian (Russia)|
+|[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
+|[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
+|[vTorrent](https://vtorrent.pl/){#vtorrent}|vTorrent is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[YGGcookie](https://www3.yggtorrent.do/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
+|[YGGtorrent](https://www3.yggtorrent.do/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
+|[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
+|[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
+|[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for Adult content|Russian (Russia)|
+|[RuTracker](https://rutracker.org/){#rutracker}|RuTracker is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
+|[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
+|[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 
 ### Private Trackers
 
@@ -551,6 +620,7 @@ dateCreated: 2023-06-11T04:13:14.893480
 
 |Indexer|Description|Language|
 |:--|:--|:--|
+|[NZBIndex](https://nzbindex.com/){#nzbindex}|A Usenet Indexer|English (United States)|
 
 ### Private Indexers
 
