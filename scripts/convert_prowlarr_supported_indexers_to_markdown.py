@@ -421,7 +421,7 @@ def main(commit, build, app_apikey, output_file, app_base_url):
     tbl_usenet_public = build_markdown_table(indexer_obj, ["public"], "usenet")
     # Semi-Private Usenet
     logging.info("Building: Usenet - Semi-Private")
-    tbl_usenet_semiprivate = build_markdown_table(indexer_obj, ["semiprivate"], "usenet")
+    tbl_usenet_semiprivate = build_markdown_table(indexer_obj, ["semiPrivate"], "usenet")
     # Private Usenet
     logging.info("Building: Usenet - Private")
     tbl_usenet_private = build_markdown_table(indexer_obj, ["private"], "usenet")
@@ -430,7 +430,7 @@ def main(commit, build, app_apikey, output_file, app_base_url):
     tbl_torrent_public = build_markdown_table(indexer_obj, ["public"], "torrent")
     # Semi-Private Torrents
     logging.info("Building: Torrents - Semi-Private")
-    tbl_torrent_semiprivate = build_markdown_table(indexer_obj, ["semiprivate"], "torrent")
+    tbl_torrent_semiprivate = build_markdown_table(indexer_obj, ["semiPrivate"], "torrent")
     # Private Torrents
     logging.info("Building: Torrents - Private")
     tbl_torrent_private = build_markdown_table(indexer_obj, ["private"], "torrent")
