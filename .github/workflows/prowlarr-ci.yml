@@ -1,68 +1,62 @@
-name: Daily Update Prowlarr Supported Indexers
+name: Update Prowlarr Supported Indexers
 
 on:
-  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
     branches:
       - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   update-wiki:
     runs-on: ubuntu-latest
-    services:
-      prowlarr:
-        image: ghcr.io/linuxserver/prowlarr:nightly
-        ports:
-          - 9696:9696
-
+    if: github.repository == 'Servarr/Wiki'
+    permissions:
+      contents: write
+    env:
+      API_KEY: fakeapikey
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Setup Python
+        uses: actions/setup-python@v3
         with:
-          python-version: "3.x"
+          python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install pip packages
         run: |
-          python -m pip install --upgrade pip
-          pip install xmltodict
+          pip3 install -U --no-cache-dir \
+            requests==2.31.0 \
+            pycountry==22.3.5 \
+            python_iso639==2023.4.13
 
-      - name: Extract API Key from Prowlarr config
-        id: extract-api-key
+      - name: Update supported indexers markdown
         run: |
-          API_KEY=$(python -c "
-          import xmltodict
-          with open('/config/config.xml', 'r') as f:
-              data = xmltodict.parse(f.read())
-              print(data['Config']['ApiKey'])
-          ")
-          echo "::add-mask::${API_KEY}"
-          echo "API_KEY=$API_KEY" >> $GITHUB_ENV
+          echo "<Config><LaunchBrowser>False</LaunchBrowser><ApiKey>${{ env.API_KEY }}</ApiKey></Config>" | tee prowlarr-config.xml
+          docker run -d --rm --name=prowlarr -e TZ=Etc/UTC -p 9696:9696 -v "$(pwd)/prowlarr-config.xml":/config/config.xml ghcr.io/linuxserver/prowlarr:nightly
+          sleep 15
+          APP_VERSION=$(curl -sL "http://localhost:9696/api?apikey=${{ env.API_KEY }}" -I | awk 'BEGIN {RS="\r\n"; FS=": "}/^X-Application-Version/{print $2}')
+          echo "PROWLARR_VERSION=$APP_VERSION" >> $GITHUB_ENV
+          echo "PROWLARR_VERSION=$APP_VERSION" >> $GITHUB_STEP_SUMMARY
+          python scripts/convert_prowlarr_supported_indexers_to_markdown.py -k "${{ env.API_KEY }}" -u "http://localhost:9696" -o "prowlarr/supported-indexers.md"
+          docker stop prowlarr
 
-      - name: Run Python script
-        run: |
-          python scripts/convert_prowlarr_supported_indexers_to_markdown.py -k ${{ env.API_KEY }} -u "http://localhost:9696" -o "prowlarr/supported-indexers.md"
-
-      - name: Configure Git
+      - name: Commit changes
         run: |
           git config --global user.name "Servarr"
           git config --global user.email "development@lidarr.audio"
-
-      - name: Create Branch
-        run: |
-          git checkout -b update-wiki
+          git checkout -b update-wiki-supported-indexers
           git add prowlarr/supported-indexers.md
-          git commit -m "[script] supported indexers $(date --iso-8601=seconds)"
-          git push origin update-wiki
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-wiki-supported-indexers
-          title: "[script] supported indexers $(date --iso-8601=seconds)"
-          labels: "[script]"
-          body: |
-            Prowlarr version: $(curl -sL "https://prowlarr.servarr.com/v1/update/nightly/changes?runtime=netcore&os=linuxmusl" | jq -r '.[0].version')
-            This PR updates the supported indexers in the prowlarr/supported-indexers.md file.
+          if git status | grep -q modified
+          then
+            git commit -m "[script] supported indexers $(date --iso-8601=seconds)"
+            git push -f --set-upstream origin update-wiki-supported-indexers
+            curl -X POST -H "Authorization: Bearer ${{ secrets.PAT }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/servarr/wiki/pulls -d '{"head":"update-wiki-supported-indexers","base":"master","title":"[script] supported indexers for Prowlarr ${{ env.PROWLARR_VERSION }}"}'
+          else
+            echo "No changes since last run"
+          fi
