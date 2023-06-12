@@ -2,13 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-11T04:29:33.250596
+date: 2023-06-12T01:17:44.953991
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-11T04:29:33.250596
+dateCreated: 2023-06-12T01:17:44.953991
 ---
 
-- Supported Trackers and Indexers as of Build `1.6.0.3527` / [Commit: 31c2917bad63a817b932a6fe298616a72ac3771d](https://github.com/Prowlarr/Prowlarr/commit/31c2917bad63a817b932a6fe298616a72ac3771d)
+- Supported Trackers and Indexers as of Build `1.6.1.3532` / [Commit: e658e3fe487cb14ae6641c8b723454badfa8659b](https://github.com/Prowlarr/Prowlarr/commit/e658e3fe487cb14ae6641c8b723454badfa8659b)
 
 ---
 
@@ -150,7 +150,7 @@ dateCreated: 2023-06-11T04:29:33.250596
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[Anidub](https://tr.anidub.com/){#anidub}|Anidub is russian anime voiceover group and eponymous anime tracker|Russian (Russia)|
+|[Anidub](https://tr.anidub.com/){#anidub}|Anidub is RUSSIAN anime voiceover group and eponymous anime tracker|Russian (Russia)|
 |[Anime-Free](https://anime-free.one/){#anime-free}|Anime-Free is a RUSSIAN Semi-Private Torrent Tracker for Hentai manga, eroge and flash porn games|Russian (Russia)|
 |[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
 |[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
