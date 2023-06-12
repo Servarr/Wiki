@@ -449,6 +449,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
     wiki_page_start = (
         WIKI_1NEWLINE
         + "- Supported Trackers and Indexers as of "
+        + WIKI_1NEWLINE
         + f"  - Prowlarr Build `{build}` / [Commit: {app_commit}]({GH_APP_COMMIT_URL.rstrip('/')}/{app_commit})"
         + WIKI_1NEWLINE
         + f"  - [Prowlarr Indexers Commit: {indexer_commit}]({GH_INDEXER_COMMIT_URL.rstrip('/')}/{indexer_commit}"
