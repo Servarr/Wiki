@@ -19,8 +19,10 @@ WIKI_1NEWLINE = "\n"
 WIKI_2NEWLINE = "\n\n"
 WIKI_ENCODING = "utf8"
 WIKI_INFOLINK = "https://wiki.servarr.com/prowlarr/supported-indexers#"
-GH_URL = "https://api.github.com/repos/Prowlarr/Prowlarr/commits"
-GH_COMMIT_URL = "https://github.com/Prowlarr/Prowlarr/commit/"
+GH_APP_URL = "https://api.github.com/repos/Prowlarr/Prowlarr/commits"
+GH_APP_COMMIT_URL = "https://github.com/Prowlarr/Prowlarr/commit/"
+GH_INDEXER_URL = "https://api.github.com/repos/Prowlarr/Indexers/commits"
+GH_INDEXER_COMMIT_URL = "https://github.com/Prowlarr/Indexers/commit/"
 LANG_DICT = {
     'af': 'Afrikaans',
     'af-ZA': 'Afrikaans (South Africa)',
@@ -315,6 +317,7 @@ def get_language_name(language_code, indexer=None):
 
 
 def get_request(url, request_headers=None, request_timeout=5, max_retries=3):
+    """Gets the request from the given url"""
     retries = 0
     while retries < max_retries:
         try:
@@ -392,24 +395,31 @@ def build_markdown_table(indexers, privacy, protocol):
     return table
 
 
-def main(commit, build, app_apikey, output_file, app_base_url):
+def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url):
     # API URLs
     api_url = f"{app_base_url}/api/{API_VERSION}"
 
     # Headers
     headers = {"X-Api-Key": app_apikey}
 
-    # Determine Commit
-    if not commit:
-        response = get_request(GH_URL)
+    # Determine App Commit
+    if not app_commit:
+        response = get_request(GH_APP_URL)
         github_req = json.loads(response.content)
-        commit = github_req[0]["sha"]
-    logging.info("Commit is {%s}", commit)
+        app_commit = github_req[0]["sha"]
+    logging.info("App Commit is {%s}", app_commit)
 
     # Determine Version (Build)
     if not build:
         version_obj = get_version(api_url, headers)
         build = version_obj.replace("\n", "").replace("\r", "")
+
+    # Determine Indexers Commit
+    if not indexer_commit:
+        response = get_request(GH_INDEXER_URL)
+        github_req = json.loads(response.content)
+        indexer_commit = github_req[0]["sha"]
+    logging.info("Indexer Commit is {%s}", indexer_commit)
 
     # Get Indexer Data
     indexer_obj = get_indexers(api_url, headers)
@@ -438,7 +448,10 @@ def main(commit, build, app_apikey, output_file, app_base_url):
     # Page Header Info
     wiki_page_start = (
         WIKI_1NEWLINE
-        + f"- Supported Trackers and Indexers as of Build `{build}` / [Commit: {commit}]({GH_COMMIT_URL.rstrip('/')}/{commit})"
+        + "- Supported Trackers and Indexers as of "
+        + f"  - Prowlarr Build `{build}` / [Commit: {app_commit}]({GH_APP_COMMIT_URL.rstrip('/')}/{app_commit})"
+        + WIKI_1NEWLINE
+        + f"  - [Prowlarr Indexers Commit: {indexer_commit}]({GH_INDEXER_COMMIT_URL.rstrip('/')}/{indexer_commit}"
         + WIKI_1NEWLINE
     )
 
@@ -524,7 +537,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Convert Prowlarr Supported Indexers to Markdown Table"
     )
-    parser.add_argument("-c", "--commit", help="Commit hash")
+    parser.add_argument("-c", "--commit", help="App Commit hash")
+    parser.add_argument("-i", "--indexercommit", help="Indexer Commit hash")
     parser.add_argument("-b", "--build", help="Build version")
     parser.add_argument("-k", "--appapikey", help="App API Key")
     parser.add_argument(
@@ -540,6 +554,7 @@ if __name__ == "__main__":
 
     main(
         args.commit,
+        args.indexercommit,
         args.build,
         args.appapikey,
         args.outputfile,
