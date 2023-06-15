@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-12T15:08:35.546121
+date: 2023-06-15T01:12:01.009633
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-12T15:08:35.546121
+dateCreated: 2023-06-15T01:12:01.009633
 ---
 
-- Supported Trackers and Indexers as of 
-  - Prowlarr Build `1.6.1.3535` / [Commit: e658e3fe487cb14ae6641c8b723454badfa8659b](https://github.com/Prowlarr/Prowlarr/commit/e658e3fe487cb14ae6641c8b723454badfa8659b)
-  - [Prowlarr Indexers Commit: f8a754bd999be083f04d57e2a1b5eeed766ade44](https://github.com/Prowlarr/Indexers/commit/f8a754bd999be083f04d57e2a1b5eeed766ade44)
+- Supported Trackers and Indexers as of
+  - Prowlarr Build `1.6.1.3552` / [Commit: 4561859c2b3e8edf5ffab994f72ec8f97aca8c53](https://github.com/Prowlarr/Prowlarr/commit/4561859c2b3e8edf5ffab994f72ec8f97aca8c53)
+  - [Prowlarr Indexers Commit: 74aaaa758e8a52dbcb743afde0e045f08e7c5523](https://github.com/Prowlarr/Indexers/commit/74aaaa758e8a52dbcb743afde0e045f08e7c5523)
 
 ---
 
@@ -125,7 +125,7 @@ dateCreated: 2023-06-12T15:08:35.546121
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq260.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir106.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir108.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent10.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz58.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
