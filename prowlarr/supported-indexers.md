@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-16T01:12:30.545129
+date: 2023-06-18T01:21:32.924196
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-16T01:12:30.545129
+dateCreated: 2023-06-18T01:21:32.924196
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.6.1.3558` / [Commit: d21debe77f27e43cd807ba67e700fda4351eb6a8](https://github.com/Prowlarr/Prowlarr/commit/d21debe77f27e43cd807ba67e700fda4351eb6a8)
-  - [Prowlarr Indexers Commit: d08715c9a84dcda530232e465d8f195967186abb](https://github.com/Prowlarr/Indexers/commit/d08715c9a84dcda530232e465d8f195967186abb)
+  - Prowlarr Build `1.6.1.3564` / [Commit: 8a891d07cfb0daab8a2d3e476c4906eeedd7ce64](https://github.com/Prowlarr/Prowlarr/commit/8a891d07cfb0daab8a2d3e476c4906eeedd7ce64)
+  - [Prowlarr Indexers Commit: 861289ad28e1e54ad2c784dd77d47aafc9af7b45](https://github.com/Prowlarr/Indexers/commit/861289ad28e1e54ad2c784dd77d47aafc9af7b45)
 
 ---
 
@@ -42,7 +42,7 @@ dateCreated: 2023-06-16T01:12:30.545129
 |[BTDigg](https://btdig.com/){#btdigg}|BTDigg is a Public BitTorrent DHT search engine|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
-|[BTSOW](https://btsow.bond/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
+|[BTSOW](https://btsow.skin/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[BullTorrent](https://www.bulltorrent.com/){#bulltorrent}|BullTorrent (formerly TOROS) is a Public torrent index|English (United States)|
 |[Byrutor](https://byrutdb.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|Chinese (China)|
@@ -495,7 +495,6 @@ dateCreated: 2023-06-16T01:12:30.545129
 |[TellyTorrent (API)](https://telly.wtf/){#tellytorrent-api}|TellyTorrent is an INDIAN Private Tracker for MOVIES / TV|English (United States)|
 |[teracod](https://teracod.net/){#teracod}|teracod (Movie Zone) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[The-Crazy-Ones](https://thecrazyones.hopto.org/){#the-crazy-ones}|The-Crazy-Ones (T-C-O) is a Private GERMAN tracker for MOVIES / TV / MUSIC|German (Germany)|
-|[TheDarkCommunity (API)](https://thedarkcommunity.cc/){#thedarkcommunity-api}|TheDarkCommunity (TDC) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[The Geeks](https://thegeeks.click/){#thegeeks}|Technology E-Learning|English (United States)|
