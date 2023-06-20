@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-18T01:21:32.924196
+date: 2023-06-20T01:10:02.977563
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-18T01:21:32.924196
+dateCreated: 2023-06-20T01:10:02.977563
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.6.1.3564` / [Commit: 8a891d07cfb0daab8a2d3e476c4906eeedd7ce64](https://github.com/Prowlarr/Prowlarr/commit/8a891d07cfb0daab8a2d3e476c4906eeedd7ce64)
-  - [Prowlarr Indexers Commit: 861289ad28e1e54ad2c784dd77d47aafc9af7b45](https://github.com/Prowlarr/Indexers/commit/861289ad28e1e54ad2c784dd77d47aafc9af7b45)
+  - Prowlarr Build `1.6.2.3574` / [Commit: 9a4c23797a98286d04652a3551bfe8205e870d72](https://github.com/Prowlarr/Prowlarr/commit/9a4c23797a98286d04652a3551bfe8205e870d72)
+  - [Prowlarr Indexers Commit: 3bb26031d5d33db050d9ff36407f442b801d39e2](https://github.com/Prowlarr/Indexers/commit/3bb26031d5d33db050d9ff36407f442b801d39e2)
 
 ---
 
@@ -163,7 +163,6 @@ dateCreated: 2023-06-18T01:21:32.924196
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|Icelandic (Iceland)|
 |[Demonoid](https://www.demonoid.is/){#demonoid}|Demonoid is a Semi-Private torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
-|[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles|Russian (Russia)|
 |[Electro-Torrent](https://electro-torrent.pl/){#electro-torrent}|Electro-Torrent is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[EliteTorrent-pl](https://elitetorrent.pl/){#elitetorrent-pl}|EliteTorrent-pl is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -317,6 +316,7 @@ dateCreated: 2023-06-18T01:21:32.924196
 |[DesiTorrents (API)](https://desitorrents.tv/){#desitorrents-api}|Desitorrents is a Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / MUSIC|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
 |[DigitalCore](https://digitalcore.club/){#digitalcore}|DigitalCore is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DivTeam](https://divteam.com/){#divteam}|DivTeam is a SPANISH Private Torrent Tracker for MOVIES / GENERAL|Spanish (Spain)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-learning|English (United States)|
@@ -562,6 +562,7 @@ dateCreated: 2023-06-18T01:21:32.924196
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
