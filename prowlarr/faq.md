@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-06-02T15:17:27.218Z
+date: 2023-06-21T23:01:13.571Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -132,6 +132,7 @@ The following attributes are optional, but recommended:
 - The specific error will be be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
   - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
   - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
+    - Note that certain Trackers - primarily "crappy" public trackers - require one to select and sync the `8000 - Other` category. This is often - but not always - noted within the Tracker's details within Prowlarr.
   - Try again later
   - If the issue persist you may have a corrupted database. Check your logs for instances of `Database disk image is malformed` or `Error creating main database`. See [this heading](https://wiki.servarr.com/prowlarr/faq#i-am-getting-an-error-database-disk-image-is-malformed) for possible solutions.
 
