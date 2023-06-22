@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-20T01:10:02.977563
+date: 2023-06-22T01:13:44.750516
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-20T01:10:02.977563
+dateCreated: 2023-06-22T01:13:44.750516
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.6.2.3574` / [Commit: 9a4c23797a98286d04652a3551bfe8205e870d72](https://github.com/Prowlarr/Prowlarr/commit/9a4c23797a98286d04652a3551bfe8205e870d72)
-  - [Prowlarr Indexers Commit: 3bb26031d5d33db050d9ff36407f442b801d39e2](https://github.com/Prowlarr/Indexers/commit/3bb26031d5d33db050d9ff36407f442b801d39e2)
+  - Prowlarr Build `1.6.2.3584` / [Commit: 15e7cc7ea81c23aaf3be48195f5d4e6b05e37101](https://github.com/Prowlarr/Prowlarr/commit/15e7cc7ea81c23aaf3be48195f5d4e6b05e37101)
+  - [Prowlarr Indexers Commit: 75acb852a15906543e3b8beebc396be4cbc271f9](https://github.com/Prowlarr/Indexers/commit/75acb852a15906543e3b8beebc396be4cbc271f9)
 
 ---
 
@@ -217,6 +217,7 @@ dateCreated: 2023-06-20T01:10:02.977563
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[MovieWorld](https://movieworld.pics/){#movieworld}|MovieWorld (Flicker) is a Semi-Private Torrent Tracker for MOVIES / TV / 3X|English (United States)|
+|[MuseBootlegs](https://www.musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for Adult content|Russian (Russia)|
 |[RuTracker](https://rutracker.org/){#rutracker}|RuTracker is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
@@ -556,6 +557,9 @@ dateCreated: 2023-06-20T01:10:02.977563
 |[Zelka\.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
+|[Azusa](https://azusa.wiki/){#azusa}|Azusa is a CHINESE Torrent Tracker focusing on Comics|Chinese (China)|
+|[Dajiao](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kufei](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -564,6 +568,7 @@ dateCreated: 2023-06-20T01:10:02.977563
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
+|[Shadowflow](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
