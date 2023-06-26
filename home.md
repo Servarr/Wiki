@@ -2,7 +2,7 @@
 title: Servarr
 description: 
 published: true
-date: 2022-08-17T05:05:52.191Z
+date: 2023-06-26T02:22:25.885Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -34,7 +34,6 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 ## Indexer Management
 
 - [![16.png](/assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
-- [<i class="fas fa-book-reader"></i>&emsp;Cardigann YAML Indexer Definition *Prowlarr Cardigann*](/prowlarr/cardigann-yml-definition)
 {.links-list}
 
 # Other
