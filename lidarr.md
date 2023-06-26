@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2022-11-25T01:40:15.525Z
+date: 2023-06-26T02:51:13.402Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -54,7 +54,6 @@ dateCreated: 2021-05-16T23:39:16.456Z
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Lidarr Discord*](https://lidarr.audio/discord)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Lidarr Subreddit*](https://reddit.com/r/lidarr)
 {.links-list}
 
 # Links
