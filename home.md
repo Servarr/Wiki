@@ -1,8 +1,8 @@
 ---
 title: Servarr
-description: 
+description: Official wiki for Lidarr, Radarr, Readarr, Sonarr, and Whisparr
 published: true
-date: 2023-06-26T02:56:58.128Z
+date: 2023-06-26T03:23:25.209Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
