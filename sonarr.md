@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2023-06-09T22:43:55.805Z
+date: 2023-06-26T03:14:28.922Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -43,7 +43,6 @@ dateCreated: 2021-05-16T16:59:52.354Z
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/sonarr/contributing)
-- [<i class="fas fa-book"></i>&emsp; Legacy API Docs](https://github.com/Sonarr/Sonarr/wiki/API)
 - [<i class="fas fa-book"></i>&emsp; v4 Beta API Docs](https://sonarr.tv/docs/api)
 {.links-list}
 
