@@ -2,7 +2,7 @@
 title: Radarr
 description: Radarr wiki homepage
 published: true
-date: 2022-05-03T13:31:48.826Z
+date: 2023-06-26T02:50:56.887Z
 tags: radarr
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
@@ -53,7 +53,6 @@ dateCreated: 2021-05-16T13:53:17.360Z
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Radarr Discord*](https://radarr.video/discord)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Radarr Subreddit*](https://reddit.com/r/radarr)
 {.links-list}
 
 # Links
