@@ -2,7 +2,7 @@
 title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
-date: 2023-04-30T22:38:25.371Z
+date: 2023-06-26T02:50:38.494Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
@@ -54,7 +54,6 @@ dateCreated: 2021-05-24T03:32:41.926Z
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Prowlarr Discord*](https://prowlarr.com/discord)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Prowlarr Subreddit*](https://reddit.com/r/prowlarr)
 {.links-list}
 
 # Links
