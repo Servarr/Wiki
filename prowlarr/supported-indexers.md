@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-06-22T01:13:44.750516
+date: 2023-06-26T01:22:06.601958
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-06-22T01:13:44.750516
+dateCreated: 2023-06-26T01:22:06.601958
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.6.2.3584` / [Commit: 15e7cc7ea81c23aaf3be48195f5d4e6b05e37101](https://github.com/Prowlarr/Prowlarr/commit/15e7cc7ea81c23aaf3be48195f5d4e6b05e37101)
-  - [Prowlarr Indexers Commit: 75acb852a15906543e3b8beebc396be4cbc271f9](https://github.com/Prowlarr/Indexers/commit/75acb852a15906543e3b8beebc396be4cbc271f9)
+  - Prowlarr Build `1.6.3.3606` / [Commit: f20319fff1c481329dc8a0f464578591e5482cc5](https://github.com/Prowlarr/Prowlarr/commit/f20319fff1c481329dc8a0f464578591e5482cc5)
+  - [Prowlarr Indexers Commit: db95a4c8906dfae714c8855caaf818f362a6a53f](https://github.com/Prowlarr/Indexers/commit/db95a4c8906dfae714c8855caaf818f362a6a53f)
 
 ---
 
@@ -124,10 +124,10 @@ dateCreated: 2023-06-22T01:13:44.750516
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq261.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir108.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentView](https://viewtorrent10.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentWhiz](https://torrentwiz58.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq262.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir109.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentView](https://viewtorrent11.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentWhiz](https://torrentwiz59.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -298,6 +298,7 @@ dateCreated: 2023-06-22T01:13:44.750516
 |[Central Torrent](http://central-torrent.eu/){#centraltorrent}|Central Torrent is a POLISH Private Torrent Tracker for MOVIES / MUSIC|Polish (Poland)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[cheggit](https://www.cheggit.me/){#cheggit}|cheggit is a Private site for 3X|English (United States)|
 |[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
 |[CiNEFiLHD](http://cinefilhd.xyz/){#cinefilhd}|CiNEFiLHD is a Private Torrent Tracker for MOVIES / TV /  MUSIC|English (United States)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|B-movie tracker|English (United States)|
@@ -364,7 +365,6 @@ dateCreated: 2023-06-22T01:13:44.750516
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDMaYi](http://hdmayi.com/){#hdmayi}|HDMaYi (小蚂蚁PT站) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDMonkey](https://hdmonkey.org/){#hdmonkey}|HDMonkey is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH site for HD content|Spanish (Spain)|
 |[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -456,7 +456,6 @@ dateCreated: 2023-06-22T01:13:44.750516
 |[Punk's Horror Tracker](https://punck-tracker.net/){#punkshorror}|Punk's Horror Tracker is a HUNGARIAN Private Tracker for Horror MOVIES / TV|Hungarian (Hungary)|
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH site for General content|Spanish (Spain)|
 |[PuTao](https://pt.sjtu.edu.cn/){#putao}|葡萄 (PuTao) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[Puur-Hollands](https://www.puur-hollands.org/){#puurhollands}|Puur-Hollands is a DUTCH Private Torrent Tracker for MUSIC|Dutch (Netherlands)|
 |[PWTorrents](https://pwtorrents.net/){#pwtorrents}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING|English (United States)|
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private site for MOVIES / TV / GENERAL|English (United States)|
 |[Racing4Everyone (API)](https://racing4everyone.eu/){#racing4everyone-api}|Racing4Everyone (R4E) is a Private Torrent Tracker for RACING|English (United States)|
@@ -466,7 +465,6 @@ dateCreated: 2023-06-22T01:13:44.750516
 |[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
-|[RPTorrents](https://rptorrents.com/){#rptorrents}|RPTorrents is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SDBits](https://sdbits.org/){#sdbits}|SDBits is a small tracker that focuses on SD movies and tv|English (United States)|
 |[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
@@ -557,9 +555,11 @@ dateCreated: 2023-06-22T01:13:44.750516
 |[Zelka\.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
+|[3Wmg](https://www.3wmg.com/){#3wmg}|3Wmg is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Azusa](https://azusa.wiki/){#azusa}|Azusa is a CHINESE Torrent Tracker focusing on Comics|Chinese (China)|
 |[Dajiao](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
+|[Free Farm](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kufei](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
