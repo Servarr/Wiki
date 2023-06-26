@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2022-07-25T22:50:59.026Z
+date: 2023-06-26T02:51:30.603Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
@@ -54,7 +54,6 @@ dateCreated: 2021-08-15T13:12:38.327Z
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Readarr Subreddit*](https://reddit.com/r/readarr)
 {.links-list}
 
 # Links
