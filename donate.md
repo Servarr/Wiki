@@ -2,7 +2,7 @@
 title: Donate
 description: 
 published: true
-date: 2023-06-26T02:31:41.267Z
+date: 2023-06-26T03:16:42.643Z
 tags: radarr, sonarr, lidarr, readarr, prowlarr, donate
 editor: markdown
 dateCreated: 2021-05-30T17:43:32.301Z
@@ -22,4 +22,4 @@ We currently use OpenCollective, GitHub Sponsors, or Bitcoin to accept donations
 
 ## Donate Buttons
 
-[![Lidarr.png](/assets/lidarr/logos/48.png)](https://lidarr.audio/donate)&emsp;[![Prowlarr.png](/assets/prowlarr/logos/48.png)](https://prowlarr.com/donate)&emsp;[![Radarr.png](/assets/radarr/logos/48.png)](https://radarr.video/donate)&emsp;[![Readarr.png](/assets/readarr/logos/48.png)](https://readarr.com/donate)&emsp;[![Sonarr.png](/assets/sonarr/logos/48.png)](https://sonarr.tv/donate)&emsp;{.links-list}
+[![Lidarr.png](/assets/lidarr/logos/48.png)](https://lidarr.audio/donate)&emsp;[![Prowlarr.png](/assets/prowlarr/logos/48.png)](https://prowlarr.com/donate)&emsp;[![Radarr.png](/assets/radarr/logos/48.png)](https://radarr.video/donate)&emsp;[![Readarr.png](/assets/readarr/logos/48.png)](https://readarr.com/donate)&emsp;[![Sonarr.png](/assets/sonarr/logos/48.png)](https://sonarr.tv/donate)&emsp;[![Whisparr.png](/assets/whisparr/logos/48.png)](https://whisparr.com/donate)&emsp;{.links-list}
