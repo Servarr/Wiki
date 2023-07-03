@@ -1,3 +1,13 @@
+---
+title: Lidarr Windows Installation
+description: Windows installation guide for Lidarr
+published: true
+date: 2023-07-03T20:30:47.519Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:11:02.991Z
+---
+
 # Windows
 
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.
