@@ -1,3 +1,13 @@
+---
+title: Readarr Windows Installation
+description: Windows installation guide for Readarr
+published: true
+date: 2023-07-04T15:23:25.114Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:13:03.495Z
+---
+
 # Windows
 
 Readarr is supported natively on Windows. Readarr can be installed on Windows as Windows Service or system tray application.
