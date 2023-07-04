@@ -1,6 +1,6 @@
 ---
 title: Prowlarr Installation
-description: 
+description: Instructions and Guides for Installation of Prowlarr
 published: true
 date: 2023-07-03T20:26:01.103Z
 tags: prowlarr

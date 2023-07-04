@@ -1,3 +1,13 @@
+---
+title: Lidarr FreeBSD Installation
+description: FreeBSD installation guide for Lidarr
+published: true
+date: 2023-07-03T20:30:47.519Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:11:02.991Z
+---
+
 # FreeBSD
 
 The Lidarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.

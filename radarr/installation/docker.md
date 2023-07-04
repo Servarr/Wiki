@@ -1,3 +1,13 @@
+---
+title: Radarr Docker Installation
+description: Docker installation guide for Radarr
+published: true
+date: 2023-07-03T20:30:47.519Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:11:02.991Z
+---
+
 # Docker
 
 The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.

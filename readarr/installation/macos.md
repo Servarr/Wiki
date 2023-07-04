@@ -1,3 +1,13 @@
+---
+title: Readarr MacOS Installation
+description: MacOS installation guide for Readarr
+published: true
+date: 2023-07-03T20:30:47.519Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:11:02.991Z
+---
+
 # MacOS (OSX)
 
 {#OSX}

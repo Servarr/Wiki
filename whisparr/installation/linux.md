@@ -1,3 +1,13 @@
+---
+title: Whisparr Linux Installation
+description: Linux installation guide for Lidarr
+published: true
+date: 2023-07-03T20:26:42.229Z
+tags: 
+editor: markdown
+dateCreated: 2022-04-03T03:49:24.491Z
+---
+
 # Linux
 
 ## Debian / Ubuntu

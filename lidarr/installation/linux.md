@@ -1,3 +1,13 @@
+---
+title: Lidarr Linux Installation
+description: Linux installation guide for Lidarr
+published: true
+date: 2023-07-03T20:30:47.519Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:11:02.991Z
+---
+
 # Linux
 
 ## Debian / Ubuntu

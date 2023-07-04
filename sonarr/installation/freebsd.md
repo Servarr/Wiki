@@ -1,3 +1,13 @@
+---
+title: Sonarr FreeBSD Installation
+description: FreeBSD installation guide for Sonarr
+published: true
+date: 2023-07-03T20:23:52.657Z
+tags: sonarr
+editor: markdown
+dateCreated: 2021-07-10T16:07:37.425Z
+---
+
 # FreeBSD
 
 The Sonarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.

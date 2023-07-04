@@ -1,3 +1,13 @@
+---
+title: Sonarr Synology Installation
+description: Synology installation guide for Sonarr
+published: true
+date: 2023-07-03T20:23:52.657Z
+tags: sonarr
+editor: markdown
+dateCreated: 2021-07-10T16:07:37.425Z
+---
+
 # Synology
 
 - [The SynoCommunity creates, supports,and maintains a Synology NAS Package](https://synocommunity.com/package/nzbdrone)

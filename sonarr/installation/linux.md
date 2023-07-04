@@ -1,3 +1,13 @@
+---
+title: Sonarr Linux Installation
+description: Linux installation guide for Sonarr
+published: true
+date: 2023-07-03T20:23:52.657Z
+tags: sonarr
+editor: markdown
+dateCreated: 2021-07-10T16:07:37.425Z
+---
+
 # Linux
 
 - [Please see the website for instructions](https://sonarr.tv/#downloads-v3-linux)
