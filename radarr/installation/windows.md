@@ -1,3 +1,13 @@
+---
+title: Radarr Windows Installation
+description: Windows installation guide for Radarr
+published: true
+date: 2023-07-04T15:22:03.589Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:12:19.928Z
+---
+
 # Windows
 
 Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
