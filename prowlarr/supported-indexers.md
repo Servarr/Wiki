@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-07-03T01:22:14.107996
+date: 2023-07-05T01:21:53.964857
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-07-03T01:22:14.107996
+dateCreated: 2023-07-05T01:21:53.964857
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.7.1.3632` / [Commit: bfc06fc8bcea1b85ed99060af664e45a56bfab60](https://github.com/Prowlarr/Prowlarr/commit/bfc06fc8bcea1b85ed99060af664e45a56bfab60)
-  - [Prowlarr Indexers Commit: e4ba9dfdf4e87fb78fdbf81b1dfda1beae41dfdf](https://github.com/Prowlarr/Indexers/commit/e4ba9dfdf4e87fb78fdbf81b1dfda1beae41dfdf)
+  - Prowlarr Build `1.7.1.3656` / [Commit: 02a3c1b224574c091e86a4a912abb63833bcf382](https://github.com/Prowlarr/Prowlarr/commit/02a3c1b224574c091e86a4a912abb63833bcf382)
+  - [Prowlarr Indexers Commit: b1f8722f3b055c943397dd3bc365fa12adb19827](https://github.com/Prowlarr/Indexers/commit/b1f8722f3b055c943397dd3bc365fa12adb19827)
 
 ---
 
@@ -44,7 +44,7 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.skin/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[BullTorrent](https://www.bulltorrent.com/){#bulltorrent}|BullTorrent (formerly TOROS) is a Public torrent index|English (United States)|
-|[Byrutor](https://byrutdb.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
+|[Byrutor](https://byrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|Chinese (China)|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|English (United States)|
 |[cpasbien](https://cpasbiens911.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
@@ -237,7 +237,7 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[BitHDTV](https://www.bit-hdtv.com/){#bithdtv}|BIT-HDTV - Home of High Definition|English (United States)|
 |[BroadcasTheNet](https://api.broadcasthe.net/){#broadcasthenet}|BroadcasTheNet (BTN) is an invite-only torrent tracker focused on TV shows|English (United States)|
 |[BrokenStones](https://brokenstones.is/){#brokenstones}|Broken Stones is a Private site for MacOS and iOS APPS / GAMES|English (United States)|
-|[0day\.kiev](https://tracker.0day.kiev.ua/){#0daykiev}|0day\.kiev\.ua is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
+|[0day\.kiev](https://tracker.0day.community/){#0daykiev}|0day\.kiev\.ua is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[1ptbar](https://1ptba.com/){#1ptbar}|1ptbar is a CHINESE Private Torrent Tracker for MOVIES / TV / E-LEARNING|Chinese (China)|
 |[2 Fast 4 You](https://2f4y.me/){#2fast4you}|2 Fast 4 You is a FRENCH Private site for TV / MOVIES / GENERAL|French (France)|
 |[2xFree](https://pt.2xfree.org/){#2xfree}|2xFree is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
@@ -269,6 +269,7 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[BeiTai](https://www.beitai.pt/){#beitai}|BeiTai is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Best-Core](https://best-core.info/){#bestcore}|Best-Core is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a private site for eBooks and audiobooks|English (United States)|
+|[biho](https://www.biho.xyz/){#biho}|biho (必火pt) is a CHINESE Private site for MOVIES / TV / GENERAL|Chinese (China)|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[Bithorlo](https://www.bithorlo.info/){#bithorlo}|Bithorlo (BHO) is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
@@ -299,7 +300,6 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[cheggit](https://www.cheggit.me/){#cheggit}|cheggit is a Private site for 3X|English (United States)|
 |[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
-|[CiNEFiLHD](http://cinefilhd.xyz/){#cinefilhd}|CiNEFiLHD is a Private Torrent Tracker for MOVIES / TV /  MUSIC|English (United States)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|B-movie tracker|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Cinematik](https://www.cinematik.net/){#cinematik}|A tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse|English (United States)|
@@ -334,6 +334,7 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[Fantastic Heaven](https://fantastic-heaven.eu/){#fantasticheaven}|Fantastic Heaven is a German Time based tracker|German (Germany)|
 |[Fantastiko](https://fantastiko.space/){#fantastiko}|Fantastiko is a GREEK Private Torrent Tracker for SCI-FI / FANTASY / HORROR MOVIES / TV / GENERAL|Greek (Greece)|
 |[Fappaizuri](https://fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
+|[FastScene](https://fastscene.net/){#fastscene}|FastScene is a ROMANIAN / ENGLISH Private site for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
@@ -396,7 +397,6 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[LemonHD](https://lemonhd.org/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Les-Cinephiles](https://les-cinephiles.nl/){#les-cinephiles}|Les-Cinephiles is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LeSaloon](https://lesaloonv2-0.xyz/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|Hungarian (Hungary)|
@@ -564,9 +564,11 @@ dateCreated: 2023-07-03T01:22:14.107996
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kufei](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private site for MOVIES / TV / GENERAL|English (United States)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Shadowflow](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
