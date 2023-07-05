@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-01-04T22:19:24.417Z
+date: 2023-07-05T22:43:26.930Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -178,7 +178,10 @@ This change was due to not have our server get killed by people updating lists e
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://readarr.servarr.com/v1/update/master/changes) -    (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. **Readarr does not yet have a stable release.**
+- `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://readarr.servarr.com/v1/update/master/changes) -    (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch. 
+
+> **Readarr does not yet have a stable release.**
+{.is-danger}
 
 - `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://readarr.servarr.com/v1/update/develop/changes) -  (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first after nightly. It can be considered semi-stable, but is still `beta`.
 
