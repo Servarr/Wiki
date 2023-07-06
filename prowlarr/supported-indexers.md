@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-07-05T01:21:53.964857
+date: 2023-07-06T01:22:54.974798
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-07-05T01:21:53.964857
+dateCreated: 2023-07-06T01:22:54.974798
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.7.1.3656` / [Commit: 02a3c1b224574c091e86a4a912abb63833bcf382](https://github.com/Prowlarr/Prowlarr/commit/02a3c1b224574c091e86a4a912abb63833bcf382)
-  - [Prowlarr Indexers Commit: b1f8722f3b055c943397dd3bc365fa12adb19827](https://github.com/Prowlarr/Indexers/commit/b1f8722f3b055c943397dd3bc365fa12adb19827)
+  - Prowlarr Build `1.7.1.3670` / [Commit: ce68fe41052385a864901eff5f52dd827fb7e04f](https://github.com/Prowlarr/Prowlarr/commit/ce68fe41052385a864901eff5f52dd827fb7e04f)
+  - [Prowlarr Indexers Commit: f1f67738789a7422f494788895709ab2fe32d85f](https://github.com/Prowlarr/Indexers/commit/f1f67738789a7422f494788895709ab2fe32d85f)
 
 ---
 
@@ -117,6 +117,7 @@ dateCreated: 2023-07-05T01:21:53.964857
 |[Torrent9 clone](https://www.torrent9.fi/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
+|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
@@ -206,7 +207,6 @@ dateCreated: 2023-07-05T01:21:53.964857
 |[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
-|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|Russian (Russia)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
@@ -552,7 +552,7 @@ dateCreated: 2023-07-05T01:21:53.964857
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
 |[YDYPT](https://pt.hdbd.us/){#ydypt}|YDYPT is a CHINESE Private Torrent Tracker for MOVIES / TV / 3X|Chinese (China)|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
-|[Zelka\.org](http://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[Zelka\.org](https://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
 |[3Wmg](https://www.3wmg.com/){#3wmg}|3Wmg is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -611,7 +611,7 @@ dateCreated: 2023-07-05T01:21:53.964857
 |[SpeedCD](https://speed.cd/){#speedcd}|Your home now!|English (United States)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
 |[TorrentDay](https://torrentday.cool/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|English (United States)|
-|[TorrentPotato](http://127.0.0.1){#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|English (United States)|
+|TorrentPotato{#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|English (United States)|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
 |AnimeTosho{#torznab}|Anime NZB/DDL mirror|English (United States)|
 |MoreThanTV{#torznab}|Private torrent tracker for TV / MOVIES|English (United States)|
