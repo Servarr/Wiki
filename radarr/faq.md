@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-05-04T03:43:15.060Z
+date: 2023-07-06T17:19:53.482Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -97,9 +97,13 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## What is Minimum Availability?
 
+> For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
+{.is-info}
+
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
-- **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical date on TMDb) This option is not recommended.
+- **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
 - **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
+  - If TMDb is not populated with a date, it is assumed 90 days after `Theatrical Date` (Oldest in theater's date) the movie is available in web or physical services.
 
 ## How are possible downloads compared?
 
@@ -139,7 +143,8 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 - You can trigger a list refresh manually, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
 - This restriction is to not have our server and list providers get killed by people updating lists every 10 minutes.
-- This interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
+- In Radarr pre-v4.7 interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
+- In Radarr v4.7 these values are now hardcoded and not configurable.
 
 ## Can all my movie files be stored in one folder?
 
