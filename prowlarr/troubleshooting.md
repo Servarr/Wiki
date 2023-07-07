@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2022-12-19T02:47:33.966Z
+date: 2023-07-07T16:13:21.674Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -48,6 +48,8 @@ But before you go there and post, be sure your request for help is the best it c
 The more we know, the easier it is to help you.
 
 # Logging and Log Files
+
+It is likely beneficial to also review the [Indexer, Application, and Download Client Issues Common Problems](#indexer-application-and-download-client-issues).
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
