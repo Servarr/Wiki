@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2023-01-10T19:27:57.629Z
+date: 2023-07-07T16:59:43.795Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -122,6 +122,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/sonarr/custom-scripts) for more details.
 - Discord {#discord}
   - By far one of the most common ways to push notifications of actions happening on your Sonarr
+  - Supported field types:
+  `Overview, Rating, Genres, Quality, Group, Size, Links, Release, Poster, Fanart, CustomFormats, CustomFormatScore, Indexer`
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
