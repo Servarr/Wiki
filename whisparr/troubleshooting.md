@@ -2,7 +2,7 @@
 title: Whisparr Troubleshooting
 description: 
 published: true
-date: 2022-07-21T20:01:42.474Z
+date: 2023-07-07T16:12:41.485Z
 tags: troubleshooting, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:50:06.989Z
@@ -90,6 +90,11 @@ But before you go there and post, be sure your request for help is the best it c
 The more we know, the easier it is to help you.
 
 # Logging and Log Files
+
+It is likely beneficial to also review the Common Troubleshooting problems:
+- [Downloads and Importing Common Problems](#common-problems)
+- [Searching Indexers and Trackers Common Problems](#common-problems-1)
+{.links-list}
 
 If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
