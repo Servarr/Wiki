@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-07-06T01:22:54.974798
+date: 2023-07-10T01:20:52.896210
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-07-06T01:22:54.974798
+dateCreated: 2023-07-10T01:20:52.896210
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.7.1.3670` / [Commit: ce68fe41052385a864901eff5f52dd827fb7e04f](https://github.com/Prowlarr/Prowlarr/commit/ce68fe41052385a864901eff5f52dd827fb7e04f)
-  - [Prowlarr Indexers Commit: f1f67738789a7422f494788895709ab2fe32d85f](https://github.com/Prowlarr/Indexers/commit/f1f67738789a7422f494788895709ab2fe32d85f)
+  - Prowlarr Build `1.7.2.3685` / [Commit: cb520b2264bffe0b82aa933944ee39eb464bfc87](https://github.com/Prowlarr/Prowlarr/commit/cb520b2264bffe0b82aa933944ee39eb464bfc87)
+  - [Prowlarr Indexers Commit: 70f8bfa0ea1b42ffe0d85d03d483283c090723c6](https://github.com/Prowlarr/Indexers/commit/70f8bfa0ea1b42ffe0d85d03d483283c090723c6)
 
 ---
 
@@ -124,8 +124,8 @@ dateCreated: 2023-07-06T01:22:54.974798
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq263.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir110.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq264.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir111.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent11.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz59.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -311,6 +311,7 @@ dateCreated: 2023-07-06T01:22:54.974798
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\.  Cookie Login for 2FA use|English (United Kingdom)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|English (United States)|
+|[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Dark-Shadow](https://projekt.dark-shadow.me/){#dark-shadow}|Dark-Shadow is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DataTalli](https://datatalli.net/){#datatalli}|DataTalli is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
@@ -392,7 +393,7 @@ dateCreated: 2023-07-06T01:22:54.974798
 |[Korsar](http://filbi1976.org/){#korsar}|Korsar is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
-|[LastFiles](https://www.last-torrents.org/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
+|[LastFiles](http://www.last-torrents.org/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
@@ -432,7 +433,6 @@ dateCreated: 2023-07-06T01:22:54.974798
 |[OshenPT](http://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD Movies, TV, Music|Chinese (China)|
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[P2PBG](http://p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
-|[Partis](https://www.partis.si/){#partis}|Partis is a Private SLOVENIAN Torrent Tracker for MOVIES / TV / BOOKS / GENERAL|Slovenian (Slovenia)|
 |[Party-Tracker](https://party-tracker.info/){#party-tracker}|Party-Tracker is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Peeratiko](https://peeratiko.org/){#peeratiko}|Peeratiko is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[Peers\.FM](https://peers.fm/){#peersfm}|Peers\.FM is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
