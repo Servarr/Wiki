@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2023-07-14T12:18:47.528Z
+date: 2023-07-14T12:19:34.383Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -61,7 +61,7 @@ nano ArrInstall.sh
 ### Version v3.0.7 2023-01-05 - Bakerboy448 - Prowlarr to master
 ### Version v3.0.8 2023-04-20 - Bakerboy448 - Shellcheck fixes & remove prior tarballs
 ### Version v3.0.9 2023-04-28 - Bakerboy448 - fix tarball check
-### Version v3.0.0a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
+### Version v3.0.9a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
