@@ -2,7 +2,7 @@
 title: *Arr Installation Script
 description: Common Installation Script for the *Arr Suite of Applications
 published: true
-date: 2023-04-28T17:51:26.627Z
+date: 2023-07-14T12:18:47.528Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-03T15:12:29.483Z
 
 # \*Arr Installation Script
 
-This is a community created and supported **unofficial** script to handle installation of Lidarr/Prowlarr/Radarr/Readarr/Whisparr on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
+This is a community created and community supported **unofficial** script to handle installation of Lidarr/Prowlarr/Radarr/Readarr/Whisparr on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
 
 > This will install the selected application to /opt. It will run application as the user and group you configure.
 > For Lidarr/Radarr/Readarr/Whisparr - you should use a common group that is the same that your download client runs as and media server runs as to ensure ownership and permissions are sane and all files are accessible.
@@ -40,7 +40,7 @@ Be aware of the following:
 nano ArrInstall.sh
 ```
 
-- Copy (top right corner of the script) and Paste into your SSH console. Review the variables worth comments and update if necessary.
+- Copy (top right corner of the script) and Paste into your SSH console. Review the variables woth comments and update if necessary.
   - If you are in an GUI OS such as Windows or MacOS (OSX): pasting could be as simple as 'right clicking' in your ssh client.
 
 ```bash
@@ -61,6 +61,7 @@ nano ArrInstall.sh
 ### Version v3.0.7 2023-01-05 - Bakerboy448 - Prowlarr to master
 ### Version v3.0.8 2023-04-20 - Bakerboy448 - Shellcheck fixes & remove prior tarballs
 ### Version v3.0.9 2023-04-28 - Bakerboy448 - fix tarball check
+### Version v3.0.0a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Additional Updates by: The \*Arr Community
 
 ### Boilerplate Warning
@@ -72,8 +73,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.8"
-scriptdate="2023-04-20"
+scriptversion="3.0.9a"
+scriptdate="2023-07-14"
 
 set -euo pipefail
 
