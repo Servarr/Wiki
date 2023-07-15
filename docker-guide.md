@@ -2,7 +2,7 @@
 title: Docker Guide
 description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
-date: 2023-07-15T20:36:22.693Z
+date: 2023-07-15T20:40:53.466Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -46,6 +46,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
   - [Find UID/GID for user](#find-uidgid-for-user)
   - [Examine files for hard links](#examine-files-for-hard-links)
 - [Interesting Docker Images](#interesting-docker-images)
+  - [All-in-One Solutions](#All-in-One-Solutions)
 - [Custom Docker Network and DNS](#custom-docker-network-and-dns)
 - [Common Problems](#common-problems)
   - [Correct *outside* paths, incorrect *inside* paths](#correct-outside-paths-incorrect-inside-paths)
@@ -517,8 +518,9 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
 {.links-list}
 
-> Note: [This is a GitHub repository](https://github.com/Luctia/ezarr) aimed at beginners who want to use Docker for their Servarr stack. It is basically a ready-to-go collection of files and only requires you to run two things to get the entire thing online. It removes the hassle around user management and permissions on the host device and features some other applications like PleX.
-{.is-info}
+### All-in-One Solutions
+
+- [This is a GitHub repository](https://github.com/Luctia/ezarr) aimed at beginners who want to use Docker for their Servarr stack. It is basically a ready-to-go collection of files and only requires you to run two things to get the entire thing online. It removes the hassle around user management and permissions on the host device and features some other applications like PleX.
 
 # Custom Docker Network and DNS
 
