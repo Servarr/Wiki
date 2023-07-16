@@ -1,3 +1,13 @@
+---
+title: multiple-instances
+description: 
+published: true
+date: 2023-07-16T13:12:11.734Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:12:51.889Z
+---
+
 # Multiple Instances
 
 It is possible to run multiple instances of Readarr. This is typically done when one wants a audiobook and ebook copy of a book.
@@ -5,6 +15,7 @@ Note that you can configure Readarr to use a second Readarr as a list. This is h
 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
+- [MacOS Multiple Instances](#macos-multi)
 - [Docker Multiple Instances](#docker-multi)
 {.links-list}
 
@@ -100,6 +111,8 @@ separate locations. {.is-warning}
 - If one Readarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
 #### Windows Port Checker and Restarter PowerShell Script
+
+{#win-portchecker}
 
 - When you use two Readarr instances and one of it is updating, it will kill all instances. Only the one which is updating will come back online.
 - The below powershell script should be configured as a scheduled task.
@@ -273,6 +286,127 @@ sudo systemctl -q daemon-reload
 ```shell
 sudo systemctl enable --now -q readarr-audiobooks
 ```
+
+## MacOS Multiple Instances
+
+{#macos-multi}
+
+This guide was made and tested with macOS 13 (Ventura), but should work on any version that Readarr supports.
+
+### Prerequisites
+- Must have the Readarr application installed in the `/Applications` folder
+- If Readarr has already been used before, all the data will be lost. Move `~/.config/Readarr` to `~/.config/readarr-books` or `~/.config/readarr-audiobooks` to keep data.
+
+### Creating Applications (easily start Readarr)
+You will create two new applications: "Readarr Books" and "Readarr Audiobooks".
+
+- Open the Automator app
+- Select `New Document`, then `Application`
+- Use the search box at the top left to look for `Run Shell Script`, then double-click on it
+- In the box that opens, paste the following:
+
+```shell
+# Readarr Books
+open -F -n -a Readarr --args -data="$HOME"/.config/readarr-books
+```
+
+- Save the application as `Readarr Books`
+- Go to `File` > `Duplicate` in the menu bar
+- Replace the contents of the script with the following:
+
+```shell
+# Readarr Audiobooks
+open -F -n -a Readarr --args -data="$HOME"/.config/readarr-audiobooks
+```
+
+- Save the new application as `Readarr Audiobooks`
+- View the applications in Finder, optionally change their icons to your liking (via the `Get Info` window).
+
+### Configuring Instances
+Now, you will be setting the ports and names for each instance.
+
+- Pick a port number for each instance. For example, the default `8787` for e-books and `8789` for audiobooks.
+- If one of the instances uses the default port number, launch the other one first. Otherwise, launch any one of them.
+- Go to `Settings` > `General` in Readarr, and set the correct port.
+
+> Optionally: Toggle advanced options and set `Instance Name` to your liking.
+{.is-success}
+
+- Launch the other instance and do the same.
+
+### Updates
+When you update one instance, the updater shuts both down and only restarts the one you updated. To work around this, a port checker periodic task will be created (adapted but slightly changed from the [Windows guide](#win-portchecker)).
+
+- Disable auto updates in one of the instances, and make sure to never update it.
+- Create a new file in a place you will remember, and name it `readarrportchecker.zsh`.
+- Add the following content:
+
+```shell
+#!/bin/zsh
+
+# First instance's *application name*
+name0="Readarr Books"
+# First instance's port number
+port0=8787
+
+# Second instance's *application name*
+name1="Readarr Audiobooks"
+# Second instance's port number
+port1=8789
+
+# Logging
+LOGFILE="$HOME/.local/state/readarr.log"
+test -d "$HOME/.local/state" || mkdir -p "$HOME/.local/state"
+
+function checkport {
+    lsof -i ":${1}" &>/dev/null
+}
+
+# One instance running means both should be
+if checkport "${port0}" && ! checkport "${port1}"; then
+		open -a "${name1}"
+    echo "Opened ${name1}" >> "$LOGFILE"
+elif checkport "${port1}" && ! checkport "${port0}"; then
+		open -a "${name0}"
+    echo "Opened ${name0}" >> "$LOGFILE"
+fi
+```
+
+- Make the script executable:
+
+```shell
+chmod +x readarrportchecker.zsh
+```
+
+- Schedule the script to run periodically. Create a new file in `~/Library/LaunchAgents` named `local.readarr.portchecker.plist`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>local.readarr.portchecker</string>
+    <key>Program</key>
+    <!-- Find the path by right clicking, then Option and copy -->
+    <string>/path/to/readarrportchecker.zsh</string>
+    <key>StartInterval</key>
+    <!-- Periodic interval in seconds. 300 for five minutes,
+         600 for ten minutes. -->
+    <integer>300</integer>
+  </dict>
+</plist>
+```
+
+- Modify the file according to the comments
+- Either re-login or manually load the file:
+
+```shell
+launchctl load ~/Library/LaunchAgents/local.readarr.portchecker.plist
+```
+
+> `TODO`: possibly integrate this into a custom script for the update process, or observe file change instead of running every 300 seconds.
+{.is-info}
 
 ## Docker Multiple Instances
 
