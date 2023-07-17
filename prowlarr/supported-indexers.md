@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-07-11T01:14:26.518207
+date: 2023-07-17T01:24:06.608744
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-07-11T01:14:26.518207
+dateCreated: 2023-07-17T01:24:06.608744
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.7.2.3693` / [Commit: 6b698b33be629bdafe5274cedfc27efbafe419b3](https://github.com/Prowlarr/Prowlarr/commit/6b698b33be629bdafe5274cedfc27efbafe419b3)
-  - [Prowlarr Indexers Commit: 21030ed7a3ada3dbe622c3485dda8294dd2e6203](https://github.com/Prowlarr/Indexers/commit/21030ed7a3ada3dbe622c3485dda8294dd2e6203)
+  - Prowlarr Build `1.7.3.3720` / [Commit: 0e6cec6f54dfb5cd751b5f95288863ec4ca15b9b](https://github.com/Prowlarr/Prowlarr/commit/0e6cec6f54dfb5cd751b5f95288863ec4ca15b9b)
+  - [Prowlarr Indexers Commit: 99b6102df2f71a593416b7ed845403e8adb107ac](https://github.com/Prowlarr/Indexers/commit/99b6102df2f71a593416b7ed845403e8adb107ac)
 
 ---
 
@@ -30,7 +30,6 @@ dateCreated: 2023-07-11T01:14:26.518207
 |[0Magnet](https://0magnet.co/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
-|[ACGsou](https://www.36dm.club/){#acgsou}|ACGsou (36DM) is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|Russian (Russia)|
 |[AniRena](https://www.anirena.com/){#anirena}|AniRena is a Public torrent tracker for the latest anime and Japanese related torrents|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
@@ -125,8 +124,8 @@ dateCreated: 2023-07-11T01:14:26.518207
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq264.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir111.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq265.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir112.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent11.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz59.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -358,7 +357,7 @@ dateCreated: 2023-07-11T01:14:26.518207
 |[hawke-uno](https://www.hawke.uno/){#hawke-uno}|hawke-uno is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDArea](https://www.hdarea.co/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[HDArea](https://www.hdarea.club/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDAtmos](https://hdatmos.club/){#hdatmos}|HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDC](https://hdcity.city/){#hdc}|HDC (HDCiTY) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDChina](https://hdchina.org/){#hdchina}|HDChina (HDWing) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -366,7 +365,7 @@ dateCreated: 2023-07-11T01:14:26.518207
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[HDMaYi](http://hdmayi.com/){#hdmayi}|HDMaYi (小蚂蚁PT站) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[HDMaYi](https://hdmayi.com/){#hdmayi}|HDMaYi (小蚂蚁PT站) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH site for HD content|Spanish (Spain)|
 |[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -396,6 +395,7 @@ dateCreated: 2023-07-11T01:14:26.518207
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
 |[LastFiles](https://www.last-torrents.org/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
+|[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
