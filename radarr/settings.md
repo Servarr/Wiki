@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2023-04-29T18:16:34.463Z
+date: 2023-07-18T04:21:25.658Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -190,7 +190,11 @@ Also, note that for each individual settings page, there are some options at the
 
 - Replace `&` with `and`
 - Replace `/` and `\` with ` `
-- Remove `,`,`<`,`>`,`/`,`\`,`;`,`:`,`'`,`|`, `~`,`!`,`?`,`@`,`$`,`%`,`^`,`*`,`-`,`_`,`=`
+- Remove `,`,`<`,`>`,`/`,`\`,`;`,`:`,`'`,`|`, `~`,`!`,`?`,`@`,`$`,`%`,`^`,`*`,`-`,`_`,`=` as per the following regex:
+
+```regex
+(?<=\s)(,|<|>|\/|\\|;|:|'|""|\||`|~|!|\?|@|$|%|^|\*|-|_|=){1}(?=\s)|('|:|\?|,)(?=(?:(?:s|m)\s)|\s|$)|(\(|\)|\[|\]|\{|\})
+```
 
 ### Movie IDs
 
