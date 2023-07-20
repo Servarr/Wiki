@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-07-17T01:24:06.608744
+date: 2023-07-20T01:10:06.930209
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-07-17T01:24:06.608744
+dateCreated: 2023-07-20T01:10:06.930209
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.7.3.3720` / [Commit: 0e6cec6f54dfb5cd751b5f95288863ec4ca15b9b](https://github.com/Prowlarr/Prowlarr/commit/0e6cec6f54dfb5cd751b5f95288863ec4ca15b9b)
-  - [Prowlarr Indexers Commit: 99b6102df2f71a593416b7ed845403e8adb107ac](https://github.com/Prowlarr/Indexers/commit/99b6102df2f71a593416b7ed845403e8adb107ac)
+  - Prowlarr Build `1.7.3.3741` / [Commit: f546b9a3b058d2fecdfd242799888fde2a196ce3](https://github.com/Prowlarr/Prowlarr/commit/f546b9a3b058d2fecdfd242799888fde2a196ce3)
+  - [Prowlarr Indexers Commit: 05ae8e7e3cc8eebdf5899e2551b8ea9f2abb2041](https://github.com/Prowlarr/Indexers/commit/05ae8e7e3cc8eebdf5899e2551b8ea9f2abb2041)
 
 ---
 
@@ -126,8 +126,8 @@ dateCreated: 2023-07-17T01:24:06.608744
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq265.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir112.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentView](https://viewtorrent11.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentWhiz](https://torrentwiz59.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentView](https://viewtorrent12.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentWhiz](https://torrentwiz60.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
