@@ -2,7 +2,7 @@
 title: Whisparr Troubleshooting
 description: 
 published: true
-date: 2023-07-07T16:12:41.485Z
+date: 2023-07-24T19:55:15.208Z
 tags: troubleshooting, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:50:06.989Z
@@ -96,41 +96,35 @@ It is likely beneficial to also review the Common Troubleshooting problems:
 - [Searching Indexers and Trackers Common Problems](#common-problems-1)
 {.links-list}
 
-If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
+If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
->- **Do not simply provide the whole log file unless explicitly asked.**
->- **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
->- When the relevant section is ~ 15 lines, it may be acceptable to paste in discord in a code block like this:
->
->````none
->   ```
->   words here
->   ```
->````
->
->- **Do not attempt to get logs while a spammy task is running such as an RSS refresh.**
->- **Do ensure [Logging](/whisparr/settings#logging) is set to Trace (or Debug if requested).**
->- **Do not just provide the whole log file nor a combination of info, debug, and/or trace logs.**
->- **Do ensure the logs you provide capture the issue**
-{.is-info}
+- Avoid sharing the entire log file unless asked.
+- Don't upload logs directly to Discord or paste them as walls of text, unless requested.
+- Don't share the logs as an attachment, a zip archive, or anything other than text shared via the services noted below
 
 To provide good and useful logs for sharing:
 
-1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
-1. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
-1. Reproduce the Issue (Redo what is breaking things)
-1. [Open the trace log file (whisparr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
-1. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-1. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
-
-> Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
-> Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
-> Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
-> Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
-{.is-info}
-
-> When using [0bin](https://0bin.net/) be sure to disable colorize and do not burn after reading.
+> Ensure a spammy task is NOT running such as an RSS refresh
 {.is-warning}
+
+1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
+2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
+3. Reproduce the Issue (Redo what is breaking things)
+4. [Open the trace log file (whisparr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
+6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
+
+**Warnings:**
+- **Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
+- Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+- Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
+- Do not upload your log as a file
+- Do not upload and share your logs via Google Drive, Dropbox, or any other site not noted above.
+- Do not archive (zip, tar (tarball), 7zip, etc.) your logs.
+- Do not share console output, docker container output, or anything other than the application logs specified
+
+**Important Note:**
+- When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
 - **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/whisparr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
