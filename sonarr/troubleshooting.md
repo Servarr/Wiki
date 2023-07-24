@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2023-07-07T16:11:47.570Z
+date: 2023-07-24T19:54:54.368Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -105,11 +105,11 @@ It is likely beneficial to also review the Common Troubleshooting problems:
 - [Searching Indexers and Trackers Common Problems](#common-problems-1)
 {.links-list}
 
-If you're linked here for support remember to get them the information from the actual trace log file, put the logs in a pastebin and show us context around what we need to see. If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
+If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
-> \* **Do not simply provide the whole log file unless explicitly asked.**
-> \* **Do not upload the logs directly to discord as a file nor paste them as a wall of text unless explicitly asked.**
-{.is-info}
+- Avoid sharing the entire log file unless asked.
+- Don't upload logs directly to Discord or paste them as walls of text, unless requested.
+- Don't share the logs as an attachment, a zip archive, or anything other than text shared via the services noted below
 
 To provide good and useful logs for sharing:
 
@@ -123,14 +123,17 @@ To provide good and useful logs for sharing:
 5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
 6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
-> \* Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
-> \* Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
-> \* Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
-> \* Do not upload your logs and share via Google Drive, Dropbox, or any other site not noted above.
-{.is-danger}
+**Warnings:**
+- **Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
+- Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
+- Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
+- Do not upload your log as a file
+- Do not upload and share your logs via Google Drive, Dropbox, or any other site not noted above.
+- Do not archive (zip, tar (tarball), 7zip, etc.) your logs.
+- Do not share console output, docker container output, or anything other than the application logs specified
 
-> When using [0bin](https://0bin.net/) be sure to disable colorize and do not burn after reading.
-{.is-warning}
+**Important Note:**
+- When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
 - **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/sonarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
