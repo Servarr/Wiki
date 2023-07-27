@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-05-09T12:27:08.098Z
+date: 2023-07-27T13:53:56.446Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -98,6 +98,7 @@ Note that the application's database can be found in the Application Data Direct
 1. Close the database
 1. New Database => File => Import => import that file from the previous export step
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
+1. Execute the following SQL `VACUUM;`
 1. Save the database when prompted.
 1. Tools => Integrity Check; the result should say OK
 1. Close the database
@@ -105,6 +106,8 @@ Note that the application's database can be found in the Application Data Direct
 1. Save (or copy, if \*Arr is not on the same system as DB4S) the new database in the config folder and point the application at it. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Start the application
+
+Please note that the gif does not cover the `VACUUM;` command
 
 ![dbrecover.gif](/dbrecover.gif)
 
@@ -121,7 +124,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
+1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <path to bad database> "VACUUM;" | sqlite3 <output path for recovered database>`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Remove or move/rename the old corrupt database and any `wal` or `shm` in the folder
 1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
