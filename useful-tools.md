@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-07-27T13:53:56.446Z
+date: 2023-07-27T13:57:35.400Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -124,7 +124,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <path to bad database> "VACUUM;" | sqlite3 <output path for recovered database>`
+1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Remove or move/rename the old corrupt database and any `wal` or `shm` in the folder
 1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
