@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-06-09T22:47:20.005Z
+date: 2023-08-01T17:12:28.759Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -137,7 +137,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 {.is-warning}
 
 > \* Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has Upgrades disabled.
-> \* Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
+> \* Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-prefer-season-packs)
 {.is-info}
 
 ## Preferred Words FAQs
@@ -146,13 +146,13 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 - How are preferred words included in renaming?
 
-  - For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [at TRaSH's recommended naming scheme](https://trash-guides.info/Sonarr/V3/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
+  - For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [at TRaSH's recommended naming scheme](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
 
 - As of v3.0.7, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
 
 - Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has `Upgrades` disabled
 
-> Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-matches-season-packs-use-this-if-you-prefer-season-packs)
+> Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-prefer-season-packs)
 {.is-info}
 
 - Tags can be used to control what Series a Release Profile applies to; refer to the settings entry for Release Profiles for more information
