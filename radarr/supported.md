@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2023-01-10T19:28:10.218Z
+date: 2023-08-05T16:58:01.394Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -170,6 +170,26 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
 - StevenLu Custom {#stevenluimport}
+	- Allows you to create custom movies lists in json format.
+  	Your feed requires for each movie either a `title` or an `imdb_id`, both can be provided.
+  		> Note that `imdb_id` is safer than `title` as it does not require a broad search
+    Here is a sample valid json : 
+      ```
+      [
+          {
+            "title": "The Wastetown",
+            "poster_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/6J32RMp8uko8CUEM3rYP962hQun.jpg",
+            "imdb_id": "tt22889064"
+          },
+          {
+            "title": "Wild Sunflowers",
+            "poster_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tHK4c0UZKrqkmXZ2HJeGNhNetRz.jpg",
+            "imdb_id": "tt13774830"
+          }
+      ]
+      ```
+      - Additional keys can be added in items (will be ignored)
+      - For an empty list just return an empty json array `[]`
 - StevenLu List {#stevenlu2import}
 - TMDb Collection {#tmdbcollectionimport}
   - Collection Lists are no longer supported in Radarr v4.2 and have been migrated to collections within Radarr. See the [Collections](/radarr/library#collections) section for more details.
