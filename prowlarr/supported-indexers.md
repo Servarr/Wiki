@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-08-01T01:10:52.494973
+date: 2023-08-06T01:00:02.474460
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-08-01T01:10:52.494973
+dateCreated: 2023-08-06T01:00:02.474460
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.8.1.3817` / [Commit: cc66cee71cae8ffc2f073367dac4ef1e6229d67f](https://github.com/Prowlarr/Prowlarr/commit/cc66cee71cae8ffc2f073367dac4ef1e6229d67f)
-  - [Prowlarr Indexers Commit: bca482d040876576fca9cc754ccff95d0326f6f5](https://github.com/Prowlarr/Indexers/commit/bca482d040876576fca9cc754ccff95d0326f6f5)
+  - Prowlarr Build `1.8.1.3837` / [Commit: 95c2531107c4141cd54c91ec9b49e2f7a5d23142](https://github.com/Prowlarr/Prowlarr/commit/95c2531107c4141cd54c91ec9b49e2f7a5d23142)
+  - [Prowlarr Indexers Commit: 9e5a9e6a66afd15fdf94ab4319f30985f69cd708](https://github.com/Prowlarr/Indexers/commit/9e5a9e6a66afd15fdf94ab4319f30985f69cd708)
 
 ---
 
@@ -63,7 +63,7 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[GkTorrent](https://www.gktorrents.cc/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
-|[Idope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
+|[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
 |[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.nz/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
@@ -115,7 +115,7 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.torrent911.io/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.wtf/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.moe/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
@@ -125,8 +125,8 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq267.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir113.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq268.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir114.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent12.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz60.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -294,7 +294,7 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
 |[Central Torrent](http://central-torrent.eu/){#centraltorrent}|Central Torrent is a POLISH Private Torrent Tracker for MOVIES / MUSIC|Polish (Poland)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
-|[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[CHDBits](https://ptchdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[cheggit](https://www.cheggit.me/){#cheggit}|cheggit is a Private site for 3X|English (United States)|
 |[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
 |[CiNEFiLHD](http://cinefilhd.xyz/){#cinefilhd}|CiNEFiLHD is a Private Torrent Tracker for MOVIES / TV /  MUSIC|English (United States)|
@@ -330,7 +330,6 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[ExtremeTorrents](https://www.extremetorrents.org/){#extremetorrents}|ExtremeTorrents is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Falkon Vision Team](http://falkonvision-team.com/){#falkonvisionteam}|Falkon Vision Team is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
-|[Fantastic Heaven](https://fantastic-heaven.eu/){#fantasticheaven}|Fantastic Heaven is a German Time based tracker|German (Germany)|
 |[Fantastiko](https://fantastiko.space/){#fantastiko}|Fantastiko is a GREEK Private Torrent Tracker for SCI-FI / FANTASY / HORROR MOVIES / TV / GENERAL|Greek (Greece)|
 |[Fappaizuri](https://fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[FastScene](https://fastscene.net/){#fastscene}|FastScene is a ROMANIAN / ENGLISH Private site for MOVIES / TV / GENERAL|Romanian (Romania)|
@@ -525,6 +524,7 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[TotallyKids](http://www.totallykids.tv/){#totallykids}|TotallyKids (TK) is a Private Torrent Tracker for CHILDRENS MOVIES / TV / GENERAL|English (United States)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) A Chinese tracker|Chinese (China)|
 |[ToTheGloryCookie](https://totheglory.im/){#totheglorycookie}|ToTheGlory (TTG) A Chinese tracker\. This uses the cookie method for access|Chinese (China)|
+|[TrackerMK](http://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private site for MUSIC|English (United States)|
 |[TreZzoR](https://tracker.czech-server.com/){#trezzor}|TreZzoR is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
 |[TreZzoRCookie](https://tracker.czech-server.com/){#trezzorcookie}|TreZzoR is a CZECH Private site for TV / MOVIES / GENERAL\. This uses the cookie method for access|Czech (Czech Republic)|
@@ -558,6 +558,7 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[Dajiao](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[Free Farm](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Gamera](https://gamerapt.link/){#gamera}|Gamera (駕瞑羅) is a CHINESE Private Torrent Tracker for Japanese Monster and Superhero MOVIES / TV|Chinese (China)|
 |[HDPT](https://hdpt.xyz/){#hdpt}|HDPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
@@ -577,7 +578,8 @@ dateCreated: 2023-08-01T01:10:52.494973
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[Uploads](http://uploads.ltd/){#uploads}|Uploads is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[Wukong](https://wukongwendao.top/){#wukong}|Wukong (悟空问道) is a Chinese Private Torrent Tracker for E-LEARNING|Chinese (China)|
+|[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Wukong](https://wukongwendao.top/){#wukong}|Wukong (悟空问道) is a CHINESE Private Torrent Tracker for E-LEARNING|Chinese (China)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
 |[CinemaZ](https://cinemaz.to/){#cinemaz}|CinemaZ (EuTorrents) is a Private Torrent Tracker for FOREIGN NON-ASIAN MOVIES|English (United States)|
 |[DICMusic](https://dicmusic.club/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
