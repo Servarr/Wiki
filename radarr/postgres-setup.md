@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2022-12-04T23:18:26.871Z
+date: 2023-08-09T19:29:31.472Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -114,7 +114,7 @@ DELETE FROM "Metadata";
 2. Start Radarr
 
 3. For those having the issues adding movies POST-MIGRATION from SQLite run the following:
-
+```SQL
 select setval('public."MovieFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MovieFiles"));
 select setval('public."AlternativeTitles_Id_seq"', (SELECT MAX("Id")+1 FROM "AlternativeTitles"));
 select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
@@ -151,3 +151,4 @@ select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "Schedu
 select setval('public."SubtitleFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "SubtitleFiles"));
 select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
 select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+```
