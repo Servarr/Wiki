@@ -13,6 +13,7 @@ import argparse
 from datetime import datetime
 import requests
 import iso639
+import re
 import pycountry
 
 # Constants
@@ -403,28 +404,42 @@ def extract_commits_from_file(filename):
     """
     _logger = get_logger('extract_commits_from_file')
     try:
-        with open(filename, 'r') as f:
-            content = f.read()
-            app_commit_start = content.find('Commit: ') + 8
-            app_commit_end = content.find(')', app_commit_start)
-            indexer_commit_start = content.rfind('Commit: ') + 8
-            indexer_commit_end = content.find(')', indexer_commit_start)
+        with open(filename, 'r') as content_file:
+            content = content_file.read()
 
-            prev_app_commit = content[app_commit_start:app_commit_end]
-            _logger.info(
-                "Existing App Commit from %s is [%s]", filename, prev_app_commit)
-            prev_indexer_commit = content[indexer_commit_start:indexer_commit_end]
-            _logger.info(
-                "Existing Indexer Commit from %s is [%s]", filename, prev_indexer_commit)
+            # Use regex to find the commit hash pattern
+            app_commit_pattern = r'\[Commit: (\w{40})\]'
+            indexer_commit_pattern = r'\[Prowlarr Indexers Commit: (\w{40})\]'
+
+            prev_app_commit_match = re.search(app_commit_pattern, content)
+            prev_indexer_commit_match = re.search(
+                indexer_commit_pattern, content)
+
+            prev_app_commit = prev_app_commit_match.group(
+                1) if prev_app_commit_match else None
+            prev_indexer_commit = prev_indexer_commit_match.group(
+                1) if prev_indexer_commit_match else None
+
+            if prev_app_commit:
+                _logger.info("Existing App Commit is {%s}", prev_app_commit)
+
+            if prev_indexer_commit:
+                _logger.info(
+                    "Existing Indexer Commit is [%s]", prev_indexer_commit)
+
     except:
         prev_app_commit = None
         prev_indexer_commit = None
         _logger.warning(
             "Couldn't read previous commits from file. Assuming no previous data.")
+
     return prev_app_commit, prev_indexer_commit
 
 
 def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url, prev_app_commit, prev_indexer_commit):
+
+    _logger = get_logger('main')
+
     # API URLs
     api_url = f"{app_base_url}/api/{API_VERSION}"
 
@@ -436,7 +451,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
         response = get_request(GH_APP_URL)
         github_req = json.loads(response.content)
         app_commit = github_req[0]["sha"]
-    logging.info("App Commit is {%s}", app_commit)
+    _logger.info("App Commit is {%s}", app_commit)
 
     # Determine Version (Build)
     if not build:
@@ -448,42 +463,42 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
         response = get_request(GH_INDEXER_URL)
         github_req = json.loads(response.content)
         indexer_commit = github_req[0]["sha"]
-    logging.info("Indexer Commit is {%s}", indexer_commit)
+    _logger.info("Indexer Commit is {%s}", indexer_commit)
 
     # Compare Commits to Existing
     extract_commits_from_file(output_file)
     if not prev_app_commit and not prev_indexer_commit:
-        logging.info("No previous commits found. Building table.")
+        _logger.info("No previous commits found. Building table.")
     if prev_app_commit == app_commit and prev_indexer_commit == indexer_commit:
-        logging.info("No change in commits. Exiting script.")
+        _logger.info("No change in commits. Exiting script.")
         sys.exit()
 
     # Get Indexer Data
     indexer_obj = get_indexers(api_url, headers)
 
     # Build Table Fields
-    logging.info("Building Indexer Tables")
+    _logger.info("Building Indexer Tables")
     # Public Usenet
-    logging.info("Building: Usenet - Public")
+    _logger.info("Building: Usenet - Public")
     tbl_usenet_public = build_markdown_table(indexer_obj, ["public"], "usenet")
     # Semi-Private Usenet
-    logging.info("Building: Usenet - Semi-Private")
+    _logger.info("Building: Usenet - Semi-Private")
     tbl_usenet_semiprivate = build_markdown_table(
         indexer_obj, ["semiPrivate"], "usenet")
     # Private Usenet
-    logging.info("Building: Usenet - Private")
+    _logger.info("Building: Usenet - Private")
     tbl_usenet_private = build_markdown_table(
         indexer_obj, ["private"], "usenet")
     # Public Torrents
-    logging.info("Building: Torrents - Public")
+    _logger.info("Building: Torrents - Public")
     tbl_torrent_public = build_markdown_table(
         indexer_obj, ["public"], "torrent")
     # Semi-Private Torrents
-    logging.info("Building: Torrents - Semi-Private")
+    _logger.info("Building: Torrents - Semi-Private")
     tbl_torrent_semiprivate = build_markdown_table(
         indexer_obj, ["semiPrivate"], "torrent")
     # Private Torrents
-    logging.info("Building: Torrents - Private")
+    _logger.info("Building: Torrents - Private")
     tbl_torrent_private = build_markdown_table(
         indexer_obj, ["private"], "torrent")
 
@@ -573,7 +588,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
     )
     with open(output_file, "w", encoding=WIKI_ENCODING) as file:
         file.write(wiki_page_file)
-    logging.info("Wiki Page Output")
+    _logger.info("Wiki Page Output")
 
 
 if __name__ == "__main__":
