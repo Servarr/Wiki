@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2023-06-09T22:53:05.263Z
+date: 2023-08-09T15:26:07.386Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -203,8 +203,8 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
 - Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
 - Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
-- One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
-- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+- One example is if your downloads are going into `/data/downloads` then you have a root folder set as `/data/downloads`.
+- It is suggested to use paths like `/data/media/` for your root folder/library and `/data/downloads/` for your downloads.
 - Review our [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
 > Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
