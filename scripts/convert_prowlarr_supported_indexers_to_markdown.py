@@ -398,9 +398,10 @@ def build_markdown_table(indexers, privacy, protocol):
 
 
 def extract_commits_from_file(filename):
-	"""
-	Extracts Commits from existing output file
-	"""
+    """
+    Extracts Commits from existing output file
+    """
+    _logger = get_logger('extract_commits_from_file')
     try:
         with open(filename, 'r') as f:
             content = f.read()
@@ -410,15 +411,20 @@ def extract_commits_from_file(filename):
             indexer_commit_end = content.find(')', indexer_commit_start)
 
             prev_app_commit = content[app_commit_start:app_commit_end]
-            logger.info("Existing App Commit from %s is [%s]", filename, prev_app_commit)
+            _logger.info(
+                "Existing App Commit from %s is [%s]", filename, prev_app_commit)
             prev_indexer_commit = content[indexer_commit_start:indexer_commit_end]
-            logger.info("Existing Indexer Commit from %s is [%s]", filename, prev_indexer_commit)
-            return prev_app_commit, prev_indexer_commit
+            _logger.info(
+                "Existing Indexer Commit from %s is [%s]", filename, prev_indexer_commit)
     except:
-        logging.warning("Couldn't read previous commits from file. Assuming no previous data.")
-        return None, None
+        prev_app_commit = None
+        prev_indexer_commit = None
+        _logger.warning(
+            "Couldn't read previous commits from file. Assuming no previous data.")
+    return prev_app_commit, prev_indexer_commit
 
-def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url):
+
+def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url, prev_app_commit, prev_indexer_commit):
     # API URLs
     api_url = f"{app_base_url}/api/{API_VERSION}"
 
@@ -446,6 +452,8 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
 
     # Compare Commits to Existing
     extract_commits_from_file(output_file)
+    if not prev_app_commit and not prev_indexer_commit:
+        logging.info("No previous commits found. Building table.")
     if prev_app_commit == app_commit and prev_indexer_commit == indexer_commit:
         logging.info("No change in commits. Exiting script.")
         sys.exit()
@@ -460,19 +468,24 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
     tbl_usenet_public = build_markdown_table(indexer_obj, ["public"], "usenet")
     # Semi-Private Usenet
     logging.info("Building: Usenet - Semi-Private")
-    tbl_usenet_semiprivate = build_markdown_table(indexer_obj, ["semiPrivate"], "usenet")
+    tbl_usenet_semiprivate = build_markdown_table(
+        indexer_obj, ["semiPrivate"], "usenet")
     # Private Usenet
     logging.info("Building: Usenet - Private")
-    tbl_usenet_private = build_markdown_table(indexer_obj, ["private"], "usenet")
+    tbl_usenet_private = build_markdown_table(
+        indexer_obj, ["private"], "usenet")
     # Public Torrents
     logging.info("Building: Torrents - Public")
-    tbl_torrent_public = build_markdown_table(indexer_obj, ["public"], "torrent")
+    tbl_torrent_public = build_markdown_table(
+        indexer_obj, ["public"], "torrent")
     # Semi-Private Torrents
     logging.info("Building: Torrents - Semi-Private")
-    tbl_torrent_semiprivate = build_markdown_table(indexer_obj, ["semiPrivate"], "torrent")
+    tbl_torrent_semiprivate = build_markdown_table(
+        indexer_obj, ["semiPrivate"], "torrent")
     # Private Torrents
     logging.info("Building: Torrents - Private")
-    tbl_torrent_private = build_markdown_table(indexer_obj, ["private"], "torrent")
+    tbl_torrent_private = build_markdown_table(
+        indexer_obj, ["private"], "torrent")
 
     # Page Header Info
     wiki_page_start = (
@@ -565,7 +578,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Convert Prowlarr Supported Indexers to Markdown Table"
+        description="Convert Prowlarr Supported Indexers to Markdown Table for Wiki Page if and only if commits changed"
     )
     parser.add_argument("-c", "--commit", help="App Commit hash")
     parser.add_argument("-i", "--indexercommit", help="Indexer Commit hash")
@@ -580,6 +593,10 @@ if __name__ == "__main__":
         help="App Base URL",
         default="http://localhost:9696",
     )
+    parser.add_argument("-pc", "--prev_app_commit",
+                        help="Previous App Commit hash")
+    parser.add_argument("-pic", "--prev_indexer_commit",
+                        help="Previous Indexer Commit hash")
     args = parser.parse_args()
 
     main(
@@ -589,4 +606,6 @@ if __name__ == "__main__":
         args.appapikey,
         args.outputfile,
         args.appbaseurl,
+        args.prev_app_commit,
+        args.prev_indexer_commit
     )
