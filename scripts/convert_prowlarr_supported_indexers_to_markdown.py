@@ -398,9 +398,9 @@ def build_markdown_table(indexers, privacy, protocol):
     return table
 
 
-def extract_commits_from_file(filename):
+def extract_and_compare_commits_from_file(filename, app_commit, indexer_commit):
     """
-    Extracts Commits from existing output file
+    Extracts Commits from existing output file and compares them to the current commits.
     """
     _logger = get_logger('extract_commits_from_file')
     try:
@@ -425,7 +425,7 @@ def extract_commits_from_file(filename):
 
             if prev_indexer_commit:
                 _logger.info(
-                    "Existing Indexer Commit is [%s]", prev_indexer_commit)
+                    "Existing Indexer Commit is {%s}", prev_indexer_commit)
 
     except:
         prev_app_commit = None
@@ -433,7 +433,12 @@ def extract_commits_from_file(filename):
         _logger.warning(
             "Couldn't read previous commits from file. Assuming no previous data.")
 
-    return prev_app_commit, prev_indexer_commit
+    if app_commit == prev_app_commit and indexer_commit == prev_indexer_commit:
+        _logger.debug("Commits are the same. TRUE")
+        return True
+    else:
+        _logger.debug("Commits are different. FALSE")
+        return False
 
 
 def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url, prev_app_commit, prev_indexer_commit):
@@ -466,12 +471,13 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
     _logger.info("Indexer Commit is {%s}", indexer_commit)
 
     # Compare Commits to Existing
-    extract_commits_from_file(output_file)
-    if not prev_app_commit and not prev_indexer_commit:
-        _logger.info("No previous commits found. Building table.")
-    if prev_app_commit == app_commit and prev_indexer_commit == indexer_commit:
+    compared = extract_and_compare_commits_from_file(
+        output_file, app_commit, indexer_commit)
+    if compared:
         _logger.info("No change in commits. Exiting script.")
         sys.exit()
+    else:
+        _logger.info("Commits have changed. Continuing script.")
 
     # Get Indexer Data
     indexer_obj = get_indexers(api_url, headers)
