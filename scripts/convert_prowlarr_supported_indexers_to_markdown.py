@@ -1,7 +1,9 @@
 """
-Convert-ProwlarrSupportedIndexersToMarkdownTable.py
+conver_prowlarr_supported_indexers_to_markdown.py
 
 The purpose of this script is to export a markdown table for the wiki of the available indexers.
+We get the most recent commits from two repositories and from the existing specified output page.
+The current and existing commits are compared and if needed a new wiki page is generated.
 """
 
 import json
@@ -395,6 +397,27 @@ def build_markdown_table(indexers, privacy, protocol):
     return table
 
 
+def extract_commits_from_file(filename):
+	"""
+	Extracts Commits from existing output file
+	"""
+    try:
+        with open(filename, 'r') as f:
+            content = f.read()
+            app_commit_start = content.find('Commit: ') + 8
+            app_commit_end = content.find(')', app_commit_start)
+            indexer_commit_start = content.rfind('Commit: ') + 8
+            indexer_commit_end = content.find(')', indexer_commit_start)
+
+            prev_app_commit = content[app_commit_start:app_commit_end]
+            logger.info("Existing App Commit from %s is [%s]", filename, prev_app_commit)
+            prev_indexer_commit = content[indexer_commit_start:indexer_commit_end]
+            logger.info("Existing Indexer Commit from %s is [%s]", filename, prev_indexer_commit)
+            return prev_app_commit, prev_indexer_commit
+    except:
+        logging.warning("Couldn't read previous commits from file. Assuming no previous data.")
+        return None, None
+
 def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url):
     # API URLs
     api_url = f"{app_base_url}/api/{API_VERSION}"
@@ -420,6 +443,12 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
         github_req = json.loads(response.content)
         indexer_commit = github_req[0]["sha"]
     logging.info("Indexer Commit is {%s}", indexer_commit)
+
+    # Compare Commits to Existing
+    extract_commits_from_file(output_file)
+    if prev_app_commit == app_commit and prev_indexer_commit == indexer_commit:
+        logging.info("No change in commits. Exiting script.")
+        sys.exit()
 
     # Get Indexer Data
     indexer_obj = get_indexers(api_url, headers)
