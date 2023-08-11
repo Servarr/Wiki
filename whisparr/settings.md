@@ -2,7 +2,7 @@
 title: Whisparr Settings
 description: 
 published: true
-date: 2022-05-10T03:54:48.059Z
+date: 2023-08-11T02:47:42.546Z
 tags: needs-love, settings, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:43.530Z
@@ -61,7 +61,6 @@ dateCreated: 2022-04-03T03:49:43.530Z
     - [Torrent Tracker Configuration](#torrent-tracker-configuration)
       - [Indexer Flags](#indexer-flags)
   - [Options](#options)
-  - [Restrictions](#restrictions)
 - [Download Clients](#download-clients)
   - [Overview](#overview)
   - [Download Client Processes](#download-client-processes)
@@ -614,14 +613,6 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Whitelisted Subtitle Tags - Tags entered here will not be considered hardcoded subtitles.
 - Allow Hardcoded Subs - If enabled, allow releases with hardcoded subtitles to be downloaded automatically
 
-## Restrictions
-
-- Here you will be able to set global restrictions based upon a couple of parameters
-- Click the <kb>+</kb> and a new window will open
-- Must Contain - Within this field you can tell Whisparr that if a release does not contain a certain string then Whisparr will not grab that release. This is case insensitive by default and regex can be used.
-- Must Not Contain - Within this field you can tell Whisparr that if a release does contain a certain string then Whisparr will not grab that release. This is case insensitive by default and regex can be used.
-- Tags - Here you can apply these settings to movies with at least one of the given [tag](#tags).
-
 # Download Clients
 
 > Information on supported download clients can be found at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section
@@ -848,13 +839,13 @@ Kodi will be one of the most commonly used options here if that is the software 
 - Tags are particularly useful for:
 
   - Delay Profiles
-  - Restrictions
+  - Release Profiles
   - Indexers
 
-- Tags can be used to link Delay Profiles, Indexers, and Restrictions and Movies together.
+- Tags can be used to link Delay Profiles, Indexers, and Release Profiles and Sites together.
 - For Example:
   - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
-  - You want a specific Restrictions to only apply to a specific movie. You would create a tag and assign the Restrictions and Movie that tag.
+  - You want a specific Release Profile to only apply to a specific movie. You would create a tag and assign the Release Profile and Site that tag.
   - This process is the same for Delay Profiles.
 
 > Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
