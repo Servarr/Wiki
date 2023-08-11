@@ -2,7 +2,7 @@
 title: Servarr
 description: Official wiki for Lidarr, Radarr, Readarr, Sonarr, and Whisparr
 published: true
-date: 2023-06-26T03:23:25.209Z
+date: 2023-08-11T03:01:25.190Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -20,7 +20,7 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 - [![16.png](/assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
 - [![16.png](/assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
 - [![16.png](/assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
-- [![16.png](/assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Movies*](/whisparr)
+- [![16.png](/assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Videos*](/whisparr)
 {.links-list}
 
 ## Indexer Management
