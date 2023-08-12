@@ -2,10 +2,10 @@
 title: Sonarr Docker Installation
 description: Docker installation guide for Sonarr
 published: true
-date: 2023-07-03T20:23:52.657Z
+date: 2023-08-12T16:03:21.613Z
 tags: sonarr
 editor: markdown
-dateCreated: 2021-07-10T16:07:37.425Z
+dateCreated: 2023-07-03T20:13:15.754Z
 ---
 
 # Docker
@@ -15,6 +15,23 @@ The Sonarr team does not offer an official Docker image. However, a number of th
 These instructions provide generic guidance that should apply to any Sonarr Docker image.
 
 Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/)
+
+## Portainer
+
+> **Portainer should be avoided for setting up docker containers** {.is-danger}
+
+- Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
+- Portainer should only for viewing docker container logs / container status.
+- It's strongly suggested to use Docker compose and to not use Portainer.
+- Portainer has many issues, such as:
+  - Incorrect order of source and target of mounts
+  - Inconsistent case-sensitivity
+  - No automatically created custom networks for inter-container communication
+  - Inconsistent compose implementations on different architectures
+  - Pulls every tag on update when you don't set a specific tag
+  - Capabilities are hidden and some don't work at all on ARM platforms
+
+See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 ## Avoid Common Pitfalls
 
