@@ -2,10 +2,10 @@
 title: Lidarr Docker Installation
 description: Docker installation guide for Lidarr
 published: true
-date: 2023-07-03T20:30:47.519Z
+date: 2023-08-12T16:03:02.989Z
 tags: 
 editor: markdown
-dateCreated: 2023-07-03T20:11:02.991Z
+dateCreated: 2023-07-03T20:10:37.188Z
 ---
 
 # Docker
@@ -13,6 +13,23 @@ dateCreated: 2023-07-03T20:11:02.991Z
 The Lidarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 These instructions provide generic guidance that should apply to any Lidarr Docker image.
+
+## Portainer
+
+> **Portainer should be avoided for setting up docker containers** {.is-danger}
+
+- Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
+- Portainer should only for viewing docker container logs / container status.
+- It's strongly suggested to use Docker compose and to not use Portainer.
+- Portainer has many issues, such as:
+  - Incorrect order of source and target of mounts
+  - Inconsistent case-sensitivity
+  - No automatically created custom networks for inter-container communication
+  - Inconsistent compose implementations on different architectures
+  - Pulls every tag on update when you don't set a specific tag
+  - Capabilities are hidden and some don't work at all on ARM platforms
+
+See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 ## Avoid Common Pitfalls
 
