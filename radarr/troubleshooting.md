@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2023-07-24T19:54:11.627Z
+date: 2023-08-12T09:40:45.369Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -409,6 +409,13 @@ For SABnzbd, this is handled with the History Retention setting.
 ### Download cannot be matched to a library item
 
 For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Show Unknown (this is now enabled by default in recent builds) will display all items not otherwise ignored / already imported within \*Arr's download client category. These will typically need to be manually mapped and imported.
+
+Reasons Include:
+- Movie Name has a `:` on TMDb and TMDb has no alt title with a `-` or with a ` ` replacinf the `:`
+- File Name is missing the year which is required
+- AKA or weird multiple names; Radarr has limited support for these
+- File Name matches to multiple movies
+- Release Name or Release ID from the indexer dows not match the file name
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 
