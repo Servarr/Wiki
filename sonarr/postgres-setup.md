@@ -2,7 +2,7 @@
 title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
-date: 2023-08-12T12:26:25.094Z
+date: 2023-08-12T13:04:38.218Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
@@ -88,7 +88,7 @@ Before starting a migration please ensure that you have run Sonarr against the c
 1. Run the following commands:
 
 ```SQL
-DELETE FROM "Profiles";
+DELETE FROM "QualityProfiles";
 DELETE FROM "QualityDefinitions";
 DELETE FROM "DelayProfiles";
 DELETE FROM "Metadata";
