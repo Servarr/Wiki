@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-08-15T11:58:21.719Z
+date: 2023-08-15T12:03:54.571Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -15,6 +15,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [How does Radarr work?](#how-does-radarr-work)
   - [How does Radarr find movies?](#how-does-radarr-find-movies)
   - [How do I access Radarr from another computer?](#how-do-i-access-radarr-from-another-computer)
+  - [Forced Authentication](#forced-authentication)
   - [What is Minimum Availability?](#what-is-minimum-availability)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
   - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
@@ -94,6 +95,17 @@ dateCreated: 2021-05-16T20:44:27.778Z
 ## How do I access Radarr from another computer?
 
 - By default Radarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Radarr uses integrates with Windows (this also applies for current alternatives). If Radarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
+
+## Forced Authentication
+
+If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
+
+As of v5 Radarr will automatically enforce this by enabling its internal authentication system.
+
+- If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
+
+- If you do not expose Radarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 
 ## What is Minimum Availability?
 
