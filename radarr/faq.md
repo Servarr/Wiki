@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-07-06T17:19:53.482Z
+date: 2023-08-15T11:58:21.719Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -554,15 +554,23 @@ Depending on your OS, there are multiple possible ways.
 > Starting 2023-02-12, Radarr's metadata cache will begin to consider a Movie's Original Language to be the TMDb Spoken Language if and only if only 1 spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used.
 {.is-warning}
 
-- Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero.
+## ID Searches
+
+- **Indexers supporting ID based Searches** - Searches on indexers and trackers that support ID (TMDbId, IMDbId, etc.) based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. If results are returned will not fallback to a name/text search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
+  - Language of the release may also be derived from the indexer or trackers release's language in the result if provided rather than parsed from the name
+
+## Text Searches
+
+- **Indexers not supporting id based searches or id based searches with no results** - Search on will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero.
 - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
+  - Language of the release may also be derived from the indexer or trackers release's language in the result if provided rather than parsed from the name
+
+## Getting Foreign Movids
+
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language\*), a specific language for that profile, or `Any` and create and score greater than 0 Custom Formats with Language Conditions to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
   - Note that starting with [Radarr v4.1](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
   - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
-
-> Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Radarr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
-{.is-warning}
 
 ## How does Radarr handle "multi" in names?
 
