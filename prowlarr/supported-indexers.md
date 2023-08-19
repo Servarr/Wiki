@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-08-15T00:53:52.216741
+date: 2023-08-19T00:51:58.433779
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-08-15T00:53:52.216741
+dateCreated: 2023-08-19T00:51:58.433779
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.8.3.3867` / [Commit: 130257fdd426a337afa6a7d0872f0fb32df7fee2](https://github.com/Prowlarr/Prowlarr/commit/130257fdd426a337afa6a7d0872f0fb32df7fee2)
-  - [Prowlarr Indexers Commit: ed72bdbf7daecaf533ded6f13160b68b856789a3](https://github.com/Prowlarr/Indexers/commit/ed72bdbf7daecaf533ded6f13160b68b856789a3)
+  - Prowlarr Build `1.8.3.3876` / [Commit: f0892eb4b8029c9c1b8d179997e0265dacd06a2b](https://github.com/Prowlarr/Prowlarr/commit/f0892eb4b8029c9c1b8d179997e0265dacd06a2b)
+  - [Prowlarr Indexers Commit: 7d0b22040d39d637830b4a6afca4edf2351d5f23](https://github.com/Prowlarr/Indexers/commit/7d0b22040d39d637830b4a6afca4edf2351d5f23)
 
 ---
 
@@ -60,7 +60,7 @@ dateCreated: 2023-08-15T00:53:52.216741
 |[FireBit](https://firebit.net/){#firebit}|FireBit is an UKRAINIAN / RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrents.cc/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.ac/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -115,7 +115,7 @@ dateCreated: 2023-08-15T00:53:52.216741
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.torrent911.io/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://ww2.torrent9.moe/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.pro/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
@@ -557,6 +557,7 @@ dateCreated: 2023-08-15T00:53:52.216741
 |[Dajiao](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[Free Farm](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Gamera](https://gamerapt.link/){#gamera}|Gamera (駕瞑羅) is a CHINESE Private Torrent Tracker for Japanese Monster and Superhero MOVIES / TV|Chinese (China)|
 |[HDPT](https://hdpt.xyz/){#hdpt}|HDPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -568,6 +569,7 @@ dateCreated: 2023-08-15T00:53:52.216741
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[OnlyEncodes (API)](https://onlyencodes.cc/){#onlyencodes-api}|OnlyEncodes is a Private Tracker for MOVIES / TV|English (United States)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
