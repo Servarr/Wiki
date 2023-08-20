@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-08-19T00:51:58.433779
+date: 2023-08-20T00:56:18.873784
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-08-19T00:51:58.433779
+dateCreated: 2023-08-20T00:56:18.873784
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.8.3.3876` / [Commit: f0892eb4b8029c9c1b8d179997e0265dacd06a2b](https://github.com/Prowlarr/Prowlarr/commit/f0892eb4b8029c9c1b8d179997e0265dacd06a2b)
-  - [Prowlarr Indexers Commit: 7d0b22040d39d637830b4a6afca4edf2351d5f23](https://github.com/Prowlarr/Indexers/commit/7d0b22040d39d637830b4a6afca4edf2351d5f23)
+  - Prowlarr Build `1.8.3.3878` / [Commit: ba2aab6bb3d422f90b7c3800f955ed4c79f111d1](https://github.com/Prowlarr/Prowlarr/commit/ba2aab6bb3d422f90b7c3800f955ed4c79f111d1)
+  - [Prowlarr Indexers Commit: 88d6cf201cec099766875919d7a5fad828338d5a](https://github.com/Prowlarr/Indexers/commit/88d6cf201cec099766875919d7a5fad828338d5a)
 
 ---
 
@@ -125,8 +125,8 @@ dateCreated: 2023-08-19T00:51:58.433779
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq269.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir114.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq270.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir115.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent13.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz61.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -424,7 +424,7 @@ dateCreated: 2023-08-19T00:51:58.433779
 |[Ncore](https://ncore.pro/){#ncore}|Ncore is a Hungarian Private Torrent Tracker for Movies/Series/General|Hungarian (Hungary)|
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / GENERAL|German (Germany)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
-|[NORDiCHD](http://nordichd.org/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[NORDiCHD](https://nordichd.org/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Old Toons World](https://oldtoons.world/){#oldtoonsworld}|Old Toons World is a Private Torrent Tracker for Cartoon MOVIES / TV / GENERAL|English (United States)|
 |[OpenCD](https://open.cd/){#opencd}|OpenCD is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
 |[OshenPT](http://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD Movies, TV, Music|Chinese (China)|
@@ -473,7 +473,6 @@ dateCreated: 2023-08-19T00:51:58.433779
 |[SoulVoice](https://pt.soulvoice.club/){#soulvoice}|SoulVoice is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Speedmaster HD](https://speedmaster-hd.net/){#speedmasterhd}|Speedmaster HD is a German Time based tracker for MOVIES / TV|German (Germany)|
 |[SpeedTorrent Reloaded](https://st-tracker.eu/){#speedtorrentreloaded}|SpeedTorrent Reloaded (ST-Tracker) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
-|[SpiderTK](https://spidertk.top/){#spidertk}|SpiderTK is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Spirit of Revolution](https://sor-next.tk/){#spiritofrevolution}|Spirit of Revolution is a German Time based tracker for 0DAY|German (Germany)|
 |[SportHD](http://satsporthd.org/){#sporthd}|SportHD is a Private Torrent Tracker for HD SPORTS|English (United States)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
