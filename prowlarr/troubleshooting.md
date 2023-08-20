@@ -28,6 +28,7 @@ dateCreated: 2021-06-20T20:05:25.223Z
     - [Manually upgrading](#manually-upgrading)
 - [NGINX errors](#nginx-errors)
 - [Indexer, Application, and Download Client Issues](#indexer-application-and-download-client-issues)
+  - [Cannot determine the frame size or a corrupted frame was received](##cannot-determine-the-frame-size-or-a-corrupted-frame-was-received)
   - [Connection Timed Out](#connection-timed-out)
   - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
   - [\*Arr HTTP 400 Errors](#arr-http-400-errors)
@@ -206,14 +207,15 @@ If you have any different `proxy_set_header` you must replace it with the line a
 
 Below are some common causes
 
-# Cannot determine the frame size or a corrupted frame was received
+## Cannot determine the frame size or a corrupted frame was received
 
 `Cannot determine the frame size or a corrupted frame was received.`
 
-- Prowlarr had a security issue connecting to the site.
+Prowlarr had a security issue connecting to the site.
 
 This is typically caused by:
-- local DNS issues
+
+- local DNS issues - Try changing to a different DNS provider
 
 ## Connection Timed Out
 
@@ -225,8 +227,7 @@ This is typically caused by:
 
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
-- local DNS issues
-  - ISP blocking site access
+- local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
 

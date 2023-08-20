@@ -416,7 +416,7 @@ This can also be caused by:
 
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
-- local DNS issues
+- local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy and it being improperly configured
 
@@ -568,7 +568,7 @@ This can also be caused by:
 
 - improperly configured or use of a VPN
 - improperly configured or use of a proxy
-- local DNS issues
+- local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy and it being improperly configured
 

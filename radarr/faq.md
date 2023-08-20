@@ -313,7 +313,7 @@ As of v5 Radarr will automatically enforce this by enabling its internal authent
 - This is often caused by:
   - improperly configured or use of a VPN
   - improperly configured or use of a proxy
-  - local DNS issues
+  - local DNS issues - Try changing to a different DNS provider
   - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
   - the use of Privoxy and it being improperly configured
   - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
