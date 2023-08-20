@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-08-15T12:03:54.571Z
+date: 2023-08-20T09:49:10.418Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -577,7 +577,7 @@ Depending on your OS, there are multiple possible ways.
 - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
   - Language of the release may also be derived from the indexer or trackers release's language in the result if provided rather than parsed from the name
 
-## Getting Foreign Movids
+## Getting Foreign Movies
 
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language\*), a specific language for that profile, or `Any` and create and score greater than 0 Custom Formats with Language Conditions to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
