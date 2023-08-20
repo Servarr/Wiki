@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2023-08-20T00:19:05.713Z
+date: 2023-08-20T00:20:04.841Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -206,7 +206,7 @@ If you have any different `proxy_set_header` you must replace it with the line a
 
 Below are some common causes
 
-# Cannot determine the frame size or a corrupted frame was received.
+# Cannot determine the frame size or a corrupted frame was received
 
 `Cannot determine the frame size or a corrupted frame was received.`
 
