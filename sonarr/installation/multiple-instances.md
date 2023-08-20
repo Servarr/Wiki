@@ -2,7 +2,7 @@
 title: multiple-instances
 description: 
 published: true
-date: 2023-08-20T02:22:57.951Z
+date: 2023-08-20T02:23:13.676Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:13:35.847Z
@@ -10,7 +10,7 @@ dateCreated: 2023-07-03T20:13:35.847Z
 
 # Multiple Instances
 
-It is possible to run multiple instances of Sonarr. This is typically done when one wants a 4K and 1080p copy of a movie.
+It is possible to run multiple instances of Sonarr. This is typically done when one wants a 4K and 1080p copy of a series.
 [Note that you can configure Sonarr to use a second Sonarr as a list. This is helpful if you wish to keep both in sync.](https://trash-guides.info/Sonarr/Tips/Sync-2-radarr-sonarr/)
 
 - [Windows Multiple Instances](#windows-multi)
