@@ -142,21 +142,23 @@ As of v5 Radarr will automatically enforce this by enabling its internal authent
 
 ## What are Lists and what can they do for me?
 
-- Lists are a part of Radarr that allow you to follow a given list creator.
+- Lists are a part of Radarr that allow you to follow a given list from various sources including Plex
+- Lists are not intended to be an "add it now" functionality, but rather are an add movies in this lisf eventually functionality.  
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
+- Lists can also be used to sync Radarr to another Radarr instance or to import your of your users' Plex watchlist(s)
 
 > **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
 {.is-warning}
 
 - It's suggested that physically look at the list before you even go to Radarr.
 
-## Why are lists sync times so long and can I change it?
+### Why are lists sync times so long and can I change it?
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
-- You can trigger a list refresh manually, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
+- You can trigger a list refresh manually by testing it, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
 - This restriction is to not have our server and list providers get killed by people updating lists every 10 minutes.
 - In Radarr pre-v4.7 interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
-- In Radarr v4.7 these values are now hardcoded and not configurable.
+- In Radarr v4.7 these values are now hardcoded and not configurable. Times are based on the list type to minimize inpact to third party services and allow Radarr's functionality with them to continue.
 
 ## Can all my movie files be stored in one folder?
 
