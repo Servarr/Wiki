@@ -2,7 +2,7 @@
 title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
-date: 2023-08-12T13:04:38.218Z
+date: 2023-08-21T19:37:53.766Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
@@ -112,3 +112,44 @@ DELETE FROM "Metadata";
 
 
 2. Start Sonarr
+
+
+3. For those having the issues adding series or errors in the log after POST-MIGRATION from SQLite run the following:
+```SQL
+select setval('public."AutoTagging_Id_seq"',(SELECT MAX("Id")+1 FROM "AutoTagging"));
+select setval('public."Blacklist_Id_seq"',(SELECT MAX("Id")+1 FROM "Blocklist"));
+select setval('public."Commands_Id_seq"',(SELECT MAX("Id")+1 FROM "Commands"));
+select setval('public."Config_Id_seq"',(SELECT MAX("Id")+1 FROM "Config"));
+select setval('public."CustomFilters_Id_seq"',(SELECT MAX("Id")+1 FROM "CustomFilters"));
+select setval('public."CustomFormats_Id_seq"',(SELECT MAX("Id")+1 FROM "CustomFormats"));
+select setval('public."DelayProfiles_Id_seq"',(SELECT MAX("Id")+1 FROM "DelayProfiles"));
+select setval('public."DownloadClientStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+select setval('public."DownloadClients_Id_seq"',(SELECT MAX("Id")+1 FROM "DownloadClients"));
+select setval('public."DownloadHistory_Id_seq"',(SELECT MAX("Id")+1 FROM "DownloadHistory"));
+select setval('public."EpisodeFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "EpisodeFiles"));
+select setval('public."Episodes_Id_seq"',(SELECT MAX("Id")+1 FROM "Episodes"));
+select setval('public."ExtraFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "ExtraFiles"));
+select setval('public."History_Id_seq"',(SELECT MAX("Id")+1 FROM "History"));
+select setval('public."ImportListExclusions_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListExclusions"));
+select setval('public."ImportListStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListStatus"));
+select setval('public."ImportLists_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportLists"));
+select setval('public."IndexerStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "IndexerStatus"));
+select setval('public."Indexers_Id_seq"',(SELECT MAX("Id")+1 FROM "Indexers"));
+select setval('public."MetadataFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "MetadataFiles"));
+select setval('public."Metadata_Id_seq"',(SELECT MAX("Id")+1 FROM "Metadata"));
+select setval('public."NamingConfig_Id_seq"',(SELECT MAX("Id")+1 FROM "NamingConfig"));
+select setval('public."NotificationStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "NotificationStatus"));
+select setval('public."Notifications_Id_seq"',(SELECT MAX("Id")+1 FROM "Notifications"));
+select setval('public."PendingReleases_Id_seq"',(SELECT MAX("Id")+1 FROM "PendingReleases"));
+select setval('public."QualityDefinitions_Id_seq"',(SELECT MAX("Id")+1 FROM "QualityDefinitions"));
+select setval('public."QualityProfiles_Id_seq"',(SELECT MAX("Id")+1 FROM "QualityProfiles"));
+select setval('public."RemotePathMappings_Id_seq"',(SELECT MAX("Id")+1 FROM "RemotePathMappings"));
+select setval('public."Restrictions_Id_seq"',(SELECT MAX("Id")+1 FROM "Restrictions"));
+select setval('public."RootFolders_Id_seq"',(SELECT MAX("Id")+1 FROM "RootFolders"));
+select setval('public."SceneMappings_Id_seq"',(SELECT MAX("Id")+1 FROM "SceneMappings"));
+select setval('public."ScheduledTasks_Id_seq"',(SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+select setval('public."Series_Id_seq"',(SELECT MAX("Id")+1 FROM "Series"));
+select setval('public."SubtitleFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "SubtitleFiles"));
+select setval('public."Tags_Id_seq"',(SELECT MAX("Id")+1 FROM "Tags"));
+select setval('public."Users_Id_seq"',(SELECT MAX("Id")+1 FROM "Users"));
+```
