@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-08-20T00:56:18.873784
+date: 2023-08-22T00:54:43.264587
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-08-20T00:56:18.873784
+dateCreated: 2023-08-22T00:54:43.264587
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.8.3.3878` / [Commit: ba2aab6bb3d422f90b7c3800f955ed4c79f111d1](https://github.com/Prowlarr/Prowlarr/commit/ba2aab6bb3d422f90b7c3800f955ed4c79f111d1)
-  - [Prowlarr Indexers Commit: 88d6cf201cec099766875919d7a5fad828338d5a](https://github.com/Prowlarr/Indexers/commit/88d6cf201cec099766875919d7a5fad828338d5a)
+  - Prowlarr Build `1.8.4.3882` / [Commit: 1b0c9adf243f2a2934c0ab00313db7b01951ff9c](https://github.com/Prowlarr/Prowlarr/commit/1b0c9adf243f2a2934c0ab00313db7b01951ff9c)
+  - [Prowlarr Indexers Commit: 671c7afbde4d706a69326bdc1cd6ae1d2ff5a1ad](https://github.com/Prowlarr/Indexers/commit/671c7afbde4d706a69326bdc1cd6ae1d2ff5a1ad)
 
 ---
 
@@ -115,7 +115,7 @@ dateCreated: 2023-08-20T00:56:18.873784
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.torrent911.io/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.pro/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.gs/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
@@ -126,7 +126,7 @@ dateCreated: 2023-08-20T00:56:18.873784
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq270.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir115.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir116.com){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent13.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz61.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -338,7 +338,6 @@ dateCreated: 2023-08-20T00:56:18.873784
 |[Flux-Zone](http://fluxzone.org/){#fluxzone}|Flux-Zone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[Fuzer](https://www.fuzer.me/){#fuzer}|Fuzer is a private torrent website with israeli torrents|Hebrew (Israel)|
-|[GainBound](https://gainbound.net/){#gainbound}|GainBound is a CHINESE Private Tracker for MOVIES especially from Hong Kong|Chinese (China)|
 |[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GAYtorrent\.ru](https://www.gaytor.rent/){#gaytorrentru}|GayTorrent\.ru is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[Generation-Free (API)](https://generation-free.org/){#generationfree-api}|Generation-Free (GF-Free) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
@@ -569,6 +568,7 @@ dateCreated: 2023-08-20T00:56:18.873784
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[OnlyEncodes (API)](https://onlyencodes.cc/){#onlyencodes-api}|OnlyEncodes is a Private Tracker for MOVIES / TV|English (United States)|
+|[Ostwiki](https://www.ostwiki.com/){#ostwiki}|Ostwiki is a Private Torrent Tracker for Soundtracks releases|English (United States)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
