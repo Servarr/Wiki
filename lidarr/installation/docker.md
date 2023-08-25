@@ -41,7 +41,7 @@ The first is a problem because the download client will report a download's path
 
 Most Docker images suggest paths like `/music` and `/downloads`. This causes slow moves and doesn't allow hard links because they are considered two different file systems inside the container. Some also recommend paths for the download client container that are different from the Lidarr container, like /torrents.
 
-The best solution is to use a single, common volume inside the containers, such as /data. Your Movies would be in `/data/Movies`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
+The best solution is to use a single, common volume inside the containers, such as /data. Your Music would be in `/data/Music`, torrents in `/data/downloads/torrents` and/or usenet downloads in `/data/downloads/usenet`.
 
 If this advice is not followed, you may have to configure a Remote Path Mapping in the Lidarr web UI (Settings › Download Clients).
 
