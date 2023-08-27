@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2023-07-06T17:20:43.156Z
+date: 2023-08-27T22:14:05.687Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -187,7 +187,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Radarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
+- Completed downloads that are still seeding will files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.  Torrents that are paused and completed seeding will be atomic moved if hardlinks are supported or copy+delete if they are not.
 - Hardlinks are enabled by default. [A hardlink will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Radarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Radarr's settings, Radarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
