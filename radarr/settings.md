@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2023-08-27T22:00:21.963Z
+date: 2023-08-27T22:02:11.780Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -448,6 +448,14 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - If the first release is from BitTorrent, Radarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
+## Release Profiles
+
+- Here you will be able to set global restrictions based upon a couple of parameters
+- Click the <kb>+</kb> and a new window will open
+- Must Contain - Within this field you can tell Radarr that if a release does not contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
+- Must Not Contain - Within this field you can tell Radarr that if a release does contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
+- Tags - Here you can apply these settings to movies with at least one of the given [tag](#tags).
+
 # Quality
 
 ## Quality Table Meanings
@@ -644,14 +652,6 @@ Profiles is where Custom Format Scores are configured.
 
 - Whitelisted Subtitle Tags - Tags entered here will not be considered hardcoded subtitles.
 - Allow Hardcoded Subs - If enabled, allow releases with hardcoded subtitles to be downloaded automatically
-
-## Release Profiles
-
-- Here you will be able to set global restrictions based upon a couple of parameters
-- Click the <kb>+</kb> and a new window will open
-- Must Contain - Within this field you can tell Radarr that if a release does not contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
-- Must Not Contain - Within this field you can tell Radarr that if a release does contain a certain string then Radarr will not grab that release. This is case insensitive by default and regex can be used.
-- Tags - Here you can apply these settings to movies with at least one of the given [tag](#tags).
 
 # Download Clients
 
