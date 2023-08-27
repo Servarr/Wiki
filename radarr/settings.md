@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2023-07-18T04:21:25.658Z
+date: 2023-08-27T22:00:21.963Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -645,7 +645,7 @@ Profiles is where Custom Format Scores are configured.
 - Whitelisted Subtitle Tags - Tags entered here will not be considered hardcoded subtitles.
 - Allow Hardcoded Subs - If enabled, allow releases with hardcoded subtitles to be downloaded automatically
 
-## Restrictions
+## Release Profiles
 
 - Here you will be able to set global restrictions based upon a couple of parameters
 - Click the <kb>+</kb> and a new window will open
@@ -921,7 +921,8 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Security
 
 - Authentication - How would you like to authenticate to access your Radarr instance
-  - None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web
+  - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](/radarr/faq#forced-authentication)
+  - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
   - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
 - API Key - This is how other programs would communicate or have Radarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
