@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-08-01T17:12:28.759Z
+date: 2023-08-28T19:31:41.131Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -805,3 +805,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 - Sonarr will need to move files away from where the downloader puts them into the final location, so this means that Sonarr will need to read/write to both the source and the destination directory and files.
 - On Linux, where best practices have services running as their own user, this will probably mean using a shared group and setting folder permissions to `775` and files to `664` both in your downloader and Sonarr. In umask notation, that would be `002`.
+
+## Forced Authentication
+
+- In Sonarr v4 (beta) authentication is mandatory. Please see the [Sonarr v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) for details
