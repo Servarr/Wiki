@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2023-01-03T21:57:04.805Z
+date: 2023-08-28T19:27:05.378Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -74,6 +74,24 @@ dateCreated: 2021-06-14T14:33:41.344Z
 - Put another way, Lidarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases you want that were uploaded in the past.
 - If you've already added the album, but now you want to search for it, you have a few choices. You can go to the album's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see ''all'' the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Lidarr has been offline for an extended period of time, Lidarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Lidarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
+
+## Forced Authentication
+
+If Lidarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
+
+As of Lidarr v1, Authentication is Mandatory.
+
+### Authentication Method
+
+- `Basic` (Browser pop-up) - This option when accessing your Lidarr will show a small pop-up allowing you to input a Username and Password
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr
+- `External` - Configurable via Config File Only
+  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/lidarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+
+### Authentication Required
+
+- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 
 ## How are possible downloads compared?
 
