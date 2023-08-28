@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-06-21T23:01:13.571Z
+date: 2023-08-28T19:27:17.503Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -51,7 +51,24 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [VPNs, Prowlarr, and the \*ARRs](#vpns-jackett-and-the-arrs)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
-  - [Can I disable forced authentication?](#can-i-disable-forced-authentication)
+  
+## Forced Authentication
+
+If Prowlarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
+
+As of Prowlarr v1, Authentication is Mandatory.
+
+### Authentication Method
+
+- `Basic` (Browser pop-up) - This option when accessing your Prowlarr will show a small pop-up allowing you to input a Username and Password
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
+- `External` - Configurable via Config File Only
+  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/prowlarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+
+### Authentication Required
+
+- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
   
 ## How do I reset Stats?
 
@@ -404,10 +421,3 @@ Depending on your OS, there are multiple possible ways.
 ## Can I easily add all indexers at once?
 
 No. This would not be a good thing to do, and this functionality will not be added. It is much better to choose your indexers wisely, pay attention to the stats to remove indexers that are too slow or not producing grabs. Proper pruning and maintenance of your indexers will result in much better results overall, and quicker results on searches from your apps.
-
-## Can I disable forced authentication?
-
-- If Prowlarr is exposed externally then you are required - including increasingly required by most Trackers and Indexers - to have authentication in front of Prowlarr.
-  - If you use an **external authentication** such as Authelia, Authentik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/prowlarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
-- If you do not expose Prowlarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
