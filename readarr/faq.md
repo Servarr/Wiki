@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-08-28T19:26:54.007Z
+date: 2023-08-28T19:29:22.021Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -12,6 +12,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 
 - [Table of Contents](#table-of-contents)
   - [How does Readarr work?](#how-does-readarr-work)
+  - [Forced Authentication](#forced-authentication)
   - [How does Readarr find books?](#how-does-readarr-find-books)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
   - [Error of a task was canceled](#a-task-was-canceled)
