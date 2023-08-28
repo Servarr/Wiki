@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-08-28T19:27:17.503Z
+date: 2023-08-28T19:29:30.585Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -11,6 +11,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
+  - [Forced Authentication](#forced-authentication)
   - [How do I reset Stats?](#how-do-i-reset-stats)
   - [Category Not Available or Missing](#category-not-available-or-missing)
   - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
