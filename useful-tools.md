@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-07-27T13:57:56.517Z
+date: 2023-08-28T09:19:27.683Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -338,6 +338,10 @@ There are a handful of options out there for extracting and deleting files after
 ## tdarr_inform
 
 [tdarr_inform](https://github.com/deathbybandaid/tdarr_inform) is a custom script for Sonarr and Radarr to inform Tdarr of new/changed/deleted files without relying on filesystem events or frequent disk scanning.
+
+## Deleterr
+
+[Deleterr](https://github.com/rfsbraz/deleterr) is a tool to delete stale and inactive media from Plex/Sonarr/Radarr. It helps managing limited space when you allow users to request shows via Overseerr/Ombi but don't want to manually monitor available disk space. It's configurable to support only deleting media meeting your defined criteria.
 
 ## Twitter Connect
 
