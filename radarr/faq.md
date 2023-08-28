@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-08-20T09:49:10.418Z
+date: 2023-08-28T19:24:56.415Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -100,11 +100,18 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
-As of v5 Radarr will automatically enforce this by enabling its internal authentication system.
+As of Radarr v5, Authentication is Mandatory.
 
-- If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost will be used**
+### Authentication Method
 
-- If you do not expose Radarr externally or do not wish to have auth required for local access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+- `Basic` (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
+- `External` - Configurable via Config File Only
+  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+
+### Authentication Required
+
+- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 
 ## What is Minimum Availability?
