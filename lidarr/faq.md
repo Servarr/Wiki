@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2023-08-28T19:27:05.378Z
+date: 2023-08-28T19:29:12.425Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -13,6 +13,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 - [Table of Contents](#table-of-contents)
   - [How does Lidarr work?](#how-does-lidarr-work)
   - [How does Lidarr find releases?](#how-does-lidarr-find-releases)
+  - [Forced Authentication](#forced-authentication)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
   - [Lidarr stopped working after updating to Ubuntu 22.04](#lidarr-stopped-working-after-updating-to-ubuntu-2204)
   - [Why can I not add a new release or artist to Lidarr?](#why-can-i-not-add-a-new-release-or-artist-to-lidarr)
