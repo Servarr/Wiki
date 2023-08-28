@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-08-28T19:27:57.638Z
+date: 2023-08-28T19:29:38.774Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
