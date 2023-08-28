@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-07-05T22:43:26.930Z
+date: 2023-08-28T19:26:54.007Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -64,6 +64,24 @@ dateCreated: 2021-05-25T20:01:09.320Z
 - Put another way, Readarr will only find books that are newly uploaded to your indexers. It will not actively try to find books you want that were uploaded in the past.
 - If you've already added the book, but now you want to search for it, you have a few choices. You can go to the author's page and use the search button next to the book, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Readarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed books.
+
+## Forced Authentication
+
+If Readarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
+
+As of Readarr v1, Authentication is Mandatory.
+
+### Authentication Method
+
+- `Basic` (Browser pop-up) - This option when accessing your Readarr will show a small pop-up allowing you to input a Username and Password
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Readarr
+- `External` - Configurable via Config File Only
+  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/readarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+
+### Authentication Required
+
+- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 
 ## How does Readarr find books?
 
