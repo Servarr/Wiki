@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2023-08-28T19:29:12.425Z
+date: 2023-08-31T19:08:18.905Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -80,7 +80,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 
 If Lidarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
-As of Lidarr v1, Authentication is Mandatory.
+As of Lidarr v2, Authentication is Mandatory.
 
 ### Authentication Method
 
