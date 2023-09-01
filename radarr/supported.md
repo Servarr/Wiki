@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2023-08-05T16:58:01.394Z
+date: 2023-09-01T16:45:41.479Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -138,6 +138,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
+- Pushcut {#pushcut}
 - Pushover {#pushover}
 - SendGrid {#sendgrid}
 - Slack {#slack}
