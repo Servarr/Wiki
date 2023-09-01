@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2023-07-07T16:59:43.795Z
+date: 2023-09-01T16:44:31.667Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -149,6 +149,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
+- Pushcut {#pushcut}
 - Pushover {#pushover}
 - SendGrid {#sendgrid}
 - Slack {#slack}
