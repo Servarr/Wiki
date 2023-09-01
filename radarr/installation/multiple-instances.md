@@ -1,3 +1,13 @@
+---
+title: multiple-instances
+description: 
+published: true
+date: 2023-09-01T05:05:47.102Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:12:10.189Z
+---
+
 # Multiple Instances
 
 It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie. Note that you can (and probably should) [review TRaSH's guide and configure Radarr to use a second Radarr as a list](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/). This is helpful if you wish to keep both in sync.
@@ -103,7 +113,7 @@ separate locations. {.is-warning}
 
 ### Dealing with Updates
 
-- Disable automatic updates in one of your instances
+> - Disable automatic updates in one of your instances
   - In config.xml change update branch to `<Branch>nonexistent</Branch>`
 - If one Radarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
