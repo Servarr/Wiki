@@ -2,7 +2,7 @@
 title: LIdarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2023-09-03T17:16:58.863Z
+date: 2023-09-03T17:21:21.279Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -112,7 +112,7 @@ DELETE FROM "MetadataProfiles";
   {.is-info}
 
 1. Start Lidarr
-2. Execute the following queries in the database.
+2. Execute the following queries in the database. if you get errors like ` Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint`
 ```sql
 select setval('public."AlbumReleases_Id_seq"',(SELECT MAX("Id")+1 FROM "AlbumReleases"));
 select setval('public."Albums_Id_seq"',(SELECT MAX("Id")+1 FROM "Albums"));
