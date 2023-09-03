@@ -2,7 +2,7 @@
 title: Sonarr Contributing
 description: 
 published: true
-date: 2023-07-03T19:02:23.607Z
+date: 2023-09-03T13:55:05.394Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-06-11T23:10:04.820Z
@@ -76,7 +76,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Sonarr
-1. Open <http://localhost:8686>
+1. Open <http://localhost:8989>
 
 #### Command line
 
