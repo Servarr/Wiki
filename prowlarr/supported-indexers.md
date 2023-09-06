@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-09-02T00:53:12.175811
+date: 2023-09-06T00:55:12.770674
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-09-02T00:53:12.175811
+dateCreated: 2023-09-06T00:55:12.770674
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.8.5.3895` / [Commit: dee98ac46f72aed399a1bdeef5b6456b0348c373](https://github.com/Prowlarr/Prowlarr/commit/dee98ac46f72aed399a1bdeef5b6456b0348c373)
-  - [Prowlarr Indexers Commit: 157dfad94aa57ccbda85e0f923d118649908fbe3](https://github.com/Prowlarr/Indexers/commit/157dfad94aa57ccbda85e0f923d118649908fbe3)
+  - Prowlarr Build `1.8.6.3931` / [Commit: fe9cad5697cfd52538d41adfa27ce5533cc508d6](https://github.com/Prowlarr/Prowlarr/commit/fe9cad5697cfd52538d41adfa27ce5533cc508d6)
+  - [Prowlarr Indexers Commit: dbcdb02f123ed6c936625b6010f8767d2e0f8318](https://github.com/Prowlarr/Indexers/commit/dbcdb02f123ed6c936625b6010f8767d2e0f8318)
 
 ---
 
@@ -129,7 +129,7 @@ dateCreated: 2023-09-02T00:53:12.175811
 |[TorrentSir](https://torrentsir117.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent13.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz61.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentz2eu](https://2torrentz2eu.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
+|[Torrentz2eu](https://torrentz2beta.com/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -300,7 +300,7 @@ dateCreated: 2023-09-02T00:53:12.175811
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|B-movie tracker|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Cinematik](https://www.cinematik.net/){#cinematik}|A tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse|English (United States)|
-|[Classix](http://classix-unlimited.co.uk/){#classix}|Classic movie tracker|English (United States)|
+|[Classix](http://classix-unlimited.co.uk/){#classix}|Classix is a Private Torrent Tracker for classic MOVIES / TV / GENERAL|English (United States)|
 |[Coastal-Crew](https://coastal-crew.bounceme.net/){#coastalcrew}|Coastal-Crew is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Concertos](https://concertos.live/){#concertos}|Concertos - Private site for Live Concerts with Strict Quality Control|English (United States)|
 |[CrazyHD](https://www.chd4.com/){#crazyhd}|CrazyHD is a BANGLADESHI Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
