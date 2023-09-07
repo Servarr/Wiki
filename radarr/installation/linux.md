@@ -2,10 +2,10 @@
 title: Radarr Linux Installation
 description: Linux installation guide for Radarr
 published: true
-date: 2023-07-03T20:30:47.519Z
+date: 2023-09-07T20:43:01.533Z
 tags: 
 editor: markdown
-dateCreated: 2023-07-03T20:11:02.991Z
+dateCreated: 2023-07-03T20:11:59.391Z
 ---
 
 # Linux
@@ -31,7 +31,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Radarr and install it into `/opt`
+> The steps below will download the stable version (`master` release branch) Radarr and install it into `/opt`
 > Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
 > Radarr's configuration files will be stored in `/var/lib/radarr`
 {.is-success}
@@ -51,6 +51,7 @@ sudo apt install curl sqlite3
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
 > \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
+> \* Previous/existing installations were using the `master` release branch noted on the [FAQ](/radarr/faq) or you update `master` in the download URL
 {.is-danger}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-success}
