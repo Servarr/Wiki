@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-08-28T19:29:47.507Z
+date: 2023-09-08T04:24:10.540Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -582,13 +582,13 @@ Depending on your OS, there are multiple possible ways.
 
 ## Text Searches
 
-- **Indexers not supporting id based searches or id based searches with no results** - Search on will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero.
+- **Indexers not supporting id based searches or id based searches with no results** - Search on will use the Movie's Original Title, English Title, and Translated Title from [whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/).
 - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
   - Language of the release may also be derived from the indexer or trackers release's language in the result if provided rather than parsed from the name
 
 ## Getting Foreign Movies
 
-- To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language\*), a specific language for that profile, or `Any` and create and score greater than 0 Custom Formats with Language Conditions to determine which language to grab.
+- To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language\*), a specific language for that profile, or `Any` and create and score greater than 0 [Custom Formats with Language Conditions to determine which language to grab - see the linked TRaSH's Guide for details](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/).
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
   - Note that starting with [Radarr v4.1](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
   - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
