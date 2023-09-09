@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-08-28T09:19:27.683Z
+date: 2023-09-09T21:33:13.729Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -48,7 +48,8 @@ dateCreated: 2021-06-05T20:51:53.183Z
 - [Other Projects and Programs](#other-projects-and-programs)
   - [Filebot](#filebot)
   - [JDupes](#jdupes)
-  - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-start-scripts)
+  - [Cuban's Just A Bunch Of Starr Scripts](#just-a-bunch-of-start-scripts)
+  - [Drazzilb's UserScripts](#drazzilb-s-userscripts)
   - [Just A Bunch Of Plex Scripts (JBOPS)](#just-a-bunch-of-plex-scripts)
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
@@ -295,7 +296,8 @@ There are a handful of options out there for extracting and deleting files after
 - Automatically add cross-seed torrents in paused state (used in conjunction with the [cross-seed script](#cross-seed))
 - Recheck paused torrents sorted by lowest size and resume if completed
 - Remove orphaned files from your root directory that are not referenced by qBittorrent
-- Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded
+- Tag any torrents that have no hard links and utilize Share Limits to remove them 
+- Apply Share Limits based on tags and categories
 
 # Other Projects and Programs
 
@@ -313,10 +315,15 @@ There are a handful of options out there for extracting and deleting files after
 
 - `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
 
+## Drazzilb's UserScripts
+
+- [Drazzilb's collection of unRAID (and native compatible) userscripts](https://github.com/Drazzilb08/userScripts) and other scripts around the internet that he finds neat/useful. The [list of scripts can be found on his wiki](https://github.com/Drazzilb08/userScripts/wiki).
+  -[Drazzilb's Upgradinatorr](https://github.com/Drazzilb08/userScripts/wiki/upgradinatorr) is a script is designed to keep your media in sync with your Radarr/Sonarr's Custom Formats/Scoring. It is a python script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :) This script is a python port of [Cuban's Powershell Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md); thanks again Cuban.
+
 ## Just A Bunch Of Starr Scripts
 
 - [Just A Bunch Of Starr Scripts](https://github.com/angrycuban13/Just-A-Bunch-Of-Starr-Scripts)
-- [Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md) is a powershell script to manually search n items that are not tagged with a specific tag in your Radarr/Sonarr media library. n is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
+  - [Cuban's Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md) is a Powershell script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
 
 ## Just A Bunch Of Plex Scripts
 
