@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-09-09T23:32:52.816Z
+date: 2023-09-09T23:33:08.434Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -170,7 +170,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 ## Can all my movie files be stored in one folder?
 
 - No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for some users and will *maybe* come in a future version, but it is **extremely unlikely**. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
-- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
+- The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time or ever.
 - If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder?
