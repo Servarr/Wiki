@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-09-09T21:35:09.741Z
+date: 2023-09-09T21:37:00.698Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -278,13 +278,13 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Toolbarr
 
-[Toolbarr](https://github.com/Notifiarr/toolbarr) provides a suite of utilities to fix problems with Starr applications. Toolbarr allows you to perform various actions against your Starr apps and their SQLite3 databases.
+[Toolbarr](https://github.com/Notifiarr/toolbarr) provides a suite of utilities to fix problems with Starr applications. Toolbarr allows you to perform various actions against your Starr apps and their SQLite3 databases. The most useful feature is being able to convert paths from linux to windows and windows to linux.
 
 ## Unpackerr
 
-[Unpackerr](https://github.com/unpackerr/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
+- [Unpackerr](https://github.com/unpackerr/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
 
-There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so He wrote my own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
+- There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so he wrote his own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
 
 ## qBit Management
 
@@ -318,7 +318,7 @@ There are a handful of options out there for extracting and deleting files after
 ## Drazzilb's UserScripts
 
 - [Drazzilb's collection of unRAID (and native compatible) userscripts](https://github.com/Drazzilb08/userScripts) and other scripts around the internet that he finds neat/useful. The [list of scripts can be found on his wiki](https://github.com/Drazzilb08/userScripts/wiki).
-  -[Drazzilb's Upgradinatorr](https://github.com/Drazzilb08/userScripts/wiki/upgradinatorr) is a script is designed to keep your media in sync with your Radarr/Sonarr's Custom Formats/Scoring. It is a python script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :) This script is a python port of [Cuban's Powershell Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md); thanks again Cuban.
+  - [Drazzilb's Upgradinatorr](https://github.com/Drazzilb08/userScripts/wiki/upgradinatorr) is a script is designed to keep your media in sync with your Radarr/Sonarr's Custom Formats/Scoring. It is a python script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :) This script is a python port of [Cuban's Powershell Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md); thanks again Cuban.
 
 ## Just A Bunch Of Starr Scripts
 
