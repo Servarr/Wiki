@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-09-09T21:33:13.729Z
+date: 2023-09-09T21:35:09.741Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -48,8 +48,8 @@ dateCreated: 2021-06-05T20:51:53.183Z
 - [Other Projects and Programs](#other-projects-and-programs)
   - [Filebot](#filebot)
   - [JDupes](#jdupes)
-  - [Cuban's Just A Bunch Of Starr Scripts](#just-a-bunch-of-start-scripts)
-  - [Drazzilb's UserScripts](#drazzilb-s-userscripts)
+  - [Cuban's Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
+  - [Drazzilb's UserScripts](#drazzilbs-userscripts)
   - [Just A Bunch Of Plex Scripts (JBOPS)](#just-a-bunch-of-plex-scripts)
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
