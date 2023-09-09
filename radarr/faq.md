@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-09-09T21:51:13.235Z
+date: 2023-09-09T23:32:52.816Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -100,7 +100,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
-As of Radarr v5, Authentication is Mandatory.
+**As of Radarr v5, Authentication is Mandatory.**
 
 ### Authentication Method
 
@@ -171,11 +171,6 @@ As of Radarr v5, Authentication is Mandatory.
 
 - No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for some users and will *maybe* come in a future version, but it is **extremely unlikely**. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
-- A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
-  - Use a Custom Script
-    - the script should be triggered on import
-    - it should be designed to move the file whenever you want it
-    - it then needs to call the Radarr API and change the movie to unmonitored.
 - If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder?
