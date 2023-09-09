@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-09-08T04:24:10.540Z
+date: 2023-09-09T21:51:13.235Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -169,7 +169,7 @@ As of Radarr v5, Authentication is Mandatory.
 
 ## Can all my movie files be stored in one folder?
 
-- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
+- No and the reason is that Radarr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for some users and will *maybe* come in a future version, but it is **extremely unlikely**. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
 - A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Radarr or it will show as missing and regardless the movie will never be upgraded.
   - Use a Custom Script
