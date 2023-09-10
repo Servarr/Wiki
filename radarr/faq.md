@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-09-09T23:47:42.479Z
+date: 2023-09-10T10:57:47.064Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -86,6 +86,9 @@ dateCreated: 2021-05-16T20:44:27.778Z
 - Put another way, Radarr will only find movies that are newly uploaded to your indexers. It will not actively try to find movies you want that were uploaded in the past.
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
+
+> Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](/useful-tools#drazzilbs-userscripts) or [Cuban's Powershell Script](/useful-tools#just-a-bunch-of-starr-scripts)
+{.is-info}
 
 ## How does Radarr find movies?
 
