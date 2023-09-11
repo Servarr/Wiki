@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2023-09-11T22:08:02.184Z
+date: 2023-09-11T22:16:09.028Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -34,6 +34,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Enable Completed Download Handling](#enable-completed-download-handling)
       - [Downloading into Root Folder](#downloading-into-root-folder)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
+      - [History Retention is disabled]{#download-client-history-retention-disabled}
     - [Indexers](#indexers)
       - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-sonarr-will-not-grab-new-releases-automatically)
