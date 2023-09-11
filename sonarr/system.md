@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2023-08-09T15:27:13.123Z
+date: 2023-09-11T22:08:02.184Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -261,6 +261,12 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 > \* Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
 > \* Completed Download Handling requires Sonarr has read and write access to the completed download directory
 {.is-warning}
+
+#### History Retention is disabled
+
+{#download-client-history-retention-disabled}
+
+- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then Sonarr may not see the completed download before it is removed from the download client.
 
 ### Indexers
 
