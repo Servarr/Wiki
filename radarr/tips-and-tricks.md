@@ -2,7 +2,7 @@
 title: Radarr Tips and Tricks
 description: 
 published: true
-date: 2022-03-24T02:53:26.272Z
+date: 2023-09-11T07:07:49.175Z
 tags: radarr, needs-love, tips-and-tricks
 editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
@@ -36,7 +36,7 @@ dateCreated: 2021-08-14T15:12:58.934Z
 
 - [Settings => Media Management (Advanced Settings Shown) => Movie Naming](/radarr/settings#media-management)
 
-  - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {\[Quality Title]}`
+  - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {[Quality Title]}`
   - Folder: `{Movie CleanTitle} {(Release Year)}`
 
 - Note: You can replace the spaces above with `.` or `_` if you prefer that naming format.
