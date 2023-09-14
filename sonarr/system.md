@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2023-09-11T22:16:26.788Z
+date: 2023-09-14T06:57:59.274Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -34,7 +34,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Enable Completed Download Handling](#enable-completed-download-handling)
       - [Downloading into Root Folder](#downloading-into-root-folder)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
-      - [History Retention is disabled](#download-client-history-retention-disabled)
+      - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
     - [Indexers](#indexers)
       - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-sonarr-will-not-grab-new-releases-automatically)
@@ -263,11 +263,11 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 > \* Completed Download Handling requires Sonarr has read and write access to the completed download directory
 {.is-warning}
 
-#### History Retention is disabled
+#### Download Client Removes Completed Downloads
 
-{#download-client-history-retention-disabled}
+{#download-client-removes-completed-downloads}
 
-- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then Sonarr may not see the completed download before it is removed from the download client.
+- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then Sonarr may not see the completed download before it is removed from the download client. Removing completed downloads can be managed by sonarr and enabled via the download client settings.
 
 ### Indexers
 
