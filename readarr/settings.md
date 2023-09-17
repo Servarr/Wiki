@@ -2,7 +2,7 @@
 title: Readarr Settings
 description: 
 published: true
-date: 2023-04-29T18:17:11.930Z
+date: 2023-09-17T12:32:59.037Z
 tags: readarr, settings
 editor: markdown
 dateCreated: 2021-11-25T15:07:27.926Z
@@ -129,6 +129,7 @@ Also, note that for each individual settings page, there are some options at the
 - Calibre Specific Settings (Only if Use Calibre is enabled)
   - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
 
+> \* **Only for use with ebooks, not audiobooks!**
 > \* Note that this **cannot be enabled on an existing root folder**.
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
