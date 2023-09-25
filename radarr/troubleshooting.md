@@ -411,7 +411,7 @@ For SABnzbd, this is handled with the History Retention setting.
 For various reasons, releases cannot be parsed once grabbed and sent to the download client. Activity => Options => Show Unknown (this is now enabled by default in recent builds) will display all items not otherwise ignored / already imported within \*Arr's download client category. These will typically need to be manually mapped and imported.
 
 Reasons Include:
-- Movie Name has a `:` on TMDb and TMDb has no alt title with a `-` or with a ` ` replacinf the `:`
+- Movie Name has a `:` on TMDb and TMDb has no alt title with a `-` or with a ` ` replacing the `:`
 - File Name is missing the year which is required
 - AKA or weird multiple names; Radarr has limited support for these
 - File Name matches to multiple movies
