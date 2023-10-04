@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-10-02T00:56:52.345293
+date: 2023-10-04T00:57:17.867113
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-10-02T00:56:52.345293
+dateCreated: 2023-10-04T00:57:17.867113
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.9.3.3996` / [Commit: 3ff144421d785832083668ff379a21135215d8ac](https://github.com/Prowlarr/Prowlarr/commit/3ff144421d785832083668ff379a21135215d8ac)
-  - [Prowlarr Indexers Commit: acfaa44486b06047750717e36c146440bcc25e55](https://github.com/Prowlarr/Indexers/commit/acfaa44486b06047750717e36c146440bcc25e55)
+  - Prowlarr Build `1.9.3.4001` / [Commit: c81cbc801a85dc8487ca7e134963b5ef6f7f226c](https://github.com/Prowlarr/Prowlarr/commit/c81cbc801a85dc8487ca7e134963b5ef6f7f226c)
+  - [Prowlarr Indexers Commit: eaddece80a3bb8966d5ea6c5faf92658eed9fdd1](https://github.com/Prowlarr/Indexers/commit/eaddece80a3bb8966d5ea6c5faf92658eed9fdd1)
 
 ---
 
