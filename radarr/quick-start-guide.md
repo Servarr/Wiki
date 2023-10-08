@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: 
 published: true
-date: 2023-08-27T22:14:05.687Z
+date: 2023-10-08T19:12:03.299Z
 tags: radarr, quickstart
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -178,7 +178,7 @@ Downloading and importing is where most people experience issues. From a high le
 - When the download is completed, Radarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Radarr
 - Radarr will scan that completed file location for files that Radarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
 - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Radarr will fall back and copy the file then delete from the source which is IO intensive.
-- If the "Completed Download Handling - Remove" option is enabled in Radarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
+- If the ["Completed Download Handling - Remove"](/radarr/settings#completed-download-handling) option is enabled in Radarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
 ### BitTorrent
 
