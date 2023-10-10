@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2022-11-29T13:19:38.953Z
+date: 2023-10-10T08:40:22.309Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -100,4 +100,27 @@ Before starting a migration please ensure that you have run Prowlarr against the
   > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
   {.is-info}
 
-1. Start Prowlarr
+2. For those having the issues POST-MIGRATION from SQLite run the following:
+
+```postgres
+select setval('public."ApplicationIndexerMapping_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationIndexerMapping"));
+select setval('public."Applications_Id_seq"', (SELECT MAX("Id")+1 FROM "Applications"));
+select setval('public."ApplicationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationStatus"));
+select setval('public."AppSyncProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "AppSyncProfiles"));
+select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+select setval('public."IndexerDefinitionVersions_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerDefinitionVersions"));
+select setval('public."IndexerProxies_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerProxies"));
+select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+```
+
+3. Start Prowlarr
