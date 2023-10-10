@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2023-08-09T19:29:31.472Z
+date: 2023-10-10T04:57:51.762Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -88,7 +88,7 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Run the following commands:
 
 ```SQL
-DELETE FROM "Profiles";
+DELETE FROM "QualityProfiles";
 DELETE FROM "QualityDefinitions";
 DELETE FROM "DelayProfiles";
 DELETE FROM "Metadata";
