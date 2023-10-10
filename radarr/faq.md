@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-09-10T10:57:47.064Z
+date: 2023-10-10T00:02:49.595Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -111,6 +111,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
 - `External` - Configurable via Config File Only
   - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - [OIDC Support](https://github.com/Radarr/Radarr/issues/7047#issuecomment-1696156068) is being explored for future versions (Ref [GHI #7047](https://github.com/Radarr/Radarr/issues/7047)) and is NOT currently supported.
 
 ### Authentication Required
 
