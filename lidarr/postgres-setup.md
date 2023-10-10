@@ -2,7 +2,7 @@
 title: LIdarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2023-09-03T17:21:21.279Z
+date: 2023-10-10T08:45:19.842Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -111,46 +111,46 @@ DELETE FROM "MetadataProfiles";
   > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
   {.is-info}
 
-1. Start Lidarr
-2. Execute the following queries in the database. if you get errors like ` Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint`
-```sql
-select setval('public."AlbumReleases_Id_seq"',(SELECT MAX("Id")+1 FROM "AlbumReleases"));
-select setval('public."Albums_Id_seq"',(SELECT MAX("Id")+1 FROM "Albums"));
-select setval('public."ArtistMetadata_Id_seq"',(SELECT MAX("Id")+1 FROM "ArtistMetadata"));
-select setval('public."Artists_Id_seq"',(SELECT MAX("Id")+1 FROM "Artists"));
-select setval('public."Blacklist_Id_seq"',(SELECT MAX("Id")+1 FROM "Blocklist"));
-select setval('public."Commands_Id_seq"',(SELECT MAX("Id")+1 FROM "Commands"));
-select setval('public."Config_Id_seq"',(SELECT MAX("Id")+1 FROM "Config"));
-select setval('public."CustomFilters_Id_seq"',(SELECT MAX("Id")+1 FROM "CustomFilters"));
-select setval('public."CustomFormats_Id_seq"',(SELECT MAX("Id")+1 FROM "CustomFormats"));
-select setval('public."DelayProfiles_Id_seq"',(SELECT MAX("Id")+1 FROM "DelayProfiles"));
-select setval('public."DownloadClientStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
-select setval('public."DownloadClients_Id_seq"',(SELECT MAX("Id")+1 FROM "DownloadClients"));
-select setval('public."DownloadHistory_Id_seq"',(SELECT MAX("Id")+1 FROM "DownloadHistory"));
-select setval('public."ExtraFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "ExtraFiles"));
-select setval('public."History_Id_seq"',(SELECT MAX("Id")+1 FROM "History"));
-select setval('public."ImportListExclusions_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListExclusions"));
-select setval('public."ImportListStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListStatus"));
-select setval('public."ImportLists_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportLists"));
-select setval('public."IndexerStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "IndexerStatus"));
-select setval('public."Indexers_Id_seq"',(SELECT MAX("Id")+1 FROM "Indexers"));
-select setval('public."LyricFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "LyricFiles"));
-select setval('public."MetadataFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "MetadataFiles"));
-select setval('public."MetadataProfiles_Id_seq"',(SELECT MAX("Id")+1 FROM "MetadataProfiles"));
-select setval('public."Metadata_Id_seq"',(SELECT MAX("Id")+1 FROM "Metadata"));
-select setval('public."NamingConfig_Id_seq"',(SELECT MAX("Id")+1 FROM "NamingConfig"));
-select setval('public."NotificationStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "NotificationStatus"));
-select setval('public."Notifications_Id_seq"',(SELECT MAX("Id")+1 FROM "Notifications"));
-select setval('public."PendingReleases_Id_seq"',(SELECT MAX("Id")+1 FROM "PendingReleases"));
--- select setval('public."Profiles_Id_seq"',(SELECT MAX("Id")+1 FROM "Profiles"));
-select setval('public."QualityDefinitions_Id_seq"',(SELECT MAX("Id")+1 FROM "QualityDefinitions"));
-select setval('public."RemotePathMappings_Id_seq"',(SELECT MAX("Id")+1 FROM "RemotePathMappings"));
--- select setval('public."Restrictions_Id_seq"',(SELECT MAX("Id")+1 FROM "Restrictions"));
-select setval('public."RootFolders_Id_seq"',(SELECT MAX("Id")+1 FROM "RootFolders"));
-select setval('public."ScheduledTasks_Id_seq"',(SELECT MAX("Id")+1 FROM "ScheduledTasks"));
-select setval('public."Tags_Id_seq"',(SELECT MAX("Id")+1 FROM "Tags"));
-select setval('public."TrackFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "TrackFiles"));
-select setval('public."Tracks_Id_seq"',(SELECT MAX("Id")+1 FROM "Tracks"));
-select setval('public."Users_Id_seq"',(SELECT MAX("Id")+1 FROM "Users"));
+2. For those having the issues POST-MIGRATION from SQLite run the following:
+
+```postgres
+select setval('public."AlbumReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "AlbumReleases"));
+select setval('public."Albums_Id_seq"', (SELECT MAX("Id")+1 FROM "Albums"));
+select setval('public."ArtistMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "ArtistMetadata"));
+select setval('public."Artists_Id_seq"', (SELECT MAX("Id")+1 FROM "Artists"));
+select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
+select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+select setval('public."CustomFormats_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFormats"));
+select setval('public."DelayProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "DelayProfiles"));
+select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+select setval('public."DownloadHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadHistory"));
+select setval('public."ExtraFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ExtraFiles"));
+select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+select setval('public."ImportListExclusions_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListExclusions"));
+select setval('public."ImportLists_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportLists"));
+select setval('public."ImportListStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListStatus"));
+select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+select setval('public."LyricFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "LyricFiles"));
+select setval('public."Metadata_Id_seq"', (SELECT MAX("Id")+1 FROM "Metadata"));
+select setval('public."MetadataFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataFiles"));
+select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
+select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
+select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
+select setval('public."Profiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
+select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
+select setval('public."RemotePathMappings_Id_seq"', (SELECT MAX("Id")+1 FROM "RemotePathMappings"));
+select setval('public."Restrictions_Id_seq"', (SELECT MAX("Id")+1 FROM "ReleaseProfiles"));
+select setval('public."RootFolders_Id_seq"', (SELECT MAX("Id")+1 FROM "RootFolders"));
+select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+select setval('public."TrackFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "TrackFiles"));
+select setval('public."Tracks_Id_seq"', (SELECT MAX("Id")+1 FROM "Tracks"));
+select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
 ```
-Note:  there are two commented as I couldn't find the 'source' table for that sequences.
+
+3. Start Lidarr
