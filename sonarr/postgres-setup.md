@@ -2,7 +2,7 @@
 title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
-date: 2023-08-21T19:37:53.766Z
+date: 2023-10-10T08:44:19.946Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
@@ -110,12 +110,9 @@ DELETE FROM "Metadata";
   > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
   {.is-info}
 
+2. For those having the issues POST-MIGRATION from SQLite run the following:
 
-2. Start Sonarr
-
-
-3. For those having the issues adding series or errors in the log after POST-MIGRATION from SQLite run the following:
-```SQL
+```postgres
 select setval('public."AutoTagging_Id_seq"',(SELECT MAX("Id")+1 FROM "AutoTagging"));
 select setval('public."Blacklist_Id_seq"',(SELECT MAX("Id")+1 FROM "Blocklist"));
 select setval('public."Commands_Id_seq"',(SELECT MAX("Id")+1 FROM "Commands"));
@@ -153,3 +150,5 @@ select setval('public."SubtitleFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "Subtitle
 select setval('public."Tags_Id_seq"',(SELECT MAX("Id")+1 FROM "Tags"));
 select setval('public."Users_Id_seq"',(SELECT MAX("Id")+1 FROM "Users"));
 ```
+
+3. Start Sonarr
