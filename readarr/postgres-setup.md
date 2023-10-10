@@ -2,7 +2,7 @@
 title: Readarr Configuring PostgreSQL Database
 description: Configuring Readarr with a Postgres Database
 published: true
-date: 2022-12-04T23:00:38.482Z
+date: 2023-10-10T08:42:54.885Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-25T22:49:56.668Z
@@ -111,4 +111,46 @@ DELETE FROM "MetadataProfiles";
 > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 {.is-info}
 
-1. Start Readarr
+2. For those having the issues POST-MIGRATION from SQLite run the following:
+
+```postgres
+select setval('public."AuthorMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "AuthorMetadata"));
+select setval('public."Authors_Id_seq"', (SELECT MAX("Id")+1 FROM "Authors"));
+select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
+select setval('public."BookFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "BookFiles"));
+select setval('public."Books_Id_seq"', (SELECT MAX("Id")+1 FROM "Books"));
+select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+select setval('public."CustomFormats_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFormats"));
+select setval('public."DelayProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "DelayProfiles"));
+select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+select setval('public."DownloadHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadHistory"));
+select setval('public."Editions_Id_seq"', (SELECT MAX("Id")+1 FROM "Editions"));
+select setval('public."ExtraFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ExtraFiles"));
+select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+select setval('public."ImportListExclusions_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListExclusions"));
+select setval('public."ImportLists_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportLists"));
+select setval('public."ImportListStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListStatus"));
+select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+select setval('public."Metadata_Id_seq"', (SELECT MAX("Id")+1 FROM "Metadata"));
+select setval('public."MetadataFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataFiles"));
+select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
+select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
+select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
+select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
+select setval('public."QualityProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
+select setval('public."ReleaseProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ReleaseProfiles"));
+select setval('public."RemotePathMappings_Id_seq"', (SELECT MAX("Id")+1 FROM "RemotePathMappings"));
+select setval('public."RootFolders_Id_seq"', (SELECT MAX("Id")+1 FROM "RootFolders"));
+select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+select setval('public."Series_Id_seq"', (SELECT MAX("Id")+1 FROM "Series"));
+select setval('public."SeriesBookLink_Id_seq"', (SELECT MAX("Id")+1 FROM "SeriesBookLink"));
+select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+```
+
+3. Start Readarr
