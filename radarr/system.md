@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2023-10-12T15:54:53.615Z
+date: 2023-10-12T15:55:36.108Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -382,9 +382,9 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 {#download-client-removes-completed-downloads}
 
-- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
+- It's required that your download client retain its history of completed downloads until Radarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
   - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
-- Removing completed downloads from your client can be managed by Sonarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
+- Removing completed downloads from your client can be managed by Radarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
 
 ### Indexers
 
