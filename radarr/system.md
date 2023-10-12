@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2022-10-19T22:59:06.531Z
+date: 2023-10-12T15:54:53.615Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -49,6 +49,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
       - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
     - [Completed/Failed Download Handling](#completedfailed-download-handling)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
+      - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
     - [Indexers](#indexers)
       - [No indexers available with automatic search enabled, Radarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-radarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Radarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-radarr-will-not-grab-new-releases-automatically)
@@ -376,6 +377,14 @@ Note: you will also need to add the websocket directive to your radarr configura
 - (This warning is only generated for existing users before when the Completed Download Handling feature was implemented. This feature is disabled by default to ensure the system continued to operate as expected for current configurations.)
 - It’s recommended to use Completed Download Handling since it provides better compatibility for the unpacking and post-processing logic of various download clients. With it, Radarr will only import a download once the download client reports it as ready.
 - If you wish to enable Completed Download Handling you should verify the following: * Warning: Completed Download Handling only works properly if the download client and Radarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
+
+#### Download Client Removes Completed Downloads
+
+{#download-client-removes-completed-downloads}
+
+- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
+  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
+- Removing completed downloads from your client can be managed by Sonarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
 
 ### Indexers
 
