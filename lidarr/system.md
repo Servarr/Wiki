@@ -2,7 +2,7 @@
 title: Lidarr System
 description: 
 published: true
-date: 2022-10-31T04:35:13.645Z
+date: 2023-10-12T15:55:59.868Z
 tags: lidarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -48,6 +48,7 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
     - [Completed/Failed Download Handling](#completedfailed-download-handling)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
+      - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
     - [Indexers](#indexers)
       - [No indexers available with automatic search enabled, Lidarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Lidarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically)
@@ -359,6 +360,14 @@ chmod +x /opt/Lidarr/fpcalc
 
 - Lidarr requires `Completed Download Handling` to be able to import files that were downloaded by the download client. It is recommended to enable `Completed Download Handling`. (It is enabled by default for new users.)
 
+#### Download Client Removes Completed Downloads
+
+{#download-client-removes-completed-downloads}
+
+- It's required that your download client retain its history of completed downloads until Lidarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
+  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
+- Removing completed downloads from your client can be managed by Lidarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
+
 ### Indexers
 
 #### No indexers available with automatic search enabled, Lidarr will not provide any automatic search results
@@ -429,7 +438,8 @@ chmod +x /opt/Lidarr/fpcalc
 
 - Typically this simply means that Lidarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
-- Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
+
+- Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
 
 ## Disk Space
 
