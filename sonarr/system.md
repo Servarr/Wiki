@@ -2,7 +2,7 @@
 title: Sonarr System
 description: 
 published: true
-date: 2023-10-09T11:56:54.713Z
+date: 2023-10-12T15:54:39.615Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -267,9 +267,9 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 
 {#download-client-removes-completed-downloads}
 
-- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then Sonarr may not see the completed download before it is removed from the download client. Your download client should be set to keep or pause downloads after completion, either indefinitely or for at least 14 days.
-
-- Removing completed downloads from your client can be managed by sonarr and enabled via the download client settings. Sonarr can ensure that your download client history is cleaned up.
+- It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
+  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
+- Removing completed downloads from your client can be managed by Sonarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
 
 ### Indexers
 
