@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2023-10-11T03:51:22.346Z
+date: 2023-10-13T11:37:08.630Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -415,9 +415,11 @@ A common complaint is the Refresh task causes heavy I/O usage. One setting that 
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Lidarr Appdata Directory](/lidarr/appdata-directory)
 
+1. Stop Lidarr
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
+*(Be sure you do not have two AuthenticationMethod entries in your file!)*
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
 1. Restart Lidarr
 1. Lidarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
