@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-10-10T00:06:06.789Z
+date: 2023-10-13T11:41:22.239Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -467,10 +467,13 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
+1. Close Radarr
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+*(Be sure that you do not have two AuthenticationMethod entries in your file)*
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
+*(If you are running an older 4.x version, the correct value is None instead of External)*
 1. Restart Radarr
 1. Radarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
