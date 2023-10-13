@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-08-28T19:29:22.021Z
+date: 2023-10-13T11:38:49.564Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -390,9 +390,11 @@ chmod -R 0644 *
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Readarr Appdata Directory](/readarr/appdata-directory)
 
+1. Close Readarr
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
+*(Be sure that you do not have two AuthenticationMethod entries in your file)*
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
 1. Restart Readarr
 1. Readarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
