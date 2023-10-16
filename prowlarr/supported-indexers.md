@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-10-15T01:00:20.217704
+date: 2023-10-16T17:22:08.153620
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-10-15T01:00:20.217704
+dateCreated: 2023-10-16T17:22:08.153620
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.9.4.4033` / [Commit: 980bd35f95164a56c12a472f1fe8935ecc05dad6](https://github.com/Prowlarr/Prowlarr/commit/980bd35f95164a56c12a472f1fe8935ecc05dad6)
-  - [Prowlarr Indexers Commit: f58660b4efc45387983f6bb0ef9a865500cd1332](https://github.com/Prowlarr/Indexers/commit/f58660b4efc45387983f6bb0ef9a865500cd1332)
+  - Prowlarr Build `1.10.0.4045` / [Commit: b37d8799a0a4e79fd3249955760e4f6b0ac8f179](https://github.com/Prowlarr/Prowlarr/commit/b37d8799a0a4e79fd3249955760e4f6b0ac8f179)
+  - [Prowlarr Indexers Commit: 81cd61901279d12bd2ab847b68661cc8804fafb6](https://github.com/Prowlarr/Indexers/commit/81cd61901279d12bd2ab847b68661cc8804fafb6)
 
 ---
 
@@ -304,7 +304,6 @@ dateCreated: 2023-10-15T01:00:20.217704
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\.  Cookie Login for 2FA use|English (United Kingdom)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|English (United States)|
-|[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DesiTorrents (API)](https://desitorrents.tv/){#desitorrents-api}|Desitorrents is a Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / MUSIC|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
@@ -600,10 +599,9 @@ dateCreated: 2023-10-15T01:00:20.217704
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|Norwegian (Bokmål) (Norway)|
 |[Orpheus](https://orpheus.network/){#orpheus}|Orpheus (APOLLO) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[PassThePopcorn](https://passthepopcorn.me){#passthepopcorn}|PassThePopcorn (PTP) is a Private site for MOVIES / TV|English (United States)|
-|[PirateTheNet](https://piratethenet.org/){#piratethenet}|PirateTheNet (PTN) is a ratioless movie tracker|English (United States)|
 |[PiXELHD](https://pixelhd.me/){#pixelhd}|PixelHD (PxHD) is a ratioless Private Torrent Tracker for HD \.MP4 MOVIES / TV|English (United States)|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker|English (United States)|
-|[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeTorrents|English (United States)|
+|[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD (PHD) is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeTorrents|English (United States)|
 |[Redacted](https://redacted.ch/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
 |[RetroFlix](https://retroflix.club/){#retroflix}|RetroFlix (RFX) is a Private Torrent Tracker for Classic Movies / TV / General Releases|English (United States)|
 |[RevolutionTT](https://revolutiontt.me/){#revolutiontt}|The Revolution has begun|English (United States)|
