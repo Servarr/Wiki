@@ -1,3 +1,13 @@
+---
+title: reverse-proxy
+description: 
+published: true
+date: 2023-10-22T17:42:25.578Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:11:34.526Z
+---
+
 # Reverse Proxy Configuration
 
 Sample config examples for configuring Prowlarr to be accessible through a reverse proxy.
@@ -12,7 +22,7 @@ Add the following configuration to `nginx.conf` located in the root of your Ngin
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
 
 ```nginx
-location ~ /prowlarr {
+location /prowlarr {
     proxy_pass http://127.0.0.1:9696;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -24,7 +34,7 @@ location ~ /prowlarr {
     proxy_set_header Connection $http_connection;
 }
 # Allow the API/Indexer External Access via NGINX
-location ^~ /prowlarr(/[0-9]+)?/api {
+location ~ /prowlarr(/[0-9]+)?/api {
     auth_basic off;
     proxy_pass http://127.0.0.1:9696;
 }
