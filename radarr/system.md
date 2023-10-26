@@ -2,7 +2,7 @@
 title: Radarr System
 description: 
 published: true
-date: 2023-10-12T15:55:36.108Z
+date: 2023-10-26T10:56:09.737Z
 tags: radarr, needs-love
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -334,6 +334,10 @@ Note: you will also need to add the websocket directive to your radarr configura
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
 - See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
+
+- For Linux ensure:
+  - If you're using an NFS mount ensure `nolock` is enabled for your mount.
+  - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
 
 #### Downloading into Root Folder
 
