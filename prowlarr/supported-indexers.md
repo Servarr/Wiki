@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-10-21T00:54:53.115111
+date: 2023-10-28T00:54:18.146479
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-10-21T00:54:53.115111
+dateCreated: 2023-10-28T00:54:18.146479
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.10.0.4046` / [Commit: db9f06156425782c79a2cfce8d944d867a4be929](https://github.com/Prowlarr/Prowlarr/commit/db9f06156425782c79a2cfce8d944d867a4be929)
-  - [Prowlarr Indexers Commit: 922b3cb8ec5bbae29e7c2044882b4fef9805ce47](https://github.com/Prowlarr/Indexers/commit/922b3cb8ec5bbae29e7c2044882b4fef9805ce47)
+  - Prowlarr Build `1.10.1.4059` / [Commit: 71a19efd9a26f3e5c8c500a3449e196463a79ef9](https://github.com/Prowlarr/Prowlarr/commit/71a19efd9a26f3e5c8c500a3449e196463a79ef9)
+  - [Prowlarr Indexers Commit: 500e77afaf1343db29f8da03cab7086e88f1e552](https://github.com/Prowlarr/Indexers/commit/500e77afaf1343db29f8da03cab7086e88f1e552)
 
 ---
 
@@ -120,11 +120,11 @@ dateCreated: 2023-10-21T00:54:53.115111
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq279.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir121.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq280.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir122.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent15.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz63.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentz2eu](https://torrentz2beta.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
+|[Torrentz2eu](https://torrentz2beta.asia/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -160,6 +160,7 @@ dateCreated: 2023-10-21T00:54:53.115111
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|Icelandic (Iceland)|
 |[Demonoid](https://www.demonoid.is/){#demonoid}|Demonoid is a Semi-Private torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[DreamingTree](https://dreamingtree.org/){#dreamingtree}|DreamingTree is a Semi-Private Torrent Tracker for DAVE MATHEWS MUSIC / BOOTLEGS|English (United States)|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles|Russian (Russia)|
 |[Electro-Torrent](https://electro-torrent.pl/){#electro-torrent}|Electro-Torrent is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[EniaHD](https://eniatv.com/){#eniahd}|EniaHD is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
@@ -547,7 +548,6 @@ dateCreated: 2023-10-21T00:54:53.115111
 |[BTArg](https://www.btarg.com.ar/){#btarg}|BTArg is an ARGENTINIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Argentina)|
 |[Dajiao](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
-|[Emmid Tracker](https://emmidtracker.online/){#emmidtracker}|Emmid Tracker is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Free Farm](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[FusionMayhem](https://fusionmayhem.net/){#fusionmayhem}|FusionMayhem is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -578,6 +578,7 @@ dateCreated: 2023-10-21T00:54:53.115111
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[ULTRA HD](https://ultrahd.online/){#ultra-hd}|ULTRA HD is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
