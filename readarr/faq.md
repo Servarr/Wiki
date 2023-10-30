@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-10-13T11:38:49.564Z
+date: 2023-10-30T02:08:04.939Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -71,6 +71,7 @@ dateCreated: 2021-05-25T20:01:09.320Z
 If Readarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 As of Readarr v1, Authentication is Mandatory.
+- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
@@ -83,6 +84,7 @@ As of Readarr v1, Authentication is Mandatory.
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
+- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
 ## How does Readarr find books?
 
