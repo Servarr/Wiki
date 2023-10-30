@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2023-10-13T11:37:08.630Z
+date: 2023-10-30T02:08:31.352Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -81,6 +81,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 If Lidarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 As of Lidarr v2, Authentication is Mandatory.
+- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
@@ -93,6 +94,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
+- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
 ## How are possible downloads compared?
 
