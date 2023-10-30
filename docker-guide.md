@@ -58,7 +58,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
 
 # The Best Docker Setup
 
-**TL;DR**: An [eponymous](https://www.lexico.com/en/definition/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
+**TL;DR**: An [eponymous](https://www.dictionary.com/browse/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
 
 > Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 {.is-info}
