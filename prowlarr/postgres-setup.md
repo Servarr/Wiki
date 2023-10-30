@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2023-10-10T08:40:22.309Z
+date: 2023-10-30T15:06:33.193Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -71,6 +71,8 @@ Only **after creating** both databases you can start the Prowlarr migration from
 ## Migrating data
 
 > If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
+
+> Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres. {.is-warning}
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
