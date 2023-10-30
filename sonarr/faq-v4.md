@@ -2,7 +2,7 @@
 title: Sonarr v4 Beta FAQ
 description: Sonarr v4 Beta FAQ
 published: true
-date: 2023-08-28T19:29:38.774Z
+date: 2023-10-30T02:09:09.252Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -46,6 +46,7 @@ As of Sonarr v4, Authentication is Mandatory.
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
+- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
 ## Preferred Words to Custom Formats Migration
 
