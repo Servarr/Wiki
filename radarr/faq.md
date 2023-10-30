@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-10-13T11:41:22.239Z
+date: 2023-10-30T02:07:47.331Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -104,6 +104,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 **As of Radarr v5, Authentication is Mandatory.**
+- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
@@ -117,6 +118,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN (i.e. Link Local, [Class A, Class C, or Class B](https://en.wikipedia.org/wiki/Classful_network#Classful_addressing_definition) addresses)) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
+- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
 ## What is Minimum Availability?
 
