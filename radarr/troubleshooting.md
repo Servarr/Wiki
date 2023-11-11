@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2023-11-11T15:04:38.574Z
+date: 2023-11-11T15:08:55.035Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -655,7 +655,7 @@ If you are performing a search, and get this error message, please check your lo
 
 1. You are using a Unifi router, and have ad blocking turned on. Unifi has decided that all .video sites should be blocked, which includes Radarr's metadata server. To solve this, either turn off ad blocking entirely on Unifi, or add a whitelist for the radarr.video domain.
 
-2. You are in Russia or Belarus, or are using a VPN whose IP address is associated with Russia or Belarus. Radarr uses MaxMind to determine geolocation, and sometimes they get it wrong and cause false positives. You can report false positives to MaxMind, or if you're on a VPN, get a different IP. If you truly are in Russia or Belarus, you are blocked from using Radarr.
+2. You are in Russia or Belarus, or are using a VPN whose IP address is associated with Russia or Belarus. Radarr uses [MaxMind](https://www.maxmind.com/en/locate-my-ip-address) to determine geolocation, and sometimes they get it wrong and cause false positives. You can report false positives to MaxMind, or if you're on a VPN, get a different IP. If you truly are in Russia or Belarus, you are blocked from using Radarr.
 
 ### Problem Not Listed
 
