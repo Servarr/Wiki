@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2023-09-12T11:44:46.511Z
+date: 2023-11-11T15:04:18.060Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -74,6 +74,7 @@ dateCreated: 2021-08-03T21:05:52.988Z
   - [Errors](#errors)
     - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
     - [The request timed out](#the-request-timed-out)
+    - [Invalid response received from TMDB](#invalid-response-received-from-tmdb)
     - [Problem Not Listed](#problem-not-listed-2)
 
 # Asking for Help
@@ -647,6 +648,13 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 ### Using NZBHydra2 as a single entry
 
 Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Radarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Radarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+
+### Invalid response received from TMDB
+
+If you are performing a search, and get this error message, please check your log. If the error code is "503.ServiceUnavailable", then you have one of two issues going on:
+
+1. You are using a Unifi router, and have ad blocking turned on. Unifi has decided that all .video sites should be blocked, which includes Radarr's metadata server. To solve this, either turn off ad blocking entirely on Unifi, or add a whitelist for the radarr.video domain.
+2. You are in Russia or Belarus, or are using a VPN whose IP address is associated with Russia or Belarus. Radarr uses MaxMind to determine geolocation, and sometimes they get it wrong and cause false positives. You can report false positives to MaxMind, or if you're on a VPN, get a different IP. If you truly are in Russia or Belarus, you are blocked from using Radarr.
 
 ### Problem Not Listed
 
