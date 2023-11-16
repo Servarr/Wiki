@@ -63,6 +63,7 @@ nano ArrInstall.sh
 ### Version v3.0.9 2023-04-28 - Bakerboy448 - fix tarball check
 ### Version v3.0.9a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Additional Updates by: The \*Arr Community
+### Version v3.0.9b 2023-11-16 - antonionardella - added Sonarr installation
 
 ### Boilerplate Warning
 #THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -73,8 +74,8 @@ nano ArrInstall.sh
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.9a"
-scriptdate="2023-07-14"
+scriptversion="3.0.9b"
+scriptdate="2023-11-16"
 
 set -euo pipefail
 
@@ -89,7 +90,7 @@ fi
 
 echo "Select the application to install: "
 
-select app in lidarr prowlarr radarr readarr whisparr quit; do
+select app in lidarr sonarr prowlarr radarr readarr whisparr quit; do
 
     case $app in
     lidarr)
@@ -99,18 +100,25 @@ select app in lidarr prowlarr radarr readarr whisparr quit; do
         branch="master"                                          # {Update me if needed} branch to install
         break
         ;;
+    sonarr)
+        app_port="8989"                                                         # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libchromaprint-tools mediainfo mono-runtime"   # Required packages
+        app_umask="0002"                                                        # UMask the Service will run as
+        branch="main"                                                           # {Update me if needed} branch to install
+        break
+        ;;
     prowlarr)
         app_port="9696"           # Default App Port; Modify config.xml after install if needed
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
-        branch="master"          # {Update me if needed} branch to install
+        branch="master"           # {Update me if needed} branch to install
         break
         ;;
     radarr)
-        app_port="7878"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="master"           # {Update me if needed} branch to install
+        app_port="7878"                                          # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libicu72 "                      # Required packages
+        app_umask="0002"                                         # UMask the Service will run as
+        branch="master"                                          # {Update me if needed} branch to install
         break
         ;;
     readarr)
@@ -207,7 +215,7 @@ echo "Directories created"
 echo ""
 echo "Installing pre-requisite Packages"
 # shellcheck disable=SC2086
-apt update && apt install $app_prereq
+apt update && apt install -y $app_prereq
 echo ""
 ARCH=$(dpkg --print-architecture)
 # get arch
@@ -227,7 +235,11 @@ echo "Removing previous tarballs"
 rm -f "${app^}".*.tar.gz
 echo ""
 echo "Downloading..."
-wget --content-disposition "$DLURL"
+if [[ $app == 'sonarr' ]]; then
+    wget --content-disposition "https://services.sonarr.tv/v1/download/main/latest?version=3&os=linux"
+else
+    wget --content-disposition "$DLURL"
+fi
 tar -xvzf "${app^}".*.tar.gz
 echo ""
 echo "Installation files downloaded and extracted"
@@ -251,6 +263,11 @@ echo "App Installed"
 echo "Removing old service file"
 rm -rf /etc/systemd/system/"$app".service
 
+if [[ $app == 'sonarr' ]]; then
+    execstart="mono --debug /opt/Sonarr/Sonarr.exe -nobrowser -data=/opt/Sonarr"
+else 
+    execstart="$bindir/$app_bin -nobrowser -data=$datadir"
+fi
 # Create app .service with correct user startup
 echo "Creating service file"
 cat <<EOF | tee /etc/systemd/system/"$app".service >/dev/null
@@ -262,7 +279,7 @@ User=$app_uid
 Group=$app_guid
 UMask=$app_umask
 Type=simple
-ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
+ExecStart=$execstart
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
@@ -290,7 +307,6 @@ fi
 
 # Exit
 exit 0
-
 ```
 
 - Press <kbd>Ctrl</kbd>+<kbd>O</kbd> (save) then <kbd>Enter</kbd>
