@@ -69,7 +69,7 @@ If you want to specify a database name then should also include the following co
 <PostgresCacheDb>CacheDbName</PostgresCacheDb>
 ```
 
-Only **after creating** both databases you can start the Readarr migration from SQLite to Postgres.
+Only **after creating** all three databases you can start the Readarr migration from SQLite to Postgres.
 
 ## Migrating data
 
