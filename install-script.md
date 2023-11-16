@@ -101,10 +101,10 @@ select app in lidarr sonarr prowlarr radarr readarr whisparr quit; do
         break
         ;;
     sonarr)
-        app_port="8989"                                                         # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libchromaprint-tools mediainfo mono-runtime"   # Required packages
-        app_umask="0002"                                                        # UMask the Service will run as
-        branch="main"                                                           # {Update me if needed} branch to install
+        app_port="8989"                                                          # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libchromaprint-tools mediainfo libmono-cil-dev" # Required packages
+        app_umask="0002"                                                         # UMask the Service will run as
+        branch="main"                                                            # {Update me if needed} branch to install
         break
         ;;
     prowlarr)
