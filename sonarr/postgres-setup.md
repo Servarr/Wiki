@@ -2,7 +2,7 @@
 title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
-date: 2023-10-30T15:07:29.728Z
+date: 2023-11-17T23:06:47.928Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
@@ -94,6 +94,9 @@ DELETE FROM "QualityProfiles";
 DELETE FROM "QualityDefinitions";
 DELETE FROM "DelayProfiles";
 DELETE FROM "Metadata";
+DELETE FROM "Config";
+DELETE FROM "VersionInfo";
+DELETE FROM "ScheduledTasks";
 ```
 
 1. Start the migration by using either of these options:
