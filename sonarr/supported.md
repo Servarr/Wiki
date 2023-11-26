@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: 
 published: true
-date: 2023-09-01T16:44:31.667Z
+date: 2023-11-26T09:44:48.190Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -117,7 +117,6 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 {#notification}
 
-- Boxcar {#boxcar}
 - Custom Script {#customscript}
   - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/sonarr/custom-scripts) for more details.
 - Discord {#discord}
@@ -135,10 +134,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Kodi {#xbmc}
   - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new episode has been added to Sonarr.
 - Mailgun {#mailgun}
-- Plex Home Theater {#plexhometheater}
-  - Depreciated
-- Plex Media Center {#plexclient}
-  - Depreciated
+
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available.
   - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
@@ -158,6 +154,12 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Twitter {#twitter}
   - See this [Tips and Tricks entry](/useful-tools#twitter)
 - Webhook {#webhook}
+
+### Depricated Notifications
+
+- Boxcar {#boxcar}
+- Plex Home Theater {#plexhometheater}
+- Plex Media Center {#plexclient}
 
 # Lists
 
