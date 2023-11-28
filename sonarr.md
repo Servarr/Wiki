@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2023-09-22T15:10:12.524Z
+date: 2023-11-28T17:52:18.069Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -59,7 +59,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 # Links
 
 - [sonarr.tv *Website*](https://sonarr.tv)
-- [Open Collective *Donations*](https://opencollective.com/sonarr)
+- [sonarr.tv *Donations*](https://sonarr.tv/donate)
 - [GitHub *Source Code*](https://github.com/sonarr/sonarr)
 - [XEM Moderation Guide *<i class="fab fa-xing"></i>*](/sonarr/xem-guide)
 {.links-list}
