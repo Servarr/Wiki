@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-11-15T00:58:38.800849
+date: 2023-11-28T01:02:38.461363
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-11-15T00:58:38.800849
+dateCreated: 2023-11-28T01:02:38.461363
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.10.4.4078` / [Commit: 942477ecf9453ad9f349d5abbcb7f755c8fbf822](https://github.com/Prowlarr/Prowlarr/commit/942477ecf9453ad9f349d5abbcb7f755c8fbf822)
-  - [Prowlarr Indexers Commit: 0faae449d4725630541587ed9df67ea1e8bd0d70](https://github.com/Prowlarr/Indexers/commit/0faae449d4725630541587ed9df67ea1e8bd0d70)
+  - Prowlarr Build `1.11.0.4121` / [Commit: 6d134750ffd46195b3251417503f92bee869717a](https://github.com/Prowlarr/Prowlarr/commit/6d134750ffd46195b3251417503f92bee869717a)
+  - [Prowlarr Indexers Commit: b7798267fab07d44b1d73a1e2a21ae552df78eaa](https://github.com/Prowlarr/Indexers/commit/b7798267fab07d44b1d73a1e2a21ae552df78eaa)
 
 ---
 
@@ -42,7 +42,6 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
-|[BullTorrent](https://www.bulltorrent.com/){#bulltorrent}|BullTorrent (formerly TOROS) is a Public torrent index|English (United States)|
 |[Byrutor](https://thebyrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|Chinese (China)|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|English (United States)|
@@ -54,7 +53,7 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
-|[EZTV](https://eztv.re/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
+|[EZTV](https://eztv.li/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[GkTorrent](https://www.gktorrent.ph/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
@@ -90,7 +89,7 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
-|[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL"|English (United States)|
+|[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[Rapidzona](https://rapidzona.tv/){#rapidzona}|Rapidzona is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -110,7 +109,7 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.torrent911.io/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.ink/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.sk/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
@@ -120,11 +119,11 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq282.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir124.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq284.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir125.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent16.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz63.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentz2eu](https://torrentz2beta.online/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
+|[Torrentz2eu](https://torrentz2beta.asia/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -229,7 +228,6 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[aro\.lol](https://aro.lol/){#aro.lol}|aro\.lol is a SERBIAN/ENGLISH Private Torrent Tracker for ANIME|English (United States)|
 |[AvistaZ](https://avistaz.to/){#avistaz}|Aka AsiaTorrents|English (United States)|
 |[BakaBT](https://bakabt.me/){#bakabt}|Anime Community|English (United States)|
-|[BB](https://baconbits.org/){#bb}|BB is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[BitHDTV](https://www.bit-hdtv.com/){#bithdtv}|BIT-HDTV - Home of High Definition|English (United States)|
 |[BroadcasTheNet](https://api.broadcasthe.net/){#broadcasthenet}|BroadcasTheNet (BTN) is an invite-only torrent tracker focused on TV shows|English (United States)|
@@ -324,7 +322,6 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[eStone](http://estone.cc/){#estone}|eStone (XiDER, BigTorrent) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[exitorrent\.org](https://exitorrent.org/){#exitorrent-org}|exitorrent\.org is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[ExtremeBits](https://extremebits.net/){#extremebits}|ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS|English (United States)|
-|[ExtremeTorrents](https://www.extremetorrents.org/){#extremetorrents}|ExtremeTorrents is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Falkon Vision Team](http://falkonvision-team.com/){#falkonvisionteam}|Falkon Vision Team is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fantastiko](https://fantastiko.space/){#fantastiko}|Fantastiko is a GREEK Private Torrent Tracker for SCI-FI / FANTASY / HORROR MOVIES / TV / GENERAL|Greek (Greece)|
@@ -393,7 +390,7 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Les-Cinephiles](https://les-cinephiles.nl/){#les-cinephiles}|Les-Cinephiles is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[LeSaloon](https://lesaloonv2-0.xyz/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
+|[LeSaloon](https://lesaloonv2-0.lol/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|Hungarian (Hungary)|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL|Lithuanian (Lithuania)|
 |[Locadora](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Tracker for MOVIES and TV|Portuguese (Brazil)|
@@ -417,7 +414,7 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[M-Team - TP (2FA)](https://kp.m-team.cc/){#mteamtp2fa}|This indexer uses a cookie login for M-Team TP (MTTP) for those that want to use 2FA|Chinese (China)|
 |[MuziekFabriek](https://www.muziekfabriek.org/){#muziekfabriek}|MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC|Dutch (Netherlands)|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|English (United States)|
-|[Ncore](https://ncore.pro/){#ncore}|Ncore is a Hungarian Private Torrent Tracker for Movies/Series/General|Hungarian (Hungary)|
+|[nCore](https://ncore.pro/){#ncore}|nCore is a Hungarian Private Torrent Tracker for Movies/Series/General|Hungarian (Hungary)|
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[NORDiCHD](https://nordichd.org/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -555,7 +552,6 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Free Farm](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[FusionMayhem](https://fusionmayhem.net/){#fusionmayhem}|FusionMayhem is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Gamera](https://gamerapt.link/){#gamera}|Gamera (駕瞑羅) is a CHINESE Private Torrent Tracker for Japanese Monster and Superhero MOVIES / TV|Chinese (China)|
 |[HDPT](https://hdpt.xyz/){#hdpt}|HDPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -581,10 +577,10 @@ dateCreated: 2023-11-15T00:58:38.800849
 |[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Shadowflow](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
+|[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[TvRoad](https://tvroad.info/){#tvroad}|TvRoad is a FRENCH Private Torrent Tracker for TV|French (France)|
-|[Twisted-Music](https://twisted-music.info/){#twisted-music}|Twisted-Music is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ULTRA HD](https://ultrahd.online/){#ultra-hd}|ULTRA HD is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
@@ -671,6 +667,5 @@ dateCreated: 2023-11-15T00:58:38.800849
 |NZBNDX{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |NzbPlanet{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |NZBStars{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
-|OZnzb{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Tabula Rasa{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Generic Newznab{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
