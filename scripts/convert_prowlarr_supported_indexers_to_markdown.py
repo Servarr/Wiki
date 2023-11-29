@@ -4,6 +4,7 @@ conver_prowlarr_supported_indexers_to_markdown.py
 The purpose of this script is to export a markdown table for the wiki of the available indexers.
 We get the most recent commits from two repositories and from the existing specified output page.
 The current and existing commits are compared and if needed a new wiki page is generated.
+Specifcally the indexer tables are compared.
 """
 
 import json
@@ -15,6 +16,7 @@ import requests
 import iso639
 import re
 import pycountry
+import hashlib
 
 # Constants
 API_VERSION = "v1"
@@ -426,7 +428,6 @@ def extract_and_compare_commits_from_file(filename, app_commit, indexer_commit):
             if prev_indexer_commit:
                 _logger.info(
                     "Existing Indexer Commit is {%s}", prev_indexer_commit)
-
     except:
         prev_app_commit = None
         prev_indexer_commit = None
@@ -441,7 +442,34 @@ def extract_and_compare_commits_from_file(filename, app_commit, indexer_commit):
         return False
 
 
-def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_url, prev_app_commit, prev_indexer_commit):
+def hash_and_compare_tables(hash_file_name, tbl_fmt_use, tbl_fmt_tor):
+    """
+    Gets hashed file and compares to existing tables to determine if data changed.
+    """
+    _logger = get_logger('compare_table_hashes')
+    # Generate SHA256 hash of the concatenated string of tbl_fmt_use and tbl_fmt_tor
+    hash_data = tbl_fmt_use + tbl_fmt_tor
+    generated_hash = hashlib.sha256(hash_data.encode('utf-8')).hexdigest()
+    try:
+        # Read the hash from the file and compare it with the newly generated hash
+        with open(hash_file_name, 'r') as file:
+            stored_hash = file.read().strip()
+    except:
+        stored_hash = None
+        _logger.warning(
+            "Couldn't read previous commits from file. Assuming no previous data.")
+    if stored_hash == generated_hash:
+        _logger.debug("Tables are the same. TRUE")
+        return True
+    else:
+        _logger.debug("Tables are different. FALSE")
+        # Write the generated hash to the file
+        with open(hash_file_name, 'w') as file:
+            file.write(generated_hash)
+        return False
+
+
+def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, app_base_url, prev_app_commit, prev_indexer_commit):
 
     _logger = get_logger('main')
 
@@ -554,6 +582,15 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
         tbl_usenet_private
     )
 
+    # Compare Tables to Existing
+    compared_tables = hash_and_compare_tables(
+        hashfile, tbl_fmt_use, tbl_fmt_tor)
+    if compared_tables:
+        _logger.info("No change in tables. Exiting script.")
+        sys.exit()
+    else:
+        _logger.info("Tables have changed. Continuing script.")
+
     # Build and Output Page
     date = datetime.utcnow().isoformat()
     header_wiki = (
@@ -599,7 +636,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, app_base_ur
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Convert Prowlarr Supported Indexers to Markdown Table for Wiki Page if and only if commits changed"
+        description="Convert Prowlarr Supported Indexers to Markdown Table for Wiki Page if and only if commits and table contents changed"
     )
     parser.add_argument("-c", "--commit", help="App Commit hash")
     parser.add_argument("-i", "--indexercommit", help="Indexer Commit hash")
@@ -608,6 +645,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "-o", "--outputfile", help="Output file path", default="supported-indexers.md"
     )
+    parser.add_argument("-s", "--hashfile", help="Hash file of previous wiki page tables",
+                        default="supported-indexers.md.hash")
     parser.add_argument(
         "-u",
         "--appbaseurl",
@@ -626,6 +665,7 @@ if __name__ == "__main__":
         args.build,
         args.appapikey,
         args.outputfile,
+        args.hashfile,
         args.appbaseurl,
         args.prev_app_commit,
         args.prev_indexer_commit
