@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-11-29T01:53:12.470251
+date: 2023-11-30T00:59:17.259537
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-11-29T01:53:12.470251
+dateCreated: 2023-11-30T00:59:17.259537
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.0.4123` / [Commit: 9dc117191e3ef0a8f888c7095b18a5f5821455b8](https://github.com/Prowlarr/Prowlarr/commit/9dc117191e3ef0a8f888c7095b18a5f5821455b8)
-  - [Prowlarr Indexers Commit: b7798267fab07d44b1d73a1e2a21ae552df78eaa](https://github.com/Prowlarr/Indexers/commit/b7798267fab07d44b1d73a1e2a21ae552df78eaa)
+  - Prowlarr Build `1.11.0.4125` / [Commit: 12ca70555639810d6d0eade569f997a6fbc692cf](https://github.com/Prowlarr/Prowlarr/commit/12ca70555639810d6d0eade569f997a6fbc692cf)
+  - [Prowlarr Indexers Commit: cc4bc96e1846e523a7ec9f8badbae588f910eb71](https://github.com/Prowlarr/Indexers/commit/cc4bc96e1846e523a7ec9f8badbae588f910eb71)
 
 ---
 
@@ -53,10 +53,10 @@ dateCreated: 2023-11-29T01:53:12.470251
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
-|[EZTV](https://eztv.li/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
+|[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.ph/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.vc/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -108,7 +108,7 @@ dateCreated: 2023-11-29T01:53:12.470251
 |[Torlock](https://www.torlock2.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.torrent911.io/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.torrent911.biz/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent9 clone](https://www.torrent9.sk/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
@@ -120,7 +120,7 @@ dateCreated: 2023-11-29T01:53:12.470251
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq284.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir125.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir126.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent16.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz63.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://torrentz2beta.asia/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
