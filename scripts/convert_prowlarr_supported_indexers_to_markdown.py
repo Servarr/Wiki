@@ -502,15 +502,6 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         indexer_commit = github_req[0]["sha"]
     _logger.info("Indexer Commit is {%s}", indexer_commit)
 
-    # Compare Commits to Existing
-    compared = extract_and_compare_commits_from_file(
-        output_file, app_commit, indexer_commit)
-    if compared:
-        _logger.info("No change in commits. Exiting script.")
-        sys.exit()
-    else:
-        _logger.info("Commits have changed. Continuing script.")
-
     # Get Indexer Data
     indexer_obj = get_indexers(api_url, headers)
 
