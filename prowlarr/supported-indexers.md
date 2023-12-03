@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-11-30T00:59:17.259537
+date: 2023-12-03T01:02:46.758030
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-11-30T00:59:17.259537
+dateCreated: 2023-12-03T01:02:46.758030
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.0.4125` / [Commit: 12ca70555639810d6d0eade569f997a6fbc692cf](https://github.com/Prowlarr/Prowlarr/commit/12ca70555639810d6d0eade569f997a6fbc692cf)
-  - [Prowlarr Indexers Commit: cc4bc96e1846e523a7ec9f8badbae588f910eb71](https://github.com/Prowlarr/Indexers/commit/cc4bc96e1846e523a7ec9f8badbae588f910eb71)
+  - Prowlarr Build `1.11.0.4128` / [Commit: 7c38ec2baafbc7d18b4d250d84cc781fdc1e4ddf](https://github.com/Prowlarr/Prowlarr/commit/7c38ec2baafbc7d18b4d250d84cc781fdc1e4ddf)
+  - [Prowlarr Indexers Commit: 6ac918983deeed0f6a754332469692fc8453c880](https://github.com/Prowlarr/Indexers/commit/6ac918983deeed0f6a754332469692fc8453c880)
 
 ---
 
@@ -119,7 +119,7 @@ dateCreated: 2023-11-30T00:59:17.259537
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq284.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq285.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir126.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent16.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz63.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -501,6 +501,7 @@ dateCreated: 2023-11-30T00:59:17.259537
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|A general Bangladesh tracker|English (United States)|
 |[TorrentCCF](https://et8.org/){#torrentccf}|TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[TorrentDD](https://www.torrentdd.com/){#torrentdd}|TorrentDD is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[TorrentHR](https://www.torrenthr.org/){#torrenthr}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private site for MOVIES / TV / GENERAL|English (United States)|
 |[Torrentland](https://torrentland.li/){#torrentland}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
