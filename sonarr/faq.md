@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-10-13T11:44:29.977Z
+date: 2023-12-05T22:30:06.495Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -495,53 +495,30 @@ Some examples of other shows that commonly have issues, most of which may be res
 
 ## Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?
 
-There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series.
+There can be multiple reasons why Sonarr is not able to find or import episodes for a particular series, and there are two methods for "correcting" these failures.
 
-> Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb.
-{.is-warning}
-
-> **For indexers that support ID based searches**, the series TVDbID or IMDbID are used for searching. Series titles and any aliases are only used if ID based searches return no results.
-{.is-info}
-
-- Sonarr relies on being able to match titles, often the uploaders name episodes using different titles, e.g. `CSI: Crime Scene Investigation` is posted just `CSI` thus Sonarr cannot match the names without some help. These are handled by the Scene Mapping that the Sonarr Team maintains.
-- You may also wish to review the [FAQ Entry for Problematic Shows and Release Group vs. TVDb numbering issues](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
-
-> **For all Japanese Anime, aliases will need to be added to [thexem.info](https://thexem.info)**, for other series to request a new mapping see the steps below. Further information can be found with some of the XEM folks that hangout in the #XEM discord channel on the Sonarr Discord.
-{.is-danger}
-
-- [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-- [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-{.links-list}
-
-> Typically Services requests are added within 1-5 days
-{.is-info}
-
-> Again, do not request a mapping for Japanese Anime; use XEM for that.
-> Further information can be found with some of the XEM folks that hangout in the [\#XEM discord channel on the Sonarr Discord](https://discord.gg/Z3D6u5hBJb)
-{.is-danger}
-
-> If a Non-Japanese Series requires Season mapping (e.g. released as S25E26 but TVDB is S26E2 then an XEM mapping will be required. This cannot be done with Services mapping.
-{.is-info}
-
-> The series "Helt Perfekt" with TVDb ids of `343189` and `252077` is difficult to automate due to TVDb having the same name for both shows, violating TVDb's own rules. The first entry for the series gets the name. Any future entries for the series must have the year as part of the series name. However, a scene exception as been added to map releases (case sensitive mapping) Helt Perfekt releases containing `NORWEGIAN` -\> `252077` and containing `SWEDISH` -\> `343189`
-{.is-info}
+* Sonarr tries to search first using TVDBid or IMDBid, if your indexer supports those kinds of searches. If there are no results, or you have no indexers which support ID-based searches, Sonarr falls back to searching text-based titles.
+* Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb.
+* The text-based search must match exactly. This includes the year, if a year is required (listed on TVDB with a year after the series title).
+* The text-based search is *only* for the English translation of the series title from TVDB. Other languages are not searched.
+* The site https://thexem.info is used to correct scene/episode mappings, and also to add aliases to be searched for series or season names. Please check this site for corrections if you have a mismatch between season/episode results and the ones you expect. There is a #xem channel on Discord to talk about changes to the site. Xem is the *only* way to fix Japanese Anime aliases.
+* The Scene Mapping Table can be used for series aliases for non-Anime series only. This table is manual. Please search first to be sure your request has not been made, and provide a release name example with your request. [This](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) is the current list of previous requests for your review. [This](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform) is the form for requesting new mappings. Requests to this table are added manually by devs, and can take up to 2 weeks to take effect. *Please remember that all aliases must be searched by all Sonarr users for every episode/season search, which can dramatically increase search times and API hits.*
+* We are aware that some series are just plain difficult. You may also wish to review the [FAQ Entry for Problematic Shows and Release Group vs. TVDb numbering issues](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc).
 
 ## TVDb is updated why isn't Sonarr?
 
 {#tvdb}
 
-- TVDb has a 24 hour cache on their API.
-- TVDb's API then needs to populate through their CDN cache which takes several hours.
+- TVDb has a 1-3 hour cache on their API.
+- TVDb's API then needs to populate through their CDN cache which takes up to an hour.
 - Sonarr's Skyhook has a much smaller few hour cache on top of that.
 - Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
-- Therefore for a change on TVDb to get into Sonarr automatically it will typically take between 36 and 48 hours (24 + ~3 + ~3 + 12)
-
-- If a series or episodes are missing on TVDb, they'll take 36 to 48 hours from when they're added to populate into your Sonarr instance.
+- Therefore for a change on TVDb to get into Sonarr automatically it will typically take between 3 and 19 hours (3 + 1 + 3 + 12)
 
 {#missing-episodes}
 
-- If you know a TVDb update was made more than 48 hours ago, then please come discuss on our [Discord](https://discord.sonarr.tv/).
+- If you know a TVDb update was made more than 24 hours ago, and you have refreshed the series in Sonarr, then please come discuss on our [Discord](https://discord.sonarr.tv/).
 
 ## Why can I not add a series?
 
