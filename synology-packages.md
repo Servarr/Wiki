@@ -2,7 +2,7 @@
 title: Synology Packages
 description: Servarr Synology Packages
 published: true
-date: 2023-12-05T13:35:37.363Z
+date: 2023-12-05T13:38:09.343Z
 tags: lidarr, prowlarr, synology, radarr,readarr,sonarr
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
@@ -17,7 +17,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 
 # Servarr Synology Packages
 
-> These packages can be considered "beta". They are not maintained/developed by the Servarr team. No support is available for the packages. Use at your own risk.
+> These packages can be considered "beta". They are not maintained/developed by the Servarr team. No support is available for the packages. Use at your own risk. 
 {.is-danger}
 
 - The Servarr Team now creates and maintains Synology Packages
