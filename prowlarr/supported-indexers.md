@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-05T01:00:12.363047
+date: 2023-12-06T01:00:13.494237
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-05T01:00:12.363047
+dateCreated: 2023-12-06T01:00:13.494237
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.1.4139` / [Commit: 43d56f681777f4a506ea085dce5f2b8e19f30937](https://github.com/Prowlarr/Prowlarr/commit/43d56f681777f4a506ea085dce5f2b8e19f30937)
-  - [Prowlarr Indexers Commit: 68f421fbf45652625b625b66aaf788ee2732d194](https://github.com/Prowlarr/Indexers/commit/68f421fbf45652625b625b66aaf788ee2732d194)
+  - Prowlarr Build `1.11.1.4140` / [Commit: 67355ec07b4f73f3e9de9da8e228d08f5eaf2ecc](https://github.com/Prowlarr/Prowlarr/commit/67355ec07b4f73f3e9de9da8e228d08f5eaf2ecc)
+  - [Prowlarr Indexers Commit: 22a616df863faed8b30b29fe8f6d28c5dba14210](https://github.com/Prowlarr/Indexers/commit/22a616df863faed8b30b29fe8f6d28c5dba14210)
 
 ---
 
@@ -35,7 +35,6 @@ dateCreated: 2023-12-05T01:00:12.363047
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
 |[Badass Torrents](https://badasstorrents.com/){#badasstorrents}|Badass Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
-|[BiatchTorrents](https://biat.ch/){#biatch}|BiatchTorrents is a FRENCH Public torrent site for MOVIES / TV / GENERAL|French (France)|
 |[BigFANGroup](https://bigfangroup.org/){#bigfangroup}|BigFANGroup is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[BitRu](https://bitru.org/){#bitru}|BitRu is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[BitSearch](https://bitsearch.to/){#bitsearch}|BitSearch is a Public torrent meta-search engine|English (United States)|
@@ -208,8 +207,8 @@ dateCreated: 2023-12-05T01:00:12.363047
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
 |[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
-|[YGGcookie](https://www3.yggtorrent.wtf/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
-|[YGGtorrent](https://www3.yggtorrent.wtf/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
+|[YGGcookie](https://www3.yggtorrent.qa/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
+|[YGGtorrent](https://www3.yggtorrent.qa/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[MovieWorld](https://movieworld.pics/){#movieworld}|MovieWorld (Flicker) is a Semi-Private Torrent Tracker for MOVIES / TV / 3X|English (United States)|
@@ -225,7 +224,6 @@ dateCreated: 2023-12-05T01:00:12.363047
 |[AlphaRatio](https://alpharatio.cc/){#alpharatio}|AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[AnimeBytes](https://animebytes.tv/){#animebytes}|AnimeBytes (AB) is the largest private torrent tracker that specialises in anime and anime-related content|English (United States)|
 |[AnimeTorrents](https://animetorrents.me/){#animetorrents}|Definitive source for anime and manga|English (United States)|
-|[aro\.lol](https://aro.lol/){#aro.lol}|aro\.lol is a SERBIAN/ENGLISH Private Torrent Tracker for ANIME|English (United States)|
 |[AvistaZ](https://avistaz.to/){#avistaz}|Aka AsiaTorrents|English (United States)|
 |[BakaBT](https://bakabt.me/){#bakabt}|Anime Community|English (United States)|
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
@@ -250,7 +248,6 @@ dateCreated: 2023-12-05T01:00:12.363047
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[Amigos Share Club](https://cliente.amigos-share.club/){#amigosshare}|Amigos Share Club is a Brazilian Private site for TV / MOVIES / GENERAL|Portuguese (Brazil)|
 |[AnimeTorrents\.ro](https://animetorrents.ro/){#animetorrentsro}|AnimeTorrents\.ro (Anime Torrents Romania) is a ROMANIAN Private Torrent Tracker for ANIME / MANGA|Romanian (Romania)|
-|[AnimeTracker (API)](https://animetracker.cc/){#animetracker}|AnimeTracker is a Private Torrent Tracker for HD ANIME / MANGA / HENTAI|English (United States)|
 |[AnimeWorld (API)](https://animeworld.cx/){#animeworld-api}|AnimeWorld (AW) is a GERMAN Private site for ANIME / MANGA / HENTAI|German (Germany)|
 |[Anthelion (API)](https://anthelion.me/){#anthelion-api}|Anthelion is a Private MOVIES tracker|English (United States)|
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private site for TV / MOVIES / GENERAL|Italian (Italy)|
@@ -585,7 +582,6 @@ dateCreated: 2023-12-05T01:00:12.363047
 |[TvRoad](https://tvroad.info/){#tvroad}|TvRoad is a FRENCH Private Torrent Tracker for TV|French (France)|
 |[Twisted-Music](https://twisted-music.info/){#twisted-music}|Twisted-Music is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[ULTRA HD](https://ultrahd.online/){#ultra-hd}|ULTRA HD is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
