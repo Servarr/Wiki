@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2023-12-06T10:56:18.657Z
+date: 2023-12-06T10:58:15.754Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -14,7 +14,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
 - [Status](#status)
   - [Health](#health)
     - [System Warnings](#system-warnings)
-      - [Servarr Message: Metadata Errors](#we-are-currently-experiencing-issues-with-our-metadata-provider-this-will-prevent-user-searches-and-author-refreshes-from-working-we-are-working-to-solve-the-issue)
+      - [Servarr Message - Metadata Errors](#we-are-currently-experiencing-issues-with-our-metadata-provider-this-will-prevent-user-searches-and-author-refreshes-from-working-we-are-working-to-solve-the-issue)
       - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
@@ -74,7 +74,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
 
 ### System Warnings
 
-#### Servarr; Metadata Issues Message
+#### Servarr - Metadata Issues Message
 
 {#we-are-currently-experiencing-issues-with-our-metadata-provider-this-will-prevent-user-searches-and-author-refreshes-from-working-we-are-working-to-solve-the-issue}
 
@@ -88,10 +88,11 @@ dateCreated: 2021-06-20T19:54:43.262Z
 - You can add SOME authors by finding the author ID number on goodreads (it's part of the URL) and adding it to readarr by using `author:authorid` in the search. Note that this is a separate issue from the ["large author" -GHI 2783](https://github.com/Readarr/Readarr/issues/2153) issue which is ongoing and will not be solved when this comes back up. We know, it's been down for a long time. 
 - We know this is an inconvenience to you. We do not have an ETA. It is not a regular occurrence. This also does not impact searching for downloads of books and authors you already have in Readarr, and importing those.
 
-Related GitHub Issues:
+Related GitHub Issues
 - [GHI 3106 - Dupe - Pinned](https://github.com/Readarr/Readarr/issues/3106)
 - [GHI 3110 - Dupe] (https://github.com/Readarr/Readarr/issues/3110)
 - [GHI 2970 - Tracking](https://github.com/Readarr/Readarr/issues/2970#issuecomment-1822031496)
+{.links-list}
 
 #### Branch is not a valid release branch
 
