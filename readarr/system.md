@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2023-12-06T10:58:15.754Z
+date: 2023-12-06T11:00:30.599Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -90,8 +90,8 @@ dateCreated: 2021-06-20T19:54:43.262Z
 
 Related GitHub Issues
 - [GHI 3106 - Dupe - Pinned](https://github.com/Readarr/Readarr/issues/3106)
-- [GHI 3110 - Dupe] (https://github.com/Readarr/Readarr/issues/3110)
-- [GHI 2970 - Tracking](https://github.com/Readarr/Readarr/issues/2970#issuecomment-1822031496)
+- [GHI 3110 - Dupe](https://github.com/Readarr/Readarr/issues/3110)
+- [GHI 2970 - Tracking](https://github.com/Readarr/Readarr/issues/2970)
 {.links-list}
 
 #### Branch is not a valid release branch
