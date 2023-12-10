@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-06T01:00:13.494237
+date: 2023-12-10T01:03:39.160651
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-06T01:00:13.494237
+dateCreated: 2023-12-10T01:03:39.160651
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.1.4140` / [Commit: 67355ec07b4f73f3e9de9da8e228d08f5eaf2ecc](https://github.com/Prowlarr/Prowlarr/commit/67355ec07b4f73f3e9de9da8e228d08f5eaf2ecc)
-  - [Prowlarr Indexers Commit: 22a616df863faed8b30b29fe8f6d28c5dba14210](https://github.com/Prowlarr/Indexers/commit/22a616df863faed8b30b29fe8f6d28c5dba14210)
+  - Prowlarr Build `1.11.1.4146` / [Commit: fe142b8a1c12bbda4e3a822cdb4a9c269995dde3](https://github.com/Prowlarr/Prowlarr/commit/fe142b8a1c12bbda4e3a822cdb4a9c269995dde3)
+  - [Prowlarr Indexers Commit: a620cb5ca81a7d18b1eac6f39899cce73d4e8c99](https://github.com/Prowlarr/Indexers/commit/a620cb5ca81a7d18b1eac6f39899cce73d4e8c99)
 
 ---
 
@@ -99,7 +99,7 @@ dateCreated: 2023-12-06T01:00:13.494237
 |[Shana Project](https://www.shanaproject.com/){#shanaproject}|Shana Project is a Public torrent site for ANIME|English (United States)|
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |[SimpleAnime](https://www.36dm.org/){#simpleanime}|SimpleAnime is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
-|[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
+|[Solid Torrents](https://solidtorrents.eu/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
 |[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|English (United States)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
@@ -118,8 +118,8 @@ dateCreated: 2023-12-06T01:00:13.494237
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq285.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir126.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq286.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir127.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent16.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz63.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://www.torrentz2beta.pro/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
