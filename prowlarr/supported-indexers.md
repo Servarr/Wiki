@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-10T01:03:39.160651
+date: 2023-12-11T01:00:36.906904
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-10T01:03:39.160651
+dateCreated: 2023-12-11T01:00:36.906904
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.1.4146` / [Commit: fe142b8a1c12bbda4e3a822cdb4a9c269995dde3](https://github.com/Prowlarr/Prowlarr/commit/fe142b8a1c12bbda4e3a822cdb4a9c269995dde3)
-  - [Prowlarr Indexers Commit: a620cb5ca81a7d18b1eac6f39899cce73d4e8c99](https://github.com/Prowlarr/Indexers/commit/a620cb5ca81a7d18b1eac6f39899cce73d4e8c99)
+  - Prowlarr Build `1.11.2.4148` / [Commit: d4bbb2e14a559d142d3efd3cdc556ae58b5c4156](https://github.com/Prowlarr/Prowlarr/commit/d4bbb2e14a559d142d3efd3cdc556ae58b5c4156)
+  - [Prowlarr Indexers Commit: de2a4b3803e58fd6334d5798e0e1a27ce952114a](https://github.com/Prowlarr/Indexers/commit/de2a4b3803e58fd6334d5798e0e1a27ce952114a)
 
 ---
 
@@ -315,6 +315,7 @@ dateCreated: 2023-12-10T01:03:39.160651
 |[Ebooks-Shares](https://ebooks-shares.org/){#ebooks-shares}|Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS|English (United States)|
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://www.empornium.is/){#empornium2fa}|this indexer uses a cookie login for Empornium for those that want to use 2FA|English (United States)|
+|[Enthralled](https://www.enthralled.me/){#enthralled}|Enthralled is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[eShareNet](https://esharenet.eu/){#esharenet}|eShareNet is a Private Tracker for British MOVIE / TV|English (United Kingdom)|
 |[eStone](http://estone.cc/){#estone}|eStone (BigTorrent) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[exitorrent\.org](https://exitorrent.org/){#exitorrent-org}|exitorrent\.org is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
