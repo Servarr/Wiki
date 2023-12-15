@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-11T01:00:36.906904
+date: 2023-12-15T01:00:13.867919
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-11T01:00:36.906904
+dateCreated: 2023-12-15T01:00:13.867919
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.2.4148` / [Commit: d4bbb2e14a559d142d3efd3cdc556ae58b5c4156](https://github.com/Prowlarr/Prowlarr/commit/d4bbb2e14a559d142d3efd3cdc556ae58b5c4156)
-  - [Prowlarr Indexers Commit: de2a4b3803e58fd6334d5798e0e1a27ce952114a](https://github.com/Prowlarr/Indexers/commit/de2a4b3803e58fd6334d5798e0e1a27ce952114a)
+  - Prowlarr Build `1.11.2.4156` / [Commit: a443a876039dbccf325af33ebe7503b837d36049](https://github.com/Prowlarr/Prowlarr/commit/a443a876039dbccf325af33ebe7503b837d36049)
+  - [Prowlarr Indexers Commit: fd2b3d24708b29242e00079102f1cc302343a3c1](https://github.com/Prowlarr/Indexers/commit/fd2b3d24708b29242e00079102f1cc302343a3c1)
 
 ---
 
@@ -55,7 +55,7 @@ dateCreated: 2023-12-11T01:00:36.906904
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.vc/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.fi/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -118,10 +118,10 @@ dateCreated: 2023-12-11T01:00:36.906904
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq286.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq287.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir127.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentView](https://viewtorrent16.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentWhiz](https://torrentwiz63.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://www.torrentz2beta.pro/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -316,6 +316,7 @@ dateCreated: 2023-12-11T01:00:36.906904
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://www.empornium.is/){#empornium2fa}|this indexer uses a cookie login for Empornium for those that want to use 2FA|English (United States)|
 |[Enthralled](https://www.enthralled.me/){#enthralled}|Enthralled is a Private Torrent Tracker for FETISH 3X|English (United States)|
+|[Enthralled2FA](https://www.enthralled.me/){#enthralled2fa}|Enthralled is a Private Torrent Tracker for FETISH 3X\.  Cookie Login for 2FA use|English (United States)|
 |[eShareNet](https://esharenet.eu/){#esharenet}|eShareNet is a Private Tracker for British MOVIE / TV|English (United Kingdom)|
 |[eStone](http://estone.cc/){#estone}|eStone (BigTorrent) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[exitorrent\.org](https://exitorrent.org/){#exitorrent-org}|exitorrent\.org is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -329,6 +330,7 @@ dateCreated: 2023-12-11T01:00:36.906904
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[Flux-Zone](http://fluxzone.org/){#fluxzone}|Flux-Zone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
+|[FSM](https://fsm.name/){#fsm}|FSM is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[Fuzer](https://www.fuzer.me/){#fuzer}|Fuzer is a private torrent website with israeli torrents|Hebrew (Israel)|
 |[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|English (United States)|
@@ -342,7 +344,7 @@ dateCreated: 2023-12-11T01:00:36.906904
 |[HaiDan](https://www.haidan.video/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Haitang](https://www.htpt.cc/){#haitang}|海棠PT (Hǎitáng PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|English (United States)|
-|[hawke-uno](https://www.hawke.uno/){#hawke-uno}|hawke-uno is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
+|[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDArea](https://hdarea.club/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
