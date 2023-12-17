@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-15T01:00:13.867919
+date: 2023-12-17T01:03:37.285603
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-15T01:00:13.867919
+dateCreated: 2023-12-17T01:03:37.285603
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.2.4156` / [Commit: a443a876039dbccf325af33ebe7503b837d36049](https://github.com/Prowlarr/Prowlarr/commit/a443a876039dbccf325af33ebe7503b837d36049)
-  - [Prowlarr Indexers Commit: fd2b3d24708b29242e00079102f1cc302343a3c1](https://github.com/Prowlarr/Indexers/commit/fd2b3d24708b29242e00079102f1cc302343a3c1)
+  - Prowlarr Build `1.11.2.4158` / [Commit: 1b3695187912ebbc66c1fb8b2d458481ac8bf1f5](https://github.com/Prowlarr/Prowlarr/commit/1b3695187912ebbc66c1fb8b2d458481ac8bf1f5)
+  - [Prowlarr Indexers Commit: 0e9976163f337bd83201857b527e12acd7d2ddde](https://github.com/Prowlarr/Indexers/commit/0e9976163f337bd83201857b527e12acd7d2ddde)
 
 ---
 
@@ -354,6 +354,7 @@ dateCreated: 2023-12-15T01:00:13.867919
 |[HDDolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
+|[HDFun](https://hdzone.me/){#hdfun}|HDFun (HDZone) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDMaYi](https://hdmayi.com/){#hdmayi}|HDMaYi (小蚂蚁PT站) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH site for HD content|Spanish (Spain)|
@@ -363,7 +364,6 @@ dateCreated: 2023-12-15T01:00:13.867919
 |[HDtime](https://hdtime.org/){#hdtime}|HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDZone](https://hdzone.me/){#hdzone}|HDZone is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Hebits](https://hebits.net/){#hebits}|The Israeli Tracker|Hebrew (Israel)|
 |[HHanClub](https://hhanclub.top/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HomePornTorrents](https://www.homeporntorrents.club/){#homeporntorrents}|HomePornTorrents (HPT) is a Private Torrent Tracker for Amateur 3X|English (United States)|
