@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-11-16T18:03:47.657Z
+date: 2023-12-17T00:52:45.672Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -562,7 +562,7 @@ Depending on your OS, there are multiple possible ways.
 ## How does Radarr determine the year of a movie?
 
 - Radarr gets metadata from [TMDb](https://www.themoviedb.org/)
-- Radarr uses the year of the oldest **Theatrical Release** date and the oldest **Premier** date for matching.
+- Radarr uses the year of the oldest **Theatrical Release** date for primary purposes and the oldest **Premier** date as secondary only for matching.
   - Note that if a Theatrical Release does not exist then the logic will fall back to the oldest physical or digital release date.
 - If a movie is missing a digital, physical, theatrical, or premier release date then TMDb should be updated.
 - [TMDb's Contribution Bible](https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000009#59f73d3c9251416e71000013) notes the following about their release types.
