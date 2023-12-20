@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-17T01:03:37.285603
+date: 2023-12-20T00:49:09.753233
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-17T01:03:37.285603
+dateCreated: 2023-12-20T00:49:09.753233
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.2.4158` / [Commit: 1b3695187912ebbc66c1fb8b2d458481ac8bf1f5](https://github.com/Prowlarr/Prowlarr/commit/1b3695187912ebbc66c1fb8b2d458481ac8bf1f5)
-  - [Prowlarr Indexers Commit: 0e9976163f337bd83201857b527e12acd7d2ddde](https://github.com/Prowlarr/Indexers/commit/0e9976163f337bd83201857b527e12acd7d2ddde)
+  - Prowlarr Build `1.11.3.4162` / [Commit: ed17d91a7b04bf564a3040700d69f8ddb2dbd0d8](https://github.com/Prowlarr/Prowlarr/commit/ed17d91a7b04bf564a3040700d69f8ddb2dbd0d8)
+  - [Prowlarr Indexers Commit: 769efd3b1a66f26be214242fb4b6120ee437851b](https://github.com/Prowlarr/Indexers/commit/769efd3b1a66f26be214242fb4b6120ee437851b)
 
 ---
 
@@ -107,8 +107,8 @@ dateCreated: 2023-12-17T01:03:37.285603
 |[Torlock](https://www.torlock2.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.torrent911.biz/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.rs/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.torrent911.pw/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.pm/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
@@ -119,7 +119,7 @@ dateCreated: 2023-12-17T01:03:37.285603
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq287.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir127.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir128.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://www.torrentz2beta.pro/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -267,7 +267,6 @@ dateCreated: 2023-12-17T01:03:37.285603
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[Bithorlo](https://www.bithorlo.info/){#bithorlo}|Bithorlo (BHO) is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
-|[Bit Of Valor](https://bitvalor.hu/){#bitofvalor}|Bit Of Valor is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[BitSexy](https://bitsexy.org/){#bitsexy}|BitSexy is a Private Torrent Tracker for 3X|English (United States)|
 |[Bitspyder](https://bitspyder.net/){#bitspyder}|Bitspyder is a Private site for Educational BOOKS / AUDIO|English (United States)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
@@ -412,7 +411,6 @@ dateCreated: 2023-12-17T01:03:37.285603
 |[Movie-Torrentz](https://m2g.link/){#movietorrentz}|Movie-Torrentz is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[M-Team - TP](https://kp.m-team.cc/){#mteamtp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
 |[M-Team - TP (2FA)](https://kp.m-team.cc/){#mteamtp2fa}|This indexer uses a cookie login for M-Team TP (MTTP) for those that want to use 2FA|Chinese (China)|
-|[MuziekFabriek](https://www.muziekfabriek.org/){#muziekfabriek}|MuziekFabriek is a DUTCH Private Torrent Tracker for MUSIC|Dutch (Netherlands)|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|English (United States)|
 |[nCore](https://ncore.pro/){#ncore}|nCore is a Hungarian Private Torrent Tracker for Movies/Series/General|Hungarian (Hungary)|
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
