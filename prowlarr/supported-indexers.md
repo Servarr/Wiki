@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-20T00:49:09.753233
+date: 2023-12-23T00:56:11.517864
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-20T00:49:09.753233
+dateCreated: 2023-12-23T00:56:11.517864
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.3.4162` / [Commit: ed17d91a7b04bf564a3040700d69f8ddb2dbd0d8](https://github.com/Prowlarr/Prowlarr/commit/ed17d91a7b04bf564a3040700d69f8ddb2dbd0d8)
-  - [Prowlarr Indexers Commit: 769efd3b1a66f26be214242fb4b6120ee437851b](https://github.com/Prowlarr/Indexers/commit/769efd3b1a66f26be214242fb4b6120ee437851b)
+  - Prowlarr Build `1.11.3.4163` / [Commit: 14f9a75a73cbbd85f768bfc00f38d5e0231fa6a8](https://github.com/Prowlarr/Prowlarr/commit/14f9a75a73cbbd85f768bfc00f38d5e0231fa6a8)
+  - [Prowlarr Indexers Commit: fb693f8bb8a03289359e91c15424af096c4c68f4](https://github.com/Prowlarr/Indexers/commit/fb693f8bb8a03289359e91c15424af096c4c68f4)
 
 ---
 
@@ -111,18 +111,18 @@ dateCreated: 2023-12-20T00:49:09.753233
 |[Torrent9 clone](https://www.torrent9.pm/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
-|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public general torrent index|English (United States)|
+|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq287.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq288.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir128.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentz2eu](https://www.torrentz2beta.pro/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
+|[Torrentz2eu](https://torrentz2beta.online/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -523,7 +523,6 @@ dateCreated: 2023-12-20T00:49:09.753233
 |[UHDBits](https://uhdbits.org/){#uhdbits}|UHDBits is a Private Torrent Tracker for UHD Movies / TV|English (United States)|
 |[UnionGang](http://www.uniongang.net/){#uniongang}|UnionGang is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[Universal-Torrents](https://uni-track.org/){#universaltorrents}|Universal-Torrents is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
-|[UnleashTheCartoons](https://unleashthecartoons.world/){#unleashthecartoons}|UnleashTheCartoons is a ROMANIAN Private Torrent Tracker for ANIMATED MOVIES / TV|Romanian (Romania)|
 |[Unlimitz](https://www.unlimitz.biz/){#unlimitz}|Unlimitz is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[UTOPIA](https://utp.to/){#utopia}|UTOPIA is a UKRAINIAN Private Tracker for HD MOVIES and TV|Ukrainian (Ukraine)|
 |[WDT](http://ultimatewrestlingtorrents.com/){#wdt}|Wrestling Desires Torrents (Ultimate Wrestling Torrents) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
