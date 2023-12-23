@@ -2,7 +2,7 @@
 title: Docker Guide
 description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
-date: 2023-07-15T20:41:38.016Z
+date: 2023-12-23T22:46:42.683Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -489,7 +489,6 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [NZBGet](https://hotio.dev/containers/nzbget/)
   - [SABnzbd](https://hotio.dev/containers/sabnzbd/)
   - [qflood](https://hotio.dev/containers/qflood/)
-  - [ombi](https://hotio.dev/containers/ombi) for requesting media
   - [overseerr](https://hotio.dev/containers/overseerr/) for requesting media
   - [jackett](https://hotio.dev/containers/jackett) for torrent tracker searching
   - [nzbhydra2](https://hotio.dev/containers/nzbhydra2) for usenet indexer searching
