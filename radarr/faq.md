@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2023-12-17T00:52:45.672Z
+date: 2023-12-26T06:31:57.384Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -576,8 +576,10 @@ Depending on your OS, there are multiple possible ways.
 
 > [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) may be useful for helping get movies in the language(s) you want.{.is-info}
 
-> Starting 2023-02-12, Radarr's metadata cache will begin to consider a Movie's Original Language to be the TMDb Spoken Language if and only if only 1 spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used.
+> Radarr's metadata cache considers a Movie's Original Language to be the TMDb Spoken Language if and only if only one (1) spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used.*
 {.is-warning}
+
+- *\*the [original language field should contain the main language spoken by the production companies.](https://www.themoviedb.org/talk/646c7179a5046e00e5b7cd4c#647239a9dd731b00ddf07fd1)*
 
 ## ID Searches
 
