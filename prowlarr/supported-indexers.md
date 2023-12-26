@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2023-12-23T00:56:11.517864
+date: 2023-12-26T00:57:18.106296
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2023-12-23T00:56:11.517864
+dateCreated: 2023-12-26T00:57:18.106296
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.11.3.4163` / [Commit: 14f9a75a73cbbd85f768bfc00f38d5e0231fa6a8](https://github.com/Prowlarr/Prowlarr/commit/14f9a75a73cbbd85f768bfc00f38d5e0231fa6a8)
-  - [Prowlarr Indexers Commit: fb693f8bb8a03289359e91c15424af096c4c68f4](https://github.com/Prowlarr/Indexers/commit/fb693f8bb8a03289359e91c15424af096c4c68f4)
+  - Prowlarr Build `1.11.4.4171` / [Commit: 8beff3211715aeeec984c1d1af12fbfc91117ba1](https://github.com/Prowlarr/Prowlarr/commit/8beff3211715aeeec984c1d1af12fbfc91117ba1)
+  - [Prowlarr Indexers Commit: 8f639a4205670956207228a280489cfda3fe8b4f](https://github.com/Prowlarr/Indexers/commit/8f639a4205670956207228a280489cfda3fe8b4f)
 
 ---
 
@@ -99,7 +99,7 @@ dateCreated: 2023-12-23T00:56:11.517864
 |[Shana Project](https://www.shanaproject.com/){#shanaproject}|Shana Project is a Public torrent site for ANIME|English (United States)|
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |[SimpleAnime](https://www.36dm.org/){#simpleanime}|SimpleAnime is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
-|[Solid Torrents](https://solidtorrents.eu/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
+|[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
 |[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|English (United States)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
@@ -478,6 +478,7 @@ dateCreated: 2023-12-23T00:56:11.517864
 |[TeamOS](https://www.teamos.xyz/){#teamos}|Team OS is a Private Torrent Tracker for SOFTWARE|English (United States)|
 |[TEKNO3D](https://tracker.tekno3d.com/){#tekno3d}|TEKNO3D is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[teracod](https://teracod.net/){#teracod}|teracod (Movie Zone) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
+|[The Crazy Ones](https://thecrazyones.hopto.org/){#thecrazyones}|The Crazy Ones is a Private GERMAN tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[The Geeks](https://thegeeks.click/){#thegeeks}|Technology E-Learning|English (United States)|
@@ -635,7 +636,6 @@ dateCreated: 2023-12-23T00:56:11.517864
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[BinSearch](https://binsearch.info/){#binsearch}|The binary Usenet search engine|English (United States)|
 
 ### Semi-Private Indexers
 
