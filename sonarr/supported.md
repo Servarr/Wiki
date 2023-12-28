@@ -155,7 +155,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - See this [Tips and Tricks entry](/useful-tools#twitter)
 - Webhook {#webhook}
 
-### Depricated Notifications
+### Deprecated Notifications
 
 - Boxcar {#boxcar}
 - Plex Home Theater {#plexhometheater}

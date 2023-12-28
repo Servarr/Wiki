@@ -416,7 +416,7 @@ Reasons Include:
 - File Name is missing the year which is required
 - AKA or weird multiple names; Radarr has limited support for these
 - File Name matches to multiple movies
-- Release Name or Release ID from the indexer dows not match the file name
+- Release Name or Release ID from the indexer does not match the file name
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 

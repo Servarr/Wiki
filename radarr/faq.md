@@ -171,7 +171,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - You can trigger a list refresh manually by testing it, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
 - This restriction is to not have our server and list providers get killed by people updating lists every 10 minutes.
 - In Radarr pre-v4.7 interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
-- In Radarr v4.7 these values are now hardcoded and not configurable. Times are based on the list type to minimize inpact to third party services and allow Radarr's functionality with them to continue.
+- In Radarr v4.7 these values are now hardcoded and not configurable. Times are based on the list type to minimize impact to third party services and allow Radarr's functionality with them to continue.
 
 ## Can all my movie files be stored in one folder?
 
