@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2023-11-11T15:43:58.423Z
+date: 2023-12-28T21:18:48.776Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -584,6 +584,10 @@ The movie(s) is(are) not monitored.
 ### Wrong categories
 
 Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in . The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in.
+
+### Indexer needs year removed in search
+
+Some indexers don't return results with the year for the search.  There is an Indexer Advanced option to remove the year from the search string.  Note that year in the release name is still required for Radarr to parse the title.
 
 ### Query Successful - No Results returned
 
