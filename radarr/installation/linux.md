@@ -2,7 +2,7 @@
 title: Radarr Linux Installation
 description: Linux installation guide for Radarr
 published: true
-date: 2023-09-07T20:43:01.533Z
+date: 2023-12-29T21:56:14.073Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:11:59.391Z
@@ -41,8 +41,6 @@ You'll need to install the binaries using the below commands.
 ```shell
 sudo apt install curl sqlite3
 ```
-
-> Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
 
 > **Installation Prerequisites**
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
