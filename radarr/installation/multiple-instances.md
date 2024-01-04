@@ -114,7 +114,8 @@ separate locations. {.is-warning}
 ### Dealing with Updates
 
 > - Disable automatic updates in one of your instances
-  - In config.xml change update branch to `<Branch>nonexistent</Branch>`
+>
+- In config.xml change update branch to `<Branch>nonexistent</Branch>`
 - If one Radarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
 > Configuring the [NSSM Exit Action](#creating-radarr-4k-service) correctly should allow Radarr to update and restart multiple instances with no additional scripts.
