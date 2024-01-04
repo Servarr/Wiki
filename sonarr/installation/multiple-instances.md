@@ -263,7 +263,7 @@ User=sonarr
 Group=media
 Type=simple
 
-ExecStart=mono --debug /usr/lib/sonarr/bin/Sonarr.exe -nobrowser -data=/var/lib/sonarr4k/
+ExecStart=/opt/Sonarr/Sonarr -nobrowser -data=/var/lib/sonarr4k/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
