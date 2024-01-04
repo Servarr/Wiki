@@ -9,26 +9,25 @@ Sample config examples for configuring Sonarr to be accessible from the outside 
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-- Note that $proxy_host is needed rather than the typical $host due to mono.
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
 
 ```nginx
 location ^~ /sonarr {
-  proxy_pass         http://127.0.0.1:8989/sonarr;
-  proxy_set_header   Host $proxy_host;
-  proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header   X-Forwarded-Host $host;
-  proxy_set_header   X-Forwarded-Proto $scheme;
-  proxy_redirect     off;
-  proxy_http_version 1.1;
-  proxy_set_header   Upgrade $http_upgrade;
-  proxy_set_header   Connection $http_connection;
+    proxy_pass http://127.0.0.1:8989;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $http_connection;
 }
 # Allow the API External Access via NGINX
 location ^~ /sonarr/api {
-    auth_request      off;
-    proxy_pass        http://127.0.0.1:8989;
+    auth_basic off;
+    proxy_pass http://127.0.0.1:8989;
 }
-
 ```
 
 A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
@@ -56,6 +55,8 @@ By default Nginx includes the `sites-enabled` folder. You can check this in `ngi
 
 > For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8989` and Sonarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `sonarr` is chosen (line 5). {.is-info}
 
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+
 ```nginx
 server {
   listen      80;
@@ -64,7 +65,7 @@ server {
   server_name sonarr.*;
 
   location / {
-    proxy_set_header   Host $proxy_host;
+    proxy_set_header   Host $host;
     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header   X-Forwarded-Host $host;
     proxy_set_header   X-Forwarded-Proto $scheme;
@@ -107,4 +108,3 @@ ProxyPassReverse / http://127.0.0.1:8989/sonarr/
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
 - `/sonarr/api/`
-- `/sonarr/Content/`

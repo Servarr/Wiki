@@ -28,8 +28,10 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 1. Run the installer
 1. Browse to <http://localhost:8989> to start using Sonarr
 
-- [Windows x32 Installer](https://services.sonarr.tv/v1/download/main/latest?version=3&os=windows&installer=true)
+- [Windows x64 Installer](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x64&installer=true)
+{.links-list}
+- [Windows x32 Installer](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x86&installer=true)
 {.links-list}
 
-> It is possible to install Sonarr manually using the [x32 .zip download](https://services.sonarr.tv/v1/download/main/latest?version=3&os=windows). However in that case you must manually deal with dependencies, installation and permissions.
+> It is possible to install Sonarr manually using the [x64 .zip download](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x64) or [x32 .zip download](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x86). However in that case you must manually deal with dependencies, installation and permissions.
 {.is-info}
