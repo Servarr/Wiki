@@ -1,3 +1,13 @@
+---
+title: reverse-proxy
+description: 
+published: true
+date: 2024-01-04T16:42:39.425Z
+tags: 
+editor: markdown
+dateCreated: 2023-07-03T20:12:15.231Z
+---
+
 # Reverse Proxy Configuration
 
 Sample config examples for configuring Radarr to be accessible from the outside world through a reverse proxy.
@@ -9,7 +19,7 @@ Sample config examples for configuring Radarr to be accessible from the outside 
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
 
 ```nginx
 location ^~ /radarr {
