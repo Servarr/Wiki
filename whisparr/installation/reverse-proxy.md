@@ -9,7 +9,7 @@ Sample config examples for configuring Whisparr to be accessible from the outsid
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
 
 ```nginx
 location /whisparr {
@@ -55,7 +55,7 @@ By default Nginx includes the `sites-enabled` folder. You can check this in `ngi
 
 > For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `6969` and Whisparr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `whisparr` is chosen (line 5). {.is-info}
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` {.is-warning}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
 
 ```nginx
 server {

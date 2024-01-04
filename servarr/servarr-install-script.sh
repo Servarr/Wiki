@@ -1,11 +1,11 @@
 #!/bin/bash
-### Description: \*Arr .NET Debian install
+### Description: Servarr .NET Debian install
 ### Originally written for Radarr by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
 ### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 ### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 ### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
 ### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
-### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all \*Arrs)
+### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all Servarrs)
 ### Version v3.0.1 2022-02-05 - aeramor (typo fix line 179: 'chown "$app_uid":"$app_uid" -R "$bindir"' -> 'chown "$app_uid":"$app_guid" -R "$bindir"')
 ### Version v3.0.3 2022-02-06 - Bakerboy448 fixup ownership
 ### Version v3.0.3a Readarr to develop
@@ -17,7 +17,7 @@
 ### Version v3.0.9 2023-04-28 - Bakerboy448 - fix tarball check
 ### Version v3.0.9a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Version v3.0.10 2024-01-04 - Bakerboy448 - Misc updates and refactoring. Move to own script file.
-### Additional Updates by: The \*Arr Community
+### Additional Updates by: The Servarr Community
 
 ### Boilerplate Warning
 #THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -33,7 +33,7 @@ scriptdate="2024-01-04"
 
 set -euo pipefail
 
-echo "Running \*Arr Install Script - Version [$scriptversion] as of [$scriptdate]"
+echo "Running Servarr Install Script - Version [$scriptversion] as of [$scriptdate]"
 
 # Am I root?, need root!
 

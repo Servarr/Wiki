@@ -37,7 +37,7 @@ Be aware of the following:
 - Once SSHed in type the below to download the installation script in your current directory
 
 ```bash
-curl -o starrInstall.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-install-script.sh
+curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-install-script.sh
 ```
 
 - To run the install script
