@@ -5,7 +5,7 @@
 ### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 ### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
 ### Version v2.0.1 2021-11-23 - brightghost (Fixed datadir step to use correct variables.)
-### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all Servarrs)
+### Version v3.0.0 2022-02-03 - Bakerboy448 (Rewrote script to prompt for user/group and made generic for all \*Arrs)
 ### Version v3.0.1 2022-02-05 - aeramor (typo fix line 179: 'chown "$app_uid":"$app_uid" -R "$bindir"' -> 'chown "$app_uid":"$app_guid" -R "$bindir"')
 ### Version v3.0.3 2022-02-06 - Bakerboy448 fixup ownership
 ### Version v3.0.3a Readarr to develop
