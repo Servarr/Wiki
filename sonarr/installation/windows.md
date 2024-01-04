@@ -29,7 +29,6 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 1. Browse to <http://localhost:8989> to start using Sonarr
 
 - [Windows x64 Installer](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x64&installer=true)
-{.links-list}
 - [Windows x32 Installer](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x86&installer=true)
 {.links-list}
 
