@@ -34,7 +34,7 @@ Be aware of the following:
 
 > SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.{.is-info}
 
-- Once SSHed in type the below to download the installation script in your current directory
+- Once SSHed in type the command below to download the installation script in your current directory
 
 ```bash
 curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-install-script.sh
