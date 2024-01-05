@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-01T01:04:39.011333
+date: 2024-01-05T00:59:21.860914
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-01-01T01:04:39.011333
+dateCreated: 2024-01-05T00:59:21.860914
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.12.0.4178` / [Commit: af4e69f8fb5930c1f9a93f55368815aa99bb436b](https://github.com/Prowlarr/Prowlarr/commit/af4e69f8fb5930c1f9a93f55368815aa99bb436b)
-  - [Prowlarr Indexers Commit: 11d99edebfe62a11c3b96f2cbdec3cd4429faab7](https://github.com/Prowlarr/Indexers/commit/11d99edebfe62a11c3b96f2cbdec3cd4429faab7)
+  - Prowlarr Build `1.12.0.4187` / [Commit: 9679e88717abd45d88016a1e0877864d5a3c4ef0](https://github.com/Prowlarr/Prowlarr/commit/9679e88717abd45d88016a1e0877864d5a3c4ef0)
+  - [Prowlarr Indexers Commit: 2caf4621522b7e06d9c95fb2ecdee45f5efdf7a3](https://github.com/Prowlarr/Indexers/commit/2caf4621522b7e06d9c95fb2ecdee45f5efdf7a3)
 
 ---
 
@@ -370,7 +370,7 @@ dateCreated: 2024-01-01T01:04:39.011333
 |[Indietorrents](https://www.indietorrents.com/){#indietorrents}|Indietorrents is a private Music tracker for independent music|English (United Kingdom)|
 |[Infire](https://infire.si/){#infire}|Infire is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Insane Tracker](https://newinsane.info/){#insanetracker}|Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
-|[JME-REUNIT3D (API)](https://jme-reunit3d.de/){#jme-reunit3d-api}|JME-REUNIT3D is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[JME-REUNIT3D (API)](https://jme-reunit3d.de/){#jme-reunit3d-api}|JME-REUNIT3D is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[JoyHD](https://www.joyhd.net/){#joyhd}|JoyHD (JHD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[JPopsuki](https://jpopsuki.eu/){#jpopsuki}|JPopSuki is a Private Torrent Tracker for ASIAN MUSIC|English (United States)|
 |[JPTV](https://jptv.club/){#jptv}|JPTV is a JAPANESE Private Torrent Tracker for JAPANESE TV / MOVIES|Japanese (Japan)|
@@ -455,6 +455,7 @@ dateCreated: 2024-01-01T01:04:39.011333
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|A general italian tracker|Italian (Italy)|
+|[SharkPT](https://sharkpt.net/){#sharkpt}|SharkPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SiamBIT](https://www.siambit.me/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[SkipTheCommercials (API)](https://skipthecommericals.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
 |[SkipTheTrailers](https://skipthetrailers.xyz/){#skipthetrailers}|SkipTheTrailers (STT) is a Private Torrent Tracker for MOVIES|English (United States)|
@@ -541,6 +542,7 @@ dateCreated: 2024-01-01T01:04:39.011333
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
 |[3Wmg](https://www.3wmg.com/){#3wmg}|3Wmg is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[AGSVPT](https://abroad.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AniToons](https://anitoons.xyz/){#anitoons}|AniToons is a BRAZILIAN Private Torrent Tracker for ANIME / CARTOONS|Portuguese (Brazil)|
 |[Azusa](https://azusa.wiki/){#azusa}|Azusa is a CHINESE Torrent Tracker focusing on Comics|Chinese (China)|
 |[BitPorn](https://bitporn.eu/){#bitporn}|BitPorn is a HUNGARIAN Private Torrent Tracker for 3X|Hungarian (Hungary)|
@@ -574,6 +576,7 @@ dateCreated: 2024-01-01T01:04:39.011333
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Red Leaves](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[RPTorrents (RPT)](https://rptscene.xyz/){#rptorrents-api}|RPTorrents (RPT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Shadowflow](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
