@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2023-07-24T19:54:54.368Z
+date: 2024-01-06T08:15:42.878Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -285,7 +285,7 @@ Ensure SSL encryption is not turned on if you're using both your instance and yo
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/sonarr/faq#why-cant-i-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t Sonarr see my files on a remote server](/sonarr/faq#why-can-sonarr-not-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives are not reliable
 
