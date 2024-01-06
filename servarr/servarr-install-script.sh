@@ -17,6 +17,7 @@
 ### Version v3.0.9 2023-04-28 - Bakerboy448 - fix tarball check
 ### Version v3.0.9a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Version v3.0.10 2024-01-04 - Bakerboy448 - Misc updates and refactoring. Move to own script file.
+### Version v3.0.11 2024-01-06 - StevieTV - Exit script when ran from installdir
 ### Additional Updates by: The Servarr Community
 
 ### Boilerplate Warning
@@ -28,8 +29,8 @@
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-scriptversion="3.0.10"
-scriptdate="2024-01-04"
+scriptversion="3.0.11"
+scriptdate="2024-01-06"
 
 set -euo pipefail
 
@@ -100,6 +101,12 @@ app_bin=${app^}                # Binary Name of the app
 
 if [[ $app != 'prowlarr' ]]; then
     echo "It is critical that the user and group you select to run ${app^} as will have READ and WRITE access to your Media Library and Download Client Completed Folders"
+fi
+
+# This script should not be ran from installdir, otherwise later in the script the extracted files will be removed before they can be moved to installdir.
+if [ "$installdir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ] || [ "$bindir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ]; then
+    echo "You should not run this script from the intended install directory. The script will exit. Please re-run it from another directory"
+    exit
 fi
 
 # Prompt User
@@ -183,7 +190,6 @@ echo "Installation files downloaded and extracted"
 
 # remove existing installs
 echo "Removing existing installation"
-# If you happen to run this script in the installdir the line below will delete the extracted files and cause the mv some lines below to fail.
 rm -rf "$bindir"
 echo "Installing..."
 mv "${app^}" $installdir
