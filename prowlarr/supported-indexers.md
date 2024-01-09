@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-05T00:59:21.860914
+date: 2024-01-09T01:00:42.766470
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-01-05T00:59:21.860914
+dateCreated: 2024-01-09T01:00:42.766470
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.12.0.4187` / [Commit: 9679e88717abd45d88016a1e0877864d5a3c4ef0](https://github.com/Prowlarr/Prowlarr/commit/9679e88717abd45d88016a1e0877864d5a3c4ef0)
-  - [Prowlarr Indexers Commit: 2caf4621522b7e06d9c95fb2ecdee45f5efdf7a3](https://github.com/Prowlarr/Indexers/commit/2caf4621522b7e06d9c95fb2ecdee45f5efdf7a3)
+  - Prowlarr Build `1.12.1.4193` / [Commit: ac97952fd72bbc8d8d867253452b31f27814229f](https://github.com/Prowlarr/Prowlarr/commit/ac97952fd72bbc8d8d867253452b31f27814229f)
+  - [Prowlarr Indexers Commit: 92ed0098dbc86fa614d339bd730dcd31addaa2a3](https://github.com/Prowlarr/Indexers/commit/92ed0098dbc86fa614d339bd730dcd31addaa2a3)
 
 ---
 
@@ -121,7 +121,7 @@ dateCreated: 2024-01-05T00:59:21.860914
 |[TorrentSir](https://torrentsir128.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentz2eu](https://torrentz2beta.online/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
+|[Torrentz2eu](https://torrentz2beta.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -564,6 +564,7 @@ dateCreated: 2024-01-05T00:59:21.860914
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[Kufei](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private site for MOVIES / TV / GENERAL|English (United States)|
+|[Last Digital Underground](https://theldu.net/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
