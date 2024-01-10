@@ -2,7 +2,7 @@
 title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
-date: 2023-11-17T23:06:47.928Z
+date: 2024-01-10T06:41:20.143Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
@@ -146,7 +146,6 @@ select setval('public."PendingReleases_Id_seq"',(SELECT MAX("Id")+1 FROM "Pendin
 select setval('public."QualityDefinitions_Id_seq"',(SELECT MAX("Id")+1 FROM "QualityDefinitions"));
 select setval('public."QualityProfiles_Id_seq"',(SELECT MAX("Id")+1 FROM "QualityProfiles"));
 select setval('public."RemotePathMappings_Id_seq"',(SELECT MAX("Id")+1 FROM "RemotePathMappings"));
-select setval('public."Restrictions_Id_seq"',(SELECT MAX("Id")+1 FROM "Restrictions"));
 select setval('public."RootFolders_Id_seq"',(SELECT MAX("Id")+1 FROM "RootFolders"));
 select setval('public."SceneMappings_Id_seq"',(SELECT MAX("Id")+1 FROM "SceneMappings"));
 select setval('public."ScheduledTasks_Id_seq"',(SELECT MAX("Id")+1 FROM "ScheduledTasks"));
