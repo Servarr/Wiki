@@ -2,7 +2,7 @@
 title: Servarr Installation Script
 description: Common Installation Script for the Servarr Suite of Applications
 published: true
-date: 2023-07-14T12:19:34.383Z
+date: 2024-01-10T15:35:19.132Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -43,5 +43,5 @@ curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki
 - To run the install script
 
 ```shell
-sudo bash starrInstall.sh
+sudo bash servarr-install-script.sh
 ```
