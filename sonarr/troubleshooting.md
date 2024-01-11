@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-01-06T08:15:42.878Z
+date: 2024-01-11T18:58:43.755Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -780,10 +780,6 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for 
 ### Jackett manual search finding more results
 
 - [See this FAQ entry](/sonarr/faq#jackett-shows-more-results-than-sonarr-when-manually-searching)
-
-### Release Profiles not being respected
-
-There are a few causes why it may appear your profiles are being ignored. The most common one is related to the Indexer restriction in Release Profiles. Because the indexer *isn’t* stored with the data, any `preferred word` scores are *zero* for media in your library, *but* during “RSS” and search, they’ll be applied. Similarly for any `must contain` or `must-not` contain the restrictions only apply to that indexer; anything else is fair game. This may then cause release profiles to appear to be ignored or for upgrade loops to occur.
 
 ### Problem Not Listed
 
