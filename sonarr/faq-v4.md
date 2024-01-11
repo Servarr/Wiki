@@ -39,6 +39,7 @@ Below are some of the highlights and more prominent changes:
 If Sonarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 As of Sonarr v4, Authentication is Mandatory.
+
 - `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
