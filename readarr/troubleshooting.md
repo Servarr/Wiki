@@ -48,17 +48,19 @@ dateCreated: 2021-06-20T20:06:25.552Z
     - [Usenet download misses import](#usenet-download-misses-import)
     - [Download client clearing items](#download-client-clearing-items)
     - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
-    - [Connection Timed Out](#connection-timed-out)
+    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
+    - [The request timed out](#the-request-timed-out)
   - [Problem Not Listed](#problem-not-listed)
 - [Searches Indexers and Trackers](#searches-indexers-and-trackers)
   - [Turn logging up to trace](#turn-logging-up-to-trace)
   - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
   - [Testing a Search](#testing-a-search)
   - [Common Problems](#common-problems-1)
+    - [Unable to Load Search Results](#unable-to-load-search-results)
     - [Media is Unmonitored](#media-is-unmonitored)
     - [Wrong categories](#wrong-categories)
     - [Wrong results](#wrong-results)
-    - [Query Successful - No Results returned](#query-successful-no-results-returned)
+    - [Query Successful - No Results returned](#query-successful---no-results-returned)
     - [Missing Results](#missing-results)
     - [Certificate validation](#certificate-validation)
     - [Hitting rate limits](#hitting-rate-limits)
@@ -67,8 +69,8 @@ dateCreated: 2021-06-20T20:06:25.552Z
     - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
     - [Problem Not Listed](#problem-not-listed-1)
   - [Errors](#errors)
-    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
-    - [The request timed out](#the-request-timed-out)
+    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send-1)
+    - [The request timed out](#the-request-timed-out-1)
     - [Problem Not Listed](#problem-not-listed-2)
 
 # Asking for Help
@@ -474,6 +476,10 @@ Full section of Trace Log for a Manual Search Needed
 ## Common Problems
 
 Below are some common problems.
+
+### Unable to Load Search Results
+
+Most likely you're using a reverse proxy and you reverse proxy timeout is set too short before \*Arr has completed the search query. Increase the timeout and try again.
 
 ### Media is Unmonitored
 

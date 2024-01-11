@@ -8,90 +8,9 @@ editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
 
-<!-- # Table of Contents
+> For Sonarr v4 specific FAQ entries - Please see the v4 FAQ [here](/sonarr/faq-v4)
+{.is-info}
 
-- [Table of Contents](#table-of-contents)
-- [Sonarr Basics](#sonarr-basics)
-  - [How does Sonarr find episodes?](#how-does-sonarr-find-episodes)
-  - [How are possible downloads compared?](#how-are-possible-downloads-compared)
-  - [Preferred Words FAQs](#preferred-words-faqs)
-  - [How do I change from the Windows Service to a Tray App?](#how-do-i-change-from-the-windows-service-to-a-tray-app)
-  - [How do I Backup/Restore my Sonarr?](#how-do-i-backuprestore-my-sonarr)
-    - [Backing up Sonarr](#backing-up-sonarr)
-      - [Using built-in backup](#using-built-in-backup)
-      - [Using file system directly](#using-file-system-directly)
-    - [Restoring from Backup](#restoring-from-backup)
-      - [Using zip backup](#using-zip-backup)
-      - [Using file system backup](#using-file-system-backup)
-      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
-  - [Help I have locked myself out](#help-i-have-locked-myself-out)
-  - [Why are there two files? \| Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
-  - [I see that feature/bug X was fixed, Why can I not see it?](#i-see-that-featurebug-x-was-fixed-why-can-i-not-see-it)
-  - [Episode Progress - How is it calculated?](#episode-progress-how-is-it-calculated)
-  - [How do I access Sonarr from another computer?](#how-do-i-access-sonarr-from-another-computer)
-  - [Why does Sonarr refresh series information so frequently?](#why-does-sonarr-refresh-series-information-so-frequently)
-  - [Why is there a number next to Activity?](#why-is-there-a-number-next-to-activity)
-  - [What's the different Series Types?](#whats-the-different-series-types)
-    - [Series Types](#series-types)
-    - [Series Type Examples](#series-type-examples)
-      - [Daily](#daily)
-      - [Standard](#standard)
-      - [Anime](#anime)
-  - [How can I rename my series folders?](#how-can-i-rename-my-series-folders)
-  - [How do I update Sonarr?](#how-do-i-update-sonarr)
-    - [Installing a newer version](#installing-a-newer-version)
-      - [Native](#native)
-      - [Docker](#docker)
-  - [Can I switch from `develop` back to `main`?](#can-i-switch-from-develop-back-to-main)
-  - [Can I switch between branches?](#can-i-switch-between-branches)
-- [Sonarr and Series Issues + Metadata](#sonarr-and-series-issues-metadata)
-  - [How does Sonarr handle scene numbering issues (American Dad!, etc)?](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
-    - [How Sonarr handles scene numbering issues](#how-sonarr-handles-scene-numbering-issues)
-    - [Problematic Shows](#problematic-shows)
-  - [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)
-  - [TVDb is updated why isn't Sonarr?](#tvdb-is-updated-why-isnt-sonarr)
-  - [Why can I not add a series?](#why-can-i-not-add-a-series)
-  - [Why can I not add a series when I know the TVDb ID?](#why-can-i-not-add-a-series-when-i-know-the-tvdb-id)
-  - [Title Slug in Use](#title-slug-in-use)
-  - [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
-  - [Episode Air Times](#episode-air-times)
-- [Sonarr Common Problems](#sonarr-common-problems)
-  - [Path is Already Configured for an Existing Series](#path-is-already-configured-for-an-existing-series)
-  - [Episode does not have an forever](#system-logs-loads-forever)
-  - [Weird UI Issues](#weird-ui-issues)
-  - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
-  - [uTorrent is no longer working](#utorrent-is-no-longer-working)
-  - [Does Sonarr require a SABnzbd post-processing script to import downloaded episodes?](#does-sonarr-require-a-sabnzbd-post-processing-script-to-import-downloaded-episodes)
-  - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
-  - [Sonarr on Synology Stopped Working (SSL)](#sonarr-on-synology-stopped-working-ssl)
-  - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
-  - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
-  - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-  - [I see log messages for shows I do not have/do not want](#i-see-log-messages-for-shows-i-do-not-havedo-not-want)
-  - [Seeding torrents aren't deleted automatically](#seeding-torrents-arent-deleted-automatically)
-  - [Help, my Mac says Sonarr cannot be opened because the developer cannot be verified](#help-my-mac-says-sonarr-cannot-be-opened-because-the-developer-cannot-be-verified)
-  - [Help, my Mac says Sonarr.app is damaged and cannot be opened](#help-my-mac-says-sonarrapp-is-damaged-and-cannot-be-opened)
-  - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
-  - [I use Sonarr on a Mac and it suddenly stopped working. What happened?](#i-use-sonarr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
-  - [Why can Sonarr not see my files on a remote server?](#why-can-sonarr-not-see-my-files-on-a-remote-server)
-    - [Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares](#sonarr-runs-under-the-localservice-account-by-default-which-doesnt-have-access-to-protected-remote-file-shares)
-    - [You're using a mapped network drive (not a UNC path)](#youre-using-a-mapped-network-drive-not-a-unc-path)
-  - [Mapped Network Drives vs UNC Paths](#mapped-network-drives-vs-unc-paths)
-  - [Sonarr will not work on Big Sur](#sonarr-will-not-work-on-big-sur)
-  - [My Custom Script stopped working after upgrading from v2](#my-custom-script-stopped-working-after-upgrading-from-v2)
-- [Sonarr Searching & Downloading Common Problems](#sonarr-searching-downloading-common-problems)
-  - [Query Successful - No Results Returned](#query-successful-no-results-returned)
-  - [Why didn't Sonarr grab an episode I was expecting?](#why-didnt-sonarr-grab-an-episode-i-was-expecting)
-  - [Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-release-was-matched-to-series-by-id-automatic-import-is-not-possible)
-  - [Why wont Sonarr import a TBA episode?](#why-wont-sonarr-import-a-tba-episode)
-  - [Sonarr says Unknown Series on Searches or Imports](#sonarr-says-unknown-series-on-searches-or-imports)
-  - [Jackett's /all Endpoint](#jacketts-all-endpoint)
-    - [Jackett /All Solutions](#jackett-all-solutions)
-  - [Jackett shows more results than Sonarr when manually searching](#jackett-shows-more-results-than-sonarr-when-manually-searching)
-  - [Finding Cookies](#finding-cookies)
-  - [Unpack Torrents](#unpack-torrents)
-  - [Permissions](#permissions)
--->
 # Sonarr Basics
 
 ## How does Sonarr find episodes?
@@ -396,9 +315,9 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 - Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
 
 |                                                                    | `main` (stable) ![Current Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v3-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v3) (beta) ![Current v3 Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v3-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v4) (v4 beta) ![Current v4 Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=v4-preview&query=%24%5B%27v4-preview%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) |
-|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [hotio](https://hotio.dev/containers/sonarr)                       | `release`                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                   | `v4`                                                                                                                                                                                                            |
-| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `latest`                                                                                                                                                                                              | `3.0.10`                                                                                                                                                                                                     | `develop`                                                                                                                                                                                                       |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [hotio](https://hotio.dev/containers/sonarr)                       | `release`                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                           | `v4`                                                                                                                                                                                                              |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `latest`                                                                                                                                                                                              | `3.0.10`                                                                                                                                                                                                            | `develop`                                                                                                                                                                                                         |
 
 ### Installing a newer version
 

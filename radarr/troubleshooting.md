@@ -8,75 +8,6 @@ editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
 ---
 
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Asking for Help](#asking-for-help)
-- [Logging and Log Files](#logging-and-log-files)
-  - [Standard Logs Location](#standard-logs-location)
-  - [Update Logs Location](#update-logs-location)
-  - [Sharing Logs](#sharing-logs)
-  - [Trace/Debug Logs](#tracedebug-logs)
-  - [Clearing Logs](#clearing-logs)
-- [Multiple Log Files](#multiple-log-files)
-- [Recovering from a Failed Update](#recovering-from-a-failed-update)
-  - [Determine the issue](#determine-the-issue)
-    - [Database disk image is malformed](#database-disk-image-is-malformed)
-    - [Migration Issue](#migration-issue)
-    - [UI Migration Issues](#ui-migration-issues)
-    - [Permission Issue](#permission-issue)
-  - [Resolving the issue](#resolving-the-issue)
-    - [Migration Issues](#migration-issues)
-    - [Permissions Issues](#permissions-issues)
-    - [Manually upgrading](#manually-upgrading)
-- [Downloads and Importing](#downloads-and-importing)
-  - [Testing the Download Client](#testing-the-download-client)
-  - [Testing a Download](#testing-a-download)
-  - [Testing an Import](#testing-an-import)
-  - [Common Problems](#common-problems)
-    - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
-    - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
-    - [Can’t see share on Windows](#cant-see-share-on-windows)
-    - [Mapped network drives are not reliable](#mapped-network-drives-are-not-reliable)
-    - [Docker and user, group, ownership, permissions and paths](#docker-and-user-group-ownership-permissions-and-paths)
-    - [Remote Path Mapping](#remote-path-mapping)
-      - [Remote Mount or Remote Sync (Syncthing)](#remote-mount-or-remote-sync-syncthing)
-    - [Permissions on the Library Folder](#permissions-on-the-library-folder)
-    - [Permissions on the Downloads Folder](#permissions-on-the-downloads-folder)
-    - [Download folder and library folder not different folders](#download-folder-and-library-folder-not-different-folders)
-    - [Incorrect category](#incorrect-category)
-    - [Packed torrents](#packed-torrents)
-    - [Repeated downloads](#repeated-downloads)
-    - [Usenet download misses import](#usenet-download-misses-import)
-    - [Download client clearing items](#download-client-clearing-items)
-    - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
-    - [Connection Timed Out](#connection-timed-out)
-  - [Problem Not Listed](#problem-not-listed)
-- [Searches Indexers and Trackers](#searches-indexers-and-trackers)
-  - [Turn logging up to trace](#turn-logging-up-to-trace)
-  - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
-  - [Testing a Search](#testing-a-search)
-  - [Common Problems](#common-problems-1)
-    - [Tracker needs RawSearch Caps](#tracker-needs-rawsearch-caps)
-    - [Media is Unmonitored](#media-is-unmonitored)
-    - [Wrong categories](#wrong-categories)
-    - [Query Successful - No Results returned](#query-successful-no-results-returned)
-    - [Wrong results](#wrong-results)
-    - [Missing Results](#missing-results)
-    - [Certificate validation](#certificate-validation)
-    - [Hitting rate limits](#hitting-rate-limits)
-    - [IP Ban](#ip-ban)
-    - [Year doesn't match](#year-doesnt-match)
-    - [Missing year](#missing-year)
-    - [Using the Jackett /all endpoint](#using-the-jackett-all-endpoint)
-    - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
-    - [Problem Not Listed](#problem-not-listed-1)
-  - [Errors](#errors)
-    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
-    - [The request timed out](#the-request-timed-out)
-    - [Invalid response received from TMDB](#invalid-response-received-from-tmdb)
-    - [Problem Not Listed](#problem-not-listed-2)
-
 # Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
@@ -568,6 +499,10 @@ Full section of Trace Log for a Manual Search Needed
 ## Common Problems
 
 Below are some common problems.
+
+### Unable to Load Search Results
+
+Most likely you're using a reverse proxy and you reverse proxy timeout is set too short before \*Arr has completed the search query. Increase the timeout and try again.
 
 ### Tracker needs RawSearch Caps
 

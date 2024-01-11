@@ -8,84 +8,6 @@ editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
 ---
 
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Asking for Help](#asking-for-help)
-- [Logging and Log Files](#logging-and-log-files)
-  - [Standard Logs Location](#standard-logs-location)
-  - [Update Logs Location](#update-logs-location)
-  - [Sharing Logs](#sharing-logs)
-  - [Trace/Debug Logs](#tracedebug-logs)
-  - [Clearing Logs](#clearing-logs)
-- [Multiple Log Files](#multiple-log-files)
-- [Recovering from a Failed Update](#recovering-from-a-failed-update)
-  - [Determine the issue](#determine-the-issue)
-    - [Migration Issue](#migration-issue)
-    - [Permission Issue](#permission-issue)
-  - [Resolving the issue](#resolving-the-issue)
-    - [Permissions Issues](#permissions-issues)
-    - [Manually upgrading](#manually-upgrading)
-- [Downloads and Importing](#downloads-and-importing)
-  - [Testing the Download Client](#testing-the-download-client)
-  - [Testing a Download](#testing-a-download)
-  - [Testing an Import](#testing-an-import)
-  - [Common Problems](#common-problems)
-    - [One or More Episodes expected in the release were not imported or missing](#one-or-more-episodes-expected-in-the-release-were-not-imported-or-missing)
-    - [Using Sonarr v2](#using-sonarr-v2)
-    - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
-    - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
-    - [Can’t see share on Windows](#cant-see-share-on-windows)
-    - [Mapped network drives are not reliable](#mapped-network-drives-are-not-reliable)
-    - [Docker and user, group, ownership, permissions and paths](#docker-and-user-group-ownership-permissions-and-paths)
-    - [Remote Path Mapping](#remote-path-mapping)
-      - [Remote Mount or Remote Sync (Syncthing)](#remote-mount-or-remote-sync-syncthing)
-    - [Permissions on the Library Folder](#permissions-on-the-library-folder)
-    - [Permissions on the Downloads Folder](#permissions-on-the-downloads-folder)
-    - [Download folder and library folder not different folders](#download-folder-and-library-folder-not-different-folders)
-    - [Incorrect category](#incorrect-category)
-    - [Packed torrents](#packed-torrents)
-    - [Repeated downloads](#repeated-downloads)
-    - [Usenet download misses import](#usenet-download-misses-import)
-    - [Download client clearing items](#download-client-clearing-items)
-    - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
-      - [Found matching series via grab history, but series was matched by series ID. Automatic import is not possible](#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
-    - [Episode Name is TBA](#episode-name-is-tba)
-    - [Connection Timed Out](#connection-timed-out)
-  - [Problem Not Listed](#problem-not-listed)
-- [Searches Indexers and Trackers](#searches-indexers-and-trackers)
-  - [Turn logging up to trace](#turn-logging-up-to-trace)
-  - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
-  - [Testing a Search](#testing-a-search)
-  - [Common Problems](#common-problems-1)
-    - [Indexers not being Searched](#indexers-not-being-searched)
-    - [Poorly Named Releases](#poorly-named-releases)
-    - [Tracker needs RawSearch Caps](#tracker-needs-rawsearch-caps)
-    - [Series needs an alias](#series-needs-an-alias)
-    - [Series needs an XEM Mapping](#series-needs-an-xem-mapping)
-    - [Wrong Series Type](#wrong-series-type)
-      - [Daily](#daily)
-      - [Standard](#standard)
-      - [Anime](#anime)
-    - [Media is Unmonitored](#media-is-unmonitored)
-    - [Query Successful - No Results Returned](#query-successful-no-results-returned)
-    - [Wrong Categories](#wrong-categories)
-    - [Wrong Results](#wrong-results)
-    - [Missing Results](#missing-results)
-    - [Certificate validation](#certificate-validation)
-    - [Hitting rate limits](#hitting-rate-limits)
-    - [IP Ban](#ip-ban)
-    - [Using the Jackett /all endpoint](#using-the-jackett-all-endpoint)
-    - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
-    - [Indexer not being searched](#indexer-not-being-searched)
-    - [Jackett manual search finding more results](#jackett-manual-search-finding-more-results)
-    - [Release Profiles not being respected](#release-profiles-not-being-respected)
-    - [Problem Not Listed](#problem-not-listed-1)
-  - [Errors](#errors)
-    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
-    - [The request timed out](#the-request-timed-out)
-    - [Problem Not Listed](#problem-not-listed-2)
-
 # Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
@@ -668,6 +590,10 @@ https://nzbgeek.info/geekseek.php?guid=f7e4ac2875b6a1ce45bae91ab19e9699
 ## Common Problems
 
 Below are some common problems that are the solution for almost all issues experienced.
+
+### Unable to Load Search Results
+
+Most likely you're using a reverse proxy and you reverse proxy timeout is set too short before \*Arr has completed the search query. Increase the timeout and try again.
 
 ### Indexers not being Searched
 

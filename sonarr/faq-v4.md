@@ -1,6 +1,6 @@
 ---
-title: Sonarr v4 Beta FAQ
-description: Sonarr v4 Beta FAQ
+title: Sonarr v4 FAQ
+description: Sonarr v4 FAQ
 published: true
 date: 2023-10-30T02:09:28.676Z
 tags: 
@@ -8,26 +8,31 @@ editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
 ---
 
-# Sonarr v4 Beta FAQ
-
-> Sonarr v4 is currently in beta, and as such errors and issues are to be expected. Please use our support channels to ask questions, report issues or provide feedback with the v4 beta. If necessary you may be asked to open an issue on Github, if you're asked to open an issue on [Github](https://github.com/Sonarr/Sonarr). Please provide a link to the original discussion along with all other requested information. {.is-warning}
+# Sonarr v4 FAQ
 
 ## What Changed?
 
-Refer to the [v4 beta announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/) for more information
+Refer to the [v4 release announcement](https://forums.sonarr.tv/t/sonarr-v4-released/33089) for more information
 
 Below are some of the highlights and more prominent changes:
 
-- [Forced Authentication](#forced-authentication)
-- Mono => Dotnet (more speed; no more mono). Due to this change Reverse Proxy conf updates are likely required:
-  - [Nginx](#nginx)
-  - [Apache](#apache)
-- [Preferred Words are gone](#preferred-words-to-custom-formats-migration) and replaced with Custom Formats
-- [Language Profiles are gone](#where-have-language-profiles-gone) and replaced with Custom Formats
-- Dark/Light Theme
-- SysLog and Instance Name Support
-- Merger of Mass Editor into [Series Overview](#where-has-the-mass-editor-gone)
-- Much much more
+- [Sonarr v4 FAQ](#sonarr-v4-faq)
+  - [What Changed?](#what-changed)
+  - [Forced Authentication](#forced-authentication)
+    - [Authentication Method](#authentication-method)
+    - [Authentication Required](#authentication-required)
+  - [Preferred Words to Custom Formats Migration](#preferred-words-to-custom-formats-migration)
+    - [Must (not) contain](#must-not-contain)
+    - [File Naming Tokens](#file-naming-tokens)
+  - [Where have language profiles gone?](#where-have-language-profiles-gone)
+    - [Only English](#only-english)
+    - [Only Original](#only-original)
+  - [My Reverse Proxy doesn't work anymore?](#my-reverse-proxy-doesnt-work-anymore)
+    - [Nginx](#nginx)
+    - [Apache](#apache)
+  - [What is this new "*Override and add to download queue*" button?](#what-is-this-new-override-and-add-to-download-queue-button)
+  - [Where has the Mass Editor gone?](#where-has-the-mass-editor-gone)
+  - [Episodes showing runtimes of 0](#episodes-showing-runtimes-of-0)
 
 ## Forced Authentication
 
