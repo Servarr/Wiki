@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2024-01-12T02:16:25.007Z
+date: 2024-01-12T02:16:54.665Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -127,7 +127,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This option is not recommended.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
-- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
+- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and should be combined with an Availability Delay of `-14` or `-21` days.
   - If TMDb is not populated with a date, it is assumed 90 days after `Theatrical Date` (Oldest in theater's date) the movie is available in web or physical services.
 
 ## How are possible downloads compared?
