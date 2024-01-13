@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-09T01:00:42.766470
+date: 2024-01-13T00:59:45.258932
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-01-09T01:00:42.766470
+dateCreated: 2024-01-13T00:59:45.258932
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.12.1.4193` / [Commit: ac97952fd72bbc8d8d867253452b31f27814229f](https://github.com/Prowlarr/Prowlarr/commit/ac97952fd72bbc8d8d867253452b31f27814229f)
-  - [Prowlarr Indexers Commit: 92ed0098dbc86fa614d339bd730dcd31addaa2a3](https://github.com/Prowlarr/Indexers/commit/92ed0098dbc86fa614d339bd730dcd31addaa2a3)
+  - Prowlarr Build `1.12.1.4201` / [Commit: 031d81330d36a6083811f616a707f22ec1500a83](https://github.com/Prowlarr/Prowlarr/commit/031d81330d36a6083811f616a707f22ec1500a83)
+  - [Prowlarr Indexers Commit: 0e113fc90ac51382d4b2ef64ba52a60fc3d2fcc4](https://github.com/Prowlarr/Indexers/commit/0e113fc90ac51382d4b2ef64ba52a60fc3d2fcc4)
 
 ---
 
@@ -117,8 +117,8 @@ dateCreated: 2024-01-09T01:00:42.766470
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq289.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir128.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq291.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir129.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2eu](https://torrentz2beta.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
@@ -166,7 +166,6 @@ dateCreated: 2024-01-09T01:00:42.766470
 |[File-Tracker](https://file-tracker.net/){#file-tracker}|File Tracker is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|Russian (Russia)|
 |[Gay-Torrents\.net](https://www.gay-torrents.net/){#gay-torrents}|Gay-Torrents\.net is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[Genesis-Movement](https://torrent.genesis-movement.org/){#genesismovement}|Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC|English (United States)|
-|[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Semi-Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
 |[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH semi private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -342,6 +341,7 @@ dateCreated: 2024-01-09T01:00:42.766470
 |[Haitang](https://www.htpt.cc/){#haitang}|海棠PT (Hǎitáng PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|English (United States)|
 |[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
+|[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDArea](https://hdarea.club/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -373,7 +373,7 @@ dateCreated: 2024-01-09T01:00:42.766470
 |[JME-REUNIT3D (API)](https://jme-reunit3d.de/){#jme-reunit3d-api}|JME-REUNIT3D is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[JoyHD](https://www.joyhd.net/){#joyhd}|JoyHD (JHD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[JPopsuki](https://jpopsuki.eu/){#jpopsuki}|JPopSuki is a Private Torrent Tracker for ASIAN MUSIC|English (United States)|
-|[JPTV](https://jptv.club/){#jptv}|JPTV is a JAPANESE Private Torrent Tracker for JAPANESE TV / MOVIES|Japanese (Japan)|
+|[JPTV (API)](https://jptv.club/){#jptv-api}|JPTV is a JAPANESE Private Torrent Tracker for JAPANESE TV / MOVIES / GENERAL|Japanese (Japan)|
 |[KamePT](https://kamept.com/){#kamept}|KamePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Karagarga](https://karagarga.in/){#karagarga}|Karagarga tracks non-hollywood, rare and obscure movies, music and literature|English (United States)|
 |[Keep Friends](https://pt.keepfrds.com/){#keepfriends}|Keep Friends is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -585,7 +585,7 @@ dateCreated: 2024-01-09T01:00:42.766470
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[TvRoad](https://tvroad.info/){#tvroad}|TvRoad is a FRENCH Private Torrent Tracker for TV|French (France)|
-|[Twisted-Music](https://twisted-music.info/){#twisted-music}|Twisted-Music is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
+|[Twisted-Music](https://twisted-music.org/){#twisted-music}|Twisted-Music is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
