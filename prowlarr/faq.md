@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2023-10-30T02:08:59.497Z
+date: 2024-01-14T20:32:14.182Z
 tags: prowlarr, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -350,20 +350,6 @@ If you can only reach your web interface at `http://localhost:9696/` or `http://
 
 Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
-## uTorrent is no longer working
-
-- Ensure the Web UI is enabled
-
-![faq_4_utorrent.png](/assets/general/faq_4_utorrent.png)
-
-- Turn on Web UI
-
-![faq_5_utorrent.png](/assets/general/faq_5_utorrent.png)
-
-- Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections). We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
-
-![faq_6_utorrent.png](/assets/general/faq_6_utorrent.png)
-
 ## I got a pop-up that said config.xml was corrupt, what now?
 
 Prowlarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Prowlarr back online, you will need to delete `.xml` in your AppData Folder, once deleted start Prowlarr and it will start on the default port (9696), you should now re-configure any settings you configured on the General Settings page.
@@ -380,14 +366,14 @@ If your download client and Prowlarr are on the same machine there is no reason 
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
-
+1. Close Prowlarr
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+***(Be sure that you do not have two AuthenticationMethod entries in your file)***
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
 1. Restart Prowlarr
-1. Prowlarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
+1. Prowlarr will now be accessible without a password, you should go the `Settings` => `General` in the UI, change the Authentication Method to Basic or Forms and set your new username and password
 
 ## Weird UI Issues
 
