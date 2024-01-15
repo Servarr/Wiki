@@ -2,7 +2,7 @@
 title: Sonarr
 description: 
 published: true
-date: 2023-11-28T17:52:18.069Z
+date: 2024-01-15T23:29:55.392Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-05-16T16:59:52.354Z
@@ -18,7 +18,7 @@ dateCreated: 2021-05-16T16:59:52.354Z
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/sonarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/sonarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
-- [<i class="far fa-question-circle"></i>&emsp;v4 Beta FAQ](/sonarr/faq-v4)
+- [<i class="far fa-question-circle"></i>&emsp;v4 FAQ *FAQ entries specific to v4 changes*](/sonarr/faq-v4)
 {.links-list}
 
 # User Guide
