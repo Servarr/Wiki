@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2023-12-28T21:18:48.776Z
+date: 2024-01-16T18:29:58.721Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -376,6 +376,10 @@ This can also be caused by:
 - local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy and it being improperly configured
+
+### Download doesn't contain intermediate path
+
+There was no output path reported from your download client for this item.
 
 ## Problem Not Listed
 
