@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-01-11T18:58:43.755Z
+date: 2024-01-16T18:31:12.209Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -395,6 +395,10 @@ This can also be caused by:
 - local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy and it being improperly configured
+
+### Download doesn't contain intermediate path
+
+There was no output path reported from your download client for this item.
 
 ## Problem Not Listed
 
