@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2023-12-05T22:30:06.495Z
+date: 2024-01-16T22:21:33.138Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -37,13 +37,12 @@ Active searching (via the indexer's API) is only done in the below situations. N
 > Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 {.is-info}
 
-- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L40s).
+- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L41s).
 
-- As of 2022-01-23 the logic is as follows:
+- As of 2024-01-16 the logic is as follows:
 
 1. Quality
-1. Language
-1. Preferred Word Score\*
+1. Custom Format Score
 1. Protocol (as configured in the relevant Delay Profile)
 1. Episode Count\*
 1. Episode Number
@@ -52,31 +51,11 @@ Active searching (via the indexer's API) is only done in the below situations. N
 1. Age (If Usenet)
 1. Size
 
-> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/sonarr/settings#file-management) and use a preferred word regex of `/\b(repack|proper)\b/i` with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#p2p-groups-repackproper)
+> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/sonarr/settings#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
 {.is-warning}
 
-> \* Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has Upgrades disabled.
-> \* Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-prefer-season-packs)
+> \* Custom Formats override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). There is no method to prefer season packs [without causing a download loop due to the imported files](https://github.com/Sonarr/Sonarr/issues/5598) never matching the [season pack custom format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#season-pack) that the release name matched on.
 {.is-info}
-
-## Preferred Words FAQs
-
-- For the score of the on disk file: The existing name of the file and the "original scene name" of the release are evaluated for preferred words. The higher score of the two is taken.
-
-- How are preferred words included in renaming?
-
-  - For Sonarr you can make use of the `{Preferred Words}` token in your renaming scheme and also enable`Include Preferred when Renaming` in the release profile. take a look [at TRaSH's recommended naming scheme](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for a recommended naming scheme examples for Sonarr. Using the tokens in your renaming scheme could help with download loop issues.
-
-- As of v3.0.7, you can now also include Preferred Words on a Release Profile basis `{Preferred Words:<Release Profile Name>}`
-
-- Preferred Words always upgrade a release even if the quality and/or language cutoff has been met. This includes if the Profile has `Upgrades` disabled
-
-> Preferred Words override the standard Season Pack Preference. This is [Sonarr Github Issue #3562](https://github.com/Sonarr/Sonarr/issues/3562). To prefer Season Packs when using preferred words, you need to [add a season pack preference as well](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#optional-prefer-season-packs)
-{.is-info}
-
-- Tags can be used to control what Series a Release Profile applies to; refer to the settings entry for Release Profiles for more information
-
-- For additional information on Preferred Words and Release Profiles [see the settings page](/sonarr/settings#release-profiles)
 
 ## How do I change from the Windows Service to a Tray App?
 
@@ -298,15 +277,10 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 
 *This will not install the bits from that branch immediately, it will happen during the next update.*
 
-- main - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v3-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) - (Default/Stable): This has been tested by users on nightly (`develop`) branch and it's not known to have any major issues. This branch should be used by the majority of users. On GitHub, this is the `main` branch.
-- develop - ![Current Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v3-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) -  (Alpha/Unstable) : This is now the same as main for non-Docker users and likely the last v3 release.
+- main - ![Current v4 Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v4-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) - (Default/Stable): This has been tested by users on nightly (`develop`) branch and it's not known to have any major issues. This branch should be used by the majority of users. On GitHub, this is the `main` branch.
+- develop - ![Current v4 Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v4-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) -  (Beta/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch. **Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.** This version is updated immediately.
 
-> ~~**Warning: You may not be able to go back to `main` after switching to this branch.** On GitHub, this is the `develop` branch.~~
-{.is-danger}
-
-- v4 develop - ![Current v4 Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=v4-preview&query=%24%5B%27v4-preview%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) -  (Alpha/Unstable) : **For Non-Docker users the branch is `develop` once v4 is installed. For Docker users this is likely the `develop` tag** This is the bleeding edge for Sonarr v4 Beta. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch. On GitHub, this is the `develop` branch.
-
-> **Warning: You are not able to go back to (v3) `main` or (v3) `develop` after switching to the v4 branch without reinstalling and locating a v3 backup.** On GitHub, this is the `develop` branch.
+> **Warning: You may not be able to go back to `main` after switching to this branch.** On GitHub, this is the `develop` branch.
 {.is-danger}
 
 > v3 **non-docker** installs **cannot** be upgraded directly to v4 and require installing Sonarr v4
@@ -314,10 +288,10 @@ If you have adjusted your your Series Name format after Sonarr has already creat
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
 
-|                                                                    | `main` (stable) ![Current Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v3-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v3) (beta) ![Current v3 Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v3-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v4) (v4 beta) ![Current v4 Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=v4-preview&query=%24%5B%27v4-preview%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [hotio](https://hotio.dev/containers/sonarr)                       | `release`                                                                                                                                                                                             | `nightly`                                                                                                                                                                                                           | `v4`                                                                                                                                                                                                              |
-| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `latest`                                                                                                                                                                                              | `3.0.10`                                                                                                                                                                                                            | `develop`                                                                                                                                                                                                         |
+|                                                                    | `main` (v4 stable) ![Current v4 Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v4-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) | `develop` (v4 beta) ![Current v4 Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v4-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) |
+|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [hotio](https://hotio.dev/containers/sonarr)                       | `release`                                                                                                                                                                                                   | `nightly`                                                                                                                                                                                                         |
+| [LinuxServer.io](https://docs.linuxserver.io/images/docker-sonarr) | `latest`                                                                                                                                                                                                    | `develop`                                                                                                                                                                                                         |
 
 ### Installing a newer version
 
