@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2024-01-16T22:39:49.481Z
+date: 2024-01-16T22:40:27.135Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -44,7 +44,7 @@ dateCreated: 2021-06-11T23:29:12.300Z
   - [Root Folders](#root-folders)
 - [Profiles](#profiles)
   - [Quality Profiles](#quality-profiles)
-  - [Language Profiles](#language-profiles)
+  - [Custom Formats](#custom-formats-1)
   - [Delay Profiles](#delay-profiles)
     - [Uses](#uses)
     - [How Delay Profiles Work](#how-delay-profiles-work)
@@ -52,7 +52,6 @@ dateCreated: 2021-06-11T23:29:12.300Z
         - [Example 1](#example-1)
         - [Example 2](#example-2)
         - [Example 3](#example-3)
-  - [Release Profiles](#release-profiles)
 - [Quality](#quality-1)
   - [Quality Table Meanings](#quality-table-meanings)
   - [Qualities Defined](#qualities-defined)
