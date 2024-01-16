@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2023-12-23T04:55:22.901Z
+date: 2024-01-16T22:39:49.481Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -424,20 +424,70 @@ Name for the `Specials` (Season) folder
 > By default the qualities are set from lowest (bottom) to highest (top)
 {.is-info}
 
-## Language Profiles
+# Custom Formats
 
-- Set profiles for the language of series you're looking to download.
+{#custom-formats-2}
 
-> Please note that the priority / order does matter even if the language is not wanted (selected).
+- Ensure you get the right release every time! Custom formats allows fine control over release prioritization and selection. As simple as a single preferred word or as complex as you want with multiple criteria and regex.
+- Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
+- Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
+- It's strongly recommended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
+  - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
+  - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
+
+---
+
+- Name - The Name of the Custom Format
+- Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
+
+> Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses.
 {.is-info}
 
-- Name - Select a **UNIQUE** name for the language profile you are creating
-- Upgrades allowed - If unchecked (disabled) languages will not be upgraded. For example, if you tell Sonarr download a Chinese version as it is the first release of a specific series then later somebody is able to upload an English version then with this selected Sonarr will automatically upgrade to the better quality
+Profiles is where Custom Format Scores are configured.  
 
-> This is only valid if English is higher in the language list than Chinese and both are selected
-{.is-warning}
+## Custom Format Conditions
 
-- Languages - Languages higher in the list are more preferred. Only checked languages are wanted
+### Modifiers
+
+- Negate - the match is inverted, so the condition is satisfied if and only if the non-negated condition is not satisfied
+- Required - only applies to formats with more than one condition of the same type and changes the matching rules for type groups. Enabling this option means that this specific condition must be satisfied for the whole custom format to apply regardless of if another condition of the same type would otherwise satisfy the type group. **Note: You only use this if you use a condition more than once. In other words, if you have a custom format with 2 required release title conditions and 3 non required language conditions, then it MUST meet BOTH of the required release title conditions and it MUST meet ONE OF the 3 language conditions.** Similarly, if you have a custom format with 4 release title conditions and none are required, then the custom format will apply if ANY of the conditions are met.
+
+### Conditions
+
+> **Different Condition Types** act as `and` within the same Custom Format.  **Multiple Conditions of the same type** act as `or` unless Required is used
+{.is-info}
+
+- **Any conditions that use RegEx are case insensitive**
+- Note the following GitHub Issues
+  - [Improve CF Comparison Between Release and File #5598](https://github.com/Sonarr/Sonarr/issues/5598)
+- Release Title - This is a regular expression matched against the release title and, after download, the filename on disk.
+  - Note: Sonarr only considers text after the series title which means anything preceding the title is ignored.
+- Language - This language is matched against any language(s) Sonarr parses. All languages previously selectable in profiles work here.
+- Source - The source where a release was ripped from (e.g. BLURAY).
+- Resolution - The resolution parsed from either the release name or media info (if available).
+- Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
+- Group - This is matched against the group that Sonarr parses based on Sonarr's group detection logic.
+
+### Profiling Settings and Ranking
+
+- Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded.
+- A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
+- The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected.
+  - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
+  - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
+- [Please see TRaSH's Guides for how to setup and use custom formats](https://trash-guides.info/Sonarr/Sonarr-setup-custom-formats/)
+
+#### Importing / Exporting Custom Formats
+
+- [Please see TRaSH's Guides for how to import/export custom formats.](https://trash-guides.info/Sonarr/Sonarr-import-custom-formats/) However, one is able to import and export custom formats.
+
+#### Importing / Updating Existing Custom Formats
+
+- [Please see TRaSH's Guides for how to import or update existing custom formats.](https://trash-guides.info/Sonarr/Sonarr-how-to-update-custom-formats/)
+
+### Collection of Custom Formats
+
+- [TRaSH maintains a collection of custom formats](https://trash-guides.info/Sonarr/Sonarr-collection-of-custom-formats/)
 
 ## Delay Profiles
 
