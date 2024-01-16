@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-01-16T22:21:33.138Z
+date: 2024-01-16T22:22:01.130Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -323,10 +323,6 @@ If you have adjusted your your Series Name format after Sonarr has already creat
     - `The DataMapper was unable to load the following field: 'Languages' value`
     - `ID does not match a known language Parameter name: id`
     - Other similar database errors around missing columns or tables.
-- **August 7 2022 Update**
-  - `3.0.9.1549` has been released as main/stable
-  - For those on develop and are still on `3.0.9.1549` or lower you can safely downgrade to main
-  - If you are on a newer version you *may be stuck* on nightly/develop until a new stable release is cut. If you have a backup from prior to upgrading past the version noted above, you can reinstall and restore the backup. Check with the development team to see if you can safely downgrade.
 
 # Sonarr and Series Issues + Metadata
 
