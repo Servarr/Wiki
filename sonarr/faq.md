@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-01-16T22:22:01.130Z
+date: 2024-01-17T13:03:55.253Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -542,8 +542,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I am getting an error: Database disk image is malformed
 
-> You may receive this after upgrading sqlite3 to 3.41. Sonarr v3.0.9 does not support sqlite3 3.41 due to a breaking default change. [Details on the issue can be found in Sonarr GHI #5464](https://github.com/Sonarr/Sonarr/issues/5464)
-> This is resolved with Sonarr v3.0.10 and users should upgrade Sonarr accordingly.
+> Database corruption occurring when upgrading to v4 means your existing v3 database is corrupt. v4 does not create database corruption. Downgrading to v3 or staying on v3 does not and will never fix the underlying corruption. **Sonarr v3 is end of life and unsupported**
 {.is-warning}
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
