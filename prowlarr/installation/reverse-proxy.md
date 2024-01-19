@@ -2,7 +2,7 @@
 title: reverse-proxy
 description: 
 published: true
-date: 2023-10-22T17:42:25.578Z
+date: 2024-01-19T23:44:51.382Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:11:34.526Z
@@ -54,15 +54,17 @@ server {
 }
 ```
 
-Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Radarr at `yourdomain.tld/radarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Prowlarr at `yourdomain.tld/prowlarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
 
 ### Subdomain
 
-Alternatively you can use a subdomain for radarr. In this case you would visit `radarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
+Alternatively you can use a subdomain for prowlarr. In this case you would visit `prowlarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
 > Many free DNS providers do not support this {.is-warning}
+
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
-> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5).
+> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `9696` and Prowlarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `prowlarr` is chosen (line 5).
 {.is-info}
+
 > If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port`
 {.is-warning}
 
@@ -115,7 +117,7 @@ If you implement any additional authentication through Apache, you should exclud
 
 - `/prowlarr/api/`
 
-### Using SSL on the reverse proxy
+### Using SSL on the Apache reverse proxy
 
 If the reverse proxy does SSL termination (i.e. the URL to access the reverse proxy is using the `https://` protocol), then you need to tell Prowlarr that it should use `https://` for its API responses by setting the `X-Forwarded-Proto` correctly. The common way is to add the following lines under the `ProxyPassReverse` configuration:
 
