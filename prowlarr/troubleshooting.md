@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2023-08-20T00:20:04.841Z
+date: 2024-01-20T01:59:15.987Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -172,7 +172,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ## Resolving the issue
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/prowlarr) or swing by our [discord](https://prowlarr.com/discord). If there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any pinned github issues), please swing by our [discord](https://prowlarr.com/discord). If there are others with the same issue, then rest assured we are working on it.
 
 > Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
 
@@ -235,7 +235,8 @@ This is typically caused by:
 
 - This is typically due to running an end of life (EOL) version of Sonarr which does not have the v3 API endpoints
 - Prowlarr does not support Sonarr v2
-- Prowlarr only supports Sonarr v3
+- Prowlarr only supports Sonarr v3 and v4
+  - Note that Sonarr v3 is end of life and support may be dropped at any time.
 
 ## \*Arr HTTP 400 Errors
 
@@ -253,6 +254,9 @@ This is typically caused by:
 - If the issue is Prowlarr caused then please file a bug report.
 
 ## Searches Indexers and Trackers
+
+> Refer to the first FAQ question for the \*Arrs for how they work - searches are not automatically executed. For other troubleshooting, refer to the articles below.
+{.is-info}
 
 - [Lidarr Searching & Indexers](/lidarr/troubleshooting#searches-indexers-and-trackers)
 - [Radarr Searching & Indexers](/radarr/troubleshooting#searches-indexers-and-trackers)
