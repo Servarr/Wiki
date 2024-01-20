@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2024-01-16T22:40:27.135Z
+date: 2024-01-20T06:35:36.016Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -138,7 +138,7 @@ Also, note that for each individual settings page, there are some options at the
 ## Episode Naming
 
 - Rename Episodes - Check to enable Sonarr to rename files
-  - If unchecked:
+  - If unchecked (i.e. disabled):
     - Download Client Import
       - Non-Season Pack: Download Client's Release Title is used
       - Season Pack: Original File Name
