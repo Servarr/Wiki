@@ -83,9 +83,9 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 1. Clean solution
 
-  ```shell
-  dotnet clean $slnFile -c Debug
-  ```
+```shell
+dotnet clean src/Prowlarr.sln -c Debug
+```
 
 1. Restore and Build debug configuration for the correct platform (Posix or Windows)
 
