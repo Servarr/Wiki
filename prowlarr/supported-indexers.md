@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-19T01:00:54.590064
+date: 2024-01-22T01:03:18.424803
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-01-19T01:00:54.590064
+dateCreated: 2024-01-22T01:03:18.424803
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.12.2.4210` / [Commit: b53f8d4552d42f25a12252ad53c2fbbf2474ff9a](https://github.com/Prowlarr/Prowlarr/commit/b53f8d4552d42f25a12252ad53c2fbbf2474ff9a)
-  - [Prowlarr Indexers Commit: 0439f6cbbd4c8d31527f9559e8a1cf33b4ba7610](https://github.com/Prowlarr/Indexers/commit/0439f6cbbd4c8d31527f9559e8a1cf33b4ba7610)
+  - Prowlarr Build `1.13.1.4221` / [Commit: dd5b108ffdcff3ba2d2d4571253f691329e4230c](https://github.com/Prowlarr/Prowlarr/commit/dd5b108ffdcff3ba2d2d4571253f691329e4230c)
+  - [Prowlarr Indexers Commit: 2728a96ac5cf92b1ec715765a0c33023e48c1e60](https://github.com/Prowlarr/Indexers/commit/2728a96ac5cf92b1ec715765a0c33023e48c1e60)
 
 ---
 
@@ -117,7 +117,7 @@ dateCreated: 2024-01-19T01:00:54.590064
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq291.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq292.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir130.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -577,10 +577,11 @@ dateCreated: 2024-01-19T01:00:54.590064
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Red Leaves](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[RPTorrents (RPT)](https://rptscene.xyz/){#rptorrents-api}|RPTorrents (RPT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[RPTScene](https://rptscene.xyz/){#rptscene-api}|RPTScene (RPTorrents) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Shadowflow](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
+|[Toca Share](https://tocashare.com/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Portugal)|
 |[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
