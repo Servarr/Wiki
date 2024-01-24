@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-22T01:03:18.424803
+date: 2024-01-24T01:02:15.623617
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-01-22T01:03:18.424803
+dateCreated: 2024-01-24T01:02:15.623617
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.13.1.4221` / [Commit: dd5b108ffdcff3ba2d2d4571253f691329e4230c](https://github.com/Prowlarr/Prowlarr/commit/dd5b108ffdcff3ba2d2d4571253f691329e4230c)
-  - [Prowlarr Indexers Commit: 2728a96ac5cf92b1ec715765a0c33023e48c1e60](https://github.com/Prowlarr/Indexers/commit/2728a96ac5cf92b1ec715765a0c33023e48c1e60)
+  - Prowlarr Build `1.13.1.4229` / [Commit: 5d2b80d15a2ccde010a4966efbbaea130c3d92d1](https://github.com/Prowlarr/Prowlarr/commit/5d2b80d15a2ccde010a4966efbbaea130c3d92d1)
+  - [Prowlarr Indexers Commit: c7bf26c86eadcfc21a16fd4beeec810f0346919d](https://github.com/Prowlarr/Indexers/commit/c7bf26c86eadcfc21a16fd4beeec810f0346919d)
 
 ---
 
@@ -264,7 +264,6 @@ dateCreated: 2024-01-22T01:03:18.424803
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[Bithorlo](https://www.bithorlo.info/){#bithorlo}|Bithorlo (BHO) is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
-|[BitSexy](https://bitsexy.org/){#bitsexy}|BitSexy is a Private Torrent Tracker for 3X|English (United States)|
 |[Bitspyder](https://bitspyder.net/){#bitspyder}|Bitspyder is a Private site for Educational BOOKS / AUDIO|English (United States)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
 |[Bj-Share](https://bj-share.info/){#bjshare}|Private PT-BR torrent|Portuguese (Brazil)|
