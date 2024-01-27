@@ -257,13 +257,14 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 
 > The same process applies for moving/changing Series paths as well{.is-info}
 
-If you have adjusted your your Series Name format after Sonarr has already created some Series folders, Sonarr will not automatically rename existing folders. In order to trigger a rename of these folders the following steps should be taken:
+If you have adjusted your Series Name format after Sonarr has already created some Series folders, Sonarr will not automatically rename existing folders. In order to trigger a rename of these folders the following steps should be taken:
 
 1. Series
-1. Mass Editor
+1. Click on "Select Series"
 1. Select what series need their folder renamed
+1. Click on "Edit"
 1. Change Root Folder to the same Root Folder that the series currently exist in
-1. Select "Yes move files" to have
+1. Select "Yes, move the files"
 
 > If you are using Plex or Emby, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 {.is-warning}

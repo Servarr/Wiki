@@ -176,10 +176,11 @@ As of Lidarr v2, Authentication is Mandatory.
 {.is-info}
 
 1. Library
-1. Mass Editor
+1. Click on "Select Artists"
 1. Select what artists need their folder renamed
+1. Click on "Edit"
 1. Change Root Folder to the same Root Folder that the artists currently exist in
-1. Select "Yes move files"
+1. Select "Yes, move the files"
 
 ## How can I mass delete artists from the wanted list?
 

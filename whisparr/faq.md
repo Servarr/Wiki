@@ -308,7 +308,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 1. Movie Editor
 1. Select what movies need their folder renamed
 1. Change Root Folder to the same Root Folder that the movies currently exist in
-1. Select "Yes move files"
+1. Select "Yes, move the files"
 
 > If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 {.is-warning}
