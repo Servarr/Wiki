@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-27T10:03:26.994Z
+date: 2024-01-27T10:05:43.365Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-09-06T17:37:40.680Z
@@ -25,7 +25,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
+|[Секс видео](https://nice-sex.online/){#Nice Sex}|Самое лучшее секс видео и порно смотрите онлайн бесплатно без регистрации. fansub groups of anime|English (United States)|
 |[0Magnet](https://0magnet.co/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
