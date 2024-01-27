@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-27T10:06:20.663Z
+date: 2024-01-27T10:10:21.485Z
 tags: prowlarr, indexers
 editor: markdown
 dateCreated: 2021-09-06T17:37:40.680Z
@@ -672,4 +672,4 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |NZBStars{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Tabula Rasa{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Generic Newznab{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
-Смотреть порно с животными на - https://bestiality-sex.online/
+|[Bestiality sex](https://bestiality-sex.online/){#zoo}|Лучшее порно с животными. Зоо секс онлайн бесплатно. / Zoo|Russian (Russian)|
