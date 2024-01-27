@@ -155,7 +155,7 @@ This change was due to not have our server get killed by people updating lists e
 
 - Readarr has a hardcoded minimum percent match threshold when comparing the to-be-imported file against the book and author. Matches below this threshold will need to be manually imported.
 - This is not user configurable.
-- Currently this is 80% [1-_bookThreshold](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/MediaFiles/BookImport/Specifications/CloseAlbumMatchSpecification.cs#L11)
+- Currently, this is 80% [1-_bookThreshold](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/MediaFiles/BookImport/Specifications/CloseAlbumMatchSpecification.cs#L11)
 - The development team is considering lowering this to somewhere in the 70%s. If you have false negative matches between 70% and 80% please share them with us on discord.
 
 ## How can I rename my author folders?
@@ -164,11 +164,11 @@ This change was due to not have our server get killed by people updating lists e
 
 > The same process applies for moving/changing Author paths as well{.is-info}
 
-1. Author
-1. Author Editor
+1. Authors
+1. Click on "Author Editor"
 1. Select what authors need their folder renamed
 1. Change Root Folder to the same Root Folder that the authors currently exist in
-1. Select "Yes move files"
+1. Select "Yes, move the files"
 
 ## How can I mass delete authors from the wanted list?
 

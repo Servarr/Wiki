@@ -351,10 +351,11 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 {.is-info}
 
 1. Movies
-1. Movie Editor
+1. Click on "Edit Movies"
 1. Select what movies need their folder renamed
+1. Click on "Edit"
 1. Change Root Folder to the same Root Folder that the movies currently exist in
-1. Select "Yes move files"
+1. Select "Yes, move the files"
 
 > If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 {.is-warning}
