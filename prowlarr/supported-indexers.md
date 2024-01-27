@@ -2,7 +2,7 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-27T10:16:03.385Z
+date: 2024-01-27T10:30:24.399Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-06T17:37:40.680Z
@@ -62,7 +62,12 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.nz/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a Public HUNGARIAN site|Hungarian (Hungary)|
+|[Секс видео](https://nice-sex.online/){#Nice Sex}|Самое лучшее секс видео и порно смотрите онлайн бесплатно без регистрации |Russian (Русское порно)|
+|[Дойки порно](https://dojki.xxx/){#Dojki XXX}|Дойки XXX - бесплатное порно видео разных жанров онлайн в HD качестве |Russian (Порно Дойки)|
+
+|[Brazzers порно](https://brazzers-xxx.top){#Brazzers XXX}|Brazzers - самое новое порно видео разных жанров от Канадской студии Бразерс. Смотрите онлайн лучшие порно ролики в HD качестве абсолютно бесплатно и без регистрации 24/7/365. |Russian (Порно Бразерс)|
 |[JAV-Torrent](https://jav-torrent.org/){#jav-torrent}|JAV-Torrent is a Public tracker for Asian 3X (JAV)|English (United States)|
+|[bestiality sex](https://bestiality-sex.online/){#bestiality sex}|Bestiality-sex - бесплатное порно видео с животными онлайн |Russian (Порно bestiality)|
 |[kickasstorrents\.to](https://kickasstorrents.to/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
 |[Knaben](https://knaben.eu/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
