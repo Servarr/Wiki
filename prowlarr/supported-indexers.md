@@ -2,12 +2,13 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-27T10:10:46.607Z
-tags: prowlarr, indexers
+date: 2024-01-27T10:16:03.385Z
+tags: 
 editor: markdown
 dateCreated: 2021-09-06T17:37:40.680Z
 ---
 
+- Supported Trackers and Indexers as of
   - Prowlarr Build `1.13.1.4243` / [Commit: f7bf21df6880d4ad813eb064a9cd3c3ad774e6ca](https://github.com/Prowlarr/Prowlarr/commit/f7bf21df6880d4ad813eb064a9cd3c3ad774e6ca)
   - [Prowlarr Indexers Commit: 2417ee93a3183e7970e65166b5c7b0453fc083da](https://github.com/Prowlarr/Indexers/commit/2417ee93a3183e7970e65166b5c7b0453fc083da)
 
@@ -24,7 +25,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[Секс видео](https://nice-sex.online/){#Nice Sex}|Самое лучшее секс видео и порно смотрите онлайн бесплатно без регистрации. fansub groups of anime|Russian (Русское порно)|
+|[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[0Magnet](https://0magnet.co/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
@@ -63,7 +64,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a Public HUNGARIAN site|Hungarian (Hungary)|
 |[JAV-Torrent](https://jav-torrent.org/){#jav-torrent}|JAV-Torrent is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[kickasstorrents\.to](https://kickasstorrents.to/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
-|[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|[](/https://bestiality-sex.online/)
+|[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
 |[Knaben](https://knaben.eu/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|English (United States)|
 |[LimeTorrents](https://www.limetorrents.lol/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|English (United States)|
