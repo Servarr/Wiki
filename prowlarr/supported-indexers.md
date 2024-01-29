@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-27T17:22:49.712Z
-tags: 
+date: 2024-01-29T00:56:58.276070
+tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2021-09-06T17:37:40.680Z
+dateCreated: 2024-01-29T00:56:58.276070
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.13.1.4243` / [Commit: f7bf21df6880d4ad813eb064a9cd3c3ad774e6ca](https://github.com/Prowlarr/Prowlarr/commit/f7bf21df6880d4ad813eb064a9cd3c3ad774e6ca)
-  - [Prowlarr Indexers Commit: 2417ee93a3183e7970e65166b5c7b0453fc083da](https://github.com/Prowlarr/Indexers/commit/2417ee93a3183e7970e65166b5c7b0453fc083da)
+  - Prowlarr Build `1.13.2.4245` / [Commit: 8cf892124cedff4f168d3ba1dfeb0b2c86b9fa2f](https://github.com/Prowlarr/Prowlarr/commit/8cf892124cedff4f168d3ba1dfeb0b2c86b9fa2f)
+  - [Prowlarr Indexers Commit: 6f653141c446527466e38a0801c603d44a2c5754](https://github.com/Prowlarr/Indexers/commit/6f653141c446527466e38a0801c603d44a2c5754)
 
 ---
 
@@ -54,7 +54,7 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.wf/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.wtf/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -106,8 +106,8 @@ dateCreated: 2021-09-06T17:37:40.680Z
 |[Torlock](https://www.torlock2.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.torrent911.cx/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.st/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.torrent911.vc/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.boo/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
