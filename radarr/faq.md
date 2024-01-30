@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2024-01-12T02:18:35.847Z
+date: 2024-01-30T15:25:36.377Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -413,10 +413,6 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 ## I am getting an error: Database disk image is malformed
 
-> \* For Radarr users experiencing this after upgrading to v4.X versions. v4 versions do several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Radarr) the migration will bomb out and fail. This will cause Radarr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue.
-> \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Radarr with the recovered backup file. It should then migrate without issues.
-{.is-warning}
-
 - **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` or generic `database disk image is malformed` with no specified database indicate issues with radarr.db**
@@ -509,12 +505,6 @@ Depending on your OS, there are multiple possible ways.
 
 - Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/unpackerr/unpackerr).
 
-## uTorrent is no longer working
-
-- Ensure the Web UI is enabled
-- Ensure that the Alt Listening Port (Advanced => Web UI) is not the same as the Listening Port (Connections)
-- We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
-
 ## I got a pop-up that said config.xml was corrupt, what now?
 
 - Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
@@ -555,6 +545,17 @@ Depending on your OS, there are multiple possible ways.
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
+
+## What is this new "*Override and add to download queue*" button?
+
+When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
+
+- Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Radarr decide which client to use.
+- Override Radarr's parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
+  - Movie
+  - Quality
+  - Language
+- *Note that this overruled information is not carried over to the import logic and manual imports may be required*
 
 ## Jackett shows more results than when manually searching
   
