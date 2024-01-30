@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-01-29T00:56:58.276070
+date: 2024-01-30T00:56:07.458202
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-01-29T00:56:58.276070
+dateCreated: 2024-01-30T00:56:07.458202
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.13.2.4245` / [Commit: 8cf892124cedff4f168d3ba1dfeb0b2c86b9fa2f](https://github.com/Prowlarr/Prowlarr/commit/8cf892124cedff4f168d3ba1dfeb0b2c86b9fa2f)
-  - [Prowlarr Indexers Commit: 6f653141c446527466e38a0801c603d44a2c5754](https://github.com/Prowlarr/Indexers/commit/6f653141c446527466e38a0801c603d44a2c5754)
+  - [Prowlarr Indexers Commit: 2cc360d82ff552628a306fd9986c7784c8f1559d](https://github.com/Prowlarr/Indexers/commit/2cc360d82ff552628a306fd9986c7784c8f1559d)
 
 ---
 
@@ -415,7 +415,7 @@ dateCreated: 2024-01-29T00:56:58.276070
 |[OpenCD](https://open.cd/){#opencd}|OpenCD is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
 |[OshenPT](http://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD Movies, TV, Music|Chinese (China)|
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[P2PBG](http://p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[P2PBG](http://www.p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Party-Tracker](https://party-tracker.info/){#party-tracker}|Party-Tracker is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Peeratiko](https://peeratiko.org/){#peeratiko}|Peeratiko is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[Peers\.FM](https://peers.fm/){#peersfm}|Peers\.FM is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
