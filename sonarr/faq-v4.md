@@ -2,7 +2,7 @@
 title: Sonarr v4 FAQ
 description: Sonarr v4 FAQ
 published: true
-date: 2023-10-30T02:09:28.676Z
+date: 2024-01-30T15:22:32.557Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -171,6 +171,7 @@ When doing an interactive search a second download button has been added titled 
   - Episode(s)
   - Quality
   - Language
+- *Note that this overruled information is not carried over to the import logic and manual imports may be required*
 
 ## Where has the Mass Editor gone?
 
