@@ -14,6 +14,8 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How does Lidarr work?](#how-does-lidarr-work)
   - [How does Lidarr find releases?](#how-does-lidarr-find-releases)
   - [Forced Authentication](#forced-authentication)
+    - [Authentication Method](#authentication-method)
+    - [Authentication Required](#authentication-required)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
   - [Lidarr stopped working after updating to Ubuntu 22.04](#lidarr-stopped-working-after-updating-to-ubuntu-2204)
   - [Why can I not add a new release or artist to Lidarr?](#why-can-i-not-add-a-new-release-or-artist-to-lidarr)
@@ -58,6 +60,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Weird UI Issues](#weird-ui-issues)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
+    - [Use of a VPN](#use-of-a-vpn)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
     - [Jackett /All Solutions](#jackett-all-solutions)
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
@@ -134,7 +137,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Can I add just an album?
 
-- Not at the moment.
+- Yes, but when adding an album you also be prompted to add the artist. Changing both monitoring options to `none` will add add only the current album.
 
 ## Can I download single tracks?
 
