@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2023-10-30T02:08:46.401Z
+date: 2024-02-04T16:31:03.639Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -137,7 +137,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Can I add just an album?
 
-- Yes, but when adding an album you also be prompted to add the artist. Changing both monitoring options to `none` will add add only the current album.
+- Yes, but when adding an album you also be prompted to add the artist. Changing both monitoring options to `none` will add only the current album.
 
 ## Can I download single tracks?
 
