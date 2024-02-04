@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2024-02-04T16:55:43.813Z
+date: 2024-02-04T17:18:43.229Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -195,7 +195,7 @@ Newer builds of Lidarr support limiting the tag length to an arbitrary interger.
 
 > Do not end a file or directory name with a space or a period. Although the underlying file system may support such names, the Windows shell and user interface does not.
 
-When this occurs, you must rename the folder using WSL to make it accessable again. 
+When this occurs, you must rename the folder using WSL to make it accessible again. 
 
 ```console
 mv <foldername...> <foldername>
