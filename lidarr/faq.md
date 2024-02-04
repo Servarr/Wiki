@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2024-02-04T16:31:03.639Z
+date: 2024-02-04T16:55:43.813Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -184,6 +184,22 @@ As of Lidarr v2, Authentication is Mandatory.
 1. Click on "Edit"
 1. Change Root Folder to the same Root Folder that the artists currently exist in
 1. Select "Yes, move the files"
+
+## Why Does Lidarr Keep Trying To Rename the Same Folders?
+
+ - During rename operations, Lidarr will attempt to rename folders to the correct case. On Windows, this operation will appear to succeed but no changes are made. The current solution is to manually correct these paths. 
+
+## Why Can’t I Access a Folder in Windows After Lidarr Rename
+
+Newer builds of Lidarr support limiting the tag length to an arbitrary interger. The tag is truncated and a three periods are added to the end of the folder name. [Windows](https://learn.microsoft.com/windows/win32/fileio/naming-a-file#naming-conventions) does support some characters at the end of folder names, and the folder will become inaccessable. 
+
+> Do not end a file or directory name with a space or a period. Although the underlying file system may support such names, the Windows shell and user interface does not.
+
+When this occurs, you must rename the folder using WSL to make it accessable again. 
+
+```console
+mv <foldername...> <foldername>
+```
 
 ## How can I mass delete artists from the wanted list?
 
