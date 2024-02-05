@@ -28,13 +28,13 @@ dateCreated: 2021-06-20T20:05:25.223Z
     - [Manually upgrading](#manually-upgrading)
 - [NGINX errors](#nginx-errors)
 - [Indexer, Application, and Download Client Issues](#indexer-application-and-download-client-issues)
-  - [Cannot determine the frame size or a corrupted frame was received](##cannot-determine-the-frame-size-or-a-corrupted-frame-was-received)
+  - [Cannot determine the frame size or a corrupted frame was received](#cannot-determine-the-frame-size-or-a-corrupted-frame-was-received)
   - [Connection Timed Out](#connection-timed-out)
   - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
   - [\*Arr HTTP 400 Errors](#arr-http-400-errors)
   - [503 HTTP Service Unavailable](#503-http-service-unavailable)
   - [Invalid Torrents](#invalid-torrents)
-  - [Searching & Indexers](#searches-indexers-and-trackers)
+  - [Searches Indexers and Trackers](#searches-indexers-and-trackers)
 
 # Asking for Help
 
@@ -74,6 +74,7 @@ To provide good and useful logs for sharing:
 6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
 **Warnings:**
+
 - **Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
 - Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
 - Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
@@ -83,6 +84,7 @@ To provide good and useful logs for sharing:
 - Do not share console output, docker container output, or anything other than the application logs specified
 
 **Important Note:**
+
 - When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.

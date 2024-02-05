@@ -12,10 +12,12 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 - [Table of Contents](#table-of-contents)
   - [Forced Authentication](#forced-authentication)
+    - [Authentication Method](#authentication-method)
+    - [Authentication Required](#authentication-required)
   - [How do I reset Stats?](#how-do-i-reset-stats)
   - [Category Not Available or Missing](#category-not-available-or-missing)
-  - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
   - [Can I add any (generic) Torrent RSS Feed?](#can-i-add-any-generic-torrent-rss-feed)
+  - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
   - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
   - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
@@ -44,12 +46,12 @@ dateCreated: 2021-11-03T03:01:18.079Z
       - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
   - [WebUI only Loads at localhost on Windows](#webui-only-loads-at-localhost-on-windows)
   - [Finding Cookies](#finding-cookies)
-  - [uTorrent is no longer working](#utorrent-is-no-longer-working)
   - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
   - [Help I have locked myself out](#help-i-have-locked-myself-out)
   - [Weird UI Issues](#weird-ui-issues)
-  - [VPNs, Prowlarr, and the \*ARRs](#vpns-jackett-and-the-arrs)
+  - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
+    - [Use of a VPN](#use-of-a-vpn)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
   
@@ -58,6 +60,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 If Prowlarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 As of Prowlarr v1, Authentication is Mandatory.
+
 - `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
