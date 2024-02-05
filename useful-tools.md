@@ -15,48 +15,48 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Recovering a Corrupt DB (UI) (Windows)](#recovering-a-corrupt-db-ui-windows)
   - [Command Line DB Recovery](#command-line-db-recovery)
 - [Finding Cookies](#finding-cookies)
+  - [General Instructions](#general-instructions)
+    - [Notes](#notes)
   - [Chrome](#chrome)
   - [Firefox](#firefox)
 - [Clearing Cookies and Local Storage](#clearing-cookies-and-local-storage)
   - [Chrome](#chrome-1)
   - [Firefox](#firefox-1)
   - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
-  {.links-list}
-- [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs-request-apps-arrs)
-  - [Notifiarr](#notifiarr-fka-discord-notifier)
+- [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs---request-apps-arrs)
+  - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
   - [Petio](#petio)
-  {.links-list}
-- [Other Projects and Programs - \*Arr Related](#other-projects-and-programs-arr-related)
+- [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
     - [LunaSea](#lunasea)
-    - [Radarr & Sonarr Companion - Android App](#radarr-sonarr-companion-android-app)
-    - [nzb360 - Android App](#nzb360-android-app)
-    {.links-list}
+    - [Radarr \& Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
+    - [nzb360 - Android App](#nzb360---android-app)
   - [Lidarr](#lidarr)
     - [AMD](#amd)
     - [AMVD](#amvd)
   - [Radarr](#radarr)
-    - [AMTD](#amtd)
+  - [AMTD](#amtd)
   - [Subtitles](#subtitles)
-    - [Bazarr](#bazarr)
-- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs-torrentsdownloading)
+  - [Bazarr](#bazarr)
+- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs---torrentsdownloading)
   - [Cross-Seed](#cross-seed)
+  - [Toolbarr](#toolbarr)
   - [Unpackerr](#unpackerr)
   - [qBit Management](#qbit-management)
 - [Other Projects and Programs](#other-projects-and-programs)
   - [Filebot](#filebot)
   - [JDupes](#jdupes)
-  - [Cuban's Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
   - [Drazzilb's UserScripts](#drazzilbs-userscripts)
-  - [Just A Bunch Of Plex Scripts (JBOPS)](#just-a-bunch-of-plex-scripts)
+  - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
+  - [Just A Bunch Of Plex Scripts](#just-a-bunch-of-plex-scripts)
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
-  - [tdarr_inform](#tdarr_inform)
-  {.links-list}
-- [Twitter Connect Instructions](#twitter-connect)
+  - [tdarr\_inform](#tdarr_inform)
+  - [Deleterr](#deleterr)
+  - [Twitter Connect](#twitter-connect)
 
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
@@ -296,7 +296,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 - Automatically add cross-seed torrents in paused state (used in conjunction with the [cross-seed script](#cross-seed))
 - Recheck paused torrents sorted by lowest size and resume if completed
 - Remove orphaned files from your root directory that are not referenced by qBittorrent
-- Tag any torrents that have no hard links and utilize Share Limits to remove them 
+- Tag any torrents that have no hard links and utilize Share Limits to remove them
 - Apply Share Limits based on tags and categories
 
 # Other Projects and Programs

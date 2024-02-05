@@ -31,6 +31,8 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [How can I get missing album images? (Cover Art)](#how-can-i-get-missing-album-images-cover-art)
   - [I'm having trouble importing my artists, what could it be?](#im-having-trouble-importing-my-artists-what-could-it-be)
   - [How can I rename my artist folders?](#how-can-i-rename-my-artist-folders)
+  - [Why Does Lidarr Keep Trying To Rename the Same Folders?](#why-does-lidarr-keep-trying-to-rename-the-same-folders)
+  - [Why Can’t I Access a Folder in Windows After Lidarr Rename](#why-cant-i-access-a-folder-in-windows-after-lidarr-rename)
   - [How can I mass delete artists from the wanted list?](#how-can-i-mass-delete-artists-from-the-wanted-list)
   - [Why doesn't Lidarr work behind a reverse proxy](#why-doesnt-lidarr-work-behind-a-reverse-proxy)
   - [How do I update Lidarr?](#how-do-i-update-lidarr)
@@ -84,6 +86,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 If Lidarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 As of Lidarr v2, Authentication is Mandatory.
+
 - `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
@@ -187,15 +190,15 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Why Does Lidarr Keep Trying To Rename the Same Folders?
 
- - During rename operations, Lidarr will attempt to rename folders to the correct case. On Windows, this operation will appear to succeed but no changes are made. The current solution is to manually correct these paths. 
+- During rename operations, Lidarr will attempt to rename folders to the correct case. On Windows, this operation will appear to succeed but no changes are made. The current solution is to manually correct these paths.
 
 ## Why Can’t I Access a Folder in Windows After Lidarr Rename
 
-Newer builds of Lidarr support limiting the tag length to an arbitrary interger. The tag is truncated and a three periods are added to the end of the folder name. [Windows](https://learn.microsoft.com/windows/win32/fileio/naming-a-file#naming-conventions) does support some characters at the end of folder names, and the folder will become inaccessable. 
+Newer builds of Lidarr support limiting the tag length to an arbitrary interger. The tag is truncated and a three periods are added to the end of the folder name. [Windows](https://learn.microsoft.com/windows/win32/fileio/naming-a-file#naming-conventions) does support some characters at the end of folder names, and the folder will become inaccessable.
 
 > Do not end a file or directory name with a space or a period. Although the underlying file system may support such names, the Windows shell and user interface does not.
 
-When this occurs, you must rename the folder using WSL to make it accessible again. 
+When this occurs, you must rename the folder using WSL to make it accessible again.
 
 ```console
 mv <foldername...> <foldername>

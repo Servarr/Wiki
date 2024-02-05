@@ -14,6 +14,8 @@ dateCreated: 2021-05-29T15:57:25.304Z
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
   - [Community Naming Suggestions](#community-naming-suggestions)
+    - [Movie Files](#movie-files)
+    - [Movie Folders](#movie-folders)
   - [Movie Naming](#movie-naming)
     - [Standard Movie Format](#standard-movie-format)
     - [Movie Naming](#movie-naming-1)
@@ -41,6 +43,7 @@ dateCreated: 2021-05-29T15:57:25.304Z
         - [Example 1](#example-1)
         - [Example 2](#example-2)
         - [Example 3](#example-3)
+  - [Release Profiles](#release-profiles)
 - [Quality](#quality-1)
   - [Quality Table Meanings](#quality-table-meanings)
   - [Qualities Defined](#qualities-defined)
@@ -49,8 +52,8 @@ dateCreated: 2021-05-29T15:57:25.304Z
     - [Modifiers](#modifiers)
     - [Conditions](#conditions)
     - [Profiling Settings and Ranking](#profiling-settings-and-ranking)
-      - [Importing / Exporting Custom Formats](#importing-exporting-custom-formats)
-      - [Importing / Updating Existing Custom Formats](#importing-updating-existing-custom-formats)
+      - [Importing / Exporting Custom Formats](#importing--exporting-custom-formats)
+      - [Importing / Updating Existing Custom Formats](#importing--updating-existing-custom-formats)
     - [Collection of Custom Formats](#collection-of-custom-formats)
 - [Indexers](#indexers)
   - [Supported Indexers](#supported-indexers)
@@ -59,7 +62,6 @@ dateCreated: 2021-05-29T15:57:25.304Z
     - [Torrent Tracker Configuration](#torrent-tracker-configuration)
       - [Indexer Flags](#indexer-flags)
   - [Options](#options)
-  - [Restrictions](#restrictions)
 - [Download Clients](#download-clients)
   - [Overview](#overview)
   - [Download Client Processes](#download-client-processes)
@@ -189,7 +191,7 @@ Also, note that for each individual settings page, there are some options at the
 `CleanTitle` [does the following](https://github.com/Radarr/Radarr/blob/5948f564827eabb7afc1e89bf4a5987e3c71dc74/src/NzbDrone.Core/Organizer/FileNameBuilder.cs#L207):
 
 - Replace `&` with `and`
-- Replace `/` and `\` with ` `
+- Replace `/` and `\` with ``
 - Remove `,`,`<`,`>`,`/`,`\`,`;`,`:`,`'`,`|`, `~`,`!`,`?`,`@`,`$`,`%`,`^`,`*`,`-`,`_`,`=` as per the following regex:
 
 ```regex

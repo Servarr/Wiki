@@ -9,16 +9,18 @@ dateCreated: 2023-06-26T02:47:03.542Z
 ---
 
 # Reporting a Bug
-Reporting a bug is as simple as opening a GitHub Issue on the correct project. However, before doing so, please search our list of open issues. If you are unsure as to if the issue you are experiencing is infact a bug, please stop by our discord server and ask first. 
+
+Reporting a bug is as simple as opening a GitHub Issue on the correct project. However, before doing so, please search our list of open issues. If you are unsure as to if the issue you are experiencing is infact a bug, please stop by our discord server and ask first.
 
 ## Bug Reporting Info
+
 When reporting a bug, please be prepared to supply the following information
+
 - Current Behavior
 - Expected Behavior
 - Steps needed to report the issue (be as thourough as possible)
 - Information about your system and the application version you are running
 - Trace Logs (if unsure how to provide these, please checkout [this page](https://wiki.servarr.com/radarr/troubleshooting#logging-and-log-files)
-
 
 ## Bug Reporting Links
 

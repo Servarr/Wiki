@@ -96,33 +96,33 @@ Before starting a migration please ensure that you have run Prowlarr against the
       docker run --rm -v /absolute/path/to/prowlarr.db:/prowlarr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /prowlarr.db "postgresql://qstick:qstick@localhost/prowlarr-main"
       ```
 
-  > If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
-  {.is-warning}
+    > If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
+    {.is-warning}
 
-  > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
-  {.is-info}
+    > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
+    {.is-info}
 
-2. For those having the issues POST-MIGRATION from SQLite run the following:
+1. For those having the issues POST-MIGRATION from SQLite run the following:
 
-```postgres
-select setval('public."ApplicationIndexerMapping_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationIndexerMapping"));
-select setval('public."Applications_Id_seq"', (SELECT MAX("Id")+1 FROM "Applications"));
-select setval('public."ApplicationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationStatus"));
-select setval('public."AppSyncProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "AppSyncProfiles"));
-select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
-select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
-select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
-select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
-select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
-select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
-select setval('public."IndexerDefinitionVersions_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerDefinitionVersions"));
-select setval('public."IndexerProxies_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerProxies"));
-select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
-select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
-select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
-select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
-select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
-select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
-```
+  ```postgres
+  select setval('public."ApplicationIndexerMapping_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationIndexerMapping"));
+  select setval('public."Applications_Id_seq"', (SELECT MAX("Id")+1 FROM "Applications"));
+  select setval('public."ApplicationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationStatus"));
+  select setval('public."AppSyncProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "AppSyncProfiles"));
+  select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+  select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+  select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+  select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+  select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+  select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+  select setval('public."IndexerDefinitionVersions_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerDefinitionVersions"));
+  select setval('public."IndexerProxies_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerProxies"));
+  select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+  select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+  select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+  select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+  select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+  select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+  ```
 
-3. Start Prowlarr
+1. Start Prowlarr

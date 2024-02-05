@@ -34,7 +34,7 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
 - Season Folder - Enable or disable creation and usage of Season folders for this series
 - Tags - Used to assign series to release profiles, delay profiles, indexers, or just to organize your series
 - [ ] Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series
-- [ ] Start search for cutoff unmet episodes - based on your selected monitor settings and only applicable if you have existing files for your episodes in the series folder, search for all existing and monitored episodes in this series that do not meet or exceed your qualtiy profile's cutoff
+- [ ] Start search for cutoff unmet episodes - based on your selected monitor settings and only applicable if you have existing files for your episodes in the series folder, search for all existing and monitored episodes in this series that do not meet or exceed your quality profile's cutoff
 
 # Library Import
 

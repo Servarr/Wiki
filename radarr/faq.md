@@ -16,10 +16,12 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [How does Radarr find movies?](#how-does-radarr-find-movies)
   - [How do I access Radarr from another computer?](#how-do-i-access-radarr-from-another-computer)
   - [Forced Authentication](#forced-authentication)
+    - [Authentication Method](#authentication-method)
+    - [Authentication Required](#authentication-required)
   - [What is Minimum Availability?](#what-is-minimum-availability)
   - [How are possible downloads compared?](#how-are-possible-downloads-compared)
   - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
-  - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
+    - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
   - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
   - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
   - [How do I update Radarr?](#how-do-i-update-radarr)
@@ -38,7 +40,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
       - [Using file system backup](#using-file-system-backup)
       - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
 - [Radarr Common Problems](#radarr-common-problems)
-  - [Error of a task was canceled](#a-task-was-canceled)
+  - [A Task was Canceled](#a-task-was-canceled)
   - [Path is Already Configured for an Existing Movie](#path-is-already-configured-for-an-existing-movie)
   - [How can I rename my movie folders?](#how-can-i-rename-my-movie-folders)
   - [Movie File and Folder Naming](#movie-file-and-folder-naming)
@@ -58,23 +60,26 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Weird UI Issues](#weird-ui-issues)
   - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
   - [Permissions](#permissions)
-  - [System & Logs loads forever](#system-logs-loads-forever)
-  - [Finding Cookies](#finding-cookies)
+  - [System \& Logs loads forever](#system-logs-loads-forever)
   - [Unpack Torrents](#unpack-torrents)
-  - [uTorrent is no longer working](#utorrent-is-no-longer-working)
   - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-- [Radarr Searching and Downloading Common Problems](#radarr-searching-downloading-common-problems)
+    - [Use of a VPN](#use-of-a-vpn)
+- [Radarr Searching \& Downloading Common Problems](#radarr-searching--downloading-common-problems)
   - [Why can I not add a new movie to Radarr?](#why-can-i-not-add-a-new-movie-to-radarr)
-  - [How does Radarr determine the year of a movie?](#how-does-radarr-determine-the-year-of-a-movie)
+  - [What is this new "*Override and add to download queue*" button?](#what-is-this-new-override-and-add-to-download-queue-button)
   - [Jackett shows more results than when manually searching](#jackett-shows-more-results-than-when-manually-searching)
+  - [How does Radarr determine the year of a movie?](#how-does-radarr-determine-the-year-of-a-movie)
   - [How does Radarr handle foreign movies or foreign titles?](#how-does-radarr-handle-foreign-movies-or-foreign-titles)
+  - [ID Searches](#id-searches)
+  - [Text Searches](#text-searches)
+  - [Getting Foreign Movies](#getting-foreign-movies)
   - [How does Radarr handle "multi" in names?](#how-does-radarr-handle-multi-in-names)
   - [Help, Movie Added, But Not Searched](#help-movie-added-but-not-searched)
   - [Jackett's /all Endpoint](#jacketts-all-endpoint)
     - [Jackett /All Solutions](#jackett-all-solutions)
-  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files-why-is-there-a-file-left-in-downloads)
+  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [Why doesn't Radarr work behind a reverse proxy](#why-doesnt-radarr-work-behind-a-reverse-proxy)
 
 # Radarr Basics
@@ -104,6 +109,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
 
 **As of Radarr v5, Authentication is Mandatory.**
+
 - `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method

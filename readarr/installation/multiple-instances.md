@@ -294,10 +294,12 @@ sudo systemctl enable --now -q readarr-audiobooks
 This guide was made and tested with macOS 13 (Ventura), but should work on any version that Readarr supports.
 
 ### Prerequisites
+
 - Must have the Readarr application installed in the `/Applications` folder
 - If Readarr has already been used before, all the data will be lost. Move `~/.config/Readarr` to `~/.config/readarr-books` or `~/.config/readarr-audiobooks` to keep data.
 
 ### Creating Applications (easily start Readarr)
+
 You will create two new applications: "Readarr Books" and "Readarr Audiobooks".
 
 - Open the Automator app
@@ -323,6 +325,7 @@ open -F -n -a Readarr --args -data="$HOME"/.config/readarr-audiobooks
 - View the applications in Finder, optionally change their icons to your liking (via the `Get Info` window).
 
 ### Configuring Instances
+
 Now, you will be setting the ports and names for each instance.
 
 - Pick a port number for each instance. For example, the default `8787` for e-books and `8789` for audiobooks.
@@ -335,6 +338,7 @@ Now, you will be setting the ports and names for each instance.
 - Launch the other instance and do the same.
 
 ### Updates
+
 When you update one instance, the updater shuts both down and only restarts the one you updated. To work around this, a port checker periodic task will be created (adapted but slightly changed from the [Windows guide](#win-portchecker)).
 
 - Disable auto updates in one of the instances, and make sure to never update it.
@@ -364,10 +368,10 @@ function checkport {
 
 # One instance running means both should be
 if checkport "${port0}" && ! checkport "${port1}"; then
-		open -a "${name1}"
+  open -a "${name1}"
     echo "Opened ${name1}" >> "$LOGFILE"
 elif checkport "${port1}" && ! checkport "${port0}"; then
-		open -a "${name0}"
+  open -a "${name0}"
     echo "Opened ${name0}" >> "$LOGFILE"
 fi
 ```

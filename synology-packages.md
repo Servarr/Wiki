@@ -17,7 +17,7 @@ dateCreated: 2022-05-06T13:45:19.731Z
 
 # Servarr Synology Packages
 
-> These packages can be considered "beta". They are not maintained/developed by the Servarr team. No support is available for the packages. Use at your own risk. 
+> These packages can be considered "beta". They are not maintained/developed by the Servarr team. No support is available for the packages. Use at your own risk.
 {.is-danger}
 
 - The Servarr Team now creates and maintains Synology Packages

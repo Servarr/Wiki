@@ -37,6 +37,9 @@ dateCreated: 2021-05-16T20:23:46.192Z
 - [Helpful commands](#helpful-commands)
   - [List running containers](#list-running-containers)
   - [Shell *inside* a container](#shell-inside-a-container)
+    - [Examples as Specific Users](#examples-as-specific-users)
+      - [LSIO Radarr](#lsio-radarr)
+      - [Hotio Sonarr](#hotio-sonarr)
   - [Prune Docker](#prune-docker)
   - [Get docker run command](#get-docker-run-command)
   - [Get docker-compose](#get-docker-compose)
@@ -517,7 +520,7 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
 {.links-list}
 
-### All-in-One Solutions
+## All-in-One Solutions
 
 - [This is a GitHub repository](https://github.com/Luctia/ezarr) aimed at beginners who want to use Docker for their Servarr stack. It is basically a ready-to-go collection of files and only requires you to run two things to get the entire thing online. It removes the hassle around user management and permissions on the host device and features some other applications like PleX.
 
