@@ -60,7 +60,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Weird UI Issues](#weird-ui-issues)
   - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
   - [Permissions](#permissions)
-  - [System \& Logs loads forever](#system--logs-loads-forever)
+  - [System \& Logs loads forever](#system-logs-loads-forever)
   - [Unpack Torrents](#unpack-torrents)
   - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
   - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
