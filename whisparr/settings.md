@@ -581,14 +581,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 #### Indexer Flags
 
 | Flag             | Symbol | Description                                                                                                                                                                                                                 |
-| ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `G_Freeleech`    | ⬇⬇     | Sometimes, torrent sites set a torrent to be freeleech. This means, that the download of this torrent will not count towards your download quota or ratio. This is really useful if you have not built up a good ratio yet. |
 | `G_Halfleech`    | ⇩⇩     | Similar to `G_Freeleech`, `G_Halfleech` signifies that only half of the size of this torrent will count towards your download quota or ratio.                                                                               |
 | `G_DoubleUpload` | ⬆      | Similar to `G_Freeleech`, `G_DoubleUpload` signifies that any amount of data you upload via seeding is counted twice towards your upload quota and ratio. This is very useful, if you want to build up a ratio buffer.      |
-| `PTP_Golden`     | 🌟      | On PassThePopcorn, some torrents are given the *Golden* tag, when they meet certain encoding standards. These are usually the best encodes, with almost no perceptible quality loss. You can learn more on their wiki page. |
+| `PTP_Golden`     | 🌟     | On PassThePopcorn, some torrents are given the *Golden* tag, when they meet certain encoding standards. These are usually the best encodes, with almost no perceptible quality loss. You can learn more on their wiki page. |
 | `PTP_Approved`   | ✔      | On PassThePopcorn, some torrents are approved, when they meet the minimum standards for encoding (e.g., no low bitrates). See their wiki for more information.                                                              |
-| `HDB_Internal`   | 🚪      | Releases on HDBits receive this tag, when the release was uploaded by one of the release groups of HDBits themselves.                                                                                                       |
-| `G_Scene`        | ☠      | Similar to `G_Freeleech`, `G_Scene` signifies a release from a SCENE group.                                                                                                                                                |
+| `G_Scene`        | ☠      | Signifies a release from a SCENE group.                                                                                                                                                                                     |
 | `G_Freeleech75`  | ⇩⬇     | Similar to `G_Freeleech`, `G_Freeleech75` signifies that only 25% of the size of this torrent will count towards your download quota or ratio.                                                                              |
 | `G_Freeleech25`  | ⇩      | Similar to `G_Freeleech`, `G_Freeleech25` signifies that only 75% of the size of this torrent will count towards your download quota or ratio.                                                                              |
 
@@ -604,7 +603,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Prefer Indexer Flags - Prioritize releases with special flags. (See Required Flags above)
 - Availability Delay - Amount of time before (-#) or after (#) the available date to search for Movie
   - This is helpful to delay searching for a release to give the community time to perform the best encodes.
-  - Typically a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
+  - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
   - Please see [How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) for a better understanding of how RSS Sync will help you
 
