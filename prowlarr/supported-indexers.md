@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-06T00:56:10.703646
+date: 2024-02-09T00:55:31.962615
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-06T00:56:10.703646
+dateCreated: 2024-02-09T00:55:31.962615
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.13.2.4251` / [Commit: 21589fda573f930cb3e175fb0107da766da6daf5](https://github.com/Prowlarr/Prowlarr/commit/21589fda573f930cb3e175fb0107da766da6daf5)
-  - [Prowlarr Indexers Commit: 38802b18df08dea5424959793dd430e0f4b1c780](https://github.com/Prowlarr/Indexers/commit/38802b18df08dea5424959793dd430e0f4b1c780)
+  - Prowlarr Build `1.13.3.4259` / [Commit: dd2567a85fde79e417e76a4f3c0410a583451c14](https://github.com/Prowlarr/Prowlarr/commit/dd2567a85fde79e417e76a4f3c0410a583451c14)
+  - [Prowlarr Indexers Commit: 8ff0b728020376cbe269426893fa630a7d308897](https://github.com/Prowlarr/Indexers/commit/8ff0b728020376cbe269426893fa630a7d308897)
 
 ---
 
@@ -103,9 +103,9 @@ dateCreated: 2024-02-06T00:56:10.703646
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|English (United States)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Tokyo Toshokan](https://www.tokyotosho.info/){#tokyotosho}|A BitTorrent Library for Japanese Media|English (United States)|
-|[Torlock](https://www.torlock2.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
+|[Torlock](https://www.torlock.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
-|[Torrent9](https://www.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.torrent911.vc/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent9 clone](https://www.torrent9.kim/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
@@ -117,7 +117,7 @@ dateCreated: 2024-02-06T00:56:10.703646
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq294.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq295.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir132.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
