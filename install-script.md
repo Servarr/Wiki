@@ -2,7 +2,7 @@
 title: Servarr Installation Script
 description: Common Installation Script for the Servarr Suite of Applications
 published: true
-date: 2024-01-29T20:19:07.629Z
+date: 2024-02-14T00:20:15.131Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -44,4 +44,31 @@ curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki
 
 ```shell
 sudo bash servarr-install-script.sh
+```
+
+## Uninstalling
+
+To uninstall and keep your appdata.
+
+### Radarr
+
+```bash
+sudo systemctl stop radarr
+sudo rm -rf /opt/Radarr
+sudo rm -rf /etc/systemd/system/radarr.service
+sudo systemctl -q daemon-reload
+```
+
+## Uninstall and Purge
+
+To uninstall and remove your appdata.
+
+### Radarr
+
+```bash
+sudo systemctl stop radarr
+sudo rm -rf /opt/Radarr
+sudo rm -rf /var/lib/radarr
+sudo rm -rf /etc/systemd/system/radarr.service
+sudo systemctl -q daemon-reload
 ```
