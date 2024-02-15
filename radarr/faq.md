@@ -549,7 +549,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Radarr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
   - TMDb doesn't like special characters to be used when searching for movies through the API (which Radarr uses), so try searching a translated name, and/or without special characters.
-  - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
+  - You can also add by TMDb ID or, if TMDb doesn't have it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
 ## What is this new "*Override and add to download queue*" button?
