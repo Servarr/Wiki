@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-09T00:55:31.962615
+date: 2024-02-15T00:56:32.506424
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-09T00:55:31.962615
+dateCreated: 2024-02-15T00:56:32.506424
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.13.3.4259` / [Commit: dd2567a85fde79e417e76a4f3c0410a583451c14](https://github.com/Prowlarr/Prowlarr/commit/dd2567a85fde79e417e76a4f3c0410a583451c14)
-  - [Prowlarr Indexers Commit: 8ff0b728020376cbe269426893fa630a7d308897](https://github.com/Prowlarr/Indexers/commit/8ff0b728020376cbe269426893fa630a7d308897)
+  - Prowlarr Build `1.14.0.4277` / [Commit: a5ecc2dc9f44bb3821b89625e58232311b2fae27](https://github.com/Prowlarr/Prowlarr/commit/a5ecc2dc9f44bb3821b89625e58232311b2fae27)
+  - [Prowlarr Indexers Commit: 08a2940ccaa03b94527e5719ca364a85ed979fbe](https://github.com/Prowlarr/Indexers/commit/08a2940ccaa03b94527e5719ca364a85ed979fbe)
 
 ---
 
@@ -54,7 +54,7 @@ dateCreated: 2024-02-09T00:55:31.962615
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.wtf/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.vg/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -106,7 +106,7 @@ dateCreated: 2024-02-09T00:55:31.962615
 |[Torlock](https://www.torlock.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.torrent911.vc/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.torrent911.bz/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent9 clone](https://www.torrent9.kim/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
@@ -118,10 +118,9 @@ dateCreated: 2024-02-09T00:55:31.962615
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq295.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir132.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentView](https://viewtorrent17.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentWhiz](https://torrentwiz64.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentz2eu](https://torrentz2beta.in/){#torrentz2eu}|Torrentz2eu is a Public torrent meta-search engine|English (United States)|
+|[TorrentSir](https://torrentsir133.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -140,7 +139,7 @@ dateCreated: 2024-02-09T00:55:31.962615
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
-|[TorrentsCSV](https://torrents-csv.ml/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
+|[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 
 ### Semi-Private Trackers
 
@@ -453,7 +452,7 @@ dateCreated: 2024-02-09T00:55:31.962615
 |[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|A general italian tracker|Italian (Italy)|
 |[SharkPT](https://sharkpt.net/){#sharkpt}|SharkPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[SiamBIT](https://www.siambit.me/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
+|[SiamBIT](https://thaibit.net/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[SkipTheCommercials (API)](https://skipthecommericals.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
 |[SkipTheTrailers](https://skipthetrailers.xyz/){#skipthetrailers}|SkipTheTrailers (STT) is a Private Torrent Tracker for MOVIES|English (United States)|
 |[slosoul](https://slosoul.net/){#slosoul}|slosoul is a Slovanian  Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -581,7 +580,6 @@ dateCreated: 2024-02-09T00:55:31.962615
 |[Shadowflow](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Toca Share](https://tocashare.com/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Portugal)|
-|[ToonsForMe](https://toonsfor.me/){#toonsforme}|ToonsForMe is a Private Tracker for Cartoons/Kids MOVIES / TV|English (United States)|
 |[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
