@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-16T00:55:56.726885
+date: 2024-02-17T16:25:28.063481
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-16T00:55:56.726885
+dateCreated: 2024-02-17T16:25:28.063481
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.0.4285` / [Commit: 858f16195e3f9d0613543f35501ad7740493bcb7](https://github.com/Prowlarr/Prowlarr/commit/858f16195e3f9d0613543f35501ad7740493bcb7)
-  - [Prowlarr Indexers Commit: 6ad06394330dd4a0f777ff3fdfa9c91bf9ec259e](https://github.com/Prowlarr/Indexers/commit/6ad06394330dd4a0f777ff3fdfa9c91bf9ec259e)
+  - Prowlarr Build `1.14.0.4286` / [Commit: 5d35f1dcc7263b10b60a63c835f6683b9da00bee](https://github.com/Prowlarr/Prowlarr/commit/5d35f1dcc7263b10b60a63c835f6683b9da00bee)
+  - [Prowlarr Indexers Commit: 78318b1ff73773fe5ae506cb18b98eab97125829](https://github.com/Prowlarr/Indexers/commit/78318b1ff73773fe5ae506cb18b98eab97125829)
 
 ---
 
@@ -239,6 +239,7 @@ dateCreated: 2024-02-16T00:55:56.726885
 |[ABtorrents](https://abtorrents.me/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Acid-Lounge](https://www.acid-lounge.org.uk/){#acidlounge}|Acid Lounge (A-L) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|English (Australia)|
+|[ADBT](https://adbt.is-into-anime.com/){#adbt}|ADBT (Anime Datenbank Tracker) is a GERMAN Private Tracker for Anime, Hentai and Cartoons|German (Germany)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a Private Torrent Tracker for Female Japanese Idol related files|English (United States)|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
@@ -446,7 +447,7 @@ dateCreated: 2024-02-16T00:55:56.726885
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[RM-HD](https://remastered-hd.org/){#rmhd}|RM-HD (remastered-hd) is a UKRAINIAN Private tracker for remastered MOVIES / TV / MUSIC|Ukrainian (Ukraine)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
-|[RPTScene](https://rptscene.xyz/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
+|[RPTScene](https://rpthd.com/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
