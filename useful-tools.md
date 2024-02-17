@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2023-09-09T21:37:00.698Z
+date: 2024-02-17T01:32:25.609Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -278,7 +278,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Toolbarr
 
-[Toolbarr](https://github.com/Notifiarr/toolbarr) provides a suite of utilities to fix problems with Starr applications. Toolbarr allows you to perform various actions against your Starr apps and their SQLite3 databases. The most useful feature is being able to convert paths from linux to windows and windows to linux.
+[Toolbarr](https://github.com/Notifiarr/toolbarr) provides a suite of utilities to fix problems with Starr applications. Toolbarr allows you to perform various actions against your Starr apps and their SQLite3 databases. The most useful [feature is being able to convert paths from linux to windows and windows to linux](https://github.com/Notifiarr/toolbarr/wiki/Change-Root-Folder).
 
 ## Unpackerr
 
