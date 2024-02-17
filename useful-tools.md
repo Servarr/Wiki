@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2024-02-17T01:32:25.609Z
+date: 2024-02-17T01:32:52.762Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -274,7 +274,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Cross-Seed
 
-[Cross-Seed](https://github.com/mmgoodnow/cross-seed) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
+[Cross-Seed](https://crossseed.org) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
 
 ## Toolbarr
 
@@ -282,7 +282,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Unpackerr
 
-- [Unpackerr](https://github.com/unpackerr/unpackerr) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
+- [Unpackerr](https://unpackerr.zip) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
 
 - There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so he wrote his own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
 
