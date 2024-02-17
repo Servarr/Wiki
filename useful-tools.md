@@ -2,7 +2,7 @@
 title: Useful Tools
 description: 
 published: true
-date: 2024-02-17T01:32:52.762Z
+date: 2024-02-17T01:34:04.726Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -40,7 +40,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [AMTD](#amtd)
   - [Subtitles](#subtitles)
   - [Bazarr](#bazarr)
-- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs---torrentsdownloading)
+- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs-torrentsdownloading)
   - [Cross-Seed](#cross-seed)
   - [Toolbarr](#toolbarr)
   - [Unpackerr](#unpackerr)
@@ -274,7 +274,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Cross-Seed
 
-[Cross-Seed](https://crossseed.org) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
+[Cross-Seed](https://cross-seed.org) is an app designed to help you download torrents that you can cross seed based on your existing torrents. It is designed to match conservatively to minimize manual intervention. It supports Jackett and Qbittorrent/rTorrent at this time.
 
 ## Toolbarr
 
