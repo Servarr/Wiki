@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-17T16:25:28.063481
+date: 2024-02-20T00:55:12.758053
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-17T16:25:28.063481
+dateCreated: 2024-02-20T00:55:12.758053
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.0.4286` / [Commit: 5d35f1dcc7263b10b60a63c835f6683b9da00bee](https://github.com/Prowlarr/Prowlarr/commit/5d35f1dcc7263b10b60a63c835f6683b9da00bee)
-  - [Prowlarr Indexers Commit: 78318b1ff73773fe5ae506cb18b98eab97125829](https://github.com/Prowlarr/Indexers/commit/78318b1ff73773fe5ae506cb18b98eab97125829)
+  - Prowlarr Build `1.14.1.4289` / [Commit: 8c653b5c09f7cff707554238aea0d8e749cbd4a9](https://github.com/Prowlarr/Prowlarr/commit/8c653b5c09f7cff707554238aea0d8e749cbd4a9)
+  - [Prowlarr Indexers Commit: c3f9bb70a56cae43a2783b29057ee2ec30aa8173](https://github.com/Prowlarr/Indexers/commit/c3f9bb70a56cae43a2783b29057ee2ec30aa8173)
 
 ---
 
@@ -297,6 +297,7 @@ dateCreated: 2024-02-17T16:25:28.063481
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\.  Cookie Login for 2FA use|English (United Kingdom)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|English (United States)|
+|[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DesiTorrents (API)](https://desitorrents.tv/){#desitorrents-api}|Desitorrents is a Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / MUSIC|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
