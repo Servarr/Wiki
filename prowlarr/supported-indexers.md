@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-20T00:55:12.758053
+date: 2024-02-21T00:56:23.025065
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-20T00:55:12.758053
+dateCreated: 2024-02-21T00:56:23.025065
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.14.1.4289` / [Commit: 8c653b5c09f7cff707554238aea0d8e749cbd4a9](https://github.com/Prowlarr/Prowlarr/commit/8c653b5c09f7cff707554238aea0d8e749cbd4a9)
-  - [Prowlarr Indexers Commit: c3f9bb70a56cae43a2783b29057ee2ec30aa8173](https://github.com/Prowlarr/Indexers/commit/c3f9bb70a56cae43a2783b29057ee2ec30aa8173)
+  - [Prowlarr Indexers Commit: 255322d73ab775f917185455415e4b3fa7e92dc6](https://github.com/Prowlarr/Indexers/commit/255322d73ab775f917185455415e4b3fa7e92dc6)
 
 ---
 
@@ -43,7 +43,6 @@ dateCreated: 2024-02-20T00:55:12.758053
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://thebyrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|Chinese (China)|
-|[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Public conspiracy related torrent index|English (United States)|
 |[cpasbien](https://cpasbien-vf.pics/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[cpasbien clone](https://www.cpasbien.tw/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
@@ -58,7 +57,6 @@ dateCreated: 2024-02-20T00:55:12.758053
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
-|[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.nz/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a Public HUNGARIAN site|Hungarian (Hungary)|
@@ -292,6 +290,7 @@ dateCreated: 2024-02-20T00:55:12.758053
 |[Cinematik](https://cinematik.net/){#cinematik}|A tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse|English (United States)|
 |[Classix](http://classix-unlimited.co.uk/){#classix}|Classix is a Private Torrent Tracker for classic MOVIES / TV / GENERAL|English (United States)|
 |[Coastal-Crew](https://coastal-crew.bounceme.net/){#coastalcrew}|Coastal-Crew is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Private conspiracy related torrent index|English (United States)|
 |[Concertos](https://concertos.live/){#concertos}|Concertos - Private site for Live Concerts with Strict Quality Control|English (United States)|
 |[CrazySpirits](https://www.crazyspirits.com/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
