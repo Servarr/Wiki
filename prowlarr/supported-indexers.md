@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-21T00:56:23.025065
+date: 2024-02-23T00:55:07.420218
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-21T00:56:23.025065
+dateCreated: 2024-02-23T00:55:07.420218
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.1.4289` / [Commit: 8c653b5c09f7cff707554238aea0d8e749cbd4a9](https://github.com/Prowlarr/Prowlarr/commit/8c653b5c09f7cff707554238aea0d8e749cbd4a9)
-  - [Prowlarr Indexers Commit: 255322d73ab775f917185455415e4b3fa7e92dc6](https://github.com/Prowlarr/Indexers/commit/255322d73ab775f917185455415e4b3fa7e92dc6)
+  - Prowlarr Build `1.14.1.4302` / [Commit: 5f0d6e2fddde77905b5fb5180b549a0f8aae8d96](https://github.com/Prowlarr/Prowlarr/commit/5f0d6e2fddde77905b5fb5180b549a0f8aae8d96)
+  - [Prowlarr Indexers Commit: 4a2e20ea7d5a77d3902304f63ac47f6dc868b53e](https://github.com/Prowlarr/Indexers/commit/4a2e20ea7d5a77d3902304f63ac47f6dc868b53e)
 
 ---
 
@@ -344,7 +344,6 @@ dateCreated: 2024-02-21T00:56:23.025065
 |[HDArea](https://hdarea.club/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDAtmos](https://hdatmos.club/){#hdatmos}|HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDC](https://hdcity.city/){#hdc}|HDC (HDCiTY) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDDolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
 |[HDFun](https://hdzone.me/){#hdfun}|HDFun (HDZone) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -556,7 +555,6 @@ dateCreated: 2024-02-21T00:56:23.025065
 |[HDPT](https://hdpt.xyz/){#hdpt}|HDPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDTorrents\.it](https://hdtorrents.eu/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private site for TV / MOVIES|Italian (Italy)|
 |[hdvbits](https://hdvbits.com/){#hdvbits}|hdvbits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
