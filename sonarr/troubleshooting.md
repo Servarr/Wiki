@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-01-16T18:31:12.209Z
+date: 2024-02-27T04:53:00.387Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -198,7 +198,11 @@ Below are some common problems.
 
 ### Using Sonarr v2
 
-Sonarr v2 has been end of life and not supported since 3/2021. It is not compatible with qBittorrent v4.3.0 or newer. Upgrade to Sonarr v3
+Sonarr v2 has been end of life and not supported since 3/2021. It is not compatible with qBittorrent v4.3.0 or newer. Upgrade to Sonarr v4
+
+### Using Sonarr v3
+
+Sonarr v3 has been end of life since 1/2024. Upgrade to Sonarr v4.
 
 ### Download Client's WebUI is not enabled
 
