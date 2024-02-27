@@ -2,47 +2,44 @@
 title: Davo's Community Lidarr Guide
 description: Like TRaSH Guides, but Davo for Lidarr
 published: true
-date: 2024-02-27T14:22:03.466Z
+date: 2024-02-27T17:39:16.087Z
 tags: lidarr, trash, guide, davo
 editor: markdown
 dateCreated: 2024-02-27T14:10:01.585Z
 ---
 
-This guide is primarily focused on flac quality with mp3-320 as fallback. Since music files are much smaller than other media I prefer to grab flac quality (not 24bit lossless).
-
-Lidarr is designed to follow artists and albums, not singles. If you prefer singles then spotify/apple music is a better fit for you.
+This guide is primarily focused on flac quality with mp3-320 as fallback. Since music files are much smaller than other media I prefer to grab flac quality (not 24 bit lossless). Lidarr is designed to follow artists and albums, not singles. If you prefer singles then spotify/apple music is a better fit for you.
 
 This guide also assumes you are familiar with the basis of the arr apps and will not go into detail about adding indexers, download clients, etc. since that has been covered in other guides.
 
-**Quality settings**
+## Quality settings
 
-Flac
+### Flac
 
-Min - 0 bit/s
+- Min - 0 bit/s
+- Max - 1400 bit/s
 
-Max - 1400 bit/s
+### Flac 24bit
 
-Flac 24bit
-
-Min - 0 bit/s
-
-Max - 1495 bit/s
+- Min - 0 bit/s
+- Max - 1495 bit/s
 
 Minimizes results that are single track releases for an entire album
 
-**Recommended naming scheme**
+## Recommended naming scheme
 
 Ensure advanced settings are enabled and rename tracks/replace illegal character options are checked.
 
-Standard format - {Album Title} {(Album Disambiguation)}/{Artist Name}\_{Album Title}\_{track:00}\_{Track Title}
+Standard format - `{Album Title} {(Album Disambiguation)}/{Artist Name}\_{Album Title}\_{track:00}\_{Track Title}`
 
 - Result: \`Venus Hum/Big Beautiful Sky/Venus Hum_Big Beautiful Sky_01_Hummingbirds.flac\`
 
-Multi-disc format - {Album Title} {(Album Disambiguation)}/{Artist Name}\_{Album Title}\_{medium:00}-{track:00}\_{Track Title}
+Multi-disc format - `{Album Title} {(Album Disambiguation)}/{Artist Name}\_{Album Title}\_{medium:00}-{track:00}\_{Track Title}`
 
 - Result: \`The Smashing Pumpkins/Mellon Collie and the Infinite Sadness/The Smashing Pumpkins_Mellon Collie and the Infinite Sadness_01-01_Mellon Collie and the Infinite Sadness.flac\`
 
-Note: Without {(Album Disambiguation)} you run the risk of tracks for albums that have the same title (such as Weezer (Blue Album and Weezer (Red Album)) all being dumped into the same album folder (Weezer). If there is no disambiguation associated with an album then Lidarr will use the standard folder name.
+> Note: Without {(Album Disambiguation)} you run the risk of tracks for albums that have the same title (such as Weezer (Blue Album and Weezer (Red Album)) all being dumped into the same album folder (Weezer). If there is no disambiguation associated with an album then Lidarr will use the standard folder name.
+{.is-info}
 
 Artist folder format - {Artist Name}
 
