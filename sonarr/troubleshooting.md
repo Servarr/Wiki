@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-02-27T04:53:47.281Z
+date: 2024-02-27T04:54:06.243Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
 
 # Asking for Help
 
-Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
+Do you need help? That's okay, everyone needs help sometimes. You can get help on
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Forums*](https://forums.sonarr.tv/)
