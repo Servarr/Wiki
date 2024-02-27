@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-02-27T04:54:23.077Z
+date: 2024-02-27T04:54:45.102Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -48,7 +48,7 @@ To provide good and useful logs for sharing:
 
 **Warnings:**
 
-- **Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.
+- **Do not use [pastebin.com](https://pastebin.com) as their filters have a tendency to block the logs.**
 - Do not use [pastebin.pl](https://pastebin.pl) as their site is frequently not accessible.
 - Do not use [JustPasteIt](https://justpaste.it/) as their site does not facilitate reviewing logs.
 - Do not upload your log as a file
