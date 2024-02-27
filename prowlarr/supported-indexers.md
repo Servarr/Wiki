@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-23T00:55:07.420218
+date: 2024-02-27T00:55:04.246578
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-23T00:55:07.420218
+dateCreated: 2024-02-27T00:55:04.246578
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.1.4302` / [Commit: 5f0d6e2fddde77905b5fb5180b549a0f8aae8d96](https://github.com/Prowlarr/Prowlarr/commit/5f0d6e2fddde77905b5fb5180b549a0f8aae8d96)
-  - [Prowlarr Indexers Commit: 4a2e20ea7d5a77d3902304f63ac47f6dc868b53e](https://github.com/Prowlarr/Indexers/commit/4a2e20ea7d5a77d3902304f63ac47f6dc868b53e)
+  - Prowlarr Build `1.14.1.4305` / [Commit: ecdc0a51a9ab8355ad9330822d7db9b9c550ae9d](https://github.com/Prowlarr/Prowlarr/commit/ecdc0a51a9ab8355ad9330822d7db9b9c550ae9d)
+  - [Prowlarr Indexers Commit: a298c9d2e44a12a524bebaf5e407beab0ca2a122](https://github.com/Prowlarr/Indexers/commit/a298c9d2e44a12a524bebaf5e407beab0ca2a122)
 
 ---
 
@@ -108,15 +108,14 @@ dateCreated: 2024-02-23T00:55:07.420218
 |[Torrent9 clone](https://www.torrent9.mn/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
-|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq296.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir133.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq297.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir134.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -555,6 +554,7 @@ dateCreated: 2024-02-23T00:55:07.420218
 |[HDPT](https://hdpt.xyz/){#hdpt}|HDPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDTorrents\.it](https://hdtorrents.eu/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private site for TV / MOVIES|Italian (Italy)|
 |[hdvbits](https://hdvbits.com/){#hdvbits}|hdvbits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
