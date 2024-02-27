@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-02-27T04:53:00.387Z
+date: 2024-02-27T04:53:47.281Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -13,7 +13,7 @@ dateCreated: 2021-06-20T19:13:01.108Z
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
+- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Forums*](https://forums.sonarr.tv/)
 {.links-list}
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .net/Mono, version of Sonarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
