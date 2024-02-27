@@ -2,8 +2,8 @@
 title: Davo's Community Lidarr Guide
 description: Like TRaSH Guides, but Davo for Lidarr
 published: true
-date: 2024-02-27T14:21:26.458Z
-tags: 
+date: 2024-02-27T14:22:03.466Z
+tags: lidarr, trash, guide, davo
 editor: markdown
 dateCreated: 2024-02-27T14:10:01.585Z
 ---
