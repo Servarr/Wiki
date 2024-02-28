@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-02-27T00:55:04.246578
+date: 2024-02-28T00:55:08.838045
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-02-27T00:55:04.246578
+dateCreated: 2024-02-28T00:55:08.838045
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.14.1.4305` / [Commit: ecdc0a51a9ab8355ad9330822d7db9b9c550ae9d](https://github.com/Prowlarr/Prowlarr/commit/ecdc0a51a9ab8355ad9330822d7db9b9c550ae9d)
-  - [Prowlarr Indexers Commit: a298c9d2e44a12a524bebaf5e407beab0ca2a122](https://github.com/Prowlarr/Indexers/commit/a298c9d2e44a12a524bebaf5e407beab0ca2a122)
+  - [Prowlarr Indexers Commit: 947b14a742e7e3b9eb306b977d6c75621d196a0e](https://github.com/Prowlarr/Indexers/commit/947b14a742e7e3b9eb306b977d6c75621d196a0e)
 
 ---
 
@@ -52,11 +52,13 @@ dateCreated: 2024-02-27T00:55:04.246578
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
+|[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[GkTorrent](https://www.gktorrent.vg/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
+|[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.nz/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a Public HUNGARIAN site|Hungarian (Hungary)|
@@ -445,7 +447,7 @@ dateCreated: 2024-02-27T00:55:04.246578
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[RM-HD](https://remastered-hd.org/){#rmhd}|RM-HD (remastered-hd) is a UKRAINIAN Private tracker for remastered MOVIES / TV / MUSIC|Ukrainian (Ukraine)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
-|[RPTScene](https://rpthd.com/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
+|[RPTScene](https://rptscene.xyz/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
@@ -539,7 +541,6 @@ dateCreated: 2024-02-27T00:55:04.246578
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
 |[3Wmg](https://www.3wmg.com/){#3wmg}|3Wmg is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AGSVPT](https://abroad.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[AniToons](https://anitoons.xyz/){#anitoons}|AniToons is a BRAZILIAN Private Torrent Tracker for ANIME / CARTOONS|Portuguese (Brazil)|
 |[Azusa](https://azusa.wiki/){#azusa}|Azusa is a CHINESE Torrent Tracker focusing on Comics|Chinese (China)|
 |[BitPorn](https://bitporn.eu/){#bitporn}|BitPorn is a HUNGARIAN Private Torrent Tracker for 3X|Hungarian (Hungary)|
 |[BTArg](https://www.btarg.com.ar/){#btarg}|BTArg is an ARGENTINIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Argentina)|
@@ -555,6 +556,7 @@ dateCreated: 2024-02-27T00:55:04.246578
 |[HDTorrents\.it](https://hdtorrents.eu/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private site for TV / MOVIES|Italian (Italy)|
 |[hdvbits](https://hdvbits.com/){#hdvbits}|hdvbits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Heavens-Hell](https://heavens-hell.info/){#heavens-hell}|Heavens-Hell is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
@@ -585,7 +587,7 @@ dateCreated: 2024-02-27T00:55:04.246578
 |[Twisted-Music](https://twisted-music.org/){#twisted-music}|Twisted-Music is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
-|[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
+|[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for MOVIES|English (United States)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Wukong](https://wukongwendao.top/){#wukong}|Wukong (悟空问道) is a CHINESE Private Torrent Tracker for E-LEARNING|Chinese (China)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
