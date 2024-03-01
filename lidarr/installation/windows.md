@@ -2,7 +2,7 @@
 title: Lidarr Windows Installation
 description: Windows installation guide for Lidarr
 published: true
-date: 2023-07-03T20:30:47.519Z
+date: 2024-03-01T22:14:42.246Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:11:02.991Z
@@ -20,7 +20,7 @@ Additionally the Windows Service runs under the 'Local Service' account, by defa
 
 It's therefore advisable to install Lidarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
 
-> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml` is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to run As Administrator every time.
+> You may have to run once "As Administrator" after installing in tray mode, if you get an access error -- such as Access to the path `C:\ProgramData\Lidarr\config.xml` is denied -- or you use mapped network drives. This gives Lidarr the permissions it needs. You should not need to Run as administrator every time.
 {.is-warning}
 
 1. Download the latest version of Lidarr for your architecture linked below.
