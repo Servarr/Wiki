@@ -202,7 +202,7 @@ Understanding the configuration/concepts behind `Indexers` are beyond the scope 
 
 `Settings` => `Download Clients`
 
-![Lidarr-settings-download-clients.png](/assets/lidarr/Lidarr-settings-download-clients.png)
+![lidarr-settings-download-clients.png](./images/lidarr-settings-download-clients.png)
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
