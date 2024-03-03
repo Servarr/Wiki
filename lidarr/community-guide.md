@@ -10,7 +10,7 @@ dateCreated: 2024-02-27T14:10:01.585Z
 
 This guide is primarily focused on FLAC quality with MP3-320 as a fallback. Since music files are much smaller than other media I prefer to grab FLAC quality (not 24-bit lossless). Lidarr is designed to follow artists and albums, not singles. If you prefer singles then Spotify or Apple Music is a better fit for you.
 
-This guide assumes familiarity with ARR apps and omits details covered in other guides, such as adding indexers or download clients.
+This guide also assumes you are familiar with the basics of the ARR apps and omits details covered in other guides, such as adding indexers or download clients.
 
 ## Quality settings
 
@@ -24,7 +24,7 @@ This guide assumes familiarity with ARR apps and omits details covered in other 
 - Min - 0 bit/s
 - Max - 1495 bit/s
 
-Minimizes results that are single track releases for an entire album, such as FLAC/CUE files.
+Filters out results that are single track rips for an entire album, such as FLAC/CUE files.
 
 ## Recommended Naming Scheme
 
@@ -198,9 +198,10 @@ Quality profiles - High Quality - check flac and mp3-320 and move them to the to
 
 ![quality profiles](./images/quality-profiles.png)
 
-Upgrade until - set this to flac
+Upgrades Allowed - check this box
+Upgrade until - set this to Flac
 
-Custom format scoring - This is very subjective. If you follow the table below it will require releases to include a minimum score of \`1\` in order to be grabbed, meaning it will need to meet at least one of the custom formats (except for vinyl) and will prefer CD source over WEB and will actively avoid vinyl releases.
+Custom format scoring - This is very subjective. If you follow the table below it will require releases to include a minimum score of `1` in order to be grabbed, meaning it will need to meet at least one of the custom formats (except for vinyl) and will prefer CD source over WEB and will actively avoid vinyl releases.
 
 ![custom format scoring](./images/custom-format-scoring.png)
 
@@ -208,7 +209,7 @@ Custom format scoring - This is very subjective. If you follow the table below i
 
 ### Metadata Profiles
 
-This is another setting that is more personal preference. If you want to ensure you don’t miss any releases check all boxes and name the profile \`Any\`. My personal metadata profile is named \`Standard\` and I have the following options checked:
+This is another setting that is more personal preference. If you want to ensure you don’t miss any releases check all boxes and name the profile `Any`. My personal metadata profile is named `Standard` and I have the following options checked:
 
 ![meta data profile](./images/metadata-profile.png)
 
