@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-01T01:01:06.924414
+date: 2024-03-03T00:58:44.364681
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-01T01:01:06.924414
+dateCreated: 2024-03-03T00:58:44.364681
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.1.4315` / [Commit: 1283e06f95ddb1f331d3b119ec5e33e62c6d78e4](https://github.com/Prowlarr/Prowlarr/commit/1283e06f95ddb1f331d3b119ec5e33e62c6d78e4)
-  - [Prowlarr Indexers Commit: 99748cda4598eec9690e2828d64017340d4c3bb1](https://github.com/Prowlarr/Indexers/commit/99748cda4598eec9690e2828d64017340d4c3bb1)
+  - Prowlarr Build `1.14.1.4315` / [Commit: 00bd9c241a103de5977b9e1faa6b48878d289de9](https://github.com/Prowlarr/Prowlarr/commit/00bd9c241a103de5977b9e1faa6b48878d289de9)
+  - [Prowlarr Indexers Commit: 16be4cdc5540944528838d919370d518cccdc9a0](https://github.com/Prowlarr/Indexers/commit/16be4cdc5540944528838d919370d518cccdc9a0)
 
 ---
 
@@ -117,7 +117,7 @@ dateCreated: 2024-03-01T01:01:06.924414
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq298.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir134.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir135.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -283,7 +283,6 @@ dateCreated: 2024-03-01T01:01:06.924414
 |[Central Torrent](http://central-torrent.eu/){#centraltorrent}|Central Torrent is a POLISH Private Torrent Tracker for MOVIES / MUSIC|Polish (Poland)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CHDBits](https://ptchdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[cheggit](https://www.cheggit.me/){#cheggit}|cheggit is a Private site for 3X|English (United States)|
 |[ChileBT](https://chilebt.com/){#chilebt}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|B-movie tracker|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -563,6 +562,7 @@ dateCreated: 2024-03-01T01:01:06.924414
 |[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private site for MOVIES / TV / GENERAL|English (United States)|
 |[Last Digital Underground](https://theldu.net/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
+|[LilleSky\.org](https://lillesky.org/){#lilleskyorg}|LilleSky\.org is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Mendigos da WEB](https://mendigosdaweb.cc/){#mendigosdaweb}|Mendigos da WEB is a PORTUGUESE Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Portugal)|
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
@@ -583,7 +583,6 @@ dateCreated: 2024-03-01T01:01:06.924414
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[TvRoad](https://tvroad.info/){#tvroad}|TvRoad is a FRENCH Private Torrent Tracker for TV|French (France)|
-|[Twisted-Music](https://twisted-music.org/){#twisted-music}|Twisted-Music is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for MOVIES|English (United States)|
