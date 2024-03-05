@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-03T00:58:44.364681
+date: 2024-03-05T00:55:40.631790
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-03T00:58:44.364681
+dateCreated: 2024-03-05T00:55:40.631790
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.1.4315` / [Commit: 00bd9c241a103de5977b9e1faa6b48878d289de9](https://github.com/Prowlarr/Prowlarr/commit/00bd9c241a103de5977b9e1faa6b48878d289de9)
-  - [Prowlarr Indexers Commit: 16be4cdc5540944528838d919370d518cccdc9a0](https://github.com/Prowlarr/Indexers/commit/16be4cdc5540944528838d919370d518cccdc9a0)
+  - Prowlarr Build `1.14.2.4318` / [Commit: 882152b9117aadd621d1b248a36a233e5abc0527](https://github.com/Prowlarr/Prowlarr/commit/882152b9117aadd621d1b248a36a233e5abc0527)
+  - [Prowlarr Indexers Commit: 4507255eebacf5bf9b989e9668d61ab0b430d44c](https://github.com/Prowlarr/Indexers/commit/4507255eebacf5bf9b989e9668d61ab0b430d44c)
 
 ---
 
@@ -54,7 +54,7 @@ dateCreated: 2024-03-03T00:58:44.364681
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.vg/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.lol/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -106,7 +106,7 @@ dateCreated: 2024-03-03T00:58:44.364681
 |[Torlock](https://www.torlock.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.torrent911.bz/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.torrent911.ac/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent9 clone](https://www.torrent9.city/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
@@ -567,6 +567,7 @@ dateCreated: 2024-03-03T00:58:44.364681
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[Old Greek Tracker](http://oldgreektracker.xyz/){#oldgreektracker}|Old Greek Tracker is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
 |[OnlyEncodes (API)](https://onlyencodes.cc/){#onlyencodes-api}|OnlyEncodes is a Private Tracker for MOVIES / TV|English (United States)|
 |[Ostwiki](https://www.ostwiki.com/){#ostwiki}|Ostwiki is a Private Torrent Tracker for Soundtracks releases|English (United States)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
