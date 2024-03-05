@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: 
 published: true
-date: 2024-02-27T04:54:45.102Z
+date: 2024-03-05T19:20:10.157Z
 tags: sonarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -659,7 +659,7 @@ Most likely you're using a reverse proxy and you reverse proxy timeout is set to
 
 ### Series needs an alias
 
-Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences. Please see [this FAQ entry](/sonarr/faq#why-cannot-sonarr-import-episode-files-for-series-x-why-cannot-sonarr-find-releases-for-series-x)
+Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences. This also includes Foreign Titles. Please see [this FAQ entry](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)
 
 ### Series needs an XEM Mapping
 
