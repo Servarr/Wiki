@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-05T00:55:40.631790
+date: 2024-03-06T05:08:20.911258
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-05T00:55:40.631790
+dateCreated: 2024-03-06T05:08:20.911258
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.14.2.4318` / [Commit: 882152b9117aadd621d1b248a36a233e5abc0527](https://github.com/Prowlarr/Prowlarr/commit/882152b9117aadd621d1b248a36a233e5abc0527)
-  - [Prowlarr Indexers Commit: 4507255eebacf5bf9b989e9668d61ab0b430d44c](https://github.com/Prowlarr/Indexers/commit/4507255eebacf5bf9b989e9668d61ab0b430d44c)
+  - [Prowlarr Indexers Commit: 9f47fc213a696cfe7ad493e3a35d2d0e4ffcdab0](https://github.com/Prowlarr/Indexers/commit/9f47fc213a696cfe7ad493e3a35d2d0e4ffcdab0)
 
 ---
 
@@ -407,7 +407,6 @@ dateCreated: 2024-03-05T00:55:40.631790
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[NORDiCHD](https://nordichd.org/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[Old Toons World](https://oldtoons.world/){#oldtoonsworld}|Old Toons World is a Private Torrent Tracker for Cartoon MOVIES / TV / GENERAL|English (United States)|
 |[OpenCD](https://open.cd/){#opencd}|OpenCD is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
 |[OshenPT](http://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD Movies, TV, Music|Chinese (China)|
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
@@ -568,6 +567,7 @@ dateCreated: 2024-03-05T00:55:40.631790
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[Old Greek Tracker](http://oldgreektracker.xyz/){#oldgreektracker}|Old Greek Tracker is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
+|[Oldtoons](https://oldtoons.world/){#oldtoonsworld}|Oldtoons is a Private Torrent Tracker for Cartoon MOVIES / TV|English (United States)|
 |[OnlyEncodes (API)](https://onlyencodes.cc/){#onlyencodes-api}|OnlyEncodes is a Private Tracker for MOVIES / TV|English (United States)|
 |[Ostwiki](https://www.ostwiki.com/){#ostwiki}|Ostwiki is a Private Torrent Tracker for Soundtracks releases|English (United States)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
