@@ -91,7 +91,7 @@ The branch you have set is not a valid release branch. You will not receive upda
 
 {#update-to-net-core-version}
 
-- Newer versions of Lidarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
+- Newer versions of Lidarr are targeted for .NET 8 or newer. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
 
 ##### Fixing Docker installs
 

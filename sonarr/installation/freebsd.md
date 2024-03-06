@@ -174,7 +174,7 @@ sonarr_start_precmd()
  [ -d ${sonarr_pid_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_pid_dir}
  [ -d ${sonarr_data_dir} ] || install -d -g ${sonarr_group} -o ${sonarr_user} ${sonarr_data_dir}
 
- # .NET 6+ uses dual mode sockets to avoid the separate AF handling.
+ # .NET 8+ uses dual mode sockets to avoid the separate AF handling.
  # disable .NET use of V6 if no ipv6 is configured.
  # See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259194#c17
  ifconfig | grep -q inet6
