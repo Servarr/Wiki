@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2023-08-27T22:02:11.780Z
+date: 2024-03-06T15:15:08.235Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -526,11 +526,13 @@ Profiles is where Custom Format Scores are configured.
 {.is-info}
 
 - **Any conditions that use RegEx are case insensitive**
-- Note the following GitHub Issues
-  - [Custom Formats do not apply before the Movie Year in release titles #4859](https://github.com/Radarr/Radarr/issues/4859)
-  - [Custom Format doesn't match for term "xvid" at end of release name #6824](https://github.com/Radarr/Radarr/issues/6824)
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk.
   - Note: Radarr only considers text after the movie title and year which means anything preceding the title is ignored.
+  - **Known Custom Format Title Parsing Bugs**
+      - [Custom Formats do not apply before the Year in release titles for Grabs and ignore movie title](https://github.com/Radarr/Radarr/issues/4859)
+    - [Custom Format doesn't match for term "xvid" at end of release name as the video extension](https://github.com/Radarr/Radarr/issues/6824)
+    - [CF applied to the name of the film. Movie Title not ignored for Files](https://github.com/Radarr/Radarr/issues/7004)
+    - [Custom format Flag stays after transcoding into other Codec and don't ignore scene name original file title](https://github.com/Radarr/Radarr/issues/7896)
 - Edition - This tag is matched against any Editions Radarr may parse. You can put any value Radarr will try to match that against what it parsed (case-insensitive).
 - Language - This language is matched against any language(s) Radarr parses. All languages previously selectable in profiles work here.
 - [Indexer Flag](/radarr/settings#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
