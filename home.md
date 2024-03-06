@@ -2,7 +2,7 @@
 title: Servarr
 description: Official wiki for Lidarr, Radarr, Readarr, Sonarr, and Whisparr
 published: true
-date: 2024-01-29T20:17:16.594Z
+date: 2024-03-06T23:21:53.972Z
 tags: servarr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
@@ -48,7 +48,8 @@ Contributions are welcome either on the Wiki directly, just authenticate with Gi
 
 ## Guides & Tools
 
-- [<i class="fas fa-tools"></i>&emsp;Useful Tools](/useful-tools)
+- [<i class="fas fa-tools"></i>&emsp;Useful Tools *Servarr list of related apps and tools*](/useful-tools)
 - [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
+- [<i class="fas fa-swatchbook"></i>&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](/lidarr/community-guide)
 - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](/install-script)
 {.links-list}
