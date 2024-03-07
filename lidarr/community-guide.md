@@ -33,7 +33,7 @@ Ensure Advanced Settings are enabled and Rename Tracks & Replace Illegal Charact
 ### Standard Track Format
 
 ```jinja
-{Album Title} {(Album Disambiguation)}/{Artist Name}\_{Album Title}\_{track:00}\_{Track Title}
+{Album Title} {(Album Disambiguation)}/{Artist Name}_{Album Title}_{track:00}_{Track Title}
 ```
 
 - Result: `Venus Hum/Big Beautiful Sky/Venus Hum_Big Beautiful Sky_01_Hummingbirds.flac`
@@ -41,7 +41,7 @@ Ensure Advanced Settings are enabled and Rename Tracks & Replace Illegal Charact
 ### Multi Disc Track Format
 
 ```jinja
-{Album Title} {(Album Disambiguation)}/{Artist Name}\_{Album Title}\_{medium:00}-{track:00}\_{Track Title}
+{Album Title} {(Album Disambiguation)}/{Artist Name}_{Album Title}_{medium:00}-{track:00}_{Track Title}
 ```
 
 - Result: `The Smashing Pumpkins/Mellon Collie and the Infinite Sadness/The Smashing Pumpkins_Mellon Collie and the Infinite Sadness_01-01_Mellon Collie and the Infinite Sadness.flac`
