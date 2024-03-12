@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-10T00:59:41.222401
+date: 2024-03-12T00:55:34.658146
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-10T00:59:41.222401
+dateCreated: 2024-03-12T00:55:34.658146
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.14.2.4318` / [Commit: 2ebabd69b59811053abef865fe7c5a8038782aba](https://github.com/Prowlarr/Prowlarr/commit/2ebabd69b59811053abef865fe7c5a8038782aba)
-  - [Prowlarr Indexers Commit: af2682291cc230bc8c12b59aeb6f2ef6f2d30a2f](https://github.com/Prowlarr/Indexers/commit/af2682291cc230bc8c12b59aeb6f2ef6f2d30a2f)
+  - Prowlarr Build `1.14.3.4322` / [Commit: 7f8c1ace147f96a34503e4ce04559b9046a19310](https://github.com/Prowlarr/Prowlarr/commit/7f8c1ace147f96a34503e4ce04559b9046a19310)
+  - [Prowlarr Indexers Commit: 3b3ac7e3c09c4b3a77c0edc809883db95189a071](https://github.com/Prowlarr/Indexers/commit/3b3ac7e3c09c4b3a77c0edc809883db95189a071)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2024-03-10T00:59:41.222401
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.torrent911.ac/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.city/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.gy/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
@@ -357,7 +357,6 @@ dateCreated: 2024-03-10T00:59:41.222401
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[Hebits](https://hebits.net/){#hebits}|The Israeli Tracker|Hebrew (Israel)|
 |[HHanClub](https://hhanclub.top/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[HomePornTorrents](https://www.homeporntorrents.club/){#homeporntorrents}|HomePornTorrents (HPT) is a Private Torrent Tracker for Amateur 3X|English (United States)|
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ICC2022](https://www.icc2022.com/){#icc2022}|ICC2022 (冰淇淋) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[Immortuos](https://immortuos.life/){#immortuos}|Immortuos is a GERMAN Private Tracker for MOVIES / TV|German (Germany)|
