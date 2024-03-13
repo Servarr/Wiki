@@ -2,7 +2,7 @@
 title: Docker Guide
 description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
-date: 2024-03-13T11:11:35.266Z
+date: 2024-03-13T11:18:09.857Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
@@ -62,7 +62,7 @@ dateCreated: 2021-05-16T20:23:46.192Z
 # The Best Docker Setup
 
 > This does not apply directly to Unraid which does things a little differently and runs all containers as `nobody:users`. See TRaSH's Hardlink's Unraid Guide for details.
-{.info}
+{.is-info}
 
 **TL;DR**: An [eponymous](https://www.dictionary.com/browse/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
 
@@ -96,7 +96,7 @@ This article will not show you specifics about the best Docker setup, but it des
 # Multiple users and a shared group
 
 > This does not apply to Unraid which does things a little differently and runs all containers as `nobody:users`
-{.info}
+{.is-info}
 
 ## Permissions
 
