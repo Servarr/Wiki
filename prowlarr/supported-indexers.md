@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-15T00:56:34.740702
+date: 2024-03-15T17:06:49.522543
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-15T00:56:34.740702
+dateCreated: 2024-03-15T17:06:49.522543
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.14.3.4326` / [Commit: e981cacbda6fab8b945ed51110efe10141ec8a09](https://github.com/Prowlarr/Prowlarr/commit/e981cacbda6fab8b945ed51110efe10141ec8a09)
-  - [Prowlarr Indexers Commit: e174758cb98cad0903d1231901f7cd9207bd1285](https://github.com/Prowlarr/Indexers/commit/e174758cb98cad0903d1231901f7cd9207bd1285)
+  - [Prowlarr Indexers Commit: 6b8a1364434ca525b46aa80f2f6d159f2fc9caff](https://github.com/Prowlarr/Indexers/commit/6b8a1364434ca525b46aa80f2f6d159f2fc9caff)
 
 ---
 
@@ -117,7 +117,7 @@ dateCreated: 2024-03-15T00:56:34.740702
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq302.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir136.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir137.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -237,7 +237,6 @@ dateCreated: 2024-03-15T00:56:34.740702
 |[ABtorrents](https://abtorrents.me/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Acid-Lounge](https://www.acid-lounge.org.uk/){#acidlounge}|Acid Lounge (A-L) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|English (Australia)|
-|[ADBT](https://adbt.is-into-anime.com/){#adbt}|ADBT (Anime Datenbank Tracker) is a GERMAN Private Tracker for Anime, Hentai and Cartoons|German (Germany)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a Private Torrent Tracker for Female Japanese Idol related files|English (United States)|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
