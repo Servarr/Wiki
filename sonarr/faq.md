@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-02-27T05:55:05.068Z
+date: 2024-03-19T19:53:19.648Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -580,7 +580,6 @@ Depending on your OS, there are multiple possible ways.
 - Stop the Sonarr service.
 - Open the Properties \> Log On dialog.
 - Change the service user account to the target user account.
-- Run Sonarr.exe using the Startup Folder
 
 ### You're using a mapped network drive (not a UNC path)
 
