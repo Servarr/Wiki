@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-19T00:56:49.177524
+date: 2024-03-21T00:57:32.750701
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-19T00:56:49.177524
+dateCreated: 2024-03-21T00:57:32.750701
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.15.0.4337` / [Commit: 721ae1cac053a9c872e79bb0fa6e4d5b7f9d13a6](https://github.com/Prowlarr/Prowlarr/commit/721ae1cac053a9c872e79bb0fa6e4d5b7f9d13a6)
-  - [Prowlarr Indexers Commit: 0eaeae546388afa91fb9c1f93c68ed18d6133b75](https://github.com/Prowlarr/Indexers/commit/0eaeae546388afa91fb9c1f93c68ed18d6133b75)
+  - Prowlarr Build `1.15.0.4343` / [Commit: 9ea8335aa0a2278e633bd61946d12c6fb2e9ad65](https://github.com/Prowlarr/Prowlarr/commit/9ea8335aa0a2278e633bd61946d12c6fb2e9ad65)
+  - [Prowlarr Indexers Commit: fd050f005e7a674de5a05e7c92fca183c9c34b1a](https://github.com/Prowlarr/Indexers/commit/fd050f005e7a674de5a05e7c92fca183c9c34b1a)
 
 ---
 
@@ -539,6 +539,7 @@ dateCreated: 2024-03-19T00:56:49.177524
 |[Zelka\.org](https://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
+|[IrishTV](http://irishtv.xyz/){#irishtv}|IrishTV (ITV) is an IRISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[AGSVPT](https://www.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AT-12 Project](https://at-12project.cc/){#at12project}|AT-12 Project is a Private Torrent Tracker for JAPANESE MOVIES / TV|English (United States)|
 |[Azusa (梓喵)](https://azusa.wiki/){#azusa}|Azusa (梓喵) is a CHINESE Private Torrent Tracker focusing on Comics|Chinese (China)|
