@@ -2,7 +2,7 @@
 title: multiple-instances
 description: 
 published: true
-date: 2023-07-16T13:12:11.734Z
+date: 2024-03-22T17:43:24.041Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:12:51.889Z
@@ -266,7 +266,7 @@ User=readarr
 Group=media
 Type=simple
 
-ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/Readarr-audiobooks/
+ExecStart=/opt/Readarr/Readarr -nobrowser -data=/var/lib/readarr-audiobooks/
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
