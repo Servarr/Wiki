@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: 
 published: true
-date: 2024-03-23T17:47:04.644Z
+date: 2024-03-28T17:54:37.206Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -123,11 +123,11 @@ Also, note that for each individual settings page, there are some options at the
 
 > Warning: Starting from v3.0.6.1431, Sonarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` {.is-warning}
 
-- Standard Series: `{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
+- Standard Series: `{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Custom Formats (replacing Release Profile Preferred Words)}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
 
-- Daily Series: `{Series TitleYear} - {Air-Date} - {Episode CleanTitle} [{Preferred Words}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
+- Daily Series: `{Series TitleYear} - {Air-Date} - {Episode CleanTitle} [{Custom Formats (replacing Release Profile Preferred Words)}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
 
-- Anime Series: `{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Preferred Words}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} {Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}`
+- Anime Series: `{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Custom Formats (replacing Release Profile Preferred Words)}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} {Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}`
 
 - Season Folders: `Season {season:00}`
 
@@ -229,10 +229,10 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 ### Other
 
 - `{Release Group}` = Rls Grp
-- `{Preferred Words}` = iNTERNAL or NF
+- `{Custom Formats (replacing Release Profile Preferred Words)}` = iNTERNAL or NF
 
-> \* Preferred words will be the word or words that were the literal matches of any preferred words you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
-\* `{Preferred Words:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
+> \* Custom Formats (replacing Release Profile Preferred Words) will be the word or words that were the literal matches of any Custom Formats (replacing Release Profile Preferred Words) you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
+\* `{Custom Formats (replacing Release Profile Preferred Words):<Release Profile Name>}` is an additional option to use matches from specific release profiles only
 {.is-info}
 
 ### Original
@@ -342,13 +342,13 @@ Name for the `Specials` (Season) folder
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Release Profiles (Preferred Words)](#release-profiles).
+  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Custom Formats
 
 > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
 > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 {.is-info}
 
-> [Use preferred words for automatic upgrades to propers/repacks](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/#propers-and-repacks)
+> [Use Custom Formats words for automatic upgrades to propers/repacks](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/#proper-and-repacks)
 {.is-info}
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
@@ -356,6 +356,9 @@ Name for the `Specials` (Season) folder
   - Always - This will rescan series folder based upon Tasks Schedule
   - After Manual Refresh - You will have to manually rescan the disk
   - Never - Just as it says, never rescan the series folder.
+    - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
+    - If you delete episode files manually or via Plex or another third party program, do not set this to `Never`.
+  {.is-warning}
 - Change File Date - Change file date on import/rescan
   - None - Sonarr will not change the date that shows in your given file browser
   - Local Release - The date the video was aired locally
@@ -496,6 +499,7 @@ Profiles is where Custom Format Scores are configured.
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
 - Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
+- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
 - Tags - With giving this delay profile a tag you will be able to tag a given series to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
@@ -527,52 +531,42 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ##### Example 1
 
 - In this simple example, the profile is set with a 120 minute (two hour) delay for both Usenet and Torrent.
-
 - At 11:00pm the first release for an Episode is detected by Sonarr and it was uploaded at 10:50pm and the 120 minute clock begins. At 12:50am, Sonarr will evaluate any releases it has found in the past two hours, and download the best one, which is WebDL 720p.
-
 - At 3:00am another release is found, which is WebDL 720p that was added to your indexer at 2:46am. Another 120 minute clock begins. At 4:46am the best-available release is downloaded. Since the quality cutoff is now reached, the Episode no longer is upgradeable and Sonarr will stop looking for new releases.
-
 - At any point, if a WebDL 1080p release is found, it will be downloaded immediately because it is the highest-ranking quality. If there is a delay timer currently active it will be canceled.
 
 ##### Example 2
 
 - This example has different timers for Usenet and Torrents. Assume a 120 minute timer for Usenet and a 180 minute timer for BitTorrent.
-
 - At 11:00pm the first release for an Episode is detected by Sonarr and both timers begin. The release was added to the indexer at 10:15pm At 12:15am, Sonarr will evaluate any releases, and if there are any acceptable Usenet releases, the best one will be downloaded and both timers will end. If not, Sonarr will wait until 12:15am and download the best release, regardless of which source it came from.
 
 ##### Example 3
 
 - A common use for delay profiles is to emphasize one protocol over another. For example, you might only want to download a BitTorrent release if nothing has been uploaded to Usenet after a certain amount of time.
-
 - You could set a 60 minute timer for BitTorrent, and a 0 minute timer for Usenet.
-
 - If the first release that is detected is from Usenet, Sonarr will download it immediately.
-
 - If the first release is from BitTorrent, Sonarr will set a 60 minute timer. If any qualifying Usenet release is detected during that timer, the BitTorrent release will be ignored and the Usenet release will be grabbed.
 
 ## Release Profiles
 
 - Not all releases are created equal, each release group has their own way of packaging and encoding their material. Here you will be able to select the preferred releases you're looking for.
 
-> You can use regex (default case sensitive) in the `Must Contain`, `Must Not Contain`, and `Preferred` words values. Regex needs to be like `/regex-here/i`
+> You can use regex (default case sensitive) in the `Must Contain` or `Must Not Contain` words values. Regex needs to be like `/regex-here/i`
 {.is-info}
 
 - Name - Select a **UNIQUE** name for the release profile you are creating
 - Enable Profile - Toggling this given profile on or off
 - Must Contain - The release must contain at least one of these terms (case insensitive)
 - Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
-- Preferred - Here you can select a given term and give it a score.
-  - Let's say you're looking for releases with a specific grouping of words. Let's say you want to tell Sonarr that you want Repacks or Propers over regular releases. Here you will put the word Repack in one of the fields and give it a value (say 100) but, you're also looking for DTS-HD audio so you will put that in there and also give it a score (say 100 again). When Sonarr goes through and looks at all the releases from the RSS feed and it comes across a release that has both Repack and DTS-HD that will give it a score of 200. Which is much higher than all the others that do not have either of those words. This tells Sonarr that this has a higher score and it will be the first file picked for download.
-- Include Preferred when Renaming - When utilizing the {Preferred Words} tag in the naming scheme
 - Indexer - Specify what indexer the profile applies to.
 
 > This is useful if you only want specific releases from a given indexer/tracker
 {.is-info}
 
-- Tags - With giving this release profile a tag you will be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
+> Preferred Words have been replaced with Custom Formats. See [TRaSH Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/) for additional uses.
+{.is-info}
 
-- [TRaSH maintains a list of WEB-DL Release Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/)
-- [TRaSH Anime Profiles](https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/)
+- Tags - With giving this release profile a tag you will be able to tag a given series to have it play by the rules set here. If you leave this field blank these rules will apply to all series
 
 # Quality
 
@@ -978,7 +972,6 @@ Most of the lists settings are fairly self explanatory, some lists require you t
   - Built-in - Use Sonarr's own updater
   - Script - Have Sonarr run the update script
   - Docker - Do not update Sonarr from inside the Docker, instead pull a brand new image with the new update
-  - Apt - Set by the Debian/Ubuntu package when updating is managed exclusively via Apt
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Sonarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Sonarr is run under, it will need permissions to update the Sonarr files as well as stop/start Sonarr.
 - Built-in - The built-in method will backup Sonarr files and settings, stop Sonarr, update the installation and Start Sonarr, if your system will not handle the stopping of Sonarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Sonarr will be restarted.
