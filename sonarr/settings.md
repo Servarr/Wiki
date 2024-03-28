@@ -1,6 +1,6 @@
 ---
 title: Sonarr Settings
-description: 
+description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 published: true
 date: 2024-03-28T17:54:37.206Z
 tags: sonarr, needs-love, settings
@@ -123,11 +123,11 @@ Also, note that for each individual settings page, there are some options at the
 
 > Warning: Starting from v3.0.6.1431, Sonarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` {.is-warning}
 
-- Standard Series: `{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Custom Formats (replacing Release Profile Preferred Words)}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
+- Standard Series: `{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Custom Formats}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
 
-- Daily Series: `{Series TitleYear} - {Air-Date} - {Episode CleanTitle} [{Custom Formats (replacing Release Profile Preferred Words)}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
+- Daily Series: `{Series TitleYear} - {Air-Date} - {Episode CleanTitle} [{Custom Formats}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
 
-- Anime Series: `{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Custom Formats (replacing Release Profile Preferred Words)}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} {Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}`
+- Anime Series: `{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Custom Formats}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} {Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}`
 
 - Season Folders: `Season {season:00}`
 
@@ -229,10 +229,10 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 ### Other
 
 - `{Release Group}` = Rls Grp
-- `{Custom Formats (replacing Release Profile Preferred Words)}` = iNTERNAL or NF
+- `{Custom Formats}` = iNTERNAL or NF
 
-> \* Custom Formats (replacing Release Profile Preferred Words) will be the word or words that were the literal matches of any Custom Formats (replacing Release Profile Preferred Words) you have. The above example would be a preferred word of `iNTERNAL` or similarly a preferred word of `/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i` would return `AMZN` or `Amazon`
-\* `{Custom Formats (replacing Release Profile Preferred Words):<Release Profile Name>}` is an additional option to use matches from specific release profiles only
+> \* Custom Formats will the name of the Custom Format
+\* `{Custom Formats:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
 {.is-info}
 
 ### Original
