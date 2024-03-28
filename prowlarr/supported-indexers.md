@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-26T00:56:23.533066
+date: 2024-03-28T00:59:21.751260
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-26T00:56:23.533066
+dateCreated: 2024-03-28T00:59:21.751260
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.15.0.4357` / [Commit: a33023b8c6a83d33a65525275dfb6aa028460e6e](https://github.com/Prowlarr/Prowlarr/commit/a33023b8c6a83d33a65525275dfb6aa028460e6e)
-  - [Prowlarr Indexers Commit: b3dc3d229a522f4ef925a72fd2fbdd45d3b1e197](https://github.com/Prowlarr/Indexers/commit/b3dc3d229a522f4ef925a72fd2fbdd45d3b1e197)
+  - Prowlarr Build `1.15.0.4359` / [Commit: 41ce79ccce2b86f5c2006b9ba9d9dab39e02f392](https://github.com/Prowlarr/Prowlarr/commit/41ce79ccce2b86f5c2006b9ba9d9dab39e02f392)
+  - [Prowlarr Indexers Commit: be21dc2c17472f20a7c99c761db10144cc3587e0](https://github.com/Prowlarr/Indexers/commit/be21dc2c17472f20a7c99c761db10144cc3587e0)
 
 ---
 
@@ -28,6 +28,7 @@ dateCreated: 2024-03-26T00:56:23.533066
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[0Magnet](https://0magnet.co/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
+|[52BT](https://529048.xyz/){#52bt}|52BT is a CHINESE Public tracker for TV / MOVIES / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|Russian (Russia)|
 |[Anime Time](https://animetime.cc/){#animetime}|Anime Time is a PUBLIC torrent tracker for ANIME|English (United States)|
@@ -123,6 +124,7 @@ dateCreated: 2024-03-26T00:56:23.533066
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
+|[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Russian (Russia)|
 |[VSTHouse](http://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
