@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-03-19T19:53:19.648Z
+date: 2024-03-28T17:54:52.790Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -195,6 +195,12 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Sonarr refreshes series and episode information in addition to rescanning the disk for files every 12 hours. This might seem aggressive, but is a very important process. The data refresh from our TVDb proxy is important, because new episode information is synced down, air dates, number of episodes, status (continuing/ended). Even shows that aren't airing are being updated with new information.
 - The disk scan is less important, but is used to check for new files that weren't sorted by Sonarr and detect deleted files.
 - The most time consuming portion is the information refresh (assuming reasonable disk access speed), larger shows take longer due to the number of episodes to process.
+- No you cannot disable the task nor should you through any SQL hackery. The refresh series task queries the upstream Skyhook proxy and checks to see if the metadata for each series (ids, episodes, summaries, etc.) has updated compared to what is currently in Sonarr. If necessary, it will then update the applicable movies.
+- A common complaint is the Refresh task causes heavy I/O usage.
+- The main setting is "Rescan Series Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.
+  - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
+  - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+- The other setting that can be changed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
 > It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
 {.is-warning}
