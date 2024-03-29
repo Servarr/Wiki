@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-28T00:59:21.751260
+date: 2024-03-29T05:36:04.853392
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-28T00:59:21.751260
+dateCreated: 2024-03-29T05:36:04.853392
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.15.0.4359` / [Commit: 41ce79ccce2b86f5c2006b9ba9d9dab39e02f392](https://github.com/Prowlarr/Prowlarr/commit/41ce79ccce2b86f5c2006b9ba9d9dab39e02f392)
-  - [Prowlarr Indexers Commit: be21dc2c17472f20a7c99c761db10144cc3587e0](https://github.com/Prowlarr/Indexers/commit/be21dc2c17472f20a7c99c761db10144cc3587e0)
+  - Prowlarr Build `1.16.0.4363` / [Commit: 6a1e01abbda1901666965e28a522e2489319a7a2](https://github.com/Prowlarr/Prowlarr/commit/6a1e01abbda1901666965e28a522e2489319a7a2)
+  - [Prowlarr Indexers Commit: 8dd9ad32d10dc18bb15f517bc1f324e4c9bb2f53](https://github.com/Prowlarr/Indexers/commit/8dd9ad32d10dc18bb15f517bc1f324e4c9bb2f53)
 
 ---
 
@@ -108,7 +108,7 @@ dateCreated: 2024-03-28T00:59:21.751260
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.t911.ws/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.gy/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.sbs/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
@@ -117,7 +117,7 @@ dateCreated: 2024-03-28T00:59:21.751260
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq303.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq304.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir138.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -128,7 +128,7 @@ dateCreated: 2024-03-28T00:59:21.751260
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Russian (Russia)|
 |[VSTHouse](http://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
+|[VST Torrentz](https://looptorrent.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[xxxAdultTorrent](https://xxxadulttorrent.org/){#xxxadulttorrent}|xxxAdultTorrent is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -136,7 +136,6 @@ dateCreated: 2024-03-28T00:59:21.751260
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://www.zetorrents.pw/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[TheRARBG](https://therarbg.to/){#therarbg}|TheRARBG is a Public site inspired by RARBG\.to for TV / MOVIES / GENERAL|English (United States)|
-|[ShizaProject](https://shiza-project.com/){#shizaproject}|ShizaProject Tracker is a Public RUSSIAN tracker and release group for ANIME|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
@@ -210,7 +209,7 @@ dateCreated: 2024-03-28T00:59:21.751260
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[MovieWorld](https://movieworld.pics/){#movieworld}|MovieWorld (Flicker) is a Semi-Private Torrent Tracker for MOVIES / TV / 3X|English (United States)|
 |[MuseBootlegs](https://www.musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
-|[RuTracker](https://rutracker.org/){#rutracker}|RuTracker is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
+|[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 
@@ -560,6 +559,7 @@ dateCreated: 2024-03-28T00:59:21.751260
 |[Heavens-Hell](https://heavens-hell.info/){#heavens-hell}|Heavens-Hell is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
+|[Kelu](https://our.kelu.one/){#kelu}|Kelu is a CHINESE Private Torrent Tracker for GAY 3X|Chinese (China)|
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private site for MOVIES / TV / GENERAL|English (United States)|
