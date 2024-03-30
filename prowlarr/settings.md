@@ -72,7 +72,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to
 ## Proxy Settings
   
 - Name - Name of the Proxy in Prowlarr
-- Tags - The tags for this proxy. Proxies apply to all matching (same tag) indexers. If blank this proxy applies to all indexers.
+- Tags - The tags for this proxy. Proxies apply to all matching (same tag) indexers. If blank this proxy is disabled.
 
 ## FlareSolverr Proxy Settings
 
