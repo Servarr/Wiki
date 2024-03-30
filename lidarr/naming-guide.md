@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes
 published: true
-date: 2024-03-30T13:47:32.507Z
+date: 2024-03-30T13:52:57.300Z
 tags: lidarr, naming, folders
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -39,7 +39,7 @@ This format is from Davo's [community-guide](/lidarr/community-guide).
 
 ## B's Naming Convention
 
-This naming convention limits folder and file length to the specified number of characters. This is especially important for fans of [Fiona Apple](https://musicbrainz.org/release-group/b7493310-d408-44e2-a2d6-bbbd485d7abc) or [Bring Me the Horizon](https://musicbrainz.org/release-group/b7493310-d408-44e2-a2d6-bbbd485d7abc)
+This naming convention limits folder and file length to the specified number of characters. This is especially important for fans of [Fiona Apple](https://musicbrainz.org/release-group/b7493310-d408-44e2-a2d6-bbbd485d7abc), [Flume](https://musicbrainz.org/recording/93d0086c-27e7-4206-8722-e4c3c0b6d786) or [Bring Me the Horizon](https://musicbrainz.org/release-group/b7493310-d408-44e2-a2d6-bbbd485d7abc).
 
 Windows users should not use this naming convention as some folders could [become inaccessible](https://wiki.servarr.com/lidarr/faq#why-cant-i-access-a-folder-in-windows-after-lidarr-rename). 
 
@@ -86,9 +86,7 @@ TODO: Add explainer
 
 ## JasonVelocity's Naming Convention
 
-<!---
-TODO: Add explainer
---->
+This naming convention works well with Plex and is useful as a workaround when an artist has multiple release groups with the same name.
 
 ### Standard Track Format
 
