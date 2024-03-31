@@ -29,8 +29,8 @@ jobs:
         run: |
           pip3 install -U --no-cache-dir \
             requests==2.31.0 \
-            pycountry==22.3.5 \
-            python_iso639==2023.6.15
+            pycountry==23.12.11 \
+            python_iso639==2024.2.7
 
       - name: Update supported indexers markdown
         run: |
