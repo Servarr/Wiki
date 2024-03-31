@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-29T05:36:04.853392
+date: 2024-03-31T01:02:03.780552
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-29T05:36:04.853392
+dateCreated: 2024-03-31T01:02:03.780552
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.0.4363` / [Commit: 6a1e01abbda1901666965e28a522e2489319a7a2](https://github.com/Prowlarr/Prowlarr/commit/6a1e01abbda1901666965e28a522e2489319a7a2)
-  - [Prowlarr Indexers Commit: 8dd9ad32d10dc18bb15f517bc1f324e4c9bb2f53](https://github.com/Prowlarr/Indexers/commit/8dd9ad32d10dc18bb15f517bc1f324e4c9bb2f53)
+  - Prowlarr Build `1.16.0.4364` / [Commit: 41b043e551932dd8a6cdc1a7bed21e6d2cb7bb7d](https://github.com/Prowlarr/Prowlarr/commit/41b043e551932dd8a6cdc1a7bed21e6d2cb7bb7d)
+  - [Prowlarr Indexers Commit: f5b1cf609af4b44fddd2004775acfac0bee107a3](https://github.com/Prowlarr/Indexers/commit/f5b1cf609af4b44fddd2004775acfac0bee107a3)
 
 ---
 
@@ -118,7 +118,7 @@ dateCreated: 2024-03-29T05:36:04.853392
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq304.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir138.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir139.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -354,6 +354,7 @@ dateCreated: 2024-03-29T05:36:04.853392
 |[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[HDT-LaFenice](https://hdtlafenice.eu/){#hdt-lafenice}|HDT-LaFenice is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[HDtime](https://hdtime.org/){#hdtime}|HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
