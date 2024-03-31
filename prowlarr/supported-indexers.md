@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-31T01:02:03.780552
+date: 2024-03-31T02:00:08.359336
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-31T01:02:03.780552
+dateCreated: 2024-03-31T02:00:08.359336
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.16.0.4364` / [Commit: 41b043e551932dd8a6cdc1a7bed21e6d2cb7bb7d](https://github.com/Prowlarr/Prowlarr/commit/41b043e551932dd8a6cdc1a7bed21e6d2cb7bb7d)
-  - [Prowlarr Indexers Commit: f5b1cf609af4b44fddd2004775acfac0bee107a3](https://github.com/Prowlarr/Indexers/commit/f5b1cf609af4b44fddd2004775acfac0bee107a3)
+  - [Prowlarr Indexers Commit: cc38bbace6dbfd6b864d0b5a1ab42ecb3eca3b74](https://github.com/Prowlarr/Indexers/commit/cc38bbace6dbfd6b864d0b5a1ab42ecb3eca3b74)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2024-03-31T01:02:03.780552
 |[Torlock](https://www.torlock.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.t911.ws/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.t911.pw/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent9 clone](https://www.torrent9.sbs/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
