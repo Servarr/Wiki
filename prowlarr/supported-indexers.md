@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-03-31T02:00:08.359336
+date: 2024-04-03T23:18:10.729738
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-03-31T02:00:08.359336
+dateCreated: 2024-04-03T23:18:10.729738
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.0.4364` / [Commit: 41b043e551932dd8a6cdc1a7bed21e6d2cb7bb7d](https://github.com/Prowlarr/Prowlarr/commit/41b043e551932dd8a6cdc1a7bed21e6d2cb7bb7d)
-  - [Prowlarr Indexers Commit: cc38bbace6dbfd6b864d0b5a1ab42ecb3eca3b74](https://github.com/Prowlarr/Indexers/commit/cc38bbace6dbfd6b864d0b5a1ab42ecb3eca3b74)
+  - Prowlarr Build `1.16.0.4384` / [Commit: eaaf8db48665974f30c4058524abd4ec7fe9b5bb](https://github.com/Prowlarr/Prowlarr/commit/eaaf8db48665974f30c4058524abd4ec7fe9b5bb)
+  - [Prowlarr Indexers Commit: 938e2271f396b1ddf951f9add40df85c4080bfdc](https://github.com/Prowlarr/Indexers/commit/938e2271f396b1ddf951f9add40df85c4080bfdc)
 
 ---
 
@@ -55,7 +55,7 @@ dateCreated: 2024-03-31T02:00:08.359336
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.sh/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.eu/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -108,7 +108,7 @@ dateCreated: 2024-03-31T02:00:08.359336
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[Torrent9](https://torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[Torrent911](https://www.t911.pw/){#torrent911}|Torrent911 is a French Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9 clone](https://www.torrent9.sbs/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9 clone](https://www.torrent9.sb/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
@@ -128,7 +128,7 @@ dateCreated: 2024-03-31T02:00:08.359336
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Russian (Russia)|
 |[VSTHouse](http://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[VST Torrentz](https://looptorrent.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
+|[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[xxxAdultTorrent](https://xxxadulttorrent.org/){#xxxadulttorrent}|xxxAdultTorrent is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -191,8 +191,8 @@ dateCreated: 2024-03-31T02:00:08.359336
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://rudub.xyz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
-|[Rustorka](http://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
+|[RUDUB](https://03april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
 |[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
@@ -559,6 +559,7 @@ dateCreated: 2024-03-31T02:00:08.359336
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Heavens-Hell](https://heavens-hell.info/){#heavens-hell}|Heavens-Hell is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[iAnon](https://ianon.app/){#ianon}|MacOS software tracker|English (United States)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kelu](https://our.kelu.one/){#kelu}|Kelu is a CHINESE Private Torrent Tracker for GAY 3X|Chinese (China)|
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
@@ -593,7 +594,7 @@ dateCreated: 2024-03-31T02:00:08.359336
 |[TvRoad](https://tvroad.info/){#tvroad}|TvRoad is a FRENCH Private Torrent Tracker for TV|French (France)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
-|[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx is a Private Torrent Tracker for MOVIES|English (United States)|
+|[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Wukong (悟空问道)](https://wukongwendao.top/){#wukong}|Wukong (悟空问道) is a CHINESE Private Torrent Tracker for E-LEARNING|Chinese (China)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
@@ -665,7 +666,6 @@ dateCreated: 2024-03-31T02:00:08.359336
 |DrunkenSlug{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |GingaDADDY{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Miatrix{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
-|Newz-Complex{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Newz69{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |NinjaCentral{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
 |Nzb\.su{#newznab}|Newznab is an API search specification for Usenet|English (United States)|
