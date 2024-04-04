@@ -19,7 +19,6 @@ This guide also assumes you are familiar with the basics of the ARR apps and omi
 | FLAC       | 0   | 895       | 1400 |
 | FLAC 24bit | 0   | 895       | 1495 |
 
-
 Filters out results that are single track rips for an entire album, such as FLAC/CUE files.
 
 ## Recommended Naming Scheme
