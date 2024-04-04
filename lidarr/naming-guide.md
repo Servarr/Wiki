@@ -105,7 +105,7 @@ This naming convention works well with Plex and is useful as a workaround when a
 
 ### Artist Folder Format
 
-Using `CleanNameThe` moves `The` to the end of the folder name for easier folder navigation. 
+Using `CleanNameThe` moves `The` to the end of the folder name for easier folder navigation.
 
 ```jinja
 {Artist CleanNameThe}

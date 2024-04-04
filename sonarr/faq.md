@@ -29,7 +29,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
   - User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific episode, season, or series.
 - Adding a show using the Add and Search button
 - Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches
-- Recent Episodes 
+- Recent Episodes
   - **New episodes** from TVDb in Skyhook that aired in the last 14 days or within 1 day into the future (to cover those episodes that may release a bit early) will be automatically searched for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr)
   - **Absolute Numbering** Episodes with absolute numbers added to TVDb in Skyhook that aired in the last 14 days or within 1 day into thr future
 

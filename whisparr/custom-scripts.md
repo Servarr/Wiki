@@ -70,8 +70,8 @@ Note that the following will only be logged for custom scripts:
 | `whisparr_moviefile_scenename`         | Original release name (empty if unknown)                                                     |
 | `whisparr_moviefile_sourcepath`        | Full path to the imported movie file                                                         |
 | `whisparr_moviefile_sourcefolder`      | Full path to the folder the movie file was imported from                                     |
-| `whisparr_deletedrelativepaths`        | `|`-delimited list of files that were deleted to import this file                            |
-| `whisparr_deletedpaths`                | `|`-delimited list of full paths to files that were deleted to import this file              |
+| `whisparr_deletedrelativepaths`        | \|-delimited list of files that were deleted to import this file                            |
+| `whisparr_deletedpaths`                | \|-delimited list of full paths to files that were deleted to import this file              |
 
 ## On Rename
 
@@ -87,10 +87,10 @@ Note that the following will only be logged for custom scripts:
 | `whisparr_movie_in_cinemas_date`           | Cinema release date (empty if unknown)          |
 | `whisparr_movie_physical_release_date`     | Physical/Web release date (empty if unknown)    |
 | `whisparr_moviefile_ids`                   | `,`-delimited list of file ID(s)                |
-| `whisparr_moviefile_relativepaths`         | `|`-delimited list of relative path(s)          |
-| `whisparr_moviefile_paths`                 | `|`-delimited list of path(s)                   |
-| `whisparr_moviefile_previousrelativepaths` | `|`-delimited list of previous relative path(s) |
-| `whisparr_moviefile_previouspaths`         | `|`-delimited list of previous path(s)          |
+| `whisparr_moviefile_relativepaths`         | \|-delimited list of relative path(s)          |
+| `whisparr_moviefile_paths`                 | \|-delimited list of path(s)                   |
+| `whisparr_moviefile_previousrelativepaths` | \|-delimited list of previous relative path(s) |
+| `whisparr_moviefile_previouspaths`         | \|-delimited list of previous path(s)          |
 
 ## On Health Check
 

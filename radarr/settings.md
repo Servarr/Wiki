@@ -529,7 +529,7 @@ Profiles is where Custom Format Scores are configured.
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk.
   - Note: Radarr only considers text after the movie title and year which means anything preceding the title is ignored.
   - **Known Custom Format Title Parsing Bugs**
-      - [Custom Formats do not apply before the Year in release titles for Grabs and ignore movie title](https://github.com/Radarr/Radarr/issues/4859)
+    - [Custom Formats do not apply before the Year in release titles for Grabs and ignore movie title](https://github.com/Radarr/Radarr/issues/4859)
     - [Custom Format doesn't match for term "xvid" at end of release name as the video extension](https://github.com/Radarr/Radarr/issues/6824)
     - [CF applied to the name of the film. Movie Title not ignored for Files](https://github.com/Radarr/Radarr/issues/7004)
     - [Custom format Flag stays after transcoding into other Codec and don't ignore scene name original file title](https://github.com/Radarr/Radarr/issues/7896)

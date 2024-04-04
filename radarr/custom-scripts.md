@@ -70,8 +70,8 @@ Note that the following will only be logged for custom scripts:
 | `radarr_moviefile_scenename`         | Original release name (empty if unknown)                                                     |
 | `radarr_moviefile_sourcepath`        | Full path to the imported movie file                                                         |
 | `radarr_moviefile_sourcefolder`      | Full path to the folder the movie file was imported from                                     |
-| `radarr_deletedrelativepaths`        | `|`-delimited list of files that were deleted to import this file                            |
-| `radarr_deletedpaths`                | `|`-delimited list of full paths to files that were deleted to import this file              |
+| `radarr_deletedrelativepaths`        | \|-delimited list of files that were deleted to import this file                            |
+| `radarr_deletedpaths`                | \|-delimited list of full paths to files that were deleted to import this file              |
 
 ## On Rename
 
@@ -87,10 +87,10 @@ Note that the following will only be logged for custom scripts:
 | `radarr_movie_in_cinemas_date`           | Cinema release date (empty if unknown)          |
 | `radarr_movie_physical_release_date`     | Physical/Web release date (empty if unknown)    |
 | `radarr_moviefile_ids`                   | `,`-delimited list of file ID(s)                |
-| `radarr_moviefile_relativepaths`         | `|`-delimited list of relative path(s)          |
-| `radarr_moviefile_paths`                 | `|`-delimited list of path(s)                   |
-| `radarr_moviefile_previousrelativepaths` | `|`-delimited list of previous relative path(s) |
-| `radarr_moviefile_previouspaths`         | `|`-delimited list of previous path(s)          |
+| `radarr_moviefile_relativepaths`         | \|-delimited list of relative path(s)          |
+| `radarr_moviefile_paths`                 | \|-delimited list of path(s)                   |
+| `radarr_moviefile_previousrelativepaths` | \|-delimited list of previous relative path(s) |
+| `radarr_moviefile_previouspaths`         | \|-delimited list of previous path(s)          |
 
 ## On Health Check
 
