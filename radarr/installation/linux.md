@@ -2,7 +2,7 @@
 title: Radarr Linux Installation
 description: Linux installation guide for Radarr
 published: true
-date: 2023-12-29T21:56:14.073Z
+date: 2024-04-05T19:13:32.098Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:11:59.391Z
@@ -28,6 +28,8 @@ If you want an easy life, follow this community provided and maintained `Easy In
 {.is-info}
 
 ### Debian / Ubuntu Hands on Install
+
+*It is assumed you have a basic knowledge of linux or the ability to google / learn as necessary. Otherwise it is suggested to use an OS you know and understand*
 
 You'll need to install the binaries using the below commands.
 
