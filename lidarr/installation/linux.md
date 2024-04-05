@@ -2,7 +2,7 @@
 title: Lidarr Linux Installation
 description: Linux installation guide for Lidarr
 published: true
-date: 2024-04-05T19:14:43.231Z
+date: 2024-04-05T19:16:34.218Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:10:49.328Z
@@ -36,7 +36,7 @@ You'll need to install the binaries using the below commands.
 > The steps below will download Lidarr and install it into `/opt`
 > Lidarr will run under the user `lidarr` and group `media`
 > Lidarr's configuration files will be stored in `/var/lib/lidarr`
-{.is-warning}
+{.is-success}
 
 - Ensure you have the required prerequisite packages:
 
