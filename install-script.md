@@ -2,7 +2,7 @@
 title: Servarr Installation Script
 description: Common Installation Script for the Servarr Suite of Applications
 published: true
-date: 2024-02-14T00:20:15.131Z
+date: 2024-04-05T19:19:40.347Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -11,6 +11,8 @@ dateCreated: 2022-02-03T15:12:29.483Z
 # Servarr Installation Script
 
 This is a community created and community supported **unofficial** [script to handle installation of Servarr Apps (Lidarr/Prowlarr/Radarr/Readarr/Whisparr)](https://github.com/Servarr/Wiki/blob/master/servarr/servarr-install-script.sh) on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
+
+*It is assumed you have a basic knowledge of linux or the ability to google / learn as necessary. Otherwise it is suggested to use an OS you know and understand*
 
 > This will install the selected application to /opt. It will run application as the user and group you configure.
 > For Lidarr/Radarr/Readarr/Whisparr - you should use a common group that is the same that your download client runs as and media server runs as to ensure ownership and permissions are sane and all files are accessible.
