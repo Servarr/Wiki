@@ -2,7 +2,7 @@
 title: Prowlarr Linux Installation
 description: Linux installation guide for Prowlarr
 published: true
-date: 2024-02-06T01:21:05.371Z
+date: 2024-04-05T19:15:26.860Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:11:24.804Z
