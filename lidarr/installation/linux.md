@@ -2,7 +2,7 @@
 title: Lidarr Linux Installation
 description: Linux installation guide for Lidarr
 published: true
-date: 2024-04-05T19:16:34.218Z
+date: 2024-04-05T19:17:19.275Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:10:49.328Z
@@ -13,9 +13,6 @@ dateCreated: 2023-07-03T20:10:49.328Z
 ## Debian / Ubuntu
 
 > Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
-
-> Lidarr v0.8 is not compatible nor supported on Ubuntu 22.04 [See this FAQ Entry for details](/lidarr/faq#lidarr-stopped-working-after-updating-to-ubuntu-2204)
-{.is-warning}
 
 ### Easy Install
 
@@ -53,7 +50,7 @@ sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 > \* Your download clients and media server run as and are a part of the group `media`
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
 > \* You created the directory `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions for it
-{.is-danger}
+{.is-success}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
 
