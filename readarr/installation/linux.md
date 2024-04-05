@@ -2,10 +2,10 @@
 title: Readarr Linux Installation
 description: Linux installation guide for Readarr
 published: true
-date: 2023-07-03T20:30:47.519Z
+date: 2024-04-05T19:15:00.224Z
 tags: 
 editor: markdown
-dateCreated: 2023-07-03T20:11:02.991Z
+dateCreated: 2023-07-03T20:12:40.290Z
 ---
 
 # Linux
@@ -25,6 +25,8 @@ If you want an easy life, follow this community provided and maintained `Easy In
 [Please see the \*Arr Community Installation Script](/install-script)
 
 ### Debian / Ubuntu Hands on Install
+
+*It is assumed you have a basic knowledge of linux or the ability to google / learn as necessary. Otherwise it is suggested to use an OS you know and understand*
 
 You'll need to install the binaries using the below commands.
 
