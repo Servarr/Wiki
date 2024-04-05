@@ -2,7 +2,7 @@
 title: Prowlarr Linux Installation
 description: Linux installation guide for Prowlarr
 published: true
-date: 2024-04-05T19:15:26.860Z
+date: 2024-04-05T19:16:07.117Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:11:24.804Z
@@ -27,6 +27,8 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 ### Debian / Ubuntu Hands on Install
 
+*It is assumed you have a basic knowledge of linux or the ability to google / learn as necessary. Otherwise it is suggested to use an OS you know and understand*
+
 You'll need to install the binaries using the below commands.
 
 > The steps below will download Prowlarr and install it into `/opt`
@@ -46,7 +48,7 @@ sudo apt install curl sqlite3
 > The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
 > \* The user `prowlarr` is created
 > \* You created the directory `/var/lib/prowlarr` and ensured the user `prowlarr` has read/write permissions for it
-{.is-danger}
+{.is-success}
 
 > By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
 
