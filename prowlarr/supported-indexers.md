@@ -2,22 +2,21 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-05T22:02:27.761065
+date: 2024-04-06T00:55:30.561398
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-05T22:02:27.761065
+dateCreated: 2024-04-06T00:55:30.561398
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.0.4387` / [Commit: a989bf82ea541151668f23c8e786c5b219b816eb](https://github.com/Prowlarr/Prowlarr/commit/a989bf82ea541151668f23c8e786c5b219b816eb)
-  - [Prowlarr Indexers Commit: cdab3013710cb21cb3f47e8e36b67aedba10cc90](https://github.com/Prowlarr/Indexers/commit/cdab3013710cb21cb3f47e8e36b67aedba10cc90)
+  - Prowlarr Build `1.16.0.4392` / [Commit: a989bf82ea541151668f23c8e786c5b219b816eb](https://github.com/Prowlarr/Prowlarr/commit/a989bf82ea541151668f23c8e786c5b219b816eb)
+  - [Prowlarr Indexers Commit: e2dc2d0eef2e5c24af92fb7f5c28666db54bcd9e](https://github.com/Prowlarr/Indexers/commit/e2dc2d0eef2e5c24af92fb7f5c28666db54bcd9e)
 
 ---
 
 - Current `Master` Version | ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/master/changes)
 - Current `Develop` Version | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/develop/changes)
 - Current `Nightly` Version | ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes)
-
 ---
 
 ## Torrents
@@ -588,7 +587,7 @@ dateCreated: 2024-04-05T22:02:27.761065
 |[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Shadowflow (影)](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TheRebels (API)](https://therebels.tv/){#therebels-api}|TheRebels is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
-|[Toca Share](https://tocashare.com/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Portugal)|
+|[Toca Share](https://tocashare.biz/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Portugal)|
 |[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH site for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Torrentland (API)](https://torrentland.li/){#torrentland-api}|Torrentland is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
@@ -640,6 +639,7 @@ dateCreated: 2024-04-05T22:02:27.761065
 |Generic Torznab{#torznab}|A Newznab-like api for torrents|English (United States)|
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
+
 
 ## Usenet
 
