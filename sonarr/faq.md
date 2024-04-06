@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-04-04T13:00:34.399Z
+date: 2024-04-06T14:31:02.744Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -145,7 +145,7 @@ chmod -R 0644 *
 
 {#help-i-have-forgotten-my-password}
 
-> If you are using v4 of Sonarr the `AuthenticationMethod` type `None` is no longer valid - please see this [FAQ](/sonarr/faq-v4) {.is-info}
+> Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) {.is-info}
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
@@ -153,9 +153,9 @@ To disable authentication (to reset your forgotten username or password) you wil
 1. Open config.xml in a text editor
 1. Find the authentication method line will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
-*(Make sure you only have one AuthenticationMethod entry in your file)*
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
-*(If you are running v4, the correct entry is External instead of None)*
+***(Be sure that you do not have two AuthenticationMethod entries in your file)***
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
+***(If you are running an old v3 version, the correct value is `None` instead of `External`)***
 1. Restart Sonarr
 1. Sonarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
