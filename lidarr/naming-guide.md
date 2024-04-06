@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes
 published: true
-date: 2024-04-06T13:02:35.717Z
+date: 2024-04-06T13:12:03.956Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -81,7 +81,7 @@ TODO: Add explainer
 
 ### Artist Folder Format
 
-Adding the artist disambiguation is needed when MusicBrainz has two similar artist entries such as Alice Cooper [the person](https://musicbrainz.org/artist/ee58c59f-8e7f-4430-b8ca-236c4d3745ae) and Alice Cooper [the band](/lidarr/quick-start-guide)<https://musicbrainz.org/artist/4d7928cd-7ed2-4282-8c29-c0c9f966f1bd>).
+Adding the artist disambiguation is needed when MusicBrainz has two similar artist entries such as Alice Cooper [the person](https://musicbrainz.org/artist/ee58c59f-8e7f-4430-b8ca-236c4d3745ae) and Alice Cooper [the band](https://musicbrainz.org/artist/4d7928cd-7ed2-4282-8c29-c0c9f966f1bd).
 
 ```jinja
 {Artist NameThe} {(Artist Disambiguation)}
