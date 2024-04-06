@@ -2,8 +2,8 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes
 published: true
-date: 2024-04-06T12:49:48.304Z
-tags: lidarr, naming, folders
+date: 2024-04-06T13:02:35.717Z
+tags: 
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
 ---
@@ -105,10 +105,10 @@ This naming convention works well with Plex and is useful as a workaround when a
 
 ### Artist Folder Format
 
-Using `CleanNameThe` moves `The` to the end of the folder name for easier folder navigation. Adding `Artist Disambiguation` prevents conflicts when two artist have the same name, such as [The Home Team (Seattle pop-rock group)](https://musicbrainz.org/artist/35c8d5bb-8bbd-43e2-a8d3-157fa391789f) and [The Home Team (Canadian early 2000's rock/emo band)](https://musicbrainz.org/artist/ea5a58c2-7638-45c1-adb7-3913491d505c) 
+Using `CleanNameThe` moves `The` to the end of the folder name for easier folder navigation.
 
 ```jinja
-{Artist CleanNameThe} {Artist Disambiguation}
+{Artist CleanNameThe}
 ```
 
 ## Fra's Naming Convention
