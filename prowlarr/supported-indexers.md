@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-06T00:55:30.561398
+date: 2024-04-07T01:02:10.600661
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-06T00:55:30.561398
+dateCreated: 2024-04-07T01:02:10.600661
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.0.4392` / [Commit: a989bf82ea541151668f23c8e786c5b219b816eb](https://github.com/Prowlarr/Prowlarr/commit/a989bf82ea541151668f23c8e786c5b219b816eb)
-  - [Prowlarr Indexers Commit: e2dc2d0eef2e5c24af92fb7f5c28666db54bcd9e](https://github.com/Prowlarr/Indexers/commit/e2dc2d0eef2e5c24af92fb7f5c28666db54bcd9e)
+  - Prowlarr Build `1.16.0.4401` / [Commit: 37a6d03d52fbe3c24e860f440326cedc765a567e](https://github.com/Prowlarr/Prowlarr/commit/37a6d03d52fbe3c24e860f440326cedc765a567e)
+  - [Prowlarr Indexers Commit: 0fd3588761a45676c5efd35a5ec56685783fc03b](https://github.com/Prowlarr/Indexers/commit/0fd3588761a45676c5efd35a5ec56685783fc03b)
 
 ---
 
@@ -338,7 +338,7 @@ dateCreated: 2024-04-06T00:55:30.561398
 |[HaiDan](https://www.haidan.video/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Hǎitáng (海棠PT)](https://www.htpt.cc/){#haitang}|Hǎitáng (海棠PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|English (United States)|
-|[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
+|[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno (HUNO) is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
 |[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
@@ -444,6 +444,7 @@ dateCreated: 2024-04-06T00:55:30.561398
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[RM-HD](https://remastered-hd.org/){#rmhd}|RM-HD (remastered-hd) is a UKRAINIAN Private tracker for remastered MOVIES / TV / MUSIC|Ukrainian (Ukraine)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
+|[RoTorrent](https://rotorrent.ro/){#rotorrent}|RoTorrent is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[RPTScene](https://rptscene.xyz/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
@@ -581,6 +582,7 @@ dateCreated: 2024-04-06T00:55:30.561398
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PT GTK](https://pt.gtk.pw/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTLSP](https://www.ptlsp.com/){#ptlsp}|PTLSP is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Qingwa (青蛙)](https://new.qingwa.pro/){#qingwa}|Qingwa (青蛙) is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Red Leaves (红叶)](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
