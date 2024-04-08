@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-07T01:02:10.600661
+date: 2024-04-08T00:58:07.515647
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-07T01:02:10.600661
+dateCreated: 2024-04-08T00:58:07.515647
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.0.4401` / [Commit: 37a6d03d52fbe3c24e860f440326cedc765a567e](https://github.com/Prowlarr/Prowlarr/commit/37a6d03d52fbe3c24e860f440326cedc765a567e)
-  - [Prowlarr Indexers Commit: 0fd3588761a45676c5efd35a5ec56685783fc03b](https://github.com/Prowlarr/Indexers/commit/0fd3588761a45676c5efd35a5ec56685783fc03b)
+  - Prowlarr Build `1.16.0.4401` / [Commit: 292af28d4274306bea6468bf1529d47cf89508f5](https://github.com/Prowlarr/Prowlarr/commit/292af28d4274306bea6468bf1529d47cf89508f5)
+  - [Prowlarr Indexers Commit: dc108335683f9bd4497fab837cf4b7be4c13a5f7](https://github.com/Prowlarr/Indexers/commit/dc108335683f9bd4497fab837cf4b7be4c13a5f7)
 
 ---
 
@@ -111,6 +111,7 @@ dateCreated: 2024-04-07T01:02:10.600661
 |[Torrent9 clone](https://www.torrent9.sb/){#torrent9clone}|Torrent9 clone is a FRENCH Public Torrent9 clone for TV / MOVIES / GENERAL|French (France)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN public Torrent Tracker|Russian (Russia)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
+|[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
@@ -191,7 +192,7 @@ dateCreated: 2024-04-07T01:02:10.600661
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://06april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://07april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
@@ -561,6 +562,7 @@ dateCreated: 2024-04-07T01:02:10.600661
 |[Heavens-Hell](https://heavens-hell.info/){#heavens-hell}|Heavens-Hell is a Private Torrent Tracker for MUSIC / AUDIO SOFTWARE|English (United States)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[iAnon](https://ianon.app/){#ianon}|MacOS software tracker|English (United States)|
+|[ilolicon PT](https://share.ilolicon.com/){#ilolicon}|ilolicon PT is a CHINESE Private torrent tracker for LOLICON / MOVIES / 3X|Chinese (China)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kelu](https://our.kelu.one/){#kelu}|Kelu is a CHINESE Private Torrent Tracker for GAY 3X|Chinese (China)|
 |[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
