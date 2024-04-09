@@ -42,6 +42,14 @@ scriptdate="2024-04-09" # change this later
 
 set -euo pipefail
 
+### Am I root?, need root! GROOT!
+
+if [ "$EUID" -ne 0 ]; then
+    echo -e ${red}"Please run as root!"
+    echo -e "Exiting script!"
+    exit
+fi
+
 ### Title Splash
 echo -e ${brown}
 echo -e "#############################################################"
@@ -57,14 +65,6 @@ echo -e "#############################################################"
 echo -e ${reset}
 
 echo "Running Servarr Install Script - Version [$scriptversion] as of [$scriptdate]"
-
-### Am I root?, need root! GROOT!
-
-if [ "$EUID" -ne 0 ]; then
-    echo -e ${red}"Please run as root!"
-    echo -e "Exiting script!"
-    exit
-fi
 
 echo "Select the application to install: "
 
