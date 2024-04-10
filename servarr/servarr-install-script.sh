@@ -56,7 +56,11 @@ echo -e "#############################################################"
 echo -e "#                                                           #"
 echo -e "#   Welcome to the Servarr Community Installation Script!   #"
 echo -e "#                                                           #"
+<<<<<<< HEAD
 echo -e "#  This script is for the Debian-based distro users  #"
+=======
+echo -e "#  This script is for the Debian distro based users         #"
+>>>>>>> 92d283b8 (Updated install/uninstall scripts)
 echo -e "#  who need a little help with just the press of a button.  #"
 echo -e "#  If you have not done so, exit the script and read the    #"
 echo -e "#  Boilerplate Warning just to CYA. Enjoy your new setup!   #"

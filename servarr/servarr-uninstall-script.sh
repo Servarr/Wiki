@@ -37,7 +37,7 @@ echo -e "   #############################################################"
 echo -e "   #                                                           #"
 echo -e "   #   Welcome to the Servarr Community UNInstaller Script!    #"
 echo -e "   #                                                           #"
-echo -e "   #  This script is for the Debian / Ubuntu / Raspbian users  #"
+echo -e "   #  This script is for any Debian distro based users         #"
 echo -e "   #  who need a little help with just the press of a button.  #"
 echo -e "   #  If you have not done so, exit the script and read the    #"
 echo -e "   #  Boilerplate Warning just to CYA. Enjoy your new setup!   #"
@@ -193,7 +193,7 @@ fi
 
 # User confirmation remove $User
 echo ""
-read -p "Do you want to remove user '$User'? (y/N): " deluser
+read -p "Do you want to delete USER '$User'? (y/N): " deluser
 deluser=${deluser:-N}
 
 if [[ $deluser =~ ^[Yy]$ ]]; then
@@ -220,7 +220,7 @@ if [ -n "$users_in_group" ]; then
     sleep 1
 else
     echo ""
-    read -p "Do you want to remove group '$Group'? (y/N): " delgroup
+    read -p "Do you want to delete GROUP '$Group'? (y/N): " delgroup
     delgroup=${delgroup:-N}
 
     if [[ $delgroup =~ ^[Yy]$ ]]; then
