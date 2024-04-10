@@ -18,7 +18,7 @@
 ### Version v3.0.9a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Version v3.0.10 2024-01-04 - Bakerboy448 - Misc updates and refactoring. Move to own script file.
 ### Version v3.0.11 2024-01-06 - StevieTV - Exit script when ran from installdir
-### Version v3.0.12 2024-04-09 - nostrus-dominion - Added title splash, added colors, attempting to improve readability, check for installed prerequisites, supressed tarball extraction, and added some sleep timers.
+### Version v3.0.12 2024-04-09 - nostrus-dominion - moved root check, added title splash, added colors, attempted to improve readability, check for installed prerequisites before bothering apt, supressed tarball extraction, added some sleep timers.
 ### Additional Updates by: The Servarr Community
 
 ### Boilerplate Warning
@@ -38,7 +38,7 @@ brown='\033[0;33m'
 reset='\033[0m' # No Color
 
 scriptversion="3.0.12"
-scriptdate="2024-04-09" # change this later
+scriptdate="2024-04-10" # change this later
 
 set -euo pipefail
 
@@ -64,10 +64,10 @@ echo -e "#                                                           #"
 echo -e "#############################################################"
 echo -e ${reset}
 
-echo "Running Servarr Install Script - Version [$scriptversion] as of [$scriptdate]"
-
+echo "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} as of ${brown}[$scriptdate]${reset}"
+echo ""
 echo "Select the application to install: "
-
+echo ""
 select app in lidarr prowlarr radarr readarr whisparr quit; do
 
     case $app in
@@ -114,8 +114,9 @@ select app in lidarr prowlarr radarr readarr whisparr quit; do
         ;;
     esac
 done
+echo ""
 
-# Constants
+### CONSTANTS
 ### Update these variables as required for your specific instance
 installdir="/opt"              # {Update me if needed} Install Location
 bindir="${installdir}/${app^}" # Full Path to Install Location
@@ -123,13 +124,20 @@ datadir="/var/lib/$app/"       # {Update me if needed} AppData directory to use
 app_bin=${app^}                # Binary Name of the app
 
 if [[ $app != 'prowlarr' ]]; then
-    echo -e ${red}"It is critical that the User and Group you select to run${reset} ${app^} ${red}as will have both READ and WRITE access to your Media Library and Download Client Completed Folders!"${reset}
+    echo -e ${red}"   WARNING! WARNING! WARNING!"${reset}
+    echo ""
+    echo -e "   It is ${red}CRITICAL${reset} that the ${brown}User${reset} and ${brown}Group${reset} you select"
+    echo -e "   to run ${brown}[${app^}]${reset} will have both ${red}READ${reset} and ${red}WRITE${reset} access"
+    echo -e "   to your Media Library and Download Client directories!"${reset}
+    sleep 5
 fi
 
 # This script should not be ran from installdir, otherwise later in the script the extracted files will be removed before they can be moved to installdir.
 if [ "$installdir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ] || [ "$bindir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ]; then
-    echo -e ${red}"You should not run this script from the intended install directory. Please re-run it from another directory."
-    echo -e "Exiting Script!"${reset}
+    echo ""
+    echo -e "${red}Error!${reset} You should not run this script from the intended install directory."
+    echo "Please re-run it from another directory."
+    echo "Exiting Script!"
     exit
 fi
 
@@ -155,10 +163,19 @@ else
     echo ""
     echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
     echo ""
-    echo -e "By continuing, you've confirmed that that user and group will have both ${red}READ${reset} and ${red}WRITE${reset} access to your Media Library and Download Client Completed Download directories."
+    echo -e "   By continuing, you've ${red}CONFIRMED${reset} that that ${brown}[$app_uid]${reset} and ${brown}[$app_guid]${reset}"
+    echo -e "   will have both ${red}READ${reset} and ${red}WRITE${reset} access to all required directories."
+    echo ""
 fi
+
+# User confirmation that installation will continue
 echo ""
-read -n 1 -r -s -p $'Press ENTER to continue or use CTRL + C to exit...\n'
+read -r -p "Please type 'yes' to continue with the installation: " response
+if [[ $response != "yes" && $response != "YES" ]]; then
+    echo "Invalid response. Operation is canceled!"
+    echo "Exiting script!"
+    exit 0
+fi
 
 # Create User / Group as needed
 if [ "$app_guid" != "$app_uid" ]; then
@@ -213,10 +230,10 @@ done
 
 if [ ${#missing_packages[@]} -eq 0 ]; then
     echo ""
-    echo -e ${yellow}"All prerequisite packages are already installed!"${reset}
+    echo -e ${green}"All prerequisite packages are already installed!"${reset}
 else
     echo ""
-    echo -e "Installing missing prerequisite packages: ${yellow}${missing_packages[*]}${reset}"
+    echo -e "Installing missing prerequisite packages: ${brown}${missing_packages[*]}${reset}"
     # Install missing prerequisite packages
     apt update && apt install "${missing_packages[@]}"
 fi
@@ -248,7 +265,7 @@ wget --content-disposition "$DLURL"
 echo ""
 echo -e ${yellow}"Download complete!"${reset}
 echo ""
-echo -e "Extracting tarball! Output is suppressed."
+echo -e ${yellow}"Extracting tarball!"${reset}
 tar -xvzf "${app^}".*.tar.gz >/dev/null 2>&1
 echo ""
 echo -e ${yellow}"Installation files downloaded and extracted!"${reset}
