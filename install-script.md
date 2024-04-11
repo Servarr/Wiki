@@ -61,7 +61,7 @@ SSH into your Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or log
 - Once SSHed in type the command below to download the installation script in your current directory
 
 ```bash
-curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-uninstall-script.sh
+curl -o servarr-uninstall-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-uninstall-script.sh
 ```
 
 - To run the uninstall script
