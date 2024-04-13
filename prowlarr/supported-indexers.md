@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-10T15:47:11.453346
+date: 2024-04-13T00:48:06.000100
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-10T15:47:11.453346
+dateCreated: 2024-04-13T00:48:06.000100
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.1.4406` / [Commit: a84210c4529692fbc53d37b8a9df8302b7912b1c](https://github.com/Prowlarr/Prowlarr/commit/a84210c4529692fbc53d37b8a9df8302b7912b1c)
-  - [Prowlarr Indexers Commit: 49eb02e7d0c54f139514d87c8a683e41933a91ce](https://github.com/Prowlarr/Indexers/commit/49eb02e7d0c54f139514d87c8a683e41933a91ce)
+  - Prowlarr Build `1.16.1.4412` / [Commit: c957168040853787057058f34a0c2a1dfdc54b87](https://github.com/Prowlarr/Prowlarr/commit/c957168040853787057058f34a0c2a1dfdc54b87)
+  - [Prowlarr Indexers Commit: e17c0573cc16367745a26f5a9168b551c46d8b1b](https://github.com/Prowlarr/Indexers/commit/e17c0573cc16367745a26f5a9168b551c46d8b1b)
 
 ---
 
@@ -117,7 +117,7 @@ dateCreated: 2024-04-10T15:47:11.453346
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq305.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq306.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentSir](https://torrentsir140.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -191,7 +191,7 @@ dateCreated: 2024-04-10T15:47:11.453346
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://10april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://11april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
@@ -582,9 +582,10 @@ dateCreated: 2024-04-10T15:47:11.453346
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PT GTK](https://pt.gtk.pw/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTLSP](https://www.ptlsp.com/){#ptlsp}|PTLSP is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[Qingwa (青蛙)](https://new.qingwa.pro/){#qingwa}|Qingwa (青蛙) is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Qingwa (青蛙)](https://www.qingwapt.com/){#qingwa}|Qingwa (青蛙) is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Red Leaves (红叶)](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[RocketHD](https://r0k3t.li/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Shadowflow (影)](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
