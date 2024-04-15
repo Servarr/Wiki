@@ -2,7 +2,7 @@
 title: Servarr Installation Script
 description: Common Installation Script for the Servarr Suite of Applications
 published: true
-date: 2024-04-06T01:35:12.502Z
+date: 2024-04-15T10:13:30.679Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
@@ -61,7 +61,7 @@ SSH into your Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or log
 - Once SSHed in type the command below to download the installation script in your current directory
 
 ```bash
-curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-uninstall-script.sh
+curl -o servarr-uninstall-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-uninstall-script.sh
 ```
 
 - To run the uninstall script
