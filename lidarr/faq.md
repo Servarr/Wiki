@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2024-02-04T17:18:43.229Z
+date: 2024-04-15T23:08:34.098Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -156,7 +156,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## I cannot find a release in Lidarr but it is on MusicBrainz
 
-- This is likely due to the release having an `unknown` release status. Update MusicBrainz.
+- This is likely due to the release having an `unknown` release status. Update MusicBrainz. Lidarr Metadata only ingests `official` releases. 
 
 ## How often do Lidarr's and MusicBrainz databases sync?
 
