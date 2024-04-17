@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-15T03:19:29.846559
+date: 2024-04-17T00:57:42.178895
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-15T03:19:29.846559
+dateCreated: 2024-04-17T00:57:42.178895
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.16.1.4420` / [Commit: e3e9094d426e78097f304ebdd6fc408ac3053267](https://github.com/Prowlarr/Prowlarr/commit/e3e9094d426e78097f304ebdd6fc408ac3053267)
-  - [Prowlarr Indexers Commit: 37cbdf6c7b011f50f5e97243331edc0f5e6f9d38](https://github.com/Prowlarr/Indexers/commit/37cbdf6c7b011f50f5e97243331edc0f5e6f9d38)
+  - Prowlarr Build `1.16.2.4431` / [Commit: 21d553cf1bd6bc348afdfbe8b12fb208046de7c1](https://github.com/Prowlarr/Prowlarr/commit/21d553cf1bd6bc348afdfbe8b12fb208046de7c1)
+  - [Prowlarr Indexers Commit: b693230565c12e6abef921b1a9ac47eb0b4b2c60](https://github.com/Prowlarr/Indexers/commit/b693230565c12e6abef921b1a9ac47eb0b4b2c60)
 
 ---
 
@@ -190,7 +190,7 @@ dateCreated: 2024-04-15T03:19:29.846559
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://14april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://16april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
@@ -304,7 +304,7 @@ dateCreated: 2024-04-15T03:19:29.846559
 |[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-learning|English (United States)|
-|[Dream Tracker](https://dream-tracker.net/){#dreamtracker}|Dream Tracker is a GREEK Private tracker for TV / MOVIES / GENERAL|English (United States)|
+|[Dream Tracker](https://dream-tracker.net/){#dreamtracker}|Dream Tracker is a Subscription only GREEK Private tracker for TV / MOVIES / GENERAL|English (United States)|
 |[Ebooks-Shares](https://ebooks-shares.org/){#ebooks-shares}|Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS|English (United States)|
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://www.empornium.is/){#empornium2fa}|this indexer uses a cookie login for Empornium for those that want to use 2FA|English (United States)|
@@ -599,7 +599,6 @@ dateCreated: 2024-04-15T03:19:29.846559
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Wukong (悟空问道)](https://wukongwendao.top/){#wukong}|Wukong (悟空问道) is a CHINESE Private Torrent Tracker for E-LEARNING|Chinese (China)|
-|[XbytesV2](https://xbytesv2.li/){#xbytes2}|xbytesV2 is a SPANISH site for HD content|Spanish (Spain)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
 |[CinemaZ](https://cinemaz.to/){#cinemaz}|CinemaZ (EuTorrents) is a Private Torrent Tracker for FOREIGN NON-ASIAN MOVIES|English (United States)|
 |[DICMusic](https://dicmusic.com/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
