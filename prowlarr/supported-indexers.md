@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-17T00:57:42.178895
+date: 2024-04-17T03:48:03.357993
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-17T00:57:42.178895
+dateCreated: 2024-04-17T03:48:03.357993
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.16.2.4431` / [Commit: 21d553cf1bd6bc348afdfbe8b12fb208046de7c1](https://github.com/Prowlarr/Prowlarr/commit/21d553cf1bd6bc348afdfbe8b12fb208046de7c1)
-  - [Prowlarr Indexers Commit: b693230565c12e6abef921b1a9ac47eb0b4b2c60](https://github.com/Prowlarr/Indexers/commit/b693230565c12e6abef921b1a9ac47eb0b4b2c60)
+  - [Prowlarr Indexers Commit: 7459419b5341bf2a6b3ea489b0eae180744c84d6](https://github.com/Prowlarr/Indexers/commit/7459419b5341bf2a6b3ea489b0eae180744c84d6)
 
 ---
 
@@ -190,7 +190,7 @@ dateCreated: 2024-04-17T00:57:42.178895
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://16april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://17april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
