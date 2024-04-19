@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-17T03:48:03.357993
+date: 2024-04-19T00:57:36.155858
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-17T03:48:03.357993
+dateCreated: 2024-04-19T00:57:36.155858
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.16.2.4431` / [Commit: 21d553cf1bd6bc348afdfbe8b12fb208046de7c1](https://github.com/Prowlarr/Prowlarr/commit/21d553cf1bd6bc348afdfbe8b12fb208046de7c1)
-  - [Prowlarr Indexers Commit: 7459419b5341bf2a6b3ea489b0eae180744c84d6](https://github.com/Prowlarr/Indexers/commit/7459419b5341bf2a6b3ea489b0eae180744c84d6)
+  - [Prowlarr Indexers Commit: 274f98973168218c61a7e491a0e35de4501cd1e0](https://github.com/Prowlarr/Indexers/commit/274f98973168218c61a7e491a0e35de4501cd1e0)
 
 ---
 
@@ -207,7 +207,6 @@ dateCreated: 2024-04-17T03:48:03.357993
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private site for TV / MOVIES / GENERAL|Italian (Italy)|
-|[MovieWorld](https://movieworld.pics/){#movieworld}|MovieWorld (Flicker) is a Semi-Private Torrent Tracker for MOVIES / TV / 3X|English (United States)|
 |[MuseBootlegs](https://www.musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
