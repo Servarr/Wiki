@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-23T00:58:44.324958
+date: 2024-04-25T01:00:26.999123
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-23T00:58:44.324958
+dateCreated: 2024-04-25T01:00:26.999123
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.17.0.4440` / [Commit: 73cdaf3d4487ac84cc6e3faaa45c569de3838a54](https://github.com/Prowlarr/Prowlarr/commit/73cdaf3d4487ac84cc6e3faaa45c569de3838a54)
-  - [Prowlarr Indexers Commit: a4cf54f2e84216fc568704469151d9e96bf4369f](https://github.com/Prowlarr/Indexers/commit/a4cf54f2e84216fc568704469151d9e96bf4369f)
+  - Prowlarr Build `1.17.0.4444` / [Commit: 0261201360ae7eb7d8feb1751cf3afeb3deb7184](https://github.com/Prowlarr/Prowlarr/commit/0261201360ae7eb7d8feb1751cf3afeb3deb7184)
+  - [Prowlarr Indexers Commit: 9dbebda667ea91f29ca4834cab6919712c042d84](https://github.com/Prowlarr/Indexers/commit/9dbebda667ea91f29ca4834cab6919712c042d84)
 
 ---
 
@@ -57,7 +57,6 @@ dateCreated: 2024-04-23T00:58:44.324958
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[GkTorrent](https://www.gktorrent.eu/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[GTorrent\.ru](http://gtorrent.ru/){#gtorrentpro}|GTorrent\.ru is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
 |[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
@@ -118,9 +117,9 @@ dateCreated: 2024-04-23T00:58:44.324958
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq307.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentSir](https://torrentsir141.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentView](https://viewtorrent18.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[TorrentWhiz](https://torrentwiz66.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir142.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](http://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -190,7 +189,7 @@ dateCreated: 2024-04-23T00:58:44.324958
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://20april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://24april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
@@ -414,7 +413,6 @@ dateCreated: 2024-04-23T00:58:44.324958
 |[PigNetwork (猪猪网)](https://piggo.me/){#pignetwork}|PigNetwork (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[PixelCove](https://www.pixelcove.me/){#pixelcove}|PixelCove (Ultimate Gamer) is a Private Torrent Tracker for GAMES|English (United States)|
 |[PixelCove2FA](https://www.pixelcove.me/){#pixelcove2fa}|PixelCove2FA (Ultimate Gamer) is a Private Torrent Tracker for GAMES\. Cookie Login for 2FA use|English (United States)|
-|[PolishSource](https://polishsource.cz/){#polishsource}|PolishSource (PS) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private site for 0DAY / MOVIES / GENERAL|Polish (Poland)|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|English (United States)|
 |[Portugas (API)](https://portugas.org/){#portugas-api}|Portugas is a Private PORTUGUESE Tracker|Portuguese (Portugal)|
@@ -566,7 +564,6 @@ dateCreated: 2024-04-23T00:58:44.324958
 |[Last Digital Underground](https://theldu.net/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
 |[LilleSky\.org](https://lillesky.org/){#lilleskyorg}|LilleSky\.org is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[Mendigos da WEB](https://mendigosdaweb.cc/){#mendigosdaweb}|Mendigos da WEB is a PORTUGUESE Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Portugal)|
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
