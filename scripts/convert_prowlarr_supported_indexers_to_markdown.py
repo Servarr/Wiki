@@ -588,7 +588,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         _logger.info("Tables have changed. Continuing script.")
 
     # Build and Output Page
-    date = datetime.now(datetime.timezone.UTC).isoformat()
+    date = datetime.utcnow().isoformat()
     header_wiki = (
         f"---\n"
         f"title: Prowlarr Supported Indexers\n"
