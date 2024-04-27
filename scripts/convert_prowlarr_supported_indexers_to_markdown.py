@@ -366,7 +366,8 @@ def get_indexers(api_url, headers):
     indexer_url = f"{api_url}/indexer/schema"
     response = get_request(indexer_url, headers)
     indexer_obj = json.loads(response.content)
-    return indexer_obj
+    sorted_indexers = sorted(indexer_obj, key=lambda x: x["sortName"])
+    return sorted_indexers
 
 
 def build_markdown_table(indexers, privacy, protocol):
@@ -587,7 +588,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         _logger.info("Tables have changed. Continuing script.")
 
     # Build and Output Page
-    date = datetime.utcnow().isoformat()
+    date = datetime.now(datetime.timezone.UTC).isoformat()
     header_wiki = (
         f"---\n"
         f"title: Prowlarr Supported Indexers\n"
