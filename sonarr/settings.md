@@ -119,7 +119,7 @@ Also, note that for each individual settings page, there are some options at the
 
 ## Community Naming Suggestions
 
-> Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) {.is-info}
+> Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-recommended-naming-scheme/) {.is-info}
 
 > Warning: Starting from v3.0.6.1431, Sonarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` {.is-warning}
 
@@ -433,9 +433,9 @@ Name for the `Specials` (Season) folder
 - Ensure you get the right release every time! Custom formats allows fine control over release prioritization and selection. As simple as a single preferred word or as complex as you want with multiple criteria and regex.
 - Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
 - Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
-- It's strongly recommended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Sonarr/Sonarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
-  - [DV (WEB-DL)](https://trash-guides.info/Sonarr/Sonarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
-  - [BR-DISK](https://trash-guides.info/Sonarr/Sonarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
+- It's strongly recommended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
+  - [DV (WEB-DL)](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
+  - [BR-DISK](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
 ---
 
@@ -478,19 +478,19 @@ Profiles is where Custom Format Scores are configured.
 - The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected.
   - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
   - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
-- [**Please see TRaSH's Guides for how to setup and use custom formats**](https://trash-guides.info/Sonarr/Sonarr-setup-custom-formats/)
+- [**Please see TRaSH's Guides for how to setup and use custom formats**](https://trash-guides.info/Sonarr/sonarr-setup-custom-formats/)
 
 #### Importing / Exporting Custom Formats
 
-- [Please see TRaSH's Guides for how to import/export custom formats.](https://trash-guides.info/Sonarr/Sonarr-import-custom-formats/) However, one is able to import and export custom formats.
+- [Please see TRaSH's Guides for how to import/export custom formats.](https://trash-guides.info/Sonarr/sonarr-import-custom-formats/) However, one is able to import and export custom formats.
 
 #### Importing / Updating Existing Custom Formats
 
-- [Please see TRaSH's Guides for how to import or update existing custom formats.](https://trash-guides.info/Sonarr/Sonarr-how-to-update-custom-formats/)
+- [Please see TRaSH's Guides for how to import or update existing custom formats.](https://trash-guides.info/Sonarr/sonarr-how-to-update-custom-formats/)
 
 ### Collection of Custom Formats
 
-- [TRaSH maintains a collection of custom formats](https://trash-guides.info/Sonarr/Sonarr-collection-of-custom-formats/)
+- [TRaSH maintains a collection of custom formats](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/)
 
 ## Delay Profiles
 

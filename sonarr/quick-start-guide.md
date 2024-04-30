@@ -58,7 +58,7 @@ Click on `Settings` => `Media Management` on the left menu.
 ![qs_episodenaming.png](/assets/sonarr/qs_episodenaming.png)
 
 - Check the box to enable Rename Episodes.
-- Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/).
+- Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/sonarr-recommended-naming-scheme/).
 
 > If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
 {.is-info}

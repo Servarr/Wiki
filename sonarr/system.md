@@ -194,7 +194,7 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/tv and since you used /data in Sonarr when the download client tells Sonarr it's done Sonarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/tv all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hardlinks and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hardlinks and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
-- See [TRaSH's Remote Path Guide](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) for more information.
+- See [TRaSH's Remote Path Guide](https://trash-guides.info/Sonarr/sonarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 
@@ -217,7 +217,7 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 
 #### Bad Remote Path Mapping
 
-- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) for more information.
+- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Sonarr/sonarr-remote-path-mapping/) for more information.
 
 #### Permissions Error
 
