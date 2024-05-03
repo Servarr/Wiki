@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-04-29T00:59:27.690465
+date: 2024-05-03T01:01:31.513678
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-04-29T00:59:27.690465
+dateCreated: 2024-05-03T01:01:31.513678
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.17.1.4468` / [Commit: 3e0af062c12728686c362489ff717feca69def60](https://github.com/Prowlarr/Prowlarr/commit/3e0af062c12728686c362489ff717feca69def60)
-  - [Prowlarr Indexers Commit: ef5f3e2e8aebe851f173a435de6d76e96282bd04](https://github.com/Prowlarr/Indexers/commit/ef5f3e2e8aebe851f173a435de6d76e96282bd04)
+  - Prowlarr Build `1.17.1.4483` / [Commit: cb673ddc42df406ad9779481a7b5ae13e41f0649](https://github.com/Prowlarr/Prowlarr/commit/cb673ddc42df406ad9779481a7b5ae13e41f0649)
+  - [Prowlarr Indexers Commit: 44744195acb45f244ee7135c452a7e418a26a529](https://github.com/Prowlarr/Indexers/commit/44744195acb45f244ee7135c452a7e418a26a529)
 
 ---
 
@@ -55,7 +55,7 @@ dateCreated: 2024-04-29T00:59:27.690465
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.eu/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.xyz/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
 |[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
@@ -120,9 +120,9 @@ dateCreated: 2024-04-29T00:59:27.690465
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq308.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq309.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir142.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir143.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -191,7 +191,7 @@ dateCreated: 2024-04-29T00:59:27.690465
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://29april.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://03may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -525,7 +525,6 @@ dateCreated: 2024-04-29T00:59:27.690465
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[RetroFlix](https://retroflix.club/){#retroflix}|RetroFlix (RFX) is a Private Torrent Tracker for Classic Movies / TV / General Releases|English (United States)|
 |[RevolutionTT](https://revolutiontt.me/){#revolutiontt}|The Revolution has begun|English (United States)|
-|[RM-HD](https://remastered-hd.org/){#rmhd}|RM-HD (remastered-hd) is a UKRAINIAN Private tracker for remastered MOVIES / TV / MUSIC|Ukrainian (Ukraine)|
 |[RocketHD](https://r0k3t.li/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
 |[RoTorrent](https://rotorrent.ro/){#rotorrent}|RoTorrent is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
@@ -609,13 +608,11 @@ dateCreated: 2024-04-29T00:59:27.690465
 |[TurkSeed](https://turkseed.com/){#turkseed-api}|TurkSeed is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TurkTorrent](https://turktorrent.us/){#turktorrent}|TurkTorrent (TT) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TVChaosUK](https://tvchaosuk.com/){#tvchaosuk}|TV Chaos UK (TVCUK) is a Private Torrent Tracker for UK TV|English (United Kingdom)|
-|[TvRoad](https://tvroad.info/){#tvroad}|TvRoad is a FRENCH Private Torrent Tracker for TV|French (France)|
 |[U2](https://u2.dmhy.org/){#u2}|U2 (U2分享園@動漫花園) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UHDBits](https://uhdbits.org/){#uhdbits}|UHDBits is a Private Torrent Tracker for UHD Movies / TV|English (United States)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[UnionGang](https://www.uniongang.net/){#uniongang}|UnionGang is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
-|[Universal-Torrents](https://uni-track.org/){#universaltorrents}|Universal-Torrents is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Unlimitz](https://www.unlimitz.biz/){#unlimitz}|Unlimitz is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[UTOPIA](https://utp.to/){#utopia}|UTOPIA is a UKRAINIAN Private Tracker for HD MOVIES and TV|Ukrainian (Ukraine)|
