@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-05-03T01:01:31.513678
+date: 2024-05-06T01:00:19.692723
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-05-03T01:01:31.513678
+dateCreated: 2024-05-06T01:00:19.692723
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.17.1.4483` / [Commit: cb673ddc42df406ad9779481a7b5ae13e41f0649](https://github.com/Prowlarr/Prowlarr/commit/cb673ddc42df406ad9779481a7b5ae13e41f0649)
-  - [Prowlarr Indexers Commit: 44744195acb45f244ee7135c452a7e418a26a529](https://github.com/Prowlarr/Indexers/commit/44744195acb45f244ee7135c452a7e418a26a529)
+  - Prowlarr Build `1.17.2.4493` / [Commit: 634016ae1bfce61640c6e98704ff7920ba5cc4a4](https://github.com/Prowlarr/Prowlarr/commit/634016ae1bfce61640c6e98704ff7920ba5cc4a4)
+  - [Prowlarr Indexers Commit: fc52b85965531be8b7bd9fcbddd614e5011052c9](https://github.com/Prowlarr/Indexers/commit/fc52b85965531be8b7bd9fcbddd614e5011052c9)
 
 ---
 
@@ -120,7 +120,7 @@ dateCreated: 2024-05-03T01:01:31.513678
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq309.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq311.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir143.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -507,6 +507,7 @@ dateCreated: 2024-05-03T01:01:31.513678
 |[PTLSP](https://www.ptlsp.com/){#ptlsp}|PTLSP is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTSBAO (烧包)](https://ptsbao.club/){#ptsbao}|PTSBAO (烧包) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[PTTime](https://www.pttime.org/){#pttime}|PTTime is a ratioless CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[PTVicomo](https://ptvicomo.net/){#ptvicomo}|PTVicomo is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PT分享站 (itzmx)](https://pt.itzmx.com/){#ptitzmx}|PT分享站 (itzmx) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Punk's Horror Tracker](https://punck-tracker.net/){#punkshorror}|Punk's Horror Tracker is a HUNGARIAN Private Tracker for Horror MOVIES / TV|Hungarian (Hungary)|
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH site for General content|Spanish (Spain)|
