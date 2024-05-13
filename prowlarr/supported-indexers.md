@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-05-09T00:59:26.626956
+date: 2024-05-13T01:07:17.357581
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-05-09T00:59:26.626956
+dateCreated: 2024-05-13T01:07:17.357581
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.17.2.4505` / [Commit: 9561371a47f118bd161652a9243a51fb4ba23667](https://github.com/Prowlarr/Prowlarr/commit/9561371a47f118bd161652a9243a51fb4ba23667)
-  - [Prowlarr Indexers Commit: af715b6b1e089e1c96f9807c537758457a03a7a1](https://github.com/Prowlarr/Indexers/commit/af715b6b1e089e1c96f9807c537758457a03a7a1)
+  - Prowlarr Build `1.18.0.4512` / [Commit: 2929c3c8980e90c3769565706c591336b5ea5997](https://github.com/Prowlarr/Prowlarr/commit/2929c3c8980e90c3769565706c591336b5ea5997)
+  - [Prowlarr Indexers Commit: 5d0948bc0120abac86ef4cbc4b0069372202df54](https://github.com/Prowlarr/Indexers/commit/5d0948bc0120abac86ef4cbc4b0069372202df54)
 
 ---
 
@@ -57,6 +57,7 @@ dateCreated: 2024-05-09T00:59:26.626956
 |[GamesTorrents](https://www.gamestorrents.fm/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[GkTorrent](https://www.gktorrent.xyz/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
 |[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
@@ -121,9 +122,9 @@ dateCreated: 2024-05-09T00:59:26.626956
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq312.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq313.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir143.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir144.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -192,7 +193,7 @@ dateCreated: 2024-05-09T00:59:26.626956
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://09may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://13may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -398,6 +399,7 @@ dateCreated: 2024-05-09T00:59:26.626956
 |[HHanClub](https://hhanclub.top/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[HQMusic](http://hqmusic.info/){#hqmusic}|HQMusic is a Private Torrent Tracker for MUSIC|English (United States)|
+|[HUDBT (蝴蝶)](https://hudbt.hust.edu.cn/){#hudbt}|HUDBT (蝴蝶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Hǎitáng (海棠PT)](https://www.htpt.cc/){#haitang}|Hǎitáng (海棠PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|Chinese (China)|
 |[iAnon](https://ianon.app/){#ianon}|MacOS software tracker|English (United States)|
 |[ICC2022 (冰淇淋)](https://www.icc2022.com/){#icc2022}|ICC2022 (冰淇淋) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
