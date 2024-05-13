@@ -27,7 +27,7 @@ Note that the following will only be logged for custom scripts:
 ## On Grab
 
 | Environment Variable                    | Details                                                                                      |
-| --------------------------------------- | -------------------------------------------------------------------------------------------- |
+|-----------------------------------------|----------------------------------------------------------------------------------------------|
 | `sonarr_eventtype`                      | `Grab`                                                                                       |
 | `sonarr_series_id`                      | Internal ID of the series                                                                    |
 | `sonarr_series_title`                   | Title of the series                                                                          |
@@ -35,6 +35,7 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_series_tvmazeid`                | TVMaze ID for the series                                                                     |
 | `sonarr_series_imdbid`                  | IMDB ID for the series (empty if unknown)                                                    |
 | `sonarr_series_type`                    | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
+| `sonarr_series_year`                    | Year of the series                                                                           |
 | `sonarr_release_episodecount`           | Number of episodes in the release                                                            |
 | `sonarr_release_seasonnumber`           | Season number from release                                                                   |
 | `sonarr_release_episodenumbers`         | Comma-delimited list of episode numbers                                                      |
@@ -54,7 +55,7 @@ Note that the following will only be logged for custom scripts:
 ## On Import/On Upgrade
 
 | Environment Variable                    | Details                                                                                      |
-| --------------------------------------- | -------------------------------------------------------------------------------------------- |
+|-----------------------------------------|----------------------------------------------------------------------------------------------|
 | `sonarr_eventtype`                      | `Download`                                                                                   |
 | `sonarr_isupgrade`                      | `True` when an existing file is upgraded, `False` otherwise                                  |
 | `sonarr_series_id`                      | Internal ID of the series                                                                    |
@@ -64,6 +65,7 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_series_tvmazeid`                | TVMaze ID for the series                                                                     |
 | `sonarr_series_imdbid`                  | IMDB ID for the series (empty if unknown)                                                    |
 | `sonarr_series_type`                    | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
+| `sonarr_series_year`                    | Year of the series                                                                           |
 | `sonarr_episodefile_id`                 | Internal ID of the episode file                                                              |
 | `sonarr_episodefile_episodecount`       | Number of episodes in the file                                                               |
 | `sonarr_episodefile_relativepath`       | Path to the episode file, relative to the series path                                        |
@@ -88,7 +90,7 @@ Note that the following will only be logged for custom scripts:
 ## On Rename
 
 | Environment Variable     | Details                                              |
-| ------------------------ | ---------------------------------------------------- |
+|--------------------------|------------------------------------------------------|
 | `sonarr_eventtype`       | `Rename`                                             |
 | `sonarr_series_id`       | Internal ID of the series                            |
 | `sonarr_series_title`    | Title of the series                                  |
@@ -97,11 +99,12 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_series_tvmazeid` | TVMaze ID for the series                             |
 | `sonarr_series_imdbid`   | IMDB ID for the series (empty if unknown)            |
 | `sonarr_series_type`     | Type of the series (`Anime`, `Daily`, or `Standard`) |
+| `sonarr_series_year`     | Year of the series                                   |
 
 ## On Episode File Delete
 
 | Environment Variable                    | Details                                                                          |
-| --------------------------------------- | -------------------------------------------------------------------------------- |
+|-----------------------------------------|----------------------------------------------------------------------------------|
 | `sonarr_eventtype`                      | `EpisodeFileDelete`                                                              |
 | `sonarr_series_id`                      | Internal ID of the series                                                        |
 | `sonarr_series_title`                   | Title of the series                                                              |
@@ -110,6 +113,7 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_series_tvmazeid`                | TVMaze ID for the series                                                         |
 | `sonarr_series_imdbid`                  | IMDB ID for the series (empty if unknown)                                        |
 | `sonarr_series_type`                    | Type of the series (`Anime`, `Daily`, or `Standard`)                             |
+| `sonarr_series_year`                    | Year of the series                                                               |
 | `sonarr_episodefile_id`                 | Internal ID of the episode file                                                  |
 | `sonarr_episodefile_episodecount`       | Number of episodes in the file                                                   |
 | `sonarr_episodefile_relativepath`       | Path to the episode file, relative to the series' path                           |
@@ -128,7 +132,7 @@ Note that the following will only be logged for custom scripts:
 ## On Series Delete
 
 | Environment Variable         | Details                                                                  |
-| ---------------------------- | ------------------------------------------------------------------------ |
+|------------------------------|--------------------------------------------------------------------------|
 | `sonarr_eventtype`           | `SeriesDelete`                                                           |
 | `sonarr_series_id`           | Internal ID of the series                                                |
 | `sonarr_series_title`        | Title of the series                                                      |
@@ -136,12 +140,13 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_series_tvdbid`       | TVDB ID for the series                                                   |
 | `sonarr_series_imdbid`       | IMDB ID for the series (empty if unknown)                                |
 | `sonarr_series_type`         | Type of the series (`Anime`, `Daily`, or `Standard`)                     |
+| `sonarr_series_year`         | Year of the series                                                       |
 | `sonarr_series_deletedfiles` | `True` when the delete files option has been selected, otherwise `False` |
 
 ## On Health Issue
 
 | Environment Variable          | Details                                                      |
-| ----------------------------- | ------------------------------------------------------------ |
+|-------------------------------|--------------------------------------------------------------|
 | `sonarr_eventtype`            | `HealthIssue`                                                |
 | `sonarr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
 | `sonarr_health_issue_message` | Message from the health issue                                |
@@ -150,17 +155,17 @@ Note that the following will only be logged for custom scripts:
 
 ## On Application Update
 
-| Environment Variable             | Details                               |
-|--------------------------------- |-------------------------------------- |
-| `sonarr_eventtype`               | `ApplicationUpdate`                   |
-| `sonarr_update_message`          | Message from Update                   |
-| `sonarr_update_newversion`       | Version Sonarr updated to (string)    |
-| `sonarr_update_previousversion`  | Version Sonarr updated from (string)  |
+| Environment Variable            | Details                              |
+|---------------------------------|--------------------------------------|
+| `sonarr_eventtype`              | `ApplicationUpdate`                  |
+| `sonarr_update_message`         | Message from Update                  |
+| `sonarr_update_newversion`      | Version Sonarr updated to (string)   |
+| `sonarr_update_previousversion` | Version Sonarr updated from (string) |
 
 ## On Test
 
 When adding the script to Sonarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
 
 | Environment Variable | Details |
-| -------------------- | ------- |
+|----------------------|---------|
 | `sonarr_eventtype`   | `Test`  |
