@@ -693,17 +693,17 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 |      Client       |                                Ratio                                 |                                    Time                                    |
 | :---------------: | :------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-|       Aria2       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
-|      Deluge       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
-| Download Station  | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
-|       Flood       |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
-|     Hadouken      | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
-|    qBittorrent    |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
-|     rTorrent      |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
-| Torrent Blackhole | ![Not Supported](https://img.shields.io/badge/Supported-No-critical) |    ![Not Supported](https://img.shields.io/badge/Supported-No-critical)    |
-|   Transmission    |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue)\* |
-|     uTorrent      |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
-|       Vuze        |   ![Supported](https://img.shields.io/badge/Supported-Yes-success)   |      ![Supported](https://img.shields.io/badge/Supported-Yes-success)      |
+|       Aria2       |   :white_check_mark:   |    :x:    |
+|      Deluge       |   :white_check_mark:   |    :x:    |
+| Download Station  | :x: |    :x:    |
+|       Flood       |   :white_check_mark:   |      :white_check_mark:      |
+|     Hadouken      | :x: |    :x:    |
+|    qBittorrent    |   :white_check_mark:   |      :white_check_mark:      |
+|     rTorrent      |   :white_check_mark:   |      :white_check_mark:      |
+| Torrent Blackhole | :x: |    :x:    |
+|   Transmission    |   :white_check_mark:   | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue)\* |
+|     uTorrent      |   :white_check_mark:   |      :white_check_mark:      |
+|       Vuze        |   :white_check_mark:   |      :white_check_mark:      |
 
 > ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Whisparr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
