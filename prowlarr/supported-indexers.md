@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-05-17T01:00:54.093235
+date: 2024-05-18T00:59:23.222275
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-05-17T01:00:54.093235
+dateCreated: 2024-05-18T00:59:23.222275
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.18.0.4513` / [Commit: a4257cbcdee421229194102c03148ac9dd6a70fe](https://github.com/Prowlarr/Prowlarr/commit/a4257cbcdee421229194102c03148ac9dd6a70fe)
-  - [Prowlarr Indexers Commit: 5a070ac01284da658b5892b523709308556a56df](https://github.com/Prowlarr/Indexers/commit/5a070ac01284da658b5892b523709308556a56df)
+  - [Prowlarr Indexers Commit: 27e3937ac706e59bc096fe1761a82970b5d06b1f](https://github.com/Prowlarr/Indexers/commit/27e3937ac706e59bc096fe1761a82970b5d06b1f)
 
 ---
 
@@ -208,8 +208,6 @@ dateCreated: 2024-05-17T01:00:54.093235
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
-|[YGGcookie](https://www3.yggtorrent.cool/){#yggcookie}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
-|[YGGtorrent](https://www3.yggtorrent.cool/){#yggtorrent}|YGGTorrent is a FRENCH Semi-Private Torrent Tracker for 0DAY / GENERAL|French (France)|
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
@@ -636,6 +634,8 @@ dateCreated: 2024-05-17T01:00:54.093235
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
 |[YDYPT (伊甸园PT)](https://pt.hdbd.us/){#ydypt}|YDYPT (伊甸园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / 3X|Chinese (China)|
+|[YGGcookie](https://www.ygg.re/){#yggcookie}|YGGTorrent is a FRENCH Private Torrent Tracker for 0DAY / GENERAL|French (France)|
+|[YGGtorrent](https://www.ygg.re/){#yggtorrent}|YGGTorrent is a FRENCH Private Torrent Tracker for 0DAY / GENERAL|French (France)|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Zelka\.org](https://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
