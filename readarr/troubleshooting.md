@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2024-05-19T15:38:18.402Z
+date: 2024-05-19T16:13:07.761Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -73,6 +73,7 @@ dateCreated: 2021-06-20T20:06:25.552Z
     - [The request timed out](#the-request-timed-out-1)
     - [Invalid Response Received from Metadata API](#invalid-response-received-from-metadata-api)
     - [Problem Not Listed](#problem-not-listed-2)
+  - [Metadata API Issues](#metadata-api-issues)
 
 # Asking for Help
 
@@ -579,12 +580,16 @@ This can also be caused by:
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy and it being improperly configured
 
-### Invalid Response Received from Metadata API
-
-This indicates that there is a problem with the metadata server. If the error is a 521 error, then it means the cloudflare gateway has an issue reaching the metadata server. Either the metadata server as a whole is down temporarily, or that specific piece of it is down.
-
-Sometimes you can still add an author by the `author:authorID` search method when you get this error.
-
 ### Problem Not Listed
 
 You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+
+## Metadata API Issues
+
+### Invalid Response Received from Metadata API
+
+This indicates that there is a problem with the metadata server. If the error is a 521 error, then it means the Cloudflare gateway has an issue reaching the metadata server. Either the metadata server as a whole is down temporarily, or that specific piece of it is down.
+
+Sometimes you can still add an author by the `author:authorID` search method when you get this error.
+
+See [Readarr Status](/readarr/status) for more information.
