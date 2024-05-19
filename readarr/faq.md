@@ -2,7 +2,7 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2023-10-30T02:08:35.101Z
+date: 2024-05-19T16:10:37.985Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
@@ -177,20 +177,6 @@ This change was due to not have our server get killed by people updating lists e
 ## How can I mass delete authors from the wanted list?
 
 - Use Author Editor from the Author tab => Select authors you want to delete => Delete
-
-## Why doesn't Readarr work behind a reverse proxy
-
-- Readarr uses .NET Core and a new webserver. In order for SignalR to work, the UI buttons to work, database changes to take, and other items. It requires the following addition to the location block for Readarr:
-
-```none
- proxy_http_version 1.1;
- proxy_set_header Upgrade $http_upgrade;
- proxy_set_header Connection $http_connection;
-```
-
-- Make sure you `do not` include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. `THIS WILL NOT WORK`
-- [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
-- If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
 ## How do I update Readarr?
 
@@ -401,7 +387,7 @@ To disable authentication (to reset your forgotten username or password) you wil
 1. Find the authentication method line will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
 *(Be sure that you do not have two AuthenticationMethod entries in your file)*
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
+1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
 1. Restart Readarr
 1. Readarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
