@@ -2,7 +2,7 @@
 title: Readarr
 description: 
 published: true
-date: 2024-05-19T16:05:31.588Z
+date: 2024-05-19T16:06:20.488Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-08-15T13:12:38.327Z
@@ -39,7 +39,7 @@ dateCreated: 2021-08-15T13:12:38.327Z
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/readarr/troubleshooting)
 {.links-list}
-- [<i class="fa-solid fa-signal"></i>&emsp;Readarr Status](/readarr/status)
+- [<i class="fa-solid fa-signal"></i>&emsp;Readarr Status *Status of Metadata and Known Issues*](/readarr/status)
 
 # Development
 
