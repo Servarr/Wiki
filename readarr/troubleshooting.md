@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2023-07-24T19:54:33.343Z
+date: 2024-05-19T15:38:18.402Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -71,6 +71,7 @@ dateCreated: 2021-06-20T20:06:25.552Z
   - [Errors](#errors)
     - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send-1)
     - [The request timed out](#the-request-timed-out-1)
+    - [Invalid Response Received from Metadata API](#invalid-response-received-from-metadata-api)
     - [Problem Not Listed](#problem-not-listed-2)
 
 # Asking for Help
@@ -577,6 +578,12 @@ This can also be caused by:
 - local DNS issues
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy and it being improperly configured
+
+### Invalid Response Received from Metadata API
+
+This indicates that there is a problem with the metadata server. If the error is a 521 error, then it means the cloudflare gateway has an issue reaching the metadata server. Either the metadata server as a whole is down temporarily, or that specific piece of it is down.
+
+Sometimes you can still add an author by the `author:authorID` search method when you get this error.
 
 ### Problem Not Listed
 
