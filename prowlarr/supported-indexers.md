@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-05-18T00:59:23.222275
+date: 2024-05-20T01:00:51.235108
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-05-18T00:59:23.222275
+dateCreated: 2024-05-20T01:00:51.235108
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.18.0.4513` / [Commit: a4257cbcdee421229194102c03148ac9dd6a70fe](https://github.com/Prowlarr/Prowlarr/commit/a4257cbcdee421229194102c03148ac9dd6a70fe)
-  - [Prowlarr Indexers Commit: 27e3937ac706e59bc096fe1761a82970b5d06b1f](https://github.com/Prowlarr/Indexers/commit/27e3937ac706e59bc096fe1761a82970b5d06b1f)
+  - Prowlarr Build `1.18.0.4522` / [Commit: 74509ea7c9f198116983b1c97083b5bb17b92e45](https://github.com/Prowlarr/Prowlarr/commit/74509ea7c9f198116983b1c97083b5bb17b92e45)
+  - [Prowlarr Indexers Commit: 7bcfb01e11386a96e59fa4eb1c7c0159d1c89099](https://github.com/Prowlarr/Indexers/commit/7bcfb01e11386a96e59fa4eb1c7c0159d1c89099)
 
 ---
 
@@ -42,7 +42,7 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
-|[Byrutor](https://byruthub.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
+|[Byrutor](https://thebyrut.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|Chinese (China)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[cpasbien clone](https://www.cpasbien.tw/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
@@ -193,7 +193,7 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://17may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://20may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -303,7 +303,7 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[The Crazy Ones](https://thecrazyones.hopto.org/){#thecrazyones}|The Crazy Ones is a Private GERMAN tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[CrazySpirits](https://www.crazyspirits.com/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
-|[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\.  Cookie Login for 2FA use|English (United Kingdom)|
+|[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\. This indexer uses cookie login for 2FA|English (United Kingdom)|
 |[Dajiao (打胶)](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|English (United States)|
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
@@ -323,7 +323,7 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[Ebooks-Shares](https://ebooks-shares.org/){#ebooks-shares}|Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS|English (United States)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
-|[Empornium2FA](https://www.empornium.is/){#empornium2fa}|this indexer uses a cookie login for Empornium for those that want to use 2FA|English (United States)|
+|[Empornium2FA](https://www.empornium.is/){#empornium2fa}|Empornium (EMP) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
 |[Enthralled](https://www.enthralled.me/){#enthralled}|Enthralled is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[Enthralled2FA](https://www.enthralled.me/){#enthralled2fa}|Enthralled is a Private Torrent Tracker for FETISH 3X\.  Cookie Login for 2FA use|English (United States)|
 |[eShareNet](https://esharenet.eu/){#esharenet}|eShareNet is a Private Tracker for British MOVIE / TV|English (United Kingdom)|
@@ -367,6 +367,7 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[Hares Club (白兔俱乐部)](https://club.hares.top/){#haresclub}|Hares Club (白兔俱乐部) is a CHINESE Private site that focuses on 4K media|Chinese (China)|
 |[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno (HUNO) is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
 |[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
+|[HD Dolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH site for HD content|Spanish (Spain)|
 |[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
@@ -569,7 +570,7 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[TEKNO3D](https://tracker.tekno3d.com/){#tekno3d}|TEKNO3D is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[teracod](https://teracod.net/){#teracod}|teracod (Movie Zone) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[TGay](https://tgay.pro/){#tgay}|TGay is a RUSSIAN Private Torrent Tracker for LGBTQ MOVIES / TV / GENERAL|Russian (Russia)|
-|[TheLeachZone](https://tlz.digital/){#theleachzone}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TheScenePlace](https://www.thesceneplace.com/){#thesceneplace}|TheScenePlace (TSP) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[Thor's Land](https://ethor.tk/){#thorsland}|Thor's Land is a FRENCH Private site for TV / MOVIES / GENERAL|French (France)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -634,8 +635,8 @@ dateCreated: 2024-05-18T00:59:23.222275
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
 |[YDYPT (伊甸园PT)](https://pt.hdbd.us/){#ydypt}|YDYPT (伊甸园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / 3X|Chinese (China)|
-|[YGGcookie](https://www.ygg.re/){#yggcookie}|YGGTorrent is a FRENCH Private Torrent Tracker for 0DAY / GENERAL|French (France)|
-|[YGGtorrent](https://www.ygg.re/){#yggtorrent}|YGGTorrent is a FRENCH Private Torrent Tracker for 0DAY / GENERAL|French (France)|
+|[YGG cookie](https://www.ygg.re/){#yggcookie}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login|French (France)|
+|[YggTorrent](https://www.ygg.re/){#yggtorrent}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Zelka\.org](https://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
