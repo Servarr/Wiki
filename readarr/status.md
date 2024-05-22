@@ -2,13 +2,17 @@
 title: Readarr Status
 description: Readarr is in Beta and Goodreads data is finicky. As such this page documents the status and known issues.
 published: true
-date: 2024-05-20T02:15:51.921Z
+date: 2024-05-22T17:27:37.708Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-16T13:27:03.794Z
 ---
 
 # Readarr Status
+
+## 2024-05-22 Rate Limiting
+
+Readarr's metadata server is responding with rate limiting (HTTP 429) frequently because of the downtime and everyone's systems hitting it to get list imports, etc. This is expected to slow things down for a week or few until everything is running like normal again. If you're trying to import, or search, etc. and those things are slow or failing, your logs will indicate a 429 error. This will get better. Please have some patience and it will resolve in time.
 
 ## 2024-05-20 Search is Back
 
