@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-05-22T01:16:41.278733
+date: 2024-05-22T22:42:25.210157
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-05-22T01:16:41.278733
+dateCreated: 2024-05-22T22:42:25.210157
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.18.0.4522` / [Commit: 74509ea7c9f198116983b1c97083b5bb17b92e45](https://github.com/Prowlarr/Prowlarr/commit/74509ea7c9f198116983b1c97083b5bb17b92e45)
-  - [Prowlarr Indexers Commit: 43ad46238e07b8d22729d143624a71eb436deaac](https://github.com/Prowlarr/Indexers/commit/43ad46238e07b8d22729d143624a71eb436deaac)
+  - [Prowlarr Indexers Commit: 83a55795a1c9579e05fa5c001d5d82f1d68c07c0](https://github.com/Prowlarr/Indexers/commit/83a55795a1c9579e05fa5c001d5d82f1d68c07c0)
 
 ---
 
@@ -124,7 +124,7 @@ dateCreated: 2024-05-22T01:16:41.278733
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq316.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir144.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir145.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -192,7 +192,7 @@ dateCreated: 2024-05-22T01:16:41.278733
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://22may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://23may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -361,6 +361,7 @@ dateCreated: 2024-05-22T01:16:41.278733
 |[H-P2P](https://h-p2p.cam/){#h-p2p}|H-P2P is a Private Torrent Tracker for OnlyFans XXX|English (United States)|
 |[HaiDan](https://www.haidan.video/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|English (United States)|
+|[HappyFappy2FA](https://www.happyfappy.org/){#happyfappy2fa}|HappyFappy is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
 |[Hares Club (白兔俱乐部)](https://club.hares.top/){#haresclub}|Hares Club (白兔俱乐部) is a CHINESE Private site that focuses on 4K media|Chinese (China)|
 |[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno (HUNO) is a Private Torrent Tracker for (X265 / HEVC) MOVIES / TV|English (United States)|
 |[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
