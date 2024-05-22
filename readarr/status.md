@@ -2,7 +2,7 @@
 title: Readarr Status
 description: Readarr is in Beta and Goodreads data is finicky. As such this page documents the status and known issues.
 published: true
-date: 2024-05-22T17:27:37.708Z
+date: 2024-05-22T17:36:11.367Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-16T13:27:03.794Z
