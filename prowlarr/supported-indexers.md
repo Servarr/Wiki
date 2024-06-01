@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-05-28T02:32:04.558931
+date: 2024-06-01T01:05:15.175928
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-05-28T02:32:04.558931
+dateCreated: 2024-06-01T01:05:15.175928
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.18.0.4532` / [Commit: f95f67a7ca3e274cd0b5abbac487eb914fccd0bb](https://github.com/Prowlarr/Prowlarr/commit/f95f67a7ca3e274cd0b5abbac487eb914fccd0bb)
-  - [Prowlarr Indexers Commit: 1870a907323dfc0ec828c4ca87bdfb11f9f9773c](https://github.com/Prowlarr/Indexers/commit/1870a907323dfc0ec828c4ca87bdfb11f9f9773c)
+  - [Prowlarr Indexers Commit: 8291c041556b7eea8886b158b7f1bee1a090dc38](https://github.com/Prowlarr/Indexers/commit/8291c041556b7eea8886b158b7f1bee1a090dc38)
 
 ---
 
@@ -122,7 +122,7 @@ dateCreated: 2024-05-28T02:32:04.558931
 |[TorrentGalaxy](https://torrentgalaxy.to/){#torrentgalaxy}|TorrentGalaxy (TGx) is a Public site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq317.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq318.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir145.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -192,7 +192,7 @@ dateCreated: 2024-05-28T02:32:04.558931
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://28may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://31may.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -336,6 +336,7 @@ dateCreated: 2024-05-28T02:32:04.558931
 |[Fappaizuri](https://fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
+|[File-Shack](https://file-shack.xyz/){#file-shack}|File-Shack is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
@@ -604,7 +605,7 @@ dateCreated: 2024-05-28T02:32:04.558931
 |[ToTheGloryCookie](https://totheglory.im/){#totheglorycookie}|ToTheGlory (TTG) A Chinese tracker\. This uses the cookie method for access|Chinese (China)|
 |[TrackerMK](http://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private site for MUSIC|English (United States)|
-|[Trellas](https://trellas.net/){#trellas}|Trellas (Magico) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[Trellas](https://trellas.me/){#trellas}|Trellas (Magico) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[TreZzoR](https://tracker.czech-server.com/){#trezzor}|TreZzoR is a CZECH Private site for TV / MOVIES / GENERAL|Czech (Czech Republic)|
 |[TreZzoRCookie](https://tracker.czech-server.com/){#trezzorcookie}|TreZzoR is a CZECH Private site for TV / MOVIES / GENERAL\. This uses the cookie method for access|Czech (Czech Republic)|
 |[TurkSeed](https://turkseed.com/){#turkseed-api}|TurkSeed is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
