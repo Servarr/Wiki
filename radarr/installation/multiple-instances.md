@@ -2,7 +2,7 @@
 title: multiple-instances
 description: 
 published: true
-date: 2023-09-01T05:05:47.102Z
+date: 2024-06-10T14:53:45.448Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:12:10.189Z
@@ -16,13 +16,14 @@ It is possible to run multiple instances of Radarr. This is typically done when 
 
 The following requirements should be noted:
 
-- If non-docker, the same binaries (program files) should be used
+- If non-docker, the same binaries (windows: program files) should be used
 - If non-docker, all instances *must* have a `-data=` or `/data=` argument passed
 - If non-docker, different ports must be used
-  - If docker, different external ports must be used
+- If non-docker, disable automatic updates on all but 1 instance.
+- If docker, different external (host) ports must be used
+- If docker different host mounts for `/config` must be used
 - Different download client categories must be used
 - Different root folders must be used.
-- If non-docker, disable automatic updates on all but 1 instance.
 
 ### Setting Up Multiple Instances
 
