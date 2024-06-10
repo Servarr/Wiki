@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-09T01:07:55.868649
+date: 2024-06-10T01:04:37.166558
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-09T01:07:55.868649
+dateCreated: 2024-06-10T01:04:37.166558
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.19.0.4545` / [Commit: 1a428197b2064b39199c58f5e3fcce97320753a5](https://github.com/Prowlarr/Prowlarr/commit/1a428197b2064b39199c58f5e3fcce97320753a5)
-  - [Prowlarr Indexers Commit: 0da8df9266c410661ae6ed8b112b7f0ad43e1c90](https://github.com/Prowlarr/Indexers/commit/0da8df9266c410661ae6ed8b112b7f0ad43e1c90)
+  - Prowlarr Build `1.19.0.4548` / [Commit: 0ef42dbb4d583981169110e326b735cce80a1ea3](https://github.com/Prowlarr/Prowlarr/commit/0ef42dbb4d583981169110e326b735cce80a1ea3)
+  - [Prowlarr Indexers Commit: 1f4aa3a1c2a2bc39de0599a9d3a5c74b1f7944ce](https://github.com/Prowlarr/Indexers/commit/1f4aa3a1c2a2bc39de0599a9d3a5c74b1f7944ce)
 
 ---
 
@@ -599,6 +599,7 @@ dateCreated: 2024-06-09T01:07:55.868649
 |TorrentPotato{#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|English (United States)|
 |[TorrentSeeds (API)](https://torrentseeds.org/){#torrentseeds-api}|TorrentSeeds is a Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
+|[ToSky](https://t.tosky.club/){#tosky}|ToSky is a Private CHINESE tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) A Chinese tracker|Chinese (China)|
 |[ToTheGloryCookie](https://totheglory.im/){#totheglorycookie}|ToTheGlory (TTG) A Chinese tracker\. This uses the cookie method for access|Chinese (China)|
 |[TrackerMK](http://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
