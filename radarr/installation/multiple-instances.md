@@ -12,10 +12,7 @@ dateCreated: 2023-07-03T20:12:10.189Z
 
 It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie. Note that you can (and probably should) [review TRaSH's guide and configure Radarr to use a second Radarr as a list](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/). This is helpful if you wish to keep both in sync.
 
-- [Windows Multiple Instances](#windows-multi)
-- [Linux Multiple Instances](#linux-multi)
-- [Docker Multiple Instances](#docker-multi)
-{.links-list}
+## Prerequisites
 
 The following requirements should be noted:
 
@@ -26,6 +23,13 @@ The following requirements should be noted:
 - Different download client categories must be used
 - Different root folders must be used.
 - If non-docker, disable automatic updates on all but 1 instance.
+
+### Setting Up Multiple Instances
+
+- [Windows Multiple Instances](#windows-multi)
+- [Linux Multiple Instances](#linux-multi)
+- [Docker Multiple Instances](#docker-multi)
+{.links-list}
 
 ## Windows Multiple Instances
 
