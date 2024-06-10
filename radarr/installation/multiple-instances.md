@@ -306,4 +306,4 @@ sudo systemctl enable --now -q radarr4k
 
 {#docker-multi}
 
-- Simply spin up a second Docker container with a different name, ensuring the above requirements are met.
+- Simply spin up a second Docker container with a different name, ensuring the [above requirements](#prerequisites)are met.
