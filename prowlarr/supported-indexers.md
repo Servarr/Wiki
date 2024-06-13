@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-11T01:03:17.101849
+date: 2024-06-13T01:02:50.110842
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-11T01:03:17.101849
+dateCreated: 2024-06-13T01:02:50.110842
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.19.0.4552` / [Commit: dfda86aca3b2061c5ae20229e0c4e71537a2aaf4](https://github.com/Prowlarr/Prowlarr/commit/dfda86aca3b2061c5ae20229e0c4e71537a2aaf4)
-  - [Prowlarr Indexers Commit: 09cf7f2b0cbe941a37cef71be8d376fbc6c3e441](https://github.com/Prowlarr/Indexers/commit/09cf7f2b0cbe941a37cef71be8d376fbc6c3e441)
+  - Prowlarr Build `1.19.0.4554` / [Commit: 6c0d08de56ceccb8070b8328250831961fae19c6](https://github.com/Prowlarr/Prowlarr/commit/6c0d08de56ceccb8070b8328250831961fae19c6)
+  - [Prowlarr Indexers Commit: 12f187ad169b008aa42728a6c461b178d278a98d](https://github.com/Prowlarr/Indexers/commit/12f187ad169b008aa42728a6c461b178d278a98d)
 
 ---
 
@@ -121,7 +121,7 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq319.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir146.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir147.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -190,7 +190,7 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://11june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://13june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -199,7 +199,8 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
-|[Torrent911](https://www.oxtorrent.zip/){#torrent911}|Torrent911 is a French Semi-Private site for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9-tel](https://www.torrent9.plus/){#torrent9-tel}|Torrent9-tel is a FRENCH Semi-Private tracker for TV / MOVIES / GENERAL|French (France)|
+|[Torrent911](https://www.oxtorrent.vip/){#torrent911}|Torrent911 is a French Semi-Private site for TV / MOVIES / GENERAL|French (France)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|Russian (Russia)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
@@ -299,6 +300,7 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[CrazySpirits](https://www.crazyspirits.com/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\. This indexer uses cookie login for 2FA|English (United Kingdom)|
+|[cyanbug (大青虫)](https://cyanbug.net/){#cyanbug}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Dajiao (打胶)](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|English (United States)|
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
@@ -428,7 +430,6 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
-|[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Les-Cinephiles](https://les-cinephiles.nl/){#les-cinephiles}|Les-Cinephiles is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LeSaloon](https://lesaloonv2-0.lol/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
@@ -571,7 +572,6 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[TGay](https://tgay.pro/){#tgay}|TGay is a RUSSIAN Private Torrent Tracker for LGBTQ MOVIES / TV / GENERAL|Russian (Russia)|
 |[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TheScenePlace](https://www.thesceneplace.com/){#thesceneplace}|TheScenePlace (TSP) is a Private site for TV / MOVIES / GENERAL|English (United States)|
-|[Thor's Land](https://ethor.tk/){#thorsland}|Thor's Land is a FRENCH Private site for TV / MOVIES / GENERAL|French (France)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TmGHuB](https://tmghub.org/){#tmghub}|TmGHuB (TH) is an INDIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -586,7 +586,6 @@ dateCreated: 2024-06-11T01:03:17.101849
 |[Torrent Sector Crew](https://tsctracker.org/){#torrentsectorcrew}|Torrent Sector Crew (TSC) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL|Turkish (Turkey)|
-|[Torrent9-tel](https://www.torrent9.plus/){#torrent9-tel}|Torrent9-tel is a FRENCH Private tracker for TV / MOVIES / GENERAL|French (France)|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|A general Bangladesh tracker|English (United States)|
 |[TorrentCCF](https://et8.org/){#torrentccf}|TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TorrentDay](https://tday.love/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|English (United States)|
