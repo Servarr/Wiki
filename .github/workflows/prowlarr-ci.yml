@@ -47,14 +47,12 @@ jobs:
         run: |
           git config --global user.name "Servarr"
           git config --global user.email "development@lidarr.audio"
-          git checkout -b update-wiki-supported-indexers
           git add prowlarr/supported-indexers.md
           git add prowlarr/supported-indexers.md.hash
           if git status | grep -q modified
           then
             git commit -m "[script] supported indexers $(date --iso-8601=seconds)"
-            git push -f --set-upstream origin update-wiki-supported-indexers
-            curl -X POST -H "Authorization: Bearer ${{ secrets.PAT }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/servarr/wiki/pulls -d '{"head":"update-wiki-supported-indexers","base":"master","title":"[script] supported indexers for Prowlarr ${{ env.PROWLARR_VERSION }}"}'
+            git push
           else
             echo "No changes since last run"
           fi
