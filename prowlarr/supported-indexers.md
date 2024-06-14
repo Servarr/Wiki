@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-13T18:30:25.947723
+date: 2024-06-14T01:02:48.235110
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-13T18:30:25.947723
+dateCreated: 2024-06-14T01:02:48.235110
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.19.0.4556` / [Commit: f5790bec2ed68db21b65be4e97d59f2e13a653e8](https://github.com/Prowlarr/Prowlarr/commit/f5790bec2ed68db21b65be4e97d59f2e13a653e8)
-  - [Prowlarr Indexers Commit: d1dd7ece7529854638986f05e90a17f3782cd7f1](https://github.com/Prowlarr/Indexers/commit/d1dd7ece7529854638986f05e90a17f3782cd7f1)
+  - [Prowlarr Indexers Commit: 30144bc0f6d4201bef2ace58d281d6a5e851ae0a](https://github.com/Prowlarr/Indexers/commit/30144bc0f6d4201bef2ace58d281d6a5e851ae0a)
 
 ---
 
@@ -183,6 +183,7 @@ dateCreated: 2024-06-13T18:30:25.947723
 |[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|Vietnamese (Viet Nam)|
 |[NewStudioL](https://newstudio.tv/){#newstudiol}|NewStudio is a RUSSIAN Public site for TV\. This supports login|Russian (Russia)|
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
+|[OxTorrent-vip](https://www.oxtorrent.vip/){#oxtorrent-vip}|OxTorrent-vip is a French Semi-Private site for TV / MOVIES / GENERAL|French (France)|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for 3X|Russian (Russia)|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
 |[Rainbow Tracker](https://gaytracker.ru/){#rainbowtracker}|Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV|Russian (Russia)|
@@ -200,7 +201,6 @@ dateCreated: 2024-06-13T18:30:25.947723
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[Torrent9-tel](https://www.torrent9.plus/){#torrent9-tel}|Torrent9-tel is a FRENCH Semi-Private tracker for TV / MOVIES / GENERAL|French (France)|
-|[Torrent911](https://www.oxtorrent.vip/){#torrent911}|Torrent911 is a French Semi-Private site for TV / MOVIES / GENERAL|French (France)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Torrents-Local](https://torrents-local.xyz/){#torrentslocal}|Torrents-Local is a RUSSIAN Semi-Private Torrent Tracker|Russian (Russia)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
