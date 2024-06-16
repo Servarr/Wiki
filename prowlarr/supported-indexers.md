@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-15T01:02:41.939106
+date: 2024-06-16T01:07:51.956321
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-15T01:02:41.939106
+dateCreated: 2024-06-16T01:07:51.956321
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.19.0.4557` / [Commit: 4c4b16d234a3da2da44fbd470f4a8226f9b3ea4b](https://github.com/Prowlarr/Prowlarr/commit/4c4b16d234a3da2da44fbd470f4a8226f9b3ea4b)
-  - [Prowlarr Indexers Commit: 80270236244ab738afb5d0b6bab981c5edda39c0](https://github.com/Prowlarr/Indexers/commit/80270236244ab738afb5d0b6bab981c5edda39c0)
+  - Prowlarr Build `1.19.0.4558` / [Commit: 3793538ba42bf2ae40f45670de4dca63d08c5b96](https://github.com/Prowlarr/Prowlarr/commit/3793538ba42bf2ae40f45670de4dca63d08c5b96)
+  - [Prowlarr Indexers Commit: 40e0117839e80fd01b42f58bc1828f93e1947544](https://github.com/Prowlarr/Indexers/commit/40e0117839e80fd01b42f58bc1828f93e1947544)
 
 ---
 
@@ -282,6 +282,7 @@ dateCreated: 2024-06-15T01:02:41.939106
 |[Carpathians](https://mycarpathians.net/){#carpathians}|Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[CarPT](https://carpt.net/){#carpt}|CarPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
+|[CD File](https://pt.cdfile.org/){#cdfile}|CD File is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Central Torrent](http://central-torrent.eu/){#centraltorrent}|Central Torrent is a POLISH Private Torrent Tracker for MOVIES / MUSIC|Polish (Poland)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
@@ -599,7 +600,8 @@ dateCreated: 2024-06-15T01:02:41.939106
 |[TorrentSeeds (API)](https://torrentseeds.org/){#torrentseeds-api}|TorrentSeeds is a Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
 |[ToSky](https://t.tosky.club/){#tosky}|ToSky is a Private CHINESE tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) A Chinese tracker|Chinese (China)|
+|[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[ToTheGlory2FA](https://totheglory.im/){#totheglory2fa}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Chinese (China)|
 |[ToTheGloryCookie](https://totheglory.im/){#totheglorycookie}|ToTheGlory (TTG) A Chinese tracker\. This uses the cookie method for access|Chinese (China)|
 |[TrackerMK](http://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private site for MUSIC|English (United States)|
@@ -618,6 +620,7 @@ dateCreated: 2024-06-15T01:02:41.939106
 |[upload\.cx](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[UTOPIA](https://utp.to/){#utopia}|UTOPIA is a UKRAINIAN Private Tracker for HD MOVIES and TV|Ukrainian (Ukraine)|
 |[The Vault](https://thevault.click/){#thevault}|Business/Marketing E-Learning|English (United States)|
+|[ViSiON HD (API)](https://vision-hd.org/){#visionhd-api}|ViSiON HD is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[WDT](http://ultimatewrestlingtorrents.com/){#wdt}|Wrestling Desires Torrents (Ultimate Wrestling Torrents) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
 |[White Angel](https://white-angel.hu/){#whiteangel}|White Angel is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
