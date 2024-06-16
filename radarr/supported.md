@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: 
 published: true
-date: 2023-09-01T16:45:41.479Z
+date: 2024-06-16T13:47:46.803Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -170,6 +170,28 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Radarr {#radarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
+	- This list format inherit from old IMDB RSS feeds. It only needs a title and a year which can be useful for non-enriched data.
+      > Year is directly parsed from the title tag value
+
+      Here is a sample data : 
+      ```XML
+      <rss>
+        <channel>
+            <title>My custom RSS list</title>
+            <description></description>
+            <link>http://example.com/rss</link>
+            <lastBuildDate>Sun, 16 Jun 2024 13:54:33 GMT</lastBuildDate>
+            <item>
+                <title><![CDATA[ Tehachapi (2023) ]]></title>
+                <guid isPermaLink="false">Tehachapi (2023)</guid>
+            </item>
+            <item>
+                <title><![CDATA[ Dissidente (2023) ]]></title>
+                <guid isPermaLink="false">Dissidente (2023)</guid>
+            </item>
+        </channel>
+      </rss>
+      ```
 - StevenLu Custom {#stevenluimport}
   - Allows you to create custom movies lists in json format.
    Your feed requires for each movie either a `title` or an `imdb_id`, both can be provided.
