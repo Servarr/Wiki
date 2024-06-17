@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-16T01:34:29.910442
+date: 2024-06-17T01:05:15.810464
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-16T01:34:29.910442
+dateCreated: 2024-06-17T01:05:15.810464
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.19.0.4558` / [Commit: 3793538ba42bf2ae40f45670de4dca63d08c5b96](https://github.com/Prowlarr/Prowlarr/commit/3793538ba42bf2ae40f45670de4dca63d08c5b96)
-  - [Prowlarr Indexers Commit: e3a5880021c0faa3fae33f149921c62fbd4241aa](https://github.com/Prowlarr/Indexers/commit/e3a5880021c0faa3fae33f149921c62fbd4241aa)
+  - Prowlarr Build `1.19.0.4559` / [Commit: 9f075c09a2c12cedb7e58c9478a7faf4eac8c664](https://github.com/Prowlarr/Prowlarr/commit/9f075c09a2c12cedb7e58c9478a7faf4eac8c664)
+  - [Prowlarr Indexers Commit: a2b91f6a8d3e50c113c528b50c14e02a829ed4c6](https://github.com/Prowlarr/Indexers/commit/a2b91f6a8d3e50c113c528b50c14e02a829ed4c6)
 
 ---
 
@@ -137,7 +137,6 @@ dateCreated: 2024-06-16T01:34:29.910442
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents.pw/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -191,7 +190,7 @@ dateCreated: 2024-06-16T01:34:29.910442
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://16june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://17june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -207,6 +206,7 @@ dateCreated: 2024-06-16T01:34:29.910442
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[zetorrents](https://www.zetorrents.pw/){#zetorrents}|zetorrents is a FRENCH Semi-Private site for MOVIES / TV / GENERAL|French (France)|
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
