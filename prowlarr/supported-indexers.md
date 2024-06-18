@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-18T02:41:30.138051
+date: 2024-06-18T13:27:41.701066
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-18T02:41:30.138051
+dateCreated: 2024-06-18T13:27:41.701066
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.19.0.4559` / [Commit: 9f075c09a2c12cedb7e58c9478a7faf4eac8c664](https://github.com/Prowlarr/Prowlarr/commit/9f075c09a2c12cedb7e58c9478a7faf4eac8c664)
-  - [Prowlarr Indexers Commit: 1d8dceb77baeffb83bbbd9b8327b6e796a137858](https://github.com/Prowlarr/Indexers/commit/1d8dceb77baeffb83bbbd9b8327b6e796a137858)
+  - [Prowlarr Indexers Commit: f0d29b002e93b39885e5d15644e0ab959bc6c130](https://github.com/Prowlarr/Indexers/commit/f0d29b002e93b39885e5d15644e0ab959bc6c130)
 
 ---
 
@@ -121,7 +121,7 @@ dateCreated: 2024-06-18T02:41:30.138051
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq320.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir147.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir148.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -150,6 +150,7 @@ dateCreated: 2024-06-18T02:41:30.138051
 |[BootyTape](https://ssl.bootytape.com/){#bootytape}|BootyTape is a Semi-Private site for 3X|English (United States)|
 |[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|Russian (Russia)|
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|Icelandic (Iceland)|
+|[Demonoid](https://www.demonoid.is/){#demonoid}|Demonoid is a Semi-Private torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[DreamingTree](https://dreamingtree.org/){#dreamingtree}|DreamingTree is a Semi-Private Torrent Tracker for DAVE MATHEWS MUSIC / BOOTLEGS|English (United States)|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles|Russian (Russia)|
