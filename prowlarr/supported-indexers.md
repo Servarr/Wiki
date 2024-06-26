@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-23T01:07:06.572766
+date: 2024-06-26T01:03:10.147341
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-23T01:07:06.572766
+dateCreated: 2024-06-26T01:03:10.147341
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.20.0.4570` / [Commit: a1d19852dc38914a715b26bad2e2abe5a9fe124c](https://github.com/Prowlarr/Prowlarr/commit/a1d19852dc38914a715b26bad2e2abe5a9fe124c)
-  - [Prowlarr Indexers Commit: e67df12f71a83867de85da8c8ef64a99c0f15652](https://github.com/Prowlarr/Indexers/commit/e67df12f71a83867de85da8c8ef64a99c0f15652)
+  - Prowlarr Build `1.20.0.4570` / [Commit: 2d6c818aec2d35cd91d7ed6537396edeb907ce5e](https://github.com/Prowlarr/Prowlarr/commit/2d6c818aec2d35cd91d7ed6537396edeb907ce5e)
+  - [Prowlarr Indexers Commit: 721714dcc8a3107a0cc46d2f4c67d93b56c9daaf](https://github.com/Prowlarr/Indexers/commit/721714dcc8a3107a0cc46d2f4c67d93b56c9daaf)
 
 ---
 
@@ -124,7 +124,7 @@ dateCreated: 2024-06-23T01:07:06.572766
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq321.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir148.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir149.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://viewtorrent19.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz67.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -193,7 +193,7 @@ dateCreated: 2024-06-23T01:07:06.572766
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://22june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://25june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -532,7 +532,6 @@ dateCreated: 2024-06-23T01:07:06.572766
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private site dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
 |[RoTorrent](https://rotorrent.ro/){#rotorrent}|RoTorrent is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[RPTScene](https://rptscene.xyz/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
 |[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
