@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-26T01:03:10.147341
+date: 2024-06-27T01:03:19.614238
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-26T01:03:10.147341
+dateCreated: 2024-06-27T01:03:19.614238
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.20.0.4570` / [Commit: 2d6c818aec2d35cd91d7ed6537396edeb907ce5e](https://github.com/Prowlarr/Prowlarr/commit/2d6c818aec2d35cd91d7ed6537396edeb907ce5e)
-  - [Prowlarr Indexers Commit: 721714dcc8a3107a0cc46d2f4c67d93b56c9daaf](https://github.com/Prowlarr/Indexers/commit/721714dcc8a3107a0cc46d2f4c67d93b56c9daaf)
+  - Prowlarr Build `1.20.0.4580` / [Commit: e2ce6437e94f231bccad8b722cff83faaa7788c2](https://github.com/Prowlarr/Prowlarr/commit/e2ce6437e94f231bccad8b722cff83faaa7788c2)
+  - [Prowlarr Indexers Commit: e180fd08505005475feee3369d5eaee6c11ff46f](https://github.com/Prowlarr/Indexers/commit/e180fd08505005475feee3369d5eaee6c11ff46f)
 
 ---
 
@@ -27,7 +27,7 @@ dateCreated: 2024-06-26T01:03:10.147341
 |:--|:--|:--|
 |[0Magnet](https://0magnet.co/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://www.529052.xyz/){#52bt}|52BT is a CHINESE Public tracker for TV / MOVIES / MUSIC / GENERAL|Chinese (China)|
+|[52BT](https://www.529053.xyz/){#52bt}|52BT is a CHINESE Public tracker for TV / MOVIES / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|Russian (Russia)|
@@ -193,7 +193,7 @@ dateCreated: 2024-06-26T01:03:10.147341
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://25june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://27june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -433,6 +433,7 @@ dateCreated: 2024-06-26T01:03:10.147341
 |[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
+|[leech24 (API)](https://leech24.net/){#leech24-api}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Les-Cinephiles](https://les-cinephiles.nl/){#les-cinephiles}|Les-Cinephiles is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LeSaloon](https://lesaloonv2-0.lol/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
