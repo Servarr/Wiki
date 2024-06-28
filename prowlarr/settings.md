@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2024-06-28T01:06:18.607Z
+date: 2024-06-28T01:09:06.770Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -22,6 +22,8 @@ dateCreated: 2021-06-06T15:04:48.057Z
 -   - [Socks5 Proxy Settings](#socks5-proxy-settings)
 ---
 
+---
+1. 
 - [Applications](#applications)
   - [Application Settings](#application-settings)
   - [Testing the Application](#testing-the-application)
