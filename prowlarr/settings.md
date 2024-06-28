@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: 
 published: true
-date: 2024-06-28T01:05:44.414Z
+date: 2024-06-28T01:06:18.607Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -19,7 +19,9 @@ dateCreated: 2021-06-06T15:04:48.057Z
   - [FlareSolverr Proxy Settings](#flaresolverr-proxy-settings)
   - [HTTP Proxy Settings](#http-proxy-settings)
   - [Socks4 Proxy Settings](#socks4-proxy-settings)
-  - [Socks5 Proxy Settings](#socks5-proxy-settings)
+-   - [Socks5 Proxy Settings](#socks5-proxy-settings)
+---
+
 - [Applications](#applications)
   - [Application Settings](#application-settings)
   - [Testing the Application](#testing-the-application)
