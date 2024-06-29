@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-28T01:03:25.387812
+date: 2024-06-29T01:02:20.021738
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-28T01:03:25.387812
+dateCreated: 2024-06-29T01:02:20.021738
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.20.0.4588` / [Commit: d22bf93dfdafd73b0aefa223ae2ba31ba57206b6](https://github.com/Prowlarr/Prowlarr/commit/d22bf93dfdafd73b0aefa223ae2ba31ba57206b6)
-  - [Prowlarr Indexers Commit: 4e4c0b3677e9ff53437dc1b0795aed5526b50d5d](https://github.com/Prowlarr/Indexers/commit/4e4c0b3677e9ff53437dc1b0795aed5526b50d5d)
+  - Prowlarr Build `1.20.0.4590` / [Commit: 9c599a6be47fcc819ccef1f0818d501ebffe0241](https://github.com/Prowlarr/Prowlarr/commit/9c599a6be47fcc819ccef1f0818d501ebffe0241)
+  - [Prowlarr Indexers Commit: 4b7508f2f15b8f101bb3e40d6df87984ada77076](https://github.com/Prowlarr/Indexers/commit/4b7508f2f15b8f101bb3e40d6df87984ada77076)
 
 ---
 
@@ -192,7 +192,7 @@ dateCreated: 2024-06-28T01:03:25.387812
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://28june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://29june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -447,11 +447,11 @@ dateCreated: 2024-06-28T01:03:25.387812
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|German (Germany)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[Making Off](https://makingoff.org/){#makingoff}|Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
+|[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[MDAN](https://bt.mdan.org/){#mdan}|Mansão dos Animes (MDAN) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[MegamixTracker](https://megamixtracker.hu/){#megamixtracker}|MegamixTracker is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a Hungarian Private site for fairy tales, family movies and comedies|Hungarian (Hungary)|
 |[MetalGuru](https://metalguru.me/){#metalguru}|MetalGuru is a Private Torrent Tracker for General with focus on Music|English (United States)|
-|[METALWRKS](https://metalworks.lol/){#metalwrks}|METALWRKS is an AUSTRALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (Australia)|
 |[Milkie](https://milkie.cc/){#milkie}|Milkie\.cc (ME) is private torrent tracker for 0day / general|English (United States)|
 |[MMA-torrents](https://mma-torrents.com/){#mma-torrents}|MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)|English (United States)|
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN tracker|German (Germany)|
