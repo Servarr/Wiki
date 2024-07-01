@@ -93,7 +93,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 {#update-to-net-core-version}
 
-- Newer versions of Radarr are targeted for .NET6 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
+- Newer versions of Radarr are targeted for .NET 8 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
 
 See the below entries for how to switch from unsupported, end-of-life mono versions to dotnet.
 
