@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-06-29T01:02:20.021738
+date: 2024-07-01T01:10:51.086709
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-06-29T01:02:20.021738
+dateCreated: 2024-07-01T01:10:51.086709
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.20.0.4590` / [Commit: 9c599a6be47fcc819ccef1f0818d501ebffe0241](https://github.com/Prowlarr/Prowlarr/commit/9c599a6be47fcc819ccef1f0818d501ebffe0241)
-  - [Prowlarr Indexers Commit: 4b7508f2f15b8f101bb3e40d6df87984ada77076](https://github.com/Prowlarr/Indexers/commit/4b7508f2f15b8f101bb3e40d6df87984ada77076)
+  - Prowlarr Build `1.20.1.4591` / [Commit: 220ef723c79ee87710bbfc7e1a9d8f988d1481f7](https://github.com/Prowlarr/Prowlarr/commit/220ef723c79ee87710bbfc7e1a9d8f988d1481f7)
+  - [Prowlarr Indexers Commit: ba0fe3067935ac3c0fcc048e20097a5a0201a8a3](https://github.com/Prowlarr/Indexers/commit/ba0fe3067935ac3c0fcc048e20097a5a0201a8a3)
 
 ---
 
@@ -192,7 +192,7 @@ dateCreated: 2024-06-29T01:02:20.021738
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://29june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://30june.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -241,7 +241,7 @@ dateCreated: 2024-06-29T01:02:20.021738
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[ArabP2P](https://www.arabp2p.net/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (U.A.E.)|
 |[ArabTorrents](https://arab-torrents.net/){#arabtorrents}|ArabTorrents is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (U.A.E.)|
-|[AsianCinema](https://asiancinema.me/){#asiancinema}|Tracker Movies/TV/Music|English (United States)|
+|[AsianCinema](https://eiga.moi/){#asiancinema}|Tracker Movies/TV/Music|English (United States)|
 |[AsianDVDClub](https://asiandvdclub.org/){#asiandvdclub}|AsianDVDClub (ADC) is a Private Torrent Tracker for Asian DVD and BluRay|English (United States)|
 |[Audiences](https://audiences.me/){#audiences}|Audiences is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AudioNews](https://audionews.org/){#audionews}|AudioNews (AN) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|English (United States)|
@@ -347,7 +347,6 @@ dateCreated: 2024-06-29T01:02:20.021738
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Fuzer](https://www.fuzer.me/){#fuzer}|Fuzer is a private torrent website with israeli torrents|Hebrew (Israel)|
-|[Gamera (駕瞑羅)](https://gamerapt.link/){#gamera}|Gamera (駕瞑羅) is a CHINESE Private Torrent Tracker for Japanese Monster and Superhero MOVIES / TV|Chinese (China)|
 |[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GAYtorrent\.ru](https://www.gaytor.rent/){#gaytorrentru}|GayTorrent\.ru is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GazelleGames](https://gazellegames.net/){#gazellegames}|GazelleGames (GGn) is a Private Torrent Tracker for GAMES|English (United States)|
