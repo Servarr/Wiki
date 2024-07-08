@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-07-06T01:02:11.701926
+date: 2024-07-08T01:05:49.386424
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-07-06T01:02:11.701926
+dateCreated: 2024-07-08T01:05:49.386424
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.20.1.4597` / [Commit: da9ce5b5c3434daf2bba126256f34293098426ab](https://github.com/Prowlarr/Prowlarr/commit/da9ce5b5c3434daf2bba126256f34293098426ab)
-  - [Prowlarr Indexers Commit: 1c3348160fdbb7412fdac96ab77fd68900a56ce9](https://github.com/Prowlarr/Indexers/commit/1c3348160fdbb7412fdac96ab77fd68900a56ce9)
+  - Prowlarr Build `1.21.0.4605` / [Commit: a2a12d245000a0713946cec732d853dd7cdc58c2](https://github.com/Prowlarr/Prowlarr/commit/a2a12d245000a0713946cec732d853dd7cdc58c2)
+  - [Prowlarr Indexers Commit: 24c0247a6256a961051166722516efe20d188c11](https://github.com/Prowlarr/Indexers/commit/24c0247a6256a961051166722516efe20d188c11)
 
 ---
 
@@ -85,7 +85,7 @@ dateCreated: 2024-07-06T01:02:11.701926
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[OxTorrent](https://www.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for TV / MOVIES / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent.la/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent.lol/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[ParnuXi](http://parnuxi.com/){#parnuxi}|ParnuXi is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
@@ -192,7 +192,7 @@ dateCreated: 2024-07-06T01:02:11.701926
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://06july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://08july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
