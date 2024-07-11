@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-07-10T01:05:10.131719
+date: 2024-07-11T01:05:30.646594
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-07-10T01:05:10.131719
+dateCreated: 2024-07-11T01:05:30.646594
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.21.0.4605` / [Commit: c0777474c0d67cd764cf8456a84a6cde5eaf3d64](https://github.com/Prowlarr/Prowlarr/commit/c0777474c0d67cd764cf8456a84a6cde5eaf3d64)
-  - [Prowlarr Indexers Commit: 612c085dd91171f5fa81c9b579496dbe4f320faa](https://github.com/Prowlarr/Indexers/commit/612c085dd91171f5fa81c9b579496dbe4f320faa)
+  - Prowlarr Build `1.21.0.4610` / [Commit: c0777474c0d67cd764cf8456a84a6cde5eaf3d64](https://github.com/Prowlarr/Prowlarr/commit/c0777474c0d67cd764cf8456a84a6cde5eaf3d64)
+  - [Prowlarr Indexers Commit: 777d27283cc7e02fffb25314387a0fcc8fe71fda](https://github.com/Prowlarr/Indexers/commit/777d27283cc7e02fffb25314387a0fcc8fe71fda)
 
 ---
 
@@ -78,7 +78,6 @@ dateCreated: 2024-07-10T01:05:10.131719
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|Spanish (Spain)|
 |[MyPornClub](https://myporn.club/){#mypornclub}|MyPornClub is a Public Torrent Tracker for 3X|English (United States)|
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
-|[NextJAV](https://nextjav.com/){#nextjav}|NextJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from Japan|English (United States)|
 |[NNTT](http://www.nntt.org/){#nntt}|NNTT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|Russian (Russia)|
@@ -192,7 +191,7 @@ dateCreated: 2024-07-10T01:05:10.131719
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://09july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://11july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -338,7 +337,6 @@ dateCreated: 2024-07-10T01:05:10.131719
 |[Fappaizuri](https://fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
-|[File-Shack](https://file-shack.xyz/){#file-shack}|File-Shack is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[FinVip](https://finvip.org/){#finvip}|FinVip is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
@@ -471,6 +469,7 @@ dateCreated: 2024-07-10T01:05:10.131719
 |[NORDiCHD](https://nordichd.org/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Ntelogo (API)](https://ntelogo.org/){#ntelogo}|Ntelogo is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[The Occult](https://theoccult.click/){#theoccult}|Cult E-Learning|English (United States)|
+|[OKFUN PT](https://pt.okfun.org/){#okfunpt}|OKFUN PT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private site for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[Old Greek Tracker](https://oldgreektracker.xyz/){#oldgreektracker}|Old Greek Tracker is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
 |[The Old School (API)](https://theoldschool.cc/){#theoldschool-api}|The Old School is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
