@@ -1,8 +1,8 @@
 ---
-title: multiple-instances
-description: 
+title: Radarr Multiple Instances
+description: Requirements and how to install multiple instances of Radarr
 published: true
-date: 2024-06-10T14:53:45.448Z
+date: 2024-07-13T15:28:02.725Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:12:10.189Z
