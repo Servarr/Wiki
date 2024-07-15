@@ -2,7 +2,7 @@
 title: Readarr Troubleshooting
 description: 
 published: true
-date: 2024-05-19T16:13:07.761Z
+date: 2024-07-15T15:13:25.259Z
 tags: readarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:06:25.552Z
@@ -67,6 +67,7 @@ dateCreated: 2021-06-20T20:06:25.552Z
     - [IP Ban](#ip-ban)
     - [Using the Jackett /all endpoint](#using-the-jackett-all-endpoint)
     - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
+    - [Book imported with incorrect edition](#book-imported-with-incorrect-edition)
     - [Problem Not Listed](#problem-not-listed-1)
   - [Errors](#errors)
     - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send-1)
@@ -545,6 +546,10 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 ### Using NZBHydra2 as a single entry
 
 Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Readarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Readarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
+
+### Book Imported With Incorrect Edition
+
+If a book imports with an incorrect edition, or you need to change that edition, you will need to move that book file *entirely* out of Readarr's root folder, then use Wanted/Manual Import to re-import it, choosing the correct edition using the drop-down at the bottom of the screen. This is the only working way to change the edition of a book after it's been imported.
 
 ### Problem Not Listed
 
