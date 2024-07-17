@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-04-06T14:31:02.744Z
+date: 2024-07-17T14:56:51.717Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -412,6 +412,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - Additionally, Sonarr only runs the Refresh Series task every 12 hours. This task can be manually ran from System => Tasks; "Update All" from the Series Index, or manually ran for a specific series on that series's page.
 
 - Therefore for a change on TVDb to get into Sonarr automatically it will typically take between 3 and 19 hours (3 + 1 + 3 + 12)
+
+- Episode titles in English are the only titles synced. If there is no English translation, then the episode title will be TBA.
 
 {#missing-episodes}
 
