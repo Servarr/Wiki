@@ -2,7 +2,7 @@
 title: Sonarr Quick Start Guide
 description: 
 published: true
-date: 2022-07-14T14:07:19.793Z
+date: 2024-07-19T20:16:08.572Z
 tags: sonarr, needs-love
 editor: markdown
 dateCreated: 2021-09-03T19:14:22.283Z
@@ -58,7 +58,7 @@ Click on `Settings` => `Media Management` on the left menu.
 ![qs_episodenaming.png](/assets/sonarr/qs_episodenaming.png)
 
 - Check the box to enable Rename Episodes.
-- Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/sonarr-recommended-naming-scheme/).
+- Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/).
 
 > If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
 {.is-info}
