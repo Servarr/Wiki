@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-07-24T01:06:13.206464
+date: 2024-07-25T01:05:30.464800
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-07-24T01:06:13.206464
+dateCreated: 2024-07-25T01:05:30.464800
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.21.2.4639` / [Commit: cb2ed7daf9c64725ef7ce547cc5ce6c9c7312b9c](https://github.com/Prowlarr/Prowlarr/commit/cb2ed7daf9c64725ef7ce547cc5ce6c9c7312b9c)
-  - [Prowlarr Indexers Commit: ead9da19b0495379af76c28191016a5b1dd152e4](https://github.com/Prowlarr/Indexers/commit/ead9da19b0495379af76c28191016a5b1dd152e4)
+  - Prowlarr Build `1.21.2.4643` / [Commit: cc7769b601dcdd4f71cdcb10b17c568c124a64ae](https://github.com/Prowlarr/Prowlarr/commit/cc7769b601dcdd4f71cdcb10b17c568c124a64ae)
+  - [Prowlarr Indexers Commit: 4a065c42595cf37937e3a08b2d07812e58328f70](https://github.com/Prowlarr/Indexers/commit/4a065c42595cf37937e3a08b2d07812e58328f70)
 
 ---
 
@@ -131,7 +131,7 @@ dateCreated: 2024-07-24T01:06:13.206464
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Russian (Russia)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[VSTHouse](http://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
+|[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[xxxAdultTorrent](https://xxxadulttorrent.org/){#xxxadulttorrent}|xxxAdultTorrent is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
@@ -192,7 +192,7 @@ dateCreated: 2024-07-24T01:06:13.206464
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://23july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://25july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
