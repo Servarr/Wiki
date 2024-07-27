@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-07-25T01:05:30.464800
+date: 2024-07-27T01:04:19.532537
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-07-25T01:05:30.464800
+dateCreated: 2024-07-27T01:04:19.532537
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.21.2.4643` / [Commit: cc7769b601dcdd4f71cdcb10b17c568c124a64ae](https://github.com/Prowlarr/Prowlarr/commit/cc7769b601dcdd4f71cdcb10b17c568c124a64ae)
-  - [Prowlarr Indexers Commit: 4a065c42595cf37937e3a08b2d07812e58328f70](https://github.com/Prowlarr/Indexers/commit/4a065c42595cf37937e3a08b2d07812e58328f70)
+  - Prowlarr Build `1.21.2.4648` / [Commit: cca55fd66c177315a2c3922d30bd03b4bfbd1308](https://github.com/Prowlarr/Prowlarr/commit/cca55fd66c177315a2c3922d30bd03b4bfbd1308)
+  - [Prowlarr Indexers Commit: 49fdcdbb4e91967af6ad460c38b7770098068dd1](https://github.com/Prowlarr/Indexers/commit/49fdcdbb4e91967af6ad460c38b7770098068dd1)
 
 ---
 
@@ -31,7 +31,6 @@ dateCreated: 2024-07-25T01:05:30.464800
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|Russian (Russia)|
-|[Anime Time](https://animetime.cc/){#animetime}|Anime Time is a PUBLIC torrent tracker for ANIME|English (United States)|
 |[AniRena](https://www.anirena.com/){#anirena}|AniRena is a Public torrent tracker for the latest anime and Japanese related torrents|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
 |[Badass Torrents](https://badasstorrents.com/){#badasstorrents}|Badass Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
@@ -120,7 +119,7 @@ dateCreated: 2024-07-25T01:05:30.464800
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq325.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq326.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir150.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -138,7 +137,7 @@ dateCreated: 2024-07-25T01:05:30.464800
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents.tw/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents.in/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -192,7 +191,7 @@ dateCreated: 2024-07-25T01:05:30.464800
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://25july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://27july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -438,13 +437,11 @@ dateCreated: 2024-07-25T01:05:30.464800
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
 |[Libble](https://libble.me/){#libble}|Libble is a Private Torrent Tracker for MUSIC|English (United States)|
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|Hungarian (Hungary)|
-|[LilleSky\.org](https://lillesky.org/){#lilleskyorg}|LilleSky\.org is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private site for TV / MOVIES / GENERAL|Lithuanian (Lithuania)|
 |[Locadora](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Tracker for MOVIES and TV|Portuguese (Brazil)|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private site for High Quality Music|Russian (Russia)|
 |[LST](https://lst.gg/){#lst}|LST is an English Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[M-Team - TP](https://kp.m-team.cc/){#m-team---tp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
-|[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|German (Germany)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[Making Off](https://makingoff.org/){#makingoff}|Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
@@ -633,7 +630,6 @@ dateCreated: 2024-07-25T01:05:30.464800
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
-|[YDYPT (伊甸园PT)](https://pt.hdbd.us/){#ydypt}|YDYPT (伊甸园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / 3X|Chinese (China)|
 |[YGG cookie](https://www.ygg.re/){#yggcookie}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login|French (France)|
 |[YggTorrent](https://www.ygg.re/){#yggtorrent}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[YOiNKED](https://yoinked.org/){#yoinked}|YOiNKED is a Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
