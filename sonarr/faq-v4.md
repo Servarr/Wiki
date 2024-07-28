@@ -2,7 +2,7 @@
 title: Sonarr v4 FAQ
 description: Sonarr v4 FAQ
 published: true
-date: 2024-01-30T15:22:32.557Z
+date: 2024-07-28T20:51:12.143Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -40,7 +40,7 @@ If Sonarr is exposed so that the UI can be accessed from outside your local netw
 
 As of Sonarr v4, Authentication is Mandatory.
 
-- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
+- `AuthenticationRequired` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
