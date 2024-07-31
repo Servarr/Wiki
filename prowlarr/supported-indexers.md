@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-07-30T01:05:37.557877
+date: 2024-07-31T00:54:45.071906
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-07-30T01:05:37.557877
+dateCreated: 2024-07-31T00:54:45.071906
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.21.2.4648` / [Commit: cca55fd66c177315a2c3922d30bd03b4bfbd1308](https://github.com/Prowlarr/Prowlarr/commit/cca55fd66c177315a2c3922d30bd03b4bfbd1308)
-  - [Prowlarr Indexers Commit: 412fa25591e242b492890d685fa5daa8b90e0923](https://github.com/Prowlarr/Indexers/commit/412fa25591e242b492890d685fa5daa8b90e0923)
+  - [Prowlarr Indexers Commit: f3b5975e65e19b608810ff028c07facb9085f57d](https://github.com/Prowlarr/Indexers/commit/f3b5975e65e19b608810ff028c07facb9085f57d)
 
 ---
 
@@ -39,6 +39,7 @@ dateCreated: 2024-07-30T01:05:37.557877
 |[BitRu](https://bitru.org/){#bitru}|BitRu is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[BitSearch](https://bitsearch.to/){#bitsearch}|BitSearch is a Public torrent meta-search engine|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
+|[BTdirectory](https://btmulu.work/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://byruthub.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
@@ -88,6 +89,7 @@ dateCreated: 2024-07-30T01:05:37.557877
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
+|[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[Rapidzona](https://rapidzona.tv/){#rapidzona}|Rapidzona is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -191,7 +193,7 @@ dateCreated: 2024-07-30T01:05:37.557877
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://29july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://30july.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
