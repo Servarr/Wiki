@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-08-06T01:05:53.816633
+date: 2024-08-09T01:07:26.863899
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-08-06T01:05:53.816633
+dateCreated: 2024-08-09T01:07:26.863899
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.21.2.4648` / [Commit: cca55fd66c177315a2c3922d30bd03b4bfbd1308](https://github.com/Prowlarr/Prowlarr/commit/cca55fd66c177315a2c3922d30bd03b4bfbd1308)
-  - [Prowlarr Indexers Commit: 5e4ed5b84b1f22ceb70ce95394212e473d0887b6](https://github.com/Prowlarr/Indexers/commit/5e4ed5b84b1f22ceb70ce95394212e473d0887b6)
+  - [Prowlarr Indexers Commit: c8fc9c5c4347687ee084fd9e56cfcea9abbadb7d](https://github.com/Prowlarr/Indexers/commit/c8fc9c5c4347687ee084fd9e56cfcea9abbadb7d)
 
 ---
 
@@ -50,6 +50,7 @@ dateCreated: 2024-08-06T01:05:53.816633
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|Chinese (Taiwan)|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[EBookBay](http://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
+|[Elitetorrent-wf](https://www.elitetorrent.wf/){#elitetorrent-wf}|Elitetorrent-wf is a SPANISH Public tracker for MOVIES / TV|Spanish (Spain)|
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
@@ -68,6 +69,7 @@ dateCreated: 2024-08-06T01:05:53.816633
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
 |[Knaben](https://knaben.eu/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|English (United States)|
+|[Libronube](https://www.libronube.com/){#libronube}|Libronube is a Spanish Public tracker for EBOOKS|Spanish (Spain)|
 |[LimeTorrents](https://www.limetorrents.lol/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|English (United States)|
 |[LinuxTracker](https://linuxtracker.org/){#linuxtracker}|LinuxTracker is a Public Linux ISO Torrent Repository|English (United States)|
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|English (United States)|
@@ -123,7 +125,7 @@ dateCreated: 2024-08-06T01:05:53.816633
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq327.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir150.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir151.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz68.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -193,7 +195,7 @@ dateCreated: 2024-08-06T01:05:53.816633
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://06august.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://08august.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -360,7 +362,6 @@ dateCreated: 2024-08-06T01:05:53.816633
 |[Girotorrent](https://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[GreatPosterWall](https://greatposterwall.com/){#greatposterwall}|GreatPosterWall (GPW) is a CHINESE Private site for MOVIES|English (United States)|
 |[GreekDiamond](https://greekdiamond.info/){#greekdiamond}|GreekDiamond is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
-|[H-P2P](https://h-p2p.xyz/){#h-p2p}|H-P2P is a Private Torrent Tracker for OnlyFans XXX|English (United States)|
 |[HaiDan](https://www.haidan.video/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|English (United States)|
 |[HappyFappy2FA](https://www.happyfappy.org/){#happyfappy2fa}|HappyFappy is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
@@ -534,7 +535,6 @@ dateCreated: 2024-08-06T01:05:53.816633
 |[RPTScene](https://rptscene.xyz/){#rptscene}|RPTScene is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
-|[SceneLinks](https://scenelinks.me/){#scenelinks}|SceneLinks (SL) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|A tracker for rare movies|English (United States)|
