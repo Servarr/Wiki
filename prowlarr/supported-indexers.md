@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-08-09T01:07:26.863899
+date: 2024-08-10T01:06:57.677648
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-08-09T01:07:26.863899
+dateCreated: 2024-08-10T01:06:57.677648
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.21.2.4648` / [Commit: cca55fd66c177315a2c3922d30bd03b4bfbd1308](https://github.com/Prowlarr/Prowlarr/commit/cca55fd66c177315a2c3922d30bd03b4bfbd1308)
-  - [Prowlarr Indexers Commit: c8fc9c5c4347687ee084fd9e56cfcea9abbadb7d](https://github.com/Prowlarr/Indexers/commit/c8fc9c5c4347687ee084fd9e56cfcea9abbadb7d)
+  - [Prowlarr Indexers Commit: afc733ecbbf7aff71f9c2d4d8a0bea8d5d38edc0](https://github.com/Prowlarr/Indexers/commit/afc733ecbbf7aff71f9c2d4d8a0bea8d5d38edc0)
 
 ---
 
@@ -123,7 +123,7 @@ dateCreated: 2024-08-09T01:07:26.863899
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq327.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq328.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir151.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -195,7 +195,7 @@ dateCreated: 2024-08-09T01:07:26.863899
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://08august.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://19august.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -389,7 +389,7 @@ dateCreated: 2024-08-09T01:07:26.863899
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDT-LaFenice](https://hdtlafenice.eu/){#hdt-lafenice}|HDT-LaFenice is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[HDtime](https://hdtime.org/){#hdtime}|HDtime is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDTorrents\.it](https://hdtorrents.eu/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private site for TV / MOVIES|Italian (Italy)|
+|[HDTorrents\.it](https://hdtorrents.eu/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private PAY2DL site for TV / MOVIES|Italian (Italy)|
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[hdvbits](https://hdvbits.com/){#hdvbits}|hdvbits is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -465,6 +465,7 @@ dateCreated: 2024-08-09T01:07:26.863899
 |[nCore](https://ncore.pro/){#ncore}|nCore is a Hungarian Private Torrent Tracker for Movies/Series/General|Hungarian (Hungary)|
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|English (United States)|
 |[The-New-Fun](https://the-new-fun.com/){#thenewfun}|The-New-Fun is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[New Heaven](https://newheaven.nl/){#newheaven}|New Heaven is a GERMAN Private tracker for MOVIES / AUDIO / TV / GENERAL|German (Germany)|
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|Norwegian (Bokmål) (Norway)|
