@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-08-10T01:06:57.677648
+date: 2024-08-11T01:11:57.966719
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-08-10T01:06:57.677648
+dateCreated: 2024-08-11T01:11:57.966719
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.21.2.4648` / [Commit: cca55fd66c177315a2c3922d30bd03b4bfbd1308](https://github.com/Prowlarr/Prowlarr/commit/cca55fd66c177315a2c3922d30bd03b4bfbd1308)
-  - [Prowlarr Indexers Commit: afc733ecbbf7aff71f9c2d4d8a0bea8d5d38edc0](https://github.com/Prowlarr/Indexers/commit/afc733ecbbf7aff71f9c2d4d8a0bea8d5d38edc0)
+  - [Prowlarr Indexers Commit: c2d8b74e4864681800d6b81a495d49565a95c15f](https://github.com/Prowlarr/Indexers/commit/c2d8b74e4864681800d6b81a495d49565a95c15f)
 
 ---
 
@@ -150,6 +150,7 @@ dateCreated: 2024-08-10T01:06:57.677648
 |[Anidub](https://tr.anidub.com/){#anidub}|Anidub is RUSSIAN anime voiceover group and eponymous anime tracker|Russian (Russia)|
 |[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
 |[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[Best-Torrents](https://best-torrents.com/){#best-torrents}|Best-Torrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[BitMagnet (Local DHT)](http://127.0.0.1:3333/){#bitmagnet}|BitMagnet is a self-hosted BitTorrent DHT search engine|English (United States)|
 |[BookTracker](https://booktracker.org/){#booktracker}|BookTracker is a RUSSIAN Semi-Private Torrent Tracker for EBOOKS|Russian (Russia)|
 |[BootyTape](https://ssl.bootytape.com/){#bootytape}|BootyTape is a Semi-Private site for 3X|English (United States)|
