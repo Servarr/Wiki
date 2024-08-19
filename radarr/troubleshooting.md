@@ -229,7 +229,7 @@ If you have Radarr in Docker and the Download Client in non-Docker (or vice vers
 Logs will indicate something similar to.
 
 ```none
-2022-02-03 14:03:54.3|Error|DownloadedMovieImportService|Import failed, path does not exist or is not accessible by Radarr: /volume3/data/torrents/movies/The.Orville.2022.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Radarr has the correct permissions to access this file/folder
+2022-02-03 14:03:54.3|Error|DownloadedMovieImportService|Import failed, path does not exist or is not accessible by Radarr: /volume3/data/torrents/movies/The.Orville.2022.1080p.WEB.H264-GGEZ[eztv]. Ensure the path exists and the user running Radarr has the correct permissions to access this file/folder
 ```
 
 Thus `/volume3/data` does not exist within Radarr's container or is not accessible.
@@ -557,8 +557,6 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 ### Hitting rate limits
 
 If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
-
-Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
 
 ### IP Ban
 

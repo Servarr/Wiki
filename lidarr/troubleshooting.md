@@ -456,8 +456,6 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 
 If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy .
 
-Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
-
 ### IP Ban
 
 Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an IP address. This is typically semi-permanent and the solution is to  to get a new IP from your ISP or VPN provider.

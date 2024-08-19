@@ -231,7 +231,7 @@ If you have Sonarr in Docker and the Download Client in non-Docker (or vice vers
 Logs will look like
 
 ```none
-2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/torrents/tv/The.Orville.S03E08.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
+2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/torrents/tv/The.Orville.S03E08.1080p.WEB.H264-GGEZ[eztv]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
 ```
 
 Thus `/volume3/data` does not exist within Sonarr's container or is not accessible.
@@ -264,7 +264,7 @@ Thus `/volume3/data` does not exist within Sonarr's container or is not accessib
 Logs will look like
 
 ```none
-2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/tv/The Orville/Season 03/The.Orville.S03E08.1080p.WEB.H264-GGEZ[rarbg]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
+2022-02-03 14:03:54.3|Error|DownloadedEpisodesImportService|Import failed, path does not exist or is not accessible by Sonarr: /volume3/data/tv/The Orville/Season 03/The.Orville.S03E08.1080p.WEB.H264-GGEZ[eztv]. Ensure the path exists and the user running Sonarr has the correct permissions to access this file/folder
 ```
 
 Don’t forget to check permissions and ownership of the *destination*. It is easy to get fixated on the download’s ownership and permissions and that is *usually* the cause of permissions related issues, but it *could* be the destination as well. Check that the destination folder(s) exist. Check that a destination *file* doesn’t already exist or can’t be deleted or moved to recycle bin. Check that ownership and permissions allow the downloaded file to be copied, hard linked or moved. The user or group that runs as needs to be able to read and write the root folder.
@@ -752,8 +752,6 @@ You’ll be connecting to most indexers/trackers via https, so you’ll need tha
 ### Hitting rate limits
 
 If you run your through a VPN or proxy, you may be competing with 10s or 100s or 1000s of other people all trying to use services like , theXEM ,and/or your indexers and trackers. Rate limiting and DDOS protection are often done by IP address and your VPN/proxy exit point is *one* IP address. Unless you’re in a repressive country like China, Australia or South Africa you don’t need to VPN/proxy.
-
-Rarbg has a tendency to have some sort of rate limiting within their API and displays as responding with no results.
 
 ### IP Ban
 

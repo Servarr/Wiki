@@ -92,9 +92,6 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
       - This can be fixed when / if [Pull Request #4637](https://github.com/Sonarr/Sonarr/pull/4637) is merged
   - > Nyaa frowns upon automation and frequently will ban your IP. {.is-warning}
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
-- Rarbg {#rarbg}
-  - Public Tracker
-  - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
   > The RSS feed must contain a `pubdate`. The release size is recommended as well.

@@ -87,9 +87,6 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
   - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
-- Rarbg {#rarbg}
-  - Public Tracker
-  - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
   > The RSS feed must contain a `pubdate`. The release size is recommended as well.
