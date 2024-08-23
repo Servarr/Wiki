@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2024-08-23T18:25:22.244Z
+date: 2024-08-23T18:25:35.762Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -78,7 +78,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
 
 {#we-are-currently-experiencing-issues-with-our-metadata-provider-this-will-prevent-user-searches-and-author-refreshes-from-working-we-are-working-to-solve-the-issue}
 
-Please see [Readarr Metadata Issue](/readarr/metadata-issues)
+- Please see [Readarr Metadata Issue](/readarr/metadata-issues)
 
 #### Branch is not a valid release branch
 
