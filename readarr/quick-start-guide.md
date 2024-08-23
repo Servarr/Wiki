@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2024-08-23T18:12:42.915Z
+date: 2024-08-23T18:13:33.210Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -198,6 +198,9 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
 > \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
+
+> There was a change in Calibre 7.2.0 which starts listening on ipv6, and it can cause a problem with readarr connections. To fix it, change the Calibre setting "The interface to listen for connections" to 0.0.0.0 in Preferences->Sharing over the net->Advanced, in calibre, and restart calibre. This should resolve the issue.
+{.is-info}
 
 > If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over. You cannot add books, delete books, re-tag books, or convert books inside Calibre. This includes updating the metadata.
 {.is-danger}
