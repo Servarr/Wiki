@@ -2,7 +2,7 @@
 title: Readarr Quick Start Guide
 description: 
 published: true
-date: 2024-08-23T18:10:49.612Z
+date: 2024-08-23T18:12:42.915Z
 tags: readarr
 editor: markdown
 dateCreated: 2021-12-11T19:42:31.825Z
@@ -199,7 +199,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 > \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
 
-> If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over. This includes updating the metadata.
+> If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over. You cannot add books, delete books, re-tag books, or convert books inside Calibre. This includes updating the metadata.
 {.is-danger}
 
 - Calibre Host - The IP/domain of the host of the Calibre Content Server
