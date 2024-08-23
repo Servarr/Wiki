@@ -2,7 +2,7 @@
 title: Readarr System
 description: 
 published: true
-date: 2023-12-06T11:00:30.599Z
+date: 2024-08-23T18:25:22.244Z
 tags: readarr, needs-love, system
 editor: markdown
 dateCreated: 2021-06-20T19:54:43.262Z
@@ -78,22 +78,7 @@ dateCreated: 2021-06-20T19:54:43.262Z
 
 {#we-are-currently-experiencing-issues-with-our-metadata-provider-this-will-prevent-user-searches-and-author-refreshes-from-working-we-are-working-to-solve-the-issue}
 
-> We are currently experiencing issues with our metadata provider, this will prevent user searches and author refreshes from working. We are working to solve the issue.
-{.is-info}
-
-[Pinned Discord Message](https://discord.com/channels/264387956343570434/1028840624864120872/1176254480593997904)
-
-- Currently the Readarr metadata server (bookclub.info) that proxies Goodreads for Readarr users is *mostly* down. This will prevent you from doing searches for or adding books and authors. There is no timeline for getting it back up, but the devs are still working on it.
-- It's been reported to be slightly up currently, and some users are able to occasionally perform a search and add an author. **The metadata server is not open source, and there is nothing you can do to help get it back up. Please be patient and it will be operational soon.** Also a reminder that Readarr is (very) beta software and will have issues like this fairly regularly, and if that is a deal-breaker for your book library you may want to explore alternatives until it's more stable.
-- You can add SOME authors by finding the author ID number on goodreads (it's part of the URL) and adding it to readarr by using `author:authorid` in the search. Note that this is a separate issue from the ["large author" -GHI 2783](https://github.com/Readarr/Readarr/issues/2153) issue which is ongoing and will not be solved when this comes back up. We know, it's been down for a long time.
-- We know this is an inconvenience to you. We do not have an ETA. It is not a regular occurrence. This also does not impact searching for downloads of books and authors you already have in Readarr, and importing those.
-
-Related GitHub Issues
-
-- [GHI 3106 - Dupe - Pinned](https://github.com/Readarr/Readarr/issues/3106)
-- [GHI 3110 - Dupe](https://github.com/Readarr/Readarr/issues/3110)
-- [GHI 2970 - Tracking](https://github.com/Readarr/Readarr/issues/2970)
-{.links-list}
+Please see [Readarr Metadata Issue](/readarr/metadata-issues)
 
 #### Branch is not a valid release branch
 
