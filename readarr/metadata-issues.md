@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-08-23T18:20:51.850Z
+date: 2024-08-23T18:25:57.964Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -40,3 +40,12 @@ Due to continuous GoodReads issues - work has slowly begun by a community member
 - Impact:
   - Large authors are still not working, and will not be for a while. A partial, but not exhaustive, list of those authors: Stephen King, Isaac Asimov, Leo Tolstoy, Fyodor Dostoevsky, Arthur Conan Doyle, Stephen Fry, Agatha Christie, Arthur C. Clarke, Oscar Wilde, Jack London, Neil Gaiman, Charles Dickens, Jane Smiley, Vladimir Nabokov, Bernard Cornwall, D.H. Lawrence. 
   -  For large authors, you cannot do anything to add either the author OR their individual books. There is no workaround. 
+
+## Github Issues
+
+Related GitHub Issues
+
+- [GHI 3106 - Dupe - Pinned](https://github.com/Readarr/Readarr/issues/3106)
+- [GHI 3110 - Dupe](https://github.com/Readarr/Readarr/issues/3110)
+- [GHI 2970 - Tracking](https://github.com/Readarr/Readarr/issues/2970)
+{.links-list}
