@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2024-04-06T14:29:54.540Z
+date: 2024-08-24T21:23:51.690Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -556,7 +556,7 @@ Depending on your OS, there are multiple possible ways.
 When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
 
 - Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Radarr decide which client to use.
-- Override Radarr's parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
+- Override Radarr's parsing of the release title in case Radarr has parsed it incorrectly or Radarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
   - Movie
   - Quality
   - Language
