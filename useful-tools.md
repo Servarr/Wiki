@@ -2,7 +2,7 @@
 title: Useful Tools
 description: companions to the *Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the *Arr Development Team. 
 published: true
-date: 2024-08-24T04:43:39.295Z
+date: 2024-08-24T04:49:20.511Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -238,7 +238,7 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ### LunaSea
 
-[LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software
+[LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software. Manage new media content fetched via Lidarr, Radarr, and Sonarr.
 
 ### Radarr & Sonarr Companion - Android App
 
@@ -282,7 +282,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## Unpackerr
 
-- [Unpackerr](https://unpackerr.zip) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
+[Unpackerr](https://unpackerr.zip) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
 
 - There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so he wrote his own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
 
@@ -330,9 +330,13 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 - [Just A Bunch Of Plex Scripts (JBOPS)](https://github.com/blacktwin/JBOPS)
 - [TRaSH Guides JBOPS 4K Transcode Stopping with Tautulli](https://trash-guides.info/Plex/Tips/4k-transcoding/)
 
-## Plex Meta Manager
+## Kometa
 
-[Plex Meta Manager (PMM)](https://github.com/meisnate12/Plex-Meta-Manager) is a Python script to update metadata information for movies, shows, and collections as well as automatically build collections.
+[Kometa (FKA Meta Manager (PMM))](https://kometa.wiki/en/latest/) is a Python script to update metadata information for movies, shows, and collections as well as automatically build collections.
+
+Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
+
+
 
 ## Tautulli
 
