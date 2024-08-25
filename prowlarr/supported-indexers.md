@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-08-24T01:05:32.696372
+date: 2024-08-25T01:12:27.357818
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-08-24T01:05:32.696372
+dateCreated: 2024-08-25T01:12:27.357818
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.21.2.4648` / [Commit: 99f9a0b4e6f354d2406a95605b113a7d3912c5ba](https://github.com/Prowlarr/Prowlarr/commit/99f9a0b4e6f354d2406a95605b113a7d3912c5ba)
-  - [Prowlarr Indexers Commit: e5a8af1da7e28f4fe843989a9c2ba4e24ddb3a7d](https://github.com/Prowlarr/Indexers/commit/e5a8af1da7e28f4fe843989a9c2ba4e24ddb3a7d)
+  - [Prowlarr Indexers Commit: 67999cbecd3da996cb0db572ba514f620d88a711](https://github.com/Prowlarr/Indexers/commit/67999cbecd3da996cb0db572ba514f620d88a711)
 
 ---
 
@@ -540,6 +540,7 @@ dateCreated: 2024-08-24T01:05:32.696372
 |[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|A tracker for rare movies|English (United States)|
 |[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
+|[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-day MOVIES / TV / GENERAL|English (United States)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Shadowflow (影)](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|A general italian tracker|Italian (Italy)|
