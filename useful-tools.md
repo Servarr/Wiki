@@ -27,6 +27,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
+  - [Jellyserr](#jellyseerr)
   - [Petio](#petio)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
@@ -226,6 +227,10 @@ Highlights
 
 [Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
 
+## Jellyseerr
+
+[Jellyseerr](https://github.com/Fallenbagel/jellyseerr) is a fork of Overseerr built to bring support for Jellyfin & Emby media servers.
+
 ## Petio
 
 [Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
@@ -335,8 +340,6 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 [Kometa (FKA Meta Manager (PMM))](https://kometa.wiki/en/latest/) is a Python script to update metadata information for movies, shows, and collections as well as automatically build collections.
 
 Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
-
-
 
 ## Tautulli
 
