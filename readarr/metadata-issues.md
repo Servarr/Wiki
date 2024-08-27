@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-08-23T18:25:57.964Z
+date: 2024-08-27T04:39:43.959Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -15,7 +15,24 @@ For the latest updates please refer to the pinned messages in the [Readarr Disco
 
 ## Future Plans
 
-Due to continuous GoodReads issues - work has slowly begun by a community member and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
+Due to continuous GoodReads issues - work has slowly begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
+
+Per the community user:
+
+> The replacement metadata server is close to completion which should resolve the issue for everyone in the meantime. If you're referring to switching to book-based instead of author-based, I don't think that's blocking
+
+Per the Servarr Team:
+
+> Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
+
+## BookInfo
+
+BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for Sonarr.
+
+## Metadata Server
+
+- Why is the meta server not OSS?
+  - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API
 
 ## Rate Limiting
 
