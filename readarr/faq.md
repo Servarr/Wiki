@@ -2,11 +2,14 @@
 title: Readarr FAQ
 description: 
 published: true
-date: 2024-05-19T16:10:37.985Z
+date: 2024-08-27T04:41:05.746Z
 tags: readarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-25T20:01:09.320Z
 ---
+
+> [Read More on Metadata Issues](/readarr/metadata-issues)
+{.is-info}
 
 # Table of Contents
 
