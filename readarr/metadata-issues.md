@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-08-27T04:39:43.959Z
+date: 2024-08-27T04:44:09.192Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -60,9 +60,6 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 ## Github Issues
 
-Related GitHub Issues
-
-- [GHI 3106 - Dupe - Pinned](https://github.com/Readarr/Readarr/issues/3106)
-- [GHI 3110 - Dupe](https://github.com/Readarr/Readarr/issues/3110)
-- [GHI 2970 - Tracking](https://github.com/Readarr/Readarr/issues/2970)
+- [Readarr #2783: Metadata Server Issues (429) & Authors with missing books / Authors not found](https://github.com/Readarr/Readarr/issues/2783)
+- [Readarr #3486: Migrate to OpenLibrary as Metadata Backend](https://github.com/Readarr/Readarr/issues/3486)
 {.links-list}
