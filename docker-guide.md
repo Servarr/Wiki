@@ -242,7 +242,7 @@ This is the best option for most users, it lets you control and configure many c
 ```yml
     # sonarr
     Sonarr:
-        image: cr.hotio.dev/hotio/sonarr
+        image: ghcr.io/hotio/sonarr
         volumes:
             - /path/to/config/sonarr:/config
             - /host/data:/data
@@ -264,7 +264,7 @@ This is the best option for most users, it lets you control and configure many c
 
     # SABnzbd
     SABnzbd:
-        image: cr.hotio.dev/hotio/sabnzbd
+        image: ghcr.io/hotio/sabnzbd
         volumes:
             - /path/to/config/sabnzbd:/config
             - /host/data/usenet:/data/usenet
@@ -275,7 +275,7 @@ This is the best option for most users, it lets you control and configure many c
 
     # plex
     Plex:
-        image: cr.hotio.dev/hotio/plex
+        image: ghcr.io/hotio/plex
         volumes:
             - /path/to/config/plex:/config
             - /host/data/media:/data/media
@@ -310,7 +310,7 @@ This is the best option for most users, it lets you control and configure many c
     docker run -v /path/to/config/sonarr:/config \
                -v /host/data:/data \
                -e PUID=111 -e PGID=321 -e UMASK=002 \
-               cr.hotio.dev/hotio/sonarr
+               ghcr.io/hotio/sonarr
 
     # deluge
     docker run -v /path/to/config/deluge:/config \
@@ -322,13 +322,13 @@ This is the best option for most users, it lets you control and configure many c
     docker run -v /path/to/config/sabnzbd:/config \
                -v /host/data/usenet:/data/usenet \
                -e PUID=333 -e PGID=321 -e UMASK=002 \
-               cr.hotio.dev/hotio/sabnzbd
+               ghcr.io/hotio/sabnzbd
 
     # plex
     docker run -v /path/to/config/plex:/config \
                -v /host/data/media:/data/media \
                -e PUID=444 -e PGID=321 -e UMASK=002 \
-               cr.hotio.dev/hotio/plex
+               ghcr.io/hotio/plex
 ```
 
 ## Systemd
