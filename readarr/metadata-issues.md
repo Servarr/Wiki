@@ -13,9 +13,9 @@ dateCreated: 2024-08-23T18:20:51.850Z
 Below are the summarized issues of the Readarr Metadata Server.
 For the latest updates please refer to the pinned messages in the [Readarr Discord](https://readarr.com/discord)
 
-## Future Plans
+## The Future and Open Library
 
-Due to continuous GoodReads issues - work has slowly begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
+Due to continuous GoodReads issues - work has begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord, acquire the Tester role and meet us in the appropiate channel.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
 
 Per the community user:
 
@@ -24,6 +24,14 @@ Per the community user:
 Per the Servarr Team:
 
 > Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
+
+### Why can we not just use OpenLibrary Directly?
+
+As per docs you are not allowed to do that, that’s why they provide data dumps.
+
+## Why can we not just use the Metadata Provider Directly?
+
+If you throw all that directly at the source, it's either against their policy, or going to be very expensive
 
 ## BookInfo
 
