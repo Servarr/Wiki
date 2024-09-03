@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-09-02T01:11:17.633936
+date: 2024-09-03T01:09:08.831133
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-09-02T01:11:17.633936
+dateCreated: 2024-09-03T01:09:08.831133
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.21.2.4648` / [Commit: 6fa0b79c673c15d23afff1c8003c438c54582752](https://github.com/Prowlarr/Prowlarr/commit/6fa0b79c673c15d23afff1c8003c438c54582752)
-  - [Prowlarr Indexers Commit: 9fd5acedbb286fa3b17ddb9e2f5c687ffdc4c13b](https://github.com/Prowlarr/Indexers/commit/9fd5acedbb286fa3b17ddb9e2f5c687ffdc4c13b)
+  - Prowlarr Build `1.24.0.4713` / [Commit: 58ae9c0a13daa5c72cd46e7257e801c68481f590](https://github.com/Prowlarr/Prowlarr/commit/58ae9c0a13daa5c72cd46e7257e801c68481f590)
+  - [Prowlarr Indexers Commit: c80a72cfebd4dc5a9806ddfb7e2d4eb8d041644d](https://github.com/Prowlarr/Indexers/commit/c80a72cfebd4dc5a9806ddfb7e2d4eb8d041644d)
 
 ---
 
@@ -43,7 +43,6 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.yachts/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://byruthub.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
-|[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Public tracker for Anime / Hentai / Manga|Chinese (China)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[cpasbien clone](https://www.cpasbien.love/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
@@ -75,7 +74,6 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|English (United States)|
 |[MegaPeer](https://megapeer.vip/){#megapeer}|MegaPeer is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
-|[MioBT](https://miobt.com/){#miobt}|MioBT is a CHINESE Public torrent index|Chinese (China)|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|Spanish (Spain)|
 |[MyPornClub](https://myporn.club/){#mypornclub}|MyPornClub is a Public Torrent Tracker for 3X|English (United States)|
@@ -155,6 +153,7 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[BookTracker](https://booktracker.org/){#booktracker}|BookTracker is a RUSSIAN Semi-Private Torrent Tracker for EBOOKS|Russian (Russia)|
 |[BootyTape](https://ssl.bootytape.com/){#bootytape}|BootyTape is a Semi-Private site for 3X|English (United States)|
 |[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|Russian (Russia)|
+|[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Semi-Private tracker for Anime / Hentai / Manga|Chinese (China)|
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an Icelandic Semi-Private site for TV / MOVIES / GENERAL|Icelandic (Iceland)|
 |[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[DreamingTree](https://dreamingtree.org/){#dreamingtree}|DreamingTree is a Semi-Private Torrent Tracker for DAVE MATHEWS MUSIC / BOOTLEGS|English (United States)|
@@ -181,6 +180,7 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[Masters-TB](https://masters-tb.com/){#masters-tb}|Masters-TB is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Mazepa](https://mazepa.to/){#mazepa}|Mazepa is a UKRAINIAN Semi-Private Torrent Tracker for Videos with Ukrainian soundtracks|Ukrainian (Ukraine)|
 |[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private site dedicated to HEAVY METAL MUSIC\. This definition is for the English site|English (United States)|
+|[MioBT](https://miobt.com/){#miobt}|MioBT is a CHINESE Semi-Private torrent index|Chinese (China)|
 |[MIRCrew](https://mircrew-releases.org/){#mircrew}|MIRCrew is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[MuseBootlegs](https://www.musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES\. This definition is for the Forum Tracker site|English (United States)|
@@ -195,7 +195,7 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://01september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://03september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -362,7 +362,6 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[GimmePeers](https://www.gimmepeers.com/){#gimmepeers}|GimmePeers (formerly ILT) is a Paid Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Girotorrent](https://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[GreatPosterWall](https://greatposterwall.com/){#greatposterwall}|GreatPosterWall (GPW) is a CHINESE Private site for MOVIES|English (United States)|
-|[GreekDiamond](https://greekdiamond.info/){#greekdiamond}|GreekDiamond is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HaiDan](https://www.haidan.video/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.org/){#happyfappy}|HappyFappy is a Private Torrent Tracker for 3X|English (United States)|
 |[HappyFappy2FA](https://www.happyfappy.org/){#happyfappy2fa}|HappyFappy is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
@@ -507,7 +506,7 @@ dateCreated: 2024-09-02T01:11:17.633936
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTChina (铂金学院)](https://ptchina.org/){#ptchina}|PTChina (铂金学院) is a CHINESE Private site for MOVIES / TV|Chinese (China)|
 |[PTerClub (PT之友俱乐部)](https://pterclub.com/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS, MOVIES, TV & ANIME|Chinese (China)|
-|[PTFans](https://cusat.win/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[PThome](https://www.pthome.net/){#pthome}|PThome is a CHINESE Private Torrent Tracker for 0DAY / GENERAL|Chinese (China)|
 |[PTSBAO (烧包)](https://ptsbao.club/){#ptsbao}|PTSBAO (烧包) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
