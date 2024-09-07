@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-08-27T04:44:09.192Z
+date: 2024-09-07T18:01:47.654Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -15,11 +15,15 @@ For the latest updates please refer to the pinned messages in the [Readarr Disco
 
 ## The Future and Open Library
 
+> **It is only anticipated that Open Library will resolve the 'Large Author Issue' and similar GoodRead's Specific Issues**
+{.is-warning}
+
 Due to continuous GoodReads issues - work has begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord, acquire the Tester role and meet us in the appropiate channel.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
 
 Per the community user:
 
-> The replacement metadata server is close to completion which should resolve the issue for everyone in the meantime. If you're referring to switching to book-based instead of author-based, I don't think that's blocking
+> The replacement metadata server is close to completion which should resolve the issue for everyone in the meantime. If you're referring to switching to book-based instead of author-based, I don't think that's blocking.
+{.is-info}
 
 Per the Servarr Team:
 
@@ -43,6 +47,9 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
   - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API
 
 ## Rate Limiting
+
+> This is caused by the Metadata Cache not properly caching and is being investigated by the Servarr Team when time permits.  Accordingly, the Metadata Server is being hammered which makes it 1) slow and 2) hard to troubleshoot.
+{.is-warning}
 
 - As Of: 2024-05-22
 - Updated: 2024-08-09
