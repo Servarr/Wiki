@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-09-07T01:08:39.326196
+date: 2024-09-08T01:15:29.818384
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-09-07T01:08:39.326196
+dateCreated: 2024-09-08T01:15:29.818384
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.24.0.4719` / [Commit: 39befe5aa4f409cbc4d237bd7a657aaa21fc1af7](https://github.com/Prowlarr/Prowlarr/commit/39befe5aa4f409cbc4d237bd7a657aaa21fc1af7)
-  - [Prowlarr Indexers Commit: 756fe7e9b0020cec556af150176f4d02d120ced8](https://github.com/Prowlarr/Indexers/commit/756fe7e9b0020cec556af150176f4d02d120ced8)
+  - Prowlarr Build `1.24.0.4721` / [Commit: 66d722e0970754c64418735c498c5f968d657073](https://github.com/Prowlarr/Prowlarr/commit/66d722e0970754c64418735c498c5f968d657073)
+  - [Prowlarr Indexers Commit: 2252b179572065bfc2f8dc66d29c8da7586502aa](https://github.com/Prowlarr/Indexers/commit/2252b179572065bfc2f8dc66d29c8da7586502aa)
 
 ---
 
@@ -38,6 +38,7 @@ dateCreated: 2024-09-07T01:08:39.326196
 |[BigFANGroup](https://bigfangroup.org/){#bigfangroup}|BigFANGroup is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[BitRu](https://bitru.org/){#bitru}|BitRu is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[BitSearch](https://bitsearch.to/){#bitsearch}|BitSearch is a Public torrent meta-search engine|English (United States)|
+|[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTdirectory](https://btmulu.work/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
@@ -195,7 +196,7 @@ dateCreated: 2024-09-07T01:08:39.326196
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://07september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://08september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
