@@ -635,8 +635,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 - Whisparr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: movies, tv, series, music, etc.
 - Whisparr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Whisparr under the specific download client). When files are imported to your media folder Whisparr will hardlink the file if supported by your setup or copy if not hard links are not supported.
-- Hard links are enabled by default. [A hardlink will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hard links then Whisparr will fall back and copy the file.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Whisparr under the specific download client). When files are imported to your media folder Whisparr will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
+- Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then Whisparr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Whisparr's settings, Whisparr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped (i.e. paused).
 
 ## Download Clients
@@ -726,7 +726,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 If you download using a BitTorrent client, the process is slightly different:
 
-- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Whisparr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
+- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Whisparr will attempt to hardlinkthe file or fall back to copy (use double space) if hard links are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Whisparr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the torrent is in the same category (i.e. not using a post-import category), the seed goal reached is supported by Whisparr, and torrent is paused (stopped).
 
 ### Failed Download Handling
