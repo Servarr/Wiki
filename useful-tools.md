@@ -318,7 +318,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
 
-- `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hardlinks thus reducing the used duplicate space
+- `jdupes -L -r "/data/tv/" "/data/tv/.torrents/"` <= this would recreate them as hard links thus reducing the used duplicate space
 
 ## Drazzilb's UserScripts
 

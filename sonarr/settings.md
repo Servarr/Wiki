@@ -692,7 +692,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Sonarr
 - Sonarr will scan that completed file location for files that Sonarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hard links and atomic moves then Sonarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
 ## BitTorrent
@@ -700,8 +700,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-- Hardlinks are enabled by default. [A hardlink will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Sonarr will fall back and copy the file.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlink the file if supported by your setup or copy if not hard links are not supported.
+- Hard links are enabled by default. [A hardlink will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hard links then Sonarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings, Sonarr will delete the torrent from your client and qsk the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 ## Download Clients
@@ -756,19 +756,19 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. Seed goals can be set globally in the client itself or per tracker in \*Arr settings for each indexer. See the table below for client compatibility.
 
-|      Client       |                                Ratio                                 |                                   Time                                   |
-| :---------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------: |
-|       Aria2       |   :white_check_mark:   |   :x:   |
-|      Deluge       |   :white_check_mark:   |   :x:   |
-| Download Station  | :x: |   :x:   |
-|       Flood       |   :white_check_mark:   |     :white_check_mark:     |
-|     Hadouken      | :x: |   :x:   |
-|    qBittorrent    |   :white_check_mark:   |     :white_check_mark:     |
-|     rTorrent      |   :white_check_mark:   |     :white_check_mark:     |
-| Torrent Blackhole | :x: |   :x:   |
-|   Transmission    |   :white_check_mark:   | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
-|     uTorrent      |   :white_check_mark:   |     :white_check_mark:     |
-|       Vuze        |   :white_check_mark:   |     :white_check_mark:     |
+|      Client       |       Ratio        |                                   Time                                   |
+| :---------------: | :----------------: | :----------------------------------------------------------------------: |
+|       Aria2       | :white_check_mark: |                                   :x:                                    |
+|      Deluge       | :white_check_mark: |                                   :x:                                    |
+| Download Station  |        :x:         |                                   :x:                                    |
+|       Flood       | :white_check_mark: |                            :white_check_mark:                            |
+|     Hadouken      |        :x:         |                                   :x:                                    |
+|    qBittorrent    | :white_check_mark: |                            :white_check_mark:                            |
+|     rTorrent      | :white_check_mark: |                            :white_check_mark:                            |
+| Torrent Blackhole |        :x:         |                                   :x:                                    |
+|   Transmission    | :white_check_mark: | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
+|     uTorrent      | :white_check_mark: |                            :white_check_mark:                            |
+|       Vuze        | :white_check_mark: |                            :white_check_mark:                            |
 
 > ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Sonarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
@@ -790,7 +790,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 If you download using a BitTorrent client, the process is slightly different:
 
-- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Sonarr will attempt to hardlink the file or fall back to copy (use double space) if hardlinks are not supported.
+- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Sonarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Sonarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the torrent is in the same category (i.e. not using a post-import category), the seed goal reached is supported by Sonarr, and torrent is paused (stopped).
 
 ### Failed Download Handling
