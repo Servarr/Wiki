@@ -80,9 +80,6 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Torrent Tracker for Japanese Media (Anime) exclusively.
   > Nyaa frowns upon automation and frequently will ban your IP. {.is-info}
   - [Refer to the Settings Page](/readarr/settings#indexer-settings)
-- Rarbg {#rarbg}
-  - Public Tracker
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
   > The RSS feed must contain a `pubdate`. The release size is recommended as well.

@@ -133,7 +133,7 @@ Also, note that for each individual settings page, there are some options at the
 > \* Note that this **cannot be enabled on an existing root folder**.
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
-> \* Note that hardlinks do not work with Calibre integration.
+> \* Note that hard links do not work with Calibre integration.
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
 > \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
@@ -312,9 +312,9 @@ Commonly used naming schema are:
   
 - (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
-- (Advanced Option) Use Hardlinks instead of Copy - Check this box to use Hardlinks instead of Copies (for Torrents). Note that this is enabled by default.
+- (Advanced Option) Use Hard links instead of Copy - Check this box to use Hard links instead of Copies (for Torrents). Note that this is enabled by default.
   
-> You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
+> You should ideally use this wherever possible. In order for hard links to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
   
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
@@ -622,14 +622,14 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Readarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Readarr
 - Readarr will scan that completed file location for files that Readarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hard links and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
 
 ### Torrent Process
 
 - Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings. Examples: books, tv, series, music, etc.
 - Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-- Hardlinks are enabled by default. [A hardlink will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
+- Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then Readarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your client, but only if the client reports that seeding is complete and torrent is stopped.
 
 ## Download Clients
@@ -679,19 +679,19 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - Readarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. Seed goals can be set globally in the client itself or per tracker in \*Arr settings for each indexer. See the table below for client compatibility.
 
-|      Client       |                                Ratio                                 |                                   Time                                   |
-| :---------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------: |
-|       Aria2       |   :white_check_mark:   |   :x:   |
-|      Deluge       |   :white_check_mark:   |   :x:   |
-| Download Station  | :x: |   :x:   |
-|       Flood       |   :white_check_mark:   |     :white_check_mark:     |
-|     Hadouken      | :x: |   :x:   |
-|    qBittorrent    |   :white_check_mark:   |     :white_check_mark:     |
-|     rTorrent      |   :white_check_mark:   |     :white_check_mark:     |
-| Torrent Blackhole | :x: |   :x:   |
-|   Transmission    |   :white_check_mark:   | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
-|     uTorrent      |   :white_check_mark:   |     :white_check_mark:     |
-|       Vuze        |   :white_check_mark:   |     :white_check_mark:     |
+|      Client       |       Ratio        |                                   Time                                   |
+| :---------------: | :----------------: | :----------------------------------------------------------------------: |
+|       Aria2       | :white_check_mark: |                                   :x:                                    |
+|      Deluge       | :white_check_mark: |                                   :x:                                    |
+| Download Station  |        :x:         |                                   :x:                                    |
+|       Flood       | :white_check_mark: |                            :white_check_mark:                            |
+|     Hadouken      |        :x:         |                                   :x:                                    |
+|    qBittorrent    | :white_check_mark: |                            :white_check_mark:                            |
+|     rTorrent      | :white_check_mark: |                            :white_check_mark:                            |
+| Torrent Blackhole |        :x:         |                                   :x:                                    |
+|   Transmission    | :white_check_mark: | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
+|     uTorrent      | :white_check_mark: |                            :white_check_mark:                            |
+|       Vuze        | :white_check_mark: |                            :white_check_mark:                            |
 
 > ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Readarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
 
@@ -712,7 +712,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 If you download using a BitTorrent client, the process is slightly different:
 
-- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Readarr will attempt to hardlink the file or fall back to copy (use double space) if hard links are not supported.
+- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Readarr will attempt to hardlinkthe file or fall back to copy (use double space) if hard links are not supported.
 - If the "Completed Download Handling - Remove" option is enabled in settings, Readarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the torrent is in the same category (i.e. not using a post-import category), the seed goal reached is supported by Readarr, and torrent is paused (stopped).
 
 ### Failed Download Handling

@@ -86,9 +86,9 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 - (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
-- (Advanced Option) Use Hardlinks instead of Copy - Check this box to use Hardlinks instead of Copies (for Torrents). Note that this is enabled by default.
+- (Advanced Option) Use Hard links instead of Copy - Check this box to use Hard links instead of Copies (for Torrents). Note that this is enabled by default.
   
-> You should ideally use this wherever possible. In order for hardlinks to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
+> You should ideally use this wherever possible. In order for hard links to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
 {.is-info}
   
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
@@ -146,7 +146,7 @@ You may also elect to use Calibre to manage your library on this screen. Doing s
 > \* If you're using an SMB mount ensure `nobrl` is enabled.
 {.is-warning}
 
-> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored. Hardlinks are not used when adding Calibre integration.
+> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored. Hard links are not used when adding Calibre integration.
 > **Note that you cannot add Calibre integration to a root folder after it's created.**
 {.is-danger}
 
@@ -194,7 +194,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 > \* Note that this **cannot be enabled on an existing root folder**.
 > \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
 > \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
-> \* Note that hardlinks do not work with Calibre integration.
+> \* Note that hard links do not work with Calibre integration.
 > \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
 > \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 {.is-warning}
@@ -242,7 +242,7 @@ Downloading and importing is where most people experience issues. From a high le
 - Readarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Readarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Readarr
 - Readarr will scan that completed file location for files that Readarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hardlinks and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
+- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hard links and atomic moves then Readarr will fall back and copy the file then delete from the source which is IO intensive.
 - If the "Completed Download Handling - Remove" option is enabled in Readarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
 ### BitTorrent
@@ -252,8 +252,8 @@ Downloading and importing is where most people experience issues. From a high le
 - Readarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
   - Examples: movies, tv, series, music, etc.
 - Readarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlink the file if supported by your setup or copy if not hardlinks are not supported.
-- Hardlinks are enabled by default. [A hardlink will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hardlink creation fails or your setup does not support hardlinks then Readarr will fall back and copy the file.
+- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Readarr under the specific download client). When files are imported to your media folder Readarr will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
+- Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then Readarr will fall back and copy the file.
 - If the "Completed Download Handling - Remove" option is enabled in Readarr's settings, Readarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
