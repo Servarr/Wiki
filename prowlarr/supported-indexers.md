@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-09-08T01:15:29.818384
+date: 2024-09-09T01:12:17.046114
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-09-08T01:15:29.818384
+dateCreated: 2024-09-09T01:12:17.046114
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.24.0.4721` / [Commit: 66d722e0970754c64418735c498c5f968d657073](https://github.com/Prowlarr/Prowlarr/commit/66d722e0970754c64418735c498c5f968d657073)
-  - [Prowlarr Indexers Commit: 2252b179572065bfc2f8dc66d29c8da7586502aa](https://github.com/Prowlarr/Indexers/commit/2252b179572065bfc2f8dc66d29c8da7586502aa)
+  - Prowlarr Build `1.24.1.4730` / [Commit: 710ab7ae090b2bb0a86dde08aa830595b2ea8bcc](https://github.com/Prowlarr/Prowlarr/commit/710ab7ae090b2bb0a86dde08aa830595b2ea8bcc)
+  - [Prowlarr Indexers Commit: 2f506dc441b8ecbf022e25c3c8a526e88010c928](https://github.com/Prowlarr/Indexers/commit/2f506dc441b8ecbf022e25c3c8a526e88010c928)
 
 ---
 
@@ -196,7 +196,7 @@ dateCreated: 2024-09-08T01:15:29.818384
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://08september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://09september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -309,7 +309,7 @@ dateCreated: 2024-09-08T01:15:29.818384
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\. This indexer uses cookie login for 2FA|English (United Kingdom)|
 |[cyanbug (大青虫)](https://cyanbug.net/){#cyanbug}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Dajiao (打胶)](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|English (United States)|
+|[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|Danish (Denmark)|
 |[Darius Tracker](https://dariustracker.hu/){#dariustracker}|Darius Tracker is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
