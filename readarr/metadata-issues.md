@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-09-07T18:01:47.654Z
+date: 2024-09-09T16:26:55.421Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -48,30 +48,40 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 ## Rate Limiting
 
-> This is caused by the Metadata Cache not properly caching and is being investigated by the Servarr Team when time permits.  Accordingly, the Metadata Server is being hammered which makes it 1) slow and 2) hard to troubleshoot.
+> ~~This is caused by the Metadata Cache not properly caching and is being investigated by the Servarr Team when time permits.  Accordingly, the Metadata Server is being hammered which makes it 1) slow and 2) hard to troubleshoot.~~
 {.is-warning}
 
+> Readarr's metadata server appears to be functioning normally with no 429 or cache issues. As always, I will update this pin if things change. All pins are the current state of readarr and if anything changes, the pins will be updated accordingly.
+{.is-success}
+
+
 - As Of: 2024-05-22
-- Updated: 2024-08-09
+- Updated: 2024-09-09
 - Impact: Log Entries of `BookInfo returned 429, backing off for `
-  - Readarr's metadata server is getting a lot of rate limiting because of the downtime and everyone's systems hitting it to get list imports, etc. This is expected to slow things down for a week or two until everything is running like normal again. If you're trying to import, or search, etc. and those things are slow or failing, your logs will indicate a 429 error. This will get better. Please have some patience and it will resolve in time.
-  - The metadata server is struggling. Something occurred on 2024-07-31 that caused it, and it hasn't been able to be corrected yet. It works. You will see 429's a LOT. Sometimes it's better than other times. Hopefully it will be corrected soon. When that happens, I will update here. There is nothing you can do to help but wait and be patient. It is not an issue on your end.
-  - The 429 messages are due to a metadata server issue. This impacts all searches for books or authors, imports, list additions, etc. Anything that hits the metadata server.
-  - **The metadata server cannot be self-hosted or changed. The only thing you can do is be patient and wait. It will work, but slowly. There is nothing you can do to help in the meantime.**
-  - It's not you, it's us.
-  - Please be patient, it will eventually get better, but we have no timeline on when that might happen. The pins, as always, have the most current information and will be updated if/when something changes.
+  - ~~Readarr's metadata server is getting a lot of rate limiting because of the downtime and everyone's systems hitting it to get list imports, etc. This is expected to slow things down for a week or two until everything is running like normal again. If you're trying to import, or search, etc. and those things are slow or failing, your logs will indicate a 429 error. This will get better. Please have some patience and it will resolve in time.~~
+  - ~~The metadata server is struggling. Something occurred on 2024-07-31 that caused it, and it hasn't been able to be corrected yet. It works. You will see 429's a LOT. Sometimes it's better than other times. Hopefully it will be corrected soon. When that happens, I will update here. There is nothing you can do to help but wait and be patient. It is not an issue on your end.~~
+  - ~~The 429 messages are due to a metadata server issue. This impacts all searches for books or authors, imports, list additions, etc. Anything that hits the metadata server.~~
+  - ~~**The metadata server cannot be self-hosted or changed. The only thing you can do is be patient and wait. It will work, but slowly. There is nothing you can do to help in the meantime.**~~
+  - ~~It's not you, it's us.~~
+  - ~~Please be patient, it will eventually get better, but we have no timeline on when that might happen. The pins, as always, have the most current information and will be updated if/when something changes.~~
 
 ## Data Delays
 
+> Readarr's metadata server appears to be functioning normally with no 429 or cache issues. As always, I will update this pin if things change. All pins are the current state of readarr and if anything changes, the pins will be updated accordingly.
+{.is-success}
+
 - As Of: 2024-04-17
-- Impact: It's functioning, approximately 3 months behind. If you have a book that was added to Goodreads less than 3 months ago, it probably is not going to show up yet.
+- Updated: 2024-09-09
+- Impact: ~~It's functioning, approximately 3 months behind. If you have a book that was added to Goodreads less than 3 months ago, it probably is not going to show up yet.~~
 
 ## Large Authors
 
 - As Of: 2023
+- Updated: 2024-09-09
 - Impact:
   - Large authors are still not working, and will not be for a while. A partial, but not exhaustive, list of those authors: Stephen King, Isaac Asimov, Leo Tolstoy, Fyodor Dostoevsky, Arthur Conan Doyle, Stephen Fry, Agatha Christie, Arthur C. Clarke, Oscar Wilde, Jack London, Neil Gaiman, Charles Dickens, Jane Smiley, Vladimir Nabokov, Bernard Cornwall, D.H. Lawrence. 
-  -  For large authors, you cannot do anything to add either the author OR their individual books. There is no workaround. 
+  -  For large authors, you cannot do anything to add either the author OR their individual books. There is no workaround.
+  - The eventual move from Goodreads to OpenLibrary will resolve this.
 
 ## Github Issues
 
