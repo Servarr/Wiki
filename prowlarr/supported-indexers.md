@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-09-10T01:10:59.628804
+date: 2024-09-11T01:10:18.796125
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-09-10T01:10:59.628804
+dateCreated: 2024-09-11T01:10:18.796125
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.24.1.4730` / [Commit: 710ab7ae090b2bb0a86dde08aa830595b2ea8bcc](https://github.com/Prowlarr/Prowlarr/commit/710ab7ae090b2bb0a86dde08aa830595b2ea8bcc)
-  - [Prowlarr Indexers Commit: ec7686756c7c81a66630e6360989c5e4b550728c](https://github.com/Prowlarr/Indexers/commit/ec7686756c7c81a66630e6360989c5e4b550728c)
+  - [Prowlarr Indexers Commit: 3d4200135ec2bf06fa730214d5a0e04a2b3f1cfd](https://github.com/Prowlarr/Indexers/commit/3d4200135ec2bf06fa730214d5a0e04a2b3f1cfd)
 
 ---
 
@@ -197,7 +197,7 @@ dateCreated: 2024-09-10T01:10:59.628804
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://10september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://11september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -542,7 +542,7 @@ dateCreated: 2024-09-10T01:10:59.628804
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|A tracker for rare movies|English (United States)|
-|[SeedFile](https://www.seedfile.ro/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
+|[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-day MOVIES / TV / GENERAL|English (United States)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Shadowflow (影)](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
