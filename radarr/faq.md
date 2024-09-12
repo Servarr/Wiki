@@ -162,14 +162,14 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 ## What are Lists and what can they do for me?
 
 - Lists are a part of Radarr that allow you to follow a given list from various sources including Plex
-- Lists are not intended to be an "add it now" functionality, but rather are an add movies in this lisf eventually functionality.  
+- Lists are not intended to be an "add it now" functionality, but rather are an add movies in this list eventually functionality.  
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
-- Lists can also be used to sync Radarr to another Radarr instance or to import your of your users' Plex watchlist(s)
+- Lists can also be used to sync Radarr to another Radarr instance or to import your users' Plex watchlist(s)
 
 > **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
 {.is-warning}
 
-- It's suggested that physically look at the list before you even go to Radarr.
+- It's suggested that you physically look at the list before you even go to Radarr.
 
 ### Why are lists sync times so long and can I change it?
 
