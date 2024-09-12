@@ -199,7 +199,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Why Can’t I Access a Folder in Windows After Lidarr Rename
 
-Newer builds of Lidarr support limiting the tag length to an arbitrary interger. The tag is truncated and a three periods are added to the end of the folder name. [Windows](https://learn.microsoft.com/windows/win32/fileio/naming-a-file#naming-conventions) does support some characters at the end of folder names, and the folder will become inaccessable.
+Newer builds of Lidarr support limiting the tag length to an arbitrary integer. The tag is truncated and a three periods are added to the end of the folder name. [Windows](https://learn.microsoft.com/windows/win32/fileio/naming-a-file#naming-conventions) does support some characters at the end of folder names, and the folder will become inaccessible.
 
 > Do not end a file or directory name with a space or a period. Although the underlying file system may support such names, the Windows shell and user interface does not.
 

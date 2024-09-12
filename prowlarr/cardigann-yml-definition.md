@@ -230,7 +230,7 @@ id: thepiratebay
 name: The Pirate Bay
 
 # [REQUIRED] displayed in the tooltip on the add-indexer page and in the config panel
-description: "Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site"
+description: "Pirate Bay (TPB) is the galaxyâs most resilient Public BitTorrent site"
 
 # [REQUIRED] Language code of the main language used on the tracker
 # See http://www.lingoes.net/en/translator/langcode.htm
@@ -1746,7 +1746,7 @@ filters:
   # input: crime, x264, 1080p, (music), pack, comedy, Science_Fiction, dd5.1, Hip/Hop
   - name: validate
     args: "Action, Adventure, Crime, Comedy, Science_Fiction, War"
-  # result: crime, comedy, scence fiction
+  # result: crime, comedy, science fiction
 ```
 
 ## dateparse
@@ -1921,7 +1921,7 @@ Example:
 # get the filename
 text: "{{ .Result.title }}"
 filters:
-  # input: aFile?Name>With<Invalid*Symbols
+  # input: a file?Name>With<Invalid*Symbols
   - name: validfilename
   # result: aFileNameWithInvalidSymbols
 ```
@@ -1935,10 +1935,10 @@ Example:
 ```yaml
 # replace any diacritics
 keywordsfilters:
-  # input: ŠĐĆŽšđčćž
+  # input: Å ÄÄÅ½Å¡ÄÄÄÅ¾
   - name: diacritics
     args: replace
-  # result: SĐCZsđccz
+  # result: SÄCZsÄccz
 ```
 
 ## jsonjoinarray
