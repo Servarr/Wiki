@@ -130,11 +130,7 @@ Also, note that for each individual settings page, there are some options at the
 
 - Radarr v4.2.2.6489 or newer
 
-`{Movie CleanTitle} {(Release Year)} {imdb-{ImdbId}} {edition-{Edition Tags}} {[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{MediaInfo AudioLanguages}[{Mediainfo VideoCodec}]{-Release Group}`
-
-- Older Radarr Versions
-
-`{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
+`{Movie CleanTitle} {(Release Year)} {imdb-{ImdbId}} {edition-{Edition Tags}} {[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{[Mediainfo VideoCodec]}{-Release Group}`
 
 ### Movie Folders
 
@@ -147,7 +143,7 @@ Also, note that for each individual settings page, there are some options at the
     - Download Client Import
       - Download Client's Release Title is used
     - Manual (Ad-Hoc) Import: Original File Name
-- Replace Illegal` Characters - If unchecked, Radarr will remove them instead.
+- Replace Illegal Characters - If unchecked, Radarr will remove them instead.
 
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
