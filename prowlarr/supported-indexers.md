@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-09-12T01:10:22.689043
+date: 2024-09-13T01:10:57.902527
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-09-12T01:10:22.689043
+dateCreated: 2024-09-13T01:10:57.902527
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.24.1.4730` / [Commit: 710ab7ae090b2bb0a86dde08aa830595b2ea8bcc](https://github.com/Prowlarr/Prowlarr/commit/710ab7ae090b2bb0a86dde08aa830595b2ea8bcc)
-  - [Prowlarr Indexers Commit: 023ad81e1542d778ddf4f8cb0c1cdde9cb0ba43a](https://github.com/Prowlarr/Indexers/commit/023ad81e1542d778ddf4f8cb0c1cdde9cb0ba43a)
+  - [Prowlarr Indexers Commit: 3eda116cdce4aa681e70a68d22c5952f477063a8](https://github.com/Prowlarr/Indexers/commit/3eda116cdce4aa681e70a68d22c5952f477063a8)
 
 ---
 
@@ -123,7 +123,7 @@ dateCreated: 2024-09-12T01:10:22.689043
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq332.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq333.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir153.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
