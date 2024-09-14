@@ -13,11 +13,9 @@ dateCreated: 2024-08-23T18:20:51.850Z
 Below are the summarized issues of the Readarr Metadata Server.
 For the latest updates please refer to the pinned messages in the [Readarr Discord](https://readarr.com/discord)
 
-## BookInfo Server Error HTTP 500
+## Metadata Server Information
 
-Text searches seem to be having a bit of a flaky issue, because it does that search directly on Goodreads to get the ID and then searches the metadata server for that ID. To shortcut the problem, use ID based searches directly.
-
-## The Future and Open Library
+### The Future and Open Library
 
 > **It is only anticipated that Open Library will resolve the 'Large Author Issue' and similar GoodRead's Specific Issues**
 {.is-warning}
@@ -33,22 +31,32 @@ Per the Servarr Team:
 
 > Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
 
-### Why can we not just use OpenLibrary Directly?
+#### Why can we not just use OpenLibrary Directly?
 
 As per docs you are not allowed to do that, that’s why they provide data dumps.
 
-## Why can we not just use the Metadata Provider Directly?
+### Why can we not just use the Metadata Provider Directly?
 
 If you throw all that directly at the source, it's either against their policy, or going to be very expensive
 
-## BookInfo
+### BookInfo
 
 BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for Sonarr.
 
-## Metadata Server
+### Metadata Server
 
 - Why is the meta server not OSS?
   - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API
+
+## Metadata Server Issues
+
+
+## BookInfo Server Error HTTP 500
+
+- As Of: 2024-09-14
+- Updated: 2024-09-14
+
+Text searches seem to be having a bit of a flaky issue, because it does that search directly on Goodreads to get the ID and then searches the metadata server for that ID. To shortcut the problem, use ID based searches directly.
 
 ## Rate Limiting
 
@@ -57,7 +65,6 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 > Readarr's metadata server appears to be functioning normally with no 429 or cache issues. As always, I will update this pin if things change. All pins are the current state of readarr and if anything changes, the pins will be updated accordingly.
 {.is-success}
-
 
 - As Of: 2024-05-22
 - Updated: 2024-09-09
