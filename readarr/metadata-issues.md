@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-09-09T16:26:55.421Z
+date: 2024-09-14T16:04:53.074Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -12,6 +12,10 @@ dateCreated: 2024-08-23T18:20:51.850Z
 
 Below are the summarized issues of the Readarr Metadata Server.
 For the latest updates please refer to the pinned messages in the [Readarr Discord](https://readarr.com/discord)
+
+## BookInfo Server Error HTTP 500
+
+Text searches seem to be having a bit of a flaky issue, because it does that search directly on Goodreads to get the ID and then searches the metadata server for that ID. To shortcut the problem, use ID based searches directly.
 
 ## The Future and Open Library
 
