@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-09-14T16:04:53.074Z
+date: 2024-09-15T17:19:31.503Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -60,21 +60,20 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 ## Rate Limiting
 
-> ~~This is caused by the Metadata Cache not properly caching and is being investigated by the Servarr Team when time permits.  Accordingly, the Metadata Server is being hammered which makes it 1) slow and 2) hard to troubleshoot.~~
+
+> The metadata server appears to be having some further issues with 429's. There's not much you can do, although doing ID based searches are better than doing text string searches where possible. The devs have been made aware of the issue (which began on the evening of 9/14), and this pin will updated when there is a change in status. If this pin is up, it's still an issue, no need to ask.
 {.is-warning}
 
-> Readarr's metadata server appears to be functioning normally with no 429 or cache issues. As always, I will update this pin if things change. All pins are the current state of readarr and if anything changes, the pins will be updated accordingly.
-{.is-success}
-
-- As Of: 2024-05-22
-- Updated: 2024-09-09
+- As Of: ~~2024-05-22~~ 2024-09-14
+- Updated: 2024-09-15
 - Impact: Log Entries of `BookInfo returned 429, backing off for `
+  - The metadata server appears to be having some further issues with 429's. There's not much you can do, although doing ID based searches are better than doing text string searches where possible. The devs have been made aware of the issue (which began on the evening of 9/14), and this pin will updated when there is a change in status. If this pin is up, it's still an issue, no need to ask.
   - ~~Readarr's metadata server is getting a lot of rate limiting because of the downtime and everyone's systems hitting it to get list imports, etc. This is expected to slow things down for a week or two until everything is running like normal again. If you're trying to import, or search, etc. and those things are slow or failing, your logs will indicate a 429 error. This will get better. Please have some patience and it will resolve in time.~~
   - ~~The metadata server is struggling. Something occurred on 2024-07-31 that caused it, and it hasn't been able to be corrected yet. It works. You will see 429's a LOT. Sometimes it's better than other times. Hopefully it will be corrected soon. When that happens, I will update here. There is nothing you can do to help but wait and be patient. It is not an issue on your end.~~
   - ~~The 429 messages are due to a metadata server issue. This impacts all searches for books or authors, imports, list additions, etc. Anything that hits the metadata server.~~
-  - ~~**The metadata server cannot be self-hosted or changed. The only thing you can do is be patient and wait. It will work, but slowly. There is nothing you can do to help in the meantime.**~~
-  - ~~It's not you, it's us.~~
-  - ~~Please be patient, it will eventually get better, but we have no timeline on when that might happen. The pins, as always, have the most current information and will be updated if/when something changes.~~
+  - **The metadata server cannot be self-hosted or changed. The only thing you can do is be patient and wait. It will work, but slowly. There is nothing you can do to help in the meantime.**
+  - It's not you, it's us.
+  - Please be patient, it will eventually get better, but we have no timeline on when that might happen. The pins, as always, have the most current information and will be updated if/when something changes.
 
 ## Data Delays
 
