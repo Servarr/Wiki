@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-09-14T01:09:39.881921
+date: 2024-09-15T01:18:06.489349
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-09-14T01:09:39.881921
+dateCreated: 2024-09-15T01:18:06.489349
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.24.1.4730` / [Commit: 710ab7ae090b2bb0a86dde08aa830595b2ea8bcc](https://github.com/Prowlarr/Prowlarr/commit/710ab7ae090b2bb0a86dde08aa830595b2ea8bcc)
-  - [Prowlarr Indexers Commit: 1d4588fb06bfafba372c2cccfe02c90e4bf981d2](https://github.com/Prowlarr/Indexers/commit/1d4588fb06bfafba372c2cccfe02c90e4bf981d2)
+  - Prowlarr Build `1.24.1.4740` / [Commit: a23d66930b01c76c982e1655c83a1a7f37dc95d7](https://github.com/Prowlarr/Prowlarr/commit/a23d66930b01c76c982e1655c83a1a7f37dc95d7)
+  - [Prowlarr Indexers Commit: e0a33a4fc52fd7879dd53a4c0aaa8b87c8e18716](https://github.com/Prowlarr/Indexers/commit/e0a33a4fc52fd7879dd53a4c0aaa8b87c8e18716)
 
 ---
 
@@ -141,7 +141,7 @@ dateCreated: 2024-09-14T01:09:39.881921
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents.in/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents.vg/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -197,7 +197,7 @@ dateCreated: 2024-09-14T01:09:39.881921
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://13september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://14september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -436,7 +436,6 @@ dateCreated: 2024-09-14T01:09:39.881921
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
 |[leech24 (API)](https://leech24.net/){#leech24-api}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[Les-Cinephiles](https://les-cinephiles.nl/){#les-cinephiles}|Les-Cinephiles is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LeSaloon](https://lesaloonv2-0.lol/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
 |[Libble](https://libble.me/){#libble}|Libble is a Private Torrent Tracker for MUSIC|English (United States)|
@@ -628,6 +627,7 @@ dateCreated: 2024-09-14T01:09:39.881921
 |[Wukong (悟空问道)](https://wukongwendao.top/){#wukong}|Wukong (悟空问道) is a CHINESE Private Torrent Tracker for E-LEARNING|Chinese (China)|
 |[x-ite\.me](https://x-ite.me/){#x-ite.me}|Tracker for LGBTQ movies, TV, books, magazines, anime, PC and 3X|English (United States)|
 |[Xider-Torrent](https://xider.eu/){#xider-torrent}|Xider-Torrent is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
+|[XperienceBytes (API)](https://xperiencebytes.me/){#xperiencebytes-api}|XperienceBytes (XPB) is a BRAZILIAN Private site for ANIME|Portuguese (Brazil)|
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Xthor (API)](https://xthor.tk/){#xthor-api}|General French Private Tracker|French (France)|
 |[Xthor (Scraping)](https://xthor.tk/){#xthor-scraping}|General French Private Tracker|French (France)|
