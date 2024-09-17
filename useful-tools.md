@@ -23,6 +23,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Chrome](#chrome-1)
   - [Firefox](#firefox-1)
   - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
+- [Using Environment Variables for Config](#using-environment-variables-for-config)
 - [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs---request-apps-arrs)
   - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
@@ -200,6 +201,64 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 1. Enter the site (or app) name you wish to clear
 1. Click the arrow for the site
 1. Click the trash icon for the site
+
+# Using Environment Variables for Config
+
+All of the *arrs now have the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. In general the environment variables are comprised of 3 parts, delimited by two underscores.
+
+`APPNAME__CONFIGNAMESPACE__CONFIGITEM`
+
+The app name that should be used is simply the app name that the environment variable is passed to: `RADARR`, `SONARR`, `PROWLARR`, etc.
+
+The config namespaces are currently predictable and shared between all apps. It is simply the option types for the options files in the project, located in the `src/NzbDrone.Common/Options` directory. The namespaces are currently:
+
+* APP
+* AUTH
+* LOG
+* POSTGRES
+* SERVER
+* UPDATE
+
+Each of these options namespaces has several config items below it. Below you can find the entire directory for each. You must replace `*ARR` with whatever *arr app you are setting up. These have not all been tested and may be wrong.
+
+| Option Name in config.xml    | Namespace | Option Name | Full Environment Variable Name      |
+|-----------------|-----------|--------------------|---------------------------------|
+| InstanceName    | APP       | INSTANCENAME        | *ARR__APP__INSTANCENAME         |
+| Theme           | APP       | THEME               | *ARR__APP__THEME                |
+| LaunchBrowser   | APP       | LAUNCHBROWSER       | *ARR__APP__LAUNCHBROWSER        |
+| ApiKey          | AUTH      | APIKEY             | *ARR__AUTH__APIKEY              |
+| AuthenticationEnabled         | AUTH      | ENABLED            | *ARR__AUTH__ENABLED             |
+| AuthenticationMethod          | AUTH      | METHOD             | *ARR__AUTH__METHOD              |
+| AuthenticationRequired        | AUTH      | REQUIRED           | *ARR__AUTH__REQUIRED            |
+| LogLevel              | LOG       | LEVEL                   | *ARR__LOG__LEVEL                 |
+| FilterSentryEvents  | LOG       | FILTERSENTRYEVENTS       | *ARR__LOG__FILTERSENTRYEVENTS    |
+| LogRotate             | LOG       | ROTATE                  | *ARR__LOG__ROTATE                |
+| LogSizeLimit          | LOG       | SIZELIMIT               | *ARR__LOG__SIZELIMIT             |
+| LogSql                | LOG       | SQL                     | *ARR__LOG__SQL                   |
+| ConsoleLogLevel       | LOG       | CONSOLELEVEL            | *ARR__LOG__CONSOLELEVEL          |
+| ConsoleLogFormat      | LOG       | CONSOLEFORMAT           | *ARR__LOG__CONSOLEFORMAT         |
+| AnalyticsEnabled   | LOG       | ANALYTICSENABLED         | *ARR__LOG__ANALYTICSENABLED       |
+| SyslogServer       | LOG       | SYSLOGSERVER            | *ARR__LOG__SYSLOGSERVER          |
+| SyslogPort         | LOG       | SYSLOGPORT              | *ARR__LOG__SYSLOGPORT            |
+| SyslogLevel        | LOG       | SYSLOGLEVEL             | *ARR__LOG__SYSLOGLEVEL           |
+| DbEnabled          | LOG       | DBENABLED               | *ARR__LOG__DBENABLED             |
+| PostgresHost        | POSTGRES  | HOST                    | *ARR__POSTGRES__HOST             |
+| PostgresPort        | POSTGRES  | PORT                    | *ARR__POSTGRES__PORT             |
+| PostgresUser        | POSTGRES  | USER                    | *ARR__POSTGRES__USER             |
+| PostgresPassword    | POSTGRES  | PASSWORD                | *ARR__POSTGRES__PASSWORD         |
+| PostgresMainDb      | POSTGRES  | MAINDB                  | *ARR__POSTGRES__MAINDB           |
+| PostgresLogDb       | POSTGRES  | LOGDB                   | *ARR__POSTGRES__LOGDB            |
+| UrlBase           | SERVER    | URLBASE             | *ARR__SERVER__URLBASE           |
+| BindAddress       | SERVER    | BINDADDRESS         | *ARR__SERVER__BINDADDRESS       |
+| Port              | SERVER    | PORT                | *ARR__SERVER__PORT              |
+| EnableSsl         | SERVER    | ENABLESSL           | *ARR__SERVER__ENABLESSL         |
+| SslPort           | SERVER    | SSLPORT             | *ARR__SERVER__SSLPORT           |
+| SslCertPath       | SERVER    | SSLCERTPATH         | *ARR__SERVER__SSLCERTPATH       |
+| SslCertPassword   | SERVER    | SSLCERTPASSWORD     | *ARR__SERVER__SSLCERTPASSWORD   |
+| UpdateMechanism       | UPDATE    | MECHANISM           | *ARR__UPDATE__MECHANISM         |
+| UpdateAutomatically   | UPDATE    | AUTOMATICALLY       | *ARR__UPDATE__AUTOMATICALLY     |
+| UpdateScriptPath      | UPDATE    | SCRIPTPATH          | *ARR__UPDATE__SCRIPTPATH        |
+| Branch          | UPDATE    | BRANCH              | *ARR__UPDATE__BRANCH            |
 
 # Other Projects and Programs - Request Apps \*Arrs
 
