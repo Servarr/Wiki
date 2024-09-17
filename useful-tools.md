@@ -203,6 +203,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 1. Click the trash icon for the site
 
 # Using Environment Variables for Config
+
 All of the *arrs now have the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. In general the environment variables are comprised of 3 parts, delimited by two underscores.
 
 `APPNAME__CONFIGNAMESPACE__CONFIGITEM`
