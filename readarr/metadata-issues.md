@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-09-15T17:19:31.503Z
+date: 2024-09-18T20:47:53.953Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -50,8 +50,13 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 ## Metadata Server Issues
 
+> The metadata issue was fixed on 9/17. We are still seeing a couple of 429 rate limits and a couple of failed searches, presumably while things get re-cached again and they will continue to improve as time goes on. I have not seen any issues with imports, only with searches to add authors or books. This does not fix the large author issue below, or the 3 month metadata delay. Both of those issues are being worked on with a change to OpenLibrary as the source of data, but that work is long and ongoing (you can self-apply a `!tester` role to yourself and follow along in the [#readarr-ol](https://discord.com/channels/264387956343570434/1278408662188036156) channel to see how that project is coming along, if you're curious). These are 2 separate, concurrent issues that are being solved that do not interconnect. As always, the metadata server is not open source, and there is nothing you can do to help with that part of the issue except to be patient. Dev help is not being solicited/accepted on the metadata server side of things. There are 900+ open issues on the readarr github if you're anxious to help us out. Please start there. This pin will be updated with current information. If you're reading this pin, this is the most current, accurate information about the metadata server, and there is no need to ask in the channel if things have changed.
+{.is-info}
 
 ## BookInfo Server Error HTTP 500
+
+> Resolved: As of 2024-09-17
+{.is-success}
 
 - As Of: 2024-09-14
 - Updated: 2024-09-14
@@ -60,12 +65,11 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 ## Rate Limiting
 
-
-> The metadata server appears to be having some further issues with 429's. There's not much you can do, although doing ID based searches are better than doing text string searches where possible. The devs have been made aware of the issue (which began on the evening of 9/14), and this pin will updated when there is a change in status. If this pin is up, it's still an issue, no need to ask.
-{.is-warning}
+> Resolved: As of 2024-09-17
+{.is-success}
 
 - As Of: ~~2024-05-22~~ 2024-09-14
-- Updated: 2024-09-15
+- Updated: 2024-09-17
 - Impact: Log Entries of `BookInfo returned 429, backing off for `
   - The metadata server appears to be having some further issues with 429's. There's not much you can do, although doing ID based searches are better than doing text string searches where possible. The devs have been made aware of the issue (which began on the evening of 9/14), and this pin will updated when there is a change in status. If this pin is up, it's still an issue, no need to ask.
   - ~~Readarr's metadata server is getting a lot of rate limiting because of the downtime and everyone's systems hitting it to get list imports, etc. This is expected to slow things down for a week or two until everything is running like normal again. If you're trying to import, or search, etc. and those things are slow or failing, your logs will indicate a 429 error. This will get better. Please have some patience and it will resolve in time.~~
