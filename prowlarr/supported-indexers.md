@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-01T01:20:41.409491
+date: 2024-10-02T01:14:04.342436
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-01T01:20:41.409491
+dateCreated: 2024-10-02T01:14:04.342436
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.25.1.4769` / [Commit: 121ef8e80d010507f3c5f5aae7c7bbf2c03fb76a](https://github.com/Prowlarr/Prowlarr/commit/121ef8e80d010507f3c5f5aae7c7bbf2c03fb76a)
-  - [Prowlarr Indexers Commit: ebb992b0320251f20dd9b28bdfbcfbf45efaa920](https://github.com/Prowlarr/Indexers/commit/ebb992b0320251f20dd9b28bdfbcfbf45efaa920)
+  - [Prowlarr Indexers Commit: 08afb5244a78278ed6479ee4283f1cda848e5de1](https://github.com/Prowlarr/Indexers/commit/08afb5244a78278ed6479ee4283f1cda848e5de1)
 
 ---
 
@@ -78,7 +78,7 @@ dateCreated: 2024-10-01T01:20:41.409491
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|Spanish (Spain)|
 |[MyPornClub](https://myporn.club/){#mypornclub}|MyPornClub is a Public Torrent Tracker for 3X|English (United States)|
-|[NewStudio](http://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
+|[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from Japan|English (United States)|
 |[NNTT](http://www.nntt.org/){#nntt}|NNTT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|Russian (Russia)|
@@ -187,7 +187,7 @@ dateCreated: 2024-10-01T01:20:41.409491
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES\. This definition is for the Forum Tracker site|English (United States)|
 |[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private site dedicated to UK TV and DOCUMENTARIES\. This definition is for the Main Tracker site|English (United States)|
 |[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|Vietnamese (Viet Nam)|
-|[NewStudioL](http://newstudio.tv/){#newstudiol}|NewStudio is a RUSSIAN Public site for TV\. This supports login|Russian (Russia)|
+|[NewStudioL](https://newstudio.tv/){#newstudiol}|NewStudio is a RUSSIAN Public site for TV\. This supports login|Russian (Russia)|
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for 3X|Russian (Russia)|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
@@ -196,7 +196,7 @@ dateCreated: 2024-10-01T01:20:41.409491
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://30september.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://02october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
