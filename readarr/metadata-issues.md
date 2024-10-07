@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-09-18T20:47:53.953Z
+date: 2024-10-07T21:10:59.838Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -86,7 +86,7 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 - As Of: 2024-04-17
 - Updated: 2024-09-09
-- Impact: ~~It's functioning, approximately 3 months behind. If you have a book that was added to Goodreads less than 3 months ago, it probably is not going to show up yet.~~
+- Impact: It's functioning, approximately 3 months behind. If you have a book that was added to Goodreads less than 3 months ago, it probably is not going to show up yet.
 
 ## Large Authors
 
