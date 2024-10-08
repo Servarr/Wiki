@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-07T01:16:13.430766
+date: 2024-10-08T01:13:51.764101
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-07T01:16:13.430766
+dateCreated: 2024-10-08T01:13:51.764101
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.25.2.4776` / [Commit: 19a9b56fa465e232c536dca58742a2602cc55b93](https://github.com/Prowlarr/Prowlarr/commit/19a9b56fa465e232c536dca58742a2602cc55b93)
-  - [Prowlarr Indexers Commit: b6f19b14f9582f60508704e56120cd9fa5b89cdf](https://github.com/Prowlarr/Indexers/commit/b6f19b14f9582f60508704e56120cd9fa5b89cdf)
+  - Prowlarr Build `1.25.2.4777` / [Commit: cb5764c654a70e9eea092d6b9aa55990c0e598cb](https://github.com/Prowlarr/Prowlarr/commit/cb5764c654a70e9eea092d6b9aa55990c0e598cb)
+  - [Prowlarr Indexers Commit: fe75e2c8d0eef70dafa39eecfe2cbdb2452a3964](https://github.com/Prowlarr/Indexers/commit/fe75e2c8d0eef70dafa39eecfe2cbdb2452a3964)
 
 ---
 
@@ -196,11 +196,11 @@ dateCreated: 2024-10-07T01:16:13.430766
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://07october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://08october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
-|[Sharewood](https://www.sharewood.tv/){#sharewood}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
+|[Sharewood (API)](https://www.sharewood.tv/){#sharewood-api}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
@@ -498,7 +498,6 @@ dateCreated: 2024-10-07T01:16:13.430766
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private site for 0DAY / MOVIES / GENERAL|Polish (Poland)|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|English (United States)|
 |[Portugas (API)](https://portugas.org/){#portugas-api}|Portugas is a Private PORTUGUESE Tracker|Portuguese (Portugal)|
-|[PotUK](https://www.potuk.net/){#potuk}|PotUK - Private site for MOVIES / TV / GENERAL|English (United States)|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker|English (United States)|
 |[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD (PHD) is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeTorrents|English (United States)|
 |[PrivateSilverScreen (API)](https://privatesilverscreen.cc/){#privatesilverscreen-api}|PrivateSilverScreen (PSS) is a Private tracker for MOVIES / TV / MUSIC|English (United States)|
