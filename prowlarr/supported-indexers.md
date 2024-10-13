@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-12T01:12:06.967361
+date: 2024-10-13T01:18:51.525546
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-12T01:12:06.967361
+dateCreated: 2024-10-13T01:18:51.525546
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.25.2.4791` / [Commit: dd046d8a684bcae3ea3a09ab8fba031cea3e2c45](https://github.com/Prowlarr/Prowlarr/commit/dd046d8a684bcae3ea3a09ab8fba031cea3e2c45)
-  - [Prowlarr Indexers Commit: 18e934d9bc9665ca84ce741fb31810c448f5eb7a](https://github.com/Prowlarr/Indexers/commit/18e934d9bc9665ca84ce741fb31810c448f5eb7a)
+  - Prowlarr Build `1.25.2.4794` / [Commit: c05be39346b017d6ef228fddaefd9d3c24c8493d](https://github.com/Prowlarr/Prowlarr/commit/c05be39346b017d6ef228fddaefd9d3c24c8493d)
+  - [Prowlarr Indexers Commit: 7daa6a17c2e919f8f495fda937d7e3871722f753](https://github.com/Prowlarr/Indexers/commit/7daa6a17c2e919f8f495fda937d7e3871722f753)
 
 ---
 
@@ -124,7 +124,7 @@ dateCreated: 2024-10-12T01:12:06.967361
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq337.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir155.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir156.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentWhiz](https://torrentwiz68.com/){#torrentwhiz}|TorrentWhiz ( 토렌트위즈) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -196,7 +196,7 @@ dateCreated: 2024-10-12T01:12:06.967361
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://11october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://13october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -443,6 +443,7 @@ dateCreated: 2024-10-12T01:12:06.967361
 |[Locadora](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Tracker for MOVIES, TV and ANIME|Portuguese (Brazil)|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private site for High Quality Music|Russian (Russia)|
 |[LST](https://lst.gg/){#lst}|LST is an English Private tracker for MOVIES / TV / GENERAL|English (United States)|
+|[LustHive](https://lusthive.org/){#lusthive}|LustHive  is a Private Torrent Tracker for 3X|English (United States)|
 |[M-Team - TP](https://kp.m-team.cc/){#m-team---tp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|German (Germany)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
@@ -618,6 +619,7 @@ dateCreated: 2024-10-12T01:12:06.967361
 |[Upscale Vault (API)](https://upscalevault.com/){#upscalevault}|Upscale Vault is a Private Torrent Tracker for AI upscaled and remastered MOVIES / TV|English (United States)|
 |[UTOPIA](https://utp.to/){#utopia}|UTOPIA is a UKRAINIAN Private Tracker for HD MOVIES and TV|Ukrainian (Ukraine)|
 |[The Vault](https://thevault.click/){#thevault}|Business/Marketing E-Learning|English (United States)|
+|[Vault network](https://vault-network.net/){#vault-network}|Vault network is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[WDT](http://ultimatewrestlingtorrents.com/){#wdt}|Wrestling Desires Torrents (Ultimate Wrestling Torrents) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
 |[White Angel](https://white-angel.hu/){#whiteangel}|White Angel is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
