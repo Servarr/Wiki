@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-15T01:14:56.650575
+date: 2024-10-16T01:14:59.527473
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-15T01:14:56.650575
+dateCreated: 2024-10-16T01:14:59.527473
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.25.3.4800` / [Commit: 04fa7d366dd4fd849a420729d1c27525e35bde2e](https://github.com/Prowlarr/Prowlarr/commit/04fa7d366dd4fd849a420729d1c27525e35bde2e)
-  - [Prowlarr Indexers Commit: 018594121db34e997f37b7fe84dad1c69b9006f8](https://github.com/Prowlarr/Indexers/commit/018594121db34e997f37b7fe84dad1c69b9006f8)
+  - Prowlarr Build `1.25.3.4800` / [Commit: 3e3a7ed4f0a0197a366c188549f57f25d71a686a](https://github.com/Prowlarr/Prowlarr/commit/3e3a7ed4f0a0197a366c188549f57f25d71a686a)
+  - [Prowlarr Indexers Commit: c19935073363db9913750031c6502ba14290a918](https://github.com/Prowlarr/Indexers/commit/c19935073363db9913750031c6502ba14290a918)
 
 ---
 
@@ -60,6 +60,7 @@ dateCreated: 2024-10-15T01:14:56.650575
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
+|[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.nz/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a Public HUNGARIAN site|Hungarian (Hungary)|
@@ -78,6 +79,7 @@ dateCreated: 2024-10-15T01:14:56.650575
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|Spanish (Spain)|
 |[MyPornClub](https://myporn.club/){#mypornclub}|MyPornClub is a Public Torrent Tracker for 3X|English (United States)|
+|[Myporno](https://myporno.top/){#myporno}|Myporno is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from Japan|English (United States)|
 |[NNTT](http://www.nntt.org/){#nntt}|NNTT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -196,7 +198,7 @@ dateCreated: 2024-10-15T01:14:56.650575
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://14october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://15october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
