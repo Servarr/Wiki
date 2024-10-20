@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-17T01:14:24.092838
+date: 2024-10-20T01:20:06.836204
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-17T01:14:24.092838
+dateCreated: 2024-10-20T01:20:06.836204
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.25.3.4801` / [Commit: 3e3a7ed4f0a0197a366c188549f57f25d71a686a](https://github.com/Prowlarr/Prowlarr/commit/3e3a7ed4f0a0197a366c188549f57f25d71a686a)
-  - [Prowlarr Indexers Commit: 72f6162bcc7325d5484da318c8f0fddd20f09cd2](https://github.com/Prowlarr/Indexers/commit/72f6162bcc7325d5484da318c8f0fddd20f09cd2)
+  - Prowlarr Build `1.25.3.4813` / [Commit: 8aad1ac55497579c1afdc2d918f7ebe490fb4013](https://github.com/Prowlarr/Prowlarr/commit/8aad1ac55497579c1afdc2d918f7ebe490fb4013)
+  - [Prowlarr Indexers Commit: d4b0b8579f5b88d77fda2c1e0e5c9984850e3150](https://github.com/Prowlarr/Indexers/commit/d4b0b8579f5b88d77fda2c1e0e5c9984850e3150)
 
 ---
 
@@ -125,7 +125,7 @@ dateCreated: 2024-10-17T01:14:24.092838
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq337.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq338.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir156.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -143,7 +143,7 @@ dateCreated: 2024-10-17T01:14:24.092838
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents.vc/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents.sk/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -198,7 +198,7 @@ dateCreated: 2024-10-17T01:14:24.092838
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://17october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://20october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -213,7 +213,6 @@ dateCreated: 2024-10-17T01:14:24.092838
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[ViDEOTEKA](http://videoteka.org/){#videoteka}|ViDEOTEKA (VT) is a SLOVENIAN Semi-Private Torrent Tracker for MOVIES / TV|Slovenian (Slovenia)|
-|[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
@@ -396,6 +395,7 @@ dateCreated: 2024-10-17T01:14:24.092838
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDVIDEO](https://hdvideo.one/){#hdvideo}|HDVIDEO is a CHINESE Private torrent tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[HDZero (API)](https://hdzero.org/){#hdzero}|HD Zero is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Hebits](https://hebits.net/){#hebits}|The Israeli Tracker|Hebrew (Israel)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HellasHut (API)](https://hellashut.net/){#hellashut-api}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
@@ -633,6 +633,7 @@ dateCreated: 2024-10-17T01:14:24.092838
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Xthor (API)](https://xthor.tk/){#xthor-api}|General French Private Tracker|French (France)|
 |[Xthor (Scraping)](https://xthor.tk/){#xthor-scraping}|General French Private Tracker|French (France)|
+|[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
