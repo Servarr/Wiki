@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-20T01:20:06.836204
+date: 2024-10-21T01:16:05.670798
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-20T01:20:06.836204
+dateCreated: 2024-10-21T01:16:05.670798
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.25.3.4813` / [Commit: 8aad1ac55497579c1afdc2d918f7ebe490fb4013](https://github.com/Prowlarr/Prowlarr/commit/8aad1ac55497579c1afdc2d918f7ebe490fb4013)
-  - [Prowlarr Indexers Commit: d4b0b8579f5b88d77fda2c1e0e5c9984850e3150](https://github.com/Prowlarr/Indexers/commit/d4b0b8579f5b88d77fda2c1e0e5c9984850e3150)
+  - Prowlarr Build `1.25.4.4817` / [Commit: 3f547f08567d07b29939e56ff231ed2d3d715348](https://github.com/Prowlarr/Prowlarr/commit/3f547f08567d07b29939e56ff231ed2d3d715348)
+  - [Prowlarr Indexers Commit: 34ccf162a0e205a65ff54f6225834aa056236454](https://github.com/Prowlarr/Indexers/commit/34ccf162a0e205a65ff54f6225834aa056236454)
 
 ---
 
@@ -43,7 +43,7 @@ dateCreated: 2024-10-20T01:20:06.836204
 |[BTdirectory](https://btmulu.work/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
-|[Byrutor](https://byruthub.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
+|[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[cpasbien clone](https://www1.cpasbien.to/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
@@ -198,7 +198,7 @@ dateCreated: 2024-10-20T01:20:06.836204
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://20october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://21october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
