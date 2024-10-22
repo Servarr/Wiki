@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-21T01:16:05.670798
+date: 2024-10-22T01:15:15.803314
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-21T01:16:05.670798
+dateCreated: 2024-10-22T01:15:15.803314
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.25.4.4817` / [Commit: 3f547f08567d07b29939e56ff231ed2d3d715348](https://github.com/Prowlarr/Prowlarr/commit/3f547f08567d07b29939e56ff231ed2d3d715348)
-  - [Prowlarr Indexers Commit: 34ccf162a0e205a65ff54f6225834aa056236454](https://github.com/Prowlarr/Indexers/commit/34ccf162a0e205a65ff54f6225834aa056236454)
+  - [Prowlarr Indexers Commit: a2c98556ace950d93b587674fc395aa991c53295](https://github.com/Prowlarr/Indexers/commit/a2c98556ace950d93b587674fc395aa991c53295)
 
 ---
 
@@ -60,7 +60,7 @@ dateCreated: 2024-10-21T01:16:05.670798
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
-|[Il Corsaro Nero](https://ilcorsaronero.link/){#ilcorsaronero}|Il Corsaro Nero is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
+|[ilCorSaRoNeRo](https://ilcorsaronero.link/){#ilcorsaronero}|ilCorSaRoNeRo is an ITALIAN Public site for TV / MOVIES / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.nz/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a Public HUNGARIAN site|Hungarian (Hungary)|
@@ -198,7 +198,7 @@ dateCreated: 2024-10-21T01:16:05.670798
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://21october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://22october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
