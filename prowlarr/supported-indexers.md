@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-10-22T01:15:15.803314
+date: 2024-10-24T01:14:32.026784
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-10-22T01:15:15.803314
+dateCreated: 2024-10-24T01:14:32.026784
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.25.4.4817` / [Commit: 3f547f08567d07b29939e56ff231ed2d3d715348](https://github.com/Prowlarr/Prowlarr/commit/3f547f08567d07b29939e56ff231ed2d3d715348)
-  - [Prowlarr Indexers Commit: a2c98556ace950d93b587674fc395aa991c53295](https://github.com/Prowlarr/Indexers/commit/a2c98556ace950d93b587674fc395aa991c53295)
+  - Prowlarr Build `1.26.0.4819` / [Commit: 25afadc9b2e5e20539bddebea904aab72a36f5d1](https://github.com/Prowlarr/Prowlarr/commit/25afadc9b2e5e20539bddebea904aab72a36f5d1)
+  - [Prowlarr Indexers Commit: 1a8f6b586c7c5d2efd52d481d014e4708d20474f](https://github.com/Prowlarr/Indexers/commit/1a8f6b586c7c5d2efd52d481d014e4708d20474f)
 
 ---
 
@@ -198,7 +198,7 @@ dateCreated: 2024-10-22T01:15:15.803314
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://22october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://24october.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -275,7 +275,6 @@ dateCreated: 2024-10-22T01:15:15.803314
 |[BlueBird](https://bluebird-hd.org/){#bluebird}|BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES|Russian (Russia)|
 |[BlurayTracker](https://bluraytracker.cz/){#bluraytracker}|BlurayTracker is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[Blutopia (API)](https://blutopia.cc/){#blutopia-api}|Blutopia (BLU) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
-|[Bolly (API)](https://bolly.wtf/){#bolly-api}|Bolly (Telly) is an INDIAN Private Tracker for MOVIES / TV|English (United States)|
 |[Borgzelle](https://borgzelle.borg/){#borgzelle}|Borgzelle is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Boxing Torrents](https://tc-boxing.com/){#boxingtorrents}|Boxing Torrents is a Private Torrent Tracker for BOXING|English (United States)|
 |[BrasilTracker](https://brasiltracker.org/){#brasiltracker}|BrasilTracker is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
@@ -599,7 +598,6 @@ dateCreated: 2024-10-22T01:15:15.803314
 |TorrentPotato{#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|English (United States)|
 |[TorrentSeeds (API)](https://torrentseeds.org/){#torrentseeds-api}|TorrentSeeds is a Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
-|[ToSky](https://t.tosky.club/){#tosky}|ToSky is a Private CHINESE tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory2FA](https://totheglory.im/){#totheglory2fa}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Chinese (China)|
 |[TrackerMK](http://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
