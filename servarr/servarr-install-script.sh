@@ -19,6 +19,7 @@
 ### Version v3.0.10 2024-01-04 - Bakerboy448 - Misc updates and refactoring. Move to own script file.
 ### Version v3.0.11 2024-01-06 - StevieTV - Exit script when ran from installdir
 ### Version v3.0.12 2024-04-09 - nostrus-dominion - moved root check, added title splash, added colors, attempted to improve readability, check for installed prerequisites before bothering apt, supressed tarball extraction, added some sleep timers.
+### Version v3.0.13 2024-11-03 - cyneric - added sonarr support and refactored script for readability and functionality
 ### Additional Updates by: The Servarr Community
 
 ### Boilerplate Warning
@@ -30,28 +31,27 @@
 #OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 #WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-### Colors
-green='\033[0;32m'
-yellow='\033[1;33m'
-red='\033[0;31m'
-brown='\033[0;33m'
-reset='\033[0m' # No Color
+# Constants
+readonly SCRIPT_VERSION="3.0.13"
+readonly SCRIPT_DATE="2024-11-03"
 
-scriptversion="3.0.12"
-scriptdate="2024-04-10" # change this later
+# Colors
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly RED='\033[0;31m'
+readonly BROWN='\033[0;33m'
+readonly RESET='\033[0m'
 
 set -euo pipefail
 
-### Am I root?, need root! GROOT!
-
+# Check root
 if [ "$EUID" -ne 0 ]; then
-    echo -e ${red}"Please run as root!"
-    echo -e "Exiting script!"
-    exit
+    echo -e "${RED}Please run as root!\nExiting script!${RESET}"
+    exit 1
 fi
 
-### Title Splash
-echo -e ${brown}
+# Title splash
+echo -e ${BROWN}
 echo -e "#############################################################"
 echo -e "#                                                           #"
 echo -e "#   Welcome to the Servarr Community Installation Script!   #"
@@ -62,163 +62,116 @@ echo -e "#  If you have not done so, exit the script and read the    #"
 echo -e "#  Boilerplate Warning just to CYA. Enjoy your new setup!   #"
 echo -e "#                                                           #"
 echo -e "#############################################################"
-echo -e ${reset}
+echo -e ${RESET}
 
-echo "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} as of ${brown}[$scriptdate]${reset}"
-echo ""
-echo "Select the application to install: "
-echo ""
-select app in lidarr prowlarr radarr readarr whisparr quit; do
+echo -e "\nRunning Servarr Install Script - Version ${BROWN}[$SCRIPT_VERSION]${RESET} as of ${BROWN}[$SCRIPT_DATE]${RESET}"
 
-    case $app in
-    lidarr)
-        app_port="8686"                                          # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libchromaprint-tools mediainfo" # Required packages
-        app_umask="0002"                                         # UMask the Service will run as
-        branch="master"                                          # {Update me if needed} branch to install
-        break
-        ;;
-    prowlarr)
-        app_port="9696"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="master"           # {Update me if needed} branch to install
-        break
-        ;;
-    radarr)
-        app_port="7878"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="master"           # {Update me if needed} branch to install
-        break
-        ;;
-    readarr)
-        app_port="8787"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="develop"          # {Update me if needed} branch to install
-        break
-        ;;
-    whisparr)
-        app_port="6969"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="nightly"          # {Update me if needed} branch to install
-        break
-        ;;
-    quit)
+# App selection
+declare -A APP_CONFIGS=(
+    ["lidarr"]="8686|curl sqlite3 libchromaprint-tools mediainfo|0002|master"
+    ["prowlarr"]="9696|curl sqlite3|0002|master"
+    ["radarr"]="7878|curl sqlite3|0002|master"
+    ["readarr"]="8787|curl sqlite3|0002|develop"
+    ["whisparr"]="6969|curl sqlite3|0002|nightly"
+    ["sonarr"]="8989|curl sqlite3|0002|main"
+)
+
+echo -e "\nSelect the application to install:\n"
+select app in "${!APP_CONFIGS[@]}" quit; do
+    if [[ $app == "quit" ]]; then
         exit 0
-        ;;
-    *)
+    elif [[ -n ${APP_CONFIGS[$app]:-} ]]; then
+        IFS='|' read -r app_port app_prereq app_umask branch <<< "${APP_CONFIGS[$app]}"
+        break
+    else
         echo "Invalid option $REPLY"
-        ;;
-    esac
+    fi
 done
-echo ""
 
-### CONSTANTS
-### Update these variables as required for your specific instance
-installdir="/opt"              # {Update me if needed} Install Location
-bindir="${installdir}/${app^}" # Full Path to Install Location
-datadir="/var/lib/$app/"       # {Update me if needed} AppData directory to use
-app_bin=${app^}                # Binary Name of the app
+# Installation paths
+readonly INSTALL_DIR="/opt"
+readonly BIN_DIR="${INSTALL_DIR}/${app^}"
+readonly DATA_DIR="/var/lib/$app/"
+readonly APP_BIN=${app^}
 
+# Display warning for non-Prowlarr apps
 if [[ $app != 'prowlarr' ]]; then
-    echo -e ${red}"   WARNING! WARNING! WARNING!"${reset}
-    echo ""
-    echo -e "   It is ${red}CRITICAL${reset} that the ${brown}User${reset} and ${brown}Group${reset} you select"
-    echo -e "   to run ${brown}[${app^}]${reset} will have both ${red}READ${reset} and ${red}WRITE${reset} access"
-    echo -e "   to your Media Library and Download Client directories!"${reset}
+    echo -e "\n${RED}   WARNING! WARNING! WARNING!${RESET}\n"
+    echo -e "   It is ${RED}CRITICAL${RESET} that the ${BROWN}User${RESET} and ${BROWN}Group${RESET} you select"
+    echo -e "   to run ${BROWN}[${app^}]${RESET} will have both ${RED}READ${RESET} and ${RED}WRITE${RESET} access"
+    echo -e "   to your Media Library and Download Client directories!${RESET}"
     sleep 5
 fi
 
-# This script should not be ran from installdir, otherwise later in the script the extracted files will be removed before they can be moved to installdir.
-if [ "$installdir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ] || [ "$bindir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ]; then
-    echo ""
-    echo -e "${red}Error!${reset} You should not run this script from the intended install directory."
+# Check install directory
+if [[ "$INSTALL_DIR" == "$(dirname -- "$(readlink -f -- "$0")")" ]] || 
+   [[ "$BIN_DIR" == "$(dirname -- "$(readlink -f -- "$0")")" ]]; then
+    echo -e "\n${RED}Error!${RESET} You should not run this script from the intended install directory."
     echo "Please re-run it from another directory."
     echo "Exiting Script!"
-    exit
+    exit 1
 fi
 
-# Prompt User
-echo ""
+# Get user/group
 read -r -p "What user should [${app^}] run as? (Default: $app): " app_uid
-app_uid=$(echo "$app_uid" | tr -d ' ')
-app_uid=${app_uid:-$app}
-# Prompt Group
-echo ""
-read -r -p "What group should [${app^}] run as? (Default: media): " app_guid
-app_guid=$(echo "$app_guid" | tr -d ' ')
-app_guid=${app_guid:-media}
+app_uid=$(echo "${app_uid:-$app}" | tr -d ' ')
 
-echo ""
-echo -e "${brown}[${app^}]${reset} selected for installation."
-echo ""
-echo -e "${brown}[${app^}]${reset} will then be installed to ${brown}[$bindir]${reset} and use ${brown}[$datadir]${reset} for the AppData Directory."
+read -r -p "What group should [${app^}] run as? (Default: media): " app_guid
+app_guid=$(echo "${app_guid:-media}" | tr -d ' ')
+
+# Display configuration
+echo -e "\n${BROWN}[${app^}]${RESET} selected for installation."
+echo -e "\n${BROWN}[${app^}]${RESET} will then be installed to ${BROWN}[$BIN_DIR]${RESET} and use ${BROWN}[$DATA_DIR]${RESET} for the AppData Directory."
+
 if [[ $app == 'prowlarr' ]]; then
-    echo ""
-    echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
+    echo -e "\n${BROWN}[${app^}]${RESET} will run as the user ${BROWN}[$app_uid]${RESET} and group ${BROWN}[$app_guid]${RESET}."
 else
-    echo ""
-    echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
-    echo ""
-    echo -e "   By continuing, you've ${red}CONFIRMED${reset} that that ${brown}[$app_uid]${reset} and ${brown}[$app_guid]${reset}"
-    echo -e "   will have both ${red}READ${reset} and ${red}WRITE${reset} access to all required directories."
-    echo ""
+    echo -e "\n${BROWN}[${app^}]${RESET} will run as the user ${BROWN}[$app_uid]${RESET} and group ${BROWN}[$app_guid]${RESET}."
+    echo -e "\n   By continuing, you've ${RED}CONFIRMED${RESET} that that ${BROWN}[$app_uid]${RESET} and ${BROWN}[$app_guid]${RESET}"
+    echo -e "   will have both ${RED}READ${RESET} and ${RED}WRITE${RESET} access to all required directories.\n"
 fi
 
-# User confirmation that installation will continue
-echo ""
+# Confirm installation
 read -r -p "Please type 'yes' to continue with the installation: " response
-if [[ $response != "yes" && $response != "YES" ]]; then
+if [[ ${response,,} != "yes" ]]; then
     echo "Invalid response. Operation is canceled!"
     echo "Exiting script!"
     exit 0
 fi
 
-# Create User / Group as needed
-if [ "$app_guid" != "$app_uid" ]; then
-    if ! getent group "$app_guid" >/dev/null; then
-        groupadd "$app_guid"
-    fi
+# Create user/group
+if [[ "$app_guid" != "$app_uid" ]] && ! getent group "$app_guid" >/dev/null; then
+    groupadd "$app_guid"
 fi
+
 if ! getent passwd "$app_uid" >/dev/null; then
     adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
-    echo ""
-    echo -e "Created User ${yellow}$app_uid${reset}"
-    echo ""
-    echo -e "Created Group ${yellow}$app_guid${reset}."
-    sleep 3
-fi
-if ! getent group "$app_guid" | grep -qw "$app_uid"; then
-    echo ""
-    echo -e "User ${yellow}$app_uid${reset} did not exist in Group ${yellow}$app_guid${reset}."
-    usermod -a -G "$app_guid" "$app_uid"
-    echo ""
-    echo -e "Added User ${yellow}$app_uid${reset} to Group ${yellow}$app_guid${reset}."
+    echo -e "\nCreated User ${YELLOW}$app_uid${RESET}"
+    echo -e "\nCreated Group ${YELLOW}$app_guid${RESET}."
     sleep 3
 fi
 
-# Stop the App if running
+if ! getent group "$app_guid" | grep -qw "$app_uid"; then
+    echo -e "\nUser ${YELLOW}$app_uid${RESET} did not exist in Group ${YELLOW}$app_guid${RESET}."
+    usermod -a -G "$app_guid" "$app_uid"
+    echo -e "\nAdded User ${YELLOW}$app_uid${RESET} to Group ${YELLOW}$app_guid${RESET}."
+    sleep 3
+fi
+
+# Stop existing service
 if service --status-all | grep -Fq "$app"; then
-    systemctl stop "$app"
-    systemctl disable "$app".service
+    systemctl disable --now "$app".service
     echo "Stopped existing $app."
 fi
 
-# Create Appdata Directories
-mkdir -p "$datadir"
-chown -R "$app_uid":"$app_guid" "$datadir"
-chmod 775 "$datadir"
-echo ""
-echo -e "Directories ${yellow}$bindir${reset} and ${yellow}$datadir${reset} created!"
+# Create directories
+mkdir -p "$DATA_DIR"
+chown -R "$app_uid":"$app_guid" "$DATA_DIR"
+chmod 775 "$DATA_DIR"
+echo -e "\nDirectories ${YELLOW}$BIN_DIR${RESET} and ${YELLOW}$DATA_DIR${RESET} created!"
 
-# Download and install the App
-
-# Check if prerequisite packages are already installed and install them if needed
-echo ""
-echo -e ${yellow}"Checking Pre-Requisite Packages..."${reset}
+# Check prerequisites
+echo -e "\n${YELLOW}Checking Pre-Requisite Packages...${RESET}"
 sleep 3
 
 missing_packages=()
@@ -228,139 +181,95 @@ for pkg in $app_prereq; do
     fi
 done
 
-if [ ${#missing_packages[@]} -eq 0 ]; then
-    echo ""
-    echo -e ${green}"All prerequisite packages are already installed!"${reset}
+if (( ${#missing_packages[@]} == 0 )); then
+    echo -e "\n${GREEN}All prerequisite packages are already installed!${RESET}"
 else
-    echo ""
-    echo -e "Installing missing prerequisite packages: ${brown}${missing_packages[*]}${reset}"
-    # Install missing prerequisite packages
-    apt update && apt install "${missing_packages[@]}"
+    echo -e "\nInstalling missing prerequisite packages: ${BROWN}${missing_packages[*]}${RESET}"
+    apt-get update && apt-get install -y "${missing_packages[@]}"
 fi
 
-# check if architecture is correct
-echo ""
-ARCH=$(dpkg --print-architecture)
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
+# Download and install
+echo -e "\n${YELLOW}Checking architecture...${RESET}"
+readonly ARCH=$(dpkg --print-architecture)
+
+if [[ $app == 'sonarr' ]]; then
+    dlbase="https://services.sonarr.tv/v1/download/$branch/latest?version=4&os=linux"
+else
+    dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
+fi
+
 case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo -e ${red}"Your arch is not supported!"
-    echo -e "Exiting installer script!"${reset}
-    exit 1
-    ;;
+    "amd64") DLURL="${dlbase}&arch=x64" ;;
+    "armhf") DLURL="${dlbase}&arch=arm" ;;
+    "arm64") DLURL="${dlbase}&arch=arm64" ;;
+    *)
+        echo -e "${RED}Architecture $ARCH is not supported!\nExiting installer script!${RESET}"
+        exit 1
+        ;;
 esac
 
-echo -e ${yellow}"Removing tarballs..."${reset}
-sleep 3
-# -f to Force so we do not fail if it doesn't exist
+echo -e "${YELLOW}Removing old tarballs...${RESET}"
 rm -f "${app^}".*.tar.gz
-echo ""
-echo -e ${yellow}"Downloading required files..."${reset}
-echo ""
+
+echo -e "\n${YELLOW}Downloading and extracting...${RESET}"
 wget --content-disposition "$DLURL"
-echo ""
-echo -e ${yellow}"Download complete!"${reset}
-echo ""
-echo -e ${yellow}"Extracting tarball!"${reset}
-tar -xvzf "${app^}".*.tar.gz >/dev/null 2>&1
-echo ""
-echo -e ${yellow}"Installation files downloaded and extracted!"${reset}
+tar -xf "${app^}".*.tar.gz
 
-# remove existing installs
-echo ""
-echo -e "Removing existing installation files from ${brown}[$bindir]"${reset}
-rm -rf "$bindir"
-sleep 2
-echo ""
-echo -e "Attempting to install ${brown}[${app^}]${reset}..."
-sleep 2
-mv "${app^}" $installdir
-chown "$app_uid":"$app_guid" -R "$bindir"
-chmod 775 "$bindir"
-# Ensure we check for an update in case user installs older version or different branch
-touch "$datadir"/update_required
-chown "$app_uid":"$app_guid" "$datadir"/update_required
-echo ""
-echo -e "Successfully installed ${brown}[${app^}]${reset}!!"
-rm -rf "${app^}.*.tar.gz"
-sleep 2
+echo -e "\n${YELLOW}Installing...${RESET}"
+rm -rf "$BIN_DIR"
+mv "${app^}" "$INSTALL_DIR"
+chown -R "$app_uid":"$app_guid" "$BIN_DIR"
+chmod 775 "$BIN_DIR"
 
-# Configure Autostart
+touch "$DATA_DIR/update_required"
+chown "$app_uid":"$app_guid" "$DATA_DIR/update_required"
 
-# Remove any previous app .service
-echo ""
-echo "Removing old service file..."
-rm -rf /etc/systemd/system/"$app".service
-sleep 2
+rm -f "${app^}".*.tar.gz
 
-# Create app .service with correct user startup
-echo ""
-echo "Creating new service file..."
-cat <<EOF | tee /etc/systemd/system/"$app".service >/dev/null
+echo -e "\nSuccessfully installed ${BROWN}[${app^}]${RESET}!"
+
+# Create service file
+echo -e "\nConfiguring service..."
+cat > "/etc/systemd/system/$app.service" << EOF
 [Unit]
 Description=${app^} Daemon
 After=syslog.target network.target
+
 [Service]
 User=$app_uid
 Group=$app_guid
 UMask=$app_umask
 Type=simple
-ExecStart=$bindir/$app_bin -nobrowser -data=$datadir
+ExecStart=$BIN_DIR/$APP_BIN -nobrowser -data=$DATA_DIR
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
 EOF
-sleep 2
 
-# Start the App
-echo ""
-echo -e "New service file created!"
-echo ""
-echo -e "${brown}[${app^}]${reset} is attempting to start, this may take a few seconds..."
-systemctl -q daemon-reload
-systemctl enable --now -q "$app"
-sleep 3
+# Start service
+echo -e "\n${BROWN}[${app^}]${RESET} is starting..."
+systemctl daemon-reload
+systemctl enable --now "$app"
 
-# Check if the service is up and running
-echo ""
-echo "Checking if the service is up and running..."
-
-# Loop to wait until the service is active
+# Wait for service
 while ! systemctl is-active --quiet "$app"; do
     sleep 1
 done
 
-echo ""
-echo -e "${brown}[${app^}]${reset} installation and service start up is complete!"
-
-# Finish Installation
-host=$(hostname -I)
-ip_local=$(grep -oP '^\S*' <<<"$host")
-echo ""
-echo -e "Attempting to check for a connection at http://$ip_local:$app_port..."
+# Final status
+readonly IP_LOCAL=$(hostname -I | awk '{print $1}')
+echo -e "\nChecking connection at http://$IP_LOCAL:$app_port..."
 sleep 3
-STATUS="$(systemctl is-active "$app")"
-if [ "${STATUS}" = "active" ]; then
-    echo ""
-    echo "Successful connection!"
-    echo ""
-    echo -e "Browse to ${green}http://$ip_local:$app_port${reset} for the GUI."
-    echo ""
-    echo "Script complete! Exiting now!"
-    echo ""
+
+if systemctl is-active --quiet "$app"; then
+    echo -e "\nSuccessful connection!"
+    echo -e "\nBrowse to ${GREEN}http://$IP_LOCAL:$app_port${RESET} for the GUI."
 else
-    echo ""
-    echo -e ${red}"${app^} failed to start."${reset}
-    echo ""
-    echo "Please try again. Exiting script."
-    echo
+    echo -e "\n${RED}${app^} failed to start.${RESET}"
+    echo -e "\nPlease try again."
 fi
 
-# Exit
 exit 0
