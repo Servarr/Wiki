@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-06T01:12:50.626658
+date: 2024-11-07T01:13:18.165080
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-06T01:12:50.626658
+dateCreated: 2024-11-07T01:13:18.165080
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.26.1.4837` / [Commit: 62479737a70685d09fb9b38e419ff4960c35903b](https://github.com/Prowlarr/Prowlarr/commit/62479737a70685d09fb9b38e419ff4960c35903b)
-  - [Prowlarr Indexers Commit: f2e7ff3b307c80fcdabe975df7950b53731b6dc9](https://github.com/Prowlarr/Indexers/commit/f2e7ff3b307c80fcdabe975df7950b53731b6dc9)
+  - [Prowlarr Indexers Commit: c141199893acda4867ad00d6425ab5f60c91cdb8](https://github.com/Prowlarr/Indexers/commit/c141199893acda4867ad00d6425ab5f60c91cdb8)
 
 ---
 
@@ -198,7 +198,7 @@ dateCreated: 2024-11-06T01:12:50.626658
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://06november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://07november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
