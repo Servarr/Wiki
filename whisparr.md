@@ -2,7 +2,7 @@
 title: Whisparr
 description: Whisparr wiki homepage
 published: true
-date: 2023-08-11T03:02:11.101Z
+date: 2024-11-09T04:08:21.274Z
 tags: whisparr
 editor: markdown
 dateCreated: 2022-04-03T00:57:35.371Z
@@ -14,7 +14,7 @@ dateCreated: 2022-04-03T00:57:35.371Z
 {.is-info}
 
 # Getting Started
-
+we all like porn
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/whisparr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/whisparr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/whisparr/faq)
