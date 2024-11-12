@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-11T01:14:47.031990
+date: 2024-11-12T01:12:34.588780
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-11T01:14:47.031990
+dateCreated: 2024-11-12T01:12:34.588780
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.26.1.4838` / [Commit: b1c7e986644c93306712de71ae4906d6bef37579](https://github.com/Prowlarr/Prowlarr/commit/b1c7e986644c93306712de71ae4906d6bef37579)
-  - [Prowlarr Indexers Commit: bffe4c1276a5cef3fb1baf7b9418bcabbfe448ae](https://github.com/Prowlarr/Indexers/commit/bffe4c1276a5cef3fb1baf7b9418bcabbfe448ae)
+  - [Prowlarr Indexers Commit: 5e974dd83ceaa87edf863fecab60c01f1a227300](https://github.com/Prowlarr/Indexers/commit/5e974dd83ceaa87edf863fecab60c01f1a227300)
 
 ---
 
@@ -198,7 +198,7 @@ dateCreated: 2024-11-11T01:14:47.031990
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://11november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://12november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -268,7 +268,6 @@ dateCreated: 2024-11-11T01:14:47.031990
 |[Bitpalace](https://bitpalace.cc/){#bitpalace}|Bitpalace is a Hungarian Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[BitPorn](https://bitporn.eu/){#bitporn}|BitPorn is a HUNGARIAN Private Torrent Tracker for 3X|Hungarian (Hungary)|
 |[Bitspyder](https://bitspyder.net/){#bitspyder}|Bitspyder is a Private site for Educational BOOKS / AUDIO|English (United States)|
-|[BitStream (API)](https://bitstream.click/){#bitstream}|BitStream is a SPANISH Private tracker for H\.265 MOVIES / TV|Spanish (Spain)|
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN tracker|German (Germany)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a Turkish Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
 |[Bj-Share](https://bj-share.info/){#bjshare}|Private PT-BR torrent|Portuguese (Brazil)|
