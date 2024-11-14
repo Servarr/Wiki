@@ -61,6 +61,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
         - [Solutions](#solutions)
     - [Movie Folders](#movie-folders)
       - [Missing Root Folder](#missing-root-folder)
+      - [Movie Path Mount is Read Only](#movie-path-mount-is-read-only)
     - [Movies](#movies)
       - [Movie was removed from TMDb](#movie-was-removed-from-tmdb)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
@@ -466,6 +467,12 @@ Note: you will also need to add the websocket directive to your radarr configura
 1. Create a custom filter in Collections with the old root folder path
 1. Select the collections  and from the Root Paths drop down select the new root path that you want these collections' future movies to be assigned to.
 1. Run the Check Health Task in System => Tasks
+
+#### Movie Path Mount is Read Only
+
+{#movie-mount-ro}
+
+A mount containing a movie path is read only and is not writable by the user Radarr is running as.
 
 ### Movies
 
