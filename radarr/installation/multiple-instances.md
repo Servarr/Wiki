@@ -99,13 +99,24 @@ separate locations. {.is-warning}
 
 #### Creating Radarr-4K Tray App
 
-- Create a new folder for Radarr-4K's configuration files. Most use a similar place such as
-    `C:\ProgramData\Radarr-4K`
-- Right click and Create New Shortcut
-- Path: `C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K`
-- Give the shortcut a unique name such as `Radarr-4K` and finish the wizard.
-- Double click the new shortcut to run and test.
-- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+To format your text for GitHub Markdown in the specified section, here’s how it should look:
+
+You must have Radarr already installed.
+	1.	In C:/ProgramData, create a new folder for Radarr-4K’s configuration files. Most use a similar location such as C:\ProgramData\Radarr-4K.
+	2.	Place these changes in the startup folder. Go to “Run” and enter %appdata%\Microsoft\Windows\Start Menu\Programs\Startup, then click OK.
+Radarr’s shortcut must be configured with a /data= argument in the ‘target’ field to allow multiple instances. Assuming you installed Radarr with default settings on the C drive, it will look like this:
+
+C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K
+
+
+	3.	Create the Radarr-4K Tray App.
+Right-click the Radarr shortcut, and select “Create New Shortcut.”
+Rename the shortcut “Radarr-4K.” Edit the target field of the new shortcut:
+
+C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K
+
+Double-click the new shortcut to run and test.
+Continue to “Configuring Radarr-4K.”- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
 ### Configuring Radarr-4k {#windows-multi-config-second}
 
