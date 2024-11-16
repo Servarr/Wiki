@@ -115,7 +115,7 @@ You must have Radarr already installed
 
    C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K
 
-   Double click the new shortcut to run and test.Continue to “Configuring Radarr-4K.”- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+   Double click the new shortcut to run and test. Continue to “Configuring Radarr-4K.”- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
 ### Configuring Radarr-4k {#windows-multi-config-second}
 
