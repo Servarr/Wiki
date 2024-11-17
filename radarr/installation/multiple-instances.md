@@ -113,7 +113,7 @@ You must have Radarr already installed
    Right click the Radarr shortcut, and Create New Shortcut.
    Rename the shortcut “Radarr-4K.” Edit the target field of the new shortcut:
 
-   C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K
+   `C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K`
 
    Double click the new shortcut to run and test. Continue to “Configuring Radarr-4K.”- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
