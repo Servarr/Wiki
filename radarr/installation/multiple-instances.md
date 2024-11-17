@@ -105,7 +105,7 @@ separate locations. {.is-warning}
 
 You must have Radarr already installed
 
-1. In C:/ProgramData, create a new folder for Radarr-4K's configuration files. Most use a similar place such as C:\ProgramData\Radarr-4K
+1. In `C:\ProgramData`, create a new folder for Radarr-4K's configuration files. Most use a similar place such as `C:\ProgramData\Radarr-4K`
 
 2. Next we go to the startup folder. Go to “Run” and enter “%appdata%\Microsoft\Windows\Start Menu\Programs\Startup” and then OK.
    
