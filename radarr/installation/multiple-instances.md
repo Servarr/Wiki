@@ -53,9 +53,9 @@ This guide will show you how to run multiple instances of Radarr on Windows usin
 1. Open a Command Prompt administrator window. (To run as an admin,
     right click on the Command Prompt icon and choose “Run as
     administrator.”)
-1. If Radarr is running, stop the service by running `nssm stop Radarr`
+2. If Radarr is running, stop the service by running `nssm stop Radarr`
     in Command Prompt.
-1. Now we have to edit the existing Radarr instance to explicitly point
+3. Now we have to edit the existing Radarr instance to explicitly point
     to its data directory. The default command is as follows:
     `sc config Radarr binpath= "C:\ProgramData\Radarr\bin\Radarr.exe
     -data=C:\ProgramData\Radarr"`
@@ -69,7 +69,7 @@ may have to change your paths here.
 
 1. Create a new folder where you’d like Radarr-4K to live. Most use a similar place such as
     `C:\ProgramData\Radarr-4K`
-1. Back in Command Prompt, create the new Radarr-4K service using `nssm
+2. Back in Command Prompt, create the new Radarr-4K service using `nssm
     install Radarr-4K`. A popup window will open where you can type your
     parameters for the new instance. For this example, we will use the
     following:
@@ -85,9 +85,9 @@ may have to change your paths here.
 This is crucial, as it keeps all the data files from both instances in
 separate locations. {.is-warning}
 
-1. Click *Install service*. The window should close and the service
+3. Click *Install service*. The window should close and the service
     will now be available to run.
-1. Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+4. Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
 ### Tray App (Windows)
 
@@ -95,15 +95,13 @@ separate locations. {.is-warning}
 
 - [You must have Radarr already installed](#windows)
 - Radarr's shortcut must be configured with a `/data=` argument in the 'target' field to allow multiple instances.
-- Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
-- Assuming you installed Radarr with default settings, on the C drive, it will look like this:
+1. Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
+2. Assuming you installed Radarr with default settings, on the C drive, it will look like this:
 
    C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr
 
 
 #### Creating Radarr-4K Tray App
-
-You must have Radarr already installed
 
 1. In `C:\ProgramData`, create a new folder for Radarr-4K's configuration files. Most use a similar place such as `C:\ProgramData\Radarr-4K`
 
@@ -115,16 +113,16 @@ You must have Radarr already installed
 
    `C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr-4K`
 
-   Double click the new shortcut to run and test. Continue to “Configuring Radarr-4K.”- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+4. Double click the new shortcut to run and test. Continue to “Configuring Radarr-4K.”- Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
 ### Configuring Radarr-4k {#windows-multi-config-second}
 
-- Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
-- Start Radarr-4k (Service or Tray App)
-- Open up Radarr-4k and Navigate within the app to [Settings => General => Host](/radarr/settings/#host)
-- Change `Port Number` from `7878` to a different port e.g. `7879` so Radarr and Radarr4k do not conflict
-- You should now be able to start both apps
-- Continue to [Dealing with Updates](#dealing-with-updates)
+1. Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
+2. Start Radarr-4k (Service or Tray App)
+3. Open up Radarr-4k and Navigate within the app to [Settings => General => Host](/radarr/settings/#host)
+4. Change `Port Number` from `7878` to a different port e.g. `7879` so Radarr and Radarr4k do not conflict
+5. You should now be able to start both apps
+6. Continue to [Dealing with Updates](#dealing-with-updates)
 
 ### Dealing with Updates
 
@@ -145,16 +143,16 @@ This can prevent updates from being applied and can result in the following erro
 - It checks the ports and if one is not online, it will (re-)start the scheduled task to launch Radarr.
 
 1. Create a new File and name it RadarrInstancesChecker.ps1 with the below code.
-1. Edit the script with your actual service names, IP, and ports. *If you are running in Tray mode, you must create Scheduled tasks to start each Radarr instance and use those Task names in the script below.*
-1. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
+2. Edit the script with your actual service names, IP, and ports. *If you are running in Tray mode, you must create Scheduled tasks to start each Radarr instance and use those Task names in the script below.*
+3. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
 
-- Security Options: Enable `Run with highest privileges`
+4. Security Options: Enable `Run with highest privileges`
   - Otherwise the script will be unable to manipulate services
-- Trigger: `On Launch`
-- Repeat task every: `5` or `10` minutes
-- Action: `Start a Program`
-- Program/script: `powershell`
-- Argument: `-File D:\RadarrInstancesChecker.ps1`
+5. Trigger: `On Launch`
+6. Repeat task every: `5` or `10` minutes
+7. Action: `Start a Program`
+8. Program/script: `powershell`
+9. Argument: `-File D:\RadarrInstancesChecker.ps1`
   - Be sure to use the full path to your script's location
 
 ```powershell
