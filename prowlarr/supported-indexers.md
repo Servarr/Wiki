@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-16T01:16:38.455063
+date: 2024-11-17T01:22:01.692848
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-16T01:16:38.455063
+dateCreated: 2024-11-17T01:22:01.692848
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.26.1.4838` / [Commit: a9b93df0c9a0e0f1cd24316e131c74f9cd116364](https://github.com/Prowlarr/Prowlarr/commit/a9b93df0c9a0e0f1cd24316e131c74f9cd116364)
-  - [Prowlarr Indexers Commit: df6238b386070b9038801fe7e070d1714204326e](https://github.com/Prowlarr/Indexers/commit/df6238b386070b9038801fe7e070d1714204326e)
+  - [Prowlarr Indexers Commit: d93e01951ffb7ed35787d49f53cffa8ea00d5df8](https://github.com/Prowlarr/Indexers/commit/d93e01951ffb7ed35787d49f53cffa8ea00d5df8)
 
 ---
 
@@ -190,6 +190,7 @@ dateCreated: 2024-11-16T01:16:38.455063
 |[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|Vietnamese (Viet Nam)|
 |[NewStudioL](https://newstudio.tv/){#newstudiol}|NewStudio is a RUSSIAN Public site for TV\. This supports login|Russian (Russia)|
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
+|[Polskie-Torrenty](https://polskie-torrenty.eu/){#polskie-torrenty}|Polskie-Torrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for 3X|Russian (Russia)|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
 |[Rainbow Tracker](https://gaytracker.ru/){#rainbowtracker}|Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV|Russian (Russia)|
@@ -197,7 +198,7 @@ dateCreated: 2024-11-16T01:16:38.455063
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://16november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://17november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -421,7 +422,6 @@ dateCreated: 2024-11-16T01:16:38.455063
 |[Karagarga](https://karagarga.in/){#karagarga}|Karagarga tracks non-hollywood, rare and obscure movies, music and literature|English (United States)|
 |[Keep Friends](https://pt.keepfrds.com/){#keepfriends}|Keep Friends is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Kelu](https://our.kelu.one/){#kelu}|Kelu is a CHINESE Private Torrent Tracker for GAY 3X|Chinese (China)|
-|[KIMOJI](https://kimoji.club/){#kimoji}|KIMOJI is a CHINESE Private Torrent Tracker for MUSIC|English (United States)|
 |[Korsar](http://filbi1976.org/){#korsar}|Korsar is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
