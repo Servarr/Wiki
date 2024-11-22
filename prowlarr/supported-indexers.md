@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-20T01:17:38.742314
+date: 2024-11-22T01:18:26.549125
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-20T01:17:38.742314
+dateCreated: 2024-11-22T01:18:26.549125
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.27.0.4845` / [Commit: 2871f1f2a29bb40fe5cda21e730c937259315cc2](https://github.com/Prowlarr/Prowlarr/commit/2871f1f2a29bb40fe5cda21e730c937259315cc2)
-  - [Prowlarr Indexers Commit: 7a0e44707d845ecc54f3018aecc04621759a03fd](https://github.com/Prowlarr/Indexers/commit/7a0e44707d845ecc54f3018aecc04621759a03fd)
+  - Prowlarr Build `1.27.0.4846` / [Commit: 299001a513589f6da1575473a904bd397993aad7](https://github.com/Prowlarr/Prowlarr/commit/299001a513589f6da1575473a904bd397993aad7)
+  - [Prowlarr Indexers Commit: fc9b4d50a4ce677f3d0a0274a7254525531e853c](https://github.com/Prowlarr/Indexers/commit/fc9b4d50a4ce677f3d0a0274a7254525531e853c)
 
 ---
 
@@ -125,7 +125,7 @@ dateCreated: 2024-11-20T01:17:38.742314
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq342.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq343.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir159.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -198,7 +198,7 @@ dateCreated: 2024-11-20T01:17:38.742314
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://20november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://22november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -312,7 +312,6 @@ dateCreated: 2024-11-20T01:17:38.742314
 |[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[DenOfSimps (API)](https://denofsimps.club/){#denofsimps-api}|DenOfSimps (DoS) is a Private Torrent Tracker for 3X Fansite content only|English (United States)|
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|Desitorrents is a Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / MUSIC|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
 |[DICMusic](https://dicmusic.com/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
