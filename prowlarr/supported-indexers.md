@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-22T01:18:26.549125
+date: 2024-11-23T01:16:13.778371
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-22T01:18:26.549125
+dateCreated: 2024-11-23T01:16:13.778371
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.27.0.4846` / [Commit: 299001a513589f6da1575473a904bd397993aad7](https://github.com/Prowlarr/Prowlarr/commit/299001a513589f6da1575473a904bd397993aad7)
-  - [Prowlarr Indexers Commit: fc9b4d50a4ce677f3d0a0274a7254525531e853c](https://github.com/Prowlarr/Indexers/commit/fc9b4d50a4ce677f3d0a0274a7254525531e853c)
+  - [Prowlarr Indexers Commit: 6358c1adfbd2092d89ec90ee5ee81bf4af05002b](https://github.com/Prowlarr/Indexers/commit/6358c1adfbd2092d89ec90ee5ee81bf4af05002b)
 
 ---
 
@@ -568,6 +568,7 @@ dateCreated: 2024-11-22T01:18:26.549125
 |[teracod](https://teracod.net/){#teracod}|teracod (Movie Zone) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[TGay](https://tgay.pro/){#tgay}|TGay is a RUSSIAN Private Torrent Tracker for LGBTQ MOVIES / TV / GENERAL|Russian (Russia)|
 |[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[ThePiratedShip](https://thepiratedship.co.uk/){#thepiratedship}|ThePiratedShip is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TheScenePlace](https://www.thesceneplace.com/){#thesceneplace}|TheScenePlace (TSP) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
