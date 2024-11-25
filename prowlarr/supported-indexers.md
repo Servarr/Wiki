@@ -2,14 +2,14 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-24T01:22:37.469692
+date: 2024-11-25T01:19:32.301133
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-24T01:22:37.469692
+dateCreated: 2024-11-25T01:19:32.301133
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.27.0.4846` / [Commit: 299001a513589f6da1575473a904bd397993aad7](https://github.com/Prowlarr/Prowlarr/commit/299001a513589f6da1575473a904bd397993aad7)
+  - Prowlarr Build `1.27.0.4851` / [Commit: b8b32f8708be0fbe988a7ede6117fe0c0572282b](https://github.com/Prowlarr/Prowlarr/commit/b8b32f8708be0fbe988a7ede6117fe0c0572282b)
   - [Prowlarr Indexers Commit: 1a68fff2d0055bb9cb2362192542735c52877d66](https://github.com/Prowlarr/Indexers/commit/1a68fff2d0055bb9cb2362192542735c52877d66)
 
 ---
@@ -523,7 +523,7 @@ dateCreated: 2024-11-24T01:22:37.469692
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Red Leaves (红叶)](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for TV|Polish (Poland)|
-|[Redacted](https://redacted.ch/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
+|[Redacted](https://redacted.sh/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
 |[RedBits (API)](https://redbits.xyz/){#redbits-api}|RedBits is a SPANISH site for classic content|Spanish (Spain)|
 |[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
 |[Resurrect The Net](http://resurrectthe.net/){#resurrectthenet}|Resurrect The Net (RTN) is a Private site for TV / MOVIES / GENERAL|English (United States)|
