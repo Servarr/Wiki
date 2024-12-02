@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-11-30T01:17:35.340991
+date: 2024-12-02T01:22:12.135258
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-11-30T01:17:35.340991
+dateCreated: 2024-12-02T01:22:12.135258
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.28.0.4854` / [Commit: c4a90e8ba4a9b4e58b0d651c3e06cb8fe3686e8c](https://github.com/Prowlarr/Prowlarr/commit/c4a90e8ba4a9b4e58b0d651c3e06cb8fe3686e8c)
-  - [Prowlarr Indexers Commit: 1f5703e09c3321641ff7f6c684bff55739828db2](https://github.com/Prowlarr/Indexers/commit/1f5703e09c3321641ff7f6c684bff55739828db2)
+  - Prowlarr Build `1.28.0.4854` / [Commit: aace65f88e58fd4520600003ae9c74fc5ca1daad](https://github.com/Prowlarr/Prowlarr/commit/aace65f88e58fd4520600003ae9c74fc5ca1daad)
+  - [Prowlarr Indexers Commit: 66698b9aaea93525cb410efb191509ae9f6e2de2](https://github.com/Prowlarr/Indexers/commit/66698b9aaea93525cb410efb191509ae9f6e2de2)
 
 ---
 
@@ -85,6 +85,7 @@ dateCreated: 2024-11-30T01:17:35.340991
 |[NNTT](http://www.nntt.org/){#nntt}|NNTT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|Russian (Russia)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|English (United States)|
+|[NyaaPantsu](https://ouo.si/){#nyaapantsu}|NyaaPantsu is a Public site for dedicated to Asian ANIME|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for TV / MOVIES / GENERAL|French (France)|
@@ -198,7 +199,7 @@ dateCreated: 2024-11-30T01:17:35.340991
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://30november.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://02december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -398,6 +399,7 @@ dateCreated: 2024-11-30T01:17:35.340991
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HellasHut (API)](https://hellashut.net/){#hellashut-api}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HHanClub](https://hhanclub.top/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[HHD (API)](https://homiehelpdesk.net/){#hhd-api}|HHD is a Private Torrent Tracker for MOVIES / TV / GAMES|English (United States)|
 |[HomePornTorrents](https://www.homeporntorrents.club/){#homeporntorrents}|HomePornTorrents (HPT) is a Private Torrent Tracker for Amateur 3X|English (United States)|
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[HUDBT (蝴蝶)](https://hudbt.hust.edu.cn/){#hudbt}|HUDBT (蝴蝶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
