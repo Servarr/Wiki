@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-12-02T01:22:12.135258
+date: 2024-12-04T01:21:17.597008
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-12-02T01:22:12.135258
+dateCreated: 2024-12-04T01:21:17.597008
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.28.0.4854` / [Commit: aace65f88e58fd4520600003ae9c74fc5ca1daad](https://github.com/Prowlarr/Prowlarr/commit/aace65f88e58fd4520600003ae9c74fc5ca1daad)
-  - [Prowlarr Indexers Commit: 66698b9aaea93525cb410efb191509ae9f6e2de2](https://github.com/Prowlarr/Indexers/commit/66698b9aaea93525cb410efb191509ae9f6e2de2)
+  - Prowlarr Build `1.28.0.4855` / [Commit: 61e863cb3163137c4209ff3e3082ca74494b0a7f](https://github.com/Prowlarr/Prowlarr/commit/61e863cb3163137c4209ff3e3082ca74494b0a7f)
+  - [Prowlarr Indexers Commit: ab4e429732f87adba43c601801abd66143f417b4](https://github.com/Prowlarr/Indexers/commit/ab4e429732f87adba43c601801abd66143f417b4)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2024-12-02T01:22:12.135258
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |[SimpleAnime](https://www.36dm.org/){#simpleanime}|SimpleAnime is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
-|[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
+|[Solid Torrents](https://solidtorrents.eu/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
 |[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|English (United States)|
@@ -199,7 +199,7 @@ dateCreated: 2024-12-02T01:22:12.135258
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://02december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://04december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
