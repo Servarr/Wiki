@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 published: true
-date: 2024-12-07T17:33:11.470Z
+date: 2024-12-07T17:34:04.169Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -749,7 +749,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - (Advanced Option) Fail Downloads - Mark the download are failed if the specified file extensions are encountered.
-  {#extension-details}
+  {#indexer-fail-extension-details}
   - Dangerous Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_dangerousExtensions&type=code). As of 2024-12-07 they are: `.lnk`,`.ps1`,`.vbs`, and `.zipx`
   - Executable Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_executableExtensions&type=code). As of 2024-12-07 they are: `.bat`,`.cmd`,`.exe`, and `.sh`
 
