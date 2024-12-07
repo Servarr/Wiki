@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 published: true
-date: 2024-03-28T17:54:37.206Z
+date: 2024-12-07T17:33:11.470Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -748,6 +748,14 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
+- (Advanced Option) Fail Downloads - Mark the download are failed if the specified file extensions are encountered.
+  {#extension-details}
+  - Dangerous Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_dangerousExtensions&type=code). As of 2024-12-07 they are: `.lnk`,`.ps1`,`.vbs`, and `.zipx`
+  - Executable Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_executableExtensions&type=code). As of 2024-12-07 they are: `.bat`,`.cmd`,`.exe`, and `.sh`
+
+> Sonarr also detects [**archived extensions**](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_archiveExtensions&type=code). As of 2024-12-07 they are: `.7z` `.bz2` `.gz` `.r00` `.rar` `.tar.bz2` `.tar.gz` `.tar` `.tb2` `.tbz2` `.tgz` `.zip`  These are not Failureable and Unpackerr ([website](https://unpackerr.zip/)|[Github](https://github.com/Unpackerr/unpackerr)) can be used to handle these.
+{.is-info}
+
 - Completed Download Handling
   - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
     - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the below table. Torrents must also stay in the same category.
