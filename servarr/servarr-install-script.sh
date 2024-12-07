@@ -112,7 +112,8 @@ select app in lidarr prowlarr radarr readarr whisparr quit; do
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
         branch="eros"          # {Update me if needed} branch to install
-        break 
+        break
+        ;;
     quit)
         exit 0
         ;;
