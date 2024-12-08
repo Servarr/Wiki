@@ -24,7 +24,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 [Please see the \*Arr Community Installation Script](/install-script)
 
-> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
+> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says ffprobe is not found this can typically be fixed with a reinstall.
 {.is-info}
 
 ### Debian / Ubuntu Hands on Install
