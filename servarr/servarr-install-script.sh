@@ -37,7 +37,7 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.13"
+scriptversion="3.1.14"
 scriptdate="2024-12-07" # change this later
 
 set -euo pipefail
@@ -68,7 +68,7 @@ echo "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} 
 echo ""
 echo "Select the application to install: "
 echo ""
-select app in lidarr prowlarr radarr readarr whisparr quit; do
+select app in lidarr prowlarr radarr readarr whisparr whisparr-v3 quit; do
 
     case $app in
     lidarr)
