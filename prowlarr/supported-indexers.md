@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-12-08T01:26:32.060359
+date: 2024-12-09T01:23:10.325208
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-12-08T01:26:32.060359
+dateCreated: 2024-12-09T01:23:10.325208
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.28.0.4859` / [Commit: f3328863e18f3942a923f52b9143fdca9e199cb6](https://github.com/Prowlarr/Prowlarr/commit/f3328863e18f3942a923f52b9143fdca9e199cb6)
-  - [Prowlarr Indexers Commit: 099a952fd89bfc172f98b45a0015ad1bf98aba96](https://github.com/Prowlarr/Indexers/commit/099a952fd89bfc172f98b45a0015ad1bf98aba96)
+  - Prowlarr Build `1.28.0.4859` / [Commit: 58d495d618c53fcc17810c4d7de48b7cbe972709](https://github.com/Prowlarr/Prowlarr/commit/58d495d618c53fcc17810c4d7de48b7cbe972709)
+  - [Prowlarr Indexers Commit: 0d12bd6191136663bfa90c031f70ace9762187e6](https://github.com/Prowlarr/Indexers/commit/0d12bd6191136663bfa90c031f70ace9762187e6)
 
 ---
 
@@ -199,7 +199,7 @@ dateCreated: 2024-12-08T01:26:32.060359
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://08december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://09december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -430,7 +430,7 @@ dateCreated: 2024-12-08T01:26:32.060359
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
 |[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private site for MOVIES / TV / GENERAL|English (United States)|
 |[Last Digital Underground](https://theldu.to/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[LastFiles](https://www.last-torrents.org/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
+|[LastFiles](https://last-torrents.org/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Mexico)|
 |[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
