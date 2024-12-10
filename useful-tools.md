@@ -1,8 +1,8 @@
 ---
 title: Useful Tools
-description: companions to the *Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the *Arr Development Team. 
+description: companions to the *Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the *Arr Development Team.
 published: true
-date: 2024-08-24T04:52:07.478Z
+date: 2024-12-10T21:27:40.985Z
 tags: useful-tools
 editor: markdown
 dateCreated: 2021-06-05T20:51:53.183Z
@@ -101,7 +101,7 @@ Note that the application's database can be found in the Application Data Direct
 1. Close the database
 1. New Database => File => Import => import that file from the previous export step
 1. Any import errors or constraint issues, clean up the problematic insert statement if possible or delete it
-1. Execute the following SQL `VACUUM;`
+1. In the Execute SQL tab, execute the following SQL `VACUUM;`
 1. Save the database when prompted.
 1. Tools => Integrity Check; the result should say OK
 1. Close the database
