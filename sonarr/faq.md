@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-07-17T14:56:51.717Z
+date: 2024-12-13T00:29:04.952Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -398,8 +398,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - Sonarr does not use aliases nor translations (i.e. any foreign language titles) from TVDb.
 - The text-based search must match exactly. This includes the year, if a year is required (listed on TVDB with a year after the series title).
 - The text-based search is *only* for the English translation of the series title from TVDB. Other languages are not searched.
-- The site <https://thexem.info> is used to correct scene/episode mappings, and also to add aliases to be searched for series or season names. Please check this site for corrections if you have a mismatch between season/episode results and the ones you expect. There is a #xem channel on Discord to talk about changes to the site. Xem is the *only* way to fix Japanese Anime aliases.
-- The Scene Mapping Table can be used for series aliases for non-Anime series only. This table is manual. Please search first to be sure your request has not been made, and provide a release name example with your request. [This](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) is the current list of previous requests for your review. [This](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform) is the form for requesting new mappings. Requests to this table are added manually by devs, and can take up to 2 weeks to take effect. *Please remember that all aliases must be searched by all Sonarr users for every episode/season search, which can dramatically increase search times and API hits.*
+- The site <https://thexem.info> is used to correct scene/episode mappings, and also to add aliases to be searched for series or season names. Note that this is primarily for Anime only. Please check this site for corrections if you have a mismatch between season/episode results and the ones you expect. There is a #xem channel on Discord to talk about changes to the site. Xem is the *only* way to fix Japanese Anime aliases. Additonal information on XEM's usage can be found in the faq entry [How Sonarr Handles scenen numbering issues](#how-sonarr-handles-scene-numbering-issues)
+- The Scene Mapping Table is what is primarily to be used for series aliases for non-Anime series only. This table is manual. Please search first to be sure your request has not been made, and provide a release name example with your request. [This](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0) is the current list of previous requests for your review. [This](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform) is the form for requesting new mappings. Requests to this table are added manually by devs, and can take up to 2 weeks to take effect. *Please remember that all aliases must be searched by all Sonarr users for every episode/season search, which can dramatically increase search times and API hits.*
 - We are aware that some series are just plain difficult. You may also wish to review the [FAQ Entry for Problematic Shows and Release Group vs. TVDb numbering issues](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc).
 
 ## TVDb is updated why isn't Sonarr?
