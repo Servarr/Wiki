@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-12-13T00:29:04.952Z
+date: 2024-12-13T00:32:25.472Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -634,6 +634,8 @@ First, make sure you read and understand the section above called ["How does Son
 ## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
 - See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
+
+## TBA Naming
 
 - On TVDb, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the TVDb API. Typically, changes to the TVDb website take 24-48 hours to reach Sonarr due to TVDb cache (24 hours), skyhook cache (a few hours), and the series refresh interval (every 12 hours). The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 
