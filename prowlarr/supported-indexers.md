@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-12-14T01:18:33.769630
+date: 2024-12-17T01:20:53.335001
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-12-14T01:18:33.769630
+dateCreated: 2024-12-17T01:20:53.335001
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.28.1.4879` / [Commit: 4b8016d95d89b42b9d58bfbabb93fb35fe98dce9](https://github.com/Prowlarr/Prowlarr/commit/4b8016d95d89b42b9d58bfbabb93fb35fe98dce9)
-  - [Prowlarr Indexers Commit: 382c98758881b21d83746b9b22a322eccda1a53c](https://github.com/Prowlarr/Indexers/commit/382c98758881b21d83746b9b22a322eccda1a53c)
+  - Prowlarr Build `1.29.0.4887` / [Commit: 6bdf5f5d6916b03a4dbef001bdf1da8fdd074530](https://github.com/Prowlarr/Prowlarr/commit/6bdf5f5d6916b03a4dbef001bdf1da8fdd074530)
+  - [Prowlarr Indexers Commit: fa90b7344adf81eb169b8f802f18365c6de4571b](https://github.com/Prowlarr/Indexers/commit/fa90b7344adf81eb169b8f802f18365c6de4571b)
 
 ---
 
@@ -31,7 +31,6 @@ dateCreated: 2024-12-14T01:18:33.769630
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|Russian (Russia)|
-|[AniRena](https://www.anirena.com/){#anirena}|AniRena is a Public torrent tracker for the latest anime and Japanese related torrents|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
 |[Badass Torrents](https://badasstorrents.com/){#badasstorrents}|Badass Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
@@ -120,7 +119,7 @@ dateCreated: 2024-12-14T01:18:33.769630
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
 |[Torrent9](https://ww1.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9-tel](https://www.torrent9.cv/){#torrent9-tel}|Torrent9-tel is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9-tel](https://www.torrent9.ke/){#torrent9-tel}|Torrent9-tel is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
@@ -199,7 +198,7 @@ dateCreated: 2024-12-14T01:18:33.769630
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://14december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://17december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
