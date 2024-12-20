@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-12-16T01:24:16.613Z
+date: 2024-12-20T23:50:02.751Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -26,6 +26,9 @@ For the latest updates please refer to the pinned messages in the [Readarr Disco
 Due to continuous GoodReads issues - work has begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord, acquire the Tester role and meet us in the appropiate channel.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
 
 Per the community user:
+
+> for anyone coming here for the first time, what needs to be done has mostly been laid out in the [GitHub issues of the repo](https://github.com/Saghen/open-library-proxy/issues)
+{.is-info}
 
 > The replacement metadata server is close to completion which should resolve the issue for everyone in the meantime. If you're referring to switching to book-based instead of author-based, I don't think that's blocking.
 {.is-info}
@@ -52,12 +55,12 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 - Why is the meta server not OSS?
   - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API
 
-## Metadata Server Issues
+# Metadata Server Issues
 
-### 2024-12 Issues
+## 2024-12 Issues
 
-> It's not isolated to you. The metadata server is having issues. The devs are aware. I will say there are currently some issues with the metadata server where it appears to be under load and throwing 522's.
-{.is-info}
+> The metadata server is having issues. The devs are aware. I will say there are currently some issues with the metadata server where it appears to be under load and throwing 522's.
+{.is-danger}
 
 ## Other Updates
 
