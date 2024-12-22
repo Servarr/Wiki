@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-12-22T22:59:53.197Z
+date: 2024-12-22T23:03:26.857Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -12,6 +12,9 @@ dateCreated: 2024-08-23T18:20:51.850Z
 
 > The Servarr dev team would like another dev/team to take over the readarr project. Otherwise it's probably just going to atrophy until it's unusable.
 {.is-danger}
+
+> Help is wanted in pulling the ~1100 Sonarr cherry-picks from upstream and other development work. The priority would be 1) What you want to fix, 2) [Oldest sonarr-pulls first](https://github.com/Readarr/Readarr/issues?q=is%3Aopen+is%3Aissue+label%3Asonarr-pull), 3) Other fixes related to what's been pulled, 4) Everything else
+{.is-warning}
 
 Below are the summarized issues of the Readarr Metadata Server.
 For the latest updates please refer to the pinned messages in the [Readarr Discord](https://readarr.com/discord)
