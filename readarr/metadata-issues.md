@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-12-20T23:50:02.751Z
+date: 2024-12-22T22:59:53.197Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -16,7 +16,7 @@ dateCreated: 2024-08-23T18:20:51.850Z
 Below are the summarized issues of the Readarr Metadata Server.
 For the latest updates please refer to the pinned messages in the [Readarr Discord](https://readarr.com/discord)
 
-## Metadata Server Information
+## Migration from Goodreads to OpenLibrary
 
 ### The Future and Open Library
 
@@ -33,14 +33,23 @@ Per the community user:
 > The replacement metadata server is close to completion which should resolve the issue for everyone in the meantime. If you're referring to switching to book-based instead of author-based, I don't think that's blocking.
 {.is-info}
 
+> I'm currently finishing the ID mapping within an acceptable tolerance to me, and then I'm going to add in series and language data, and then work on a metadata server and test it with my docker Readarr installation. I want to end up with a server that can perform search and send the data, using OL as a source and keeping itself up-to-date, it needs to not break an existing installation and allow adding recent books since existing metadata server is months behind
+{.is-info}
+
+> In essence, I am promising to delivery a functional metadata server that works and fulfils the criteria I outlined above, and an easy way for people to test it on their Readarr installations. If the Servarr project wants to take that code and run it as the official server, cool, but that's not my decision and won't affect me if they don't since I'm running my own metadata server regardless
+{.is-info}
+
 Per the Servarr Team:
 
 > Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
 {.is-info}
 
-#### Why can we not just use OpenLibrary Directly?
+> We are expecting the new meta to be able to take GR IDs and translate, so the readarr code changes should be minimal at first (I would rather confirm it's working before looking at the client migration), but yes pretty much spot on. We don't mind what implementation we use, but the expectation is that it doesn't break anyones existing Readarr in the process and it will fully function. It will ultimately be a case of look at all the implementations that people are making and decide which is the best fitted
+{.is-info}
 
-- As per docs you are not allowed to do that, that’s why they provide data dumps.
+### Why can we not just use OpenLibrary Directly?
+
+- As per thierdocs you are not allowed to do that, that’s why they provide data dumps.
 
 ### Why can we not just use the Metadata Provider Directly?
 
