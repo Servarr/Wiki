@@ -2,14 +2,14 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-12-27T01:14:22.691901
+date: 2024-12-28T01:12:57.306896
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-12-27T01:14:22.691901
+dateCreated: 2024-12-28T01:12:57.306896
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.29.1.4899` / [Commit: 500759bf1f1312051af6e9f603e62424536dcef6](https://github.com/Prowlarr/Prowlarr/commit/500759bf1f1312051af6e9f603e62424536dcef6)
+  - Prowlarr Build `1.29.1.4901` / [Commit: 3a9b841fad457320b77528cb841940ec5f13bf62](https://github.com/Prowlarr/Prowlarr/commit/3a9b841fad457320b77528cb841940ec5f13bf62)
   - [Prowlarr Indexers Commit: 06a258113e019ea437171d1997ae015dd9ed59d5](https://github.com/Prowlarr/Indexers/commit/06a258113e019ea437171d1997ae015dd9ed59d5)
 
 ---
@@ -66,7 +66,7 @@ dateCreated: 2024-12-27T01:14:22.691901
 |[JAV-Torrent](https://jav-torrent.net/){#jav-torrent}|JAV-Torrent is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[kickasstorrents\.to](https://kickasstorrents.to/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for TV / MOVIES / GENERAL|English (United States)|
-|[Knaben](https://knaben.eu/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
+|[Knaben](https://knaben.org/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|English (United States)|
 |[Libronube](https://www.libronube.com/){#libronube}|Libronube is a Spanish Public tracker for EBOOKS|Spanish (Spain)|
 |[LimeTorrents](https://www.limetorrents.lol/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|English (United States)|
