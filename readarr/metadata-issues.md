@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-12-22T23:03:26.857Z
+date: 2024-12-28T18:38:15.086Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -23,7 +23,7 @@ For the latest updates please refer to the pinned messages in the [Readarr Disco
 
 ### The Future and Open Library
 
-> **It is only anticipated that Open Library will resolve the 'Large Author Issue' and similar GoodRead's Specific Issues**
+> **It is only anticipated that Open Library will resolve the 'Large Author Issue' and similar GoodRead's Specific Issues** It is likely it will resolve the 522 / similar metadata issues as well.
 {.is-warning}
 
 Due to continuous GoodReads issues - work has begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord, acquire the Tester role and meet us in the appropiate channel.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
@@ -47,31 +47,33 @@ Per the Servarr Team:
 > Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
 {.is-info}
 
-> We are expecting the new meta to be able to take GR IDs and translate, so the readarr code changes should be minimal at first (I would rather confirm it's working before looking at the client migration), but yes pretty much spot on. We don't mind what implementation we use, but the expectation is that it doesn't break anyones existing Readarr in the process and it will fully function. It will ultimately be a case of look at all the implementations that people are making and decide which is the best fitted
+> We are expecting the new meta to be able to take GR IDs and translate, so the readarr code changes should be minimal at first (I would rather confirm it's working before looking at the client migration), but yes pretty much spot on. The expectation is that it doesn't break anyones existing Readarr in the process and it will fully function.
 {.is-info}
 
 ### Why can we not just use OpenLibrary Directly?
 
-- As per thierdocs you are not allowed to do that, that’s why they provide data dumps.
+- As per their docs you are not allowed to do that, that’s why they provide data dumps.
 
-### Why can we not just use the Metadata Provider Directly?
+### Why can we not just use the Metadata Provider Directly or use a user selectable provider?
 
-- If you throw all that directly at the source, it's either against their policy, or going to be very expensive
+- If you throw all that directly at the source, it's either against their policy, or going to be very expensive.
+- We do not support directly hitting any metadata service that isn't our own in order to reduce likelihood of a website blocking our user-agent etc.
 
 ### BookInfo
 
 BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for Sonarr.
 
-### Metadata Server
+### Legacy Goodreads Metadata Server
 
 - Why is the meta server not OSS?
-  - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API
+  - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API.
+
 
 # Metadata Server Issues
 
 ## 2024-12 Issues
 
-> The metadata server is having issues. The devs are aware. I will say there are currently some issues with the metadata server where it appears to be under load and throwing 522's.
+> The metadata server is having issues and effectively dead in the water. The devs are aware. There is nothing feasible that can be done at this time. Please assist the community with the OpenLibrary conversion or the `sonarr-pull` Readarr github issues that need to be cherry-picked into Readarr.
 {.is-danger}
 
 ## Other Updates
