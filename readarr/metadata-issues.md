@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-12-28T18:38:15.086Z
+date: 2024-12-29T04:37:42.886Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -71,10 +71,15 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 # Metadata Server Issues
 
-## 2024-12 Issues
+## 2024-12 522 Issues
 
-> The metadata server is having issues and effectively dead in the water. The devs are aware. There is nothing feasible that can be done at this time. Please assist the community with the OpenLibrary conversion or the `sonarr-pull` Readarr github issues that need to be cherry-picked into Readarr.
-{.is-danger}
+> Resolved: As of 2024-12-28
+{.is-success}
+
+- As Of: 2024-12-13
+- Updated: 2024-12-28
+
+- The metadata server is having issues and effectively dead in the water. The devs are aware. There is nothing feasible that can be done at this time by the community for a specific metadata server issue (unrelated to Goodreads as the source). Please assist the community with the OpenLibrary conversion or the `sonarr-pull` Readarr github issues that need to be cherry-picked into Readarr.
 
 ## Other Updates
 
