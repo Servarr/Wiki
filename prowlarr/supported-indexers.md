@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2024-12-31T01:14:03.949703
+date: 2025-01-01T01:20:31.516482
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2024-12-31T01:14:03.949703
+dateCreated: 2025-01-01T01:20:31.516482
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.29.2.4907` / [Commit: 81f7a6cbab0b2bc3502377e7d00a421317677131](https://github.com/Prowlarr/Prowlarr/commit/81f7a6cbab0b2bc3502377e7d00a421317677131)
-  - [Prowlarr Indexers Commit: 98118704619f264f5ee3a91587ccabfb2f45304c](https://github.com/Prowlarr/Indexers/commit/98118704619f264f5ee3a91587ccabfb2f45304c)
+  - Prowlarr Build `1.29.2.4912` / [Commit: e01741a69e2b1291839c99c5811931ce45a4d5dd](https://github.com/Prowlarr/Prowlarr/commit/e01741a69e2b1291839c99c5811931ce45a4d5dd)
+  - [Prowlarr Indexers Commit: 7de86576ce0384ff9b558b9ff866a0ad0e22db21](https://github.com/Prowlarr/Indexers/commit/7de86576ce0384ff9b558b9ff866a0ad0e22db21)
 
 ---
 
@@ -198,13 +198,13 @@ dateCreated: 2024-12-31T01:14:03.949703
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://31december.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://01january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood (API)](https://www.sharewood.tv/){#sharewood-api}|sharewood is a Semi-Private FRENCH Torrent Tracker for GENERAL|French (France)|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
-|[SkTorrent-org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
+|[SkTorrent\.org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
