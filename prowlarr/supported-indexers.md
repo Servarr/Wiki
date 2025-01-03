@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-02T01:13:44.149396
+date: 2025-01-03T01:14:44.877153
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-02T01:13:44.149396
+dateCreated: 2025-01-03T01:14:44.877153
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.29.2.4912` / [Commit: e01741a69e2b1291839c99c5811931ce45a4d5dd](https://github.com/Prowlarr/Prowlarr/commit/e01741a69e2b1291839c99c5811931ce45a4d5dd)
-  - [Prowlarr Indexers Commit: 8bebdb9b3f9f18f1c3c3e20692327c328ff17ddd](https://github.com/Prowlarr/Indexers/commit/8bebdb9b3f9f18f1c3c3e20692327c328ff17ddd)
+  - Prowlarr Build `1.29.2.4913` / [Commit: 36f6896f30abfa54e36d226ddf3e1540fb1236b8](https://github.com/Prowlarr/Prowlarr/commit/36f6896f30abfa54e36d226ddf3e1540fb1236b8)
+  - [Prowlarr Indexers Commit: b44c5ae10853767892aecfa913a73b7b532002e0](https://github.com/Prowlarr/Indexers/commit/b44c5ae10853767892aecfa913a73b7b532002e0)
 
 ---
 
@@ -125,7 +125,7 @@ dateCreated: 2025-01-02T01:13:44.149396
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq348.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq349.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir161.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -142,7 +142,7 @@ dateCreated: 2025-01-02T01:13:44.149396
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents.sk/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents.my/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
