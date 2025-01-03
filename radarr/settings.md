@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2024-03-06T15:15:08.235Z
+date: 2025-01-03T03:39:01.266Z
 tags: radarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -819,13 +819,13 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ## List Options
 
-- (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  [This is a minimum of 6 hours.](/radarr/faq#why-are-lists-sync-times-so-long-and-can-i-change-it)
+- (Advanced Option) List Update Interval - How often should Radarr poll the list for updates? This is provider dependent as per the UI.
 - (Advanced Option) Clean Library Level - Movies in library will be removed or unmonitored if not in your list(s)
   - Disabled - Do not clean the library (Recommended)
   - Log Only - Only log the movies are not on the list(s) and take no other actions
   - Keep and Unmonitor Movie - Keep movies that are not on the list(s), but unmonitor them in Radarr.
   - Remove Movie and Keep Files - Remove movies that are not on the list(s) from Radarr, but do not delete their files
-  - Remove Movie and Delete Files - Remove movies that are not on the list(s) from Radarr and delete their files
+  - **DANGER** Remove Movie and Delete Files - Remove movies that are not on the list(s) from Radarr and delete their files
 
 ## List Exclusions
 
