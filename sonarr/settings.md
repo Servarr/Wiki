@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 published: true
-date: 2024-12-07T17:38:22.195Z
+date: 2025-01-03T03:38:08.129Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -853,7 +853,15 @@ If you download using a BitTorrent client, the process is slightly different:
 - Here you can select the <kb>+</kb> button to open a new pop up window
 - From this new window you are presented with many different options to set up your list from many different list providers. As stated before be careful when doing lists. It is highly recommended to not select the Search on add button before you're absolutely sure the list you select/setup is adding the series that you're looking for.
 - Once you've selected the list provider that you're looking to pull from (such as IMDb or Trakt) You'll be presented with a new window.
-Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
+- Most of the lists settings are fairly self explanatory, some lists require you to authenticate with the provider such as Trakt (requiring you to have an account with Trakt.tv
+
+### List Options
+
+- (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  This is provided dependent as per the UI.
+- (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at leasf one of your list(s)
+  - Disabled - Do not clean the library (Recommended)
+  - Log Only - Only log the series are not on the list(s) and take no other actions
+  - Keep and Unmonitor Series - Keep series that are not on the list(s), but unmonitor them in Sonarr.
 
 ## List Exclusions
 
