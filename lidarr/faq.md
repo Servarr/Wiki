@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2024-04-15T23:36:07.660Z
+date: 2025-01-04T17:45:57.629Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -128,7 +128,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Why can I not add a new release or artist to Lidarr?
 
-- The release is likely `unknown` type on MusicBrainz
+- Please see the [I cannot find a release in Lidarr but it is on MusicBrainz](#i-cannot-find-a release-in-Lidarr-but-it-is-on-musicbrainz) entry.
 
 ## Why can I not add a various artists album?
 
@@ -136,7 +136,7 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Why does Lidarr only show studio albums, How do I find singles or EPs?
 
-- Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist, or for your entire library by utilizing Metadata Profiles.
+- Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist or for your entire library by utilizing Metadata Profiles.
 
 ## Can I add just an album?
 
@@ -144,11 +144,11 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## Can I download single tracks?
 
-- Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
+- Unlikely, Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
 
 ## Why doesn't artist X show up in search?
 
-- Search is still a work in progress. Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
+- Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
 
 ## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
 
@@ -165,11 +165,13 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## How often do Lidarr's and MusicBrainz databases sync?
 
-- Every hour at 5 after the hour
+- Every hour at 5 after the hour.
+- Note that some Metadata server caching issues exist and require manual cache busting by a Servarr Team Member or Servarr Donatarr.
 
 ## How can I add missing artist images?
 
 - Add art to fanart.tv and wait ~7+ days for it to clear through the cache. Then refresh the metadata.
+- Fallback logic for TheAudioDB exists as a source as well.
 
 ## How can I get missing album images? (Cover Art)
 
