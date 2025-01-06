@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-04T01:13:05.417955
+date: 2025-01-06T01:17:52.528341
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-04T01:13:05.417955
+dateCreated: 2025-01-06T01:17:52.528341
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.29.2.4913` / [Commit: 36f6896f30abfa54e36d226ddf3e1540fb1236b8](https://github.com/Prowlarr/Prowlarr/commit/36f6896f30abfa54e36d226ddf3e1540fb1236b8)
-  - [Prowlarr Indexers Commit: 8803631769ca78b50a0426dd3adcf4502f1c3f09](https://github.com/Prowlarr/Indexers/commit/8803631769ca78b50a0426dd3adcf4502f1c3f09)
+  - Prowlarr Build `1.30.0.4916` / [Commit: f4d621063bf0bd9867fe24546843db34bb32f56f](https://github.com/Prowlarr/Prowlarr/commit/f4d621063bf0bd9867fe24546843db34bb32f56f)
+  - [Prowlarr Indexers Commit: 67e6293d27af539a289d9be28ff7d828313acef9](https://github.com/Prowlarr/Indexers/commit/67e6293d27af539a289d9be28ff7d828313acef9)
 
 ---
 
@@ -198,7 +198,7 @@ dateCreated: 2025-01-04T01:13:05.417955
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://04january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://06january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -310,7 +310,7 @@ dateCreated: 2025-01-04T01:13:05.417955
 |[cyanbug (大青虫)](https://cyanbug.net/){#cyanbug}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Dajiao (打胶)](https://dajiao.cyou/){#dajiao}|Dajiao (打胶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Tracker|Danish (Denmark)|
-|[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
+|[Dark-Shadow](https://dark-shadow.me/){#dark-shadow}|Dark-Shadow (D-S) is a GERMAN Private Torrent Tracker for TV / MOVIES / GENERAL|German (Germany)|
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|Desitorrents is a Private Torrent Tracker for BOLLYWOOD / TOLLYWOOD / MUSIC|English (United States)|
@@ -577,7 +577,7 @@ dateCreated: 2025-01-04T01:13:05.417955
 |[Tormac](https://tormac.org/){#tormac}|Tormac is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL for Apple products|Russian (Russia)|
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
-|[Torrent-Explosiv](https://torrent-explosiv.me/){#torrent-explosiv}|Torrent-Explosiv is a German Private site for TV / MOVIES / GENERAL|German (Germany)|
+|[Torrent-Explosiv](https://torrent-explosiv.me/){#torrent-explosiv}|Torrent-Explosiv (T-E) is a German Private Torrent Tracker for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
