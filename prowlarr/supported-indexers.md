@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-06T01:17:52.528341
+date: 2025-01-08T01:14:58.980007
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-06T01:17:52.528341
+dateCreated: 2025-01-08T01:14:58.980007
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.30.0.4916` / [Commit: f4d621063bf0bd9867fe24546843db34bb32f56f](https://github.com/Prowlarr/Prowlarr/commit/f4d621063bf0bd9867fe24546843db34bb32f56f)
-  - [Prowlarr Indexers Commit: 67e6293d27af539a289d9be28ff7d828313acef9](https://github.com/Prowlarr/Indexers/commit/67e6293d27af539a289d9be28ff7d828313acef9)
+  - Prowlarr Build `1.30.0.4918` / [Commit: 2c3621d25e1f4e67abeed6fefa160f114e5096a3](https://github.com/Prowlarr/Prowlarr/commit/2c3621d25e1f4e67abeed6fefa160f114e5096a3)
+  - [Prowlarr Indexers Commit: a231503223542263a523dc57fc6fcb0fc566f40f](https://github.com/Prowlarr/Indexers/commit/a231503223542263a523dc57fc6fcb0fc566f40f)
 
 ---
 
@@ -198,7 +198,7 @@ dateCreated: 2025-01-06T01:17:52.528341
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://06january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://08january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -358,6 +358,7 @@ dateCreated: 2025-01-06T01:17:52.528341
 |[The Geeks](https://thegeeks.click/){#thegeeks}|Technology E-Learning|English (United States)|
 |[Generation-Free (API)](https://generation-free.org/){#generationfree-api}|Generation-Free (GF-Free) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |Generic Torznab{#torznab}|A Newznab-like api for torrents|English (United States)|
+|[GGPT](https://www.gamegamept.com/){#ggpt}|GGPT is a CHINESE Private Torrent Tracker for GAMES|Chinese (China)|
 |[GigaTorrents](https://gigatorrents.ws/){#gigatorrents}|Giga Torrents is a Hungarian Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
 |[GimmePeers](https://www.gimmepeers.com/){#gimmepeers}|GimmePeers (formerly ILT) is a Paid Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Girotorrent](https://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private site for TV / MOVIES / GENERAL|Italian (Italy)|
