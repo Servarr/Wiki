@@ -371,7 +371,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 ## JDupes
 
-[Jdupes](https://github.com/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
+[Jdupes](https://codeberg.org/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
 
 > TRaSH [has a guide](https://trash-guides.info/jdupes) as well {.is-info}
 
