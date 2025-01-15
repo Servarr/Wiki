@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-12T01:21:28.402208
+date: 2025-01-15T01:13:07.144155
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-12T01:21:28.402208
+dateCreated: 2025-01-15T01:13:07.144155
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.30.0.4920` / [Commit: 547bc2e58c44ef9bdf62af7fbde4dea07f0c85c2](https://github.com/Prowlarr/Prowlarr/commit/547bc2e58c44ef9bdf62af7fbde4dea07f0c85c2)
-  - [Prowlarr Indexers Commit: da23e49b25110dd670e547d0f7f952133cf35fe1](https://github.com/Prowlarr/Indexers/commit/da23e49b25110dd670e547d0f7f952133cf35fe1)
+  - Prowlarr Build `1.30.1.4926` / [Commit: 8c2d5a404d4658d7252418c4a233244c08029b86](https://github.com/Prowlarr/Prowlarr/commit/8c2d5a404d4658d7252418c4a233244c08029b86)
+  - [Prowlarr Indexers Commit: c1d3cbfb3da21bca5eea085f6c2ab8c424f69e55](https://github.com/Prowlarr/Indexers/commit/c1d3cbfb3da21bca5eea085f6c2ab8c424f69e55)
 
 ---
 
@@ -198,7 +198,7 @@ dateCreated: 2025-01-12T01:21:28.402208
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://11january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://14january.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -414,7 +414,7 @@ dateCreated: 2025-01-12T01:21:28.402208
 |[Infire](https://infire.si/){#infire}|Infire is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Insane Tracker](https://newinsane.info/){#insanetracker}|Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[IPTorrents](https://iptorrents.com/){#iptorrents}|IPTorrents (IPT) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
-|[IrishTV](http://irishtv.xyz/){#irishtv}|IrishTV (ITV) is an IRISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[IrishTV](https://irishtv.xyz/){#irishtv}|IrishTV (ITV) is an IRISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[JME-REUNIT3D (API)](https://jme-reunit3d.de/){#jme-reunit3d-api}|JME-REUNIT3D is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[JoyHD](https://www.joyhd.net/){#joyhd}|JoyHD (JHD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
@@ -548,7 +548,7 @@ dateCreated: 2025-01-12T01:21:28.402208
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|A general italian tracker|Italian (Italy)|
 |[Shazbat](https://www.shazbat.tv/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
 |[The Show](https://theshow.click/){#theshow}|Entertainment E-Learning|English (United States)|
-|[SiamBIT](https://bearbit.co/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
+|[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[SoulVoice (聆音Club)](https://pt.soulvoice.club/){#soulvoice}|SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
