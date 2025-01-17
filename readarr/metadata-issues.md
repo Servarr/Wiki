@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2024-12-29T04:37:42.886Z
+date: 2025-01-17T20:33:05.191Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -28,27 +28,30 @@ For the latest updates please refer to the pinned messages in the [Readarr Disco
 
 Due to continuous GoodReads issues - work has begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moveing.  If you wish to assist with this - please visit us on Discord, acquire the Tester role and meet us in the appropiate channel.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
 
-Per the community user:
-
-> for anyone coming here for the first time, what needs to be done has mostly been laid out in the [GitHub issues of the repo](https://github.com/Saghen/open-library-proxy/issues)
-{.is-info}
-
-> The replacement metadata server is close to completion which should resolve the issue for everyone in the meantime. If you're referring to switching to book-based instead of author-based, I don't think that's blocking.
-{.is-info}
-
-> I'm currently finishing the ID mapping within an acceptable tolerance to me, and then I'm going to add in series and language data, and then work on a metadata server and test it with my docker Readarr installation. I want to end up with a server that can perform search and send the data, using OL as a source and keeping itself up-to-date, it needs to not break an existing installation and allow adding recent books since existing metadata server is months behind
-{.is-info}
-
-> In essence, I am promising to delivery a functional metadata server that works and fulfils the criteria I outlined above, and an easy way for people to test it on their Readarr installations. If the Servarr project wants to take that code and run it as the official server, cool, but that's not my decision and won't affect me if they don't since I'm running my own metadata server regardless
-{.is-info}
-
-Per the Servarr Team:
-
 > Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
 {.is-info}
 
 > We are expecting the new meta to be able to take GR IDs and translate, so the readarr code changes should be minimal at first (I would rather confirm it's working before looking at the client migration), but yes pretty much spot on. The expectation is that it doesn't break anyones existing Readarr in the process and it will fully function.
 {.is-info}
+
+#### Community Container
+
+> These are unofficial repositories and not official nor endorsed by the Servarr Team use at your own risk
+{.is-danger}
+
+1. https://github.com/santarrsgrotto/readarr-docker - a Docker compose setup for running Readarr with the custom metadata server, which if you just want to help test on the client side then feel free to {Instructions Removed - Please visit discord for details}
+
+1. https://github.com/santarrsgrotto/readarr-server - A full metadata server designed for use with a PostgreSQL database containing Open Library data, based on Saghen's work. To use this you will need to install the prerequisites first. This is very much still alpha quality, it should broadly speaking work and has a level of ratings and series support and a full text search, but it needs lots of testing.
+
+1. https://github.com/santarrsgrotto/mapping - A mapping of Goodreads IDs to Open Library IDs in CSV format as well as some scripts to load said CSVs into the same database as the Open Library data. This repository is ~750 MB so please don't clone it unless you're fully committed to helping on the server side of this since GitHub has bandwidth restrictions. This mapping is also not complete yet, and I will be making updates.
+
+#### Current Status
+
+A proof-of-concept container has been created and initial integration is ongoing.  It's been identified the main next outstanding steps are
+
+  1. continuing OL to GR mapping
+  1. updating, enhancing, and cleaning up OpenLibrary Metadata
+  1. Implementing the metadata using the recent changes endpoint and applying them from OL
 
 ### Why can we not just use OpenLibrary Directly?
 
