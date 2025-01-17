@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2025-01-17T20:33:05.191Z
+date: 2025-01-17T20:50:31.855Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -55,7 +55,7 @@ A proof-of-concept container has been created and initial integration is ongoing
 
 ### Why can we not just use OpenLibrary Directly?
 
-- As per their docs you are not allowed to do that, that’s why they provide data dumps.
+- Due to the large amount of data readarr uses, the dump is providing the base of the data in the BookInfo metadata service to cache it.
 
 ### Why can we not just use the Metadata Provider Directly or use a user selectable provider?
 
