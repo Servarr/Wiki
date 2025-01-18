@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-01-18T23:42:55.566Z
+date: 2025-01-18T23:47:00.651Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -39,6 +39,7 @@ After completing the installation, Lidarr needs to be restarted for the plugin t
 
 ## Plugins
 
+Both plugins and this documentation are community-driven. There are no official recommendations at this time, and each plugin is supported by its developer.
 
 ### codefaux/deemix-for-lidarr
 
