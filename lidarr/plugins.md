@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-01-18T16:31:41.474Z
+date: 2025-01-18T16:38:24.986Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -37,15 +37,16 @@ After completing the installation, Lidarr needs to be restarted for the plugin t
 > Plugin updates do not occur automatically 
 {.is-info}
 
-## Supported Plugins
+## Plugins
 
-(blerb about plugins)
 
 ### Deemix
 
-TBD
+https://github.com/codefaux/deemix-for-lidarr/
 
 ### Slskd
+
+https://github.com/allquiet-hub/Lidarr.Plugin.Slskd
 
 #### Prerequisites 
 This plugin enables Lidarr to search Soulseek using Slskd. You must have a working Lidarr installation from the plugins branch and a working Slskd installation to use this plugin.
@@ -76,13 +77,17 @@ To search, Slskd must also be added as an Indexer.
 
 #### Delay Profile
 
-
+WIP
 
 ### Verification
 
-TBD
+WIP
 
 ### Tidal
 
-TBD
+https://github.com/TrevTV/Lidarr.Plugin.Tidal
+
+### Qobuz
+
+https://github.com/TrevTV/Lidarr.Plugin.Qobuz
 
