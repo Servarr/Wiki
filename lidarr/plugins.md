@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-01-18T16:26:19.877Z
+date: 2025-01-18T16:31:41.474Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -43,6 +43,46 @@ After completing the installation, Lidarr needs to be restarted for the plugin t
 
 ### Deemix
 
+TBD
+
 ### Slskd
 
+#### Prerequisites 
+This plugin enables Lidarr to search Soulseek using Slskd. You must have a working Lidarr installation from the plugins branch and a working Slskd installation to use this plugin.
+
+To generate the Api Key necessary for the communication to the Slskd app follow the steps here:
+https://github.com/slskd/slskd/blob/master/docs/config.md#authentication
+
+#### Configuration
+
+##### Download Client
+
+Once the plugin is installed, Slskd can be added as a download client. 
+- Navigate to `/settings/downloadclients`, and select the plus button under Download clients. Slskd will appear at the bottom under the Other section.
+- Enter the correct hostname.
+- Enter the API key
+- Select the Test button.
+- If the Test returns a green checkmark, select Save.
+
+#### Indexer
+
+To search, Slskd must also be added as an Indexer. 
+- Navigate to `/settings/indexers`, and select the plus button under Indexers. Slskd will appear at the bottom under the Other section.
+- Enter the correct URL.
+- Enter the API key
+- Select the Test button.
+  - The Indexer test will send a test search to slskd for "Silent Partner Chances".
+- If the Test returns a green checkmark, select Save.
+
+#### Delay Profile
+
+
+
+### Verification
+
+TBD
+
 ### Tidal
+
+TBD
+
