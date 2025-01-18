@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-01-18T16:38:24.986Z
+date: 2025-01-18T23:42:55.566Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -40,11 +40,11 @@ After completing the installation, Lidarr needs to be restarted for the plugin t
 ## Plugins
 
 
-### Deemix
+### codefaux/deemix-for-lidarr
 
 https://github.com/codefaux/deemix-for-lidarr/
 
-### Slskd
+### allquiet-hub/Lidarr.Plugin.Slskd
 
 https://github.com/allquiet-hub/Lidarr.Plugin.Slskd
 
@@ -79,15 +79,23 @@ To search, Slskd must also be added as an Indexer.
 
 WIP
 
-### Verification
+#### Verification
 
 WIP
 
-### Tidal
+### lucapolesel/Lidarr.Plugin.Slskd
+
+https://github.com/lucapolesel/Lidarr.Plugin.Slskd
+
+### TrevTV/Lidarr.Plugin.Tidal
 
 https://github.com/TrevTV/Lidarr.Plugin.Tidal
 
-### Qobuz
+### TrevTV/Lidarr.Plugin.Qobuz
 
 https://github.com/TrevTV/Lidarr.Plugin.Qobuz
+
+### TypNull/Tubifarry
+
+https://github.com/TypNull/Tubifarry
 
