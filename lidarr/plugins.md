@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-01-19T00:12:39.421Z
+date: 2025-01-19T13:35:45.004Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -42,28 +42,28 @@ After completing the installation, Lidarr needs to be restarted for the plugin t
 > Plugin updates do not occur automatically 
 {.is-info}
 
-## Plugins
+# Plugins
 
 > Both plugins and this documentation are community-driven. There are no official recommendations at this time, and each plugin is supported by its developer.
 {.is-info}
 
-### codefaux/deemix-for-lidarr
+## codefaux/deemix-for-lidarr
 
 [Deemix for Lidarr by Codefaux](https://github.com/codefaux/deemix-for-lidarr/)
 
-### allquiet-hub/Lidarr.Plugin.Slskd
+## allquiet-hub/Lidarr.Plugin.Slskd
 
 [Slskd (Soulseek) by Allquiet](https://github.com/allquiet-hub/Lidarr.Plugin.Slskd)
 
-#### Prerequisites 
+### Prerequisites 
 
 This plugin enables Lidarr to search Soulseek using Slskd. You must have a working Lidarr installation from the plugins branch and a working Slskd installation to use this plugin.
 
 To generate the Api Key necessary for the communication to the Slskd app follow the steps [here on the developer's respository](https://github.com/slskd/slskd/blob/master/docs/config.md#authentication)
 
-#### Configuration
+### Configuration
 
-##### Download Client
+#### Download Client
 
 Once the plugin is installed, Slskd can be added as a download client. 
 - Navigate to `/settings/downloadclients`, and select the <kb>+</kb> button under Download clients. Slskd will appear at the bottom under the Other section.
@@ -72,7 +72,7 @@ Once the plugin is installed, Slskd can be added as a download client.
 - Select the Test button.
 - If the Test returns a green checkmark, select Save.
 
-#### Indexer
+### Indexer
 
 To search, Slskd must also be added as an Indexer. 
 - Navigate to `/settings/indexers`, and select the <kb>+</kb> button under Indexers. Slskd will appear at the bottom under the Other section.
@@ -82,27 +82,27 @@ To search, Slskd must also be added as an Indexer.
   - The Indexer test will send a test search to slskd for "Silent Partner Chances".
 - If the Test returns a green checkmark, select Save.
 
-#### Delay Profile
+### Delay Profile
 
 WIP - Contributions welcomed
 
-#### Verification
+### Verification
 
 WIP - Contributions welcomed
 
-### lucapolesel/Lidarr.Plugin.Slskd
+## lucapolesel/Lidarr.Plugin.Slskd
 
 [Slskd (Soulseek) by lucapolesel](https://github.com/lucapolesel/Lidarr.Plugin.Slskd)
 
-### TrevTV/Lidarr.Plugin.Tidal
+## TrevTV/Lidarr.Plugin.Tidal
 
 [Tidal by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Tidal)
 
-### TrevTV/Lidarr.Plugin.Qobuz
+## TrevTV/Lidarr.Plugin.Qobuz
 
 [Qobuz by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Qobuz)
 
-### TypNull/Tubifarry
+## TypNull/Tubifarry
 
 [Tubifarry by TypeNull](https://github.com/TypNull/Tubifarry)
 
