@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: 
 published: true
-date: 2025-01-19T14:12:42.752Z
+date: 2025-01-19T14:15:07.301Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -10,13 +10,12 @@ dateCreated: 2021-06-14T21:36:46.193Z
 
 # Asking for Help
 
-Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on
+Need help? That's okay; everyone needs assistance sometimes. You can get real-time help via chat on Discord.
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Lidarr Discord*](https://lidarr.audio/discord)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Lidarr Subreddit*](https://reddit.com/r/lidarr)
 {.links-list}
 
-But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Lidarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+Before posting, ensure your request for help is clear. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Lidarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
