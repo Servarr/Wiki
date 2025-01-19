@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes
 published: true
-date: 2024-04-06T13:12:03.956Z
+date: 2025-01-19T13:58:52.935Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -89,18 +89,18 @@ Adding the artist disambiguation is needed when MusicBrainz has two similar arti
 
 ## JasonVelocity's Naming Convention
 
-This naming convention works well with Plex and is useful as a workaround when an artist has multiple release groups with the same name. Jason runs Lidarr using Docker on WSL.
+This naming convention is effective with Plex and serves as a workaround for artists with multiple release groups sharing the same name and year.
 
 ### Standard Track Format
 
 ```jinja
-{Album Type}/{Album CleanTitle}{ (Album Disambiguation)}/{track:00} - {Track CleanTitle}
+{Album Type}/({Release Year}) {Album CleanTitle}{ (Album Disambiguation)}/{track:00} - {Track ArtistCleanNameThe} - {Album CleanTitle} - {Track CleanTitle}
 ```
 
 ### Multi Disc Track Format
 
 ```jinja
-{Album Type}/{Album CleanTitle}{ (Album Disambiguation)}/{medium:00}{track:00} - {Track CleanTitle}
+{Album Type}/({Release Year}) {Album CleanTitle}{ (Album Disambiguation)}/{medium:00}{track:00} - {Track ArtistCleanNameThe} - {Album CleanTitle} - {Track CleanTitle}
 ```
 
 ### Artist Folder Format
