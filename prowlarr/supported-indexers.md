@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-18T01:10:34.049984
+date: 2025-01-19T01:17:53.375681
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-18T01:10:34.049984
+dateCreated: 2025-01-19T01:17:53.375681
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.30.1.4928` / [Commit: 6eb21a02a1caff10e583b64bfaa6b3125be11eb2](https://github.com/Prowlarr/Prowlarr/commit/6eb21a02a1caff10e583b64bfaa6b3125be11eb2)
-  - [Prowlarr Indexers Commit: 5f14887d57dd45f03a20a47e27113e25042c5a63](https://github.com/Prowlarr/Indexers/commit/5f14887d57dd45f03a20a47e27113e25042c5a63)
+  - [Prowlarr Indexers Commit: 1f8906e473a2bf4625219e76884cdfa50f98c2d3](https://github.com/Prowlarr/Indexers/commit/1f8906e473a2bf4625219e76884cdfa50f98c2d3)
 
 ---
 
@@ -104,7 +104,7 @@ dateCreated: 2025-01-18T01:10:34.049984
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |[SimpleAnime](https://www.36dm.org/){#simpleanime}|SimpleAnime is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
-|[Solid Torrents](https://solidtorrents.eu/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
+|[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
 |[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern Asian media including anime, manga, games and JAV|English (United States)|
@@ -196,7 +196,7 @@ dateCreated: 2025-01-18T01:10:34.049984
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://17jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://18jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
