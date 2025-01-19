@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-01-19T13:35:45.004Z
+date: 2025-01-19T13:53:25.305Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -84,11 +84,13 @@ To search, Slskd must also be added as an Indexer.
 
 ### Delay Profile
 
-WIP - Contributions welcomed
+- Navigate to `settings/profiles` and scroll down to Delay Profiles
+- Select the wrench icon on the right side of the profile you wish to use slskd with. Most installations will only have a Default profile. 
+- Select the Slskd protocol, and select Save.
 
 ### Verification
 
-WIP - Contributions welcomed
+Slskd is now available for both automatic and interactive searches. During Lidarr search operations you can view the slskd `/searches` as they occur and monitor `/downloads`.
 
 ## lucapolesel/Lidarr.Plugin.Slskd
 
