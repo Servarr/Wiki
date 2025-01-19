@@ -2,10 +2,12 @@
 title: Lidarr Calendar
 description: 
 published: true
-date: 2021-07-31T14:58:53.766Z
+date: 2025-01-19T14:06:02.291Z
 tags: lidarr, needs-love, calendar
 editor: markdown
 dateCreated: 2021-06-14T21:35:03.094Z
 ---
 
-The calendar page shows future (by week) album releases by any of the artists in your library.
+# Calendar
+
+The calendar page displays album releases from artists in your library. Each release will be color-coded according to your configured monitoring settings.
