@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-21T01:12:34.680841
+date: 2025-01-22T01:14:14.862028
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-21T01:12:34.680841
+dateCreated: 2025-01-22T01:14:14.862028
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.30.2.4931` / [Commit: ed5120811677961e273c7ad81eb79e70a02f3083](https://github.com/Prowlarr/Prowlarr/commit/ed5120811677961e273c7ad81eb79e70a02f3083)
-  - [Prowlarr Indexers Commit: fc3e5beb1c21f03893b3725b6675ce5647cfdb79](https://github.com/Prowlarr/Indexers/commit/fc3e5beb1c21f03893b3725b6675ce5647cfdb79)
+  - [Prowlarr Indexers Commit: 623c6f52bbaeb75bc4f796e77a069c18db41f0b0](https://github.com/Prowlarr/Indexers/commit/623c6f52bbaeb75bc4f796e77a069c18db41f0b0)
 
 ---
 
@@ -78,7 +78,6 @@ dateCreated: 2025-01-21T01:12:34.680841
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
 |[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|Spanish (Spain)|
 |[MyPornClub](https://myporn.club/){#mypornclub}|MyPornClub is a Public Torrent Tracker for 3X|English (United States)|
-|[Myporno](https://myporno.top/){#myporno}|Myporno is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from Japan|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|Russian (Russia)|
@@ -196,7 +195,7 @@ dateCreated: 2025-01-21T01:12:34.680841
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://21jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://22jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -371,7 +370,6 @@ dateCreated: 2025-01-21T01:12:34.680841
 |[HD-Space](https://hd-space.org/){#hdspace}|HD-Space is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[HD-Torrents](https://hdts.ru/){#hd-torrents}|HD-Torrents is a private torrent website with HD torrents and strict rules on their content|English (United States)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
-|[HD4FANS](https://pt.hd4fans.org/){#hd4fans}|HD4FANS is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDArea](https://hdarea.club/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDAtmos](https://hdatmos.club/){#hdatmos}|HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDBits](https://hdbits.org/){#hdbits}|Best HD Tracker|English (United States)|
