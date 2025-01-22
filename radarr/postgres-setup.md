@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2023-10-30T15:05:11.461Z
+date: 2025-01-22T18:46:08.399Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -89,12 +89,12 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
-```SQL
-DELETE FROM "QualityProfiles";
-DELETE FROM "QualityDefinitions";
-DELETE FROM "DelayProfiles";
-DELETE FROM "Metadata";
-```
+	```SQL
+	DELETE FROM "QualityProfiles";
+	DELETE FROM "QualityDefinitions";
+	DELETE FROM "DelayProfiles";
+	DELETE FROM "Metadata";
+	```
 
 1. Start the migration by using either of these options:
 
@@ -112,7 +112,7 @@ DELETE FROM "Metadata";
     > With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
     {.is-info}
 
-2. For those having the issues POST-MIGRATION from SQLite run the following:
+1. For those having the issues POST-MIGRATION from SQLite run the following:
 
     ```postgres
     select setval('public."MovieFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MovieFiles"));
