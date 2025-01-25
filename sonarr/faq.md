@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2025-01-25T13:32:43.892Z
+date: 2025-01-25T13:43:22.908Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -694,11 +694,13 @@ First, make sure you read and understand the section above called ["How does Son
 
 - In your download client, set it to Pause or Stop on completion of meeting goals. You should not set goals in your download client, just the option to Pause or Stop (in qbit, you have to check a box for ratio or time, change the setting, and then uncheck the box again).
 
-- In each indexer in Settings -> Indexers, set a Seed Ratio and/or Seed Time (this is an advanced option). You must use reasonable times/ratios, and if you are seeding for less than a 1.0x ratio, that is being a bad torrent citizen and you will not get support help on the Sonarr discord. The settings you choose here are "first to meet one of the goals".
+- In each indexer in Settings -> Indexers, set a Seed Ratio and/or Seed Time (this is an advanced option). The settings you choose here are "first to meet one of the goals". Note that if you use Prowlarr on Full Sync, you want to set those goals there instead, or they will be overwritten on the next sync.
 
 - Note that time or ratio settings here are set On Grab. They do not impact torrents you already have in your download client. They also do not work with a post-import category setting.
 
 - Some torrent clients do not have this ability. See [settings#torrent-client-remove-download-compatibility](this page) for details for your client.
+
+- Setting extremely low seed times or ratios will not work, and is also poor torrent etiquette. You should **always** seed to at least a 1.0x ratio, or a couple of hours, for public trackers and whatever the requirements are for private trackers (plus a little buffer, because the way your download client calculates time and ratio is slightly different than your private tracker, and you don't want a hit and run for being a few minutes short of your requirement). Seeding for less than 1.0x ratio will mean that we will not provide you support in discord.
 
 
 
