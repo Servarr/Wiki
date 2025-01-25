@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2025-01-25T13:30:16.240Z
+date: 2025-01-25T13:32:43.892Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -698,7 +698,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 - Note that time or ratio settings here are set On Grab. They do not impact torrents you already have in your download client. They also do not work with a post-import category setting.
 
-- Some torrent clients do not have this ability. See this page[settings#torrent-client-remove-download-compatibility](/sonarr/settings#torrent-client-remove-download-compatibility) for details for your client.
+- Some torrent clients do not have this ability. See [settings#torrent-client-remove-download-compatibility](this page) for details for your client.
 
 
 
