@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2024-08-24T21:23:51.690Z
+date: 2025-01-25T16:15:34.050Z
 tags: radarr, needs-love, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -403,6 +403,12 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
   - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Radarr.
   - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 - The other setting that can be changed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
+
+## Found matching movie via grab history, but release was matched to movie by ID. Manual Import required.
+
+When you this error, it is because Radarr asked your indexer for a tmdbid or imdbid, and your indexer returned this movie. However, the movie name is not an exact match for the movie in Radarr, so it will require you to validate that it's actually the thing you want and manually import it.
+
+This could be because your indexer poorly matched it, or the uploader didn't name it quite right. If it's the wrong movie, you should report this bad match to the indexer the release was grabbed from.
 
 ## How do I request a feature for Radarr?
 
