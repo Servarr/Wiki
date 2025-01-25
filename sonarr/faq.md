@@ -2,7 +2,7 @@
 title: Sonarr FAQ
 description: 
 published: true
-date: 2024-12-14T18:36:04.530Z
+date: 2025-01-25T13:30:16.240Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
@@ -687,3 +687,19 @@ First, make sure you read and understand the section above called ["How does Son
 ## Forced Authentication
 
 - In Sonarr v4 (beta) authentication is mandatory. Please see the [Sonarr v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) for details
+
+## Removing Completed Torrents
+
+- In Sonarr in Settings -> Download Clients, in each download client, check the box to Remove Completed.
+
+- In your download client, set it to Pause or Stop on completion of meeting goals. You should not set goals in your download client, just the option to Pause or Stop (in qbit, you have to check a box for ratio or time, change the setting, and then uncheck the box again).
+
+- In each indexer in Settings -> Indexers, set a Seed Ratio and/or Seed Time (this is an advanced option). You must use reasonable times/ratios, and if you are seeding for less than a 1.0x ratio, that is being a bad torrent citizen and you will not get support help on the Sonarr discord. The settings you choose here are "first to meet one of the goals".
+
+- Note that time or ratio settings here are set On Grab. They do not impact torrents you already have in your download client. They also do not work with a post-import category setting.
+
+- Some torrent clients do not have this ability. See this page[settings#torrent-client-remove-download-compatibility](/sonarr/settings#torrent-client-remove-download-compatibility) for details for your client.
+
+
+
+
