@@ -77,7 +77,8 @@ Once the plugin is installed, Slskd can be added as a download client.
 To search, Slskd must also be added as an Indexer. 
 - Navigate to `/settings/indexers`, and select the <kb>+</kb> button under Indexers. Slskd will appear at the bottom under the Other section.
 - Enter the correct URL.
-- Enter the API key
+- Enter the API key.
+- Enter a '0' (Key) and your Soulseek username (Value) for 'Ignored Users'.
 - Select the Test button.
   - The Indexer test will send a test search to slskd for "Silent Partner Chances".
 - If the Test returns a green checkmark, select Save.
