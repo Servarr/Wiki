@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-26T01:15:03.153891
+date: 2025-01-29T01:12:37.311140
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-26T01:15:03.153891
+dateCreated: 2025-01-29T01:12:37.311140
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.31.0.4940` / [Commit: f0540a5f8b95a6fac68166947aeb6c07214870e7](https://github.com/Prowlarr/Prowlarr/commit/f0540a5f8b95a6fac68166947aeb6c07214870e7)
-  - [Prowlarr Indexers Commit: c46c6faa9e6bc9ad7f22ea65536c72b6ba2d4b9a](https://github.com/Prowlarr/Indexers/commit/c46c6faa9e6bc9ad7f22ea65536c72b6ba2d4b9a)
+  - [Prowlarr Indexers Commit: 19ec64a6ef4bb2d06b8dd95a143b18adab99849d](https://github.com/Prowlarr/Indexers/commit/19ec64a6ef4bb2d06b8dd95a143b18adab99849d)
 
 ---
 
@@ -31,6 +31,7 @@ dateCreated: 2025-01-26T01:15:03.153891
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced on russian by AniLibria team|Russian (Russia)|
+|[Anime Time](https://animetime.cc/){#anime-time}|Anime Time is a Public Torrent Tracker for ANIME|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
 |[Badass Torrents](https://badasstorrents.com/){#badasstorrents}|Badass Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
@@ -55,7 +56,7 @@ dateCreated: 2025-01-26T01:15:03.153891
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.app/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.cz/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www.gktorrent.cv/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
@@ -146,6 +147,7 @@ dateCreated: 2025-01-26T01:15:03.153891
 |Indexer|Description|Language|
 |:--|:--|:--|
 |[Anidub](https://tr.anidub.com/){#anidub}|Anidub is RUSSIAN anime voiceover group and eponymous anime tracker|Russian (Russia)|
+|[Anime TimeL](https://animetime.cc/){#anime-timel}|This is the Anime Time indexer with Login enabled in the config to include NSFW content|English (United States)|
 |[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
 |[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Best-Torrents](https://best-torrents.com/){#best-torrents}|Best-Torrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -195,7 +197,7 @@ dateCreated: 2025-01-26T01:15:03.153891
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://26jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://28jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -418,6 +420,7 @@ dateCreated: 2025-01-26T01:15:03.153891
 |[Karagarga](https://karagarga.in/){#karagarga}|Karagarga tracks non-hollywood, rare and obscure movies, music and literature|English (United States)|
 |[Keep Friends](https://pt.keepfrds.com/){#keepfriends}|Keep Friends is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[Kelu](https://our.kelu.one/){#kelu}|Kelu is a CHINESE Private Torrent Tracker for GAY 3X|Chinese (China)|
+|[The Kitchen](https://thekitchen.click/){#thekitchen}|TheKitchen (TK) is a Private Torrent Tracker for Cooking / Cuisines / Recipes|English (United States)|
 |[Korsar](http://filbi1976.org/){#korsar}|Korsar is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
