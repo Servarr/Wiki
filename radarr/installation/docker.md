@@ -18,7 +18,7 @@ Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info
 
 ## Portainer
 
-> **Portainer should be avoided for setting up docker containers** {.is-danger}
+Some users have reported issues using Portainer, many users use it without issue. If you are familiar with the tool already there are no documented issues; however, users have reported the following:
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
 - Portainer should only for viewing docker container logs / container status.
