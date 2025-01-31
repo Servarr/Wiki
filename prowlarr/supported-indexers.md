@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-01-30T01:11:53.927280
+date: 2025-01-31T01:12:57.051167
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-01-30T01:11:53.927280
+dateCreated: 2025-01-31T01:12:57.051167
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.31.0.4941` / [Commit: 22834a852a4643b00fe98b7ee1550d129a03f710](https://github.com/Prowlarr/Prowlarr/commit/22834a852a4643b00fe98b7ee1550d129a03f710)
-  - [Prowlarr Indexers Commit: fd6d5fc64dd393120a26e307c4f85acf09d501c4](https://github.com/Prowlarr/Indexers/commit/fd6d5fc64dd393120a26e307c4f85acf09d501c4)
+  - [Prowlarr Indexers Commit: b9b532d67fc58881c99faab1896aa20ecd088760](https://github.com/Prowlarr/Indexers/commit/b9b532d67fc58881c99faab1896aa20ecd088760)
 
 ---
 
@@ -54,7 +54,6 @@ dateCreated: 2025-01-30T01:11:53.927280
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
-|[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.app/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[GkTorrent](https://www.gktorrent.cv/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -103,7 +102,6 @@ dateCreated: 2025-01-30T01:11:53.927280
 |[Shana Project](https://www.shanaproject.com/){#shanaproject}|Shana Project is a Public torrent site for ANIME|English (United States)|
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
-|[SimpleAnime](https://www.36dm.org/){#simpleanime}|SimpleAnime is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
 |[Solid Torrents](https://solidtorrents.to/){#solidtorrents}|Solid Torrents is a Public torrent meta-search engine|English (United States)|
 |[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
@@ -123,7 +121,7 @@ dateCreated: 2025-01-30T01:11:53.927280
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq352.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq353.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir164.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -197,7 +195,7 @@ dateCreated: 2025-01-30T01:11:53.927280
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://29jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://31jan.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -432,7 +430,6 @@ dateCreated: 2025-01-30T01:11:53.927280
 |[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
-|[leech24 (API)](https://leech24.net/){#leech24-api}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LemonHD](https://lemonhd.club/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[LeSaloon](https://lesaloonv2-0.lol/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
