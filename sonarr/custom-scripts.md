@@ -117,7 +117,7 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_episodefile_id`                 | Internal ID of the episode file                                                  |
 | `sonarr_episodefile_episodecount`       | Number of episodes in the file                                                   |
 | `sonarr_episodefile_relativepath`       | Path to the episode file, relative to the series' path                           |
-| `sonarr_episodefile_path`               | Full path to the episode file                                                    |
+| `sonarr_episodefile_paths`              | Full path to the episode file                                                    |
 | `sonarr_episodefile_episodeids`         | Internal ID(s) of the episode file                                               |
 | `sonarr_episodefile_seasonnumber`       | Season number of episode file                                                    |
 | `sonarr_episodefile_episodenumbers`     | Comma-delimited list of episode numbers                                          |
