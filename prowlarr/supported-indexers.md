@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-02T01:16:25.868916
+date: 2025-02-04T01:13:09.930492
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-02T01:16:25.868916
+dateCreated: 2025-02-04T01:13:09.930492
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.31.0.4941` / [Commit: 22834a852a4643b00fe98b7ee1550d129a03f710](https://github.com/Prowlarr/Prowlarr/commit/22834a852a4643b00fe98b7ee1550d129a03f710)
-  - [Prowlarr Indexers Commit: e74480295939a07a1eb9b255241601b434b0a2b0](https://github.com/Prowlarr/Indexers/commit/e74480295939a07a1eb9b255241601b434b0a2b0)
+  - Prowlarr Build `1.31.1.4950` / [Commit: 12ff612775605de1b9fa33f62b89887819d08e82](https://github.com/Prowlarr/Prowlarr/commit/12ff612775605de1b9fa33f62b89887819d08e82)
+  - [Prowlarr Indexers Commit: 3328c4a6d3edacb80ad18f2a3c79b0c857900228](https://github.com/Prowlarr/Indexers/commit/3328c4a6d3edacb80ad18f2a3c79b0c857900228)
 
 ---
 
@@ -115,7 +115,7 @@ dateCreated: 2025-02-02T01:16:25.868916
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
 |[Torrent9](https://ww1.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
-|[Torrent9-tel](https://www.torrent9.men/){#torrent9-tel}|Torrent9-tel is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
+|[Torrent9-tel](https://www-torrent9.com/){#torrent9-tel}|Torrent9-tel is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
@@ -195,7 +195,7 @@ dateCreated: 2025-02-02T01:16:25.868916
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://02feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://04feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -379,7 +379,6 @@ dateCreated: 2025-02-02T01:16:25.868916
 |[HDFun](https://hdzone.me/){#hdfun}|HDFun (HDZone) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDKylin (麒麟)](https://na.hdkylin.com/){#hdkylin}|HDKylin (麒麟) is a Private CHINESE tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[HDPT (明教)](https://hdpt.xyz/){#hdpt}|HDPT (明教) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDT-LaFenice](https://hdtlafenice.eu/){#hdt-lafenice}|HDT-LaFenice is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
