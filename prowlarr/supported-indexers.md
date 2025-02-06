@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-05T01:14:07.947909
+date: 2025-02-06T01:14:10.246822
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-05T01:14:07.947909
+dateCreated: 2025-02-06T01:14:10.246822
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.31.1.4950` / [Commit: 12ff612775605de1b9fa33f62b89887819d08e82](https://github.com/Prowlarr/Prowlarr/commit/12ff612775605de1b9fa33f62b89887819d08e82)
-  - [Prowlarr Indexers Commit: a44e81879217264dee7b4a32a3471db6506a1c4c](https://github.com/Prowlarr/Indexers/commit/a44e81879217264dee7b4a32a3471db6506a1c4c)
+  - Prowlarr Build `1.31.1.4956` / [Commit: 147e732c9ca7a4c289d4f6386f1277650e11f15b](https://github.com/Prowlarr/Prowlarr/commit/147e732c9ca7a4c289d4f6386f1277650e11f15b)
+  - [Prowlarr Indexers Commit: 8daf4c88bbb3e07a49731220e1550e1a89373c06](https://github.com/Prowlarr/Indexers/commit/8daf4c88bbb3e07a49731220e1550e1a89373c06)
 
 ---
 
@@ -121,9 +121,9 @@ dateCreated: 2025-02-05T01:14:07.947909
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq353.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq354.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir164.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir165.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -195,7 +195,7 @@ dateCreated: 2025-02-05T01:14:07.947909
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://05feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://06feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -518,6 +518,7 @@ dateCreated: 2025-02-05T01:14:07.947909
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private site for MOVIES / TV / GENERAL|English (United States)|
 |[Racing4Everyone (API)](https://racing4everyone.eu/){#racing4everyone-api}|Racing4Everyone (R4E) is a Private Torrent Tracker for RACING|English (United States)|
 |[RacingForMe](https://www.racingfor.me/){#racingforme}|Racing For Me (RFM) is a Private Torrent Tracker for RACING|English (United States)|
+|[Rain (雨)](https://raingfh.top/){#rain}|Rain (雨) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RareShare2 (API)](https://rareshare2.me/){#rareshare2}|RareShare2 is a Private Torrent Tracker for TV|English (United States)|
 |[Red Leaves (红叶)](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for TV|Polish (Poland)|
