@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-02-07T17:13:29.084Z
+date: 2025-02-07T17:14:25.363Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
