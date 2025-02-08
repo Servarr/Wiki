@@ -327,14 +327,14 @@ Here you will set the naming convention for the folder that contains the season 
 
 Movies may have extra files associated with it: subtitles, metadata, or other files such as artwork.
 Extra files can be [imported](#importing) automatically when a movie is imported.
-If a movie is upgraded, usually due to a [quality profile](#quality-profiles), you can decide whether or not to delete extra files along with the movie file that will be upgraded.
+If a movie is upgraded you can decide whether or not to delete extra files along with the movie file that will be upgraded.
 The configuration of each file type can be controlled separately:
 
 - Keep subtitles files
 - Keep metadata files
 - Keep other files
 
-> Renaming a movie file outside of Radarr **cannot** be handled like an upgrade, extras will be deleted in such cases. If external programs might rename movie files in your library, configure a [recycling bin folder](#file-management) to be safe.{.is-warning}
+> Renaming a movie file outside of Radarr **cannot** be handled like an upgrade and extras will be deleted in such cases. If external programs may rename or otherwise modify movie files in your library, configure a [recycling bin folder](#file-management) to be safe.{.is-warning}
 
 ## Permissions
 
