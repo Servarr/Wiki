@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-09T01:17:38.989850
+date: 2025-02-10T01:15:09.503328
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-09T01:17:38.989850
+dateCreated: 2025-02-10T01:15:09.503328
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.31.1.4959` / [Commit: e101129cff942dd7156657627347b6a00b1c1579](https://github.com/Prowlarr/Prowlarr/commit/e101129cff942dd7156657627347b6a00b1c1579)
-  - [Prowlarr Indexers Commit: 70c13137f2a0f201b6d13332e8743655abaa68ca](https://github.com/Prowlarr/Indexers/commit/70c13137f2a0f201b6d13332e8743655abaa68ca)
+  - Prowlarr Build `1.31.2.4960` / [Commit: 4df8fc02f1720cac683bc747b244360f0cf2dc2b](https://github.com/Prowlarr/Prowlarr/commit/4df8fc02f1720cac683bc747b244360f0cf2dc2b)
+  - [Prowlarr Indexers Commit: 9ed9b6dbabca78cc7604dc8589f916914970da00](https://github.com/Prowlarr/Indexers/commit/9ed9b6dbabca78cc7604dc8589f916914970da00)
 
 ---
 
@@ -40,7 +40,7 @@ dateCreated: 2025-02-09T01:17:38.989850
 |[BitSearch](https://bitsearch.to/){#bitsearch}|BitSearch is a Public torrent meta-search engine|English (United States)|
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
-|[BTdirectory](https://www.btmulu.asia/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
+|[BTdirectory](https://www.btmulu.one/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
 |[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
@@ -55,7 +55,7 @@ dateCreated: 2025-02-09T01:17:38.989850
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[GamesTorrents](https://www.gamestorrents.app/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
-|[GkTorrent](https://www.gktorrent.cv/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[GkTorrent](https://www-gktorrent.com/){#gktorrent}|GkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[iDope](https://idope.se/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
