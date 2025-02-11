@@ -24,10 +24,34 @@ Note that the following will only be logged for custom scripts:
 
 # Environment Variables
 
-Environment Variables vary based on the event type. Details coming soon^tm^
+## On Health Issue
 
-> [The code to review is here in the interim. Wiki contributions welcome](https://github.com/Prowlarr/Prowlarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
-{.is-info}
+| Environment Variable            | Details                                                      |
+| ------------------------------- | ------------------------------------------------------------ |
+| `prowlarr_eventtype`            | `HealthIssue`                                                |
+| `prowlarr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
+| `prowlarr_health_issue_message` | Message from the health issue                                |
+| `prowlarr_health_issue_type`    | Source of the health issue                                   |
+| `prowlarr_health_issue_wiki`    | Wiki URL for the health issue (Empty if it does not exist)   |
+
+## On Health Restored
+
+| Environment Variable               | Details                                                      |
+| ---------------------------------- | ------------------------------------------------------------ |
+| `prowlarr_eventtype`               | `HealthRestored`                                             |
+| `prowlarr_health_restored_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
+| `prowlarr_health_restored_message` | Message from the health issue                                |
+| `prowlarr_health_restored_type`    | Source of the health issue                                   |
+| `prowlarr_health_restored_wiki`    | Wiki URL for the health issue (Empty if it does not exist)   |
+
+## On Application Update
+
+| Environment Variable              | Details                                |
+| --------------------------------- | -------------------------------------- |
+| `prowlarr_eventtype`              | `ApplicationUpdate`                    |
+| `prowlarr_update_message`         | Message from the update                |
+| `prowlarr_update_newversion`      | Version Prowlarr updated from (string) |
+| `prowlarr_update_previousversion` | Version Prowlarr updated to (string)   |
 
 ## On Test
 
