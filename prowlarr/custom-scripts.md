@@ -46,12 +46,12 @@ Note that the following will only be logged for custom scripts:
 
 ## On Application Update
 
-| Environment Variable              | Details                                                      |
-| --------------------------------- | ------------------------------------------------------------ |
-| `prowlarr_eventtype`              | `ApplicationUpdate`                                          |
-| `prowlarr_update_message`         | Message from the update                                      |
-| `prowlarr_update_newversion`      | Version Prowlarr updated from (string)                       |
-| `prowlarr_update_previousversion` | Version Prowlarr updated to (string)                         |
+| Environment Variable              | Details                                |
+| --------------------------------- | -------------------------------------- |
+| `prowlarr_eventtype`              | `ApplicationUpdate`                    |
+| `prowlarr_update_message`         | Message from the update                |
+| `prowlarr_update_newversion`      | Version Prowlarr updated from (string) |
+| `prowlarr_update_previousversion` | Version Prowlarr updated to (string)   |
 
 ## On Test
 
