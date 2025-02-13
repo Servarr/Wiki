@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-12T01:14:02.435320
+date: 2025-02-13T01:14:25.314134
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-12T01:14:02.435320
+dateCreated: 2025-02-13T01:14:25.314134
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.31.2.4960` / [Commit: 4df8fc02f1720cac683bc747b244360f0cf2dc2b](https://github.com/Prowlarr/Prowlarr/commit/4df8fc02f1720cac683bc747b244360f0cf2dc2b)
-  - [Prowlarr Indexers Commit: d69174cfe43019a824552b0f832a814b5c809310](https://github.com/Prowlarr/Indexers/commit/d69174cfe43019a824552b0f832a814b5c809310)
+  - Prowlarr Build `1.31.2.4965` / [Commit: d6e8d89be4daa73fb9d43bcd969622dc66d918e8](https://github.com/Prowlarr/Prowlarr/commit/d6e8d89be4daa73fb9d43bcd969622dc66d918e8)
+  - [Prowlarr Indexers Commit: 11c920a723b26e56d6fe2db1b9752207ab746083](https://github.com/Prowlarr/Indexers/commit/11c920a723b26e56d6fe2db1b9752207ab746083)
 
 ---
 
@@ -195,7 +195,7 @@ dateCreated: 2025-02-12T01:14:02.435320
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://12feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://13feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -366,7 +366,7 @@ dateCreated: 2025-02-12T01:14:02.435320
 |[HD Dolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH site for HD content|Spanish (Spain)|
-|[HD-Only](https://hd-only.org/){#hdonly}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
+|[HD-Only (API)](https://hd-only.org/){#hdonly-api}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HD-Space](https://hd-space.org/){#hdspace}|HD-Space is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[HD-Torrents](https://hdts.ru/){#hd-torrents}|HD-Torrents is a private torrent website with HD torrents and strict rules on their content|English (United States)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
