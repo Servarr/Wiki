@@ -18,7 +18,7 @@ Setup guides, [FAQ](/readarr/faq), the more information we have on the [wiki](ht
 
 # Development
 
-Readarr is written in C# (backend) and JS (frontend). The backend is built on the .NET6 framework, while the frontend utilizes Reactjs.
+Readarr is written in C# (backend) and JS (frontend). The backend is built on the .NET6 (and _soon_ .NET8) framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
@@ -33,11 +33,11 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
   - **20** (any minor or patch version within this)
 {.grid-list}
 
-> Readarr will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other verisons.
+> The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other verisons.
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
-  - Yarn is included with **Node 16.10**+ by default. Enable it with `corepack enable`
+  - Yarn is included with **Node 20**+ by default. Enable it with `corepack enable`
   - For other Node versions, install it with `npm i -g corepack`
 
 ## Getting started
