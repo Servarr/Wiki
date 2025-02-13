@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-02-07T17:14:25.363Z
+date: 2025-02-13T23:56:14.962Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -31,10 +31,18 @@ Plug-in capabilities are currently only available on the `plugins` branch.
 
 Update your Docker Compose file to use the following image, pull, and recreate your Lidarr container. 
 
+#### Hotio
+
 ```yaml
 image: ghcr.io/hotio/lidarr:pr-plugins
 ```
- 
+
+#### LinuxServer.io
+
+```yaml
+image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
+```
+
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation. 
 - If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `CurrentlyInstalled`.
 
