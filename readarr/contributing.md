@@ -30,7 +30,7 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
-  - **20.0**
+  - **20** (any minor or patch version within this)
 {.grid-list}
 
 > Readarr will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other verisons.
