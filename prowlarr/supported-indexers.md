@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-14T01:14:14.578917
+date: 2025-02-15T01:13:15.101177
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-14T01:14:14.578917
+dateCreated: 2025-02-15T01:13:15.101177
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.31.2.4965` / [Commit: d6e8d89be4daa73fb9d43bcd969622dc66d918e8](https://github.com/Prowlarr/Prowlarr/commit/d6e8d89be4daa73fb9d43bcd969622dc66d918e8)
-  - [Prowlarr Indexers Commit: 64e7615bc4fbb9c244c2b8d5510696113d04cb65](https://github.com/Prowlarr/Indexers/commit/64e7615bc4fbb9c244c2b8d5510696113d04cb65)
+  - [Prowlarr Indexers Commit: 1b30a61b8dbe375726a9132e23173ea4d90b182c](https://github.com/Prowlarr/Indexers/commit/1b30a61b8dbe375726a9132e23173ea4d90b182c)
 
 ---
 
@@ -322,6 +322,7 @@ dateCreated: 2025-02-14T01:14:14.578917
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://www.empornium.is/){#empornium2fa}|Empornium (EMP) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
+|[eMuwarez (API)](https://emuwarez.it/){#emuwarez}|eMuwarez is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
 |[Enthralled](https://www.enthralled.me/){#enthralled}|Enthralled is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[Enthralled2FA](https://www.enthralled.me/){#enthralled2fa}|Enthralled is a Private Torrent Tracker for FETISH 3X\.  Cookie Login for 2FA use|English (United States)|
 |[eShareNet](https://esharenet.eu/){#esharenet}|eShareNet is a Private Tracker for British MOVIE / TV|English (United Kingdom)|
