@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-02-13T23:56:14.962Z
+date: 2025-02-16T14:01:08.272Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -45,6 +45,7 @@ image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation. 
 - If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `CurrentlyInstalled`.
+- If the plugins rebase is older than the current version of lidarr you have installed, it won't install this way. Instead, you will need to download the plugins branch install file directly and install it over your lidarr setup.
 
 After completing the installation, Lidarr needs to be restarted for the plugin to work properly. The restart procedure varies depending on the platform used.
 
@@ -56,7 +57,11 @@ After completing the installation, Lidarr needs to be restarted for the plugin t
 > Both plugins and this documentation are community-driven. There are no official recommendations at this time, and each plugin is supported by its developer.
 {.is-info}
 
-## codefaux/deemix-for-lidarr
+## ta264/deemix
+
+[Deemix plugin by ta264](https://github.com/ta264/Lidarr.Plugin.Deemix)
+
+This plugin enables Lidarr to search Deezer using Deemix. You must have a working Lidarr installation from the plugins branch, a working Deemix container, and an ARL from Deezer to use this plugin. In order to get FLAC files, your ARL would need to be for a hi-fi account type on Deezer.
 
 [Deemix for Lidarr by Codefaux](https://github.com/codefaux/deemix-for-lidarr/)
 
