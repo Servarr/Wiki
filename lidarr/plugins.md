@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-02-17T14:46:27.834Z
+date: 2025-02-17T15:12:59.134Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -44,10 +44,19 @@ image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
 ```
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation. 
-- If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `CurrentlyInstalled`.
-- If the plugins rebase is older than the current version of lidarr you have installed, it won't install this way. Instead, you will need to download the plugins branch install file directly and install it over your lidarr setup. For Windows, the link is [here](https://lidarr.servarr.com/v1/update/plugins/updatefile?os=windows&runtime=netcore&arch=x64&installer=true).
+- If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
 
-After completing the installation, Lidarr needs to be restarted for the plugin to work properly. The restart procedure varies depending on the platform used.
+#### Manually Installing
+
+> If the plugins branch is older than the current version of Lidarr you have installed, it won't automatically install via the updater. Instead, you will need to download the plugins branch and install file directly and install it over your Lidarr setup.
+{.is-warning}
+
+- See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in thr install docs from `master` to `plugins` otherwise following the docs as-is.
+
+## Next Steps
+
+- Install the plugin to Lidarr using the new Plugin Lidarr Page and the plugin's documentation.
+- Restart Lidarr to complete plugin installation
 
 > Plugin updates do not occur automatically 
 {.is-info}
@@ -75,7 +84,7 @@ This plugin enables Lidarr to search Soulseek using Slskd. You must have a worki
 
 To generate the Api Key necessary for the communication to the Slskd app follow the steps [here on the developer's respository](https://github.com/slskd/slskd/blob/master/docs/config.md#authentication)
 
-### Configuration
+### Post-Install Configuration
 
 #### Download Client
 
