@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-02-16T14:01:08.272Z
+date: 2025-02-17T14:46:27.834Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -45,7 +45,7 @@ image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation. 
 - If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `CurrentlyInstalled`.
-- If the plugins rebase is older than the current version of lidarr you have installed, it won't install this way. Instead, you will need to download the plugins branch install file directly and install it over your lidarr setup.
+- If the plugins rebase is older than the current version of lidarr you have installed, it won't install this way. Instead, you will need to download the plugins branch install file directly and install it over your lidarr setup. For Windows, the link is [here](https://lidarr.servarr.com/v1/update/plugins/updatefile?os=windows&runtime=netcore&arch=x64&installer=true).
 
 After completing the installation, Lidarr needs to be restarted for the plugin to work properly. The restart procedure varies depending on the platform used.
 
