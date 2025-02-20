@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-18T01:14:14.941711
+date: 2025-02-20T01:14:58.593842
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-18T01:14:14.941711
+dateCreated: 2025-02-20T01:14:58.593842
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.31.2.4971` / [Commit: 2d584f7eb64eeddb292b60a7cf1cfbf433debc99](https://github.com/Prowlarr/Prowlarr/commit/2d584f7eb64eeddb292b60a7cf1cfbf433debc99)
-  - [Prowlarr Indexers Commit: ea0fb9537d94ed79835160a2beba90a5c49c71ee](https://github.com/Prowlarr/Indexers/commit/ea0fb9537d94ed79835160a2beba90a5c49c71ee)
+  - Prowlarr Build `1.31.2.4974` / [Commit: 635e76526a38dd1c28d659c5a71f877e794ac700](https://github.com/Prowlarr/Prowlarr/commit/635e76526a38dd1c28d659c5a71f877e794ac700)
+  - [Prowlarr Indexers Commit: cfb91152998dbc08b1f8670d5cfd89dc3e955f84](https://github.com/Prowlarr/Indexers/commit/cfb91152998dbc08b1f8670d5cfd89dc3e955f84)
 
 ---
 
@@ -86,7 +86,7 @@ dateCreated: 2025-02-18T01:14:14.941711
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for TV / MOVIES / GENERAL|French (France)|
-|[OxTorrent-vip](https://www-oxtorrent.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent1.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
@@ -194,7 +194,7 @@ dateCreated: 2025-02-18T01:14:14.941711
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://18feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://20feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -436,7 +436,6 @@ dateCreated: 2025-02-18T01:14:14.941711
 |[Locadora (API)](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Tracker for MOVIES, TV and ANIME|Portuguese (Brazil)|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private site for High Quality Music|Russian (Russia)|
 |[LST](https://lst.gg/){#lst}|LST is an English Private tracker for MOVIES / TV / GENERAL|English (United States)|
-|[LustHive](https://lusthive.org/){#lusthive}|LustHive  is a Private Torrent Tracker for 3X|English (United States)|
 |[M-Team - TP](https://kp.m-team.cc/){#m-team---tp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a Private GERMAN site for MOVIES / TV / GENERAL|German (Germany)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
