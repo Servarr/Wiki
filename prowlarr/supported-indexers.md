@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-20T01:14:58.593842
+date: 2025-02-21T01:15:22.197502
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-20T01:14:58.593842
+dateCreated: 2025-02-21T01:15:22.197502
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.31.2.4974` / [Commit: 635e76526a38dd1c28d659c5a71f877e794ac700](https://github.com/Prowlarr/Prowlarr/commit/635e76526a38dd1c28d659c5a71f877e794ac700)
-  - [Prowlarr Indexers Commit: cfb91152998dbc08b1f8670d5cfd89dc3e955f84](https://github.com/Prowlarr/Indexers/commit/cfb91152998dbc08b1f8670d5cfd89dc3e955f84)
+  - [Prowlarr Indexers Commit: 1c5063b2569ff47312ee14c72697d1dd58349ec5](https://github.com/Prowlarr/Indexers/commit/1c5063b2569ff47312ee14c72697d1dd58349ec5)
 
 ---
 
@@ -315,7 +315,6 @@ dateCreated: 2025-02-20T01:14:58.593842
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DivTeam](https://divteam.com/){#divteam}|DivTeam is a SPANISH Private Torrent Tracker for MOVIES / GENERAL|Spanish (Spain)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-learning|English (United States)|
-|[Dream Tracker](https://dream-tracker.net/){#dreamtracker}|Dream Tracker is a Subscription only GREEK Private tracker for TV / MOVIES / GENERAL|English (United States)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[Ebooks-Shares](https://ebooks-shares.org/){#ebooks-shares}|Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS|English (United States)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
