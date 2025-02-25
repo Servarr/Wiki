@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-24T01:17:12.017430
+date: 2025-02-25T01:16:47.008902
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-24T01:17:12.017430
+dateCreated: 2025-02-25T01:16:47.008902
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.32.0.4976` / [Commit: 328f3c0423511447eb0dac94ba602b009cd54fd0](https://github.com/Prowlarr/Prowlarr/commit/328f3c0423511447eb0dac94ba602b009cd54fd0)
-  - [Prowlarr Indexers Commit: ffe27e11463566acbdc26d8d33275722936157d8](https://github.com/Prowlarr/Indexers/commit/ffe27e11463566acbdc26d8d33275722936157d8)
+  - [Prowlarr Indexers Commit: da3d913b1e704a05cc8e2842e161af69e96927be](https://github.com/Prowlarr/Indexers/commit/da3d913b1e704a05cc8e2842e161af69e96927be)
 
 ---
 
@@ -122,6 +122,7 @@ dateCreated: 2025-02-24T01:17:12.017430
 |[TorrentQQ](https://torrentqq356.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir166.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[torrentssg](https://torrentssg7.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
