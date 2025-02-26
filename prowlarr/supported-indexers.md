@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-02-25T01:16:47.008902
+date: 2025-02-26T01:16:04.468386
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-02-25T01:16:47.008902
+dateCreated: 2025-02-26T01:16:04.468386
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.32.0.4976` / [Commit: 328f3c0423511447eb0dac94ba602b009cd54fd0](https://github.com/Prowlarr/Prowlarr/commit/328f3c0423511447eb0dac94ba602b009cd54fd0)
-  - [Prowlarr Indexers Commit: da3d913b1e704a05cc8e2842e161af69e96927be](https://github.com/Prowlarr/Indexers/commit/da3d913b1e704a05cc8e2842e161af69e96927be)
+  - [Prowlarr Indexers Commit: 7b811549cad2df2a9a03c380f56f3ef6e73e70d7](https://github.com/Prowlarr/Indexers/commit/7b811549cad2df2a9a03c380f56f3ef6e73e70d7)
 
 ---
 
@@ -86,9 +86,10 @@ dateCreated: 2025-02-25T01:16:47.008902
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for TV / MOVIES / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent1.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent2.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
+|[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -121,7 +122,7 @@ dateCreated: 2025-02-25T01:16:47.008902
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq356.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir166.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir167.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://torrentssg7.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -195,7 +196,7 @@ dateCreated: 2025-02-25T01:16:47.008902
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://24feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://25feb.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
