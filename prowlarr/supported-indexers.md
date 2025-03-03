@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-01T01:21:22.004594
+date: 2025-03-03T01:18:45.482552
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-01T01:21:22.004594
+dateCreated: 2025-03-03T01:18:45.482552
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.32.0.4976` / [Commit: 328f3c0423511447eb0dac94ba602b009cd54fd0](https://github.com/Prowlarr/Prowlarr/commit/328f3c0423511447eb0dac94ba602b009cd54fd0)
-  - [Prowlarr Indexers Commit: 0ad912530c544cced4ca4b754abbd2d8b5f7e75d](https://github.com/Prowlarr/Indexers/commit/0ad912530c544cced4ca4b754abbd2d8b5f7e75d)
+  - Prowlarr Build `1.32.1.4979` / [Commit: 46b6124b978e3ecb3a2cd948d4750f08cedc5390](https://github.com/Prowlarr/Prowlarr/commit/46b6124b978e3ecb3a2cd948d4750f08cedc5390)
+  - [Prowlarr Indexers Commit: 4a2707d847a4df8d8e6794882b85abe3cb6102e4](https://github.com/Prowlarr/Indexers/commit/4a2707d847a4df8d8e6794882b85abe3cb6102e4)
 
 ---
 
@@ -80,13 +80,13 @@ dateCreated: 2025-03-01T01:21:22.004594
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from Japan|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|Russian (Russia)|
-|[NorTorrent](https://www.nortorrent.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
+|[NorTorrent](https://www.nortorrent1.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|English (United States)|
 |[NyaaPantsu](https://ouo.si/){#nyaapantsu}|NyaaPantsu is a Public site for dedicated to Asian ANIME|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for TV / MOVIES / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent2.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent1.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -138,8 +138,8 @@ dateCreated: 2025-03-01T01:21:22.004594
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www-zetorrents.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
-|[ZkTorrent](https://www.zktorrent.com/){#zktorrent}|ZkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents1.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://www.zktorrent1.com/){#zktorrent}|ZkTorrent is a French Public site for TV / MOVIES / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -196,7 +196,7 @@ dateCreated: 2025-03-01T01:21:22.004594
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://01mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://03mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -559,7 +559,6 @@ dateCreated: 2025-03-01T01:21:22.004594
 |[TeamHD](https://teamhd.org/){#teamhd}|TeamHD is a RUSSIAN Private Torrent Tracker for HD MOVIES / TV|Russian (Russia)|
 |[TeamOS](https://www.teamos.xyz/){#teamos}|Team OS is a Private Torrent Tracker for SOFTWARE|English (United States)|
 |[TEKNO3D](https://tracker.tekno3d.com/){#tekno3d}|TEKNO3D is a Private Torrent Tracker for MOVIES / TV|English (United States)|
-|[teracod](https://teracod.net/){#teracod}|teracod (Movie Zone) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ThePiratedShip](https://thepiratedship.co.uk/){#thepiratedship}|ThePiratedShip is a Private tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
