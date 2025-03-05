@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-04T01:17:33.640983
+date: 2025-03-05T01:17:41.095080
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-04T01:17:33.640983
+dateCreated: 2025-03-05T01:17:41.095080
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.32.1.4979` / [Commit: f02a6f3e2cdb64763d3e03e5203169c842dbaece](https://github.com/Prowlarr/Prowlarr/commit/f02a6f3e2cdb64763d3e03e5203169c842dbaece)
-  - [Prowlarr Indexers Commit: 917a1a5ab1a127fe0490c482ef3dc2d584572656](https://github.com/Prowlarr/Indexers/commit/917a1a5ab1a127fe0490c482ef3dc2d584572656)
+  - Prowlarr Build `1.32.1.4981` / [Commit: 49268f3b8d0c57775db282445ff1096a0fc22096](https://github.com/Prowlarr/Prowlarr/commit/49268f3b8d0c57775db282445ff1096a0fc22096)
+  - [Prowlarr Indexers Commit: ae04ba4c1284367051717c6f011c05a52dd96649](https://github.com/Prowlarr/Indexers/commit/ae04ba4c1284367051717c6f011c05a52dd96649)
 
 ---
 
@@ -80,7 +80,7 @@ dateCreated: 2025-03-04T01:17:33.640983
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from Japan|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for TV / MOVIES / MUSIC|Russian (Russia)|
-|[NorTorrent](https://www.nortorrent1.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
+|[NorTorrent](https://www.nortorrent2.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for TV / MOVIES / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern Asian media including anime, manga, literature and music|English (United States)|
 |[NyaaPantsu](https://ouo.si/){#nyaapantsu}|NyaaPantsu is a Public site for dedicated to Asian ANIME|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
