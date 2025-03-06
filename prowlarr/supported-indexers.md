@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-05T01:17:41.095080
+date: 2025-03-06T01:17:33.684714
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-05T01:17:41.095080
+dateCreated: 2025-03-06T01:17:33.684714
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.32.1.4981` / [Commit: 49268f3b8d0c57775db282445ff1096a0fc22096](https://github.com/Prowlarr/Prowlarr/commit/49268f3b8d0c57775db282445ff1096a0fc22096)
-  - [Prowlarr Indexers Commit: ae04ba4c1284367051717c6f011c05a52dd96649](https://github.com/Prowlarr/Indexers/commit/ae04ba4c1284367051717c6f011c05a52dd96649)
+  - [Prowlarr Indexers Commit: 70027361288c59f8d8530fee364c56b5bccf359f](https://github.com/Prowlarr/Indexers/commit/70027361288c59f8d8530fee364c56b5bccf359f)
 
 ---
 
@@ -41,7 +41,6 @@ dateCreated: 2025-03-05T01:17:41.095080
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTdirectory](https://www.btmulu.one/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
-|[BTMET](https://btmet.com/){#btmet}|BTMET is a Public magnet indexer|English (United States)|
 |[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
@@ -86,7 +85,7 @@ dateCreated: 2025-03-05T01:17:41.095080
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for Asian 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for TV / MOVIES / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent1.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent2.com/){#oxtorrent-vip}|OxTorrent-vip is a French Public site for TV / MOVIES / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -120,9 +119,9 @@ dateCreated: 2025-03-05T01:17:41.095080
 |[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq357.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq358.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir167.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir168.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://torrentssg7.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentView](https://torrentview1.com/){#torrentview}|Torrent View  (토렌트뷰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
@@ -196,7 +195,7 @@ dateCreated: 2025-03-05T01:17:41.095080
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://04mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://06mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -442,6 +441,7 @@ dateCreated: 2025-03-05T01:17:41.095080
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[Making Off](https://makingoff.org/){#makingoff}|Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
+|[Matrix](https://matrixworld.info/){#matrix}|M\.A\.T\.R\.I\.X is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[MDAN](https://bt.mdan.org/){#mdan}|Mansão dos Animes (MDAN) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[MegamixTracker](https://megamixtracker.hu/){#megamixtracker}|MegamixTracker is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a Hungarian Private site for fairy tales, family movies and comedies|Hungarian (Hungary)|
