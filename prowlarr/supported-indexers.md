@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-08T01:02:38.530702
+date: 2025-03-10T01:05:57.284001
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-08T01:02:38.530702
+dateCreated: 2025-03-10T01:05:57.284001
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.32.1.4983` / [Commit: 015db4a916865447674fdf356ba9c56cf5361b9c](https://github.com/Prowlarr/Prowlarr/commit/015db4a916865447674fdf356ba9c56cf5361b9c)
-  - [Prowlarr Indexers Commit: b0b19f23f5d87490c8b66f17c8eb1f97d9829529](https://github.com/Prowlarr/Indexers/commit/b0b19f23f5d87490c8b66f17c8eb1f97d9829529)
+  - Prowlarr Build `1.32.2.4984` / [Commit: 32634540412a2efcd6092a042ff0a59319fc27cc](https://github.com/Prowlarr/Prowlarr/commit/32634540412a2efcd6092a042ff0a59319fc27cc)
+  - [Prowlarr Indexers Commit: ef4430f417ffc11a47941c4a9886a64e02623f1c](https://github.com/Prowlarr/Indexers/commit/ef4430f417ffc11a47941c4a9886a64e02623f1c)
 
 ---
 
@@ -196,7 +196,7 @@ dateCreated: 2025-03-08T01:02:38.530702
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://08mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://09mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -372,6 +372,7 @@ dateCreated: 2025-03-08T01:02:38.530702
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HDArea](https://hdarea.club/){#hdarea}|HDArea is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDAtmos](https://hdatmos.club/){#hdatmos}|HDAtmos is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[HDBao](https://hdbao.cc/){#hdbao}|HDBao is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDBits](https://hdbits.org/){#hdbits}|Best HD Tracker|English (United States)|
 |[HDCiTY](https://hdcity.city/){#hdc}|HDCiTY (HDC) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDClone](https://pt.hdclone.org/){#hdclone}|HDClone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -429,6 +430,7 @@ dateCreated: 2025-03-08T01:02:38.530702
 |[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
+|[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LemonHD](https://lemonhd.club/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[LeSaloon](https://lesaloonv2-0.lol/){#lesaloon}|Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Lesbians4u](http://lesbians4u.org/){#lesbians4u}|Lesbians4u is a Private Torrent Tracker for 3X|English (United States)|
