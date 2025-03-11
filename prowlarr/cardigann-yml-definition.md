@@ -12,19 +12,6 @@ dateCreated: 2021-08-14T18:19:59.428Z
 
 - [Table of Contents](#table-of-contents)
 - [Cardigann Versions](#cardigann-versions)
-  - [Schemas](#schemas)
-    - [Schema Validation](#schema-validation)
-  - [Active Versions](#active-versions)
-    - [V9 Indexers](#v9-indexers)
-  - [Depreciated Versions](#depreciated-versions)
-    - [V8 Indexers](#v8-indexers)
-    - [V7 Indexers](#v7-indexers)
-    - [V6 Indexers](#v6-indexers)
-    - [V5 Indexers](#v5-indexers)
-    - [V4 Indexers](#v4-indexers)
-    - [V3 Indexers](#v3-indexers)
-    - [V2 Indexers](#v2-indexers)
-    - [V1 Indexers](#v1-indexers)
 - [General](#general)
 - [Format](#format)
   - [Header](#header)
@@ -86,9 +73,12 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [Proposed changes](#proposed-changes)
   - [Credit](#credit)
 
+> This document is not well-maintained. Current documentation is maintained by the Jackett Team within their [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format)
+{.is-danger}
+
 # Cardigann Versions
 
-- Below are the Prowlarr Cardigann  Versions
+- Below are the Prowlarr Cardigann Versions
 
 - For testing custom yml definitions please see [the custom yml section in the Indexer page](/prowlarr/indexers#adding-a-custom-yml-definition)
 
@@ -110,75 +100,22 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
 
 ## Active Versions
 
-### [V9 Indexers](https://github.com/Prowlarr/Prowlarr/commit/bceebc34c134db8140a307e25312cb15e0ff5d63)
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v9/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v9 includes several changes such as
-  - AllowEmptyInputs
-  - default values
-  - MissingAttributeEqualsNoResults
-
-### [V8 Indexers](https://github.com/Prowlarr/Prowlarr/commit/1529527af9d2bf09dcd1b540b4c6f95a7dd00bd1)
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v8/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v8 includes several changes such as
-  - HtmlEncode and HtmlDecode filters
-
-### [V7 Indexers](https://github.com/Prowlarr/Prowlarr/commit/ee6467073f64cfaa5ef0de2225f39f0fd0eb5c05)
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v7/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v7 includes several changes such as
-  - `Publisher`, `Year`, `Genre`, Query support
+- [V11 Indexers](https://github.com/Prowlarr/Prowlarr/commit/886054fdf8e17e27714a8c41911980fff3550e39) - [Dev 1.20.0.4590](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.20.0.4590)
+  - Prowlarr Cardigann v11 includes several changes such as
+    - Predefined setting type: `info_category_8000`
+    - Optional `selectorinputs` and `getselectorinputs` for login section
+- [V10 Indexers](https://github.com/Prowlarr/Prowlarr/commit/f95f67a7ca3e274cd0b5abbac487eb914fccd0bb) - [Dev 1.18.0.4543](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.18.0.4543)
+  - Prowlarr Cardigann v10 includes several changes such as
+    - Predefined settings type: `info_cookie`, `info_flaresolverr` and `info_useragent`
 
 ## Depreciated Versions
 
-### [V6 Indexers](https://github.com/Prowlarr/Prowlarr/commit/5ee95e3cc29d1307192320eb82b5a8f1287f00d6)
+### V1 Indexers - Legacy Beta
+- Prowlarr Cardigann v1 are base level standard YML
+- No new indexers are to be added to v1 as of 2021-10-13
+- No new updates backported to v1 as of 2021-10-17
 
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v6/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v6 includes several changes such as
-  - `doubanid` support
-  - `tmdbid` TV Search Support
-
-### [V5 Indexers](https://github.com/Prowlarr/Prowlarr/commit/76afb70b01f4a670d8e402d9a3de05c09611b7ab)
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v5/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v5 includes several changes such as
-  - Allow JSON Filters
-
-### [V4 Indexers](https://github.com/Prowlarr/Prowlarr/pull/828)
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v4/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v4 includes several changes such as
-  - TMDBId
-  - Genre
-  - TraktID
-  - CategoryDescr
-
-### V3 Indexers
-
-> The schema is [located here](https://github.com/Prowlarr/Indexers/blob/master/definitions/v3/schema.json)
-{.is-info}
-
-- Prowlarr Cardigann v3 includes support for APIs and JSON
-- Replace `imdb:` selector with `imdbid:`
-- Makes `Description` an optional by default
-- All new Indexers using shall be in v3 as of 2021-10-21
-  - Indexers utilizing CategoryDescr or any v4 features MUST be in v4
-  
-### V2 Indexers
-
+### V2 Indexers - Legacy Beta
 - Prowlarr Cardigann v2 include several changes such as
   - Regex removal for Size parsing
   - Multiple Download Selectors
@@ -189,11 +126,43 @@ Schemas can be validated as follows. It is assumed the commands are ran from the
 - No new indexers are to be added to v2 as of 2022-04-18
 - No new updates backported to v2 as of 2022-04-18
 
-### V1 Indexers
+### V3 Indexers - Legacy Beta
+- Prowlarr Cardigann v3 includes support for APIs and JSON
+- Replace `imdb:` selector with `imdbid:`
+- Makes `Description` an optional by default
+- All new Indexers using APIs shall be in v3 as of 2021-10-21
+  - Indexers utilizing CategoryDescr or any v4 features MUST be in v4
 
-- Prowlarr Cardigann v1 are base level standard YML
-- No new indexers are to be added to v1 as of 2021-10-13
-- No new updates backported to v1 as of 2021-10-17
+### [V4 Indexers](https://github.com/Prowlarr/Prowlarr/pull/828) - [Dev 0.2.0.1678](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.2.0.1678)
+- Prowlarr Cardigann v4 includes several changes such as
+  - TMDBId
+  - Genre
+  - TraktID
+  - CategoryDescr
+
+### [V5 Indexers](https://github.com/Prowlarr/Prowlarr/commit/76afb70b01f4a670d8e402d9a3de05c09611b7ab) - [Dev 0.2.0.1678](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.2.0.1678)
+- Prowlarr Cardigann v5 includes several changes such as
+  - Allow JSON Filters
+
+### [V6 Indexers](https://github.com/Prowlarr/Prowlarr/commit/5ee95e3cc29d1307192320eb82b5a8f1287f00d6) - [Dev 0.4.2.1879](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.4.2.1879)
+- Prowlarr Cardigann v6 includes several changes such as
+  - `doubanid` support
+  - `tmdbid` TV Search Support
+
+### [V7 Indexers](https://github.com/Prowlarr/Prowlarr/commit/ee6467073f64cfaa5ef0de2225f39f0fd0eb5c05) - [Dev 0.4.4.1947](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.4.4.1947)
+- Prowlarr Cardigann v7 includes several changes such as
+    - `Publisher`, `Year`, `Genre`, Query support
+
+### [V8 Indexers](https://github.com/Prowlarr/Prowlarr/commit/1529527af9d2bf09dcd1b540b4c6f95a7dd00bd1) - [Dev 1.1.0.2322](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.1.0.2322)
+- Prowlarr Cardigann v8 includes several changes such as
+    - HtmlEncode and HtmlDecode filters
+
+### [V9 Indexers](https://github.com/Prowlarr/Prowlarr/commit/bceebc34c134db8140a307e25312cb15e0ff5d63) - [Dev 1.4.0.3230](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.4.0.3230)
+- Prowlarr Cardigann v9 includes several changes such as
+    - AllowEmptyInputs
+    - default values
+    - MissingAttributeEqualsNoResults
+
 
 # General
 
@@ -222,15 +191,22 @@ Each definition must start with a header like this:
 
 ```yaml
 ---
+---
 # [REQUIRED] Internal name of the indexer, must be unique. Usually it's the name of the
 # web site, in lower case, stripped of any special characters and space
 id: thepiratebay
   
-# [REQUIRED]  Display name (The full name of the tracker)
+# [OPTIONAL] This is an administrative function which should not be used by the end user.
+# It is used to maintain backward compatibility when renaming the id of an indexer
+# (the id is used in the torznab/download/search urls and in the indexer configuration file)
+replaces:
+  - tpb-original
+
+# [REQUIRED] Display name (The full name of the tracker)
 name: The Pirate Bay
 
 # [REQUIRED] displayed in the tooltip on the add-indexer page and in the config panel
-description: "Pirate Bay (TPB) is the galaxyâs most resilient Public BitTorrent site"
+description: "Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site"
 
 # [REQUIRED] Language code of the main language used on the tracker
 # See http://www.lingoes.net/en/translator/langcode.htm
@@ -258,7 +234,7 @@ followredirect: false
 testlinktorrent: false
 
 # [OPTIONAL] The number of seconds in between requests to a site
-# Mainly used for JSON API that limit the number of requests per period.
+# Mainly used for sites that limit the number of requests per period with a temporary block.
 requestDelay: 2.5
 
 # [REQUIRED] List of known domains
@@ -277,7 +253,7 @@ legacylinks:
 # you can specify a list of SHA-1 Fingerprint (thumbprint) hashes which should be accepted
 #  as valid anyway. This shouldn't be needed in most cases.
 certificates:
-  - D40789207A75EA36B02E255BF7162C8DF9637751
+  - D40789207A75EA36B02E255BF7162C8DF9637751 # Expired 24 June 2020
 ```
 
 ## Caps
@@ -289,9 +265,9 @@ Next, you've to specify the capabilities of the indexer.
 # Mapping between the tracker categories and the Newznab categories.
 # - id:      [REQUIRED] The tracker specific category ID.
 #            Can be a string too.
-# - cat:     [REQUIRED] The corresponding newznab predefined category - this must conform to the standard categories.
-#            See this list for valid options
-#            https://wiki.servarr.com/prowlarr/cardigann-yml-definition#categories
+# - cat:     [REQUIRED] The corresponding newznab predefined category.
+#            See this list for valid options:
+#            https://github.com/Jackett/Jackett/wiki/Jackett-Categories
 # - desc:    [OPTIONAL] The tracker category name.
 #            If provided it will be used for a 1:1 mapping between
 #            tracker and newznab categories.
@@ -300,18 +276,19 @@ Next, you've to specify the capabilities of the indexer.
 #            contain any categories).
 caps:
   categorymappings:
-    - { id: 101, cat: Audio, desc: "Music", default: false }
-    - { id: 201, cat: Movies, desc: "Movies", default: false }
-    - { id: 299, cat: Movies/Other, desc: "Video Other", default: false }
-    - { id: 302, cat: PC/Mac, desc: "Mac", default: false }
-    - { id: 901, cat: XXX, desc: "Porn SD", default: false }
-    - { id: 902, cat: XXX, desc: "Porn HD", default: false }
-
+    - {id: 101, cat: Audio, desc: "Music", default: false}
+    - {id: 201, cat: Movies, desc: "Movies", default: true}
+    - {id: 299, cat: Movies/Other, desc: "Video Other", default: true}
+    - {id: 302, cat: PC/Mac, desc: "Mac", default: false}
+    - {id: 901, cat: XXX, desc: "Porn SD", default: false}
+    - {id: 902, cat: XXX, desc: "Porn HD", default: false}
+   
   # Specify one or more torznab search modes and attributes that are supported by the indexer.
-  # Implementation note: Prowlarr doesn't care very much about this, but you should still
-  # specify the correct modes, as most apps calling Prowlarr via the Torznab API depend on them.
-  # The q attribute is the absolute minimum default, and you should only add the others if
-  # the tracker supports searching with them, especially imdbid, tvdbid, tmdbid and rid (TVRage).
+  # Implementation note: Jackett doesn't care very much about this, but you should still
+  # specify the correct modes, as most apps calling Jackett via the Torznab API depend on them.
+  # The q attribute is the absolute minimum default, and you should only add the others if the
+  # tracker supports searching with them, especially imdbid, tvdbid, tmdbid, rid (TVRage), 
+  # tvmaze, traktid, doubanid, album, artist, label, track, author, title, publisher, year & genre.
   modes:
     search: [q]
     tv-search: [q, season, ep, imdbid, tvdbid, rid, tvmaze, traktid, doubanid, year, genre]
@@ -415,6 +392,7 @@ settings:
     label: Username
 
   - name: password
+    # the input box will mask the content from view replacing characters with asterisks
     type: password
     label: Password
 
@@ -455,6 +433,22 @@ settings:
     defaults:
       - 1080p
       - 720p
+
+  # this special type generates an info box in the indexer config that gives details on the sites' category 8000 dependence
+  - name: info_category_8000
+    type: info_category_8000
+
+  # this special type generates an info box in the indexer config that gives instructions on how to fetch a cookie
+  - name: info_cookie
+    type: Info_cookie
+
+  # this special type generates an info box in the indexer config to warn that the flaresolverr app may be required
+  - name: info_flaresolverr
+    type: Info_flaresolverr
+
+  # this special type generates an info box in the indexer config that gives instructions on how to fetch a useragent
+  - name: info_useragent
+    type: Info_useragent
 ```
 
 If it's a public tracker and no config settings are needed then set `settings: []` to disable all options.
@@ -526,7 +520,7 @@ login:
   # [OPTIONAL] Only needed in case of dynamic input element names (very rare)
   # If it's set to true the keys/names from the 'input' section will be
   # interpreted as CSS selectors
-  # example: https://github.com/Prowlarr/Indexers/blob/84349de6f7e2208caeab1d52d31169830dbbda01/definitions/v1/spiritofrevolution.yml
+  # example: https://github.com/Jackett/Jackett/blob/master/src/Jackett.Common/Definitions/spiritofrevolution.yml
   selectors: false
   # [OPTIONAL] Only needed in very limited cases.
   # Can be used to include values based on a result of a selector.
@@ -645,6 +639,9 @@ search:
     - path: xxx.php
       # only use it if we're searching for porn
       categories: [901, 902]
+  # [OPTIONAL] If a key resolves to a value that is empty then Cardigann will not use that key/value pair in its query to the site.
+    In the event that the site requires a key without a value then use this override. The default is false.
+  allowEmptyInputs: true
   # list of HTTP arguments which are used by all paths
   inputs:
     # Generate the category[] arguments list
@@ -706,9 +703,8 @@ search:
 
   # [REQUIRED] list of attributes which are extracted for each row
   fields:
-    # [OPTIONAL] tracker category id (id field from caps/categorymappings)
-    # While not required, it is usual to return a category for Torznab apps to use,
-    # so if the site does not provide one in its results, then use category Other.
+    # [REQUIRED] tracker category id (id field from caps/categorymappings)
+    # if the site does not provide one in its results then use category Other.
     category:
       selector: a[href^="browse.php?cat="]
       attribute: href
@@ -723,20 +719,21 @@ search:
     # [REQUIRED] the title of the torrent
     title:
       selector: a[href^="details.php?id="]
-    # [REQUIRED] link to the site's details page for the torrent
+    # [OPTIONAL] link to the site's details page for the torrent
+    # If not available from the response then its usual to use the .Config.sitelink as a default.
     details:
       selector: a[href^="details.php?id="]
       attribute: href
-    # [OPTIONAL] download link for the torrent file. See the download block documentation for special handling.
-    # if a download link is not available you should provide a magnet URI, or if neither is available an infohash.
+    # [REQUIRED] download link for the torrent file. See the download block documentation for special handling if needed.
+    # If a download link is not available you should provide a magnet URI, or if neither is available an infohash.
     download:
       selector: a[href^="download.php?torrent="]
       attribute: href
-    # [OPTIONAL] magnet link
-      magnet:
-        selector: a[href^="magnet:"]
-        attribute: href
-    # [OPTIONAL] Loads the infohash, and for Pubic or Semi-Private Indexers auto-generates a magnet URI
+    # [ALTERNATIVE] magnet link
+    magnet:
+      selector: a[href^="magnet:"]
+      attribute: href
+    # [ALTERNATIVE] Loads the infohash, and for Pubic or Semi-Private Indexers auto-generates a magnet URI
     # When neither the .torrent link or a magnet URI is available, use the infohash statement to auto-generate a
     # magnet URI from an infohash. The magnet's &dn= will be loaded from the .Result.title, and a set of ten of
     # the currently most useful trackers will be added for the &tr= sequence.
@@ -748,6 +745,7 @@ search:
         - name: querystring
           args: id
     # [OPTIONAL] link to a poster image (cover, banner, etc.)
+    # This will show up (on the Jackett dashboard search page) as a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     poster:
       selector: a[href^="details.php?id="]
@@ -794,18 +792,21 @@ search:
     doubanid:
       selector: a[href*="movie.douban.com/subject/"]
       attribute: href
-    # [OPTIONAL] publish date (if the site does not provide a date for all results, then a default of "now" is preferred)
+    # [REQUIRED] publish date (if the site does not provide a date for all results, then a default of "now" should be used)
+    # if the site can only provide a rows: dateheaders: selector then you can omit the date field.
+    # The relevant time zone abbreviation (e.g. CST, CET, GMT, MSK, etc.) should also be added as a comment,
+    # or the comment "auto adjusted by site account profile" used if appropriate
     date:
       selector: td:nth-child(4) > span[title]
       attribute: title
       filters:
         # append the timezone used by the tracker
         - name: append
-          args: " +08:00"
+          args: " +08:00" # CST
         - name: dateparse 
           args: "yyyy-MM-ss HH:mm:ss zzz"
-    # [OPTIONAL] size of the torrent (units are handled automatically). if the site does not provide a size for all
-    # results, then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
+    # [REQUIRED] size of the torrent (units are handled automatically). if the site does not provide a size for all
+    # results, then provide a default of "512 MB". If the site occasionally has a missing size then "0 B" is usual.
     # Side note: For Sites using European numbering schemes (1,024.4MB or 1.024,4MB etc.) there is no need to remove
     # commas or extra dots as these are automatically dealt with.
     size:
@@ -820,12 +821,12 @@ search:
         - name: regexp
           # get the first number from the result
           args: (\d+)
-    # [OPTIONAL] number of seeders (if the site does not provide seeders for all results,
-    # then a default of "1" is preferred).
+    # [REQUIRED] number of seeders (if the site does not provide seeders for all results,
+    # then provide a default of "1").
     seeders:
       selector: td:nth-child(9)
     # [OPTIONAL] number of leechers (if the site does not provide leechers for all results,
-    # then a default of "1" is preferred).
+    # then provide a default of "1").
     leechers:
       selector: td:nth-child(10)
     # [OPTIONAL] genre. A list of one or more genre categories.
@@ -863,6 +864,7 @@ search:
       # 1 day (as seconds = 24 x 60 x 60)
       text: 86400
     # [OPTIONAL] description (any other available/relevant information)
+    # This will show up (on the Jackett dashboard search page) as info on a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     description:
       selector: td:nth-child(2)
@@ -964,7 +966,7 @@ search:
       method: "{{ if .Keywords }}post{{ else }}get{{ end }}"
       # [REQUIRED] The response block is necessary to define parsing of a JSON response
       response:
-        # [REQUIRED] "json" indicates that a JSON response is expected and "xml" indicates an XML response is expected.
+        # [REQUIRED] "json" indicates that a JSON response is expected
         type: json
         # [OPTIONAL] In the event that a server does not return an empty JSON object or a Count set to 0
         # in response to a query-no-found state, you can code the exception here.
@@ -1012,7 +1014,7 @@ search:
     # You give them a name and use them to extract additional data from the row sets, which you can use in
     # conditionals for setting strings for other fields, or as direct values for concatenating into strings. 
     #
-    # [OPTIONAL] tracker category id (id field from caps/categorymappings)
+    # [REQUIRED] tracker category id (id field from caps/categorymappings)
     # While not required, it is usual to return a category for Torznab apps to use,
     # so if the site does not provide one in its results, then use category Other.     
     category:
@@ -1040,7 +1042,7 @@ search:
           args: ".{{ .Result.year }}.{{ .Result._quality }}.{{ if eq .Result._type \"web\" }}WEBRip{{ else }}BRRip{{ end }}-YTS"
     _id:
       selector: id
-    # [REQUIRED] link to the site's details page for the torrent
+    # [OPTIONAL] link to the site's details page for the torrent
     # If not available from the response then its usual to use the .Config.sitelink as a default.
     details:
       text: "{{ .Config.sitelink }}browse/{{ .Result._id }}"
@@ -1048,14 +1050,14 @@ search:
       text: "{{ .Config.apikey }}"
       filters:
         - name: urlencode
-    # [OPTIONAL] download link for the torrent file.
+    # [REQUIRED] download link for the torrent file.
     # if a download link is not available you should provide a magnet URI, or if neither is available an infohash.
     download:
       text: "{{ .Config.sitelink }}api/v1/torrents/{{ .Result._id }}/torrent?key={{ .Result.apikey }}"
-    # [OPTIONAL] magnet link
+    # [ALTERNATIVE] magnet link
     magnet:
       selector: magnet_uri
-    # [OPTIONAL] Loads the infohash, and for Public and Semi-Private Indexers auto-generates a magnet URI
+    # [ALTERNATIVE] Loads the infohash, and for Public and Semi-Private Indexers auto-generates a magnet URI
     # When neither the .torrent link or a magnet URI is available, use the infohash statement to auto-generate a
     # magnet URI from an infohash. The magnet's &dn= will be loaded from the .Result.title, and a set of ten
     # currently most useful trackers will be added for the &tr= sequence.
@@ -1063,10 +1065,12 @@ search:
     infohash:
       selector: hash
     # [OPTIONAL] link to a poster image (cover, banner, etc.)
+    # This will show up (on the Jackett dashboard search page) as a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     poster:
       selector: ..large_cover_image
     # [OPTIONAL] description (any other available/relevant information)
+    # This will show up (on the Jackett dashboard search page) as info on a tooltip when you hover over the title
     # If the selector does not match it is ignored.
     description:
       text: "{{ .Result.year }} - {{ .Result._quality }} - {{ .Result._type }}"
@@ -1099,11 +1103,11 @@ search:
     # If the selector does not match it is ignored.
     doubanid:
       selector: ..douban_id
-    # [OPTIONAL] publish date (if the site does not provide a date for all results, then "now" is preferred)
+    # [REQUIRED] publish date (if the site does not provide a date for all results, then "now" is preferred)
     date:
       selector: ..date_uploaded_unix
-    # [OPTIONAL] size of the torrent (units are handled automatically). if the site does not provide a size for all
-    # results, then a default of "512 MB" is preferred. If the site occasionally has a missing size then "0 B" is usual.
+    # [REQUIRED] size of the torrent (units are handled automatically). if the site does not provide a size for all
+    # results, then provide a default of "512 MB". If the site occasionally has a missing size then "0 B" is usual.
     # Side note: For Sites using European numbering schemes (1,024.4MB or 1.024,4MB etc.) there is no need to remove
     # commas or extra dots as these are automatically dealt with.
     size:
@@ -1114,12 +1118,12 @@ search:
     # [OPTIONAL] number of completed downloads
     grabs:
       selector: completed
-    # [OPTIONAL] number of seeders (if the site does not provide seeders for all results,
-    # then a default of "1" is preferred). 
+    # [REQUIRED] number of seeders (if the site does not provide seeders for all results,
+    # then provide a default of "1"). 
     seeders:
       selector: seeds
     # [OPTIONAL] number of leechers (if the site does not provide leechers for all results,
-    # then a default of "1" is preferred).
+    # then provide a default of "1").
     leechers:
       selector: peers
     # [OPTIONAL] genre. A list of one or more genre categories.
