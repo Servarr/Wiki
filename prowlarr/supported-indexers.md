@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-10T01:05:57.284001
+date: 2025-03-12T01:17:24.206942
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-10T01:05:57.284001
+dateCreated: 2025-03-12T01:17:24.206942
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.32.2.4984` / [Commit: 32634540412a2efcd6092a042ff0a59319fc27cc](https://github.com/Prowlarr/Prowlarr/commit/32634540412a2efcd6092a042ff0a59319fc27cc)
-  - [Prowlarr Indexers Commit: ef4430f417ffc11a47941c4a9886a64e02623f1c](https://github.com/Prowlarr/Indexers/commit/ef4430f417ffc11a47941c4a9886a64e02623f1c)
+  - Prowlarr Build `1.32.2.4985` / [Commit: a19b8ea997053e54c9e758b6d8ece06aeaffd9d5](https://github.com/Prowlarr/Prowlarr/commit/a19b8ea997053e54c9e758b6d8ece06aeaffd9d5)
+  - [Prowlarr Indexers Commit: 9e99cfe21761feaaaf14431fdd8a33a0ccbed2eb](https://github.com/Prowlarr/Indexers/commit/9e99cfe21761feaaaf14431fdd8a33a0ccbed2eb)
 
 ---
 
@@ -196,7 +196,7 @@ dateCreated: 2025-03-10T01:05:57.284001
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private site dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://09mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://11mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -329,7 +329,7 @@ dateCreated: 2025-03-10T01:05:57.284001
 |[eStone](https://estone.cc/){#estone}|eStone (BigTorrent) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[exitorrent\.org](https://exitorrent.org/){#exitorrent-org}|exitorrent\.org is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[ExoticaZ](https://exoticaz.to/){#exoticaz}|ExoticaZ (YourExotic) is a Private Torrent Tracker for 3X|English (United States)|
-|[Explosiv-World](https://explosiv-world.biz/){#torrent-explosiv}|Explosiv-World (E-W) is a German Private Torrent Tracker for TV / MOVIES / GENERAL|German (Germany)|
+|[Explosiv-World](https://explosiv-world.biz/){#explosiv-world}|Explosiv-World (E-W) is a German Private Torrent Tracker for TV / MOVIES / GENERAL|German (Germany)|
 |[ExtremeBits](https://extremebits.net/){#extremebits}|ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS|English (United States)|
 |[F1Carreras (API)](https://f1carreras.xyz/){#f1carreras-api}|F1Carreras is a Spanish Private Torrent Tracker for Motor Racing TV Releases|Spanish (Mexico)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
@@ -542,7 +542,7 @@ dateCreated: 2025-03-10T01:05:57.284001
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-day MOVIES / TV / GENERAL|English (United States)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Shadowflow (影)](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[Shareisland (API)](https://shareisland.org/){#shareisland-api}|A general italian tracker|Italian (Italy)|
+|[Shareisland (API)](https://shareisland.org/){#shareisland-api}|Shareisland is a Private ITALIAN Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Shazbat](https://www.shazbat.tv/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
 |[The Show](https://theshow.click/){#theshow}|Entertainment E-Learning|English (United States)|
 |[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
