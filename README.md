@@ -14,7 +14,7 @@ Welcome to the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sona
 
 # GitHub
 
-This the git backup of [WikiArr](https://wikijs.servarr.com/), the consolidated Wiki for Sonarr, Radarr, Lidarr, and Readarr.
+This is the git backup of [WikiArr](https://wikijs.servarr.com/), the consolidated Wiki for Sonarr, Radarr, Lidarr, and Readarr.
 
 ## Contributing
 
