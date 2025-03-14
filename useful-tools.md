@@ -53,6 +53,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Drazzilb's UserScripts](#drazzilbs-userscripts)
   - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
   - [Just A Bunch Of Plex Scripts](#just-a-bunch-of-plex-scripts)
+  - [Nixarr](#nixarr)
   - [Plex Meta Manager](#plex-meta-manager)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
@@ -393,6 +394,14 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 - [Just A Bunch Of Plex Scripts (JBOPS)](https://github.com/blacktwin/JBOPS)
 - [TRaSH Guides JBOPS 4K Transcode Stopping with Tautulli](https://trash-guides.info/Plex/Tips/4k-transcoding/)
+
+## Nixarr
+
+[Nixarr](https://github.com/rasmus-kirk/nixarr) is a [NixOS](https://nixos.org/) module that sets up various starr related services and let's you:
+
+- *Run services through a VPN:* You can run any service that Nixarr supports through a VPN, fx `nixarr.transmission.vpn.enable = true;`.
+- *Automatic directories, users and permissions:* Nixarr automatically creates directories and users for your media library. It also sets sane permissions.
+- *State management:* All of Nixarr's services support state management and all state that they manage is located by default in `/data/.state/nixarr/*`. This means that you only have to backup your media directory and `/data/.state/nixarr`.
 
 ## Kometa
 
