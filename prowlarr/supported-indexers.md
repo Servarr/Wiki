@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-13T01:18:54.385849
+date: 2025-03-14T01:17:27.674485
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-13T01:18:54.385849
+dateCreated: 2025-03-14T01:17:27.674485
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.32.2.4985` / [Commit: a19b8ea997053e54c9e758b6d8ece06aeaffd9d5](https://github.com/Prowlarr/Prowlarr/commit/a19b8ea997053e54c9e758b6d8ece06aeaffd9d5)
-  - [Prowlarr Indexers Commit: 90aca0bee3e16377720267a0e79c6a4414614aea](https://github.com/Prowlarr/Indexers/commit/90aca0bee3e16377720267a0e79c6a4414614aea)
+  - [Prowlarr Indexers Commit: d579cdd3e4a8813fda9cd5a600af8915583b7b9f](https://github.com/Prowlarr/Indexers/commit/d579cdd3e4a8813fda9cd5a600af8915583b7b9f)
 
 ---
 
@@ -129,6 +129,7 @@ dateCreated: 2025-03-13T01:18:54.385849
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
+|[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[UnionDHT](https://uniondht.org/){#uniondht}|UnionDHT is a RUSSIAN Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Russian (Russia)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a Public Russian site for AUDIO apps, plugins and samples|Russian (Russia)|
