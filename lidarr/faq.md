@@ -137,6 +137,10 @@ As of Lidarr v2, Authentication is Mandatory.
 ## Why does Lidarr only show studio albums, How do I find singles or EPs?
 
 - Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist or for your entire library by utilizing Metadata Profiles.
+- A single is a type of album with one, sometimes more, tracks (recordings). 
+- An album (release) is part of a release group. A release group is a grouping of the same album that was released multiple times, eg. on a CD, on Vinyl, digitally and can contain versions such as a deluxe version.
+- Lidarr tracks albums (release groups) and can only have one version (release) of an album (release group).
+- You can **manually import** a single track (recording) from an album.
 
 ## Can I add just an album?
 
