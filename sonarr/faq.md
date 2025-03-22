@@ -698,7 +698,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 - Note that time or ratio settings here are set On Grab. They do not impact torrents you already have in your download client. They also do not work with a post-import category setting.
 
-- Some torrent clients do not have this ability. See [settings#torrent-client-remove-download-compatibility](this page) for details for your client.
+- Some torrent clients do not have this ability. See [this page](settings#torrent-client-remove-download-compatibility) for details for your client.
 
 - Setting extremely low seed times or ratios will not work, and is also poor torrent etiquette. You should **always** seed to at least a 1.0x ratio, or a couple of hours, for public trackers and whatever the requirements are for private trackers (plus a little buffer, because the way your download client calculates time and ratio is slightly different than your private tracker, and you don't want a hit and run for being a few minutes short of your requirement). Seeding for less than 1.0x ratio will mean that we will not provide you support in discord.
 
