@@ -32,6 +32,7 @@ dateCreated: 2021-05-29T15:57:25.304Z
   - [Folders](#folders)
   - [Importing](#importing)
   - [File Management](#file-management)
+  - [Upgrade Management](#upgrade-management)
   - [Permissions](#permissions)
   - [Root Folders](#root-folders)
 - [Profiles](#profiles)
@@ -322,6 +323,19 @@ Here you will set the naming convention for the folder that contains the season 
 
 > Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
 
+## Upgrade Management
+
+Movies may have extra files associated with it: subtitles, metadata, or other files such as artwork.
+Extra files can be [imported](#importing) automatically when a movie is imported.
+If a movie is upgraded you can decide whether or not to delete extra files along with the movie file that will be upgraded.
+The configuration of each file type can be controlled separately:
+
+- Keep subtitles files
+- Keep metadata files
+- Keep other files
+
+> Renaming a movie file outside of Radarr **cannot** be handled like an upgrade and extras will be deleted in such cases. If external programs may rename or otherwise modify movie files in your library, configure a [recycling bin folder](#file-management) to be safe.{.is-warning}
+
 ## Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
@@ -507,7 +521,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses.
 {.is-info}
 
-Profiles is where Custom Format Scores are configured.  
+Profiles is where Custom Format Scores are configured.
 
 ## Custom Format Conditions
 
@@ -929,7 +943,7 @@ Kodi will be one of the most commonly used options here if that is the software 
   - Enabled - Validate all HTTPS certificates (recommended)
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
-  
+
 ## Proxy
 
 Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
