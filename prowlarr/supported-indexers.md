@@ -2,14 +2,14 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-22T01:17:48.678560
+date: 2025-03-23T01:24:13.242868
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-22T01:17:48.678560
+dateCreated: 2025-03-23T01:24:13.242868
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.33.0.4992` / [Commit: 5125f256fb8c20b902adafe16530c4792a580d87](https://github.com/Prowlarr/Prowlarr/commit/5125f256fb8c20b902adafe16530c4792a580d87)
+  - Prowlarr Build `1.33.0.4994` / [Commit: 73ee69563372dc57ed7eba8bb7c05f338319d1f3](https://github.com/Prowlarr/Prowlarr/commit/73ee69563372dc57ed7eba8bb7c05f338319d1f3)
   - [Prowlarr Indexers Commit: 26403860499609a8bd52b76932d7e0d7ec90ba30](https://github.com/Prowlarr/Indexers/commit/26403860499609a8bd52b76932d7e0d7ec90ba30)
 
 ---
@@ -199,7 +199,7 @@ dateCreated: 2025-03-22T01:17:48.678560
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
 |[RUDUB](https://21mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
-|[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a Semi-Private Russian torrent site with a thriving file-sharing community|Russian (Russia)|
+|[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
 |[Sharewood (API)](https://www.sharewood.tv/){#sharewood-api}|sharewood is a FRENCH Semi-Private Torrent Tracker for GENERAL|French (France)|
 |[SkTorrent](https://sktorrent.eu/){#sktorrent}|SkTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
