@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-23T01:24:13.242868
+date: 2025-03-24T01:21:26.968401
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-23T01:24:13.242868
+dateCreated: 2025-03-24T01:21:26.968401
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.33.0.4994` / [Commit: 73ee69563372dc57ed7eba8bb7c05f338319d1f3](https://github.com/Prowlarr/Prowlarr/commit/73ee69563372dc57ed7eba8bb7c05f338319d1f3)
-  - [Prowlarr Indexers Commit: 26403860499609a8bd52b76932d7e0d7ec90ba30](https://github.com/Prowlarr/Indexers/commit/26403860499609a8bd52b76932d7e0d7ec90ba30)
+  - Prowlarr Build `1.33.1.4995` / [Commit: 758dddd4ad8261a9c948303d4d5811676496e1e6](https://github.com/Prowlarr/Prowlarr/commit/758dddd4ad8261a9c948303d4d5811676496e1e6)
+  - [Prowlarr Indexers Commit: b72f6077bf8e0386d48810ac4f6e743f2c15412a](https://github.com/Prowlarr/Indexers/commit/b72f6077bf8e0386d48810ac4f6e743f2c15412a)
 
 ---
 
@@ -41,7 +41,7 @@ dateCreated: 2025-03-23T01:24:13.242868
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTdirectory](https://www.btmulu.one/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
-|[BTSOW](https://btsow.motorcycles/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
+|[BTSOW](https://btsow.pics/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[cpasbien clone](https://www1.cpasbien.to/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
@@ -88,6 +88,7 @@ dateCreated: 2025-03-23T01:24:13.242868
 |[OxTorrent-vip](https://www.oxtorrent2.com/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
+|[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
@@ -197,7 +198,7 @@ dateCreated: 2025-03-23T01:24:13.242868
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://21mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://23mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -628,11 +629,12 @@ dateCreated: 2025-03-23T01:24:13.242868
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
-|[YGG cookie](https://www.ygg.re/){#yggcookie}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login|French (France)|
-|[YggTorrent](https://www.ygg.re/){#yggtorrent}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
+|[YGG cookie](https://www.yggtorrent.top/){#yggcookie}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login|French (France)|
+|[YggTorrent](https://www.yggtorrent.top/){#yggtorrent}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[YOiNKED (API)](https://yoinked.org/){#yoinked}|YOiNKED is a Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
 |[Zelka\.org](https://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
