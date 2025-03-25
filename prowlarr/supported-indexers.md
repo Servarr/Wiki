@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-24T11:22:31.854362
+date: 2025-03-25T01:20:13.864984
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-24T11:22:31.854362
+dateCreated: 2025-03-25T01:20:13.864984
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.33.1.4995` / [Commit: 758dddd4ad8261a9c948303d4d5811676496e1e6](https://github.com/Prowlarr/Prowlarr/commit/758dddd4ad8261a9c948303d4d5811676496e1e6)
-  - [Prowlarr Indexers Commit: b845657945c0298e71606d97476c539cf2c2f394](https://github.com/Prowlarr/Indexers/commit/b845657945c0298e71606d97476c539cf2c2f394)
+  - [Prowlarr Indexers Commit: 7deee1f185b9a1492fbde35ce865941ebe05fdef](https://github.com/Prowlarr/Indexers/commit/7deee1f185b9a1492fbde35ce865941ebe05fdef)
 
 ---
 
@@ -197,7 +197,7 @@ dateCreated: 2025-03-24T11:22:31.854362
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://24mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://25mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -295,7 +295,7 @@ dateCreated: 2025-03-24T11:22:31.854362
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Cinematik (API)](https://cinematik.net/){#cinematik}|Cinematik is a Private tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse|English (United States)|
 |[CinemaZ](https://cinemaz.to/){#cinemaz}|CinemaZ (EuTorrents) is a Private Torrent Tracker for FOREIGN NON-ASIAN MOVIES|English (United States)|
-|[Coastal-Crew](https://coastal-crew.bounceme.net/){#coastalcrew}|Coastal-Crew is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[Coastal-Music-Crew](https://coastal-crew.bounceme.net/){#coastalcrew}|Coastal-Music-Crew (C-M-C) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Private conspiracy related torrent index|English (United States)|
 |[Concertos](https://concertos.live/){#concertos}|Concertos is a Private Torrent Tracker for Live Concerts with Strict Quality Control|English (United States)|
 |[CrabPT (蟹黄堡)](https://crabpt.vip/){#crabpt}|CrabPT (蟹黄堡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -378,7 +378,7 @@ dateCreated: 2025-03-24T11:22:31.854362
 |[HDClone](https://pt.hdclone.org/){#hdclone}|HDClone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDFun](https://hdzone.me/){#hdfun}|HDFun (HDZone) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[HDHome](https://hdhome.org/){#hdhome}|HDHome (HDBiger) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[HDHome](https://hdhome.org/){#hdhome}|HDHome is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDKylin (麒麟)](https://na.hdkylin.com/){#hdkylin}|HDKylin (麒麟) is a CHINESE Private tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDRoute](http://hdroute.org/){#hdroute}|HDRoute is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDSky](https://hdsky.me/){#hdsky}|HDSky is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
