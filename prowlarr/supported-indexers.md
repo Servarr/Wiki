@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-25T01:20:13.864984
+date: 2025-03-27T01:19:21.408574
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-25T01:20:13.864984
+dateCreated: 2025-03-27T01:19:21.408574
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.33.1.4995` / [Commit: 758dddd4ad8261a9c948303d4d5811676496e1e6](https://github.com/Prowlarr/Prowlarr/commit/758dddd4ad8261a9c948303d4d5811676496e1e6)
-  - [Prowlarr Indexers Commit: 7deee1f185b9a1492fbde35ce865941ebe05fdef](https://github.com/Prowlarr/Indexers/commit/7deee1f185b9a1492fbde35ce865941ebe05fdef)
+  - Prowlarr Build `1.33.1.4996` / [Commit: 023eec0ec062a0e1fac3c45907fdcf1e2222125e](https://github.com/Prowlarr/Prowlarr/commit/023eec0ec062a0e1fac3c45907fdcf1e2222125e)
+  - [Prowlarr Indexers Commit: 415d79be0ad1213980b9445ebe90469d8b13b507](https://github.com/Prowlarr/Indexers/commit/415d79be0ad1213980b9445ebe90469d8b13b507)
 
 ---
 
@@ -121,7 +121,7 @@ dateCreated: 2025-03-25T01:20:13.864984
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq360.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir169.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir170.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome187.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://torrentssg7.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://Torrenttip168.com/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -197,7 +197,7 @@ dateCreated: 2025-03-25T01:20:13.864984
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://25mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://26mar.rudub.online/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -554,6 +554,7 @@ dateCreated: 2025-03-25T01:20:13.864984
 |[SpeedCD](https://speed.cd/){#speedcd}|Your home now!|English (United States)|
 |[Speedmaster HD](https://speedmaster-hd.net/){#speedmasterhd}|Speedmaster HD is a GERMAN Time based Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Spirit of Revolution](https://sor-next.tk/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
+|[SportsCraze](https://sportscraze.xyz/){#sportscraze}|SportsCraze (SC) is a Private Torrent Tracker for SPORT|English (United States)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[SugoiMusic](https://sugoimusic.me/){#sugoimusic}|SugoiMusic is a Private Torrent Tracker for ASIAN MUSIC / TV|English (United States)|
