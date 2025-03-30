@@ -2,7 +2,7 @@
 title: Sonarr v4 FAQ
 description: Sonarr v4 FAQ
 published: true
-date: 2025-03-30T15:42:44.052Z
+date: 2025-03-30T15:44:33.686Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T14:02:10.493Z
@@ -44,8 +44,8 @@ As of Sonarr v4, Authentication is Mandatory.
 
 ### Authentication Method
 
-- `Basic` (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password
-- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
+- `Basic` (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr. This is recommended.
 - `External` - Configurable via Config File Only
   - Disables authentication completely. Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/sonarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
