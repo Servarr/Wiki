@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: 
 published: true
-date: 2025-01-04T17:45:57.629Z
+date: 2025-03-30T15:47:51.456Z
 tags: lidarr, needs-love, faq
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -91,10 +91,10 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ### Authentication Method
 
-- `Basic` (Browser pop-up) - This option when accessing your Lidarr will show a small pop-up allowing you to input a Username and Password
-- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr
+- `Basic` (Browser pop-up) - This option when accessing your Lidarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - If you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/lidarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/lidarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
