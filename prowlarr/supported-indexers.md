@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-03-31T01:23:47.133494
+date: 2025-04-02T01:21:29.261167
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-03-31T01:23:47.133494
+dateCreated: 2025-04-02T01:21:29.261167
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.33.2.4999` / [Commit: 2b16d93095844ad6a867cfa69042f7398c9f442c](https://github.com/Prowlarr/Prowlarr/commit/2b16d93095844ad6a867cfa69042f7398c9f442c)
-  - [Prowlarr Indexers Commit: d16bf035b32d1f2b8f5d45aa186e4a45694dfb85](https://github.com/Prowlarr/Indexers/commit/d16bf035b32d1f2b8f5d45aa186e4a45694dfb85)
+  - Prowlarr Build `1.33.2.5001` / [Commit: f6f2a3b00d0c3986f11078deb804e89480f812ff](https://github.com/Prowlarr/Prowlarr/commit/f6f2a3b00d0c3986f11078deb804e89480f812ff)
+  - [Prowlarr Indexers Commit: 149e968dad48bb2521ce614153b1795e365f4765](https://github.com/Prowlarr/Indexers/commit/149e968dad48bb2521ce614153b1795e365f4765)
 
 ---
 
@@ -92,7 +92,6 @@ dateCreated: 2025-03-31T01:23:47.133494
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[Rapidzona](https://rapidzona.tv/){#rapidzona}|Rapidzona is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[RuTor](https://rutor.info/){#rutor}|RuTor is a RUSSIAN Public site for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -191,13 +190,14 @@ dateCreated: 2025-03-31T01:23:47.133494
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
 |[Polskie-Torrenty](https://polskie-torrenty.eu/){#polskie-torrenty}|Polskie-Torrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for 3X|Russian (Russia)|
+|[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Semi-Private tracker for 3X|Russian (Russia)|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
 |[Rainbow Tracker](https://gaytracker.ru/){#rainbowtracker}|Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV|Russian (Russia)|
 |[RGFootball](http://rgfootball.net/){#rgfootball}|RGFootball is a RUSSIAN Sports torrent tracker|Russian (Russia)|
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://mar30.rudub.vip/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://apr02.rudub.vip/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -229,6 +229,7 @@ dateCreated: 2025-03-31T01:23:47.133494
 |[ABtorrents](https://abtorrents.me/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|English (Australia)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
+|[AFUN](https://www.ptlover.cc/){#afun}|AFUN is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AGSVPT](https://www.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a JAPANESE Private Torrent Tracker for Female Japanese Idol related files|English (United States)|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
