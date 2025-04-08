@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-06T01:24:58.701774
+date: 2025-04-08T01:20:27.878958
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-06T01:24:58.701774
+dateCreated: 2025-04-08T01:20:27.878958
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.33.2.5002` / [Commit: 700862635823004f5abce0845931cfa3068b7a46](https://github.com/Prowlarr/Prowlarr/commit/700862635823004f5abce0845931cfa3068b7a46)
-  - [Prowlarr Indexers Commit: 5598e7a7208aec9383bdfdf6c9e97ebc04fcdb18](https://github.com/Prowlarr/Indexers/commit/5598e7a7208aec9383bdfdf6c9e97ebc04fcdb18)
+  - Prowlarr Build `1.33.3.5005` / [Commit: 07711da4e090887eb6540d77d05bc3d3d9d2bc29](https://github.com/Prowlarr/Prowlarr/commit/07711da4e090887eb6540d77d05bc3d3d9d2bc29)
+  - [Prowlarr Indexers Commit: aa632f67b5d05e906cc9ad94387a3d9549450cc8](https://github.com/Prowlarr/Indexers/commit/aa632f67b5d05e906cc9ad94387a3d9549450cc8)
 
 ---
 
@@ -53,6 +53,7 @@ dateCreated: 2025-04-06T01:24:58.701774
 |[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
+|[Frozen Layer](https://www.frozen-layer.com/){#frozenlayer}|Frozen Layer is a SPANISH Public torrent site focused on ANIME|Spanish (Spain)|
 |[GamesTorrents](https://www.gamestorrents.app/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[GloDLS](https://glodls.to/){#glodls}|GloDLS is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -196,7 +197,7 @@ dateCreated: 2025-04-06T01:24:58.701774
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://apr06.rudub.vip/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://apr07.rudub.vip/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
