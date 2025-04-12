@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes
 published: true
-date: 2025-01-19T13:58:52.935Z
+date: 2025-04-12T12:26:00.209Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -94,13 +94,13 @@ This naming convention is effective with Plex and serves as a workaround for art
 ### Standard Track Format
 
 ```jinja
-{Album Type}/({Release Year}) {Album CleanTitle}{ (Album Disambiguation)}/{track:00} - {Track ArtistCleanNameThe} - {Album CleanTitle} - {Track CleanTitle}
+{Album Type}/({Release Year}) {Album CleanTitle:100}{ (Album Disambiguation)}/{track:00} - {Track ArtistCleanNameThe:100} 
 ```
 
 ### Multi Disc Track Format
 
 ```jinja
-{Album Type}/({Release Year}) {Album CleanTitle}{ (Album Disambiguation)}/{medium:00}{track:00} - {Track ArtistCleanNameThe} - {Album CleanTitle} - {Track CleanTitle}
+{Album Type}/({Release Year}) {Album CleanTitle:100}{ (Album Disambiguation:100)}/{medium:00}{track:00} - {Track ArtistCleanNameThe:100} - {Album CleanTitle:100} - {Track CleanTitle:100}
 ```
 
 ### Artist Folder Format
@@ -108,7 +108,7 @@ This naming convention is effective with Plex and serves as a workaround for art
 Using `CleanNameThe` moves `The` to the end of the folder name for easier folder navigation.
 
 ```jinja
-{Artist CleanNameThe}
+{Artist CleanNameThe:100}
 ```
 
 ## Fra's Naming Convention
