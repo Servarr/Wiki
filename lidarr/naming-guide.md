@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes
 published: true
-date: 2025-04-12T12:26:00.209Z
+date: 2025-04-13T13:14:21.295Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -94,7 +94,7 @@ This naming convention is effective with Plex and serves as a workaround for art
 ### Standard Track Format
 
 ```jinja
-{Album Type}/({Release Year}) {Album CleanTitle:100}{ (Album Disambiguation)}/{track:00} - {Track ArtistCleanNameThe:100} 
+{Album Type}/({Release Year}) {Album CleanTitle:100}{ (Album Disambiguation)}/{track:00} - {Track ArtistCleanNameThe:100} - {Album CleanTitle:100} - {Track CleanTitle:100}
 ```
 
 ### Multi Disc Track Format
