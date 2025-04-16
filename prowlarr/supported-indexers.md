@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-15T01:23:11.737913
+date: 2025-04-16T01:22:37.428656
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-15T01:23:11.737913
+dateCreated: 2025-04-16T01:22:37.428656
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.34.1.5018` / [Commit: 362f3fe22382220ec1478c8f2eef4c6a0e847d63](https://github.com/Prowlarr/Prowlarr/commit/362f3fe22382220ec1478c8f2eef4c6a0e847d63)
-  - [Prowlarr Indexers Commit: 50840e2ac175a361da359877180c2555968c83e4](https://github.com/Prowlarr/Indexers/commit/50840e2ac175a361da359877180c2555968c83e4)
+  - [Prowlarr Indexers Commit: ddcb49b8dfd87629f69f2425202f9e928606b6e4](https://github.com/Prowlarr/Indexers/commit/ddcb49b8dfd87629f69f2425202f9e928606b6e4)
 
 ---
 
@@ -197,7 +197,7 @@ dateCreated: 2025-04-15T01:23:11.737913
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://apr15.rudub.vip/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://apr16.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -409,7 +409,6 @@ dateCreated: 2025-04-15T01:23:11.737913
 |[Infire](https://infire.si/){#infire}|Infire is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Insane Tracker](https://newinsane.info/){#insanetracker}|Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[IPTorrents](https://iptorrents.com/){#iptorrents}|IPTorrents (IPT) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
-|[IrishTV](https://irishtv.xyz/){#irishtv}|IrishTV (ITV) is an IRISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ItaTorrents](https://itatorrents.xyz/){#itatorrents}|ItaTorrents is an ITALIAN Private tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[JME-REUNIT3D (API)](https://jme-reunit3d.de/){#jme-reunit3d-api}|JME-REUNIT3D is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[JoyHD](https://www.joyhd.net/){#joyhd}|JoyHD (JHD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
@@ -423,7 +422,6 @@ dateCreated: 2025-04-15T01:23:11.737913
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
-|[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Last Digital Underground](https://theldu.to/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LastFiles](https://lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Mexico)|
