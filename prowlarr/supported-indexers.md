@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-16T01:22:37.428656
+date: 2025-04-17T01:21:44.205691
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-16T01:22:37.428656
+dateCreated: 2025-04-17T01:21:44.205691
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.34.1.5018` / [Commit: 362f3fe22382220ec1478c8f2eef4c6a0e847d63](https://github.com/Prowlarr/Prowlarr/commit/362f3fe22382220ec1478c8f2eef4c6a0e847d63)
-  - [Prowlarr Indexers Commit: ddcb49b8dfd87629f69f2425202f9e928606b6e4](https://github.com/Prowlarr/Indexers/commit/ddcb49b8dfd87629f69f2425202f9e928606b6e4)
+  - [Prowlarr Indexers Commit: 3162b1b3c51c9b8a6346e8d4dcb9312da124ccb2](https://github.com/Prowlarr/Indexers/commit/3162b1b3c51c9b8a6346e8d4dcb9312da124ccb2)
 
 ---
 
@@ -405,7 +405,7 @@ dateCreated: 2025-04-16T01:22:37.428656
 |[ImmortalSeed](https://immortalseed.me/){#immortalseed}|ImmortalSeed (iS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Immortuos](https://immortuos.life/){#immortuos}|Immortuos is a GERMAN Private Tracker for MOVIES / TV|German (Germany)|
 |[Indietorrents](https://www.indietorrents.com/){#indietorrents}|Indietorrents is a Private Music Torrent Tracker for independent MUSIC|English (United Kingdom)|
-|[INFINITY (API)](https://infinitylibrary.net/){#infinity-api}|INFINITY is a Private Torrent Tracker for MOVIES / TV|English (United States)|
+|[INFINITY (API)](https://infinitylibrary.net/){#infinity-api}|INFINITY is a Private PAY2DL Torrent Tracker for MOVIES / TV|English (United States)|
 |[Infire](https://infire.si/){#infire}|Infire is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Insane Tracker](https://newinsane.info/){#insanetracker}|Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[IPTorrents](https://iptorrents.com/){#iptorrents}|IPTorrents (IPT) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
@@ -541,6 +541,7 @@ dateCreated: 2025-04-16T01:22:37.428656
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|Secret Cinema is a Private ratioless site for rare MOVIES|English (United States)|
 |[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-DAY MOVIES / TV / GENERAL|English (United States)|
+|[SewerPT](https://sewerpt.com/){#sewerpt}|SewerPT (下水道) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Shadowflow (影)](https://shadowflow.org/){#shadowflow}|Shadowflow (影) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|Shareisland is a ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
