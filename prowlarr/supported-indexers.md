@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-21T01:25:42.553236
+date: 2025-04-22T01:22:11.434253
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-21T01:25:42.553236
+dateCreated: 2025-04-22T01:22:11.434253
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.35.0.5023` / [Commit: 0b3a5c9bc41f5fa550bb487e9ac661496aa64b63](https://github.com/Prowlarr/Prowlarr/commit/0b3a5c9bc41f5fa550bb487e9ac661496aa64b63)
-  - [Prowlarr Indexers Commit: a6efef5b1179762a8a4c52ee79789457eb6bd725](https://github.com/Prowlarr/Indexers/commit/a6efef5b1179762a8a4c52ee79789457eb6bd725)
+  - Prowlarr Build `1.35.0.5024` / [Commit: 48a658571bdecda1d6a94b77876afb84346bdf5e](https://github.com/Prowlarr/Prowlarr/commit/48a658571bdecda1d6a94b77876afb84346bdf5e)
+  - [Prowlarr Indexers Commit: fa1ef6bbece9b653a8346b223c0b2c63e2fe3157](https://github.com/Prowlarr/Indexers/commit/fa1ef6bbece9b653a8346b223c0b2c63e2fe3157)
 
 ---
 
@@ -37,6 +37,7 @@ dateCreated: 2025-04-21T01:25:42.553236
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
 |[BigFANGroup](https://bigfangroup.org/){#bigfangroup}|BigFANGroup is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[BitRu](https://bitru.org/){#bitru}|BitRu is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
+|[BitSearch](https://bitsearch.to/){#bitsearch}|BitSearch (Solid Torrents) is a Public torrent meta-search engine|English (United States)|
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTdirectory](https://btmulu.work/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
@@ -196,7 +197,7 @@ dateCreated: 2025-04-21T01:25:42.553236
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://apr21.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://apr22.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
