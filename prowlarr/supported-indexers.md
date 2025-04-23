@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-22T01:22:11.434253
+date: 2025-04-23T01:22:24.294693
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-22T01:22:11.434253
+dateCreated: 2025-04-23T01:22:24.294693
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.35.0.5024` / [Commit: 48a658571bdecda1d6a94b77876afb84346bdf5e](https://github.com/Prowlarr/Prowlarr/commit/48a658571bdecda1d6a94b77876afb84346bdf5e)
-  - [Prowlarr Indexers Commit: fa1ef6bbece9b653a8346b223c0b2c63e2fe3157](https://github.com/Prowlarr/Indexers/commit/fa1ef6bbece9b653a8346b223c0b2c63e2fe3157)
+  - [Prowlarr Indexers Commit: ee87d8c9155a84163186af74677887355c66cef3](https://github.com/Prowlarr/Indexers/commit/ee87d8c9155a84163186af74677887355c66cef3)
 
 ---
 
@@ -422,6 +422,7 @@ dateCreated: 2025-04-22T01:22:11.434253
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
+|[LaidBackManor (API)](https://laidbackmanor.xyz/){#laidbackmanor}|LaidBackManor (LBM) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Last Digital Underground](https://theldu.to/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LastFiles](https://lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Mexico)|
