@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-24T01:22:36.227990
+date: 2025-04-25T01:23:24.261118
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-24T01:22:36.227990
+dateCreated: 2025-04-25T01:23:24.261118
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.35.0.5024` / [Commit: c85f170d4174320ae6501dc1c74b74c6643182ef](https://github.com/Prowlarr/Prowlarr/commit/c85f170d4174320ae6501dc1c74b74c6643182ef)
-  - [Prowlarr Indexers Commit: 420d53ba572987683f19020a7094d6c4f5f401e3](https://github.com/Prowlarr/Indexers/commit/420d53ba572987683f19020a7094d6c4f5f401e3)
+  - [Prowlarr Indexers Commit: 3f3599a04e6766e0b9d24d49d584dc5d78340c1e](https://github.com/Prowlarr/Indexers/commit/3f3599a04e6766e0b9d24d49d584dc5d78340c1e)
 
 ---
 
@@ -116,7 +116,6 @@ dateCreated: 2025-04-24T01:22:36.227990
 |[Torrent9](https://ww1.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
-|[TorrentFunk](https://www.torrentfunk.com/){#torrentfunk}|TorrentFunk is a Public torrent index|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq365.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
