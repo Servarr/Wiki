@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-27T01:27:33.190156
+date: 2025-04-28T01:25:05.208712
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-27T01:27:33.190156
+dateCreated: 2025-04-28T01:25:05.208712
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.35.0.5024` / [Commit: c85f170d4174320ae6501dc1c74b74c6643182ef](https://github.com/Prowlarr/Prowlarr/commit/c85f170d4174320ae6501dc1c74b74c6643182ef)
-  - [Prowlarr Indexers Commit: e5880ea07c50e93c1f8caab2ef57c323197e84cb](https://github.com/Prowlarr/Indexers/commit/e5880ea07c50e93c1f8caab2ef57c323197e84cb)
+  - Prowlarr Build `1.35.1.5028` / [Commit: 2b0e52ebca191b574df4a9a5c9525de127b77b57](https://github.com/Prowlarr/Prowlarr/commit/2b0e52ebca191b574df4a9a5c9525de127b77b57)
+  - [Prowlarr Indexers Commit: 3eb9f365c6a307ddf0bb36486e70cd2fcedadeb5](https://github.com/Prowlarr/Indexers/commit/3eb9f365c6a307ddf0bb36486e70cd2fcedadeb5)
 
 ---
 
@@ -196,7 +196,7 @@ dateCreated: 2025-04-27T01:27:33.190156
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://apr27.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://apr28.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -335,7 +335,7 @@ dateCreated: 2025-04-27T01:27:33.190156
 |[F1Carreras (API)](https://f1carreras.xyz/){#f1carreras-api}|F1Carreras is a SPANISH Private Torrent Tracker for Motor Racing TV Releases|Spanish (Mexico)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
-|[Fappaizuri](https://fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
+|[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
