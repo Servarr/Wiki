@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-04-28T01:25:05.208712
+date: 2025-04-30T01:23:19.544196
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-04-28T01:25:05.208712
+dateCreated: 2025-04-30T01:23:19.544196
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.35.1.5028` / [Commit: 2b0e52ebca191b574df4a9a5c9525de127b77b57](https://github.com/Prowlarr/Prowlarr/commit/2b0e52ebca191b574df4a9a5c9525de127b77b57)
-  - [Prowlarr Indexers Commit: 3eb9f365c6a307ddf0bb36486e70cd2fcedadeb5](https://github.com/Prowlarr/Indexers/commit/3eb9f365c6a307ddf0bb36486e70cd2fcedadeb5)
+  - Prowlarr Build `1.35.1.5032` / [Commit: 5eb4d112cacde8bcd93f3d733a13ea48592b0dbb](https://github.com/Prowlarr/Prowlarr/commit/5eb4d112cacde8bcd93f3d733a13ea48592b0dbb)
+  - [Prowlarr Indexers Commit: 5ff3cac0af35d80a4d81b4fd8540a8d09a63dc3a](https://github.com/Prowlarr/Indexers/commit/5ff3cac0af35d80a4d81b4fd8540a8d09a63dc3a)
 
 ---
 
@@ -67,7 +67,6 @@ dateCreated: 2025-04-28T01:25:05.208712
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[Knaben](https://knaben.org/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|English (United States)|
-|[Libronube](https://www.libronube.com/){#libronube}|Libronube is a SPANISH Public tracker for EBOOKS|Spanish (Spain)|
 |[LimeTorrents](https://www.limetorrents.lol/){#limetorrents}|LimeTorrents is a Public general torrent index with mostly verified torrents|English (United States)|
 |[LinuxTracker](https://linuxtracker.org/){#linuxtracker}|LinuxTracker is a Public Linux ISO Torrent Repository|English (United States)|
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|English (United States)|
@@ -196,7 +195,7 @@ dateCreated: 2025-04-28T01:25:05.208712
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://apr28.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://apr30.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -426,7 +425,6 @@ dateCreated: 2025-04-28T01:25:05.208712
 |[LastFiles](https://lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Mexico)|
 |[Le-Cinephile](https://le-cinephile.de/){#le-cinephile}|Le-Cinephile is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[LearnBits](http://www.learnbits.me/){#learnbits}|LearnBits is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[LearnFlakes](https://learnflakes.net/){#learnflakes}|LearnFlakes is a Private Torrent Tracker for CERTIFICATE / TRAINING E-LEARNING|English (United States)|
 |[leech24](https://leech24.net/){#leech24}|leech24 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LemonHD](https://lemonhd.club/){#lemonhd}|LemonHD is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
