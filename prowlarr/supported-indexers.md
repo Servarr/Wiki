@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-02T01:23:40.596215
+date: 2025-05-03T01:21:37.642732
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-02T01:23:40.596215
+dateCreated: 2025-05-03T01:21:37.642732
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.36.0.5044` / [Commit: c0d2cb42e90f714bc7111e292a73162855bd9675](https://github.com/Prowlarr/Prowlarr/commit/c0d2cb42e90f714bc7111e292a73162855bd9675)
-  - [Prowlarr Indexers Commit: 8edde710b31af3392ee9088323e37feefc2735fc](https://github.com/Prowlarr/Indexers/commit/8edde710b31af3392ee9088323e37feefc2735fc)
+  - [Prowlarr Indexers Commit: 9dceb2be9ca5aa6c6936cb49f124f8f7c8b93c64](https://github.com/Prowlarr/Indexers/commit/9dceb2be9ca5aa6c6936cb49f124f8f7c8b93c64)
 
 ---
 
@@ -585,7 +585,6 @@ dateCreated: 2025-05-02T01:23:40.596215
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|TorrentLeech (TL) is a Private Torrent Tracker for 0DAY / GENERAL\. not here _ not scene|English (United States)|
 |[Torrentleech\.pl](https://torrentleech.pl/){#torrentleech-pl}|Torrentleech\.pl is a POLISH Private Torrent Tracker for 0DAY / GENERAL|Polish (Poland)|
 |TorrentPotato{#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|English (United States)|
-|[TorrentSeeds (API)](https://torrentseeds.org/){#torrentseeds-api}|TorrentSeeds (TS) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory2FA](https://totheglory.im/){#totheglory2fa}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Chinese (China)|
