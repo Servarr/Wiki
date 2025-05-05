@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-04T01:39:17.076269
+date: 2025-05-05T01:26:56.477185
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-04T01:39:17.076269
+dateCreated: 2025-05-05T01:26:56.477185
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.36.0.5044` / [Commit: c0d2cb42e90f714bc7111e292a73162855bd9675](https://github.com/Prowlarr/Prowlarr/commit/c0d2cb42e90f714bc7111e292a73162855bd9675)
-  - [Prowlarr Indexers Commit: 2471eaebfd0b5db98a74543ee6016d1c244bf8ca](https://github.com/Prowlarr/Indexers/commit/2471eaebfd0b5db98a74543ee6016d1c244bf8ca)
+  - Prowlarr Build `1.36.1.5045` / [Commit: 5cc4c3f302d006df2458789530f89a097a9d1fc7](https://github.com/Prowlarr/Prowlarr/commit/5cc4c3f302d006df2458789530f89a097a9d1fc7)
+  - [Prowlarr Indexers Commit: 5027b9600b4d55aa75f8233ec263f473858eba84](https://github.com/Prowlarr/Indexers/commit/5027b9600b4d55aa75f8233ec263f473858eba84)
 
 ---
 
@@ -195,7 +195,7 @@ dateCreated: 2025-05-04T01:39:17.076269
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://may03.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://may05.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -397,7 +397,6 @@ dateCreated: 2025-05-04T01:39:17.076269
 |[HQMusic](https://tracker.hqmusic.info/){#hqmusic}|HQMusic is a VIETNAMESE Private Torrent Tracker for MUSIC|Vietnamese (Viet Nam)|
 |[HUDBT (蝴蝶)](https://hudbt.hust.edu.cn/){#hudbt}|HUDBT (蝴蝶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Hǎitáng (海棠PT)](https://www.htpt.cc/){#haitang}|Hǎitáng (海棠PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|Chinese (China)|
-|[iAnon](https://ianon.app/){#ianon}|MacOS software tracker|English (United States)|
 |[ICC2022 (冰淇淋)](https://www.icc2022.com/){#icc2022}|ICC2022 (冰淇淋) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[ilolicon PT](https://share.ilolicon.com/){#ilolicon}|ilolicon PT is a CHINESE Private Torrent Tracker for LOLICON / MOVIES / 3X|Chinese (China)|
 |[ImmortalSeed](https://immortalseed.me/){#immortalseed}|ImmortalSeed (iS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
