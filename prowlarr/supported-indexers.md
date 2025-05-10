@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-08T01:25:18.890563
+date: 2025-05-10T01:21:44.114946
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-08T01:25:18.890563
+dateCreated: 2025-05-10T01:21:44.114946
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.36.1.5045` / [Commit: 5cc4c3f302d006df2458789530f89a097a9d1fc7](https://github.com/Prowlarr/Prowlarr/commit/5cc4c3f302d006df2458789530f89a097a9d1fc7)
-  - [Prowlarr Indexers Commit: ae69b9558fe1f0d73e5815f263afab265ae94ac8](https://github.com/Prowlarr/Indexers/commit/ae69b9558fe1f0d73e5815f263afab265ae94ac8)
+  - Prowlarr Build `1.36.1.5046` / [Commit: c8f5099423bb0b26258777194a103f619797ca96](https://github.com/Prowlarr/Prowlarr/commit/c8f5099423bb0b26258777194a103f619797ca96)
+  - [Prowlarr Indexers Commit: 334f745ac81bb15e928822744ebea9a59793036a](https://github.com/Prowlarr/Indexers/commit/334f745ac81bb15e928822744ebea9a59793036a)
 
 ---
 
@@ -25,7 +25,7 @@ dateCreated: 2025-05-08T01:25:18.890563
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[0Magnet](https://0magnet.co/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
+|[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[52BT](https://www.529056.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
@@ -63,7 +63,7 @@ dateCreated: 2025-05-08T01:25:18.890563
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[Isohunt2](https://isohunt.ch/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[iTorrent](https://itorrent.ws/){#itorrent}|iTorrent is a HUNGARIAN Public site|Hungarian (Hungary)|
-|[kickasstorrents\.to](https://www.kickasstorrents.do/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
+|[kickasstorrents\.to](https://kickass.torrentbay.st/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[Knaben](https://knaben.org/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
 |[LePorno\.info](https://leporno.info/){#lepornoinfo}|LePorno\.info is a Public Tracker for 3X|English (United States)|
@@ -119,7 +119,7 @@ dateCreated: 2025-05-08T01:25:18.890563
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq367.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir172.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentSir](https://torrentsir173.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome194.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://torrentssg7.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip175.com/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -195,7 +195,7 @@ dateCreated: 2025-05-08T01:25:18.890563
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://may08.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://may10.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
