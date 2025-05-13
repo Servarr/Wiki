@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-10T01:21:44.114946
+date: 2025-05-13T01:25:48.614922
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-10T01:21:44.114946
+dateCreated: 2025-05-13T01:25:48.614922
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.36.1.5046` / [Commit: c8f5099423bb0b26258777194a103f619797ca96](https://github.com/Prowlarr/Prowlarr/commit/c8f5099423bb0b26258777194a103f619797ca96)
-  - [Prowlarr Indexers Commit: 334f745ac81bb15e928822744ebea9a59793036a](https://github.com/Prowlarr/Indexers/commit/334f745ac81bb15e928822744ebea9a59793036a)
+  - Prowlarr Build `1.36.2.5050` / [Commit: 903b86b9a215b54f72e7261739deb36565d11cc3](https://github.com/Prowlarr/Prowlarr/commit/903b86b9a215b54f72e7261739deb36565d11cc3)
+  - [Prowlarr Indexers Commit: 8e1a28468b97e83b4405e8239b5bd431f7040645](https://github.com/Prowlarr/Indexers/commit/8e1a28468b97e83b4405e8239b5bd431f7040645)
 
 ---
 
@@ -195,7 +195,7 @@ dateCreated: 2025-05-10T01:21:44.114946
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://may10.rudub.biz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://may13.rudub.run/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
