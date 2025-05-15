@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 published: true
-date: 2025-01-03T03:38:08.129Z
+date: 2025-05-15T17:27:34.383Z
 tags: sonarr, needs-love, settings
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -329,10 +329,10 @@ Name for the `Specials` (Season) folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
   - For more information on this click [here](https://trash-guides.info/hardlinks)
-
- > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
+> Rarely - but possibly - file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
 {.is-warning}
-
+- Import Using Script - Execute a custom script to import rather than the native import functionality.
+  - Import Script Path - Path to executable script.
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file.
   If a subtitle filename contains additional tags such as `cc` or `forced`, they will be preserved as long as they are recognized (currently in develop version).
 
