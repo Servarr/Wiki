@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-16T01:25:53.701277
+date: 2025-05-19T01:38:01.978784
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-16T01:25:53.701277
+dateCreated: 2025-05-19T01:38:01.978784
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.36.2.5059` / [Commit: 708c94bc560fac676b72baa1770666613fcceb38](https://github.com/Prowlarr/Prowlarr/commit/708c94bc560fac676b72baa1770666613fcceb38)
-  - [Prowlarr Indexers Commit: 8f00ccfa1204f0d7a3310b562076ead2e6c883d8](https://github.com/Prowlarr/Indexers/commit/8f00ccfa1204f0d7a3310b562076ead2e6c883d8)
+  - Prowlarr Build `1.36.3.5063` / [Commit: 40d2e40d9413aa47c120255698dc8f7b12a2ff8c](https://github.com/Prowlarr/Prowlarr/commit/40d2e40d9413aa47c120255698dc8f7b12a2ff8c)
+  - [Prowlarr Indexers Commit: a621ed7f8956aa38bbfc0c33a36c4d15c96e4f13](https://github.com/Prowlarr/Indexers/commit/a621ed7f8956aa38bbfc0c33a36c4d15c96e4f13)
 
 ---
 
@@ -115,6 +115,7 @@ dateCreated: 2025-05-16T01:25:53.701277
 |[Torrent9](https://ww1.torrent9.fm/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
+|[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq368.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -195,7 +196,7 @@ dateCreated: 2025-05-16T01:25:53.701277
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://may16.rudub.run/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://may19.rudub.run/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -264,6 +265,7 @@ dateCreated: 2025-05-16T01:25:53.701277
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Bitpalace](https://bitpalace.cc/){#bitpalace}|Bitpalace is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[BitPorn](https://bitporn.eu/){#bitporn}|BitPorn (Malacka) is a HUNGARIAN Private Torrent Tracker for 3X|Hungarian (Hungary)|
+|[BitSexy (API)](https://bitsexy.cc/){#bitsexy-api}|BitSexy is a Private Torrent Tracker for 3X|English (United States)|
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
 |[Bj-Share](https://bj-share.info/){#bjshare}|Private PT-BR torrent|Portuguese (Brazil)|
