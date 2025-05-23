@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-22T01:25:26.432221
+date: 2025-05-23T01:25:45.723513
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-22T01:25:26.432221
+dateCreated: 2025-05-23T01:25:45.723513
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `1.36.3.5063` / [Commit: 40d2e40d9413aa47c120255698dc8f7b12a2ff8c](https://github.com/Prowlarr/Prowlarr/commit/40d2e40d9413aa47c120255698dc8f7b12a2ff8c)
-  - [Prowlarr Indexers Commit: bec41b97a0dbbc464d540518970eb34e0f04d3f3](https://github.com/Prowlarr/Indexers/commit/bec41b97a0dbbc464d540518970eb34e0f04d3f3)
+  - Prowlarr Build `1.36.3.5067` / [Commit: 9c936121e86fb482591773dd65b5ae04510de1dd](https://github.com/Prowlarr/Prowlarr/commit/9c936121e86fb482591773dd65b5ae04510de1dd)
+  - [Prowlarr Indexers Commit: b3d5958dad3bb60471b2fa1da9a0452553b36161](https://github.com/Prowlarr/Indexers/commit/b3d5958dad3bb60471b2fa1da9a0452553b36161)
 
 ---
 
@@ -118,7 +118,7 @@ dateCreated: 2025-05-22T01:25:26.432221
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq368.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq369.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir174.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome196.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
