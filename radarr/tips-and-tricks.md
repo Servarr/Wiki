@@ -99,26 +99,22 @@ Radarr can be configured to auto-remove torrents (and their files) upon meeting 
 
 Caveats:
 
-* Seed goals are set on grab, so these changes work only going forward, and do not impact any existing torrents.
-* You may not use a post-import category in Radarr's download client configuration.
-* Goals set in Radarr (or Prowlarr, if you use it and are on Full Sync) override the goals set in Qbittorrent. Qbit's goals would only be used for grabs *not* made by Radarr.
-* Setting goals low, even for testing purposes, does not work. Please be sure to seed to at least 1.0x ratio, or a few hours.
+	* Seed goals are set on grab, so these changes work only going forward, and do not impact any existing torrents.
+	* You may not use a post-import category in Radarr's download client configuration.
+	* Goals set in Radarr (or Prowlarr, if you use it and are on Full Sync) override the goals set in Qbittorrent. Qbit's goals would only be used for grabs *not* made by Radarr.
+	* Setting goals low, even for testing purposes, does not work. Please be sure to seed to at least 1.0x ratio, or a few hours.
 
 If you use Prowlarr on full sync, then you should be setting these values in Prowlarr!
 
-1) In Radarr, go to Settings -> Indexers. Click on each indexer. In that indexer, click Show Advanced. Set the Seed Ratio value to at least "1", and the Seed Time value to at least 300. You may leave one of those values blank, if you only want either time or ratio. If you set both, the first value that is met triggers the removal (i.e. if it hits 1.0 ratio in 120 minutes, it would be removed even though it hasn't met the time value).
+1. In Radarr, go to Settings -> Indexers. Click on each indexer. In that indexer, click Show Advanced. Set the Seed Ratio value to at least "1", and the Seed Time value to at least 300. You may leave one of those values blank, if you only want either time or ratio. If you set both, the first value that is met triggers the removal (i.e. if it hits 1.0 ratio in 120 minutes, it would be removed even though it hasn't met the time value).
 
-![image3.png](/images/image3.png)
+	![radarr-seed-time.png](/images/radarr-seed-time.png)
   
-2) Repeat this for all of your torrent indexers. You can set different goals for each indexer. Note that you should add 10-20% over what your private indexers require, because the way that your download client calculates time/ratio is slightly different than what your indexers do, and setting it too close to requirements can result in hit & runs.
+1. Repeat this for all of your torrent indexers. You can set different goals for each indexer. Note that you should add 10-20% over what your private indexers require, because the way that your download client calculates time/ratio is slightly different than what your indexers do, and setting it too close to requirements can result in hit & runs.
 
-3) In Qbittorrent, go to Tools / Options / Downloads. Change to Automatic Torrent Management mode (it should already be like this, since you're using automated tools, but many people have missed this setup configuration).
+1. In Qbittorrent, go to Tools / Options / BitTorrent. You will have to check one of the seed goal items in order to be able to select from the drop-down. Change the drop-down to "Stop Torrent" (on older versions of Qbittorrent, this is Pause Torrent). Then you can un-check the box again, if you don't want Qbittorrent to have any default values set.
 
-![image2.png](/images/image2.png)
-
-4) In Qbittorrent, go to Tools / Options / BitTorrent. You will have to check one of the seed goal items in order to be able to select from the drop-down. Change the drop-down to "Stop Torrent" (on older versions of Qbittorrent, this is Pause Torrent). Then you can un-check the box again, if you don't want Qbittorrent to have any default values set.
-
-![image5.png](/images/image5.png)
+	![qbit-remove-settings.png](/images/qbit-remove-settings.png)
 
 Now you're done. New grabs should have the values you've set, and when they're done they should Stop in Qbittorrent, and be removed shortly thereafter by Radarr.
 
