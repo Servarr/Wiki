@@ -2,7 +2,7 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2025-01-30T19:26:03.929Z
+date: 2025-05-29T21:35:39.065Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -19,6 +19,9 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
 
 > Postgres databases are NOT backed up by Lidarr, any backups must be implemented and maintained by the user
 {.is-danger}
+
+> Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
+{.is-info}
 
 ## Setting up Postgres
 
