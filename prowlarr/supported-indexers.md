@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-05-28T01:26:36.117903
+date: 2025-05-29T01:26:15.563061
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-05-28T01:26:36.117903
+dateCreated: 2025-05-29T01:26:15.563061
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.37.0.5072` / [Commit: a9f7a376c72792b9d448db71a1781ea4e55e0155](https://github.com/Prowlarr/Prowlarr/commit/a9f7a376c72792b9d448db71a1781ea4e55e0155)
-  - [Prowlarr Indexers Commit: dd03c1890199ec9a72a550a2b6158178da0103c9](https://github.com/Prowlarr/Indexers/commit/dd03c1890199ec9a72a550a2b6158178da0103c9)
+  - [Prowlarr Indexers Commit: f9fae2dcccd11f8d72ecee78c84cb1ff211ef1b8](https://github.com/Prowlarr/Indexers/commit/f9fae2dcccd11f8d72ecee78c84cb1ff211ef1b8)
 
 ---
 
@@ -41,6 +41,7 @@ dateCreated: 2025-05-28T01:26:36.117903
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTdirectory](https://btmulu.live/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
+|[btsate](https://btstate.com/){#btsate}|btsate is a Public BitTorrent DHT search engine|English (United States)|
 |[BTSOW](https://btsow.pics/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
@@ -118,12 +119,12 @@ dateCreated: 2025-05-28T01:26:36.117903
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq369.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq370.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir175.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentsome](https://torrentsome196.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome197.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://ssg1.torrentssg8.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip177.com/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip178.com/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[truPornolabs](http://trupornolabs.org/){#trupornolabs}|truPornolabs is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -196,7 +197,7 @@ dateCreated: 2025-05-28T01:26:36.117903
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://may27.rudub.run/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://may29.rudub.run/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -480,7 +481,7 @@ dateCreated: 2025-05-28T01:26:36.117903
 |[P2PBG](http://www.p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ParabellumHD](https://parabellumhd.cx/){#parabellumhd}|ParabellumHD is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
-|[The Paradiese](https://theparadiese.org/){#theparadiese}|The Paradiese is a GERMAN Private tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[The Paradiese](https://theparadiese.hopto.org/){#theparadiese}|The Paradiese is a GERMAN Private tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Party-Tracker](https://party-tracker.info/){#party-tracker}|Party-Tracker is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[PassThePopcorn](https://passthepopcorn.me){#passthepopcorn}|PassThePopcorn (PTP) is a Private site for MOVIES / TV|English (United States)|
 |[Peeratiko](https://peeratiko.org/){#peeratiko}|Peeratiko is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
