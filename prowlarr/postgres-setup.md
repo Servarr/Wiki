@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2023-10-30T15:06:33.193Z
+date: 2025-05-29T21:37:09.627Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -16,6 +16,9 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
 
 > Postgres databases are NOT backed up by Prowlarr, any backups must be implemented and maintained by the user
 {.is-danger}
+
+> Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
+{.is-info}
 
 ## Setting up Postgres
 
