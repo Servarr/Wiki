@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2025-01-22T18:46:08.399Z
+date: 2025-05-29T21:30:30.766Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -19,6 +19,9 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
 
 > Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user
 {.is-danger}
+
+> Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
+{.is-info}
 
 ## Setting up Postgres
 
