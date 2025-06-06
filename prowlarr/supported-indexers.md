@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-06-05T01:26:35.184125
+date: 2025-06-06T01:26:26.575186
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-06-05T01:26:35.184125
+dateCreated: 2025-06-06T01:26:26.575186
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `1.38.0.5078` / [Commit: 7d813ef97a01af0f36a2beaec32e9cd854fc67f3](https://github.com/Prowlarr/Prowlarr/commit/7d813ef97a01af0f36a2beaec32e9cd854fc67f3)
-  - [Prowlarr Indexers Commit: f1c2b1bd1953005533a4c7d5ff1235e8aa17ed5a](https://github.com/Prowlarr/Indexers/commit/f1c2b1bd1953005533a4c7d5ff1235e8aa17ed5a)
+  - [Prowlarr Indexers Commit: b5b1237312f6f477cc5a83fd472f02076c43e95e](https://github.com/Prowlarr/Indexers/commit/b5b1237312f6f477cc5a83fd472f02076c43e95e)
 
 ---
 
@@ -119,7 +119,7 @@ dateCreated: 2025-06-05T01:26:35.184125
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.tv/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq370.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq371.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir175.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome198.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
