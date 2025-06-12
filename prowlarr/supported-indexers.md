@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-06-11T01:28:27.613872
+date: 2025-06-12T01:26:52.708551
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-06-11T01:28:27.613872
+dateCreated: 2025-06-12T01:26:52.708551
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.0.0.5090` / [Commit: 4924b45b562fc124db2755cca03fe1d6e6d239cc](https://github.com/Prowlarr/Prowlarr/commit/4924b45b562fc124db2755cca03fe1d6e6d239cc)
-  - [Prowlarr Indexers Commit: 72a7f5816d4fff193ba90bcbaa376089ec07816a](https://github.com/Prowlarr/Indexers/commit/72a7f5816d4fff193ba90bcbaa376089ec07816a)
+  - Prowlarr Build `2.0.0.5093` / [Commit: fe198352a3ca940208f69edd9a95952118aa9c7e](https://github.com/Prowlarr/Prowlarr/commit/fe198352a3ca940208f69edd9a95952118aa9c7e)
+  - [Prowlarr Indexers Commit: a2aeaf14ba8e6388dd8c30d436c7e616cb7774db](https://github.com/Prowlarr/Indexers/commit/a2aeaf14ba8e6388dd8c30d436c7e616cb7774db)
 
 ---
 
@@ -543,7 +543,7 @@ dateCreated: 2025-06-11T01:28:27.613872
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[SpeedCD](https://speed.cd/){#speedcd}|Your home now!|English (United States)|
 |[Speedmaster HD](https://speedmaster-hd.net/){#speedmasterhd}|Speedmaster HD is a GERMAN Time based Torrent Tracker for MOVIES / TV|German (Germany)|
-|[Spirit of Revolution](https://sor-next.tk/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
+|[Spirit of Revolution](https://sor-next.top/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
 |[SportsCraze](https://sportscraze.xyz/){#sportscraze}|SportsCraze (SPCRZ) is a Private Torrent Tracker for SPORT|English (United States)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
