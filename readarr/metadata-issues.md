@@ -2,7 +2,7 @@
 title: Readarr Metadata Issues
 description: Summary of Readarr metadata issues
 published: true
-date: 2025-01-17T20:50:31.855Z
+date: 2025-06-17T11:58:13.112Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-23T18:20:51.850Z
@@ -13,7 +13,7 @@ dateCreated: 2024-08-23T18:20:51.850Z
 > The Servarr dev team would like another dev/team to take over the readarr project. Otherwise it's probably just going to atrophy until it's unusable.
 {.is-danger}
 
-> Help is wanted in pulling the ~1100 Sonarr cherry-picks from upstream and other development work. The priority would be 1) What you want to fix, 2) [Oldest sonarr-pulls first](https://github.com/Readarr/Readarr/issues?q=is%3Aopen+is%3Aissue+label%3Asonarr-pull), 3) Other fixes related to what's been pulled, 4) Everything else
+> Help is wanted in pulling the ~1200 Sonarr cherry-picks from upstream and other development work. The priority would be 1) What you want to fix, 2) [Oldest sonarr-pulls first](https://github.com/Readarr/Readarr/issues?q=is%3Aopen+is%3Aissue+label%3Asonarr-pull), 3) Other fixes related to what's been pulled, 4) Everything else
 {.is-warning}
 
 Below are the summarized issues of the Readarr Metadata Server.
@@ -73,6 +73,14 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 
 # Metadata Server Issues
+
+## 2025-06 522 Issues
+
+- As Of: 2025-06-17
+- Updated: 2025-06-17
+
+- This looks to impact all use of the metadata server. The issue is characterised by a 522 error from the Metadata server.
+- We don't currently know what causes this - possibly Digital Ocean or Cloudflare DNS problems, but devs have been notified and will sort it out as soon as possible. We apologise for the inconvenience.
 
 ## 2024-12 522 Issues
 
