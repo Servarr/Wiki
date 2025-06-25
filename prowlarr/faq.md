@@ -118,7 +118,7 @@ The following attributes are optional, but recommended:
 - Yes.
 
 1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexer-proxies)
-1. Add a tag to the created flaresovlerr proxy
+1. Add a tag to the created flaresolverr proxy
 1. Add the same tag to your [Indexer](/prowlarr/indexers)
 
 > The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used.
