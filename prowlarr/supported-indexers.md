@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-06-24T01:37:15.088497
+date: 2025-06-25T01:37:41.842468
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-06-24T01:37:15.088497
+dateCreated: 2025-06-25T01:37:41.842468
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.1.5095` / [Commit: 01dd793c0a872f53bcdf33da062e2752e349c65b](https://github.com/Prowlarr/Prowlarr/commit/01dd793c0a872f53bcdf33da062e2752e349c65b)
-  - [Prowlarr Indexers Commit: 250f664adaa0bbbd3cc7a1bd43ac0c9a050276fa](https://github.com/Prowlarr/Indexers/commit/250f664adaa0bbbd3cc7a1bd43ac0c9a050276fa)
+  - [Prowlarr Indexers Commit: 84f81e6bee823efabb22bcbe995fa422f9489fed](https://github.com/Prowlarr/Indexers/commit/84f81e6bee823efabb22bcbe995fa422f9489fed)
 
 ---
 
@@ -70,6 +70,7 @@ dateCreated: 2025-06-24T01:37:15.088497
 |[LinuxTracker](https://linuxtracker.org/){#linuxtracker}|LinuxTracker is a Public Linux ISO Torrent Repository|English (United States)|
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|English (United States)|
 |[Magnet Cat](https://magnetcatcat.com/){#magnetcat}|Magnet Cat is a Public Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[MagnetDownload](https://www.magnetdownload.com/){#magnetdownload}|MagnetDownload is a Public DHT Crawler|English (United States)|
 |[MegaPeer](https://megapeer.vip/){#megapeer}|MegaPeer is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
@@ -193,7 +194,7 @@ dateCreated: 2025-06-24T01:37:15.088497
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jun24.rudub.icu/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jun25.rudub.icu/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -288,7 +289,7 @@ dateCreated: 2025-06-24T01:37:15.088497
 |[CD File](https://pt.cdfile.org/){#cdfile}|CD File is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
-|[CHDBits](https://chdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[CHDBits](https://ptchdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[ChileBT (API)](https://chilebt.com/){#chilebt-api}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|Cinemageddon is a Private Torrent Tracker for B-movies|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
