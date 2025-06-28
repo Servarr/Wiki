@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-06-27T01:37:52.929693
+date: 2025-06-28T01:25:59.943781
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-06-27T01:37:52.929693
+dateCreated: 2025-06-28T01:25:59.943781
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.1.5095` / [Commit: 01dd793c0a872f53bcdf33da062e2752e349c65b](https://github.com/Prowlarr/Prowlarr/commit/01dd793c0a872f53bcdf33da062e2752e349c65b)
-  - [Prowlarr Indexers Commit: eb9a47a16192dabac2a421f5848db949435b99b4](https://github.com/Prowlarr/Indexers/commit/eb9a47a16192dabac2a421f5848db949435b99b4)
+  - [Prowlarr Indexers Commit: 01654eb446dc6a1190ebdd8a3b0f81b7366fbe36](https://github.com/Prowlarr/Indexers/commit/01654eb446dc6a1190ebdd8a3b0f81b7366fbe36)
 
 ---
 
@@ -330,12 +330,12 @@ dateCreated: 2025-06-27T01:37:52.929693
 |[Explosiv-World](https://explosiv-world.biz/){#explosiv-world}|Explosiv-World (E-W) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ExtremeBits](https://extremebits.net/){#extremebits}|ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS|English (United States)|
 |[F1Carreras (API)](https://f1carreras.xyz/){#f1carreras-api}|F1Carreras is a SPANISH Private Torrent Tracker for Motor Racing TV Releases|Spanish (Mexico)|
+|[F1GP](https://f1gp.site/){#f1gp}|F1GP is a Private Torrent Tracker for F1 Racing|English (United States)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
-|[F!GP](https://f1gp.site/){#f1gp}|F1GP is a Private Torrent Tracker for F1 Racing|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[Flux-Zone](http://fluxzone.org/){#fluxzone}|Flux-Zone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
