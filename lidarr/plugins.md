@@ -169,8 +169,6 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 - **Search Sniper**: Automates batch searching of large wanted lists  
 - **MetaMix**: Aggregates metadata from different sources (experimental)  
 
-Here's a rewritten version of your text with improved clarity and structure:
-
 ### Branches  
 - Certain features are exclusively available on specific branches.  
 - To install these:  
@@ -179,5 +177,5 @@ Here's a rewritten version of your text with improved clarity and structure:
 - *Example:* The development version can be found at:  
   `https://github.com/TypNull/Tubifarry/tree/develop`  
 
-> 📘 **Detailed instructions**: See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.  
-
+> See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
+{.is-info}
