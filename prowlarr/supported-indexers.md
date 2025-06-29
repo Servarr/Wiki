@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-06-28T01:25:59.943781
+date: 2025-06-29T01:45:59.155917
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-06-28T01:25:59.943781
+dateCreated: 2025-06-29T01:45:59.155917
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.0.1.5095` / [Commit: 01dd793c0a872f53bcdf33da062e2752e349c65b](https://github.com/Prowlarr/Prowlarr/commit/01dd793c0a872f53bcdf33da062e2752e349c65b)
-  - [Prowlarr Indexers Commit: 01654eb446dc6a1190ebdd8a3b0f81b7366fbe36](https://github.com/Prowlarr/Indexers/commit/01654eb446dc6a1190ebdd8a3b0f81b7366fbe36)
+  - Prowlarr Build `2.0.1.5099` / [Commit: 54918e0c3038e3e829057d8ce7443f36959c6964](https://github.com/Prowlarr/Prowlarr/commit/54918e0c3038e3e829057d8ce7443f36959c6964)
+  - [Prowlarr Indexers Commit: 15fcdee5b822fe5b58562f9002483e7c340379aa](https://github.com/Prowlarr/Indexers/commit/15fcdee5b822fe5b58562f9002483e7c340379aa)
 
 ---
 
@@ -30,7 +30,6 @@ dateCreated: 2025-06-28T01:25:59.943781
 |[52BT](https://www.529059.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
-|[AniLibria](https://www.anilibria.tv/){#anilibria}|AniLibria is a Public torrent tracker for anime, voiced in Russian by AniLibria team|Russian (Russia)|
 |[Anime Time](https://animetime.cc/){#anime-time}|Anime Time is a Public Torrent Tracker for ANIME|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
@@ -194,7 +193,7 @@ dateCreated: 2025-06-28T01:25:59.943781
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jun27.rudub.icu/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jun29.rudub.icu/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
