@@ -120,15 +120,64 @@ Slskd is now available for both automatic and interactive searches. During Lidar
 
 [Slskd (Soulseek) by lucapolesel](https://github.com/lucapolesel/Lidarr.Plugin.Slskd)
 
-## TrevTV/Lidarr.Plugin.Tidal
+## TrevTV
 
-[Tidal by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Tidal)
+TrevTV develops specialized Lidarr plugins for direct music platform integration.
 
-## TrevTV/Lidarr.Plugin.Qobuz
+### Deezer  
+[Deezer by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Deezer) is a Lidarr plugin that provides direct Deezer integration:  
+- **Indexer & Download Client**: Searches and downloads from Deezer without intermediaries like Deemix 
+- **Flexible Auth**: Automatic ARL selection or manual entry  
 
-[Qobuz by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Qobuz)
+### Tidal  
+[Tidal by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Tidal) is a Lidarr plugin for Tidal integration:  
+- **OAuth2 Authentication**: Secure token-based login flow  
+- **FFmpeg Conversion**: Optional audio processing 
+- *Note: Shows only estimated file sizes*  
 
-## TypNull/Tubifarry
+### Qobuz  
+[Qobuz by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Qobuz) is a Lidarr plugin for Qobuz integration:  
+- **Dual Authentication**: Email/MD5 password or user token login  
+- **Hi-Res Handling**: Automatically falls back to 96kHz when needed  
 
-[Tubifarry by TypeNull](https://github.com/TypNull/Tubifarry)
+### Configuration Essentials
+1. **Delay Profiles**: All plugins require Delay Profile activation
+2. **Lyrics Support**:
+   - Enable `.lrc` file support in:
+     - Each plugin's download client settings
+     - Lidarr's Media Management → "Import Extra Files" (add `lrc`)
+3. **Docker Requirements**:
+   - FFmpeg required for Tidal conversions
+   - Custom app IDs may be needed for Qobuz authentication
+
+## TypNull/Tubifarry  
+
+[Tubifarry by TypNull](https://github.com/TypNull/Tubifarry) is a *multi-feature* plugin that extends Lidarr's capabilities with these key functions:  
+
+### Core Features  
+- **YouTube Music Downloader**:  
+  - Downloads music from YouTube (requires cookies/trusted sessions for reliability)  
+  - Optional FFmpeg audio extraction (recommended for compatibility)  
+- **Soulseek Integration**:  
+  - Slskd support as both indexer and download client
+
+### Toolbox Additions 
+- **Soundtrack Importer**: Fetches soundtracks from Sonarr/Radarr via *Arr-Soundtracks* import list  
+- **Queue Cleaner**: Auto-manages failed imports (blocklist/rename/retry)  
+- **Codec Tinker**: Converts audio formats using FFmpeg rules (e.g., `wav→flac`, `AAC→MP3`)  
+- **Lyrics Fetcher**: Adds time-synced lyrics (.lrc files or embedded metadata)  
+- **Search Sniper**: Automates batch searching of large wanted lists  
+- **MetaMix**: Aggregates metadata from different sources (experimental)  
+
+Here's a rewritten version of your text with improved clarity and structure:
+
+### Branches  
+- Certain features are exclusively available on specific branches.  
+- To install these:  
+  1. First ensure you have the stable version installed.  
+  2. Then switch to your desired branch using its URL.  
+- *Example:* The development version can be found at:  
+  `https://github.com/TypNull/Tubifarry/tree/develop`  
+
+> 📘 **Detailed instructions**: See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.  
 
