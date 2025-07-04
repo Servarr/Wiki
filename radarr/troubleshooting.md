@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2024-04-25T00:04:30.659Z
+date: 2025-07-04T19:41:37.043Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -159,7 +159,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### Migration Issues
 
-In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/radarr) or swing by our [discord](https://radarr.video/discord), if there are others with the same issue, then rest assured we are working on it.
+In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please swing by our [discord](https://radarr.video/discord), if there are others with the same issue, then rest assured we are working on it.
 
 > Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
 
@@ -599,7 +599,7 @@ If you are performing a search, and get this error message, please check your lo
 
 1. You are using a Unifi router, and have ad blocking turned on. Unifi has decided that all .video sites should be blocked, which includes Radarr's metadata server. To solve this, either turn off ad blocking entirely on Unifi, or add a whitelist for the radarr.video domain.
 
-2. You are in Russia or Belarus, or are using a VPN whose IP address is associated with Russia or Belarus. Radarr uses [MaxMind](https://www.maxmind.com/en/locate-my-ip-address) to determine geolocation, and sometimes they get it wrong and cause false positives. You can report false positives to MaxMind, or if you're on a VPN, get a different IP. If you truly are in Russia or Belarus, you are blocked from using Radarr.
+2. You are in Russia or Belarus, or are using a VPN whose IP address is associated with Russia or Belarus. You may use [this Cloudflare Page to Geolocate your IP](https://radar.cloudflare.com/ip) Radarr via Cloudflare's blocking uses [MaxMind](https://www.maxmind.com/en/locate-my-ip-address) to determine geolocation, and sometimes they get it wrong and cause false positives. You can report false positives to MaxMind, or if you're on a VPN, get a different IP. If you truly are in Russia or Belarus, you are blocked from using Radarr.
 
 3. The Radarr metadata server is temporarily down. It'll be back up shortly.
 
