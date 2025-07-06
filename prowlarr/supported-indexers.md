@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-07-05T01:25:37.126871
+date: 2025-07-06T01:44:35.198923
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-07-05T01:25:37.126871
+dateCreated: 2025-07-06T01:44:35.198923
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.1.5101` / [Commit: 86b81948af8003b56be48b1ff3cb22b018f4d337](https://github.com/Prowlarr/Prowlarr/commit/86b81948af8003b56be48b1ff3cb22b018f4d337)
-  - [Prowlarr Indexers Commit: c9846d6575c648988858062b56bfe887ab770c2c](https://github.com/Prowlarr/Indexers/commit/c9846d6575c648988858062b56bfe887ab770c2c)
+  - [Prowlarr Indexers Commit: ae579ee3bb7b7a41d17abfeff283634302f09816](https://github.com/Prowlarr/Indexers/commit/ae579ee3bb7b7a41d17abfeff283634302f09816)
 
 ---
 
@@ -42,6 +42,7 @@ dateCreated: 2025-07-05T01:25:37.126871
 |[BTSOW](https://btsow.pics/){#btsow}|BTSOW is a Public torrent indexer|English (United States)|
 |[btstate](https://btstate.com/){#btstate}|btstate is a Public BitTorrent DHT search engine|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
+|[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[cpasbien](https://feminalpes.fr/){#cpabien}|cpasbien is a FRENCH Public site for TV / MOVIES / GENERAL|French (France)|
 |[cpasbien clone](https://www1.cpasbien.to/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
@@ -149,7 +150,6 @@ dateCreated: 2025-07-05T01:25:37.126871
 |[BitMagnet (Local DHT)](http://127.0.0.1:3333/){#bitmagnet}|BitMagnet is a self-hosted BitTorrent DHT search engine|English (United States)|
 |[BookTracker](https://booktracker.org/){#booktracker}|BookTracker is a RUSSIAN Semi-Private Torrent Tracker for EBOOKS|Russian (Russia)|
 |[BootyTape](https://ssl.bootytape.com/){#bootytape}|BootyTape is a Semi-Private Torrent Tracker for 3X|English (United States)|
-|[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Semi-Private Torrent Tracker for GAMES|Russian (Russia)|
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Semi-Private tracker for Anime / Hentai / Manga|Chinese (China)|
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an ICELANDIC Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Icelandic (Iceland)|
 |[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -192,7 +192,7 @@ dateCreated: 2025-07-05T01:25:37.126871
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jul05.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jul06.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
