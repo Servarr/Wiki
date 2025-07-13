@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-07-11T01:40:16.147811
+date: 2025-07-13T01:48:44.023483
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-07-11T01:40:16.147811
+dateCreated: 2025-07-13T01:48:44.023483
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.2.5111` / [Commit: 2b332a00d77839c24320c1bf60b0d03179f0559e](https://github.com/Prowlarr/Prowlarr/commit/2b332a00d77839c24320c1bf60b0d03179f0559e)
-  - [Prowlarr Indexers Commit: e20cf83a9982a5c78c1afe1c02de9b257c6e174a](https://github.com/Prowlarr/Indexers/commit/e20cf83a9982a5c78c1afe1c02de9b257c6e174a)
+  - [Prowlarr Indexers Commit: bd0d693f1e4998b8f5ba6973b66a6b3881c04359](https://github.com/Prowlarr/Indexers/commit/bd0d693f1e4998b8f5ba6973b66a6b3881c04359)
 
 ---
 
@@ -195,7 +195,7 @@ dateCreated: 2025-07-11T01:40:16.147811
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jul11.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jul12.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -257,6 +257,7 @@ dateCreated: 2025-07-11T01:40:16.147811
 |[Best-Core](https://best-core.info/){#bestcore}|Best-Core is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a Private Torrent Tracker for EBOOKS and AUDIOBOOKS|English (United States)|
+|[BigCore](https://bigcore.eu/){#bigcore}|BigCore is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[bitGAMER](https://bitgamer.ch/){#bitgamer}|bitGAMER is a Private Torrent Tracker for GAMES|English (United States)|
@@ -342,7 +343,6 @@ dateCreated: 2025-07-11T01:40:16.147811
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[Flux-Zone](http://fluxzone.org/){#fluxzone}|Flux-Zone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Free Farm (自由农场)](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[FSM](https://fsm.name/){#fsm}|FSM is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[FunFile](https://www.funfile.org/){#funfile}|FunFile is a general tracker|English (United States)|
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
@@ -516,7 +516,6 @@ dateCreated: 2025-07-11T01:40:16.147811
 |[RailgunPT](https://bilibili.download/){#railgunpt}|RailgunPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rain (雨)](https://raingfh.top/){#rain}|Rain (雨) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rastastugan (API)](https://rastastugan.org/){#rastastugan-api}|Rastastugan is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[Red Leaves (红叶)](https://leaves.red/){#redleaves}|Red Leaves (红叶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for MOVIES / TV|Polish (Poland)|
 |[Redacted](https://redacted.sh/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
 |[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
@@ -526,7 +525,6 @@ dateCreated: 2025-07-11T01:40:16.147811
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SAMARITANO (API)](https://samaritano.cc/){#samaritano}|SAMARITANO is a BRAZILIAN Private tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
-|[SATClubbing](https://satclubbing.club/){#satclubbing}|SATClubbing is a RUSSIAN/ENGLISH Private Torrent Tracker for ELECTRONIC MUSIC|English (United States)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|English (United States)|
@@ -607,7 +605,6 @@ dateCreated: 2025-07-11T01:40:16.147811
 |[World-In-HD](https://world-in-hd.net/){#wihd}|World-In-HD is a Private Torrent Tracker\. Your world in HD|French (France)|
 |[World-of-Tomorrow](https://w-o-t.pro/){#world-of-tomorrow}|World-of-Tomorrow is a GERMAN Private tracker|German (Germany)|
 |[x-ite\.me](https://x-ite.me/){#x-ite.me}|X-ite\.me (XM) is a Private Torrent Tracker for LGBTQ MOVIES / GENERAL / 3X|English (United States)|
-|[Xider-Torrent](https://xider.eu/){#xider-torrent}|Xider-Torrent is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Xthor (API)](https://xthor.tk/){#xthor-api}|Xthor is a FRENCH Private Torrent Tracker for MOVIES / GENERAL|French (France)|
 |[Xthor (Scraping)](https://xthor.tk/){#xthor-scraping}|General French Private Tracker|French (France)|
