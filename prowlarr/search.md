@@ -2,7 +2,7 @@
 title: Prowlarr Search
 description: 
 published: true
-date: 2022-01-02T23:05:56.758Z
+date: 2025-07-15T20:42:03.748Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T23:31:53.221Z
@@ -62,7 +62,7 @@ You can bulk grab results at once by checking the select boxes on the left side 
 
 ## Search Feed
 
-- `http://{prowlarrhost}:{prowlarrport}/{baseurl}/api/v1/search?query={encoded term}&indexerIds={comma separated list}&categories={comma separated list}&type={searchtype}`
+- `http://{prowlarrhost}:{prowlarrport}/{baseurl}/api/v1/search?query={encoded term}&indexerIds={comma separated list}&categories={cat}&categories={other-cat}&type={searchtype}`
   - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=black%20hawk%20down&indexerIds=-1&categories=2000&type=search`
   - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=%7BTvdbId%3A71663%7D%20%7BSeason%3A32%7D&categories=5000&type=tvsearch`
 
@@ -74,7 +74,7 @@ Parameters
   - `-2` is all torrents
   - `-1` is all usenet
   - Indexer Ids
-- `categories` - comma separated list of Categories to use
+- `categories` - add a new parameter-value pair for each category to search  
   - leave off parameter for all
 - `type` - the search type to perform
   - `search` - Basic Text Query
