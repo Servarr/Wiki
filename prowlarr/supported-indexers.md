@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-07-21T01:47:59.446555
+date: 2025-07-22T01:42:58.233739
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-07-21T01:47:59.446555
+dateCreated: 2025-07-22T01:42:58.233739
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.2.5116` / [Commit: fab74b58fae595519409f2f4944afdfc1f32ad8e](https://github.com/Prowlarr/Prowlarr/commit/fab74b58fae595519409f2f4944afdfc1f32ad8e)
-  - [Prowlarr Indexers Commit: ab087ab894824044dfaa881cff0bf6735579a060](https://github.com/Prowlarr/Indexers/commit/ab087ab894824044dfaa881cff0bf6735579a060)
+  - [Prowlarr Indexers Commit: 6dfb508a70e74b401b0261bfa734b6ea61b7c952](https://github.com/Prowlarr/Indexers/commit/6dfb508a70e74b401b0261bfa734b6ea61b7c952)
 
 ---
 
@@ -195,7 +195,7 @@ dateCreated: 2025-07-21T01:47:59.446555
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jul20.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jul22.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -225,7 +225,7 @@ dateCreated: 2025-07-21T01:47:59.446555
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
 |[Abnormal](https://abn.lol/){#abnormal}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[ABtorrents](https://abtorrents.me/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
+|[ABtorrents](https://abtorrents.xyz/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|English (Australia)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[AFUN](https://www.ptlover.cc/){#afun}|AFUN is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
