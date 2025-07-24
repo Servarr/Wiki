@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-07-22T01:42:58.233739
+date: 2025-07-24T01:43:03.127282
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-07-22T01:42:58.233739
+dateCreated: 2025-07-24T01:43:03.127282
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.0.2.5116` / [Commit: fab74b58fae595519409f2f4944afdfc1f32ad8e](https://github.com/Prowlarr/Prowlarr/commit/fab74b58fae595519409f2f4944afdfc1f32ad8e)
-  - [Prowlarr Indexers Commit: 6dfb508a70e74b401b0261bfa734b6ea61b7c952](https://github.com/Prowlarr/Indexers/commit/6dfb508a70e74b401b0261bfa734b6ea61b7c952)
+  - Prowlarr Build `2.0.3.5117` / [Commit: de7f42cf3030eb78a618fc86ff35100c1d2d3afa](https://github.com/Prowlarr/Prowlarr/commit/de7f42cf3030eb78a618fc86ff35100c1d2d3afa)
+  - [Prowlarr Indexers Commit: e9445cbd2fc165fdf1f8e0a5834b3bdab3c92519](https://github.com/Prowlarr/Indexers/commit/e9445cbd2fc165fdf1f8e0a5834b3bdab3c92519)
 
 ---
 
@@ -124,9 +124,9 @@ dateCreated: 2025-07-22T01:42:58.233739
 |[TorrentQQ](https://torrentqq377.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir176.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentsome](https://torrentsome204.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome205.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://ssg1.torrentssg8.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip185.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip186.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
@@ -195,7 +195,7 @@ dateCreated: 2025-07-22T01:42:58.233739
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jul22.rudub.shop/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jul23.rudub.top/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
