@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-07-24T01:43:03.127282
+date: 2025-07-30T01:45:20.682590
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-07-24T01:43:03.127282
+dateCreated: 2025-07-30T01:45:20.682590
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.3.5117` / [Commit: de7f42cf3030eb78a618fc86ff35100c1d2d3afa](https://github.com/Prowlarr/Prowlarr/commit/de7f42cf3030eb78a618fc86ff35100c1d2d3afa)
-  - [Prowlarr Indexers Commit: e9445cbd2fc165fdf1f8e0a5834b3bdab3c92519](https://github.com/Prowlarr/Indexers/commit/e9445cbd2fc165fdf1f8e0a5834b3bdab3c92519)
+  - [Prowlarr Indexers Commit: 51c8f346c496f72a9ab480447ffefef0d840b856](https://github.com/Prowlarr/Indexers/commit/51c8f346c496f72a9ab480447ffefef0d840b856)
 
 ---
 
@@ -27,7 +27,7 @@ dateCreated: 2025-07-24T01:43:03.127282
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://www.529059.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[52BT](https://www.529063.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[Anime Time](https://animetime.cc/){#anime-time}|Anime Time is a Public Torrent Tracker for ANIME|English (United States)|
@@ -121,7 +121,7 @@ dateCreated: 2025-07-24T01:43:03.127282
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq377.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq378.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir176.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome205.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
@@ -161,11 +161,11 @@ dateCreated: 2025-07-24T01:43:03.127282
 |[Electro-Torrent](https://electro-torrent.pl/){#electro-torrent}|Electro-Torrent is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Ex-torrenty](https://ex-torrenty.org/){#ex-torrenty}|Ex-torrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[ExKinoRay](https://exkinoray.ru/){#exkinoray}|ExKinoRay is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
-|[Fenyarnyek-Tracker](http://tracker.fenyarnyek.com/){#fenyarnyek-tracker}|Fenyarnyek-Tracker is a HUNGARIAN semi private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
+|[Fenyarnyek-Tracker](http://tracker.fenyarnyek.com/){#fenyarnyek-tracker}|Fenyarnyek-Tracker is a HUNGARIAN Semi-Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
 |[File-Tracker](https://file-tracker.net/){#file-tracker}|File Tracker is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|Russian (Russia)|
 |[Gay-Torrents\.net](https://www.gay-torrents.net/){#gay-torrents}|Gay-Torrents\.net is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[Genesis-Movement](https://torrent.genesis-movement.org/){#genesismovement}|Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC|English (United States)|
-|[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH semi private site for MOVIES / TV / GENERAL|Czech (Czech Republic)|
+|[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH Semi-Private PAY2DL site for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
@@ -195,7 +195,7 @@ dateCreated: 2025-07-24T01:43:03.127282
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://jul23.rudub.top/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://jul29.rudub.top/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -206,7 +206,7 @@ dateCreated: 2025-07-24T01:43:03.127282
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
-|[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi private torrent site focused on ANIME|Spanish (Spain)|
+|[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[ViDEOTEKA](http://videoteka.org/){#videoteka}|ViDEOTEKA (VT) is a SLOVENIAN Semi-Private Torrent Tracker for MOVIES / TV|Slovenian (Slovenia)|
 |[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
@@ -226,7 +226,7 @@ dateCreated: 2025-07-24T01:43:03.127282
 |[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
 |[Abnormal](https://abn.lol/){#abnormal}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[ABtorrents](https://abtorrents.xyz/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
-|[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a torrent site for Rugby and other sports played in Australia|English (Australia)|
+|[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a Private torrent site for Rugby and other sports played in Australia|English (Australia)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[AFUN](https://www.ptlover.cc/){#afun}|AFUN is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AGSVPT](https://www.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
