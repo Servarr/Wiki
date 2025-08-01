@@ -31,11 +31,16 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_eventtype`                      | `Grab`                                                                                       |
 | `sonarr_series_id`                      | Internal ID of the series                                                                    |
 | `sonarr_series_title`                   | Title of the series                                                                          |
+| `sonarr_series_titleslug`               | Common formatted title slug of the series                                                    |
+| `sonarr_series_tmdbid`                  | TMDB ID for the series                                                                       |
 | `sonarr_series_tvdbid`                  | TVDB ID for the series                                                                       |
 | `sonarr_series_tvmazeid`                | TVMaze ID for the series                                                                     |
 | `sonarr_series_imdbid`                  | IMDB ID for the series (empty if unknown)                                                    |
 | `sonarr_series_type`                    | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
 | `sonarr_series_year`                    | Year of the series                                                                           |
+| `sonarr_series_genres`                  | `\|`-delimited list of genres                                                                |
+| `sonarr_series_originallanguage`        | Original language of the series                                                              |
+| `sonarr_series_tags`                    | `\|`-delimited list of tags                                                                  |
 | `sonarr_release_episodecount`           | Number of episodes in the release                                                            |
 | `sonarr_release_seasonnumber`           | Season number from release                                                                   |
 | `sonarr_release_episodenumbers`         | Comma-delimited list of episode numbers                                                      |
@@ -43,14 +48,22 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_release_episodeairdates`        | Comma-delimited list of air dates from original network                                      |
 | `sonarr_release_episodeairdatesutc`     | Comma-delimited list of air dates in UTC                                                     |
 | `sonarr_release_episodetitles`          | `\|`-delimited list of episode titles                                                        |
+| `sonarr_release_episodeoverviews`       | `\|`-delimited list of episode overview descriptions                                         |
 | `sonarr_release_title`                  | Torrent/NZB title                                                                            |
 | `sonarr_release_indexer`                | Indexer from which the release was grabbed                                                   |
-| `sonarr_release_size`                   | Size of the release, as reported by the indexer                                              |
+| `sonarr_release_indexerflags`           | Indexer flags for the release (e.g. `Freeleech`)                                             |
+| `sonarr_release_size`                   | Size of the release, as reported by the indexer (in bytes)                                   |
 | `sonarr_release_quality`                | Quality name of the release, as detected by Sonarr                                           |
 | `sonarr_release_qualityversion`         | `1` is the default, `2` is for proper, and `3`+ could be used for anime versions             |
 | `sonarr_release_releasegroup`           | Release group (empty if unknown)                                                             |
+| `sonarr_release_releasetype`            | Release type (`SingleEpisode`, `SeasonPack`)                                                 |
+| `sonarr_release_customformat`           | `\|`-delimited list of custom formats                                                        |
+| `sonarr_release_customformatscore`      | Numerical score of the custom formats of the release                                         |
 | `sonarr_download_client`                | Download client                                                                              |
+| `sonarr_download_client_type`           | Download client type                                                                         |
 | `sonarr_download_id`                    | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
+| `sonarr_instance_name`                  | Instance name of the Sonarr installation                                                     |
+| `sonarr_applicationurl`                 | URL of the Sonarr application                                                                |
 
 ## On Import/On Upgrade
 
@@ -161,6 +174,32 @@ Note that the following will only be logged for custom scripts:
 | `sonarr_update_message`         | Message from Update                  |
 | `sonarr_update_newversion`      | Version Sonarr updated to (string)   |
 | `sonarr_update_previousversion` | Version Sonarr updated from (string) |
+
+## On Manual Interaction Required
+
+| Environment Variable             | Details                                                                                      |
+|----------------------------------|----------------------------------------------------------------------------------------------|
+| `sonarr_eventtype`               | `ManualInteractionRequired`                                                                  |
+| `sonarr_applicationurl`          | URL of the application                                                                       |
+| `sonarr_download_client`         | Download client name                                                                         |
+| `sonarr_download_client_type`    | Download client type                                                                         |
+| `sonarr_download_id`             | Hash of the torrent/NZB file (used to uniquely identify the download in the download client) |
+| `sonarr_download_size`           | Download size                                                                                |
+| `sonarr_download_title`          | Download title                                                                               |
+| `sonarr_instancename`            | Instance name                                                                                |
+| `sonarr_series_genres`           | Genres of the series                                                                         |
+| `sonarr_series_id`               | Internal ID of the series                                                                    |
+| `sonarr_series_imdbid`           | IMDB ID of the series (empty if unknown)                                                     |
+| `sonarr_series_originallanguage` | Original language of the series                                                              |
+| `sonarr_series_path`             | Full path to the series                                                                      |
+| `sonarr_series_tags`             | Tags of the series                                                                           |
+| `sonarr_series_title`            | Title of the series                                                                          |
+| `sonarr_series_titleslug`        | Common formatted title slug of the series                                                    |
+| `sonarr_series_tmdbid`           | TMDB ID of the series                                                                        |
+| `sonarr_series_tvdbid`           | TVDB ID of the series                                                                        |
+| `sonarr_series_tvmazeid`         | TVMaze ID of the series                                                                      |
+| `sonarr_series_type`             | Type of the series (`Anime`, `Daily`, or `Standard`)                                         |
+| `sonarr_series_year`             | Year of the series                                                                           |
 
 ## On Test
 
