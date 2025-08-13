@@ -45,53 +45,40 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 1. Fork Prowlarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
-For css changes `yarn stylelint-windows --fix`
+> **Important:** Always run linting before committing:
+> - Frontend changes: `yarn lint --fix`
+> - CSS changes: `yarn stylelint-windows --fix`
 {.is-info}
 
-### Building the frontend
+### Quick Start for Frontend Development
 
-- Navigate to the cloned directory
-- Install the required Node Packages
+```bash
+# Navigate to cloned directory
+cd prowlarr
 
-     ```bash
-     yarn install
-     ```
+# Install dependencies
+yarn install
 
-- Start webpack to monitor your development environment for any changes that need post processing using:
-
-     ```bash
-     yarn start
-     ```
-
-### Building the Backend
-
-The backend solution is most easily built and ran in Visual Studio or Rider, however if the only priority is working on the frontend UI it can be built easily from command line as well when the correct SDK is installed.
-
-#### Visual Studio
-
-> Ensure startup project is set to `Prowlarr.Console` and framework to `net8.0`
-{.is-info}
-
-1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
-1. Next `Debug/Run` the project in Visual Studio to start Prowlarr
-1. Open <http://localhost:9696>
-
-#### Command line
-
-1. Clean solution
-
-```shell
-dotnet clean src/Prowlarr.sln -c Debug
+# Start development server
+yarn start
 ```
 
-1. Restore and Build debug configuration for the correct platform (Posix or Windows)
+### Quick Start for Backend Development
 
-```shell
-dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posix -t:PublishAllRids
+#### Visual Studio (Recommended)
+1. Open `src/Prowlarr.sln`
+2. Set `Prowlarr.Console` as startup project (framework: `net8.0`)
+3. Hit F5 to build and run
+4. Backend available at `http://localhost:9696`
+
+#### Command Line
+```bash
+# Build and run
+dotnet run --project src/Prowlarr.Console
+
+# Or build for production
+dotnet publish src/Prowlarr.sln -c Release -o _output
 ```
-
-1. Run the produced executable from `/_output`
 
 ## Contributing Code
 
