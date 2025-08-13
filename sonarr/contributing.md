@@ -42,60 +42,73 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
 
 ## Getting started
 
-1. Fork Sonarr
+1. Fork Sonarr from the [v5-develop branch](https://github.com/Sonarr/Sonarr/tree/v5-develop)
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+1. Checkout the v5-develop branch: `git checkout v5-develop`
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
-For css changes `yarn stylelint-windows --fix` {.is-info}
-
-### Building the frontend
-
-- Navigate to the cloned directory
-- Install the required Node Packages
-
-     ```bash
-     yarn install
-     ```
-
-- Start webpack to monitor your development environment for any changes that need post processing using:
-
-     ```bash
-     yarn start
-     ```
-
-### Building the Backend
-
-The backend solution is most easily built and ran in Visual Studio or Rider, however if the only priority is working on the frontend UI it can be built easily from command line as well when the correct SDK is installed.
-
-#### Visual Studio
-
-> Ensure startup project is set to `Sonarr.Console` and framework to `net8.0`
+> **Important:** Always run linting before committing:
+> - Frontend changes: `yarn lint --fix`
+> - CSS changes: `yarn stylelint-windows --fix`
+> - Backend changes: Follow existing code style and patterns
 {.is-info}
 
-1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
-1. Next `Debug/Run` the project in Visual Studio to start Sonarr
-1. Open <http://localhost:8989>
+### Quick Start for Frontend Development
 
-#### Command line
+```bash
+# Navigate to the cloned directory
+cd sonarr
 
-1. Clean solution
+# Install dependencies
+yarn install
 
-```shell
-dotnet clean src/Sonarr.sln -c Debug
+# Start development server (watches for changes)
+yarn start
 ```
 
-1. Restore and Build debug configuration for the correct platform (Posix or Windows)
+The frontend will be available at `http://localhost:3000` and will proxy API calls to the backend.
 
-```shell
-dotnet msbuild -restore src/Sonarr.sln -p:Configuration=Debug -p:Platform=Posix -t:PublishAllRids
+### Quick Start for Backend Development
+
+#### Option 1: Visual Studio (Recommended)
+
+1. Open `src/Sonarr.sln` in Visual Studio
+2. Set `Sonarr.Console` as startup project
+3. Ensure target framework is `net8.0`
+4. Hit F5 to build and run
+5. Backend will be available at `http://localhost:8989`
+
+#### Option 2: Command Line
+
+```bash
+# Build and run backend
+dotnet run --project src/Sonarr.Console
+
+# Or build for production
+dotnet publish src/Sonarr.sln -c Release -o _output
 ```
 
-1. Run the produced executable from `/_output`
+#### Option 3: JetBrains Rider
+
+1. Open `src/Sonarr.sln`
+2. Set run configuration to `Sonarr.Console`
+3. Run with Ctrl+F5
+
+> **Dev Tip:** For frontend-only development, you can use the nightly builds API endpoint instead of running the backend locally.
+{.is-info}
+
+## Development Tips
+
+- **Hot Reload:** Frontend changes auto-reload when using `yarn start`
+- **API Documentation:** Available at `/docs` when running locally
+- **Database:** SQLite database is created in `~/.config/Sonarr/` (Linux/Mac) or `%APPDATA%/Sonarr/` (Windows)
+- **Logs:** Check `~/.config/Sonarr/logs/` for debugging
+- **Port Conflicts:** Change port in `config.xml` if 8989 is in use
+- **IDE Extensions:** Install C# and ESLint extensions for better development experience
 
 ## Contributing Code
 
 - If you're adding a new, already requested feature, please comment on [GitHub Issues](https://github.com/Sonarr/Sonarr/issues) so work is not duplicated (If you want to add something not already on there, please talk to us first)
-- Rebase from Sonarr's develop branch, do not merge
+- Rebase from Sonarr's v5-develop branch, do not merge
 - Make meaningful commits, or squash them
 - Feel free to make a pull request before work is complete, this will let us see where its at and make comments/suggest improvements
 - Reach out to us on the discord if you have any questions
@@ -106,14 +119,14 @@ dotnet msbuild -restore src/Sonarr.sln -p:Configuration=Debug -p:Platform=Posix 
 
 ## Pull Requesting
 
-- Only make pull requests to `develop`, never `main`, if you make a PR to `main` we will comment on it and close it
+- Only make pull requests to `v5-develop`, never `main`, if you make a PR to `main` we will comment on it and close it
 - You're probably going to get some comments or questions from us, they will be to ensure consistency and maintainability
 - We'll try to respond to pull requests as soon as possible, if its been a day or two, please reach out to us on Discord, we may have missed it
-- Each PR should come from its own [feature branch](http://martinfowler.com/bliki/FeatureBranch.html) not develop in your fork, it should have a meaningful branch name (what is being added/fixed)
+- Each PR should come from its own [feature branch](http://martinfowler.com/bliki/FeatureBranch.html) not v5-develop in your fork, it should have a meaningful branch name (what is being added/fixed)
   - `new-feature` (Good)
   - `fix-bug` (Good)
   - `patch` (Bad)
-  - `develop` (Bad)
+  - `v5-develop` (Bad)
 - Commits should be wrote as `New:` or `Fixed:` for changes that would not be considered a `maintenance release`
 
 ## Unit Testing
