@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-08-11T04:52:46.662521
+date: 2025-08-14T01:38:24.741272
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-08-11T04:52:46.662521
+dateCreated: 2025-08-14T01:38:24.741272
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.0.3.5130` / [Commit: d9d045a548367e4f7c3c7c7ac3766276ae243254](https://github.com/Prowlarr/Prowlarr/commit/d9d045a548367e4f7c3c7c7ac3766276ae243254)
-  - [Prowlarr Indexers Commit: 6cc7594b6495c36c073b45fcfd978b30a61856cc](https://github.com/Prowlarr/Indexers/commit/6cc7594b6495c36c073b45fcfd978b30a61856cc)
+  - Prowlarr Build `2.0.4.5138` / [Commit: 8664fc095dd79e420f9dfe4237bb268f9fb1df2e](https://github.com/Prowlarr/Prowlarr/commit/8664fc095dd79e420f9dfe4237bb268f9fb1df2e)
+  - [Prowlarr Indexers Commit: 16cd656daac0c8197ba090ed32797e5ab34759c0](https://github.com/Prowlarr/Indexers/commit/16cd656daac0c8197ba090ed32797e5ab34759c0)
 
 ---
 
@@ -124,9 +124,9 @@ dateCreated: 2025-08-11T04:52:46.662521
 |[TorrentQQ](https://torrentqq380.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir176.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentsome](https://torrentsome207.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome208.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://ssg1.torrentssg8.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip188.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip189.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentz2nz](https://torrentz2.nz/){#torrentz2nz}|Torrentz2nz is a Public torrent meta-search engine|English (United States)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
@@ -196,7 +196,7 @@ dateCreated: 2025-08-11T04:52:46.662521
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://aug11.rudub.club/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://aug13.rudub.club/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -317,7 +317,7 @@ dateCreated: 2025-08-11T04:52:46.662521
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|DesiTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[DICMusic](https://dicmusic.com/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
-|[DigitalCore](https://digitalcore.club/){#digitalcore-api}|DigitalCore (DC) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
+|[DigitalCore (API)](https://digitalcore.club/){#digitalcore-api}|DigitalCore (DC) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-LEARNING|English (United States)|
