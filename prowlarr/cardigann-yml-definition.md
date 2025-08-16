@@ -73,8 +73,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [Proposed changes](#proposed-changes)
   - [Credit](#credit)
 
-> This document is not well-maintained. Current documentation is maintained by the Jackett Team within their [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format)
-{.is-danger}
+> Documentation is synced from the Jackett Team's [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format). Last sync: August 16, 2025
+{.is-info}
 
 # Cardigann Versions
 
@@ -89,14 +89,31 @@ For more specific details between versions the schema files can be compared.
 
 ### Schema Validation
 
-Schemas can be validated as follows. It is assumed the commands are ran from the local Prowlarr/Indexers repository directory.
+Schemas can be validated using the Python validation script in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers). It is assumed the commands are run from the local Prowlarr/Indexers repository directory.
 
-> Note that the following npm packages are required `ajv-cli-servarr ajv-formats`  These can be installed globally on your system with `npm install -g ajv-cli-servarr ajv-formats`
+The validation script provides flexible validation options:
+
+```bash
+# Validate a single file against a specific schema
+python scripts/validate.py --single "definitions/v{VERSION}/{INDEXER_FILE}.yml" "definitions/v{VERSION}/schema.json"
+
+# Validate entire definition set
+python scripts/validate.py
+
+# Validate specific directory
+python scripts/validate.py --dir "definitions/v{VERSION}/"
+
+# Find best schema version for a file
+python scripts/validate.py --find-schema "definitions/v{VERSION}/{INDEXER_FILE}.yml"
+```
+
+**Legacy AJV Validation** (still supported):
+> Note that the following npm packages are required `ajv-cli-servarr ajv-formats`. These can be installed globally with `npm install -g ajv-cli-servarr ajv-formats`
 {.is-info}
 
 ```bash
- ajv test -d "definitions/v{VERSION}/{INDEXER FILE NAME}.yml" -s "definitions/v{VERSION}/schema.json" --valid -c ajv-formats
- ```
+ajv test -d "definitions/v{VERSION}/{INDEXER FILE NAME}.yml" -s "definitions/v{VERSION}/schema.json" --valid -c ajv-formats
+```
 
 ## Active Versions
 
@@ -2022,6 +2039,8 @@ fields:
 - Add support for multi row parsing as described in <https://github.com/cardigann/cardigann/pull/336#issuecomment-277645749>
 
 ## Credit
+
+Documentation and examples are maintained by the Jackett Team within their [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format) and synced to Prowlarr's documentation.
 
 - [Jackett Wiki Contributors](https://github.com/Jackett/Jackett/wiki/Definition-format)
 - [Prowlarr Wiki Contributors](https://wiki.servarr.com/prowlarr/cardigann-yml-definition)
