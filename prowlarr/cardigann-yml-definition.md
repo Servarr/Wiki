@@ -74,6 +74,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [Credit](#credit)
 
 > Documentation is synced from the Jackett Team's [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format). Last sync: August 16, 2025
+> 
+> Cardigann YML definitions are maintained in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers)
 {.is-info}
 
 # Cardigann Versions
@@ -88,6 +90,10 @@ Each Cardigann Version has a YML Schema for it contained within the definitions'
 For more specific details between versions the schema files can be compared.
 
 ### Schema Validation
+
+To help you conform to YML coding standards, (and maintain compatibility parity with the v11 Prowlarr yaml indexers), you can validate your Prowlarr yaml Indexer using multiple validation methods.
+
+#### Python Validation (Recommended)
 
 Schemas can be validated using the Python validation script in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers). It is assumed the commands are run from the local Prowlarr/Indexers repository directory.
 
@@ -107,13 +113,17 @@ python scripts/validate.py --dir "definitions/v{VERSION}/"
 python scripts/validate.py --find-schema "definitions/v{VERSION}/{INDEXER_FILE}.yml"
 ```
 
-**Legacy AJV Validation** (still supported):
-> Note that the following npm packages are required `ajv-cli-servarr ajv-formats`. These can be installed globally with `npm install -g ajv-cli-servarr ajv-formats`
-{.is-info}
+#### Legacy AJV Validation
 
+**Installation**: The following npm packages are required `ajv-cli-servarr ajv-formats`. These can be installed globally on your system with `npm install -g ajv-cli-servarr ajv-formats`.
+
+**Usage**: 
 ```bash
-ajv test -d "definitions/v{VERSION}/{INDEXER FILE NAME}.yml" -s "definitions/v{VERSION}/schema.json" --valid -c ajv-formats
+ajv test -d "definitions/v{VERSION}/{INDEXER FILE NAME}.yml" -s "definitions/v{VERSION}/schema.json" --valid --all-errors -c ajv-formats --spec=draft2019
 ```
+where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*` to scan all indexers beginning with `hd`
+
+**Credit**: The Prowlarr team
 
 ## Active Versions
 
@@ -208,7 +218,6 @@ Each definition must start with a header like this:
 
 ```yaml
 ---
----
 # [REQUIRED] Internal name of the indexer, must be unique. Usually it's the name of the
 # web site, in lower case, stripped of any special characters and space
 id: thepiratebay
@@ -227,7 +236,7 @@ description: "Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorren
 
 # [REQUIRED] Language code of the main language used on the tracker
 # See http://www.lingoes.net/en/translator/langcode.htm
-# usually you load this with the value from the sites <html lang="en_US"> tag.
+# usually you load this with the value from the sites <html lang="en-US"> tag.
 language: en-US
 
 # [REQUIRED] Indexer type:
@@ -1484,7 +1493,7 @@ Note that these are always available.
 ```yaml
 .True contains "True" (which represents a non-empty variable)
 .False contains null (which represents an empty variable)
-.Today.Year contains "2022" (or whatever the current year is)
+.Today.Year contains "2024" (or whatever the current year is)
 ```
 
 ## Search Query Variables
@@ -1492,36 +1501,56 @@ Note that these are always available.
 Note that these are only available during search queries.
 
 ```yaml
-.Query.Type
+.Query.Type        # search, movie, tvsearch, book, music
 .Query.Q
 .Query.Series      # not supported (Cardigann compatibility)
-.Query.Ep
-.Query.Season
+.Query.Ep          # from t=tvsearch
+.Query.Season      # from t=tvsearch
 .Query.Movie       # not supported (Cardigann compatibility)
-.Query.Year
+.Query.Year        # from t=tvsearch or t=movie or t=music or t=book
 .Query.Limit
 .Query.Offset
 .Query.Extended
 .Query.Categories
 .Query.APIKey
-.Query.TVDBID
-.Query.TVRageID
-.Query.IMDBID      # e.g. tt12345678
+.Query.TVDBID      # from t=tvsearch
+.Query.TVRageID    # from t=tvsearch
+.Query.IMDBID      # e.g. tt12345678 from t=tvsearch or t=movie
 .Query.IMDBIDShort # e.g. 12345678
-.Query.TMDBID
-.Query.TVMazeID
-.Query.TraktID
-.Query.DoubanID
-.Query.Album 
-.Query.Artist
-.Query.Label
-.Query.Track
-.Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd
-.Query.Author
-.Query.Title
+.Query.TMDBID      # from t=tvsearch or t=movie
+.Query.TVMazeID    # from t=tvsearch
+.Query.TraktID     # from t=tvsearch or t=movie
+.Query.DoubanID    # from t=tvsearch or t=movie
+.Query.Genre       # from t=tvsearch or t=movie or t=music or t=book
+.Query.Album       # from t=music
+.Query.Artist      # from t=music
+.Query.Label       # from t=music
+.Query.Track       # from t=music
+.Query.Episode     # EpisodeSearchString, such as S00E00 or S00 or yyyy.MM.dd from t=tvsearch
+.Query.Author      # from t=book
+.Query.Title       # from t=book
+.Query.Publisher   # from t=book
 .Categories        # MappedCategories
 .Query.Keywords    # original keywords
 .Keywords          # keywords after applying the keywordsfilters
+```
+the following are boolean-like variables in that they return either the string "True" or are null. Can be used in if-else-end statements.
+```
+.Query.IsBookSearch   # t=book
+.Query.IsDoubanQuery  # from t=tvsearch or t=movie
+.Query.IsGenreQuery   # from t=tvsearch or t=movie or t=music or t=book
+.Query.IsIdSearch     # Episode.IsNotNullOrWhiteSpace() || Season > 0 || IsImdbQuery || IsTvdbQuery || IsTVRageQuery || IsTraktQuery || IsTvmazeQuery || IsTmdbQuery || IsDoubanQuery || Album.IsNotNullOrWhiteSpace() || Artist.IsNotNullOrWhiteSpace() || Label.IsNotNullOrWhiteSpace() || Genre.IsNotNullOrWhiteSpace() || Track.IsNotNullOrWhiteSpace() || Author.IsNotNullOrWhiteSpace() || Title.IsNotNullOrWhiteSpace() || Publisher.IsNotNullOrWhiteSpace() || Year.HasValue
+.Query.IsImdbQuery    # from t=tvsearch or t=movie
+.Query.IsMovieSearch  # t=movie
+.Query.IsMusicSearch  # t=music
+.Query.IsRssSearch    # SearchTerm.IsNullOrWhiteSpace() && !IsIdSearch
+.Query.IsSearch       # t=search
+.Query.IsTVRageQuery  # from t=tvsearch
+.Query.IsTVSearch     # t=tvsearch
+.Query.IsTmdbQuery    # from t=tvsearch or t=movie
+.Query.IsTraktQuery   # from t=tvsearch or t=movie
+.Query.IsTvdbQuery    # from t=tvsearch
+.Query.IsTvmazeQuery  # from t=tvsearch
 ```
 
 Note: There are several variables that are not supported are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
@@ -1556,7 +1585,7 @@ Based on the download search field result the following variables are available:
 .DownloadUri.Host               example: domain.to
 .DownloadUri.Port               example: 443
 .DownloadUri.PathAndQuery       example: /torrent/1234567/A-Torrent-Name-1080p/
-.DownloadUri.Query              example: 
+.DownloadUri.Query              example: see below
 ```
 
 For each query string argument of the URI a corresponding `.DownloadUri.Query.$Key` variable is generated.
