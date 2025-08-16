@@ -45,52 +45,40 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
 1. Fork Radarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
-For css changes `yarn stylelint-windows --fix` {.is-info}
-
-### Building the frontend
-
-- Navigate to the cloned directory
-- Install the required Node Packages
-
-     ```bash
-     yarn install
-     ```
-
-- Start webpack to monitor your development environment for any changes that need post processing using:
-
-     ```bash
-     yarn start
-     ```
-
-### Building the Backend
-
-The backend solution is most easily built and ran in Visual Studio or Rider, however if the only priority is working on the frontend UI it can be built easily from command line as well when the correct SDK is installed.
-
-#### Visual Studio
-
-> Ensure startup project is set to `Radarr.Console` and framework to `net6.0`
+> **Important:** Always run linting before committing:
+> - Frontend changes: `yarn lint --fix`
+> - CSS changes: `yarn stylelint-windows --fix`
 {.is-info}
 
-1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
-1. Next `Debug/Run` the project in Visual Studio to start Radarr
-1. Open <http://localhost:7878>
+### Quick Start for Frontend Development
 
-#### Command line
+```bash
+# Navigate to cloned directory
+cd radarr
 
-1. Clean solution
+# Install dependencies
+yarn install
 
-```shell
-dotnet clean src/Radarr.sln -c Debug
+# Start development server
+yarn start
 ```
 
-1. Restore and Build debug configuration for the correct platform (Posix or Windows)
+### Quick Start for Backend Development
 
-```shell
-dotnet msbuild -restore src/Radarr.sln -p:Configuration=Debug -p:Platform=Posix -t:PublishAllRids
+#### Visual Studio (Recommended)
+1. Open `src/Radarr.sln`
+2. Set `Radarr.Console` as startup project (framework: `net6.0`)
+3. Hit F5 to build and run
+4. Backend available at `http://localhost:7878`
+
+#### Command Line
+```bash
+# Build and run
+dotnet run --project src/Radarr.Console
+
+# Or build for production
+dotnet publish src/Radarr.sln -c Release -o _output
 ```
-
-1. Run the produced executable from `/_output`
 
 ## Contributing Code
 
