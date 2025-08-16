@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-08-16T03:04:15.855418
+date: 2025-08-16T19:28:28.477316
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-08-16T03:04:15.855418
+dateCreated: 2025-08-16T19:28:28.477316
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.4.5138` / [Commit: 8664fc095dd79e420f9dfe4237bb268f9fb1df2e](https://github.com/Prowlarr/Prowlarr/commit/8664fc095dd79e420f9dfe4237bb268f9fb1df2e)
-  - [Prowlarr Indexers Commit: e5e7d825cb36b024654c1ed31ca3916e04869c8d](https://github.com/Prowlarr/Indexers/commit/e5e7d825cb36b024654c1ed31ca3916e04869c8d)
+  - [Prowlarr Indexers Commit: a965e118196a83a2da8b108553c9a1a06d4bb2d0](https://github.com/Prowlarr/Indexers/commit/a965e118196a83a2da8b108553c9a1a06d4bb2d0)
 
 ---
 
@@ -530,6 +530,7 @@ dateCreated: 2025-08-16T03:04:15.855418
 |[Shazbat](https://www.shazbat.tv/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
 |[The Show](https://theshow.click/){#theshow}|TheShow (TSBZ) is a Private Torrent Tracker for ENTERTAINMENT-INDUSTRY E-LEARNING|English (United States)|
 |[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
+|[SkipTheCommercials (API)](https://skipthecommericals.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[SoulVoice (聆音Club)](https://pt.soulvoice.club/){#soulvoice}|SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
