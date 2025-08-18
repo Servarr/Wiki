@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-08-16T19:28:28.477316
+date: 2025-08-18T01:43:46.018639
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-08-16T19:28:28.477316
+dateCreated: 2025-08-18T01:43:46.018639
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.0.4.5138` / [Commit: 8664fc095dd79e420f9dfe4237bb268f9fb1df2e](https://github.com/Prowlarr/Prowlarr/commit/8664fc095dd79e420f9dfe4237bb268f9fb1df2e)
-  - [Prowlarr Indexers Commit: a965e118196a83a2da8b108553c9a1a06d4bb2d0](https://github.com/Prowlarr/Indexers/commit/a965e118196a83a2da8b108553c9a1a06d4bb2d0)
+  - Prowlarr Build `2.0.5.5147` / [Commit: f1c9ba40c4386891e7c90468c923f10e00cb7b71](https://github.com/Prowlarr/Prowlarr/commit/f1c9ba40c4386891e7c90468c923f10e00cb7b71)
+  - [Prowlarr Indexers Commit: 9cdf8fb1ffdd29433fe978facded5c113896ade2](https://github.com/Prowlarr/Indexers/commit/9cdf8fb1ffdd29433fe978facded5c113896ade2)
 
 ---
 
@@ -89,8 +89,8 @@ dateCreated: 2025-08-16T19:28:28.477316
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
+|[PornXLab](https://www.pornxlab.com/){#pornxlab}|PornXLab is a Public tracker for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[ptorrents](https://www.ptorrents.com/){#ptorrents}|ptorrents is a Public tracker for 3X|English (United States)|
 |[Qbite (Hubite)](https://qbite.top/){#qbite}|Qbite (Hubite) is a Public Torrent Tracker for 3X|English (United States)|
 |[Rapidzona](https://rapidzona.tv/){#rapidzona}|Rapidzona is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -192,7 +192,7 @@ dateCreated: 2025-08-16T19:28:28.477316
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://aug16.rudub.club/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://aug17.rudub.club/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -413,6 +413,7 @@ dateCreated: 2025-08-16T19:28:28.477316
 |[KrazyZone](https://krazyzone.net/){#krazyzone}|KrazyZone is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
+|[Kufirc2FA](https://kufirc.com/){#kufirc2fa}|Kufirc is a HUNGARIAN Private tracker for 3X\. This indexer uses cookie login for 2FA|Hungarian (Hungary)|
 |[Last Digital Underground](https://theldu.to/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LastFiles](https://lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Lat-Team (API)](https://lat-team.com/){#lat-team-api}|Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Mexico)|
@@ -530,7 +531,7 @@ dateCreated: 2025-08-16T19:28:28.477316
 |[Shazbat](https://www.shazbat.tv/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
 |[The Show](https://theshow.click/){#theshow}|TheShow (TSBZ) is a Private Torrent Tracker for ENTERTAINMENT-INDUSTRY E-LEARNING|English (United States)|
 |[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
-|[SkipTheCommercials (API)](https://skipthecommericals.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
+|[SkipTheCommercials (API)](https://skipthecommercials.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[SoulVoice (聆音Club)](https://pt.soulvoice.club/){#soulvoice}|SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
