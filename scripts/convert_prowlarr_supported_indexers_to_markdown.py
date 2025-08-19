@@ -1,5 +1,5 @@
 """
-conver_prowlarr_supported_indexers_to_markdown.py
+convert_prowlarr_supported_indexers_to_markdown.py
 
 The purpose of this script is to export a markdown table for the wiki of the available indexers.
 We get the most recent commits from two repositories and from the existing specified output page.
@@ -12,6 +12,7 @@ import logging
 import sys
 import argparse
 from datetime import datetime
+from typing import Dict, List, Optional, Any
 import requests
 import iso639
 import re
@@ -260,14 +261,14 @@ LANG_DICT = {
 }
 
 
-def escape_markdown(text):
+def escape_markdown(text: str) -> str:
     """
     Escape brackets in the given text for Markdown formatting.
     """
     return text.replace("[", "\\[").replace("]", "\\]")
 
 
-def get_logger(name=__name__):
+def get_logger(name: str = __name__) -> logging.Logger:
     """ Gets the logger for the given name"""
     logging.basicConfig(format='%(asctime)s %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
@@ -276,9 +277,10 @@ def get_logger(name=__name__):
     return logger
 
 
-def get_language_name(language_code, indexer=None):
+def get_language_name(language_code: str, indexer: Optional[str] = None) -> str:
     """Gets the language name from the language code
     :param language_code: The language code
+    :param indexer: The indexer name for logging purposes
     :return: The language name
     """
     _logger = get_logger('lang_parser')
@@ -289,7 +291,7 @@ def get_language_name(language_code, indexer=None):
     try:
         return LANG_DICT[language_code]
     except KeyError:
-        None
+        pass
     try:
         language = iso639.Language.match(language_code)
         _logger.debug("Found Language: %s", language)
@@ -305,7 +307,7 @@ def get_language_name(language_code, indexer=None):
                 _logger.debug("Trying to get Country: %s", split_lang[1])
                 country = pycountry.countries.get(alpha_2=split_lang[1])
             except LookupError:
-                None
+                pass
             finally:
                 if country is not None:
                     country = country.name
@@ -321,7 +323,8 @@ def get_language_name(language_code, indexer=None):
     return f'{language}{" (" + country + ")" if country is not None else ""}'
 
 
-def get_request(url, request_headers=None, request_timeout=5, max_retries=3):
+def get_request(url: str, request_headers: Optional[Dict[str, str]] = None, 
+               request_timeout: int = 5, max_retries: int = 3) -> requests.Response:
     """Gets the request from the given url"""
     retries = 0
     while retries < max_retries:
@@ -349,7 +352,7 @@ def get_request(url, request_headers=None, request_timeout=5, max_retries=3):
     sys.exit(504)  # Gateway Timeout
 
 
-def get_version(api_url, headers):
+def get_version(api_url: str, headers: Dict[str, str]) -> str:
     """
     Retrieves the Prowlarr application version.
     """
@@ -359,7 +362,7 @@ def get_version(api_url, headers):
     return version_obj["version"]
 
 
-def get_indexers(api_url, headers):
+def get_indexers(api_url: str, headers: Dict[str, str]) -> List[Dict[str, Any]]:
     """
     Retrieves the list of indexers from Prowlarr.
     """
@@ -370,7 +373,7 @@ def get_indexers(api_url, headers):
     return sorted_indexers
 
 
-def build_markdown_table(indexers, privacy, protocol):
+def build_markdown_table(indexers: List[Dict[str, Any]], privacy: List[str], protocol: str) -> str:
     """
     Builds a markdown table for the given indexers, privacy, and protocol.
     """
@@ -401,7 +404,7 @@ def build_markdown_table(indexers, privacy, protocol):
     return table
 
 
-def extract_and_compare_commits_from_file(filename, app_commit, indexer_commit):
+def extract_and_compare_commits_from_file(filename: str, app_commit: str, indexer_commit: str) -> bool:
     """
     Extracts Commits from existing output file and compares them to the current commits.
     """
@@ -429,11 +432,11 @@ def extract_and_compare_commits_from_file(filename, app_commit, indexer_commit):
             if prev_indexer_commit:
                 _logger.info(
                     "Existing Indexer Commit is {%s}", prev_indexer_commit)
-    except:
+    except (FileNotFoundError, IOError, OSError) as e:
         prev_app_commit = None
         prev_indexer_commit = None
         _logger.warning(
-            "Couldn't read previous commits from file. Assuming no previous data.")
+            "Couldn't read previous commits from file. Assuming no previous data. Error: %s", e)
 
     if app_commit == prev_app_commit and indexer_commit == prev_indexer_commit:
         _logger.debug("Commits are the same. TRUE")
@@ -443,7 +446,7 @@ def extract_and_compare_commits_from_file(filename, app_commit, indexer_commit):
         return False
 
 
-def hash_and_compare_tables(hash_file_name, tbl_fmt_use, tbl_fmt_tor):
+def hash_and_compare_tables(hash_file_name: str, tbl_fmt_use: str, tbl_fmt_tor: str) -> bool:
     """
     Gets hashed file and compares to existing tables to determine if data changed.
     """
@@ -457,10 +460,10 @@ def hash_and_compare_tables(hash_file_name, tbl_fmt_use, tbl_fmt_tor):
         with open(hash_file_name, 'r') as file:
             stored_hash = file.read().strip()
         _logger.info("Stored Table Hash is {%s}", stored_hash)
-    except:
+    except (FileNotFoundError, IOError, OSError) as e:
         stored_hash = None
         _logger.warning(
-            "Couldn't read previous hash from file. Assuming no previous data.")
+            "Couldn't read previous hash from file. Assuming no previous data. Error: %s", e)
     if stored_hash == generated_hash:
         _logger.debug("Tables are the same. TRUE")
         return True
@@ -474,7 +477,9 @@ def hash_and_compare_tables(hash_file_name, tbl_fmt_use, tbl_fmt_tor):
         return False
 
 
-def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, app_base_url, prev_app_commit, prev_indexer_commit):
+def main(app_commit: Optional[str], indexer_commit: Optional[str], build: Optional[str], 
+         app_apikey: str, output_file: str, hashfile: str, app_base_url: str, 
+         prev_app_commit: Optional[str], prev_indexer_commit: Optional[str]) -> None:
 
     _logger = get_logger('main')
 
