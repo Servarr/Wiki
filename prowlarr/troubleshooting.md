@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2024-01-20T01:59:15.987Z
+date: 2025-08-20T04:53:51.026Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -28,6 +28,7 @@ dateCreated: 2021-06-20T20:05:25.223Z
     - [Manually upgrading](#manually-upgrading)
 - [NGINX errors](#nginx-errors)
 - [Indexer, Application, and Download Client Issues](#indexer-application-and-download-client-issues)
+  - [DNS & SSL Connection Issues](#dns-ssl-connection-issues)
   - [Cannot determine the frame size or a corrupted frame was received](#cannot-determine-the-frame-size-or-a-corrupted-frame-was-received)
   - [Connection Timed Out](#connection-timed-out)
   - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
@@ -208,6 +209,71 @@ If you have any different `proxy_set_header` you must replace it with the line a
 {.is-info}
 
 Below are some common causes
+
+DNS/SSL Connection Issues
+
+```none
+Unable to connect to indexer
+```
+
+  SSL connection could not be
+  established
+
+  These connection errors are
+  typically caused by ISP DNS
+  interference, SSL certificate
+  issues, or network configuration
+  problems.
+
+  ### Common causes and solutions
+
+  1. ISP DNS interference - Many ISPs intercept or block DNS requests to certain sites
+    - Solution: Stop using your ISP's DNS servers. Try:
+        - Google DNS: 8.8.8.8, 8.8.4.4
+      - Cloudflare DNS: 1.1.1.1,
+  1.0.0.1
+      - Quad9 DNS: 9.9.9.9,
+  149.112.112.112
+  2. DNS over HTTPS/TLS - For
+  persistent DNS blocking
+    - Solution: Configure DNS over TLS
+   or HTTPS on your router/system
+    - This encrypts DNS queries to
+  prevent ISP interference
+  3. IPv6 issues - IPv6 may be enabled
+   but non-functional
+    - Solution: Disable IPv6 in your
+  network settings if not properly
+  configured
+  4. Flaresolverr dependency - If
+  using indexers protected by
+  Cloudflare
+    - Note: Flaresolverr is no longer
+  maintained. Search for alternatives
+  if needed
+    - Prowlarr does not endorse any
+  specific replacements
+  5. VPN/Proxy solutions - For
+  persistent connection issues
+    - SOCKS5 proxy: Configure for
+  problematic indexers only
+    - VPN: Route Prowlarr traffic
+  through VPN (last resort)
+    - See #vpns-jackett-and-the-arrs
+  for important considerations
+
+  ### Troubleshooting steps
+
+  1. Try different DNS servers first
+  1. Test if IPv6 can be disabled
+  1. Configure DNS over TLS/HTTPS if simple DNS change doesn't work
+  1. Consider SOCKS5 proxy for specific problematic indexers
+  1. VPN as last resort if other solutions fail
+
+  ISP interference with DNS/SSL is 
+  increasingly common. Start with DNS server changes as this resolves most connection issues.
+  {.is-info}
+
 
 ## Cannot determine the frame size or a corrupted frame was received
 
