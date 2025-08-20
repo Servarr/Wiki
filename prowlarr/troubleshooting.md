@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2025-08-20T04:54:56.293Z
+date: 2025-08-20T16:16:19.858Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -210,74 +210,50 @@ If you have any different `proxy_set_header` you must replace it with the line a
 
 Below are some common causes
 
-## DNS/SSL Connection Issues
 
-{#dns-ssl-connection-issues}
+These errors are usually caused by ISP DNS interference, SSL certificate issues, or network configuration problems.
 
-```none
-Unable to connect to indexer
-```
+---
 
-```none
-  SSL connection could not be
-  established
-```
+### Common Causes and Solutions
 
-  These connection errors are
-  typically caused by ISP DNS
-  interference, SSL certificate
-  issues, or network configuration
-  problems.
+1. **ISP DNS interference** – Many ISPs intercept or block DNS requests to certain sites  
+   - **Solution**: Stop using your ISP’s DNS servers. Use public resolvers such as:  
+     - Google DNS: `8.8.8.8`, `8.8.4.4`  
+     - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`  
+     - Quad9 DNS: `9.9.9.9`, `149.112.112.112`
 
-### Common causes and solutions
+2. **DNS over HTTPS/TLS** – For persistent DNS blocking  
+   - **Solution**: Configure DNS over TLS or HTTPS on your router or system  
+   - Encrypts DNS queries to prevent ISP interference
 
-  1. ISP DNS interference - Many ISPs intercept or block DNS requests to certain sites
-    - Solution: Stop using your ISP's DNS servers. Try:
-        - Google DNS: 8.8.8.8, 8.8.4.4
-      - Cloudflare DNS: 1.1.1.1,
-  1.0.0.1
-      - Quad9 DNS: 9.9.9.9,
-  149.112.112.112
-  2. DNS over HTTPS/TLS - For
-  persistent DNS blocking
-    - Solution: Configure DNS over TLS
-   or HTTPS on your router/system
-    - This encrypts DNS queries to
-  prevent ISP interference
-  3. IPv6 issues - IPv6 may be enabled
-   but non-functional
-    - Solution: Disable IPv6 in your
-  network settings if not properly
-  configured
-  4. Flaresolverr dependency - If
-  using indexers protected by
-  Cloudflare
-    - Note: Flaresolverr is no longer
-  maintained. Search for alternatives
-  if needed
-    - Prowlarr does not endorse any
-  specific replacements
-  5. VPN/Proxy solutions - For
-  persistent connection issues
-    - SOCKS5 proxy: Configure for
-  problematic indexers only
-    - VPN: Route Prowlarr traffic
-  through VPN (last resort)
-    - See #vpns-jackett-and-the-arrs
-  for important considerations
+3. **IPv6 issues** – IPv6 may be enabled but non-functional  
+   - **Solution**: Disable IPv6 in network settings if not properly configured
 
-  ### Troubleshooting steps
+4. **Flaresolverr dependency** – If using indexers protected by Cloudflare  
+   - Note: Flaresolverr is no longer maintained  
+   - Flaresolverr (and alternatives) are actively being fought by Cloudflare's Development Team.
+   - Search for alternatives if needed (e.g. Byparr)
+   - Prowlarr does not endorse specific replacements
+   - Encourage your indexer to remove Cloudflare protection. Often this is done for load due to scraping and can be resolved by the indexer implementing a proper API for automation use by Jackett and Prowlarr.
 
-  1. Try different DNS servers first
-  1. Test if IPv6 can be disabled
-  1. Configure DNS over TLS/HTTPS if simple DNS change doesn't work
-  1. Consider SOCKS5 proxy for specific problematic indexers
-  1. VPN as last resort if other solutions fail
+5. **VPN/Proxy solutions** – For persistent connection issues  
+   - SOCKS5 proxy: Configure per problematic indexer  
+   - VPN: Route Prowlarr traffic through VPN (last resort)  
+   - See [VPNs, Jackett, and the Arrs](/prowlarr/faq#vpns-jackett-and-the-arrs) for important considerations
 
-  ISP interference with DNS/SSL is 
-  increasingly common. Start with DNS server changes as this resolves most connection issues.
-  {.is-info}
+### Troubleshooting Steps
 
+1. Try different DNS servers first  
+2. Test disabling IPv6  
+3. Configure DNS over TLS/HTTPS if simple DNS change doesn’t work  
+4. Use a SOCKS5 proxy for specific indexers if needed  
+5. Use a VPN only as a last resort
+
+---
+
+> ISP interference with DNS/SSL is increasingly common. Start with DNS server changes, as this resolves most connection issues.  
+{.is-info}
 
 ## Cannot determine the frame size or a corrupted frame was received
 
