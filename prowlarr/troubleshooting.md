@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2025-08-20T04:53:51.026Z
+date: 2025-08-20T04:54:56.293Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -210,14 +210,18 @@ If you have any different `proxy_set_header` you must replace it with the line a
 
 Below are some common causes
 
-DNS/SSL Connection Issues
+## DNS/SSL Connection Issues
+
+{#dns-ssl-connection-issues}
 
 ```none
 Unable to connect to indexer
 ```
 
+```none
   SSL connection could not be
   established
+```
 
   These connection errors are
   typically caused by ISP DNS
@@ -225,7 +229,7 @@ Unable to connect to indexer
   issues, or network configuration
   problems.
 
-  ### Common causes and solutions
+### Common causes and solutions
 
   1. ISP DNS interference - Many ISPs intercept or block DNS requests to certain sites
     - Solution: Stop using your ISP's DNS servers. Try:
