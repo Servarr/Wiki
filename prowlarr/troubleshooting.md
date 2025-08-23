@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2025-08-20T16:16:19.858Z
+date: 2025-08-23T21:14:40.796Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -207,6 +207,8 @@ If you have any different `proxy_set_header` you must replace it with the line a
 
 > Note that logs indicating querying indexer ID 0: The 0 ID is a generic test endpoint that allows us to test if \*Arr can call back and connect to Prowlarr without actually relying on an indexer working.
 {.is-info}
+
+## DNS SSL Connection Issues
 
 Below are some common causes
 
