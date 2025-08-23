@@ -64,7 +64,7 @@ echo -e "#                                                           #"
 echo -e "#############################################################"
 echo -e ${reset}
 
-echo "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} as of ${brown}[$scriptdate]${reset}"
+echo -e "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} as of ${brown}[$scriptdate]${reset}"
 echo ""
 echo "Select the application to install: "
 echo ""
