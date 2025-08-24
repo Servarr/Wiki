@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2025-08-24T14:56:42.858Z
+date: 2025-08-24T14:57:37.363Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -180,12 +180,12 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 - Your indexer(s) do not have (an) existing definition (file) this is typically due to your indexer being no longer supported and removed or the Cardigann YML definition no longer is accessible.
 
+> [YGG Users Click Here](https://github.com/Prowlarr/Indexers/pull/481#issue-2483856081)
+{.is-info}
+
 #### Indexers are Obsolete
 
 - Your indexer(s)'s definition is obsolete and out of date. This has one of two causes which are noted below
-
-> [YGG Users Click Here](https://github.com/Prowlarr/Indexers/pull/481#issue-2483856081)
-{.is-info}
 
 ##### Obsolete due to Code Changes
 
