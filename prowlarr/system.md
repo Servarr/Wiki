@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: 
 published: true
-date: 2023-05-31T11:54:59.064Z
+date: 2025-08-24T14:56:42.858Z
 tags: prowlarr, system
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -183,6 +183,9 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 #### Indexers are Obsolete
 
 - Your indexer(s)'s definition is obsolete and out of date. This has one of two causes which are noted below
+
+> [YGG Users Click Here](https://github.com/Prowlarr/Indexers/pull/481#issue-2483856081)
+{.is-info}
 
 ##### Obsolete due to Code Changes
 
