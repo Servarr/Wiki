@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-08-24T01:39:58.125545
+date: 2025-08-25T00:16:45.418404
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-08-24T01:39:58.125545
+dateCreated: 2025-08-25T00:16:45.418404
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.0.5.5159` / [Commit: 532bffe772317ed44b65d8544b3e8358ed954390](https://github.com/Prowlarr/Prowlarr/commit/532bffe772317ed44b65d8544b3e8358ed954390)
-  - [Prowlarr Indexers Commit: 23085f58db449cac5d4509baa9acb1473e398f78](https://github.com/Prowlarr/Indexers/commit/23085f58db449cac5d4509baa9acb1473e398f78)
+  - [Prowlarr Indexers Commit: 6a6404fca18514fabed243156326752c20d45aa5](https://github.com/Prowlarr/Indexers/commit/6a6404fca18514fabed243156326752c20d45aa5)
 
 ---
 
@@ -607,8 +607,6 @@ dateCreated: 2025-08-24T01:39:58.125545
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
-|[YGG cookie](https://www.yggtorrent.top/){#yggcookie}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login|French (France)|
-|[YggTorrent](https://www.yggtorrent.top/){#yggtorrent}|YggTorrent (YGG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[YOiNKED (API)](https://yoinked.org/){#yoinked}|YOiNKED is a Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
