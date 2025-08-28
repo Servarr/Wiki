@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: 
 published: true
-date: 2025-08-23T21:14:40.796Z
+date: 2025-08-28T01:31:53.162Z
 tags: prowlarr, troubleshooting
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -210,16 +210,30 @@ If you have any different `proxy_set_header` you must replace it with the line a
 
 ## DNS SSL Connection Issues
 
-Below are some common causes
-
-
 These errors are usually caused by ISP DNS interference, SSL certificate issues, or network configuration problems.
 
 ---
 
-### Common Causes and Solutions
+### Common Issues and Solutions
 
-1. **ISP DNS interference** – Many ISPs intercept or block DNS requests to certain sites  
+#### HTTP Request Exception: Connection Reset by Peer
+
+```none
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+—> System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+—> System.Net.Sockets.SocketException (104): Connection reset by peer
+```
+
+The indexer or application server terminated the connection unexpectedly during a request.
+
+- Indexer rate limiting or IP blocking
+- Indexer server overload or maintenance
+- VPN/proxy connection issues
+- Firewall blocking outbound requests
+- DNS resolution failures
+- SSL/TLS certificate problems
+
+#### ISP DNS interference** – Many ISPs intercept or block DNS requests to certain sites  
    - **Solution**: Stop using your ISP’s DNS servers. Use public resolvers such as:  
      - Google DNS: `8.8.8.8`, `8.8.4.4`  
      - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`  
@@ -246,11 +260,11 @@ These errors are usually caused by ISP DNS interference, SSL certificate issues,
 
 ### Troubleshooting Steps
 
-1. Try different DNS servers first  
-2. Test disabling IPv6  
-3. Configure DNS over TLS/HTTPS if simple DNS change doesn’t work  
-4. Use a SOCKS5 proxy for specific indexers if needed  
-5. Use a VPN only as a last resort
+1. Try different DNS servers first 
+1. Test disabling IPv6  
+1. Configure DNS over TLS/HTTPS if simple DNS change doesn’t work  
+1. Use a SOCKS5 proxy for specific indexers if needed  
+1. Use a VPN only as a last resort
 
 ---
 
