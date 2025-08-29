@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: 
 published: true
-date: 2022-06-17T08:57:21.618Z
+date: 2025-08-29T18:12:06.507Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -130,12 +130,12 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 {#importlist}
 
-- Headphones {#headphonesimport}
+- Headphones {#headphonesimport} [More Info](https://github.com/rembo10/headphones)
 - Last.fm Tag {#lastfmtag}
 - Last.fm User {#lastfmuser}
 - Lidarr {#lidarrimport}
 - Lidarr Lists {#lidarrlists}
-- MusicBrainz Series {#musicbrainzseries}
+- MusicBrainz Series {#musicbrainzseries} [More Info](https://musicbrainz.org/doc/Series)
 - Spotify Followed Artists {#spotifyfollowedartists}
 - Spotify Playlists {#spotifyplaylist}
 - Spotify Saved Albums {#spotifysavedalbums}
