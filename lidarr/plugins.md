@@ -2,7 +2,7 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-04-14T12:32:25.702Z
+date: 2025-08-30T16:02:31.783Z
 tags: lidarr, plugins
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -16,7 +16,7 @@ Lidarr plug-ins allow users to extend the capability of Lidarr to include new in
 
 Plug-in capabilities are currently only available on the `plugins` branch.
 
-> You cannot go back to a mainline Lidarr branch (master/develop/nightly) without restoring a database prior to the `plugins` branch
+> You cannot go back to a mainline Lidarr branch (master/develop/nightly) without restoring a database prior to the `plugins` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
 {.is-danger}
 
 ### Native Installs -Windows, Mac, and Linux
