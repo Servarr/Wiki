@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-08-25T00:16:45.418404
+date: 2025-09-02T01:22:21.375175
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-08-25T00:16:45.418404
+dateCreated: 2025-09-02T01:22:21.375175
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.0.5.5159` / [Commit: 532bffe772317ed44b65d8544b3e8358ed954390](https://github.com/Prowlarr/Prowlarr/commit/532bffe772317ed44b65d8544b3e8358ed954390)
-  - [Prowlarr Indexers Commit: 6a6404fca18514fabed243156326752c20d45aa5](https://github.com/Prowlarr/Indexers/commit/6a6404fca18514fabed243156326752c20d45aa5)
+  - Prowlarr Build `2.1.0.5166` / [Commit: f601ff98a238456f0577d8c641b4c52f1c029650](https://github.com/Prowlarr/Prowlarr/commit/f601ff98a238456f0577d8c641b4c52f1c029650)
+  - [Prowlarr Indexers Commit: 0ea08ad049e21b6ce66c3713bf7520b5043f8449](https://github.com/Prowlarr/Indexers/commit/0ea08ad049e21b6ce66c3713bf7520b5043f8449)
 
 ---
 
@@ -82,7 +82,7 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www1.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent7.com/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent8.com/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
@@ -118,12 +118,12 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq382.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq383.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir176.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrentsome](https://torrentsome209.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome210.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[torrentssg](https://ssg1.torrentssg8.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip190.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip191.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -186,6 +186,7 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
 |[Polskie-Torrenty](https://polskie-torrenty.eu/){#polskie-torrenty}|Polskie-Torrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PornoLab](https://pornolab.net/){#pornolab}|PornoLab is a Semi-Private Russian site for 3X|Russian (Russia)|
+|[Postman (API)](http://tracker2.postman.i2p/){#postman-api}|Postman is a Semi-Private I2P Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses the API for login|English (United States)|
 |[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Semi-Private tracker for 3X|Russian (Russia)|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
 |[Rainbow Tracker](https://gaytracker.ru/){#rainbowtracker}|Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV|Russian (Russia)|
@@ -193,7 +194,7 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://aug23.rudub.buzz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep01.rudub.buzz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -207,7 +208,6 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[ViDEOTEKA](http://videoteka.org/){#videoteka}|ViDEOTEKA (VT) is a SLOVENIAN Semi-Private Torrent Tracker for MOVIES / TV|Slovenian (Slovenia)|
-|[ZOMB](http://zombtracker.the-zomb.com/){#zomb}|ZOMB is a Semi-Private Torrent Tracker for BOOTLEG MUSIC|English (United States)|
 |[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
 ### Private Trackers
@@ -338,6 +338,7 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
+|[Flood](https://flood.st/){#flood}|Flood (FLD) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Flux-Zone](http://fluxzone.org/){#fluxzone}|Flux-Zone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Free Farm (自由农场)](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[FunFile](https://www.funfile.org/){#funfile}|FunFile is a general tracker|English (United States)|
@@ -467,7 +468,6 @@ dateCreated: 2025-08-25T00:16:45.418404
 |[OpenCD](https://open.cd/){#opencd}|OpenCD is a CHINESE Private Torrent Tracker for LOSSLESS ASIAN MUSIC|Chinese (China)|
 |[Orpheus](https://orpheus.network/){#orpheus}|Orpheus (APOLLO) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[OshenPT](https://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[Ostwiki](https://www.ostwiki.com/){#ostwiki}|Ostwiki is a Private Torrent Tracker for Soundtracks releases|English (United States)|
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[P2PBG](http://www.p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
