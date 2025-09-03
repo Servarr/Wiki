@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-03T01:18:06.378880
+date: 2025-09-03T01:43:42.278405
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-09-03T01:18:06.378880
+dateCreated: 2025-09-03T01:43:42.278405
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.0.5166` / [Commit: f601ff98a238456f0577d8c641b4c52f1c029650](https://github.com/Prowlarr/Prowlarr/commit/f601ff98a238456f0577d8c641b4c52f1c029650)
-  - [Prowlarr Indexers Commit: a8ea903638e1cff4bcb456a256fa078c203b6cc6](https://github.com/Prowlarr/Indexers/commit/a8ea903638e1cff4bcb456a256fa078c203b6cc6)
+  - [Prowlarr Indexers Commit: 631409317d24214ce5b3ad15dd7c83b619d474c7](https://github.com/Prowlarr/Indexers/commit/631409317d24214ce5b3ad15dd7c83b619d474c7)
 
 ---
 
@@ -41,7 +41,7 @@ dateCreated: 2025-09-03T01:18:06.378880
 |[BTdirectory](https://btmulu.live/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
 |[btstate](https://btstate.com/){#btstate}|btstate is a Public BitTorrent DHT search engine|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
-|[Catorrent](https://catorrent.org/){#catorrent}|Catorrent is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
+|[Catorrent](https://catorrent.net/){#catorrent}|Catorrent is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[cpasbien clone](https://www1.cpasbien.to/){#cpasbienclone}|cpasbien clone is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
 |[DaMagNet](https://damag.net/){#damagnet}|DaMagNet is a Public DHT Crawler|English (United States)|
@@ -162,7 +162,6 @@ dateCreated: 2025-09-03T01:18:06.378880
 |[Fenyarnyek-Tracker](http://tracker.fenyarnyek.com/){#fenyarnyek-tracker}|Fenyarnyek-Tracker is a HUNGARIAN Semi-Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
 |[File-Tracker](https://file-tracker.net/){#file-tracker}|File Tracker is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|Russian (Russia)|
 |[Gay-Torrents\.net](https://www.gay-torrents.net/){#gay-torrents}|Gay-Torrents\.net is a Private Torrent Tracker for GAY 3X|English (United States)|
-|[Genesis-Movement](https://torrent.genesis-movement.org/){#genesismovement}|Genesis-Movement is a Semi-Private Torrent Tracker for GENESIS BOOTLEG MUSIC|English (United States)|
 |[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH Semi-Private PAY2DL site for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -194,7 +193,7 @@ dateCreated: 2025-09-03T01:18:06.378880
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep02.rudub.buzz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep03.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
