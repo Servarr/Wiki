@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-02T01:22:21.375175
+date: 2025-09-03T01:18:06.378880
 tags: prowlarr, indexers
 editor: markdown
-dateCreated: 2025-09-02T01:22:21.375175
+dateCreated: 2025-09-03T01:18:06.378880
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.0.5166` / [Commit: f601ff98a238456f0577d8c641b4c52f1c029650](https://github.com/Prowlarr/Prowlarr/commit/f601ff98a238456f0577d8c641b4c52f1c029650)
-  - [Prowlarr Indexers Commit: 0ea08ad049e21b6ce66c3713bf7520b5043f8449](https://github.com/Prowlarr/Indexers/commit/0ea08ad049e21b6ce66c3713bf7520b5043f8449)
+  - [Prowlarr Indexers Commit: a8ea903638e1cff4bcb456a256fa078c203b6cc6](https://github.com/Prowlarr/Indexers/commit/a8ea903638e1cff4bcb456a256fa078c203b6cc6)
 
 ---
 
@@ -194,7 +194,7 @@ dateCreated: 2025-09-02T01:22:21.375175
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep01.rudub.buzz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep02.rudub.buzz/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -431,6 +431,7 @@ dateCreated: 2025-09-02T01:22:21.375175
 |[Locadora (API)](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / ANIME|Portuguese (Brazil)|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private Torrent Tracker for High Quality Music|Russian (Russia)|
 |[LST](https://lst.gg/){#lst}|LST is an ENGLISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[LuckPT](https://pt.luckpt.de/){#luckpt}|LuckPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[M-Team - TP](https://kp.m-team.cc/){#m-team---tp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
