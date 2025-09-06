@@ -9,6 +9,7 @@
   "MD025": false,
   "MD026": { "punctuation": ".,;:!?" },
   "MD028": false,
+  "MD029": false,
   "MD033": {
     "allowed_elements": [
       "i",
@@ -31,5 +32,6 @@
   "MD036": false,
   "MD041": false,
   "MD046": { "style": "fenced" },
-  "MD048": { "style": "backtick" }
+  "MD048": { "style": "backtick" },
+  "MD051": false
 }
