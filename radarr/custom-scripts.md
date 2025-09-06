@@ -38,9 +38,9 @@ Note that the following will only be logged for custom scripts:
 | `radarr_movie_title`                 | Title of the movie                                                                           |
 | `radarr_movie_tmdbid`                | TMDb ID for the movie                                                                        |
 | `radarr_movie_year`                  | Release year of the movie                                                                    |
-| `radarr_movie_tags`                  | Tags set for the movie		                                                                    |
+| `radarr_movie_tags`                  | Tags set for the movie                                                                       |
 | `radarr_release_indexer`             | Indexer from which the release was grabbed                                                   |
-| `radarr_indexerflags`		             | Indexer flags associated with the release	                                                  |
+| `radarr_indexerflags`                | Indexer flags associated with the release                                                    |
 | `radarr_release_quality`             | Quality name of the release, as detected by Radarr                                           |
 | `radarr_release_qualityversion`      | `1` is the default, `2` is for proper, and `3`+ could be used for anime versions             |
 | `radarr_release_releasegroup`        | Release group (empty if unknown)                                                             |
@@ -61,7 +61,7 @@ Note that the following will only be logged for custom scripts:
 | `radarr_movie_path`                  | Full path to the movie                                                                       |
 | `radarr_movie_physical_release_date` | Physical release date (empty if unknown)                                                     |
 | `radarr_movie_title`                 | Title of the movie                                                                           |
-| `radarr_movie_tags`                  | Tags set for the movie		                                                                    |
+| `radarr_movie_tags`                  | Tags set for the movie                                                                       |
 | `radarr_movie_tmdbid`                | TMDb ID for the movie                                                                        |
 | `radarr_movie_year`                  | Release year of the movie                                                                    |
 | `radarr_moviefile_id`                | Internal ID of the movie file                                                                |
@@ -73,24 +73,24 @@ Note that the following will only be logged for custom scripts:
 | `radarr_moviefile_scenename`         | Original release name (empty if unknown)                                                     |
 | `radarr_moviefile_sourcepath`        | Full path to the imported movie file                                                         |
 | `radarr_moviefile_sourcefolder`      | Full path to the folder the movie file was imported from                                     |
-| `radarr_deletedrelativepaths`        | \|-delimited list of files that were deleted to import this file                            |
-| `radarr_deletedpaths`                | \|-delimited list of full paths to files that were deleted to import this file              |
+| `radarr_deletedrelativepaths`        | \|-delimited list of files that were deleted to import this file                             |
+| `radarr_deletedpaths`                | \|-delimited list of full paths to files that were deleted to import this file               |
 
 ## On Rename
 
-| Environment Variable                     | Details                                         |
-| ---------------------------------------- | ----------------------------------------------- |
-| `radarr_eventtype`                       | `Rename`                                        |
-| `radarr_movie_id`                        | Internal ID of the movie                        |
-| `radarr_movie_title`                     | Title of the movie                              |
-| `radarr_movie_tags`                  		 | Tags set for the movie													 |
-| `radarr_movie_year`                      | Release year of the movie                       |
-| `radarr_movie_path`                      | Full path to the movie                          |
-| `radarr_movie_imdbid`                    | IMDb ID for the movie (empty if unknown)        |
-| `radarr_movie_tmdbid`                    | TMDb ID for the movie                           |
-| `radarr_movie_in_cinemas_date`           | Cinema release date (empty if unknown)          |
-| `radarr_movie_physical_release_date`     | Physical/Web release date (empty if unknown)    |
-| `radarr_moviefile_ids`                   | `,`-delimited list of file ID(s)                |
+| Environment Variable                     | Details                                        |
+| ---------------------------------------- | ---------------------------------------------- |
+| `radarr_eventtype`                       | `Rename`                                       |
+| `radarr_movie_id`                        | Internal ID of the movie                       |
+| `radarr_movie_title`                     | Title of the movie                             |
+| `radarr_movie_tags`                      | Tags set for the movie                         |
+| `radarr_movie_year`                      | Release year of the movie                      |
+| `radarr_movie_path`                      | Full path to the movie                         |
+| `radarr_movie_imdbid`                    | IMDb ID for the movie (empty if unknown)       |
+| `radarr_movie_tmdbid`                    | TMDb ID for the movie                          |
+| `radarr_movie_in_cinemas_date`           | Cinema release date (empty if unknown)         |
+| `radarr_movie_physical_release_date`     | Physical/Web release date (empty if unknown)   |
+| `radarr_moviefile_ids`                   | `,`-delimited list of file ID(s)               |
 | `radarr_moviefile_relativepaths`         | \|-delimited list of relative path(s)          |
 | `radarr_moviefile_paths`                 | \|-delimited list of path(s)                   |
 | `radarr_moviefile_previousrelativepaths` | \|-delimited list of previous relative path(s) |
@@ -108,12 +108,12 @@ Note that the following will only be logged for custom scripts:
 
 ## On Application Update
 
-| Environment Variable             | Details                               |
-|--------------------------------- |-------------------------------------- |
-| `radarr_eventtype`               | `ApplicationUpdate`                   |
-| `radarr_update_message`          | Message from Update                   |
-| `radarr_update_newversion`       | Version Radarr updated to (string)    |
-| `radarr_update_previousversion`  | Version Radarr updated from (string)  |
+| Environment Variable            | Details                              |
+| ------------------------------- | ------------------------------------ |
+| `radarr_eventtype`              | `ApplicationUpdate`                  |
+| `radarr_update_message`         | Message from Update                  |
+| `radarr_update_newversion`      | Version Radarr updated to (string)   |
+| `radarr_update_previousversion` | Version Radarr updated from (string) |
 
 ## On Test
 

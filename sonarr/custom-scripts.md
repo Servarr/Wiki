@@ -27,7 +27,7 @@ Note that the following will only be logged for custom scripts:
 ## On Grab
 
 | Environment Variable                    | Details                                                                                      |
-|-----------------------------------------|----------------------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `sonarr_eventtype`                      | `Grab`                                                                                       |
 | `sonarr_series_id`                      | Internal ID of the series                                                                    |
 | `sonarr_series_title`                   | Title of the series                                                                          |
@@ -68,7 +68,7 @@ Note that the following will only be logged for custom scripts:
 ## On Import/On Upgrade
 
 | Environment Variable                    | Details                                                                                      |
-|-----------------------------------------|----------------------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `sonarr_eventtype`                      | `Download`                                                                                   |
 | `sonarr_isupgrade`                      | `True` when an existing file is upgraded, `False` otherwise                                  |
 | `sonarr_series_id`                      | Internal ID of the series                                                                    |
@@ -103,7 +103,7 @@ Note that the following will only be logged for custom scripts:
 ## On Rename
 
 | Environment Variable     | Details                                              |
-|--------------------------|------------------------------------------------------|
+| ------------------------ | ---------------------------------------------------- |
 | `sonarr_eventtype`       | `Rename`                                             |
 | `sonarr_series_id`       | Internal ID of the series                            |
 | `sonarr_series_title`    | Title of the series                                  |
@@ -117,7 +117,7 @@ Note that the following will only be logged for custom scripts:
 ## On Episode File Delete
 
 | Environment Variable                    | Details                                                                          |
-|-----------------------------------------|----------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------- |
 | `sonarr_eventtype`                      | `EpisodeFileDelete`                                                              |
 | `sonarr_series_id`                      | Internal ID of the series                                                        |
 | `sonarr_series_title`                   | Title of the series                                                              |
@@ -145,7 +145,7 @@ Note that the following will only be logged for custom scripts:
 ## On Series Delete
 
 | Environment Variable         | Details                                                                  |
-|------------------------------|--------------------------------------------------------------------------|
+| ---------------------------- | ------------------------------------------------------------------------ |
 | `sonarr_eventtype`           | `SeriesDelete`                                                           |
 | `sonarr_series_id`           | Internal ID of the series                                                |
 | `sonarr_series_title`        | Title of the series                                                      |
@@ -159,7 +159,7 @@ Note that the following will only be logged for custom scripts:
 ## On Health Issue
 
 | Environment Variable          | Details                                                      |
-|-------------------------------|--------------------------------------------------------------|
+| ----------------------------- | ------------------------------------------------------------ |
 | `sonarr_eventtype`            | `HealthIssue`                                                |
 | `sonarr_health_issue_level`   | Type of health issue (`Ok`, `Notice`, `Warning`, or `Error`) |
 | `sonarr_health_issue_message` | Message from the health issue                                |
@@ -169,7 +169,7 @@ Note that the following will only be logged for custom scripts:
 ## On Application Update
 
 | Environment Variable            | Details                              |
-|---------------------------------|--------------------------------------|
+| ------------------------------- | ------------------------------------ |
 | `sonarr_eventtype`              | `ApplicationUpdate`                  |
 | `sonarr_update_message`         | Message from Update                  |
 | `sonarr_update_newversion`      | Version Sonarr updated to (string)   |
@@ -178,7 +178,7 @@ Note that the following will only be logged for custom scripts:
 ## On Manual Interaction Required
 
 | Environment Variable             | Details                                                                                      |
-|----------------------------------|----------------------------------------------------------------------------------------------|
+| -------------------------------- | -------------------------------------------------------------------------------------------- |
 | `sonarr_eventtype`               | `ManualInteractionRequired`                                                                  |
 | `sonarr_applicationurl`          | URL of the application                                                                       |
 | `sonarr_download_client`         | Download client name                                                                         |
@@ -206,5 +206,5 @@ Note that the following will only be logged for custom scripts:
 When adding the script to Sonarr and clicking 'Test,' the script will be invoked with the following parameters. The script should be able to gracefully ignore any unsupported event type.
 
 | Environment Variable | Details |
-|----------------------|---------|
+| -------------------- | ------- |
 | `sonarr_eventtype`   | `Test`  |

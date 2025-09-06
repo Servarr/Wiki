@@ -1819,33 +1819,33 @@ For a full breakdown of the format specifiers see <https://learn.microsoft.com/e
 
 Here are the more common format specifiers used by Jackett
 
-format specifier|description|example
----|---|---
-yyyy|The year as a four-digit number.|2009-06-15T13:45:30.6175 -> 2009
-yy|The year, from 00 to 99.|2009-06-15T13:45:30.6175 -> 09
-MMMM|The full name of the month.|2009-06-15T13:45:30.6175 -> June
-MMM|The abbreviated name of the month.|2009-06-15T13:45:30.6175 -> Jun
-MM|The month, from 01 through 12.|2009-06-15T13:45:30.6175 -> 06
-M|The month, from 1 through 12.|2009-06-15T13:45:30.6175 -> 6
-dddd|The full name of the day of the week.|2009-06-15T13:45:30.6175 -> Monday
-ddd|The abbreviated name of the day of the week.|2009-06-15T13:45:30.6175 -> Mon
-dd|The day of the month, from 01 through 31.|2009-06-15T13:45:30.6175 -> 15
-d|The day of the month, from 1 through 31.|2009-06-15T13:45:30.6175 -> 15
-HH|The hour, using a 24-hour clock from 00 to 23.|2009-06-15T13:45:30.6175 -> 13
-H|The hour, using a 24-hour clock from 0 to 23.|2009-06-15T13:45:30.6175 -> 13
-hh|The hour, using a 12-hour clock from 01 to 12.|2009-06-15T13:45:30.6175 -> 01
-h|The hour, using a 12-hour clock from 1 to 12.|2009-06-15T13:45:30.6175 -> 1
-mm|The minute, from 00 through 59.|2009-06-15T13:45:30.6175 -> 45
-m|The minute, from 0 through 59.|2009-06-15T13:45:30.6175 -> 45
-ss|The second, from 00 through 59.|2009-06-15T13:45:30.6175 -> 30
-s|The second, from 0 through 59.|2009-06-15T13:45:30.6175 -> 30
-ffff|The ten thousandths of a second in a date and time value.|2009-06-15T13:45:30.6175 -> 6175
-fff|The milliseconds in a date and time value.|2009-06-15T13:45:30.6175 -> 617
-ff|The hundredths of a second in a date and time value.|2009-06-15T13:45:30.6175 -> 61
-f|The tenths of a second in a date and time value.|2009-06-15T13:45:30.6175 -> 6
-tt|The AM/PM designator.|2009-06-15T13:45:30.6175 -> PM
-zzz|Hours and minutes offset from UTC.|2009-06-15T13:45:30-07:00 -> -07:00
-zz|Hours offset from UTC, with a leading zero for a single-digit value.|2009-06-15T13:45:30-07:00 -> -07
+| format specifier | description                                                          | example                             |
+| ---------------- | -------------------------------------------------------------------- | ----------------------------------- |
+| yyyy             | The year as a four-digit number.                                     | 2009-06-15T13:45:30.6175 -> 2009    |
+| yy               | The year, from 00 to 99.                                             | 2009-06-15T13:45:30.6175 -> 09      |
+| MMMM             | The full name of the month.                                          | 2009-06-15T13:45:30.6175 -> June    |
+| MMM              | The abbreviated name of the month.                                   | 2009-06-15T13:45:30.6175 -> Jun     |
+| MM               | The month, from 01 through 12.                                       | 2009-06-15T13:45:30.6175 -> 06      |
+| M                | The month, from 1 through 12.                                        | 2009-06-15T13:45:30.6175 -> 6       |
+| dddd             | The full name of the day of the week.                                | 2009-06-15T13:45:30.6175 -> Monday  |
+| ddd              | The abbreviated name of the day of the week.                         | 2009-06-15T13:45:30.6175 -> Mon     |
+| dd               | The day of the month, from 01 through 31.                            | 2009-06-15T13:45:30.6175 -> 15      |
+| d                | The day of the month, from 1 through 31.                             | 2009-06-15T13:45:30.6175 -> 15      |
+| HH               | The hour, using a 24-hour clock from 00 to 23.                       | 2009-06-15T13:45:30.6175 -> 13      |
+| H                | The hour, using a 24-hour clock from 0 to 23.                        | 2009-06-15T13:45:30.6175 -> 13      |
+| hh               | The hour, using a 12-hour clock from 01 to 12.                       | 2009-06-15T13:45:30.6175 -> 01      |
+| h                | The hour, using a 12-hour clock from 1 to 12.                        | 2009-06-15T13:45:30.6175 -> 1       |
+| mm               | The minute, from 00 through 59.                                      | 2009-06-15T13:45:30.6175 -> 45      |
+| m                | The minute, from 0 through 59.                                       | 2009-06-15T13:45:30.6175 -> 45      |
+| ss               | The second, from 00 through 59.                                      | 2009-06-15T13:45:30.6175 -> 30      |
+| s                | The second, from 0 through 59.                                       | 2009-06-15T13:45:30.6175 -> 30      |
+| ffff             | The ten thousandths of a second in a date and time value.            | 2009-06-15T13:45:30.6175 -> 6175    |
+| fff              | The milliseconds in a date and time value.                           | 2009-06-15T13:45:30.6175 -> 617     |
+| ff               | The hundredths of a second in a date and time value.                 | 2009-06-15T13:45:30.6175 -> 61      |
+| f                | The tenths of a second in a date and time value.                     | 2009-06-15T13:45:30.6175 -> 6       |
+| tt               | The AM/PM designator.                                                | 2009-06-15T13:45:30.6175 -> PM      |
+| zzz              | Hours and minutes offset from UTC.                                   | 2009-06-15T13:45:30-07:00 -> -07:00 |
+| zz               | Hours offset from UTC, with a leading zero for a single-digit value. | 2009-06-15T13:45:30-07:00 -> -07    |
 
 Example:
 
