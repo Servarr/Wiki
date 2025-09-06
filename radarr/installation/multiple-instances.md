@@ -95,11 +95,11 @@ separate locations. {.is-warning}
 
 - [You must have Radarr already installed](#windows)
 - Radarr's shortcut must be configured with a `/data=` argument in the 'target' field to allow multiple instances.
+
 1. Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
 2. Assuming you installed Radarr with default settings, on the C drive, it will look like this:
 
    C:\ProgramData\Radarr\bin\Radarr.exe /data=C:\ProgramData\Radarr
-
 
 #### Creating Radarr-4K Tray App
 
@@ -147,13 +147,16 @@ This can prevent updates from being applied and can result in the following erro
 3. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
 
 4. Security Options: Enable `Run with highest privileges`
-  - Otherwise the script will be unable to manipulate services
+
+- Otherwise the script will be unable to manipulate services
+
 5. Trigger: `On Launch`
 6. Repeat task every: `5` or `10` minutes
 7. Action: `Start a Program`
 8. Program/script: `powershell`
 9. Argument: `-File D:\RadarrInstancesChecker.ps1`
-  - Be sure to use the full path to your script's location
+
+- Be sure to use the full path to your script's location
 
 ```powershell
 ################################################################################################

@@ -74,11 +74,11 @@ A proof-of-concept container has been created and initial integration is ongoing
   1. updating, enhancing, and cleaning up OpenLibrary Metadata
   1. Implementing the metadata using the recent changes endpoint and applying them from OL
 
-### Why can we not just use OpenLibrary Directly?
+### Why can we not just use OpenLibrary Directly
 
 - Due to the large amount of data readarr uses, the dump is providing the base of the data in the BookInfo metadata service to cache it.
 
-### Why can we not just use the Metadata Provider Directly or use a user selectable provider?
+### Why can we not just use the Metadata Provider Directly or use a user selectable provider
 
 - If you throw all that directly at the source, it's either against their policy, or going to be very expensive.
 - We do not support directly hitting any metadata service that isn't our own in order to reduce likelihood of a website blocking our user-agent etc.
@@ -91,7 +91,6 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 - Why is the meta server not OSS?
   - It is due to the fact that we use goodreads, and they have killed off access to their API, so even if it was OS no one could run it as goodreads will not provide new access to their API.
-
 
 # Metadata Server Issues
 
@@ -135,7 +134,7 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 - As Of: ~~2024-05-22~~ 2024-09-14
 - Updated: 2024-09-17
-- Impact: Log Entries of `BookInfo returned 429, backing off for `
+- Impact: Log Entries of `BookInfo returned 429, backing off for`
   - The metadata server appears to be having some further issues with 429's. There's not much you can do, although doing ID based searches are better than doing text string searches where possible. The devs have been made aware of the issue (which began on the evening of 9/14), and this pin will updated when there is a change in status. If this pin is up, it's still an issue, no need to ask.
   - ~~Readarr's metadata server is getting a lot of rate limiting because of the downtime and everyone's systems hitting it to get list imports, etc. This is expected to slow things down for a week or two until everything is running like normal again. If you're trying to import, or search, etc. and those things are slow or failing, your logs will indicate a 429 error. This will get better. Please have some patience and it will resolve in time.~~
   - ~~The metadata server is struggling. Something occurred on 2024-07-31 that caused it, and it hasn't been able to be corrected yet. It works. You will see 429's a LOT. Sometimes it's better than other times. Hopefully it will be corrected soon. When that happens, I will update here. There is nothing you can do to help but wait and be patient. It is not an issue on your end.~~
@@ -158,8 +157,8 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 - As Of: 2023
 - Updated: 2024-09-09
 - Impact:
-  - Large authors are still not working, and will not be for a while. A partial, but not exhaustive, list of those authors: Stephen King, Isaac Asimov, Leo Tolstoy, Fyodor Dostoevsky, Arthur Conan Doyle, Stephen Fry, Agatha Christie, Arthur C. Clarke, Oscar Wilde, Jack London, Neil Gaiman, Charles Dickens, Jane Smiley, Vladimir Nabokov, Bernard Cornwall, D.H. Lawrence. 
-  -  For large authors, you cannot do anything to add either the author OR their individual books. There is no workaround.
+  - Large authors are still not working, and will not be for a while. A partial, but not exhaustive, list of those authors: Stephen King, Isaac Asimov, Leo Tolstoy, Fyodor Dostoevsky, Arthur Conan Doyle, Stephen Fry, Agatha Christie, Arthur C. Clarke, Oscar Wilde, Jack London, Neil Gaiman, Charles Dickens, Jane Smiley, Vladimir Nabokov, Bernard Cornwall, D.H. Lawrence.
+  - For large authors, you cannot do anything to add either the author OR their individual books. There is no workaround.
   - The eventual move from Goodreads to OpenLibrary will resolve this.
 
 ## Github Issues

@@ -167,10 +167,11 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Radarr {#radarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
-	- This list format inherit from old IMDB RSS feeds. It only needs a title and a year which can be useful for non-enriched data.
+  - This list format inherit from old IMDB RSS feeds. It only needs a title and a year which can be useful for non-enriched data.
       > Year is directly parsed from the title tag value
 
-      Here is a sample data : 
+      Here is a sample data :
+
       ```XML
       <rss>
         <channel>
@@ -189,6 +190,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
         </channel>
       </rss>
       ```
+
 - StevenLu Custom {#stevenluimport}
   - Allows you to create custom movies lists in json format.
    Your feed requires for each movie either a `title` or an `imdb_id`, both can be provided.

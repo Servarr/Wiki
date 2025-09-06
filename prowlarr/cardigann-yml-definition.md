@@ -74,7 +74,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [Credit](#credit)
 
 > Documentation is synced from the Jackett Team's [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format). Last sync: August 16, 2025
-> 
+>
 > Cardigann YML definitions are maintained in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers)
 {.is-info}
 
@@ -117,10 +117,12 @@ python scripts/validate.py --find-schema "definitions/v{VERSION}/{INDEXER_FILE}.
 
 **Installation**: The following npm packages are required `ajv-cli-servarr ajv-formats`. These can be installed globally on your system with `npm install -g ajv-cli-servarr ajv-formats`.
 
-**Usage**: 
+**Usage**:
+
 ```bash
 ajv test -d "definitions/v{VERSION}/{INDEXER FILE NAME}.yml" -s "definitions/v{VERSION}/schema.json" --valid --all-errors -c ajv-formats --spec=draft2019
 ```
+
 where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*` to scan all indexers beginning with `hd`
 
 **Credit**: The Prowlarr team
@@ -138,11 +140,13 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
 ## Depreciated Versions
 
 ### V1 Indexers - Legacy Beta
+
 - Prowlarr Cardigann v1 are base level standard YML
 - No new indexers are to be added to v1 as of 2021-10-13
 - No new updates backported to v1 as of 2021-10-17
 
 ### V2 Indexers - Legacy Beta
+
 - Prowlarr Cardigann v2 include several changes such as
   - Regex removal for Size parsing
   - Multiple Download Selectors
@@ -154,6 +158,7 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
 - No new updates backported to v2 as of 2022-04-18
 
 ### V3 Indexers - Legacy Beta
+
 - Prowlarr Cardigann v3 includes support for APIs and JSON
 - Replace `imdb:` selector with `imdbid:`
 - Makes `Description` an optional by default
@@ -161,6 +166,7 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
   - Indexers utilizing CategoryDescr or any v4 features MUST be in v4
 
 ### [V4 Indexers](https://github.com/Prowlarr/Prowlarr/pull/828) - [Dev 0.2.0.1678](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.2.0.1678)
+
 - Prowlarr Cardigann v4 includes several changes such as
   - TMDBId
   - Genre
@@ -168,28 +174,32 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
   - CategoryDescr
 
 ### [V5 Indexers](https://github.com/Prowlarr/Prowlarr/commit/76afb70b01f4a670d8e402d9a3de05c09611b7ab) - [Dev 0.2.0.1678](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.2.0.1678)
+
 - Prowlarr Cardigann v5 includes several changes such as
   - Allow JSON Filters
 
 ### [V6 Indexers](https://github.com/Prowlarr/Prowlarr/commit/5ee95e3cc29d1307192320eb82b5a8f1287f00d6) - [Dev 0.4.2.1879](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.4.2.1879)
+
 - Prowlarr Cardigann v6 includes several changes such as
   - `doubanid` support
   - `tmdbid` TV Search Support
 
 ### [V7 Indexers](https://github.com/Prowlarr/Prowlarr/commit/ee6467073f64cfaa5ef0de2225f39f0fd0eb5c05) - [Dev 0.4.4.1947](https://github.com/Prowlarr/Prowlarr/releases/tag/v0.4.4.1947)
+
 - Prowlarr Cardigann v7 includes several changes such as
-    - `Publisher`, `Year`, `Genre`, Query support
+  - `Publisher`, `Year`, `Genre`, Query support
 
 ### [V8 Indexers](https://github.com/Prowlarr/Prowlarr/commit/1529527af9d2bf09dcd1b540b4c6f95a7dd00bd1) - [Dev 1.1.0.2322](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.1.0.2322)
+
 - Prowlarr Cardigann v8 includes several changes such as
-    - HtmlEncode and HtmlDecode filters
+  - HtmlEncode and HtmlDecode filters
 
 ### [V9 Indexers](https://github.com/Prowlarr/Prowlarr/commit/bceebc34c134db8140a307e25312cb15e0ff5d63) - [Dev 1.4.0.3230](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.4.0.3230)
-- Prowlarr Cardigann v9 includes several changes such as
-    - AllowEmptyInputs
-    - default values
-    - MissingAttributeEqualsNoResults
 
+- Prowlarr Cardigann v9 includes several changes such as
+  - AllowEmptyInputs
+  - default values
+  - MissingAttributeEqualsNoResults
 
 # General
 
@@ -1534,7 +1544,9 @@ Note that these are only available during search queries.
 .Query.Keywords    # original keywords
 .Keywords          # keywords after applying the keywordsfilters
 ```
+
 the following are boolean-like variables in that they return either the string "True" or are null. Can be used in if-else-end statements.
+
 ```
 .Query.IsBookSearch   # t=book
 .Query.IsDoubanQuery  # from t=tvsearch or t=movie

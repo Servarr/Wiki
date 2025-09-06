@@ -113,6 +113,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 # Notifications
 
 {#notification}
+
 - Apprise {#apprise}
 - Custom Script {#customscript}
   - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/sonarr/custom-scripts) for more details.
@@ -148,7 +149,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Pushover {#pushover}
 - SendGrid {#sendgrid}
 - Signal {#signal-cli}
-	- Requires [Signal-CLI](https://github.com/AsamK/signal-cli)
+  - Requires [Signal-CLI](https://github.com/AsamK/signal-cli)
 - Simplepush {#simplepush}
 - Slack {#slack}
 - Synology Indexer {#synologyindexer}

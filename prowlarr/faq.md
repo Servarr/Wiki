@@ -76,7 +76,7 @@ As of Prowlarr v1, Authentication is Mandatory.
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 - `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
-## How do I reset Stats?
+## How do I reset Stats
 
 - To reset your stats and clear history do the following:
 
@@ -92,7 +92,7 @@ As of Prowlarr v1, Authentication is Mandatory.
 
 - Please note that custom/non-standard indexer specific categories are mapped to standard ones, so searching will standard ones will incorporate all custom ones. Review your specific Indexer's category mapping definition for details.
 
-## Can I add any (generic) Torrent RSS Feed?
+## Can I add any (generic) Torrent RSS Feed
 
 Yes. Use "TorrentRSS".
 
@@ -108,12 +108,12 @@ The following attributes are optional, but recommended:
 - size
 - pubDate
 
-## Can I add any (generic) Torznab or Newznab indexer?
+## Can I add any (generic) Torznab or Newznab indexer
 
 - Yes.
 - Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
-## Can I use flaresolverr indexers?
+## Can I use flaresolverr indexers
 
 - Yes.
 
@@ -127,7 +127,7 @@ The following attributes are optional, but recommended:
 > [See TRaSH's Guides on "How to setup Flaresolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/) for more details
 {.is-info}
 
-## How can I add an indexer that is down or not functional?
+## How can I add an indexer that is down or not functional
 
 - Follow then standard steps to add the indexer noting the following changes.
 - Uncheck (Disable) the `Enabled` box
@@ -178,7 +178,7 @@ The following attributes are optional, but recommended:
 
 With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr.
 
-## How do I update Prowlarr?
+## How do I update Prowlarr
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -206,7 +206,7 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 | [hotio](https://hotio.dev/containers/prowlarr)                       | `latest`                                                                                                                                                                                                             | `testing`                                                                                                                                                                                                            | `nightly`                                                                                                                                                                                                                 |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-prowlarr) | `latest`                                                                                                                                                                                                             | `develop`                                                                                                                                                                                                            | `nightly`                                                                                                                                                                                                                 |
 
-### Can I update Prowlarr inside my Docker container?
+### Can I update Prowlarr inside my Docker container
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
@@ -221,9 +221,9 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 
 1. Repull your tag and update your container
 
-## Can I switch from `nightly` back to `develop`?
+## Can I switch from `nightly` back to `develop`
 
-## Can I switch between branches?
+## Can I switch between branches
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
 - Failure to follow these instructions may result in your Prowlarr becoming unusable or throwing errors. You have been warned
@@ -240,7 +240,7 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 
 That is either due to a corrupt download (so try again), or security issues answered just above this.
 
-## How do I request a feature for Prowlarr?
+## How do I request a feature for Prowlarr
 
 To request a feature for Prowlarr, first search on GitHub to ensure no similar request exists, then [click here](https://github.com/Prowlarr/Prowlarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) to add your request.
 
@@ -258,18 +258,18 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## I use Prowlarr on a Mac and it suddenly stopped working. What happened?
+## I use Prowlarr on a Mac and it suddenly stopped working. What happened
 
 - Most likely this is due to a MacOS bug which caused the Prowlarr database to be corrupted. Please check the FAQ entry for restoring a corrupt database.
 
-## How do I change from the Windows Service to a Tray App?
+## How do I change from the Windows Service to a Tray App
 
 - Shut Prowlarr down
 - Run serviceuninstall.exe that's in the Prowlarr directory
 - Run Prowlarr.exe as an administrator once to give it proper permissions and open the firewall. Once complete, then you can close it and run it normally.
 - (Optional) Drop a shortcut to Prowlarr.exe in the startup folder to auto-start on boot.
 
-## How do I Backup/Restore Prowlarr?
+## How do I Backup/Restore Prowlarr
 
 ### Backing up Prowlarr
 
@@ -353,7 +353,7 @@ If you can only reach your web interface at `http://localhost:9696/` or `http://
 
 Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
 
-## I got a pop-up that said config.xml was corrupt, what now?
+## I got a pop-up that said config.xml was corrupt, what now
 
 Prowlarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Prowlarr back online, you will need to delete `.xml` in your AppData Folder, once deleted start Prowlarr and it will start on the default port (9696), you should now re-configure any settings you configured on the General Settings page.
 
@@ -402,7 +402,7 @@ If your download client and Prowlarr are on the same machine there is no reason 
   - for Prowlarr configure your vpn client to provide a proxy and add the proxy in Settings => Indexers. Give the proxy a tag and any indexers that need to use it the same tag.
     - If absolutely required and if your vpn does not provide a way to create a proxy you may put Prowlarr behind the VPN and ensure split tunneling allows local access.
 
-## How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup
 
 Depending on your OS, there are multiple possible ways.
 
@@ -410,6 +410,6 @@ Depending on your OS, there are multiple possible ways.
 - When invoking Prowlarr, you can add `-nobrowser` (*nix) or `/nobrowser` (Windows) to the arguments.
 - Stop Prowlarr and edit the config.xml file, and change `<LaunchBrowser>True</LaunchBrowser>` to `<LaunchBrowser>False</LaunchBrowser>`.
 
-## Can I easily add all indexers at once?
+## Can I easily add all indexers at once
 
 No. This would not be a good thing to do, and this functionality will not be added. It is much better to choose your indexers wisely, pay attention to the stats to remove indexers that are too slow or not producing grabs. Proper pruning and maintenance of your indexers will result in much better results overall, and quicker results on searches from your apps.

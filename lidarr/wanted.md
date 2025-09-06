@@ -12,7 +12,7 @@ dateCreated: 2021-06-14T21:35:43.417Z
 
 ## Missing
 
-The wanted page displays missing albums with options to filter between monitored and unmonitored. Users can search for individual albums or query the entire list. 
+The wanted page displays missing albums with options to filter between monitored and unmonitored. Users can search for individual albums or query the entire list.
 
 ### Manual Import
 

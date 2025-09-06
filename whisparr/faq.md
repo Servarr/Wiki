@@ -77,12 +77,12 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 # Whisparr Basics
 
-## How does Whisparr work?
+## How does Whisparr work
 
 - Whisparr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
 - Whisparr enforces a minimum of 10 minutes on the RSS Sync interval and a maximum of 2 hours. 15 minutes is the minimum recommended by most indexers, though some do allow lower intervals and 2 hours ensures Whisparr is checking frequently enough to not miss a release (even though it can page through the RSS feed on many indexers to help with that). Some indexers allow clients to perform an RSS sync more frequently than 10 minutes, in those scenarios we recommend using Whisparr's Release-Push API endpoint along with an IRC announce channel to push releases to Whisparr for processing which can happen in near real time and with less overhead on the indexer and Whisparr as Whisparr doesn’t need to request the RSS feed too frequently and process the same releases over and over.
 
-## How does Whisparr find movies?
+## How does Whisparr find movies
 
 - Whisparr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Whisparr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a movie, you will need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you do not need to initiate a search.
@@ -90,17 +90,17 @@ dateCreated: 2022-04-03T03:49:19.500Z
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Whisparr has been offline for an extended period of time, Whisparr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Whisparr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
 
-## How do I access Whisparr from another computer?
+## How do I access Whisparr from another computer
 
 - By default Whisparr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Whisparr uses integrates with Windows (this also applies for current alternatives). If Whisparr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
 
-## What is Minimum Availability?
+## What is Minimum Availability
 
 - **Announced**: Whisparr shall consider movies available as soon as they are added to Whisparr. This setting is recommended if you have good private trackers that do not have fakes.
 - **In Cinemas**: Whisparr shall consider movies available as soon as movies hit cinemas. This option is not recommended.
 - **Released**: Whisparr shall consider movies available as soon as the Blu-Ray or streaming version is released. This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
 
-## How are possible downloads compared?
+## How are possible downloads compared
 
 > Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 {.is-info}
@@ -120,7 +120,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 > \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/whisparr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).{.is-warning}
 
-## What are Lists and what can they do for me?
+## What are Lists and what can they do for me
 
 - Lists are a part of Whisparr that allow you to follow a given list creator.
 
@@ -131,7 +131,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - It's suggested that physically look at the list before you even go to Whisparr.
 
-## Why are lists sync times so long and can I change it?
+## Why are lists sync times so long and can I change it
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 
@@ -141,7 +141,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - This interval can be configured in [Settings => Lists](/whisparr/settings#lists) for between 6-24 hours. The default is 24 hours.
 
-## Can all my movie files be stored in one folder?
+## Can all my movie files be stored in one folder
 
 - No and the reason is that Whisparr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Whisparr/Whisparr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
@@ -153,11 +153,11 @@ dateCreated: 2022-04-03T03:49:19.500Z
     - it then needs to call the Whisparr API and change the movie to unmonitored.
 - If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/whisparr/tips-and-tricks#creating-a-folder-for-each-movie) article
 
-## Can I put all my movies in my library into one folder?
+## Can I put all my movies in my library into one folder
 
 - No, see above.
 
-## How do I update Whisparr?
+## How do I update Whisparr
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -185,7 +185,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 | [hotio](https://hotio.dev/containers/whisparr)                       | `release`                                                                                                                                                                                                            | `testing`                                                                                                                                                                                                            | `nightly`                                                                                                                                                                                                              |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-whisparr) | `latest`                                                                                                                                                                                                             | `develop`                                                                                                                                                                                                            | `nightly`                                                                                                                                                                                                              |
 
-### Can I update Whisparr inside my Docker container?
+### Can I update Whisparr inside my Docker container
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
@@ -200,15 +200,15 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 1. Repull your tag and update your container
 
-## Can I switch from `nightly` back to `develop`?
+## Can I switch from `nightly` back to `develop`
 
-## Can I switch between branches?
+## Can I switch between branches
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
 - Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned
   - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
-## How do I Backup/Restore Whisparr?
+## How do I Backup/Restore Whisparr
 
 ### Backing up Whisparr
 
@@ -298,7 +298,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
   - Options => Add path as a column
   - Sort and find the movie at the noted problematic path.
 
-## How can I rename my movie folders?
+## How can I rename my movie folders
 
 {#rename-folders}
 
@@ -347,7 +347,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - A common complaint is the Refresh task causes heavy I/O usage. This is partly due to the setting "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O. The other setting is "Rescan Movie Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Whisparr. If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 
-## How do I request a feature for Whisparr?
+## How do I request a feature for Whisparr
 
 - This is an easy one [click here](https://github.com/Whisparr/Whisparr/issues)
 
@@ -374,7 +374,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## I use Whisparr on a Mac and it suddenly stopped working. What happened?
+## I use Whisparr on a Mac and it suddenly stopped working. What happened
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 
@@ -382,7 +382,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/whisparr](http://reddit.com/r/whisparr) or hop on [our discord](https://whisparr.com/discord) for help.
 
-## Why can Whisparr not see my files on a remote server?
+## Why can Whisparr not see my files on a remote server
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
@@ -404,7 +404,7 @@ dateCreated: 2022-04-03T03:49:19.500Z
 - Change your paths to UNC paths (`\\server\share`)
 - Run Whisparr.exe via the Startup Folder
 
-## How do I change from the Windows Service to a Tray App?
+## How do I change from the Windows Service to a Tray App
 
 1. Shut down Whisparr
 1. Run serviceuninstall.exe that's in the Whisparr directory
@@ -424,7 +424,7 @@ To disable authentication (to reset your forgotten username or password) you wil
 1. Restart Whisparr
 1. Whisparr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-## How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup
 
 Depending on your OS, there are multiple possible ways.
 
@@ -466,7 +466,7 @@ Depending on your OS, there are multiple possible ways.
 
 - We'd suggest changing the Web UI Alt Listening Port so as to not mess with any port forwarding for connections.
 
-## I got a pop-up that said config.xml was corrupt, what now?
+## I got a pop-up that said config.xml was corrupt, what now
 
 - Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/whisparr/appdata-directory), once deleted start and it will start on the default port (6969), you should now re-configure any settings you configured on the General Settings page.
 
@@ -488,7 +488,7 @@ Depending on your OS, there are multiple possible ways.
 
 # Whisparr and Movie Issues + Metadata
 
-## Why can I not add a new movie to Whisparr?
+## Why can I not add a new movie to Whisparr
 
 {#why-cant-i-add-a-new-movie-to-whisparr}
 
@@ -503,7 +503,7 @@ Depending on your OS, there are multiple possible ways.
 
 - This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/whisparr/troubleshooting) for more information.
 
-## How does Whisparr handle foreign movies or foreign titles?
+## How does Whisparr handle foreign movies or foreign titles
 
 - Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero. - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
@@ -513,7 +513,7 @@ Depending on your OS, there are multiple possible ways.
 > Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Whisparr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
 {.is-warning}
 
-## How does Whisparr handle "multi" in names?
+## How does Whisparr handle "multi" in names
 
 - Whisparr by default assumes multi is English and French unless specified in your indexer's advanced settings in Whisparr.
 - Note that `multi` definitions only help for release parsing and not for foreign titles or movies searches.
@@ -552,7 +552,7 @@ Depending on your OS, there are multiple possible ways.
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
-## Why are there two files? | Why is there a file left in downloads?
+## Why are there two files? | Why is there a file left in downloads
 
 This is expected. With a setup that supports [hardlinks](https://trash-guides.info/hardlinks), double space will not be used. Below is how the Torrent Process works.
 

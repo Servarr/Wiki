@@ -68,12 +68,12 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [I keep getting warnings from my cloud storage about API limits](#i-keep-getting-warnings-from-my-cloud-storage-about-api-limits)
 
-## How does Lidarr work?
+## How does Lidarr work
 
 - Lidarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
 - Lidarr enforces a minimum of 10 minutes on the RSS Sync interval and a maximum of 2 hours. 15 minutes is the minimum recommended by most indexers, though some do allow lower intervals and 2 hours ensures Lidarr is checking frequently enough to not miss a release (even though it can page through the RSS feed on many indexers to help with that). Some indexers allow clients to perform an RSS sync more frequently than 10 minutes, in those scenarios we recommend using Lidarr's Release-Push API endpoint along with an IRC announce channel to push releases to Lidarr for processing which can happen in near real time and with less overhead on the indexer and Lidarr as Lidarr doesn’t need to request the RSS feed too frequently and process the same releases over and over.
 
-## How does Lidarr find releases?
+## How does Lidarr find releases
 
 - Lidarr does ''not'' regularly search for album files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for ''all'' the newly posted releases, then compares that with its list of releases that are missing or need to be upgraded. Any matches are downloaded. This lets Lidarr cover a library of ''any size'' with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the ''future'' though.
 - So how do you deal with the present and past? When you're adding a album, you will need to set the correct path, profile and monitoring status then use the Start search for missing album checkbox. If the album hasn't been released yet, you do not need to initiate a search.
@@ -102,7 +102,7 @@ As of Lidarr v2, Authentication is Mandatory.
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 - `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
-## How are possible downloads compared?
+## How are possible downloads compared
 
 > Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
 {.is-info}
@@ -126,35 +126,35 @@ As of Lidarr v2, Authentication is Mandatory.
 - Only Lidarr v1 supports Ubuntu 22.04
 - [See this FAQ entry for the branches and versions](#how-do-i-update-lidarr)
 
-## Why can I not add a new release or artist to Lidarr?
+## Why can I not add a new release or artist to Lidarr
 
 - Please see the [I cannot find a release in Lidarr but it is on MusicBrainz](#i-cannot-find-a release-in-Lidarr-but-it-is-on-musicbrainz) entry.
 
-## Why can I not add a various artists album?
+## Why can I not add a various artists album
 
 - Various Artists and other meta artists on Musicbrainz are due to the number of entries they provide.
 
-## Why does Lidarr only show studio albums, How do I find singles or EPs?
+## Why does Lidarr only show studio albums, How do I find singles or EPs
 
 - Lidarr defaults to only bringing in studio albums for each artist. However, you can expand the album types per an artist or for your entire library by utilizing Metadata Profiles.
-- A single is a type of album with one, sometimes more, tracks (recordings). 
+- A single is a type of album with one, sometimes more, tracks (recordings).
 - An album (release) is part of a release group. A release group is a grouping of the same album that was released multiple times, eg. on a CD, on Vinyl, digitally and can contain versions such as a deluxe version.
 - Lidarr tracks albums (release groups) and can only have one version (release) of an album (release group).
 - You can **manually import** a single track (recording) from an album.
 
-## Can I add just an album?
+## Can I add just an album
 
 - Yes, but when adding an album you also be prompted to add the artist. Changing both monitoring options to `none` will add only the current album.
 
-## Can I download single tracks?
+## Can I download single tracks
 
 - Unlikely, Lidarr works by searching for and downloading full releases, therefore individual tracks cannot be downloaded unless they were released as a single by the artist.
 
-## Why doesn't artist X show up in search?
+## Why doesn't artist X show up in search
 
 - Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
 
-## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?
+## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release
 
 - Open the Album details page and select the Edit Icon in the top nav. There you can find a dropdown of all releases tied to that Album.
 
@@ -167,12 +167,12 @@ As of Lidarr v2, Authentication is Mandatory.
   - Bootleg
   - Pseudo-Release
 
-## How often do Lidarr's and MusicBrainz databases sync?
+## How often do Lidarr's and MusicBrainz databases sync
 
 - Every hour at 5 after the hour.
 - Note that some Metadata server caching issues exist and require manual cache busting by a Servarr Team Member or Servarr Donatarr.
 
-## How can I add missing artist images?
+## How can I add missing artist images
 
 - Add art to fanart.tv and wait ~7+ days for it to clear through the cache. Then refresh the metadata.
 - Fallback logic for TheAudioDB exists as a source as well.
@@ -181,11 +181,11 @@ As of Lidarr v2, Authentication is Mandatory.
 
 - Add coverart to musicbrainz and wait ~1hr+ for it to clear through the cache. Then refresh the metadata.
 
-## I'm having trouble importing my artists, what could it be?
+## I'm having trouble importing my artists, what could it be
 
 - The artist import process just imports the Artist names and path locations, which are then stored in the database so that a) metadata can be retrieved and b) downloaded content can be put in the same location in future. To this end, the user account that Lidarr runs under needs both read and write to your data directory.
 
-## How can I rename my artist folders?
+## How can I rename my artist folders
 
 {#rename-folders}
 
@@ -199,7 +199,7 @@ As of Lidarr v2, Authentication is Mandatory.
 1. Change Root Folder to the same Root Folder that the artists currently exist in
 1. Select "Yes, move the files"
 
-## Why Does Lidarr Keep Trying To Rename the Same Folders?
+## Why Does Lidarr Keep Trying To Rename the Same Folders
 
 - During rename operations, Lidarr will attempt to rename folders to the correct case. On Windows, this operation will appear to succeed but no changes are made. The current solution is to manually correct these paths.
 
@@ -215,7 +215,7 @@ When this occurs, you must rename the folder using WSL to make it accessible aga
 mv <foldername...> <foldername>
 ```
 
-## How can I mass delete artists from the wanted list?
+## How can I mass delete artists from the wanted list
 
 - Use Mass Editor => Select artists you want to delete => Delete
 
@@ -230,7 +230,7 @@ mv <foldername...> <foldername>
 - [See this ASP.NET Core issue](https://github.com/aspnet/AspNetCore/issues/17081)
 - If you are using a CDN like Cloudflare ensure websockets are enabled to allow websocket connections.
 
-## How do I update Lidarr?
+## How do I update Lidarr
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -258,7 +258,7 @@ mv <foldername...> <foldername>
 | [hotio](https://hotio.dev/containers/lidarr)                       | `release`                                                                                                                                                                                                          | `testing`                                                                                                                                                                                                          | `nightly`                                                                                                                                                                                                            |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-lidarr) | `latest`                                                                                                                                                                                                           | `develop`                                                                                                                                                                                                          | `nightly`                                                                                                                                                                                                            |
 
-### Can I update Lidarr inside my Docker container?
+### Can I update Lidarr inside my Docker container
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
@@ -273,9 +273,9 @@ mv <foldername...> <foldername>
 
 1. Repull your tag and update your container
 
-## Can I switch from `nightly` back to `develop`?
+## Can I switch from `nightly` back to `develop`
 
-## Can I switch between branches?
+## Can I switch between branches
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Lidarr becoming unusable or throwing errors. You have been warned
@@ -295,7 +295,7 @@ mv <foldername...> <foldername>
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## How do I Backup/Restore my Lidarr?
+## How do I Backup/Restore my Lidarr
 
 ### Backing up Lidarr
 
@@ -371,7 +371,7 @@ chmod -R 0644 *
 
 - Start Lidarr
 
-## I use Lidarr on a Mac and it suddenly stopped working. What happened?
+## I use Lidarr on a Mac and it suddenly stopped working. What happened
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 
@@ -409,7 +409,7 @@ First ensure you are running Raspbian buster e.g using `lsb_release -a`
   sudo apt update && sudo apt-get -t buster-backports install libseccomp2
   ```
 
-## Why are lists sync times so long and can I change it?
+## Why are lists sync times so long and can I change it
 
 Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
 
@@ -423,7 +423,7 @@ No, nor should you through any SQL hackery. The refresh releases task queries th
 
 A common complaint is the Refresh task causes heavy I/O usage. One setting that can cause issues is "Rescan Artist Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new releases, upgrades, deletions etc) are done through Lidarr. If you delete release files manually or a third party program, do not set this to `Never`.
 
-## Why can Lidarr not see my files on a remote server?
+## Why can Lidarr not see my files on a remote server
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
@@ -460,7 +460,7 @@ To disable authentication (to reset your forgotten username or password) you wil
 1. Restart Lidarr
 1. Lidarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-## How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup
 
 Depending on your OS, there are multiple possible ways.
 
@@ -513,7 +513,7 @@ Depending on your OS, there are multiple possible ways.
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
-## Why are there two files? | Why is there a file left in downloads?
+## Why are there two files? | Why is there a file left in downloads
 
 This is expected. With a setup that supports [hardlinks](https://trash-guides.info/hardlinks), double space will not be used. Below is how the Torrent Process works.
 

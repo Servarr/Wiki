@@ -145,6 +145,6 @@ When you delete the Master column for any reason, make sure that there are no di
 
 One of the things to always keep in mind is that sometimes a series is so messed up or otherwise complex that it can not be mapped in TheXEM. Sometimes you'll be able to map one of the use cases, sometimes not even that. In those cases often nothing can really be done about it.
 
-# Need help?
+# Need help
 
 Finally, if you need help with anything or if you simply do not have an account on TheXEM, please join us on Sonarr's Discord server in the [#xem channel](https://discord.gg/QzDaBmN2J3). We'll be happy to help. Do keep in mind though that response times might be slow and very much dependent on timezone difference.

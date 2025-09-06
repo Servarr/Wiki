@@ -234,10 +234,11 @@ The indexer or application server terminated the connection unexpectedly during 
 - SSL/TLS certificate problems
 
 #### ISP DNS interference** – Many ISPs intercept or block DNS requests to certain sites  
-   - **Solution**: Stop using your ISP’s DNS servers. Use public resolvers such as:  
-     - Google DNS: `8.8.8.8`, `8.8.4.4`  
-     - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`  
-     - Quad9 DNS: `9.9.9.9`, `149.112.112.112`
+
+- **Solution**: Stop using your ISP’s DNS servers. Use public resolvers such as:  
+  - Google DNS: `8.8.8.8`, `8.8.4.4`  
+  - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`  
+  - Quad9 DNS: `9.9.9.9`, `149.112.112.112`
 
 2. **DNS over HTTPS/TLS** – For persistent DNS blocking  
    - **Solution**: Configure DNS over TLS or HTTPS on your router or system  
@@ -260,7 +261,7 @@ The indexer or application server terminated the connection unexpectedly during 
 
 ### Troubleshooting Steps
 
-1. Try different DNS servers first 
+1. Try different DNS servers first
 1. Test disabling IPv6  
 1. Configure DNS over TLS/HTTPS if simple DNS change doesn’t work  
 1. Use a SOCKS5 proxy for specific indexers if needed  

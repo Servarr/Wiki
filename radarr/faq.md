@@ -84,7 +84,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 # Radarr Basics
 
-## How does Radarr work?
+## How does Radarr work
 
 - Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a movie, you will need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you do not need to initiate a search.
@@ -95,12 +95,12 @@ dateCreated: 2021-05-16T20:44:27.778Z
 > Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](/useful-tools#drazzilbs-userscripts) or [Cuban's Powershell Script](/useful-tools#just-a-bunch-of-starr-scripts)
 {.is-info}
 
-## How does Radarr find movies?
+## How does Radarr find movies
 
 > This FAQ item is a legacy FAQ Entry. Refer to [How does Radarr work?](#how-does-radarr-work)
 {.is-info}
 
-## How do I access Radarr from another computer?
+## How do I access Radarr from another computer
 
 - By default Radarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Radarr uses integrates with Windows (this also applies for current alternatives). If Radarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
 
@@ -126,7 +126,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 - `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
-## What is Minimum Availability?
+## What is Minimum Availability
 
 > For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
 {.is-info}
@@ -136,7 +136,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and should be combined with an `Availability Delay` (Settings => Indexers) of `-14` or `-21` days.
   - If TMDb is not populated with a date, it is assumed 90 days after `Theatrical Date` (Oldest in theater's date) the movie is available in web or physical services.
 
-## How are possible downloads compared?
+## How are possible downloads compared
 
 > Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 {.is-info}
@@ -159,7 +159,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 > \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
 
-## What are Lists and what can they do for me?
+## What are Lists and what can they do for me
 
 - Lists are a part of Radarr that allow you to follow a given list from various sources including Plex
 - Lists are not intended to be an "add it now" functionality, but rather are an add movies in this list eventually functionality.
@@ -171,7 +171,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 - It's suggested that you physically look at the list before you even go to Radarr.
 
-### Why are lists sync times so long and can I change it?
+### Why are lists sync times so long and can I change it
 
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 - You can trigger a list refresh manually by testing it, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
@@ -179,17 +179,17 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - In Radarr pre-v4.7 interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
 - In Radarr v4.7 these values are now hardcoded and not configurable. Times are based on the list type to minimize impact to third party services and allow Radarr's functionality with them to continue.
 
-## Can all my movie files be stored in one folder?
+## Can all my movie files be stored in one folder
 
 - No. Radarr is a fork of [Sonarr](/sonarr) and thus requires that each movie be stored in individual folders. It is **highly unlikely** a flat file structure would ever be supported due to substantial backend modifications required.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) addresses this request, but it is **unlikely** that it would allow all movie files to be housed in a single folder.
 - For information on how to move your movies from a single folder to separate folders, refer to the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie).
 
-## Can I put all my movies in my library into one folder?
+## Can I put all my movies in my library into one folder
 
 - No, see above.
 
-## How do I update Radarr?
+## How do I update Radarr
 
 - Go to Settings and then the General tab and show advanced settings (use the toggle by the save button).
 
@@ -217,7 +217,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 | [hotio](https://hotio.dev/containers/radarr)                       | `release`                                                                                                                                                                                        | `testing`                                                                                                                                                                                         | `nightly`                                                                                                                                                                                          |
 | [LinuxServer.io](https://docs.linuxserver.io/images/docker-radarr) | `latest`                                                                                                                                                                                         | `develop`                                                                                                                                                                                         | `nightly`                                                                                                                                                                                          |
 
-### Can I update Radarr inside my Docker container?
+### Can I update Radarr inside my Docker container
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
@@ -232,9 +232,9 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 1. Repull your tag and update your container
 
-## Can I switch from `nightly` back to `develop`?
+## Can I switch from `nightly` back to `develop`
 
-## Can I switch between branches?
+## Can I switch between branches
 
 - If version is identical you are able to switch, otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Radarr becoming unusable or throwing errors. You have been warned. If the below errors are encountered then you are using a newer database with an older \*Arr version which is not supported. Upgrade \*Arr to the version you were previously on or newer.
@@ -244,7 +244,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
     - `ID does not match a known language Parameter name: id`
     - Other similar database errors around missing columns or tables.
 
-## How do I Backup/Restore Radarr?
+## How do I Backup/Restore Radarr
 
 ### Backing up Radarr
 
@@ -349,7 +349,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
   - Sort and find the movie at the noted problematic path.
 - Alternatively, delete the movie using the existing path from Radarr
 
-## How can I rename my movie folders?
+## How can I rename my movie folders
 
 {#rename-folders}
 
@@ -404,13 +404,13 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
   - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 - The other setting that can be changed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
-## Found matching movie via grab history, but release was matched to movie by ID. Manual Import required.
+## Found matching movie via grab history, but release was matched to movie by ID. Manual Import required
 
 When you this error, it is because Radarr asked your indexer for a tmdbid or imdbid, and your indexer returned this movie. However, the movie name is not an exact match for the movie in Radarr, so it will require you to validate that it's actually the thing you want and manually import it.
 
 This could be because your indexer poorly matched it, or the uploader didn't name it quite right. If it's the wrong movie, you should report this bad match to the indexer the release was grabbed from.
 
-## How do I request a feature for Radarr?
+## How do I request a feature for Radarr
 
 - This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
 
@@ -437,13 +437,13 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## I use Radarr on a Mac and it suddenly stopped working. What happened?
+## I use Radarr on a Mac and it suddenly stopped working. What happened
 
 - Most likely this is due to a MacOS bug which caused one of the databases to be corrupted.
 - See the above database is malformed entry.
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
-## Why can Radarr not see my files on a remote server?
+## Why can Radarr not see my files on a remote server
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
@@ -465,7 +465,7 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 - Change your paths to UNC paths (`\\server\share`)
 - Run Radarr.exe via the Startup Folder
 
-## How do I change from the Windows Service to a Tray App?
+## How do I change from the Windows Service to a Tray App
 
 1. Shut down Radarr
 1. Run serviceuninstall.exe that's in the Radarr directory
@@ -487,7 +487,7 @@ To disable authentication (to reset your forgotten username or password) you wil
 1. Restart Radarr
 1. Radarr will now be accessible without a password, you should go the `Settings` => `General` in the UI, change the Authentication Method to Basic or Forms and set your new username and password
 
-## How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup
 
 Depending on your OS, there are multiple possible ways.
 
@@ -516,7 +516,7 @@ Depending on your OS, there are multiple possible ways.
 
 - Most torrent clients doesn’t come with the automatic handling of compressed archives like their usenet counterparts. We recommend [unpackerr](https://github.com/unpackerr/unpackerr).
 
-## I got a pop-up that said config.xml was corrupt, what now?
+## I got a pop-up that said config.xml was corrupt, what now
 
 - Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
 
@@ -548,7 +548,7 @@ Depending on your OS, there are multiple possible ways.
 
 # Radarr Searching & Downloading Common Problems
 
-## Why can I not add a new movie to Radarr?
+## Why can I not add a new movie to Radarr
 
 {#why-cant-i-add-a-new-movie-to-radarr}
 
@@ -557,7 +557,7 @@ Depending on your OS, there are multiple possible ways.
   - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
   - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
-## What is this new "*Override and add to download queue*" button?
+## What is this new "*Override and add to download queue*" button
 
 When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
 
@@ -572,7 +572,7 @@ When doing an interactive search a second download button has been added titled 
 
 - This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
 
-## How does Radarr determine the year of a movie?
+## How does Radarr determine the year of a movie
 
 - Radarr gets metadata from [TMDb](https://www.themoviedb.org/)
 - Radarr uses the year of the oldest **Theatrical Release** date for primary purposes and the oldest **Premier** date as secondary only for matching.
@@ -585,7 +585,7 @@ When doing an interactive search a second download button has been added titled 
   - **Physical** - Includes all VHS, DVD and Blu-ray releases.
   - **Digital** - All and any relevant releases can be added including streaming platforms, VOD rental or purchase. Digital screenings including online film festivals and virtual cinema releases also count as digital releases.
 
-## How does Radarr handle foreign movies or foreign titles?
+## How does Radarr handle foreign movies or foreign titles
 
 > [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) may be useful for helping get movies in the language(s) you want.{.is-info}
 
@@ -612,7 +612,7 @@ When doing an interactive search a second download button has been added titled 
   - Note that starting with [Radarr v4.1](https://github.com/Radarr/Radarr/commit/ad8629fac981217f5a4a5068da968c29d9ee634c) of Radarr `multi` is no longer assumed to include English
   - Users can adjust their Settings per Indexer to define what language(s) `multi` indicates
 
-## How does Radarr handle "multi" in names?
+## How does Radarr handle "multi" in names
 
 - With Radarr v4.1+, Radarr assumes
 `multi` is only the movie's language and **NOT** English as in previous versions.
@@ -653,7 +653,7 @@ When doing an interactive search a second download button has been added titled 
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
-## Why are there two files? | Why is there a file left in downloads?
+## Why are there two files? | Why is there a file left in downloads
 
 This is expected. With a setup that supports [hardlinks](https://trash-guides.info/hardlinks), double space will not be used. Below is how the Torrent Process works.
 

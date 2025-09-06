@@ -10,7 +10,7 @@ dateCreated: 2022-11-25T14:02:10.493Z
 
 # Sonarr v4 FAQ
 
-## What Changed?
+## What Changed
 
 Refer to the [v4 release announcement](https://forums.sonarr.tv/t/sonarr-v4-released/33089) for more information
 
@@ -73,7 +73,7 @@ The `{Custom Formats}` naming token uses the Custom Format Name for naming in fi
 > It's recommended to screenshot or remove your Preferred Words release profiles PRIOR to upgrading.  Every Preferred Word line will become it's own Custom Format post migration.
 {.is-warning}
 
-## Where have language profiles gone?
+## Where have language profiles gone
 
 Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of Custom Formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
 
@@ -134,7 +134,7 @@ If you only want to grab releases in The Series's TVDb Original Language then yo
 }
 ```
 
-## My Reverse Proxy doesn't work anymore?
+## My Reverse Proxy doesn't work anymore
 
 Due to changes in the backend of Sonarr (migration from mono to donnet) your may not work any more.
 
@@ -160,7 +160,7 @@ Due to changes in the backend of Sonarr (migration from mono to donnet) your may
       ProxyPreserveHost On
  ```
 
-## What is this new "*Override and add to download queue*" button?
+## What is this new "*Override and add to download queue*" button
 
 When doing an interactive search a second download button has been added titled "Override and add to download queue". This button enables you to do two things:
 
@@ -173,7 +173,7 @@ When doing an interactive search a second download button has been added titled 
   - Language
 - *Note that this overruled information is not carried over to the import logic and manual imports may be required*
 
-## Where has the Mass Editor gone?
+## Where has the Mass Editor gone
 
 The Mass Editor standalone page has been removed and the functionality has been merged into the series overview page. To mass edit shows first click the `Select Series` button at the top of the series overview and select the shows you want to edit.
 

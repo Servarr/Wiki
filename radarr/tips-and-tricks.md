@@ -117,5 +117,3 @@ If you use Prowlarr on full sync, then you should be setting these values in Pro
 	![qbit-remove-settings.png](/images/qbit-remove-settings.png)
 
 Now you're done. New grabs should have the values you've set, and when they're done they should Stop in Qbittorrent, and be removed shortly thereafter by Radarr.
-
-  

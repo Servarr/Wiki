@@ -64,7 +64,7 @@ Readarr is written in C# (backend) and JS (frontend). The backend is built on th
 ## Getting started
 
 1. Fork Readarr
-1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+1. Clone the repository into your development machine. [_info_](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 > Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
 For css changes `yarn stylelint-windows --fix` {.is-info}

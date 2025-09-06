@@ -329,8 +329,10 @@ Name for the `Specials` (Season) folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
   - For more information on this click [here](https://trash-guides.info/hardlinks)
+
 > Rarely - but possibly - file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
 {.is-warning}
+
 - Import Using Script - Execute a custom script to import rather than the native import functionality.
   - Import Script Path - Path to executable script.
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file.
@@ -644,6 +646,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 > Sonarr also detects [**archived extensions**](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_archiveExtensions&type=code). As of 2024-12-07 they are: `.7z` `.bz2` `.gz` `.r00` `.rar` `.tar.bz2` `.tar.gz` `.tar` `.tb2` `.tbz2` `.tgz` `.zip`  These are not Failureable and Unpackerr ([website](https://unpackerr.zip/)|[Github](https://github.com/Unpackerr/unpackerr)) can be used to handle these.
 {.is-info}
+
 - Tags - Only use this indexer for series with at least one matching tag. Leave blank to use with all series.
 
 ### Torrent Tracker Configuration
@@ -676,6 +679,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 > Sonarr also detects [**archived extensions**](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_archiveExtensions&type=code). As of 2024-12-07 they are: `.7z` `.bz2` `.gz` `.r00` `.rar` `.tar.bz2` `.tar.gz` `.tar` `.tb2` `.tbz2` `.tgz` `.zip`  These are not Failureable and Unpackerr ([website](https://unpackerr.zip/)|[Github](https://github.com/Unpackerr/unpackerr)) can be used to handle these.
 {.is-info}
+
 - Tags - Only use this indexer for series with at least one matching tag. Leave blank to use with all series.
 
 ## Options

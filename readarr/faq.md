@@ -85,7 +85,7 @@ The Servarr Team
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [Calibre is saying "Calibre rejected duplicate book" but it's not](#calibre-is-saying-calibre-rejected-duplicate-book-but-its-not)
 
-## How does Readarr work?
+## How does Readarr work
 
 - Readarr does *not* regularly search for book files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted books, then compares that with its list of books that are missing or need to be upgraded. Any matches are downloaded. This lets Readarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a book/author, you will need to set the correct path, profile and monitoring status then use the Start search for missing book checkbox. If the book hasn't been released yet, you do not need to initiate a search.
@@ -114,12 +114,12 @@ As of Readarr v1, Authentication is Mandatory.
   - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 - `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
-## How does Readarr find books?
+## How does Readarr find books
 
 > This FAQ item is a legacy FAQ Entry. Refer to [How does Readarr work?](#how-does-readarr-work)
 {.is-info}
 
-## How are possible downloads compared?
+## How are possible downloads compared
 
 > Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
 {.is-info}
@@ -148,7 +148,7 @@ As of Readarr v1, Authentication is Mandatory.
   - the use of Privoxy and it being improperly configured
   - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
 
-## What are Lists and what can they do for me?
+## What are Lists and what can they do for me
 
 - Lists are a part of Readarr that allow you to follow a given list creator.
 - Let's say that you follow a given list creator on GoodReads and really like their collection of Great Books and want to add every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
@@ -158,7 +158,7 @@ As of Readarr v1, Authentication is Mandatory.
 
 - It is suggested that you read through the list before you import it into Readarr.
 
-## Why are lists sync times so long and can I change it?
+## Why are lists sync times so long and can I change it
 
 Lists never were nor are intended to be `add it now` they are `hey I want this, add it eventually` tools.
 
@@ -166,7 +166,7 @@ You can trigger a list refresh manually, script it and trigger it via the API, o
 
 This change was due to not have our server get killed by people updating lists every 10 minutes.
 
-## Why can I not add a new book or author to Readarr?
+## Why can I not add a new book or author to Readarr
 
 - Readarr uses [GoodReads](http://goodreads.com) for book and author information and images like cover and author art, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a book:
 - GoodReads doesn't like special characters to be used when searching for books through the API (which Readarr uses), so try searching a translated name, and/or without special characters.
@@ -186,7 +186,7 @@ This change was due to not have our server get killed by people updating lists e
 - Currently, this is 80% [1-_bookThreshold](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/MediaFiles/BookImport/Specifications/CloseAlbumMatchSpecification.cs#L11)
 - The development team is considering lowering this to somewhere in the 70%s. If you have false negative matches between 70% and 80% please share them with us on discord.
 
-## How can I rename my author folders?
+## How can I rename my author folders
 
 {#rename-folders}
 
@@ -198,11 +198,11 @@ This change was due to not have our server get killed by people updating lists e
 1. Change Root Folder to the same Root Folder that the authors currently exist in
 1. Select "Yes, move the files"
 
-## How can I mass delete authors from the wanted list?
+## How can I mass delete authors from the wanted list
 
 - Use Author Editor from the Author tab => Select authors you want to delete => Delete
 
-## How do I update Readarr?
+## How do I update Readarr
 
 {#how-do-I-update-my-readarr}
 
@@ -235,7 +235,7 @@ This change was due to not have our server get killed by people updating lists e
 | [hotio](https://hotio.dev/containers/readarr)             | no stable release yet                                                                                                                                                                                        | `testing`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                                |
 | [lsio](https://docs.linuxserver.io/images/docker-readarr) | no stable release yet                                                                                                                                                                                        | `develop`                                                                                                                                                                                                           | `nightly`                                                                                                                                                                                                                |
 
-### Can I update Readarr inside my Docker container?
+### Can I update Readarr inside my Docker container
 
 - *Technically, yes.* **But you absolutely should not.** It is a primary philosophy of Docker. Database issues can arise if you upgrade your installation inside to the most recent `nightly`, but then update the Docker container itself (possibly downgrading to an older version).
 
@@ -250,9 +250,9 @@ This change was due to not have our server get killed by people updating lists e
 
 1. Repull your tag and update your container
 
-## Can I switch from `nightly` back to `develop`?
+## Can I switch from `nightly` back to `develop`
 
-## Can I switch between branches?
+## Can I switch between branches
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned
@@ -272,7 +272,7 @@ This change was due to not have our server get killed by people updating lists e
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
-## How do I Backup/Restore my Readarr?
+## How do I Backup/Restore my Readarr
 
 ### Backing up Readarr
 
@@ -370,15 +370,15 @@ chmod -R 0644 *
 - No, nor should you through any SQL hackery. The refresh books task queries the upstream Servarr proxy and checks to see if the metadata for each book (ids, cast, summary, rating, translations, alt titles, etc.) has updated compared to what is currently in Readarr. If necessary, it will then update the applicable books.
 - A common complaint is the Refresh task causes heavy I/O usage. One setting that can cause issues is "Rescan Author Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`. Do not change this to `Never` unless all changes to your library (new books, upgrades, deletions etc) are done through Readarr. If you delete book files manually or a third party program, do not set this to `Never`.
 
-## Can I have BOTH an ebook and an audiobook version of the same book?
+## Can I have BOTH an ebook and an audiobook version of the same book
 
 - No. With a single Readarr instance, you can have either one or the other, but not both. If you want both, you would need to run two separate instances of Readarr (much like some people run 2 instances of Sonarr or Radarr for 1080p and 4K versions of their media).
 
-## Do I need to use Calibre?
+## Do I need to use Calibre
 
 - No. In general Calibre offers some further enhancement, such as the ability to auto-convert ebooks to another format specific to your e-reader's capabilities, and also to connect to that e-reader. But if you weren't running Calibre prior to installing Readarr, then it's probably going to be of limited added benefit to you to install it, and it's a very large program.
 
-## Why can Readarr not see my files on a remote server?
+## Why can Readarr not see my files on a remote server
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
@@ -415,7 +415,7 @@ To disable authentication (to reset your forgotten username or password) you wil
 1. Restart Readarr
 1. Readarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
 
-## How do I stop the browser from launching on startup?
+## How do I stop the browser from launching on startup
 
 Depending on your OS, there are multiple possible ways.
 
@@ -469,7 +469,7 @@ Depending on your OS, there are multiple possible ways.
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
-## Why are there two files? | Why is there a file left in downloads?
+## Why are there two files? | Why is there a file left in downloads
 
 This is expected. With a setup that supports [hardlinks](https://trash-guides.info/hardlinks), double space will not be used. Below is how the Torrent Process works.
 
