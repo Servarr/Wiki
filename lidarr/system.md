@@ -492,7 +492,7 @@ chmod +x /opt/Lidarr/fpcalc
 # Backup
 
 > This section will be more tailored to the buttons and overall point of the page.
-> However, if you're looking for how to back/restore your Lidarr instance click [here](/lidarr/faq).
+> However, if you're looking for how to back/restore your Lidarr instance click [the Lidarr backup FAQ](/lidarr/faq).
 {.is-info}
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).

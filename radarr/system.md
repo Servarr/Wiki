@@ -549,7 +549,7 @@ A mount containing a movie path is read only and is not writable by the user Rad
 
 # Backup
 
-> If you're looking for how to back/restore your Radarr instance click [here](/radarr/faq).
+> If you're looking for how to back/restore your Radarr instance click [the Radarr backup FAQ](/radarr/faq).
 {.is-info}
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).

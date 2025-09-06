@@ -10,7 +10,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of- If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn't supported by `direct_io` as explained in the [mergerFS documentation](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)contents)
   - [Forced Authentication](#forced-authentication)
     - [Authentication Method](#authentication-method)
     - [Authentication Required](#authentication-required)
@@ -231,7 +231,7 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
-- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
+- This is simple, please see the [Mac help documentation](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) for more information
 - Alternatively, you may need to self-sign Prowlarr `codesign --force --deep -s - /Applications/Prowlarr.app && xattr -rd com.apple.quarantine`
 
 ![faq_1_mac.png](/assets/general/faq_1_mac.png)
@@ -242,7 +242,7 @@ That is either due to a corrupt download (so try again), or security issues answ
 
 ## How do I request a feature for Prowlarr
 
-To request a feature for Prowlarr, first search on GitHub to ensure no similar request exists, then [click here](https://github.com/Prowlarr/Prowlarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) to add your request.
+To request a feature for Prowlarr, first search on GitHub to ensure no similar request exists, then [submit a feature request on GitHub](https://github.com/Prowlarr/Prowlarr/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) to add your request.
 
 ## I am getting an error: Database disk image is malformed
 

@@ -328,7 +328,7 @@ Name for the `Specials` (Season) folder
 - Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
-  - For more information on this click [here](https://trash-guides.info/hardlinks)
+  - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
 
 > Rarely - but possibly - file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
 {.is-warning}

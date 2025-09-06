@@ -414,7 +414,7 @@ The queue will show you running and upcoming tasks as well as a history of recen
 
 # Backup
 
-> If you're looking for how to back/restore your Readarr instance click [here](/readarr/faq).
+> If you're looking for how to back/restore your Readarr instance click the [Readarr FAQ backup section](/readarr/faq).
 {.is-info}
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).

@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
 
-> For Sonarr v4 specific FAQ entries - Please see the v4 FAQ [here](/sonarr/faq-v4)
+> For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
 {.is-info}
 
 # Sonarr Basics
@@ -384,7 +384,7 @@ If you have adjusted your Series Name format after Sonarr has already created so
 - Great Asian Railway Journeys {#problemshow-greatasianrail}
   - Great Asian Railway Journeys was first aired as 20 smaller episodes, but was later re-aired as 10 long episodes. These longer combined episodes were added as Specials, and should be named accordingly. (S00E01, etc, ...)
 - Horizon {#problemshow-horizon}
-  - A show that sporadically airs episodes since 1964. This makes mapping particularly difficult, as you can see on [TheXEM](https://thexem.info/xem/show/5495). Those interested can find the original discussion on the Sonarr discord [here](https://discord.com/channels/383686866005917708/649018968559845376/1046898050909622312).
+  - A show that sporadically airs episodes since 1964. This makes mapping particularly difficult, as you can see on [TheXEM](https://thexem.info/xem/show/5495). Those interested can find the original discussion [on the Sonarr discord server](https://discord.com/channels/383686866005917708/649018968559845376/1046898050909622312).
 - Kaleidoscope (2023) {#problemshow-kaleidoscope}
   - Kaleidoscope (2023) was released on Netflix as a non-linear show meaning that every user got a different order when watching the series. This causes an issue for Sonarr as release groups have different episode orders for the show. In order to prevent incorrect mapping of episodes Sonarr will not automatically grab episodes and you will need to grab and import the episodes manually. You can match them based on episode title, or by previewing the first few seconds and seeing the episode 'color' matching the title.
 
@@ -541,7 +541,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
-- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
+- This is simple, please see this link for more information [in the Mac help documentation](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
 [![Developer Cannot be verified](/assets/general/faq_1_mac.png)]
 
 ## Help, my Mac says Sonarr.app is damaged and cannot be opened

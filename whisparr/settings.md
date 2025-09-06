@@ -258,7 +258,7 @@ Here you will set the naming convention for the folder that contains the season 
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
 
-  - For more information on this click [here](https://trash-guides.info/hardlinks)
+  - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
 
  > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Whisparr's rename function as a work around.{.is-warning}
 
@@ -525,7 +525,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 ## Supported Indexers
 
-- A list of supported indexers is located [here](/whisparr/supported#indexers)
+- A list of supported indexers is located in the [Whisparr supported indexers documentation](/whisparr/supported#indexers)
 
 ### Indexer Settings
 
@@ -645,7 +645,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located [here](/whisparr/supported#downloadclient)
+- A list of supported download clients is located in the [Whisparr supported download clients documentation](/whisparr/supported#downloadclient)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 

@@ -381,9 +381,9 @@ A mount containing a series path is read only and is not writable by the user So
 - Wiki: You're here already.
 - Reddit: [r/sonarr](https://www.reddit.com/r/sonarr)
 - Discord: Join our [discord](https://discord.sonarr.tv/)
-- Donations: If you're feeling generous and would like to donate, click [here](https://sonarr.tv/donate).
+- Donations: If you're feeling generous and would like to donate, click [the Sonarr donation page](https://sonarr.tv/donate).
 - Source: [GitHub](https://www.github.com/sonarr/sonarr)
-- Feature Requests: Got a great idea drop it [here](https://www.github.com/sonarr/sonarr/issues).
+- Feature Requests: Got a great idea drop it [on the GitHub issues page](https://www.github.com/sonarr/sonarr/issues).
 
 # Tasks
 
@@ -415,7 +415,7 @@ The queue will show you running and upcoming tasks as well as a history of recen
 
 # Backup
 
-> If you're looking for how to back/restore your Sonarr instance click [here](/sonarr/faq).
+> If you're looking for how to back/restore your Sonarr instance click [the Sonarr backup FAQ](/sonarr/faq).
 {.is-info}
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).

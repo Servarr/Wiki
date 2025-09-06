@@ -412,11 +412,11 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 
 ## How do I request a feature for Radarr
 
-- This is an easy one [click here](https://github.com/Radarr/Radarr/issues)
+- This is an easy one [visit the Radarr GitHub issues page](https://github.com/Radarr/Radarr/issues)
 
 ## Help, My Mac says Radarr cannot be opened because the developer cannot be verified
 
-- This is simple, please see this link for more information [here](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
+- This is simple, please see this link for more information [in the Mac help documentation](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) ![Developer Cannot be verified](developer-cannot-be-verified.png "Developer Cannot be verified")
 - Alternatively, you may need to self-sign Radarr `codesign --force --deep -s - /Applications/Radarr.app && xattr -rd com.apple.quarantine`
 
 ## Help, My Mac says Radarr.app is damaged and can’t be opened

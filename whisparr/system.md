@@ -428,7 +428,7 @@ Note: you will also need to add the websocket directive to your whisparr configu
 
 # Backup
 
-> If you're looking for how to back/restore your Whisparr instance click [here](/whisparr/faq).
+> If you're looking for how to back/restore your Whisparr instance click [the Whisparr backup FAQ](/whisparr/faq).
 {.is-info}
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
