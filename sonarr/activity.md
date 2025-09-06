@@ -1,9 +1,9 @@
 ---
 title: Sonarr Activity
-description: 
+description: Monitor download progress, search history, and queue management in Sonarr
 published: true
 date: 2022-02-06T09:07:34.371Z
-tags: sonarr
+tags: sonarr, activity, queue, downloads, history, monitoring
 editor: markdown
 dateCreated: 2021-06-11T23:32:31.144Z
 ---

@@ -1,9 +1,9 @@
 ---
 title: Sonarr Library
-description: 
+description: Manage your TV series collection, monitor status, and organize media in Sonarr
 published: true
 date: 2022-10-28T17:18:11.116Z
-tags: sonarr, needs-love
+tags: sonarr, library, series, management, collection, organization
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
 ---

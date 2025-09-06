@@ -1,9 +1,9 @@
 ---
 title: Radarr Library
-description: 
+description: Manage your movie collection, monitor status, and organize film library in Radarr
 published: true
 date: 2022-11-14T15:04:06.364Z
-tags: radarr
+tags: radarr, library, movies, management, collection, organization
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
 ---
@@ -92,7 +92,7 @@ Library Import allows you to import existing organized movies and each movie's f
   - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a movie to Radarr and importing the movie and its file from the root (library) folder that was input to Library Import
 - If you get an error of "path is already configured", [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie).
-  
+
 > It is required that movie folders and files have the year in their name to be imported and parsed.{.is-warning}
 
 > \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.

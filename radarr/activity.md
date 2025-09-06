@@ -1,9 +1,9 @@
 ---
 title: Radarr Activity
-description: 
+description: Monitor download progress, search history, and queue management in Radarr
 published: true
 date: 2022-02-06T09:07:15.520Z
-tags: radarr
+tags: radarr, activity, queue, downloads, history, monitoring
 editor: markdown
 dateCreated: 2021-05-25T01:28:36.350Z
 ---

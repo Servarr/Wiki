@@ -1,9 +1,9 @@
 ---
 title: Sonarr Calendar
-description: 
+description: View upcoming and aired episodes in a calendar format for better scheduling
 published: true
 date: 2022-04-26T01:49:26.770Z
-tags: sonarr, needs-love
+tags: sonarr, calendar, schedule, episodes, planning
 editor: markdown
 dateCreated: 2021-06-11T23:31:36.392Z
 ---

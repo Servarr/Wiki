@@ -1,9 +1,9 @@
 ---
 title: Radarr Calendar
-description: 
+description: View upcoming movie releases and track cinema/digital release dates
 published: true
 date: 2021-11-24T19:23:55.178Z
-tags: radarr
+tags: radarr, calendar, releases, schedule, movies, planning
 editor: markdown
 dateCreated: 2021-05-25T01:29:31.158Z
 ---
