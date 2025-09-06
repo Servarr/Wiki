@@ -1,9 +1,9 @@
 ---
 title: Sonarr Appdata Directory
-description: 
+description: Guide to Sonarr application data directory structure, configuration files, and data management
 published: true
 date: 2021-11-24T19:25:42.806Z
-tags: 
+tags: sonarr, appdata, configuration, directory, files, data, structure
 editor: markdown
 dateCreated: 2021-06-09T15:53:57.860Z
 ---

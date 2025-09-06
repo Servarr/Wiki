@@ -1,9 +1,9 @@
 ---
 title: Sonarr Custom Scripts
-description: 
+description: Guide for creating and implementing custom scripts for automation and integration
 published: true
 date: 2022-06-13T15:52:03.477Z
-tags: sonarr, needs-love, custom scripts
+tags: sonarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-06-16T15:55:53.999Z
 ---

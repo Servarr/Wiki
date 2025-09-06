@@ -1,9 +1,9 @@
 ---
 title: Lidarr FAQ
-description:
+description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
 date: 2025-03-30T15:47:51.456Z
-tags: lidarr, needs-love, faq
+tags: lidarr, faq, questions, help, troubleshooting, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---

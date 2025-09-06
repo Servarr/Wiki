@@ -1,9 +1,9 @@
 ---
 title: Whisparr Quick Start Guide
-description: 
+description: Step-by-step guide to setting up and configuring Whisparr for adult video management
 published: true
 date: 2022-07-14T14:11:06.333Z
-tags: quickstart, whisparr
+tags: whisparr, quick-start, setup, configuration, guide, installation
 editor: markdown
 dateCreated: 2022-04-03T03:49:38.922Z
 ---

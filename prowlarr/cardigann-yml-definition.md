@@ -1,9 +1,9 @@
 ---
 title: Prowlarr Cardigann YML Definition
-description:
+description: Complete reference guide for creating Cardigann YAML indexer definitions in Prowlarr
 published: true
 date: 2023-04-30T23:03:37.294Z
-tags: prowlarr, needs-love, development
+tags: prowlarr, cardigann, yml, yaml, indexers, development, reference, guide
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
 ---

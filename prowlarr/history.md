@@ -1,9 +1,9 @@
 ---
 title: Prowlarr History
-description: 
+description: View and manage search history, indexer statistics, and query logs in Prowlarr
 published: true
 date: 2021-11-24T19:23:05.283Z
-tags: prowlarr
+tags: prowlarr, history, search, logs, statistics, queries, monitoring
 editor: markdown
 dateCreated: 2021-06-08T23:32:35.055Z
 ---

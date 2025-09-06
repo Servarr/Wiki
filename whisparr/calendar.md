@@ -1,9 +1,9 @@
 ---
 title: Whisparr Calendar
-description:
+description: View upcoming releases and track availability of new adult video content
 published: true
 date: 2021-11-24T19:23:55.178Z
-tags: whisparr
+tags: whisparr, calendar, releases, schedule, content, planning
 editor: markdown
 dateCreated: 2021-05-25T01:29:31.158Z
 ---
