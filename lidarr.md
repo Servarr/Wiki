@@ -2,7 +2,7 @@
 title: Lidarr
 description: 
 published: true
-date: 2023-06-26T03:27:06.627Z
+date: 2025-09-06T17:47:47.402Z
 tags: lidarr
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -42,7 +42,7 @@ dateCreated: 2021-05-16T23:39:16.456Z
 
 # Development
 
-- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/lidarr/contributing)
+- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](https://github.com/Lidarr/Lidarr/blob/develop/CONTRIBUTING.md)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://lidarr.audio/docs/api/)
 {.links-list}
 
