@@ -1,9 +1,9 @@
 ---
 title: Sonarr Contributing
-description: 
+description: Guide for contributing to Sonarr development including setup, building, testing, and submitting changes
 published: true
 date: 2023-09-03T13:55:05.394Z
-tags: sonarr
+tags: sonarr, contributing, development, guide, setup
 editor: markdown
 dateCreated: 2021-06-11T23:10:04.820Z
 ---
@@ -178,7 +178,7 @@ public IndexerCheck(ILocalizationService localizationService)
 {
   _localizationService = localizationService;
 }
-        
+
 var translated = _localizationService.GetLocalizedString("IndexerHealthCheckNoIndexers")
 ```
 

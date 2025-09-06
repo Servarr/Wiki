@@ -1,9 +1,9 @@
 ---
 title: Radarr Contributing
-description:
+description: Guide for contributing to Radarr development including setup, building, testing, and submitting changes
 published: true
-date: 2022-09-26T15:56:47.019Z
-tags: radarr, development, contributing
+date: 2022-09-26T15:56:47019Z
+tags: radarr, development, contributing, guide, setup
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
 ---
