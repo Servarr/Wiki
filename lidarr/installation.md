@@ -3,7 +3,7 @@ title: Lidarr Installation
 description: Instructions and Guides for Installation of Lidarr
 published: true
 date: 2023-07-03T20:25:07.129Z
-tags: [lidarr, installation, docker, scripts]
+tags: installation, setup, docker, scripts, lidarr, guide
 editor: markdown
 dateCreated: 2021-05-24T05:12:27.036Z
 ---

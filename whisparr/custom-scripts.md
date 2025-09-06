@@ -1,9 +1,9 @@
 ---
 title: Whisparr Custom Scripts
-description: 
+description: Guide for creating and implementing custom scripts for automation and integration with Whisparr workflows
 published: true
 date: 2022-05-02T03:37:47.889Z
-tags: needs-love, custom scripts, whisparr
+tags: scripts, automation, custom, integration, hooks, api, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:14.966Z
 ---

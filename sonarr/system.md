@@ -1,9 +1,9 @@
 ---
 title: Sonarr System
-description: 
+description: System information, logs, scheduled tasks, and status monitoring for Sonarr administration and troubleshooting
 published: true
 date: 2023-10-12T15:54:39.615Z
-tags: 
+tags: system, administration, logs, tasks, status, sonarr
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
 ---
@@ -257,7 +257,7 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
   - Episodes will always be missing in Sonarr and eligible to be grabbed in perpetuity
     - Episodes manually moved and renamed by the user into the series' folder in Sonarr's library folder will possibly be picked up by the twice daily rescan if named properly and thus not be missing at that point.
   - The user will need to manually unmonitor or configure an On Grab custom script to unmonitor episodes.
-  - FlexGet is likely a better tools for one's usecase if they do not wish to use Sonarr's media library management functionalites and simply require something to parse rss feeds and send releases to the download client  
+  - FlexGet is likely a better tools for one's usecase if they do not wish to use Sonarr's media library management functionalites and simply require something to parse rss feeds and send releases to the download client
 
 > \* Completed Download Handling only works properly if the download client and Sonarr are on the same machine since it gets the path to be imported directly from the download client otherwise a remote map is needed.
 > \* Completed Download Handling requires Sonarr has read and write access to the completed download directory
@@ -405,7 +405,7 @@ A mount containing a series path is read only and is not writable by the user So
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Refresh Series - This goes through and refreshes all the metadata for all monitored and unmonitored series
 - RSS Sync - This will run the RSS Sync. This can be changed in Settings => Indexers => Options. More information on the RSS function can be found on our [FAQ](/sonarr/faq)
-  
+
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
@@ -419,11 +419,11 @@ The queue will show you running and upcoming tasks as well as a history of recen
 {.is-info}
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
-  
+
 - Backup Now - This option will trigger a manual backup of your Sonarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
   - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Sonarr Zip backup
-  
+
 - If you have any previous backups and would like to download them from Sonarr to be placed in a non standard location you simply can select one of these files to download them
 - Off to the right of each of the previous download you have two options.
 
@@ -434,7 +434,7 @@ Within the Backup section you will be presented with previous backups (unless yo
 
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
 This page will also display the update notes from the Developers telling you what has been fixed or added to Sonarr (Rejoice!)
-  
+
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history on Github for specifics.
 {.is-info}
 

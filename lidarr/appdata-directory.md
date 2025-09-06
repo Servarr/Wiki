@@ -1,9 +1,9 @@
 ---
 title: Lidarr Appdata Directory
-description: 
+description: Guide to Lidarr application data directory structure, configuration files, and data management
 published: true
 date: 2021-11-24T19:22:06.078Z
-tags: lidarr, appdata
+tags: lidarr, appdata, configuration, directory, files, data, structure
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
 ---

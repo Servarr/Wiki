@@ -1,9 +1,9 @@
 ---
 title: Radarr Custom Scripts
-description: 
+description: Guide for creating and implementing custom scripts for automation and integration in Radarr
 published: true
 date: 2025-08-12T13:58:51.517Z
-tags: radarr, needs-love, custom scripts
+tags: radarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-06-16T15:55:44.765Z
 ---

@@ -3,7 +3,7 @@ title: Whisparr Installation
 description: Instructions and Guides for Installation of Whisparr
 published: true
 date: 2023-07-03T20:26:42.229Z
-tags: 
+tags: installation, setup, docker, whisparr, guide
 editor: markdown
 dateCreated: 2022-04-03T03:49:24.491Z
 ---

@@ -1,9 +1,9 @@
 ---
 title: Sonarr Wanted
-description: 
+description: Managing wanted episodes, manual searches, and download monitoring in Sonarr's Wanted section
 published: true
 date: 2021-11-29T22:12:55.806Z
-tags: sonarr, needs-love, wanted
+tags: wanted, episodes, search, monitoring, missing, sonarr
 editor: markdown
 dateCreated: 2021-06-10T01:40:02.329Z
 ---
@@ -28,7 +28,7 @@ At the top of the page is `Manual Import` which allows you to arbitrarily import
 
 - Move Automatically will attempt to automatically match the files to series/episodes in Sonarr and will move - not copy nor hard link - them to your library folder
 - Interactive Import will allow you to review the matches and adjust various specifications as needed. It provides the option (bottom left corner) to `Move` or `Copy/Hardlink` your files. Be sure to choose the correct option for your needs.
-  
+
   > If a directory has more than 100 files in it then Sonarr will not recursively search the directory nor attempt to parse and match the files. {.is-info}
 
 # Cutoff Unmet

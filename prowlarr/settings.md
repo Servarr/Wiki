@@ -1,9 +1,9 @@
 ---
 title: Prowlarr Settings
-description: 
+description: Configuration guide for Prowlarr settings including applications, indexers, notifications, and general preferences
 published: true
 date: 2023-03-30T14:07:39.851Z
-tags: 
+tags: settings, configuration, prowlarr, indexers, applications, notifications
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
 ---
@@ -41,7 +41,7 @@ dateCreated: 2021-06-06T15:04:48.057Z
   - [Dates](#dates)
   - [Style](#style)
   - [Language](#language)
-  
+
 This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
 
 # Menu options
@@ -70,7 +70,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to
 ![proxies.png](/assets/prowlarr/proxies.png)
 
 ## Proxy Settings
-  
+
 - Name - Name of the Proxy in Prowlarr
 - Tags - The tags for this proxy. Proxies apply to all matching (same tag) indexers. If blank this proxy is disabled.
 
@@ -115,7 +115,7 @@ Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, L
 - Click on `Settings` => `Apps`, and then click the <kb>+</kb> to add an app.
 - Sync App Indexers - Trigger a sync of all indexers to all applications
 - Test All Apps - Trigger a test of all applications
-  
+
 ![addapps.png](/assets/prowlarr/addapps.png)
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you should add each of them separately.
@@ -145,7 +145,7 @@ All programs you can add are listed. You should only add programs you currently 
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
 - (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
   - Indexer Custom Categories get mapped into the Standard Torznab/Newznab  categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
-  
+
 ## Testing the Application
 
 Test your entry. If a green check-mark appears, you can save your entry, and repeat as necessary for each program you'd like to sync with Prowlarr. If it fails, you will need to check your log for the error (URL, API Key, etc.).
@@ -180,7 +180,7 @@ Click on `Settings` => `Download Clients`, and then click the <kb>+</kb> to add 
 ![downloadclients.png](/assets/prowlarr/downloadclients.png)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
-  
+
 > Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 {.is-info}
 

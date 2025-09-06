@@ -3,7 +3,7 @@ title: Sonarr Installation
 description: Instructions and Guides for Installation of Sonarr
 published: true
 date: 2023-07-03T20:23:52.657Z
-tags: sonarr
+tags: installation, setup, docker, sonarr, guide
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z
 ---

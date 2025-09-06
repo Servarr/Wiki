@@ -1,9 +1,9 @@
 ---
 title: Whisparr System
-description: 
+description: System information, logs, tasks, and status monitoring for Whisparr administration and troubleshooting
 published: true
 date: 2022-05-05T12:55:26.343Z
-tags: needs-love, whisparr
+tags: system, administration, logs, tasks, status, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:55.636Z
 ---

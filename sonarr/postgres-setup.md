@@ -3,7 +3,7 @@ title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
 date: 2025-05-29T21:37:27.122Z
-tags: 
+tags: database, postgres, postgresql, setup, configuration, sonarr
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
 ---

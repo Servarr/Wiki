@@ -3,7 +3,7 @@ title: Whisparr Configuring PostgreSQL Database
 description: Configuring Whisparr with a Postgres Database
 published: true
 date: 2023-10-26T15:25:13.098Z
-tags: 
+tags: database, postgres, postgresql, setup, configuration, whisparr
 editor: markdown
 dateCreated: 2022-04-03T03:49:34.975Z
 ---

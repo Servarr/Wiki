@@ -1,9 +1,9 @@
 ---
 title: Sonarr Tips and Tricks
-description: 
+description: Advanced tips, optimization techniques, and workflow improvements for experienced Sonarr users
 published: true
 date: 2021-12-22T19:56:48.398Z
-tags: sonarr, needs-love, tips-and-tricks
+tags: tips, tricks, optimization, workflow, advanced, sonarr
 editor: markdown
 dateCreated: 2021-08-14T15:15:35.157Z
 ---

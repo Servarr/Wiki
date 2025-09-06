@@ -1,9 +1,9 @@
 ---
 title: Lidarr Custom Scripts
-description: 
+description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
 date: 2023-04-09T23:23:38.475Z
-tags: lidarr, needs-love, custom scripts
+tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
 ---

@@ -1,9 +1,9 @@
 ---
 title: Whisparr Settings
-description: 
+description: Comprehensive guide to configuring Whisparr settings for media profiles, quality definitions, indexers, and automation preferences
 published: true
 date: 2023-08-11T02:47:42.546Z
-tags: needs-love, settings, whisparr
+tags: settings, configuration, whisparr, profiles, quality, indexers
 editor: markdown
 dateCreated: 2022-04-03T03:49:43.530Z
 ---
