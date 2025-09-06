@@ -3,7 +3,7 @@ title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
 date: 2025-01-03T03:39:01.266Z
-tags: radarr, needs-love, settings
+tags: settings, configuration, radarr, profiles, quality, indexers
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
 ---
@@ -507,7 +507,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 > Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Radarr uses.
 {.is-info}
 
-Profiles is where Custom Format Scores are configured.  
+Profiles is where Custom Format Scores are configured.
 
 ## Custom Format Conditions
 
@@ -929,7 +929,7 @@ Kodi will be one of the most commonly used options here if that is the software 
   - Enabled - Validate all HTTPS certificates (recommended)
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
-  
+
 ## Proxy
 
 Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files

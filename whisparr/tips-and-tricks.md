@@ -1,9 +1,9 @@
 ---
 title: Whisparr Tips and Tricks
-description:
+description: Advanced tips, optimization techniques, and workflow improvements for experienced Whisparr users
 published: true
 date: 2022-03-24T02:53:26.272Z
-tags: whisparr, needs-love, tips-and-tricks
+tags: tips, tricks, optimization, workflow, advanced, whisparr
 editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
 ---

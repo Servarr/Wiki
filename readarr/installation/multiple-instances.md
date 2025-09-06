@@ -3,7 +3,7 @@ title: Readarr Multiple Instances (Retired)
 description: Requirements and how to install multiple instances of Readarr
 published: true
 date: 2024-07-13T15:28:36.572Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2023-07-03T20:12:51.889Z
 ---
@@ -209,17 +209,17 @@ $instances = @(
 function Write-Log
 {
     #Will write to C:\Users\YOURUSERNAME\log.txt
-    
+
     Param(
         $Message,
-        $Path = "$env:USERPROFILE\log.txt" 
+        $Path = "$env:USERPROFILE\log.txt"
     )
 
     function TS { Get-Date -Format 'hh:mm:ss' }
-    
+
     #Console output
     Write-Output "[$(TS)]$Message"
-    
+
     #File Output
     if ($logToFile)
     {
@@ -233,9 +233,9 @@ Write-Log 'START ====================='
 
 $instances | ForEach-Object {
     Write-Log "Check $($_.Name) $($_.IP):$($_.Port)"
-    
-    $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded 
-    
+
+    $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded
+
     if (!$PortOpen)
     {
         Write-Log "Port $($_.Port) is closed, restart $($startType) $($_.Name)!"

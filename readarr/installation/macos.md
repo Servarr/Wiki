@@ -3,7 +3,7 @@ title: Readarr MacOS Installation (Retired)
 description: MacOS installation guide for Readarr
 published: true
 date: 2023-07-28T11:16:36.367Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2023-07-03T20:12:47.465Z
 ---

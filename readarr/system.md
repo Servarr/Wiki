@@ -1,6 +1,6 @@
 ---
 title: Readarr System (Retired)
-description: 
+description:
 published: true
 date: 2024-08-23T18:25:35.762Z
 tags: readarr, needs-love, system
@@ -404,7 +404,7 @@ Note: you will also need to add the websocket directive to your readarr configur
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Rescan folders - This scans all book folders to see if a book exists or not, and updates the status of it appropriately.
 - RSS Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
-  
+
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
@@ -418,11 +418,11 @@ The queue will show you running and upcoming tasks as well as a history of recen
 {.is-info}
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
-  
+
 - Backup Now - This option will trigger a manual backup of your Readarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
   - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Readarr Zip backup
-  
+
 - If you have any previous backups and would like to download them from Readarr to be placed in a non standard location you simply can select one of these files to download them
 - Off to the right of each of the previous download you have two options.
   - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
@@ -432,7 +432,7 @@ The queue will show you running and upcoming tasks as well as a history of recen
 
 - The update screen will show the past 5 updates that have been made as well as the current version you are on.
 - This page will also display the update notes from the Developers telling you what has been fixed or added to Readarr (Rejoice!)
-  
+
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
 

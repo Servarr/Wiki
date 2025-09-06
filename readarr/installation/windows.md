@@ -3,7 +3,7 @@ title: Readarr Windows Installation (Retired)
 description: Windows installation guide for Readarr
 published: true
 date: 2023-07-04T15:23:25.114Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2023-07-03T20:13:03.495Z
 ---

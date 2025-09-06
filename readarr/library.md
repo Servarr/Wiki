@@ -1,6 +1,6 @@
 ---
 title: Readarr Library (Retired)
-description: 
+description:
 published: true
 date: 2021-11-30T01:41:54.243Z
 tags: readarr, needs-love, library
@@ -63,7 +63,7 @@ This section is for managing your library of [authors](#authors) and [books](#bo
     - Overview - Display overview information and the poster (detailed view)
   - Sort - Sort the current view
   - Filter - Filter the current view
-  
+
 # Add New
 
 ![addnew.png](/assets/readarr/addnew.png)

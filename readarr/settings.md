@@ -1,6 +1,6 @@
 ---
 title: Readarr Settings (Retired)
-description: 
+description:
 published: true
 date: 2023-09-17T12:32:59.037Z
 tags: readarr, settings
@@ -299,7 +299,7 @@ Commonly used naming schema are:
 
 > Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
 {.is-info}
-  
+
 ## Author Folder Format
 
 - (Advanced Option) This is where you will set the naming convention for the author folder name.
@@ -316,35 +316,35 @@ Commonly used naming schema are:
 - `{Author Disambiguation}` = Author Name (disambiguation used from GoodReads for multiple authors with the same name)
 
 ## Folders
-  
+
 ![mm_folders.png](/assets/readarr/mm_folders.png)
-  
+
 - (Advanced Option) Create empty author folders - Select the box to create empty author folders when a new author is added.
 - (Advanced Option) Delete empty author folders -  Select the box to delete empty author folders if there are no books in it.
-  
+
 > One of those boxes can be checked, but they should not BOTH be checked. {.is-warning}
 
 > This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 {.is-info}
 
 ## Importing
-  
+
 ![mm_importing.png](/assets/readarr/mm_importing.png)
-  
+
 - (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
 - (Advanced Option) Use Hard links instead of Copy - Check this box to use Hard links instead of Copies (for Torrents). Note that this is enabled by default.
-  
+
 > You should ideally use this wherever possible. In order for hard links to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
-  
+
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
 
 > If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
 {.is-info}
-  
+
 ## File Management
-  
+
   ![mm_filemgmt.png](/assets/readarr/mm_filemgmt.png)
 
 - Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
@@ -352,7 +352,7 @@ Commonly used naming schema are:
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
-  
+
 > \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
 > \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 {.is-info}
@@ -396,7 +396,7 @@ Commonly used naming schema are:
 ## Quality Profiles
 
 Quality profiles are used to determine what formats of books are acceptable for a book in your library.
-  
+
 ![qualityprofile.png](/assets/readarr/qualityprofile.png)
 
 - Set profiles for the quality of books you're looking to download.
@@ -429,7 +429,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Plus icon (<kb>+</kb>) - Create a new Metadata profile
 
 ![metaprofiles.png](/assets/readarr/metaprofiles.png)
-  
+
 - Name - Enter a **UNIQUE** name for the metadata profile profile
 - Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
 
@@ -446,26 +446,26 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Skip secondary series books - Enable to skip secondary series books.
 - Allowed Languages - Enter a comma-separated list of ISO 639-3 language codes, or 'null' for allowable languages for your books
 - Must Not Contain - Enter words or phrases that a book title must not contain in order to be added.
-  
+
 > You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
 {.is-info}
-  
+
 ## Release Profiles
 
 Release profiles are used to determine if indexer release names qualify for downloading.
 
-![releaseprofiles.png](/assets/readarr/releaseprofiles.png)  
-  
+![releaseprofiles.png](/assets/readarr/releaseprofiles.png)
+
 - Enable Profile - Check the box to enable this profile.
 - Must Contain - Add a list of words or phrases that MUST be in the release name in order to be considered valid.
 - Must Not Contain - Add a list of words or phrases that MUST NOT be in the release name in order to be considered valid.
 - Preferred (Words) - Here you can add terms or regex with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
-  
+
 > Releases with a higher preferred word score than the existing file are ALWAYS an upgrade!
 {.is-info}
-  
+
 - Include Preferred when Renaming Check this box to include your preferred words (or regex matches) in the `{Preferred Words}` file naming assignment token.
-  
+
 > You should include `{Preferred Words}` in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
 {.is-warning}
 

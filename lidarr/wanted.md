@@ -1,9 +1,9 @@
 ---
 title: Lidarr Wanted
-description:
+description: Managing wanted albums, manual searches, and download monitoring in Lidarr's Wanted section
 published: true
 date: 2025-01-19T14:22:57.030Z
-tags: lidarr, needs-love, wanted
+tags: wanted, albums, search, monitoring, missing, lidarr
 editor: markdown
 dateCreated: 2021-06-14T21:35:43.417Z
 ---

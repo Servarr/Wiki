@@ -3,7 +3,7 @@ title: Readarr Linux Installation (Retired)
 description: Linux installation guide for Readarr
 published: true
 date: 2024-04-05T19:15:00.224Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2023-07-03T20:12:40.290Z
 ---
@@ -102,7 +102,7 @@ sudo mv Readarr /opt/
 
 - Ensure ownership of the binary directory.
 
-```shell  
+```shell
 sudo chown readarr:readarr -R /opt/Readarr
 ```
 

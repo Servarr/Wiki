@@ -1,6 +1,6 @@
 ---
 title: Readarr Quick Start Guide (Retired)
-description: 
+description:
 published: true
 date: 2024-08-23T18:13:33.210Z
 tags: readarr
@@ -108,10 +108,10 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
 - (Advanced Option) Use Hard links instead of Copy - Check this box to use Hard links instead of Copies (for Torrents). Note that this is enabled by default.
-  
+
 > You should ideally use this wherever possible. In order for hard links to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
 {.is-info}
-  
+
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
 

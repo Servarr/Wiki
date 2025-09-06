@@ -3,7 +3,7 @@ title: Readarr Docker Installation (Retired)
 description: Docker installation guide for Readarr
 published: true
 date: 2023-08-12T16:02:33.082Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2023-07-03T20:12:28.883Z
 ---

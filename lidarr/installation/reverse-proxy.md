@@ -37,9 +37,9 @@ To achieve this it is required to modify `nginx.conf` and add `include subfolder
 server {
   listen 80;
   server_name _;
-  
+
   # more configuration
-  
+
   include subfolders-enabled/*.conf
 }
 ```
@@ -68,7 +68,7 @@ server {
     proxy_set_header   Connection $http_connection;
     proxy_redirect     off;
     proxy_http_version 1.1;
-    
+
     proxy_pass http://127.0.0.1:8686;
   }
 }
