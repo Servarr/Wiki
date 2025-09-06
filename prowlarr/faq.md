@@ -10,7 +10,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 
 # Table of Contents
 
-- [Table of Contents](#table-of- If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn't supported by `direct_io` as explained in the [mergerFS documentation](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)contents)
+- [Table of Contents](#table-of-contents)
   - [Forced Authentication](#forced-authentication)
     - [Authentication Method](#authentication-method)
     - [Authentication Required](#authentication-required)

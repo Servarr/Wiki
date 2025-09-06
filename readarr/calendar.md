@@ -1,6 +1,6 @@
 ---
 title: Readarr Calendar (Retired)
-description:
+description: Calendar functionality for the retired Readarr application
 published: true
 date: 2021-11-24T19:24:48.673Z
 tags: readarr

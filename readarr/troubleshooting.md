@@ -1,6 +1,6 @@
 ---
 title: Readarr Troubleshooting (Retired)
-description:
+description: Troubleshooting guide for the retired Readarr application
 published: true
 date: 2024-07-15T15:13:25.259Z
 tags: readarr, troubleshooting

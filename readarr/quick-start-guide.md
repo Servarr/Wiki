@@ -1,6 +1,6 @@
 ---
 title: Readarr Quick Start Guide (Retired)
-description:
+description: Quick start guide for the retired Readarr application
 published: true
 date: 2024-08-23T18:13:33.210Z
 tags: readarr

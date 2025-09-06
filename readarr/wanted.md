@@ -1,6 +1,6 @@
 ---
 title: Readarr Wanted (Retired)
-description:
+description: Wanted/missing books management for the retired Readarr application
 published: true
 date: 2021-11-24T19:25:33.912Z
 tags: readarr, needs-love, wanted

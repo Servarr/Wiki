@@ -1,5 +1,5 @@
 ---
-title: Readarr Environment Variables
+title: Readarr Environment Variables (Retired)
 description: Complete guide to Readarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
 date: 2025-09-06T00:00:00.000Z

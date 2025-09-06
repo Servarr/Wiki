@@ -1,6 +1,6 @@
 ---
 title: Readarr Custom Scripts (Retired)
-description:
+description: Custom scripts guide for the retired Readarr application
 published: true
 date: 2022-05-02T03:36:38.595Z
 tags: readarr, needs-love, custom scripts

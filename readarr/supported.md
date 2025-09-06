@@ -1,6 +1,6 @@
 ---
 title: Readarr Supported (Retired)
-description:
+description: Supported features for the retired Readarr application
 published: true
 date: 2022-01-07T19:44:47.143Z
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Readarr System (Retired)
-description:
+description: System settings and information for the retired Readarr application
 published: true
 date: 2024-08-23T18:25:35.762Z
 tags: readarr, needs-love, system

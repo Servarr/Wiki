@@ -1,6 +1,6 @@
 ---
 title: Readarr Library (Retired)
-description:
+description: Library management guide for the retired Readarr application
 published: true
 date: 2021-11-30T01:41:54.243Z
 tags: readarr, needs-love, library

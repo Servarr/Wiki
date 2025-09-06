@@ -1,6 +1,6 @@
 ---
 title: Readarr Appdata Directory (Retired)
-description:
+description: AppData directory information for the retired Readarr application
 published: true
 date: 2021-11-24T19:24:45.782Z
 tags: readarr, appdata

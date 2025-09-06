@@ -1,6 +1,6 @@
 ---
 title: Readarr Activity (Retired)
-description:
+description: Activity monitoring for the retired Readarr application
 published: true
 date: 2022-02-06T09:05:37.496Z
 tags:

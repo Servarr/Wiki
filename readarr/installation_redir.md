@@ -1,5 +1,5 @@
 ---
-title: Readarr Installation Redirect
+title: Readarr Installation Redirect (Retired)
 description: Redirect Page for Readarr Installation
 published: true
 date: 2021-11-24T19:25:04.773Z

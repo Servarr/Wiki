@@ -1,6 +1,6 @@
 ---
 title: Readarr Settings (Retired)
-description:
+description: Configuration settings guide for the retired Readarr application
 published: true
 date: 2023-09-17T12:32:59.037Z
 tags: readarr, settings

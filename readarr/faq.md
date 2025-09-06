@@ -1,6 +1,6 @@
 ---
 title: Readarr FAQ (Retired)
-description:
+description: Frequently asked questions for the retired Readarr application
 published: true
 date: 2025-03-30T15:48:25.855Z
 tags: readarr, needs-love, troubleshooting, faq
