@@ -1,9 +1,9 @@
 ---
 title: Whisparr Contributing
-description:
+description: Development and contribution guide for the Whisparr adult video application
 published: true
 date: 2021-11-29T15:44:06.951Z
-tags: whisparr, development, contributing
+tags: whisparr, development, contributing, setup, compilation
 editor: markdown
 dateCreated: 2021-05-16T21:58:50.719Z
 ---

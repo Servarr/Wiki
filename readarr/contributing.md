@@ -1,9 +1,9 @@
 ---
 title: Readarr Contributing (Retired)
-description:
+description: Development and contribution guide for the retired Readarr application
 published: true
 date: 2022-09-26T15:56:42.368Z
-tags: readarr, development, contributing
+tags: readarr, development, contributing, retired, archived
 editor: markdown
 dateCreated: 2021-05-25T19:21:59.324Z
 ---

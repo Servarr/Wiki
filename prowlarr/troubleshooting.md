@@ -1,9 +1,9 @@
 ---
 title: Prowlarr Troubleshooting
-description:
+description: Comprehensive troubleshooting guide for common Prowlarr issues and problems
 published: true
 date: 2025-08-28T01:31:53.162Z
-tags: prowlarr, troubleshooting
+tags: prowlarr, troubleshooting, problems, issues, debugging, help
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
 ---
