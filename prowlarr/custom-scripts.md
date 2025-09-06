@@ -1,9 +1,9 @@
 ---
 title: Prowlarr Custom Scripts
-description: 
+description: Guide for creating and implementing custom scripts for automation and integration with Prowlarr workflows
 published: true
 date: 2021-12-20T16:40:47.702Z
-tags: prowlarr, needs-love, custom scripts
+tags: scripts, automation, custom, integration, hooks, api, prowlarr
 editor: markdown
 dateCreated: 2021-06-23T06:40:30.916Z
 ---

@@ -1,9 +1,9 @@
 ---
 title: Lidarr Library
-description: 
+description: Managing your music library in Lidarr including artist monitoring, album tracking, and metadata management
 published: true
 date: 2024-01-02T15:50:41.776Z
-tags: lidarr, needs-love, library
+tags: library, music, artists, albums, metadata, monitoring, lidarr
 editor: markdown
 dateCreated: 2021-06-14T21:34:03.446Z
 ---

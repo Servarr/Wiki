@@ -1,9 +1,9 @@
 ---
 title: Prowlarr Quick Start Guide
-description: 
+description: Essential setup guide for new Prowlarr users covering installation, configuration, and indexer management
 published: true
 date: 2023-04-06T16:04:33.682Z
-tags: 
+tags: quick-start, setup, getting-started, indexers, configuration, prowlarr
 editor: markdown
 dateCreated: 2023-04-06T16:04:33.682Z
 ---
@@ -148,7 +148,7 @@ Click on `Settings` => `Download Clients`, and then click the + to add a new dow
 
 > Currently supported Download Clients can be found at the [More Info (Supported)](/prowlarr/supported#downloadclient) page for this section
 
-Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.  
+Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 ![nzbget.png](/assets/prowlarr/nzbget.png)
 
 > Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
