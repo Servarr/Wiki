@@ -17,6 +17,7 @@ dateCreated: 2022-04-03T00:57:35.371Z
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/whisparr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/whisparr/quick-start-guide)
+- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/whisparr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/whisparr/faq)
 {.links-list}
 

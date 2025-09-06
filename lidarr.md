@@ -1,6 +1,6 @@
 ---
 title: Lidarr
-description: 
+description:
 published: true
 date: 2025-09-06T17:47:47.402Z
 tags: lidarr
@@ -17,6 +17,7 @@ dateCreated: 2021-05-16T23:39:16.456Z
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/lidarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/lidarr/quick-start-guide)
+- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/lidarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/lidarr/faq)
 {.links-list}
 

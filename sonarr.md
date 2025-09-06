@@ -1,6 +1,6 @@
 ---
 title: Sonarr
-description: 
+description:
 published: true
 date: 2024-01-15T23:29:55.392Z
 tags: sonarr
@@ -17,6 +17,7 @@ dateCreated: 2021-05-16T16:59:52.354Z
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/sonarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/sonarr/quick-start-guide)
+- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/sonarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
 - [<i class="far fa-question-circle"></i>&emsp;v4 FAQ *FAQ entries specific to v4 changes*](/sonarr/faq-v4)
 {.links-list}

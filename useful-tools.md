@@ -42,7 +42,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [AMTD](#amtd)
   - [Subtitles](#subtitles)
   - [Bazarr](#bazarr)
-- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs-torrentsdownloading)
+- [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs---torrentsdownloading)
   - [Cross-Seed](#cross-seed)
   - [Toolbarr](#toolbarr)
   - [Unpackerr](#unpackerr)
@@ -53,7 +53,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Drazzilb's UserScripts](#drazzilbs-userscripts)
   - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
   - [Just A Bunch Of Plex Scripts](#just-a-bunch-of-plex-scripts)
-  - [Plex Meta Manager](#plex-meta-manager)
+  - [Kometa (Plex Meta Manager)](#kometa)
   - [Tautulli](#tautulli)
   - [Tdarr](#tdarr)
   - [tdarr\_inform](#tdarr_inform)
@@ -75,7 +75,7 @@ Note that the application's database can be found in the Application Data Direct
 
 > There are two options to recover the database which are listed below.{.is-info}
 
-- [Using DB Browser for SQLite and using the UI](#recovering-a-corrupt-db-ui)
+- [Using DB Browser for SQLite and using the UI](#recovering-a-corrupt-db-ui-windows)
 - [Using Sqlite's `.recover` function](#command-line-db-recovery)
 {.links-list}
 
@@ -208,57 +208,25 @@ All of the *arrs now have the ability to use environment variables to override e
 
 `APPNAME__CONFIGNAMESPACE__CONFIGITEM`
 
+For detailed environment variable documentation for each app, see:
+
+- [Sonarr Environment Variables](/sonarr/environment-variables)
+- [Radarr Environment Variables](/radarr/environment-variables)
+- [Lidarr Environment Variables](/lidarr/environment-variables)
+- [Readarr Environment Variables](/readarr/environment-variables)
+- [Prowlarr Environment Variables](/prowlarr/environment-variables)
+- [Whisparr Environment Variables](/whisparr/environment-variables)
+
 The app name that should be used is simply the app name that the environment variable is passed to: `RADARR`, `SONARR`, `PROWLARR`, etc.
 
 The config namespaces are currently predictable and shared between all apps. It is simply the option types for the options files in the project, located in the `src/NzbDrone.Common/Options` directory. The namespaces are currently:
 
-* APP
-* AUTH
-* LOG
-* POSTGRES
-* SERVER
-* UPDATE
-
-Each of these options namespaces has several config items below it. Below you can find the entire directory for each. You must replace `*ARR` with whatever *arr app you are setting up. These have not all been tested and may be wrong.
-
-| Option Name in config.xml    | Namespace | Option Name | Full Environment Variable Name      |
-|-----------------|-----------|--------------------|---------------------------------|
-| InstanceName    | APP       | INSTANCENAME        | *ARR__APP__INSTANCENAME         |
-| Theme           | APP       | THEME               | *ARR__APP__THEME                |
-| LaunchBrowser   | APP       | LAUNCHBROWSER       | *ARR__APP__LAUNCHBROWSER        |
-| ApiKey          | AUTH      | APIKEY             | *ARR__AUTH__APIKEY              |
-| AuthenticationEnabled         | AUTH      | ENABLED            | *ARR__AUTH__ENABLED             |
-| AuthenticationMethod          | AUTH      | METHOD             | *ARR__AUTH__METHOD              |
-| AuthenticationRequired        | AUTH      | REQUIRED           | *ARR__AUTH__REQUIRED            |
-| LogLevel              | LOG       | LEVEL                   | *ARR__LOG__LEVEL                 |
-| FilterSentryEvents  | LOG       | FILTERSENTRYEVENTS       | *ARR__LOG__FILTERSENTRYEVENTS    |
-| LogRotate             | LOG       | ROTATE                  | *ARR__LOG__ROTATE                |
-| LogSizeLimit          | LOG       | SIZELIMIT               | *ARR__LOG__SIZELIMIT             |
-| LogSql                | LOG       | SQL                     | *ARR__LOG__SQL                   |
-| ConsoleLogLevel       | LOG       | CONSOLELEVEL            | *ARR__LOG__CONSOLELEVEL          |
-| ConsoleLogFormat      | LOG       | CONSOLEFORMAT           | *ARR__LOG__CONSOLEFORMAT         |
-| AnalyticsEnabled   | LOG       | ANALYTICSENABLED         | *ARR__LOG__ANALYTICSENABLED       |
-| SyslogServer       | LOG       | SYSLOGSERVER            | *ARR__LOG__SYSLOGSERVER          |
-| SyslogPort         | LOG       | SYSLOGPORT              | *ARR__LOG__SYSLOGPORT            |
-| SyslogLevel        | LOG       | SYSLOGLEVEL             | *ARR__LOG__SYSLOGLEVEL           |
-| DbEnabled          | LOG       | DBENABLED               | *ARR__LOG__DBENABLED             |
-| PostgresHost        | POSTGRES  | HOST                    | *ARR__POSTGRES__HOST             |
-| PostgresPort        | POSTGRES  | PORT                    | *ARR__POSTGRES__PORT             |
-| PostgresUser        | POSTGRES  | USER                    | *ARR__POSTGRES__USER             |
-| PostgresPassword    | POSTGRES  | PASSWORD                | *ARR__POSTGRES__PASSWORD         |
-| PostgresMainDb      | POSTGRES  | MAINDB                  | *ARR__POSTGRES__MAINDB           |
-| PostgresLogDb       | POSTGRES  | LOGDB                   | *ARR__POSTGRES__LOGDB            |
-| UrlBase           | SERVER    | URLBASE             | *ARR__SERVER__URLBASE           |
-| BindAddress       | SERVER    | BINDADDRESS         | *ARR__SERVER__BINDADDRESS       |
-| Port              | SERVER    | PORT                | *ARR__SERVER__PORT              |
-| EnableSsl         | SERVER    | ENABLESSL           | *ARR__SERVER__ENABLESSL         |
-| SslPort           | SERVER    | SSLPORT             | *ARR__SERVER__SSLPORT           |
-| SslCertPath       | SERVER    | SSLCERTPATH         | *ARR__SERVER__SSLCERTPATH       |
-| SslCertPassword   | SERVER    | SSLCERTPASSWORD     | *ARR__SERVER__SSLCERTPASSWORD   |
-| UpdateMechanism       | UPDATE    | MECHANISM           | *ARR__UPDATE__MECHANISM         |
-| UpdateAutomatically   | UPDATE    | AUTOMATICALLY       | *ARR__UPDATE__AUTOMATICALLY     |
-| UpdateScriptPath      | UPDATE    | SCRIPTPATH          | *ARR__UPDATE__SCRIPTPATH        |
-| Branch          | UPDATE    | BRANCH              | *ARR__UPDATE__BRANCH            |
+- APP
+- AUTH
+- LOG
+- POSTGRES
+- SERVER
+- UPDATE
 
 # Other Projects and Programs - Request Apps \*Arrs
 

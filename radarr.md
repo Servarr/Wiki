@@ -17,6 +17,7 @@ dateCreated: 2021-05-16T13:53:17.360Z
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/radarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/radarr/quick-start-guide)
+- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/radarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/radarr/faq)
 {.links-list}
 

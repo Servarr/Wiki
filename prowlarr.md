@@ -17,6 +17,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/prowlarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/prowlarr/quick-start-guide)
+- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/prowlarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/prowlarr/faq)
 {.links-list}
 
