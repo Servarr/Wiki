@@ -3,7 +3,7 @@ title: Prowlarr Installation
 description: Instructions and Guides for Installation of Prowlarr
 published: true
 date: 2023-07-03T20:26:01.103Z
-tags: prowlarr
+tags: prowlarr, installation
 editor: markdown
 dateCreated: 2021-05-24T05:07:51.882Z
 ---

@@ -3,7 +3,7 @@ title: Docker Guide
 description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
 date: 2024-03-13T11:21:23.126Z
-tags: 
+tags: docker, installation, troubleshooting, sonarr, radarr, lidarr, readarr, prowlarr, whisparr, scripts, synology
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
 ---

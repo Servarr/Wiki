@@ -3,7 +3,7 @@ title: Radarr FAQ
 description: Radarr FAQ
 published: true
 date: 2025-03-30T15:53:13.708Z
-tags: radarr, needs-love, troubleshooting, faq
+tags: radarr, faq, troubleshooting
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
@@ -162,7 +162,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 ## What are Lists and what can they do for me?
 
 - Lists are a part of Radarr that allow you to follow a given list from various sources including Plex
-- Lists are not intended to be an "add it now" functionality, but rather are an add movies in this list eventually functionality.  
+- Lists are not intended to be an "add it now" functionality, but rather are an add movies in this list eventually functionality.
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
 - Lists can also be used to sync Radarr to another Radarr instance or to import your users' Plex watchlist(s)
 
@@ -256,8 +256,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 #### Using file system directly
 
-- Find the location of the AppData directory for Radarr  
-  - Via the Radarr UI go to System => About  
+- Find the location of the AppData directory for Radarr
+  - Via the Radarr UI go to System => About
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -280,8 +280,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 #### Using file system backup
 
 - Re-install Radarr (if applicable / not already installed)
-- Find the location of the AppData directory for Radarr  
-  - Running Radarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Radarr
+  - Running Radarr once and via the UI go to System => About
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -295,11 +295,11 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 {.is-warning}
 
 - Re-install Radarr (if applicable / not already installed)
-- Find the location of the AppData directory for Radarr  
-  - Running Radarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Radarr
+  - Running Radarr once and via the UI go to System => About
   - [Radarr Appdata Directory](/radarr/appdata-directory)
 - Stop Radarr
-- Connect to the Synology NAS through SSH and log in as root  
+- Connect to the Synology NAS through SSH and log in as root
 
 > On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr *` {.is-info}
 
@@ -569,7 +569,7 @@ When doing an interactive search a second download button has been added titled 
 - *Note that this overruled information is not carried over to the import logic and manual imports may be required*
 
 ## Jackett shows more results than when manually searching
-  
+
 - This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
 
 ## How does Radarr determine the year of a movie?

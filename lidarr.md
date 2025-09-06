@@ -1,6 +1,6 @@
 ---
 title: Lidarr
-description:
+description: Music collection manager for Usenet and BitTorrent users to automatically download and organize music albums
 published: true
 date: 2025-09-06T17:47:47.402Z
 tags: lidarr

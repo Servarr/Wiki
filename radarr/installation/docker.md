@@ -3,7 +3,7 @@ title: Radarr Docker Installation
 description: Docker installation guide for Radarr
 published: true
 date: 2023-08-12T16:02:10.602Z
-tags: 
+tags: docker, installation, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:11:47.674Z
 ---

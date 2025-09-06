@@ -3,7 +3,7 @@ title: Radarr Multiple Instances
 description: Requirements and how to install multiple instances of Radarr
 published: true
 date: 2024-07-13T15:28:02.725Z
-tags: 
+tags: installation, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:12:10.189Z
 ---
@@ -106,7 +106,7 @@ separate locations. {.is-warning}
 1. In `C:\ProgramData`, create a new folder for Radarr-4K's configuration files. Most use a similar place such as `C:\ProgramData\Radarr-4K`
 
 2. Next we go to the startup folder. Go to “Run” and enter `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and then OK.
-   
+
 3. Create the Radarr-4K Tray App.
    Right click the Radarr shortcut, and Create New Shortcut.
    Rename the shortcut “Radarr-4K.” Edit the target field of the new shortcut:
@@ -213,17 +213,17 @@ $instances = @(
 function Write-Log
 {
     #Will write to C:\Users\YOURUSERNAME\log.txt
-    
+
     Param(
         $Message,
-        $Path = "$env:USERPROFILE\log.txt" 
+        $Path = "$env:USERPROFILE\log.txt"
     )
 
     function TS { Get-Date -Format 'hh:mm:ss' }
-    
+
     #Console output
     Write-Output "[$(TS)]$Message"
-    
+
     #File Output
     if ($logToFile)
     {
@@ -237,9 +237,9 @@ Write-Log 'START ====================='
 
 $instances | ForEach-Object {
     Write-Log "Check $($_.Name) $($_.IP):$($_.Port)"
-    
-    $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded 
-    
+
+    $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded
+
     if (!$PortOpen)
     {
         Write-Log "Port $($_.Port) is closed, restart $($startType) $($_.Name)!"

@@ -1,6 +1,6 @@
 ---
 title: Sonarr
-description:
+description: Smart PVR for newsgroup and bittorrent users to manage and automatically download TV episodes
 published: true
 date: 2024-01-15T23:29:55.392Z
 tags: sonarr

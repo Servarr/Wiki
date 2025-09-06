@@ -3,7 +3,7 @@ title: Servarr
 description: Official wiki for Lidarr, Radarr, Readarr, Sonarr, and Whisparr
 published: true
 date: 2024-11-14T03:55:41.825Z
-tags: servarr
+tags: docker, installation, lidarr, prowlarr, radarr, readarr, scripts, sonarr, synology, troubleshooting, whisparr
 editor: markdown
 dateCreated: 2021-05-16T02:37:25.239Z
 ---

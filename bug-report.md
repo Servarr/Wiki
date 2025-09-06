@@ -1,9 +1,9 @@
 ---
 title: Report a Bug
-description:
+description: Guidelines for reporting bugs and issues across all Servarr applications including Sonarr, Radarr, Lidarr, Readarr, and Prowlarr
 published: true
 date: 2023-06-26T02:47:03.542Z
-tags: radarr, sonarr, lidarr, readarr, prowlarr
+tags: radarr, sonarr, lidarr, readarr, prowlarr, troubleshooting, scripts
 editor: markdown
 dateCreated: 2023-06-26T02:47:03.542Z
 ---

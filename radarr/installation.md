@@ -3,7 +3,7 @@ title: Radarr Installation
 description: Instructions and Guides for Installation of Radarr
 published: true
 date: 2023-07-03T20:24:32.935Z
-tags: 
+tags: radarr, installation
 editor: markdown
 dateCreated: 2021-05-17T01:14:47.863Z
 ---

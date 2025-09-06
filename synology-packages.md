@@ -3,7 +3,7 @@ title: Synology Packages
 description: Servarr Synology Packages
 published: true
 date: 2023-12-05T13:38:09.343Z
-tags: lidarr, prowlarr, synology, radarr,readarr,sonarr
+tags: installation, lidarr, prowlarr, radarr, readarr, scripts, sonarr, synology
 editor: markdown
 dateCreated: 2022-05-06T13:45:19.731Z
 ---

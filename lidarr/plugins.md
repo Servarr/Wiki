@@ -3,7 +3,7 @@ title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
 date: 2025-08-30T16:02:31.783Z
-tags: lidarr, plugins
+tags: lidarr, plugins, installation, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
 ---
@@ -21,7 +21,7 @@ Plug-in capabilities are currently only available on the `plugins` branch.
 
 ### Native Installs -Windows, Mac, and Linux
 
-- Navigate to `/settings/general` 
+- Navigate to `/settings/general`
 - Show Advanced if not already enabled
 - Scroll down to Updates. Type in `plugins`
 - Save changes.
@@ -29,7 +29,7 @@ Plug-in capabilities are currently only available on the `plugins` branch.
 
 ### Docker
 
-Update your Docker Compose file to use the following image, pull, and recreate your Lidarr container. 
+Update your Docker Compose file to use the following image, pull, and recreate your Lidarr container.
 
 #### Hotio
 
@@ -43,7 +43,7 @@ image: ghcr.io/hotio/lidarr:pr-plugins
 image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
 ```
 
-- Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation. 
+- Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation.
 - If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
 
 #### Manually Installing
@@ -51,14 +51,14 @@ image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
 > If the plugins branch is older than the current version of Lidarr you have installed, it won't automatically install via the updater. Instead, you will need to download the plugins branch and install file directly and install it over your Lidarr setup.
 {.is-warning}
 
-- See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in thr install docs from `master` to `plugins` otherwise following the docs as-is.
+- See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in the install docs from `master` to `plugins` otherwise following the docs as-is.
 
 ## Next Steps
 
 - Install the plugin to Lidarr using the new Plugin Lidarr Page and the plugin's documentation.
 - Restart Lidarr to complete plugin installation
 
-> Plugin updates do not occur automatically 
+> Plugin updates do not occur automatically
 {.is-info}
 
 # Plugins
@@ -78,17 +78,18 @@ This plugin enables Lidarr to search Deezer using Deemix. You must have a workin
 
 [Slskd (Soulseek) by Allquiet](https://github.com/allquiet-hub/Lidarr.Plugin.Slskd)
 
-### Prerequisites 
+### Prerequisites
 
 This plugin enables Lidarr to search Soulseek using Slskd. You must have a working Lidarr installation from the plugins branch and a working Slskd installation to use this plugin.
 
-To generate the Api Key necessary for the communication to the Slskd app follow the steps [here on the developer's respository](https://github.com/slskd/slskd/blob/master/docs/config.md#authentication)
+To generate the Api Key necessary for the communication to the Slskd app follow the steps [here on the developer's repository](https://github.com/slskd/slskd/blob/master/docs/config.md#authentication)
 
 ### Post-Install Configuration
 
 #### Download Client
 
-Once the plugin is installed, Slskd can be added as a download client. 
+Once the plugin is installed, Slskd can be added as a download client.
+
 - Navigate to `/settings/downloadclients`, and select the <kb>+</kb> button under Download clients. Slskd will appear at the bottom under the Other section.
 - Enter the correct hostname.
 - Enter the API key
@@ -97,7 +98,8 @@ Once the plugin is installed, Slskd can be added as a download client.
 
 ### Indexer
 
-To search, Slskd must also be added as an Indexer. 
+To search, Slskd must also be added as an Indexer.
+
 - Navigate to `/settings/indexers`, and select the <kb>+</kb> button under Indexers. Slskd will appear at the bottom under the Other section.
 - Enter the correct URL.
 - Enter the API key.
@@ -109,7 +111,7 @@ To search, Slskd must also be added as an Indexer.
 ### Delay Profile
 
 - Navigate to `settings/profiles` and scroll down to Delay Profiles
-- Select the wrench icon on the right side of the profile you wish to use slskd with. Most installations will only have a Default profile. 
+- Select the wrench icon on the right side of the profile you wish to use slskd with. Most installations will only have a Default profile.
 - Select the Slskd protocol, and select Save.
 
 ### Verification
@@ -124,23 +126,30 @@ Slskd is now available for both automatic and interactive searches. During Lidar
 
 TrevTV develops specialized Lidarr plugins for direct music platform integration.
 
-### Deezer  
-[Deezer by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Deezer) is a Lidarr plugin that provides direct Deezer integration:  
-- **Indexer & Download Client**: Searches and downloads from Deezer without intermediaries like Deemix 
-- **Flexible Auth**: Automatic ARL selection or manual entry  
+### Deezer
 
-### Tidal  
-[Tidal by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Tidal) is a Lidarr plugin for Tidal integration:  
-- **OAuth2 Authentication**: Secure token-based login flow  
-- **FFmpeg Conversion**: Optional audio processing 
-- *Note: Shows only estimated file sizes*  
+[Deezer by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Deezer) is a Lidarr plugin that provides direct Deezer integration:
 
-### Qobuz  
-[Qobuz by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Qobuz) is a Lidarr plugin for Qobuz integration:  
-- **Dual Authentication**: Email/MD5 password or user token login  
-- **Hi-Res Handling**: Automatically falls back to 96kHz when needed  
+- **Indexer & Download Client**: Searches and downloads from Deezer without intermediaries like Deemix
+- **Flexible Auth**: Automatic ARL selection or manual entry
+
+### Tidal
+
+[Tidal by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Tidal) is a Lidarr plugin for Tidal integration:
+
+- **OAuth2 Authentication**: Secure token-based login flow
+- **FFmpeg Conversion**: Optional audio processing
+- *Note: Shows only estimated file sizes*
+
+### Qobuz
+
+[Qobuz by TrevTV](https://github.com/TrevTV/Lidarr.Plugin.Qobuz) is a Lidarr plugin for Qobuz integration:
+
+- **Dual Authentication**: Email/MD5 password or user token login
+- **Hi-Res Handling**: Automatically falls back to 96kHz when needed
 
 ### Configuration Essentials
+
 1. **Delay Profiles**: All plugins require Delay Profile activation
 2. **Lyrics Support**:
    - Enable `.lrc` file support in:
@@ -150,32 +159,35 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
    - FFmpeg required for Tidal conversions
    - Custom app IDs may be needed for Qobuz authentication
 
-## TypNull/Tubifarry  
+## TypNull/Tubifarry
 
-[Tubifarry by TypNull](https://github.com/TypNull/Tubifarry) is a *multi-feature* plugin that extends Lidarr's capabilities with these key functions:  
+[Tubifarry by TypNull](https://github.com/TypNull/Tubifarry) is a *multi-feature* plugin that extends Lidarr's capabilities with these key functions:
 
-### Core Features  
-- **YouTube Music Downloader**:  
-  - Downloads music from YouTube (requires cookies/trusted sessions for reliability)  
-  - Optional FFmpeg audio extraction (recommended for compatibility)  
-- **Soulseek Integration**:  
+### Core Features
+
+- **YouTube Music Downloader**:
+  - Downloads music from YouTube (requires cookies/trusted sessions for reliability)
+  - Optional FFmpeg audio extraction (recommended for compatibility)
+- **Soulseek Integration**:
   - Slskd support as both indexer and download client
 
-### Toolbox Additions 
-- **Soundtrack Importer**: Fetches soundtracks from Sonarr/Radarr via *Arr-Soundtracks* import list  
-- **Queue Cleaner**: Auto-manages failed imports (blocklist/rename/retry)  
-- **Codec Tinker**: Converts audio formats using FFmpeg rules (e.g., `wav→flac`, `AAC→MP3`)  
-- **Lyrics Fetcher**: Adds time-synced lyrics (.lrc files or embedded metadata)  
-- **Search Sniper**: Automates batch searching of large wanted lists  
-- **MetaMix**: Aggregates metadata from different sources (experimental)  
+### Toolbox Additions
 
-### Branches  
-- Certain features are exclusively available on specific branches.  
-- To install these:  
-  1. First ensure you have the stable version installed.  
-  2. Then switch to your desired branch using its URL.  
-- *Example:* The development version can be found at:  
-  `https://github.com/TypNull/Tubifarry/tree/develop`  
+- **Soundtrack Importer**: Fetches soundtracks from Sonarr/Radarr via *Arr-Soundtracks* import list
+- **Queue Cleaner**: Auto-manages failed imports (blocklist/rename/retry)
+- **Codec Tinker**: Converts audio formats using FFmpeg rules (e.g., `wav→flac`, `AAC→MP3`)
+- **Lyrics Fetcher**: Adds time-synced lyrics (.lrc files or embedded metadata)
+- **Search Sniper**: Automates batch searching of large wanted lists
+- **MetaMix**: Aggregates metadata from different sources (experimental)
+
+### Branches
+
+- Certain features are exclusively available on specific branches.
+- To install these:
+  1. First ensure you have the stable version installed.
+  2. Then switch to your desired branch using its URL.
+- *Example:* The development version can be found at:
+  `https://github.com/TypNull/Tubifarry/tree/develop`
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}

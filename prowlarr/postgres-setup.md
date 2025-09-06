@@ -3,7 +3,7 @@ title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
 date: 2025-05-29T21:37:09.627Z
-tags: 
+tags: prowlarr, postgres, database, installation
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
 ---

@@ -3,7 +3,7 @@ title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
 date: 2025-03-30T15:47:07.580Z
-tags: prowlarr, faq
+tags: prowlarr, faq, troubleshooting
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
 ---
@@ -54,7 +54,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
     - [Use of a VPN](#use-of-a-vpn)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
-  
+
 ## Forced Authentication
 
 If Prowlarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
@@ -129,7 +129,7 @@ The following attributes are optional, but recommended:
 
 ## How can I add an indexer that is down or not functional?
 
-- Follow then standard steps to add the indexer noting thr following changes.
+- Follow then standard steps to add the indexer noting the following changes.
 - Uncheck (Disable) the `Enabled` box
 - Press `Save`
 - Press `Save` again to trigger a force save
@@ -281,8 +281,8 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 
 #### Using file system directly
 
-- Find the location of the AppData directory for Prowlarr  
-  - Via the Prowlarr UI go to System => About  
+- Find the location of the AppData directory for Prowlarr
+  - Via the Prowlarr UI go to System => About
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -305,8 +305,8 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 #### Using file system backup
 
 - Re-install Prowlarr (if applicable / not already installed)
-- Find the location of the AppData directory for Prowlarr  
-  - Running Prowlarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Prowlarr
+  - Running Prowlarr once and via the UI go to System => About
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -320,11 +320,11 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 {.is-warning}
 
 - Re-install Prowlarr (if applicable / not already installed)
-- Find the location of the AppData directory for Prowlarr  
-  - Running Prowlarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Prowlarr
+  - Running Prowlarr once and via the UI go to System => About
   - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
 - Stop Prowlarr
-- Connect to the Synology NAS through SSH and log in as root  
+- Connect to the Synology NAS through SSH and log in as root
 
 > On some installations, the user is different than the below commands: `chown -R sc-Prowlarr:Prowlarr *` {.is-info}
 

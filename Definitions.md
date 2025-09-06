@@ -1,9 +1,9 @@
 ---
 title: Definitions (Redirect)
-description: 
+description: Redirect page for common terms and definitions used throughout the Servarr applications
 published: true
 date: 2022-01-05T00:19:12.686Z
-tags: 
+tags: lidarr, prowlarr, radarr, readarr, scripts, sonarr, whisparr
 editor: markdown
 dateCreated: 2022-01-05T00:19:12.686Z
 ---

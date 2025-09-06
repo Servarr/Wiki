@@ -3,7 +3,7 @@ title: Lidarr MacOS Installation
 description: MacOS installation guide for Lidarr
 published: true
 date: 2023-07-28T11:16:00.388Z
-tags: 
+tags: installation, lidarr, macos
 editor: markdown
 dateCreated: 2023-07-03T20:10:53.957Z
 ---

@@ -3,7 +3,7 @@ title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
 date: 2025-05-29T21:30:30.766Z
-tags: 
+tags: radarr, postgres, database, installation
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
 ---

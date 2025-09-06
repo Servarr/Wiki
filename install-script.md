@@ -3,7 +3,7 @@ title: Servarr Installation Script
 description: Common Installation Script for the Servarr Suite of Applications
 published: true
 date: 2024-04-15T10:13:30.679Z
-tags: 
+tags: installation, scripts, sonarr, radarr, lidarr, readarr, prowlarr, whisparr
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
 ---

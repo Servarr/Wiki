@@ -3,7 +3,7 @@ title: Radarr
 description: Radarr wiki homepage
 published: true
 date: 2023-06-26T03:26:21.684Z
-tags: radarr
+tags: radarr, installation, troubleshooting, scripts, postgres
 editor: markdown
 dateCreated: 2021-05-16T13:53:17.360Z
 ---

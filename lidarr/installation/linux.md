@@ -3,7 +3,7 @@ title: Lidarr Linux Installation
 description: Linux installation guide for Lidarr
 published: true
 date: 2024-04-05T19:17:19.275Z
-tags: 
+tags: installation, lidarr, linux
 editor: markdown
 dateCreated: 2023-07-03T20:10:49.328Z
 ---
@@ -20,7 +20,7 @@ For the Debian / Ubuntu / Raspbian beginners there isn't an Apt Repository or De
 
 If you want an easy life, follow this community provided and maintained `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
 
-**For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
+**For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian--ubuntu-hands-on-install) steps further below.**
 
 [Please see the \*Arr Community Installation Script](/install-script)
 

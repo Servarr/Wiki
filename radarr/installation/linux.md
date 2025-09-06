@@ -3,7 +3,7 @@ title: Radarr Linux Installation
 description: Linux installation guide for Radarr
 published: true
 date: 2024-04-05T19:13:32.098Z
-tags: 
+tags: installation, linux, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:11:59.391Z
 ---
@@ -83,7 +83,7 @@ sudo mv Radarr /opt/
 
 - Ensure ownership of the binary directory.
 
-```shell  
+```shell
 sudo chown radarr:radarr -R /opt/Radarr
 ```
 

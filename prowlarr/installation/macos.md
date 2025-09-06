@@ -3,7 +3,7 @@ title: Prowlarr MacOS Installation
 description: MacOS installation guide for Prowlarr
 published: true
 date: 2023-07-28T11:17:40.904Z
-tags: 
+tags: installation, macos, prowlarr
 editor: markdown
 dateCreated: 2023-07-03T20:11:30.382Z
 ---
@@ -11,7 +11,7 @@ dateCreated: 2023-07-03T20:11:30.382Z
 # MacOS (OSX)
 
 {#OSX}
-  
+
 > Prowlarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 

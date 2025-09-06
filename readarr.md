@@ -1,6 +1,6 @@
 ---
 title: Readarr (Retired)
-description: 
+description: Ebook and audiobook collection manager - retired application no longer in active development
 published: true
 date: 2024-08-23T18:23:16.288Z
 tags: readarr

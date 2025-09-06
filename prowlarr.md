@@ -3,7 +3,7 @@ title: Prowlarr
 description: Prowlarr Wiki Home
 published: true
 date: 2023-06-26T03:27:39.242Z
-tags: prowlarr
+tags: prowlarr, installation, troubleshooting, scripts, postgres, sonarr, radarr, lidarr, readarr
 editor: markdown
 dateCreated: 2021-05-24T03:32:41.926Z
 ---

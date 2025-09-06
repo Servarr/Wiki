@@ -3,7 +3,7 @@ title: Davo's Community Lidarr Guide
 description: Like TRaSH Guides, but Davo for Lidarr
 published: true
 date: 2024-02-27T21:07:38.868Z
-tags: lidarr, trash, guide, davo
+tags: lidarr, guide, configuration, quality
 editor: markdown
 dateCreated: 2024-02-27T14:10:01.585Z
 ---
@@ -15,7 +15,7 @@ This guide also assumes you are familiar with the basics of the ARR apps and omi
 ## Quality settings
 
 | Quality    | Min | Preferred | Max  |
-|------------|-----|-----------|------|
+| ---------- | --- | --------- | ---- |
 | FLAC       | 0   | 895       | 1400 |
 | FLAC 24bit | 0   | 895       | 1495 |
 

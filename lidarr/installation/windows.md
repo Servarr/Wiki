@@ -3,7 +3,7 @@ title: Lidarr Windows Installation
 description: Windows installation guide for Lidarr
 published: true
 date: 2024-03-01T22:14:42.246Z
-tags: 
+tags: installation, lidarr, windows
 editor: markdown
 dateCreated: 2023-07-03T20:11:02.991Z
 ---

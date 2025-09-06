@@ -3,7 +3,7 @@ title: Radarr MacOS Installation
 description: MacOS installation guide for Radarr
 published: true
 date: 2023-07-28T09:08:51.541Z
-tags: 
+tags: installation, macos, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:12:05.036Z
 ---

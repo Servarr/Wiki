@@ -1,9 +1,9 @@
 ---
 title: Readarr Environment Variables
-description: Environment variables for configuring Readarr settings
+description: Complete guide to Readarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
 date: 2025-09-06T00:00:00.000Z
-tags: readarr, configuration, environment-variables
+tags: readarr, configuration, environment-variables, docker, installation, postgres
 editor: markdown
 dateCreated: 2025-09-06T00:00:00.000Z
 ---

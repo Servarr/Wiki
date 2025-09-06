@@ -3,7 +3,7 @@ title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
 date: 2025-05-29T21:35:39.065Z
-tags: 
+tags: lidarr, postgres, database, installation
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
 ---

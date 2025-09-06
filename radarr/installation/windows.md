@@ -3,7 +3,7 @@ title: Radarr Windows Installation
 description: Windows installation guide for Radarr
 published: true
 date: 2023-07-04T15:22:03.589Z
-tags: 
+tags: installation, radarr, windows
 editor: markdown
 dateCreated: 2023-07-03T20:12:19.928Z
 ---
