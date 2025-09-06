@@ -1,9 +1,9 @@
 ---
-title: reverse-proxy
-description: 
+title: Radarr Reverse Proxy
+description: Configuring reverse proxy setup for Radarr with nginx, Apache, and other web servers
 published: true
 date: 2024-01-04T16:42:39.425Z
-tags: 
+tags: reverse-proxy, nginx, apache, web-server, configuration, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:12:15.231Z
 ---
@@ -47,9 +47,9 @@ To achieve this it is required to modify `nginx.conf` and add `include subfolder
 server {
   listen 80;
   server_name _;
-  
+
   # more configuration
-  
+
   include subfolders-enabled/*.conf
 }
 ```
@@ -84,7 +84,7 @@ server {
 
     proxy_redirect     off;
     proxy_http_version 1.1;
-    
+
     proxy_pass http://127.0.0.1:7878;
   }
 }

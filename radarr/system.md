@@ -1,9 +1,9 @@
 ---
 title: Radarr System
-description: 
+description: System information, logs, scheduled tasks, and status monitoring for Radarr administration and troubleshooting
 published: true
 date: 2023-10-26T10:56:09.737Z
-tags: radarr, needs-love
+tags: system, administration, logs, tasks, status, radarr
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
 ---
@@ -539,7 +539,7 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Refresh Movie - This goes through and refreshes all the metadata for all monitored and unmonitored movies
 - RSS Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
-  
+
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
@@ -553,11 +553,11 @@ A mount containing a movie path is read only and is not writable by the user Rad
 {.is-info}
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
-  
+
 - Backup Now - This option will trigger a manual backup of your Radarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
   - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Radarr Zip backup
-  
+
 - If you have any previous backups and would like to download them from Radarr to be placed in a non standard location you simply can select one of these files to download them
 - Off to the right of each of the previous download you have two options.
   - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
@@ -567,7 +567,7 @@ A mount containing a movie path is read only and is not writable by the user Rad
 
 - The update screen will show the past 5 updates that have been made as well as the current version you are on.
 - This page will also display the update notes from the Developers telling you what has been fixed or added to Radarr (Rejoice!)
-  
+
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
 

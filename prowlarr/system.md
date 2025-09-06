@@ -1,9 +1,9 @@
 ---
 title: Prowlarr System
-description: 
+description: System information, logs, scheduled tasks, and status monitoring for Prowlarr administration and troubleshooting
 published: true
 date: 2025-08-24T14:57:37.363Z
-tags: prowlarr, system
+tags: system, administration, logs, tasks, status, prowlarr
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
 ---
@@ -266,7 +266,7 @@ This page lists all scheduled tasks that Prowlarr runs
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Prowlarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Prowlarr
-  
+
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
@@ -281,13 +281,13 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 {.is-info}
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
-  
+
 Here you will have two options at the top of the screen
 
 - Backup Now - This option will trigger a manual backup of your Prowlarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
 By selecting Choose File this will prompt your browser to open a dialog box to restore from a Prowlarr Zip backup
-  
+
 Finally if you have any previous backups and would like to download them from Prowlarr to be placed in a non standard location you simply can select one of these files to download them
 Off to the right of each of the previous download you have two options.
 
@@ -298,7 +298,7 @@ Off to the right of each of the previous download you have two options.
 
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
 This page will also display the update notes from the Developers telling you what has been fixed or added to Prowlarr (Rejoice!)
-  
+
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
 

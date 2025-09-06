@@ -1,9 +1,9 @@
 ---
 title: Lidarr System
-description: 
+description: System information, logs, scheduled tasks, and status monitoring for Lidarr administration and troubleshooting
 published: true
 date: 2023-10-12T15:55:59.868Z
-tags: lidarr, needs-love, system
+tags: system, administration, logs, tasks, status, lidarr
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
 ---
@@ -481,7 +481,7 @@ chmod +x /opt/Lidarr/fpcalc
   - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
   - Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
   - Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
-  
+
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}
 
@@ -496,13 +496,13 @@ chmod +x /opt/Lidarr/fpcalc
 {.is-info}
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
-  
+
 Here you will have two options at the top of the screen
 
 - Backup Now - This option will trigger a manual backup of your Lidarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
 By selecting Choose File this will prompt your browser to open a dialog box to restore from a Lidarr Zip backup
-  
+
 Finally if you have any previous backups and would like to download them from Lidarr to be placed in a non standard location you simply can select one of these files to download them
 Off to the right of each of the previous download you have two options.
 
@@ -513,7 +513,7 @@ Off to the right of each of the previous download you have two options.
 
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
 This page will also display the update notes from the Developers telling you what has been fixed or added to Lidarr (Rejoice!)
-  
+
 > A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 {.is-info}
 

@@ -3,7 +3,7 @@ title: Whisparr MacOS Installation
 description: MacOS installation guide for Lidarr
 published: true
 date: 2023-07-28T11:17:09.312Z
-tags: 
+tags: installation, macos, mac, setup, guide, whisparr
 editor: markdown
 dateCreated: 2023-07-03T20:14:16.660Z
 ---

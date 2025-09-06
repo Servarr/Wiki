@@ -1,9 +1,9 @@
 ---
-title: reverse-proxy
-description: 
+title: Prowlarr Reverse Proxy
+description: Configuring reverse proxy setup for Prowlarr with nginx, Apache, and other web servers
 published: true
 date: 2024-01-19T23:44:51.382Z
-tags: 
+tags: reverse-proxy, nginx, apache, web-server, configuration, prowlarr
 editor: markdown
 dateCreated: 2023-07-03T20:11:34.526Z
 ---
@@ -47,9 +47,9 @@ To achieve this it is required to modify `nginx.conf` and add `include subfolder
 server {
   listen 80;
   server_name _;
-  
+
   # more configuration
-  
+
   include subfolders-enabled/*.conf
 }
 ```
@@ -82,7 +82,7 @@ server {
     proxy_set_header   Connection $http_connection;
     proxy_redirect     off;
     proxy_http_version 1.1;
-    
+
     proxy_pass http://127.0.0.1:9696;
   }
 }

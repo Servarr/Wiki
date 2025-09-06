@@ -3,7 +3,7 @@ title: Sonarr Windows Installation
 description: Windows installation guide for Sonarr
 published: true
 date: 2023-07-04T15:22:44.146Z
-tags: 
+tags: installation, windows, setup, guide, sonarr
 editor: markdown
 dateCreated: 2023-07-03T20:13:54.851Z
 ---

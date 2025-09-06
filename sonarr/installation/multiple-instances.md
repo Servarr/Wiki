@@ -3,7 +3,7 @@ title: Sonarr Multiple Instances
 description: Requirements and how to install multiple instances of Sonarr
 published: true
 date: 2024-07-13T15:27:26.468Z
-tags: 
+tags: installation, multiple-instances, configuration, setup, sonarr
 editor: markdown
 dateCreated: 2023-07-03T20:13:35.847Z
 ---
@@ -186,17 +186,17 @@ $instances = @(
 function Write-Log
 {
     #Will write to C:\Users\YOURUSERNAME\log.txt
-    
+
     Param(
         $Message,
-        $Path = "$env:USERPROFILE\log.txt" 
+        $Path = "$env:USERPROFILE\log.txt"
     )
 
     function TS { Get-Date -Format 'hh:mm:ss' }
-    
+
     #Console output
     Write-Output "[$(TS)]$Message"
-    
+
     #File Output
     if ($logToFile)
     {
@@ -210,9 +210,9 @@ Write-Log 'START ====================='
 
 $instances | ForEach-Object {
     Write-Log "Check $($_.Name) $($_.IP):$($_.Port)"
-    
-    $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded 
-    
+
+    $PortOpen = ( Test-NetConnection $_.IP -Port $_.Port -WarningAction SilentlyContinue ).TcpTestSucceeded
+
     if (!$PortOpen)
     {
         Write-Log "Port $($_.Port) is closed, restart $($startType) $($_.Name)!"
