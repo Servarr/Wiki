@@ -1,6 +1,6 @@
 ---
 title: Radarr Contributing
-description: 
+description:
 published: true
 date: 2022-09-26T15:56:47.019Z
 tags: radarr, development, contributing
@@ -178,7 +178,7 @@ public IndexerCheck(ILocalizationService localizationService)
 {
   _localizationService = localizationService;
 }
-        
+
 var translated = _localizationService.GetLocalizedString("IndexerHealthCheckNoIndexers")
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Prowlarr Contributing
-description: 
+description:
 published: true
 date: 2022-11-16T19:35:23.515Z
 tags: prowlarr, development, contributing
@@ -33,7 +33,7 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
   - **20** (any minor or patch version within this)
 {.grid-list}
 
-> The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other verisons.
+> The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
 {.is-warning}
 
 - [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
@@ -193,7 +193,7 @@ public IndexerCheck(ILocalizationService localizationService)
 {
   _localizationService = localizationService;
 }
-        
+
 var translated = _localizationService.GetLocalizedString("IndexerHealthCheckNoIndexers")
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Prowlarr Troubleshooting
-description: 
+description:
 published: true
 date: 2025-08-28T01:31:53.162Z
 tags: prowlarr, troubleshooting
@@ -233,43 +233,43 @@ The indexer or application server terminated the connection unexpectedly during 
 - DNS resolution failures
 - SSL/TLS certificate problems
 
-#### ISP DNS interference** – Many ISPs intercept or block DNS requests to certain sites  
+#### ISP DNS interference** – Many ISPs intercept or block DNS requests to certain sites
 
-- **Solution**: Stop using your ISP’s DNS servers. Use public resolvers such as:  
-  - Google DNS: `8.8.8.8`, `8.8.4.4`  
-  - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`  
+- **Solution**: Stop using your ISP’s DNS servers. Use public resolvers such as:
+  - Google DNS: `8.8.8.8`, `8.8.4.4`
+  - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`
   - Quad9 DNS: `9.9.9.9`, `149.112.112.112`
 
-2. **DNS over HTTPS/TLS** – For persistent DNS blocking  
-   - **Solution**: Configure DNS over TLS or HTTPS on your router or system  
+1. **DNS over HTTPS/TLS** – For persistent DNS blocking
+   - **Solution**: Configure DNS over TLS or HTTPS on your router or system
    - Encrypts DNS queries to prevent ISP interference
 
-3. **IPv6 issues** – IPv6 may be enabled but non-functional  
+2. **IPv6 issues** – IPv6 may be enabled but non-functional
    - **Solution**: Disable IPv6 in network settings if not properly configured
 
-4. **Flaresolverr dependency** – If using indexers protected by Cloudflare  
-   - Note: Flaresolverr is no longer maintained  
+3. **Flaresolverr dependency** – If using indexers protected by Cloudflare
+   - Note: Flaresolverr is no longer maintained
    - Flaresolverr (and alternatives) are actively being fought by Cloudflare's Development Team.
    - Search for alternatives if needed (e.g. Byparr)
    - Prowlarr does not endorse specific replacements
    - Encourage your indexer to remove Cloudflare protection. Often this is done for load due to scraping and can be resolved by the indexer implementing a proper API for automation use by Jackett and Prowlarr.
 
-5. **VPN/Proxy solutions** – For persistent connection issues  
-   - SOCKS5 proxy: Configure per problematic indexer  
-   - VPN: Route Prowlarr traffic through VPN (last resort)  
+4. **VPN/Proxy solutions** – For persistent connection issues
+   - SOCKS5 proxy: Configure per problematic indexer
+   - VPN: Route Prowlarr traffic through VPN (last resort)
    - See [VPNs, Jackett, and the Arrs](/prowlarr/faq#vpns-jackett-and-the-arrs) for important considerations
 
 ### Troubleshooting Steps
 
 1. Try different DNS servers first
-1. Test disabling IPv6  
-1. Configure DNS over TLS/HTTPS if simple DNS change doesn’t work  
-1. Use a SOCKS5 proxy for specific indexers if needed  
+1. Test disabling IPv6
+1. Configure DNS over TLS/HTTPS if simple DNS change doesn’t work
+1. Use a SOCKS5 proxy for specific indexers if needed
 1. Use a VPN only as a last resort
 
 ---
 
-> ISP interference with DNS/SSL is increasingly common. Start with DNS server changes, as this resolves most connection issues.  
+> ISP interference with DNS/SSL is increasingly common. Start with DNS server changes, as this resolves most connection issues.
 {.is-info}
 
 ## Cannot determine the frame size or a corrupted frame was received

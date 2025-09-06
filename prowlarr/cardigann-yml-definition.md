@@ -1,6 +1,6 @@
 ---
 title: Prowlarr Cardigann YML Definition
-description: 
+description:
 published: true
 date: 2023-04-30T23:03:37.294Z
 tags: prowlarr, needs-love, development
@@ -231,7 +231,7 @@ Each definition must start with a header like this:
 # [REQUIRED] Internal name of the indexer, must be unique. Usually it's the name of the
 # web site, in lower case, stripped of any special characters and space
 id: thepiratebay
-  
+
 # [OPTIONAL] This is an administrative function which should not be used by the end user.
 # It is used to maintain backward compatibility when renaming the id of an indexer
 # (the id is used in the torznab/download/search urls and in the indexer configuration file)
@@ -318,12 +318,12 @@ caps:
     - {id: 302, cat: PC/Mac, desc: "Mac", default: false}
     - {id: 901, cat: XXX, desc: "Porn SD", default: false}
     - {id: 902, cat: XXX, desc: "Porn HD", default: false}
-   
+
   # Specify one or more torznab search modes and attributes that are supported by the indexer.
   # Implementation note: Jackett doesn't care very much about this, but you should still
   # specify the correct modes, as most apps calling Jackett via the Torznab API depend on them.
   # The q attribute is the absolute minimum default, and you should only add the others if the
-  # tracker supports searching with them, especially imdbid, tvdbid, tmdbid, rid (TVRage), 
+  # tracker supports searching with them, especially imdbid, tvdbid, tmdbid, rid (TVRage),
   # tvmaze, traktid, doubanid, album, artist, label, track, author, title, publisher, year & genre.
   modes:
     search: [q]
@@ -410,7 +410,7 @@ id newznabcat
 8000 Other
 8010 Other/Misc
 8020 Other/Hashed
-100000  Custom   
+100000  Custom
 ```
 
 ## Settings
@@ -439,7 +439,7 @@ settings:
   - name: itorrents-links
     type: checkbox
     label: Add download links via itorrents.org
-    # [OPTIONAL] set the following to true if you want the checkbox to be ticked. 
+    # [OPTIONAL] set the following to true if you want the checkbox to be ticked.
     # The checkbox is un-ticked by default
     default: false
 
@@ -547,7 +547,7 @@ login:
     selector: img[alt="Security code"]
     # name of the target form element (captcha value)
     input: code
-  inputs: 
+  inputs:
     # use configured username and password from the settings
     username: "{{ .Config.username }}"
     password: "{{ .Config.password }}"
@@ -560,7 +560,7 @@ login:
   selectors: false
   # [OPTIONAL] Only needed in very limited cases.
   # Can be used to include values based on a result of a selector.
-  # e.g. if a CSRF token is hidden in JavaScript). 
+  # e.g. if a CSRF token is hidden in JavaScript).
   selectorinputs:
     # name of the required key-name,  for example: securitytoken
     securitytoken:
@@ -839,7 +839,7 @@ search:
         # append the timezone used by the tracker
         - name: append
           args: " +08:00" # CST
-        - name: dateparse 
+        - name: dateparse
           args: "yyyy-MM-ss HH:mm:ss zzz"
     # [REQUIRED] size of the torrent (units are handled automatically). if the site does not provide a size for all
     # results, then provide a default of "512 MB". If the site occasionally has a missing size then "0 B" is usual.
@@ -876,7 +876,7 @@ search:
           args: "\\((.+?)\\)"
     # [OPTIONAL] Factor for the download volume. In most cases it should be set to "1"
     # Set to "0" if a torrent is freeleech, "0.5" if only 50% is counted, "0.75" if only 75% is counted.
-    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted). 
+    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted).
     downloadvolumefactor:
       case:
         img.pro_free: 0
@@ -998,7 +998,7 @@ search:
     # [REQUIRED] If the API has different paths for some queries, you can use conditionals to define them
     - path: "{{ if .Keywords }}api/v2/torrent/search{{ else }}api/torrent/latest{{ end }}"
       # [OPTIONAL] The default is to send the query as a http get, the other choice is http post
-      #            You can use conditionals to select the method for different path requirements 
+      #            You can use conditionals to select the method for different path requirements
       method: "{{ if .Keywords }}post{{ else }}get{{ end }}"
       # [REQUIRED] The response block is necessary to define parsing of a JSON response
       response:
@@ -1043,16 +1043,16 @@ search:
     # If you have not defined an attribute in the rows block above, then all the fields are extracted
     # from the rows set.
     # If you have defined an attribute in the rows block above, then a prefix of .. means that this field
-    # is extracted directly from the rows set, and without a .. prefix you are indicating that the field is 
+    # is extracted directly from the rows set, and without a .. prefix you are indicating that the field is
     # to be extracted from the attribute subset.
     #
     # Any fields below that do not have either [OPTIONAL] or [REQUIRED] are working fields.
     # You give them a name and use them to extract additional data from the row sets, which you can use in
-    # conditionals for setting strings for other fields, or as direct values for concatenating into strings. 
+    # conditionals for setting strings for other fields, or as direct values for concatenating into strings.
     #
     # [REQUIRED] tracker category id (id field from caps/categorymappings)
     # While not required, it is usual to return a category for Torznab apps to use,
-    # so if the site does not provide one in its results, then use category Other.     
+    # so if the site does not provide one in its results, then use category Other.
     category:
       selector: category
     # [ALTERNATIVE] if the site does not provide a category id for results,
@@ -1155,7 +1155,7 @@ search:
     grabs:
       selector: completed
     # [REQUIRED] number of seeders (if the site does not provide seeders for all results,
-    # then provide a default of "1"). 
+    # then provide a default of "1").
     seeders:
       selector: seeds
     # [OPTIONAL] number of leechers (if the site does not provide leechers for all results,
@@ -1170,7 +1170,7 @@ search:
       selector: genres
     # [OPTIONAL] Factor for the download volume. In most cases it should be set to "1"
     # Set to "0" if a torrent is freeleech, "0.5" if only 50% is counted, "0.75" if only 75% is counted.
-    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted). 
+    # if a site states that the download is 75% free then the DLVF is 0.25 (only 25% is counted).
     downloadvolumefactor:
       selector: freeleech
       # in this example the freeleech provided by the API is 0=false, 1=true
@@ -1293,7 +1293,7 @@ download:
       id: "{{ .DownloadUri.Query.id }}"
   # [OPTIONAL] If you only have a magnet hash then this method will allow you to automatically generate a magnet URI
   # For use with Public or Semi-Private Indexers.
-  # Note that this option is not suitable for Private sites which may require ONLY the use of their own tracker and 
+  # Note that this option is not suitable for Private sites which may require ONLY the use of their own tracker and
   # have DHT DISABLED and no other PUBLIC trackers on the magnet.
   infohash:
     # [OPTIONAL] Can be true or false (default is false)
@@ -1380,13 +1380,13 @@ Example of: if or ... else ... end
 ```yaml
 search:
   paths:
-    # when any of the 3 vars in brackets has a value 
-    # then set the path to search 
+    # when any of the 3 vars in brackets has a value
+    # then set the path to search
     # otherwise set it to music
     - path: "{{ if or (.Query.Album) (.Query.Artist) (.Keywords) }}search{{ else }}music{{ end }}"
   inputs:
-    # when either/both of the two query vars in the brackets have a value 
-    # then load whichever vars have a value to the string 
+    # when either/both of the two query vars in the brackets have a value
+    # then load whichever vars have a value to the string
     # and when neither var has a value then load the value from .Keywords to the string
     q: "{{ if or (.Query.Album) (.Query.Artist) }}{{ or (.Query.Album) (.Query.Artist) }}{{ else }}{{ .Keywords }}{{ end }}"
 ```
@@ -1395,7 +1395,7 @@ Example of: if and ... else ... end
 
 ```yaml
     title:
-      # when both the vars in brackets have a value 
+      # when both the vars in brackets have a value
       # then load the value from title_polish to the string
       # when only one of the vars has a value, or both vars have no value
       # then load the value from title_phase1 to the string
@@ -1464,7 +1464,7 @@ Example:
 
 ## range (with indexing)
 
-If a parameter requires indexing then use the following to generate an incremental index starting with zero.  
+If a parameter requires indexing then use the following to generate an incremental index starting with zero.
 
 Syntax: `{{ range $i, $e := .Variable }}<prefix[{{$i}}]>{{.}}<suffix>{{end}}`
 
@@ -1547,7 +1547,7 @@ Note that these are only available during search queries.
 
 the following are boolean-like variables in that they return either the string "True" or are null. Can be used in if-else-end statements.
 
-```
+```yaml
 .Query.IsBookSearch   # t=book
 .Query.IsDoubanQuery  # from t=tvsearch or t=movie
 .Query.IsGenreQuery   # from t=tvsearch or t=movie or t=music or t=book
@@ -2031,7 +2031,7 @@ selector: div[class="resultdivbotton"] div[class="resulttime"] div[class="result
 filters:
   # input: Tue, 19 Sep 2017 21:21:52 +12
   - name: hexdump
-  # result in the log: MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: T(54)u(75)e(65),(2C) (20)1(31)9(39) (20)S(53)e(65)p(70) (20)2(32)0(30)1(31)7(37) (20)2(32)1(31):(3A)2(32)1(31):(3A)5(35)2(32) (20)+(2B)1(31)2(32) 
+  # result in the log: MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump: T(54)u(75)e(65),(2C) (20)1(31)9(39) (20)S(53)e(65)p(70) (20)2(32)0(30)1(31)7(37) (20)2(32)1(31):(3A)2(32)1(31):(3A)5(35)2(32) (20)+(2B)1(31)2(32)
 ```
 
 ## strdump
@@ -2057,7 +2057,7 @@ fields:
     filters:
       # input: Star Trek 1080p
       - name: strdump
-        args: title 
+        args: title
       # result in the log: # MM-dd hh:mm:ss Debug CardigannIndexer (trackername): strdump(title): Star Trek 1080p
   download:
     selector: a[href^="details.php/?id="]

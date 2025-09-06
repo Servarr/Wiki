@@ -1,9 +1,9 @@
 ---
 title: Sonarr Supported
-description: 
+description:
 published: true
 date: 2024-08-02T12:07:02.466Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
 ---

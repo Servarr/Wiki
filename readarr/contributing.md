@@ -1,6 +1,6 @@
 ---
 title: Readarr Contributing (Retired)
-description: 
+description:
 published: true
 date: 2022-09-26T15:56:42.368Z
 tags: readarr, development, contributing
@@ -199,7 +199,7 @@ public IndexerCheck(ILocalizationService localizationService)
 {
   _localizationService = localizationService;
 }
-        
+
 var translated = _localizationService.GetLocalizedString("IndexerHealthCheckNoIndexers")
 ```
 

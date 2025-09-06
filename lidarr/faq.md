@@ -1,6 +1,6 @@
 ---
 title: Lidarr FAQ
-description: 
+description:
 published: true
 date: 2025-03-30T15:47:51.456Z
 tags: lidarr, needs-love, faq
@@ -307,8 +307,8 @@ mv <foldername...> <foldername>
 
 #### Using file system directly
 
-- Find the location of the AppData directory for Lidarr  
-  - Via the Lidarr UI go to System => About  
+- Find the location of the AppData directory for Lidarr
+  - Via the Lidarr UI go to System => About
   - [Lidarr Appdata Directory](/lidarr/appdata-directory)
 - Stop Lidarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -331,8 +331,8 @@ mv <foldername...> <foldername>
 #### Using file system backup
 
 - Re-install Lidarr (if applicable / not already installed)
-- Find the location of the AppData directory for Lidarr  
-  - Running Lidarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Lidarr
+  - Running Lidarr once and via the UI go to System => About
   - [Lidarr Appdata Directory](/lidarr/appdata-directory)
 - Stop Lidarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -346,11 +346,11 @@ mv <foldername...> <foldername>
 {.is-warning}
 
 - Re-install Lidarr (if applicable / not already installed)
-- Find the location of the AppData directory for Lidarr  
-  - Running Lidarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Lidarr
+  - Running Lidarr once and via the UI go to System => About
   - [Lidarr Appdata Directory](/lidarr/appdata-directory)
 - Stop Lidarr
-- Connect to the Synology NAS through SSH and log in as root  
+- Connect to the Synology NAS through SSH and log in as root
 
 > On some installations, the user is different than the below commands: `chown -R sc-Lidarr:Lidarr *` {.is-info}
 

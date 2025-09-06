@@ -1,6 +1,6 @@
 ---
 title: Readarr FAQ (Retired)
-description: 
+description:
 published: true
 date: 2025-03-30T15:48:25.855Z
 tags: readarr, needs-love, troubleshooting, faq
@@ -284,8 +284,8 @@ This change was due to not have our server get killed by people updating lists e
 
 #### Using file system directly
 
-- Find the location of the AppData directory for Readarr  
-  - Via the Readarr UI go to System => About  
+- Find the location of the AppData directory for Readarr
+  - Via the Readarr UI go to System => About
   - [Readarr Appdata Directory](/readarr/appdata-directory)
 - Stop Readarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -308,8 +308,8 @@ This change was due to not have our server get killed by people updating lists e
 #### Using file system backup
 
 - Re-install Readarr (if applicable / not already installed)
-- Find the location of the AppData directory for Readarr  
-  - Running Readarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Readarr
+  - Running Readarr once and via the UI go to System => About
   - [Readarr Appdata Directory](/readarr/appdata-directory)
 - Stop Readarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -323,11 +323,11 @@ This change was due to not have our server get killed by people updating lists e
 {.is-warning}
 
 - Re-install Readarr (if applicable / not already installed)
-- Find the location of the AppData directory for Readarr  
-  - Running Readarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Readarr
+  - Running Readarr once and via the UI go to System => About
   - [Readarr Appdata Directory](/readarr/appdata-directory)
 - Stop Readarr
-- Connect to the Synology NAS through SSH and log in as root  
+- Connect to the Synology NAS through SSH and log in as root
 
 > On some installations, the user is different than the below commands: `chown -R sc-Readarr:Readarr *`
 {.is-info}

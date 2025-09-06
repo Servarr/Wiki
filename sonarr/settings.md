@@ -96,7 +96,7 @@ dateCreated: 2021-06-11T23:29:12.300Z
   - [Calendar](#calendar)
   - [Dates](#dates)
   - [Style](#style)
-  
+
 This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
 
 # Menu options
@@ -447,7 +447,7 @@ Name for the `Specials` (Season) folder
 > Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Sonarr uses.
 {.is-info}
 
-Profiles is where Custom Format Scores are configured.  
+Profiles is where Custom Format Scores are configured.
 
 ## Custom Format Conditions
 
@@ -769,7 +769,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Completed Download Handling
   - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
     - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the below table. Torrents must also stay in the same category.
-  
+
 ### Torrent Client Remove Download Compatibility
 
 - Sonarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. Seed goals can be set globally in the client itself or per tracker in \*Arr settings for each indexer. See the table below for client compatibility.

@@ -1,9 +1,9 @@
 ---
 title: Sonarr FAQ
-description: 
+description:
 published: true
 date: 2025-01-25T13:43:22.908Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
@@ -77,8 +77,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 #### Using file system directly
 
-- Find the location of the AppData directory for Sonarr  
-  - Via the Sonarr UI go to System => About  
+- Find the location of the AppData directory for Sonarr
+  - Via the Sonarr UI go to System => About
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
@@ -101,8 +101,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 #### Using file system backup
 
 - Re-install Sonarr (if applicable / not already installed)
-- Find the location of the AppData directory for Sonarr  
-  - Running Sonarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Sonarr
+  - Running Sonarr once and via the UI go to System => About
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
@@ -116,11 +116,11 @@ Active searching (via the indexer's API) is only done in the below situations. N
 {.is-warning}
 
 - Re-install Sonarr (if applicable / not already installed)
-- Find the location of the AppData directory for Sonarr  
-  - Running Sonarr once and via the UI go to System => About  
+- Find the location of the AppData directory for Sonarr
+  - Running Sonarr once and via the UI go to System => About
   - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 - Stop Sonarr
-- Connect to the Synology NAS through SSH and log in as root  
+- Connect to the Synology NAS through SSH and log in as root
 
 > On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr *` {.is-info}
 
@@ -357,7 +357,7 @@ If you have adjusted your Series Name format after Sonarr has already created so
 > This by no means is an all inclusive list of shows that have known issues with scene mapping; however, these are some common ones.
 {.is-info}
 
-- This is an incomplete list of the known shows and how/why they're problematic:  
+- This is an incomplete list of the known shows and how/why they're problematic:
 - American Dad {#problemshow-americandad}
   - Due to network season changes, American Dad is typically off by 1 season between releases and TVDb. Refer to the XEM map for details
   - [American Dad](https://thexem.info/xem/show/4948) is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
@@ -463,7 +463,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - TVDb dictates - with exceptions for streaming services - that the airtime and date is based on the Primary Airing Network's local time in the country's most popular city. [See TVDb's FAQ entry for details](https://support.thetvdb.com/kb/faq.php?id=29)
 - Episode Air Dates and Air Time on TVDb is converted to UTC and uses Sonarr's Timezone that is mapped in Skyhook by the Sonarr team for the Network TVDb has for the series.
   - In the rare case a network is not mapped then the time in TVDb will be assumed to be US EST (UTC-5).
-  - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.sonarr.tv/) for support with updating the Network's timezone.  
+  - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.sonarr.tv/) for support with updating the Network's timezone.
 
 # Sonarr Common Problems
 
