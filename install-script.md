@@ -1,28 +1,31 @@
 ---
 title: Servarr Installation Script
-description: Common Installation Script for the Servarr Suite of Applications
+description: Community Installation Script for the Servarr Suite of Applications (excludes retired Readarr)
 published: true
 date: 2024-04-15T10:13:30.679Z
-tags: installation, scripts, sonarr, radarr, lidarr, readarr, prowlarr, whisparr
+tags: installation, scripts, sonarr, radarr, lidarr, prowlarr, whisparr
 editor: markdown
 dateCreated: 2022-02-03T15:12:29.483Z
 ---
 
 # Servarr Installation Script
 
-This is a community created and community supported **unofficial** [script to handle installation of Servarr Apps (Lidarr/Prowlarr/Radarr/Readarr/Whisparr)](https://github.com/Servarr/Wiki/blob/master/servarr/servarr-install-script.sh) on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
+This is a community created and community supported **unofficial** [script to handle installation of Servarr Apps (Lidarr/Prowlarr/Radarr/Whisparr)](https://github.com/Servarr/Wiki/blob/master/servarr/servarr-install-script.sh) on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
+
+> **Note:** Readarr is not included in this script as it is a retired application no longer in active development.
+{.is-info}
 
 *It is assumed you have a basic knowledge of linux or the ability to google / learn as necessary. Otherwise it is suggested to use an OS you know and understand*
 
 ## Installing
 
 > This will install the selected application to /opt. It will run application as the user and group you configure.
-> For Lidarr/Radarr/Readarr/Whisparr - you should use a common group that is the same that your download client runs as and media server runs as to ensure ownership and permissions are sane and all files are accessible.
+> For Lidarr/Radarr/Whisparr - you should use a common group that is the same that your download client runs as and media server runs as to ensure ownership and permissions are sane and all files are accessible.
 {.is-info}
 
 Please be aware of the following common mistake around permissions.
 
-> Two things to keep in mind are that Lidarr/Radarr/Readarr/Whisparr require read and write access to your download client's download directory and whatever folder you'll configure as your root (library or media) folder.
+> Two things to keep in mind are that Lidarr/Radarr/Whisparr require read and write access to your download client's download directory and whatever folder you'll configure as your root (library or media) folder.
 > Ideally each app is running as its own user and common group of `media` with permissions of `775` and `664` which is a UMask of `002`
 > \* Your download clients and media server run as and are a part of the group you input
 > \* Your paths used by your download clients and media server are accessible (read/write) to the group you input

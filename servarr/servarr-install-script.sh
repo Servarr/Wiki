@@ -68,7 +68,7 @@ echo "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} 
 echo ""
 echo "Select the application to install: "
 echo ""
-select app in lidarr prowlarr radarr readarr whisparr whisparr-v3 quit; do
+select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
 
     case $app in
     lidarr)
@@ -90,13 +90,6 @@ select app in lidarr prowlarr radarr readarr whisparr whisparr-v3 quit; do
         app_prereq="curl sqlite3" # Required packages
         app_umask="0002"          # UMask the Service will run as
         branch="master"           # {Update me if needed} branch to install
-        break
-        ;;
-    readarr)
-        app_port="8787"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="develop"          # {Update me if needed} branch to install
         break
         ;;
     whisparr)
