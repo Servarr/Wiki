@@ -1,9 +1,9 @@
 ---
 title: Installing Docker on a Synology ARM NAS
-description: 
+description: Step-by-step guide for installing Docker on ARM-based Synology NAS devices and running Servarr applications
 published: true
 date: 2022-05-18T15:47:17.201Z
-tags: docker, synology
+tags: docker, synology, arm, installation, nas
 editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
 ---

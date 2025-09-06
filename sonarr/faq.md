@@ -1,9 +1,9 @@
 ---
 title: Sonarr FAQ
-description:
+description: Frequently asked questions about Sonarr installation, configuration, troubleshooting, and common issues
 published: true
 date: 2025-01-25T13:43:22.908Z
-tags:
+tags: sonarr, faq, troubleshooting, configuration, installation
 editor: markdown
 dateCreated: 2021-06-09T18:39:33.208Z
 ---
