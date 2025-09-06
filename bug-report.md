@@ -1,6 +1,6 @@
 ---
 title: Report a Bug
-description: 
+description:
 published: true
 date: 2023-06-26T02:47:03.542Z
 tags: radarr, sonarr, lidarr, readarr, prowlarr
@@ -18,7 +18,7 @@ When reporting a bug, please be prepared to supply the following information
 
 - Current Behavior
 - Expected Behavior
-- Steps needed to report the issue (be as thourough as possible)
+- Steps needed to report the issue (be as thorough as possible)
 - Information about your system and the application version you are running
 - Trace Logs (if unsure how to provide these, please checkout [this page](https://wiki.servarr.com/radarr/troubleshooting#logging-and-log-files)
 

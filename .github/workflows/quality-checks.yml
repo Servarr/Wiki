@@ -1,0 +1,75 @@
+name: Documentation Quality Checks
+
+on:
+  push:
+    branches: [master, main]
+    paths: ["**.md", "**.yaml", "**.yml"]
+  pull_request:
+    branches: [master, main]
+    paths: ["**.md", "**.yaml", "**.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    name: Documentation Quality Checks
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Cache pre-commit hooks
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files
+
+  spell-check:
+    runs-on: ubuntu-latest
+    name: Spell Check
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install typos
+        uses: taiki-e/install-action@v2
+        with:
+          tool: typos-cli
+
+      - name: Run spell check
+        run: typos --config _typos.toml
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+    name: Markdown Lint
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+
+      - name: Run markdownlint
+        run: markdownlint --config .markdownlint.json "**/*.md"

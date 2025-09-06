@@ -1,6 +1,6 @@
 ---
 title: Prowlarr Search
-description: 
+description:
 published: true
 date: 2025-07-15T20:42:03.748Z
 tags: prowlarr
@@ -27,7 +27,7 @@ To initiate a search, click on `Search` on the left menu. There will be a mostly
 > These are generally formatted as `{VariableName:SearchValue}` e.g. For a TV Search of The Simpsons Season 32 the search input would be `{TvdbId:71663} {Season:32}`
 {.is-info}
 
-> Note that not all Indexers upport all query types {.is-info}
+> Note that not all Indexers support all query types {.is-info}
 
 - Indexers - Choose your indexers in the Indexers drop-down. You can check "Usenet" or "Torrents" to select all of the indexers in those categories automatically, or you can select specific indexers for your search from either group.
 - Category - Choose the categories you want to search on your indexers from the drop-down. You can select top-level categories (TV, Movies, etc.) to select all of the sub-categories automatically, or you can select specific categories from any of the groups.
@@ -46,7 +46,7 @@ You can bulk grab results at once by checking the select boxes on the left side 
 
 - Standard Newznab/Torznab compatible endpoint/parameters. You can adjust the queries accordingly for your needs per the defined standards.
 
-> An aggregate multi-indexer endpoint will not be added due to the significant drawbacks of said functionaliy {.is-info}
+> An aggregate multi-indexer endpoint will not be added due to the significant drawbacks of said functionality {.is-info}
 
 ### API Key in Query
 
@@ -74,7 +74,7 @@ Parameters
   - `-2` is all torrents
   - `-1` is all usenet
   - Indexer Ids
-- `categories` - add a new parameter-value pair for each category to search  
+- `categories` - add a new parameter-value pair for each category to search
   - leave off parameter for all
 - `type` - the search type to perform
   - `search` - Basic Text Query

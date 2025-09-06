@@ -1,0 +1,26 @@
+[default]
+# Only check markdown files
+extend-glob = ["*.md"]
+
+[default.extend-words]
+# Technical terms and proper nouns commonly used in the Servarr ecosystem
+api = "api"
+arr = "arr"
+arrs = "arrs"
+docker = "docker"
+lidarr = "lidarr"
+prowlarr = "prowlarr"
+radarr = "radarr"
+readarr = "readarr"
+servarr = "servarr"
+sonarr = "sonarr"
+whisparr = "whisparr"
+
+# Intentional names/terms that shouldn't be "corrected"
+broadcas = "broadcas" # Part of tracker name BroadcasTheNet
+hda = "hda" # Tracker acronym
+nam = "nam" # Part of "Viet Nam"
+searchin = "searchin" # API field name
+tork = "tork" # Tracker acronym
+tre = "tre" # Part of tracker name TreZzoR
+youre = "youre" # Used in anchor links like #youre-using-a-mapped-network-drive
