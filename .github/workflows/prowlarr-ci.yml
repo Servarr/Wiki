@@ -25,12 +25,20 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "18"
+
       - name: Install pip packages
         run: |
           pip3 install -U --no-cache-dir \
             requests==2.31.0 \
             pycountry==23.12.11 \
             python_iso639==2024.2.7
+
+      - name: Install pre-commit
+        run: pip install pre-commit
 
       - name: Update supported indexers markdown
         run: |
@@ -42,6 +50,10 @@ jobs:
           echo "PROWLARR_VERSION=$APP_VERSION" >> $GITHUB_STEP_SUMMARY
           python scripts/convert_prowlarr_supported_indexers_to_markdown.py -k "${{ env.API_KEY }}" -u "http://localhost:9696" -o "prowlarr/supported-indexers.md" -s "prowlarr/supported-indexers.md.hash"
           docker stop prowlarr
+
+      - name: Run pre-commit on updated files
+        run: |
+          pre-commit run --files prowlarr/supported-indexers.md || true
 
       - name: Commit changes
         run: |
