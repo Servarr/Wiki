@@ -17,6 +17,7 @@ dateCreated: 2025-09-07T01:24:37.296463
 - Current `Master` Version | ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/master/changes)
 - Current `Develop` Version | ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/develop/changes)
 - Current `Nightly` Version | ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes)
+
 ---
 
 ## Torrents
@@ -615,7 +616,6 @@ dateCreated: 2025-09-07T01:24:37.296463
 |[Zelka\.org](https://zelka.org/){#zelkaorg}|Zelka (Zamunda) is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
-
 
 ## Usenet
 
