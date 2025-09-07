@@ -10,7 +10,7 @@ repos:
         exclude: \.(png|jpg|jpeg|gif|svg|webp)$
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: end-of-file-fixer
-        exclude: \.(md|png|jpg|jpeg|gif|svg|webp)$
+        exclude: \.(md|hash|png|jpg|jpeg|gif|svg|webp)$
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: check-yaml
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
