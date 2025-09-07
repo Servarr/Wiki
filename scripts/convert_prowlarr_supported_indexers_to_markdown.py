@@ -551,11 +551,11 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         "### Public Trackers" +
         WIKI_2NEWLINE +
         tbl_torrent_public +
-        WIKI_1NEWLINE +
+        WIKI_2NEWLINE +
         "### Semi-Private Trackers" +
         WIKI_2NEWLINE +
         tbl_torrent_semiprivate +
-        WIKI_1NEWLINE +
+        WIKI_2NEWLINE +
         "### Private Trackers" +
         WIKI_2NEWLINE +
         tbl_torrent_private
@@ -568,11 +568,11 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         "### Public Indexers" +
         WIKI_2NEWLINE +
         tbl_usenet_public +
-        WIKI_1NEWLINE +
+        WIKI_2NEWLINE +
         "### Semi-Private Indexers" +
         WIKI_2NEWLINE +
         tbl_usenet_semiprivate +
-        WIKI_1NEWLINE +
+        WIKI_2NEWLINE +
         "### Private Indexers" +
         WIKI_2NEWLINE +
         tbl_usenet_private
@@ -596,7 +596,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         f"Other indexers may be available via either Generic Newznab or Generic Torznab.\n"
         f"published: true\n"
         f"date: {date}\n"
-        f"tags: prowlarr, indexers\n"
+        f"tags: prowlarr, indexers, reference\n"
         f"editor: markdown\n"
         f"dateCreated: {date}\n"
         f"---"
@@ -611,7 +611,7 @@ def main(app_commit, indexer_commit, build, app_apikey, output_file, hashfile, a
         "&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/develop/changes)\n"
         "- Current `Nightly` Version | ![Current Nightly/Unstable]"
         "(https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly"
-        "&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes)\n"
+        "&query=%24%5B0%5D.version&url=https://prowlarr.servarr.com/v1/update/nightly/changes)\n\n"
         "---"
     )
 
