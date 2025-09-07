@@ -1,0 +1,5 @@
+# Python dependencies for Prowlarr indexer script
+requests==2.31.0
+pycountry==23.12.11
+python_iso639==2024.2.7
+pre-commit
