@@ -59,6 +59,7 @@ The Servarr Team
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/readarr/troubleshooting)
+- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 {.links-list}
 - [<i class="fa-solid fa-signal"></i>&emsp;Readarr Metadata Issues *Status of Metadata and Known Issues*](/readarr/metadata-issues)
 

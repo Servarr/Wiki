@@ -35,6 +35,7 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 ## General Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)
+- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 {.links-list}
 
 ## Docker

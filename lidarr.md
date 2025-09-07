@@ -39,6 +39,7 @@ dateCreated: 2021-05-16T23:39:16.456Z
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/lidarr/troubleshooting)
+- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 {.links-list}
 
 # Development

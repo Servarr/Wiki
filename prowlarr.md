@@ -38,6 +38,7 @@ dateCreated: 2021-05-24T03:32:41.926Z
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/prowlarr/troubleshooting)
+- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 {.links-list}
 
 # Development

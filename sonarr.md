@@ -40,6 +40,7 @@ dateCreated: 2021-05-16T16:59:52.354Z
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/sonarr/troubleshooting)
+- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 {.links-list}
 
 # Development
