@@ -1,0 +1,32 @@
+# --- Default behavior ---
+# Normalize line endings for all text files to LF in repo
+* text=auto eol=lf
+
+# --- Documentation (Markdown / text) ---
+*.md     text eol=lf
+*.txt    text eol=lf
+
+# --- Scripts ---
+*.sh     text eol=lf
+*.bash   text eol=lf
+*.zsh    text eol=lf
+
+# --- GitHub Actions workflows ---
+*.yml    text eol=lf
+*.yaml   text eol=lf
+
+# --- Config files ---
+.gitattributes text eol=lf
+.gitignore     text eol=lf
+.editorconfig  text eol=lf
+
+# --- Binary files (never auto-converted) ---
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.ico binary
