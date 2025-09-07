@@ -40,6 +40,12 @@ jobs:
       - name: Install pre-commit
         run: pip install pre-commit
 
+      - name: Cache pre-commit hooks
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+
       - name: Update supported indexers markdown
         run: |
           echo "<Config><LaunchBrowser>False</LaunchBrowser><ApiKey>${{ env.API_KEY }}</ApiKey></Config>" | tee prowlarr-config.xml
@@ -53,7 +59,15 @@ jobs:
 
       - name: Run pre-commit on updated files
         run: |
-          pre-commit run --files prowlarr/supported-indexers.md || true
+          echo "Running pre-commit hooks on generated files..."
+          pre-commit install
+          pre-commit run --files prowlarr/supported-indexers.md || echo "Pre-commit applied formatting fixes"
+
+          # Check if pre-commit made any changes
+          if ! git diff --quiet prowlarr/supported-indexers.md; then
+            echo "Pre-commit made formatting changes to supported-indexers.md"
+            git add prowlarr/supported-indexers.md
+          fi
 
       - name: Commit changes
         run: |
@@ -61,10 +75,10 @@ jobs:
           git config --global user.email "development@lidarr.audio"
           git add prowlarr/supported-indexers.md
           git add prowlarr/supported-indexers.md.hash
-          if git status | grep -q modified
+          if git diff --staged --quiet
           then
-            git commit -m "[script] supported indexers $(date --iso-8601=seconds)"
-            git push
-          else
             echo "No changes since last run"
+          else
+            git commit -m "docs: update supported indexers $(date --iso-8601=seconds)" -m "Automated update of Prowlarr supported indexers list" -m "- Generated from Prowlarr build $PROWLARR_VERSION" -m "- Applied pre-commit formatting and linting fixes"
+            git push
           fi
