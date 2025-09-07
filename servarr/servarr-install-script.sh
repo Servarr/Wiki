@@ -19,7 +19,7 @@
 ### Version v3.0.10 2024-01-04 - Bakerboy448 - Misc updates and refactoring. Move to own script file.
 ### Version v3.0.11 2024-01-06 - StevieTV - Exit script when ran from installdir
 ### Version v3.0.12 2024-04-09 - nostrus-dominion - moved root check, added title splash, added colors, attempted to improve readability, check for installed prerequisites before bothering apt, supressed tarball extraction, added some sleep timers.
-### Additional Updates by: The Servarr Community
+### Version v3.0.13+ 2024+ - Additional Updates by: The Servarr Community
 
 ### Boilerplate Warning
 #THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -37,8 +37,8 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.14"
-scriptdate="2024-12-07" # change this later
+scriptversion="3.1.15"
+scriptdate="2025-09-06" # change this later
 
 set -euo pipefail
 
