@@ -18,7 +18,8 @@ VPNs can cause significant problems with Servarr applications when used incorrec
 
 - **BitTorrent traffic** may benefit from VPN protection in some jurisdictions
 - **Usenet traffic** does NOT require VPN protection (uses encrypted SSL connections)
-- For most countries including the UK, using **secure DNS** is sufficient instead of VPNs
+- For most countries including the UK, using **secure DNS** is sufficient instead of VPNs and **fixes indexer connectivity issues**
+- Only your **torrent client** should be behind a VPN - not the \*Arr applications
 - VPNs are often unnecessary and cause more problems than they solve
 
 > **To be clear it is not a matter if VPNs will cause issues with the \*Arr Apps, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
@@ -32,7 +33,7 @@ VPNs can cause significant problems with Servarr applications when used incorrec
 
 ## Secure DNS Alternative (Recommended)
 
-For most users, **secure DNS is sufficient instead of VPNs** and resolves most access issues:
+For most users, **secure DNS is sufficient instead of VPNs** and **fixes indexer connectivity issues** without the complexity and problems of VPN setups:
 
 ### Standard DNS Servers
 
@@ -78,9 +79,11 @@ Use download clients with built-in VPN support:
 
 Use **[Hotio's base image](https://hotio.dev/containers/base/)** and route all download clients through it. This is the only acceptable use case for sharing a VPN container.
 
-### Selective VPN (Prowlarr)
+### Selective VPN (Prowlarr Indexers Only)
 
-Add your VPN provider's proxy to `Settings -> Indexers -> Indexer Proxies` and apply only to specific indexers. See [TRaSH Guide for Prowlarr Proxy Setup](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/).
+If specific indexers require VPN access, add your VPN provider's proxy to `Settings -> Indexers -> Indexer Proxies` and apply only to those specific indexers. This allows **only indexer traffic** to go through the VPN while keeping the main application free from VPN-related issues.
+
+See the [TRaSH Guide for Prowlarr Proxy Setup](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/) for detailed configuration instructions.
 
 ## VPN Provider Requirements
 
