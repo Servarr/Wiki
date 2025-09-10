@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-10T01:18:16.199969
+date: 2025-09-10T04:08:44.204353
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-10T01:18:16.199969
+dateCreated: 2025-09-10T04:08:44.204353
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.1.5182` / [Commit: f17cf6144f11450aea353dc2630fdc56ff51babd](https://github.com/Prowlarr/Prowlarr/commit/f17cf6144f11450aea353dc2630fdc56ff51babd)
-  - [Prowlarr Indexers Commit: 430a27958e2eec3888539a08c046d7f72909b0fa](https://github.com/Prowlarr/Indexers/commit/430a27958e2eec3888539a08c046d7f72909b0fa)
+  - [Prowlarr Indexers Commit: 1f3ad554a3afa6669192d636f1a5644daa9ce663](https://github.com/Prowlarr/Indexers/commit/1f3ad554a3afa6669192d636f1a5644daa9ce663)
 
 ---
 
@@ -108,7 +108,6 @@ dateCreated: 2025-09-10T01:18:16.199969
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern ASIAN media including anime, manga, games and JAV|English (United States)|
 |[TheRARBG](https://therarbg.to/){#therarbg}|TheRARBG is a Public site inspired by RARBG\.to for MOVIES / TV / GENERAL|English (United States)|
 |[Tokyo Toshokan](https://www.tokyotosho.info/){#tokyotosho}|Tokyo Toshokan is a Public BitTorrent Library for JAPANESE Media|English (United States)|
-|[Torlock](https://www.torlock.com/){#torlock}|Torlock is a torrent search site that lists verified torrents only for TV series and movies|English (United States)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN Public Torrent Tracker|Russian (Russia)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
@@ -135,7 +134,6 @@ dateCreated: 2025-09-10T01:18:16.199969
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
-|[YourBittorrent](https://yourbittorrent.com/){#yourbittorrent}|YourBittorrent is a Public torrent index|English (United States)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://www.zetorrents1.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[ZkTorrent](https://www.zktorrent5.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
@@ -195,7 +193,7 @@ dateCreated: 2025-09-10T01:18:16.199969
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep09.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep10.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
