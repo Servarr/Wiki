@@ -2,8 +2,8 @@
 title: Prowlarr Troubleshooting
 description: Comprehensive troubleshooting guide for common Prowlarr issues and problems
 published: true
-date: 2025-08-28T01:31:53.162Z
-tags: prowlarr, troubleshooting, problems, issues, debugging, help
+date: 2025-09-11T17:14:35.382Z
+tags: prowlarr, troubleshooting, help, problems, issues, debugging
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
 ---
@@ -248,7 +248,6 @@ The indexer or application server terminated the connection unexpectedly during 
    - **Solution**: Disable IPv6 in network settings if not properly configured
 
 3. **Flaresolverr dependency** – If using indexers protected by Cloudflare
-   - Note: Flaresolverr is no longer maintained
    - Flaresolverr (and alternatives) are actively being fought by Cloudflare's Development Team.
    - Search for alternatives if needed (e.g. Byparr)
    - Prowlarr does not endorse specific replacements
