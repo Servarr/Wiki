@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-10T04:08:44.204353
+date: 2025-09-11T01:20:22.588803
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-10T04:08:44.204353
+dateCreated: 2025-09-11T01:20:22.588803
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.1.5182` / [Commit: f17cf6144f11450aea353dc2630fdc56ff51babd](https://github.com/Prowlarr/Prowlarr/commit/f17cf6144f11450aea353dc2630fdc56ff51babd)
-  - [Prowlarr Indexers Commit: 1f3ad554a3afa6669192d636f1a5644daa9ce663](https://github.com/Prowlarr/Indexers/commit/1f3ad554a3afa6669192d636f1a5644daa9ce663)
+  - [Prowlarr Indexers Commit: fd288f194b1af80c9884fe4306f3b2cc5973bee4](https://github.com/Prowlarr/Indexers/commit/fd288f194b1af80c9884fe4306f3b2cc5973bee4)
 
 ---
 
@@ -527,6 +527,7 @@ dateCreated: 2025-09-10T04:08:44.204353
 |[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-DAY MOVIES / TV / GENERAL|English (United States)|
 |[SewerPT](https://sewerpt.com/){#sewerpt}|SewerPT (下水道) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[SexTorrent](https://sextorrent.eu/){#sextorrent}|SexTorrent is a Private Torrent Tracker for 3X|English (United States)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|Shareisland is a ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Shazbat](https://www.shazbat.tv/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
