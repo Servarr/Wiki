@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: Comprehensive troubleshooting guide for common Prowlarr issues and problems
 published: true
-date: 2025-09-11T17:19:00.380Z
+date: 2025-09-12T14:59:15.099Z
 tags: prowlarr, troubleshooting, help, problems, issues, debugging
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -242,6 +242,10 @@ The indexer or application server terminated the connection unexpectedly during 
     Check DNS settings, ensure IPv6 is working or disabled, consider using different DNS servers, or try a VPN/proxy if needed.
     See: 'https://wiki.servarr.com/prowlarr/troubleshooting#dns-ssl-connection-issues'
     Connection refused (site.tld:443)
+    ```
+- SSL Related issues. SSL errors are almost always ISP interception.
+    ```none
+    Unable to connect to indexer. This is typically caused by DNS/SSL issues. Check DNS settings, ensure IPv6 is working or disabled, consider using different DNS servers, or try a VPN/proxy if needed. See: 'https://wiki.servarr.com/prowlarr/troubleshooting#dns-ssl-connection-issues' The SSL connection could not be established, see inner exception.
     ```
 
 1. Stop using your ISP’s DNS servers. 
