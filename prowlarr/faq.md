@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2025-09-12T22:39:56.511Z
+date: 2025-09-12T22:51:38.317Z
 tags: prowlarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -376,7 +376,7 @@ If your download client and Prowlarr are on the same machine there is no reason 
 ***(Be sure that you do not have two AuthenticationMethod entries in your file)***
 1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
 1. Restart Prowlarr
-1. Prowlarr will now be accessible without a password, you should go the `Settings` => `General` in the UI, change the Authentication Method to Basic or Forms and set your new username and password
+1. Prowlarr will now be accessible without a password, you should go the `Settings` => `General` in the UI, change the Authentication Method to Forms and set your new username and password
 
 ## Weird UI Issues
 
