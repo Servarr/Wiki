@@ -2,7 +2,7 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2025-09-12T22:39:33.762Z
+date: 2025-09-12T22:47:21.936Z
 tags: radarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
@@ -11,11 +11,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
-
 - [Radarr Basics](#radarr-basics)
-  - [Forced Authentication](#forced-authentication)
-    - [Authentication Method](#authentication-method)
-    - [Authentication Required](#authentication-required)
   - [How does Radarr work?](#how-does-radarr-work)
   - [How does Radarr find movies?](#how-does-radarr-find-movies)
   - [How do I access Radarr from another computer?](#how-do-i-access-radarr-from-another-computer)
@@ -88,28 +84,6 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 # Radarr Basics
 
-## Forced Authentication
-
-If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
-
-As of Radarr v5, Authentication is Mandatory.
-
-- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
-
-### Authentication Method
-
-- `Basic` (Browser pop-up) - Removed in Radarr v6
-- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr. This is recommended.
-- `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/prowlarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
-
-### Authentication Required
-
-- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
-- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
-
-
 ## How does Radarr work
 
 - Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
@@ -140,7 +114,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 ### Authentication Method
 
-- `Basic` (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
+- `Basic` (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and removed in Radarr v6.
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr. This is recommended.
 - `External` - Configurable via Config File Only
   - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
