@@ -2,8 +2,8 @@
 title: Radarr FAQ
 description: Radarr FAQ
 published: true
-date: 2025-03-30T15:53:13.708Z
-tags: radarr, faq, troubleshooting
+date: 2025-09-12T22:39:33.762Z
+tags: radarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
@@ -11,7 +11,11 @@ dateCreated: 2021-05-16T20:44:27.778Z
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
+
 - [Radarr Basics](#radarr-basics)
+  - [Forced Authentication](#forced-authentication)
+    - [Authentication Method](#authentication-method)
+    - [Authentication Required](#authentication-required)
   - [How does Radarr work?](#how-does-radarr-work)
   - [How does Radarr find movies?](#how-does-radarr-find-movies)
   - [How do I access Radarr from another computer?](#how-do-i-access-radarr-from-another-computer)
@@ -83,6 +87,28 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Why doesn't Radarr work behind a reverse proxy](#why-doesnt-radarr-work-behind-a-reverse-proxy)
 
 # Radarr Basics
+
+## Forced Authentication
+
+If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
+
+As of Radarr v5, Authentication is Mandatory.
+
+- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
+
+### Authentication Method
+
+- `Basic` (Browser pop-up) - Removed in Radarr v6
+- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr. This is recommended.
+- `External` - Configurable via Config File Only
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/prowlarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+
+### Authentication Required
+
+- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
+  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
+- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
+
 
 ## How does Radarr work
 
