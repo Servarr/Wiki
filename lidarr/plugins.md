@@ -2,8 +2,8 @@
 title: How Do I Install Plugins
 description: Instructions on installing plugins in Lidarr
 published: true
-date: 2025-08-30T16:02:31.783Z
-tags: lidarr, plugins, installation, configuration
+date: 2025-09-15T03:04:45.341Z
+tags: lidarr, installation, plugins, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
 ---
@@ -16,8 +16,13 @@ Lidarr plug-ins allow users to extend the capability of Lidarr to include new in
 
 Plug-in capabilities are currently only available on the `plugins` branch.
 
+> The `plugins` branch is based on the `nightly` release channel and thus is inherently unstable.
+{.is-danger}
+
 > You cannot go back to a mainline Lidarr branch (master/develop/nightly) without restoring a database prior to the `plugins` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
 {.is-danger}
+
+### How To Install Plugins
 
 ### Native Installs -Windows, Mac, and Linux
 
@@ -43,15 +48,17 @@ image: ghcr.io/hotio/lidarr:pr-plugins
 image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
 ```
 
-- Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation.
-- If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
-
-#### Manually Installing
+### Manually Installing
 
 > If the plugins branch is older than the current version of Lidarr you have installed, it won't automatically install via the updater. Instead, you will need to download the plugins branch and install file directly and install it over your Lidarr setup.
 {.is-warning}
 
 - See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in the install docs from `master` to `plugins` otherwise following the docs as-is.
+
+### Post Install
+
+- Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation.
+- If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
 
 ## Next Steps
 
