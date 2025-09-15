@@ -2,8 +2,8 @@
 title: Radarr MacOS Installation
 description: MacOS installation guide for Radarr
 published: true
-date: 2023-07-28T09:08:51.541Z
-tags: installation, macos, radarr
+date: 2025-09-15T02:43:12.347Z
+tags: radarr, installation, macos
 editor: markdown
 dateCreated: 2023-07-03T20:12:05.036Z
 ---
@@ -22,4 +22,7 @@ dateCreated: 2023-07-03T20:12:05.036Z
 1. Browse to <http://localhost:7878> to start using Radarr
 
 > Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
+{.is-info}
+
+> Due to Apple Security Restrictions, the Application's Updater must be self-signed as well or you must manually install updates. This is primarily due to the Personal Information required by Apple to sign applications.
 {.is-info}
