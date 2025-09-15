@@ -2,8 +2,8 @@
 title: Prowlarr MacOS Installation
 description: MacOS installation guide for Prowlarr
 published: true
-date: 2023-07-28T11:17:40.904Z
-tags: installation, macos, prowlarr
+date: 2025-09-15T02:43:44.795Z
+tags: prowlarr, installation, macos
 editor: markdown
 dateCreated: 2023-07-03T20:11:30.382Z
 ---
@@ -20,3 +20,6 @@ dateCreated: 2023-07-03T20:11:30.382Z
 1. Self-sign Prowlarr `codesign --force --deep -s - /Applications/Prowlarr.app && xattr -rd com.apple.quarantine /Applications/Prowlarr.app`
 1. Start Prowlarr by double-clicking the icon or running `open /Applications/Prowlarr.app`
 1. Browse to <http://localhost:9696> to start using Prowlarr
+
+> Due to Apple Security Restrictions, the Application's Updater must be self-signed as well or you must manually install updates. This is primarily due to the Personal Information required by Apple to sign applications.
+{.is-info}
