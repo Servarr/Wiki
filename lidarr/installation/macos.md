@@ -2,8 +2,8 @@
 title: Lidarr MacOS Installation
 description: MacOS installation guide for Lidarr
 published: true
-date: 2023-07-28T11:16:00.388Z
-tags: installation, lidarr, macos
+date: 2025-09-15T02:42:39.920Z
+tags: lidarr, installation, macos
 editor: markdown
 dateCreated: 2023-07-03T20:10:53.957Z
 ---
@@ -20,3 +20,6 @@ dateCreated: 2023-07-03T20:10:53.957Z
 1. Self-sign Lidarr `codesign --force --deep -s - /Applications/Lidarr.app && xattr -rd com.apple.quarantine /Applications/Lidarr.app`
 1. Start Lidarr by double-clicking the icon or running `open /Applications/Lidarr.app`
 1. Browse to <http://localhost:8686> to start using Lidarr
+
+> Due to Apple Security Restrictions, the Application's Updater must be self-signed as well or you must manually install updates. This is primarily due to the Personal Information required by Apple to sign applications.
+{.is-info}
