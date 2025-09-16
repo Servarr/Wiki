@@ -243,12 +243,14 @@ The indexer or application server terminated the connection unexpectedly during 
     See: 'https://wiki.servarr.com/prowlarr/troubleshooting#dns-ssl-connection-issues'
     Connection refused (site.tld:443)
     ```
+
 - SSL Related issues. SSL errors are almost always ISP interception.
+
     ```none
     Unable to connect to indexer. This is typically caused by DNS/SSL issues. Check DNS settings, ensure IPv6 is working or disabled, consider using different DNS servers, or try a VPN/proxy if needed. See: 'https://wiki.servarr.com/prowlarr/troubleshooting#dns-ssl-connection-issues' The SSL connection could not be established, see inner exception.
     ```
 
-1. Stop using your ISP’s DNS servers. 
+1. Stop using your ISP’s DNS servers.
    - **Solution**: Use public resolvers.
      - Google DNS: `8.8.8.8`, `8.8.4.4`
      - Cloudflare DNS: `1.1.1.1`, `1.0.0.1`

@@ -129,7 +129,7 @@ The following attributes are optional, but recommended:
 
 ## How can I add an indexer that is down or not functional
 
-- Follow then standard steps to add the indexer noting the following changes.
+- Follow the standard steps to add the indexer noting the following changes.
 - Uncheck (Disable) the `Enabled` box
 - Press `Save`
 - Press `Save` again to trigger a force save
@@ -149,10 +149,10 @@ The following attributes are optional, but recommended:
 - Only in instances where an App and Indexer have matching tags or no tags at all will an indexer be synced to an app
 - Indexers are synced based on the capabilities/categories they claim to support.
   - If an indexer supports only TV categories it will not be synced to Lidarr, Radarr, and Readarr.
-- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis.
+- A given indexer will only be synced to Sonarr if "Supported" Categories can be selected as an advanced setting on a per app basis.
 - Indexers will not be attempted to be synced if the specific Categories supported by the Indexer are not selected in Settings => Application => {App} => Sync Categories (Advanced Settings) and logs will not show any indication of a sync attempt.
 - The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to an App and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
-- The specific error will be be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
+- The specific error will be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
   - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
   - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
     - Note that certain Trackers - primarily "crappy" public trackers - require one to select and sync the `8000 - Other` category. This is often - but not always - noted within the Tracker's details within Prowlarr.
@@ -161,22 +161,70 @@ The following attributes are optional, but recommended:
 
 ## What \*Arr Indexer Settings are Compared for App Full Sync
 
-- App/Prowlarr: Indexer Name
-- App/Prowlarr: Enable/Disable RSS
-- App/Prowlarr: Enable/Disable Auto Search
-- App/Prowlarr: Enable/Disable Interactive Search
-- App/Prowlarr: Indexer Priority
-- App/Prowlarr: API Key
-- App/Prowlarr: Url
-- App/Prowlarr: Baseurl
-- App/Prowlarr: Port
-- App/Prowlarr: Categories
-- App/Prowlarr: Seed Ratio and Seed Time
-- App/Prowlarr: Minimum Seeders
-- App/Prowlarr: *Any Other Settings configurable/controlled in Prowlarr*
-- Prowlarr: Implementation (e.g. YML or C#)
+When Full Sync is enabled, Prowlarr compares the following settings between the \*Arr app and Prowlarr to determine if an indexer needs to be updated:
 
-With Full Sync enabled, if any of the above change between the \*Arr App and Prowlarr then the Indexer will be Synced and Updated in \*Arr.
+### Sonarr
+
+| Setting | Description | Code Reference |
+|---------|-------------|----------------|
+| **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `SonarrIndexer.cs:71` |
+| **Enable RSS** | Whether RSS feeds are enabled for the indexer | `SonarrIndexer.cs:68` |
+| **Enable Automatic Search** | Whether automatic searches are enabled | `SonarrIndexer.cs:69` |
+| **Enable Interactive Search** | Whether interactive (manual) searches are enabled | `SonarrIndexer.cs:70` |
+| **Priority** | Indexer priority for search order | `SonarrIndexer.cs:73` |
+| **Implementation** | Indexer protocol type (Newznab/Torznab) | `SonarrIndexer.cs:72` |
+| **Base URL** | The base URL for the indexer API endpoint | `SonarrIndexer.cs:32` |
+| **API Path** | The API path (typically "/api") | `SonarrIndexer.cs:40-42` |
+| **API Key** | Prowlarr's API key for authentication | `SonarrIndexer.cs:36-38` |
+| **Categories** | Supported categories mapped between Prowlarr and Sonarr | `SonarrIndexer.cs:33` |
+| **Anime Categories** | Anime-specific category mappings | `SonarrIndexer.cs:34` |
+| **Anime Standard Format Search** | Whether to use standard format for anime searches | `SonarrIndexer.cs:44-46` |
+| **Minimum Seeders** | Minimum number of seeders required (torrent indexers only) | `SonarrIndexer.cs:48-50` |
+| **Seed Ratio** | Seed ratio for torrent downloads | `SonarrIndexer.cs:60-62` |
+| **Seed Time** | Minimum seed time for torrents | `SonarrIndexer.cs:52-54` |
+| **Season Pack Seed Time** | Seed time for season packs | `SonarrIndexer.cs:56-58` |
+| **Reject Blocklisted Torrent Hashes** | Whether to reject blocklisted torrent hashes while grabbing | `SonarrIndexer.cs:64-66` |
+
+### Radarr
+
+| Setting | Description | Code Reference |
+|---------|-------------|----------------|
+| **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `RadarrIndexer.cs:61` |
+| **Enable RSS** | Whether RSS feeds are enabled for the indexer | `RadarrIndexer.cs:58` |
+| **Enable Automatic Search** | Whether automatic searches are enabled | `RadarrIndexer.cs:59` |
+| **Enable Interactive Search** | Whether interactive (manual) searches are enabled | `RadarrIndexer.cs:60` |
+| **Priority** | Indexer priority for search order | `RadarrIndexer.cs:63` |
+| **Implementation** | Indexer protocol type (Newznab/Torznab) | `RadarrIndexer.cs:62` |
+| **Base URL** | The base URL for the indexer API endpoint | `RadarrIndexer.cs:31` |
+| **API Path** | The API path (typically "/api") | `RadarrIndexer.cs:38-40` |
+| **API Key** | Prowlarr's API key for authentication | `RadarrIndexer.cs:34-36` |
+| **Categories** | Supported categories mapped between Prowlarr and Radarr | `RadarrIndexer.cs:32` |
+| **Minimum Seeders** | Minimum number of seeders required (torrent indexers only) | `RadarrIndexer.cs:42-44` |
+| **Seed Ratio** | Seed ratio for torrent downloads | `RadarrIndexer.cs:50-52` |
+| **Seed Time** | Minimum seed time for torrents | `RadarrIndexer.cs:46-48` |
+| **Reject Blocklisted Torrent Hashes** | Whether to reject blocklisted torrent hashes while grabbing | `RadarrIndexer.cs:54-56` |
+
+### Lidarr
+
+| Setting | Description | Code Reference |
+|---------|-------------|----------------|
+| **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `LidarrIndexer.cs:65` |
+| **Enable RSS** | Whether RSS feeds are enabled for the indexer | `LidarrIndexer.cs:62` |
+| **Enable Automatic Search** | Whether automatic searches are enabled | `LidarrIndexer.cs:63` |
+| **Enable Interactive Search** | Whether interactive (manual) searches are enabled | `LidarrIndexer.cs:64` |
+| **Priority** | Indexer priority for search order | `LidarrIndexer.cs:67` |
+| **Implementation** | Indexer protocol type (Newznab/Torznab) | `LidarrIndexer.cs:66` |
+| **Base URL** | The base URL for the indexer API endpoint | `LidarrIndexer.cs:31` |
+| **API Path** | The API path (typically "/api") | `LidarrIndexer.cs:38-40` |
+| **API Key** | Prowlarr's API key for authentication | `LidarrIndexer.cs:34-36` |
+| **Categories** | Supported categories mapped between Prowlarr and Lidarr | `LidarrIndexer.cs:32` |
+| **Minimum Seeders** | Minimum number of seeders required (torrent indexers only) | `LidarrIndexer.cs:42-44` |
+| **Seed Ratio** | Seed ratio for torrent downloads | `LidarrIndexer.cs:54-56` |
+| **Seed Time** | Minimum seed time for torrents | `LidarrIndexer.cs:46-48` |
+| **Discography Seed Time** | Seed time for discography downloads | `LidarrIndexer.cs:50-52` |
+| **Reject Blocklisted Torrent Hashes** | Whether to reject blocklisted torrent hashes while grabbing | `LidarrIndexer.cs:58-60` |
+
+With Full Sync enabled, if any of the above settings differ between the \*Arr app and Prowlarr, the indexer will be synced and updated in the \*Arr app.
 
 ## How do I update Prowlarr
 
@@ -222,6 +270,8 @@ With Full Sync enabled, if any of the above change between the \*Arr App and Pro
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`
+
+- See [Can I switch between branches?](#can-i-switch-between-branches) below.
 
 ## Can I switch between branches
 
