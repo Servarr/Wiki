@@ -129,7 +129,7 @@ The following attributes are optional, but recommended:
 
 ## How can I add an indexer that is down or not functional
 
-- Follow then standard steps to add the indexer noting the following changes.
+- Follow the standard steps to add the indexer noting the following changes.
 - Uncheck (Disable) the `Enabled` box
 - Press `Save`
 - Press `Save` again to trigger a force save
@@ -149,10 +149,10 @@ The following attributes are optional, but recommended:
 - Only in instances where an App and Indexer have matching tags or no tags at all will an indexer be synced to an app
 - Indexers are synced based on the capabilities/categories they claim to support.
   - If an indexer supports only TV categories it will not be synced to Lidarr, Radarr, and Readarr.
-- A given indexer will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis.
+- A given indexer will only be synced to Sonarr if "Supported" Categories can be selected as an advanced setting on a per app basis.
 - Indexers will not be attempted to be synced if the specific Categories supported by the Indexer are not selected in Settings => Application => {App} => Sync Categories (Advanced Settings) and logs will not show any indication of a sync attempt.
 - The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to an App and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
-- The specific error will be be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
+- The specific error will be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
   - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
   - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
     - Note that certain Trackers - primarily "crappy" public trackers - require one to select and sync the `8000 - Other` category. This is often - but not always - noted within the Tracker's details within Prowlarr.
@@ -270,6 +270,8 @@ With Full Sync enabled, if any of the above settings differ between the \*Arr ap
 1. Repull your tag and update your container
 
 ## Can I switch from `nightly` back to `develop`
+
+- See [Can I switch between branches?](#can-i-switch-between-branches) below.
 
 ## Can I switch between branches
 
