@@ -1,18 +1,18 @@
 ---
-title: How Do I Install Plugins
-description: Instructions on installing plugins in Lidarr
+title: Lidarr Plugins
+description: Basic Setup and Details for Plugins beta Testing Branch
 published: true
-date: 2025-09-15T03:04:45.341Z
+date: 2025-09-18T01:08:57.746Z
 tags: lidarr, installation, plugins, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
 ---
 
-# How Do I Install Plugins
+# Lidarr Plugins Branch
 
-## Plugin Branch
+## What are plugins?
 
-Lidarr plug-ins allow users to extend the capability of Lidarr to include new indexers and download clients, including peer-to-peer networks and common streaming services.
+Lidarr plugins allow users to extend the capability of Lidarr to include new indexers and download clients, including peer-to-peer networks and common streaming services.
 
 Plug-in capabilities are currently only available on the `plugins` branch.
 
