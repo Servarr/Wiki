@@ -8,9 +8,30 @@ editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
 
-# Table of Contents
+# Quick Navigation
 
-- [Table of Contents](#table-of-contents)
+**💡 Tip:** Use your browser's "Find on Page" (Ctrl+F) to quickly search this FAQ
+
+## 🚀 Most Common Issues
+> **🚀 Quick Help:** Visit [Lidarr Common Problems](/lidarr/common-problems) for common issues and solutions
+
+- [Can't Find Artist/Album](/lidarr/common-problems#cant-find-artistalbum)
+- [Album Import Issues](/lidarr/common-problems#album-import-issues)
+- [Wanted Albums Never Download](/lidarr/common-problems#wanted-albums-never-download)
+- [Database Corrupt Error](/lidarr/common-problems#database-disk-image-is-malformed)
+- [Artist Folder Naming Issues](/lidarr/common-problems#artist-folder-naming-issues)
+
+## 📚 Main Sections
+- [🔧 Common Problems](/lidarr/common-problems) | [Quick Solutions](/lidarr/common-problems)
+# Complete Table of Contents {.tabset}
+
+## Quick Access
+
+**Quick access:** Jump directly to [Lidarr Common Problems](/lidarr/common-problems) for common issues and solutions
+
+## Full Contents
+
+### Lidarr Basics
   - [How does Lidarr work?](#how-does-lidarr-work)
   - [How does Lidarr find releases?](#how-does-lidarr-find-releases)
   - [Forced Authentication](#forced-authentication)

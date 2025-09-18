@@ -11,6 +11,72 @@ dateCreated: 2021-06-09T18:39:33.208Z
 > For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
 {.is-info}
 
+# Quick Navigation
+
+**💡 Tip:** Use your browser's "Find on Page" (Ctrl+F) to quickly search this FAQ
+
+## 🚀 Most Common Issues
+> **🚀 Quick Help:** Visit [Sonarr Common Problems](/sonarr/common-problems) for common issues and solutions
+
+- [Episode Not Found/Downloaded](/sonarr/common-problems#episode-not-founddownloaded)
+- [Series Won't Add/Search](/sonarr/common-problems#series-wont-addsearch)
+- [Path Already Configured Error](/sonarr/common-problems#path-already-configured-error)
+- [Database Corrupt Error](/sonarr/common-problems#database-disk-image-is-malformed)
+- [Scene Numbering Problems](/sonarr/common-problems#scene-numbering-problems)
+
+## 📚 Main Sections
+- [📋 Sonarr Basics](#sonarr-basics)
+- [📺 Series & Episode Issues](#sonarr-and-series-issues--metadata)
+- [🔧 Common Problems](#sonarr-common-problems) | [Quick Solutions](/sonarr/common-problems)
+- [🔍 Search & Download Issues](#sonarr-searching--downloading-common-problems)
+
+# Complete Table of Contents {.tabset}
+
+## Quick Access
+
+**Quick access:** Jump directly to [Sonarr Common Problems](/sonarr/common-problems) for common issues and solutions
+
+## Full Contents
+
+### Sonarr Basics
+- [How does Sonarr find episodes](#how-does-sonarr-find-episodes)
+- [How are possible downloads compared](#how-are-possible-downloads-compared)
+- [How do I change from the Windows Service to a Tray App](#how-do-i-change-from-the-windows-service-to-a-tray-app)
+- [How do I Backup/Restore my Sonarr](#how-do-i-backuprestore-my-sonarr)
+- [How do I access Sonarr from another computer](#how-do-i-access-radarr-from-another-computer)
+- [Episode Progress - How is it calculated](#episode-progress---how-is-it-calculated)
+- [Why does Sonarr refresh series information so frequently](#why-does-sonarr-refresh-series-information-so-frequently)
+- [What's the different Series Types](#whats-the-different-series-types)
+- [How can I rename my series folders](#how-can-i-rename-my-series-folders)
+- [How do I update Sonarr](#how-do-i-update-sonarr)
+
+### Series & Episode Issues
+- [How does Sonarr handle scene numbering issues](#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
+- [Why can't Sonarr import episode files for series X](#why-cant-sonarr-import-episode-files-for-series-x--why-cant-sonarr-find-releases-for-series-x)
+- [TVDb is updated why isn't Sonarr](#tvdb-is-updated-why-isnt-sonarr)
+- [Why can I not add a series](#why-can-i-not-add-a-series)
+- [Episode does not have an absolute number](#episode-does-not-have-an-absolute-number)
+- [Episode Air Times](#episode-air-times)
+
+### Common Problems
+- [Path is Already Configured for an Existing Series](#path-is-already-configured-for-an-existing-series)
+- [System & Logs loads forever](#system--logs-loads-forever)
+- [Weird UI Issues](#weird-ui-issues)
+- [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
+- [Help I have locked myself out](#help-i-have-locked-myself-out)
+- [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
+- [VPNs, Jackett, and the *ARRs](#vpns-jackett-and-the-arrs)
+
+### Search & Download Issues
+- [Query Successful - No Results Returned](#query-successful---no-results-returned)
+- [Why didn't Sonarr grab an episode I was expecting](#why-didnt-sonarr-grab-an-episode-i-was-expecting)
+- [TBA Episode Naming](#tba-episode-naming)
+- [Jackett's /all Endpoint](#jacketts-all-endpoint)
+- [Jackett shows more results than Sonarr when manually searching](#jackett-shows-more-results-than-sonarr-when-manually-searching)
+- [Why are there two files? | Why is there a file left in downloads](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
+
+---
+
 # Sonarr Basics
 
 ## How does Sonarr find episodes

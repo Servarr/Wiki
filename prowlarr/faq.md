@@ -8,9 +8,30 @@ editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
 ---
 
-# Table of Contents
+# Quick Navigation
 
-- [Table of Contents](#table-of-contents)
+**💡 Tip:** Use your browser's "Find on Page" (Ctrl+F) to quickly search this FAQ
+
+## 🚀 Most Common Issues
+> **🚀 Quick Help:** Visit [Prowlarr Common Problems](/prowlarr/common-problems) for common issues and solutions
+
+- [Indexer Won't Sync to Apps](/prowlarr/common-problems#indexer-wont-sync-to-apps)
+- [Indexer Authentication Failures](/prowlarr/common-problems#indexer-authentication-failures)
+- [Search Results Missing/Limited](/prowlarr/common-problems#search-results-missinglimited)
+- [Database Corrupt Error](/prowlarr/common-problems#database-disk-image-is-malformed)
+- [Can't Access from Other Computers](/prowlarr/common-problems#cant-access-from-other-computers)
+
+## 📚 Main Sections
+- [🔧 Common Problems](/prowlarr/common-problems) | [Quick Solutions](/prowlarr/common-problems)
+# Complete Table of Contents {.tabset}
+
+## Quick Access
+
+**Quick access:** Jump directly to [Prowlarr Common Problems](/prowlarr/common-problems) for common issues and solutions
+
+## Full Contents
+
+### Common Topics
   - [Forced Authentication](#forced-authentication)
     - [Authentication Method](#authentication-method)
     - [Authentication Required](#authentication-required)

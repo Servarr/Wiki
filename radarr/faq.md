@@ -8,38 +8,45 @@ editor: markdown
 dateCreated: 2021-05-16T20:44:27.778Z
 ---
 
-# Table of Contents
+# Quick Navigation
 
-- [Table of Contents](#table-of-contents)
-- [Radarr Basics](#radarr-basics)
-  - [How does Radarr work?](#how-does-radarr-work)
-  - [How does Radarr find movies?](#how-does-radarr-find-movies)
-  - [How do I access Radarr from another computer?](#how-do-i-access-radarr-from-another-computer)
-  - [Forced Authentication](#forced-authentication)
-    - [Authentication Method](#authentication-method)
-    - [Authentication Required](#authentication-required)
-  - [What is Minimum Availability?](#what-is-minimum-availability)
-  - [How are possible downloads compared?](#how-are-possible-downloads-compared)
-  - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
-    - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
-  - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
-  - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
-  - [How do I update Radarr?](#how-do-i-update-radarr)
-    - [Can I update Radarr inside my Docker container?](#can-i-update-radarr-inside-my-docker-container)
-    - [Installing a newer version](#installing-a-newer-version)
-      - [Native](#native)
-      - [Docker](#docker)
-  - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
-  - [Can I switch between branches?](#can-i-switch-between-branches)
-  - [How do I Backup/Restore Radarr?](#how-do-i-backuprestore-radarr)
-    - [Backing up Radarr](#backing-up-radarr)
-      - [Using built-in backup](#using-built-in-backup)
-      - [Using file system directly](#using-file-system-directly)
-    - [Restoring from Backup](#restoring-from-backup)
-      - [Using zip backup](#using-zip-backup)
-      - [Using file system backup](#using-file-system-backup)
-      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
-- [Radarr Common Problems](#radarr-common-problems)
+**💡 Tip:** Use your browser's "Find on Page" (Ctrl+F) to quickly search this FAQ
+
+## 🚀 Most Common Issues
+> **🚀 Quick Help:** Visit [Radarr Common Problems](/radarr/common-problems) for common issues and solutions
+
+- [Movie Added but Not Searched](/radarr/common-problems#movie-added-but-not-searched)
+- [Path Already Configured Error](/radarr/common-problems#path-already-configured-error)
+- [Database Corrupt Error](/radarr/common-problems#database-disk-image-is-malformed)
+- [Can't Access from Other Computers](/radarr/common-problems#cant-access-from-other-computers)
+- [Mac Security Issues](/radarr/common-problems#mac-security-issues)
+
+## 📚 Main Sections
+- [📋 Radarr Basics](#radarr-basics)
+- [🔧 Common Problems](#radarr-common-problems) | [Quick Solutions](/radarr/common-problems)
+- [🔍 Search & Download Issues](#radarr-searching--downloading-common-problems)
+
+# Complete Table of Contents {.tabset}
+
+## Quick Access
+
+**Quick access:** Jump directly to [Radarr Common Problems](/radarr/common-problems) for common issues and solutions
+
+## Full Contents
+
+### Radarr Basics
+- [How does Radarr work?](#how-does-radarr-work)
+- [How does Radarr find movies?](#how-does-radarr-find-movies)
+- [How do I access Radarr from another computer?](#how-do-i-access-radarr-from-another-computer)
+- [Forced Authentication](#forced-authentication)
+- [What is Minimum Availability?](#what-is-minimum-availability)
+- [How are possible downloads compared?](#how-are-possible-downloads-compared)
+- [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
+- [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
+- [How do I update Radarr?](#how-do-i-update-radarr)
+- [How do I Backup/Restore Radarr?](#how-do-i-backuprestore-radarr)
+
+### Common Problems
   - [A Task was Canceled](#a-task-was-canceled)
   - [Path is Already Configured for an Existing Movie](#path-is-already-configured-for-an-existing-movie)
   - [How can I rename my movie folders?](#how-can-i-rename-my-movie-folders)
@@ -82,15 +89,30 @@ dateCreated: 2021-05-16T20:44:27.778Z
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [Why doesn't Radarr work behind a reverse proxy](#why-doesnt-radarr-work-behind-a-reverse-proxy)
 
+---
+
 # Radarr Basics
 
 ## How does Radarr work
 
-- Radarr does *not* regularly search for movie files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted movies, then compares that with its list of movies that are missing or need to be upgraded. Any matches are downloaded. This lets Radarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
-- So how do you deal with the present and past? When you're adding a movie, you will need to set the correct path, profile and monitoring status then use the Start search for missing movie checkbox. If the movie hasn't been released yet, you do not need to initiate a search.
-- Put another way, Radarr will only find movies that are newly uploaded to your indexers. It will not actively try to find movies you want that were uploaded in the past.
-- If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
-- If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
+**Key Point:** Radarr monitors RSS feeds, not your disk!
+
+### The Basics
+- Radarr **does NOT** regularly search for missing movies
+- Instead, it checks RSS feeds from your indexers every 15-60 minutes
+- It compares new releases against your wanted list
+- Automatic downloads happen when there's a match
+
+### For Missing Movies
+**Present/Past movies:** Use the "Start search for missing movie" checkbox when adding
+
+**Already added movies:**
+- Go to movie page → click Search button
+- Use Search tab for manual selection
+- Filter by `Missing`, `Wanted`, or `Cut-off Unmet`
+
+### Offline Recovery
+If Radarr was offline, it will attempt to catch up on missed releases through indexer paging.
 
 > Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](/useful-tools#drazzilbs-userscripts) or [Cuban's Powershell Script](/useful-tools#just-a-bunch-of-starr-scripts)
 {.is-info}
@@ -102,29 +124,47 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## How do I access Radarr from another computer
 
-- By default Radarr doesn't listen to requests from all systems (when not run as administrator), it will only listen on localhost, this is due to how the Web Server Radarr uses integrates with Windows (this also applies for current alternatives). If Radarr is run as an administrator it will correctly register itself with Windows as well as open the Firewall port so it can be accessed from other systems on your network. Running as admin only needs to happen once (if you change the port it will need to be re-run).
+**Quick Fix:** Run Radarr as administrator once to open firewall ports
+
+### The Issue
+- Radarr only listens on `localhost` by default
+- This is due to Windows Web Server integration
+
+### Solution
+1. **Run as administrator once** (opens firewall)
+2. Access via `http://YOUR-IP:7878`
+3. If you change the port, repeat step 1
+
+> This applies to all operating systems, not just Windows
 
 ## Forced Authentication
 
-If Radarr is exposed so that the UI can be accessed from outside your local network then you should have some form of authentication method enabled in order to access the UI. This is also increasingly required by Trackers and Indexers.
+> **⚠️ As of Radarr v5, Authentication is Mandatory**
 
-**As of Radarr v5, Authentication is Mandatory.**
+### Quick Setup
+1. **Recommended:** Use `Forms` (Login Page)
+2. **Local network only:** Set to `Disabled For Local Addresses`
+3. **External auth:** Use `External` method
 
-- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
+### Authentication Methods
 
-### Authentication Method
+**🔐 Forms** (Recommended)
+- Standard login page like most websites
+- Easy to use on mobile devices
 
-- `Basic` (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and removed in Radarr v6.
-- `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr. This is recommended.
-- `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
-  - [OIDC Support](https://github.com/Radarr/Radarr/issues/7047#issuecomment-1696156068) is being explored for future versions (Ref [GHI #7047](https://github.com/Radarr/Radarr/issues/7047)) and is NOT currently supported.
+**🚫 Basic** (Deprecated)
+- Browser popup (removed in v6)
+- Not recommended
 
-### Authentication Required
+**🌐 External**
+- For reverse proxy authentication
+- Edit config file: `<AuthenticationMethod>External</AuthenticationMethod>`
+- Use with Authelia, Nginx Basic Auth, etc.
 
-- If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN (i.e. Link Local, [Class A, Class C, or Class B](https://en.wikipedia.org/wiki/Classful_network#Classful_addressing_definition) addresses)) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
-- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
+### Local Network Access
+**Settings → General Security → Authentication Required**
+- Set to `Disabled For Local Addresses` if only accessing locally
+- Config file: `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 
 ## What is Minimum Availability
 
