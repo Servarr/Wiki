@@ -23,7 +23,7 @@ dateCreated: 2021-05-16T20:44:27.778Z
 
 ## 📚 Main Sections
 - [📋 Radarr Basics](#radarr-basics)
-- [🔧 Common Problems](#radarr-common-problems) | [Quick Solutions](/radarr/common-problems)
+- [🔧 Common Problems](#radarr-common-problems) | [🚀 Quick Guide](/radarr/common-problems)
 - [🔍 Search & Download Issues](#radarr-searching--downloading-common-problems)
 
 # Complete Table of Contents {.tabset}

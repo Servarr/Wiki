@@ -22,7 +22,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
 - [Artist Folder Naming Issues](/lidarr/common-problems#artist-folder-naming-issues)
 
 ## 📚 Main Sections
-- [🔧 Common Problems](/lidarr/common-problems) | [Quick Solutions](/lidarr/common-problems)
+- [🔧 Common Problems & Quick Guide](/lidarr/common-problems)
 # Complete Table of Contents {.tabset}
 
 ## Quick Access

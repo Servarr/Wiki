@@ -27,7 +27,7 @@ dateCreated: 2021-06-09T18:39:33.208Z
 ## 📚 Main Sections
 - [📋 Sonarr Basics](#sonarr-basics)
 - [📺 Series & Episode Issues](#sonarr-and-series-issues--metadata)
-- [🔧 Common Problems](#sonarr-common-problems) | [Quick Solutions](/sonarr/common-problems)
+- [🔧 Common Problems](#sonarr-common-problems) | [🚀 Quick Guide](/sonarr/common-problems)
 - [🔍 Search & Download Issues](#sonarr-searching--downloading-common-problems)
 
 # Complete Table of Contents {.tabset}

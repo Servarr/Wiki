@@ -22,7 +22,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
 - [Can't Access from Other Computers](/prowlarr/common-problems#cant-access-from-other-computers)
 
 ## 📚 Main Sections
-- [🔧 Common Problems](/prowlarr/common-problems) | [Quick Solutions](/prowlarr/common-problems)
+- [🔧 Common Problems & Quick Guide](/prowlarr/common-problems)
 # Complete Table of Contents {.tabset}
 
 ## Quick Access
