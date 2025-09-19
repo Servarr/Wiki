@@ -2,8 +2,8 @@
 title: Prowlarr Indexers
 description: Configure and manage indexers in Prowlarr for torrent and usenet search aggregation
 published: true
-date: 2023-03-30T14:04:26.292Z
-tags: prowlarr, indexers, configuration, torrent, usenet, search, aggregation
+date: 2025-09-19T20:50:15.177Z
+tags: prowlarr, indexers, configuration, search, torrent, usenet, aggregation
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
 ---
@@ -89,14 +89,15 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 ## Adding a custom YML definition
 
 - Note that the yml definition is cached for a short period and if you make changes for development purposes you will need to wait out the cache or restart Prowlarr.
-- If you wish to add a custom Cardigann compatible YML definition file for an indexer that is not supported or to test changes to an existing definition:
-  - Navigate to (or create) the Custom Indexer Definition folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](/prowlarr/appdata-directory)
+- If you wish to add a custom Cardigann compatible YML definition file for an indexer that is not supported or to test changes to an existing definition file:
+  - Create (or if already created, navigate to) the Custom Indexer Definition folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](/prowlarr/appdata-directory)
     - Example paths:
       - Windows: `C:\ProgramData\Prowlarr\Definitions\Custom`
       - Linux: `/home/$USER/.config/Prowlarr/Definitions/Custom`
       - OSX: `/Users/$USER/.config/Prowlarr/Definitions/Custom`
-
-  - Save the [Cardigann compatible YML file](/prowlarr/cardigann-yml-definition) within the folder and ensure Prowlarr has permissions to access it.
+      - Docker: `/config/Definitions/Custom`
+  - Create your custom defintion '.yml'
+  - Save your [Cardigann compatible YML file](/prowlarr/cardigann-yml-definition) within the custom definition folder and ensure Prowlarr has permissions to access it.
 
 > The file name and id in the definition must be unique and cannot conflict with any other existing definitions.  It's strongly advised to have the name in the definition to be unique as well.
 {.is-info}
