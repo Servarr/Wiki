@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-20T01:16:38.617111
+date: 2025-09-22T01:25:33.044329
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-20T01:16:38.617111
+dateCreated: 2025-09-22T01:25:33.044329
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.1.2.5186` / [Commit: 7eb2d956cf1903e047de716a9c8164e0c2ce9945](https://github.com/Prowlarr/Prowlarr/commit/7eb2d956cf1903e047de716a9c8164e0c2ce9945)
-  - [Prowlarr Indexers Commit: 57d4aec93b5fc537838f0d84a5455d657a2c8e4c](https://github.com/Prowlarr/Indexers/commit/57d4aec93b5fc537838f0d84a5455d657a2c8e4c)
+  - Prowlarr Build `2.1.3.5187` / [Commit: dfffb3aa4e00989f50fd63ac09025235f1da7ccc](https://github.com/Prowlarr/Prowlarr/commit/dfffb3aa4e00989f50fd63ac09025235f1da7ccc)
+  - [Prowlarr Indexers Commit: 89a03d9b1fd75e7fb8a4df6be35efa60d04d84b1](https://github.com/Prowlarr/Indexers/commit/89a03d9b1fd75e7fb8a4df6be35efa60d04d84b1)
 
 ---
 
@@ -84,7 +84,7 @@ dateCreated: 2025-09-20T01:16:38.617111
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www1.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent.diy/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent.fyi/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
@@ -193,7 +193,7 @@ dateCreated: 2025-09-20T01:16:38.617111
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep19.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep21.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
