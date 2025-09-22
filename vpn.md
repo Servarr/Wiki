@@ -10,6 +10,23 @@ dateCreated: 2025-01-07T00:00:00.000Z
 
 # VPN Guide for Servarr Applications
 
+## Table of Contents
+
+- [Overview](#overview)
+- [When VPNs are Needed](#when-vpns-are-needed)
+- [Secure DNS Alternative (Recommended)](#secure-dns-alternative-recommended)
+  - [Standard DNS Servers](#standard-dns-servers)
+  - [DNS over HTTPS (DoH) and DNS over TLS (DoT)](#dns-over-https-doh-and-dns-over-tls-dot)
+  - [Docker DNS Configuration](#docker-dns-configuration)
+- [Why Gluetun is Usually NOT Needed](#why-gluetun-is-usually-not-needed)
+- [Recommended Solutions](#recommended-solutions)
+  - [Single Download Client](#single-download-client)
+  - [Multiple Download Clients](#multiple-download-clients)
+  - [Selective VPN (Prowlarr Indexers Only)](#selective-vpn-prowlarr-indexers-only)
+- [VPN Provider Requirements](#vpn-provider-requirements)
+- [Common Problems](#common-problems)
+- [Troubleshooting](#troubleshooting)
+
 ## Overview
 
 VPNs can cause significant problems with Servarr applications when used incorrectly. This guide explains when and how to use VPNs properly.
