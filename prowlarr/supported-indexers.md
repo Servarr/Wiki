@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-22T01:25:33.044329
+date: 2025-09-23T01:18:52.546079
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-22T01:25:33.044329
+dateCreated: 2025-09-23T01:18:52.546079
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.3.5187` / [Commit: dfffb3aa4e00989f50fd63ac09025235f1da7ccc](https://github.com/Prowlarr/Prowlarr/commit/dfffb3aa4e00989f50fd63ac09025235f1da7ccc)
-  - [Prowlarr Indexers Commit: 89a03d9b1fd75e7fb8a4df6be35efa60d04d84b1](https://github.com/Prowlarr/Indexers/commit/89a03d9b1fd75e7fb8a4df6be35efa60d04d84b1)
+  - [Prowlarr Indexers Commit: 161400520a609410714cb9cb8eb4530ead32e386](https://github.com/Prowlarr/Indexers/commit/161400520a609410714cb9cb8eb4530ead32e386)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2025-09-22T01:25:33.044329
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://www.529065.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[52BT](https://www.529068.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[Anime Time](https://animetime.cc/){#anime-time}|Anime Time is a Public Torrent Tracker for ANIME|English (United States)|
@@ -193,7 +193,7 @@ dateCreated: 2025-09-22T01:25:33.044329
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep21.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep22.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -301,7 +301,7 @@ dateCreated: 2025-09-22T01:25:33.044329
 |[Concertos](https://concertos.live/){#concertos}|Concertos is a Private Torrent Tracker for Live Concerts with Strict Quality Control|English (United States)|
 |[CrabPT (蟹黄堡)](https://crabpt.vip/){#crabpt}|CrabPT (蟹黄堡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[The Crazy Ones](https://thecrazyones.hopto.org/){#thecrazyones}|The Crazy Ones is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
-|[CrazySpirits](https://www.crazyspirits.com/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
+|[CrazySpirits](https://www.crazyspirits.ca/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|Crna Berza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\. This indexer uses cookie login for 2FA|English (United Kingdom)|
 |[cyanbug (大青虫)](https://cyanbug.net/){#cyanbug}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
