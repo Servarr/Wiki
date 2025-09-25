@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-24T01:19:22.517764
+date: 2025-09-25T01:20:02.614141
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-24T01:19:22.517764
+dateCreated: 2025-09-25T01:20:02.614141
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.3.5187` / [Commit: dfffb3aa4e00989f50fd63ac09025235f1da7ccc](https://github.com/Prowlarr/Prowlarr/commit/dfffb3aa4e00989f50fd63ac09025235f1da7ccc)
-  - [Prowlarr Indexers Commit: 524207af9a0b591e946a77d9c3096a9dc18e2b85](https://github.com/Prowlarr/Indexers/commit/524207af9a0b591e946a77d9c3096a9dc18e2b85)
+  - [Prowlarr Indexers Commit: 1994fbc18e6c8d54527f7d62b66957e918ead672](https://github.com/Prowlarr/Indexers/commit/1994fbc18e6c8d54527f7d62b66957e918ead672)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2025-09-24T01:19:22.517764
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337X is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://www.529068.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[52BT](https://www.529069.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[Anime Time](https://animetime.cc/){#anime-time}|Anime Time is a Public Torrent Tracker for ANIME|English (United States)|
@@ -193,7 +193,7 @@ dateCreated: 2025-09-24T01:19:22.517764
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep23.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep24.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
