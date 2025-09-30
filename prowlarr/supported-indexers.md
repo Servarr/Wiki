@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-29T01:21:40.008247
+date: 2025-09-30T01:20:51.131243
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-29T01:21:40.008247
+dateCreated: 2025-09-30T01:20:51.131243
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.3.5188` / [Commit: f5f98e4f53a8045dc2a24e21a62e29de5bd9db17](https://github.com/Prowlarr/Prowlarr/commit/f5f98e4f53a8045dc2a24e21a62e29de5bd9db17)
-  - [Prowlarr Indexers Commit: fd714db56229f1e3ae48c77ad87fa91a37bf171f](https://github.com/Prowlarr/Indexers/commit/fd714db56229f1e3ae48c77ad87fa91a37bf171f)
+  - [Prowlarr Indexers Commit: 50d9256f20370ee5346cc0db6bac0f487e9b5db2](https://github.com/Prowlarr/Indexers/commit/50d9256f20370ee5346cc0db6bac0f487e9b5db2)
 
 ---
 
@@ -89,7 +89,6 @@ dateCreated: 2025-09-29T01:21:40.008247
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
-|[PornXLab](https://www.pornxlab.com/){#pornxlab}|PornXLab is a Public tracker for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Qbite (Hubite)](https://qbite.top/){#qbite}|Qbite (Hubite) is a Public Torrent Tracker for 3X|English (United States)|
 |[Rapidzona](https://rapidzona.tv/){#rapidzona}|Rapidzona is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -190,7 +189,7 @@ dateCreated: 2025-09-29T01:21:40.008247
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep28.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep29.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
