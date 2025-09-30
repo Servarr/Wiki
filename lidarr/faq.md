@@ -2,8 +2,8 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2025-03-30T15:47:51.456Z
-tags: lidarr, faq, questions, help, troubleshooting, common-issues
+date: 2025-09-30T18:23:54.340Z
+tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
@@ -68,18 +68,32 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [I keep getting warnings from my cloud storage about API limits](#i-keep-getting-warnings-from-my-cloud-storage-about-api-limits)
 
-## How does Lidarr work
+## How does Lidarr find releases
 
-- Lidarr relies on RSS feeds to automate grabbing of releases as they are posted, for both new releases as well as previously released releases being released or re-released. The RSS feed is the latest releases from a site, typically between 50 and 100 releases, though some sites provide more and some less. The RSS feed is comprised of all releases recently available, including releases for requested media you do not follow, if you look at debug logs you will see these releases being processed, which is completely normal.
-- Lidarr enforces a minimum of 10 minutes on the RSS Sync interval and a maximum of 2 hours. 15 minutes is the minimum recommended by most indexers, though some do allow lower intervals and 2 hours ensures Lidarr is checking frequently enough to not miss a release (even though it can page through the RSS feed on many indexers to help with that). Some indexers allow clients to perform an RSS sync more frequently than 10 minutes, in those scenarios we recommend using Lidarr's Release-Push API endpoint along with an IRC announce channel to push releases to Lidarr for processing which can happen in near real time and with less overhead on the indexer and Lidarr as Lidarr doesn’t need to request the RSS feed too frequently and process the same releases over and over.
+Lidarr does *not* regularly search for album files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted releases, then compares that with its list of albums that are missing or need to be upgraded. Any matches are downloaded. This lets Lidarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
+
+So how do you deal with the present and past? When you're adding an album, you will need to set the correct path, profile and monitoring status then use the Start search for missing album checkbox. If the album hasn't been released yet, you do not need to initiate a search.
+
+Put another way, Lidarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
+
+If you've already added the album, but now you want to search for it, you have a few choices. You can go to the album's page and use the search button, which will do a search and then automatically pick one. You can search individual albums automatically or manually. Or you can go to the Wanted tab and search from there using the Missing or Cutoff Unmet filters.
+
+If Lidarr has been offline for an extended period of time, Lidarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Lidarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
+
+### Instances When Auto Searching Does Occur
+
+Active searching (via the indexer's API) is only done in the below situations. Note that the same rules as normal apply: artist + album must be monitored and albums without a release date are skipped.
+
+* **Triggered Automatic or Manual Search**
+   * User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific album or artist.
+* **Adding an artist using the Add and Search button**
+* **Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches**
+* **Recently Added Albums**
+   * Albums discovered and monitored during artist metadata refresh will be automatically searched. This covers albums added to MusicBrainz after the artist was added to Lidarr.
 
 ## How does Lidarr find releases
 
-- Lidarr does ''not'' regularly search for album files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for ''all'' the newly posted releases, then compares that with its list of releases that are missing or need to be upgraded. Any matches are downloaded. This lets Lidarr cover a library of ''any size'' with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the ''future'' though.
-- So how do you deal with the present and past? When you're adding a album, you will need to set the correct path, profile and monitoring status then use the Start search for missing album checkbox. If the album hasn't been released yet, you do not need to initiate a search.
-- Put another way, Lidarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases you want that were uploaded in the past.
-- If you've already added the album, but now you want to search for it, you have a few choices. You can go to the album's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see ''all'' the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
-- If Lidarr has been offline for an extended period of time, Lidarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Lidarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
+This is a legacy entry. Please see [How does Lidarr work?](#how-does-lidarr-work).
 
 ## Forced Authentication
 
