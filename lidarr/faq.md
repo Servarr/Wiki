@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2025-09-30T18:23:54.340Z
+date: 2025-09-30T18:24:41.396Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -68,7 +68,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [I keep getting warnings from my cloud storage about API limits](#i-keep-getting-warnings-from-my-cloud-storage-about-api-limits)
 
-## How does Lidarr find releases
+## How does Lidarr work?
 
 Lidarr does *not* regularly search for album files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted releases, then compares that with its list of albums that are missing or need to be upgraded. Any matches are downloaded. This lets Lidarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 
