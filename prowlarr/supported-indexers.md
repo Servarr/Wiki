@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-09-30T01:20:51.131243
+date: 2025-10-01T01:28:07.327432
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-09-30T01:20:51.131243
+dateCreated: 2025-10-01T01:28:07.327432
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.1.3.5188` / [Commit: f5f98e4f53a8045dc2a24e21a62e29de5bd9db17](https://github.com/Prowlarr/Prowlarr/commit/f5f98e4f53a8045dc2a24e21a62e29de5bd9db17)
-  - [Prowlarr Indexers Commit: 50d9256f20370ee5346cc0db6bac0f487e9b5db2](https://github.com/Prowlarr/Indexers/commit/50d9256f20370ee5346cc0db6bac0f487e9b5db2)
+  - Prowlarr Build `2.1.3.5196` / [Commit: 471c9910a08f866ac78cfa1423c6d4460fcd9f41](https://github.com/Prowlarr/Prowlarr/commit/471c9910a08f866ac78cfa1423c6d4460fcd9f41)
+  - [Prowlarr Indexers Commit: 60d0aed4f56db7c1e8d7f9b73bbca8e5a685f06b](https://github.com/Prowlarr/Indexers/commit/60d0aed4f56db7c1e8d7f9b73bbca8e5a685f06b)
 
 ---
 
@@ -189,7 +189,7 @@ dateCreated: 2025-09-30T01:20:51.131243
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://sep29.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://sep30.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -284,7 +284,6 @@ dateCreated: 2025-09-30T01:20:51.131243
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
 |[CD File](https://pt.cdfile.org/){#cdfile}|CD File is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
-|[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
 |[CHDBits](https://ptchdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[ChileBT (API)](https://chilebt.com/){#chilebt-api}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
@@ -526,7 +525,7 @@ dateCreated: 2025-09-30T01:20:51.131243
 |[SexTorrent](https://sextorrent.eu/){#sextorrent}|SexTorrent is a Private Torrent Tracker for 3X|English (United States)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|Shareisland is a ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
-|[Shazbat](https://www.shazbat.tv/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
+|[Shazbat](https://www.shazbat.tube/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
 |[The Show](https://theshow.click/){#theshow}|TheShow (TSBZ) is a Private Torrent Tracker for ENTERTAINMENT-INDUSTRY E-LEARNING|English (United States)|
 |[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[SkipTheCommercials (API)](https://skipthecommercials.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
