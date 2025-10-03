@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-02T01:18:11.221276
+date: 2025-10-03T01:17:53.212327
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-02T01:18:11.221276
+dateCreated: 2025-10-03T01:17:53.212327
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.1.3.5202` / [Commit: 98608e75a6f37c5ec4709c869d175823f1da656a](https://github.com/Prowlarr/Prowlarr/commit/98608e75a6f37c5ec4709c869d175823f1da656a)
-  - [Prowlarr Indexers Commit: b6b54e826b93d7fdde6ffab5cdb3ee4505374ce7](https://github.com/Prowlarr/Indexers/commit/b6b54e826b93d7fdde6ffab5cdb3ee4505374ce7)
+  - Prowlarr Build `2.1.3.5208` / [Commit: 3c7575b58ed2b19757b24375109b1967a67861ee](https://github.com/Prowlarr/Prowlarr/commit/3c7575b58ed2b19757b24375109b1967a67861ee)
+  - [Prowlarr Indexers Commit: 77ba307725f4ae656147f609cf9bb81971cff20d](https://github.com/Prowlarr/Indexers/commit/77ba307725f4ae656147f609cf9bb81971cff20d)
 
 ---
 
@@ -116,7 +116,7 @@ dateCreated: 2025-10-02T01:18:11.221276
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq387.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq388.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[TorrentSir](https://torrentsir176.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome215.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
@@ -132,7 +132,7 @@ dateCreated: 2025-10-02T01:18:11.221276
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents.diy/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents2.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[ZkTorrent](https://www.zktorrent6.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
@@ -189,7 +189,7 @@ dateCreated: 2025-10-02T01:18:11.221276
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct01.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct02.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -318,6 +318,7 @@ dateCreated: 2025-10-02T01:18:11.221276
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://www.empornium.is/){#empornium2fa}|Empornium (EMP) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
 |[eMuwarez (API)](https://emuwarez.it/){#emuwarez}|eMuwarez is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
+|[eShareNet](https://esharenet.eu/){#esharenet}|eShareNet is a Private Tracker for British MOVIE / TV|English (United Kingdom)|
 |[eStone](https://estone.cc/){#estone}|eStone (BigTorrent) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[exitorrent\.org](https://exitorrent.org/){#exitorrent-org}|exitorrent\.org is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[ExoticaZ](https://exoticaz.to/){#exoticaz}|ExoticaZ (YourExotic) is a Private Torrent Tracker for 3X|English (United States)|
