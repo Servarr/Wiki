@@ -20,7 +20,7 @@ dateCreated: 2021-06-08T01:06:44.136Z
 
 Unless otherwise specified Prowlarr will store it's application data in the home folder of the user Prowlarr is running under 
 
--`/home/$USER/.config/Prowlarr
+- `/home/$USER/.config/Prowlarr`
 - `~/.config/Prowlarr`
 
 The installation instructions specify `/var/lib/prowlarr`
