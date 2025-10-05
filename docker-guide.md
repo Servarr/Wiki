@@ -531,7 +531,38 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 
 # Custom Docker Network and DNS
 
-One interesting feature of a [custom Docker network](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks) is that it gets its own DNS server. If you create a bridge network for your containers, you can use their hostnames in your configuration. For example, if you `docker run --network=isolated --hostname=deluge binhex/arch-deluge` and `docker run --network=isolated --hostname=radarr binhex/arch-radarr`, you can then configure the Download Client in Radarr to point at just `deluge` and it’ll work *and* communicate on its own private network. Which means if you wanted to be even more secure, you could *stop* forwarding that port too. If you put your reverse proxy container on the same network, you can even stop forwarding the web interface ports and make them even more secure.
+One interesting feature of a [custom Docker network](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks) is that it gets its own DNS server. If you create a bridge network for your containers, you can use their hostnames in your configuration. For example, if you `docker run --network=isolated --hostname=deluge binhex/arch-deluge` and `docker run --network=isolated --hostname=radarr binhex/arch-radarr`, you can then configure the Download Client in Radarr to point at just `deluge` and it'll work *and* communicate on its own private network. Which means if you wanted to be even more secure, you could *stop* forwarding that port too. If you put your reverse proxy container on the same network, you can even stop forwarding the web interface ports and make them even more secure.
+
+## Using .internal Domain for Container Communication
+
+**For more reliable container-to-container communication, especially when using VPN containers, it's recommended to use the `.internal` domain suffix.**
+
+Docker's built-in DNS automatically resolves container names with the `.internal` suffix to their internal IP addresses. This is particularly useful when:
+
+- Using VPN containers (like Hotio's VPN feature) where network routing can be complex
+- Containers need to communicate across different network configurations
+- You want to ensure DNS resolution works reliably regardless of network setup
+
+**Example:**
+
+Instead of using just the container name:
+
+```yaml
+# Less reliable
+QBITTORRENT_HOST=qbittorrent
+```
+
+Use the `.internal` suffix:
+
+```yaml
+# More reliable, especially with VPN
+QBITTORRENT_HOST=qbittorrent.internal
+```
+
+This works with any container name in your Docker setup. If your qBittorrent container is named `qbittorrent`, other containers can reach it at `qbittorrent.internal` without any additional configuration.
+
+> **Note**: This is especially important when using [Hotio's VPN feature](https://hotio.dev/containers/qbittorrent/) or any VPN container setup, as it ensures reliable DNS resolution even when routing traffic through VPN tunnels.
+{.is-info}
 
 # Common Problems
 

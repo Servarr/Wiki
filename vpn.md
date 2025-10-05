@@ -92,9 +92,15 @@ Use download clients with built-in VPN support:
 - **[Hotio qBittorrent](https://hotio.dev/containers/qbittorrent/)** - Built-in WireGuard VPN support
 - **[Binhex VPN containers](https://github.com/binhex/)** - OpenVPN support (e.g., `binhex/arch-qbittorrentvpn`)
 
+> **Important**: When using VPN containers, configure other containers to connect using the `.internal` domain suffix (e.g., `qbittorrent.internal` instead of just `qbittorrent`). This ensures reliable DNS resolution through Docker's built-in DNS, especially important with VPN routing. See the [Docker Guide](/docker-guide#using-internal-domain-for-container-communication) for more details.
+{.is-warning}
+
 ### Multiple Download Clients
 
 Use **[Hotio's base image](https://hotio.dev/containers/base/)** and route all download clients through it. This is the only acceptable use case for sharing a VPN container.
+
+> **Important**: When routing multiple download clients through a VPN container, always use the `.internal` domain suffix for container communication (e.g., `sabnzbd.internal`, `qbittorrent.internal`). This provides reliable DNS resolution regardless of VPN routing complexity.
+{.is-warning}
 
 ### Selective VPN (Prowlarr Indexers Only)
 
@@ -139,9 +145,21 @@ curl ifconfig.me
 # Test DNS
 nslookup google.com
 
+# Test container DNS resolution with .internal
+nslookup qbittorrent.internal
+
 # Container networking
 docker network inspect <network_name>
 ```
+
+**DNS Resolution Issues with VPN:**
+
+If containers cannot communicate when using VPN:
+
+1. Use `.internal` suffix for all container references (e.g., `qbittorrent.internal`)
+2. Verify DNS configuration in VPN container
+3. Check that containers are on the same Docker network
+4. Test DNS resolution from within the container using the debug commands above
 
 **When to Get Help:**
 
