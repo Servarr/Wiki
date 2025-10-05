@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-04T01:15:58.449956
+date: 2025-10-05T01:26:32.003634
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-04T01:15:58.449956
+dateCreated: 2025-10-05T01:26:32.003634
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.3.5208` / [Commit: 3c7575b58ed2b19757b24375109b1967a67861ee](https://github.com/Prowlarr/Prowlarr/commit/3c7575b58ed2b19757b24375109b1967a67861ee)
-  - [Prowlarr Indexers Commit: 2bc42bc14e2b7008935e6185febdc94066d872c5](https://github.com/Prowlarr/Indexers/commit/2bc42bc14e2b7008935e6185febdc94066d872c5)
+  - [Prowlarr Indexers Commit: 6a69a81964e64fabcead8a6c1ae54d158a747637](https://github.com/Prowlarr/Indexers/commit/6a69a81964e64fabcead8a6c1ae54d158a747637)
 
 ---
 
@@ -189,7 +189,7 @@ dateCreated: 2025-10-04T01:15:58.449956
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct03.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct04.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -218,7 +218,7 @@ dateCreated: 2025-10-04T01:15:58.449956
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
 |[Abnormal](https://abn.lol/){#abnormal}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[ABtorrents](https://abtorrents.xyz/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
+|[ABtorrents](https://usefultrash.net/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a Private torrent site for Rugby and other sports played in Australia|English (Australia)|
 |[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[AFUN](https://www.ptlover.cc/){#afun}|AFUN is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -510,7 +510,7 @@ dateCreated: 2025-10-04T01:15:58.449956
 |[Rastastugan (API)](https://rastastugan.org/){#rastastugan-api}|Rastastugan is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for MOVIES / TV|Polish (Poland)|
 |[Redacted](https://redacted.sh/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
-|[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free,LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
+|[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free, LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
 |[RetroFlix](https://retroflix.club/){#retroflix}|RetroFlix (RFX) is a Private Torrent Tracker for Classic Movies / TV / General Releases|English (United States)|
 |[RevolutionTT](https://revott.me/){#revolutiontt}|The Revolution has begun|English (United States)|
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
