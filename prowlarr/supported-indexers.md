@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-05T01:26:32.003634
+date: 2025-10-06T01:20:18.033060
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-05T01:26:32.003634
+dateCreated: 2025-10-06T01:20:18.033060
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.1.3.5208` / [Commit: 3c7575b58ed2b19757b24375109b1967a67861ee](https://github.com/Prowlarr/Prowlarr/commit/3c7575b58ed2b19757b24375109b1967a67861ee)
-  - [Prowlarr Indexers Commit: 6a69a81964e64fabcead8a6c1ae54d158a747637](https://github.com/Prowlarr/Indexers/commit/6a69a81964e64fabcead8a6c1ae54d158a747637)
+  - Prowlarr Build `2.1.4.5212` / [Commit: c6690487670fed00651761d2d8ad11c705360ea3](https://github.com/Prowlarr/Prowlarr/commit/c6690487670fed00651761d2d8ad11c705360ea3)
+  - [Prowlarr Indexers Commit: a05dc7a97e9880c8a8a73dffaa30cd6138c6b8d4](https://github.com/Prowlarr/Indexers/commit/a05dc7a97e9880c8a8a73dffaa30cd6138c6b8d4)
 
 ---
 
@@ -49,7 +49,6 @@ dateCreated: 2025-10-05T01:26:32.003634
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[EBookBay](http://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
 |[Elitetorrent-wf](https://www.elitetorrent.wf/){#elitetorrent-wf}|Elitetorrent-wf is a SPANISH Public tracker for MOVIES / TV|Spanish (Spain)|
-|[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[FileMood](https://filemood.com/){#filemood}|FileMood is a Public BitTorrent DHT search engine|English (United States)|
@@ -91,7 +90,6 @@ dateCreated: 2025-10-05T01:26:32.003634
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Qbite (Hubite)](https://qbite.top/){#qbite}|Qbite (Hubite) is a Public Torrent Tracker for 3X|English (United States)|
-|[Rapidzona](https://rapidzona.tv/){#rapidzona}|Rapidzona is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[RuTor](https://rutor.info/){#rutor}|RuTor is a RUSSIAN Public site for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.RU](http://rutracker.ru/){#rutracker-ru}|RuTracker\.RU is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -103,7 +101,6 @@ dateCreated: 2025-10-05T01:26:32.003634
 |[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern ASIAN media including anime, manga, games and JAV|English (United States)|
-|[TheRARBG](https://therarbg.to/){#therarbg}|TheRARBG is a Public site inspired by RARBG\.to for MOVIES / TV / GENERAL|English (United States)|
 |[Tokyo Toshokan](https://www.tokyotosho.info/){#tokyotosho}|Tokyo Toshokan is a Public BitTorrent Library for JAPANESE Media|English (United States)|
 |[torrent\.by](https://torrent.by/){#torrentby}|torrent\.by is a BELARUSIAN Public Torrent Tracker|Russian (Russia)|
 |[Torrent Downloads](https://www.torrentdownloads.pro/){#torrentdownloads}|Torrent Downloads (TD) is a Public torrent site for all kinds of content|English (United States)|
@@ -189,7 +186,7 @@ dateCreated: 2025-10-05T01:26:32.003634
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct04.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct05.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -325,7 +322,7 @@ dateCreated: 2025-10-05T01:26:32.003634
 |[Explosiv-World](https://explosiv-world.biz/){#explosiv-world}|Explosiv-World (E-W) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ExtremeBits](https://extremebits.net/){#extremebits}|ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS|English (United States)|
 |[F1Carreras (API)](https://f1carreras.xyz/){#f1carreras-api}|F1Carreras is a SPANISH Private Torrent Tracker for Motor Racing TV Releases|Spanish (Mexico)|
-|[F1GP](https://f1gp.site/){#f1gp}|F1GP is a Private Torrent Tracker for F1 Racing|English (United States)|
+|[F1GP](https://f1gp.site/){#f1gp}|F1GP is a Private Torrent Tracker for F1, F2, F3, FE, F1 Academy Racing|English (United States)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
