@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-06T01:20:18.033060
+date: 2025-10-07T01:18:59.255325
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-06T01:20:18.033060
+dateCreated: 2025-10-07T01:18:59.255325
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.4.5212` / [Commit: c6690487670fed00651761d2d8ad11c705360ea3](https://github.com/Prowlarr/Prowlarr/commit/c6690487670fed00651761d2d8ad11c705360ea3)
-  - [Prowlarr Indexers Commit: a05dc7a97e9880c8a8a73dffaa30cd6138c6b8d4](https://github.com/Prowlarr/Indexers/commit/a05dc7a97e9880c8a8a73dffaa30cd6138c6b8d4)
+  - [Prowlarr Indexers Commit: c1f81ad2589b7303ab51fd135526f0997f1e392d](https://github.com/Prowlarr/Indexers/commit/c1f81ad2589b7303ab51fd135526f0997f1e392d)
 
 ---
 
@@ -81,7 +81,7 @@ dateCreated: 2025-10-06T01:20:18.033060
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www1.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent.fyi/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent10.com/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
@@ -186,7 +186,7 @@ dateCreated: 2025-10-06T01:20:18.033060
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct05.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct06.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -277,7 +277,7 @@ dateCreated: 2025-10-06T01:20:18.033060
 |[CapybaraBR (API)](https://capybarabr.com/){#capybarabr}|CapybaraBR is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Carp-Hunter](https://carp-hunter.hu/){#carphunter}|Carp-Hunter is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Carpathians](https://mycarpathians.net/){#carpathians}|Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
-|[CarPT](https://carpt.net/){#carpt}|CarPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[CarPT](https://carpt.net/){#carpt}|CarPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / MUSIC|Chinese (China)|
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
 |[CD File](https://pt.cdfile.org/){#cdfile}|CD File is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
