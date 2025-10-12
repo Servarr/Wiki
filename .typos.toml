@@ -17,6 +17,7 @@ sonarr = "sonarr"
 whisparr = "whisparr"
 
 # Intentional names/terms that shouldn't be "corrected"
+aling = "aling" # tracker
 broadcas = "broadcas" # Part of tracker name BroadcasTheNet
 hda = "hda" # Tracker acronym
 nam = "nam" # Part of "Viet Nam"
