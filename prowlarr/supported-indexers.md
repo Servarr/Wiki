@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-17T01:21:10.361915
+date: 2025-10-18T01:17:20.115680
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-17T01:21:10.361915
+dateCreated: 2025-10-18T01:17:20.115680
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.5.5213` / [Commit: f7f3648dac1acb9ee5c268453251a1befa9181ad](https://github.com/Prowlarr/Prowlarr/commit/f7f3648dac1acb9ee5c268453251a1befa9181ad)
-  - [Prowlarr Indexers Commit: 54adf255896da2bb72207cabb77ca8f78ad8149b](https://github.com/Prowlarr/Indexers/commit/54adf255896da2bb72207cabb77ca8f78ad8149b)
+  - [Prowlarr Indexers Commit: 28da7b1e7e652f05b020ee757dc4ad11320805a0](https://github.com/Prowlarr/Indexers/commit/28da7b1e7e652f05b020ee757dc4ad11320805a0)
 
 ---
 
@@ -527,6 +527,7 @@ dateCreated: 2025-10-17T01:21:10.361915
 |[SewerPT](https://sewerpt.com/){#sewerpt}|SewerPT (下水道) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SexTorrent](https://sextorrent.eu/){#sextorrent}|SexTorrent is a Private Torrent Tracker for 3X|English (United States)|
 |[SFP](https://s-f-p.dyndns.dk/){#sfp}|SFP (Share Friends Projekt) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[ShaKaw](https://tracker.shakaw.com.br/){#shakaw}|ShaKaw is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|Shareisland is a ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Shazbat](https://www.shazbat.tube/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
 |[The Show](https://theshow.click/){#theshow}|TheShow (TSBZ) is a Private Torrent Tracker for ENTERTAINMENT-INDUSTRY E-LEARNING|English (United States)|
