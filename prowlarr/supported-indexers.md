@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-18T01:17:20.115680
+date: 2025-10-19T01:37:30.477143
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-18T01:17:20.115680
+dateCreated: 2025-10-19T01:37:30.477143
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.5.5213` / [Commit: f7f3648dac1acb9ee5c268453251a1befa9181ad](https://github.com/Prowlarr/Prowlarr/commit/f7f3648dac1acb9ee5c268453251a1befa9181ad)
-  - [Prowlarr Indexers Commit: 28da7b1e7e652f05b020ee757dc4ad11320805a0](https://github.com/Prowlarr/Indexers/commit/28da7b1e7e652f05b020ee757dc4ad11320805a0)
+  - [Prowlarr Indexers Commit: e72ed3cff4fb2afabd3a9191a7a087242a6b8c9f](https://github.com/Prowlarr/Indexers/commit/e72ed3cff4fb2afabd3a9191a7a087242a6b8c9f)
 
 ---
 
@@ -59,7 +59,7 @@ dateCreated: 2025-10-18T01:17:20.115680
 |[iDope](https://idope.me/){#idope}|iDope is a Public torrent search engine presenting direct magnet links|English (United States)|
 |[ilCorSaRoNeRo](https://ilcorsaronero.link/){#ilcorsaronero}|ilCorSaRoNeRo is an ITALIAN Public site for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
-|[Isohunt2](https://isohunt.ch/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
+|[Isohunt2](https://isohunt.sh/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[kickasstorrents\.to](https://kickass.torrentbay.st/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[Knaben](https://knaben.org/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
@@ -187,7 +187,7 @@ dateCreated: 2025-10-18T01:17:20.115680
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct16.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct18.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
