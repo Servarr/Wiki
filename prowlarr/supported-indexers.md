@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-19T01:37:30.477143
+date: 2025-10-20T01:26:57.946277
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-19T01:37:30.477143
+dateCreated: 2025-10-20T01:26:57.946277
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.5.5213` / [Commit: f7f3648dac1acb9ee5c268453251a1befa9181ad](https://github.com/Prowlarr/Prowlarr/commit/f7f3648dac1acb9ee5c268453251a1befa9181ad)
-  - [Prowlarr Indexers Commit: e72ed3cff4fb2afabd3a9191a7a087242a6b8c9f](https://github.com/Prowlarr/Indexers/commit/e72ed3cff4fb2afabd3a9191a7a087242a6b8c9f)
+  - [Prowlarr Indexers Commit: 574bbb01b4025c964f044f363d99bf382f007502](https://github.com/Prowlarr/Indexers/commit/574bbb01b4025c964f044f363d99bf382f007502)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2025-10-19T01:37:30.477143
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
-|[Torrent9](https://www5.torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[Torrent9](https://www.torrent9.zone/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[TorrentControl (API)](https://torrentcontrol.pw/){#torrentcontrol}|TorrentControl (API) is a Public Torrent Tracker for MOVIES / TV|English (United States)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
@@ -187,7 +187,7 @@ dateCreated: 2025-10-19T01:37:30.477143
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct18.rudub.mom/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct19.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
