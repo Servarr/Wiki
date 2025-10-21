@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-20T01:26:57.946277
+date: 2025-10-21T01:23:16.574322
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-20T01:26:57.946277
+dateCreated: 2025-10-21T01:23:16.574322
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.1.5.5213` / [Commit: f7f3648dac1acb9ee5c268453251a1befa9181ad](https://github.com/Prowlarr/Prowlarr/commit/f7f3648dac1acb9ee5c268453251a1befa9181ad)
-  - [Prowlarr Indexers Commit: 574bbb01b4025c964f044f363d99bf382f007502](https://github.com/Prowlarr/Indexers/commit/574bbb01b4025c964f044f363d99bf382f007502)
+  - Prowlarr Build `2.1.5.5215` / [Commit: 775b716c0f3cc2ccdff92db26cffa6db499b84cb](https://github.com/Prowlarr/Prowlarr/commit/775b716c0f3cc2ccdff92db26cffa6db499b84cb)
+  - [Prowlarr Indexers Commit: 63b40733ff4ae2d14581fd84407d2c47894b874f](https://github.com/Prowlarr/Indexers/commit/63b40733ff4ae2d14581fd84407d2c47894b874f)
 
 ---
 
@@ -81,7 +81,7 @@ dateCreated: 2025-10-20T01:26:57.946277
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[OxTorrent](https://www1.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[OxTorrent-vip](https://www.oxtorrent10.com/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[OxTorrent-vip](https://www.oxtorrent.town/){#oxtorrent-vip}|OxTorrent-vip is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
@@ -187,7 +187,7 @@ dateCreated: 2025-10-20T01:26:57.946277
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct19.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct20.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -293,7 +293,7 @@ dateCreated: 2025-10-20T01:26:57.946277
 |[ClearJAV (API)](https://clearjav.com/){#clearjav-api}|ClearJAV is a Private Torrent Tracker for Japanese Adult Video (JAV) content from official JAV studios only|English (United States)|
 |[Coastal-Music-Crew](https://coastal-crew.bounceme.net/){#coastalcrew}|Coastal-Music-Crew (C-M-C) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ConCen](https://concen.org/){#concen}|ConCen (Conspiracy Central) is a Private conspiracy related torrent index|English (United States)|
-|[Concertos](https://concertos.live/){#concertos}|Concertos is a Private Torrent Tracker for Live Concerts with Strict Quality Control|English (United States)|
+|[Concertos (API)](https://concertos.live/){#concertos}|Concertos is a Private Torrent Tracker for Live Concerts with Strict Quality Control|English (United States)|
 |[CrabPT (蟹黄堡)](https://crabpt.vip/){#crabpt}|CrabPT (蟹黄堡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[The Crazy Ones](https://thecrazyones.hopto.org/){#thecrazyones}|The Crazy Ones is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[CrazySpirits](https://www.crazyspirits.ca/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
@@ -510,7 +510,7 @@ dateCreated: 2025-10-20T01:26:57.946277
 |[Rastastugan (API)](https://rastastugan.org/){#rastastugan-api}|Rastastugan is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for MOVIES / TV|Polish (Poland)|
 |[Redacted](https://redacted.sh/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
-|[ReelFLiX (API)](https://reelflix.xyz/){#reelflix-api}|ReelFLiX (HD4Free, LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
+|[ReelFLiX (API)](https://reelflix.cc/){#reelflix-api}|ReelFLiX (HD4Free, LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
 |[RetroFlix](https://retroflix.club/){#retroflix}|RetroFlix (RFX) is a Private Torrent Tracker for Classic Movies / TV / General Releases|English (United States)|
 |[RevolutionTT](https://revott.me/){#revolutiontt}|The Revolution has begun|English (United States)|
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
