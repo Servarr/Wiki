@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-21T01:23:16.574322
+date: 2025-10-22T01:24:56.125530
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-21T01:23:16.574322
+dateCreated: 2025-10-22T01:24:56.125530
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.1.5.5215` / [Commit: 775b716c0f3cc2ccdff92db26cffa6db499b84cb](https://github.com/Prowlarr/Prowlarr/commit/775b716c0f3cc2ccdff92db26cffa6db499b84cb)
-  - [Prowlarr Indexers Commit: 63b40733ff4ae2d14581fd84407d2c47894b874f](https://github.com/Prowlarr/Indexers/commit/63b40733ff4ae2d14581fd84407d2c47894b874f)
+  - [Prowlarr Indexers Commit: 9dad609e7ddd7f1418bc9894ff96ba4037f0eeff](https://github.com/Prowlarr/Indexers/commit/9dad609e7ddd7f1418bc9894ff96ba4037f0eeff)
 
 ---
 
@@ -76,7 +76,7 @@ dateCreated: 2025-10-21T01:23:16.574322
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from JAPAN|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for MOVIES / TV / MUSIC|Russian (Russia)|
-|[NorTorrent](https://www.nortorrent.net/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
+|[NorTorrent](https://www.nortorrent.town/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern ASIAN media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -131,7 +131,7 @@ dateCreated: 2025-10-21T01:23:16.574322
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://www.zetorrents2.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
-|[ZkTorrent](https://www.zktorrent6.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://www.zktorrent.town/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -187,7 +187,7 @@ dateCreated: 2025-10-21T01:23:16.574322
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct20.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct21.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
