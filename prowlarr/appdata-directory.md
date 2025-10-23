@@ -18,7 +18,7 @@ dateCreated: 2021-06-08T01:06:44.136Z
 
 # Linux
 
-Unless otherwise specified Prowlarr will store it's application data in the home folder of the user Prowlarr is running under 
+Unless otherwise specified Prowlarr will store it's application data in the home folder of the user Prowlarr is running under
 
 - `/home/$USER/.config/Prowlarr`
 - `~/.config/Prowlarr`
