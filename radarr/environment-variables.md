@@ -158,8 +158,8 @@ Branch=master
 | `BuiltIn` | 0 | Default built-in updater | Standard installations |
 | `Script` | 1 | Updates via custom script | Advanced custom setups |
 | `External` | 10 | Updates managed externally | Package managers, Docker |
-| `Apt` | 11 | Debian/Ubuntu package manager | Reserved for future use |
-| `Docker` | 12 | Docker container updates | Reserved for future use |
+| `Apt` | 11 | Debian/Ubuntu package manager | Used by package maintainers |
+| `Docker` | 12 | Docker container updates | Used by Docker maintainers |
 
 ### Real-World Example
 
@@ -169,15 +169,6 @@ Branch=master
 PackageAuthor=[radarr](https://aur.archlinux.org/packages/radarr/)
 UpdateMethod=External
 UpdateMethodMessage=flag [radarr](https://aur.archlinux.org/packages/radarr/) [out-of-date](https://aur.archlinux.org/pkgbase/radarr/flag/), use an [aur helper](https://wiki.archlinux.org/index.php/AUR_helpers) or the [manual method](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) to update.
-Branch=master
-```
-
-**Custom Managed Installation:**
-```
-PackageVersion=5.0.0.0-custom
-PackageAuthor=IT Department
-UpdateMethod=External
-UpdateMethodMessage=Updates managed by configuration management system
 Branch=master
 ```
 

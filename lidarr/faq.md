@@ -393,6 +393,42 @@ chmod -R 0644 *
 
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/lidarr](http://reddit.com/r/lidarr) or hop on [our discord](https://lidarr.audio/discord) for help.
 
+## Lidarr won't start on Debian 11 or older systems due to SQLite version
+
+> This workaround is only for Debian 11 and other near end-of-life systems with outdated SQLite versions. This is not applicable to systems with SQLite corruption issues.
+{.is-warning}
+
+If Lidarr fails to start with SQLite-related errors (not corruption) on older Linux distributions like Debian 11, you can force Lidarr to use the system's SQLite library instead of the bundled version.
+
+### Solution
+
+Remove the bundled SQLite library from Lidarr's directory:
+
+```bash
+# Navigate to Lidarr installation directory
+cd /opt/Lidarr/
+
+# Remove the bundled SQLite library
+# The filename may be either of the following:
+rm -f libe_sqlite3.so
+rm -f libSQLite3.so
+```
+
+After removing the file, restart Lidarr. It will now use the system's SQLite library located in standard system paths (typically `/usr/lib`).
+
+### When to use this workaround
+
+- You're running Debian 11 or another near end-of-life Linux distribution
+- Lidarr fails to start with SQLite initialization errors
+- The error is **not** related to database corruption
+- Your system's SQLite version is at least 3.9.0
+
+### When NOT to use this workaround
+
+- You have a database corruption issue (see the section above instead)
+- You're on a modern, supported Linux distribution
+- Lidarr starts normally
+
 ## I am using a Pi and Raspbian and Lidarr will not launch
 
 Raspbian has a version of libseccomp2 that is too old to support running a docker container based on Ubuntu 20.04, which both hotio and LinuxServer use as their base. You either need to use `--privileged`, update libseccomp2 from Ubuntu or get a better OS (We recommend Ubuntu 20.04 arm64)
