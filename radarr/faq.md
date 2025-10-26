@@ -443,6 +443,42 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 - See the above database is malformed entry.
 - Then attempt to launch and see if it works. If it does not work, you will need further support. Post in our [subreddit /r/radarr](http://reddit.com/r/radarr) or hop on [our discord](https://radarr.video/discord) for help.
 
+## Radarr won't start on Debian 11 or older systems due to SQLite version
+
+> This workaround is only for Debian 11 and other near end-of-life systems with outdated SQLite versions. This is not applicable to systems with SQLite corruption issues.
+{.is-warning}
+
+If Radarr fails to start with SQLite-related errors (not corruption) on older Linux distributions like Debian 11, you can force Radarr to use the system's SQLite library instead of the bundled version.
+
+### Solution
+
+Remove the bundled SQLite library from Radarr's directory:
+
+```bash
+# Navigate to Radarr installation directory
+cd /opt/Radarr/
+
+# Remove the bundled SQLite library
+# The filename may be either of the following:
+rm -f libe_sqlite3.so
+rm -f libSQLite3.so
+```
+
+After removing the file, restart Radarr. It will now use the system's SQLite library located in standard system paths (typically `/usr/lib`).
+
+### When to use this workaround
+
+- You're running Debian 11 or another near end-of-life Linux distribution
+- Radarr fails to start with SQLite initialization errors
+- The error is **not** related to database corruption
+- Your system's SQLite version is at least 3.9.0
+
+### When NOT to use this workaround
+
+- You have a database corruption issue (see the section above instead)
+- You're on a modern, supported Linux distribution
+- Radarr starts normally
+
 ## Why can Radarr not see my files on a remote server
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.

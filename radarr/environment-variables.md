@@ -157,26 +157,19 @@ Branch=master
 |-------|---------|-------------|----------|
 | `BuiltIn` | 0 | Default built-in updater | Standard installations |
 | `Script` | 1 | Updates via custom script | Advanced custom setups |
-| `External` | 10 | Updates managed externally | Package managers (apt, yum), Docker |
-| `Apt` | 11 | Debian/Ubuntu package manager | `.deb` packages |
-| `Docker` | 12 | Docker container updates | Containerized deployments |
+| `External` | 10 | Updates managed externally | Package managers, Docker |
+| `Apt` | 11 | Debian/Ubuntu package manager | Reserved for future use |
+| `Docker` | 12 | Docker container updates | Reserved for future use |
 
-### Common Use Cases
+### Real-World Example
 
-**Debian/Ubuntu Package:**
+**Arch Linux AUR Package** (from [prowlarr AUR](https://aur.archlinux.org/packages/prowlarr/)):
 ```
-PackageVersion=5.0.0.0-1
-PackageAuthor=Your Repository
-UpdateMethod=Apt
-UpdateMethodMessage=Updates managed by APT package manager
+# PackageVersion is added by PKGBUILD
+PackageAuthor=[radarr](https://aur.archlinux.org/packages/radarr/)
+UpdateMethod=External
+UpdateMethodMessage=flag [radarr](https://aur.archlinux.org/packages/radarr/) [out-of-date](https://aur.archlinux.org/pkgbase/radarr/flag/), use an [aur helper](https://wiki.archlinux.org/index.php/AUR_helpers) or the [manual method](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) to update.
 Branch=master
-```
-
-**Docker Container:**
-```
-PackageVersion=5.0.0.0
-UpdateMethod=Docker
-UpdateMethodMessage=Update container to get the latest version
 ```
 
 **Custom Managed Installation:**
@@ -185,6 +178,7 @@ PackageVersion=5.0.0.0-custom
 PackageAuthor=IT Department
 UpdateMethod=External
 UpdateMethodMessage=Updates managed by configuration management system
+Branch=master
 ```
 
 ## Notes
