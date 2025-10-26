@@ -115,9 +115,82 @@ set SONARR__SERVER__URLBASE=/sonarr
 set SONARR__POSTGRES__HOST=localhost
 ```
 
+## Package Info File
+
+For package maintainers and custom installations, Sonarr supports a `package_info` file to override deployment settings.
+
+### Location
+
+The `package_info` file should be placed in the parent directory of the `bin` folder:
+
+```
+/opt/Sonarr/package_info
+/opt/Sonarr/bin/Sonarr
+```
+
+### Format
+
+The file uses simple key=value pairs, one per line:
+
+```
+PackageVersion=1.0.0
+PackageAuthor=YourName
+UpdateMethod=External
+Branch=main
+```
+
+### Available Keys
+
+| Key | Description | Example |
+|-----|-------------|---------|
+| `PackageVersion` | Custom package version identifier | `1.0.0-custom` |
+| `PackageAuthor` | Package maintainer name | `Community Package` |
+| `PackageGlobalMessage` | Message displayed in UI | `Custom build for Debian 11` |
+| `UpdateMethod` | How updates are handled (see values below) | `External` |
+| `UpdateMethodMessage` | Custom message about update method | `Updates managed by apt` |
+| `Branch` | Default branch to use | `main` or `develop` |
+| `ReleaseVersion` | Override release version | `4.0.0.0` |
+
+### UpdateMethod Values
+
+| Value | Numeric | Description | Use Case |
+|-------|---------|-------------|----------|
+| `BuiltIn` | 0 | Default built-in updater | Standard installations |
+| `Script` | 1 | Updates via custom script | Advanced custom setups |
+| `External` | 10 | Updates managed externally | Package managers (apt, yum), Docker |
+| `Apt` | 11 | Debian/Ubuntu package manager | `.deb` packages |
+| `Docker` | 12 | Docker container updates | Containerized deployments |
+
+### Common Use Cases
+
+**Debian/Ubuntu Package:**
+```
+PackageVersion=4.0.0.0-1
+PackageAuthor=Your Repository
+UpdateMethod=Apt
+UpdateMethodMessage=Updates managed by APT package manager
+Branch=main
+```
+
+**Docker Container:**
+```
+PackageVersion=4.0.0.0
+UpdateMethod=Docker
+UpdateMethodMessage=Update container to get the latest version
+```
+
+**Custom Managed Installation:**
+```
+PackageVersion=4.0.0.0-custom
+PackageAuthor=IT Department
+UpdateMethod=External
+UpdateMethodMessage=Updates managed by configuration management system
+```
+
 ## Notes
 
 - Environment variables override config.xml entries
 - Variable names are case-sensitive
 - Restart Sonarr after changing environment variables
+- The `package_info` file is read at startup and overrides built-in update mechanisms
 - These variables are particularly useful for Docker deployments and automation
