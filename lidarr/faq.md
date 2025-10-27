@@ -68,7 +68,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
   - [I keep getting warnings from my cloud storage about API limits](#i-keep-getting-warnings-from-my-cloud-storage-about-api-limits)
 
-## How does Lidarr work?
+## How does Lidarr work
 
 Lidarr does *not* regularly search for album files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted releases, then compares that with its list of albums that are missing or need to be upgraded. Any matches are downloaded. This lets Lidarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 
@@ -84,12 +84,12 @@ If Lidarr has been offline for an extended period of time, Lidarr will attempt t
 
 Active searching (via the indexer's API) is only done in the below situations. Note that the same rules as normal apply: artist + album must be monitored and albums without a release date are skipped.
 
-* **Triggered Automatic or Manual Search**
-   * User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific album or artist.
-* **Adding an artist using the Add and Search button**
-* **Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches**
-* **Recently Added Albums**
-   * Albums discovered and monitored during artist metadata refresh will be automatically searched. This covers albums added to MusicBrainz after the artist was added to Lidarr.
+- **Triggered Automatic or Manual Search**
+  - User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific album or artist.
+- **Adding an artist using the Add and Search button**
+- **Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches**
+- **Recently Added Albums**
+  - Albums discovered and monitored during artist metadata refresh will be automatically searched. This covers albums added to MusicBrainz after the artist was added to Lidarr.
 
 ## How does Lidarr find releases
 
@@ -395,10 +395,10 @@ chmod -R 0644 *
 
 ## Lidarr won't start on Debian 11 or older systems due to SQLite version
 
-> This workaround is only for Debian 11 and other near end-of-life systems with outdated SQLite versions. This is not applicable to systems with SQLite corruption issues.
+> This workaround is only for older end-of-life systems with outdated GLIBC/SQLite versions. This is not applicable to systems with SQLite corruption issues.
 {.is-warning}
 
-If Lidarr fails to start with SQLite-related errors (not corruption) on older Linux distributions like Debian 11, you can force Lidarr to use the system's SQLite library instead of the bundled version.
+Lidarr v3+ uses SQLite from SourceGear.sqlite3, which requires newer GLIBC versions and may cause compatibility issues on older end-of-life systems including Debian 10, Debian 11, Synology DSM, Ubuntu 18, and Ubuntu 20. If you encounter SQLite-related errors (not corruption) on these platforms, you can force Lidarr to use your system's native SQLite library instead, which is compatible with your GLIBC version.
 
 ### Solution
 
@@ -418,7 +418,7 @@ After removing the file, restart Lidarr. It will now use the system's SQLite lib
 
 ### When to use this workaround
 
-- You're running Debian 11 or another near end-of-life Linux distribution
+- You're running an older end-of-life system (Debian 10, Debian 11, Synology DSM, Ubuntu 18, or Ubuntu 20)
 - Lidarr fails to start with SQLite initialization errors
 - The error is **not** related to database corruption
 - Your system's SQLite version is at least 3.9.0
