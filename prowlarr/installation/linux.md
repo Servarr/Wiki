@@ -133,6 +133,9 @@ If Prowlarr did not appear to start, then check the status of the service:
 sudo journalctl --since today -u prowlarr
 ```
 
+> If Prowlarr v2.1.5.5216+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/prowlarr/faq#prowlarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
+{.is-info}
+
 ---
 
 ### Uninstall
