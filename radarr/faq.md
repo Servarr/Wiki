@@ -452,19 +452,42 @@ Radarr v6+ uses SQLite from SourceGear.sqlite3, which requires newer GLIBC versi
 
 ### Solution
 
-Remove the bundled SQLite library from Radarr's directory:
+Create a symlink from your system's SQLite library to the expected library name in Radarr's directory:
 
 ```bash
+# First, ensure libsqlite3-0 is installed (not just sqlite3)
+sudo apt update
+sudo apt install libsqlite3-0
+
 # Navigate to Radarr installation directory
 cd /opt/Radarr/
 
-# Remove the bundled SQLite library
-# The filename may be either of the following:
-rm -f libe_sqlite3.so
-rm -f libSQLite3.so
+# Backup the original bundled library
+mv libe_sqlite3.so libe_sqlite3.so.backup 2>/dev/null || true
+
+# Create symlink to system SQLite library
+# The path varies by architecture:
+# - amd64/x64: /usr/lib/x86_64-linux-gnu/libsqlite3.so.0
+# - arm64: /usr/lib/aarch64-linux-gnu/libsqlite3.so.0
+# - armhf: /usr/lib/arm-linux-gnueabihf/libsqlite3.so.0
+
+# For amd64 systems (most common):
+ln -s /usr/lib/x86_64-linux-gnu/libsqlite3.so.0 libe_sqlite3.so
+
+# For arm64 systems:
+# ln -s /usr/lib/aarch64-linux-gnu/libsqlite3.so.0 libe_sqlite3.so
+
+# For armhf systems:
+# ln -s /usr/lib/arm-linux-gnueabihf/libsqlite3.so.0 libe_sqlite3.so
+
+# Verify the symlink was created
+ls -la libe_sqlite3.so
 ```
 
-After removing the file, restart Radarr. It will now use the system's SQLite library located in standard system paths (typically `/usr/lib`).
+After creating the symlink, restart Radarr. It will now use the system's SQLite library which is compatible with your GLIBC version.
+
+> **Note:** You will need to recreate this symlink after each Radarr update, as updates replace the application directory contents.
+{.is-info}
 
 ### When to use this workaround
 
