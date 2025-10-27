@@ -140,6 +140,9 @@ If Radarr did not appear to start, then check the status of the service:
 sudo journalctl --since today -u radarr
 ```
 
+> If Radarr v6+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/radarr/faq#radarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
+{.is-info}
+
 ---
 
 ### Uninstall

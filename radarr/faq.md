@@ -445,10 +445,10 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 
 ## Radarr won't start on Debian 11 or older systems due to SQLite version
 
-> This workaround is only for Debian 11 and other near end-of-life systems with outdated SQLite versions. This is not applicable to systems with SQLite corruption issues.
+> This workaround is only for older end-of-life systems with outdated GLIBC/SQLite versions. This is not applicable to systems with SQLite corruption issues.
 {.is-warning}
 
-If Radarr fails to start with SQLite-related errors (not corruption) on older Linux distributions like Debian 11, you can force Radarr to use the system's SQLite library instead of the bundled version.
+Radarr v6+ uses SQLite from SourceGear.sqlite3, which requires newer GLIBC versions and may cause compatibility issues on older end-of-life systems including Debian 10, Debian 11, Synology DSM, Ubuntu 18, and Ubuntu 20. If you encounter SQLite-related errors (not corruption) on these platforms, you can force Radarr to use your system's native SQLite library instead, which is compatible with your GLIBC version.
 
 ### Solution
 
@@ -468,7 +468,7 @@ After removing the file, restart Radarr. It will now use the system's SQLite lib
 
 ### When to use this workaround
 
-- You're running Debian 11 or another near end-of-life Linux distribution
+- You're running an older end-of-life system (Debian 10, Debian 11, Synology DSM, Ubuntu 18, or Ubuntu 20)
 - Radarr fails to start with SQLite initialization errors
 - The error is **not** related to database corruption
 - Your system's SQLite version is at least 3.9.0
