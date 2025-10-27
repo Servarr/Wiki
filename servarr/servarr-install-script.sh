@@ -37,8 +37,8 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.15"
-scriptdate="2025-09-06" # change this later
+scriptversion="3.1.16"
+scriptdate="2025-10-27"
 
 set -euo pipefail
 
@@ -289,6 +289,29 @@ echo ""
 echo -e "Successfully installed ${brown}[${app^}]${reset}!!"
 rm -rf "${app^}.*.tar.gz"
 sleep 2
+
+# Check GLIBC version and remove bundled SQLite if needed
+echo ""
+echo -e ${yellow}"Checking GLIBC version for SQLite compatibility..."${reset}
+GLIBC_VERSION=$(ldd --version | awk '/ldd/{print $NF}')
+GLIBC_MAJOR=$(echo "$GLIBC_VERSION" | cut -d. -f1)
+GLIBC_MINOR=$(echo "$GLIBC_VERSION" | cut -d. -f2)
+
+# Check if GLIBC is older than 2.38
+if [ "$GLIBC_MAJOR" -lt 2 ] || { [ "$GLIBC_MAJOR" -eq 2 ] && [ "$GLIBC_MINOR" -lt 38 ]; }; then
+    echo ""
+    echo -e ${yellow}"Detected GLIBC ${GLIBC_VERSION} (older than 2.38)."${reset}
+    echo -e "Removing bundled SQLite libraries to use system SQLite..."
+
+    # Remove both possible filenames
+    rm -f "$bindir/libe_sqlite3.so"
+    rm -f "$bindir/libSQLite3.so"
+
+    echo -e ${green}"Bundled SQLite libraries removed. ${app^} will use system SQLite."${reset}
+    sleep 2
+else
+    echo -e ${green}"GLIBC ${GLIBC_VERSION} is compatible with bundled SQLite."${reset}
+fi
 
 # Configure Autostart
 
