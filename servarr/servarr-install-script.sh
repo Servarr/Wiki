@@ -37,7 +37,7 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.16"
+scriptversion="3.1.17"
 scriptdate="2025-10-27"
 
 set -euo pipefail
@@ -72,39 +72,39 @@ select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
 
     case $app in
     lidarr)
-        app_port="8686"                                          # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libchromaprint-tools mediainfo" # Required packages
-        app_umask="0002"                                         # UMask the Service will run as
-        branch="master"                                          # {Update me if needed} branch to install
+        app_port="8686"                                                     # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo" # Required packages
+        app_umask="0002"                                                    # UMask the Service will run as
+        branch="master"                                                     # {Update me if needed} branch to install
         break
         ;;
     prowlarr)
-        app_port="9696"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="master"           # {Update me if needed} branch to install
+        app_port="9696"                      # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_umask="0002"                     # UMask the Service will run as
+        branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     radarr)
-        app_port="7878"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="master"           # {Update me if needed} branch to install
+        app_port="7878"                      # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_umask="0002"                     # UMask the Service will run as
+        branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     whisparr)
-        app_port="6969"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="nightly"          # {Update me if needed} branch to install
+        app_port="6969"                      # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_umask="0002"                     # UMask the Service will run as
+        branch="nightly"                     # {Update me if needed} branch to install
         break
         ;;
     whisparr-v3)
         app=whisparr
-        app_port="6969"           # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3" # Required packages
-        app_umask="0002"          # UMask the Service will run as
-        branch="eros"          # {Update me if needed} branch to install
+        app_port="6969"                      # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_umask="0002"                     # UMask the Service will run as
+        branch="eros"                        # {Update me if needed} branch to install
         break
         ;;
     quit)
@@ -290,7 +290,7 @@ echo -e "Successfully installed ${brown}[${app^}]${reset}!!"
 rm -rf "${app^}.*.tar.gz"
 sleep 2
 
-# Check GLIBC version and remove bundled SQLite if needed
+# Check GLIBC version and create symlink to system SQLite if needed
 echo ""
 echo -e ${yellow}"Checking GLIBC version for SQLite compatibility..."${reset}
 GLIBC_VERSION=$(ldd --version | awk '/ldd/{print $NF}')
@@ -301,13 +301,25 @@ GLIBC_MINOR=$(echo "$GLIBC_VERSION" | cut -d. -f2)
 if [ "$GLIBC_MAJOR" -lt 2 ] || { [ "$GLIBC_MAJOR" -eq 2 ] && [ "$GLIBC_MINOR" -lt 38 ]; }; then
     echo ""
     echo -e ${yellow}"Detected GLIBC ${GLIBC_VERSION} (older than 2.38)."${reset}
-    echo -e "Removing bundled SQLite libraries to use system SQLite..."
+    echo -e "Creating symlink to system SQLite library..."
 
-    # Remove both possible filenames
-    rm -f "$bindir/libe_sqlite3.so"
-    rm -f "$bindir/libSQLite3.so"
+    # Backup original and create symlink based on architecture
+    mv "$bindir/libe_sqlite3.so" "$bindir/libe_sqlite3.so.backup" 2>/dev/null || true
 
-    echo -e ${green}"Bundled SQLite libraries removed. ${app^} will use system SQLite."${reset}
+    case "$ARCH" in
+        "amd64") SYSTEM_SQLITE="/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" ;;
+        "arm64") SYSTEM_SQLITE="/usr/lib/aarch64-linux-gnu/libsqlite3.so.0" ;;
+        "armhf") SYSTEM_SQLITE="/usr/lib/arm-linux-gnueabihf/libsqlite3.so.0" ;;
+        *) SYSTEM_SQLITE="/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" ;;
+    esac
+
+    if [ -f "$SYSTEM_SQLITE" ]; then
+        ln -s "$SYSTEM_SQLITE" "$bindir/libe_sqlite3.so"
+        echo -e ${green}"Symlink created. ${app^} will use system SQLite at $SYSTEM_SQLITE"${reset}
+    else
+        echo -e ${red}"System SQLite library not found at $SYSTEM_SQLITE"${reset}
+        echo -e ${red}"This should not happen as libsqlite3-0 is a prerequisite."${reset}
+    fi
     sleep 2
 else
     echo -e ${green}"GLIBC ${GLIBC_VERSION} is compatible with bundled SQLite."${reset}
