@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-27T01:38:19.269110
+date: 2025-10-28T01:21:32.033530
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-27T01:38:19.269110
+dateCreated: 2025-10-28T01:21:32.033530
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.2.0.5217` / [Commit: eb57d20545f4b617c3e2f9c5e42eea34afa17ae1](https://github.com/Prowlarr/Prowlarr/commit/eb57d20545f4b617c3e2f9c5e42eea34afa17ae1)
-  - [Prowlarr Indexers Commit: 3c004ef763323c5c5719467d6fd82f06b70467b2](https://github.com/Prowlarr/Indexers/commit/3c004ef763323c5c5719467d6fd82f06b70467b2)
+  - [Prowlarr Indexers Commit: 09c69a61c9a45aa42a1527adffe557b814587a45](https://github.com/Prowlarr/Indexers/commit/09c69a61c9a45aa42a1527adffe557b814587a45)
 
 ---
 
@@ -130,7 +130,7 @@ dateCreated: 2025-10-27T01:38:19.269110
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.mx/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.zetorrents2.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.zetorrents.town/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[ZkTorrent](https://www.zktorrent.town/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
@@ -588,6 +588,7 @@ dateCreated: 2025-10-27T01:38:19.269110
 |[U2](https://u2.dmhy.org/){#u2}|U2 (U2分享園@動漫花園) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[UHDBits](https://uhdbits.org/){#uhdbits}|UHDBits is a Private Torrent Tracker for UHD Movies / TV|English (United States)|
+|[uHDTorrent](https://uhdtorrent.club/){#uhdtorrent}|uHDTorrent is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
 |[Unlimitz](https://www.unlimitz.biz/){#unlimitz}|Unlimitz is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[upload\.cx (API)](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
