@@ -4,7 +4,7 @@ fail_fast: true
 repos:
   # General file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
         exclude: \.(png|jpg|jpeg|gif|svg|webp)$
@@ -27,7 +27,7 @@ repos:
 
   # Markdown specific formatting and linting
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.37.0
+    rev: v0.45.0
     hooks:
       - id: markdownlint
         args: ["--config", ".markdownlint.json", "--fix"]
@@ -36,7 +36,7 @@ repos:
 
   # Spell checking for markdown files
   - repo: https://github.com/crate-ci/typos
-    rev: v1.24.6
+    rev: v1
     hooks:
       - id: typos
         args: ["--config", ".typos.toml"]
