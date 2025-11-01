@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-10-31T01:24:03.765516
+date: 2025-11-01T01:28:01.573320
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-10-31T01:24:03.765516
+dateCreated: 2025-11-01T01:28:01.573320
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.2.0.5222` / [Commit: e4fb36e08fc02d6fa050ebdcd78bbe70f05e53b8](https://github.com/Prowlarr/Prowlarr/commit/e4fb36e08fc02d6fa050ebdcd78bbe70f05e53b8)
-  - [Prowlarr Indexers Commit: 361dab3c1673fbb1f858fe96c8f8b9e656b7483e](https://github.com/Prowlarr/Indexers/commit/361dab3c1673fbb1f858fe96c8f8b9e656b7483e)
+  - [Prowlarr Indexers Commit: 52fc4eddc26f730a11d956238082afa6f23237c7](https://github.com/Prowlarr/Indexers/commit/52fc4eddc26f730a11d956238082afa6f23237c7)
 
 ---
 
@@ -187,7 +187,7 @@ dateCreated: 2025-10-31T01:24:03.765516
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://oct30.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://oct31.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -489,7 +489,7 @@ dateCreated: 2025-10-31T01:24:03.765516
 |[PT GTK](https://pt.gtk.pw/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTChina (铂金学院)](https://ptchina.org/){#ptchina}|PTChina (铂金学院) is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
-|[PTerClub (PT之友俱乐部)](https://pterclub.com/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV  / ANIME|Chinese (China)|
+|[PTerClub (PT之友俱乐部)](https://pterclub.net/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV  / ANIME|Chinese (China)|
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[PThome](https://www.pthome.net/){#pthome}|PTHome is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
