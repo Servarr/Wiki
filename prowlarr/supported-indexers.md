@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-11-08T01:20:44.153503
+date: 2025-11-13T01:26:17.669238
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-11-08T01:20:44.153503
+dateCreated: 2025-11-13T01:26:17.669238
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.2.0.5222` / [Commit: e4fb36e08fc02d6fa050ebdcd78bbe70f05e53b8](https://github.com/Prowlarr/Prowlarr/commit/e4fb36e08fc02d6fa050ebdcd78bbe70f05e53b8)
-  - [Prowlarr Indexers Commit: f6f30d6f335875cf0e199f8ff1f0041fec61839b](https://github.com/Prowlarr/Indexers/commit/f6f30d6f335875cf0e199f8ff1f0041fec61839b)
+  - Prowlarr Build `2.2.0.5222` / [Commit: 9437ff9498ea4f5e79f177e42ab6b0ee8620a343](https://github.com/Prowlarr/Prowlarr/commit/9437ff9498ea4f5e79f177e42ab6b0ee8620a343)
+  - [Prowlarr Indexers Commit: b1c69921d7bf615ec68f5e16bcb3b0df1a1a096c](https://github.com/Prowlarr/Indexers/commit/b1c69921d7bf615ec68f5e16bcb3b0df1a1a096c)
 
 ---
 
@@ -68,6 +68,7 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|English (United States)|
 |[Magnet Cat](https://magnetcatcat.com/){#magnetcat}|Magnet Cat is a Public Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[MagnetDownload](https://www.magnetdownload.com/){#magnetdownload}|MagnetDownload is a Public DHT Crawler|English (United States)|
+|[Magnetz](https://magnetz.eu/){#magnetz}|Magnetz is a Public torrent meta-search engine|English (United States)|
 |[MegaPeer](https://megapeer.vip/){#megapeer}|MegaPeer is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
@@ -115,9 +116,7 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq393.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[TorrentSir](https://torrentsir176.com/){#torrentsir}|TorrentSir (토렌트썰) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrentsome](https://torrentsome220.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[torrentssg](https://ssg1.torrentssg8.com/){#torrentssg}|torrentssg (토렌트쓱) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip201.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
@@ -186,7 +185,7 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://nov06.rudub.homes/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://nov11.rudub.pics/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -200,7 +199,7 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[ViDEOTEKA](http://videoteka.org/){#videoteka}|ViDEOTEKA (VT) is a SLOVENIAN Semi-Private Torrent Tracker for MOVIES / TV|Slovenian (Slovenia)|
-|[Ztracker](http://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
+|[Ztracker](https://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
 ### Private Trackers
 
@@ -302,6 +301,7 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Torrent Tracker for MOVIES / TV / GENERAL|Danish (Denmark)|
 |[Darkpeers (API)](https://darkpeers.org/){#darkpeers}|Darkpeers is a NORDIC Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[Das Unerwartete (API)](https://dasunerwartete.biz/){#dasunerwartete-api}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This is the API version|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|DesiTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
@@ -392,6 +392,7 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[Immortuos](https://immortuos.life/){#immortuos}|Immortuos is a GERMAN Private Tracker for MOVIES / TV|German (Germany)|
 |[Indietorrents](https://www.indietorrents.com/){#indietorrents}|Indietorrents is a Private Music Torrent Tracker for independent MUSIC|English (United Kingdom)|
 |[INFINITY (API)](https://infinitylibrary.net/){#infinity-api}|INFINITY is a Private PAY2DL Torrent Tracker for MOVIES / TV|English (United States)|
+|[InfinityHD (API)](https://infinityhd.net/){#infinityhd-api}|InfinityHD is a Private Torrent Tracker for MOVIES / TV / ANIME|English (United States)|
 |[Infire](https://infire.si/){#infire}|Infire is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Insane Tracker](https://newinsane.info/){#insanetracker}|Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[IPTorrents](https://iptorrents.com/){#iptorrents}|IPTorrents (IPT) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
@@ -552,7 +553,6 @@ dateCreated: 2025-11-08T01:20:44.153503
 |[TeamOS](https://www.teamos.xyz/){#teamos}|Team OS is a Private Torrent Tracker for SOFTWARE|English (United States)|
 |[TEKNO3D](https://tracker.tekno3d.com/){#tekno3d}|TEKNO3D is a Private Torrent Tracker for UHD MOVIES / TV|English (United States)|
 |[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[ThePiratedShip](https://thepiratedship.co.uk/){#thepiratedship}|ThePiratedShip is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TmGHuB](https://tmghub.org/){#tmghub}|TmGHuB (TH) is an INDIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
