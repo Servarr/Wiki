@@ -219,15 +219,15 @@ Depending how well you got your existing movie folders named Radarr will try to 
 1. Your movie folder name.
 1. Monitor - How you want the movie to be added to Radarr.
 
-- None - Do not monitor the movie nor collection for new releases
-- Movie Only - Only Monitor the movie for new releases
-- Movie & Collection - Monitor both the movie for new releases & add and monitor any movies in the movie's collection (if exists)
+    - None - Do not monitor the movie nor collection for new releases
+    - Movie Only - Only Monitor the movie for new releases
+    - Movie & Collection - Monitor both the movie for new releases & add and monitor any movies in the movie's collection (if exists)
 
 1. Availability - When will Radarr consider a movie is available.
 
-- **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
-- **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
-- **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
+    - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is *recommended* if you have good private trackers that do not have fakes.
+    - **In Cinemas**: Radarr shall consider movies available as soon as movies they hit cinemas. This option is *not recommended*.
+    - **Released**: Radarr shall consider movies available as soon as the Blu-ray is released. This option is *recommended* if your indexers contain fakes often.
 
 1. Quality Profile - Select your preferred profile to use.
 1. Movie - What Radarr thinks the movie matched for. It is imperative that you review this and edit/search if the match is not correct. Mismatches are often caused by poorly named folders.
@@ -316,24 +316,24 @@ When you see the movie you want click on it.
 
 1. Root Folder - Radarr will add the movie to the Root Folder you’ve setup [in the root folders section](#root-folders)
 1. Monitor - How you want the movie to be added to Radarr.
-
-- Movie Only  = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-- Movie & Collection = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality. It will also add all movies in this movie's collection (if any) with your selected settings.
-- None = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  All searches for unmonitored movies must be manually triggered searches or interactive searches.
+    
+    - Movie Only  = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+    - Movie & Collection = Radarr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality. It will also add all movies in this movie's collection (if any) with your selected settings.
+    - None = Radarr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.  All searches for unmonitored movies must be manually triggered searches or interactive searches.
 
 1. Availability - When Radarr shall consider a movie is available.
 
-> For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
-{.is-info}
+    > For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
+    {.is-info}
 
-- **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
-- **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
-- **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
-  - If TMDb is not populated with a date, it is assumed 90 days after `Theatrical Date` (Oldest in theater's date) the movie is available in web or physical services.
+    - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
+    - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
+    - **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
+      - If TMDb is not populated with a date, it is assumed 90 days after `Theatrical Date` (Oldest in theater's date) the movie is available in web or physical services.
 
 1. Quality Profile - Select your profile to use for this movie
 1. Tags - Here you can add certain tags for advanced usage.
 1. Search on Add - Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
 1. Click on `Add Movie` to add the movie to Radarr.
 
-- If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
+    - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
