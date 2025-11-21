@@ -2,7 +2,7 @@
 title: Radarr Appdata Directory
 description: Guide to Radarr application data directory structure, configuration files, and data management
 published: true
-date: 2023-05-09T17:51:34.896Z
+date: 2025-11-18T10:35:55.246Z
 tags: radarr, appdata, configuration, directory, files, data, structure
 editor: markdown
 dateCreated: 2021-05-25T02:34:50.549Z
@@ -26,7 +26,7 @@ The installation instructions specify `/var/lib/radarr`
 
 {#os-x}
 
-`/Users/$USER/.config/Radarr` or `~/.config/Radarr`
+`/Users/$USER/Library/Application Support/Radarr` or `~/Library/Application Support/Radarr`
 
 # Synology
 
