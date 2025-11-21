@@ -10,7 +10,7 @@ dateCreated: 2025-01-18T16:05:16.687Z
 
 # Lidarr Plugins Branch
 
-## What are plugins?
+## What are plugins
 
 Lidarr plugins allow users to extend the capability of Lidarr to include new indexers and download clients, including peer-to-peer networks and common streaming services.
 
