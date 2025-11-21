@@ -164,6 +164,7 @@ Branch=master
 ### Real-World Example
 
 **Arch Linux AUR Package** (from [prowlarr AUR](https://aur.archlinux.org/packages/prowlarr/)):
+
 ```
 # PackageVersion is added by PKGBUILD
 PackageAuthor=[radarr](https://aur.archlinux.org/packages/radarr/)
