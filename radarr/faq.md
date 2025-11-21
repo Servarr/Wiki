@@ -537,14 +537,14 @@ After creating the symlink, restart Radarr. It will now use the system's SQLite 
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
 
-1. Close Radarr
+1. Stop Radarr
 1. Open config.xml in a text editor
-1. Find the authentication method line will be
+1. Find the authentication method line - will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
-***(Be sure that you do not have two AuthenticationMethod entries in your file)***
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
-1. Restart Radarr
-1. Radarr will now be accessible without a password, you should go the `Settings` => `General` in the UI, change the Authentication Method to Basic or Forms and set your new username and password
+***(Be sure you do not have two AuthenticationMethod entries in your file!)***
+1. Remove the entire `AuthenticationMethod` line
+1. Start Radarr
+1. Radarr will now be accessible without a password. When you open the Web UI, you should be prompted to set a new password and authentication method
 
 ## How do I stop the browser from launching on startup
 

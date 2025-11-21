@@ -417,12 +417,14 @@ dateCreated: 2022-04-03T03:49:19.500Z
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](/whisparr/appdata-directory)
 
+1. Stop Whisparr
 1. Open config.xml in a text editor
-1. Find the authentication method line will be
+1. Find the authentication method line - will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>None</AuthenticationMethod>`
-1. Restart Whisparr
-1. Whisparr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
+***(Be sure you do not have two AuthenticationMethod entries in your file!)***
+1. Remove the entire `AuthenticationMethod` line
+1. Start Whisparr
+1. Whisparr will now be accessible without a password. When you open the Web UI, you should be prompted to set a new password and authentication method
 
 ## How do I stop the browser from launching on startup
 
