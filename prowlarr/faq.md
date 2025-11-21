@@ -478,14 +478,14 @@ If your download client and Prowlarr are on the same machine there is no reason 
 
 {#help-i-have-forgotten-my-password}
 
-1. Close Prowlarr
+1. Stop Prowlarr
 1. Open config.xml in a text editor
-1. Find the authentication method line will be
+1. Find the authentication method line - will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
-***(Be sure that you do not have two AuthenticationMethod entries in your file)***
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
-1. Restart Prowlarr
-1. Prowlarr will now be accessible without a password, you should go the `Settings` => `General` in the UI, change the Authentication Method to Forms and set your new username and password
+***(Be sure you do not have two AuthenticationMethod entries in your file!)***
+1. Remove the entire `AuthenticationMethod` line
+1. Start Prowlarr
+1. Prowlarr will now be accessible without a password. When you open the Web UI, you should be prompted to set a new password and authentication method
 
 ## Weird UI Issues
 

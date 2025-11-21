@@ -151,13 +151,12 @@ To disable authentication (to reset your forgotten username or password) you wil
 
 1. Stop Sonarr
 1. Open config.xml in a text editor
-1. Find the authentication method line will be
+1. Find the authentication method line - will be
 `<AuthenticationMethod>Basic</AuthenticationMethod>` or `<AuthenticationMethod>Forms</AuthenticationMethod>`
 ***(Be sure that you do not have two AuthenticationMethod entries in your file)***
-1. Change the `AuthenticationMethod` line to `<AuthenticationMethod>External</AuthenticationMethod>`
-***(If you are running an old v3 version, the correct value is `None` instead of `External`)***
+1. Remove the entire `AuthenticationMethod` line
 1. Restart Sonarr
-1. Sonarr will now be accessible without a password, you should go the `Settings: General` in the UI and set your username and password
+1. Sonarr will now be accessible without a password. When you open the Web UI, you should be prompted to set a new password and authentication method
 
 ## Why are there two files? \| Why is there a file left in downloads
 
