@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-11-20T01:24:00.957633
+date: 2025-11-27T01:24:50.146797
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-11-20T01:24:00.957633
+dateCreated: 2025-11-27T01:24:50.146797
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.1.5238` / [Commit: ed3b25b3d6ebf843d150b941e73995ff281318df](https://github.com/Prowlarr/Prowlarr/commit/ed3b25b3d6ebf843d150b941e73995ff281318df)
-  - [Prowlarr Indexers Commit: b68f031f637aae8d456b9f1d1ba09eb6688b598c](https://github.com/Prowlarr/Indexers/commit/b68f031f637aae8d456b9f1d1ba09eb6688b598c)
+  - [Prowlarr Indexers Commit: 2b0af586f6a6e8d4ab544ccef2124bf0edc07e3b](https://github.com/Prowlarr/Indexers/commit/2b0af586f6a6e8d4ab544ccef2124bf0edc07e3b)
 
 ---
 
@@ -77,7 +77,7 @@ dateCreated: 2025-11-20T01:24:00.957633
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from JAPAN|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for MOVIES / TV / MUSIC|Russian (Russia)|
-|[NorTorrent](https://www.nortorrent.town/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
+|[NorTorrent](https://ww1-nortorrent.me/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern ASIAN media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -98,7 +98,7 @@ dateCreated: 2025-11-20T01:24:00.957633
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |[SkidrowRepack](https://skidrowrepack.com/){#skidrowrepack}|SkidrowRepack is a Public Torrent Tracker for GAMES|English (United States)|
-|[sosulki](https://sosulki.com/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
+|[sosulki](https://sosulki.hlom.ru/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern ASIAN media including anime, manga, games and JAV|English (United States)|
 |[Tokyo Toshokan](https://www.tokyotosho.info/){#tokyotosho}|Tokyo Toshokan is a Public BitTorrent Library for JAPANESE Media|English (United States)|
@@ -113,7 +113,7 @@ dateCreated: 2025-11-20T01:24:00.957633
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq394.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq395.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome222.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip203.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -128,7 +128,7 @@ dateCreated: 2025-11-20T01:24:00.957633
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.lt/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://www.zetorrents.town/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
-|[ZkTorrent](https://www.zktorrent.town/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://ww1-zktorrent.me/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -185,7 +185,7 @@ dateCreated: 2025-11-20T01:24:00.957633
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://nov19.rudub.pics/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://nov25.rudub.world/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
