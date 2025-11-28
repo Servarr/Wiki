@@ -18,7 +18,7 @@ jobs:
     env:
       API_KEY: fakeapikey
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -27,7 +27,7 @@ jobs:
           cache: "pip"
 
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: "18"
 
