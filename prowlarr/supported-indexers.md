@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-11-30T01:43:58.259366
+date: 2025-12-02T01:27:23.391296
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-11-30T01:43:58.259366
+dateCreated: 2025-12-02T01:27:23.391296
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.1.5238` / [Commit: ed3b25b3d6ebf843d150b941e73995ff281318df](https://github.com/Prowlarr/Prowlarr/commit/ed3b25b3d6ebf843d150b941e73995ff281318df)
-  - [Prowlarr Indexers Commit: 3cc25e56ea40156051c5c477f17ce135241191db](https://github.com/Prowlarr/Indexers/commit/3cc25e56ea40156051c5c477f17ce135241191db)
+  - [Prowlarr Indexers Commit: ca5e8f9eac217e90c57cac17a334bc3cd8e76655](https://github.com/Prowlarr/Indexers/commit/ca5e8f9eac217e90c57cac17a334bc3cd8e76655)
 
 ---
 
@@ -560,6 +560,7 @@ dateCreated: 2025-11-30T01:43:58.259366
 |[Tormac](https://tormac.org/){#tormac}|Tormac is a RUSSIAN Private Torrent Tracker for MAC SOFTWARE|Russian (Russia)|
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
+|[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
