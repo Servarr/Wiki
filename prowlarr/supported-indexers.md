@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-12-10T01:39:14.295898
+date: 2025-12-14T01:45:06.164473
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-12-10T01:39:14.295898
+dateCreated: 2025-12-14T01:45:06.164473
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.1.5238` / [Commit: ed3b25b3d6ebf843d150b941e73995ff281318df](https://github.com/Prowlarr/Prowlarr/commit/ed3b25b3d6ebf843d150b941e73995ff281318df)
-  - [Prowlarr Indexers Commit: ab8acfa6b139e638e8b526a269b7aafa81ebe024](https://github.com/Prowlarr/Indexers/commit/ab8acfa6b139e638e8b526a269b7aafa81ebe024)
+  - [Prowlarr Indexers Commit: c71f7c1c93e706acb9a2c5b16cfbbd506b299995](https://github.com/Prowlarr/Indexers/commit/c71f7c1c93e706acb9a2c5b16cfbbd506b299995)
 
 ---
 
@@ -112,10 +112,10 @@ dateCreated: 2025-12-10T01:39:14.295898
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq397.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq398.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome224.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip205.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome225.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip206.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -184,7 +184,7 @@ dateCreated: 2025-12-10T01:39:14.295898
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://dec09.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://dec13.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -451,7 +451,6 @@ dateCreated: 2025-12-10T01:39:14.295898
 |[Nirvana (API)](https://nirvana.li/){#nirvana}|Nirvana is a Private RUSSIAN Tracker for MOVIES / TV|Russian (Russia)|
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|Norwegian (Bokmål) (Norway)|
 |[NordicQuality (API)](https://nordicq.org/){#nordicquality}|NordicQuality is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[Nusanta(RA\.RE)](https://nusantara.re/){#nusantarare}|Nusanta(RA\.RE) is a MALAYSIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[The Occult](https://theoccult.click/){#theoccult}|TheOccult (TO) is a Private Torrent Tracker for CULT / MYTHOLOGY E-LEARNING|English (United States)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[Old Greek Tracker (OGT)](https://oldgreektracker.xyz/){#oldgreektracker}|Old Greek Tracker (OGT) is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
@@ -484,7 +483,6 @@ dateCreated: 2025-12-10T01:39:14.295898
 |[ProAudioTorrents](https://proaudiotorrents.org/){#proaudiotorrents}|ProAudioTorrents (PAT) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / TUTORIALS / ETC|English (United States)|
 |[PT GTK](https://pt.gtk.pw/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[PTChina (铂金学院)](https://ptchina.org/){#ptchina}|PTChina (铂金学院) is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[PTerClub (PT之友俱乐部)](https://pterclub.net/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV  / ANIME|Chinese (China)|
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -492,7 +490,6 @@ dateCreated: 2025-12-10T01:39:14.295898
 |[PTSBAO (烧包)](https://ptsbao.club/){#ptsbao}|PTSBAO (烧包) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[PTSKIT](https://www.ptskit.org/){#ptskit}|PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTTime](https://www.pttime.org/){#pttime}|PTTime is a ratioless CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[PTVicomo](https://ptvicomo.net/){#ptvicomo}|PTVicomo is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PT分享站 (itzmx)](https://pt.itzmx.com/){#ptitzmx}|PT分享站 (itzmx) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Punk's Horror Tracker](https://punck-tracker.net/){#punkshorror}|Punk's Horror Tracker is a HUNGARIAN Private Tracker for Horror MOVIES / TV|Hungarian (Hungary)|
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH Private Torrent Tracker for 0DAY / GENERAL|Spanish (Spain)|
