@@ -2,10 +2,10 @@
 title: Sonarr Environment Variables
 description: Complete guide to Sonarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2025-09-06T00:00:00.000Z
-tags: sonarr, configuration, environment-variables, docker, installation, postgres
+date: 2025-12-16T17:03:24.201Z
+tags: sonarr, docker, installation, configuration, postgres, environment-variables
 editor: markdown
-dateCreated: 2025-09-06T00:00:00.000Z
+dateCreated: 2025-09-06T22:34:56.401Z
 ---
 
 # Sonarr Environment Variables
@@ -123,7 +123,7 @@ For package maintainers and custom installations, Sonarr supports a `package_inf
 
 The `package_info` file should be placed in the parent directory of the `bin` folder:
 
-```
+```text
 /opt/Sonarr/package_info
 /opt/Sonarr/bin/Sonarr
 ```
@@ -132,7 +132,7 @@ The `package_info` file should be placed in the parent directory of the `bin` fo
 
 The file uses simple key=value pairs, one per line:
 
-```
+```text
 PackageVersion=1.0.0
 PackageAuthor=YourName
 UpdateMethod=External
@@ -165,7 +165,7 @@ Branch=main
 
 **Arch Linux AUR Package** (from [prowlarr AUR](https://aur.archlinux.org/packages/prowlarr/)):
 
-```
+```text
 # PackageVersion is added by PKGBUILD
 PackageAuthor=[sonarr](https://aur.archlinux.org/packages/sonarr/)
 UpdateMethod=External
