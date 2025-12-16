@@ -2,10 +2,10 @@
 title: Radarr Environment Variables
 description: Complete guide to Radarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2025-09-06T00:00:00.000Z
-tags: radarr, configuration, environment-variables, docker, installation, postgres
+date: 2025-12-16T17:03:58.213Z
+tags: radarr, docker, installation, configuration, postgres, environment-variables
 editor: markdown
-dateCreated: 2025-09-06T00:00:00.000Z
+dateCreated: 2025-09-06T22:32:10.936Z
 ---
 
 # Radarr Environment Variables
@@ -123,7 +123,7 @@ For package maintainers and custom installations, Radarr supports a `package_inf
 
 The `package_info` file should be placed in the parent directory of the `bin` folder:
 
-```
+```text
 /opt/Radarr/package_info
 /opt/Radarr/bin/Radarr
 ```
@@ -132,7 +132,7 @@ The `package_info` file should be placed in the parent directory of the `bin` fo
 
 The file uses simple key=value pairs, one per line:
 
-```
+```text
 PackageVersion=1.0.0
 PackageAuthor=YourName
 UpdateMethod=External
@@ -165,7 +165,7 @@ Branch=master
 
 **Arch Linux AUR Package** (from [prowlarr AUR](https://aur.archlinux.org/packages/prowlarr/)):
 
-```
+```text
 # PackageVersion is added by PKGBUILD
 PackageAuthor=[radarr](https://aur.archlinux.org/packages/radarr/)
 UpdateMethod=External

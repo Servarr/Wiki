@@ -2,10 +2,10 @@
 title: Prowlarr Environment Variables
 description: Complete guide to Prowlarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2025-09-06T00:00:00.000Z
-tags: docker, installation, postgres, prowlarr
+date: 2025-12-16T17:02:47.867Z
+tags: prowlarr, docker, installation, postgres
 editor: markdown
-dateCreated: 2025-09-06T00:00:00.000Z
+dateCreated: 2025-09-06T22:30:15.859Z
 ---
 
 # Prowlarr Environment Variables
@@ -121,7 +121,7 @@ For package maintainers and custom installations, Prowlarr supports a `package_i
 
 The `package_info` file should be placed in the parent directory of the `bin` folder:
 
-```
+```text
 /opt/Prowlarr/package_info
 /opt/Prowlarr/bin/Prowlarr
 ```
@@ -130,7 +130,7 @@ The `package_info` file should be placed in the parent directory of the `bin` fo
 
 The file uses simple key=value pairs, one per line:
 
-```
+```text
 PackageVersion=1.0.0
 PackageAuthor=YourName
 UpdateMethod=External
@@ -163,7 +163,7 @@ Branch=master
 
 **Arch Linux AUR Package** (from [prowlarr AUR](https://aur.archlinux.org/packages/prowlarr/)):
 
-```
+```text
 # PackageVersion is added by PKGBUILD
 PackageAuthor=[prowlarr](https://aur.archlinux.org/packages/prowlarr/)
 UpdateMethod=External
