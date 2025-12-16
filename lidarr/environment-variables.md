@@ -2,10 +2,10 @@
 title: Lidarr Environment Variables
 description: Complete guide to Lidarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2025-09-06T00:00:00.000Z
-tags: docker, installation, lidarr, postgres, scripts
+date: 2025-12-16T17:04:28.314Z
+tags: lidarr, docker, installation, scripts, postgres
 editor: markdown
-dateCreated: 2025-09-06T00:00:00.000Z
+dateCreated: 2025-09-06T22:28:37.512Z
 ---
 
 # Lidarr Environment Variables
@@ -121,7 +121,7 @@ For package maintainers and custom installations, Lidarr supports a `package_inf
 
 The `package_info` file should be placed in the parent directory of the `bin` folder:
 
-```
+```text
 /opt/Lidarr/package_info
 /opt/Lidarr/bin/Lidarr
 ```
@@ -130,7 +130,7 @@ The `package_info` file should be placed in the parent directory of the `bin` fo
 
 The file uses simple key=value pairs, one per line:
 
-```
+```text
 PackageVersion=1.0.0
 PackageAuthor=YourName
 UpdateMethod=External
@@ -163,7 +163,7 @@ Branch=master
 
 **Arch Linux AUR Package** (from [prowlarr AUR](https://aur.archlinux.org/packages/prowlarr/)):
 
-```
+```text
 # PackageVersion is added by PKGBUILD
 PackageAuthor=[lidarr](https://aur.archlinux.org/packages/lidarr/)
 UpdateMethod=External
