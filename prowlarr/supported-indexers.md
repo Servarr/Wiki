@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-12-17T01:26:17.794663
+date: 2025-12-18T01:27:10.832613
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-12-17T01:26:17.794663
+dateCreated: 2025-12-18T01:27:10.832613
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.1.5238` / [Commit: ed3b25b3d6ebf843d150b941e73995ff281318df](https://github.com/Prowlarr/Prowlarr/commit/ed3b25b3d6ebf843d150b941e73995ff281318df)
-  - [Prowlarr Indexers Commit: b114e0863c348f3f82b1acfb00feb3e8cf900fde](https://github.com/Prowlarr/Indexers/commit/b114e0863c348f3f82b1acfb00feb3e8cf900fde)
+  - [Prowlarr Indexers Commit: 078b866f0e6b7795474050855354350f4cd51e14](https://github.com/Prowlarr/Indexers/commit/078b866f0e6b7795474050855354350f4cd51e14)
 
 ---
 
@@ -114,8 +114,8 @@ dateCreated: 2025-12-17T01:26:17.794663
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq398.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome225.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip206.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome226.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip207.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -127,7 +127,7 @@ dateCreated: 2025-12-17T01:26:17.794663
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.lt/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[zetorrents](https://ww1-zetorrents.town/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
-|[ZkTorrent](https://ww1-zktorrent.town/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://www.zktorrent7.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -184,7 +184,7 @@ dateCreated: 2025-12-17T01:26:17.794663
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://dec15.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://dec17.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
@@ -251,7 +251,7 @@ dateCreated: 2025-12-17T01:26:17.794663
 |[bitGAMER](https://bitgamer.ch/){#bitgamer}|bitGAMER is a Private Torrent Tracker for GAMES|English (United States)|
 |[BitHDTV](https://www.bit-hdtv.com/){#bithdtv}|BIT-HDTV - Home of High Definition|English (United States)|
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[Bitpalace](https://bitpalace.cc/){#bitpalace}|Bitpalace is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
+|[Bitpalace](https://bitpalace.hu/){#bitpalace}|Bitpalace is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[BitPorn (API)](https://bitporn.eu/){#bitporn}|BitPorn (Malacka) is a HUNGARIAN Private Torrent Tracker for 3X|Hungarian (Hungary)|
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
@@ -481,7 +481,7 @@ dateCreated: 2025-12-17T01:26:17.794663
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker|English (United States)|
 |[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD (PHD) is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeTorrents|English (United States)|
 |[ProAudioTorrents](https://proaudiotorrents.org/){#proaudiotorrents}|ProAudioTorrents (PAT) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / TUTORIALS / ETC|English (United States)|
-|[PT GTK](https://pt.gtk.pw/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[PT GTK](https://pt.gtkpw.xyz/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTerClub (PT之友俱乐部)](https://pterclub.net/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV  / ANIME|Chinese (China)|
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
