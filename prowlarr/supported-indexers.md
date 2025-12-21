@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-12-20T01:26:15.337977
+date: 2025-12-21T01:44:43.531948
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-12-20T01:26:15.337977
+dateCreated: 2025-12-21T01:44:43.531948
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.1.5238` / [Commit: ed3b25b3d6ebf843d150b941e73995ff281318df](https://github.com/Prowlarr/Prowlarr/commit/ed3b25b3d6ebf843d150b941e73995ff281318df)
-  - [Prowlarr Indexers Commit: 8d48fca19f909fb546944b84c3ec0e3f267e1e4b](https://github.com/Prowlarr/Indexers/commit/8d48fca19f909fb546944b84c3ec0e3f267e1e4b)
+  - [Prowlarr Indexers Commit: 87b5b139d82890f193268900da1b390199243567](https://github.com/Prowlarr/Indexers/commit/87b5b139d82890f193268900da1b390199243567)
 
 ---
 
@@ -126,7 +126,7 @@ dateCreated: 2025-12-20T01:26:15.337977
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.lt/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://ww1-zetorrents.town/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.world-torrent.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[ZkTorrent](https://www.zktorrent7.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
@@ -184,7 +184,7 @@ dateCreated: 2025-12-20T01:26:15.337977
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riper.online/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
-|[RUDUB](https://dec19.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
+|[RUDUB](https://dec20.rudub.bet/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
