@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-12-27T01:37:45.172546
+date: 2025-12-30T01:40:43.007134
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-12-27T01:37:45.172546
+dateCreated: 2025-12-30T01:40:43.007134
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.1.5243` / [Commit: b188746f1ac89c7e4f7566e94e1d2ddba51f67c8](https://github.com/Prowlarr/Prowlarr/commit/b188746f1ac89c7e4f7566e94e1d2ddba51f67c8)
-  - [Prowlarr Indexers Commit: 999c78344488aa2abd8e1c46541e296e450e5468](https://github.com/Prowlarr/Indexers/commit/999c78344488aa2abd8e1c46541e296e450e5468)
+  - Prowlarr Build `2.3.2.5245` / [Commit: 0884ac92ff0aad347de0fef9ffc9b74dd79e7a7d](https://github.com/Prowlarr/Prowlarr/commit/0884ac92ff0aad347de0fef9ffc9b74dd79e7a7d)
+  - [Prowlarr Indexers Commit: 03224331273d26ef39dccbc2b95c800f453baa92](https://github.com/Prowlarr/Indexers/commit/03224331273d26ef39dccbc2b95c800f453baa92)
 
 ---
 
@@ -127,8 +127,8 @@ dateCreated: 2025-12-27T01:37:45.172546
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.lt/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.world-torrent.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
-|[ZkTorrent](https://www.zktorrent7.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[zetorrents](https://www.world-torrent1.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://www.zktorrent8.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -169,7 +169,7 @@ dateCreated: 2025-12-27T01:37:45.172546
 |[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private Torrent Tracker dedicated to HEAVY METAL MUSIC\. This definition is for the English site|English (United States)|
 |[MioBT](https://miobt.com/){#miobt}|MioBT is a CHINESE Semi-Private torrent index|Chinese (China)|
 |[MIRCrew](https://mircrew-releases.org/){#mircrew}|MIRCrew is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
-|[MuseBootlegs](https://www.musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
+|[MuseBootlegs](https://musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private Torrent Tracker dedicated to UK TV and DOCUMENTARIES\. This definition is for the Forum Tracker site|English (United States)|
 |[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private Torrent Tracker dedicated to UK TV and DOCUMENTARIES\. This definition is for the Main Tracker site|English (United States)|
 |[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|Vietnamese (Viet Nam)|
@@ -231,6 +231,7 @@ dateCreated: 2025-12-27T01:37:45.172546
 |[AnimeWorld (API)](https://animeworld.cx/){#animeworld-api}|AnimeWorld (AW) is a GERMAN Private Torrent Tracker for ANIME / MANGA / HENTAI|German (Germany)|
 |[Anthelion (API)](https://anthelion.me/){#anthelion-api}|Anthelion (ANT) is a Private Torrent Tracker for MOVIES|English (United States)|
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
+|[ArabicSource (API)](https://arabicsource.net/){#arabicsource-api}|ArabicSource is an ARABIC Private Torrent Tracker for MOVIES / TV|Arabic (Saudi Arabia)|
 |[ArabP2P](https://www.arabp2p.net/){#arabp2p}|ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (U.A.E.)|
 |[ArabTorrents](https://arab-torrents.net/){#arabtorrents}|ArabTorrents is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (U.A.E.)|
 |[AsianCinema](https://eiga.moi/){#asiancinema}|AsianCinema is a Private Tracker for ASIAN MOVIES / TV / MUSIC|English (United States)|
@@ -242,10 +243,12 @@ dateCreated: 2025-12-27T01:37:45.172546
 |[Azusa (梓喵)](https://azusa.wiki/){#azusa}|Azusa (梓喵) is a CHINESE Private Torrent Tracker focusing on COMICS|Chinese (China)|
 |[Back-ups](https://back-ups.me/){#backups}|Back-Ups is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[BakaBT](https://bakabt.me/){#bakabt}|Anime Community|English (United States)|
+|[baoziPT](https://p.t-baozi.cc/){#baozipt}|baoziPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Beload](https://beload.org/){#beload}|Beload is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Best-Core](https://best-core.info/){#bestcore}|Best-Core is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a Private Torrent Tracker for EBOOKS and AUDIOBOOKS|English (United States)|
+|[BigBBS](https://bigbbs.eu/){#bigbbs}|BigBBS is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[BigCore](https://bigcore.eu/){#bigcore}|BigCore is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
@@ -365,7 +368,7 @@ dateCreated: 2025-12-27T01:37:45.172546
 |[HDBao](https://hdbao.cc/){#hdbao}|HDBao is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDBits](https://hdbits.org/){#hdbits}|Best HD Tracker|English (United States)|
 |[HDCiTY](https://hdcity.city/){#hdc}|HDCiTY (HDC) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HDClone](https://pt.hdclone.org/){#hdclone}|HDClone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[HDClone](https://pt.hdclone.top/){#hdclone}|HDClone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDHome](https://hdhome.org/){#hdhome}|HDHome is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDKylin (麒麟)](https://na.hdkylin.com/){#hdkylin}|HDKylin (麒麟) is a CHINESE Private tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -453,6 +456,7 @@ dateCreated: 2025-12-27T01:37:45.172546
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Nirvana (API)](https://nirvana.li/){#nirvana}|Nirvana is a Private RUSSIAN Tracker for MOVIES / TV|Russian (Russia)|
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|Norwegian (Bokmål) (Norway)|
+|[NORDiCHD](http://nordichd.sytes.net/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[NordicQuality (API)](https://nordicq.org/){#nordicquality}|NordicQuality is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[The Occult](https://theoccult.click/){#theoccult}|TheOccult (TO) is a Private Torrent Tracker for CULT / MYTHOLOGY E-LEARNING|English (United States)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
