@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2025-12-30T01:40:43.007134
+date: 2026-01-01T01:50:35.883558
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2025-12-30T01:40:43.007134
+dateCreated: 2026-01-01T01:50:35.883558
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5245` / [Commit: 0884ac92ff0aad347de0fef9ffc9b74dd79e7a7d](https://github.com/Prowlarr/Prowlarr/commit/0884ac92ff0aad347de0fef9ffc9b74dd79e7a7d)
-  - [Prowlarr Indexers Commit: 03224331273d26ef39dccbc2b95c800f453baa92](https://github.com/Prowlarr/Indexers/commit/03224331273d26ef39dccbc2b95c800f453baa92)
+  - [Prowlarr Indexers Commit: 01aae27c19ca04845bbc0c60a048e9903689e539](https://github.com/Prowlarr/Indexers/commit/01aae27c19ca04845bbc0c60a048e9903689e539)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2025-12-30T01:40:43.007134
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://www.529070.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[52BT](https://www.529072.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
@@ -115,8 +115,8 @@ dateCreated: 2025-12-30T01:40:43.007134
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq400.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome227.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip208.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome228.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip209.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -124,10 +124,10 @@ dateCreated: 2025-12-30T01:40:43.007134
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
+|[World-torrent](https://www.world-torrent1.com/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.lt/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[zetorrents](https://www.world-torrent1.com/){#zetorrents}|zetorrents is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[ZkTorrent](https://www.zktorrent8.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
@@ -436,7 +436,6 @@ dateCreated: 2025-12-30T01:40:43.007134
 |[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[Matrix](https://matrixworld.info/){#matrix}|M\.A\.T\.R\.I\.X is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[MDAN](https://bt.mdan.org/){#mdan}|Mansão dos Animes (MDAN) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
-|[MegamixTracker](https://megamixtracker.hu/){#megamixtracker}|MegamixTracker is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a HUNGARIAN Private Torrent Tracker for ANIMATED MOVIES / TV|Hungarian (Hungary)|
 |[MetalGuru](https://metalguru.me/){#metalguru}|MetalGuru is a Private Torrent Tracker for GENERAL with focus on MUSIC|English (United States)|
 |[Milkie](https://milkie.cc/){#milkie}|Milkie\.cc (ME) is Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
