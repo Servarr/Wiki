@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-01T01:50:35.883558
+date: 2026-01-04T01:51:04.260934
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-01T01:50:35.883558
+dateCreated: 2026-01-04T01:51:04.260934
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.2.5245` / [Commit: 0884ac92ff0aad347de0fef9ffc9b74dd79e7a7d](https://github.com/Prowlarr/Prowlarr/commit/0884ac92ff0aad347de0fef9ffc9b74dd79e7a7d)
-  - [Prowlarr Indexers Commit: 01aae27c19ca04845bbc0c60a048e9903689e539](https://github.com/Prowlarr/Indexers/commit/01aae27c19ca04845bbc0c60a048e9903689e539)
+  - Prowlarr Build `2.3.2.5245` / [Commit: 878818e950dd253b0a9672b7052182eac4d1dd89](https://github.com/Prowlarr/Prowlarr/commit/878818e950dd253b0a9672b7052182eac4d1dd89)
+  - [Prowlarr Indexers Commit: 0389696466abae135c4453121ead6b94fd6423b2](https://github.com/Prowlarr/Indexers/commit/0389696466abae135c4453121ead6b94fd6423b2)
 
 ---
 
@@ -32,6 +32,7 @@ dateCreated: 2026-01-01T01:50:35.883558
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
+|[arab-torrents\.com](https://arab-torrents.com/){#arabtorrents-com}|arab-torrents\.com is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL|Arabic (U.A.E.)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
 |[BigFANGroup](https://bigfangroup.org/){#bigfangroup}|BigFANGroup is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[BitRu](https://bitru.org/){#bitru}|BitRu is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -49,6 +50,7 @@ dateCreated: 2026-01-01T01:50:35.883558
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[EBookBay](http://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
 |[Elitetorrent-wf](https://www.elitetorrent.wf/){#elitetorrent-wf}|Elitetorrent-wf is a SPANISH Public tracker for MOVIES / TV|Spanish (Spain)|
+|[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[FileMood](https://filemood.com/){#filemood}|FileMood is a Public BitTorrent DHT search engine|English (United States)|
@@ -273,6 +275,7 @@ dateCreated: 2026-01-01T01:50:35.883558
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[BwTorrents](https://bwtorrents.tv/){#bwtorrents}|BwTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[BYRBT](https://byr.pt/){#byrbt}|BYRBT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[C411](https://staging-68d548c5bd4.c411.org/){#c411}|C411 (Community 411) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Caishen (财神)](https://cspt.top/){#cspt}|Caishen (财神) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[cangbaoge (CBG)](https://cangbao.ge/){#cangbaoge}|cangbaoge (CBG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CapybaraBR (API)](https://capybarabr.com/){#capybarabr}|CapybaraBR is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
