@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-04T01:51:04.260934
+date: 2026-01-06T01:42:29.920799
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-04T01:51:04.260934
+dateCreated: 2026-01-06T01:42:29.920799
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5245` / [Commit: 878818e950dd253b0a9672b7052182eac4d1dd89](https://github.com/Prowlarr/Prowlarr/commit/878818e950dd253b0a9672b7052182eac4d1dd89)
-  - [Prowlarr Indexers Commit: 0389696466abae135c4453121ead6b94fd6423b2](https://github.com/Prowlarr/Indexers/commit/0389696466abae135c4453121ead6b94fd6423b2)
+  - [Prowlarr Indexers Commit: af174e8c29a9cf9472bce34b3bd8987ca6df80aa](https://github.com/Prowlarr/Indexers/commit/af174e8c29a9cf9472bce34b3bd8987ca6df80aa)
 
 ---
 
@@ -414,6 +414,7 @@ dateCreated: 2026-01-04T01:51:04.260934
 |[Kufei (库非)](https://kufei.org/){#kufei}|Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Kufirc](https://kufirc.com/){#kufirc}|Kufirc is a HUNGARIAN Private tracker for 3X|Hungarian (Hungary)|
 |[Kufirc2FA](https://kufirc.com/){#kufirc2fa}|Kufirc is a HUNGARIAN Private tracker for 3X\. This indexer uses cookie login for 2FA|Hungarian (Hungary)|
+|[La Cale (API)](https://la-cale.space/){#lacale-api}|La Cale is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[lajidui](https://pt.lajidui.top/){#lajidui}|lajidui is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Last Digital Underground](https://theldu.to/){#lastdigitalunderground}|Last Digital Underground (LDU) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LastFiles](https://lastfiles.ro/){#lastfiles}|LastFiles (LF) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
