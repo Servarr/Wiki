@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2025-09-30T18:24:41.396Z
+date: 2026-01-07T17:55:22.257Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -24,6 +24,7 @@ dateCreated: 2021-06-14T14:33:41.344Z
   - [Can I add just an album?](#can-i-add-just-an-album)
   - [Can I download single tracks?](#can-i-download-single-tracks)
   - [Why doesn't artist X show up in search?](#why-doesnt-artist-x-show-up-in-search)
+  - [How can I find a musicbrainz ID?](#how-can-i-find-a-musicbrainz-id)
   - [Lidarr matched an album with too many tracks. How can I change the Album to the correct Release?](#lidarr-matched-an-album-with-too-many-tracks-how-can-i-change-the-album-to-the-correct-release)
   - [I cannot find a release in Lidarr but it is on MusicBrainz](#i-cannot-find-a-release-in-lidarr-but-it-is-on-musicbrainz)
   - [How often do Lidarr's and MusicBrainz databases sync?](#how-often-do-lidarrs-and-musicbrainz-databases-sync)
@@ -167,6 +168,15 @@ As of Lidarr v2, Authentication is Mandatory.
 ## Why doesn't artist X show up in search
 
 - Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
+
+## How can I find a musicbrainz ID?
+
+1. [Search for your desired artist or album](https://musicbrainz.org/search) (use `Release Group` type for albums)
+2. The Musicbrainz ID can be found under the "Details" tab: 
+![musicbrainz_id_detail_tab.png](/images/musicbrainz_id_detail_tab.png)
+3. Or at the end of the URL:
+![musicbrainz_id_url.png](/images/musicbrainz_id_url.png)
+
 
 ## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release
 
