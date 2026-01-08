@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-06T01:42:29.920799
+date: 2026-01-08T01:42:53.524540
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-06T01:42:29.920799
+dateCreated: 2026-01-08T01:42:53.524540
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5245` / [Commit: 878818e950dd253b0a9672b7052182eac4d1dd89](https://github.com/Prowlarr/Prowlarr/commit/878818e950dd253b0a9672b7052182eac4d1dd89)
-  - [Prowlarr Indexers Commit: af174e8c29a9cf9472bce34b3bd8987ca6df80aa](https://github.com/Prowlarr/Indexers/commit/af174e8c29a9cf9472bce34b3bd8987ca6df80aa)
+  - [Prowlarr Indexers Commit: d0ca4ac9c07e47f3afb3f8d74ed4ec8af9286756](https://github.com/Prowlarr/Indexers/commit/d0ca4ac9c07e47f3afb3f8d74ed4ec8af9286756)
 
 ---
 
@@ -430,6 +430,7 @@ dateCreated: 2026-01-06T01:42:29.920799
 |[LibraNet](https://libranet.org/){#libranet}|LibraNet (LN) is a HUNGARIAN Private Torrent Tracker for EBOOKS / LOSSLESS MUSIC|Hungarian (Hungary)|
 |[LinkoManija](https://www.linkomanija.net/){#linkomanija}|LinkoManija is an LITHUANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Lithuanian (Lithuania)|
 |[Locadora (API)](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / ANIME|Portuguese (Brazil)|
+|[LongPT](https://longpt.org/){#longpt}|LongPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private Torrent Tracker for High Quality Music|Russian (Russia)|
 |[LST](https://lst.gg/){#lst}|LST is an ENGLISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LuckPT](https://pt.luckpt.de/){#luckpt}|LuckPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -461,6 +462,7 @@ dateCreated: 2026-01-06T01:42:29.920799
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|Norwegian (Bokmål) (Norway)|
 |[NORDiCHD](http://nordichd.sytes.net/){#nordichd}|NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[NordicQuality (API)](https://nordicq.org/){#nordicquality}|NordicQuality is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[NovaHD](https://pt.novahd.top/){#novahd}|NovaHD is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[The Occult](https://theoccult.click/){#theoccult}|TheOccult (TO) is a Private Torrent Tracker for CULT / MYTHOLOGY E-LEARNING|English (United States)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[Old Greek Tracker (OGT)](https://oldgreektracker.xyz/){#oldgreektracker}|Old Greek Tracker (OGT) is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
@@ -550,6 +552,7 @@ dateCreated: 2026-01-06T01:42:29.920799
 |[Superbits](https://superbits.org/){#superbits}|SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
 |[Swarmazon (API)](https://swarmazon.club/){#swarmazon-api}|Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Tangmen (唐门)](https://tmpt.top/){#tangmen}|Tangmen (唐门) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[TangPT (躺平)](https://www.tangpt.top/){#tangpt}|TangPT (躺平) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Tapochek](https://tapochek.net/){#tapochek}|Tapochek is a RUSSIAN Private Torrent Tracker for 0DAY / GENERAL|Russian (Russia)|
 |[Tasmanit](https://tasmanit.es/){#tasmanit}|Tasmanit\.es is a AUSTRALIAN / NEW ZEALAND Private Torrent Tracker for AUS/NZ TV|English (Australia)|
 |[Team CT Game](https://tctg.pm/){#teamctgame}|Team CT Game (TCTG) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
