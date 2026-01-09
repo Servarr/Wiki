@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-08T01:42:53.524540
+date: 2026-01-09T01:43:03.444057
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-08T01:42:53.524540
+dateCreated: 2026-01-09T01:43:03.444057
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5245` / [Commit: 878818e950dd253b0a9672b7052182eac4d1dd89](https://github.com/Prowlarr/Prowlarr/commit/878818e950dd253b0a9672b7052182eac4d1dd89)
-  - [Prowlarr Indexers Commit: d0ca4ac9c07e47f3afb3f8d74ed4ec8af9286756](https://github.com/Prowlarr/Indexers/commit/d0ca4ac9c07e47f3afb3f8d74ed4ec8af9286756)
+  - [Prowlarr Indexers Commit: ea330c65e019b9b49db8a3d15b26647174bbee77](https://github.com/Prowlarr/Indexers/commit/ea330c65e019b9b49db8a3d15b26647174bbee77)
 
 ---
 
@@ -50,7 +50,6 @@ dateCreated: 2026-01-08T01:42:53.524540
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[EBookBay](http://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
 |[Elitetorrent-wf](https://www.elitetorrent.wf/){#elitetorrent-wf}|Elitetorrent-wf is a SPANISH Public tracker for MOVIES / TV|Spanish (Spain)|
-|[EXT Torrents](https://ext.to/){#exttorrents}|EXT Torrents is a Public torrent site for MOVIES / TV / GENERAL|English (United States)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[FileMood](https://filemood.com/){#filemood}|FileMood is a Public BitTorrent DHT search engine|English (United States)|
@@ -117,8 +116,8 @@ dateCreated: 2026-01-08T01:42:53.524540
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq400.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome228.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip209.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome229.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip210.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -315,6 +314,7 @@ dateCreated: 2026-01-08T01:42:53.524540
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
+|[dubhe (天枢)](https://dubhe.site/){#dubhe}|dubhe (天枢) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Ebooks-Shares](https://ebooks-shares.org/){#ebooks-shares}|Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS|English (United States)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[Empornium](https://www.empornium.is/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
@@ -404,6 +404,7 @@ dateCreated: 2026-01-08T01:42:53.524540
 |[JME-REUNIT3D (API)](https://jme-reunit3d.de/){#jme-reunit3d-api}|JME-REUNIT3D is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[JoyHD](https://www.joyhd.net/){#joyhd}|JoyHD (JHD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[JPopsuki](https://jpopsuki.eu/){#jpopsuki}|JPopSuki is a Private Torrent Tracker for ASIAN MUSIC|English (United States)|
+|[JPTV4us (API)](https://jptv4.us/){#jptv4us-api}|JPTV4us is a JAPANESE Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[KamePT](https://kamept.com/){#kamept}|KamePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Karagarga](https://karagarga.in/){#karagarga}|Karagarga is a Private Torrent Tracker that tracks non-hollywood, rare and obscure MOVIES, MUSIC and LITERATURE|English (United States)|
 |[Keep Friends](https://pt.keepfrds.com/){#keepfriends}|Keep Friends (FRDS-PT)  is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -439,6 +440,7 @@ dateCreated: 2026-01-08T01:42:53.524540
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Making Off](https://makingoff.org/){#makingoff}|Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
+|[March](https://duckboobee.org/){#march}|March is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Matrix](https://matrixworld.info/){#matrix}|M\.A\.T\.R\.I\.X is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[MDAN](https://bt.mdan.org/){#mdan}|Mansão dos Animes (MDAN) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a HUNGARIAN Private Torrent Tracker for ANIMATED MOVIES / TV|Hungarian (Hungary)|
