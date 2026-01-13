@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-11T01:51:12.098706
+date: 2026-01-13T01:39:21.117017
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-11T01:51:12.098706
+dateCreated: 2026-01-13T01:39:21.117017
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.2.5245` / [Commit: 878818e950dd253b0a9672b7052182eac4d1dd89](https://github.com/Prowlarr/Prowlarr/commit/878818e950dd253b0a9672b7052182eac4d1dd89)
-  - [Prowlarr Indexers Commit: 3eef11812dc1bd85843f476c9e08f693434dec3b](https://github.com/Prowlarr/Indexers/commit/3eef11812dc1bd85843f476c9e08f693434dec3b)
+  - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
+  - [Prowlarr Indexers Commit: 5484d109bf34d3a14edf464982d9e5e747ebad81](https://github.com/Prowlarr/Indexers/commit/5484d109bf34d3a14edf464982d9e5e747ebad81)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2026-01-11T01:51:12.098706
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
-|[Torrent9](https://www.torrent9.zone/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[Torrent9](https://ww2.torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
