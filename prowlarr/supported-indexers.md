@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-13T01:39:21.117017
+date: 2026-01-14T01:46:38.922545
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-13T01:39:21.117017
+dateCreated: 2026-01-14T01:46:38.922545
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 5484d109bf34d3a14edf464982d9e5e747ebad81](https://github.com/Prowlarr/Indexers/commit/5484d109bf34d3a14edf464982d9e5e747ebad81)
+  - [Prowlarr Indexers Commit: fbe6d0113a1dc901b868a23d180d337126328a1f](https://github.com/Prowlarr/Indexers/commit/fbe6d0113a1dc901b868a23d180d337126328a1f)
 
 ---
 
@@ -48,7 +48,7 @@ dateCreated: 2026-01-13T01:39:21.117017
 |[DaMagNet](https://damag.net/){#damagnet}|DaMagNet is a Public DHT Crawler|English (United States)|
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|Chinese (Taiwan)|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
-|[EBookBay](http://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
+|[EBookBay](https://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
 |[Elitetorrent-wf](https://www.elitetorrent.wf/){#elitetorrent-wf}|Elitetorrent-wf is a SPANISH Public tracker for MOVIES / TV|Spanish (Spain)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
@@ -87,7 +87,7 @@ dateCreated: 2026-01-13T01:39:21.117017
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[PornoTorrent](https://www.pornotorrent.eu/){#pornotorrent}|PornoTorrent is a SPANISH Public Torrent Tracker for 3X|English (United States)|
+|[PornoTorrent](https://pornotorrent.net.br/){#pornotorrent}|PornoTorrent is a BRAZILIAN Public Torrent Tracker for 3X|Portuguese (Brazil)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -127,7 +127,7 @@ dateCreated: 2026-01-13T01:39:21.117017
 |[World-torrent](https://www.world-torrent1.com/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
-|[YTS](https://yts.lt/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
+|[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[ZkTorrent](https://www.zktorrent8.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
@@ -274,7 +274,7 @@ dateCreated: 2026-01-13T01:39:21.117017
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[BwTorrents](https://bwtorrents.tv/){#bwtorrents}|BwTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[BYRBT](https://byr.pt/){#byrbt}|BYRBT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[C411](https://staging-68d548c5bd4.c411.org/){#c411}|C411 (Community 411) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
+|[C411](https://c411.org/){#c411}|C411 (Community 411) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Caishen (财神)](https://cspt.top/){#cspt}|Caishen (财神) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[cangbaoge (CBG)](https://cangbao.ge/){#cangbaoge}|cangbaoge (CBG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CapybaraBR (API)](https://capybarabr.com/){#capybarabr}|CapybaraBR is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
