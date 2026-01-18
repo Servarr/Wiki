@@ -2,7 +2,7 @@
 title: Lidarr Plugins
 description: Basic Setup and Details for Plugins beta Testing Branch
 published: true
-date: 2025-09-18T01:08:57.746Z
+date: 2026-01-18T20:59:54.633Z
 tags: lidarr, installation, plugins, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -14,12 +14,9 @@ dateCreated: 2025-01-18T16:05:16.687Z
 
 Lidarr plugins allow users to extend the capability of Lidarr to include new indexers and download clients, including peer-to-peer networks and common streaming services.
 
-Plug-in capabilities are currently only available on the `plugins` branch.
+Plug-in capabilities are now part of the main branch of Lidarr, but only in the `nightly` branch. Both Hotio and Linuxserver are updated.
 
-> The `plugins` branch is based on the `nightly` release channel and thus is inherently unstable.
-{.is-danger}
-
-> You cannot go back to a mainline Lidarr branch (master/develop/nightly) without restoring a database prior to the `plugins` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
+> You cannot go back to a mainline Lidarr branch (master/develop) without restoring a database prior to the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
 {.is-danger}
 
 ### How To Install Plugins
@@ -28,7 +25,7 @@ Plug-in capabilities are currently only available on the `plugins` branch.
 
 - Navigate to `/settings/general`
 - Show Advanced if not already enabled
-- Scroll down to Updates. Type in `plugins`
+- Scroll down to Updates. Type in `nightly`
 - Save changes.
 - Update Lidarr
 
@@ -39,21 +36,18 @@ Update your Docker Compose file to use the following image, pull, and recreate y
 #### Hotio
 
 ```yaml
-image: ghcr.io/hotio/lidarr:pr-plugins
+image: ghcr.io/hotio/lidarr:nightly
 ```
 
 #### LinuxServer.io
 
 ```yaml
-image: ghcr.io/linuxserver-labs/prarr:lidarr-plugins
+image: lscr.io/linuxserver/lidarr:nightly
 ```
 
 ### Manually Installing
 
-> If the plugins branch is older than the current version of Lidarr you have installed, it won't automatically install via the updater. Instead, you will need to download the plugins branch and install file directly and install it over your Lidarr setup.
-{.is-warning}
-
-- See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in the install docs from `master` to `plugins` otherwise following the docs as-is.
+- See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in the install docs from `master` to `nightly`, otherwise following the docs as-is.
 
 ### Post Install
 
