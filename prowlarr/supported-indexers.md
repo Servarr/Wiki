@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-17T01:38:17.709992
+date: 2026-01-19T01:48:10.544917
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-17T01:38:17.709992
+dateCreated: 2026-01-19T01:48:10.544917
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 96d564ffd5d8d588856bb6d122174aa328c02ca6](https://github.com/Prowlarr/Indexers/commit/96d564ffd5d8d588856bb6d122174aa328c02ca6)
+  - [Prowlarr Indexers Commit: 944c4d00ddc941058600d61fbca4720dacefe52e](https://github.com/Prowlarr/Indexers/commit/944c4d00ddc941058600d61fbca4720dacefe52e)
 
 ---
 
@@ -87,7 +87,6 @@ dateCreated: 2026-01-17T01:38:17.709992
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[PornoTorrent](https://pornotorrent.net.br/){#pornotorrent}|PornoTorrent is a BRAZILIAN Public Torrent Tracker for 3X|Portuguese (Brazil)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
