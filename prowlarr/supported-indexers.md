@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-19T01:48:10.544917
+date: 2026-01-20T01:43:20.388851
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-19T01:48:10.544917
+dateCreated: 2026-01-20T01:43:20.388851
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 944c4d00ddc941058600d61fbca4720dacefe52e](https://github.com/Prowlarr/Indexers/commit/944c4d00ddc941058600d61fbca4720dacefe52e)
+  - [Prowlarr Indexers Commit: 046edc931f01a1a67a601cc96fa2873143309196](https://github.com/Prowlarr/Indexers/commit/046edc931f01a1a67a601cc96fa2873143309196)
 
 ---
 
@@ -613,6 +613,7 @@ dateCreated: 2026-01-19T01:48:10.544917
 |[World-In-HD](https://world-in-hd.net/){#wihd}|World-In-HD is a Private Torrent Tracker\. Your world in HD|French (France)|
 |[World-of-Tomorrow](https://w-o-t.pro/){#world-of-tomorrow}|World-of-Tomorrow is a GERMAN Private tracker|German (Germany)|
 |[x-ite\.me](https://x-ite.me/){#x-ite.me}|X-ite\.me (XM) is a Private Torrent Tracker for LGBTQ MOVIES / GENERAL / 3X|English (United States)|
+|[xloli](https://mua.xloli.cc/){#xloli}|xloli (ilolicon PT) is a CHINESE Private Torrent Tracker for LOLICON / MOVIES / 3X|Chinese (China)|
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Xthor (API)](https://xthor.help/){#xthor-api}|Xthor is a FRENCH Private Torrent Tracker for MOVIES / GENERAL|French (France)|
 |[Xthor (Scraping)](https://xthor.help/){#xthor-scraping}|General French Private Tracker|French (France)|
@@ -620,7 +621,6 @@ dateCreated: 2026-01-19T01:48:10.544917
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
-|[YOiNKED (API)](https://yoinked.org/){#yoinked}|YOiNKED is a Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zamunda\.net](https://zamunda.net/){#zamundanet}|Zamunda is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
