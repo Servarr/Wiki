@@ -2,7 +2,7 @@
 title: Radarr Linux Installation
 description: Linux installation guide for Radarr
 published: true
-date: 2026-01-10T12:47:49.446Z
+date: 2026-01-20T01:24:57.132Z
 tags: radarr, installation, linux
 editor: markdown
 dateCreated: 2023-07-03T20:11:59.391Z
@@ -84,7 +84,7 @@ sudo mv Radarr /opt/
 - Ensure ownership of the binary directory.
 
 ```shell
-sudo chown radarr:media -R /opt/Radarr
+sudo chown radarr:radarr -R /opt/Radarr
 ```
 
 - Configure systemd so Radarr can autostart at boot.
