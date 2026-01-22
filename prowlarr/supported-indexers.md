@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-20T01:43:20.388851
+date: 2026-01-22T01:46:12.406990
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-20T01:43:20.388851
+dateCreated: 2026-01-22T01:46:12.406990
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 046edc931f01a1a67a601cc96fa2873143309196](https://github.com/Prowlarr/Indexers/commit/046edc931f01a1a67a601cc96fa2873143309196)
+  - [Prowlarr Indexers Commit: 910f0f3f9145e728bfcc23fbfd07ffb555a6aece](https://github.com/Prowlarr/Indexers/commit/910f0f3f9145e728bfcc23fbfd07ffb555a6aece)
 
 ---
 
@@ -82,7 +82,6 @@ dateCreated: 2026-01-20T01:43:20.388851
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern ASIAN media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
-|[OxTorrent](https://www1.oxtorrent.co/){#oxtorrent-co}|OxTorrent is a FRENCH Public Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[PC-torrent](https://pc-torrents.games/){#pctorrent}|PC-torrent is a RUSSIAN Public Torrent Tracker for Games|Russian (Russia)|
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
@@ -114,8 +113,8 @@ dateCreated: 2026-01-20T01:43:20.388851
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq403.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome230.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip211.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome231.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip212.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -528,6 +527,7 @@ dateCreated: 2026-01-20T01:43:20.388851
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Rousi\.pro](https://rousi.pro/){#rousi-pro}|Rousi\.pro is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SAMARITANO (API)](https://samaritano.cc/){#samaritano}|SAMARITANO is a BRAZILIAN Private tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[SBPT](https://sbpt.link/){#sbpt}|SBPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
