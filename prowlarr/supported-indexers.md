@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-22T01:46:12.406990
+date: 2026-01-25T01:52:46.730705
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-22T01:46:12.406990
+dateCreated: 2026-01-25T01:52:46.730705
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 910f0f3f9145e728bfcc23fbfd07ffb555a6aece](https://github.com/Prowlarr/Indexers/commit/910f0f3f9145e728bfcc23fbfd07ffb555a6aece)
+  - [Prowlarr Indexers Commit: b8c4c3cc2fe0077490d63369e1385144daf02c5b](https://github.com/Prowlarr/Indexers/commit/b8c4c3cc2fe0077490d63369e1385144daf02c5b)
 
 ---
 
@@ -78,7 +78,7 @@ dateCreated: 2026-01-22T01:46:12.406990
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from JAPAN|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for MOVIES / TV / MUSIC|Russian (Russia)|
-|[NorTorrent](https://www.nortorrent8.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
+|[NorTorrent](https://ww1-nortorrent.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern ASIAN media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -111,7 +111,7 @@ dateCreated: 2026-01-22T01:46:12.406990
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq403.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq404.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome231.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip212.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -126,7 +126,7 @@ dateCreated: 2026-01-22T01:46:12.406990
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[ZkTorrent](https://www.zktorrent8.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://ww1-zktorrent.com/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
@@ -436,6 +436,7 @@ dateCreated: 2026-01-22T01:46:12.406990
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private Torrent Tracker for High Quality Music|Russian (Russia)|
 |[LST](https://lst.gg/){#lst}|LST is an ENGLISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LuckPT](https://pt.luckpt.de/){#luckpt}|LuckPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Luminarr (API)](https://luminarr.me/){#luminarr-api}|Luminarr is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[M-Team - TP](https://kp.m-team.cc/){#m-team---tp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Magico](https://magico.to/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
@@ -526,6 +527,7 @@ dateCreated: 2026-01-22T01:46:12.406990
 |[RevolutionTT](https://revott.me/){#revolutiontt}|The Revolution has begun|English (United States)|
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
+|[RoTorrent (API)](https://rotorrent.info/){#rotorrent-api}|RoTorrent (ROT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Rousi](https://rousi.zip/){#rousi}|Rousi is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rousi\.pro](https://rousi.pro/){#rousi-pro}|Rousi\.pro is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SAMARITANO (API)](https://samaritano.cc/){#samaritano}|SAMARITANO is a BRAZILIAN Private tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
