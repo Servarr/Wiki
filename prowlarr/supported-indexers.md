@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-26T01:52:21.713615
+date: 2026-01-27T01:49:30.616528
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-26T01:52:21.713615
+dateCreated: 2026-01-27T01:49:30.616528
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 194b7e9ee19fed4be4745ed65ed0ee33e8128aea](https://github.com/Prowlarr/Indexers/commit/194b7e9ee19fed4be4745ed65ed0ee33e8128aea)
+  - [Prowlarr Indexers Commit: c6d4dcf0f01f5ea2e6e2c5e56f5ec7fc09f04a5f](https://github.com/Prowlarr/Indexers/commit/c6d4dcf0f01f5ea2e6e2c5e56f5ec7fc09f04a5f)
 
 ---
 
@@ -342,6 +342,7 @@ dateCreated: 2026-01-26T01:52:21.713615
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Fuzer](https://www.fuzer.xyz/){#fuzer}|Fuzer (FZ) is an ISRAELI Private Torrent Tracker for MOVIES / TV / GENERAL|Hebrew (Israel)|
+|[G3MINI TR4CK3R (API)](https://gemini-tracker.org/){#g3minitr4ck3r-api}|G3MINI TR4CK3R is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GAYtorrent\.ru](https://www.gaytor.rent/){#gaytorrentru}|GayTorrent\.ru is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GazelleGames](https://gazellegames.net/){#gazellegames}|GazelleGames (GGn) is a Private Torrent Tracker for GAMES|English (United States)|
