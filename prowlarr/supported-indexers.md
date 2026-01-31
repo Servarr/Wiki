@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-27T01:49:30.616528
+date: 2026-01-31T01:54:28.043636
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-27T01:49:30.616528
+dateCreated: 2026-01-31T01:54:28.043636
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: c6d4dcf0f01f5ea2e6e2c5e56f5ec7fc09f04a5f](https://github.com/Prowlarr/Indexers/commit/c6d4dcf0f01f5ea2e6e2c5e56f5ec7fc09f04a5f)
+  - [Prowlarr Indexers Commit: 4e4f300d8365d0bfbbd679375a10e5076cda8ff5](https://github.com/Prowlarr/Indexers/commit/4e4f300d8365d0bfbbd679375a10e5076cda8ff5)
 
 ---
 
@@ -113,8 +113,8 @@ dateCreated: 2026-01-27T01:49:30.616528
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq404.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome231.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip212.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome232.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip213.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
