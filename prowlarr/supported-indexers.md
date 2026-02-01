@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-01-31T01:54:28.043636
+date: 2026-02-01T02:22:07.370681
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-01-31T01:54:28.043636
+dateCreated: 2026-02-01T02:22:07.370681
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.2.5251` / [Commit: 688434ced9f51d8031f93b1988cf18ebe7069c0c](https://github.com/Prowlarr/Prowlarr/commit/688434ced9f51d8031f93b1988cf18ebe7069c0c)
-  - [Prowlarr Indexers Commit: 4e4f300d8365d0bfbbd679375a10e5076cda8ff5](https://github.com/Prowlarr/Indexers/commit/4e4f300d8365d0bfbbd679375a10e5076cda8ff5)
+  - Prowlarr Build `2.3.2.5264` / [Commit: a4a8e890c1fac737d8213dfc9cdaee727d03571e](https://github.com/Prowlarr/Prowlarr/commit/a4a8e890c1fac737d8213dfc9cdaee727d03571e)
+  - [Prowlarr Indexers Commit: 5f0f73855fbf5cc3cea2ffdaa51b0b35063ae142](https://github.com/Prowlarr/Indexers/commit/5f0f73855fbf5cc3cea2ffdaa51b0b35063ae142)
 
 ---
 
@@ -111,7 +111,7 @@ dateCreated: 2026-01-31T01:54:28.043636
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq404.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq405.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome232.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip213.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -222,6 +222,7 @@ dateCreated: 2026-01-31T01:54:28.043636
 |[alingPT](https://pt.aling.de/){#alingpt}|alingPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[AlphaRatio](https://alpharatio.cc/){#alpharatio}|AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[Amigos Share Club](https://cliente.amigos-share.club/){#amigosshare}|Amigos Share Club (ASC) is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
+|[Anime No Sekai](https://www.ansktracker.com/){#animenosekai}|Anime No Sekai (ANSK) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[AnimeBytes](https://animebytes.tv/){#animebytes}|AnimeBytes (AB) is the largest private torrent tracker that specialises in anime and anime-related content|English (United States)|
 |[AnimeTorrents](https://animetorrents.me/){#animetorrents}|Definitive source for anime and manga|English (United States)|
 |[AnimeTorrents\.ro](https://animetorrents.ro/){#animetorrentsro}|AnimeTorrents\.ro (Anime Torrents Romania) is a ROMANIAN Private Torrent Tracker for ANIME / MANGA|Romanian (Romania)|
