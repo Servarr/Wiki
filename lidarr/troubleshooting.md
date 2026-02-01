@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Lidarr installation, configuration, and operational problems
 published: true
-date: 2026-02-01T14:28:29.187Z
+date: 2026-02-01T14:30:50.235Z
 tags: lidarr, troubleshooting, support, issues, debugging, errors
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -19,7 +19,7 @@ Before posting, ensure your request for help is clear. Clearly describe the prob
 
 The more we know, the easier it is to help you.
 
-> Please note we only support builds created by the servarr build platform {.is-info}
+> Please note we only support builds created by the Servarr build platform {.is-info}
 
 # Logging and Log Files
 
