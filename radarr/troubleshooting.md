@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2026-02-01T14:28:03.852Z
+date: 2026-02-01T14:30:34.852Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -19,7 +19,7 @@ But before you go there and post, be sure your request for help is the best it c
 
 The more we know, the easier it is to help you.
 
-> Please note we only support builds created by the servarr build platform {.is-info}
+> Please note we only support builds created by the Servarr build platform {.is-info}
 
 # Logging and Log Files
 
