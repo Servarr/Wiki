@@ -2,7 +2,7 @@
 title: Whisparr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Whisparr installation, configuration, and operational problems
 published: true
-date: 2026-02-01T14:29:29.615Z
+date: 2026-02-01T14:31:14.578Z
 tags: troubleshooting, whisparr, support, issues, debugging, errors
 editor: markdown
 dateCreated: 2022-04-03T03:50:06.989Z
@@ -89,7 +89,7 @@ But before you go there and post, be sure your request for help is the best it c
 
 The more we know, the easier it is to help you.
 
-> Please note we only support builds created by the servarr build platform {.is-info}
+> Please note we only support builds created by the Servarr build platform {.is-info}
 
 # Logging and Log Files
 
