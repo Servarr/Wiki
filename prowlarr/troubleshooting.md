@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: Comprehensive troubleshooting guide for common Prowlarr issues and problems
 published: true
-date: 2025-09-12T14:59:15.099Z
+date: 2026-02-01T14:29:00.489Z
 tags: prowlarr, troubleshooting, help, problems, issues, debugging
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -48,6 +48,8 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Prowlarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
+
+> Please note we only support builds created by the servarr build platform {.is-info}
 
 # Logging and Log Files
 
