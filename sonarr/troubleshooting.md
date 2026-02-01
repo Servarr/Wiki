@@ -2,8 +2,8 @@
 title: Sonarr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Sonarr installation, configuration, and operational problems
 published: true
-date: 2024-03-07T06:02:38.692Z
-tags: troubleshooting, debugging, errors, issues, support, sonarr
+date: 2026-02-01T14:30:13.515Z
+tags: sonarr, troubleshooting, support, issues, debugging, errors
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
 ---
@@ -19,6 +19,8 @@ Do you need help? That's okay, everyone needs help sometimes. You can get help o
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Sonarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
+
+> Please note we only support builds created by the Sonarr build platform {.is-info}
 
 # Logging and Log Files
 
