@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-01T02:22:07.370681
+date: 2026-02-02T02:06:31.145478
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-01T02:22:07.370681
+dateCreated: 2026-02-02T02:06:31.145478
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5264` / [Commit: a4a8e890c1fac737d8213dfc9cdaee727d03571e](https://github.com/Prowlarr/Prowlarr/commit/a4a8e890c1fac737d8213dfc9cdaee727d03571e)
-  - [Prowlarr Indexers Commit: 5f0f73855fbf5cc3cea2ffdaa51b0b35063ae142](https://github.com/Prowlarr/Indexers/commit/5f0f73855fbf5cc3cea2ffdaa51b0b35063ae142)
+  - [Prowlarr Indexers Commit: d7f6724861ed6accde65632832374a809bd24299](https://github.com/Prowlarr/Indexers/commit/d7f6724861ed6accde65632832374a809bd24299)
 
 ---
 
@@ -436,12 +436,13 @@ dateCreated: 2026-02-01T02:22:07.370681
 |[Locadora (API)](https://locadora.cc/){#locadora}|Locadora is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / ANIME|Portuguese (Brazil)|
 |[LongPT](https://longpt.org/){#longpt}|LongPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[LosslessClub](https://losslessclub.com/){#losslessclub}|LosslessClub is a RUSSIAN Private Torrent Tracker for High Quality Music|Russian (Russia)|
+|[LP-Bits 2\.0](https://lp-bits.com/){#lp-bits}|LP-Bits 2\.0 is a Private Torrent Tracker for Linkin Park Music Releases\."|English (United States)|
 |[LST](https://lst.gg/){#lst}|LST is an ENGLISH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[LuckPT](https://pt.luckpt.de/){#luckpt}|LuckPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Luminarr (API)](https://luminarr.me/){#luminarr-api}|Luminarr is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[M-Team - TP](https://kp.m-team.cc/){#m-team---tp}|M-Team TP (MTTP) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / 3X|Chinese (China)|
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
-|[Magico](https://magico.to/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[Magico](https://mpellas.me/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Making Off](https://makingoff.org/){#makingoff}|Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
