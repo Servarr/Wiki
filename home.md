@@ -18,6 +18,7 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 
 ## Media Automation
 
+- [![16.png](/assets/gamarr/logos/16.png)&emsp;Gamarr *Games*](/gamarr)
 - [![16.png](/assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)
 - [![16.png](/assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
 - [![16.png](/assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
