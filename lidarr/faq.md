@@ -169,14 +169,13 @@ As of Lidarr v2, Authentication is Mandatory.
 
 - Artists that do not show up in search may be added by searching for `lidarr:mbid` where `mbid` is the Musicbrainz ID of the artist.
 
-## How can I find a MusicBrainz ID?
+## How can I find a MusicBrainz ID
 
 1. [Search for your desired artist or album](https://musicbrainz.org/search) (use `Release Group` type for albums)
 2. The MusicBrainz ID can be found under the "Details" tab:
 ![musicbrainz_id_detail_tab.png](/images/musicbrainz_id_detail_tab.png)
 3. Or at the end of the URL:
 ![musicbrainz_id_url.png](/images/musicbrainz_id_url.png)
-
 
 ## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release
 
