@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-02T02:06:31.145478
+date: 2026-02-05T02:01:27.494336
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-02T02:06:31.145478
+dateCreated: 2026-02-05T02:01:27.494336
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.2.5264` / [Commit: a4a8e890c1fac737d8213dfc9cdaee727d03571e](https://github.com/Prowlarr/Prowlarr/commit/a4a8e890c1fac737d8213dfc9cdaee727d03571e)
-  - [Prowlarr Indexers Commit: d7f6724861ed6accde65632832374a809bd24299](https://github.com/Prowlarr/Indexers/commit/d7f6724861ed6accde65632832374a809bd24299)
+  - Prowlarr Build `2.3.2.5266` / [Commit: 13493ddbce3faa4d391b08ab38640fc696d68844](https://github.com/Prowlarr/Prowlarr/commit/13493ddbce3faa4d391b08ab38640fc696d68844)
+  - [Prowlarr Indexers Commit: 061e080b5f536d91a0812c6204c502f2a719175d](https://github.com/Prowlarr/Indexers/commit/061e080b5f536d91a0812c6204c502f2a719175d)
 
 ---
 
@@ -59,7 +59,7 @@ dateCreated: 2026-02-02T02:06:31.145478
 |[GTorrent\.club](https://gtorrent.club/){#gtorrentpro}|GTorrent\.club is a RUSSIAN Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[ilCorSaRoNeRo](https://ilcorsaronero.link/){#ilcorsaronero}|ilCorSaRoNeRo is an ITALIAN Public site for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
-|[Isohunt2](https://isohunt.sh/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
+|[Isohunt2](https://isohunt.lol/){#isohunt2}|Isohunt2 is a Public torrent search engine for MOVIES / TV / GENERAL|English (United States)|
 |[kickasstorrents\.to](https://kickass.torrentbay.st/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[Knaben](https://knaben.org/){#knaben}|Knaben is a Public torrent meta-search engine|English (United States)|
@@ -86,6 +86,7 @@ dateCreated: 2026-02-02T02:06:31.145478
 |[The Pirate Bay](https://thepiratebay.org/){#thepiratebay}|The Pirate Bay (TPB) is the galaxy’s most resilient Public BitTorrent site|English (United States)|
 |[Pirate's Paradise](https://piratesparadise.org/){#piratesparadise}|Pirate's Paradise is a Public Torrent Tracker for MOVIES / TV|English (United States)|
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
+|[PornoTorrent](https://pornotorrent.com.br/){#pornotorrent}|PornoTorrent is a BRAZILIAN Public Torrent Tracker for 3X|Portuguese (Brazil)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
@@ -113,8 +114,8 @@ dateCreated: 2026-02-02T02:06:31.145478
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq405.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome232.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip213.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome233.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip214.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
@@ -133,7 +134,7 @@ dateCreated: 2026-02-02T02:06:31.145478
 |Indexer|Description|Language|
 |:--|:--|:--|
 |[Anidub](https://tr.anidub.com/){#anidub}|Anidub is RUSSIAN anime voiceover group and eponymous anime tracker|Russian (Russia)|
-|[AnimeLayer](https://www.animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
+|[AnimeLayer](https://animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
 |[ArenaBG](https://arenabg.com/){#arenabg}|ArenaBG is a BULGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Best-Torrents](https://best-torrents.com/){#best-torrents}|Best-Torrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[BitMagnet (Local DHT)](http://127.0.0.1:3333/){#bitmagnet}|BitMagnet is a self-hosted BitTorrent DHT search engine|English (United States)|
@@ -269,6 +270,7 @@ dateCreated: 2026-02-02T02:06:31.145478
 |[BrasilTracker](https://brasiltracker.org/){#brasiltracker}|BrasilTracker is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[BroadcasTheNet](https://api.broadcasthe.net/){#broadcasthenet}|BroadcasTheNet (BTN) is an invite-only torrent tracker focused on TV shows|English (United States)|
 |[BrokenStones](https://brokenstones.is/){#brokenstones}|Broken Stones is a Private site for MacOS and iOS APPS / GAMES|English (United States)|
+|[The Brothers](https://the-brothers.bounceme.net/){#thebrothers}|The Brothers is a Private GERMAN tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[BTArg](https://www.btarg.com.ar/){#btarg}|BTArg is an ARGENTINIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Argentina)|
 |[BTNext](https://tracker.btnext.com/){#btnext}|BTNext (BTNT) is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -504,6 +506,7 @@ dateCreated: 2026-02-02T02:06:31.145478
 |[ProAudioTorrents](https://proaudiotorrents.org/){#proaudiotorrents}|ProAudioTorrents (PAT) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / TUTORIALS / ETC|English (United States)|
 |[PT GTK](https://pt.gtkpw.xyz/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[PTCC (我的PT)](https://cc.mypt.cc/){#ptcc}|PTCC (我的PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTerClub (PT之友俱乐部)](https://pterclub.net/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV  / ANIME|Chinese (China)|
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -576,7 +579,7 @@ dateCreated: 2026-02-02T02:06:31.145478
 |[Toca Share (API)](https://tocashare.biz/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES|Portuguese (Portugal)|
 |[Tormac](https://tormac.org/){#tormac}|Tormac is a RUSSIAN Private Torrent Tracker for MAC SOFTWARE|Russian (Russia)|
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
-|[Torr9](https://torr9.com/){#torr9}|Torr9 is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
+|[Torr9](https://torr9.xyz/){#torr9}|Torr9 is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
 |[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
