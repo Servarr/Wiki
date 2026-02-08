@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-07T01:57:08.410241
+date: 2026-02-08T02:30:11.050023
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-07T01:57:08.410241
+dateCreated: 2026-02-08T02:30:11.050023
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5269` / [Commit: 852d62dcf0d5422e2cdb2cc8f87d4fe2dda5d9b9](https://github.com/Prowlarr/Prowlarr/commit/852d62dcf0d5422e2cdb2cc8f87d4fe2dda5d9b9)
-  - [Prowlarr Indexers Commit: 251fb6b0086e9608f04e40ef7ed0d931dc5a98b1](https://github.com/Prowlarr/Indexers/commit/251fb6b0086e9608f04e40ef7ed0d931dc5a98b1)
+  - [Prowlarr Indexers Commit: d81fb59e3567ee6a0cd81b21fee27e36b7df2c32](https://github.com/Prowlarr/Indexers/commit/d81fb59e3567ee6a0cd81b21fee27e36b7df2c32)
 
 ---
 
@@ -304,7 +304,7 @@ dateCreated: 2026-02-07T01:57:08.410241
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\. This indexer uses cookie login for 2FA|English (United Kingdom)|
 |[cyanbug (大青虫)](https://cyanbug.net/){#cyanbug}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DanishBytes (API)](https://danishbytes.club/){#danishbytes-api}|DanishBytes is a Private Danish Torrent Tracker for MOVIES / TV / GENERAL|Danish (Denmark)|
-|[Darkpeers (API)](https://darkpeers.org/){#darkpeers}|Darkpeers is a NORDIC Private Torrent Tracker for MOVIES / TV|English (United States)|
+|[Darkpeers (API)](https://darkpeers.org/){#darkpeers}|Darkpeers is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Das Unerwartete (API)](https://dasunerwartete.biz/){#dasunerwartete-api}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This is the API version|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -389,7 +389,7 @@ dateCreated: 2026-02-07T01:57:08.410241
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HellasHut (API)](https://hellashut.net/){#hellashut-api}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HELLENIC-HD (API)](https://hellenic-hd.cc/){#hellenic-hd-api}|HELLENIC-HD is a GREEK Private Torrent Tracker for MOVIES / TV|Greek (Greece)|
-|[HHanClub](https://hhanclub.top/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[HHanClub](https://hhanclub.net/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HHD (API)](https://homiehelpdesk.net/){#hhd-api}|HHD is a Private Torrent Tracker for MOVIES / TV / GAMES|English (United States)|
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[HQMusic](https://tracker.hqmusic.info/){#hqmusic}|HQMusic is a VIETNAMESE Private Torrent Tracker for MUSIC|Vietnamese (Viet Nam)|
