@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-09T02:08:20.194968
+date: 2026-02-11T02:21:11.526021
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-09T02:08:20.194968
+dateCreated: 2026-02-11T02:21:11.526021
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5270` / [Commit: baa4baf3caa09d8f1a97c564f097053e63d3a75e](https://github.com/Prowlarr/Prowlarr/commit/baa4baf3caa09d8f1a97c564f097053e63d3a75e)
-  - [Prowlarr Indexers Commit: 2c78e953b6cf4c75cce8477b56f2cc4f67c9914c](https://github.com/Prowlarr/Indexers/commit/2c78e953b6cf4c75cce8477b56f2cc4f67c9914c)
+  - [Prowlarr Indexers Commit: e38d9ce28c91f322bf5cb56ecfbc83ee1fa54c5b](https://github.com/Prowlarr/Indexers/commit/e38d9ce28c91f322bf5cb56ecfbc83ee1fa54c5b)
 
 ---
 
@@ -624,7 +624,6 @@ dateCreated: 2026-02-09T02:08:20.194968
 |[xloli](https://mua.xloli.cc/){#xloli}|xloli (ilolicon PT) is a CHINESE Private Torrent Tracker for LOLICON / MOVIES / 3X|Chinese (China)|
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Xthor (API)](https://xthor.help/){#xthor-api}|Xthor is a FRENCH Private Torrent Tracker for MOVIES / GENERAL|French (France)|
-|[Xthor (Scraping)](https://xthor.help/){#xthor-scraping}|General French Private Tracker|French (France)|
 |[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
