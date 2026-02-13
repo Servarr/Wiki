@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-12T02:07:56.340554
+date: 2026-02-13T02:10:22.818153
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-12T02:07:56.340554
+dateCreated: 2026-02-13T02:10:22.818153
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5270` / [Commit: baa4baf3caa09d8f1a97c564f097053e63d3a75e](https://github.com/Prowlarr/Prowlarr/commit/baa4baf3caa09d8f1a97c564f097053e63d3a75e)
-  - [Prowlarr Indexers Commit: f87b689283242a3ade174e8f023bf7384519232d](https://github.com/Prowlarr/Indexers/commit/f87b689283242a3ade174e8f023bf7384519232d)
+  - [Prowlarr Indexers Commit: ab8ea2e4c95f1e16f54a51a19536cea8c14a69b1](https://github.com/Prowlarr/Indexers/commit/ab8ea2e4c95f1e16f54a51a19536cea8c14a69b1)
 
 ---
 
@@ -114,15 +114,15 @@ dateCreated: 2026-02-12T02:07:56.340554
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq406.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome233.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip214.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome234.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip215.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[UzTracker](https://uztracker.net/){#uztracker}|UzTracker is an UZBEK Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://ww1-world-torrent.com/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://ww2-mania-torrent.com/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
@@ -197,7 +197,6 @@ dateCreated: 2026-02-12T02:07:56.340554
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a ratioless Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
-|[ViDEOTEKA](http://videoteka.org/){#videoteka}|ViDEOTEKA (VT) is a SLOVENIAN Semi-Private Torrent Tracker for MOVIES / TV|Slovenian (Slovenia)|
 |[Ztracker](https://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
 ### Private Trackers
