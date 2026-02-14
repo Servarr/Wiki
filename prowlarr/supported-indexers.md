@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-13T02:10:22.818153
+date: 2026-02-14T01:58:48.711208
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-13T02:10:22.818153
+dateCreated: 2026-02-14T01:58:48.711208
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.2.5270` / [Commit: baa4baf3caa09d8f1a97c564f097053e63d3a75e](https://github.com/Prowlarr/Prowlarr/commit/baa4baf3caa09d8f1a97c564f097053e63d3a75e)
-  - [Prowlarr Indexers Commit: ab8ea2e4c95f1e16f54a51a19536cea8c14a69b1](https://github.com/Prowlarr/Indexers/commit/ab8ea2e4c95f1e16f54a51a19536cea8c14a69b1)
+  - [Prowlarr Indexers Commit: 0b13426ac6d8ef35f741205bcef94ea3676d285e](https://github.com/Prowlarr/Indexers/commit/0b13426ac6d8ef35f741205bcef94ea3676d285e)
 
 ---
 
@@ -112,7 +112,7 @@ dateCreated: 2026-02-13T02:10:22.818153
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq406.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq407.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome234.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip215.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -384,6 +384,7 @@ dateCreated: 2026-02-13T02:10:22.818153
 |[HDTorrents\.it (API)](https://hdtorrents.eu/){#hdtorrentsit}|HDTorrents\.it is an ITALIAN Private PAY2DL site for MOVIES / TV|Italian (Italy)|
 |[HDTurk](https://hdturk.club/){#hdturk}|HDTurk is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[HDU](https://pt.upxin.net/){#hdu}|HDU is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[HDVideo](https://hdvideo.top/){#hdvideo}|HDVideo is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDZero (API)](https://hdzero.org/){#hdzero}|HD Zero is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[Hebits](https://hebits.net/){#hebits}|Hebits (HB) is an ISRAELI Private Torrent Tracker for MOVIES / TV / GENERAL|Hebrew (Israel)|
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
@@ -461,6 +462,7 @@ dateCreated: 2026-02-13T02:10:22.818153
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |MoreThanTV{#torznab}|Private torrent tracker for TV / MOVIES|English (United States)|
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|English (United States)|
+|[Muxuege](https://pt.muxuege.org/){#muxuege}|Muxuege is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker|English (United States)|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|English (United States)|
 |[nCore](https://ncore.pro/){#ncore}|nCore is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
@@ -512,6 +514,7 @@ dateCreated: 2026-02-13T02:10:22.818153
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[PThome](https://www.pthome.net/){#pthome}|PTHome is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[PTLAO](https://ptlao.top/){#ptlao}|PTLAO is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTLGS](https://ptlgs.org/){#ptlgs}|PTLGS is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[PTSBAO (烧包)](https://ptsbao.club/){#ptsbao}|PTSBAO (烧包) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[PTSKIT](https://www.ptskit.org/){#ptskit}|PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
