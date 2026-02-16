@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-14T01:58:48.711208
+date: 2026-02-16T02:05:47.111534
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-14T01:58:48.711208
+dateCreated: 2026-02-16T02:05:47.111534
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.2.5270` / [Commit: baa4baf3caa09d8f1a97c564f097053e63d3a75e](https://github.com/Prowlarr/Prowlarr/commit/baa4baf3caa09d8f1a97c564f097053e63d3a75e)
-  - [Prowlarr Indexers Commit: 0b13426ac6d8ef35f741205bcef94ea3676d285e](https://github.com/Prowlarr/Indexers/commit/0b13426ac6d8ef35f741205bcef94ea3676d285e)
+  - Prowlarr Build `2.3.3.5280` / [Commit: c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb](https://github.com/Prowlarr/Prowlarr/commit/c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb)
+  - [Prowlarr Indexers Commit: 57944bf31ab0786bc1d271d816e6c074ca95c27f](https://github.com/Prowlarr/Indexers/commit/57944bf31ab0786bc1d271d816e6c074ca95c27f)
 
 ---
 
@@ -500,6 +500,7 @@ dateCreated: 2026-02-14T01:58:48.711208
 |[PixelCove2FA](https://www.pixelcove.me/){#pixelcove2fa}|PixelCove2FA (Ultimate Gamer) is a Private Torrent Tracker for GAMES\. Cookie Login for 2FA use|English (United States)|
 |[PiXELHD](https://pixelhd.me/){#pixelhd}|PixelHD (PxHD) is a ratioless Private Torrent Tracker for HD \.MP4 MOVIES / TV|English (United States)|
 |[The Place](https://theplace.click/){#theplace}|ThePlace (TP) is a Private Torrent Tracker for SEDUCTION / SELF-IMPROVEMENT E-LEARNING|English (United States)|
+|[PlayletPT](https://playletpt.xyz/){#playletpt}|PlayletPT is a CHINESE Private Torrent Tracker for Short Drama|Chinese (China)|
 |[Polish Torrent (API)](https://polishtorrent.top/){#polishtorrent}|Polish Torrent (PTT) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private Torrent Tracker for 0DAY / MOVIES / GENERAL|Polish (Poland)|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|English (United States)|
@@ -584,6 +585,7 @@ dateCreated: 2026-02-14T01:58:48.711208
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TmGHuB](https://tmghub.org/){#tmghub}|TmGHuB (TH) is an INDIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Toca Share (API)](https://tocashare.biz/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES|Portuguese (Portugal)|
+|[TokyoPT](https://www.tokyopt.xyz/){#tokyopt}|TokyoPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Tormac](https://tormac.org/){#tormac}|Tormac is a RUSSIAN Private Torrent Tracker for MAC SOFTWARE|Russian (Russia)|
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torr9](https://torr9.xyz/){#torr9}|Torr9 is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
