@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-16T02:05:47.111534
+date: 2026-02-17T02:03:17.055130
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-16T02:05:47.111534
+dateCreated: 2026-02-17T02:03:17.055130
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.3.5280` / [Commit: c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb](https://github.com/Prowlarr/Prowlarr/commit/c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb)
-  - [Prowlarr Indexers Commit: 57944bf31ab0786bc1d271d816e6c074ca95c27f](https://github.com/Prowlarr/Indexers/commit/57944bf31ab0786bc1d271d816e6c074ca95c27f)
+  - [Prowlarr Indexers Commit: 2031fef5f100790f44070857dd43b5402576c0bd](https://github.com/Prowlarr/Indexers/commit/2031fef5f100790f44070857dd43b5402576c0bd)
 
 ---
 
@@ -465,6 +465,7 @@ dateCreated: 2026-02-16T02:05:47.111534
 |[Muxuege](https://pt.muxuege.org/){#muxuege}|Muxuege is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker|English (United States)|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|English (United States)|
+|[NanyangPT (南洋)](https://52pt.site/){#nanyangpt}|NanyangPT (南洋) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[nCore](https://ncore.pro/){#ncore}|nCore is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|English (United States)|
 |[The-New-Fun](https://the-new-fun.com/){#thenewfun}|The-New-Fun is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
