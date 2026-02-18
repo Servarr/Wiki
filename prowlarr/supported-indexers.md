@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-17T02:03:17.055130
+date: 2026-02-18T02:07:01.899404
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-17T02:03:17.055130
+dateCreated: 2026-02-18T02:07:01.899404
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.3.5280` / [Commit: c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb](https://github.com/Prowlarr/Prowlarr/commit/c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb)
-  - [Prowlarr Indexers Commit: 2031fef5f100790f44070857dd43b5402576c0bd](https://github.com/Prowlarr/Indexers/commit/2031fef5f100790f44070857dd43b5402576c0bd)
+  - [Prowlarr Indexers Commit: 31d07a9dffa1b746cfae9547e03ef1d6cbb0d5b5](https://github.com/Prowlarr/Indexers/commit/31d07a9dffa1b746cfae9547e03ef1d6cbb0d5b5)
 
 ---
 
@@ -521,6 +521,7 @@ dateCreated: 2026-02-17T02:03:17.055130
 |[PTSBAO (烧包)](https://ptsbao.club/){#ptsbao}|PTSBAO (烧包) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[PTSKIT](https://www.ptskit.org/){#ptskit}|PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTTime](https://www.pttime.org/){#pttime}|PTTime is a ratioless CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[PTYING (樱花)](https://pt.ying.us.kg/){#ptying}|PTYING (樱花) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTzone](https://ptzone.xyz/){#ptzone}|PTzone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PT分享站 (itzmx)](https://pt.itzmx.com/){#ptitzmx}|PT分享站 (itzmx) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Punk's Horror Tracker](https://punck-tracker.net/){#punkshorror}|Punk's Horror Tracker is a HUNGARIAN Private Tracker for Horror MOVIES / TV|Hungarian (Hungary)|
@@ -631,6 +632,7 @@ dateCreated: 2026-02-17T02:03:17.055130
 |[World-In-HD](https://world-in-hd.net/){#wihd}|World-In-HD is a Private Torrent Tracker\. Your world in HD|French (France)|
 |[World-of-Tomorrow](https://w-o-t.pro/){#world-of-tomorrow}|World-of-Tomorrow is a GERMAN Private tracker|German (Germany)|
 |[x-ite\.me](https://x-ite.me/){#x-ite.me}|X-ite\.me (XM) is a Private Torrent Tracker for LGBTQ MOVIES / GENERAL / 3X|English (United States)|
+|[Xingwan (星湾)](https://xingwan.cc/){#xingwan}|Xingwan (星湾) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Xingyung (星陨阁)](https://pt.xingyungept.org/){#xingyung}|Xingyung (星陨阁) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[xloli](https://mua.xloli.cc/){#xloli}|xloli (ilolicon PT) is a CHINESE Private Torrent Tracker for LOLICON / MOVIES / 3X|Chinese (China)|
 |[XSpeeds](https://www.xspeeds.eu/){#xspeeds}|XSpeeds (XS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -642,6 +644,7 @@ dateCreated: 2026-02-17T02:03:17.055130
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
+|[ZRPT (自然)](https://zrpt.cc/){#zrpt}|ZRPT (自然) is a CHINESE Private Torrent Tracker for Documentaries|Chinese (China)|
 
 ## Usenet
 
