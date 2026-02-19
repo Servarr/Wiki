@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-02-18T02:07:01.899404
+date: 2026-02-19T02:05:56.442124
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-02-18T02:07:01.899404
+dateCreated: 2026-02-19T02:05:56.442124
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.3.5280` / [Commit: c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb](https://github.com/Prowlarr/Prowlarr/commit/c3a7fbdd861ef3205a476cffc3abc5cb0708f3bb)
-  - [Prowlarr Indexers Commit: 31d07a9dffa1b746cfae9547e03ef1d6cbb0d5b5](https://github.com/Prowlarr/Indexers/commit/31d07a9dffa1b746cfae9547e03ef1d6cbb0d5b5)
+  - Prowlarr Build `2.3.3.5285` / [Commit: 407acb6844ba9d3db1143fc9b3af2d84ea1a06fb](https://github.com/Prowlarr/Prowlarr/commit/407acb6844ba9d3db1143fc9b3af2d84ea1a06fb)
+  - [Prowlarr Indexers Commit: efd1db19020f324ddad0b1544b16021f097f7be1](https://github.com/Prowlarr/Indexers/commit/efd1db19020f324ddad0b1544b16021f097f7be1)
 
 ---
 
@@ -114,8 +114,8 @@ dateCreated: 2026-02-18T02:07:01.899404
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq407.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome234.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip215.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome235.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip216.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[UzTracker](https://uztracker.net/){#uztracker}|UzTracker is an UZBEK Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -171,6 +171,7 @@ dateCreated: 2026-02-18T02:07:01.899404
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private Torrent Tracker dedicated to UK TV and DOCUMENTARIES\. This definition is for the Forum Tracker site|English (United States)|
 |[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private Torrent Tracker dedicated to UK TV and DOCUMENTARIES\. This definition is for the Main Tracker site|English (United States)|
 |[NetHD](https://nethd.org/){#nethd}|NetHD (VietTorrent) is a VIETNAMESE Semi-Private Torrent Tracker for HD MOVIES / TV|Vietnamese (Viet Nam)|
+|[New-Team](https://new-team.org/){#new-team}|New-Team is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[NewStudioL](https://newstudio.tv/){#newstudiol}|NewStudio is a RUSSIAN Public site for TV\. This supports login|Russian (Russia)|
 |[NoNaMe ClubL](https://nnmclub.to/){#noname-clubl}|This is the NoNaMe Club indexer with Login enabled in the config|Russian (Russia)|
 |[Polskie-Torrenty](https://polskie-torrenty.eu/){#polskie-torrenty}|Polskie-Torrenty is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -465,7 +466,7 @@ dateCreated: 2026-02-18T02:07:01.899404
 |[Muxuege](https://pt.muxuege.org/){#muxuege}|Muxuege is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[MyAnonamouse](https://www.myanonamouse.net/){#myanonamouse}|MyAnonaMouse (MAM) is a large ebook and audiobook tracker|English (United States)|
 |[MySpleen](https://www.myspleen.org/){#myspleen}|MySpleen is a Private Torrent Tracker for TV / COMEDY / ANIMATION / 80-90’S VHS NOSTALGIA|English (United States)|
-|[NanyangPT (南洋)](https://52pt.site/){#nanyangpt}|NanyangPT (南洋) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[NanyangPT (南洋)](https://nanyangpt.com/){#nanyangpt}|NanyangPT (南洋) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[nCore](https://ncore.pro/){#ncore}|nCore is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Nebulance](https://nebulance.io/){#nebulance}|Nebulance (NBL) is a ratioless Private Torrent Tracker for TV|English (United States)|
 |[The-New-Fun](https://the-new-fun.com/){#thenewfun}|The-New-Fun is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
