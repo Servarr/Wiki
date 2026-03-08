@@ -86,11 +86,8 @@ If you need to clean up empty directories, this command will do that:
 Alternatively in Windows you can run the following script in Powershell to iterate over each file in a directory, and move it to a folder with the same name.
 
 ```powershell
-Get-ChildItem -File
-  | ForEach-Object {
-    $dir = New-Item -ItemType Directory -Name $_.BaseName -Force
-    $_ | Move-Item -Destination $dir
-  }
+Get-ChildItem -File | ForEach-Object {$dir = New-Item -ItemType Directory -Name $_.BaseName -Force 
+$_ | Move-Item -Destination $dir}
 ```
 
 # Configuring Radarr to Auto-Remove Completed Torrents
