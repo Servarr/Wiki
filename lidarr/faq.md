@@ -124,10 +124,10 @@ As of Lidarr v2, Authentication is Mandatory.
 
 - The current logic [can be found here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
-- As of 2022-01-23 the logic is as follows:
+- As of 2023-01-22 the logic is as follows:
 
 1. Quality
-1. Preferred Word Score
+1. Custom Format Score
 1. Protocol (as configured in the relevant Delay Profile)
 1. Indexer Priority
 1. Seeds/Peers (If Torrent)
