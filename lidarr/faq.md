@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2026-01-07T17:57:56.010Z
+date: 2026-03-17T17:33:54.181Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -172,7 +172,7 @@ As of Lidarr v2, Authentication is Mandatory.
 ## How can I find a MusicBrainz ID?
 
 1. [Search for your desired artist or album](https://musicbrainz.org/search) (use `Release Group` type for albums)
-2. The MusicBrainz ID can be found under the "Details" tab: 
+2. The MusicBrainz ID can be found under the "Details" tab:
 ![musicbrainz_id_detail_tab.png](/images/musicbrainz_id_detail_tab.png)
 3. Or at the end of the URL:
 ![musicbrainz_id_url.png](/images/musicbrainz_id_url.png)
