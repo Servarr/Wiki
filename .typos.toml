@@ -22,6 +22,7 @@ broadcas = "broadcas" # Part of tracker name BroadcasTheNet
 hda = "hda" # Tracker acronym
 nam = "nam" # Part of "Viet Nam"
 searchin = "searchin" # API field name
+tey = "tey" # Part of tracker name PTTey
 titel = "titel" # German word for "title" used in examples
 tork = "tork" # Tracker acronym
 tre = "tre" # Part of tracker name TreZzoR
