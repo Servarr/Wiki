@@ -251,7 +251,7 @@ Highlights
 
 ## Seerr
 
-[Seer](https://seerr.dev/) is a media request and discovery manager for Jellyfin, Plex, and Emby.
+[Seer](https://seerr.dev/) is a media discovery and request management tool for Jellyfin, Plex, and Emby.
 
 ## Petio
 
