@@ -27,8 +27,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
 - [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs---request-apps-arrs)
   - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
   - [Ombi](#ombi)
-  - [Overseerr](#overseerr)
-  - [Jellyserr](#jellyseerr)
+  - [Seerr](#seerr)
   - [Petio](#petio)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
@@ -250,13 +249,9 @@ Highlights
 
 [Ombi](https://github.com/tidusjar/Ombi/) gives users the ability to request movies, tv shows (series, seasons or single episodes) and music albums.
 
-## Overseerr
+## Seerr
 
-[Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
-
-## Jellyseerr
-
-[Jellyseerr](https://github.com/Fallenbagel/jellyseerr) is a fork of Overseerr built to bring support for Jellyfin & Emby media servers.
+[Seer](https://seerr.dev/) is a media request and discovery manager for Jellyfin, Plex, and Emby.
 
 ## Petio
 
@@ -382,7 +377,7 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 
 ## Deleterr
 
-[Deleterr](https://github.com/rfsbraz/deleterr) is a tool to delete stale and inactive media from Plex/Sonarr/Radarr. It helps managing limited space when you allow users to request shows via Overseerr/Ombi but don't want to manually monitor available disk space. It's configurable to support only deleting media meeting your defined criteria.
+[Deleterr](https://github.com/rfsbraz/deleterr) is a tool to delete stale and inactive media from Plex/Sonarr/Radarr. It helps managing limited space when you allow users to request shows via Seerr/Ombi but don't want to manually monitor available disk space. It's configurable to support only deleting media meeting your defined criteria.
 
 ## Twitter Connect
 
