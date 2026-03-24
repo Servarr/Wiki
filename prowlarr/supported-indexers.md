@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-03-22T02:09:20.796199
+date: 2026-03-24T02:01:58.991822
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-03-22T02:09:20.796199
+dateCreated: 2026-03-24T02:01:58.991822
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.4.5308` / [Commit: ec46b25be29b88624880b2ad26317c2d536ccc0c](https://github.com/Prowlarr/Prowlarr/commit/ec46b25be29b88624880b2ad26317c2d536ccc0c)
-  - [Prowlarr Indexers Commit: b80fa830634bd9777fbcd45de22fc76355c1261a](https://github.com/Prowlarr/Indexers/commit/b80fa830634bd9777fbcd45de22fc76355c1261a)
+  - [Prowlarr Indexers Commit: 4a04f7969112702f4d68ee14222fd6afdfd2df7a](https://github.com/Prowlarr/Indexers/commit/4a04f7969112702f4d68ee14222fd6afdfd2df7a)
 
 ---
 
@@ -313,6 +313,7 @@ dateCreated: 2026-03-22T02:09:20.796199
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
+|[DS-Reloaded](https://ds-reloaded.com/){#ds-reloaded}|DS-Reloaded (DS\.R) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[dubhe (天枢)](https://dubhe.site/){#dubhe}|dubhe (天枢) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Ebooks-Shares](https://ebooks-shares.org/){#ebooks-shares}|Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS|English (United States)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
@@ -500,6 +501,7 @@ dateCreated: 2026-03-22T02:09:20.796199
 |[PiXELHD](https://pixelhd.me/){#pixelhd}|PixelHD (PxHD) is a ratioless Private Torrent Tracker for HD \.MP4 MOVIES / TV|English (United States)|
 |[The Place](https://theplace.click/){#theplace}|ThePlace (TP) is a Private Torrent Tracker for SEDUCTION / SELF-IMPROVEMENT E-LEARNING|English (United States)|
 |[PlayletPT](https://playletpt.xyz/){#playletpt}|PlayletPT is a CHINESE Private Torrent Tracker for Short Drama|Chinese (China)|
+|[Podzemlje](https://podzemlje.net/){#podzemlje}|Podzemlje is an EX-YU Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Polish Torrent (API)](https://polishtorrent.top/){#polishtorrent}|Polish Torrent (PTT) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private Torrent Tracker for 0DAY / MOVIES / GENERAL|Polish (Poland)|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|English (United States)|
@@ -566,7 +568,7 @@ dateCreated: 2026-03-22T02:09:20.796199
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[SpeedCD](https://speed.cd/){#speedcd}|Your home now!|English (United States)|
 |[Speedmaster HD](https://speedmaster-hd.net/){#speedmasterhd}|Speedmaster HD is a GERMAN Time based Torrent Tracker for MOVIES / TV|German (Germany)|
-|[Spirit of Revolution](https://sor-next.top/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
+|[Spirit of Revolution](https://sor-next.org/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[SugoiMusic](https://sugoimusic.me/){#sugoimusic}|SugoiMusic is a Private Torrent Tracker for ASIAN MUSIC / TV|English (United States)|
