@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-03-24T02:01:58.991822
+date: 2026-03-26T02:13:29.384932
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-03-24T02:01:58.991822
+dateCreated: 2026-03-26T02:13:29.384932
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.4.5308` / [Commit: ec46b25be29b88624880b2ad26317c2d536ccc0c](https://github.com/Prowlarr/Prowlarr/commit/ec46b25be29b88624880b2ad26317c2d536ccc0c)
-  - [Prowlarr Indexers Commit: 4a04f7969112702f4d68ee14222fd6afdfd2df7a](https://github.com/Prowlarr/Indexers/commit/4a04f7969112702f4d68ee14222fd6afdfd2df7a)
+  - Prowlarr Build `2.3.4.5308` / [Commit: 5edde8d9bd65e6280d4bf6d78674bf702ec521c2](https://github.com/Prowlarr/Prowlarr/commit/5edde8d9bd65e6280d4bf6d78674bf702ec521c2)
+  - [Prowlarr Indexers Commit: 5c17fb27ae73240e250b454caf51335ad0ac21c2](https://github.com/Prowlarr/Indexers/commit/5c17fb27ae73240e250b454caf51335ad0ac21c2)
 
 ---
 
@@ -111,8 +111,8 @@ dateCreated: 2026-03-24T02:01:58.991822
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq412.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome239.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip220.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome240.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip221.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[UzTracker](https://uztracker.net/){#uztracker}|UzTracker is an UZBEK Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -153,7 +153,6 @@ dateCreated: 2026-03-24T02:01:58.991822
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[HunTorrent-bithorlo](https://huntorrent.org/){#huntorrent-bithorlo}|HunTorrent-bithorlo is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[ilDraGoNeRo](https://ildragonero2.info/){#ildragonero}|ilDraGoNeRo is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kinorun](http://kinorun.top/){#kinorun}|Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
@@ -486,7 +485,7 @@ dateCreated: 2026-03-24T02:01:58.991822
 |[Orpheus](https://orpheus.network/){#orpheus}|Orpheus (APOLLO) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[OshenPT](https://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[P2PBG](https://www.p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
+|[P2PBG](https://www.p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private PAY2DL Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ParabellumHD (API)](https://parabellumhd.cx/){#parabellumhd-api}|ParabellumHD is a SPANISH Private Torrent Tracker for HEVC & AV1-encoded MOVIES / TV|Spanish (Spain)|
 |[The Paradiese](https://theparadiese.hopto.org/){#theparadiese}|The Paradiese is a GERMAN Private tracker for MOVIES / TV / GENERAL|German (Germany)|
@@ -500,7 +499,7 @@ dateCreated: 2026-03-24T02:01:58.991822
 |[PixelCove2FA](https://www.pixelcove.me/){#pixelcove2fa}|PixelCove2FA (Ultimate Gamer) is a Private Torrent Tracker for GAMES\. Cookie Login for 2FA use|English (United States)|
 |[PiXELHD](https://pixelhd.me/){#pixelhd}|PixelHD (PxHD) is a ratioless Private Torrent Tracker for HD \.MP4 MOVIES / TV|English (United States)|
 |[The Place](https://theplace.click/){#theplace}|ThePlace (TP) is a Private Torrent Tracker for SEDUCTION / SELF-IMPROVEMENT E-LEARNING|English (United States)|
-|[PlayletPT](https://playletpt.xyz/){#playletpt}|PlayletPT is a CHINESE Private Torrent Tracker for Short Drama|Chinese (China)|
+|[PlayletPT](https://playlet.cc/){#playletpt}|PlayletPT is a CHINESE Private Torrent Tracker for Short Drama|Chinese (China)|
 |[Podzemlje](https://podzemlje.net/){#podzemlje}|Podzemlje is an EX-YU Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Polish Torrent (API)](https://polishtorrent.top/){#polishtorrent}|Polish Torrent (PTT) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private Torrent Tracker for 0DAY / MOVIES / GENERAL|Polish (Poland)|
@@ -571,7 +570,6 @@ dateCreated: 2026-03-24T02:01:58.991822
 |[Spirit of Revolution](https://sor-next.org/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[SugoiMusic](https://sugoimusic.me/){#sugoimusic}|SugoiMusic is a Private Torrent Tracker for ASIAN MUSIC / TV|English (United States)|
 |[Superbits](https://superbits.org/){#superbits}|SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
 |[Swarmazon (API)](https://swarmazon.club/){#swarmazon-api}|Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Tangmen (唐门)](https://tmpt.top/){#tangmen}|Tangmen (唐门) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
