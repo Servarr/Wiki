@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-03-26T02:13:29.384932
+date: 2026-03-28T02:05:51.170523
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-03-26T02:13:29.384932
+dateCreated: 2026-03-28T02:05:51.170523
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.4.5308` / [Commit: 5edde8d9bd65e6280d4bf6d78674bf702ec521c2](https://github.com/Prowlarr/Prowlarr/commit/5edde8d9bd65e6280d4bf6d78674bf702ec521c2)
-  - [Prowlarr Indexers Commit: 5c17fb27ae73240e250b454caf51335ad0ac21c2](https://github.com/Prowlarr/Indexers/commit/5c17fb27ae73240e250b454caf51335ad0ac21c2)
+  - [Prowlarr Indexers Commit: dea82fdd4d3a6260f34525e79c250eba57d02b09](https://github.com/Prowlarr/Indexers/commit/dea82fdd4d3a6260f34525e79c250eba57d02b09)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2026-03-26T02:13:29.384932
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
-|[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
+|[TorrentKitty](https://www.torrentkitty.vip/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq412.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
