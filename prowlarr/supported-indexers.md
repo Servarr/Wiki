@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-03-28T02:05:51.170523
+date: 2026-03-29T02:25:03.099415
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-03-28T02:05:51.170523
+dateCreated: 2026-03-29T02:25:03.099415
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.4.5308` / [Commit: 5edde8d9bd65e6280d4bf6d78674bf702ec521c2](https://github.com/Prowlarr/Prowlarr/commit/5edde8d9bd65e6280d4bf6d78674bf702ec521c2)
-  - [Prowlarr Indexers Commit: dea82fdd4d3a6260f34525e79c250eba57d02b09](https://github.com/Prowlarr/Indexers/commit/dea82fdd4d3a6260f34525e79c250eba57d02b09)
+  - Prowlarr Build `2.3.4.5308` / [Commit: 71d1a59008c0adf2b48cbf014532397912fa81e2](https://github.com/Prowlarr/Prowlarr/commit/71d1a59008c0adf2b48cbf014532397912fa81e2)
+  - [Prowlarr Indexers Commit: 8d938484b62ee4d45d832501e5fa965227be1a46](https://github.com/Prowlarr/Indexers/commit/8d938484b62ee4d45d832501e5fa965227be1a46)
 
 ---
 
@@ -76,7 +76,7 @@ dateCreated: 2026-03-28T02:05:51.170523
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from JAPAN|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for MOVIES / TV / MUSIC|Russian (Russia)|
-|[NorTorrent](https://ww3-nortorrent.com/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
+|[NorTorrent](https://www.nortorrent.org/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern ASIAN media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -109,7 +109,7 @@ dateCreated: 2026-03-28T02:05:51.170523
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.vip/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq412.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq413.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome240.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip221.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
