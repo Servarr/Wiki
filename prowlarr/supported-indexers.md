@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-03-29T02:25:03.099415
+date: 2026-03-31T02:23:00.200267
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-03-29T02:25:03.099415
+dateCreated: 2026-03-31T02:23:00.200267
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.4.5308` / [Commit: 71d1a59008c0adf2b48cbf014532397912fa81e2](https://github.com/Prowlarr/Prowlarr/commit/71d1a59008c0adf2b48cbf014532397912fa81e2)
-  - [Prowlarr Indexers Commit: 8d938484b62ee4d45d832501e5fa965227be1a46](https://github.com/Prowlarr/Indexers/commit/8d938484b62ee4d45d832501e5fa965227be1a46)
+  - Prowlarr Build `2.3.5.5323` / [Commit: 3c4efa0226e73426366b2dfc6498179442791fbf](https://github.com/Prowlarr/Prowlarr/commit/3c4efa0226e73426366b2dfc6498179442791fbf)
+  - [Prowlarr Indexers Commit: 93ff5e67c35550d53a1840bc6e8f19c380a6bb6d](https://github.com/Prowlarr/Indexers/commit/93ff5e67c35550d53a1840bc6e8f19c380a6bb6d)
 
 ---
 
@@ -103,11 +103,11 @@ dateCreated: 2026-03-29T02:25:03.099415
 |[Torrent Oyun indir](https://0.torrentoyunindir.com/){#torrentoyunindir}|Torrent Oyun indir is a TURKISH Public torrent site for GAMES|Turkish (Turkey)|
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
-|[Torrent9](https://www5.torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[Torrent9](https://www.torrent9.club/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
-|[TorrentKitty](https://www.torrentkitty.vip/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
+|[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq413.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
@@ -162,7 +162,6 @@ dateCreated: 2026-03-29T02:25:03.099415
 |[Mazepa](https://mazepa.to/){#mazepa}|Mazepa is an UKRAINIAN Semi-Private Torrent Tracker for Videos with Ukrainian soundtracks|Ukrainian (Ukraine)|
 |[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private Torrent Tracker dedicated to HEAVY METAL MUSIC\. This definition is for the English site|English (United States)|
 |[MioBT](https://miobt.com/){#miobt}|MioBT is a CHINESE Semi-Private torrent index|Chinese (China)|
-|[MIRCrew](https://mircrew-releases.org/){#mircrew}|MIRCrew is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[MuseBootlegs](https://musebootlegs.com/){#musebootlegs}|MuseBootlegs (MB) is a Semi-Private Torrent Tracker for MUSE MUSIC / BOOTLEGS|English (United States)|
 |[MVGroup Forum](https://forums.mvgroup.org/){#mvgroupforum}|MVGroup is a Semi-Private Torrent Tracker dedicated to UK TV and DOCUMENTARIES\. This definition is for the Forum Tracker site|English (United States)|
 |[MVGroup Main](https://forums.mvgroup.org/){#mvgroupmain}|MVGroup is a Semi-Private Torrent Tracker dedicated to UK TV and DOCUMENTARIES\. This definition is for the Main Tracker site|English (United States)|
@@ -184,7 +183,6 @@ dateCreated: 2026-03-29T02:25:03.099415
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
 |[seleZen](https://use.selezen.club/){#selezen}|seleZen is a RUSSIAN Semi-Private Torrent Tracker for MOVIES|Russian (Russia)|
-|[Sharewood (API)](https://www.sharewood.tv/){#sharewood-api}|sharewood is a FRENCH Semi-Private Torrent Tracker for GENERAL|French (France)|
 |[Sk-CzTorrent](https://sktorrent.eu/){#sktorrent}|Sk-CzTorrent is a CZECH/SLOVAK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[SkTorrent\.org](https://sktorrent.org/){#sktorrent-org}|SkTorrent\.org is a Semi-Private torrent site for MOVIES / TV/ GENERAL|English (United States)|
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
@@ -465,6 +463,7 @@ dateCreated: 2026-03-29T02:25:03.099415
 |[The-New-Fun](https://the-new-fun.com/){#thenewfun}|The-New-Fun is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[New Heaven](https://newheaven.nl/){#newheaven}|New Heaven is a GERMAN Private tracker for MOVIES / AUDIO / TV / GENERAL|German (Germany)|
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
+|[Nexum (API)](https://nexum-core.com/){#nexum-api}|Nexum is a FRENCH Private Torrent Tracker for MOVIES / TV|French (France)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Nirvana (API)](https://nirvana.li/){#nirvana}|Nirvana is a Private RUSSIAN Tracker for MOVIES / TV|Russian (Russia)|
 |[njtupt (浦园)](https://njtupt.top/){#njtupt}|njtupt (浦园) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
