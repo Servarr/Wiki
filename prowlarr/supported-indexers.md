@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-03-31T02:23:00.200267
+date: 2026-04-01T02:32:45.385902
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-03-31T02:23:00.200267
+dateCreated: 2026-04-01T02:32:45.385902
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.5.5323` / [Commit: 3c4efa0226e73426366b2dfc6498179442791fbf](https://github.com/Prowlarr/Prowlarr/commit/3c4efa0226e73426366b2dfc6498179442791fbf)
-  - [Prowlarr Indexers Commit: 93ff5e67c35550d53a1840bc6e8f19c380a6bb6d](https://github.com/Prowlarr/Indexers/commit/93ff5e67c35550d53a1840bc6e8f19c380a6bb6d)
+  - [Prowlarr Indexers Commit: 358656d0fdc7f3c1069becd2e9dbd172b05e0371](https://github.com/Prowlarr/Indexers/commit/358656d0fdc7f3c1069becd2e9dbd172b05e0371)
 
 ---
 
@@ -538,6 +538,7 @@ dateCreated: 2026-03-31T02:23:00.200267
 |[Redacted](https://redacted.sh/){#redacted}|REDActed (Aka\.PassTheHeadPhones) is one of the most well-known music trackers|English (United States)|
 |[ReelFLiX (API)](https://reelflix.cc/){#reelflix-api}|ReelFLiX (HD4Free, LegacyHD) is a Private Torrent Tracker for HD MOVIES|English (United States)|
 |[RetroFlix](https://retroflix.club/){#retroflix}|RetroFlix (RFX) is a Private Torrent Tracker for Classic Movies / TV / General Releases|English (United States)|
+|[RetroMoviesClub (API)](https://retro-movies.club/){#retromoviesclub-api}|RetroMoviesClub (RMC) is a Private Torrent Tracker for Classic Movies|English (United States)|
 |[RevolutionTT](https://revott.me/){#revolutiontt}|The Revolution has begun|English (United States)|
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
