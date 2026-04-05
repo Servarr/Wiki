@@ -32,6 +32,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Petio](#petio)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
+    - [Managarr](#managarr)
     - [LunaSea](#lunasea)
     - [Radarr \& Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
     - [nzb360 - Android App](#nzb360---android-app)
@@ -267,6 +268,10 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 # Other Projects and Programs - \*Arr Related
 
 ## Remote Control
+
+### Managarr
+
+[Managarr](https://github.com/Dark-Alex-17/managarr) is a TUI (Text-based User Interface) and CLI (Command Line Interface) for managing *arr servers from the terminal, built in Rust. It supports Radarr, Sonarr, and Lidarr with an interactive terminal UI and a scriptable CLI for automation. Available on Linux, macOS, and Windows.
 
 ### LunaSea
 
