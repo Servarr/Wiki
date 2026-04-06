@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-04-03T02:13:01.898464
+date: 2026-04-06T02:28:39.414682
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-04-03T02:13:01.898464
+dateCreated: 2026-04-06T02:28:39.414682
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.6.5326` / [Commit: 0ffcfccf1df38e775e25431716387f6eae180231](https://github.com/Prowlarr/Prowlarr/commit/0ffcfccf1df38e775e25431716387f6eae180231)
-  - [Prowlarr Indexers Commit: df68bbc660101b3cbde8acc4560b88cd32154d5b](https://github.com/Prowlarr/Indexers/commit/df68bbc660101b3cbde8acc4560b88cd32154d5b)
+  - [Prowlarr Indexers Commit: acb1f1532dd879e56c28c4f6123ccedea140167e](https://github.com/Prowlarr/Indexers/commit/acb1f1532dd879e56c28c4f6123ccedea140167e)
 
 ---
 
@@ -74,7 +74,7 @@ dateCreated: 2026-04-03T02:13:01.898464
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
 |[Nipponsei](https://nipponsei.minglong.org/){#nipponsei}|Nipponsei is a Public site for MUSIC fresh from JAPAN|English (United States)|
 |[NoNaMe Club](https://nnmclub.to/){#noname-club}|NoNaMe Club (NNM-Club) is a RUSSIAN Public Tracker for MOVIES / TV / MUSIC|Russian (Russia)|
-|[NorTorrent](https://www.nortorrent.org/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
+|[NorTorrent](https://www.nortorrent.cc/){#nortorrent}|NorTorrent is a FRENCH Public tracker for MOVIES / TV / GENERAL|French (France)|
 |[Nyaa\.si](https://nyaa.si/){#nyaasi}|Nyaa is a Public torrent site focused on Eastern ASIAN media including anime, manga, literature and music|English (United States)|
 |[OneJAV](https://onejav.com/){#onejav}|OneJAV is a Public tracker for ASIAN 3X (JAV)|English (United States)|
 |[OpenSharing](https://opensharing.org/){#opensharing}|OpenSharing is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
@@ -122,7 +122,7 @@ dateCreated: 2026-04-03T02:13:01.898464
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[Zamunda RIP](https://zamunda.rip/){#zamundarip}|Zamunda RIP is a BULGARIAN Public Torrent Archive for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
-|[ZkTorrent](https://www.zktorrent.org/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[ZkTorrent](https://www.zktorrent.cc/){#zktorrent}|ZkTorrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 
 ### Semi-Private Trackers
 
