@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-04-06T02:28:39.414682
+date: 2026-04-09T02:10:42.096627
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-04-06T02:28:39.414682
+dateCreated: 2026-04-09T02:10:42.096627
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.6.5326` / [Commit: 0ffcfccf1df38e775e25431716387f6eae180231](https://github.com/Prowlarr/Prowlarr/commit/0ffcfccf1df38e775e25431716387f6eae180231)
-  - [Prowlarr Indexers Commit: acb1f1532dd879e56c28c4f6123ccedea140167e](https://github.com/Prowlarr/Indexers/commit/acb1f1532dd879e56c28c4f6123ccedea140167e)
+  - Prowlarr Build `2.3.6.5341` / [Commit: b2d49164bc52284a3856b20f5a963e6de10950fe](https://github.com/Prowlarr/Prowlarr/commit/b2d49164bc52284a3856b20f5a963e6de10950fe)
+  - [Prowlarr Indexers Commit: 35928f5d8bdcc28ce0881c3eb3e6dfdc1ea3cf17](https://github.com/Prowlarr/Indexers/commit/35928f5d8bdcc28ce0881c3eb3e6dfdc1ea3cf17)
 
 ---
 
@@ -277,7 +277,6 @@ dateCreated: 2026-04-06T02:28:39.414682
 |[Carpathians](https://mycarpathians.net/){#carpathians}|Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[CarPT](https://carpt.net/){#carpt}|CarPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / MUSIC|Chinese (China)|
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
-|[CD File](https://pt.cdfile.org/){#cdfile}|CD File is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
 |[CHDBits](https://ptchdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -547,7 +546,7 @@ dateCreated: 2026-04-06T02:28:39.414682
 |[SBPT](https://sbpt.link/){#sbpt}|SBPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
-|[SceneTime](https://www.scenetime.com/){#scenetime}|Always on time|English (United States)|
+|[SceneTime (API)](https://www.scenetime.com/){#scenetime-api}|SceneTime is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|Secret Cinema is a Private ratioless site for rare MOVIES|English (United States)|
 |[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-DAY MOVIES / TV / GENERAL|English (United States)|
@@ -641,7 +640,6 @@ dateCreated: 2026-04-06T02:28:39.414682
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[ZonaQ](https://www.zonaq.pw/){#zonaq}|ZonaQ is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
 |[ZRPT (自然)](https://zrpt.cc/){#zrpt}|ZRPT (自然) is a CHINESE Private Torrent Tracker for Documentaries|Chinese (China)|
 
 ## Usenet
