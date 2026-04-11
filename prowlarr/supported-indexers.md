@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-04-09T02:10:42.096627
+date: 2026-04-11T02:09:29.001012
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-04-09T02:10:42.096627
+dateCreated: 2026-04-11T02:09:29.001012
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.6.5341` / [Commit: b2d49164bc52284a3856b20f5a963e6de10950fe](https://github.com/Prowlarr/Prowlarr/commit/b2d49164bc52284a3856b20f5a963e6de10950fe)
-  - [Prowlarr Indexers Commit: 35928f5d8bdcc28ce0881c3eb3e6dfdc1ea3cf17](https://github.com/Prowlarr/Indexers/commit/35928f5d8bdcc28ce0881c3eb3e6dfdc1ea3cf17)
+  - [Prowlarr Indexers Commit: 3679f36e5ef3d6f2f7fc3d9c274f381fb1f744b8](https://github.com/Prowlarr/Indexers/commit/3679f36e5ef3d6f2f7fc3d9c274f381fb1f744b8)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2026-04-09T02:10:42.096627
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq414.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq415.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome241.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip222.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
