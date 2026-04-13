@@ -211,6 +211,7 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo Simple}` = x264 DTS
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
 - `{MediaInfo AudioCodec}` = DTS
+- `{MediaInfo BestAudioCodec}` = DTS-HD MA
 - `{MediaInfo AudioChannels}` = 5.1
 - `{MediaInfo AudioLanguages}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
