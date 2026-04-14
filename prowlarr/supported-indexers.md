@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-04-11T02:09:29.001012
+date: 2026-04-14T02:30:37.353606
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-04-11T02:09:29.001012
+dateCreated: 2026-04-14T02:30:37.353606
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.3.6.5341` / [Commit: b2d49164bc52284a3856b20f5a963e6de10950fe](https://github.com/Prowlarr/Prowlarr/commit/b2d49164bc52284a3856b20f5a963e6de10950fe)
-  - [Prowlarr Indexers Commit: 3679f36e5ef3d6f2f7fc3d9c274f381fb1f744b8](https://github.com/Prowlarr/Indexers/commit/3679f36e5ef3d6f2f7fc3d9c274f381fb1f744b8)
+  - Prowlarr Build `2.3.6.5351` / [Commit: 46ce8e270138e757b14cc1b42b259419a2fac979](https://github.com/Prowlarr/Prowlarr/commit/46ce8e270138e757b14cc1b42b259419a2fac979)
+  - [Prowlarr Indexers Commit: 20f234af4fd4b8f5a5ea5d45a166d4da4b4a0cbe](https://github.com/Prowlarr/Indexers/commit/20f234af4fd4b8f5a5ea5d45a166d4da4b4a0cbe)
 
 ---
 
@@ -291,7 +291,6 @@ dateCreated: 2026-04-11T02:09:29.001012
 |[Concertos (API)](https://concertos.live/){#concertos}|Concertos is a Private Torrent Tracker for Live Concerts with Strict Quality Control|English (United States)|
 |[CrabPT (蟹黄堡)](https://crabpt.vip/){#crabpt}|CrabPT (蟹黄堡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[The Crazy Ones](https://thecrazyones.hopto.org/){#thecrazyones}|The Crazy Ones is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
-|[CrazySpirits](https://www.crazyspirits.ca/){#crazyspirits}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[CrazySpirits (API)](https://crazyspirits.com/){#crazyspirits-api}|Crazy Spirits is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[CrnaBerza](https://www.crnaberza.com/){#crnaberza}|CrnaBerza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL|Serbian (Serbia and Montenegro)|
 |[CrnaBerza2FA](https://www.crnaberza.com/){#crnaberza2fa}|CrnaBerza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Serbian (Serbia and Montenegro)|
@@ -568,6 +567,7 @@ dateCreated: 2026-04-11T02:09:29.001012
 |[Spirit of Revolution](https://sor-next.org/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[SunnyPT](https://sunnypt.top/){#sunnypt}|SunnyPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Superbits](https://superbits.org/){#superbits}|SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
 |[Swarmazon (API)](https://swarmazon.club/){#swarmazon-api}|Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Tangmen (唐门)](https://tmpt.top/){#tangmen}|Tangmen (唐门) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
