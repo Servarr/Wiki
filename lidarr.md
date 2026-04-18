@@ -2,8 +2,8 @@
 title: Lidarr
 description: Music collection manager for Usenet and BitTorrent users to automatically download and organize music albums
 published: true
-date: 2025-09-06T17:47:47.402Z
-tags: lidarr
+date: 2026-04-18T17:45:47.439Z
+tags: lidarr, troubleshooting, installation, scripts, postgres
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
 ---
@@ -16,7 +16,9 @@ dateCreated: 2021-05-16T23:39:16.456Z
 # Getting Started
 
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/lidarr/installation)
-- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/lidarr/quick-start-guide)
+- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide *First download in about 15 minutes*](/lidarr/quick-start-guide)
+- [<i class="fas fa-file-import"></i>&emsp;Importing an Existing Library *Migrate files you already have*](/lidarr/importing-existing-library)
+- [<i class="fas fa-lightbulb"></i>&emsp;Concepts *How Lidarr models music and why it depends on MusicBrainz*](/lidarr/concepts)
 - [<i class="fas fa-cog"></i>&emsp;Environment Variables](/lidarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/lidarr/faq)
 {.links-list}
