@@ -1,9 +1,9 @@
 ---
 title: Lidarr Concepts
-description: This page explains the model Lidarr uses to manage music, why that model depends on MusicBrainz, and when Lidarr is — and isn't — the right tool for your library. 
+description: How Lidarr models music, why MusicBrainz metadata matters, and when Lidarr is (and isn't) the right tool for your library
 published: true
-date: 2026-04-18T16:48:08.649Z
-tags: 
+date: 2026-04-18T16:59:43.512Z
+tags: lidarr, releases, metadata, concepts, musicbrainz, artist
 editor: markdown
 dateCreated: 2026-04-18T16:48:08.649Z
 ---
