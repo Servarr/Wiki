@@ -2,7 +2,7 @@
 title: Lidarr Concepts
 description: How Lidarr models music, why MusicBrainz metadata matters, and when Lidarr is (and isn't) the right tool for your library
 published: true
-date: 2026-04-18T16:59:43.512Z
+date: 2026-04-18T17:21:46.039Z
 tags: lidarr, releases, metadata, concepts, musicbrainz, artist
 editor: markdown
 dateCreated: 2026-04-18T16:48:08.649Z
@@ -20,7 +20,7 @@ Unlike movies and TV shows, music has no consistent set of standards for tagging
 
 The choice Lidarr makes is to lean on third-party metadata to impose order. Every album and artist in Lidarr corresponds to a record in an external data source, and Lidarr uses that record to categorize, tag, and manage files. Everything else in this page follows from that decision.
 
-> If the data does not exist in the third-party services, it cannot be managed by Lidarr.
+> If the data does not exist in the MusicBrainz, it cannot be managed by Lidarr.
 {.is-warning}
 
 ## The Release model
@@ -36,7 +36,7 @@ Examples of `Releases`:
 
 If something you want to manage does not exist as a `Release` in the metadata source, Lidarr cannot handle it — there is no "add it locally only" escape hatch.
 
-> `Releases` must exist in the third-party services to be managed in Lidarr.
+> `Releases` must exist in the MusicBrainz to be managed in Lidarr.
 {.is-info}
 
 ## The Artist model
@@ -55,7 +55,7 @@ Consider how many ways the same person can appear:
 
 Every `Release` is associated with exactly one `Artist`. To add a `Release` in Lidarr you have to find and use the canonical `Artist` as the metadata source defines it — not the one written on the album cover, the one written in MusicBrainz. This is the source of most "why can't I add this artist?" problems; see the [FAQ](/lidarr/faq) for specific cases.
 
-> `Release Artists` must exist in the third-party services to be managed in Lidarr.
+> `Release Artists` must exist in the MusicBrainz to be managed in Lidarr.
 {.is-info}
 
 ## Dependence on MusicBrainz
@@ -76,7 +76,7 @@ Lidarr is built around the `Release` model. If your library does not fit that mo
 
 - **A loose collection of files** — files from multiple artists (not compilations) or multiple `Releases` sharing a single folder. Low-to-no-curation libraries will not work with Lidarr; don't try.
 - **Classical music libraries** — classical releases typically have extensive tagging requirements, and `Release` metadata on MusicBrainz is often missing or incorrect. You can use Lidarr, but expect substantial manual work.
-- **Singles-heavy libraries** — many singles are not actual `Releases` in MusicBrainz. Third-party data sources return no metadata for them, so they cannot be automated.
+- **Singles-heavy libraries** — Many singles are not actual `Releases` in MusicBrainz. MusicBrainz returns no metadata for them, so they cannot be automated.,
 - **Mixes, beats, and samples** — libraries made of DJ mixes, beat packs, or producer samples (Beatport-style content). These are not `Releases` in the metadata sources and Lidarr cannot manage them. This does *not* apply to albums in the Electronic genre, which are fine.
 
 If most of your library falls into one of the above categories, Lidarr may not be the right tool. If only part of your library does, you can still use Lidarr for the rest — just expect to manage the problematic portion by hand.
@@ -89,7 +89,7 @@ The tools below can be used instead of — or alongside — Lidarr.
 - [MusicBrainz Picard](https://picard.musicbrainz.org/) — the canonical MusicBrainz tagger
 - [MusicBee](https://getmusicbee.com/) — music player with strong library-management features
 
-Using these in tandem with Lidarr is beyond the scope of this page, but they are common companions for preparing a library before import, or for managing the parts of a collection Lidarr can't.
+Using these in tandem with Lidarr is beyond the scope of this page, but they are common companions for preparing a library before import, or for managing the parts of a collection that Lidarr can't.
 
 ## See also
 
