@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: Guide to Lidarr application data directory structure, configuration files, and data management
 published: true
-date: 2021-11-24T19:22:06.078Z
+date: 2026-04-18T15:36:27.620Z
 tags: lidarr, appdata, configuration, directory, files, data, structure
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
@@ -14,7 +14,7 @@ dateCreated: 2021-06-09T15:53:13.142Z
 
 # Windows
 
-`C:\ProgramData\Lidarr`
+`%ProgramData%\Lidarr`
 
 # Linux
 
