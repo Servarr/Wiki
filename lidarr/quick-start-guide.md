@@ -1,9 +1,9 @@
 ---
 title: Lidarr Quick Start
-description: Essential setup guide for new Lidarr users covering installation, configuration, and music library management
+description: From a fresh install to your first Lidarr download in about 15 minutes
 published: true
-date: 2026-04-18T16:57:33.759Z
-tags: lidarr, library, configuration, setup, music, quick-start, getting-started
+date: 2026-04-18T17:09:11.762Z
+tags: lidarr, library, setup, music, quick-start, getting-started
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
 ---
