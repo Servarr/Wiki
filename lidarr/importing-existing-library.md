@@ -1,9 +1,9 @@
 ---
 title: Importing an Existing Library
-description: This page walks you through migrating an existing music library into Lidarr. It is intended for users who already have audio files on disk and want Lidarr to take over management of that library, rather than for users starting with an empty root folder.
+description: End-to-end guide for migrating an existing music library into Lidarr — preparation, pre-import checks, the import process itself, and post-import cleanup
 published: true
-date: 2026-04-18T16:54:14.510Z
-tags: 
+date: 2026-04-18T17:02:04.571Z
+tags: lidarr, library, musicbrainz, importing, migration, tagging
 editor: markdown
 dateCreated: 2026-04-18T16:54:14.510Z
 ---
