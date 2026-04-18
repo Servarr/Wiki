@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-04-16T02:36:05.981456
+date: 2026-04-18T02:22:46.409156
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-04-16T02:36:05.981456
+dateCreated: 2026-04-18T02:22:46.409156
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.6.5351` / [Commit: 46ce8e270138e757b14cc1b42b259419a2fac979](https://github.com/Prowlarr/Prowlarr/commit/46ce8e270138e757b14cc1b42b259419a2fac979)
-  - [Prowlarr Indexers Commit: c83ec4eeabe0e3547fbb0e4878d224b7a5b6345e](https://github.com/Prowlarr/Indexers/commit/c83ec4eeabe0e3547fbb0e4878d224b7a5b6345e)
+  - [Prowlarr Indexers Commit: a01783d3fe16c3722b8f4ab94d59f8a51146a3e8](https://github.com/Prowlarr/Indexers/commit/a01783d3fe16c3722b8f4ab94d59f8a51146a3e8)
 
 ---
 
@@ -110,8 +110,8 @@ dateCreated: 2026-04-16T02:36:05.981456
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq415.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome241.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip222.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome242.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip223.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[UzTracker](https://uztracker.net/){#uztracker}|UzTracker is an UZBEK Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -335,6 +335,7 @@ dateCreated: 2026-04-16T02:36:05.981456
 |[Free Farm (自由农场)](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[FunFile](https://www.funfile.org/){#funfile}|FunFile is a general tracker|English (United States)|
 |[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
+|[funZone (API)](https://myfunzone.org/){#funzone-api}|funZone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Fuzer](https://www.fuzer.xyz/){#fuzer}|Fuzer (FZ) is an ISRAELI Private Torrent Tracker for MOVIES / TV / GENERAL|Hebrew (Israel)|
 |[G3MINI TR4CK3R (API)](https://gemini-tracker.org/){#g3minitr4ck3r-api}|G3MINI TR4CK3R is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
