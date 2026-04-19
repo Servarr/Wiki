@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-04-18T02:22:46.409156
+date: 2026-04-19T02:36:58.767793
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-04-18T02:22:46.409156
+dateCreated: 2026-04-19T02:36:58.767793
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.3.6.5351` / [Commit: 46ce8e270138e757b14cc1b42b259419a2fac979](https://github.com/Prowlarr/Prowlarr/commit/46ce8e270138e757b14cc1b42b259419a2fac979)
-  - [Prowlarr Indexers Commit: a01783d3fe16c3722b8f4ab94d59f8a51146a3e8](https://github.com/Prowlarr/Indexers/commit/a01783d3fe16c3722b8f4ab94d59f8a51146a3e8)
+  - [Prowlarr Indexers Commit: 62394f8ef38cec6eb969cc164c42150de89de5c3](https://github.com/Prowlarr/Indexers/commit/62394f8ef38cec6eb969cc164c42150de89de5c3)
 
 ---
 
@@ -108,7 +108,7 @@ dateCreated: 2026-04-18T02:22:46.409156
 |[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq415.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[TorrentQQ](https://torrentqq416.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
 |[Torrentsome](https://torrentsome242.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
 |[Torrenttip](https://torrenttip223.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -154,7 +154,6 @@ dateCreated: 2026-04-18T02:22:46.409156
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
-|[ilDraGoNeRo](https://ildragonero2.info/){#ildragonero}|ilDraGoNeRo is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kinorun](http://kinorun.top/){#kinorun}|Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[Kinozal](https://kinozal.tv/){#kinozal}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses torrents|Russian (Russia)|
 |[Kinozal (M)](https://kinozal.tv/){#kinozal-magnet}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses magnet links|Russian (Russia)|
@@ -445,6 +444,7 @@ dateCreated: 2026-04-18T02:22:46.409156
 |[MDAN](https://bt.mdan.org/){#mdan}|Mansão dos Animes (MDAN) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a HUNGARIAN Private Torrent Tracker for ANIMATED MOVIES / TV|Hungarian (Hungary)|
 |[MetalGuru](https://metalguru.me/){#metalguru}|MetalGuru is a Private Torrent Tracker for GENERAL with focus on MUSIC|English (United States)|
+|[MidnightScene](https://midnightscene.cc/){#midnightscene}|MidnightScene is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Milkie](https://milkie.cc/){#milkie}|Milkie\.cc (ME) is Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[MMA-torrents](https://mma-torrents.com/){#mma-torrents}|MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)|English (United States)|
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
