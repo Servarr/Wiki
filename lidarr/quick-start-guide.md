@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: From a fresh install to your first Lidarr download in about 15 minutes
 published: true
-date: 2026-04-18T17:09:11.762Z
+date: 2026-04-19T18:03:10.742Z
 tags: lidarr, library, setup, music, quick-start, getting-started
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
