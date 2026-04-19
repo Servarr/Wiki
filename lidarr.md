@@ -2,7 +2,7 @@
 title: Lidarr
 description: Music collection manager for Usenet and BitTorrent users to automatically download and organize music albums
 published: true
-date: 2026-04-18T17:45:47.439Z
+date: 2026-04-19T18:02:16.673Z
 tags: lidarr, troubleshooting, installation, scripts, postgres
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
