@@ -192,3 +192,52 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}
+
+## jtstothard/lidarr-plugin-bandcamp
+
+[Bandcamp by jtstothard](https://github.com/jtstothard/lidarr-plugin-bandcamp)
+
+Bandcamp indexer and download client for Lidarr nightly. Searches your Bandcamp collection for albums you've bought and downloads them. Only works with music you own — there is no public catalog search.
+
+Requires cookie-based auth using the `identity` cookie from your browser.
+
+### Prerequisites
+
+- Lidarr nightly branch
+- A Bandcamp account with purchased music
+- The `identity` cookie exported from your browser
+
+### Post-Install Configuration
+
+#### Indexer
+
+- Navigate to `/settings/indexers`, and select the <kb>+</kb> button under Indexers. Bandcamp will appear at the bottom under the Other section.
+- Paste your `identity` cookie value into **Session Cookies**.
+- Select the Test button, then Save.
+
+#### Download Client
+
+- Navigate to `/settings/downloadclients`, and select the <kb>+</kb> button under Download clients. Bandcamp will appear at the bottom under the Other section.
+- Paste your `identity` cookie value into **Session Cookies**.
+- Set **Download Path** to somewhere Lidarr can write (e.g. `/downloads/bandcamp`).
+- Select the Test button, then Save.
+
+#### Delay Profile
+
+- Navigate to `settings/profiles` and scroll down to Delay Profiles
+- Select the wrench icon on the profile you want to use Bandcamp with
+- Select the Bandcamp protocol, and select Save.
+
+### Exporting the Cookie
+
+**Chrome:** Open DevTools (`F12`) → Application tab → Cookies → `https://bandcamp.com` → copy the `identity` value.
+
+**Firefox:** Open Developer Tools (`F12`) → Storage tab → Cookies → `https://bandcamp.com` → copy the `identity` value.
+
+The cookie expires over time. When downloads fail with auth errors, grab a fresh one.
+
+### Troubleshooting
+
+- **Auth errors** — Cookie expired, re-export it from your browser
+- **No search results** — Check that you bought the album on Bandcamp and that the Bandcamp protocol is enabled in your Delay Profile
+- **Plugin missing** — Make sure Lidarr is on the nightly branch and restart
