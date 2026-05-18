@@ -22,7 +22,7 @@ Your download folder and music library root folder can't be the same location. M
 
 Keep two locations separate:
 
-```
+```text
 /data/
   downloads/          ← download client writes here
   music/              ← Lidarr root folder (your library)
@@ -37,7 +37,7 @@ On import, Lidarr moves (or hardlinks) files from `downloads/` into `music/`. Th
 
 If you're running more than one download client — say, a Usenet client alongside a torrent client — give each its own subfolder under `downloads/` and set a matching category in Lidarr:
 
-```
+```text
 /data/
   downloads/
     usenet/           ← SABnzbd / NZBGet category: "lidarr"
@@ -107,7 +107,7 @@ Before setting up custom format scoring, consider tightening the FLAC quality de
 In **Settings → Quality**, set the FLAC row to:
 
 | | Min | Preferred | Max |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | FLAC | 0 | 895 | 1400 |
 | FLAC 24bit | 0 | 895 | 1495 |
 
@@ -234,7 +234,7 @@ Tags releases from a vinyl source, for libraries that want to avoid or specifica
 After creating the formats, assign scores in **Settings → Profiles → [your profile] → Custom Formats**. The table below implements a setup that requires releases to match at least one positive format before Lidarr will grab them, prefers CD over WEB, and actively avoids vinyl.
 
 | Custom Format | Score |
-|---|---|
+| --- | --- |
 | Preferred Groups | 100 |
 | CD | 10 |
 | Lossless | 10 |
