@@ -192,3 +192,65 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}
+
+## jtstothard/lidarr-plugin-bandcamp
+
+[Bandcamp by jtstothard](https://github.com/jtstothard/lidarr-plugin-bandcamp)
+
+Bandcamp indexer and download client. Searches your authenticated Bandcamp collection for purchased albums and downloads them directly into Lidarr. This plugin only works with music you have bought on Bandcamp — it cannot search or download the public catalog.
+
+### Prerequisites
+
+- A working Lidarr installation on the `nightly` branch (see [Lidarr Plugins Branch](#lidarr-plugins-branch))
+- A Bandcamp account with purchased music
+- The `identity` cookie from your browser session on bandcamp.com
+
+### Post-Install Configuration
+
+#### Indexer
+
+- Navigate to `/settings/indexers`, and select the <kb>+</kb> button under Indexers. Bandcamp will appear at the bottom under the Other section.
+- Paste your Bandcamp `identity` cookie value into the **Session Cookies** field. See below for how to get this.
+- Leave the **Base URL** as `https://bandcamp.com`.
+- Select the Test button.
+- If the Test returns a green checkmark, select Save.
+
+#### Download Client
+
+- Navigate to `/settings/downloadclients`, and select the <kb>+</kb> button under Download clients. Bandcamp will appear at the bottom under the Other section.
+- Paste your Bandcamp `identity` cookie value into the **Session Cookies** field.
+- Set the **Download Path** to a directory Lidarr can read and write (for example, `/downloads/bandcamp`).
+- Select the Test button.
+- If the Test returns a green checkmark, select Save.
+
+#### Delay Profile
+
+- Navigate to `settings/profiles` and scroll down to Delay Profiles.
+- Select the wrench icon on the right side of the profile you wish to use Bandcamp with. Most installations will only have a Default profile.
+- Select the Bandcamp protocol, and select Save.
+
+### Exporting Cookies
+
+The plugin authenticates using the `identity` cookie from your browser.
+
+**Chrome / Chromium:**
+
+1. Log in to [bandcamp.com](https://bandcamp.com).
+2. Open DevTools (`F12`) and go to the **Application** tab → **Cookies** → `https://bandcamp.com`.
+3. Find the cookie named `identity`.
+4. Copy its **Value** and paste it into the Session Cookies field in Lidarr.
+
+**Firefox:**
+
+1. Log in to [bandcamp.com](https://bandcamp.com).
+2. Open Developer Tools (`F12`) and go to the **Storage** tab → **Cookies** → `https://bandcamp.com`.
+3. Find the cookie named `identity`.
+4. Copy its **Value** and paste it into the Session Cookies field in Lidarr.
+
+The `identity` cookie expires periodically. When downloads start failing with auth errors, re-export a fresh cookie from your browser.
+
+### Troubleshooting
+
+- **Downloads fail with authentication errors** — Your `identity` cookie has expired. Re-export it from your browser and update both the indexer and download client settings.
+- **Search returns no results** — Verify your cookies are configured and that you have purchased the release on Bandcamp. Only music in your collection will appear.
+- **Plugin doesn't appear** — Ensure Lidarr is on the `nightly` branch and restart after installation.
