@@ -420,7 +420,6 @@ In this test, look for obvious errors and run some simple checks. The trace log 
 ![searches-indexers-and-trackers1.png](/assets/lidarr/searches-indexers-and-trackers1.png)
 ![searches-indexers-and-trackers2.png](/assets/lidarr/searches-indexers-and-trackers2.png)
 
-
 ## Common Problems
 
 Below are some common problems.

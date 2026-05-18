@@ -195,7 +195,7 @@ To add a Spotify relationship on MusicBrainz: open the release, go to **Edit** â
 > A 429 from Spotify doesn't indicate anything wrong with your Lidarr setup â€” it's a server-side rate limit on lookups. Checking Lidarr's logs at Debug level will show the 429 responses if you want to confirm that's the cause.
 {.is-info}
 
-## Retry or wait?
+## Retry or wait
 
 | Situation | Action |
 |---|---|
