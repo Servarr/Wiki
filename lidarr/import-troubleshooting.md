@@ -196,4 +196,4 @@ For advanced readers who want to verify the rules or trace a specific rejection,
 - [Importing an Existing Library](/lidarr/importing-existing-library) — the fresh-install import walkthrough
 - [Metadata Troubleshooting](/lidarr/metadata-troubleshooting) — for problems where the release is missing or wrong at MusicBrainz
 - [FAQ](/lidarr/faq) — shorter answers that didn't fit this page
-- [MusicBrainz Picard](https://picard.musicbrainz.org/) — tag files with MBIDs before importing for a dramatically higher succes
+- [MusicBrainz Picard](https://picard.musicbrainz.org/) — tag files with MBIDs before importing for a dramatically higher success rate
