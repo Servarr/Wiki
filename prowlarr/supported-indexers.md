@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-05-16T02:49:47.218005
+date: 2026-05-19T03:30:00.388954
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-05-16T02:49:47.218005
+dateCreated: 2026-05-19T03:30:00.388954
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5368` / [Commit: 48648342832021707d14037474a5ec887f6b5348](https://github.com/Prowlarr/Prowlarr/commit/48648342832021707d14037474a5ec887f6b5348)
-  - [Prowlarr Indexers Commit: 83c282f2dba9560dddd86deef4586b9954a39740](https://github.com/Prowlarr/Indexers/commit/83c282f2dba9560dddd86deef4586b9954a39740)
+  - [Prowlarr Indexers Commit: 072d7bbbdcdc19393fc31f84979a1433a49585c3](https://github.com/Prowlarr/Indexers/commit/072d7bbbdcdc19393fc31f84979a1433a49585c3)
 
 ---
 
@@ -62,7 +62,6 @@ dateCreated: 2026-05-16T02:49:47.218005
 |[Mac Torrents Download](https://www.torrentmac.net/){#mactorrentsdownload}|Mac Torrents Download is a Public tracker for Mac software|English (United States)|
 |[Magnet Cat](https://magnetcatcat.com/){#magnetcat}|Magnet Cat is a Public Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[MagnetDownload](https://www.magnetdownload.com/){#magnetdownload}|MagnetDownload is a Public DHT Crawler|English (United States)|
-|[Magnetz](https://magnetz.eu/){#magnetz}|Magnetz is a Public torrent meta-search engine|English (United States)|
 |[MegaPeer](https://megapeer.vip/){#megapeer}|MegaPeer is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
@@ -613,7 +612,6 @@ dateCreated: 2026-05-16T02:49:47.218005
 |[TreZzoRCookie](https://tracker.czech-server.com/){#trezzorcookie}|TreZzoR is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL\. This uses the cookie method for access|Czech (Czech Republic)|
 |[TurkSeed (API)](https://turkseed.com/){#turkseed-api}|TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TurkTorrent](https://turktorrent.us/){#turktorrent}|TurkTorrent (TT) is a TURKISH Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
-|[TVChaosUK](https://tvchaosuk.com/){#tvchaosuk}|TV Chaos UK (TVCUK) is a Private Torrent Tracker for UK TV|English (United Kingdom)|
 |[U2](https://u2.dmhy.org/){#u2}|U2 (U2分享園@動漫花園) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Ultrabits (API)](https://ultrabits.org/){#ultrabits-api}|Ultrabits is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
