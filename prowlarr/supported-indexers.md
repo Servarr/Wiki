@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-05-20T03:30:42.050122
+date: 2026-05-25T03:43:02.677760
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-05-20T03:30:42.050122
+dateCreated: 2026-05-25T03:43:02.677760
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.4.0.5368` / [Commit: 48648342832021707d14037474a5ec887f6b5348](https://github.com/Prowlarr/Prowlarr/commit/48648342832021707d14037474a5ec887f6b5348)
-  - [Prowlarr Indexers Commit: 00b1f8ae9f2fa60d0a4c34f5d3bb2f696218ced1](https://github.com/Prowlarr/Indexers/commit/00b1f8ae9f2fa60d0a4c34f5d3bb2f696218ced1)
+  - Prowlarr Build `2.4.0.5368` / [Commit: 7e3b69b01f92422de1f873d60c00ddfab86160aa](https://github.com/Prowlarr/Prowlarr/commit/7e3b69b01f92422de1f873d60c00ddfab86160aa)
+  - [Prowlarr Indexers Commit: 9d83089f3b2856f95282f1029a11969469b71ce4](https://github.com/Prowlarr/Indexers/commit/9d83089f3b2856f95282f1029a11969469b71ce4)
 
 ---
 
@@ -109,11 +109,10 @@ dateCreated: 2026-05-20T03:30:42.050122
 |[Torrenttip](https://torrenttip226.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
-|[UzTracker](https://uztracker.me/){#uztracker}|UzTracker is an UZBEK Public Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://www.darkfox.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://www.darkfox1.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
@@ -125,6 +124,7 @@ dateCreated: 2026-05-20T03:30:42.050122
 |:--|:--|:--|
 |[Anidub](https://tr.anidub.com/){#anidub}|Anidub is RUSSIAN anime voiceover group and eponymous anime tracker|Russian (Russia)|
 |[Anime by Belka](https://anibelka.com/){#animebybelka}|Anime by Belka (Аниме от Белки) is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
+|[Anime Tosho](https://animetosho.xyz/){#animetosho-xyz}|Anime Tosho is a Semi-Private Torrent Tracker for ANIME|English (United States)|
 |[AnimeLayer](https://animelayer.ru/){#animelayer}|AnimeLayer is a RUSSIAN Semi-Private Torrent Tracker for ANIME|Russian (Russia)|
 |[Best-Torrents](https://best-torrents.com/){#best-torrents}|Best-Torrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[BitMagnet (Local DHT)](http://127.0.0.1:3333/){#bitmagnet}|BitMagnet is a self-hosted BitTorrent DHT search engine|English (United States)|
@@ -168,7 +168,7 @@ dateCreated: 2026-05-20T03:30:42.050122
 |[ProPorno](https://proporno.org/){#proporno}|ProPorno is a RUSSIAN Semi-Private tracker for 3X|Russian (Russia)|
 |[PussyTorrents](https://pussytorrents.org/){#pussytorrents}|PussyTorrents is a Semi-Private Torrent Tracker for 3X|English (United States)|
 |[Rainbow Tracker](https://gaytracker.ru/){#rainbowtracker}|Rainbow Tracker is a RUSSIAN Semi-Private Torrent Tracker for LGBTQ MOVIES / TV|Russian (Russia)|
-|[RGFootball](http://rgfootball.net/){#rgfootball}|RGFootball is a RUSSIAN Sports torrent tracker|Russian (Russia)|
+|[RGFootball](https://rgfootball.net/){#rgfootball}|RGFootball is a RUSSIAN Sports torrent tracker|Russian (Russia)|
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
@@ -185,6 +185,7 @@ dateCreated: 2026-05-20T03:30:42.050122
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
+|[UzTracker](https://uztracker.me/){#uztracker}|UzTracker is an UZBEK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[Ztracker](https://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
 ### Private Trackers
@@ -549,7 +550,8 @@ dateCreated: 2026-05-20T03:30:42.050122
 |[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-DAY MOVIES / TV / GENERAL|English (United States)|
 |[SewerPT](https://sewerpt.com/){#sewerpt}|SewerPT (下水道) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[SexTorrent (API)](https://sextorrent.myds.me/){#sextorrent-api}|SexTorrent is a Private Torrent Tracker for 3X|English (United States)|
+|[SexTorrent (API)](https://sextorrent.myds.me/){#sextorrent-api}|SexTorrent is a Private Torrent Tracker for 3X / MOVIES / TV|English (United States)|
+|[Shadowbit](https://shadowbit.cc/){#shadowbit}|Shadowbit is a ratioless ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[ShaKaw](https://tracker.shakaw.com.br/){#shakaw}|ShaKaw is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[Shareisland (API)](https://shareisland.org/){#shareisland-api}|Shareisland is a ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Shazbat](https://www.shazbat.tube/){#shazbat}|Shazbat is a PRIVATE Torrent Tracker with highly curated TV content|English (United States)|
