@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-05-25T03:43:02.677760
+date: 2026-05-27T03:42:12.706868
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-05-25T03:43:02.677760
+dateCreated: 2026-05-27T03:42:12.706868
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.4.0.5368` / [Commit: 7e3b69b01f92422de1f873d60c00ddfab86160aa](https://github.com/Prowlarr/Prowlarr/commit/7e3b69b01f92422de1f873d60c00ddfab86160aa)
-  - [Prowlarr Indexers Commit: 9d83089f3b2856f95282f1029a11969469b71ce4](https://github.com/Prowlarr/Indexers/commit/9d83089f3b2856f95282f1029a11969469b71ce4)
+  - Prowlarr Build `2.4.0.5382` / [Commit: cb80af4be1dfe277b4b1a71f026683a738cfe50e](https://github.com/Prowlarr/Prowlarr/commit/cb80af4be1dfe277b4b1a71f026683a738cfe50e)
+  - [Prowlarr Indexers Commit: 0131660a88bf36af28ef80195aa607bc5b1a7e7e](https://github.com/Prowlarr/Indexers/commit/0131660a88bf36af28ef80195aa607bc5b1a7e7e)
 
 ---
 
@@ -105,8 +105,8 @@ dateCreated: 2026-05-25T03:43:02.677760
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome245.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip226.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome246.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip227.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -247,7 +247,7 @@ dateCreated: 2026-05-25T03:43:02.677760
 |[BitPorn (API)](https://bitporn.eu/){#bitporn}|BitPorn (Malacka) is a HUNGARIAN Private Torrent Tracker for 3X|Hungarian (Hungary)|
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
-|[Bj-Share](https://bj-share.info/){#bjshare}|Private PT-BR torrent|Portuguese (Brazil)|
+|[BJ-Share](https://bj-share.info/){#bjshare}|BJ-Share is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[BlueBird](https://bluebird-hd.org/){#bluebird}|BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES|Russian (Russia)|
 |[BlueTorrents](https://bluetorrents.com/){#bluetorrents}|BlueTorrents is a Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[BlurayTracker](https://bluraytracker.cz/){#bluraytracker}|BlurayTracker is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
