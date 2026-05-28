@@ -192,3 +192,29 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}
+
+## jtstothard/UniqueSingles
+
+[UniqueSingles by jtstothard](https://github.com/jtstothard/lidarr-plugin-uniquesingles)
+
+Removes duplicate singles when the same track already exists on a monitored album or EP. Matches by MusicBrainz recording ID, title + duration, or title alone.
+
+### Prerequisites
+
+- Lidarr nightly branch (plugins are not supported on stable)
+
+### Post-Install Configuration
+
+1. Go to **Settings → Connect** and select the **+** button
+2. Choose **Unique Singles** from the list
+3. Configure settings and select **Save**
+
+#### Settings
+
+- **Duration tolerance (ms):** how close track lengths need to be for a match (default 3000ms)
+- **Release types to compare:** which release types to check against singles (default: Album, EP)
+- **Title-only match action:** what happens when titles match but durations don't. Options: flag for review (default), skip, or auto-clean
+- **Scan interval (minutes):** how often to sweep the full library (default 1440 = 24 hours)
+
+> The scheduled scan appears under **Settings → Metadata** rather than Tasks. It's cosmetic and works fine.
+{.is-info}
