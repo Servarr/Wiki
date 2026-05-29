@@ -2,7 +2,7 @@
 title: Lidarr Wanted
 description: Managing wanted albums, manual searches, and download monitoring in Lidarr's Wanted section
 published: true
-date: 2026-05-06T20:11:30.440Z
+date: 2026-05-29T13:09:51.721Z
 tags: lidarr, wanted, monitoring, albums, search, missing
 editor: markdown
 dateCreated: 2021-06-14T21:35:43.417Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-14T21:35:43.417Z
 
 # Wanted
 
-The Wanted section has two tabs, **Missing** and **Cutoff Unmet**, covering albums Lidarr is actively trying to obtain or upgrade.
+The Wanted section has two tabs, **Missing** and **Cutoff Unmet**, covering albums Lidarr is actively searching for or trying to upgrade.
 
 # Missing
 
