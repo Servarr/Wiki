@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: List of supported music indexers, trackers, and download clients compatible with Lidarr
 published: true
-date: 2026-04-27T14:35:09.089Z
+date: 2026-05-29T13:06:38.772Z
 tags: lidarr, indexers, music, supported, download-clients, compatibility, trackers
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-23T07:55:13.803Z
 
 This page is the disambiguation target for all **More Info** links in the Lidarr UI. Each entry corresponds to a specific integration type.
 
-> The integrations listed here are built into Lidarr. Additional download clients and indexers — including slskd, Deezer, Tidal, and others — can be added via [plugins](/lidarr/plugins).
+> These integrations are built into Lidarr. More download clients and indexers (including slskd, Deezer, Tidal, and others) can be added via [plugins](/lidarr/plugins).
 {.is-info}
 
 # Download Clients
@@ -59,7 +59,7 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 
 - Newznab {#newznab}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
-  - Newznab is a standardised API used by many Usenet indexing sites. Many presets are available, but all require an API key. Indexer aggregators like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can manage multiple Newznab indexers from a single interface.
+  - Newznab is a standardised API used by many Usenet indexing sites. Many presets are available, but all require an API key. Indexer aggregators like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can manage more than one Newznab indexer from a single interface.
 
 ## Torrents
 
@@ -112,7 +112,7 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
   - Notifies a Kodi instance to refresh its music library after a track is imported or upgraded. Kodi is a free, open-source media centre application.
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
-  - See [Useful Tools — Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
+  - See [Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
 - Plex Media Server {#plexserver}
   - Notifies a Plex Media Server to refresh its music library after a track is imported or upgraded.
 - Prowl {#prowl}
