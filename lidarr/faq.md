@@ -2,11 +2,12 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2026-04-29T12:43:27.685Z
+date: 2026-05-29T12:40:16.432Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
+
 
 # Lidarr FAQ
 
@@ -113,7 +114,7 @@ Three common causes:
 
 - **Propagation lag.** Lidarr's copy of MusicBrainz refreshes hourly via the Servarr metadata server. If you edited MB in the last hour, wait a refresh cycle before troubleshooting further.
 - **Unknown release type.** If the MB release group has `Type: Unknown` or `Status: Unknown`, most metadata profiles filter it out. Fix the type at MusicBrainz.
-- **Video recordings.** MusicBrainz marks some recordings as video (music videos, live video streams, etc.). Lidarr is audio-only and skips releases where tracks are flagged as video — they won't appear in searches and Lidarr won't grab them. If an expected release has 0 audio tracks because all recordings are marked as video in MusicBrainz, there's nothing Lidarr can do until an audio release exists.
+- **Video recordings.** MusicBrainz marks some recordings as video (music videos, live video streams, etc.). Lidarr is audio-only and skips releases where MusicBrainz flags tracks as video — they won't appear in searches and Lidarr won't grab them. If an expected release has 0 audio tracks because MusicBrainz marks all recordings as video, there's nothing Lidarr can do until an audio release exists.
 - **Metadata server cache needs busting.** This is rare but happens, especially after large MB edits. The full flow, including the `!refresh` bot command, is on [Metadata Troubleshooting](/lidarr/metadata-troubleshooting).
 
 If none of those apply, the full troubleshooting flow is on [Metadata Troubleshooting](/lidarr/metadata-troubleshooting).
@@ -157,7 +158,7 @@ For a bulk rename:
 
 If a rename appears to have happened in Lidarr but the folder name on disk hasn't changed, see [Why does Lidarr keep trying to rename the same folders?](#why-does-lidarr-keep-trying-to-rename-the-same-folders) below. That's almost always a case-only rename on Windows, which is a filesystem-level no-op.
 
-> **Renaming outside Lidarr breaks the link between Lidarr's database and the files on disk.** Lidarr tracks files by path. If you rename a folder at the OS level, Lidarr treats the files as missing and may re-download them. Always rename through the Lidarr UI when possible.
+> **Renaming outside Lidarr breaks the link between Lidarr's database and the files on disk.** Lidarr tracks files by path. If you rename a folder at the OS level, Lidarr treats the files as missing and may re-download them. Always rename through the Lidarr UI when possible. See [Renaming or moving files outside Lidarr](/lidarr/tips-and-tricks#renaming-moving-outside-lidarr) for a full explanation and recovery steps.
 {.is-warning}
 
 ### Why does Lidarr keep trying to rename the same folders?
