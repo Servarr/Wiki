@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
-date: 2026-05-03T15:09:29.401Z
+date: 2026-05-29T13:03:38.922Z
 tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -12,7 +12,7 @@ dateCreated: 2021-11-24T19:22:09.331Z
 
 Lidarr can execute a custom script when it imports, renames, or retags an album, or when other events occur. Add scripts via **Settings → Connect → Custom Script**.
 
-A custom script can be any executable accessible by the user Lidarr is running as — a shell script, PowerShell script, Python script, or compiled binary.
+A custom script can be any executable accessible by the user Lidarr is running as: a shell script, PowerShell script, Python script, or compiled binary.
 
 ## Lidarr logs
 
@@ -78,7 +78,7 @@ Fired when Lidarr sends a release to a download client.
 | `Lidarr_Release_CustomFormat` | Pipe-separated list of matched custom format names |
 | `Lidarr_Release_CustomFormatScore` | Total custom format score for this release |
 | `Lidarr_Download_Client` | Name of the download client used |
-| `Lidarr_Download_Client_Type` | Type of download client (for example, `qBittorrent`, `SABnzbd`) |
+| `Lidarr_Download_Client_Type` | Download client name (for example, `qBittorrent`, `SABnzbd`) |
 | `Lidarr_Download_Id` | Download ID in the download client |
 
 ### On Import / On Upgrade
@@ -102,7 +102,7 @@ Fired after Lidarr has successfully imported a downloaded album into the library
 | `Lidarr_AlbumRelease_MBId` | MusicBrainz release ID (specific pressing) |
 | `Lidarr_Album_ReleaseDate` | Album release date |
 | `Lidarr_Download_Client` | Name of the download client |
-| `Lidarr_Download_Client_Type` | Type of download client |
+| `Lidarr_Download_Client_Type` | Download client name |
 | `Lidarr_Download_Id` | Download ID in the download client |
 | `Lidarr_AddedTrackPaths` | Pipe-separated list of imported track file paths |
 | `Lidarr_DeletedPaths` | Pipe-separated list of file paths deleted/replaced during upgrade |
@@ -221,11 +221,11 @@ Fired when Lidarr detects a health check failure.
 | `Lidarr_Health_Issue_Level` | Severity level: `Ok`, `Notice`, `Warning`, or `Error` |
 | `Lidarr_Health_Issue_Message` | Human-readable description of the issue |
 | `Lidarr_Health_Issue_Type` | Name of the health check that fired |
-| `Lidarr_Health_Issue_Wiki` | Wiki URL for this health issue, if one exists |
+| `Lidarr_Health_Issue_Wiki` | Wiki URL of this health issue, if one exists |
 
 ### Health Restored
 
-Fired when a previously failing health check returns to a healthy state.
+Fired when a failing health check returns to a healthy state.
 
 | Environment Variable | Details |
 |---|---|
@@ -233,7 +233,7 @@ Fired when a previously failing health check returns to a healthy state.
 | `Lidarr_Health_Restored_Level` | Previous severity level |
 | `Lidarr_Health_Restored_Message` | Description of the check that recovered |
 | `Lidarr_Health_Restored_Type` | Name of the health check |
-| `Lidarr_Health_Restored_Wiki` | Wiki URL for this health check |
+| `Lidarr_Health_Restored_Wiki` | Wiki URL of this health check |
 
 ### Application Update
 
@@ -256,7 +256,7 @@ When you click **Test** in Settings → Connect, Lidarr calls the script with on
 
 ## Example scripts
 
-The examples below cover the most common starting points. All shell examples check `Lidarr_EventType` and exit early on the `Test` event — this is the recommended pattern for any script that does real work.
+The examples below cover the most common starting points. All shell examples check `Lidarr_EventType` and exit early on the `Test` event. This is the recommended pattern for any script that does real work.
 
 ### Log all variables to a file (shell)
 
@@ -303,7 +303,7 @@ set -euo pipefail
 
 # Exit cleanly on Test events
 if [ "$Lidarr_EventType" = "Test" ]; then
-    echo "Test event received — exiting."
+    echo "Test event received. Exiting."
     exit 0
 fi
 
@@ -314,7 +314,7 @@ fi
 
 WEBHOOK_URL="https://discord.com/api/webhooks/YOUR_WEBHOOK_URL"
 
-MESSAGE="**$Lidarr_Artist_Name** — $Lidarr_Album_Title imported ($Lidarr_Release_Quality)"
+MESSAGE="**$Lidarr_Artist_Name** - $Lidarr_Album_Title imported ($Lidarr_Release_Quality)"
 
 curl -s -X POST "$WEBHOOK_URL" \
     -H "Content-Type: application/json" \
@@ -323,7 +323,7 @@ curl -s -X POST "$WEBHOOK_URL" \
 
 Replace `YOUR_WEBHOOK_URL` with your Discord webhook URL. In Discord, open channel settings → Integrations → Webhooks to create one.
 
-> The message string above doesn't escape special characters. If your artist or album names can contain double-quotes or backslashes, use `jq` or similar to build the JSON payload safely instead of constructing it manually.
+> The message string above doesn't escape special characters. If your artist or album names can contain double-quotes or backslashes, use `jq` to build the JSON payload instead of constructing it manually.
 {.is-info}
 
 ### Discord webhook on import (PowerShell)
@@ -333,7 +333,7 @@ if ($env:Lidarr_EventType -eq "Test") { exit 0 }
 if ($env:Lidarr_EventType -ne "AlbumDownload") { exit 0 }
 
 $webhookUrl = "https://discord.com/api/webhooks/YOUR_WEBHOOK_URL"
-$message    = "**$env:Lidarr_Artist_Name** — $env:Lidarr_Album_Title imported ($env:Lidarr_Release_Quality)"
+$message    = "**$env:Lidarr_Artist_Name** - $env:Lidarr_Album_Title imported ($env:Lidarr_Release_Quality)"
 
 $body = @{ content = $message } | ConvertTo-Json
 Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body $body
@@ -392,10 +392,10 @@ curl -s -X POST "$WEBHOOK_URL" \
 
 ## External resources
 
-- [Lidarr/Lidarr — CustomScript.cs](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs) — the authoritative source for all environment variables, event types, and their values
-- [RandomNinjaAtk/arr-scripts](https://github.com/RandomNinjaAtk/arr-scripts) — extended container scripts for the LinuxServer.io Lidarr Docker image, covering automated downloads, format conversion, and beets pre-matching
+- [Lidarr/Lidarr: CustomScript.cs](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs): the authoritative source for all environment variables, event types, and their values
+- [RandomNinjaAtk/arr-scripts](https://github.com/RandomNinjaAtk/arr-scripts): extended container scripts for the LinuxServer.io Lidarr Docker image, covering automated downloads, format conversion, and beets pre-matching
 
 ## See also
 
-- [Settings → Connect](/lidarr/settings#connections) — where you register scripts in the Lidarr UI
-- [Beets Integration](/lidarr/beets-integration) — using a custom script to invoke beets for tag enrichment after import
+- [Settings: Connect](/lidarr/settings#connections): where you register scripts in the Lidarr UI
+- [Beets Integration](/lidarr/beets-integration): using a custom script to invoke beets for tag enrichment after import
