@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes for Lidarr music organization including custom formats and multi-disc album handling
 published: true
-date: 2026-05-03T15:08:55.465Z
+date: 2026-05-29T13:02:16.488Z
 tags: lidarr, naming, configuration
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -10,7 +10,7 @@ dateCreated: 2024-03-30T13:23:53.095Z
 
 # Lidarr File Naming Guide
 
-Lidarr renames and organises files on import according to four configurable templates: **Standard Track Format**, **Multi-Disc Track Format**, **Artist Folder Format**, and **Album Folder Format**. Getting these right before you populate your library is important — changing them later forces a full rename of every file the next time Lidarr refreshes each artist.
+Lidarr renames and organises files on import according to four configurable templates: **Standard Track Format**, **Multi-Disc Track Format**, **Artist Folder Format**, and **Album Folder Format**. Getting these right before you populate your library. Changing them later forces a full rename of every file the next time Lidarr refreshes each artist.
 
 > Changing any naming template after you have populated your library will rename every existing file the next time Lidarr refreshes that artist. Test on a small artist first, and make sure your backup is current before changing naming on a large library.
 {.is-warning}
@@ -19,29 +19,29 @@ Lidarr renames and organises files on import according to four configurable temp
 
 ## OS path limits and illegal characters
 
-**Windows** enforces a 260-character limit on full file paths by default (you can raise this via a Group Policy setting, but most users will hit it eventually on deeply-nested libraries). Long album titles and artist names compound quickly: `Root\Artist\Album\Track.flac` can easily push 200 characters before the filename. The `:N` truncation syntax (see below) is the standard workaround — most Windows-friendly naming conventions cap tokens at 100–150 characters.
+**Windows** enforces a 260-character limit on full file paths by default. Most users hit this limit on nested libraries. Long album titles and artist names compound fast: `Root\Artist\Album\Track.flac` can push 200 characters before the filename. The `:N` truncation syntax (see below) is the standard workaround. Most Windows-friendly naming conventions cap tokens at 100-150 characters.
 
 **Windows also prohibits** these characters in file and folder names: `\ / : * ? " < > |`. Lidarr's **Replace Illegal Characters** setting handles these automatically, but be aware that Lidarr substitutes or removes characters that are valid on Linux/macOS (colons in particular) on Windows.
 
-**Linux and macOS** have a 255-byte limit per path component (individual folder or filename) and prohibit only `/` and null bytes, so very long names are rarely a practical problem unless you are also sharing the library with a Windows machine.
+**Linux and macOS** have a 255-byte limit per path component and prohibit only `/` and null bytes. Long names aren't a practical problem unless you share the library with a Windows machine.
 
 ## Media server compatibility
 
 Different media servers have different expectations about music library folder structure:
 
 - **Plex** expects `Artist/Album/Track` folder nesting. It reads tags for metadata and uses the folder structure as a secondary hint. Plex doesn't require the release year in the album folder but many users include it to disambiguate re-issues.
-- **Navidrome** reads tags exclusively and is indifferent to folder structure, so almost any sane layout works.
+- **Navidrome** reads only tags and is indifferent to folder structure, so almost any sane layout works.
 - **Jellyfin** follows MusicBrainz conventions and works best with `Artist/Album/Track` nesting, a release year in the album folder, and accurate MusicBrainz tags in the files themselves.
 
-If you run multiple media servers against the same library, choose a format that the pickiest server accepts — that's usually Plex or Jellyfin.
+If you run more than one media server against the same library, choose a format that the pickiest server accepts. Plex and Jellyfin tend to be the most restrictive.
 
 ## Cost of changing naming later
 
-Every naming change triggers a rename of all files the next time Lidarr refreshes the artist. On a large library this means thousands of file moves, all of which must be on the same filesystem as hardlinks (or full copies if they're not). Media servers will also need to re-scan after a mass rename. It's worth spending time upfront to pick a format you can live with permanently.
+Every naming change triggers a rename of all files the next time Lidarr refreshes the artist. On a large library this means thousands of file moves. All must be on the same filesystem for hardlinks (or full copies if they're not). Media servers will also need to re-scan after a mass rename. It's worth spending time upfront to pick a format you can live with permanently.
 
 # Naming token reference
 
-Wrap tokens in `{}`; Lidarr substitutes them at import time. Any token that resolves to an empty string Lidarr omits silently, including any surrounding literal text that's inside the same `{}` — this is how conditional formatting works (for example, `{ (Album Disambiguation)}` produces nothing if there's no disambiguation string).
+Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that resolves to an empty string Lidarr omits, including any surrounding literal text that's inside the same `{}`. This is how conditional formatting works (for example, `{ (Album Disambiguation)}` produces nothing if there's no disambiguation string).
 
 **Truncation:** append `:N` inside any token to cap the rendered value at N characters: `{Album Title:150}` truncates to 150 characters. Use this on Windows to stay within path limits.
 
@@ -110,7 +110,7 @@ Community members contributed the following formats as tested starting points, n
 
 ## Davo's convention
 
-From Davo's [community guide](/lidarr/community-guide). Puts the album folder inside the artist folder, uses underscores as separators, and includes a disambiguation token so identically-named albums don't collide.
+From Davo's [community guide](/lidarr/community-guide). Puts the album folder inside the artist folder, uses underscores as separators, and includes a disambiguation token so identically named albums don't collide.
 
 ### Standard Track Format
 
@@ -132,7 +132,7 @@ From Davo's [community guide](/lidarr/community-guide). Puts the album folder in
 
 ## B's convention
 
-Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows** — the truncated paths can become inaccessible after a Lidarr rename on that OS. See the [FAQ entry on Windows folder access after rename](/lidarr/faq#why-cant-i-access-a-folder-in-windows-after-lidarr-rename). Useful for libraries containing artists with notoriously long album titles.
+Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows**: the truncated paths can become inaccessible after a Lidarr rename on that OS. See the [FAQ entry on Windows folder access after rename](/lidarr/faq#why-cant-i-access-a-folder-in-windows-after-lidarr-rename). Useful for libraries containing artists with notoriously long album titles.
 
 ### Standard Track Format
 
@@ -176,7 +176,7 @@ Embeds quality and bitrate in the filename, which makes file provenance visible 
 
 ## JasonVelocity's convention
 
-Groups albums by type at the top level, then by year and title. Works well with Plex and avoids collisions when an artist has multiple release groups sharing the same name and year. The 150-character cap on most tokens keeps paths safe on Windows. `CleanNameThe` moves "The" to the end for cleaner folder sorting.
+Groups albums by type at the top level, then by year and title. Works well with Plex and avoids collisions when an artist has more than one release group sharing the same name and year. The 150-character cap on most tokens keeps paths safe on Windows. `CleanNameThe` moves "The" to the end for cleaner folder sorting.
 
 ### Standard Track Format
 
@@ -198,7 +198,7 @@ Groups albums by type at the top level, then by year and title. Works well with 
 
 ## Fra's convention
 
-Minimal format aligned with [Plex's music folder naming recommendations](https://support.plex.tv/articles/200265296-adding-music-media-from-folders/#toc-0). Relies entirely on tags for metadata — only track number and title are in the filename itself, which keeps names short and readable.
+Minimal format aligned with [Plex's music folder naming recommendations](https://support.plex.tv/articles/200265296-adding-music-media-from-folders/#toc-0). Relies entirely on tags for metadata. Only the track number and title are in the filename, which keeps names short and readable.
 
 ### Standard Track Format
 
