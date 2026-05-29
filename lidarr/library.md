@@ -2,7 +2,7 @@
 title: Lidarr Library
 description: Managing your music library in Lidarr including artist monitoring, album tracking, and metadata management
 published: true
-date: 2026-05-06T20:10:03.885Z
+date: 2026-05-29T13:09:25.609Z
 tags: lidarr, library, monitoring, albums, music, metadata, artists
 editor: markdown
 dateCreated: 2021-06-14T21:34:03.446Z
@@ -29,7 +29,7 @@ The toolbar above the artist list contains the following actions:
 - **RSS Sync**: polls your configured indexers' RSS feeds immediately, rather than waiting for the next scheduled sync.
 - **Search All** / **Search Filtered** / **Search Selected**: triggers an automatic search for all missing and cutoff-unmet albums across all artists, the current filtered view, or only the artists you have checked.
 - **Manual Import**: opens the manual import dialog to match files in any folder Lidarr can reach to artists and albums in your library. Use this when the automatic import pipeline hasn't picked up a download. See [Import Troubleshooting](/lidarr/import-troubleshooting) for when and how to use it.
-- **Artist Editor**: toggles mass-editor mode, letting you change the monitoring status, quality profile, metadata profile, root folder, or tags across multiple artists at once.
+- **Artist Editor**: toggles mass-editor mode, letting you change the monitoring status, quality profile, metadata profile, root folder, or tags across more than one artist at once.
 - **Options**: shows or hides columns in Table view and adjusts poster/banner size in the grid views.
 
 ## Filters
