@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-05-27T03:42:12.706868
+date: 2026-05-29T03:32:20.380716
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-05-27T03:42:12.706868
+dateCreated: 2026-05-29T03:32:20.380716
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.4.0.5382` / [Commit: cb80af4be1dfe277b4b1a71f026683a738cfe50e](https://github.com/Prowlarr/Prowlarr/commit/cb80af4be1dfe277b4b1a71f026683a738cfe50e)
-  - [Prowlarr Indexers Commit: 0131660a88bf36af28ef80195aa607bc5b1a7e7e](https://github.com/Prowlarr/Indexers/commit/0131660a88bf36af28ef80195aa607bc5b1a7e7e)
+  - Prowlarr Build `2.4.0.5384` / [Commit: 638d2d10211767eff97b57a86a69a8fd3bbd4b3e](https://github.com/Prowlarr/Prowlarr/commit/638d2d10211767eff97b57a86a69a8fd3bbd4b3e)
+  - [Prowlarr Indexers Commit: 2032e503929850c32a03fb4a654fa967e6f038ca](https://github.com/Prowlarr/Indexers/commit/2032e503929850c32a03fb4a654fa967e6f038ca)
 
 ---
 
@@ -267,7 +267,6 @@ dateCreated: 2026-05-27T03:42:12.706868
 |[Caishen (财神)](https://cspt.top/){#cspt}|Caishen (财神) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[cangbaoge (CBG)](https://cangbao.ge/){#cangbaoge}|cangbaoge (CBG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CapybaraBR (API)](https://capybarabr.com/){#capybarabr}|CapybaraBR is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
-|[Carp-Hunter](https://carp-hunter.hu/){#carphunter}|Carp-Hunter is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Carpathians](https://mycarpathians.net/){#carpathians}|Carpathians is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[CarPT](https://carpt.net/){#carpt}|CarPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / MUSIC|Chinese (China)|
 |[Cathode-Ray\.Tube](https://www.cathode-ray.tube/){#cathoderaytube}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV|English (United Kingdom)|
@@ -377,6 +376,7 @@ dateCreated: 2026-05-27T03:42:12.706868
 |[HellasHut](https://hellashut.net/){#hellashut}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HellasHut (API)](https://hellashut.net/){#hellashut-api}|HellasHut is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[HELLENIC-HD (API)](https://hellenic-hd.cc/){#hellenic-hd-api}|HELLENIC-HD is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[HeroBit](https://herobit.info/){#herobit}|HeroBit is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[HHanClub](https://hhanclub.net/){#hhanclub}|HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HHD (API)](https://homiehelpdesk.net/){#hhd-api}|HHD is a Private Torrent Tracker for MOVIES / TV / GAMES|English (United States)|
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
@@ -641,6 +641,7 @@ dateCreated: 2026-05-27T03:42:12.706868
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
+|[Zenith](https://znth.cx/){#zenith}|Zenith is an Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[ZmPT (织梦)](https://zmpt.cc/){#zmpt}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ZRPT (自然)](https://zrpt.cc/){#zrpt}|ZRPT (自然) is a CHINESE Private Torrent Tracker for Documentaries|Chinese (China)|
 
