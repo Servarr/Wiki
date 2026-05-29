@@ -2,7 +2,7 @@
 title: Lidarr Plugins
 description: Basic Setup and Details for Plugins beta Testing Branch
 published: true
-date: 2026-05-03T15:11:19.328Z
+date: 2026-05-29T13:04:38.474Z
 tags: lidarr, installation, plugins, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -16,7 +16,7 @@ Lidarr plugins allow users to extend the capability of Lidarr to include new ind
 
 Plug-in capabilities are now part of the main branch of Lidarr, but only in the `nightly` branch. Hotio and Linuxserver both update their images.
 
-> You can't go back to a mainline Lidarr branch (master/develop) without restoring a database prior to the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
+> You can't go back to a mainline Lidarr branch (master/develop) without restoring a database backup from before the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
 {.is-danger}
 
 ### How To Install Plugins
@@ -51,7 +51,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 
 ### Post Install
 
-- Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation.
+- Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. Installation takes a few seconds depending on your setup.
 - If `/system/plugins` doesn't appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
 
 ## Next Steps
@@ -64,14 +64,14 @@ image: lscr.io/linuxserver/lidarr:nightly
 
 # Plugins
 
-> Both plugins and this documentation are community-driven. No official recommendations exist at this time, and each developer supports their own plugin.
+> Both plugins and this documentation are community-driven. No official recommendations exist. Each developer supports their own plugin.
 {.is-info}
 
 ## ta264/deemix
 
 [Deemix plugin by ta264](https://github.com/ta264/Lidarr.Plugin.Deemix)
 
-This plugin enables Lidarr to search Deezer using Deemix. You must have a working Lidarr installation from the plugins branch, a working Deemix container, and an ARL from Deezer to use this plugin. In order to get FLAC files, your ARL would need to be for a hi-fi account type on Deezer.
+This plugin enables Lidarr to search Deezer using Deemix. You must have a working Lidarr installation from the plugins branch, a working Deemix container, and an ARL from Deezer to use this plugin. To get FLAC files, your ARL must be for a hi-fi account type on Deezer.
 
 [Deemix](https://github.com/bambanah/deemix)
 
@@ -183,7 +183,7 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 
 ### Branches
 
-- Certain features are exclusively available on specific branches.
+- Certain features are only available on specific branches.
 - To install these:
   1. First ensure you have the stable version installed.
   2. Then switch to your desired branch using its URL.
@@ -192,3 +192,52 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}
+
+## jtstothard/lidarr-plugin-bandcamp
+
+[Bandcamp by jtstothard](https://github.com/jtstothard/lidarr-plugin-bandcamp)
+
+Bandcamp indexer and download client for Lidarr nightly. Searches your Bandcamp collection for albums you have bought and downloads them. Only works with music you own. Lidarr has no public catalog search.
+
+Requires cookie-based auth using the `identity` cookie from your browser.
+
+### Prerequisites
+
+- Lidarr nightly branch
+- A Bandcamp account with purchased music
+- The `identity` cookie exported from your browser
+
+### Post-Install Configuration
+
+#### Indexer
+
+- Navigate to `/settings/indexers` and select the **+** button under Indexers. Bandcamp appears at the bottom under the Other section.
+- Paste your `identity` cookie value into **Session Cookies**.
+- Select **Test**, then **Save**.
+
+#### Download Client
+
+- Navigate to `/settings/downloadclients` and select the **+** button under Download Clients. Bandcamp appears at the bottom under the Other section.
+- Paste your `identity` cookie value into **Session Cookies**.
+- Set **Download Path** to somewhere Lidarr can write (for example, `/downloads/bandcamp`).
+- Select **Test**, then **Save**.
+
+#### Delay Profile
+
+- Navigate to `settings/profiles` and scroll down to Delay Profiles.
+- Select the wrench icon on the profile you want to use Bandcamp with.
+- Select the Bandcamp protocol, then **Save**.
+
+### Exporting the Cookie
+
+**Chrome:** Open DevTools (`F12`) → Application tab → Cookies → `https://bandcamp.com` → copy the `identity` value.
+
+**Firefox:** Open Developer Tools (`F12`) → Storage tab → Cookies → `https://bandcamp.com` → copy the `identity` value.
+
+The cookie expires over time. When downloads fail with auth errors, export a fresh one from your browser.
+
+### Troubleshooting
+
+- **Auth errors:** Cookie expired. Re-export it from your browser.
+- **No search results:** Check that you bought the album on Bandcamp and that the Bandcamp protocol is enabled in your Delay Profile.
+- **Plugin missing:** Make sure Lidarr is on the nightly branch and restart.
