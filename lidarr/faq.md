@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2026-05-29T12:40:16.432Z
+date: 2026-05-29T12:41:08.915Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
