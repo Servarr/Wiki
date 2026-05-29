@@ -2,19 +2,18 @@
 title: Lidarr Metadata Troubleshooting
 description: Why can't I add or update this album? Diagnose MusicBrainz metadata problems in Lidarr — propagation, unknown release statuses, matching, cache-busts
 published: true
-date: 2026-05-03T15:07:56.073Z
+date: 2026-05-29T13:01:49.601Z
 tags: lidarr, troubleshooting, releases, metadata, musicbrainz, cache-bust
 editor: markdown
 dateCreated: 2026-04-20T13:04:32.647Z
 ---
-
 
 # Metadata Troubleshooting
 
 > Why can't I add or update this album? This page walks through the most common MusicBrainz-related problems in Lidarr — propagation lag, unknown release statuses, bad matches, and the cache-bust process — and helps decide whether to retry, wait, or fix data upstream.
 {.is-info}
 
-If you're new to how Lidarr depends on MusicBrainz, read [Concepts](/lidarr/concepts#dependence-on-musicbrainz) first — this page assumes you already know that MusicBrainz is the source of truth and Lidarr reads from it through a cache.
+If you're new to how Lidarr depends on MusicBrainz, read [Concepts](/lidarr/concepts#dependence-on-musicbrainz) first. This page assumes you already know that MusicBrainz is the source of truth and Lidarr reads from it through a cache.
 
 ## How MusicBrainz data reaches Lidarr
 
@@ -24,7 +23,7 @@ Three caches sit between MusicBrainz and what you see in the UI:
 2. **The Servarr metadata server.** An intermediate proxy that mirrors MusicBrainz and serves Lidarr. It pulls from MusicBrainz on a schedule and holds a cache so every Lidarr install doesn't hammer MusicBrainz directly.
 3. **Lidarr's local database.** Lidarr refreshes artists on its own schedule and stores the result locally.
 
-A change made at MusicBrainz is only visible in Lidarr once it has propagated through all three. That usually takes hours, sometimes longer. This is normal — most "it's on MusicBrainz but not in Lidarr" reports are propagation, not breakage.
+A change made at MusicBrainz is only visible in Lidarr once it has propagated through all three. Expect hours, sometimes longer. This is normal — most "it's on MusicBrainz but not in Lidarr" reports are propagation, not breakage.
 
 ## It's on MusicBrainz but Lidarr doesn't see it
 
@@ -36,7 +35,7 @@ The edit hasn't reached the Servarr metadata server yet, or it has, but Lidarr h
 
 - Give it at least one full refresh cycle (see [Refresh cadence](#refresh-cadence)).
 - Trigger **Refresh Artist** in Lidarr manually once that window has passed.
-- If it's a brand-new artist or release on MusicBrainz, allow longer — new entities propagate more slowly than edits to existing ones.
+- If it's a brand-new artist or release on MusicBrainz, allow longer — new entities take longer to propagate than edits to existing ones.
 
 ### 2. The release status is `unknown`
 
@@ -56,13 +55,13 @@ The fix is to update the status at MusicBrainz — typically to `Official`. See 
 
 ### 3. Wrong release matched
 
-Lidarr matched the release group to one specific release (one pressing, one format) that doesn't include the tracks you were expecting. The data is fine; the match is wrong. See [Picking the right release](#picking-the-right-release).
+Lidarr matched the release group to one specific release (one pressing, one format) that doesn't include the tracks you were expecting. The data is fine. The match is wrong. See [Picking the right release](#picking-the-right-release).
 
 ## Picking the right release
 
 {#matched-with-too-many-tracks}
 
-A release group on MusicBrainz usually has several releases underneath it — one per pressing, per format (CD, vinyl, digital, cassette), per region, and sometimes per edition (standard, deluxe, remastered). Lidarr tracks *release groups* as albums and only holds **one** release per album at a time. If Lidarr picked a different release than the one you have, the track list won't match.
+A release group on MusicBrainz can have many releases underneath it: one per pressing, per format (CD, vinyl, digital, cassette), per region, and sometimes per edition (standard, deluxe, remastered). Lidarr tracks *release groups* as albums and only holds **one** release per album at a time. If Lidarr picked a different release than the one you have, the track list won't match.
 
 To switch releases:
 
@@ -70,36 +69,36 @@ To switch releases:
 2. Click the **Edit** icon in the top navigation.
 3. Use the release dropdown to pick a different release from the same release group.
 
-If none of the releases match what you actually have, the release itself probably doesn't exist at MusicBrainz yet — [add it upstream](#updating-musicbrainz) rather than trying to work around it in Lidarr.
+If none of the releases match what you have, the release probably doesn't exist at MusicBrainz yet. [Add it upstream](#updating-musicbrainz) rather than trying to work around the gap in Lidarr.
 
 ## Meta-artists like Various Artists
 
 {#various-artists}
 
-"Various Artists," soundtracks, and similar meta-artists on MusicBrainz have thousands of releases attached because the entity is effectively a catch-all. Lidarr doesn't add these by design — pulling in every compilation ever credited to Various Artists is the kind of bulk metadata load that punishes both the user and the metadata server.
+"Various Artists," soundtracks, and similar meta-artists on MusicBrainz have thousands of releases attached because the entity acts as a catch-all. Lidarr doesn't add these by design. Pulling in every compilation ever credited to Various Artists would be a bulk metadata load that punishes both the user and the metadata server.
 
 If you want a specific compilation album, add it under the artists who actually perform on it, or add the album directly and leave the artist unmonitored.
 
 ## Lidarr keeps trying to download the same album
 
-If an album is already imported and Lidarr starts searching for and grabbing it again — sometimes repeatedly, sometimes into the same folder on top of what's already there — the cause is usually upstream at MusicBrainz, not in Lidarr.
+If an album is already imported and Lidarr starts searching for and grabbing it again, the cause is upstream at MusicBrainz, not in Lidarr. This can happen more than once, sometimes into the same folder on top of what's already there.
 
-The usual trigger: someone adds a new release (a new pressing, a new format, a remaster) to MusicBrainz but creates a **new release group** for it instead of attaching the release to the existing release group. Because Lidarr treats each release group as an album, the new release group shows up as a distinct new album — so Lidarr monitors it and starts the grab-and-import cycle for something you already have.
+The common trigger: someone adds a new pressing, format, or remaster to MusicBrainz but creates a new release group instead of adding it to the existing one. Because Lidarr treats each release group as an album, the new release group appears as a distinct new album. Lidarr then monitors it and starts the grab-and-import cycle for something you already have.
 
 Two fixes:
 
 - **Local / immediate.** Unmonitor the new (duplicate) album in Lidarr so it stops trying to download. This stops the symptom but leaves the underlying MusicBrainz structure wrong; the same thing will happen the next time someone adds a release to the duplicate group.
 - **Upstream / full fix.** Merge the release groups on MusicBrainz so there's only one album entity. The edit goes through the usual MusicBrainz review window — expect days. Once approved and propagated, Lidarr collapses the duplicate back into a single album on the next refresh.
 
-If you notice this pattern for a specific artist, it's worth spot-checking their MusicBrainz discography for other duplicated release groups while you are already looking — merging them in one pass is cheaper than catching each duplicate one at a time.
+If you notice this pattern for a specific artist, spot-check their MusicBrainz discography for other duplicated release groups while you're already there. Merging them in one pass is cheaper than catching each duplicate one at a time.
 
 ## Refresh cadence
 
 - **Lidarr ↔ metadata server:** every hour, at 5 minutes past the hour.
 - **Metadata server ↔ MusicBrainz:** faster but not instant; assume hours, not minutes.
-- **Cover art updates:** slowest of the three, usually days. Covers aren't pulled directly by Lidarr — see [Cover art](#cover-art) below.
+- **Cover art updates:** slowest of the three — expect days. Covers aren't pulled directly by Lidarr — see [Cover art](#cover-art) below.
 
-If an edit's more than 3 hours old, has propagated through the MusicBrainz site, and still doesn't show in Lidarr after a manual **Refresh Artist**, that's when the cache-bust process applies.
+If an edit is more than 3 hours old, visible on MusicBrainz, and still absent from Lidarr after a manual **Refresh Artist**, use the cache-bust process.
 
 ### Metadata server cache-bust
 
@@ -119,21 +118,21 @@ The Servarr metadata server occasionally holds onto stale data past the normal r
 
 {#refresh-releases-task}
 
-Refresh Releases is the task that keeps Lidarr's local view of metadata in sync with the metadata server. You can't disable it, and you shouldn't try through database edits or other workarounds — Lidarr relies on it to catch upstream corrections (ID changes, cast updates, alt titles, ratings, summaries, translations) that affect matching and organisation.
+Refresh Releases is the task that keeps Lidarr's local view of metadata in sync with the metadata server. You can't disable it, and you shouldn't try through database edits or other workarounds. Lidarr relies on it to catch upstream corrections (ID changes, alt titles, ratings, summaries, translations) that affect matching and organisation.
 
 If the refresh is causing heavy disk I/O, the setting to look at is **Rescan Artist Folder after Refresh**:
 
 - Default is `Always`, which re-reads every file after every refresh.
-- Changing it to `Manual` usually solves the I/O problem — refreshes still update metadata, they just don't re-scan files on disk.
+- Changing it to `Manual` resolves the I/O problem — refreshes still update metadata, they just don't re-scan files on disk.
 - **Don't** set it to `Never` unless every change to your library (additions, upgrades, deletions) goes through Lidarr. Lidarr won't pick up manual file changes or third-party tooling if rescans never run.
 
 ## Updating MusicBrainz
 
-Fixes to metadata happen at MusicBrainz, not in Lidarr. Lidarr reads MusicBrainz; it doesn't override it.
+Fixes to metadata happen at MusicBrainz, not in Lidarr. Lidarr reads MusicBrainz. It doesn't override it.
 
 ### Harmony (recommended)
 
-[Harmony](https://harmony.pulsewidth.org.uk/) is a music-metadata aggregator and MusicBrainz importer. For most users it's the easiest and most accurate way to add a missing release — it pulls release data from multiple upstream sources (streaming services, digital retailers, etc.), cross-references them, and produces a MusicBrainz-ready import with the key fields (album type, release status, track list) already populated. Compared to hand-editing on MusicBrainz, Harmony avoids the common mistakes (missing album type, wrong status) that cause a freshly-imported release to land as `unknown` and stay invisible to Lidarr.
+[Harmony](https://harmony.pulsewidth.org.uk/) is a music-metadata aggregator and MusicBrainz importer. For most users it's the easiest and most accurate way to add a missing release. It pulls release data from upstream sources (streaming services, digital retailers, etc.) and cross-references them. The result is a MusicBrainz-ready import with the key fields (album type, release status, track list) already populated. Compared to hand-editing on MusicBrainz, Harmony avoids the common mistakes (missing album type, wrong status) that cause a newly imported release to land as `unknown` and stay invisible to Lidarr.
 
 Use Harmony when:
 
@@ -155,13 +154,13 @@ Direct edits on [musicbrainz.org](https://musicbrainz.org) are the right path fo
 - Correcting track lists, durations, or titles on an existing release
 - Fixing album type or secondary type on an existing release
 
-All edits go through a review window — usually a few days for the change to become visible site-wide, then the additional propagation time through the metadata server and Lidarr on top of that. Start the clock as soon as the edit's submitted; don't wait until it's visible on MusicBrainz to start counting.
+All edits go through a review window: allow a few days for the change to become visible site-wide, then more propagation time through the metadata server and Lidarr. Start counting from when you submit the edit, not from when it appears on MusicBrainz.
 
 ### MusicBrainz Picard
 
-[Picard](https://picard.musicbrainz.org/) is a tagging application that reads files, identifies releases, and tags against MusicBrainz IDs. For users already tagging a library, Picard is the right tool to keep files in sync with MusicBrainz once the data there's correct — clean tags also improve matching on import (see [Importing an Existing Library](/lidarr/importing-existing-library#tagging)).
+[Picard](https://picard.musicbrainz.org/) is a tagging application that reads files, identifies releases, and tags against MusicBrainz IDs. For users already tagging a library, Picard is the right tool to keep files in sync with MusicBrainz once the data there is correct. Clean tags also improve matching on import (see [Importing an Existing Library](/lidarr/importing-existing-library#tagging)).
 
-Picard is a *tagging* tool first and foremost. For adding or editing releases at MusicBrainz, reach for Harmony or the web editor instead.
+Picard is a *tagging* tool. For adding or editing releases at MusicBrainz, reach for Harmony or the web editor instead.
 
 ### Cover art
 
@@ -190,9 +189,9 @@ When you hit the rate limit, Lidarr won't add affected albums to its queue until
 - **Wait** — the rate-limit window will expire and Lidarr will retry on the next list sync.
 - **Add the missing Spotify link to MusicBrainz** — if the MusicBrainz release for an album doesn't have its Spotify album URL in the relationship links, the metadata server can't cache that mapping. Adding the Spotify relationship to the release on MusicBrainz allows the server to cache it, so future lookups for that album resolve from cache rather than triggering an individual API call.
 
-To add a Spotify relationship on MusicBrainz: open the release, go to **Edit** → **Add Relationship**, set the type to **stream for free** (Spotify) or the appropriate streaming relationship type, and paste the Spotify album URL. The cache will pick it up on the next metadata server refresh cycle.
+To add a Spotify relationship on MusicBrainz, open the release and go to **Edit** → **Add Relationship**. Set the type to **stream for free** (Spotify) or the appropriate streaming relationship type, then paste the Spotify album URL. The cache will pick it up on the next metadata server refresh cycle.
 
-> A 429 from Spotify doesn't indicate anything wrong with your Lidarr setup — it's a server-side rate limit on lookups. Checking Lidarr's logs at Debug level will show the 429 responses if you want to confirm that's the cause.
+> A 429 from Spotify doesn't mean anything is wrong with your Lidarr setup — it's a server-side rate limit on lookups. Checking Lidarr's logs at Debug level will show the 429 responses if you want to confirm that's the cause.
 {.is-info}
 
 ## Retry or wait?
