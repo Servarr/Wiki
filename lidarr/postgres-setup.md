@@ -2,7 +2,7 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2026-05-03T15:10:46.487Z
+date: 2026-05-29T13:05:19.456Z
 tags: lidarr, installation, postgres, database
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -17,7 +17,7 @@ This document will go over the key points of migrating and setting up Postgres s
 
 [Roxedus](https://github.com/Roxedus) created this guide.
 
-> Lidarr does not back up Postgres databases. You must implement and maintain your own backups.
+> Lidarr doesn't back up Postgres databases. Set up and maintain your own backups.
 {.is-danger}
 
 > Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after executing the unsupported community migration**.
@@ -25,7 +25,7 @@ This document will go over the key points of migrating and setting up Postgres s
 
 ## Setting up Postgres
 
- First, we need a Postgres instance. This guide covers the `postgres:14` Docker image.
+ First, you need a Postgres instance. This guide covers the `postgres:14` Docker image.
 
  > Don't even think about using the `latest` tag! {.is-danger}
 
@@ -54,7 +54,7 @@ You can give the databases any name you want but make sure `config.xml` file has
 
 ### Schema creation
 
- We need to tell Lidarr to use Postgres. The `config.xml` should already contain the entries we need:
+ Tell Lidarr to use Postgres. The `config.xml` should already contain the entries you need:
 
 ```xml
 <PostgresUser>qstick</PostgresUser>
@@ -76,11 +76,11 @@ Only **after creating** both databases you can start the Lidarr migration from S
 
 > If you don't want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
 
-> Lidarr does not support migrating an existing sqlite3 database, and this script may not work without modifications we can't assist you with. We support only new installs using postgres. {.is-warning}
+> Lidarr doesn't support migrating an existing sqlite3 database, and this script may not work without unsupported modifications. Use this only for new Postgres installs. {.is-warning}
 
-To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
+To migrate data, use [PGLoader](https://github.com/dimitri/pgloader). It has some gotchas:
 
-- By default transactions are case-insensitive, we use `--with "quote identifiers"` to make them sensitive.
+- By default transactions are case-insensitive; use `--with "quote identifiers"` to make them sensitive.
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus hasn't tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (it required no code modifications, only a build with updated dependencies).
 
