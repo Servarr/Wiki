@@ -2,7 +2,7 @@
 title: Lidarr Tips and Tricks
 description: Advanced tips, optimization techniques, and workflow improvements for experienced Lidarr users
 published: true
-date: 2026-05-03T13:36:08.062Z
+date: 2026-05-29T13:00:12.430Z
 tags: lidarr, tips, tricks, optimization, workflow, advanced, advanced tips
 editor: markdown
 dateCreated: 2021-08-14T15:15:51.656Z
@@ -95,6 +95,79 @@ Use **Library → Artist Editor** (formerly "Mass Editor"):
    - *Remove from Lidarr and delete files* is destructive and irreversible. Make sure you have a backup first if in doubt.
 
 The same flow works for bulk changes that aren't deletion — root folder moves, quality profile swaps, monitoring toggles — via the other bulk-action buttons at the bottom of Artist Editor.
+
+### Renaming or moving files outside Lidarr
+
+{#renaming-moving-outside-lidarr}
+
+Lidarr tracks every managed file by its absolute path. That path is stored in the `TrackFile` table in `lidarr.db`. There is no content hash, inode, or fingerprint involved in ongoing tracking after import -- the path is the only handle Lidarr has on a file.
+
+When you rename or move a file or folder at the OS level, Lidarr does not learn about it. The database still points to the old path. The next time Lidarr scans that folder -- whether triggered manually, by a refresh, or by the scheduled daily rescan -- `DiskScanService` walks the directory tree and passes the list of files on disk to `MediaFileTableCleanupService.Clean()`. That method compares the database records against the files it found:
+
+```csharp
+// src/NzbDrone.Core/MediaFiles/MediaFileTableCleanupService.cs
+var missingFiles = dbFiles.ExceptBy(x => x.Path, filesOnDisk, x => x, PathEqualityComparer.Instance).ToList();
+
+_mediaFileService.DeleteMany(missingFiles, DeleteMediaFileReason.MissingFromDisk);
+
+var orphanedTracks = _trackService.GetTracksByFileId(missingFiles.Select(x => x.Id));
+orphanedTracks.ForEach(x => x.TrackFileId = 0);
+_trackService.SetFileIds(orphanedTracks);
+```
+
+Anything at the old path is gone from the database. The tracks that referenced those files have their `TrackFileId` reset to zero, which means they are now unmatched. From Lidarr's perspective, those tracks are missing and unimported.
+
+If the album is monitored and Lidarr finds a release for it during an RSS sync, `DeletedTrackFileSpecification` checks whether track files that exist in the database are present on disk. If **Unmonitor Deleted Tracks** is enabled in **Settings → Media Management**, Lidarr treats the absence as a deletion and skips the release until the next disk scan clears the stale records. After that scan, the tracks appear missing and Lidarr may queue a search for them:
+
+```csharp
+// src/NzbDrone.Core/DecisionEngine/Specifications/RssSync/DeletedTrackFileSpecification.cs
+_logger.Debug("Files for this album exist in the database but not on disk, will be unmonitored on next diskscan. skipping.");
+return Decision.Reject("Artist is not monitored");
+```
+
+The result is that an external rename can cause Lidarr to re-download content you already have.
+
+#### What Lidarr does internally
+
+When you rename through the Lidarr UI, `RenameTrackFileService` calls `TrackFileMovingService.MoveTrackFile()`, which moves the file on disk and immediately updates the database path:
+
+```csharp
+// src/NzbDrone.Core/MediaFiles/TrackFileMovingService.cs
+trackFile.Path = destinationFilePath;
+```
+
+`_mediaFileService.Update(trackFile)` then writes the new path to the database. The move and the database update happen in the same operation.
+
+For artist folder moves, `MoveArtistService` transfers the folder on disk and publishes an `ArtistMovedEvent`. `MediaFileService` handles that event by rewriting the path prefix for every track file under the old folder:
+
+```csharp
+// src/NzbDrone.Core/MediaFiles/MediaFileService.cs
+var newPath = $"{message.DestinationPath}{file.Path.AsSpan(message.SourcePath.Length)}";
+file.Path = newPath;
+```
+
+None of this happens when the move is done outside Lidarr.
+
+#### How to rename and move safely
+
+To rename files: go to **Settings → Media Management**, enable **Rename Tracks**, and set your naming format. Then open the artist page, click the rename button (or use **Library → Artist Editor** for bulk operations). Lidarr renames the files and updates the database in one step.
+
+To move an artist folder to a different root folder: go to **Library → Artist Editor**, select the artists, and use the **Root Folder** bulk action. Choose **Yes, move the files** when prompted.
+
+To move a file to a different location on the same volume without a UI option: use the recycle bin and re-import. Delete the track file record in Lidarr (from the album page, track file menu) so the track is marked missing, move the file where you want it, then use **Manual Import** to re-import it from the new location.
+
+#### Recovery if you already renamed outside Lidarr
+
+If the rename has already happened and the next disk scan has not yet run, you can sometimes recover by renaming back before the scan fires. If the scan has already run and the records are gone:
+
+1. Make sure the files are in a location Lidarr can see (inside a configured root folder or accessible via the file browser).
+2. Go to **Activity → Manual Import** and point it at the folder containing the renamed files.
+3. Lidarr will attempt to match the files to albums and re-import them. If automatic matching fails, use the manual match controls to assign the correct album and release.
+
+After a successful manual import, Lidarr creates new track file records at the current path and the tracks are no longer considered missing.
+
+> **If you have a large library and renamed many folders outside Lidarr**, running a full disk scan before manual import may be faster than importing folder by folder. Go to **System → Tasks** and trigger **Rescan Artist Folders**, or use **Library → Artist Editor → Update** to run a rescan across all artists. Lidarr will discard the stale records and then re-match any files it finds at the new paths that still conform to the expected folder structure.
+{.is-info}
 
 ## Custom Formats
 
