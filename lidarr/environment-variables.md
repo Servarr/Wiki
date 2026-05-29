@@ -2,7 +2,7 @@
 title: Lidarr Environment Variables
 description: Complete guide to Lidarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2026-04-27T14:22:16.358Z
+date: 2026-05-29T13:14:55.964Z
 tags: lidarr, docker, installation, scripts, postgres
 editor: markdown
 dateCreated: 2025-09-06T22:28:37.512Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-06T22:28:37.512Z
 
 # Lidarr Environment Variables
 
-Lidarr has the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. Environment variables are comprised of 3 parts, delimited by two underscores:
+Lidarr can use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. Environment variables are comprised of 3 parts, delimited by two underscores:
 
 `LIDARR__CONFIGNAMESPACE__CONFIGITEM`
 
