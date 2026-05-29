@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: Guide to Lidarr application data directory structure, configuration files, and data management
 published: true
-date: 2026-04-18T15:36:27.620Z
+date: 2026-05-29T13:18:45.952Z
 tags: lidarr, appdata, configuration, directory, files, data, structure
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
@@ -48,6 +48,6 @@ The installation instructions specify `/var/lib/lidarr`
 
 # Arguments
 
-The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
+The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when running more than one instance. On Windows this would be `/data=`
 
 The `-nobrowser` argument refrains from launching/opening the browser on startup. On Windows this would be `/nobrowser`
