@@ -2,7 +2,7 @@
 title: Lidarr
 description: Music collection manager for Usenet and BitTorrent users to automatically download and organize music albums
 published: true
-date: 2026-04-19T18:02:16.673Z
+date: 2026-05-29T13:20:34.040Z
 tags: lidarr, troubleshooting, installation, scripts, postgres
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -10,7 +10,7 @@ dateCreated: 2021-05-16T23:39:16.456Z
 
 ![128.png](/assets/lidarr/logos/128.png)
 
-> Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+> Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. You can also configure it to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 {.is-info}
 
 # Getting Started
