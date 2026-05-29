@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-05-06T20:08:10.641Z
+date: 2026-05-29T12:54:57.548Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -22,7 +22,7 @@ This page covers all settings available in Lidarr. For field-level detail on a s
 
 When enabled, Lidarr renames imported track files according to the format strings below. When disabled, Lidarr imports files using their original filenames. It still manages the folder structure but leaves individual filenames as-is.
 
-> Renaming files that a torrent client is currently seeding will break seeding unless you are using hardlinks. See [Concepts — Hardlinks](/lidarr/concepts#hardlinks-and-completed-downloads) before enabling this.
+> Renaming files that a torrent client is currently seeding will break seeding unless you are using hardlinks. See [Hardlinks and Completed Downloads](/lidarr/concepts#hardlinks-and-completed-downloads) before enabling this.
 {.is-warning}
 
 ### Replace Illegal Characters
@@ -85,7 +85,7 @@ Matching files are then filtered against the configured extension list. Files th
 
 **Lyric files** (`.lrc`, `.txt`, `.utf`, `.utf8`, `.utf-8`): a separate lyric manager handles these with priority over the general extra-file handler. Lidarr imports them with the same base name as the track and renames them alongside it.
 
-**When you move an artist to a new root folder**, all files in the artist directory move together at the filesystem level, including extra files Lidarr isn't tracking. Extra files that Lidarr is tracking resolve correctly at the new location because their stored paths are relative to the artist folder, and Lidarr updates that path as part of the move.
+**When you move an artist to a new root folder**, all files in the artist directory move together at the filesystem level, including extra files Lidarr isn't tracking. Lidarr tracks extra files relative to the artist folder, so stored paths update correctly during the move.
 
 > The `*` wildcard isn't supported in the extension list. The code matches by `filename.EndsWith(extension)`; a file never literally ends in `*`. List explicit extensions only.
 {.is-warning}
@@ -181,7 +181,7 @@ Release profiles filter and score releases based on their titles. Use them to re
 
 {#custom-formats-2}
 
-Custom formats score releases based on patterns matched against the release title and indexer flags. Unlike release profiles, which require or reject terms absolutely, custom formats assign a numeric score that accumulates across all matched formats. A quality profile can then set a **Minimum Custom Format Score**; releases below that threshold aren't grabbed.
+Custom formats score releases based on patterns matched against the release title and indexer flags. Unlike release profiles, which require or reject terms absolutely, custom formats assign a numeric score that accumulates across all matched formats. A quality profile can then set a **Minimum Custom Format Score**. Releases below that threshold aren't grabbed.
 
 Click **Add (+)** to create a format, or **Import** to paste a JSON definition.
 
@@ -218,7 +218,7 @@ Two ways to test how Lidarr will parse a release name before committing to a pro
 
 The Quality page defines size thresholds for each quality level. Lidarr uses these to check that a release's reported size is consistent with the claimed quality, catching mislabelled releases.
 
-For audio, size limits use **kilobits per second (kbps)**; Lidarr computes a bitrate from the file size and duration and compares it to the configured range.
+For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bitrate from the file size and duration and compares it to the configured range.
 
 | Column | Description |
 |---|---|
@@ -240,7 +240,7 @@ For audio, size limits use **kilobits per second (kbps)**; Lidarr computes a bit
 
 ## Overview
 
-Lidarr sends download requests to a configured client, monitors the client's queue via its API, and imports finished files into the library. The download client and Lidarr must both be able to read and write to the same filesystem path; mismatched paths are the most common cause of import failures.
+Lidarr sends download requests to a configured client, monitors the client's queue via its API, and imports finished files into the library. The download client and Lidarr must both be able to read and write to the same filesystem path. Mismatched paths are the most common cause of import failures.
 
 ## How Downloading Works
 
@@ -258,7 +258,7 @@ Lidarr sends download requests to a configured client, monitors the client's que
 3. When the download completes, Lidarr imports the files. If the download folder and library folder are on the same filesystem, Lidarr creates a **hardlink**: the file appears in both locations without using extra disk space, and seeding continues uninterrupted.
 4. The torrent client retains the original files so seeding can continue. Lidarr requests removal only after seeding finishes (when you enable **Remove** and the client reaches its seed goal).
 
-> The download folder and library root folder must be on the **same filesystem** for hardlinks to work. In Docker, both must be mounted through the same volume or bind mount. See [Concepts — Hardlinks](/lidarr/concepts#hardlinks-and-completed-downloads) and [TRaSH's Hardlink Guide](https://trash-guides.info/hardlinks) for setup details.
+> The download folder and library root folder must be on the **same filesystem** for hardlinks to work. In Docker, both must be mounted through the same volume or bind mount. See [Hardlinks and Completed Downloads](/lidarr/concepts#hardlinks-and-completed-downloads) and [TRaSH's Hardlink Guide](https://trash-guides.info/hardlinks) for setup details.
 {.is-info}
 
 ## Download Client Settings
@@ -331,7 +331,7 @@ When Lidarr detects a failure, it logs it, optionally removes the failed item, s
 
 ## Remote Path Mappings
 
-You need remote path mappings when Lidarr and the download client see the same files at different paths, for example when they run on separate machines or in separate Docker containers with different volume mount paths.
+You need remote path mappings when Lidarr and the download client see the same files at different paths. This happens when they run on separate machines or in separate Docker containers with different volume mount paths.
 
 A mapping translates a remote path (as reported by the download client) to a local path (as Lidarr accesses it). Add a mapping per client under **Settings → Download Clients → Remote Path Mappings**.
 
