@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: From a fresh install to your first Lidarr download in about 15 minutes
 published: true
-date: 2026-04-27T14:34:05.219Z
+date: 2026-05-29T12:59:41.748Z
 tags: lidarr, library, setup, music, quick-start, getting-started
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -12,7 +12,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 This guide walks you from a fresh Lidarr install to your first successful download in about fifteen minutes, using default settings everywhere. It assumes Lidarr is already installed — if it isn't, start with the [Installation](/lidarr/installation) page.
 
-> Settings shown in `orange` in the Lidarr UI are advanced options. Click **Show Advanced** at the top of the relevant page to reveal them.
+> The Lidarr UI shows advanced options in `orange`. Click **Show Advanced** at the top of the relevant page to reveal them.
 {.is-warning}
 
 ## Who this is for
@@ -50,7 +50,7 @@ Click **Settings → Media Management**, then under **Root Folders** click **Add
 Fill in:
 
 - **Name** — a friendly label.
-- **Path** — the directory on disk where music files will be stored. The Lidarr user must have read and write access. **This must not be the same folder your download client writes to.**
+- **Path** — the directory on disk where Lidarr stores music files. The Lidarr user must have read and write access. **This must not be the same folder your download client writes to.**
 
 Leave everything else at defaults.
 
@@ -112,7 +112,7 @@ Click the new artist when it appears.
 
 ![lidarr_qs_dylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylan.png)
 
-> With the default `Metadata Profile`, only `Releases` of type **Studio Album** are shown. See [Concepts](/lidarr/concepts) for why the metadata profile matters.
+> With the default `Metadata Profile`, Lidarr shows only `Releases` of type **Studio Album**. See [Concepts](/lidarr/concepts) for why the metadata profile matters.
 {.is-info}
 
 ## Trigger your first download
@@ -129,7 +129,7 @@ Each row shows:
 
 1. **Title** — the release name as returned by the indexer.
 2. **Quality** — Lidarr's parse of the title into a quality level.
-3. **Warning indicators** — if a result fails a check (wrong album, wrong quality, etc.) the reason is shown here.
+3. **Warning indicators** — if a result fails a check (wrong album, wrong quality, etc.) Lidarr shows the reason here.
 4. **Download icon** — click to send the release to your download client.
 
 Pick a clean result and click the download icon. Lidarr hands the download off to your client, watches the queue, and imports the finished files into your root folder when the client reports completion.
