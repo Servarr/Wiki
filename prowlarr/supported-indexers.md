@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-05-29T03:32:20.380716
+date: 2026-05-31T03:44:40.875896
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-05-29T03:32:20.380716
+dateCreated: 2026-05-31T03:44:40.875896
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.4.0.5384` / [Commit: 638d2d10211767eff97b57a86a69a8fd3bbd4b3e](https://github.com/Prowlarr/Prowlarr/commit/638d2d10211767eff97b57a86a69a8fd3bbd4b3e)
-  - [Prowlarr Indexers Commit: 2032e503929850c32a03fb4a654fa967e6f038ca](https://github.com/Prowlarr/Indexers/commit/2032e503929850c32a03fb4a654fa967e6f038ca)
+  - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
+  - [Prowlarr Indexers Commit: 77b25747bb0edcefc776350bb67b83b3b471993b](https://github.com/Prowlarr/Indexers/commit/77b25747bb0edcefc776350bb67b83b3b471993b)
 
 ---
 
@@ -332,7 +332,6 @@ dateCreated: 2026-05-29T03:32:20.380716
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Fuzer](https://www.fuzer.xyz/){#fuzer}|Fuzer (FZ) is an ISRAELI Private Torrent Tracker for MOVIES / TV / GENERAL|Hebrew (Israel)|
 |[G3MINI TR4CK3R (API)](https://gemini-tracker.org/){#g3minitr4ck3r-api}|G3MINI TR4CK3R is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
-|[gay-torrents\.org](https://gay-torrents.org/){#gay-torrentsorg}|Gay-Torrents\.org is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GAYtorrent\.ru](https://www.gaytor.rent/){#gaytorrentru}|GayTorrent\.ru is a Private Torrent Tracker for GAY 3X|English (United States)|
 |[GazelleGames](https://gazellegames.net/){#gazellegames}|GazelleGames (GGn) is a Private Torrent Tracker for GAMES|English (United States)|
 |[The Geeks](https://thegeeks.click/){#thegeeks}|The Geeks is a Private Torrent Tracker for Technology E-LEARNING|English (United States)|
