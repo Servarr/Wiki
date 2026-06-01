@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-05-31T03:44:40.875896
+date: 2026-06-01T03:58:52.154360
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-05-31T03:44:40.875896
+dateCreated: 2026-06-01T03:58:52.154360
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
-  - [Prowlarr Indexers Commit: 77b25747bb0edcefc776350bb67b83b3b471993b](https://github.com/Prowlarr/Indexers/commit/77b25747bb0edcefc776350bb67b83b3b471993b)
+  - [Prowlarr Indexers Commit: acf3e77b52d7634513dbfa4f42f59e941c6acc95](https://github.com/Prowlarr/Indexers/commit/acf3e77b52d7634513dbfa4f42f59e941c6acc95)
 
 ---
 
@@ -43,7 +43,6 @@ dateCreated: 2026-05-31T03:44:40.875896
 |[Catorrent](https://catorrent.net/){#catorrent}|Catorrent is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
 |[DaMagNet](https://damag.net/){#damagnet}|DaMagNet is a Public DHT Crawler|English (United States)|
-|[Demonoid Clone](https://demonoid.nl/){#demonoid-clone}|Demonoid Clone is a Public Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|Chinese (Taiwan)|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[EBookBay](https://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
@@ -65,7 +64,6 @@ dateCreated: 2026-05-31T03:44:40.875896
 |[MegaPeer](https://megapeer.vip/){#megapeer}|MegaPeer is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[Mikan](https://mikanani.me/){#mikan}|Mikan is a CHINESE Public torrent tracker for ANIME|Chinese (China)|
 |[MixtapeTorrent](http://www.mixtapetorrent.com/){#mixtapetorrent}|MixtapeTorrent is a Public Music site for MixTapes|English (United States)|
-|[MoviesDVDR](https://www.moviesdvdr.co/){#moviesdvdr}|MoviesDVDR is a SPANISH Public tracker for MOVIES|Spanish (Spain)|
 |[MyPornClub](https://myporn.club/){#mypornclub}|MyPornClub is a Public Torrent Tracker for 3X|English (United States)|
 |[nekoBT](https://nekobt.to/){#nekobt}|nekoBT is a Public Torrent Tracker for ANIME|English (United States)|
 |[NewStudio](https://newstudio.tv/){#newstudio}|NewStudio is a RUSSIAN Public site for TV|Russian (Russia)|
@@ -105,8 +103,8 @@ dateCreated: 2026-05-31T03:44:40.875896
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome246.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip227.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome247.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip228.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -142,7 +140,6 @@ dateCreated: 2026-05-31T03:44:40.875896
 |[Fenyarnyek-Tracker](http://tracker.fenyarnyek.com/){#fenyarnyek-tracker}|Fenyarnyek-Tracker is a HUNGARIAN Semi-Private site for TV / MOVIES / GENERAL|Hungarian (Hungary)|
 |[File-Tracker](https://file-tracker.net/){#file-tracker}|File Tracker is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / GENERAL|Russian (Russia)|
 |[Gay-Torrents\.net](https://www.gay-torrents.net/){#gay-torrents}|Gay-Torrents\.net is a Private Torrent Tracker for GAY 3X|English (United States)|
-|[HD-CzTorrent](http://www.hd-cztorrent.cz/){#hdcztorrent}|HD-CzTorrent is a CZECH Semi-Private PAY2DL site for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
@@ -321,6 +318,7 @@ dateCreated: 2026-05-31T03:44:40.875896
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[Fappaizuri2FA](https://www.fappaizuri.me/){#fappaizuri2fa}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV\. This indexer uses cookie login for 2FA|English (United States)|
+|[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
