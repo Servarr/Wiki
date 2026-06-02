@@ -66,6 +66,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 
 > Both plugins and this documentation are community-driven. No official recommendations exist. Each developer supports their own plugin.
 {.is-info}
+
 ## jtstothard/UniqueSingles
 
 [UniqueSingles by jtstothard](https://github.com/jtstothard/lidarr-plugin-uniquesingles)
@@ -185,7 +186,6 @@ To search, you must also add Slskd as an Indexer.
 
 Slskd is now available for both automatic and interactive searches. During Lidarr search operations you can view the slskd `/searches` as they occur and monitor `/downloads`.
 
-
 ## TypNull/Tubifarry
 
 [Tubifarry by TypNull](https://github.com/TypNull/Tubifarry) is a *multi-feature* plugin that extends Lidarr's capabilities with these key functions:
@@ -218,7 +218,6 @@ Slskd is now available for both automatic and interactive searches. During Lidar
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}
-
 
 ## TrevTV
 
@@ -257,7 +256,6 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
    - FFmpeg required for Tidal conversions
    - Qobuz authentication may require custom app IDs
 
-
 ## ta264/deemix
 
 [Deemix plugin by ta264](https://github.com/ta264/Lidarr.Plugin.Deemix)
@@ -266,9 +264,6 @@ This plugin enables Lidarr to search Deezer using Deemix. You must have a workin
 
 [Deemix](https://github.com/bambanah/deemix)
 
-
 ## lucapolesel/Lidarr.Plugin.Slskd
 
 [Slskd (Soulseek) by lucapolesel](https://github.com/lucapolesel/Lidarr.Plugin.Slskd)
-
-
