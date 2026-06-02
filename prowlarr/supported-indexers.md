@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-01T03:58:52.154360
+date: 2026-06-02T03:54:16.370381
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-01T03:58:52.154360
+dateCreated: 2026-06-02T03:54:16.370381
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
-  - [Prowlarr Indexers Commit: acf3e77b52d7634513dbfa4f42f59e941c6acc95](https://github.com/Prowlarr/Indexers/commit/acf3e77b52d7634513dbfa4f42f59e941c6acc95)
+  - [Prowlarr Indexers Commit: ecdc5392b11305581be3d11a1d249de86926c61e](https://github.com/Prowlarr/Indexers/commit/ecdc5392b11305581be3d11a1d249de86926c61e)
 
 ---
 
@@ -318,7 +318,6 @@ dateCreated: 2026-06-01T03:58:52.154360
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
 |[Fappaizuri2FA](https://www.fappaizuri.me/){#fappaizuri2fa}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV\. This indexer uses cookie login for 2FA|English (United States)|
-|[FearNoPeer](https://fearnopeer.com/){#fearnopeer}|FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Femdomcult](https://femdomcult.org/){#femdomcult}|Femdomcult is a Private Torrent Tracker for FETISH 3X|English (United States)|
 |[FileList\.io](https://filelist.io/){#filelist.io}|FileList (FL) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
@@ -347,6 +346,7 @@ dateCreated: 2026-06-01T03:58:52.154360
 |[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[HD Dolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
+|[HD-Forever2FA](https://hdf.world/){#hdforever2fa}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES\. This indexer uses cookie login for 2FA|French (France)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH Private Torrent Tracker for HD MOVIES / TV|Spanish (Spain)|
 |[HD-Only (API)](https://hd-only.org/){#hdonly-api}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HD-Space](https://hd-space.org/){#hdspace}|HD-Space (HDS) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
@@ -478,6 +478,7 @@ dateCreated: 2026-06-01T03:58:52.154360
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[P2PBG](https://www.p2pbg.com/){#p2pbg}|P2PBG is a BULGARIAN Private PAY2DL Torrent Tracker for 0DAY / GENERAL|Bulgarian (Bulgaria)|
 |[Panda](https://pandapt.net/){#panda}|Panda is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[ParabellumHD (API)](https://parabellumhd.cx/){#parabellumhd-api}|ParabellumHD is a SPANISH Private Torrent Tracker for HEVC & AV1-encoded MOVIES / TV|Spanish (Spain)|
 |[The Paradiese](https://theparadiese.hopto.org/){#theparadiese}|The Paradiese is a GERMAN Private tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Party-Tracker](https://party-tracker.info/){#party-tracker}|Party-Tracker is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[PassThePopcorn](https://passthepopcorn.me){#passthepopcorn}|PassThePopcorn (PTP) is a Private site for MOVIES / TV|English (United States)|
@@ -636,6 +637,7 @@ dateCreated: 2026-06-01T03:58:52.154360
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
+|[YggReborn (API)](https://www.yggreborn.org/){#yggreborn-api}|YggReborn is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
 |[Zenith](https://znth.cx/){#zenith}|Zenith is an Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
