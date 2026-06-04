@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-02T03:54:16.370381
+date: 2026-06-04T03:56:10.843096
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-02T03:54:16.370381
+dateCreated: 2026-06-04T03:56:10.843096
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
-  - [Prowlarr Indexers Commit: ecdc5392b11305581be3d11a1d249de86926c61e](https://github.com/Prowlarr/Indexers/commit/ecdc5392b11305581be3d11a1d249de86926c61e)
+  - [Prowlarr Indexers Commit: 8ca04ff70aeee1ee1219edfcb2384961fedf2bbf](https://github.com/Prowlarr/Indexers/commit/8ca04ff70aeee1ee1219edfcb2384961fedf2bbf)
 
 ---
 
@@ -178,6 +178,7 @@ dateCreated: 2026-06-02T03:54:16.370381
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
+|[TR4KER](https://tr4ker.net/){#tr4ker}|TR4KER is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
