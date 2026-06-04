@@ -2,8 +2,8 @@
 title: Docker Guide
 description: Servarr Docker Guide - Overview of Docker Concepts, Hardlink Concepts, and Linux Ownership and Permissions
 published: true
-date: 2024-03-13T11:21:23.126Z
-tags: docker, installation, troubleshooting, sonarr, radarr, lidarr, readarr, prowlarr, whisparr, scripts, synology
+date: 2026-06-04T13:54:44.311Z
+tags: radarr, sonarr, lidarr, readarr, prowlarr, troubleshooting, docker, synology, installation, whisparr, scripts
 editor: markdown
 dateCreated: 2021-05-16T20:23:46.192Z
 ---
@@ -136,9 +136,9 @@ It is also important to remember that you’ll need to setup or re-configure pat
 
 ## Examples
 
-What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other ways of arranging things too. For example, you’re not likely to download and run into conflicts of identical releases between usenet and torrents, so you *could* put both in `/data/downloads/{movies|books|music|tv}` folders. Downloads don’t even have to be sorted into subfolders either, since movies, music and tv will rarely conflict.
+What matters here is the general structure, not the names. You are free to pick folder names that make sense to you. And there are other reasonable ways of arranging things too. We suggest keeping usenet and torrent downloads seperated, since torrents seed it generally isn't safe to just `rm -rf`, but if you know you've already imported all your usenet downloads you can clean up as needed. Keeping 
 
-This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `tv`, `movies`, `books`, and `music` subfolders. This `media` folder is your library and what you’d pass to Plex, Kodi, Emby, Jellyfin, etc.
+This example `data` folder has subfolders for torrents and usenet and each of these have subfolders for tv, movie and music downloads to keep things neat. The `media` folder has nicely named `TV`, `Movies`, `Books`, and `Music` subfolders. This `media` folder is your library and what you’d pass to software Plex, Kodi, Emby, Jellyfin, and Bazarr which only need the library.
 
 For the below example `data` is equivalent to the host path `/host/data` and the docker path `/data`
 
@@ -155,10 +155,10 @@ For the below example `data` is equivalent to the host path `/host/data` and the
     │  ├── books
     │  └── tv
     └── media
-        ├── movies
-        ├── music
-        ├── books
-        └── tv
+        ├── Movies
+        ├── Music
+        ├── Books
+        └── TV
 ```
 
 The path for each Docker container can be as specific as needed while still maintaining the correct structure:
