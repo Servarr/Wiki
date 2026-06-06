@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: List of supported music indexers, trackers, and download clients compatible with Lidarr
 published: true
-date: 2026-06-06T14:12:58.851Z
+date: 2026-06-06T14:26:29.292Z
 tags: lidarr, indexers, music, supported, download-clients, compatibility, trackers
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
