@@ -2,14 +2,13 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2026-05-29T12:41:08.915Z
+date: 2026-06-06T14:18:49.196Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
 ---
 
-
-# Lidarr FAQ
+## Lidarr FAQ
 
 > This page answers the questions that come up most often in the Lidarr help channel, Reddit, and forums. Longer troubleshooting flows and conceptual explanations have their own dedicated pages. This FAQ links to them when a full walkthrough helps.
 {.is-info}
@@ -187,7 +186,7 @@ If a file with a supported extension still isn't importing, the issue is typical
 
 **Why:** Lidarr's distance scoring gives heavy weight to MusicBrainz Recording and Release IDs (weights 10.0 and 5.0 respectively), artist/album/title text (3.0 each), track count, and duration. The `media_format` field carries a weight of only 1.0 and only penalises releases whose format MusicBrainz marks as `Unknown`. Files tagged with accurate MBIDs override almost everything else. Files without MBIDs fall back to text matching.
 
-**Release profiles and custom formats don't help here.** Both work at grab/download time, filtering and scoring releases on indexers before anything reaches a download client. They don't influence which pressing Lidarr matches your downloaded files to.
+**Release profiles and custom formats don't help here.** Both work at grab/download time, filtering and scoring releases from indexers before anything reaches a download client. They have no effect at import time at all: a file that would have been grab-rejected by a release profile (wrong edition, blocklisted term, missing required term) will still import if it lands in a monitored folder or goes through manual import. The import pipeline runs a completely separate set of checks (free space, match quality, upgrade eligibility) and release profiles aren't among them.
 
 An [open feature request](https://github.com/Lidarr/Lidarr/issues/186) to expose format/country/status as profile preferences has been open since January 2018 and isn't implemented yet.
 
