@@ -2,159 +2,156 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2026-05-29T13:05:19.456Z
+date: 2026-06-06T14:25:49.056Z
 tags: lidarr, installation, postgres, database
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
 ---
 
-# Lidarr and Postgres
+## Lidarr and Postgres
 
-This document will go over the key points of migrating and setting up Postgres support in Lidarr.
-
-> Lidarr v1.1.2.2890 or newer required
+> Lidarr v1.1.2.2890 or newer required.
 {.is-info}
-
-[Roxedus](https://github.com/Roxedus) created this guide.
 
 > Lidarr doesn't back up Postgres databases. Set up and maintain your own backups.
 {.is-danger}
 
-> Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after executing the unsupported community migration**.
-{.is-info}
+Lidarr uses [Npgsql](https://www.npgsql.org/) 9.x, which targets all [currently supported PostgreSQL versions](https://www.postgresql.org/support/versioning/) (PostgreSQL 14 through 18). PostgreSQL 13 reached end-of-life in November 2025 and isn't recommended.
 
 ## Setting up Postgres
 
- First, you need a Postgres instance. This guide covers the `postgres:14` Docker image.
+First, you need a Postgres instance. This guide covers the `postgres:17` Docker image.
 
- > Don't even think about using the `latest` tag! {.is-danger}
+> Don't use the `latest` tag. It will upgrade your database engine on container recreate and can break compatibility.
+{.is-danger}
 
-```bash
-docker create --name=postgres14 \
+```shell
+docker create --name=postgres17 \
     -e POSTGRES_PASSWORD=qstick \
     -e POSTGRES_USER=qstick \
     -e POSTGRES_DB=lidarr-main \
     -p 5432:5432/tcp \
-    -v /path/to/appdata/postgres14:/var/lib/postgresql/data \
-    postgres:14
+    -v /path/to/appdata/postgres17:/var/lib/postgresql/data \
+    postgres:17
 ```
 
 ## Creation of database
 
-Lidarr needs two databases, the default names of these are:
+Lidarr needs two databases. The default names are:
 
-- `lidarr-main`   Stores all configuration and history
-- `lidarr-log`    Stores events that produce a log entry
+- `lidarr-main`: stores all configuration and history
+- `lidarr-log`: stores events that produce a log entry
 
-> Lidarr won't create the databases for you. Make sure you create them ahead of time{.is-warning}
+> Lidarr won't create the databases for you. Create them before starting Lidarr.
+{.is-warning}
 
-Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
+Create the databases using your preferred tool, for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
 
-You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](/lidarr/postgres-setup#schema-creation).
+You can give the databases any name you want, but make sure `config.xml` has the correct names. See [Schema creation](#schema-creation) below.
 
 ### Schema creation
 
- Tell Lidarr to use Postgres. The `config.xml` should already contain the entries you need:
+Tell Lidarr to use Postgres. Open `config.xml` and add or update these entries:
 
 ```xml
 <PostgresUser>qstick</PostgresUser>
 <PostgresPassword>qstick</PostgresPassword>
 <PostgresPort>5432</PostgresPort>
-<PostgresHost>postgres14</PostgresHost>
+<PostgresHost>postgres17</PostgresHost>
 ```
 
-If you want to specify a database name then should also include the following configuration:
+To use custom database names, also add:
 
 ```xml
 <PostgresMainDb>MainDbName</PostgresMainDb>
 <PostgresLogDb>LogDbName</PostgresLogDb>
 ```
 
-Only **after creating** both databases you can start the Lidarr migration from SQLite to Postgres.
+Only **after creating** both databases, start Lidarr to initialize the schema.
 
 ## Migrating data
 
-> If you don't want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
+> If you don't want to migrate an existing SQLite database to Postgres, you're done.
+{.is-info}
 
-> Lidarr doesn't support migrating an existing sqlite3 database, and this script may not work without unsupported modifications. Use this only for new Postgres installs. {.is-warning}
+> Lidarr doesn't officially support SQLite-to-Postgres migration. The community script below works for many users on Postgres 14–17, but isn't guaranteed to work on Postgres 18 or later. For Postgres 18+, start with a fresh database.
+{.is-warning}
 
-To migrate data, use [PGLoader](https://github.com/dimitri/pgloader). It has some gotchas:
+To migrate data, use [PGLoader](https://github.com/dimitri/pgloader). Two gotchas:
 
-- By default transactions are case-insensitive; use `--with "quote identifiers"` to make them sensitive.
-- The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus hasn't tested packages in other distros).
-  Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (it required no code modifications, only a build with updated dependencies).
+- By default, identifiers are case-insensitive. Use `--with "quote identifiers"` to make them case-sensitive.
+- The version packaged in Debian and Ubuntu apt repos is too old for Postgres 14+. Use the [Roxedus pgloader binary](https://github.com/Roxedus/Pgloader-bin), which includes updated dependencies.
 
-> Don't drop any tables in the Postgres instance {.is-danger}
+> Don't drop any tables in the Postgres instance.
+{.is-danger}
 
-Before starting a migration please ensure that you have run Lidarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
+Before migrating, run Lidarr against the created Postgres databases **at least once** so the schema exists, then stop Lidarr and follow these steps:
 
-1. Stop Lidarr
-1. Open your preferred database management tool and connect to the Postgres database instance
-1. Run the following commands:
+1. Stop Lidarr.
+2. Open your preferred database management tool and connect to the Postgres instance.
+3. Run the following commands to clear the default seed data:
 
-	```SQL
-	DELETE FROM "QualityProfiles";
-	DELETE FROM "QualityDefinitions";
-	DELETE FROM "DelayProfiles";
-	DELETE FROM "Metadata";
-	DELETE FROM "MetadataProfiles";
-	```
+   ```sql
+   DELETE FROM "QualityProfiles";
+   DELETE FROM "QualityDefinitions";
+   DELETE FROM "DelayProfiles";
+   DELETE FROM "Metadata";
+   DELETE FROM "MetadataProfiles";
+   ```
 
-1. Start the migration by using either of these options:
+4. Start the migration using one of these options:
 
-    - ```bash
-      pgloader --with "quote identifiers" --with "data only" lidarr.db 'postgresql://qstick:qstick@localhost/lidarr-main'
-      ```
+   ```shell
+   pgloader --with "quote identifiers" --with "data only" lidarr.db 'postgresql://qstick:qstick@localhost/lidarr-main'
+   ```
 
-    - ```bash
-      docker run --rm -v /absolute/path/to/lidarr.db:/lidarr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /lidarr.db "postgresql://qstick:qstick@localhost/lidarr-main"
-      ```
+   ```shell
+   docker run --rm -v /absolute/path/to/lidarr.db:/lidarr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /lidarr.db "postgresql://qstick:qstick@localhost/lidarr-main"
+   ```
 
-		> If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
-    {.is-warning}
+   > If pgloader errors on a large database, add `--with "prefetch rows = 100" --with "batch size = 1MB"` to the command.
+   {.is-warning}
 
-		> With these handled, it's pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
-    {.is-info}
+5. If you see sequence errors after migration, run the following to reset all sequences:
 
-1. For those having the issues POST-MIGRATION from SQLite run the following:
+   ```sql
+   select setval('public."AlbumReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "AlbumReleases"));
+   select setval('public."Albums_Id_seq"', (SELECT MAX("Id")+1 FROM "Albums"));
+   select setval('public."ArtistMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "ArtistMetadata"));
+   select setval('public."Artists_Id_seq"', (SELECT MAX("Id")+1 FROM "Artists"));
+   select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
+   select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+   select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+   select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+   select setval('public."CustomFormats_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFormats"));
+   select setval('public."DelayProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "DelayProfiles"));
+   select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+   select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+   select setval('public."DownloadHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadHistory"));
+   select setval('public."ExtraFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ExtraFiles"));
+   select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+   select setval('public."ImportListExclusions_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListExclusions"));
+   select setval('public."ImportLists_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportLists"));
+   select setval('public."ImportListStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListStatus"));
+   select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+   select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+   select setval('public."LyricFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "LyricFiles"));
+   select setval('public."Metadata_Id_seq"', (SELECT MAX("Id")+1 FROM "Metadata"));
+   select setval('public."MetadataFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataFiles"));
+   select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
+   select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
+   select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+   select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
+   select setval('public."Profiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
+   select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
+   select setval('public."RemotePathMappings_Id_seq"', (SELECT MAX("Id")+1 FROM "RemotePathMappings"));
+   select setval('public."Restrictions_Id_seq"', (SELECT MAX("Id")+1 FROM "ReleaseProfiles"));
+   select setval('public."RootFolders_Id_seq"', (SELECT MAX("Id")+1 FROM "RootFolders"));
+   select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+   select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+   select setval('public."TrackFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "TrackFiles"));
+   select setval('public."Tracks_Id_seq"', (SELECT MAX("Id")+1 FROM "Tracks"));
+   select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+   ```
 
-	  ```sql
-  	select setval('public."AlbumReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "AlbumReleases"));
-  	select setval('public."Albums_Id_seq"', (SELECT MAX("Id")+1 FROM "Albums"));
-  	select setval('public."ArtistMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "ArtistMetadata"));
-  	select setval('public."Artists_Id_seq"', (SELECT MAX("Id")+1 FROM "Artists"));
-  	select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
-  	select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
-  	select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
-  	select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
-  	select setval('public."CustomFormats_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFormats"));
-  	select setval('public."DelayProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "DelayProfiles"));
-  	select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
-  	select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
-  	select setval('public."DownloadHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadHistory"));
-  	select setval('public."ExtraFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ExtraFiles"));
-  	select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
-  	select setval('public."ImportListExclusions_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListExclusions"));
-  	select setval('public."ImportLists_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportLists"));
-  	select setval('public."ImportListStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListStatus"));
-  	select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
-  	select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
-  	select setval('public."LyricFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "LyricFiles"));
-  	select setval('public."Metadata_Id_seq"', (SELECT MAX("Id")+1 FROM "Metadata"));
-  	select setval('public."MetadataFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataFiles"));
-  	select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
-  	select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
-  	select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
-  	select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
-  	select setval('public."Profiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
-  	select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
-  	select setval('public."RemotePathMappings_Id_seq"', (SELECT MAX("Id")+1 FROM "RemotePathMappings"));
-  	select setval('public."Restrictions_Id_seq"', (SELECT MAX("Id")+1 FROM "ReleaseProfiles"));
-  	select setval('public."RootFolders_Id_seq"', (SELECT MAX("Id")+1 FROM "RootFolders"));
-  	select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
-  	select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
-  	select setval('public."TrackFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "TrackFiles"));
-  	select setval('public."Tracks_Id_seq"', (SELECT MAX("Id")+1 FROM "Tracks"));
-  	select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
-
-1. Start Lidarr
+6. Start Lidarr.
