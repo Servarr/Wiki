@@ -57,6 +57,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Tdarr](#tdarr)
   - [tdarr\_inform](#tdarr_inform)
   - [Deleterr](#deleterr)
+  - [Prunerr](#prunerr)
   - [Twitter Connect](#twitter-connect)
 
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
@@ -378,6 +379,10 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 ## Deleterr
 
 [Deleterr](https://github.com/rfsbraz/deleterr) is a tool to delete stale and inactive media from Plex/Sonarr/Radarr. It helps managing limited space when you allow users to request shows via Seerr/Ombi but don't want to manually monitor available disk space. It's configurable to support only deleting media meeting your defined criteria.
+
+## Prunerr
+
+[Prunerr](https://github.com/helliott20/prunerr) is a media library cleanup tool for [Plex](/plex)/[Sonarr](/sonarr)/[Radarr](/radarr) that reclaims disk space by flagging and removing unwanted content based on customisable rules covering watch status, age, file size and resolution. It features a review-and-approve deletion queue, configurable grace periods, a disk-pressure reactive mode that automatically reclaims space when free space drops below a target you set, and outbound webhooks with Home Assistant integration. All service connections are configured through the web UI.
 
 ## Twitter Connect
 
