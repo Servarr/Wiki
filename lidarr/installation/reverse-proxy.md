@@ -2,24 +2,25 @@
 title: Lidarr Reverse Proxy
 description: 
 published: true
-date: 2026-04-26T16:31:38.023Z
+date: 2026-06-06T15:01:19.756Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:10:58.279Z
 ---
 
-# Reverse Proxy Configuration
+## Reverse Proxy Configuration
 
 Sample config examples for configuring Lidarr to be accessible through a reverse proxy.
 
-> These examples assumes the default port of `8686` and that you set a baseurl of `lidarr`. It also assumes your web server i.e nginx and Lidarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
+> These examples assume the default port of `8686` and a baseurl of `lidarr`. They also assume your web server (nginx) and Lidarr run on the same server, accessible at `localhost`. If not, use the host IP address or a FQDN for the proxy pass.
 {.is-info}
 
 ## NGINX
 
-Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
+Add the following configuration to `nginx.conf` in the root of your Nginx configuration. Place the code block inside the `server` context. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, for example: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host`
+{.is-warning}
 
 ```nginx
 location ^~ /lidarr {
@@ -40,8 +41,7 @@ location ~ /lidarr/api {
 }
 ```
 
-A better way to organize your configuration files for Nginx would be to store the configuration for each site in a separate file.
-To achieve this it is required to modify `nginx.conf` and add `include subfolders-enabled/*.conf` in the `server` context. So it will look something like this.
+To organize your Nginx configuration, store each site's config in a separate file. Add `include subfolders-enabled/*.conf` in the `server` context of `nginx.conf`:
 
 ```nginx
 server {
@@ -54,15 +54,22 @@ server {
 }
 ```
 
-Adding this line will include all files that end with `.conf` to the Nginx configuration. Make a new directory called `subfolders-enabled` in the same folder as your `nginx.conf` file is located. In that folder create a file with a recognizable name that ends with .conf. Add the configuration from above from the file and restart or reload Nginx. You should be able to visit Lidarr at `yourdomain.tld/lidarr`. tld is short for [Top Level Domain](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+Create a `subfolders-enabled` directory next to your `nginx.conf`, add a `.conf` file with the configuration above, then restart or reload Nginx. Lidarr should be available at `yourdomain.tld/lidarr`.
 
 ### Subdomain
 
-Alternatively you can use a subdomain for lidarr. In this case you would visit `lidarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
-> Many free DNS providers do not support this {.is-warning}
-By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
-> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8686` and Lidarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `lidarr` is chosen (line 5). {.is-info}
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
+To use a subdomain instead, visit `lidarr.yourdomain.tld`. Configure an `A record` or `CNAME record` in your DNS.
+
+> Many free DNS providers don't support this.
+{.is-warning}
+
+Nginx includes the `sites-enabled` folder by default. Check `nginx.conf` and add it via the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include) if it's missing — it must be inside the `http` context. Create a config file in `sites-enabled` with the following:
+
+> For subdomain configuration, set baseurl to `''` (empty). This assumes the default port `8686` and Lidarr on localhost (127.0.0.1). Line 5 sets the subdomain to `lidarr`.
+{.is-info}
+
+> If you're using a non-standard http/https server port, make sure your Host header also includes it, for example: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host`
+{.is-warning}
 
 ```nginx
 server {
@@ -84,13 +91,14 @@ server {
 }
 ```
 
-Now restart Nginx and Lidarr should be available at your selected subdomain.
+Restart Nginx and Lidarr should be available at your selected subdomain.
 
 ## Apache
 
-This should be added within an existing VirtualHost site. If you wish to use the root of a domain or subdomain, remove `lidarr` from the `Location` block and simply use `/` as the location.
+Add this within an existing VirtualHost site. To use the root of a domain or subdomain, remove `lidarr` from the `Location` block and use `/` as the location.
 
-Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want to use `/` as the location.
+> Don't remove the baseurl from ProxyPass and ProxyPassReverse if you use `/` as the location.
+{.is-warning}
 
 ```none
 <Location /lidarr>
@@ -102,13 +110,13 @@ Note: Do not remove the baseurl from ProxyPass and ProxyPassReverse if you want 
 
 `ProxyPreserveHost on` prevents apache2 from redirecting to localhost when using a reverse proxy.
 
-Or for making an entire VirtualHost for Lidarr:
+For a full VirtualHost for Lidarr:
 
 ```none
 ProxyPass / http://127.0.0.1:8686/lidarr/
 ProxyPassReverse / http://127.0.0.1:8686/lidarr/
 ```
 
-If you implement any additional authentication through Apache, you should exclude the following paths:
+If you add authentication through Apache, exclude the following paths:
 
 - `/lidarr/api/`
