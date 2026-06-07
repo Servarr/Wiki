@@ -2,7 +2,7 @@
 title: Lidarr Tips and Tricks
 description: Advanced tips, optimization techniques, and workflow improvements for experienced Lidarr users
 published: true
-date: 2026-05-29T13:00:12.430Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, tips, tricks, optimization, workflow, advanced, advanced tips
 editor: markdown
 dateCreated: 2021-08-14T15:15:51.656Z
@@ -166,7 +166,7 @@ If the rename has already happened and the next disk scan has not yet run, you c
 
 After a successful manual import, Lidarr creates new track file records at the current path and the tracks are no longer considered missing.
 
-> **If you have a large library and renamed many folders outside Lidarr**, running a full disk scan before manual import may be faster than importing folder by folder. Go to **System → Tasks** and trigger **Rescan Artist Folders**, or use **Library → Artist Editor → Update** to run a rescan across all artists. Lidarr will discard the stale records and then re-match any files it finds at the new paths that still conform to the expected folder structure.
+> **If you have a large library and renamed many folders outside Lidarr**, running a full disk scan before manual import may be faster than importing folder by folder. Go to **System → Tasks** and trigger **Rescan Folders**, or use **Library → Artist Editor → Update** to run a rescan across all artists. Lidarr will discard the stale records and then re-match any files it finds at the new paths that still conform to the expected folder structure.
 {.is-info}
 
 ## Custom Formats

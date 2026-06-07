@@ -2,7 +2,7 @@
 title: Lidarr Plugins
 description: Basic Setup and Details for Plugins beta Testing Branch
 published: true
-date: 2026-06-06T14:27:08.256Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, installation, plugins, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -52,7 +52,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 ### Post Install
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. Installation takes a few seconds depending on your setup.
-- If `/system/plugins` doesn't appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
+- If `/system/plugins` doesn't appear in the menu, ensure you are running the `nightly` build of Lidarr. The Plugins menu item is only present in the nightly branch.
 
 ## Next Steps
 

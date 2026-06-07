@@ -2,7 +2,7 @@
 title: Lidarr and beets Integration
 description: 
 published: true
-date: 2026-05-29T13:03:01.899Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, beets
 editor: markdown
 dateCreated: 2026-04-26T15:17:29.688Z
@@ -46,7 +46,7 @@ In this pattern, beets runs once per import triggered by a Lidarr Custom Script.
 
 ## How it works
 
-Lidarr fires its **On Import / On Upgrade** event after it has moved and renamed the downloaded files into the library folder. A Custom Script registered in **Settings → Connect** receives the file paths via the `Lidarr_AddedTrackPaths` environment variable (pipe-separated). The script invokes beets against those files with a configuration that writes tags but doesn't move or copy anything.
+Lidarr fires its **On Release Import / On Upgrade** event after it has moved and renamed the downloaded files into the library folder. A Custom Script registered in **Settings → Connect** receives the file paths via the `Lidarr_AddedTrackPaths` environment variable (pipe-separated). The script invokes beets against those files with a configuration that writes tags but doesn't move or copy anything.
 
 ## Required beets configuration
 
@@ -128,7 +128,7 @@ foreach ($dir in $albumDirs) {
 1. Go to **Settings → Connect → + Add Connection → Custom Script**.
 2. Set **Name** to something descriptive, for example, `beets tag enrichment`.
 3. Set **Path** to the full path of the script file.
-4. Enable **On Import** and **On Upgrade**. Leave other triggers disabled unless you specifically want beets to run on those events.
+4. Enable **On Release Import** and **On Upgrade**. Leave other triggers disabled unless you specifically want beets to run on those events.
 5. Click **Test**. The script receives a test event and should exit cleanly without errors.
 
 ## Trade-offs

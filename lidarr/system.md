@@ -2,7 +2,7 @@
 title: Lidarr System
 description: System information, logs, scheduled tasks, and status monitoring for Lidarr administration and troubleshooting
 published: true
-date: 2026-05-29T12:55:50.781Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, system, logs, administration, tasks, status
 editor: markdown
 dateCreated: 2021-06-14T21:36:28.225Z
@@ -21,7 +21,9 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
       - [Currently installed SQLite version isn't supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
+      - [Can't install update because startup folder is in an App Translocation folder (macOS)](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos)
       - [Can't install update because startup folder isn't writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+      - [Can't install update because UI folder isn't writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating won't be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
       - [Branch is for a previous version](#branch-is-for-a-previous-version)
       - [Couldn't connect to signalR](#could-not-connect-to-signalr)
@@ -33,7 +35,11 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
       - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
       - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
+      - [FPcalc is missing](#fpcalc-is-missing)
       - [FPcalc needs updating](#fpcalc-needs-updating)
+      - [API Key is too short](#api-key-is-too-short)
+      - [Package Maintainer Message](#package-maintainer-message)
+      - [Plugins failed to load](#plugins-failed-to-load)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -46,6 +52,7 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Permissions Error](#permissions-error)
       - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
       - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
+      - [Download Folder Same as Library Folder](#download-folder-same-as-library-folder)
     - [Completed/Failed Download Handling](#completedfailed-download-handling)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
       - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
@@ -58,9 +65,18 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
         - [Solutions](#solutions)
+      - [Invalid Indexer Download Client Setting](#invalid-indexer-download-client-setting)
+      - [Redacted Configured as Gazelle Indexer](#redacted-configured-as-gazelle-indexer)
     - [Artist Folders](#artist-folders)
       - [Missing Root Folder](#missing-root-folder)
+      - [Artist Mount is Read Only](#artist-mount-is-read-only)
+      - [Artist Removed from MusicBrainz](#artist-removed-from-musicbrainz)
+      - [Import List Missing Root Folder](#import-list-missing-root-folder)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
+    - [Notifications](#notifications)
+      - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
+    - [Recycling Bin](#recycling-bin)
+      - [Cannot Write to Recycle Bin](#cannot-write-to-recycle-bin)
   - [Disk Space](#disk-space)
   - [About](#about)
   - [More Info](#more-info)
@@ -167,11 +183,21 @@ sudo systemctl start $app
 > This warning won't appear if your current version is less than 14 days old.
 {.is-info}
 
-#### Can't install update because startup folder isn't writable by the user
+#### Can’t install update because startup folder is in an App Translocation folder (macOS)
+
+{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder.}
+
+- macOS has moved Lidarr’s startup folder into an App Translocation path. This prevents Lidarr from updating itself. Remove the quarantine attribute or move Lidarr out of the Translocation folder and re-launch it from its permanent location.
+
+#### Can’t install update because startup folder isn’t writable by the user
 
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
 
-#### Updating won't be possible to prevent deleting AppData on Update
+#### Can’t install update because UI folder isn’t writable by the user
+
+- This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s UI directory to allow Lidarr to update itself.
+
+#### Updating won’t be possible to prevent deleting AppData on Update
 
 - Lidarr detected that the AppData folder sits inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and `~/.config` for Linux.
 
@@ -228,14 +254,20 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 - Review your proxy settings and ensure they're accurate
 - Ensure your proxy is up, running, and accessible
 
 #### Proxy Failed Test
 
+{#proxy-failed-test}
+
 - Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
 
 #### System Time is off by more than 1 day
+
+{#system-time-off}
 
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until you correct the time
 - Review your system time and ensure it's synced to an authoritative time server and accurate
@@ -247,6 +279,14 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 #### Mono and x86 builds are ending
 
 - The next build of the application won't support Mono or x86. If you are receiving this error then you are running the mono version of the application or the x86 version. Due to increasing difficulty supporting these legacy versions, support and releases for them have ended. Upgrade to a supported operating system that doesn't require x86 or Mono. You may also be able to explore using Docker for your needs.
+
+#### FPcalc is missing
+
+{#fpcalc-missing}
+
+- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. Audio fingerprinting has been disabled because `fpcalc` could not be found on your system.
+- Ensure the fpcalc binary bundled with Lidarr is present and executable. Look for it in Lidarr's installation directory (for example `/opt/Lidarr/fpcalc`).
+- On Linux, you may need to install `libchromaprint-tools` (Debian/Ubuntu) or the equivalent package for your distribution.
 
 #### FPcalc needs updating
 
@@ -272,6 +312,27 @@ chmod +x /opt/Lidarr/fpcalc
 |     Arch      |     chromaprint      |
 |   OpenSUSE    |  chromaprint-fpcalc  |
 |   Synology    |     chromaprint      |
+
+#### API Key is too short
+
+{#invalid-api-key}
+
+- Your Lidarr API key must be at least 20 characters long. Go to `Settings => General` and generate a new API key, or update the existing one to be at least 20 characters.
+
+#### Package Maintainer Message
+
+{#package-maintainer-message}
+
+- Your package maintainer has provided a message. This may be an informational notice, a warning, or an error from the team that packages Lidarr for your platform.
+
+#### Plugins failed to load
+
+{#plugins-failed-to-load}
+
+- One or more Lidarr plugins failed to load. Check the Lidarr log for details on which plugins failed and why.
+
+> Plugins are only available on the develop (pre-release) branch and are not included in stable releases.
+{.is-info}
 
 ### Download Clients
 
@@ -351,6 +412,12 @@ chmod +x /opt/Lidarr/fpcalc
 
 - Check your logs for more info. Refer to the [Troubleshooting Guides](/lidarr/troubleshooting).
 
+#### Download Folder Same as Library Folder
+
+{#download-folder-and-library-folder-not-different-folders}
+
+- Your download client is configured to sort completed downloads into a folder that is the same as (or is inside) your Lidarr library/root folder. Sorting completed downloads into your library folder can cause issues. Disable sorting in your download client or choose a download destination that is separate from your library folder.
+
 ### Completed/Failed Download Handling
 
 #### Completed Download Handling is disabled
@@ -415,6 +482,16 @@ chmod +x /opt/Lidarr/fpcalc
 - Check out [Prowlarr](/prowlarr) which can sync indexers to Lidarr and is from the Servarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to Lidarr. Don't use their single combined endpoint; use `multi` if you plan to use sync.
 
+#### Invalid Indexer Download Client Setting
+
+{#invalid-indexer-download-client-setting}
+
+- One or more of your indexers have a download client specified that no longer exists or is no longer enabled. Go to `Settings => Indexers` and for each affected indexer, either clear the download client setting or set it to an enabled download client.
+
+#### Redacted Configured as Gazelle Indexer
+
+- You have configured the Redacted indexer using the generic Gazelle indexer type. Use the dedicated Redacted indexer type instead (`Settings => Indexers`). Using the correct indexer type ensures better compatibility and support.
+
 ### Artist Folders
 
 #### Missing Root Folder
@@ -431,12 +508,44 @@ chmod +x /opt/Lidarr/fpcalc
   - Next you will receive a pop-up that states Would you like to move the Artist folders to 'root path' ? This will also state This will also rename the Artist folder per the Artist folder format in settings. Simply select No if you don't want Lidarr to move your files
   - Run the Check Health Task in System => Tasks
 
+#### Artist Mount is Read Only
+
+{#artist-mount-ro}
+
+- A mount containing an artist folder is mounted as read-only. Lidarr cannot import files into a read-only mount. Check your mount configuration and ensure that Lidarr has write access to the artist folders listed in the health check message.
+
+#### Artist Removed from MusicBrainz
+
+- One or more artists in your library have been removed from MusicBrainz. Lidarr cannot update metadata for removed artists. Review the affected artists and either remove them from Lidarr or update them if the MusicBrainz data has moved to a different entry.
+
+#### Import List Missing Root Folder
+
+{#import-list-missing-root-folder}
+
+- One or more of your import lists reference a root folder path that does not exist or is not configured in Lidarr. Go to `Settings => Import Lists` and update the affected list(s) to use a valid root folder.
+
 #### Lists are unavailable due to failures
 
 - Typically this simply means that Lidarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them to rule them out, as their systems may be overloaded from time to time.
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
 
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
+
+### Notifications
+
+#### Notifications are unavailable due to failures
+
+{#notifications-are-unavailable-due-to-failures}
+
+- One or more of your configured notification connections is failing. Lidarr will back off from attempting to contact the failing notification service and retry after a period of time. Review `System => Events` or your logs for more details on the failure.
+
+### Recycling Bin
+
+#### Cannot Write to Recycle Bin
+
+{#cannot-write-recycle-bin}
+
+- Lidarr cannot write to the configured Recycle Bin path. Check that the path exists and that Lidarr (or the user it runs as) has write permission to the directory.
 
 ## Disk Space
 
@@ -468,12 +577,12 @@ chmod +x /opt/Lidarr/fpcalc
 
   - Backup - This will run a backup of your Lidarr's database on a set schedule; find more details here. More information about backups is at System => Backups.
   - Check Health - Check Health will run on the displayed schedule in the UI checking the health of your Lidarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
-  - Clean Up Recycle Bin - Lidarr clears the recycling bin on the displayed schedule. This only runs if you set a recycling bin in File Management.
   - Housekeeping - On the displayed schedule, Lidarr optimizes the database, removes orphaned records, and performs other routine maintenance tasks.
   - Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new artists. Find more info about lists at Settings => Lists.
   - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Lidarr
   - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
   - Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
+  - Rescan Folders - This rescans all root folders for changes to the library on the displayed schedule.
   - Rss Sync - This will run the RSS Sync. Change this in Settings => Options. Find more information on the RSS function in the FAQ.
 
 > You can run all these tasks manually outside their scheduled times by hitting the icon to the far right of each of the tasks.

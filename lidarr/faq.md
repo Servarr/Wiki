@@ -36,8 +36,8 @@ If Lidarr has been offline for a while, it pages back through each indexer to fi
 Lidarr runs on one of three release branches. Pick one under **Settings → General → Updates** (show advanced):
 
 - `master` — default, stable. Updates about monthly after testing in `develop` and `nightly`.
-- `develop` — beta. New features and fixes land here after `nightly`. Updates weekly or biweekly, tagged `pre-release` on GitHub.
-- `nightly` — alpha. Builds on every commit that passes CI. Required for plugin support (see [Plugins](/lidarr/plugins)). Expect occasional breakage and plan to recover a failed update yourself.
+- `develop` — beta. New features and fixes land here after `nightly`. Updates weekly or biweekly, tagged `pre-release` on GitHub. Plugin support is available on this branch and above (see [Plugins](/lidarr/plugins)).
+- `nightly` — alpha. Builds on every commit that passes CI. Expect occasional breakage and plan to recover a failed update yourself.
 
 > **Switching from `nightly` or `develop` back to `master` may not be possible without restoring an older database backup.** Database schema migrations are one-way. If a newer branch introduced columns `master` doesn't know about, the older version will refuse to start with errors like *Error parsing column N*. If you already switched and need to go back, restore from a pre-switch backup.
 {.is-danger}
@@ -181,7 +181,7 @@ The fix is a two-step manual rename (`Artist` → `Artist_tmp` → `Artist`) so 
 
 Lidarr recognises the following file extensions:
 
-`.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`
+`.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`, `.aifc`
 
 Files with any other extension are invisible to Lidarr. It won't import, rename, or manage them.
 
@@ -248,19 +248,19 @@ Custom Formats score releases. Custom Scripts respond to events. They don't over
 
 Deemix and slskd are third-party tools. Deemix is a Deezer downloader. slskd is a Soulseek daemon. Historically there was no built-in way to integrate them with Lidarr, and users cobbled together import scripts.
 
-**This changed with the plugin architecture.** As of the `nightly` branch, Lidarr supports third-party plugins that add indexers and download clients for streaming services, peer-to-peer networks, and other sources. This is the fully supported way to extend Lidarr's source coverage. See [Plugins](/lidarr/plugins) for install instructions and the current compatibility notes.
+**This changed with the plugin architecture.** As of the `develop` branch, Lidarr supports third-party plugins that add indexers and download clients for streaming services, peer-to-peer networks, and other sources. This is the fully supported way to extend Lidarr's source coverage. See [Plugins](/lidarr/plugins) for install instructions and the current compatibility notes.
 
 Common community plugins cover exactly this ground: Soulseek, Deezer, Tidal, and similar. Plugin names and availability shift faster than this FAQ can track, so the Plugins page is the current reference.
 
-Running the plugin branch requires switching to `nightly` (see [How do I update Lidarr?](#how-do-i-update-lidarr)). Database schema migrations mean switching back to `master` or `develop` afterward requires restoring a pre-switch backup.
+Running plugins requires `develop` or `nightly` (see [How do I update Lidarr?](#how-do-i-update-lidarr)). Database schema migrations mean switching back to `master` afterward requires restoring a pre-switch backup.
 
 ### Which download clients does Lidarr support?
 
-Usenet (NZB): SABnzbd, NZBGet, NZBVortex, Pneumatic, usenet blackhole.
+Usenet (NZB): SABnzbd, NZBGet, NZBVortex, Pneumatic, Download Station (Synology), usenet blackhole.
 
-Torrent: qBittorrent, Transmission, Deluge, rTorrent / ruTorrent, uTorrent, Vuze, Flood, Hadouken, torrent blackhole.
+Torrent: qBittorrent, Transmission, Deluge, rTorrent / ruTorrent, uTorrent, Vuze, Flood, Hadouken, Aria2, Download Station (Synology), Freebox Download, torrent blackhole.
 
-More clients are available via [Plugins](/lidarr/plugins) on the `nightly` branch, primarily streaming-service and P2P-network clients not covered by the built-in list.
+More clients are available via [Plugins](/lidarr/plugins) on the `develop` or `nightly` branch, primarily streaming-service and P2P-network clients not covered by the built-in list.
 
 For setup recipes, the [TRaSH Guides — Downloaders](https://trash-guides.info/Downloaders/) section covers the common clients in more depth than the Lidarr wiki does.
 

@@ -2,7 +2,7 @@
 title: Lidarr Importing an Existing Library
 description: End-to-end guide for migrating an existing music library into Lidarr — preparation, pre-import checks, the import process itself, and post-import cleanup
 published: true
-date: 2026-05-03T15:07:18.109Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, library, musicbrainz, importing, migration, tagging
 editor: markdown
 dateCreated: 2026-04-18T16:54:14.510Z
@@ -49,9 +49,9 @@ For example:
 /music/Bob Dylan/Blood on the Tracks/02 - Simple Twist of Fate.flac
 ```
 
-This layout, combined with proper tags, gives recognition rates of 95% or better in both Lidarr and most downstream media players. Flat layouts (one folder containing many releases), grouped-by-year layouts, or layouts that split discs into separate folders will all cause mismatches or import failures.
+This layout, combined with proper tags, gives recognition rates of 95% or better in both Lidarr and most downstream media players. Flat layouts (one folder containing many releases) or grouped-by-year layouts will cause mismatches or import failures.
 
-Disc-subfolder layouts (`.../Release/CD1/...`, `.../Release/CD2/...`) are a common trap: Lidarr expects all tracks for a release to live under the release folder, so consolidate or flatten disc subfolders before importing.
+Disc-subfolder layouts (`.../Release/CD1/...`, `.../Release/CD2/...`) are handled natively by Lidarr's grouping logic, which recognises `CD`, `Disc`, and `Disk` subfolder markers and groups them as a single release automatically. You do not need to flatten disc subfolders before importing.
 
 ### Tagging
 
@@ -88,12 +88,14 @@ With files prepared and the pre-import checks done, add the library folder as a 
 2. Fill in the add-root-folder dialog:
    - **Name** — a friendly label for this root folder.
    - **Path** — the filesystem path to the library you prepared. The Lidarr user must have read and write access.
-   - **Monitor*** — the default monitoring option for newly imported `Releases` (for example, all, future, latest, none). This applies to every artist and release created by the import; you can change individual artists afterwards.
+   - **Monitor*** — the default monitoring option applied to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards.
+   - **Monitor New Items*** — controls whether future releases added to MusicBrainz for an imported artist are automatically monitored (All, None, New).
    - **Quality Profile*** — the default quality profile assigned to each imported artist. Used later to decide which `Releases` are cutoff-met and what Lidarr will search for.
    - **Metadata Profile*** — the default metadata profile. Controls which `Release` types (studio albums, EPs, singles, etc.) are visible on each imported artist.
+   - **Tags** — optional tags applied to every artist created by this import, useful for later filtering or automation rules.
 3. Save the root folder. Lidarr begins scanning the path immediately.
 
-The three asterisked fields above become the defaults for every artist the import creates. You can change them on a per-artist basis later, but it's much less work to pick the right defaults up front than to batch-update hundreds of artists afterwards. In particular, `Metadata Profile` has the biggest downstream effect — a too-narrow profile will silently hide `Releases` that exist on disk.
+The asterisked fields above become the defaults for every artist the import creates. You can change them on a per-artist basis later, but it's much less work to pick the right defaults up front than to batch-update hundreds of artists afterwards. In particular, `Metadata Profile` has the biggest downstream effect — a too-narrow profile will silently hide `Releases` that exist on disk.
 
 ### What Lidarr does during the scan
 

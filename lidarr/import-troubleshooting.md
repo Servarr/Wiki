@@ -2,7 +2,7 @@
 title: Lidarr Import Troubleshooting
 description: Why a download finishes but Lidarr does not import it — match-quality thresholds, the manual-import path, and when human intervention is necessary
 published: true
-date: 2026-05-29T13:01:13.606Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, troubleshooting, plugins, import, matching
 editor: markdown
 dateCreated: 2026-04-20T13:06:15.307Z
@@ -17,7 +17,7 @@ If you haven't imported anything yet and are setting up a fresh library, start w
 
 ## Supported file types
 
-Lidarr only processes files with these extensions: `.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`. Lidarr ignores any other extension entirely — it won't attempt to import, rename, or track it. If Lidarr isn't picking up your files at all, confirm they have a supported extension before troubleshooting further.
+Lidarr only processes files with these extensions: `.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`, `.aifc`. Lidarr ignores any other extension entirely — it won't attempt to import, rename, or track it. If Lidarr isn't picking up your files at all, confirm they have a supported extension before troubleshooting further.
 
 ## Why Lidarr rejects an import
 
@@ -81,7 +81,7 @@ Fingerprinting kicks in when any of the following is true:
 Whether Lidarr allows fingerprinting depends on the **Allow Fingerprinting** setting under Settings → Media Management:
 
 - `Never` — Lidarr never fingerprints.
-- `New Files` — fingerprint new downloads only (default on most installs).
+- `For new imports only` — fingerprint new downloads only (default on most installs).
 - `Always` — fingerprint even on library imports.
 
 Fingerprinting is slower than tag-based matching and hits an external service. If downloads consistently land in a state where fingerprinting runs but doesn't rescue them, the files likely don't exist in MusicBrainz at all. No fingerprint match is possible for a release that isn't in the database.
