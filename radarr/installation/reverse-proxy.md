@@ -2,7 +2,7 @@
 title: Radarr Reverse Proxy
 description: Configuring reverse proxy setup for Radarr with nginx, Apache, and other web servers
 published: true
-date: 2024-01-04T16:42:39.425Z
+date: 2026-06-07T00:00:00.000Z
 tags: reverse-proxy, nginx, apache, web-server, configuration, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:12:15.231Z
@@ -19,7 +19,7 @@ Sample config examples for configuring Radarr to be accessible from the outside 
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
+> If you're using a non-standard http/https server port, make sure your `X-Forwarded-Host` header also includes it, i.e.: `proxy_set_header X-Forwarded-Host $host:$server_port` or `proxy_set_header X-Forwarded-Host $http_host` {.is-warning}
 
 ```nginx
 location ^~ /radarr {
@@ -65,7 +65,7 @@ By default Nginx includes the `sites-enabled` folder. You can check this in `ngi
 
 > For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `7878` and Radarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `radarr` is chosen (line 5). {.is-info}
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
+> If you're using a non-standard http/https server port, make sure your `X-Forwarded-Host` header also includes it, i.e.: `proxy_set_header X-Forwarded-Host $host:$server_port` or `proxy_set_header X-Forwarded-Host $http_host` {.is-warning}
 
 ```nginx
 server {

@@ -2,7 +2,7 @@
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
 published: true
-date: 2025-05-29T21:30:30.766Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, postgres, database, installation
 editor: markdown
 dateCreated: 2022-01-10T15:42:34.178Z
@@ -69,6 +69,16 @@ If you want to specify a database name then should also include the following co
 <PostgresMainDb>MainDbName</PostgresMainDb>
 <PostgresLogDb>LogDbName</PostgresLogDb>
 ```
+
+Alternatively, if you need to pass a full Postgres connection string (e.g. to include additional parameters like `sslmode`), you can use the connection string options **instead of** the host/user/password/port settings above. Both must be provided if either is set:
+
+```xml
+<PostgresMainDbConnectionString>Host=postgres14;Database=radarr-main;Username=qstick;Password=qstick;Port=5432</PostgresMainDbConnectionString>
+<PostgresLogDbConnectionString>Host=postgres14;Database=radarr-log;Username=qstick;Password=qstick;Port=5432</PostgresLogDbConnectionString>
+```
+
+> You cannot mix connection string settings and host/user/password/port settings — use one approach or the other, not both.
+{.is-warning}
 
 Only **after creating** both databases you can start the Radarr migration from SQLite to Postgres.
 

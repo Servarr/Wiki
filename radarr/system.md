@@ -2,7 +2,7 @@
 title: Radarr System
 description: System information, logs, scheduled tasks, and status monitoring for Radarr administration and troubleshooting
 published: true
-date: 2023-10-26T10:56:09.737Z
+date: 2026-06-07T00:00:00.000Z
 tags: system, administration, logs, tasks, status, radarr
 editor: markdown
 dateCreated: 2021-05-25T02:28:35.194Z
@@ -34,7 +34,8 @@ dateCreated: 2021-05-25T02:28:35.194Z
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
       - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
-      - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
+      - [Invalid API Key](#invalid-api-key)
+      - [Package Maintainer Message](#package-maintainer-message)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -47,26 +48,29 @@ dateCreated: 2021-05-25T02:28:35.194Z
       - [Permissions Error](#permissions-error)
       - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
       - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
+      - [Download Client Sorting Enabled](#download-client-sorting-enabled)
     - [Completed/Failed Download Handling](#completedfailed-download-handling)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
       - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
     - [Indexers](#indexers)
       - [No indexers available with automatic search enabled, Radarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-radarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Radarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-radarr-will-not-grab-new-releases-automatically)
-      - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
       - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
         - [Solutions](#solutions)
+      - [Invalid Indexer Download Client Setting](#invalid-indexer-download-client-setting)
     - [Movie Folders](#movie-folders)
       - [Missing Root Folder](#missing-root-folder)
       - [Movie Path Mount is Read Only](#movie-path-mount-is-read-only)
     - [Movies](#movies)
       - [Movie was removed from TMDb](#movie-was-removed-from-tmdb)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
+      - [Import List Missing Root Folder](#import-list-missing-root-folder)
     - [Notifications](#notifications)
-    - [Discord as Slack Notification](#discord-as-slack-notification)
+      - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
+      - [Discord as Slack Notification](#discord-as-slack-notification)
+    - [Cannot Write Recycle Bin](#cannot-write-recycle-bin)
   - [Disk Space](#disk-space)
   - [About](#about)
   - [More Info](#more-info)
@@ -287,9 +291,17 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
 
-#### Mono and x86 builds are ending
+#### Invalid API Key
 
-- Mono and x86 builds are no longer be supported with v4. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
+{#invalid-api-key}
+
+- Your API key is too short. The API key must be at least 20 characters long. You can update it in Settings => General or in the config file.
+
+#### Package Maintainer Message
+
+{#package-maintainer-message}
+
+- Your package maintainer has provided a message. This is typically used to communicate important information about your Radarr installation or package.
 
 ### Download Clients
 
@@ -375,6 +387,12 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - Check your logs for more info; Refer to our Troubleshooting Guides
 
+#### Download Client Sorting Enabled
+
+{#download-folder-and-library-folder-not-different-folders}
+
+- Your download client has sorting enabled. Sorting will reorganize downloaded files in ways that may conflict with Radarr's import logic. Disable sorting in your download client settings.
+
 ### Completed/Failed Download Handling
 
 #### Completed Download Handling is disabled
@@ -402,14 +420,6 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - Radarr uses the RSS feed to pick up new releases as they come along. More info on that here
 - To correct this issue go to Settings => Indexers, select an indexer you have and enable RSS Sync
-
-#### No indexers are enabled
-
-- Radarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.
-
-#### Enabled indexers do not support searching
-
-- None of the indexers you have enabled support searching. This means Radarr will only be able to find new releases via the RSS feeds. But searching for movies (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
 
 #### No indexers available with Interactive Search Enabled
 
@@ -439,6 +449,12 @@ Note: you will also need to add the websocket directive to your radarr configura
 - Add each tracker in Jackett manually as an indexer in \*Arr
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
+
+#### Invalid Indexer Download Client Setting
+
+{#invalid-indexer-download-client-setting}
+
+- One or more of your indexers has a download client configured that no longer exists or is disabled. Go to Settings => Indexers and update or clear the download client assigned to the affected indexer(s).
 
 ### Movie Folders
 
@@ -493,11 +509,30 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - Typically this simply means that Radarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
 
+#### Import List Missing Root Folder
+
+{#import-list-missing-root-folder}
+
+- One or more of your import lists is pointing to a root folder that does not exist or is no longer available. Go to Settings => Import Lists and update the root folder path for the affected list(s).
+
 ### Notifications
 
-### Discord as Slack Notification
+#### Notifications are unavailable due to failures
+
+{#notifications-are-unavailable-due-to-failures}
+
+- One or more of your configured notifications is unavailable due to failures. Radarr has temporarily stopped sending notifications to the affected provider(s). Review System => Events for details on the failures or check the logs.
+- If you no longer use the notification connection, disable it in Radarr to prevent the errors.
+
+#### Discord as Slack Notification
 
 - You have Discord configured to use a Slack webhook. This is not advised and the native Discord functionality should be used instead. If you're receiving this that likely means you just configured this by following an outdated guide. Please advise the guide author to update their steps.
+
+### Cannot Write Recycle Bin
+
+{#cannot-write-recycle-bin}
+
+- The recycle bin path configured in Settings => Media Management is not writable by the user Radarr is running as. Correct the permissions on the recycle bin folder or choose a different path.
 
 ## Disk Space
 
@@ -536,6 +571,7 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
 - Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new movies. More info about lists can be found Settings => Lists.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Radarr
+- Refresh Collections - This goes through and refreshes all the metadata for all collections.
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Refresh Movie - This goes through and refreshes all the metadata for all monitored and unmonitored movies
 - RSS Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
