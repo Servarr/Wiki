@@ -38,13 +38,13 @@ For the automated import to succeed, structure and tag your files before pointin
 
 The recommended structure is:
 
-```
+```text
 <Root Folder>/<Release Artist>/<Release>/<Track>
 ```
 
 For example:
 
-```
+```text
 /music/Bob Dylan/Blood on the Tracks/01 - Tangled Up in Blue.flac
 /music/Bob Dylan/Blood on the Tracks/02 - Simple Twist of Fate.flac
 ```
