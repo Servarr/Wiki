@@ -2,7 +2,7 @@
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 published: true
-date: 2025-05-15T17:27:34.383Z
+date: 2026-06-07T00:00:00.000Z
 tags: settings, configuration, sonarr, profiles, quality, indexers
 editor: markdown
 dateCreated: 2021-06-11T23:29:12.300Z
@@ -147,6 +147,14 @@ Also, note that for each individual settings page, there are some options at the
 - Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
+- Colon Replacement Format - Select how colons are handled in episode names
+  - Delete - Remove colons (e.g. `Series Title Part 1`)
+  - Dash - Replace with a dash (e.g. `Series Title - Part 1`)
+  - Space Dash - Replace with a space and a dash (e.g. `Series Title - Part 1`)
+  - Space Dash Space - Replace with a space, dash, and space (e.g. `Series Title - Part 1`)
+  - Smart - Replaces a colon followed by a space with ` - `, otherwise deletes the colon (Default)
+  - Custom - Use a custom replacement string
+
 ### Standard Episode Format
 
 Standard Episode Format - Set the naming convention for your Standard Series Type episodes. Click on the `?` icon to bring up the `File Name Tokens` dialog box.
@@ -165,18 +173,26 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 ### Series Naming
 
 - `{Series Title}` = The Series Name's Title!
-- `{Series CleanTitleYear}` = The Series Names Title! 2010
-- `{Series TitleFirstCharacter}` = S
 - `{Series CleanTitle}` = The Series Names Title!
 - `{Series TitleThe}` = Series Name's Title!, The
+- `{Series CleanTitleThe}` = Series Names Title!, The
 - `{Series TitleYear}` = The Series Name's Title (2010)
+- `{Series CleanTitleYear}` = The Series Names Title! 2010
+- `{Series TitleTheYear}` = Series Name's Title!, The (2010)
+- `{Series CleanTitleTheYear}` = Series Names Title!, The 2010
+- `{Series TitleWithoutYear}` = The Series Name's Title!
+- `{Series CleanTitleWithoutYear}` = The Series Names Title!
+- `{Series TitleTheWithoutYear}` = Series Name's Title!, The
+- `{Series CleanTitleTheWithoutYear}` = Series Names Title!, The
+- `{Series TitleFirstCharacter}` = S
 - `{Series Year}` = (2010)
 
 ### Series IDs
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
-- `{TvMazeId}`= 54321
+- `{TvdbId}` = 123456
+- `{TmdbId}` = 123456
+- `{TvMazeId}` = 54321
 
 ### Seasons
 
@@ -202,6 +218,8 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 - `{Quality Full}` = HDTV 720p Proper
 - `{Quality Title}` = HDTV 720p
+- `{Quality Proper}` = Proper
+- `{Quality Real}` = REAL
 
 ### Media Info
 
@@ -209,9 +227,10 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
+- `{MediaInfo AudioLanguages}` = \[EN+DE\]
 - `{MediaInfo AudioLanguagesAll}` = \[DE\]
-- `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
+- `{MediaInfo SubtitleLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
@@ -271,17 +290,25 @@ See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more
 ### Series Naming
 
 - `{Series Title}` = Series Name!
-- `{Series CleanTitleYear}` = Series Title 2010
-- `{Series TitleFirstCharacter}` = S
 - `{Series CleanTitle}` = Series Title
 - `{Series TitleThe}` = Series Title, The
+- `{Series CleanTitleThe}` = Series Title, The
 - `{Series TitleYear}` = Series Title (2010)
+- `{Series CleanTitleYear}` = Series Title 2010
+- `{Series TitleTheYear}` = Series Title, The (2010)
+- `{Series CleanTitleTheYear}` = Series Title, The 2010
+- `{Series TitleWithoutYear}` = Series Name!
+- `{Series CleanTitleWithoutYear}` = Series Title
+- `{Series TitleTheWithoutYear}` = Series Title, The
+- `{Series CleanTitleTheWithoutYear}` = Series Title, The
+- `{Series TitleFirstCharacter}` = S
 - `{Series Year}` = (2010)
 
 ### Series IDs
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
+- `{TvdbId}` = 123456
+- `{TmdbId}` = 123456
 - `{TvMazeId}` = 54321
 
 ## Season Folder Format
@@ -862,10 +889,11 @@ If you download using a BitTorrent client, the process is slightly different:
 ### List Options
 
 - (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  This is provided dependent as per the UI.
-- (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at leasf one of your list(s)
+- (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at least one of your list(s)
   - Disabled - Do not clean the library (Recommended)
   - Log Only - Only log the series are not on the list(s) and take no other actions
   - Keep and Unmonitor Series - Keep series that are not on the list(s), but unmonitor them in Sonarr.
+  - Keep and Tag Series - Keep series that are not on the list(s) and tag them in Sonarr.
 
 ## List Exclusions
 
@@ -889,13 +917,17 @@ If you download using a BitTorrent client, the process is slightly different:
 - On Grab - Be notified when episodes are available for download and has been sent to a download client
 - On Import - {Formerly Known as On Download} Be notified when episodes are successfully imported
 - On Upgrade - Be notified when episodes are upgraded to a better quality
+- On Import Complete - Be notified when a download has been fully processed (fired after On Import/On Upgrade)
 - On Rename - Be notified when episodes are renamed
+- On Series Add - Be notified when a new series is added to Sonarr
 - On Series Delete - Be notified when series are deleted
 - On Episode File Delete - Be notified when episodes files are deleted
 - On Episode File Delete For Upgrade - Be notified when episode files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Health Restored - Be notified when a previously reported health issue is resolved
 - On Application Update - Be notified when Sonarr gets updated to a new version
+- On Manual Interaction Required - Be notified when manual interaction is required to resolve an import
 
 # Metadata
 
@@ -1028,3 +1060,5 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Style
 
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
+- Theme - Select the light or dark theme for the UI (Light/Dark/Auto)
+- UI Language - Select the language for the Sonarr UI

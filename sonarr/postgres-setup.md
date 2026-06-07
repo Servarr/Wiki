@@ -2,7 +2,7 @@
 title: Sonarr Configuring PostgreSQL Database
 description: Configuring Sonarr with a Postgres Database
 published: true
-date: 2025-05-29T21:37:27.122Z
+date: 2026-06-07T00:00:00.000Z
 tags: database, postgres, postgresql, setup, configuration, sonarr
 editor: markdown
 dateCreated: 2023-08-12T12:26:25.094Z
@@ -136,6 +136,7 @@ DELETE FROM "ScheduledTasks";
     select setval('public."ExtraFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "ExtraFiles"));
     select setval('public."History_Id_seq"',(SELECT MAX("Id")+1 FROM "History"));
     select setval('public."ImportListExclusions_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListExclusions"));
+    select setval('public."ImportListItems_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListItems"));
     select setval('public."ImportListStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportListStatus"));
     select setval('public."ImportLists_Id_seq"',(SELECT MAX("Id")+1 FROM "ImportLists"));
     select setval('public."IndexerStatus_Id_seq"',(SELECT MAX("Id")+1 FROM "IndexerStatus"));
@@ -155,6 +156,7 @@ DELETE FROM "ScheduledTasks";
     select setval('public."Series_Id_seq"',(SELECT MAX("Id")+1 FROM "Series"));
     select setval('public."SubtitleFiles_Id_seq"',(SELECT MAX("Id")+1 FROM "SubtitleFiles"));
     select setval('public."Tags_Id_seq"',(SELECT MAX("Id")+1 FROM "Tags"));
+    select setval('public."UpdateHistory_Id_seq"',(SELECT MAX("Id")+1 FROM "UpdateHistory"));
     select setval('public."Users_Id_seq"',(SELECT MAX("Id")+1 FROM "Users"));
     ```
 
