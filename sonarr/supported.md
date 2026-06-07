@@ -2,7 +2,7 @@
 title: Sonarr Supported
 description: Comprehensive list of supported indexers, download clients, and services for Sonarr
 published: true
-date: 2024-08-02T12:07:02.466Z
+date: 2026-06-07T00:00:00.000Z
 tags: sonarr, supported, indexers, download-clients, services, compatibility
 editor: markdown
 dateCreated: 2021-06-23T07:55:33.769Z
@@ -39,6 +39,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - rTorrent {#rtorrent}
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
 - SABnzbd {#sabnzbd}
+  - [Refer to the Settings Page](/sonarr/settings#download-clients)
+- Freebox Download {#torrentfreeboxdownload}
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
 - Torrent Blackhole {#torrentblackhole}
   - [Refer to the Settings Page](/sonarr/settings#download-clients)
@@ -126,14 +128,14 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 
-- Emby {#mediabrowser}
+- Emby / Jellyfin {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
 - Kodi {#xbmc}
   - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new episode has been added to Sonarr.
 - Mailgun {#mailgun}
-- Notifiar {#notifiar}
-- Ntfy.sh {#ntfysh}
+- Notifiarr {#notifiarr}
+- Ntfy.sh {#ntfy}
 
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded episode is available.
@@ -148,7 +150,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Pushcut {#pushcut}
 - Pushover {#pushover}
 - SendGrid {#sendgrid}
-- Signal {#signal-cli}
+- Signal {#signal}
   - Requires [Signal-CLI](https://github.com/AsamK/signal-cli)
 - Simplepush {#simplepush}
 - Slack {#slack}
@@ -169,11 +171,23 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 {#importlist}
 
+- AniList {#anilistimport}
+  - [Refer to the Settings Page](/sonarr/settings#import-lists)
+- Custom Lists {#customimport}
+  - [Refer to the Settings Page](/sonarr/settings#import-lists)
+- IMDb Lists {#imdblistimport}
+  - [Refer to the Settings Page](/sonarr/settings#import-lists)
+- MyAnimeList {#myanimelistimport}
+  - [Refer to the Settings Page](/sonarr/settings#import-lists)
+- Plex Watchlist {#pleximport}
+  - Simply add a Plex watchlist for the authenticated Plex user to Sonarr. Note that it's required that your list contain shows on it.
+  - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
+- Plex Watchlist RSS {#plexrssimport}
+  - [Refer to the Settings Page](/sonarr/settings#import-lists)
+- Simkl {#simkluserimport}
+  - [Refer to the Settings Page](/sonarr/settings#import-lists)
 - Sonarr {#sonarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Sonarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
-- Plex Watchlist {#pleximport}
-  - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain shows on it.
-  - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
 - Trakt List {#traktlistimport}
   - Username - Ensure you enter the actual username of the user and not the user's name
   - List - Ensure you use the list name as presented in the list URL
@@ -190,6 +204,9 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 {#metadata}
 
+- Kometa {#kometametadata}
+  - Enable - Enable metadata file creation for this metadata type
+  > Kometa metadata is deprecated. {.is-warning}
 - Kodi (XBMC) / Emby {#xbmcmetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Series Metadata - Create a `tvshow.nfo` with full series metadata
@@ -198,6 +215,9 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Series Images - Create various Series images including posters and banners named as `poster.jpg` and `banner.jpg`
   - Season Images - Create various Season images including posters and banners named as `season##-poster.jpg` and `season##-banner.jpg`
   - Episode Images - Create various Episode images such as thumnbnails named as named as `<filename>-thumb.jpg`
+- Plex {#plexmetadata}
+  - Enable - Enable metadata file creation for this metadata type
+  - Series Metadata - Create a `.plexmatch` file in the series root folder
 - Roksbox {#roksboxmetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Episode Metadata - Create `Season##\<filename>.xml` for each episode
