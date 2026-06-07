@@ -2,7 +2,7 @@
 title: Lidarr Reverse Proxy
 description: 
 published: true
-date: 2026-06-06T15:01:19.756Z
+date: 2026-06-07T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-03T20:10:58.279Z
@@ -35,7 +35,7 @@ location ^~ /lidarr {
     proxy_set_header Connection $http_connection;
 }
 # Allow the API External Access via NGINX
-location ~ /lidarr/api {
+location ^~ /lidarr/api {
     auth_basic off;
     proxy_pass http://127.0.0.1:8686;
 }

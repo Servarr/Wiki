@@ -2,7 +2,7 @@
 title: Lidarr Environment Variables
 description: Complete guide to Lidarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2026-05-29T13:14:55.964Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, docker, installation, scripts, postgres
 editor: markdown
 dateCreated: 2025-09-06T22:28:37.512Z
@@ -36,6 +36,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `AuthenticationEnabled`  | `AUTH`     | `ENABLED`            | `LIDARR__AUTH__ENABLED`           |
 | `AuthenticationMethod`   | `AUTH`     | `METHOD`             | `LIDARR__AUTH__METHOD`            |
 | `AuthenticationRequired` | `AUTH`     | `REQUIRED`           | `LIDARR__AUTH__REQUIRED`          |
+| `TrustCgnatIpAddresses`  | `AUTH`     | `TRUSTCGNATIPADDRESSES` | `LIDARR__AUTH__TRUSTCGNATIPADDRESSES` |
 | `LogLevel`               | `LOG`      | `LEVEL`              | `LIDARR__LOG__LEVEL`              |
 | `FilterSentryEvents`     | `LOG`      | `FILTERSENTRYEVENTS` | `LIDARR__LOG__FILTERSENTRYEVENTS` |
 | `LogRotate`              | `LOG`      | `ROTATE`             | `LIDARR__LOG__ROTATE`             |
@@ -47,13 +48,15 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `SyslogServer`           | `LOG`      | `SYSLOGSERVER`       | `LIDARR__LOG__SYSLOGSERVER`       |
 | `SyslogPort`             | `LOG`      | `SYSLOGPORT`         | `LIDARR__LOG__SYSLOGPORT`         |
 | `SyslogLevel`            | `LOG`      | `SYSLOGLEVEL`        | `LIDARR__LOG__SYSLOGLEVEL`        |
-| `DbEnabled`              | `LOG`      | `DBENABLED`          | `LIDARR__LOG__DBENABLED`          |
+| `LogDbEnabled`           | `LOG`      | `DBENABLED`          | `LIDARR__LOG__DBENABLED`          |
 | `PostgresHost`           | `POSTGRES` | `HOST`               | `LIDARR__POSTGRES__HOST`          |
 | `PostgresPort`           | `POSTGRES` | `PORT`               | `LIDARR__POSTGRES__PORT`          |
 | `PostgresUser`           | `POSTGRES` | `USER`               | `LIDARR__POSTGRES__USER`          |
 | `PostgresPassword`       | `POSTGRES` | `PASSWORD`           | `LIDARR__POSTGRES__PASSWORD`      |
 | `PostgresMainDb`         | `POSTGRES` | `MAINDB`             | `LIDARR__POSTGRES__MAINDB`        |
 | `PostgresLogDb`          | `POSTGRES` | `LOGDB`              | `LIDARR__POSTGRES__LOGDB`         |
+| `PostgresMainDbConnectionString` | `POSTGRES` | `MAINDBCONNECTIONSTRING` | `LIDARR__POSTGRES__MAINDBCONNECTIONSTRING` |
+| `PostgresLogDbConnectionString`  | `POSTGRES` | `LOGDBCONNECTIONSTRING`  | `LIDARR__POSTGRES__LOGDBCONNECTIONSTRING`  |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `LIDARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `LIDARR__SERVER__BINDADDRESS`     |
 | `Port`                   | `SERVER`   | `PORT`               | `LIDARR__SERVER__PORT`            |

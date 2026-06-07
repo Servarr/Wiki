@@ -2,7 +2,7 @@
 title: Lidarr Activity
 description: Monitor download progress, search history, and queue management in Lidarr
 published: true
-date: 2026-06-06T13:48:53.842Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, activity, queue, downloads, history, monitoring
 editor: markdown
 dateCreated: 2021-06-14T21:35:25.390Z
@@ -26,7 +26,7 @@ Lidarr only shows items that are in the download client category configured unde
 
 ### Queue columns
 
-The queue table shows the following columns by default: Status, Artist, Album Title, Quality, Formats, Protocol, Download Client, Output Path, Time Left, Added, and Progress. Use **Options** to show or hide columns or change their order.
+The queue table shows the following columns by default: Status, Artist, Album Title, Quality, Formats, Time Left, and Progress. Use **Options** to show or hide columns or change their order.
 
 ### Queue statuses
 
@@ -54,11 +54,11 @@ Click **Options** in the queue toolbar to open Table Options:
 
 | Option | Default | Description |
 |---|---|---|
-| Page Size | 250 | Number of queue items shown per page. |
+| Page Size | 20 | Number of queue items shown per page. |
 | Show Unknown Artist Items | On | Shows items in Lidarr's download client category that Lidarr can't match to any artist in your library (for example, removed artists or items added to the category manually). |
 | Columns | (see below) | Choose which columns are visible and their display order. |
 
-Available columns: Status, Artist, Album Title, Album Release Date, Quality, Formats, Custom Format Score, Protocol, Indexer, Download Client, Release Title, Size, and Output Path.
+Available columns: Status, Artist, Album Title, Album Release Date, Quality, Formats, Custom Format Score, Protocol, Indexer, Download Client, Release Title, Size, Output Path, Time Left, Added, and Progress.
 
 ## History
 
