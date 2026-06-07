@@ -2,7 +2,7 @@
 title: Radarr Quick Start Guide
 description: Step-by-step guide to setting up and configuring Radarr for movie management
 published: true
-date: 2023-10-08T19:12:23.566Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, quick-start, setup, configuration, guide, installation, movies
 editor: markdown
 dateCreated: 2021-06-20T20:05:44.814Z
@@ -326,7 +326,7 @@ When you see the movie you want click on it.
     > For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
     {.is-info}
 
-    - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
+    - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers that do not have fakes.
     - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
     - **Released**: Radarr shall consider movies available as soon as the Blu-Ray or streaming version is released (Digital and Physical dates on TMDb) This option is recommended and likely should be combined with an Availability Delay of `-14` or `-21` days.
       - If TMDb is not populated with a date, it is assumed 90 days after `Theatrical Date` (Oldest in theater's date) the movie is available in web or physical services.
