@@ -116,7 +116,7 @@ The asterisked fields above become the defaults for every artist the import crea
 
 ## After import
 
-Once the scan finishes, plan on a review pass. Even a well-prepared library will produce a small number of mismatches, and finding them early is cheaper than discovering them weeks later when Lidarr downloads the "missing" half of a mis-linked `Release`.
+Once the scan finishes, plan on a review pass. Even a well-prepared library will produce a small number of mismatches, and finding them early is cheaper than discovering them weeks later when Lidarr downloads the "missing" half of a mismatched `Release`.
 
 - **Check the library view** for artists with zero monitored `Releases`. Usually means the metadata profile filtered everything out; widen the profile or change it for that artist.
 - **Look for wrong-release matches.** Pick a few albums at random and verify the tracklist on the artist page matches what you have on disk. Mismatches most commonly appear with re-releases, remasters, and region-specific pressings — the text match picked a different `Release` than the one you own. Use the **Manual Import** or **Search for MusicBrainz ID** workflow to re-link.
@@ -134,4 +134,4 @@ If a `Release` or `Release Artist` you expect is genuinely missing from MusicBra
 - [Concepts](/lidarr/concepts) — the `Release` and `Artist` model that drives import behavior
 - [Quick Start](/lidarr/quick-start-guide) — install and first download, if you don't already have a library
 - [FAQ](/lidarr/faq) — common import and metadata issues
-- [Settings](/lidarr/settings) — detailed reference for every option referenced on thi
+- [Settings](/lidarr/settings) — detailed reference for every option referenced on this page
