@@ -2,7 +2,7 @@
 title: Prowlarr Search
 description:
 published: true
-date: 2025-07-15T20:42:03.748Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr
 editor: markdown
 dateCreated: 2021-06-08T23:31:53.221Z
@@ -79,6 +79,6 @@ Parameters
 - `type` - the search type to perform
   - `search` - Basic Text Query
   - `tvsearch` - TV Query - Supports TV parameters
-  - `moviesearch` - Movie Query - Supports Movie parameters
-  - `audiosearch` - Audio/Music Query - Supports Music parameters
-  - `booksearch` - Book Query - Supports Book parameters
+  - `movie` - Movie Query - Supports Movie parameters
+  - `music` - Audio/Music Query - Supports Music parameters
+  - `book` - Book Query - Supports Book parameters

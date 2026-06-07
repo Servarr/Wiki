@@ -2,7 +2,7 @@
 title: Prowlarr Settings
 description: Configuration guide for Prowlarr settings including applications, indexers, notifications, and general preferences
 published: true
-date: 2023-03-30T14:07:39.851Z
+date: 2026-06-07T00:00:00.000Z
 tags: settings, configuration, prowlarr, indexers, applications, notifications
 editor: markdown
 dateCreated: 2021-06-06T15:04:48.057Z
@@ -236,7 +236,8 @@ Connections are how you want Prowlarr to communicate with the outside world.
 - On Release Grab - Be notified on release grab from within Prowlarr or from the API
   - Include Manual Grabs - Be notified on grabs triggered manually within Prowlarr UI
 - On Health Issue - Be notified on health check failures
-  - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Health Restored - Be notified when a previously reported health issue is resolved
+  - Include Health Warnings - Be notified on health warnings in addition to errors. (Applies to both On Health Issue and On Health Restored)
 - On Application Update - Be notified when Prowlarr gets updated to a new version
 
 # Tags
@@ -265,6 +266,7 @@ Click on `Settings` => `General`.
 - Port Number - the port that Prowlarr runs on. It must be unique. (default: 9696)
 - BaseUrl - Enter a URL base here if you are using a reverse proxy. (restart required) (default: blank)
 - (Advanced Option) Instance Name - Name to use for Browser Tab and SysLog (if enabled) (restart required) (default: Prowlarr)
+- (Advanced Option) Application URL - The external URL used to access Prowlarr, including http(s)://, port, and URL base. Leave blank if not needed.
 - (Advanced Option) Use SSL - Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked. (default: false)
 - Launch Browser (Windows Only) - Check this box if you want a browser window to be launched when Prowlarr starts. (default: yes)
 
@@ -273,9 +275,12 @@ Click on `Settings` => `General`.
 ![general_security.png](/assets/prowlarr/general_security.png)
 
 - Authentication - How would you like to authenticate to access your Prowlarr instance
-  - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web
-  - Basic (Browser pop-up) - This option when accessing your Prowlarr will show a small pop-up allowing you to input a Username and Password
+  - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Prowlarr or your Prowlarr is not exposed to the web
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
+  - External - External authentication is handled by a reverse proxy. Prowlarr will trust authentication headers passed by the proxy.
+- Authentication Required - Controls which requests require authentication
+  - Enabled - All requests require authentication
+  - Disabled for Local Addresses - Requests from local network addresses bypass authentication; all remote requests still require authentication
 - API Key - API key is used by outside apps accessing Prowlarr. This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
 - Certificate Validation - Change how strict HTTPS certification validation is
   - Enabled - Validate all HTTPS certificates (recommended)
@@ -301,12 +306,13 @@ Proxy - This option allows you to run the information your Prowlarr pulls and se
 
 ![general_logging.png](/assets/prowlarr/general_logging.png)
 
-The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
+The default log level is `Debug`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
 
 - Log level - Probably one of the most useful troubleshooting tools
   - Info - This is the most basic way that Prowlarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
   - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
   - Trace - The most advance and detailed logging on Prowlarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+- (Advanced Option) Log Size Limit - Maximum log file size in MB before archiving. Valid range is 1-10 MB. (default: `1`)
 
 ## Analytics
 

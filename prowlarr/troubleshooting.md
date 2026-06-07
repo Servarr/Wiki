@@ -2,7 +2,7 @@
 title: Prowlarr Troubleshooting
 description: Comprehensive troubleshooting guide for common Prowlarr issues and problems
 published: true
-date: 2026-02-01T14:29:00.489Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, troubleshooting, help, problems, issues, debugging
 editor: markdown
 dateCreated: 2021-06-20T20:05:25.223Z
@@ -72,7 +72,7 @@ To provide good and useful logs for sharing:
 1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
 2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
 3. Reproduce the Issue (Redo what is breaking things)
-4. [Open the trace log file (Lidarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+4. [Open the trace log file (prowlarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
 6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
