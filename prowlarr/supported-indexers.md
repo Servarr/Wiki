@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-04T03:56:10.843096
+date: 2026-06-07T03:51:27.413683
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-04T03:56:10.843096
+dateCreated: 2026-06-07T03:51:27.413683
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
-  - [Prowlarr Indexers Commit: 8ca04ff70aeee1ee1219edfcb2384961fedf2bbf](https://github.com/Prowlarr/Indexers/commit/8ca04ff70aeee1ee1219edfcb2384961fedf2bbf)
+  - [Prowlarr Indexers Commit: b544662ce8c65c2635e8194aa5298d386bfae7fe](https://github.com/Prowlarr/Indexers/commit/b544662ce8c65c2635e8194aa5298d386bfae7fe)
 
 ---
 
@@ -110,7 +110,7 @@ dateCreated: 2026-06-04T03:56:10.843096
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://www.darkfox1.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://www.darkfox2.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
