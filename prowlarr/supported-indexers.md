@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-07T03:51:27.413683
+date: 2026-06-08T03:56:28.437875
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-07T03:51:27.413683
+dateCreated: 2026-06-08T03:56:28.437875
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
-  - [Prowlarr Indexers Commit: b544662ce8c65c2635e8194aa5298d386bfae7fe](https://github.com/Prowlarr/Indexers/commit/b544662ce8c65c2635e8194aa5298d386bfae7fe)
+  - [Prowlarr Indexers Commit: efc1f5bad0d20fc757957a06ee13afb976c31e26](https://github.com/Prowlarr/Indexers/commit/efc1f5bad0d20fc757957a06ee13afb976c31e26)
 
 ---
 
@@ -588,7 +588,6 @@ dateCreated: 2026-06-07T03:51:27.413683
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torr9](https://torr9.net/){#torr9}|Torr9 is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
-|[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
