@@ -2,7 +2,7 @@
 title: Lidarr Appdata Directory
 description: Guide to Lidarr application data directory structure, configuration files, and data management
 published: true
-date: 2026-05-29T13:18:45.952Z
+date: 2026-06-08T13:02:12.338Z
 tags: lidarr, appdata, configuration, directory, files, data, structure
 editor: markdown
 dateCreated: 2021-06-09T15:53:13.142Z
@@ -26,7 +26,7 @@ The installation instructions specify `/var/lib/lidarr`
 
 {#os-x}
 
-`/Users/$USER/.config/Lidarr` or `~/.config/Lidarr`
+`/Users/$USER/Library/Application Support/Lidarr` or `~/Library/Application Support/Lidarr`
 
 # Synology
 
