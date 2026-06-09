@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-08T03:56:28.437875
+date: 2026-06-09T03:26:05.375404
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-08T03:56:28.437875
+dateCreated: 2026-06-09T03:26:05.375404
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5391` / [Commit: 1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b](https://github.com/Prowlarr/Prowlarr/commit/1d7c91aabbd3fbb9a6e46ec24ab097e3f018c44b)
-  - [Prowlarr Indexers Commit: efc1f5bad0d20fc757957a06ee13afb976c31e26](https://github.com/Prowlarr/Indexers/commit/efc1f5bad0d20fc757957a06ee13afb976c31e26)
+  - [Prowlarr Indexers Commit: ad276be5fb66ddf6e32bdd54c4ba6d09dc307178](https://github.com/Prowlarr/Indexers/commit/ad276be5fb66ddf6e32bdd54c4ba6d09dc307178)
 
 ---
 
@@ -103,8 +103,8 @@ dateCreated: 2026-06-08T03:56:28.437875
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome247.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip228.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome248.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip229.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -314,7 +314,6 @@ dateCreated: 2026-06-08T03:56:28.437875
 |[Explosiv-World](https://explosiv-world.biz/){#explosiv-world}|Explosiv-World (E-W) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ExtremeBits](https://extremebits.net/){#extremebits}|ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS|English (United States)|
 |[F1Carreras (API)](https://f1carreras.xyz/){#f1carreras-api}|F1Carreras is a SPANISH Private Torrent Tracker for Motor Racing TV Releases|Spanish (Mexico)|
-|[F1GP](https://f1gp.xyz/){#f1gp}|F1GP is a Private Torrent Tracker for F1, F2, F3, FE, F1 Academy Racing|English (United States)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
@@ -484,6 +483,7 @@ dateCreated: 2026-06-08T03:56:28.437875
 |[Party-Tracker](https://party-tracker.info/){#party-tracker}|Party-Tracker is a HUNGARIAN private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[PassThePopcorn](https://passthepopcorn.me){#passthepopcorn}|PassThePopcorn (PTP) is a Private site for MOVIES / TV|English (United States)|
 |[Peeratiko](https://peeratiko.org/){#peeratiko}|Peeratiko is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
+|[PeerGarden](https://peergarden.org/){#peergarden}|PeerGarden (PG) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Peers\.FM](https://peers.fm/){#peersfm}|Peers\.FM is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[Phoenix Project](https://phoenixproject.app/){#phoenixproject}|Phoenix Project is a Private MacOS software tracker|English (United States)|
 |[PigNetwork (猪猪网)](https://piggo.me/){#pignetwork}|PigNetwork (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
@@ -592,6 +592,7 @@ dateCreated: 2026-06-08T03:56:28.437875
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL|Turkish (Turkey)|
+|[TorrentAvenue (API)](https://torrentavenue.online/){#torrentavenue-api}|TorrentAvenue is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|TorrentBD is a BANGLADESH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentCCF](https://et8.org/){#torrentccf}|TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TorrentClaw](https://torrentclaw.com/){#torrentclaw}|TorrentClaw is a Private aggregate indexer of 10+ Public Torrent Trackers, with additional 'TrueSpec' metadata and quality score|English (United States)|
@@ -611,6 +612,7 @@ dateCreated: 2026-06-08T03:56:28.437875
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private Torrent Tracker for MUSIC|English (United States)|
 |[TreZzoR](https://tracker.czech-server.com/){#trezzor}|TreZzoR is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[TreZzoRCookie](https://tracker.czech-server.com/){#trezzorcookie}|TreZzoR is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL\. This uses the cookie method for access|Czech (Czech Republic)|
+|[TSDB](https://f1gp.xyz/){#tsdb}|TSDB (The Sports Database) is a Private Torrent Tracker for SPORTS|English (United States)|
 |[TurkSeed (API)](https://turkseed.com/){#turkseed-api}|TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TurkTorrent](https://turktorrent.us/){#turktorrent}|TurkTorrent (TT) is a TURKISH Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[U2](https://u2.dmhy.org/){#u2}|U2 (U2分享園@動漫花園) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
