@@ -2,7 +2,7 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2026-06-06T14:25:49.056Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, installation, postgres, database
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -119,6 +119,7 @@ Before migrating, run Lidarr against the created Postgres databases **at least o
    select setval('public."Albums_Id_seq"', (SELECT MAX("Id")+1 FROM "Albums"));
    select setval('public."ArtistMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "ArtistMetadata"));
    select setval('public."Artists_Id_seq"', (SELECT MAX("Id")+1 FROM "Artists"));
+   select setval('public."AutoTagging_Id_seq"', (SELECT MAX("Id")+1 FROM "AutoTagging"));
    select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
    select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
    select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
@@ -141,6 +142,7 @@ Before migrating, run Lidarr against the created Postgres databases **at least o
    select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
    select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
    select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+   select setval('public."NotificationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "NotificationStatus"));
    select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
    select setval('public."Profiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
    select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
@@ -151,6 +153,7 @@ Before migrating, run Lidarr against the created Postgres databases **at least o
    select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
    select setval('public."TrackFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "TrackFiles"));
    select setval('public."Tracks_Id_seq"', (SELECT MAX("Id")+1 FROM "Tracks"));
+   select setval('public."UpdateHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "UpdateHistory"));
    select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
    ```
 

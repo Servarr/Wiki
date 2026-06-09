@@ -2,7 +2,7 @@
 title: Radarr Supported
 description: Comprehensive list of supported indexers, download clients, and services for Radarr
 published: true
-date: 2024-06-16T13:47:46.803Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, supported, indexers, download-clients, services, compatibility
 editor: markdown
 dateCreated: 2021-06-23T07:55:24.002Z
@@ -27,6 +27,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Download Station {#usenetdownloadstation}
   - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Flood {#flood}
+  - [Refer to the Settings Page](/radarr/settings#download-clients)
+- Freebox Download {#torrentfreeboxdownload}
   - [Refer to the Settings Page](/radarr/settings#download-clients)
 - Hadouken {#hadouken}
   - [Refer to the Settings Page](/radarr/settings#download-clients)
@@ -64,9 +66,6 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
-- omgwtfnzbs {#omgwtfnzbs}
-  - A defunct legacy implementation of a private usenet indexer. Use Newznab instead.
-  - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
 ## Torrents
 
@@ -109,7 +108,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 {#notification}
 
-- Boxcar {#boxcar}
+- Apprise {#apprise}
 - Custom Script {#customscript}
   - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/radarr/custom-scripts) for more details.
 - Discord {#discord}
@@ -119,7 +118,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 
-- Emby {#mediabrowser}
+- Emby / Jellyfin {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
 - Kodi {#xbmc}
@@ -127,6 +126,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
   - See the entry on [Useful Tools - Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
+- ntfy.sh {#ntfy}
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
   - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
@@ -137,7 +137,10 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Pushbullet {#pushbullet}
 - Pushcut {#pushcut}
 - Pushover {#pushover}
+- Pushsafer {#pushsafer}
 - SendGrid {#sendgrid}
+- Signal {#signal}
+- Simplepush {#simplepush}
 - Slack {#slack}
 - Synology Indexer {#synologyindexer}
 - Telegram {#telegram}
@@ -164,6 +167,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - Requires: v4.1.0.6176+
   - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.
   - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
+- Plex Watchlist RSS {#plexrss}
+  - Add a Plex watchlist via an RSS feed URL.
 - Radarr {#radarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
@@ -191,6 +196,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
       </rss>
       ```
 
+- Simkl User Watchlist {#simkl}
+  - Add movies from your Simkl watchlist.
 - StevenLu Custom {#stevenluimport}
   - Allows you to create custom movies lists in json format.
    Your feed requires for each movie either a `title` or an `imdb_id`, both can be provided.
@@ -245,6 +252,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Emby (Legacy) {#mediabrowsermetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Movie Metadata - Enable metadata file creation for this metadata type
+- Kometa {#kometametadata}
+  - Deprecated - This metadata consumer has been deprecated
 - Kodi (XBMC) / Emby {#xbmcmetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Movie Metadata - Create a `<filename>.nfo` with the movie metadata

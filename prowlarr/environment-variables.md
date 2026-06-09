@@ -2,7 +2,7 @@
 title: Prowlarr Environment Variables
 description: Complete guide to Prowlarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2025-12-16T17:02:47.867Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, docker, installation, postgres
 editor: markdown
 dateCreated: 2025-09-06T22:30:15.859Z
@@ -36,6 +36,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `AuthenticationEnabled`  | `AUTH`     | `ENABLED`            | `PROWLARR__AUTH__ENABLED`           |
 | `AuthenticationMethod`   | `AUTH`     | `METHOD`             | `PROWLARR__AUTH__METHOD`            |
 | `AuthenticationRequired` | `AUTH`     | `REQUIRED`           | `PROWLARR__AUTH__REQUIRED`          |
+| `TrustCgnatIpAddresses`  | `AUTH`     | `TRUSTCGNATIPADDRESSES` | `PROWLARR__AUTH__TRUSTCGNATIPADDRESSES` |
 | `LogLevel`               | `LOG`      | `LEVEL`              | `PROWLARR__LOG__LEVEL`              |
 | `FilterSentryEvents`     | `LOG`      | `FILTERSENTRYEVENTS` | `PROWLARR__LOG__FILTERSENTRYEVENTS` |
 | `LogRotate`              | `LOG`      | `ROTATE`             | `PROWLARR__LOG__ROTATE`             |
@@ -47,13 +48,15 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `SyslogServer`           | `LOG`      | `SYSLOGSERVER`       | `PROWLARR__LOG__SYSLOGSERVER`       |
 | `SyslogPort`             | `LOG`      | `SYSLOGPORT`         | `PROWLARR__LOG__SYSLOGPORT`         |
 | `SyslogLevel`            | `LOG`      | `SYSLOGLEVEL`        | `PROWLARR__LOG__SYSLOGLEVEL`        |
-| `DbEnabled`              | `LOG`      | `DBENABLED`          | `PROWLARR__LOG__DBENABLED`          |
+| `LogDbEnabled`           | `LOG`      | `DBENABLED`          | `PROWLARR__LOG__DBENABLED`          |
 | `PostgresHost`           | `POSTGRES` | `HOST`               | `PROWLARR__POSTGRES__HOST`          |
 | `PostgresPort`           | `POSTGRES` | `PORT`               | `PROWLARR__POSTGRES__PORT`          |
 | `PostgresUser`           | `POSTGRES` | `USER`               | `PROWLARR__POSTGRES__USER`          |
 | `PostgresPassword`       | `POSTGRES` | `PASSWORD`           | `PROWLARR__POSTGRES__PASSWORD`      |
 | `PostgresMainDb`         | `POSTGRES` | `MAINDB`             | `PROWLARR__POSTGRES__MAINDB`        |
 | `PostgresLogDb`          | `POSTGRES` | `LOGDB`              | `PROWLARR__POSTGRES__LOGDB`         |
+| `PostgresMainDbConnectionString` | `POSTGRES` | `MAINDBCONNECTIONSTRING` | `PROWLARR__POSTGRES__MAINDBCONNECTIONSTRING` |
+| `PostgresLogDbConnectionString`  | `POSTGRES` | `LOGDBCONNECTIONSTRING`  | `PROWLARR__POSTGRES__LOGDBCONNECTIONSTRING`  |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `PROWLARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `PROWLARR__SERVER__BINDADDRESS`     |
 | `Port`                   | `SERVER`   | `PORT`               | `PROWLARR__SERVER__PORT`            |

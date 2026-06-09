@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: List of supported music indexers, trackers, and download clients compatible with Lidarr
 published: true
-date: 2026-06-06T14:26:29.292Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, indexers, music, supported, download-clients, compatibility, trackers
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -17,6 +17,9 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 
 {#downloadclient}
 
+- Aria2 {#aria2}
+  - Open-source, multi-protocol download utility supporting HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - Deluge {#deluge}
   - Open-source, cross-platform BitTorrent client with a web UI and remote daemon.
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
@@ -28,6 +31,9 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - Flood {#flood}
   - Modern web UI for rTorrent (and other torrent backends) with a clean interface and real-time updates.
+  - [Refer to the Settings Page](/lidarr/settings#download-clients)
+- Freebox Download {#torrentfreeboxdownload}
+  - Download client built into Free's Freebox home router/gateway.
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - Hadouken {#hadouken}
   - Open-source BitTorrent client with a web UI.
@@ -114,12 +120,91 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 
 {#notification}
 
-- Boxcar {#boxcar}
-  - iOS push notification service.
+- Apprise {#apprise}
+  - Allows notifications to be sent to many popular notification services via a single interface.
 - Custom Script {#customscript}
   - Runs a user-supplied script when a specified event occurs. See [Custom Scripts](/lidarr/custom-scripts) for the full list of available environment variables and example scripts.
 - Discord {#discord}
   - Sends notifications to a Discord channel via webhook. One of the most commonly used notification integrations.
 - Email {#email}
   - Sends notification emails. If you use Gmail, enable App Passwords under your Google account security settings rather than using your main password.
-  > You can use a display nam
+  > You can use a display name with the address: `Your Name <email@example.com>`
+  {.is-info}
+- Emby / Jellyfin {#mediabrowser}
+  - Notifies an Emby or Jellyfin server to refresh its music library after a track is imported or upgraded.
+- Gotify {#gotify}
+  - Self-hosted push notification server.
+- Join {#join}
+  - Push notification service for Android devices.
+- Kodi {#xbmc}
+  - Notifies a Kodi instance to refresh its music library after a track is imported or upgraded. Kodi is a free, open-source media centre application.
+- Mailgun {#mailgun}
+  - Transactional email API service for sending notification emails.
+- Notifiarr {#notifiarr}
+  - See [Useful Tools — Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
+- ntfy.sh {#ntfy}
+  - Self-hostable push notification service with a simple HTTP API.
+- Plex Media Server {#plexserver}
+  - Notifies a Plex Media Server to refresh its music library after a track is imported or upgraded.
+- Prowl {#prowl}
+  - iOS push notification service.
+- Pushbullet {#pushbullet}
+  - Cross-platform notification and file sharing service.
+- Pushcut {#pushcut}
+  - iOS app for automation and notifications.
+- Pushover {#pushover}
+  - Simple push notification service for mobile devices.
+- SendGrid {#sendgrid}
+  - Transactional email API service for sending notification emails.
+- Signal {#signal}
+  - Sends notifications via the Signal messaging app. Requires a running [Signal-CLI](https://github.com/AsamK/signal-cli) instance.
+- Simplepush {#simplepush}
+  - Simple push notification service requiring no account.
+- Slack {#slack}
+  - Sends notifications to a Slack channel via webhook.
+- Subsonic {#subsonic}
+  - Notifies a Subsonic-compatible server to update its music library.
+- Synology Indexer {#synologyindexer}
+  - Triggers a Synology NAS media indexer scan after a track is imported or upgraded.
+- Telegram {#telegram}
+  - Sends notifications to a Telegram chat or channel via a bot.
+- Twitter {#twitter}
+  - Posts notifications to a Twitter account.
+- Webhook {#webhook}
+  - Sends an HTTP POST request to a configured URL when events occur.
+
+## Lists
+
+{#importlist}
+
+- Custom List {#customlist}
+  - Import artists from a manually maintained list.
+- Headphones {#headphonesimport}
+  - Import artists from a [Headphones](https://github.com/rembo10/headphones) instance.
+- Last.fm Tag {#lastfmtag}
+  - Import artists via a Last.fm genre or style tag.
+- Last.fm User {#lastfmuser}
+  - Import artists from a Last.fm user's listening history or loved tracks.
+- Lidarr {#lidarrimport}
+  - Sync monitored artists from another Lidarr instance.
+- Lidarr Lists {#lidarrlists}
+  - Import artists from curated Lidarr community lists.
+- MusicBrainz Series {#musicbrainzseries}
+  - Import artists belonging to a [MusicBrainz Series](https://musicbrainz.org/doc/Series).
+- Spotify Followed Artists {#spotifyfollowedartists}
+  - Import artists you follow on Spotify.
+- Spotify Playlists {#spotifyplaylist}
+  - Import artists from your Spotify playlists.
+- Spotify Saved Albums {#spotifysavedalbums}
+  - Import artists from your Spotify saved albums.
+
+## Metadata
+
+{#metadata}
+
+- Kodi (XBMC) / Emby {#xbmcmetadata}
+  - Generates `.nfo` sidecar files for artist and album folders, compatible with Kodi and Emby/Jellyfin.
+- Roksbox {#roksboxmetadata}
+  - Generates metadata files compatible with Roksbox media players.
+- WDTV {#wdtvmetadata}
+  - Generates metadata files compatible with WD TV media players.

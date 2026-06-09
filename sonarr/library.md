@@ -2,7 +2,7 @@
 title: Sonarr Library
 description: Manage your TV series collection, monitor status, and organize media in Sonarr
 published: true
-date: 2022-10-28T17:18:11.116Z
+date: 2026-06-07T00:00:00.000Z
 tags: sonarr, library, series, management, collection, organization
 editor: markdown
 dateCreated: 2021-06-11T23:31:01.289Z
@@ -25,9 +25,13 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
   - All Episodes - Monitor all episodes except specials
   - Future Episodes - Monitor episodes that have not aired yet
   - Missing Episodes - Monitor episodes that do not have files or have not aired yet
-  - Existing Episodes - Monitor episodes that have files
+  - Existing Episodes - Monitor episodes that have files or have not aired yet
+  - Recent Episodes - Monitor episodes aired within the last 90 days and future episodes
+  - Pilot Episode - Only monitor the first episode of the first season
   - First Season - Monitor all episodes of the first season; all other seasons will be ignored
-  - Latest Season - Monitor all episodes of the latest season and future seasons
+  - Last Season - Monitor all episodes of the last season
+  - Monitor Specials - Monitor all special episodes without changing the monitored status of other episodes
+  - Unmonitor Specials - Unmonitor all special episodes without changing the monitored status of other episodes
   - None - No episodes will be monitored
 - Quality Profile - The [quality profile](/sonarr/settings#quality-profiles) to use for this series
 - Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](/sonarr/faq#whats-the-different-series-types)

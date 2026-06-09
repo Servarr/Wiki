@@ -2,7 +2,7 @@
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
 published: true
-date: 2026-02-01T14:30:34.852Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, troubleshooting
 editor: markdown
 dateCreated: 2021-08-03T21:05:52.988Z
@@ -595,7 +595,7 @@ Adding each indexer separately It allows for fine tuning of categories on a per 
 
 Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Radarr for many indexers in NZBHydra2) rather than multiple (i.e. many NZBHydra2 entries in Radarr for many indexers in NZBHydra2) has the same problems as noted above with Jackett's `/all` endpoint.
 
-### Invalid response received from TMDB
+### Invalid response received from RadarrAPI
 
 If you are performing a search, and get this error message, please check your log. If the error code is "503.ServiceUnavailable", then you have one of these issues going on:
 

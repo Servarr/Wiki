@@ -2,7 +2,7 @@
 title: Radarr Environment Variables
 description: Complete guide to Radarr environment variables for configuration management including Docker, database, authentication, and server settings
 published: true
-date: 2025-12-16T17:03:58.213Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, docker, installation, configuration, postgres, environment-variables
 editor: markdown
 dateCreated: 2025-09-06T22:32:10.936Z
@@ -36,6 +36,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `AuthenticationEnabled`  | `AUTH`     | `ENABLED`            | `RADARR__AUTH__ENABLED`           |
 | `AuthenticationMethod`   | `AUTH`     | `METHOD`             | `RADARR__AUTH__METHOD`            |
 | `AuthenticationRequired` | `AUTH`     | `REQUIRED`           | `RADARR__AUTH__REQUIRED`          |
+| `TrustCgnatIpAddresses`  | `AUTH`     | `TRUSTCGNATIPADDRESSES` | `RADARR__AUTH__TRUSTCGNATIPADDRESSES` |
 | `LogLevel`               | `LOG`      | `LEVEL`              | `RADARR__LOG__LEVEL`              |
 | `FilterSentryEvents`     | `LOG`      | `FILTERSENTRYEVENTS` | `RADARR__LOG__FILTERSENTRYEVENTS` |
 | `LogRotate`              | `LOG`      | `ROTATE`             | `RADARR__LOG__ROTATE`             |
@@ -47,13 +48,15 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `SyslogServer`           | `LOG`      | `SYSLOGSERVER`       | `RADARR__LOG__SYSLOGSERVER`       |
 | `SyslogPort`             | `LOG`      | `SYSLOGPORT`         | `RADARR__LOG__SYSLOGPORT`         |
 | `SyslogLevel`            | `LOG`      | `SYSLOGLEVEL`        | `RADARR__LOG__SYSLOGLEVEL`        |
-| `DbEnabled`              | `LOG`      | `DBENABLED`          | `RADARR__LOG__DBENABLED`          |
+| `LogDbEnabled`           | `LOG`      | `DBENABLED`          | `RADARR__LOG__DBENABLED`          |
 | `PostgresHost`           | `POSTGRES` | `HOST`               | `RADARR__POSTGRES__HOST`          |
 | `PostgresPort`           | `POSTGRES` | `PORT`               | `RADARR__POSTGRES__PORT`          |
 | `PostgresUser`           | `POSTGRES` | `USER`               | `RADARR__POSTGRES__USER`          |
 | `PostgresPassword`       | `POSTGRES` | `PASSWORD`           | `RADARR__POSTGRES__PASSWORD`      |
 | `PostgresMainDb`         | `POSTGRES` | `MAINDB`             | `RADARR__POSTGRES__MAINDB`        |
 | `PostgresLogDb`          | `POSTGRES` | `LOGDB`              | `RADARR__POSTGRES__LOGDB`         |
+| `PostgresMainDbConnectionString` | `POSTGRES` | `MAINDBCONNECTIONSTRING` | `RADARR__POSTGRES__MAINDBCONNECTIONSTRING` |
+| `PostgresLogDbConnectionString`  | `POSTGRES` | `LOGDBCONNECTIONSTRING`  | `RADARR__POSTGRES__LOGDBCONNECTIONSTRING`  |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `RADARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `RADARR__SERVER__BINDADDRESS`     |
 | `Port`                   | `SERVER`   | `PORT`               | `RADARR__SERVER__PORT`            |

@@ -2,7 +2,7 @@
 title: Lidarr Quick Start
 description: From a fresh install to your first Lidarr download in about 15 minutes
 published: true
-date: 2026-05-29T12:59:41.748Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, library, setup, music, quick-start, getting-started
 editor: markdown
 dateCreated: 2021-06-13T06:14:53.615Z
@@ -98,10 +98,10 @@ Search for the artist you want — Lidarr looks them up in MusicBrainz. Select t
 
 ![lidarr_qs_addnewdylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnewdylan.png)
 
-Keep the defaults:
+Use these settings:
 
 - **Root Folder** — the one you just created.
-- **Monitor** — None (for now).
+- **Monitor** — set to **None** (the UI default is "All Albums"; change it to None so Lidarr doesn't immediately queue everything).
 - **Quality Profile** — Any.
 - **Tags** — empty.
 - **Start search for missing albums** — unchecked.

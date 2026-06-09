@@ -2,7 +2,7 @@
 title: Lidarr Calendar
 description: View upcoming album releases and track music release schedules
 published: true
-date: 2026-05-29T13:10:48.016Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, calendar, releases, schedule, albums, music, planning
 editor: markdown
 dateCreated: 2021-06-14T21:35:03.094Z
@@ -18,9 +18,11 @@ Each release tile is color-coded to show its current status:
 
 | Color | Meaning |
 |---|---|
-| Green | Files on disk; Lidarr has this release. |
+| Green | All tracks downloaded; Lidarr has a complete copy of this release. |
 | Blue | Monitored and upcoming; the release date is in the future. |
-| Yellow/Orange | Monitored, released, and missing; past release date but no files yet. |
+| Purple | Currently downloading; the release is in the queue or was recently grabbed. |
+| Orange/Yellow | Partially downloaded; some but not all tracks are on disk. |
+| Red | Monitored, released, and missing; past release date but no files found. |
 | Grey | Unmonitored; Lidarr isn't looking for this release. |
 
 ## Navigation
@@ -55,8 +57,8 @@ The **Options** button opens the Calendar Options dialog, split into two section
 
 | Option | Default | Description |
 |---|---|---|
-| Collapse Multiple Albums | On | When more than one album from the same artist releases on the same day, collapse them into a single tile instead of showing each one. |
-| Icon for Cutoff Unmet | On | Show a visual indicator on release tiles where files exist but the quality cutoff hasn't been met. |
+| Collapse Multiple Albums | Off | When more than one album from the same artist releases on the same day, collapse them into a single tile instead of showing each one. |
+| Icon for Cutoff Unmet | Off | Show a visual indicator on release tiles where files exist but the quality cutoff hasn't been met. |
 
 **Global** (apply across all browsers and users):
 

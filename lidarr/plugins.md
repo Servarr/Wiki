@@ -2,7 +2,7 @@
 title: Lidarr Plugins
 description: Basic Setup and Details for Plugins beta Testing Branch
 published: true
-date: 2026-06-06T14:27:08.256Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, installation, plugins, configuration
 editor: markdown
 dateCreated: 2025-01-18T16:05:16.687Z
@@ -52,7 +52,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 ### Post Install
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. Installation takes a few seconds depending on your setup.
-- If `/system/plugins` doesn't appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
+- If `/system/plugins` doesn't appear in the menu, ensure you are running the `nightly` build of Lidarr. The Plugins menu item is only present in the nightly branch.
 
 ## Next Steps
 
@@ -66,6 +66,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 
 > Both plugins and this documentation are community-driven. No official recommendations exist. Each developer supports their own plugin.
 {.is-info}
+
 ## jtstothard/UniqueSingles
 
 [UniqueSingles by jtstothard](https://github.com/jtstothard/lidarr-plugin-uniquesingles)
@@ -185,7 +186,6 @@ To search, you must also add Slskd as an Indexer.
 
 Slskd is now available for both automatic and interactive searches. During Lidarr search operations you can view the slskd `/searches` as they occur and monitor `/downloads`.
 
-
 ## TypNull/Tubifarry
 
 [Tubifarry by TypNull](https://github.com/TypNull/Tubifarry) is a *multi-feature* plugin that extends Lidarr's capabilities with these key functions:
@@ -218,7 +218,6 @@ Slskd is now available for both automatic and interactive searches. During Lidar
 
 > See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
 {.is-info}
-
 
 ## TrevTV
 
@@ -257,7 +256,6 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
    - FFmpeg required for Tidal conversions
    - Qobuz authentication may require custom app IDs
 
-
 ## ta264/deemix
 
 [Deemix plugin by ta264](https://github.com/ta264/Lidarr.Plugin.Deemix)
@@ -266,9 +264,6 @@ This plugin enables Lidarr to search Deezer using Deemix. You must have a workin
 
 [Deemix](https://github.com/bambanah/deemix)
 
-
 ## lucapolesel/Lidarr.Plugin.Slskd
 
 [Slskd (Soulseek) by lucapolesel](https://github.com/lucapolesel/Lidarr.Plugin.Slskd)
-
-

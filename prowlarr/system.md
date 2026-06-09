@@ -2,7 +2,7 @@
 title: Prowlarr System
 description: System information, logs, scheduled tasks, and status monitoring for Prowlarr administration and troubleshooting
 published: true
-date: 2025-08-24T14:57:37.363Z
+date: 2026-06-07T00:00:00.000Z
 tags: system, administration, logs, tasks, status, prowlarr
 editor: markdown
 dateCreated: 2021-08-03T21:21:08.969Z
@@ -24,11 +24,9 @@ dateCreated: 2021-08-03T21:21:08.969Z
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+      - [Invalid API Key](#invalid-api-key)
     - [Download Clients](#download-clients)
-      - [No download client is available](#no-download-client-is-available)
-      - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
-      - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
-      - [Bad Download Client Settings](#bad-download-client-settings)
+      - [Download clients are unavailable due to failures](#download-clients-are-unavailable-due-to-failures)
     - [Indexers](#indexers)
       - [Indexers Have No Definition](#indexers-have-no-definition)
       - [Indexers are Obsolete](#indexers-are-obsolete)
@@ -36,10 +34,17 @@ dateCreated: 2021-08-03T21:21:08.969Z
         - [Obsolete due to Site Removals](#obsolete-due-to-site-removals)
       - [No indexers are enabled](#no-indexers-are-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+      - [Indexers are unavailable due to failures for more than 6 hours](#indexers-are-unavailable-due-to-failures-for-more-than-6-hours)
       - [Indexer VIP Expiring](#indexer-vip-expiring)
       - [Indexer VIP Expired](#indexer-vip-expired)
+      - [Indexers with invalid download clients](#indexers-with-invalid-download-clients)
+    - [Indexer Proxies](#indexer-proxies)
+      - [Indexer proxies are unavailable due to failures](#indexer-proxies-are-unavailable-due-to-failures)
     - [Applications](#applications)
       - [Applications are unavailable due to failures](#applications-are-unavailable-due-to-failures)
+      - [Applications are unavailable due to failures for more than 6 hours](#applications-are-unavailable-due-to-failures-for-more-than-6-hours)
+    - [Notifications](#notifications)
+      - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
   - [Disk Space](#disk-space)
   - [About](#about)
   - [More Info](#more-info)
@@ -73,6 +78,9 @@ This page contains a list of health checks errors. These health checks are perio
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
+
+> If your installed version is more than 180 days old, this escalates from a Warning to an Error.
+{.is-warning}
 
 #### Cannot install update because startup folder is not writable by the user
 
@@ -149,30 +157,17 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
+#### Invalid API Key
+
+- Your Prowlarr API key is shorter than the required minimum of 20 characters. Update your API key in Settings or the config file to be at least 20 characters long.
+
 ### Download Clients
 
-#### No download client is available
+#### Download clients are unavailable due to failures
 
-- A properly configured and enabled download client is required for Prowlarr to be able to download media. Since Prowlarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Prowlarr to use it and create a category. See Settings => Download Client.
-
-#### Unable to communicate with download client
-
-- Prowlarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
-- This is typically due to improperly configured download client. Things you can typically check:
-- Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-- The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Prowlarr.
-- Ensure SSL encryption is not turned on if you're using both your Prowlarr instance and your download client on a local network. See the SSL FAQ entry for more information.
-- Using rutorrent requires special settings changes as it requires https.
-
-#### Download clients are unavailable due to failure
-
-- One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
+- One or more of your download clients is not responding to requests made by Prowlarr. Therefore Prowlarr has decided to temporarily stop querying the download client on its normal cycle. However, Prowlarr will continue to attempt to send downloads to the client, but will in all likelihood fail.
 - You should inspect System=>Logs to see what the reason is for the failures.
 - If you no longer use this download client, disable it in Prowlarr to prevent the errors.
-
-#### Bad Download Client Settings
-
-- The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from Windows to Linux or Linux to Windows without a remote path map.
 
 ### Indexers
 
@@ -212,6 +207,13 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 - You can prevent the warning by disabling the affected indexer.
 - Run the Test on the indexer to force Prowlarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
 
+#### Indexers are unavailable due to failures for more than 6 hours
+
+- One or more of your indexers has been continuously unavailable for more than 6 hours. Prowlarr will continue to back off retries for the affected indexer(s).
+- Check Events and filter for Warnings to get a quick idea of what issues have occurred historically.
+- Please inspect the logs to determine what kind of error causes the problem.
+- You can prevent the warning by disabling the affected indexer.
+
 #### Indexer VIP Expiring
 
 - Your VIP subscription or benefits to your indexer expire within the next 7 days or less based on the expiration date you configured for your indexer in Prowlarr.
@@ -219,6 +221,17 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 #### Indexer VIP Expired
 
 - Your VIP subscription or benefits to your indexer have expired based on the expiration date you configured into for indexer in Prowlarr.
+
+#### Indexers with invalid download clients
+
+- One or more of your indexers is configured with a download client that is either disabled or no longer exists. Check Settings => Download Clients and update or remove the download client assignment on the affected indexer(s).
+
+### Indexer Proxies
+
+#### Indexer proxies are unavailable due to failures
+
+- One or more of your configured indexer proxies is failing its test. Check Settings => Indexer Proxies and verify that the proxy configuration is correct and the proxy is reachable.
+- You can prevent the warning by disabling the affected proxy.
 
 ### Applications
 
@@ -230,6 +243,21 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 - Prowlarr will be unable to sync to the application and it is more than likely the application will be unable to use Prowlarr's indexers.
 - You can prevent the warning by disabling the affected application.
 - Run the Test on the application to force Prowlarr to recheck the application, please note that the Health Check warning will not always disappear immediately.
+
+#### Applications are unavailable due to failures for more than 6 hours
+
+- One or more of your applications has been continuously unavailable for more than 6 hours. Prowlarr will be unable to sync indexers to the affected application(s).
+- Check Events and filter for Warnings to get a quick idea of what issues have occurred historically.
+- Please inspect the logs to determine what kind of error causes the problem.
+- You can prevent the warning by disabling the affected application.
+
+### Notifications
+
+#### Notifications are unavailable due to failures
+
+- One or more of your configured notifications is failing. Prowlarr will temporarily back off sending notifications to the affected notification provider(s).
+- Please inspect the logs to determine what kind of error causes the problem.
+- You can prevent the warning by disabling the affected notification.
 
 ## Disk Space
 
@@ -264,8 +292,11 @@ This page lists all scheduled tasks that Prowlarr runs
 
 - Backup - This will run a backup of your Prowlarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Prowlarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
+- Clean Up History - This will clean up history records on the configured schedule. History retention is configured in Settings => General.
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Prowlarr
+- Refresh Indexer Definitions - Downloads and refreshes Cardigann/YML indexer definitions from the Prowlarr Indexers repository.
+- Sync Application Indexers - Syncs the indexer list in Prowlarr to all configured applications (e.g. Sonarr, Radarr, Lidarr).
 
 > All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 {.is-info}

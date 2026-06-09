@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
-date: 2026-05-29T13:03:38.922Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -21,7 +21,7 @@ Lidarr writes script output to the log files:
 | Output | Log level | Log file |
 |---|---|---|
 | `stdout` | `Debug` | `config/logs/Lidarr.debug.txt` |
-| `stderr` | `Info` | `config/logs/Lidarr.txt` |
+| `stderr` | `Error` | `config/logs/Lidarr.txt` |
 | Script trigger | `Trace` | `config/logs/Lidarr.trace.txt` |
 
 Enable **Debug** or **Trace** logging in **Settings → General → Logging** to see script output in the log files.
