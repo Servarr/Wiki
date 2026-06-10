@@ -24,6 +24,8 @@ Prowlarr can automatically sync indexers with various applications
   - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Mylar {#mylar}
   - [Refer to the Settings Page](/prowlarr/settings#applications)
+- Qui {#qui}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Radarr {#radarr}
   - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Readarr {#readarr}
