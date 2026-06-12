@@ -2,7 +2,7 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2026-06-12T12:53:24.698Z
+date: 2026-06-12T13:03:27.430Z
 tags: lidarr, installation, postgres, database
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -235,21 +235,24 @@ Add a second entry for the log database if you want to preserve it as well.
 
 The following PowerShell script creates a scheduled task that backs up both databases daily and removes dumps older than the retention period. Run it once as Administrator. Re-run it with updated parameters to change the schedule or connection details.
 
+**Prerequisite:** `pg_dump` must be available on the host. If you installed Postgres natively, the client tools are included. If you are running Postgres via Docker with no native install, install the [PostgreSQL client tools](https://www.postgresql.org/download/windows/) separately, or use the Docker `pg_dump` approach from the [Creating a backup](#creating-a-backup) section above instead of this script.
+
 ```powershell
 # New-LidarrBackupTask.ps1
 # Creates a Windows scheduled task that backs up Lidarr's Postgres databases.
 #
 # Parameters:
-#   -PgHost         Postgres host             (default: localhost)
-#   -PgPort         Postgres port             (default: 5432)
-#   -PgUser         Postgres username         (default: qstick)
-#   -PgPassword     Postgres password         (default: qstick)
-#   -MainDb         Main database name        (default: lidarr-main)
-#   -LogDb          Log database name         (default: lidarr-log)
-#   -BackupDir      Directory for dump files  (default: %ProgramData%\Lidarr\Backups\postgres)
-#   -RetentionDays  Days of backups to keep   (default: 7)
-#   -RunAt          Daily run time HH:mm      (default: 02:00)
-#   -TaskName       Scheduled task name       (default: Lidarr Postgres Backup)
+#   -PgHost         Postgres host                        (default: localhost)
+#   -PgPort         Postgres port                        (default: 5432)
+#   -PgUser         Postgres username                    (default: qstick)
+#   -PgPassword     Postgres password                    (default: qstick)
+#   -MainDb         Main database name                   (default: lidarr-main)
+#   -LogDb          Log database name                    (default: lidarr-log)
+#   -BackupDir      Directory for dump files             (default: %ProgramData%\Lidarr\Backups\postgres)
+#   -RetentionDays  Days of backups to keep              (default: 7)
+#   -RunAt          Daily run time HH:mm                 (default: 02:00)
+#   -TaskName       Scheduled task name                  (default: Lidarr Postgres Backup)
+#   -PgDumpPath     Full path to pg_dump.exe (optional)  (default: auto-detect)
 
 param(
     [string]$PgHost        = "localhost",
@@ -261,13 +264,35 @@ param(
     [string]$BackupDir     = "$env:ProgramData\Lidarr\Backups\postgres",
     [int]   $RetentionDays = 7,
     [string]$RunAt         = "02:00",
-    [string]$TaskName      = "Lidarr Postgres Backup"
+    [string]$TaskName      = "Lidarr Postgres Backup",
+    [string]$PgDumpPath    = ""
 )
 
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(
         [Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Error "Run this script as Administrator."
     exit 1
+}
+
+# Resolve pg_dump before writing the backup script so we fail early with a clear message.
+if ($PgDumpPath) {
+    if (-not (Test-Path $PgDumpPath)) {
+        Write-Error "pg_dump not found at '$PgDumpPath'."
+        exit 1
+    }
+    $resolvedPgDump = $PgDumpPath
+} elseif (Get-Command 'pg_dump' -ErrorAction SilentlyContinue) {
+    $resolvedPgDump = 'pg_dump'
+} else {
+    $found = Get-ChildItem 'C:\Program Files\PostgreSQL' -Filter 'pg_dump.exe' -Recurse -ErrorAction SilentlyContinue |
+             Sort-Object FullName -Descending |
+             Select-Object -First 1
+    if ($found) {
+        $resolvedPgDump = $found.FullName
+    } else {
+        Write-Error "pg_dump not found. Install PostgreSQL client tools, add the bin directory to PATH, or pass -PgDumpPath with the full path to pg_dump.exe."
+        exit 1
+    }
 }
 
 $installDir = "$env:ProgramData\Lidarr"
@@ -280,31 +305,18 @@ foreach ($dir in $installDir, $BackupDir) {
 # Write the backup script with connection details embedded.
 # To change settings, re-run New-LidarrBackupTask.ps1 rather than editing this file.
 @"
-`$PgHost        = '$PgHost'
-`$PgPort        = $PgPort
-`$PgUser        = '$PgUser'
-`$PgPassword    = '$PgPassword'
-`$MainDb        = '$MainDb'
-`$LogDb         = '$LogDb'
-`$BackupDir     = '$BackupDir'
+`$pgDump       = '$resolvedPgDump'
+`$PgHost       = '$PgHost'
+`$PgPort       = $PgPort
+`$PgUser       = '$PgUser'
+`$PgPassword   = '$PgPassword'
+`$MainDb       = '$MainDb'
+`$LogDb        = '$LogDb'
+`$BackupDir    = '$BackupDir'
 `$RetentionDays = $RetentionDays
 
 `$env:PGPASSWORD = `$PgPassword
 `$date = Get-Date -Format 'yyyyMMdd-HHmmss'
-
-# Locate pg_dump. Uses PATH first, then searches common install locations.
-`$pgDump = 'pg_dump'
-if (-not (Get-Command `$pgDump -ErrorAction SilentlyContinue)) {
-    `$found = Get-ChildItem 'C:\Program Files\PostgreSQL' -Filter 'pg_dump.exe' -Recurse -ErrorAction SilentlyContinue |
-              Sort-Object FullName -Descending |
-              Select-Object -First 1
-    if (`$found) {
-        `$pgDump = `$found.FullName
-    } else {
-        Write-Error 'pg_dump not found. Add the PostgreSQL bin directory to PATH or install PostgreSQL client tools.'
-        exit 1
-    }
-}
 
 if (-not (Test-Path `$BackupDir)) { New-Item -ItemType Directory -Path `$BackupDir | Out-Null }
 
@@ -345,6 +357,7 @@ Register-ScheduledTask -TaskName $TaskName `
 Write-Host "Task '$TaskName' registered. Backups will run daily at $RunAt."
 Write-Host "Backup script: $scriptPath"
 Write-Host "Dump directory: $BackupDir"
+Write-Host "Using pg_dump: $resolvedPgDump"
 ```
 
 Run the script from an elevated PowerShell prompt:
@@ -353,7 +366,13 @@ Run the script from an elevated PowerShell prompt:
 .\New-LidarrBackupTask.ps1 -PgPassword "yourpassword" -RetentionDays 14
 ```
 
-The script writes `Invoke-LidarrBackup.ps1` to `%ProgramData%\Lidarr\` with your connection details embedded, then registers a daily scheduled task running as the SYSTEM account. To update the schedule or connection details, re-run `New-LidarrBackupTask.ps1` with the new parameters rather than editing the generated script directly.
+If `pg_dump` is not in PATH and not under `C:\Program Files\PostgreSQL`, pass the full path explicitly:
+
+```powershell
+.\New-LidarrBackupTask.ps1 -PgPassword "yourpassword" -PgDumpPath "C:\Program Files\PostgreSQL\17\bin\pg_dump.exe"
+```
+
+The script resolves `pg_dump` at setup time and bakes the path into the generated backup script, so the scheduled task does not depend on PATH being set correctly for the SYSTEM account. It writes `Invoke-LidarrBackup.ps1` to `%ProgramData%\Lidarr\` with your connection details embedded, then registers a daily scheduled task running as the SYSTEM account. To update the schedule or connection details, re-run `New-LidarrBackupTask.ps1` with the new parameters rather than editing the generated script directly.
 
 By default, dumps are written to `%ProgramData%\Lidarr\Backups\postgres`, alongside Lidarr's own backup files. If you are running multiple Servarr apps against the same Postgres instance, use `-BackupDir` to specify a shared location instead:
 
