@@ -2,7 +2,7 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2026-06-06T14:25:49.056Z
+date: 2026-06-12T12:43:34.868Z
 tags: lidarr, installation, postgres, database
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -155,3 +155,205 @@ Before migrating, run Lidarr against the created Postgres databases **at least o
    ```
 
 6. Start Lidarr.
+
+## Backing up and restoring Postgres
+
+> Lidarr's built-in backup covers only the application config (`config.xml`) and, when using SQLite, the database files. It does not back up a Postgres database. Restoring a Lidarr backup will not restore your Postgres data.
+{.is-danger}
+
+Use `pg_dump` to back up each database separately. The examples below use the `postgres:17` Docker container from the setup above. Adjust the container name, user, and database names to match your environment.
+
+### Creating a backup
+
+**Native Postgres install:**
+
+```shell
+pg_dump -U qstick -F c -f /path/to/backups/lidarr-main.dump lidarr-main
+pg_dump -U qstick -F c -f /path/to/backups/lidarr-log.dump lidarr-log
+```
+
+**Docker:**
+
+```shell
+docker exec postgres17 pg_dump -U qstick -F c lidarr-main > /path/to/backups/lidarr-main.dump
+docker exec postgres17 pg_dump -U qstick -F c lidarr-log > /path/to/backups/lidarr-log.dump
+```
+
+The `-F c` flag uses the custom format, which is compressed and supports selective restore with `pg_restore`. Use `-F p` for a plain SQL file if you prefer something human-readable.
+
+### Restoring from a backup
+
+1. Stop Lidarr.
+2. Drop and recreate the target databases so you start from a clean state:
+
+   ```sql
+   DROP DATABASE "lidarr-main";
+   DROP DATABASE "lidarr-log";
+   CREATE DATABASE "lidarr-main";
+   CREATE DATABASE "lidarr-log";
+   ```
+
+3. Restore each dump:
+
+   **Native Postgres install:**
+
+   ```shell
+   pg_restore -U qstick -d lidarr-main /path/to/backups/lidarr-main.dump
+   pg_restore -U qstick -d lidarr-log /path/to/backups/lidarr-log.dump
+   ```
+
+   **Docker:**
+
+   ```shell
+   docker exec -i postgres17 pg_restore -U qstick -d lidarr-main < /path/to/backups/lidarr-main.dump
+   docker exec -i postgres17 pg_restore -U qstick -d lidarr-log < /path/to/backups/lidarr-log.dump
+   ```
+
+4. Start Lidarr.
+
+### Automating backups
+
+> Keep several days of rolling backups. A single backup file that gets overwritten daily gives you no recovery point if the database was already corrupted before the last dump ran.
+{.is-warning}
+
+Store dumps in a location that is included in your normal system or offsite backup.
+
+#### Linux and macOS
+
+Use `cron` to schedule a daily dump. The example below backs up the main database and removes dumps older than 7 days:
+
+```shell
+0 2 * * * pg_dump -U qstick -F c lidarr-main > /path/to/backups/lidarr-main-$(date +\%Y\%m\%d).dump && find /path/to/backups -name "lidarr-main-*.dump" -mtime +7 -delete
+```
+
+Add a second entry for the log database if you want to preserve it as well.
+
+#### Windows
+
+> The scripts below are provided for convenience and reference only. They are not supported by the Servarr team. Review them before running and adapt them to your environment.
+{.is-warning}
+
+The following PowerShell script creates a scheduled task that backs up both databases daily and removes dumps older than the retention period. Run it once as Administrator. Re-run it with updated parameters to change the schedule or connection details.
+
+```powershell
+# New-LidarrBackupTask.ps1
+# Creates a Windows scheduled task that backs up Lidarr's Postgres databases.
+#
+# Parameters:
+#   -PgHost         Postgres host             (default: localhost)
+#   -PgPort         Postgres port             (default: 5432)
+#   -PgUser         Postgres username         (default: qstick)
+#   -PgPassword     Postgres password         (default: qstick)
+#   -MainDb         Main database name        (default: lidarr-main)
+#   -LogDb          Log database name         (default: lidarr-log)
+#   -BackupDir      Directory for dump files  (default: C:\ProgramData\lidarr-backup\dumps)
+#   -RetentionDays  Days of backups to keep   (default: 7)
+#   -RunAt          Daily run time HH:mm      (default: 02:00)
+#   -TaskName       Scheduled task name       (default: Lidarr Postgres Backup)
+
+param(
+    [string]$PgHost        = "localhost",
+    [int]   $PgPort        = 5432,
+    [string]$PgUser        = "qstick",
+    [string]$PgPassword    = "qstick",
+    [string]$MainDb        = "lidarr-main",
+    [string]$LogDb         = "lidarr-log",
+    [string]$BackupDir     = "C:\ProgramData\lidarr-backup\dumps",
+    [int]   $RetentionDays = 7,
+    [string]$RunAt         = "02:00",
+    [string]$TaskName      = "Lidarr Postgres Backup"
+)
+
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(
+        [Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Error "Run this script as Administrator."
+    exit 1
+}
+
+$installDir = "C:\ProgramData\lidarr-backup"
+$scriptPath = Join-Path $installDir "Invoke-LidarrBackup.ps1"
+
+foreach ($dir in $installDir, $BackupDir) {
+    if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir | Out-Null }
+}
+
+# Write the backup script with connection details embedded.
+# To change settings, re-run New-LidarrBackupTask.ps1 rather than editing this file.
+@"
+`$PgHost        = '$PgHost'
+`$PgPort        = $PgPort
+`$PgUser        = '$PgUser'
+`$PgPassword    = '$PgPassword'
+`$MainDb        = '$MainDb'
+`$LogDb         = '$LogDb'
+`$BackupDir     = '$BackupDir'
+`$RetentionDays = $RetentionDays
+
+`$env:PGPASSWORD = `$PgPassword
+`$date = Get-Date -Format 'yyyyMMdd-HHmmss'
+
+# Locate pg_dump. Uses PATH first, then searches common install locations.
+`$pgDump = 'pg_dump'
+if (-not (Get-Command `$pgDump -ErrorAction SilentlyContinue)) {
+    `$found = Get-ChildItem 'C:\Program Files\PostgreSQL' -Filter 'pg_dump.exe' -Recurse -ErrorAction SilentlyContinue |
+              Sort-Object FullName -Descending |
+              Select-Object -First 1
+    if (`$found) {
+        `$pgDump = `$found.FullName
+    } else {
+        Write-Error 'pg_dump not found. Add the PostgreSQL bin directory to PATH or install PostgreSQL client tools.'
+        exit 1
+    }
+}
+
+if (-not (Test-Path `$BackupDir)) { New-Item -ItemType Directory -Path `$BackupDir | Out-Null }
+
+function Invoke-Dump {
+    param([string]`$Db, [string]`$Label)
+    `$file = Join-Path `$BackupDir "`$Label-`$date.dump"
+    & `$pgDump -h `$PgHost -p `$PgPort -U `$PgUser -F c -f `$file `$Db
+    if (`$LASTEXITCODE -ne 0) {
+        Write-Error "Backup of `$Db failed (exit code `$LASTEXITCODE)."
+        exit 1
+    }
+    Write-Host "Backed up `$Db to `$file"
+}
+
+Invoke-Dump -Db `$MainDb -Label 'lidarr-main'
+Invoke-Dump -Db `$LogDb  -Label 'lidarr-log'
+
+Get-ChildItem `$BackupDir -Filter '*.dump' |
+    Where-Object { `$_.LastWriteTime -lt (Get-Date).AddDays(-`$RetentionDays) } |
+    ForEach-Object {
+        Remove-Item `$_.FullName
+        Write-Host "Removed old backup: `$(`$_.Name)"
+    }
+
+`$env:PGPASSWORD = ''
+"@ | Set-Content -Path $scriptPath -Encoding UTF8
+
+$action    = New-ScheduledTaskAction -Execute 'powershell.exe' `
+                 -Argument "-NonInteractive -ExecutionPolicy Bypass -File `"$scriptPath`""
+$trigger   = New-ScheduledTaskTrigger -Daily -At $RunAt
+$settings  = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 1) -StartWhenAvailable
+$principal = New-ScheduledTaskPrincipal -UserId 'SYSTEM' -LogonType ServiceAccount -RunLevel Highest
+
+Register-ScheduledTask -TaskName $TaskName `
+    -Action $action -Trigger $trigger -Settings $settings -Principal $principal `
+    -Force | Out-Null
+
+Write-Host "Task '$TaskName' registered. Backups will run daily at $RunAt."
+Write-Host "Backup script: $scriptPath"
+Write-Host "Dump directory: $BackupDir"
+```
+
+Run the script from an elevated PowerShell prompt:
+
+```powershell
+.\New-LidarrBackupTask.ps1 -PgPassword "yourpassword" -BackupDir "D:\backups\lidarr" -RetentionDays 14
+```
+
+The script writes `Invoke-LidarrBackup.ps1` to `C:\ProgramData\lidarr-backup\` with your connection details embedded, then registers a daily scheduled task running as the SYSTEM account. To update the schedule or connection details, re-run `New-LidarrBackupTask.ps1` with the new parameters rather than editing the generated script directly.
+
+> The password is stored in plain text inside the generated script. Restrict access to `C:\ProgramData\lidarr-backup\` to administrator accounts only.
+{.is-warning}
