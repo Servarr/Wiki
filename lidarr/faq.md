@@ -2,7 +2,7 @@
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
 published: true
-date: 2026-06-06T14:35:31.217Z
+date: 2026-06-12T14:23:52.565Z
 tags: lidarr, troubleshooting, faq, questions, help, common-issues
 editor: markdown
 dateCreated: 2021-06-14T14:33:41.344Z
@@ -132,6 +132,17 @@ Imports fail in one of a few ways:
 - **You're importing an existing library and the match fails.** See [Importing an Existing Library](/lidarr/importing-existing-library) for the fresh-install walkthrough and the lenience rules that apply to library imports.
 - **Lidarr can't read or write the folder.** The user account Lidarr runs as must have read and write access to both the download folder and the destination root folder. On Linux this is a UID/GID/permissions issue on a mount; on Windows it's Lidarr running as `LocalService` which can't reach a network share. See [Why can't Lidarr see my files on a remote server?](#why-cant-lidarr-see-my-files-on-a-remote-server) for the Windows case.
 - **Untagged or badly tagged files.** Files with generic filenames like `track01.mp3` and no tags give Lidarr nothing to match on. Run a tagger such as [MusicBrainz Picard](https://picard.musicbrainz.org/) or [Harmony](https://harmony.pulsewidth.org.uk/) before importing. See [Import Troubleshooting → Untagged or badly tagged files](/lidarr/import-troubleshooting#untagged-or-badly tagged-files).
+
+### I copied files into Lidarr's root folder but Lidarr can't see them
+
+Lidarr owns its root folder. It is the only thing that should be placing files there. Copying or moving files directly into the root folder -- or into an artist subfolder inside it -- bypasses the import pipeline, and Lidarr will not pick them up.
+
+To import files you obtained outside of Lidarr (a Bandcamp download, for example):
+
+1. Place the files in a folder Lidarr has read access to that is not the root folder -- your download client's completed folder works well.
+2. In Lidarr, go to **Wanted -> Manual Import**, point it at that folder, and work through the match dialog.
+
+Lidarr then moves the files into the root folder itself, registers them in its database, and tracks them normally from that point on.
 
 ### How can I rename my artist folders?
 
