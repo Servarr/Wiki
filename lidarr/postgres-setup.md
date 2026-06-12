@@ -2,7 +2,7 @@
 title: Lidarr Configuring PostgreSQL Database
 description: Configuring Lidarr with a Postgres Database
 published: true
-date: 2026-06-12T12:49:28.526Z
+date: 2026-06-12T12:53:24.698Z
 tags: lidarr, installation, postgres, database
 editor: markdown
 dateCreated: 2022-11-25T01:35:56.796Z
@@ -246,7 +246,7 @@ The following PowerShell script creates a scheduled task that backs up both data
 #   -PgPassword     Postgres password         (default: qstick)
 #   -MainDb         Main database name        (default: lidarr-main)
 #   -LogDb          Log database name         (default: lidarr-log)
-#   -BackupDir      Directory for dump files  (default: C:\ProgramData\lidarr-backup\dumps)
+#   -BackupDir      Directory for dump files  (default: %ProgramData%\Lidarr\Backups\postgres)
 #   -RetentionDays  Days of backups to keep   (default: 7)
 #   -RunAt          Daily run time HH:mm      (default: 02:00)
 #   -TaskName       Scheduled task name       (default: Lidarr Postgres Backup)
@@ -270,7 +270,7 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     exit 1
 }
 
-$installDir = "C:\ProgramData\lidarr-backup"
+$installDir = "$env:ProgramData\Lidarr"
 $scriptPath = Join-Path $installDir "Invoke-LidarrBackup.ps1"
 
 foreach ($dir in $installDir, $BackupDir) {
@@ -353,7 +353,7 @@ Run the script from an elevated PowerShell prompt:
 .\New-LidarrBackupTask.ps1 -PgPassword "yourpassword" -RetentionDays 14
 ```
 
-The script writes `Invoke-LidarrBackup.ps1` to `C:\ProgramData\lidarr-backup\` with your connection details embedded, then registers a daily scheduled task running as the SYSTEM account. To update the schedule or connection details, re-run `New-LidarrBackupTask.ps1` with the new parameters rather than editing the generated script directly.
+The script writes `Invoke-LidarrBackup.ps1` to `%ProgramData%\Lidarr\` with your connection details embedded, then registers a daily scheduled task running as the SYSTEM account. To update the schedule or connection details, re-run `New-LidarrBackupTask.ps1` with the new parameters rather than editing the generated script directly.
 
 By default, dumps are written to `%ProgramData%\Lidarr\Backups\postgres`, alongside Lidarr's own backup files. If you are running multiple Servarr apps against the same Postgres instance, use `-BackupDir` to specify a shared location instead:
 
@@ -361,5 +361,5 @@ By default, dumps are written to `%ProgramData%\Lidarr\Backups\postgres`, alongs
 .\New-LidarrBackupTask.ps1 -PgPassword "yourpassword" -BackupDir "D:\backups\servarr\postgres"
 ```
 
-> The password is stored in plain text inside the generated script. Restrict access to `C:\ProgramData\lidarr-backup\` to administrator accounts only.
+> The password is stored in plain text inside the generated script. Restrict access to `%ProgramData%\Lidarr\` to administrator accounts only.
 {.is-warning}
