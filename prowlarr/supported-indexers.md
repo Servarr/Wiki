@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-13T03:38:05.981025
+date: 2026-06-17T04:02:45.952892
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-13T03:38:05.981025
+dateCreated: 2026-06-17T04:02:45.952892
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5396` / [Commit: d6e8466d3ee32915d35476b9c225453984992697](https://github.com/Prowlarr/Prowlarr/commit/d6e8466d3ee32915d35476b9c225453984992697)
-  - [Prowlarr Indexers Commit: 3cbe0c3008ad598af915283b5623714690344ca3](https://github.com/Prowlarr/Indexers/commit/3cbe0c3008ad598af915283b5623714690344ca3)
+  - [Prowlarr Indexers Commit: 2edf12ae96cd3719389074723cb1d02e2184e5a9](https://github.com/Prowlarr/Indexers/commit/2edf12ae96cd3719389074723cb1d02e2184e5a9)
 
 ---
 
@@ -103,8 +103,8 @@ dateCreated: 2026-06-13T03:38:05.981025
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome248.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip229.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome249.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip230.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -113,7 +113,7 @@ dateCreated: 2026-06-13T03:38:05.981025
 |[World-torrent](https://www.darkfox2.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
-|[YTS](https://yts.bz/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
+|[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[Zamunda RIP](https://zamunda.rip/){#zamundarip}|Zamunda RIP is a BULGARIAN Public Torrent Archive for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
 
 ### Semi-Private Trackers
