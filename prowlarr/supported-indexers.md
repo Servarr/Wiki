@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-17T04:02:45.952892
+date: 2026-06-18T03:53:58.109748
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-17T04:02:45.952892
+dateCreated: 2026-06-18T03:53:58.109748
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.4.0.5396` / [Commit: d6e8466d3ee32915d35476b9c225453984992697](https://github.com/Prowlarr/Prowlarr/commit/d6e8466d3ee32915d35476b9c225453984992697)
-  - [Prowlarr Indexers Commit: 2edf12ae96cd3719389074723cb1d02e2184e5a9](https://github.com/Prowlarr/Indexers/commit/2edf12ae96cd3719389074723cb1d02e2184e5a9)
+  - [Prowlarr Indexers Commit: c57f054443c0846cf27a6c094a8ada7de7c1fa10](https://github.com/Prowlarr/Indexers/commit/c57f054443c0846cf27a6c094a8ada7de7c1fa10)
 
 ---
 
@@ -471,6 +471,7 @@ dateCreated: 2026-06-17T04:02:45.952892
 |[OldToonsWorld (API)](https://oldtoons.world/){#oldtoonsworld}|Old Toons World (OTW) is a Private Torrent Tracker for ANIMATED MOVIES / TV|English (United States)|
 |[OnlyEncodes+ (API)](https://onlyencodes.cc/){#onlyencodes-api}|OnlyEncodes+ is a Private Tracker for MOVIES / TV|English (United States)|
 |[OpenCD](https://open.cd/){#opencd}|OpenCD is a CHINESE Private Torrent Tracker for LOSSLESS ASIAN MUSIC|Chinese (China)|
+|[Order66](https://executeorder66.info/){#order66}|Order66 is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Orpheus](https://orpheus.network/){#orpheus}|Orpheus (APOLLO) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[OshenPT](https://www.oshen.win/){#oshenpt}|OshenPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[OurBits](https://ourbits.club/){#ourbits}|OurBits (HDPter) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
