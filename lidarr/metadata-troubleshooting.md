@@ -197,7 +197,7 @@ To add a Spotify relationship on MusicBrainz, open the release and go to **Edit*
 ## Retry or wait
 
 | Situation | Action |
-|---|---|
+| --- | --- |
 | You just submitted an edit at MusicBrainz | Wait ~3 hours, then **Refresh Artist** in Lidarr |
 | You just uploaded cover art to the Cover Art Archive | Allow days, not hours — covers propagate slower than metadata |
 | A release status was `unknown` and you changed it | Wait ~3 hours after the edit's visible on MusicBrainz, then **Refresh Artist** |

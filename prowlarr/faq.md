@@ -166,7 +166,7 @@ When Full Sync is enabled, Prowlarr compares the following settings between the 
 ### Sonarr
 
 | Setting | Description | Code Reference |
-|---------|-------------|----------------|
+| --------- | ------------- | ---------------- |
 | **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `SonarrIndexer.cs:71` |
 | **Enable RSS** | Whether RSS feeds are enabled for the indexer | `SonarrIndexer.cs:68` |
 | **Enable Automatic Search** | Whether automatic searches are enabled | `SonarrIndexer.cs:69` |
@@ -188,7 +188,7 @@ When Full Sync is enabled, Prowlarr compares the following settings between the 
 ### Radarr
 
 | Setting | Description | Code Reference |
-|---------|-------------|----------------|
+| --------- | ------------- | ---------------- |
 | **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `RadarrIndexer.cs:61` |
 | **Enable RSS** | Whether RSS feeds are enabled for the indexer | `RadarrIndexer.cs:58` |
 | **Enable Automatic Search** | Whether automatic searches are enabled | `RadarrIndexer.cs:59` |
@@ -207,7 +207,7 @@ When Full Sync is enabled, Prowlarr compares the following settings between the 
 ### Lidarr
 
 | Setting | Description | Code Reference |
-|---------|-------------|----------------|
+| --------- | ------------- | ---------------- |
 | **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `LidarrIndexer.cs:65` |
 | **Enable RSS** | Whether RSS feeds are enabled for the indexer | `LidarrIndexer.cs:62` |
 | **Enable Automatic Search** | Whether automatic searches are enabled | `LidarrIndexer.cs:63` |

@@ -145,7 +145,7 @@ Branch=master
 ### Available Keys
 
 | Key | Description | Example |
-|-----|-------------|---------|
+| ----- | ------------- | --------- |
 | `PackageVersion` | Custom package version identifier | `1.0.0-custom` |
 | `PackageAuthor` | Package maintainer name | `Community Package` |
 | `PackageGlobalMessage` | Message displayed in UI | `Custom build for Debian 11` |
@@ -157,7 +157,7 @@ Branch=master
 ### UpdateMethod Values
 
 | Value | Numeric | Description | Use Case |
-|-------|---------|-------------|----------|
+| ------- | --------- | ------------- | ---------- |
 | `BuiltIn` | 0 | Default built-in updater | Standard installations |
 | `Script` | 1 | Updates via custom script | Advanced custom setups |
 | `External` | 10 | Updates managed externally | Package managers, Docker |

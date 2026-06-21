@@ -19,7 +19,7 @@ A custom script can be any executable accessible by the user Lidarr is running a
 Lidarr writes script output to the log files:
 
 | Output | Log level | Log file |
-|---|---|---|
+| --- | --- | --- |
 | `stdout` | `Debug` | `config/logs/Lidarr.debug.txt` |
 | `stderr` | `Error` | `config/logs/Lidarr.txt` |
 | Script trigger | `Trace` | `config/logs/Lidarr.trace.txt` |
