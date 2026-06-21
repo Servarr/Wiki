@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-18T03:53:58.109748
+date: 2026-06-21T04:07:46.182361
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-18T03:53:58.109748
+dateCreated: 2026-06-21T04:07:46.182361
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.4.0.5396` / [Commit: d6e8466d3ee32915d35476b9c225453984992697](https://github.com/Prowlarr/Prowlarr/commit/d6e8466d3ee32915d35476b9c225453984992697)
-  - [Prowlarr Indexers Commit: c57f054443c0846cf27a6c094a8ada7de7c1fa10](https://github.com/Prowlarr/Indexers/commit/c57f054443c0846cf27a6c094a8ada7de7c1fa10)
+  - Prowlarr Build `2.5.0.5422` / [Commit: bd3bc4232ff1c20f9ec4782f83c336021d8ad216](https://github.com/Prowlarr/Prowlarr/commit/bd3bc4232ff1c20f9ec4782f83c336021d8ad216)
+  - [Prowlarr Indexers Commit: 5830542274b0b5ee2a9125da727bff803a5fb135](https://github.com/Prowlarr/Indexers/commit/5830542274b0b5ee2a9125da727bff803a5fb135)
 
 ---
 
@@ -26,7 +26,7 @@ dateCreated: 2026-06-18T03:53:58.109748
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|English (United States)|
+|[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[52BT](https://www.529075.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
@@ -98,7 +98,6 @@ dateCreated: 2026-06-18T03:53:58.109748
 |[Torrent9](https://www6.torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
-|[TorrentGalaxyClone](https://torrentgalaxy.one/){#torrentgalaxyclone}|TorrentGalaxyClone is a Public site for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
@@ -618,6 +617,7 @@ dateCreated: 2026-06-18T03:53:58.109748
 |[UBits](https://ubits.club/){#ubits}|UBits is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Ultrabits (API)](https://ultrabits.org/){#ultrabits-api}|Ultrabits is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
 |[UltraHD](https://ultrahd.net/){#ultrahd}|UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL|Chinese (China)|
+|[Unbreakable](https://unbreakable5.eu/){#unbreakable}|Unbreakable is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Unlimitz](https://www.unlimitz.biz/){#unlimitz}|Unlimitz is a THAI Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[upload\.cx (API)](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Upscale Vault (API)](https://upscalevault.com/){#upscalevault}|Upscale Vault is a Private Torrent Tracker for AI upscaled and remastered MOVIES / TV|English (United States)|
