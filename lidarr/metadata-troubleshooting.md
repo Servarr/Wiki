@@ -194,10 +194,10 @@ To add a Spotify relationship on MusicBrainz, open the release and go to **Edit*
 > A 429 from Spotify doesn't mean anything is wrong with your Lidarr setup — it's a server-side rate limit on lookups. Checking Lidarr's logs at Debug level will show the 429 responses if you want to confirm that's the cause.
 {.is-info}
 
-## Retry or wait?
+## Retry or wait
 
 | Situation | Action |
-|---|---|
+| --- | --- |
 | You just submitted an edit at MusicBrainz | Wait ~3 hours, then **Refresh Artist** in Lidarr |
 | You just uploaded cover art to the Cover Art Archive | Allow days, not hours — covers propagate slower than metadata |
 | A release status was `unknown` and you changed it | Wait ~3 hours after the edit's visible on MusicBrainz, then **Refresh Artist** |

@@ -35,7 +35,7 @@ Each row has two action icons on the right:
 ## Options
 
 | Option | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | Page Size | 20 | Number of albums shown per page. |
 | Columns | (see below) | Choose which columns are visible and their display order. |
 

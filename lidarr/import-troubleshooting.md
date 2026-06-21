@@ -50,7 +50,7 @@ Standalone track imports outside the album context use a **60% similarity** thre
 The distance score is a weighted combination of how well each field matches. Lidarr adapts the weights from [beets' default configuration](https://beets.readthedocs.io/), with MusicBrainz IDs as the strongest signals:
 
 | Signal | Weight | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `recording_id` | 10.0 | MusicBrainz Recording MBID. If present and correct, imports almost always succeed. |
 | `album_id` | 5.0 | MusicBrainz Release MBID. |
 | `artist` | 3.0 | Artist name (Levenshtein distance after normalisation). |
@@ -196,4 +196,4 @@ For advanced readers who want to verify the rules or trace a specific rejection,
 - [Importing an Existing Library](/lidarr/importing-existing-library) — the fresh-install import walkthrough
 - [Metadata Troubleshooting](/lidarr/metadata-troubleshooting) — for problems where the release is missing or wrong at MusicBrainz
 - [FAQ](/lidarr/faq) — shorter answers that didn't fit this page
-- [MusicBrainz Picard](https://picard.musicbrainz.org/) — tag files with MBIDs before importing for a dramatically higher succes
+- [MusicBrainz Picard](https://picard.musicbrainz.org/) — tag files with MBIDs before importing for a dramatically higher success rate

@@ -48,7 +48,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Artist tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Artist Name}` | Full artist name as stored in MusicBrainz. |
 | `{Artist NameThe}` | Artist name with a leading "The" moved to the end, for example, `Beatles, The`. Useful for consistent alphabetical sorting. |
 | `{Artist CleanName}` | Artist name with illegal filesystem characters removed. |
@@ -59,7 +59,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Album tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Album Title}` | Album title. |
 | `{Album TitleThe}` | Album title with a leading "The" moved to the end. |
 | `{Album CleanTitle}` | Album title with illegal filesystem characters removed. |
@@ -72,7 +72,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Track tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Track Title}` | Track title. |
 | `{Track ArtistName}` | Track-level artist name. Useful for Various Artists compilations where each track has a different credited artist. |
 | `{Track ArtistNameThe}` | Track artist name with "The" moved to the end. |
@@ -81,7 +81,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Medium (disc) tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{medium:0}` | Disc number, single digit. |
 | `{medium:00}` | Disc number zero-padded to 2 digits. |
 | `{Medium Format}` | Physical format of the disc: CD, Vinyl, Digital Media, etc. |
@@ -89,7 +89,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Quality and technical tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Quality Title}` | Quality profile name as defined in Lidarr (for example, FLAC, MP3-320). |
 | `{Quality Full}` | Full quality string including proper/repack designation. |
 | `{MediaInfo AudioBitRate}` | Audio bitrate (for example, 320kbps). Only available after import; blank on pre-import rename previews. |
