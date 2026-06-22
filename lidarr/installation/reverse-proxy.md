@@ -1,9 +1,9 @@
 ---
 title: Lidarr Reverse Proxy
-description: 
+description:
 published: true
 date: 2026-06-06T15:01:19.756Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2023-07-03T20:10:58.279Z
 ---
