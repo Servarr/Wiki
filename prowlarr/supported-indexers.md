@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-23T03:29:40.745185
+date: 2026-06-24T03:31:10.407158
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-23T03:29:40.745185
+dateCreated: 2026-06-24T03:31:10.407158
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.0.5422` / [Commit: bd3bc4232ff1c20f9ec4782f83c336021d8ad216](https://github.com/Prowlarr/Prowlarr/commit/bd3bc4232ff1c20f9ec4782f83c336021d8ad216)
-  - [Prowlarr Indexers Commit: 0768019c013bb8c5daeb4c96df3ee16e8426cba2](https://github.com/Prowlarr/Indexers/commit/0768019c013bb8c5daeb4c96df3ee16e8426cba2)
+  - [Prowlarr Indexers Commit: df4ff27c01eeebe7cc665353e7e8f11f969245e8](https://github.com/Prowlarr/Indexers/commit/df4ff27c01eeebe7cc665353e7e8f11f969245e8)
 
 ---
 
@@ -536,7 +536,6 @@ dateCreated: 2026-06-23T03:29:40.745185
 |[RevolutionTT](https://revott.me/){#revolutiontt}|The Revolution has begun|English (United States)|
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
-|[RoTorrent (API)](https://rotorrent.info/){#rotorrent-api}|RoTorrent (ROT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[Rousi\.pro](https://rousi.pro/){#rousi-pro}|Rousi\.pro is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[RunTheFrames (API)](https://runtheframes.xyz/){#runtheframes-api}|RunTheFrames is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[SAMARITANO (API)](https://samaritano.cc/){#samaritano}|SAMARITANO is a BRAZILIAN Private tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
@@ -545,6 +544,7 @@ dateCreated: 2026-06-23T03:29:40.745185
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SceneTime (API)](https://www.scenetime.com/){#scenetime-api}|SceneTime is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|Secret Cinema is a Private ratioless site for rare MOVIES|English (United States)|
+|[SeedCore (API)](https://seedcore.net/){#seedcore-api}|SeedCore (ROT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-DAY MOVIES / TV / GENERAL|English (United States)|
 |[SewerPT](https://sewerpt.com/){#sewerpt}|SewerPT (下水道) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
