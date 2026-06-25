@@ -73,28 +73,28 @@ select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
     case $app in
     lidarr)
         app_port="8686"                                                     # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo libicu76" # Required packages
         app_umask="0002"                                                    # UMask the Service will run as
         branch="master"                                                     # {Update me if needed} branch to install
         break
         ;;
     prowlarr)
         app_port="9696"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu76" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     radarr)
         app_port="7878"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu76" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     whisparr)
         app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu76" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="nightly"                     # {Update me if needed} branch to install
         break
@@ -102,7 +102,7 @@ select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
     whisparr-v3)
         app=whisparr
         app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu76" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="eros"                        # {Update me if needed} branch to install
         break
