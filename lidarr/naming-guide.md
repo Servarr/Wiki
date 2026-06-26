@@ -115,7 +115,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Original Title}` | Scene name of the file if available; falls back to the original filename without extension. |
 | `{Original Filename}` | Original filename without extension. |
 | `{Custom Formats}` | All custom formats that have "Include Custom Format when Renaming" enabled, joined by spaces. |
-| `{Custom Format}` | A specific custom format by name, for example `{Custom Format:FLAC}`. Empty when the format is not matched or not enabled for renaming. |
+| `{Custom Format}` | A single custom format by name. The part after the colon is a placeholder — replace it with the actual custom format name, for example `{Custom Format:FLAC}`. Empty when no such format exists, didn't match the release, or isn't enabled for renaming. |
 
 # Community naming conventions
 

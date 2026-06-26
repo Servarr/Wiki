@@ -250,8 +250,13 @@ Also, note that for each individual settings page, there are some options at the
 ### Custom Formats (Naming)
 
 - `{Custom Formats}` = Surround Sound x264
+- `{Custom Format:FormatName}` = AMZN
 
-> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming {.is-info}
+> `{Custom Formats}` outputs every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, separated by spaces. Add an optional name filter to narrow it: `{Custom Formats:NameA,NameB}` includes only those formats, while `{Custom Formats:-NameA,NameB}` excludes them.
+{.is-info}
+
+> `{Custom Format:FormatName}` outputs a single Custom Format by name. `FormatName` is a placeholder — replace it with the exact name of the Custom Format you want, for example `{Custom Format:AMZN}`. It outputs nothing unless a Custom Format with that name exists, matched the release, and has "Include Custom Format when Renaming" enabled.
+{.is-info}
 
 ### Original
 
