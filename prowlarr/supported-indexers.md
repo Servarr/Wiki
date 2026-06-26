@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-24T03:31:10.407158
+date: 2026-06-26T03:36:49.928906
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-24T03:31:10.407158
+dateCreated: 2026-06-26T03:36:49.928906
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.0.5422` / [Commit: bd3bc4232ff1c20f9ec4782f83c336021d8ad216](https://github.com/Prowlarr/Prowlarr/commit/bd3bc4232ff1c20f9ec4782f83c336021d8ad216)
-  - [Prowlarr Indexers Commit: df4ff27c01eeebe7cc665353e7e8f11f969245e8](https://github.com/Prowlarr/Indexers/commit/df4ff27c01eeebe7cc665353e7e8f11f969245e8)
+  - [Prowlarr Indexers Commit: 34c7310062cafa4362b89f128614e58c1fd2076f](https://github.com/Prowlarr/Indexers/commit/34c7310062cafa4362b89f128614e58c1fd2076f)
 
 ---
 
@@ -192,7 +192,6 @@ dateCreated: 2026-06-24T03:31:10.407158
 |[0day\.kiev](https://tracker.0day.community/){#0daykiev}|0day\.kiev\.ua is a UKRAINIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Ukrainian (Ukraine)|
 |[13City](https://13city.org/){#13city}|13City is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[1ptbar](https://1ptba.com/){#1ptbar}|1ptbar is a CHINESE Private Torrent Tracker for MOVIES / TV / E-LEARNING|Chinese (China)|
-|[3ChangTrai](https://3changtrai.com/){#3changtrai}|3ChangTrai (3CT) is a VIETNAMESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Vietnamese (Viet Nam)|
 |[3D Torrents](http://www.3dtorrents.org/){#3dtorrents}|3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES|English (United States)|
 |[4thD](https://4thd.xyz/){#4thd}|4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
