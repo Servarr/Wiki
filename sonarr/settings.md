@@ -249,9 +249,12 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 - `{Release Group}` = Rls Grp
 - `{Custom Formats}` = iNTERNAL or NF
+- `{Custom Format:FormatName}` = AMZN
 
-> \* Custom Formats will the name of the Custom Format
-\* `{Custom Formats:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
+> `{Custom Formats}` outputs every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, separated by spaces. Add an optional name filter to narrow it: `{Custom Formats:NameA,NameB}` includes only those formats, while `{Custom Formats:-NameA,NameB}` excludes them.
+{.is-info}
+
+> `{Custom Format:FormatName}` outputs a single Custom Format by name. `FormatName` is a placeholder — replace it with the exact name of the Custom Format you want, for example `{Custom Format:AMZN}`. It outputs nothing unless a Custom Format with that name exists, matched the release, and has "Include Custom Format when Renaming" enabled. Left as the literal `{Custom Format:FormatName}` it is not a usable token and produces no output.
 {.is-info}
 
 ### Original
