@@ -52,7 +52,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 ### Post Install
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. Installation takes a few seconds depending on your setup.
-- If `/system/plugins` doesn't appear in the menu, ensure you are running the `nightly` build of Lidarr. The Plugins menu item is only present in the nightly branch.
+- If `/system/plugins` doesn't appear in the menu, ensure you are running the `nightly` or `develop` build of Lidarr. The Plugins menu item is only present in these branches.
 
 ## Next Steps
 
