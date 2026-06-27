@@ -13,5 +13,5 @@ This guide's content now lives in these wiki pages:
 
 - **Naming** → [Naming Guide](/lidarr/naming-guide)
 - **Custom Formats and profile scoring** → [Custom Formats](/lidarr/tips-and-tricks#custom-formats)
-- **Quality and metadata profile configuration** → [Settings: Profiles](/lidarr/settings#profiles)
-- **Tag writing and hardlink considerations** → [Settings: Metadata](/lidarr/settings#metadata)
+- **Quality and metadata profile configuration** → [Settings: Metadata Profiles](/lidarr/settings#metadata-profiles)
+- **Tag writing and hardlink considerations** → [Settings: File Management](/lidarr/settings#file-management)

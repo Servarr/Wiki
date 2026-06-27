@@ -147,7 +147,7 @@ Also, note that for each individual settings page, there are some options at the
 
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
-  - Smart Replace - Uses a dash when a colon is followed by a space (`": "` → `" - "`), and a dash otherwise (`":"` → `"-"`). This is the default.
+  - Smart Replace - Uses a space-dash-space when a colon is followed by a space (`": "` → `" - "`), and a dash otherwise (`":"` → `"-"`). This is the default.
     - Example: Movie,The.mkv => Movie - The.mkv
   - Delete - Self explanatory
     - Example: Movie,The.mkv => MovieThe.mkv
@@ -956,7 +956,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable

@@ -21,7 +21,7 @@ The Wanted => Missing section contains a list of the episodes you have marked to
 
 - Filter - The filter button (top right) lets you toggle between viewing Monitored and Unmonitored missing episodes.
 
-> This search process cannot be canceled once started without restarting Sonarr.
+> This search process cannot be canceled once started without restarting Sonarr or disabling all of your indexers.
 {.is-info}
 
 At the top of the page is `Manual Import` which allows you to arbitrarily import media files from any destination Sonarr can access for series that already exist in Sonarr.

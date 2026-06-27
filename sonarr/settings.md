@@ -149,10 +149,10 @@ Also, note that for each individual settings page, there are some options at the
 
 - Colon Replacement Format - Select how colons are handled in episode names
   - Delete - Remove colons (e.g. `Series Title Part 1`)
-  - Dash - Replace with a dash (e.g. `Series Title - Part 1`)
-  - Space Dash - Replace with a space and a dash (e.g. `Series Title - Part 1`)
+  - Dash - Replace with a dash (e.g. `Series Title-Part 1`)
+  - Space Dash - Replace with a space and a dash (e.g. `Series Title -Part 1`)
   - Space Dash Space - Replace with a space, dash, and space (e.g. `Series Title - Part 1`)
-  - Smart - Replaces a colon followed by a space with ` - `, otherwise deletes the colon (Default)
+  - Smart - Replaces a colon followed by a space with ` - `, otherwise replaces it with a dash (Default)
   - Custom - Use a custom replacement string
 
 ### Standard Episode Format
@@ -185,7 +185,7 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 - `{Series TitleTheWithoutYear}` = Series Name's Title!, The
 - `{Series CleanTitleTheWithoutYear}` = Series Names Title!, The
 - `{Series TitleFirstCharacter}` = S
-- `{Series Year}` = (2010)
+- `{Series Year}` = 2010
 
 ### Series IDs
 
@@ -305,7 +305,7 @@ See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more
 - `{Series TitleTheWithoutYear}` = Series Title, The
 - `{Series CleanTitleTheWithoutYear}` = Series Title, The
 - `{Series TitleFirstCharacter}` = S
-- `{Series Year}` = (2010)
+- `{Series Year}` = 2010
 
 ### Series IDs
 
@@ -335,7 +335,7 @@ Name for the `Specials` (Season) folder
 ## Multi-Episode Style
 
 - `Extend` = `S01E01-02-03`
-- `Duplicate` = `S01E01.S01E01`
+- `Duplicate` = `S01E01.S01E02`
 - `Repeat` = `S01E01E02E03`
 - `Scene` = `S01E01-E02-E03`
 - `Range` = `S01E01-03`
@@ -501,7 +501,9 @@ Profiles is where Custom Format Scores are configured.
 - Source - The source where a release was ripped from (e.g. BLURAY).
 - Resolution - The resolution parsed from either the release name or media info (if available).
 - Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
-- Group - This is matched against the group that Sonarr parses based on Sonarr's group detection logic.
+- Release Group - This is matched against the release group that Sonarr parses based on Sonarr's group detection logic.
+- Indexer Flag - This is matched against the indexer flags reported for the release (e.g. Freeleech).
+- Release Type - This is matched against the type of release Sonarr parses: Single Episode, Multi-Episode, or Season Pack.
 
 ### Profiling Settings and Ranking
 
@@ -530,8 +532,9 @@ Profiles is where Custom Format Scores are configured.
 - Preferred Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
-- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
-- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
+- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality in the quality profile with the preferred protocol
+- Bypass if Above Custom Format Score - Bypass delay when release has a score higher than the configured minimum custom format score
+  - Minimum Custom Format Score - Minimum Custom Format Score required to bypass delay for the preferred protocol
 - Tags - With giving this delay profile a tag you will be able to tag a given series to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
@@ -891,7 +894,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ### List Options
 
-- (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  This is provided dependent as per the UI.
+- (Advanced Option) List Update Interval - How often should Sonarr poll the list for updates?  This is provider dependent as per the UI.
 - (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at least one of your list(s)
   - Disabled - Do not clean the library (Recommended)
   - Log Only - Only log the series are not on the list(s) and take no other actions
@@ -1005,7 +1008,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Proxy - This option allows you to run the information your Sonarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable
@@ -1022,7 +1025,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ## Analytics
 
-- Analytics - Send anonymous usage and error information to Sonarr's servers (SkyHook). This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
+- Analytics - Send anonymous usage and error information to Sonarr's servers. This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
 ## Updates
 

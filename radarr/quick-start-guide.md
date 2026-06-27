@@ -63,7 +63,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![Radarr-settings-mm-movie-naming.png](/assets/radarr/Radarr-settings-mm-movie-naming.png)
 
 1. Enable/Disable Renaming of your movies (as opposed to leaving the names that are currently there or as they were when you downloaded them).
-2. If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ # % & + { }`).
+2. If you want illegal characters replaced or removed (`\ / < > ? * | "`).
 3. This setting will dictate how Radarr handles colons within the movie file.
 4. Here you will select the naming convention for the actual movie files.
 5. *(Advanced Option) This is where you will set the naming convention for the folder that contains the video file.*
@@ -323,7 +323,7 @@ When you see the movie you want click on it.
 
 1. Availability - When Radarr shall consider a movie is available.
 
-    > For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
+    > For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](/radarr/faq#how-does-radarr-determine-the-year-of-a-movie)
     {.is-info}
 
     - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers that do not have fakes.
