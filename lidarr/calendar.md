@@ -17,7 +17,7 @@ The Calendar page shows album releases from artists in your library, laid out we
 Each release tile is color-coded to show its current status:
 
 | Color | Meaning |
-|---|---|
+| --- | --- |
 | Green | Files on disk; Lidarr has this release. |
 | Blue | Monitored and upcoming; the release date is in the future. |
 | Yellow/Orange | Monitored, released, and missing; past release date but no files yet. |
@@ -36,7 +36,7 @@ Lidarr can expose your calendar as an iCal feed that any calendar client support
 Click the **iCal Feed** button on the Calendar page to open the feed configuration dialog. The options available are:
 
 | Field | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | Include Unmonitored | Off | When enabled, unmonitored album releases are included in the feed as well as monitored ones. |
 | Past Days | 7 | How many days into the past the feed includes. |
 | Future Days | 28 | How many days into the future the feed includes. |
@@ -54,14 +54,14 @@ The **Options** button opens the Calendar Options dialog, split into two section
 **Local** (apply to this browser only):
 
 | Option | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | Collapse Multiple Albums | On | When more than one album from the same artist releases on the same day, collapse them into a single tile instead of showing each one. |
 | Icon for Cutoff Unmet | On | Show a visual indicator on release tiles where files exist but the quality cutoff hasn't been met. |
 
 **Global** (apply across all browsers and users):
 
 | Option | Description |
-|---|---|
+| --- | --- |
 | First Day of Week | Sets whether weeks start on Sunday or Monday. |
 | Week Column Header | Controls the date format shown above each day column (for example, `Tue 3/25`). |
 | Time Format | Sets the time format used across the calendar (12-hour or 24-hour). |
