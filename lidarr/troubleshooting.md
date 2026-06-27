@@ -63,7 +63,7 @@ To provide good and useful logs for sharing:
 - When using [0bin](https://0bin.net/), be sure to disable colorization and don't burn after reading.
 
 - To search across old log files in Windows, use the Notepad++ **Find in Files** function.
-- **Unix only:** To search across old log files, use `grep`. For example, to find entries for an artist or release named "Shooter": `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`. If your [Appdata Directory](/lidarr/appdata-directory) is in your home folder: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix only:** To search across old log files, use `grep`. For example, to find entries for an artist or release named "Shooter": `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`. If your [Appdata Directory](/lidarr/appdata-directory) is in your home folder: `grep -inr -C 100 -e 'Shooter' /home/$USER/.config/Lidarr/logs/*.trace*.txt`
 
 ```none
 
@@ -123,7 +123,7 @@ If an upgrade goes wrong, these steps will help you recover your installation.
 
 ## Determine the issue
 
-- The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/lidarr/settings#logging) and [Log Files](/lidarr/system#log-files) to find them and increase the log level.
+- The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](#tracedebug-logs) and [Log Files](/lidarr/system#log-files) to find them and increase the log level.
 - Most often, the host system messes with the `/tmp` directory and deletes critical Lidarr files during the upgrade, causing both the upgrade and rollback to fail. In this case, reinstall in-place over the existing installation.
 
 ### Migration Issue
@@ -199,11 +199,11 @@ Lidarr communicates with your download client via its API through the client's w
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption isn't turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](/lidarr/faq#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption isn't turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](/radarr/faq#invalid-certificate-and-other-https-or-ssl-issues) for more information.
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/lidarr/faq#why-cant-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t Lidarr see my files on a remote server](/lidarr/faq#why-cant-lidarr-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives aren't reliable
 

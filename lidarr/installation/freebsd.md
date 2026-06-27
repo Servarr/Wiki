@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2023-07-03T20:10:42.484Z
 ---
 
-## FreeBSD
+# FreeBSD
 
 The Lidarr team only provides builds for FreeBSD. The FreeBSD community maintains Plugins and Ports.
 

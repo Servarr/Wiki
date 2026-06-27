@@ -131,7 +131,7 @@ Imports fail in one of a few ways:
 - **The download finished but Lidarr won't import it.** This is almost always a match-quality rejection. Lidarr couldn't find a MusicBrainz release that resembles the file well enough. See [Import Troubleshooting](/lidarr/import-troubleshooting) for the match-quality rules, the fingerprinting fallback, when manual import is the expected path, and how to drive it.
 - **You're importing an existing library and the match fails.** See [Importing an Existing Library](/lidarr/importing-existing-library) for the fresh-install walkthrough and the lenience rules that apply to library imports.
 - **Lidarr can't read or write the folder.** The user account Lidarr runs as must have read and write access to both the download folder and the destination root folder. On Linux this is a UID/GID/permissions issue on a mount; on Windows it's Lidarr running as `LocalService` which can't reach a network share. See [Why can't Lidarr see my files on a remote server?](#why-cant-lidarr-see-my-files-on-a-remote-server) for the Windows case.
-- **Untagged or badly tagged files.** Files with generic filenames like `track01.mp3` and no tags give Lidarr nothing to match on. Run a tagger such as [MusicBrainz Picard](https://picard.musicbrainz.org/) or [Harmony](https://harmony.pulsewidth.org.uk/) before importing. See [Import Troubleshooting → Untagged or badly tagged files](/lidarr/import-troubleshooting#untagged-or-badly tagged-files).
+- **Untagged or badly tagged files.** Files with generic filenames like `track01.mp3` and no tags give Lidarr nothing to match on. Run a tagger such as [MusicBrainz Picard](https://picard.musicbrainz.org/) or [Harmony](https://harmony.pulsewidth.org.uk/) before importing. See [Import Troubleshooting → Untagged or badly tagged files](/lidarr/import-troubleshooting#untagged-or-badly-tagged-files).
 
 ### I copied files into Lidarr's root folder but Lidarr can't see them
 
@@ -294,7 +294,7 @@ As of Lidarr v2, **authentication is mandatory.** The config file must include `
 
 #### Authentication Required
 
-If the UI only needs auth on remote access (not on LAN), set **Settings → General → Security → Authentication Required** to *Disabled For Local Addresses*. In the config file that's `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`. The other valid value is `Enabled`.
+If the UI only needs auth on remote access (not on LAN), set **Settings → General → Security → Authentication Required** to *Disabled For Local Addresses*. In the config file that's `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`. The other valid value is `Enabled`.
 
 ### Help I have locked myself out
 
