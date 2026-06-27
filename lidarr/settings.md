@@ -202,7 +202,7 @@ Common specification types for music:
 | **Release Title** | The full release title string from the indexer. Supports regex. |
 | **Release Group** | The release group part of the title, if parseable. |
 | **Indexer Flag** | Indexer-specific flags (Freeleech, Halfleech, etc.) where the indexer supports them. |
-| **Source** | Audio source tag (CD, WEB, Vinyl, etc.) if present in the title. |
+| **Size** | The reported release size. Matches when the size falls between the configured **Minimum Size** and **Maximum Size** (in GB). |
 
 For worked examples and suggested scoring values for a FLAC-focused library, see [Tips and Tricks → Custom Formats](/lidarr/tips-and-tricks#custom-formats).
 

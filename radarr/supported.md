@@ -259,7 +259,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - Movie Metadata - Create a `<filename>.nfo` with the movie metadata
   - (Advanced Option) Movie Metadata URL - Create `movie.nfo` with TMDb and IMDb movie URLs
   - Metadata Language - Select the language Radarr should use to write the metadata if available in that language
-  - Movie Images - Create various Season images including posters and banners
+  - Movie Images - Create movie images such as `fanart.jpg` and `poster.jpg`
   - Use Movie.nfo - Write the nfo file as `movie.nfo` rather than the default
   - Collection Name - Radarr will write the collection name to the .nfo file
 - Roksbox {#roksboxmetadata}
@@ -268,5 +268,5 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - Movie Images - Create `Movie.jpg`
 - WDTV {#wdtvmetadata}
   - Enable - Enable metadata file creation for this metadata type
-  - Movie Metadata - Create `<filename>.xml` for each episode
+  - Movie Metadata - Create `<filename>.xml` for each movie
   - Movie Images - Create `folder.jpg`

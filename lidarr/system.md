@@ -185,7 +185,7 @@ sudo systemctl start $app
 
 #### Can’t install update because startup folder is in an App Translocation folder (macOS)
 
-{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder.}
+{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
 
 - macOS has moved Lidarr’s startup folder into an App Translocation path. This prevents Lidarr from updating itself. Remove the quarantine attribute or move Lidarr out of the Translocation folder and re-launch it from its permanent location.
 
@@ -292,7 +292,7 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 {#fpcalc-upgrade}
 
-- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
+- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. The installed `fpcalc` is too old; Lidarr requires at least version 1.4.3. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
 - Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). Look for it in Lidarr's installation directory (for example `/opt/Lidarr/fpcalc`). If it isn't executable, correct its permissions with the command below and restart Lidarr.
   - Note that the fix may need `sudo`, and your path to Lidarr's binary folder may differ depending on your environment.
 
@@ -645,6 +645,6 @@ The top row has options to control your log files.
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
 - Last Written - The local time Lidarr last wrote to this log file.
-  - Lidarr uses rolling log files limited to 1MB each. The current log file is always lidarr.txt, for the other files lidarr.0.txt is the next newest (higher numbers are older) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+  - Lidarr uses rolling log files limited to 1MB each. The current log file is always lidarr.txt, for the other files lidarr.0.txt is the next newest (higher numbers are older) up to 5 archived files. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - With Debug log level enabled, lidarr.debug.txt rolling log files appear, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It covers a ~40-hour window.
   - With Trace log level enabled, lidarr.trace.txt rolling log files appear, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
