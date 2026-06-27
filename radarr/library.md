@@ -118,8 +118,26 @@ Library Import allows you to import existing organized movies and each movie's f
 
 # Collections
 
-The wiki is developed and maintained by the community.
-This section has not had any contributions made to it to reflect and describe the collections page in Radarr.
+Collections groups movies that belong to a TMDb movie collection (for example, a film series). Collections are populated automatically from the metadata of movies you add; if a movie that is part of a collection is added to Radarr, that collection appears on this page.
+
+- If you have no collections, Radarr shows: "No collections found, to get started you'll want to add a new movie, or import some existing ones." Add or import a movie that belongs to a TMDb collection to populate this page.
+- Each collection can be configured by editing it. The editable options are:
+  - Monitored - Monitor to automatically have movies from this collection added to the library.
+  - Minimum Availability - The minimum availability the collection's movies must reach before Radarr will search for them (Announced, In Cinemas, or Released).
+  - Quality Profile - The quality profile applied to movies added from this collection.
+  - Root Folder - The root folder where movies added from this collection are placed.
+  - Tags - Tags applied to movies added from this collection.
+  - Search on Add - Search for movies in this collection when they are added to the library.
+- Selecting collections enables bulk editing via the footer, where you can apply changes to multiple collections at once:
+  - Monitor Collection - Set the monitored state of the selected collections.
+  - Monitor Movies - Set the monitored state of the movies within the selected collections.
+  - Quality Profile - Apply a quality profile to the selected collections.
+  - Minimum Availability - Apply a minimum availability to the selected collections.
+  - Root Folder - Apply a root folder to the selected collections.
+  - Search Movies on Add - Toggle searching for movies on add for the selected collections.
+
+> When a collection is monitored, Radarr automatically adds movies from that collection to your library as TMDb metadata is refreshed.
+{.is-info}
 
 # Discover
 
@@ -152,5 +170,5 @@ Discover shows recommended Movies
     1. Select any quality profiles you have already built ([More info](/radarr/settings#quality-profiles))
     1. Do you want Radarr to monitor this movie for any upgrades in quality?
     1. Would you like Radarr to automatically search for this movie after you add it?
-    1. Do you want Radarr to exclude these movies from any lists that would be imported? ([More info](/radarr/settings#list-exclusion))
+    1. Do you want Radarr to exclude these movies from any lists that would be imported? ([More info](/radarr/settings#list-exclusions))
     1. Finally, Add the movie to your library.

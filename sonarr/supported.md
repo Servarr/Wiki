@@ -68,8 +68,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
-  - A defunct legacy implementation of a private usenet indexer. Use Newznab instead.
-  - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
+  - The native omgwtfnzbs implementation has been removed from Sonarr. Add it via the generic Newznab indexer instead.
 
 ## Torrents
 
@@ -122,7 +121,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Discord {#discord}
   - By far one of the most common ways to push notifications of actions happening on your Sonarr
   - Supported field types:
-  `Overview, Rating, Genres, Quality, Group, Size, Links, Release, Poster, Fanart, CustomFormats, CustomFormatScore, Indexer`
+  `Overview, Rating, Genres, Quality, Group, Size, Links, Release, Poster, Fanart, Indexer, CustomFormats, CustomFormatScore`
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
@@ -158,7 +157,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Telegram {#telegram}
 - Trakt {#trakt}
 - Twitter {#twitter}
-  - See this [Tips and Tricks entry](/useful-tools#twitter)
+  - See this [Tips and Tricks entry](/useful-tools#twitter-connect)
 - Webhook {#webhook}
 
 ## Deprecated Notifications

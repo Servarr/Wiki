@@ -21,6 +21,7 @@ dateCreated: 2021-06-06T15:04:48.057Z
 - [Applications](#applications)
   - [Application Settings](#application-settings)
   - [Testing the Application](#testing-the-application)
+  - [Sync Profiles](#sync-profiles)
 - [Download Clients (Prowlarr Searches)](#download-clients-prowlarr-searches)
   - [Usenet Client Settings](#usenet-client-settings)
   - [Torrent Client Settings](#torrent-client-settings)
@@ -294,7 +295,7 @@ Click on `Settings` => `General`.
 Proxy - This option allows you to run the information your Prowlarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable

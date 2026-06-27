@@ -44,9 +44,15 @@ Each row has action icons on the right:
 
 - **Manual Import** (person icon): opens the manual import dialog for this item, letting you match and import it yourself.
 - **Grab** (download icon): re-sends the release to the download client. Useful if the client removed an item that's still in the Lidarr queue.
-- **Remove** (✕): removes the item from the Lidarr queue. When removing, you can also choose to:
-  - **Remove from Download Client:** deletes the item from the download client as well. Use this for unmatched items Lidarr shouldn't download.
-  - **Add to Blocklist:** prevents Lidarr from grabbing this release again.
+- **Remove** (✕): opens the Remove dialog, where you choose a **Removal Method** and a **Blocklist Method**.
+  - Removal Method:
+    - **Remove from Download Client:** deletes the item from the download client as well. Use this for unmatched items Lidarr shouldn't download.
+    - **Change Category:** moves the item to the download client's post-import category instead of deleting it (only available when a post-import category is configured).
+    - **Ignore Download:** leaves the item in the download client but stops Lidarr from processing it any further.
+  - Blocklist Method:
+    - **Do Not Blocklist:** removes the item without blocklisting the release.
+    - **Blocklist and Search:** blocklists the release and triggers a new search for a replacement.
+    - **Blocklist Only:** blocklists the release without searching for a replacement.
 
 ### Queue options
 
