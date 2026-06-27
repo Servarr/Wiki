@@ -2,7 +2,7 @@
 title: Sonarr Contributing
 description: Guide for contributing to Sonarr development including setup, building, testing, and submitting changes
 published: true
-date: 2023-09-03T13:55:05.394Z
+date: 2026-06-07T00:00:00.000Z
 tags: sonarr, contributing, development, guide, setup
 editor: markdown
 dateCreated: 2021-06-11T23:10:04.820Z
@@ -18,7 +18,7 @@ Setup guides, [FAQ](/sonarr/faq), the more information we have on the [wiki](htt
 
 # Development
 
-Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET8 framework, while the frontend utilizes Reactjs.
+Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET6 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
@@ -162,7 +162,7 @@ Adding translations to Sonarr requires two steps
 
 ## Adding Translation Strings in Code
 
-The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
+The English translation, `src/NzbDrone.Core/Localization/Core/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
 
 > PRs for translation of log messages will not be accepted
 {.is-warning}

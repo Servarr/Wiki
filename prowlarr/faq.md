@@ -2,7 +2,7 @@
 title: Prowlarr FAQ
 description: Prowlarr FAQ
 published: true
-date: 2025-09-12T22:51:38.317Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, troubleshooting, faq
 editor: markdown
 dateCreated: 2021-11-03T03:01:18.079Z
@@ -61,7 +61,7 @@ If Prowlarr is exposed so that the UI can be accessed from outside your local ne
 
 As of Prowlarr v1, Authentication is Mandatory.
 
-- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
+- `AuthenticationMethod` and `AuthenticationRequired` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
@@ -73,8 +73,8 @@ As of Prowlarr v1, Authentication is Mandatory.
 ### Authentication Required
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
-- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
+  - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
+- `<AuthenticationRequired>Enabled</AuthenticationRequired>` is also a valid value
 
 ## How do I reset Stats
 

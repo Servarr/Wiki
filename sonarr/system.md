@@ -2,7 +2,7 @@
 title: Sonarr System
 description: System information, logs, scheduled tasks, and status monitoring for Sonarr administration and troubleshooting
 published: true
-date: 2023-10-12T15:54:39.615Z
+date: 2026-06-07T00:00:00.000Z
 tags: system, administration, logs, tasks, status, sonarr
 editor: markdown
 dateCreated: 2021-09-08T17:58:43.288Z
@@ -14,9 +14,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
 - [Status](#status)
   - [Health](#health)
     - [System Warnings](#system-warnings)
-      - [Currently installed .NET Framework is old and unsupported](#currently-installed-net-framework-is-old-and-unsupported)
-      - [Currently installed .NET Framework is supported but upgrading is recommended](#currently-installed-net-framework-is-supported-but-upgrading-is-recommended)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
+      - [Invalid API Key](#invalid-api-key)
       - [Package Maintainer Message](#package-maintainer-message)
       - [New update is available](#new-update-is-available)
       - [Cannot install update because startup folder and/or UI folder are not writable by the user](#cannot-install-update-because-startup-folder-andor-ui-folder-are-not-writable-by-the-user)
@@ -25,16 +23,21 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [MediaInfo Library Could not be Loaded](#mediainfo-library-could-not-be-loaded)
-      - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
-      - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
+      - [Download clients are unavailable due to failures](#download-clients-are-unavailable-due-to-failures)
       - [Enable Completed Download Handling](#enable-completed-download-handling)
       - [Downloading into Root Folder](#downloading-into-root-folder)
+      - [Bad Download Client Settings](#bad-download-client-settings)
+      - [Bad Remote Path Mapping](#bad-remote-path-mapping)
+      - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
+      - [Permissions Error](#permissions-error)
+      - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
+      - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
       - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
+      - [Download Client Has Sorting Enabled](#download-client-has-sorting-enabled)
     - [Indexers](#indexers)
       - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-sonarr-will-not-grab-new-releases-automatically)
@@ -44,13 +47,19 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
         - [Solutions](#solutions)
+      - [Indexer Download Client is Invalid](#indexer-download-client-is-invalid)
+    - [Notifications](#notifications)
+      - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
     - [Media & Lists](#media--lists)
       - [Series Removed from TheTVDB](#series-removed-from-thetvdb)
       - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
       - [Import List Missing Root Folder](#import-list-missing-root-folder)
       - [Missing Root Folder](#missing-root-folder)
-      - [Missing root folder](#missing-root-folder-1)
       - [Series Path Mount is Read Only](#series-path-mount-is-read-only)
+    - [Metadata](#metadata)
+      - [Metadata Consumer using deprecated Kometa integration](#metadata-consumer-using-deprecated-kometa-integration)
+    - [Other](#other)
+      - [Cannot Write to Recycling Bin](#cannot-write-to-recycling-bin)
   - [Disk Space](#disk-space)
   - [About](#about)
   - [More Info](#more-info)
@@ -70,32 +79,11 @@ dateCreated: 2021-09-08T17:58:43.288Z
 
 ### System Warnings
 
-#### Currently installed .NET Framework is old and unsupported
+#### Invalid API Key
 
-- Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Occasionally we increase the version we build against to be able to utilize new features. Apparently you haven't applied the appropriate Windows updates in a while and need to upgrade .NET to be able to use newer versions of Sonarr.
+{#invalid-api-key}
 
-- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a restart.
-
-#### Currently installed .NET Framework is supported but upgrading is recommended
-
-- Sonarr uses the .NET Framework. We need to build Sonarr against the lowest supported version still used by our users. Upgrading to newer versions allows us to build against newer versions and use new Framework features.
-
-- Upgrading the .NET Framework is very straightforward on Windows, although it often requires a
-
-#### Currently installed mono version is old and unsupported
-
-- Sonarr v4 is written in .NET and v3 required Mono. Mono 5.20 is the absolute minimum for Sonarr.
-- The upgrade procedure for Mono varies per platform.
-
-> Mono is no longer supported starting in Sonarr version 4.0
-{.is-warning}
-
-#### Currently installed SQLite version is not supported
-
-- Sonarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Sonarr requires at least version 3.9.0.
-
-> Note that Sonarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
-{.is-info}
+- Your API key is invalid or too short. The API key must be at least 20 characters long. You can update your API key in Settings or the config file.
 
 #### Package Maintainer Message
 
@@ -130,35 +118,35 @@ If you're on Linux, you will probably have to change the home directory for the 
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 Review your proxy settings and ensure they are accurate
 Ensure your proxy is up, running, and accessible
 
 #### Proxy Failed Test
 
+{#proxy-failed-test}
+
 Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
 
 #### System Time is off by more than 1 day
 
+{#system-time-off}
+
 System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 Review your system time and ensure it is synced to an authoritative time server and accurate
-
-#### MediaInfo Library Could not be Loaded
-
-MediaInfo Library could not be loaded. Sonarr requires MediaInfo (`libmediainfo`) to evaluate the video attributes of files.
-
-#### Mono Legacy TLS enabled
-
-{#sonarr-mono-4.x-tls-workaround-still-enabled-consider-removing-mono_tls_provider-legacy-environment-option}
-
-Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option.
 
 ### Download Clients
 
 #### No download client is available
 
+{#no-download-client-is-available}
+
 A properly configured and enabled download client is required for Sonarr to be able to download media. Since Sonarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Sonarr to use it and create a category. See Settings => Download Client.
 
 #### Unable to communicate with download client
+
+{#unable-to-communicate-with-download-client}
 
 Sonarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 This is typically due to improperly configured download client. Things you can typically check:
@@ -166,7 +154,9 @@ Your download clients IP Address if its on the same bare metal machine this is t
 The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Sonarr.
 Ensure SSL encryption is not turned on if you're using both your Sonarr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
-#### Download clients are unavailable due to failure
+#### Download clients are unavailable due to failures
+
+{#download-clients-are-unavailable-due-to-failures}
 
 One or more of your download clients is not responding to requests made by Sonarr. Therefore Sonarr has decided to temporarily stop querying the download client on it's normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Sonarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 You should inspect System => Logs to see what the reason is for the failures.
@@ -178,6 +168,8 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 (Completed Download Handling is enabled by default...)
 
 #### Docker bad remote path mapping
+
+{#docker-bad-remote-path-mapping}
 
 - This error is typically associated with bad docker paths within either your download client or Sonarr
 
@@ -213,38 +205,33 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 
 #### Bad Download Client Settings
 
+{#bad-download-client-settings}
+
 - The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map.
 
 #### Bad Remote Path Mapping
+
+{#bad-remote-path-mapping}
 
 - The location your download client is downloading files to is causing problems. Check the logs for further information. This may be permissions or attempting to go from windows to linux or linux to windows without a remote path map. See [TRaSH's Remote Path Guide](https://trash-guides.info/Sonarr/sonarr-remote-path-mapping/) for more information.
 
 #### Permissions Error
 
+{#permissions-error}
+
 - Sonarr or the user sonarr is running as cannot access the location your download client is downloading files to. This is typically a permission issue.
 
 #### Remote File was removed part way through processing
+
+{#remote-path-file-removed}
 
 - A file accessible via a remote path map appears to have been removed prior to processing completing.
 
 #### Remote Path is Used and Import Failed
 
+{#remote-path-import-failed}
+
 - Check your logs for more info; Refer to our Troubleshooting Guides
-
-### Downloading into Root Folder
-
-{#downloads-in-root-folder}
-
-- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
-- This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
-- Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
-- One example is if your downloads are going into `/data/downloads` then you have a root folder set as `/data/downloads`.
-- It is suggested to use paths like `/data/media/` for your root folder/library and `/data/downloads/` for your downloads.
-- Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
-
-> Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
-{.is-warning}
 
 #### Completed Download Handling is disabled
 
@@ -270,6 +257,12 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - It's required that your download client retain its history of completed downloads until Sonarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
   - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
 - Removing completed downloads from your client can be managed by Sonarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
+
+#### Download Client Has Sorting Enabled
+
+{#download-folder-and-library-folder-not-different-folders}
+
+- One of your download clients has sorting enabled. This causes Sonarr to be unable to find completed downloads because the files are moved or renamed by the download client before Sonarr can import them. Disable sorting in your download client to resolve this.
 
 ### Indexers
 
@@ -327,6 +320,20 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 - Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
+#### Indexer Download Client is Invalid
+
+{#invalid-indexer-download-client-setting}
+
+- One or more of your indexers has a download client configured that no longer exists or is disabled in Sonarr. Go to Settings => Indexers and select the affected indexer, then update or remove the download client setting.
+
+### Notifications
+
+#### Notifications are unavailable due to failures
+
+{#notifications-are-unavailable-due-to-failures}
+
+- One or more of your notification connections is failing. Sonarr will back off and reduce the frequency of attempts. Review System => Events and check the logs to determine the cause of the failures. If you no longer use this notification, disable it in Sonarr to prevent the errors.
+
 ### Media & Lists
 
 #### Series Removed from TheTVDB
@@ -342,12 +349,16 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### Import List Missing Root Folder
 
+{#import-list-missing-root-folder}
+
 - One or more of your import lists are configured to a root folder that is not accessible to Sonarr.
 - This may be permissions issues, a missing mount, or simply needing to update the lists after reorganizing your setup.
 
 #### Missing Root Folder
 
-- A root folder is added to Sonarr and dies nor exist or is not accessible
+{#missing-root-folder}
+
+- A root folder is added to Sonarr and does not exist or is not accessible.
 - This error is typically identified if a Series is looking for a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
 - If you would like to remove this warning simply find the series that is still using the old root folder and edit it to the correct root folder.
@@ -365,6 +376,20 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 {#series-mount-ro}
 
 A mount containing a series path is read only and is not writable by the user Sonarr is running as.
+
+### Metadata
+
+#### Metadata Consumer using deprecated Kometa integration
+
+- A metadata consumer is using the Kometa (formerly Plex Meta Manager) integration which has been deprecated. Please remove or reconfigure the Kometa metadata consumer in Settings => Metadata.
+
+### Other
+
+#### Cannot Write to Recycling Bin
+
+{#cannot-write-recycle-bin}
+
+- Sonarr is unable to write to the configured Recycling Bin path. Check that the path exists and that the user Sonarr is running as has write permissions to it.
 
 ## Disk Space
 

@@ -2,7 +2,7 @@
 title: Prowlarr Reverse Proxy
 description: Configuring reverse proxy setup for Prowlarr with nginx, Apache, and other web servers
 published: true
-date: 2024-01-19T23:44:51.382Z
+date: 2026-06-07T00:00:00.000Z
 tags: reverse-proxy, nginx, apache, web-server, configuration, prowlarr
 editor: markdown
 dateCreated: 2023-07-03T20:11:34.526Z
@@ -65,7 +65,7 @@ By default Nginx includes the `sites-enabled` folder. You can check this in `ngi
 > For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `9696` and Prowlarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `prowlarr` is chosen (line 5).
 {.is-info}
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port`
+> If you're using a non-standard http/https server port, make sure your `X-Forwarded-Host` header also includes it, i.e.: `proxy_set_header X-Forwarded-Host $host:$server_port` or `proxy_set_header X-Forwarded-Host $http_host`
 {.is-warning}
 
 ```nginx
@@ -116,6 +116,7 @@ ProxyPassReverse / http://127.0.0.1:9696/prowlarr/
 If you implement any additional authentication through Apache, you should exclude the following paths:
 
 - `/prowlarr/api/`
+- `/prowlarr/[0-9]+/api` (per-indexer Newznab/Torznab endpoints)
 
 ### Using SSL on the Apache reverse proxy
 

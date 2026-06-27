@@ -2,7 +2,7 @@
 title: Sonarr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Sonarr installation, configuration, and operational problems
 published: true
-date: 2026-02-01T14:30:13.515Z
+date: 2026-06-07T00:00:00.000Z
 tags: sonarr, troubleshooting, support, issues, debugging, errors
 editor: markdown
 dateCreated: 2021-06-20T19:13:01.108Z
@@ -95,7 +95,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 You can change the log level at Settings => General => Logging. Sonarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `sonarr.trace.txt` respectively.
 
-If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
+If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of the current value.
 
 ```xml
  <Config>

@@ -2,7 +2,7 @@
 title: Prowlarr Configuring  PostgreSQL Database
 description: Configuring Prowlarr with a Postgres Database
 published: true
-date: 2025-05-29T21:37:09.627Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, postgres, database, installation
 editor: markdown
 dateCreated: 2022-01-10T15:38:53.538Z
@@ -12,28 +12,28 @@ dateCreated: 2022-01-10T15:38:53.538Z
 
 This document will go over the key points of migrating and setting up Postgres support in Prowlarr.
 
-This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
+This guide was created by the amazing [Roxedus](https://github.com/Roxedus).
 
 > Postgres databases are NOT backed up by Prowlarr, any backups must be implemented and maintained by the user
 {.is-danger}
 
-> Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
+> Prowlarr connects to Postgres via [Npgsql](https://www.npgsql.org/) and supports all currently supported PostgreSQL versions (PostgreSQL 14 through 18). PostgreSQL 13 reached end-of-life in November 2025 and isn't recommended. This guide uses `postgres:17`. The SQLite-to-Postgres migration steps below were written against Postgres 14 and may need adjustment on newer majors; for Postgres 18 or later, start with a fresh database.
 {.is-info}
 
 ## Setting up Postgres
 
- First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
+ First, we need a Postgres instance. This guide is written for usage of the `postgres:17` Docker image.
 
  > Do not even think about using the `latest` tag! {.is-danger}
 
 ```bash
-docker create --name=postgres14 \
+docker create --name=postgres17 \
     -e POSTGRES_PASSWORD=qstick \
     -e POSTGRES_USER=qstick \
     -e POSTGRES_DB=prowlarr-main \
     -p 5432:5432/tcp \
-    -v /path/to/appdata/postgres14:/var/lib/postgresql/data \
-    postgres:14
+    -v /path/to/appdata/postgres17:/var/lib/postgresql/data \
+    postgres:17
 ```
 
 ## Creation of database
@@ -59,7 +59,7 @@ You can give the databases any name you want but make sure `config.xml` file has
 <PostgresUser>qstick</PostgresUser>
 <PostgresPassword>qstick</PostgresPassword>
 <PostgresPort>5432</PostgresPort>
-<PostgresHost>postgres14</PostgresHost>
+<PostgresHost>postgres17</PostgresHost>
 ```
 
 If you want to specify a database name then should also include the following configuration:
@@ -107,25 +107,26 @@ Before starting a migration please ensure that you have run Prowlarr against the
 
 1. For those having the issues POST-MIGRATION from SQLite run the following:
 
-  ```postgres
-  select setval('public."ApplicationIndexerMapping_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationIndexerMapping"));
-  select setval('public."Applications_Id_seq"', (SELECT MAX("Id")+1 FROM "Applications"));
-  select setval('public."ApplicationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationStatus"));
-  select setval('public."AppSyncProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "AppSyncProfiles"));
-  select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
-  select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
-  select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
-  select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
-  select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
-  select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
-  select setval('public."IndexerDefinitionVersions_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerDefinitionVersions"));
-  select setval('public."IndexerProxies_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerProxies"));
-  select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
-  select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
-  select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
-  select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
-  select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
-  select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
-  ```
+    ```postgres
+    select setval('public."ApplicationIndexerMapping_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationIndexerMapping"));
+    select setval('public."Applications_Id_seq"', (SELECT MAX("Id")+1 FROM "Applications"));
+    select setval('public."ApplicationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ApplicationStatus"));
+    select setval('public."AppSyncProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "AppSyncProfiles"));
+    select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+    select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+    select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+    select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+    select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+    select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+    select setval('public."IndexerDefinitionVersions_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerDefinitionVersions"));
+    select setval('public."IndexerProxies_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerProxies"));
+    select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+    select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+    select setval('public."NotificationStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "NotificationStatus"));
+    select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+    select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+    select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+    select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+    ```
 
 1. Start Prowlarr

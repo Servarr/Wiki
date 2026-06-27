@@ -2,7 +2,7 @@
 title: Prowlarr Contributing
 description: Guide for contributing to Prowlarr development including setup, building, testing, and submitting changes
 published: true
-date: 2022-11-16T19:35:23.515Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, development, contributing, guide, setup
 editor: markdown
 dateCreated: 2021-12-11T19:42:15.627Z
@@ -177,7 +177,7 @@ Adding translations to Prowlarr requires two steps
 
 ## Adding Translation Strings in Code
 
-The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
+The English translation, `src/NzbDrone.Core/Localization/Core/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
 
 > PRs for translation of log messages will not be accepted
 {.is-warning}

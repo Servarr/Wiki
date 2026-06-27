@@ -17,7 +17,7 @@ If you don't find your question here, the most common landing spots are [Metadat
 
 ## Basics
 
-### How does Lidarr work?
+### How does Lidarr work
 
 Lidarr doesn't search for files that are missing or haven't met quality goals on a schedule. Instead, it queries your indexers and trackers at a steady cadence for *all* newly posted releases, compares that feed with your monitored albums, and downloads matches. At an RSS interval of 15–60 minutes, this amounts to 24–100 queries per day and covers a library of any size. It only catches releases going forward from when you added them, though.
 
@@ -31,13 +31,13 @@ If Lidarr has been offline for a while, it pages back through each indexer to fi
 - Adding an artist or album with *Add and Search*.
 - Albums discovered during an artist metadata refresh (for example, a new album MusicBrainz adds after you've already added the artist).
 
-### How do I update Lidarr?
+### How do I update Lidarr
 
 Lidarr runs on one of three release branches. Pick one under **Settings → General → Updates** (show advanced):
 
 - `master` — default, stable. Updates about monthly after testing in `develop` and `nightly`.
-- `develop` — beta. New features and fixes land here after `nightly`. Updates weekly or biweekly, tagged `pre-release` on GitHub.
-- `nightly` — alpha. Builds on every commit that passes CI. Required for plugin support (see [Plugins](/lidarr/plugins)). Expect occasional breakage and plan to recover a failed update yourself.
+- `develop` — beta. New features and fixes land here after `nightly`. Updates weekly or biweekly, tagged `pre-release` on GitHub. Plugin support is available on this branch and above (see [Plugins](/lidarr/plugins)).
+- `nightly` — alpha. Builds on every commit that passes CI. Expect occasional breakage and plan to recover a failed update yourself.
 
 > **Switching from `nightly` or `develop` back to `master` may not be possible without restoring an older database backup.** Database schema migrations are one-way. If a newer branch introduced columns `master` doesn't know about, the older version will refuse to start with errors like *Error parsing column N*. If you already switched and need to go back, restore from a pre-switch backup.
 {.is-danger}
@@ -59,7 +59,7 @@ Docker tag-to-branch mapping:
 
 ## Finding music and MusicBrainz
 
-### Why doesn't artist X show up in search?
+### Why doesn't artist X show up in search
 
 A few common causes:
 
@@ -84,7 +84,7 @@ Type any of these into the Lidarr search box. Lidarr tries to resolve the MBID a
 > **Release vs Release Group is the single most common mistake.** For albums, Lidarr wants the *Release Group* MBID, not a *Release* MBID. A release group is "the 2005 album"; a release is "the 2005 US CD pressing" or "the 2005 UK vinyl." If you paste a release MBID, the lookup will fail or return unexpected results.
 {.is-warning}
 
-### Why does Lidarr only show studio albums, how do I find singles or EPs?
+### Why does Lidarr only show studio albums, how do I find singles or EPs
 
 Lidarr filters what to track per artist through a **Metadata Profile** (Settings → Profiles → Metadata Profiles). The default profile includes only *Studio* albums, which is why singles, EPs, live albums, compilations, and remix collections don't appear on a fresh install.
 
@@ -98,7 +98,7 @@ Adjust the profile rather than per-artist settings for a library-wide change:
 
 To apply a changed profile to existing artists, go to Library, select the artists, and use Edit → Metadata Profile.
 
-### How can I find a MusicBrainz ID?
+### How can I find a MusicBrainz ID
 
 1. Search the artist, release group, or release on [MusicBrainz](https://musicbrainz.org/search). For albums, set the search type to **Release Group**.
 2. Open the entity page. The MBID appears under the **Details** tab, or at the end of the URL (the UUID after the last slash).
@@ -124,7 +124,7 @@ MusicBrainz doesn't have track lengths for this release (they appear as `???` on
 
 ## Importing and renaming
 
-### I'm having trouble importing my artists, what could it be?
+### I'm having trouble importing my artists, what could it be
 
 Imports fail in one of a few ways:
 
@@ -144,7 +144,7 @@ To import files you obtained outside of Lidarr (a Bandcamp download, for example
 
 Lidarr then moves the files into the root folder itself, registers them in its database, and tracks them normally from that point on.
 
-### How can I rename my artist folders?
+### How can I rename my artist folders
 
 {#rename-folders}
 
@@ -171,17 +171,17 @@ If a rename appears to have happened in Lidarr but the folder name on disk hasn'
 > **Renaming outside Lidarr breaks the link between Lidarr's database and the files on disk.** Lidarr tracks files by path. If you rename a folder at the OS level, Lidarr treats the files as missing and may re-download them. Always rename through the Lidarr UI when possible. See [Renaming or moving files outside Lidarr](/lidarr/tips-and-tricks#renaming-moving-outside-lidarr) for a full explanation and recovery steps.
 {.is-warning}
 
-### Why does Lidarr keep trying to rename the same folders?
+### Why does Lidarr keep trying to rename the same folders
 
 Almost always a case-only rename on Windows. Windows filesystems treat `Artist` and `artist` as the same path. When Lidarr renames `ARTIST` to `Artist`, the operation reports success but the folder name on disk doesn't change. Lidarr then sees the folder still needs renaming, and the cycle continues.
 
 The fix is a two-step manual rename (`Artist` → `Artist_tmp` → `Artist`) so the filesystem actually commits the case change. On Linux and macOS this isn't an issue because those filesystems are case-sensitive.
 
-### What audio formats does Lidarr support?
+### What audio formats does Lidarr support
 
 Lidarr recognises the following file extensions:
 
-`.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`
+`.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`, `.aifc`
 
 Files with any other extension are invisible to Lidarr. It won't import, rename, or manage them.
 
@@ -189,7 +189,7 @@ A subset of these formats have named quality definitions that quality profiles a
 
 If a file with a supported extension still isn't importing, the issue is typically match quality rather than format. See [Import Troubleshooting](/lidarr/import-troubleshooting).
 
-### Can Lidarr prefer a specific pressing or format during import?
+### Can Lidarr prefer a specific pressing or format during import
 
 {#can-lidarr-prefer-a-specific-pressing-or-format-during-import}
 
@@ -209,7 +209,7 @@ An [open feature request](https://github.com/Lidarr/Lidarr/issues/186) to expose
 
 ## Lists and automation
 
-### Why are list sync times so long and can I change it?
+### Why are list sync times so long and can I change it
 
 List sync is intentionally slow. Lists are an *"add eventually"* tool, not an *"add now"* tool. The original sync cadence overwhelmed the upstream Servarr metadata server when users ran 10-minute list refreshes.
 
@@ -222,7 +222,7 @@ If you need faster feedback for a specific list:
 > **Spotify import lists can trigger rate-limit errors (429s).** When Lidarr processes a Spotify list, it resolves Spotify IDs to MusicBrainz IDs via the metadata server cache. Any ID not in the cache requires an individual lookup, and enough of those in quick succession will hit the rate limit. To resolve this, wait it out, or add the missing Spotify album links to MusicBrainz so they get cached. See [Metadata Troubleshooting → Spotify import list rate limiting](/lidarr/metadata-troubleshooting#spotify-import-list-rate-limiting) for the full mechanism.
 {.is-info}
 
-### Does Lidarr download lyrics, liner notes, or other extras?
+### Does Lidarr download lyrics, liner notes, or other extras
 
 No, by design. Lidarr fetches the release audio files and tags/organises them. It doesn't bundle lyrics, liner notes, or other secondary files.
 
@@ -233,7 +233,7 @@ For lyrics, use a tag-aware companion tool:
 
 These can run alongside Lidarr against the same library. Run them after Lidarr imports so they don't fight over file ownership.
 
-### What about Custom Scripts / Custom Formats / post-processing?
+### What about Custom Scripts / Custom Formats / post-processing
 
 Lidarr supports two distinct extension points:
 
@@ -244,27 +244,27 @@ Custom Formats score releases. Custom Scripts respond to events. They don't over
 
 ## Integrations and external tools
 
-### Does Lidarr support Deemix, slskd, or similar tools?
+### Does Lidarr support Deemix, slskd, or similar tools
 
 Deemix and slskd are third-party tools. Deemix is a Deezer downloader. slskd is a Soulseek daemon. Historically there was no built-in way to integrate them with Lidarr, and users cobbled together import scripts.
 
-**This changed with the plugin architecture.** As of the `nightly` branch, Lidarr supports third-party plugins that add indexers and download clients for streaming services, peer-to-peer networks, and other sources. This is the fully supported way to extend Lidarr's source coverage. See [Plugins](/lidarr/plugins) for install instructions and the current compatibility notes.
+**This changed with the plugin architecture.** As of the `develop` branch, Lidarr supports third-party plugins that add indexers and download clients for streaming services, peer-to-peer networks, and other sources. This is the fully supported way to extend Lidarr's source coverage. See [Plugins](/lidarr/plugins) for install instructions and the current compatibility notes.
 
 Common community plugins cover exactly this ground: Soulseek, Deezer, Tidal, and similar. Plugin names and availability shift faster than this FAQ can track, so the Plugins page is the current reference.
 
-Running the plugin branch requires switching to `nightly` (see [How do I update Lidarr?](#how-do-i-update-lidarr)). Database schema migrations mean switching back to `master` or `develop` afterward requires restoring a pre-switch backup.
+Running plugins requires `develop` or `nightly` (see [How do I update Lidarr?](#how-do-i-update-lidarr)). Database schema migrations mean switching back to `master` afterward requires restoring a pre-switch backup.
 
-### Which download clients does Lidarr support?
+### Which download clients does Lidarr support
 
-Usenet (NZB): SABnzbd, NZBGet, NZBVortex, Pneumatic, usenet blackhole.
+Usenet (NZB): SABnzbd, NZBGet, NZBVortex, Pneumatic, Download Station (Synology), usenet blackhole.
 
-Torrent: qBittorrent, Transmission, Deluge, rTorrent / ruTorrent, uTorrent, Vuze, Flood, Hadouken, torrent blackhole.
+Torrent: qBittorrent, Transmission, Deluge, rTorrent / ruTorrent, uTorrent, Vuze, Flood, Hadouken, Aria2, Download Station (Synology), Freebox Download, torrent blackhole.
 
-More clients are available via [Plugins](/lidarr/plugins) on the `nightly` branch, primarily streaming-service and P2P-network clients not covered by the built-in list.
+More clients are available via [Plugins](/lidarr/plugins) on the `develop` or `nightly` branch, primarily streaming-service and P2P-network clients not covered by the built-in list.
 
 For setup recipes, the [TRaSH Guides — Downloaders](https://trash-guides.info/Downloaders/) section covers the common clients in more depth than the Lidarr wiki does.
 
-### Does Lidarr integrate with Plex, Emby, or Jellyfin?
+### Does Lidarr integrate with Plex, Emby, or Jellyfin
 
 Not directly. Lidarr manages the library on disk. Media servers read that library and serve it to clients. The common pattern is to share the root folder:
 
@@ -327,7 +327,7 @@ Common causes:
 - **Permissions.** If the Lidarr user can't write to the database file, SQLite can leave it in a corrupt state. This primarily affects new installs, migrated installs, or systems where the running user/group changed recently.
 - **mergerFS with `direct_io` enabled.** SQLite uses mmap, which mergerFS `direct_io` doesn't support. See [mergerFS docs](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs). Remove `direct_io` from the mergerFS options.
 
-### I use Lidarr on a Mac and it stopped working. What happened?
+### I use Lidarr on a Mac and it stopped working. What happened
 
 Most likely one of the databases is corrupt — a known macOS issue when the system sleeps or crashes during a database write. See [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed) above for recovery.
 

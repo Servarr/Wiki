@@ -2,7 +2,7 @@
 title: Radarr Library
 description: Manage your movie collection, monitor status, and organize film library in Radarr
 published: true
-date: 2022-11-14T15:04:06.364Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, library, movies, management, collection, organization
 editor: markdown
 dateCreated: 2021-05-25T01:24:18.386Z
@@ -46,6 +46,8 @@ dateCreated: 2021-05-25T01:24:18.386Z
       - In Cinemas
       - Released
     - Title \[contains\] (String)
+    - Original Title \[contains\] (String)
+    - Original Language (Enum Languages)
     - Release Status (Enum)
       - TBA
       - Announced
@@ -61,15 +63,21 @@ dateCreated: 2021-05-25T01:24:18.386Z
     - In Cinemas (static DateTime, relative TimeDelta)
     - Physical Release (static DateTime, relative TimeDelta)
     - Digital Release (static DateTime, relative TimeDelta)
+    - Release Date (static DateTime, relative TimeDelta)
     - Runtime (Int)
     - Path \[contains\] (String)
     - Size on Disk (Int)
     - Genres \[contains\] (Enum Genres)
+    - Keywords \[contain\] (Array)
+    - Release Groups (Array)
     - TMDB Rating (Float)
     - TMDB Votes (Int)
-    - IMDb Rating
-    - Tomato Rating
-    - IMDb Votes
+    - IMDb Rating (Float)
+    - IMDb Votes (Int)
+    - Rotten Tomatoes Rating (Float)
+    - Trakt Rating (Float)
+    - Trakt Votes (Int)
+    - Popularity (Float)
     - Certification (Enum Rating (PG-13, R, etc))
     - Tags \[contain\] (Enum Tags)
 

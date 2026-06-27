@@ -2,7 +2,7 @@
 title: Prowlarr Indexers
 description: Configure and manage indexers in Prowlarr for torrent and usenet search aggregation
 published: true
-date: 2025-12-16T17:09:47.110Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, indexers, configuration, search, torrent, usenet, aggregation
 editor: markdown
 dateCreated: 2021-06-06T11:45:31.974Z
@@ -53,10 +53,10 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 - Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
 - Enable - Check the box to enable this indexer.
-- Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
+- Redirect - If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr. Redirect is **required** for all Usenet (Newznab) indexers and cannot be disabled for them. For torrent indexers it is optional and only needed for a small number of specific trackers to avoid being banned.
 
-> Redirect is typically only needed for a handful of very specific indexers
-{.is-info}
+> Redirect is mandatory for all Usenet indexers. Attempting to save a Usenet indexer with Redirect disabled will result in a validation error.
+{.is-warning}
 
 - Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
 
@@ -78,11 +78,16 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 - (Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.
 - VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
 - Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
-- (Advanced Option) Query Limit - If your indexer limits your API hits per day, you can enter that number here to avoid exceeding the limit.
-- (Advanced Option) Grab Limit - If your indexer limits your Grabs per day, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may very.
+- (Advanced Option) Query Limit - If your indexer limits your API hits per the configured unit, you can enter that number here to avoid exceeding the limit.
+- (Advanced Option) Grab Limit - If your indexer limits your Grabs per the configured unit, you can enter that number here to avoid exceeding the limit. Once the grab limit is reached further queries will trigger an unhandled exception in \*Arr Apps. Other apps may vary.
+- (Advanced Option) Limits Unit - The unit of time for counting Query and Grab Limits per indexer. Options are `Day` (default) or `Hour`.
 - (Advanced Option) Seed Ratio - For Torrent Indexers Only: The ratio a torrent should reach before stopping, empty is app's default
 - (Advanced Option) Seed Time - For Torrent Indexers Only: The time a torrent should be seeded before stopping, empty is app's default. Values are in minutes.
-- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority. These priorities will sync to the \*Arr apps.
+- (Advanced Option) Pack Seed Time - For Torrent Indexers Only: The time a pack (season or discography) torrent should be seeded before stopping, empty is app's default. Values are in minutes.
+- (Advanced Option) Apps Minimum Seeders - For Torrent Indexers Only: The minimum number of seeders required by the connected apps for this indexer to grab a release. Empty uses the Sync Profile's default.
+- (Advanced Option) Prefer Magnet URL - For Torrent Indexers Only: When enabled, this indexer will prefer magnet URLs over torrent file links for grabs.
+- (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority, with 25 as the default. These priorities will sync to the \*Arr apps.
+- Download Client - Specify which download client is used for grabs made within Prowlarr from this indexer. Leave blank to use any available download client.
 
 - Test your indexer, and if a green checkmark appears, you're okay to save it. When you save it, depending on your sync settings, it will be added to your apps automatically.
 

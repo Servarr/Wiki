@@ -2,7 +2,7 @@
 title: Radarr Multiple Instances
 description: Requirements and how to install multiple instances of Radarr
 published: true
-date: 2024-07-13T15:28:02.725Z
+date: 2026-06-07T00:00:00.000Z
 tags: installation, radarr
 editor: markdown
 dateCreated: 2023-07-03T20:12:10.189Z
@@ -121,8 +121,9 @@ separate locations. {.is-warning}
 2. Start Radarr-4k (Service or Tray App)
 3. Open up Radarr-4k and Navigate within the app to [Settings => General => Host](/radarr/settings/#host)
 4. Change `Port Number` from `7878` to a different port e.g. `7879` so Radarr and Radarr4k do not conflict
-5. You should now be able to start both apps
-6. Continue to [Dealing with Updates](#dealing-with-updates)
+5. Change the `Instance Name` to something that identifies this instance, e.g. `Radarr-4K`. The instance name must contain `Radarr` (case-insensitive). This name is shown in the browser tab and used in notifications.
+6. You should now be able to start both apps
+7. Continue to [Dealing with Updates](#dealing-with-updates)
 
 ### Dealing with Updates
 

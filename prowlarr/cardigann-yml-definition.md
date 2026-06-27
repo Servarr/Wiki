@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: Complete reference guide for creating Cardigann YAML indexer definitions in Prowlarr
 published: true
-date: 2023-04-30T23:03:37.294Z
+date: 2026-06-07T00:00:00.000Z
 tags: prowlarr, cardigann, yml, yaml, indexers, development, reference, guide
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -63,6 +63,7 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [reltime](#reltime)
   - [fuzzytime](#fuzzytime)
   - [htmldecode](#htmldecode)
+  - [htmlencode](#htmlencode)
   - [urldecode](#urldecode)
   - [urlencode](#urlencode)
   - [validfilename](#validfilename)
@@ -457,6 +458,8 @@ settings:
       1_0: Movies
       1_1: Movies/HD
 
+  # NOTE: multi-select is NOT supported in Prowlarr's Cardigann implementation.
+  # It is defined here for schema reference only. Using this type will throw a runtime error.
   - name: quality
     type: multi-select
     label: Select one or more quality
@@ -476,15 +479,15 @@ settings:
 
   # this special type generates an info box in the indexer config that gives instructions on how to fetch a cookie
   - name: info_cookie
-    type: Info_cookie
+    type: info_cookie
 
   # this special type generates an info box in the indexer config to warn that the flaresolverr app may be required
   - name: info_flaresolverr
-    type: Info_flaresolverr
+    type: info_flaresolverr
 
   # this special type generates an info box in the indexer config that gives instructions on how to fetch a useragent
   - name: info_useragent
-    type: Info_useragent
+    type: info_useragent
 ```
 
 If it's a public tracker and no config settings are needed then set `settings: []` to disable all options.
@@ -1545,27 +1548,27 @@ Note that these are only available during search queries.
 .Keywords          # keywords after applying the keywordsfilters
 ```
 
-the following are boolean-like variables in that they return either the string "True" or are null. Can be used in if-else-end statements.
+The following boolean-like variables are documented in the upstream Jackett Cardigann specification. **These variables are NOT implemented as template variables in Prowlarr's Cardigann engine** — they exist as internal C# properties on the search criteria objects but are never populated into the template variable dictionary. Referencing them in a YAML definition will always yield null.
 
 ```yaml
-.Query.IsBookSearch   # t=book
-.Query.IsDoubanQuery  # from t=tvsearch or t=movie
-.Query.IsGenreQuery   # from t=tvsearch or t=movie or t=music or t=book
-.Query.IsIdSearch     # Episode.IsNotNullOrWhiteSpace() || Season > 0 || IsImdbQuery || IsTvdbQuery || IsTVRageQuery || IsTraktQuery || IsTvmazeQuery || IsTmdbQuery || IsDoubanQuery || Album.IsNotNullOrWhiteSpace() || Artist.IsNotNullOrWhiteSpace() || Label.IsNotNullOrWhiteSpace() || Genre.IsNotNullOrWhiteSpace() || Track.IsNotNullOrWhiteSpace() || Author.IsNotNullOrWhiteSpace() || Title.IsNotNullOrWhiteSpace() || Publisher.IsNotNullOrWhiteSpace() || Year.HasValue
-.Query.IsImdbQuery    # from t=tvsearch or t=movie
-.Query.IsMovieSearch  # t=movie
-.Query.IsMusicSearch  # t=music
-.Query.IsRssSearch    # SearchTerm.IsNullOrWhiteSpace() && !IsIdSearch
-.Query.IsSearch       # t=search
-.Query.IsTVRageQuery  # from t=tvsearch
-.Query.IsTVSearch     # t=tvsearch
-.Query.IsTmdbQuery    # from t=tvsearch or t=movie
-.Query.IsTraktQuery   # from t=tvsearch or t=movie
-.Query.IsTvdbQuery    # from t=tvsearch
-.Query.IsTvmazeQuery  # from t=tvsearch
+.Query.IsBookSearch   # t=book (Jackett only — not available in Prowlarr templates)
+.Query.IsDoubanQuery  # from t=tvsearch or t=movie (Jackett only)
+.Query.IsGenreQuery   # from t=tvsearch or t=movie or t=music or t=book (Jackett only)
+.Query.IsIdSearch     # (Jackett only)
+.Query.IsImdbQuery    # from t=tvsearch or t=movie (Jackett only)
+.Query.IsMovieSearch  # t=movie (Jackett only)
+.Query.IsMusicSearch  # t=music (Jackett only)
+.Query.IsRssSearch    # SearchTerm.IsNullOrWhiteSpace() && !IsIdSearch (Jackett only)
+.Query.IsSearch       # t=search (Jackett only)
+.Query.IsTVRageQuery  # from t=tvsearch (Jackett only)
+.Query.IsTVSearch     # t=tvsearch (Jackett only)
+.Query.IsTmdbQuery    # from t=tvsearch or t=movie (Jackett only)
+.Query.IsTraktQuery   # from t=tvsearch or t=movie (Jackett only)
+.Query.IsTvdbQuery    # from t=tvsearch (Jackett only)
+.Query.IsTvmazeQuery  # from t=tvsearch (Jackett only)
 ```
 
-Note: There are several variables that are not supported are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
+Note: There are several variables that are not supported and are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
 
 All field results are available to the following fields via the `.Result.$FieldName` variables too.
 For example:
@@ -1892,12 +1895,12 @@ filters:
 
 ## reltime
 
-Alias for [timeago](#dateparse)
+Alias for [timeago](#timeago)
 
 ## fuzzytime
 
 Converts a fuzzy-time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
-By default fuzzytime renders a USA_Date. But if you supply an argument containing "UK" then it will return a UK_Date.
+By default fuzzytime renders a USA_Date. Note: the "UK" argument for UK date format is not implemented in Prowlarr's Cardigann engine — filter args are ignored and USA date format is always used.
 Fuzzytime can handle a fuzzy-time *string* such as:
 
 ```yaml
@@ -1939,6 +1942,22 @@ filters:
   # input: Anne+Rice%26%23039%3Bs+Mayfair+Witches+S01E01+1080p+WEB-DL+DD%2B+5.1+H.264-GGEZ
   - name: htmldecode
   # result: Anne Rice's Mayfair Witches S01E01 1080p WEB-DL DD+ 5.1 H.264-GGEZ
+```
+
+## htmlencode
+
+Converts a *string* into an HTML-encoded *string* for HTTP transmission.
+
+Example:
+
+```yaml
+# encode the string for HTML transmission
+selector: td:nth-child(2) a
+attribute: title
+filters:
+  # input: Anne Rice's Mayfair Witches
+  - name: htmlencode
+  # result: Anne Rice&#39;s Mayfair Witches
 ```
 
 ## urldecode

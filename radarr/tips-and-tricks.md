@@ -2,7 +2,7 @@
 title: Radarr Tips and Tricks
 description: Advanced tips and tricks for optimizing Radarr configuration and workflow
 published: true
-date: 2025-05-24T19:18:45.779Z
+date: 2026-06-07T00:00:00.000Z
 tags: radarr, tips, tricks, configuration, optimization, workflow
 editor: markdown
 dateCreated: 2021-08-14T15:12:58.934Z
@@ -79,7 +79,7 @@ This will move all of your files into the new directories.
 
 If you need to clean up empty directories, this command will do that:
 
-`for /f "usebackq delims=" %d in ("dir /ad/b/s | sort /R") do rd "%d"`
+`for /f "usebackq delims=" %d in (`dir /ad/b/s | sort /R`) do rd "%d"`
 
 ## Windows Powershell
 

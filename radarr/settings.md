@@ -2,7 +2,7 @@
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
 published: true
-date: 2025-01-03T03:39:01.266Z
+date: 2026-06-07T00:00:00.000Z
 tags: settings, configuration, radarr, profiles, quality, indexers
 editor: markdown
 dateCreated: 2021-05-29T15:57:25.304Z
@@ -147,12 +147,14 @@ Also, note that for each individual settings page, there are some options at the
 
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
+  - Smart Replace - Uses a dash when a colon is followed by a space (`": "` → `" - "`), and a dash otherwise (`":"` → `"-"`). This is the default.
+    - Example: Movie,The.mkv => Movie - The.mkv
   - Delete - Self explanatory
     - Example: Movie,The.mkv => MovieThe.mkv
   - Replace with Dash - Removes the colon and adds a dash in its place
     - Example: Movie,The.mkv => Movie-The.mkv
-  - Replace with Space - Removes the colon and adds a space in its place
-    - Example: Movie,The.mkv => Movie The.mkv
+  - Replace with Space Dash - Removes the colon and adds a space dash in its place
+    - Example: Movie,The.mkv => Movie -The.mkv
   - Replace with Space Dash Space - self explanatory
     - Example: Movie,The.mkv => Movie - The.mkv
 
@@ -177,10 +179,13 @@ Also, note that for each individual settings page, there are some options at the
 - `{Movie Title:DE}` = Titel des Films
 - `{Movie CleanTitle}` = The Movies Title!
 - `{Movie TitleThe}` = Movie's Title!, The
+- `{Movie CleanTitleThe}` = Movies Title!, The
 - `{Movie OriginalTitle}` = Τίτλος ταινίας
 - `{Movie CleanOriginalTitle}` = Τίτλος ταινίας
 - `{Movie TitleFirstCharacter}` = S
 - `{Movie Collection}` = The Movie Collection
+- `{Movie CollectionThe}` = Movie Collection, The
+- `{Movie CleanCollectionThe}` = Movie Collection, The
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
 
@@ -197,7 +202,7 @@ Also, note that for each individual settings page, there are some options at the
 ### Movie IDs
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
+- `{TmdbId}` = 123456
 
 > Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}` {.is-info}
 
@@ -205,6 +210,8 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{Quality Full}` = HDTV 720p Proper
 - `{Quality Title}` = HDTV 720p
+- `{Quality Proper}` = Proper
+- `{Quality Real}` = REAL
 
 ### Media Info
 
@@ -213,11 +220,14 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
 - `{MediaInfo AudioLanguages}` = \[EN+DE\]
+- `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
+- `{MediaInfo SubtitleLanguagesAll}` = \[EN\]
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
 - `{MediaInfo VideoDynamicRangeType}` = DV HDR10
+- `{MediaInfo 3D}` = 3D
 
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` do not currently support a `:EN+DE` suffix allowed in Sonarr to filter the languages included in the filename. There is an open [issue](https://github.com/Radarr/Radarr/issues/4710) regarding this.
 ~~`MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.~~
@@ -240,8 +250,13 @@ Also, note that for each individual settings page, there are some options at the
 ### Custom Formats (Naming)
 
 - `{Custom Formats}` = Surround Sound x264
+- `{Custom Format:FormatName}` = AMZN
 
-> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming {.is-info}
+> `{Custom Formats}` outputs every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, separated by spaces. Add an optional name filter to narrow it: `{Custom Formats:NameA,NameB}` includes only those formats, while `{Custom Formats:-NameA,NameB}` excludes them.
+{.is-info}
+
+> `{Custom Format:FormatName}` outputs a single Custom Format by name. `FormatName` is a placeholder — replace it with the exact name of the Custom Format you want, for example `{Custom Format:AMZN}`. It outputs nothing unless a Custom Format with that name exists, matched the release, and has "Include Custom Format when Renaming" enabled.
+{.is-info}
 
 ### Original
 
@@ -263,16 +278,20 @@ Here you will set the naming convention for the folder that contains the season 
 - `{Movie Title:DE}` = FileTitle
 - `{Movie CleanTitle}` = Movie Title
 - `{Movie TitleThe}` = Movie Title, The
+- `{Movie CleanTitleThe}` = Movie Title, The
 - `{Movie OriginalTitle}` = Τίτλος ταινίας
+- `{Movie CleanOriginalTitle}` = Τίτλος ταινίας
 - `{Movie TitleFirstCharacter}` = S
 - `{Movie Collection}` = The Movie Collection
+- `{Movie CollectionThe}` = Movie Collection, The
+- `{Movie CleanCollectionThe}` = Movie Collection, The
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
 
 ### Movie ID
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
+- `{TmdbId}` = 123456
 
 ## Folders
 
@@ -847,8 +866,8 @@ Connections are how you want Radarr to communicate with the outside world.
 ## Connection Triggers
 
 - On Grab - Be notified when movies are available for download and has been sent to a download client
-- On Import - Be notified when movies are successfully imported
-- On Upgrade - Be notified when movies are upgraded to a better quality
+- On File Import - Be notified when movies are successfully imported
+- On File Upgrade - Be notified when movies are upgraded to a better quality
 - On Rename - Be notified when movies are renamed
 - On Movie Added - Be notified when movies are added to Radarr's library to manage or monitor
 - On Movie Delete - Be notified when movies are deleted
@@ -856,7 +875,9 @@ Connections are how you want Radarr to communicate with the outside world.
 - On Movie File Delete For Upgrade - Be notified when movie files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Health Restored - Be notified when a previously reported health issue is resolved
 - On Application Update - Be notified when Radarr gets updated to a new version
+- On Manual Interaction Required - Be notified when manual interaction is required for a download
 
 # Metadata
 

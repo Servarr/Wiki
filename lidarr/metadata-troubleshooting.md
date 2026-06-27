@@ -2,7 +2,7 @@
 title: Lidarr Metadata Troubleshooting
 description: Why can't I add or update this album? Diagnose MusicBrainz metadata problems in Lidarr — propagation, unknown release statuses, matching, cache-busts
 published: true
-date: 2026-05-29T13:01:49.601Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, troubleshooting, releases, metadata, musicbrainz, cache-bust
 editor: markdown
 dateCreated: 2026-04-20T13:04:32.647Z
@@ -94,7 +94,7 @@ If you notice this pattern for a specific artist, spot-check their MusicBrainz d
 
 ## Refresh cadence
 
-- **Lidarr ↔ metadata server:** every hour, at 5 minutes past the hour.
+- **Lidarr ↔ metadata server:** every 24 hours.
 - **Metadata server ↔ MusicBrainz:** faster but not instant; assume hours, not minutes.
 - **Cover art updates:** slowest of the three — expect days. Covers aren't pulled directly by Lidarr — see [Cover art](#cover-art) below.
 
@@ -123,7 +123,7 @@ Refresh Releases is the task that keeps Lidarr's local view of metadata in sync 
 If the refresh is causing heavy disk I/O, the setting to look at is **Rescan Artist Folder after Refresh**:
 
 - Default is `Always`, which re-reads every file after every refresh.
-- Changing it to `Manual` resolves the I/O problem — refreshes still update metadata, they just don't re-scan files on disk.
+- Changing it to `After Manual Refresh` resolves the I/O problem — refreshes still update metadata, they just don't re-scan files on disk.
 - **Don't** set it to `Never` unless every change to your library (additions, upgrades, deletions) goes through Lidarr. Lidarr won't pick up manual file changes or third-party tooling if rescans never run.
 
 ## Updating MusicBrainz
@@ -194,7 +194,7 @@ To add a Spotify relationship on MusicBrainz, open the release and go to **Edit*
 > A 429 from Spotify doesn't mean anything is wrong with your Lidarr setup — it's a server-side rate limit on lookups. Checking Lidarr's logs at Debug level will show the 429 responses if you want to confirm that's the cause.
 {.is-info}
 
-## Retry or wait?
+## Retry or wait
 
 | Situation | Action |
 |---|---|

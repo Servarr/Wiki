@@ -2,7 +2,7 @@
 title: Prowlarr Supported
 description: List of supported indexers, trackers, and download clients compatible with Prowlarr
 published: true
-date: 2022-10-18T19:43:50.037Z
+date: 2026-06-07T00:00:00.000Z
 tags: supported, indexers, trackers, download-clients, compatibility, prowlarr
 editor: markdown
 dateCreated: 2021-06-23T03:06:57.769Z
@@ -30,6 +30,8 @@ Prowlarr can automatically sync indexers with various applications
   - [Refer to the Settings Page](/prowlarr/settings#applications)
 - Sonarr {#sonarr}
   - [Refer to the Settings Page](/prowlarr/settings#applications)
+- Whisparr {#whisparr}
+  - [Refer to the Settings Page](/prowlarr/settings#applications)
 
 # Download Clients
 
@@ -44,6 +46,8 @@ Prowlarr can automatically sync indexers with various applications
 - Download Station {#usenetdownloadstation}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
 - Flood {#flood}
+  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+- Freebox Download {#torrentfreeboxdownload}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
 - Hadouken {#hadouken}
   - [Refer to the Settings Page](/prowlarr/settings#download-clients)
@@ -92,7 +96,7 @@ Prowlarr can automatically sync indexers with various applications
 
 {#notification}
 
-- Boxcar {#boxcar}
+- Apprise {#apprise}
 - Custom Script {#customscript}
   - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/prowlarr/custom-scripts) for more details.
 - Discord {#discord}
@@ -102,11 +106,16 @@ Prowlarr can automatically sync indexers with various applications
   - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
 - Gotify {#gotify}
 - Join {#join}
+- Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
+- Ntfy {#ntfy}
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
+- Pushcut {#pushcut}
 - Pushover {#pushover}
 - SendGrid {#sendgrid}
+- Signal {#signal}
+- Simplepush {#simplepush}
 - Slack {#slack}
 - Telegram {#telegram}
 - Twitter {#twitter}

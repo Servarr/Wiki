@@ -2,7 +2,7 @@
 title: Sonarr FreeBSD Installation
 description: FreeBSD installation guide for Sonarr
 published: true
-date: 2023-07-03T20:23:52.657Z
+date: 2026-06-07T00:00:00.000Z
 tags: sonarr
 editor: markdown
 dateCreated: 2021-07-10T16:07:37.425Z

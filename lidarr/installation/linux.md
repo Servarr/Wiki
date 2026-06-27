@@ -2,7 +2,7 @@
 title: Lidarr Linux Installation
 description: Linux installation guide for Lidarr
 published: true
-date: 2026-04-20T14:18:55.254Z
+date: 2026-06-07T00:00:00.000Z
 tags: lidarr, installation, linux
 editor: markdown
 dateCreated: 2023-07-03T20:10:49.328Z
@@ -38,7 +38,7 @@ You'll need to install the binaries using the below commands.
 - Ensure you have the required prerequisite packages:
 
 ```shell
-sudo apt install curl mediainfo sqlite3 libchromaprint-tools
+sudo apt install curl mediainfo sqlite3 libchromaprint-tools wget
 ```
 
 > Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
@@ -98,6 +98,7 @@ After=syslog.target network.target
 [Service]
 User=lidarr
 Group=media
+UMask=0002
 Type=simple
 
 ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/var/lib/lidarr/
