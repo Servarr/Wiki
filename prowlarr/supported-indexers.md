@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-26T03:36:49.928906
+date: 2026-06-29T03:50:37.262515
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-26T03:36:49.928906
+dateCreated: 2026-06-29T03:50:37.262515
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.0.5422` / [Commit: bd3bc4232ff1c20f9ec4782f83c336021d8ad216](https://github.com/Prowlarr/Prowlarr/commit/bd3bc4232ff1c20f9ec4782f83c336021d8ad216)
-  - [Prowlarr Indexers Commit: 34c7310062cafa4362b89f128614e58c1fd2076f](https://github.com/Prowlarr/Indexers/commit/34c7310062cafa4362b89f128614e58c1fd2076f)
+  - Prowlarr Build `2.5.0.5443` / [Commit: 9e19baf1ed29c18e7f3563e0a8cd2190b3db64a6](https://github.com/Prowlarr/Prowlarr/commit/9e19baf1ed29c18e7f3563e0a8cd2190b3db64a6)
+  - [Prowlarr Indexers Commit: e3b1ba0630f92a382794ea938be53f3e912874e3](https://github.com/Prowlarr/Indexers/commit/e3b1ba0630f92a382794ea938be53f3e912874e3)
 
 ---
 
@@ -102,8 +102,8 @@ dateCreated: 2026-06-26T03:36:49.928906
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome249.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip230.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome251.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip232.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -556,6 +556,7 @@ dateCreated: 2026-06-26T03:36:49.928906
 |[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI PAY2DL Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[Siqi](https://si-qi.xyz/){#siqi}|Siqi is a CHINESE Private Tracker for HD image BOOKS and E-BOOKS|Chinese (China)|
 |[SkipTheCommercials (API)](https://skipthecommercials.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
+|[Slobit Games](https://games.slo-bitcloud.eu/){#slobitgames}|Slobit Games is a Private Torrent Tracker for GAMES|English (United States)|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[SoulVoice (聆音Club)](https://pt.soulvoice.club/){#soulvoice}|SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SpeedApp\.io](https://speedapp.io/){#speedapp.io}|SpeedApp is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
