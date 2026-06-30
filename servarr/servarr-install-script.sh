@@ -37,8 +37,8 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.17"
-scriptdate="2025-10-27"
+scriptversion="3.1.18"
+scriptdate="2026-06-30"
 
 set -euo pipefail
 
@@ -68,7 +68,7 @@ echo -e "Running Servarr Install Script - Version ${brown}[$scriptversion]${rese
 echo ""
 echo "Select the application to install: "
 echo ""
-select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
+select app in lidarr prowlarr radarr whisparr quit; do
 
     case $app in
     lidarr)
@@ -97,14 +97,6 @@ select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
         app_prereq="curl sqlite3 libsqlite3-0" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="nightly"                     # {Update me if needed} branch to install
-        break
-        ;;
-    whisparr-v3)
-        app=whisparr
-        app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
-        app_umask="0002"                     # UMask the Service will run as
-        branch="eros"                        # {Update me if needed} branch to install
         break
         ;;
     quit)
