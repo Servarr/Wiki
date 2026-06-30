@@ -37,7 +37,7 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.18"
+scriptversion="3.1.19"
 scriptdate="2026-06-30"
 
 set -euo pipefail
@@ -73,28 +73,28 @@ select app in lidarr prowlarr radarr whisparr quit; do
     case $app in
     lidarr)
         app_port="8686"                                                     # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev libchromaprint-tools mediainfo" # Required packages
         app_umask="0002"                                                    # UMask the Service will run as
         branch="master"                                                     # {Update me if needed} branch to install
         break
         ;;
     prowlarr)
         app_port="9696"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     radarr)
         app_port="7878"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     whisparr)
         app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="nightly"                     # {Update me if needed} branch to install
         break
