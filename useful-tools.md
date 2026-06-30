@@ -121,17 +121,18 @@ Please note that the gif does not cover the `VACUUM;` command
 
 The below instructions are for \*Nix Operating Systems, but the concept will be similar on Windows Command Line.
 
-> This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
+> This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database), which is ideal. Note that it requires Sqlite 3.29+
 {.is-info}
 
-> Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system {.is-info}
+> The `sqlite3` command-line tool is separate from the `libsqlite3` library the \*Arrs bundle. On Debian/Ubuntu install it with `sudo apt install sqlite3`; use the equivalent package on other distributions. Check your version with `sqlite3 --version`; if it is older than 3.29 upgrade sqlite3 or use [the UI method above](#recovering-a-corrupt-db-ui) instead. {.is-info}
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
+1. Confirm the database is actually corrupt with `sqlite3 <path to bad database> "PRAGMA integrity_check;"` — a healthy database returns `ok`
+1. Recover it with `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Remove or move/rename the old corrupt database and any `wal` or `shm` in the folder
-1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
+1. Rename the recovered database to match what the \*Arr expects. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
 1. Start the application
 
 # Finding Cookies
