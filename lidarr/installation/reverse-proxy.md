@@ -19,7 +19,7 @@ Sample config examples for configuring Lidarr to be accessible through a reverse
 
 Add the following configuration to `nginx.conf` in the root of your Nginx configuration. Place the code block inside the `server` context. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, for example: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host`
+> If you're using a non-standard http/https server port, make sure your `X-Forwarded-Host` header also includes it, for example: `proxy_set_header X-Forwarded-Host $host:$server_port` or `proxy_set_header X-Forwarded-Host $http_host`
 {.is-warning}
 
 ```nginx
@@ -68,7 +68,7 @@ Nginx includes the `sites-enabled` folder by default. Check `nginx.conf` and add
 > For subdomain configuration, set baseurl to `''` (empty). This assumes the default port `8686` and Lidarr on localhost (127.0.0.1). Line 5 sets the subdomain to `lidarr`.
 {.is-info}
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, for example: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host`
+> If you're using a non-standard http/https server port, make sure your `X-Forwarded-Host` header also includes it, for example: `proxy_set_header X-Forwarded-Host $host:$server_port` or `proxy_set_header X-Forwarded-Host $http_host`
 {.is-warning}
 
 ```nginx
