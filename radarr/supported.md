@@ -146,7 +146,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Telegram {#telegram}
 - Trakt {#trakt}
 - Twitter {#twitter}
-  - See this [Tips and Tricks entry](/useful-tools#twitter)
+  - See this [Tips and Tricks entry](/useful-tools#twitter-connect)
 - Webhook {#webhook}
 
 # Lists
