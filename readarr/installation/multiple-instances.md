@@ -59,7 +59,7 @@ This guide will show you how to run multiple instances of Readarr on Windows usi
 
 #### Prerequisites (Service)
 
-- [You must have Readarr already installed](#windows)
+- [You must have Readarr already installed](/readarr/installation/windows)
 - You must have [NSSM (Non-Sucking Service Manager](http://nssm.cc) installed. To install, download the latest release (2.24 at the time of writing) and copy either the 32-bit or 64-bit nssm.exe file to C:/windows/system32.
   - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
 
@@ -104,7 +104,7 @@ separate locations. {.is-warning}
 
 #### Prerequisites (Tray App)
 
-- [You must have Readarr already installed](#windows)
+- [You must have Readarr already installed](/readarr/installation/windows)
 - Readarr must be configured with a `/data=` argument to allow multiple instances
 - Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
 

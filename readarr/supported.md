@@ -144,7 +144,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Synology Indexer {#synologyindexer}
 - Telegram {#telegram}
 - Twitter {#twitter}
-  - See this [Tips and Tricks entry](/useful-tools#twitter)
+  - See this [Tips and Tricks entry](/useful-tools#twitter-connect)
 - Webhook {#webhook}
 
 # Lists
