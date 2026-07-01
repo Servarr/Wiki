@@ -97,3 +97,16 @@ If you find that a `Release` or `Release Artist` is missing from MusicBrainz, yo
 Two questions that come up often enough to answer here:
 
 - *Why do I have the same file in my download folder and my library folder?*
+- *Why did importing fill up my disk?*
+
+When Lidarr imports a completed download, it doesn't move the file out of the download client's folder by default. The download usually needs to stay there so your torrent client can keep seeding. Instead, Lidarr puts a copy of each track into your library folder and leaves the original where the client downloaded it.
+
+How that copy is made depends on where the two folders live:
+
+- **Same filesystem → hardlink.** A hardlink is a second name for the *same* data on disk. The file appears in both your download folder and your library folder, but it only occupies the space once. Seeding continues uninterrupted because the bytes never move. This is the default and the reason both paths must be on the same volume.
+- **Different filesystems → copy.** Hardlinks can't span filesystems, so Lidarr falls back to copying the data. Now the bytes exist twice, which uses the extra disk space and the extra I/O. This is the usual cause of "importing filled up my disk."
+
+The behavior is controlled by **Use Hardlinks instead of Copy** under *Settings → Media Management* (an advanced setting, enabled by default). When it's on, Lidarr hardlinks where it can and copies where it can't; when it's off, Lidarr always copies. Disk-layout mistakes are by far the most common cause of unexpected copying — in Docker, the download folder and the library root must be reachable through the *same* volume mount for hardlinks to work.
+
+> Hardlinks only work when the source and destination are on the same filesystem. If your download folder and library folder are on different drives, volumes, or Docker mounts, Lidarr copies instead — using twice the space. See [TRaSH's Hardlink Guide](https://trash-guides.info/hardlinks) for setup details.
+{.is-info}

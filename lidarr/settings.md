@@ -37,7 +37,7 @@ When **Replace Illegal Characters** is enabled, controls how Lidarr replaces col
 |---|---|
 | **Delete** | Removes the colon and any following space (`Artist:Name` → `ArtistName`). |
 | **Replace with Dash** | Replaces with a dash (`Artist:Name` → `Artist-Name`). |
-| **Replace with Space Dash** | Replaces with a space-dash (`Artist: Name` → `Artist -Name`). |
+| **Replace with Space Dash** | Replaces with a space-dash (`Artist:Name` → `Artist -Name`). |
 | **Replace with Space Dash Space** | Replaces with a space-dash-space (`Artist: Name` → `Artist - Name`). |
 | **Smart Replace** | Uses a dash when the colon isn't followed by a space, or a space-dash when it is (`Artist:Name` → `Artist-Name`; `Artist: Name` → `Artist - Name`). |
 
@@ -207,7 +207,7 @@ Common specification types for music:
 | **Release Title** | The full release title string from the indexer. Supports regex. |
 | **Release Group** | The release group part of the title, if parseable. |
 | **Indexer Flag** | Indexer-specific flags (Freeleech, Halfleech, etc.) where the indexer supports them. |
-| **Source** | Audio source tag (CD, WEB, Vinyl, etc.) if present in the title. |
+| **Size** | The reported release size. Matches when the size falls between the configured **Minimum Size** and **Maximum Size** (in GB). |
 
 For worked examples and suggested scoring values for a FLAC-focused library, see [Tips and Tricks → Custom Formats](/lidarr/tips-and-tricks#custom-formats).
 

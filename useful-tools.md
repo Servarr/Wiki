@@ -31,6 +31,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Petio](#petio)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
+    - [Managarr](#managarr)
     - [LunaSea](#lunasea)
     - [Radarr \& Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
     - [nzb360 - Android App](#nzb360---android-app)
@@ -57,6 +58,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Tdarr](#tdarr)
   - [tdarr\_inform](#tdarr_inform)
   - [Deleterr](#deleterr)
+  - [Prunerr](#prunerr)
   - [Twitter Connect](#twitter-connect)
 
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
@@ -119,17 +121,18 @@ Please note that the gif does not cover the `VACUUM;` command
 
 The below instructions are for \*Nix Operating Systems, but the concept will be similar on Windows Command Line.
 
-> This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
+> This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database), which is ideal. Note that it requires Sqlite 3.29+
 {.is-info}
 
-> Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system {.is-info}
+> The `sqlite3` command-line tool (Debian/Ubuntu package `sqlite3`) provides the `.recover` command and is separate from the SQLite library the \*Arrs ship with. Install it with `sudo apt install sqlite3`, or the equivalent package on other distributions. Check your version with `sqlite3 --version`; if it is older than 3.29 upgrade sqlite3 or use [the UI method above](#recovering-a-corrupt-db-ui) instead. {.is-info}
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
+1. Confirm the database is actually corrupt with `sqlite3 <path to bad database> "PRAGMA integrity_check;"` — a healthy database returns `ok`
+1. Recover it with `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Remove or move/rename the old corrupt database and any `wal` or `shm` in the folder
-1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
+1. Rename the recovered database to match what the \*Arr expects. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
 1. Start the application
 
 # Finding Cookies
@@ -263,6 +266,10 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ## Remote Control
 
+### Managarr
+
+[Managarr](https://github.com/Dark-Alex-17/managarr) is a TUI (Text-based User Interface) and CLI (Command Line Interface) for managing *arr servers from the terminal, built in Rust. It supports Radarr, Sonarr, and Lidarr with an interactive terminal UI and a scriptable CLI for automation. Available on Linux, macOS, and Windows.
+
 ### LunaSea
 
 [LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software. Manage new media content fetched via Lidarr, Radarr, and Sonarr.
@@ -378,6 +385,10 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 ## Deleterr
 
 [Deleterr](https://github.com/rfsbraz/deleterr) is a tool to delete stale and inactive media from Plex/Sonarr/Radarr. It helps managing limited space when you allow users to request shows via Seerr/Ombi but don't want to manually monitor available disk space. It's configurable to support only deleting media meeting your defined criteria.
+
+## Prunerr
+
+[Prunerr](https://github.com/helliott20/prunerr) is a media library cleanup tool for [Plex](/plex)/[Sonarr](/sonarr)/[Radarr](/radarr) that reclaims disk space by flagging and removing unwanted content based on customisable rules covering watch status, age, file size and resolution. It features a review-and-approve deletion queue, configurable grace periods, a disk-pressure reactive mode that automatically reclaims space when free space drops below a target you set, and outbound webhooks with Home Assistant integration. All service connections are configured through the web UI.
 
 ## Twitter Connect
 

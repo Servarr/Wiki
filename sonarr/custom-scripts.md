@@ -19,7 +19,7 @@ Sonarr can execute a custom script when an episode is newly imported or renamed.
 Note that the following will only be logged for custom scripts:
 
 - Script `stdout` output will be logged as `Debug`
-- Script `stderr` output will be logged as `Info`
+- Script `stderr` output will be logged as `Error`
 - The trigger of the script will be logged in `Trace`
 
 # Environment Variables
