@@ -124,7 +124,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 > This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database), which is ideal. Note that it requires Sqlite 3.29+
 {.is-info}
 
-> The `sqlite3` command-line tool is separate from the `libsqlite3` library the \*Arrs bundle. On Debian/Ubuntu install it with `sudo apt install sqlite3`; use the equivalent package on other distributions. Check your version with `sqlite3 --version`; if it is older than 3.29 upgrade sqlite3 or use [the UI method above](#recovering-a-corrupt-db-ui) instead. {.is-info}
+> The `sqlite3` command-line tool (Debian/Ubuntu package `sqlite3`) provides the `.recover` command and is separate from the SQLite library the \*Arrs ship with. Install it with `sudo apt install sqlite3`, or the equivalent package on other distributions. Check your version with `sqlite3 --version`; if it is older than 3.29 upgrade sqlite3 or use [the UI method above](#recovering-a-corrupt-db-ui) instead. {.is-info}
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
