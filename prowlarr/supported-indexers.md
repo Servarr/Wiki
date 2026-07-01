@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-06-30T03:34:41.142707
+date: 2026-07-01T03:44:31.777153
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-06-30T03:34:41.142707
+dateCreated: 2026-07-01T03:44:31.777153
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.0.5443` / [Commit: 9e19baf1ed29c18e7f3563e0a8cd2190b3db64a6](https://github.com/Prowlarr/Prowlarr/commit/9e19baf1ed29c18e7f3563e0a8cd2190b3db64a6)
-  - [Prowlarr Indexers Commit: 054289ae3db9ca28b22fc820b9ddec87706d857d](https://github.com/Prowlarr/Indexers/commit/054289ae3db9ca28b22fc820b9ddec87706d857d)
+  - [Prowlarr Indexers Commit: 59cafcccda7a2b3da27d3ec57026a62a658ea88c](https://github.com/Prowlarr/Indexers/commit/59cafcccda7a2b3da27d3ec57026a62a658ea88c)
 
 ---
 
@@ -102,8 +102,8 @@ dateCreated: 2026-06-30T03:34:41.142707
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome251.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip232.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome252.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip233.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -494,7 +494,6 @@ dateCreated: 2026-06-30T03:34:41.142707
 |[Polish Torrent (API)](https://polishtorrent.top/){#polishtorrent}|Polish Torrent (PTT) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private Torrent Tracker for 0DAY / MOVIES / GENERAL|Polish (Poland)|
 |[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|English (United States)|
-|[PornBytes (API)](https://pornbytes.site/){#pornbytes-api}|PornBytes is a Private Torrent Tracker for 3X|English (United States)|
 |[Portugas (API)](https://portugas.org/){#portugas-api}|Portugas is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker|English (United States)|
 |[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD (PHD) is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeZ|English (United States)|
