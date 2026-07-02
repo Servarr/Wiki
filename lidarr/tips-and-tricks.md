@@ -2,7 +2,7 @@
 title: Lidarr Tips and Tricks
 description: Advanced tips, optimization techniques, and workflow improvements for experienced Lidarr users
 published: true
-date: 2026-07-02T16:41:10.772Z
+date: 2026-07-02T16:57:06.791Z
 tags: lidarr, tips, tricks, optimization, workflow, advanced, advanced tips
 editor: markdown
 dateCreated: 2021-08-14T15:15:51.656Z
@@ -71,7 +71,7 @@ MusicBrainz itself isn't in this path. An artist can have a complete MusicBrainz
 If an artist is showing no image or a wrong image:
 
 1. Check the artist's page on [fanart.tv](https://fanart.tv/) and [TheAudioDB](https://www.theaudiodb.com/) directly. If neither has artwork for that artist, there's nothing for the metadata server to serve, and nothing for Lidarr to render. Both sites accept community-submitted artwork if you want to fix it at the source.
-2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache of fanart.tv/TheAudioDB results has its own propagation window measured in hours, sometimes longer.
+2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache of fanart.tv / TheAudioDB results has its own propagation window measured in hours, sometimes longer.
 3. Trigger an artist refresh in Lidarr once you believe upstream has updated (Artist page → Refresh button, or Library → Artist Editor → Update).
 
 > Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream at fanart.tv or TheAudioDB — uploading art to MusicBrainz's Cover Art Archive won't fix a missing artist image, since that only feeds album cover art (see [Missing album images](#missing-album-images) below).
