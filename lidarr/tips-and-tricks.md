@@ -2,7 +2,7 @@
 title: Lidarr Tips and Tricks
 description: Advanced tips, optimization techniques, and workflow improvements for experienced Lidarr users
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-07-02T16:41:10.772Z
 tags: lidarr, tips, tricks, optimization, workflow, advanced, advanced tips
 editor: markdown
 dateCreated: 2021-08-14T15:15:51.656Z
@@ -22,7 +22,7 @@ Your download folder and music library root folder can't be the same location. M
 
 Keep two locations separate:
 
-```text
+```
 /data/
   downloads/          ← download client writes here
   music/              ← Lidarr root folder (your library)
@@ -37,7 +37,7 @@ On import, Lidarr moves (or hardlinks) files from `downloads/` into `music/`. Th
 
 If you're running more than one download client — say, a Usenet client alongside a torrent client — give each its own subfolder under `downloads/` and set a matching category in Lidarr:
 
-```text
+```
 /data/
   downloads/
     usenet/           ← SABnzbd / NZBGet category: "lidarr"
@@ -61,15 +61,20 @@ When Lidarr and your download client run in separate containers or machines, the
 
 ### Missing artist images
 
-Lidarr pulls artist images from whatever the Servarr metadata server aggregates from its upstream sources. Lidarr itself doesn't reach out to any specific image service — it renders whatever URLs the metadata server returns.
+Lidarr doesn't reach out to any image service directly. Artist images come through the Servarr metadata server, which looks each artist up by MusicBrainz ID against two providers, in order:
+
+1. **fanart.tv** — queried first, for all of banner, fanart (background), logo, and poster art.
+2. **TheAudioDB** — used only to fill in whichever of those four image types fanart.tv didn't have. It never overrides a fanart.tv result.
+
+MusicBrainz itself isn't in this path. An artist can have a complete MusicBrainz entry and still show no image in Lidarr if neither fanart.tv nor TheAudioDB has artwork for that MBID.
 
 If an artist is showing no image or a wrong image:
 
-1. Check the artist on [MusicBrainz](https://musicbrainz.org/). If the MB entity has no image linked, there's no image for Lidarr to render. MB accepts community contributions for artist and album artwork; see MB's [How to Contribute](https://musicbrainz.org/doc/How_to_Contribute) page.
-2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache has its own propagation window measured in hours, sometimes longer.
+1. Check the artist's page on [fanart.tv](https://fanart.tv/) and [TheAudioDB](https://www.theaudiodb.com/) directly. If neither has artwork for that artist, there's nothing for the metadata server to serve, and nothing for Lidarr to render. Both sites accept community-submitted artwork if you want to fix it at the source.
+2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache of fanart.tv/TheAudioDB results has its own propagation window measured in hours, sometimes longer.
 3. Trigger an artist refresh in Lidarr once you believe upstream has updated (Artist page → Refresh button, or Library → Artist Editor → Update).
 
-> Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream. This is the same model as the Release / Release Artist data itself — see [Concepts](/lidarr/concepts).
+> Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream at fanart.tv or TheAudioDB — uploading art to MusicBrainz's Cover Art Archive won't fix a missing artist image, since that only feeds album cover art (see [Missing album images](#missing-album-images) below).
 {.is-info}
 
 ### Missing album images
@@ -166,7 +171,7 @@ If the rename has already happened and the next disk scan has not yet run, you c
 
 After a successful manual import, Lidarr creates new track file records at the current path and the tracks are no longer considered missing.
 
-> **If you have a large library and renamed many folders outside Lidarr**, running a full disk scan before manual import may be faster than importing folder by folder. Go to **System → Tasks** and trigger **Rescan Folders**, or use **Library → Artist Editor → Update** to run a rescan across all artists. Lidarr will discard the stale records and then re-match any files it finds at the new paths that still conform to the expected folder structure.
+> **If you have a large library and renamed many folders outside Lidarr**, running a full disk scan before manual import may be faster than importing folder by folder. Go to **System → Tasks** and trigger **Rescan Artist Folders**, or use **Library → Artist Editor → Update** to run a rescan across all artists. Lidarr will discard the stale records and then re-match any files it finds at the new paths that still conform to the expected folder structure.
 {.is-info}
 
 ## Custom Formats
