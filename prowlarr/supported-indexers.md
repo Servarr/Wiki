@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-01T03:44:31.777153
+date: 2026-07-04T02:48:55.521184
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-01T03:44:31.777153
+dateCreated: 2026-07-04T02:48:55.521184
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.0.5443` / [Commit: 9e19baf1ed29c18e7f3563e0a8cd2190b3db64a6](https://github.com/Prowlarr/Prowlarr/commit/9e19baf1ed29c18e7f3563e0a8cd2190b3db64a6)
-  - [Prowlarr Indexers Commit: 59cafcccda7a2b3da27d3ec57026a62a658ea88c](https://github.com/Prowlarr/Indexers/commit/59cafcccda7a2b3da27d3ec57026a62a658ea88c)
+  - Prowlarr Build `2.5.0.5453` / [Commit: 4961d22ffc45e691606e82de498548d1430973f7](https://github.com/Prowlarr/Prowlarr/commit/4961d22ffc45e691606e82de498548d1430973f7)
+  - [Prowlarr Indexers Commit: 8cd548726328f8f5cbeff064c7562be102e5cc92](https://github.com/Prowlarr/Indexers/commit/8cd548726328f8f5cbeff064c7562be102e5cc92)
 
 ---
 
@@ -313,6 +313,7 @@ dateCreated: 2026-07-01T03:44:31.777153
 |[Explosiv-World](https://explosiv-world.biz/){#explosiv-world}|Explosiv-World (E-W) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[ExtremeBits](https://extremebits.net/){#extremebits}|ExtremeBits is a Private Torrent Tracker for EXTREME SPORTS|English (United States)|
 |[F1Carreras (API)](https://f1carreras.xyz/){#f1carreras-api}|F1Carreras is a SPANISH Private Torrent Tracker for Motor Racing TV Releases|Spanish (Mexico)|
+|[F1GP](https://f1gp.xyz/){#f1gp}|F1GP is a Private Torrent Tracker for SPORTS|English (United States)|
 |[The Falling Angels](https://tfa.tf/){#thefallingangels}|The Falling Angels (TFA) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[FANO\.IN](https://www.fano.in/){#fanoin}|Fano\.in is a LATVIAN Private Torrent Tracker for 0DAY / GENERAL|Latvian (Latvia)|
 |[Fappaizuri](https://www.fappaizuri.me/){#fappaizuri}|Fappaizuri is a Private Torrent Tracker for HENTAI / JAV|English (United States)|
@@ -431,6 +432,7 @@ dateCreated: 2026-07-01T03:44:31.777153
 |[March](https://duckboobee.org/){#march}|March is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Matrix](https://matrixworld.info/){#matrix}|M\.A\.T\.R\.I\.X is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[MDAN](https://bt.mdan.org/){#mdan}|Mansão dos Animes (MDAN) is a BRAZILIAN Private Torrent Tracker for ANIME|Portuguese (Brazil)|
+|[Memphis](https://memphis.fit/){#memphis}|Memphis is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[MeseVilág](https://mese-vilag.net/){#mesevilag}|MeseVilág (Fairytale World) is a HUNGARIAN Private Torrent Tracker for ANIMATED MOVIES / TV|Hungarian (Hungary)|
 |[MetalGuru](https://metalguru.me/){#metalguru}|MetalGuru is a Private Torrent Tracker for GENERAL with focus on MUSIC|English (United States)|
 |[MidnightScene](https://midnightscene.cc/){#midnightscene}|MidnightScene is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -610,7 +612,6 @@ dateCreated: 2026-07-01T03:44:31.777153
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private Torrent Tracker for MUSIC|English (United States)|
 |[TreZzoR](https://tracker.czech-server.com/){#trezzor}|TreZzoR is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[TreZzoRCookie](https://tracker.czech-server.com/){#trezzorcookie}|TreZzoR is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL\. This uses the cookie method for access|Czech (Czech Republic)|
-|[TSDB](https://f1gp.xyz/){#tsdb}|TSDB (The Sports Database) is a Private Torrent Tracker for SPORTS|English (United States)|
 |[TurkSeed (API)](https://turkseed.com/){#turkseed-api}|TurkSeed (Aturk) is a TURKISH Private Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[TurkTorrent](https://turktorrent.us/){#turktorrent}|TurkTorrent (TT) is a TURKISH Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Turkish (Turkey)|
 |[U2](https://u2.dmhy.org/){#u2}|U2 (U2分享園@動漫花園) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
