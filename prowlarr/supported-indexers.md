@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-04T02:48:55.521184
+date: 2026-07-05T03:18:52.814036
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-04T02:48:55.521184
+dateCreated: 2026-07-05T03:18:52.814036
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.0.5453` / [Commit: 4961d22ffc45e691606e82de498548d1430973f7](https://github.com/Prowlarr/Prowlarr/commit/4961d22ffc45e691606e82de498548d1430973f7)
-  - [Prowlarr Indexers Commit: 8cd548726328f8f5cbeff064c7562be102e5cc92](https://github.com/Prowlarr/Indexers/commit/8cd548726328f8f5cbeff064c7562be102e5cc92)
+  - [Prowlarr Indexers Commit: 281ccd7af8bcf304339b3d7f598b0712a99dfa6c](https://github.com/Prowlarr/Indexers/commit/281ccd7af8bcf304339b3d7f598b0712a99dfa6c)
 
 ---
 
@@ -336,7 +336,6 @@ dateCreated: 2026-07-04T02:48:55.521184
 |Generic Torznab{#torznab}|A Newznab-like api for torrents|English (United States)|
 |[GGPT](https://www.gamegamept.com/){#ggpt}|GGPT is a CHINESE Private Torrent Tracker for GAMES|Chinese (China)|
 |[GigaTorrents](https://gigatorrents.ws/){#gigatorrents}|GigaTorrents is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[GimmePeers](https://www.gimmepeers.com/){#gimmepeers}|GimmePeers (formerly ILT) is a Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Girotorrent](https://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[GreatPosterWall](https://greatposterwall.com/){#greatposterwall}|GreatPosterWall (GPW) is a CHINESE Private site for MOVIES|English (United States)|
 |[HaiDan](https://www.haidan.cc/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -455,7 +454,6 @@ dateCreated: 2026-07-04T02:48:55.521184
 |[The-New-Fun](https://the-new-fun.com/){#thenewfun}|The-New-Fun is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[New Heaven](https://newheaven.nl/){#newheaven}|New Heaven is a GERMAN Private tracker for MOVIES / AUDIO / TV / GENERAL|German (Germany)|
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
-|[Nexum (API)](https://nexum-core.com/){#nexum-api}|Nexum is a FRENCH Private Torrent Tracker for MOVIES / TV|French (France)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Nirvana (API)](https://nirvana.li/){#nirvana}|Nirvana is a Private RUSSIAN Tracker for MOVIES / TV|Russian (Russia)|
 |[njtupt (浦园)](https://njtupt.top/){#njtupt}|njtupt (浦园) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
