@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-05T03:18:52.814036
+date: 2026-07-06T03:26:34.866671
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-05T03:18:52.814036
+dateCreated: 2026-07-06T03:26:34.866671
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.0.5453` / [Commit: 4961d22ffc45e691606e82de498548d1430973f7](https://github.com/Prowlarr/Prowlarr/commit/4961d22ffc45e691606e82de498548d1430973f7)
-  - [Prowlarr Indexers Commit: 281ccd7af8bcf304339b3d7f598b0712a99dfa6c](https://github.com/Prowlarr/Indexers/commit/281ccd7af8bcf304339b3d7f598b0712a99dfa6c)
+  - Prowlarr Build `2.5.1.5460` / [Commit: 93865723d91e756ac3877d5cdb3b31c6fef91f69](https://github.com/Prowlarr/Prowlarr/commit/93865723d91e756ac3877d5cdb3b31c6fef91f69)
+  - [Prowlarr Indexers Commit: b0cafe4cd3bd26af6ad3d633fdf2a75eef536b09](https://github.com/Prowlarr/Indexers/commit/b0cafe4cd3bd26af6ad3d633fdf2a75eef536b09)
 
 ---
 
@@ -109,7 +109,7 @@ dateCreated: 2026-07-05T03:18:52.814036
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://www.darkfox3.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://www.darkfox4.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
@@ -650,6 +650,7 @@ dateCreated: 2026-07-05T03:18:52.814036
 
 |Indexer|Description|Language|
 |:--|:--|:--|
+|[NZBIndex](https://nzbindex.com/){#nzbindex}|A Usenet Indexer|English (United States)|
 
 ### Semi-Private Indexers
 
