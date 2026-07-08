@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-06T03:26:34.866671
+date: 2026-07-08T02:35:01.764978
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-06T03:26:34.866671
+dateCreated: 2026-07-08T02:35:01.764978
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.1.5460` / [Commit: 93865723d91e756ac3877d5cdb3b31c6fef91f69](https://github.com/Prowlarr/Prowlarr/commit/93865723d91e756ac3877d5cdb3b31c6fef91f69)
-  - [Prowlarr Indexers Commit: b0cafe4cd3bd26af6ad3d633fdf2a75eef536b09](https://github.com/Prowlarr/Indexers/commit/b0cafe4cd3bd26af6ad3d633fdf2a75eef536b09)
+  - [Prowlarr Indexers Commit: 18ccdc6892d5dedb484b6a2be52d04adb1b09601](https://github.com/Prowlarr/Indexers/commit/18ccdc6892d5dedb484b6a2be52d04adb1b09601)
 
 ---
 
@@ -38,7 +38,6 @@ dateCreated: 2026-07-06T03:26:34.866671
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
 |[BT\.etree](https://bt.etree.org/){#btetree}|BT\.etree is a Public Tracker dedicated to Bootleg FLAC MUSIC|English (United States)|
 |[BTdirectory](https://btmulu.live/){#btdirectory}|BTdirectory (BT目录) is a Public DHT Crawler|English (United States)|
-|[btstate](https://btstate.com/){#btstate}|btstate is a Public BitTorrent DHT search engine|English (United States)|
 |[Byrutor](https://byrutgame.org/){#byrutor}|Byrutor is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[Catorrent](https://catorrent.net/){#catorrent}|Catorrent is a RUSSIAN Public Torrent Tracker for GAMES|Russian (Russia)|
 |[CrackingPatching](https://crackingpatching.com/){#crackingpatching}|CrackingPatching is a Public tracker for Software and Apps|English (United States)|
@@ -383,7 +382,6 @@ dateCreated: 2026-07-06T03:26:34.866671
 |[ImmortalSeed](https://immortalseed.me/){#immortalseed}|ImmortalSeed (iS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Immortuos](https://immortuos.life/){#immortuos}|Immortuos is a GERMAN Private Tracker for MOVIES / TV|German (Germany)|
 |[Indietorrents](https://www.indietorrents.com/){#indietorrents}|Indietorrents is a Private Music Torrent Tracker for independent MUSIC|English (United Kingdom)|
-|[INFINITY (API)](https://infinitylibrary.net/){#infinity-api}|INFINITY is a Private PAY2DL Torrent Tracker for MOVIES / TV|English (United States)|
 |[InfinityHD (API)](https://infinityhd.net/){#infinityhd-api}|InfinityHD is a Private Torrent Tracker for MOVIES / TV / ANIME|English (United States)|
 |[Infire](https://infire.si/){#infire}|Infire is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Insane Tracker](https://newinsane.info/){#insanetracker}|Insane Tracker is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
@@ -565,7 +563,6 @@ dateCreated: 2026-07-06T03:26:34.866671
 |[SportsCora (API)](https://sportscora.com/){#sportscora}|SportsCora is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[SugoiMusic](https://sugoimusic.me/){#sugoimusic}|SugoiMusic is a Private Torrent Tracker for ASIAN MUSIC / TV|English (United States)|
 |[SunnyPT](https://sunnypt.top/){#sunnypt}|SunnyPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Superbits](https://superbits.org/){#superbits}|SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
 |[Swarmazon (API)](https://swarmazon.club/){#swarmazon-api}|Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
