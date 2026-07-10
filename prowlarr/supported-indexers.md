@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-08T02:35:01.764978
+date: 2026-07-10T02:55:59.178168
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-08T02:35:01.764978
+dateCreated: 2026-07-10T02:55:59.178168
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.1.5460` / [Commit: 93865723d91e756ac3877d5cdb3b31c6fef91f69](https://github.com/Prowlarr/Prowlarr/commit/93865723d91e756ac3877d5cdb3b31c6fef91f69)
-  - [Prowlarr Indexers Commit: 18ccdc6892d5dedb484b6a2be52d04adb1b09601](https://github.com/Prowlarr/Indexers/commit/18ccdc6892d5dedb484b6a2be52d04adb1b09601)
+  - [Prowlarr Indexers Commit: e927e4af453b7f9235fae2ca389e3a429e82c319](https://github.com/Prowlarr/Indexers/commit/e927e4af453b7f9235fae2ca389e3a429e82c319)
 
 ---
 
@@ -99,10 +99,9 @@ dateCreated: 2026-07-08T02:35:01.764978
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
-|[TorrentQQ](https://torrentqq418.com/){#torrentqq}|TorrentQQ (토렌트큐큐) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome252.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip233.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome253.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip234.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -594,7 +593,7 @@ dateCreated: 2026-07-08T02:35:01.764978
 |[TorrentDay](https://tday.love/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentDD](https://www.torrentdd.com/){#torrentdd}|TorrentDD (TodayBit) is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
-|[TorrentHR](https://www.torrenthr.org/){#torrenthr}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
+|[TorrentHR (API)](https://www.torrenthr.org/){#torrenthr-api}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|TorrentLeech (TL) is a Private Torrent Tracker for 0DAY / GENERAL\. not here _ not scene|English (United States)|
 |[Torrentleech\.pl](https://torrentleech.pl/){#torrentleech-pl}|Torrentleech\.pl is a POLISH Private Torrent Tracker for 0DAY / GENERAL|Polish (Poland)|
