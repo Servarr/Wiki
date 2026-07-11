@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-10T02:55:59.178168
+date: 2026-07-11T02:32:58.581827
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-10T02:55:59.178168
+dateCreated: 2026-07-11T02:32:58.581827
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.1.5460` / [Commit: 93865723d91e756ac3877d5cdb3b31c6fef91f69](https://github.com/Prowlarr/Prowlarr/commit/93865723d91e756ac3877d5cdb3b31c6fef91f69)
-  - [Prowlarr Indexers Commit: e927e4af453b7f9235fae2ca389e3a429e82c319](https://github.com/Prowlarr/Indexers/commit/e927e4af453b7f9235fae2ca389e3a429e82c319)
+  - [Prowlarr Indexers Commit: 4db2e7fd1068925b5bc1117b00d31e7d76d1b5b5](https://github.com/Prowlarr/Indexers/commit/4db2e7fd1068925b5bc1117b00d31e7d76d1b5b5)
 
 ---
 
@@ -498,6 +498,7 @@ dateCreated: 2026-07-10T02:55:59.178168
 |[PT GTK](https://pt.gtkpw.xyz/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCC (我的PT)](https://cc.mypt.cc/){#ptcc}|PTCC (我的PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[PTCDY (传道院)](https://pt.cdy.skin/){#ptcdy}|PTCDY (传道院) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTerClub (PT之友俱乐部)](https://pterclub.net/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV / ANIME|Chinese (China)|
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -619,6 +620,7 @@ dateCreated: 2026-07-10T02:55:59.178168
 |[UTOPIA (API)](https://utp.to/){#utopia}|UTOPIA is a UKRAINIAN Private Tracker for HD MOVIES and TV|Ukrainian (Ukraine)|
 |[The Vault](https://thevault.click/){#thevault}|TheVault (TVBZ) is a Private Torrent Tracker for BUSINESS / MARKETING E-LEARNING|English (United States)|
 |[Vault network](https://vault-network.net/){#vault-network}|Vault network is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[VC-Lib](https://pt.vclib.online/){#vc-lib}|VC-Lib is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
 |[VietMediaF](https://tracker.vietmediaf.store/){#vietmediaf}|VietMediaF is a VIETNAMESE Private Torrent Tracker for MOVIES / TV|Vietnamese (Viet Nam)|
 |[White Angel](https://white-angel.hu/){#whiteangel}|White Angel is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
