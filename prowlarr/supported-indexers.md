@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-11T02:32:58.581827
+date: 2026-07-13T02:41:05.804750
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-11T02:32:58.581827
+dateCreated: 2026-07-13T02:41:05.804750
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.1.5460` / [Commit: 93865723d91e756ac3877d5cdb3b31c6fef91f69](https://github.com/Prowlarr/Prowlarr/commit/93865723d91e756ac3877d5cdb3b31c6fef91f69)
-  - [Prowlarr Indexers Commit: 4db2e7fd1068925b5bc1117b00d31e7d76d1b5b5](https://github.com/Prowlarr/Indexers/commit/4db2e7fd1068925b5bc1117b00d31e7d76d1b5b5)
+  - Prowlarr Build `2.5.1.5464` / [Commit: 825620385ac50e5611794a2ab48cb262e005ffe5](https://github.com/Prowlarr/Prowlarr/commit/825620385ac50e5611794a2ab48cb262e005ffe5)
+  - [Prowlarr Indexers Commit: 0de12389b082e4fcdfd841069099e06309d5baa9](https://github.com/Prowlarr/Indexers/commit/0de12389b082e4fcdfd841069099e06309d5baa9)
 
 ---
 
@@ -32,7 +32,6 @@ dateCreated: 2026-07-11T02:32:58.581827
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
-|[arab-torrents\.com](https://arab-torrents.com/){#arabtorrents-com}|arab-torrents\.com is an ARABIC Public Torrent Tracker for MOVIES / TV / GENERAL|Arabic (U.A.E.)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
 |[BigFANGroup](https://bigfangroup.org/){#bigfangroup}|BigFANGroup is a RUSSIAN Public Torrent Tracker for MOVIES / TV|Russian (Russia)|
 |[BlueRoms](https://www.blueroms.ws/){#blueroms}|BlueRoms is a Public Torrent Tracker for ROMS|English (United States)|
@@ -454,7 +453,7 @@ dateCreated: 2026-07-11T02:32:58.581827
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[Nirvana (API)](https://nirvana.li/){#nirvana}|Nirvana is a Private RUSSIAN Tracker for MOVIES / TV|Russian (Russia)|
 |[njtupt (浦园)](https://njtupt.top/){#njtupt}|njtupt (浦园) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[NOBS](https://nobs.rawsmoke.net/){#nobs}|NOBS (NUCLEAR ORDER BIT SYNDICATE) is a SPANISH Private Torrent Tracker for MOVIES / TV|English (United States)|
+|[NOBS](https://nobs.rawsmoke.net/){#nobs}|NOBS (NUCLEAR ORDER BIT SYNDICATE) is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
 |[NorBits](https://norbits.net/){#norbits}|NorBits is a Norwegian Private site for MOVIES / TV / GENERAL|Norwegian (Bokmål) (Norway)|
 |[NordicBytes](https://nordicbytes.org/){#nordicbytes}|NordicBytes is a Mixed NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[NordicQuality (API)](https://nordicq.org/){#nordicquality}|NordicQuality is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
