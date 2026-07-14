@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes for Lidarr music organization including custom formats and multi-disc album handling
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-07-14T19:32:53.924Z
 tags: lidarr, naming, configuration
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -10,7 +10,7 @@ dateCreated: 2024-03-30T13:23:53.095Z
 
 # Lidarr File Naming Guide
 
-Lidarr renames and organises files on import according to four configurable templates: **Standard Track Format**, **Multi-Disc Track Format**, **Artist Folder Format**, and **Album Folder Format**. Getting these right before you populate your library. Changing them later forces a full rename of every file the next time Lidarr refreshes each artist.
+Lidarr renames and organises files on import according to three configurable templates: **Standard Track Format**, **Multi-Disc Track Format**, and **Artist Folder Format**. There's no separate album folder template; the album folder is whatever path segment you build into Standard Track Format and Multi-Disc Track Format (for example, `{Album Title}/{track:00} {Track Title}`). Getting these right before you populate your library matters. Changing them later forces a full rename of every file the next time Lidarr refreshes each artist.
 
 > Changing any naming template after you have populated your library will rename every existing file the next time Lidarr refreshes that artist. Test on a small artist first, and make sure your backup is current before changing naming on a large library.
 {.is-warning}
@@ -55,8 +55,6 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Artist CleanNameThe}` | Clean artist name with "The" moved to the end. |
 | `{Artist Disambiguation}` | Disambiguation string from MusicBrainz, for example, `UK band`. Empty for most artists. |
 | `{Artist Genre}` | First genre tag associated with the artist. |
-| `{Artist NameFirstCharacter}` | First letter of the artist name (after moving "The" to the end). Useful for alphabetical sub-folder grouping, for example, `A`, `B`, `#`. |
-| `{Artist MbId}` | MusicBrainz artist ID (UUID). |
 
 ## Album tokens
 
@@ -69,7 +67,6 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Album Disambiguation}` | Disambiguation string from MusicBrainz. Useful when an artist has two albums with the same name. |
 | `{Album Type}` | Release group type: Album, Single, EP, Compilation, Live, Remix, Soundtrack, etc. |
 | `{Album Genre}` | First genre tag for the album. |
-| `{Album MbId}` | MusicBrainz album (release group) ID (UUID). |
 | `{Release Year}` | Four-digit release year. |
 
 ## Track tokens
@@ -77,12 +74,8 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | Token | Description |
 |---|---|
 | `{Track Title}` | Track title. |
-| `{Track CleanTitle}` | Track title with illegal filesystem characters removed. |
 | `{Track ArtistName}` | Track-level artist name. Useful for Various Artists compilations where each track has a different credited artist. |
-| `{Track ArtistCleanName}` | Track artist name with illegal filesystem characters removed. |
 | `{Track ArtistNameThe}` | Track artist name with "The" moved to the end. |
-| `{Track ArtistCleanNameThe}` | Clean track artist name with "The" moved to the end. |
-| `{Track ArtistMbId}` | MusicBrainz ID of the track-level artist. |
 | `{track:00}` | Track number zero-padded to 2 digits (01, 02 … 99). Use `{track:000}` for 3-digit padding on large releases. |
 
 ## Medium (disc) tokens
@@ -92,7 +85,6 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{medium:0}` | Disc number, single digit. |
 | `{medium:00}` | Disc number zero-padded to 2 digits. |
 | `{Medium Format}` | Physical format of the disc: CD, Vinyl, Digital Media, etc. |
-| `{Medium Name}` | Name of the disc as stored in MusicBrainz (for example, `Disc 1`). |
 
 ## Quality and technical tokens
 
@@ -100,22 +92,17 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 |---|---|
 | `{Quality Title}` | Quality profile name as defined in Lidarr (for example, FLAC, MP3-320). |
 | `{Quality Full}` | Full quality string including proper/repack designation. |
-| `{Quality Proper}` | `Proper` or `Repack` when applicable; empty otherwise. |
 | `{MediaInfo AudioBitRate}` | Audio bitrate (for example, 320kbps). Only available after import; blank on pre-import rename previews. |
 | `{MediaInfo AudioChannels}` | Number of audio channels. |
 | `{MediaInfo AudioCodec}` | Audio codec (for example, FLAC, MP3). |
 | `{MediaInfo AudioSampleRate}` | Audio sample rate (for example, 44100Hz). |
-| `{MediaInfo AudioBitsPerSample}` | Bit depth of the audio (for example, 24-bit). |
 
 ## Miscellaneous tokens
 
 | Token | Description |
 |---|---|
-| `{Release Group}` | Ripping or encoding group tag from the file. Defaults to `Lidarr` when no group tag is present and the token is used without surrounding separators. |
-| `{Original Title}` | Scene name of the file if available; falls back to the original filename without extension. |
-| `{Original Filename}` | Original filename without extension. |
-| `{Custom Formats}` | All custom formats that have "Include Custom Format when Renaming" enabled, joined by spaces. |
-| `{Custom Format}` | A single custom format by name. The part after the colon is a placeholder — replace it with the actual custom format name, for example `{Custom Format:FLAC}`. Empty when no such format exists, didn't match the release, or isn't enabled for renaming. |
+| `{Release Group}` | Ripping or encoding group tag from the file. |
+| `{Preferred Words}` | Matched preferred words from Release Profiles, joined by spaces. |
 
 # Community naming conventions
 
