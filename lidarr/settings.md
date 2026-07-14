@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-07-14T19:32:00.942Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -20,7 +20,7 @@ This page covers all settings available in Lidarr. For field-level detail on a s
 
 ### Rename Tracks
 
-When enabled, Lidarr renames imported track files according to the format strings below. When disabled, Lidarr imports files using their original filenames. It still manages the folder structure but leaves individual filenames as-is.
+When enabled, Lidarr renames imported track files according to the format strings below, and reveals the [Standard Track Format and Multi Disc Track Format](#naming-format) fields. When disabled, Lidarr imports files using their original filenames. It still manages the folder structure but leaves individual filenames as-is.
 
 > Renaming files that a torrent client is currently seeding will break seeding unless you are using hardlinks. See [Hardlinks and Completed Downloads](/lidarr/concepts#hardlinks-and-completed-downloads) before enabling this.
 {.is-warning}
@@ -29,25 +29,11 @@ When enabled, Lidarr renames imported track files according to the format string
 
 Replaces characters in filenames that aren't valid on the target filesystem (for example, `: / \ * ? " < > |` on Windows). When disabled, Lidarr won't sanitize filenames and imports may fail on restricted filesystems.
 
-### Colon Replacement
-
-When **Replace Illegal Characters** is enabled, controls how Lidarr replaces colons (`:`) in filenames. Only visible when Replace Illegal Characters is on.
-
-| Option | Example result |
-|---|---|
-| **Delete** | Removes the colon and any following space (`Artist:Name` → `ArtistName`). |
-| **Replace with Dash** | Replaces with a dash (`Artist:Name` → `Artist-Name`). |
-| **Replace with Space Dash** | Replaces with a space-dash (`Artist: Name` → `Artist -Name`). |
-| **Replace with Space Dash Space** | Replaces with a space-dash-space (`Artist: Name` → `Artist - Name`). |
-| **Smart Replace** | Uses a dash when the colon isn't followed by a space, or a space-dash when it is (`Artist:Name` → `Artist-Name`; `Artist: Name` → `Artist - Name`). |
-
-Default: **Smart Replace**
-
 ## Naming Format
 
 The format strings below use tokens to build file and folder names. For a full token reference, see the [Naming Guide](/lidarr/naming-guide).
 
-> Enable **Settings → Show Advanced** to reveal the format fields.
+> **Standard Track Format** and **Multi Disc Track Format** are hidden until you enable **Rename Tracks** under [Track Naming](#track-naming) above.
 {.is-info}
 
 ### Standard Track Format
@@ -61,6 +47,9 @@ Example: `{Album Title}/{track:00} {Track Title}` → `Blood on the Tracks/01 Ta
 The filename template for tracks on releases with more than one disc. Use `{medium:00}` to include the disc number.
 
 Example: `{Album Title}/{medium:00}-{track:00} {Track Title}` → `Mellon Collie/01-01 Mellon Collie and the Infinite Sadness.flac`
+
+> Enable **Settings → Show Advanced** to reveal **Artist Folder Format**.
+{.is-info}
 
 ### Artist Folder Format
 
@@ -82,10 +71,8 @@ Example: `{Artist Name}` → `/music/The Beatles/`
 | **Skip Free Space Check** | Off | Skip the available disk space check before importing. Only enable this if Lidarr can't correctly detect free space (some network shares and unusual storage setups). |
 | **Minimum Free Space** | 100 MB | Lidarr will refuse to import if available space in the root folder falls below this value. |
 | **Use Hardlinks Instead of Copy** | On | Use hardlinks when the source and destination are on the same filesystem. Hardlinks avoid copying data and allow seeding to continue. Falls back to copy if hardlinks aren't supported. |
-| **Import Using Script** | Off | Copy files during import using a custom external script (for example, to transcode on import). When enabled, a path field appears where you enter the script location. |
-| **Import Script Path** | (empty) | Path to the script used when **Import Using Script** is enabled. Only visible when Import Using Script is on. |
 | **Import Extra Files** | Off | Import sidecar files with the same base name alongside audio files at import time (for example, lyric files, NFO files, cover images). See below. |
-| **Extra File Extensions** | srt | Comma-separated list of file extensions to import when you enable **Import Extra Files**. Example: `lrc,nfo,jpg,png`. Don't use `*`; the code treats it as a literal character, not a wildcard, and it matches nothing. |
+| **Extra File Extensions** | (empty) | Comma-separated list of file extensions to import when you enable **Import Extra Files**. Example: `lrc,nfo,jpg,png`. Don't use `*`; the code treats it as a literal character, not a wildcard, and it matches nothing. |
 
 ### How Import Extra Files works
 
@@ -112,12 +99,9 @@ Matching files are then filtered against the configured extension list. Files th
 |---|---|---|
 | **Unmonitor Deleted Tracks** | Off | When something outside Lidarr deletes a track file from disk, automatically unmonitor that track. |
 | **Download Propers and Repacks** | Prefer and Upgrade | How to handle proper/repack releases. **Prefer and Upgrade** grabs and upgrades to propers when found. **Don't Upgrade Automatically** includes them in scores but won't autograb. **Don't Prefer** treats them as equal to the original release. |
-| **Watch Library for File Changes** | On | Monitor the library folder for external file changes (additions, deletions, renames). Disabling this means Lidarr only discovers changes during scheduled rescans. |
+| **Analyse Audio Files** | On | Read audio file metadata (bitrate, sample rate, bit depth) to improve quality detection. Disabling this makes quality detection rely solely on filename parsing. |
 | **Rescan Artist Folder after Refresh** | Always | When to rescan an artist folder after a metadata refresh. **Always** rescans every time. **After Manual Refresh** only rescans when triggered manually. **Never** disables rescanning. |
-| **Allow Fingerprinting** | For new imports only | Use audio fingerprinting to improve the accuracy of track matching. **Always** fingerprints all files on every scan. **For new imports only** fingerprints only newly imported files. **Never** disables fingerprinting. Note: fingerprinting reads part of each audio file and may cause high disk or network activity. |
-| **Change File Date** | None | Set the file modification date on import/rescan. **None** leaves the date unchanged. **Album Release Date** sets the file date to the album's MusicBrainz release date. |
-| **Recycle Bin** | (empty) | Path to a recycling bin folder. When Lidarr deletes files, they're moved here rather than permanently deleted. Leave empty to skip the recycle bin. |
-| **Recycle Bin Cleanup** | 7 days | Number of days before files in the recycle bin are permanently deleted. Set to `0` to disable automatic cleanup. |
+| **Watch Library for File Changes** | On | Monitor the library folder for external file changes (additions, deletions, renames). Disabling this means Lidarr only discovers changes during scheduled rescans. |
 
 ## Permissions
 
@@ -129,6 +113,13 @@ These settings apply to Linux and macOS only. Leave disabled on Windows.
 | **chmod Folder** | 755 | Octal permission mode applied to folders on import (for example, `755` = rwxr-xr-x). |
 | **chown Group** | (empty) | Group to assign to imported files and folders. The Lidarr process user must be a member of this group. |
 
+## Recycling Bin
+
+| Setting | Default | Description |
+|---|---|---|
+| **Recycle Bin** | (empty) | Path to a recycling bin folder. When Lidarr deletes files, they're moved here rather than permanently deleted. Leave empty to skip the recycle bin. |
+| **Recycle Bin Cleanup** | 7 days | Number of days before files in the recycle bin are permanently deleted. Set to `0` to disable automatic cleanup. |
+
 ## Root Folders
 
 Root folders are the top-level directories where Lidarr stores your library. Each imported artist gets a subfolder inside a root folder.
@@ -137,6 +128,7 @@ Click **Add (+)** to add a root folder. The path must exist and Lidarr must have
 
 > Don't point a root folder at a cloud storage mount (Dropbox, OneDrive, Google Drive). Lidarr writes audio tags and metadata frequently; cloud storage APIs have rate limits that will cause failures.
 {.is-warning}
+
 
 ## Metadata Profiles
 
@@ -166,6 +158,7 @@ You can include or exclude secondary types (Compilation, Soundtrack, Spokenword,
 > MusicBrainz determines release types. If a release you expect to see is missing, check its entry on MusicBrainz: the type may be `Unknown`, which Lidarr can't filter on, or the primary type may be one you have unchecked in your profile.
 {.is-info}
 
+
 ## Release Profiles
 
 {#release-profiles}
@@ -176,14 +169,16 @@ Release profiles filter and score releases based on their titles. Use them to re
 
 | Field | Description |
 |---|---|
-| **Enable Profile** | Whether this release profile is active. Disabled profiles are ignored during release scoring. |
-| **Must Contain** | Terms (or regex patterns) that a release title must include. Lidarr rejects releases that don't match any configured term. |
-| **Must Not Contain** | Terms a release title must not include. Lidarr rejects releases that match any term. |
-| **Indexer** | Restrict this profile to a specific indexer. Leave set to "Any" to apply to all indexers. |
+| **Must Contain** | Comma-separated list of terms (or regex patterns) that a release title must include. Lidarr rejects releases that don't match. |
+| **Must Not Contain** | Comma-separated list of terms a release title must not include. Lidarr rejects releases that match any term. |
+| **Preferred** | Terms with associated scores. Positive scores boost a release; negative scores penalise it. Separate terms with commas to share a score across more than one term. |
+| **Include Preferred when Renaming** | If enabled, Lidarr appends the matched preferred term to the filename during rename. Useful for tagging releases from specific groups in the filename. |
+| **Indexers** | Restrict this profile to specific indexers. Leave empty to apply to all indexers. |
 | **Tags** | Restrict this profile to artists with matching tags. Leave empty to apply to all artists. |
 
 > Release profiles apply at **grab/download time**: they filter and score releases from indexers before Lidarr sends anything to a download client. They have no effect on which MusicBrainz release (pressing, edition, format) Lidarr matches your already-downloaded files to during import. See [FAQ → Can Lidarr prefer a specific pressing or format during import?](/lidarr/faq#can-lidarr-prefer-a-specific-pressing-or-format-during-import) for the import side of this.
 {.is-info}
+
 
 ## Custom Formats
 
@@ -219,6 +214,7 @@ Two ways to test how Lidarr will parse a release name before committing to a pro
 
 **Via the Servarr Discord bot:** In the `#bot-spam` channel, run `/parser lidarr <release title>` (for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`). The bot replies with the same parsed breakdown. Useful for quick spot-checks without opening the UI.
 
+
 # Quality
 
 {#quality}
@@ -236,6 +232,7 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 
 > FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 {.is-info}
+
 
 # Download Clients
 
@@ -344,6 +341,7 @@ A mapping translates a remote path (as reported by the download client) to a loc
 > If both Lidarr and the download client are in Docker containers on the same host with matching volume mounts, a remote path mapping isn't needed. See [TRaSH's Remote Path Mapping guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for diagnosis and setup.
 {.is-info}
 
+
 # Connect
 
 {#connections}
@@ -361,19 +359,18 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 | **On Grab** | Trigger when Lidarr sends a release to a download client. |
 | **On Release Import** | Trigger when a downloaded release is successfully imported. |
 | **On Upgrade** | Trigger when Lidarr upgrades a file to better quality. |
-| **On Download Failure** | Trigger when a download fails. |
-| **On Import Failure** | Trigger when an import fails after download. |
 | **On Rename** | Trigger when Lidarr renames files. |
-| **On Track Retag** | Trigger when audio tags are rewritten. |
-| **On Artist Add** | Trigger when you add an artist to Lidarr. |
-| **On Artist Delete** | Trigger when you remove an artist. |
+| **On Artist Added** | Trigger when you add an artist to Lidarr. |
+| **On Artist Deleted** | Trigger when you remove an artist. |
 | **On Album Delete** | Trigger when Lidarr deletes an album. |
-| **On Application Update** | Trigger when Lidarr updates to a new version. |
+| **On Track Retag** | Trigger when audio tags are rewritten. |
 | **On Health Issue** | Trigger when a health check fails. |
 | **On Health Restored** | Trigger when a health check recovers. |
+| **On Application Update** | Trigger when Lidarr updates to a new version. |
 | **Include Health Warnings** | Include `Warning`-level health issues in health notifications (not just `Error`). |
 
 For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scripts) page for the full list of environment variables available per event.
+
 
 # Tags
 
