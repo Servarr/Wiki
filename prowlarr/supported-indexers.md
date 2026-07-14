@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-13T02:41:05.804750
+date: 2026-07-14T02:24:36.813259
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-13T02:41:05.804750
+dateCreated: 2026-07-14T02:24:36.813259
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.1.5464` / [Commit: 825620385ac50e5611794a2ab48cb262e005ffe5](https://github.com/Prowlarr/Prowlarr/commit/825620385ac50e5611794a2ab48cb262e005ffe5)
-  - [Prowlarr Indexers Commit: 0de12389b082e4fcdfd841069099e06309d5baa9](https://github.com/Prowlarr/Indexers/commit/0de12389b082e4fcdfd841069099e06309d5baa9)
+  - Prowlarr Build `2.5.1.5469` / [Commit: e21636310c3aaa3b2b5b7312ceed14547a8c149f](https://github.com/Prowlarr/Prowlarr/commit/e21636310c3aaa3b2b5b7312ceed14547a8c149f)
+  - [Prowlarr Indexers Commit: d15df4752eca75895ce96c3295c478b9568dfd17](https://github.com/Prowlarr/Indexers/commit/d15df4752eca75895ce96c3295c478b9568dfd17)
 
 ---
 
@@ -289,6 +289,7 @@ dateCreated: 2026-07-13T02:41:05.804750
 |[Das Unerwartete (API)](https://dasunerwartete.biz/){#dasunerwartete-api}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This is the API version|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Depth Studio](https://dstudio.me/){#depthstudio}|Depth Studio is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[DesiGaane](https://desigaane.rocks/){#desigaane}|DesiGaane is a Private Torrent Tracker for DESI MUSIC|English (United States)|
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|DesiTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[DICMusic](https://dicmusic.com/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
