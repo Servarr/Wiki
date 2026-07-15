@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-14T02:24:36.813259
+date: 2026-07-15T02:22:37.989337
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-14T02:24:36.813259
+dateCreated: 2026-07-15T02:22:37.989337
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.1.5469` / [Commit: e21636310c3aaa3b2b5b7312ceed14547a8c149f](https://github.com/Prowlarr/Prowlarr/commit/e21636310c3aaa3b2b5b7312ceed14547a8c149f)
-  - [Prowlarr Indexers Commit: d15df4752eca75895ce96c3295c478b9568dfd17](https://github.com/Prowlarr/Indexers/commit/d15df4752eca75895ce96c3295c478b9568dfd17)
+  - [Prowlarr Indexers Commit: c3cf87c03573061bc9c45399a4283aae787058c4](https://github.com/Prowlarr/Indexers/commit/c3cf87c03573061bc9c45399a4283aae787058c4)
 
 ---
 
@@ -288,6 +288,7 @@ dateCreated: 2026-07-14T02:24:36.813259
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Das Unerwartete (API)](https://dasunerwartete.biz/){#dasunerwartete-api}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This is the API version|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[DaXiangJiao (大香蕉)](https://pt.daxiangjiao.org/){#daxiangjiao}|DaXiangJiao (大香蕉) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Depth Studio](https://dstudio.me/){#depthstudio}|Depth Studio is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DesiGaane](https://desigaane.rocks/){#desigaane}|DesiGaane is a Private Torrent Tracker for DESI MUSIC|English (United States)|
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|DesiTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
