@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-15T02:22:37.989337
+date: 2026-07-16T02:30:07.490791
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-15T02:22:37.989337
+dateCreated: 2026-07-16T02:30:07.490791
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.5.1.5469` / [Commit: e21636310c3aaa3b2b5b7312ceed14547a8c149f](https://github.com/Prowlarr/Prowlarr/commit/e21636310c3aaa3b2b5b7312ceed14547a8c149f)
-  - [Prowlarr Indexers Commit: c3cf87c03573061bc9c45399a4283aae787058c4](https://github.com/Prowlarr/Indexers/commit/c3cf87c03573061bc9c45399a4283aae787058c4)
+  - [Prowlarr Indexers Commit: a00a7f9651b6842bf103d05fc8538a0ba36ff350](https://github.com/Prowlarr/Indexers/commit/a00a7f9651b6842bf103d05fc8538a0ba36ff350)
 
 ---
 
@@ -99,8 +99,8 @@ dateCreated: 2026-07-15T02:22:37.989337
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome253.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip234.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome254.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip235.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -139,7 +139,6 @@ dateCreated: 2026-07-15T02:22:37.989337
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[Hydracker (API)](https://hydracker.com/){#hydracker-api}|Hydracker is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kinorun](http://kinorun.top/){#kinorun}|Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[Kinozal](https://kinozal.tv/){#kinozal}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses torrents|Russian (Russia)|
@@ -517,6 +516,7 @@ dateCreated: 2026-07-15T02:22:37.989337
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH Private Torrent Tracker for 0DAY / GENERAL|Spanish (Spain)|
 |[PuTao (葡萄)](https://pt.sjtu.edu.cn/){#putao}|PuTao (葡萄) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PWTorrents](https://pwtorrents.net/){#pwtorrents}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING|English (United States)|
+|[PWTorrents2FA](https://pwtorrents.net/){#pwtorrents2fa}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING\. This indexer uses cookie login for 2FA|English (United States)|
 |[Qingwa (青蛙)](https://www.qingwapt.com/){#qingwa}|Qingwa (青蛙) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Racing4Everyone (API)](https://racing4everyone.eu/){#racing4everyone-api}|Racing4Everyone (R4E) is a Private Torrent Tracker for RACING|English (United States)|
@@ -635,7 +635,9 @@ dateCreated: 2026-07-15T02:22:37.989337
 |[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
+|[XWT-Classics2FA](https://xwt-classics.net/){#xwtclassics2fa}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING\. This indexer uses cookie login for 2FA|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
+|[XWtorrents2FA](https://xtremewrestlingtorrents.net/){#xwtorrents2fa}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA\. This indexer uses cookie login for 2FA|English (United States)|
 |[YggReborn (API)](https://www.yggreborn.org/){#yggreborn-api}|YggReborn is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
