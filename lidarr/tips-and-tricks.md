@@ -22,7 +22,7 @@ Your download folder and music library root folder can't be the same location. M
 
 Keep two locations separate:
 
-```
+```text
 /data/
   downloads/          ← download client writes here
   music/              ← Lidarr root folder (your library)
@@ -37,7 +37,7 @@ On import, Lidarr moves (or hardlinks) files from `downloads/` into `music/`. Th
 
 If you're running more than one download client — say, a Usenet client alongside a torrent client — give each its own subfolder under `downloads/` and set a matching category in Lidarr:
 
-```
+```text
 /data/
   downloads/
     usenet/           ← SABnzbd / NZBGet category: "lidarr"
