@@ -129,7 +129,6 @@ Click **Add (+)** to add a root folder. The path must exist and Lidarr must have
 > Don't point a root folder at a cloud storage mount (Dropbox, OneDrive, Google Drive). Lidarr writes audio tags and metadata frequently; cloud storage APIs have rate limits that will cause failures.
 {.is-warning}
 
-
 ## Metadata Profiles
 
 {#metadata-profiles}
@@ -158,7 +157,6 @@ You can include or exclude secondary types (Compilation, Soundtrack, Spokenword,
 > MusicBrainz determines release types. If a release you expect to see is missing, check its entry on MusicBrainz: the type may be `Unknown`, which Lidarr can't filter on, or the primary type may be one you have unchecked in your profile.
 {.is-info}
 
-
 ## Release Profiles
 
 {#release-profiles}
@@ -178,7 +176,6 @@ Release profiles filter and score releases based on their titles. Use them to re
 
 > Release profiles apply at **grab/download time**: they filter and score releases from indexers before Lidarr sends anything to a download client. They have no effect on which MusicBrainz release (pressing, edition, format) Lidarr matches your already-downloaded files to during import. See [FAQ → Can Lidarr prefer a specific pressing or format during import?](/lidarr/faq#can-lidarr-prefer-a-specific-pressing-or-format-during-import) for the import side of this.
 {.is-info}
-
 
 ## Custom Formats
 
@@ -202,7 +199,7 @@ Common specification types for music:
 | **Release Title** | The full release title string from the indexer. Supports regex. |
 | **Release Group** | The release group part of the title, if parseable. |
 | **Indexer Flag** | Indexer-specific flags (Freeleech, Halfleech, etc.) where the indexer supports them. |
-| **Source** | Audio source tag (CD, WEB, Vinyl, etc.) if present in the title. |
+| **Size** | The reported release size. Matches when the size falls between the configured **Minimum Size** and **Maximum Size** (in GB). |
 
 For worked examples and suggested scoring values for a FLAC-focused library, see [Tips and Tricks → Custom Formats](/lidarr/tips-and-tricks#custom-formats).
 
@@ -213,7 +210,6 @@ Two ways to test how Lidarr will parse a release name before committing to a pro
 **In Lidarr:** Use the **Test Parsing** button on the Settings → Custom Formats page. Enter a release title and Lidarr shows the parsed fields (source, quality, release group, etc.) alongside which custom formats match and their combined score. This is the fastest way to confirm a specification fires as expected.
 
 **Via the Servarr Discord bot:** In the `#bot-spam` channel, run `/parser lidarr <release title>` (for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`). The bot replies with the same parsed breakdown. Useful for quick spot-checks without opening the UI.
-
 
 # Quality
 
@@ -232,7 +228,6 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 
 > FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 {.is-info}
-
 
 # Download Clients
 
@@ -341,7 +336,6 @@ A mapping translates a remote path (as reported by the download client) to a loc
 > If both Lidarr and the download client are in Docker containers on the same host with matching volume mounts, a remote path mapping isn't needed. See [TRaSH's Remote Path Mapping guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for diagnosis and setup.
 {.is-info}
 
-
 # Connect
 
 {#connections}
@@ -370,7 +364,6 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 | **Include Health Warnings** | Include `Warning`-level health issues in health notifications (not just `Error`). |
 
 For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scripts) page for the full list of environment variables available per event.
-
 
 # Tags
 

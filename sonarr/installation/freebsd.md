@@ -69,7 +69,7 @@ iocage create -n "sonarr" -r 13.1-RELEASE ip4_addr="vnet0|10.0.0.100/24" vnet="o
 iocage console sonarr
 ```
 
-## Sonarr Mono Installation
+## Sonarr Package Installation
 
 Back on the jails list find your newly created jail for `sonarr` and click "Shell"
 
@@ -214,7 +214,7 @@ sysrc sonarr_user="USER_YOU_WANT"
 sysrc sonarr_group="GROUP_YOU_WANT"
 ```
 
-`sonarr` stores its data, config, logs, and PID files in `/usr/local/sonarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
+`sonarr` stores its data, config, logs, and PID files in `/var/db/sonarr` by default (matching the `sonarr_data_dir` default in the rc script above). The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
 
 ```shell
 sysrc sonarr_data_dir="DIR_YOU_WANT"
@@ -243,7 +243,7 @@ You can now safely close the shell
 > The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
 {.is-info}
 
-### BSD Mono SSL Issues
+### BSD SSL Certificate Issues
 
 - SSL or other Certificate issues (i.e. `unable to verify SSL certificate`)
-  - See [this TrueNAS forum post as you'll need to update and sync mono's certs](https://www.truenas.com/community/threads/sonarr-radarr-probably-other-arr-jails-unable-to-verify-ssl-certificates-after-latest-update.96008/)
+  - See [this TrueNAS forum post for jail certificate troubleshooting](https://www.truenas.com/community/threads/sonarr-radarr-probably-other-arr-jails-unable-to-verify-ssl-certificates-after-latest-update.96008/)

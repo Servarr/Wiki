@@ -185,7 +185,7 @@ sudo systemctl start $app
 
 #### Can’t install update because startup folder is in an App Translocation folder (macOS)
 
-{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder.}
+{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
 
 - macOS has moved Lidarr’s startup folder into an App Translocation path. This prevents Lidarr from updating itself. Remove the quarantine attribute or move Lidarr out of the Translocation folder and re-launch it from its permanent location.
 
@@ -292,7 +292,7 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 {#fpcalc-upgrade}
 
-- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
+- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. The installed `fpcalc` is too old; Lidarr requires at least version 1.4.3. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
 - Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). Look for it in Lidarr's installation directory (for example `/opt/Lidarr/fpcalc`). If it isn't executable, correct its permissions with the command below and restart Lidarr.
   - Note that the fix may need `sudo`, and your path to Lidarr's binary folder may differ depending on your environment.
 
