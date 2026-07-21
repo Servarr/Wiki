@@ -263,6 +263,10 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ## Remote Control
 
+### Arrcade
+
+[Arrcade](https://arrcade.co.uk) is a cross-platform controller for Sonarr, Radarr, Prowlarr, download clients, and Seerr, managed from one account. Available on [iOS](https://apps.apple.com/app/arrcade/id6761440252) and the web, with Android in beta.
+
 ### LunaSea
 
 [LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software. Manage new media content fetched via Lidarr, Radarr, and Sonarr.
