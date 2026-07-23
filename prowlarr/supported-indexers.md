@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-20T02:50:45.529499
+date: 2026-07-23T02:37:53.924897
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-20T02:50:45.529499
+dateCreated: 2026-07-23T02:37:53.924897
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.2.5485` / [Commit: 61f939ba2f84fc67b82f2cc034295216f533426e](https://github.com/Prowlarr/Prowlarr/commit/61f939ba2f84fc67b82f2cc034295216f533426e)
-  - [Prowlarr Indexers Commit: 92ab044792c5c8583cc8171650954c6eb1489eda](https://github.com/Prowlarr/Indexers/commit/92ab044792c5c8583cc8171650954c6eb1489eda)
+  - Prowlarr Build `2.6.0.5494` / [Commit: bc65f177e364ad0e9bad3046f691b2e29e8dcfb0](https://github.com/Prowlarr/Prowlarr/commit/bc65f177e364ad0e9bad3046f691b2e29e8dcfb0)
+  - [Prowlarr Indexers Commit: 1b08d3e08fafb7c39f6de944ee2ab23b91b86f78](https://github.com/Prowlarr/Indexers/commit/1b08d3e08fafb7c39f6de944ee2ab23b91b86f78)
 
 ---
 
@@ -100,8 +100,8 @@ dateCreated: 2026-07-20T02:50:45.529499
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome254.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip235.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome255.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip236.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
