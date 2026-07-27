@@ -2,7 +2,7 @@
 title: Lidarr
 description: Music collection manager for Usenet and BitTorrent users to automatically download and organize music albums
 published: true
-date: 2026-05-29T13:20:34.040Z
+date: 2026-07-27T20:57:40.232Z
 tags: lidarr, troubleshooting, installation, scripts, postgres
 editor: markdown
 dateCreated: 2021-05-16T23:39:16.456Z
@@ -41,6 +41,8 @@ dateCreated: 2021-05-16T23:39:16.456Z
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/lidarr/troubleshooting)
+- [<i class="fas fa-tags"></i>&emsp;Metadata Troubleshooting *Missing or incorrect MusicBrainz data*](/lidarr/metadata-troubleshooting)
+- [<i class="fas fa-file-download"></i>&emsp;Import Troubleshooting *Downloads that finish but don't import*](/lidarr/import-troubleshooting)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 {.links-list}
 
