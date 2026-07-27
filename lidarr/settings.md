@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-07-14T19:32:00.942Z
+date: 2026-07-27T22:18:04.365Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -234,6 +234,43 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 {.is-info}
 
 
+# Indexers
+
+{#indexer-settings}
+
+> Find information on supported indexers at the [Supported](/lidarr/supported#indexers) page.
+{.is-info}
+
+Indexers are the sources Lidarr searches for releases: Usenet indexers (Newznab-compatible) or torrent trackers. Click **Add (+)**, choose an indexer type, and fill in its connection details.
+
+## Common Fields (all indexers)
+
+| Field | Description |
+|---|---|
+| **Name** | Label for this indexer, shown in activity and logs. |
+| **Enable RSS** | Whether Lidarr includes this indexer in periodic RSS sync (the automatic background search for new releases). |
+| **Enable Automatic Search** | Whether Lidarr uses this indexer for automatic searches, triggered from the UI or by Lidarr itself (for example, on a missing-album search). |
+| **Enable Interactive Search** | Whether this indexer's results appear when you manually search for a release from the UI. |
+| **Indexer Priority** | 1 (highest) to 50 (lowest). Default: 25. Used as a tiebreaker when grabbing between otherwise-equal releases from different indexers. All enabled indexers are still used for RSS sync and searching regardless of priority. |
+| **(Advanced) Download Client** | Pin this indexer's grabs to a specific download client instead of Lidarr's normal client-selection logic. |
+| **Tags** | Restrict this indexer to artists with at least one matching tag. Leave empty to use it for all artists. |
+
+Most Usenet (Newznab-compatible) indexers additionally need a **URL**, **API Path** (defaults to `/api`), **API Key**, and **Categories**. Torrent indexers vary by type but commonly need a **URL** and either an **API Key** or a cookie/session-based login, plus **Minimum Seeders** and, for private trackers, seed ratio and seed time goals.
+
+## Options
+
+{#indexer-options}
+
+Global settings that apply across all indexers, found under **Settings → Indexers → Options**.
+
+| Setting | Description |
+|---|---|
+| **Minimum Age** | Usenet only. Minimum age in minutes of an NZB before Lidarr will grab it. Gives new releases time to propagate across Usenet providers. |
+| **Maximum Size** | Maximum release size in MB. Lidarr rejects releases larger than this. Set to `0` for unlimited. |
+| **Retention** | Usenet only. Set to `0` for unlimited retention. |
+| **(Advanced) RSS Sync Interval** | Interval in minutes between automatic RSS syncs. Set to `0` to disable all automatic release grabbing. This applies to every indexer; follow the usage rules each indexer sets for itself. See [FAQ → How does Lidarr work?](/lidarr/faq#how-does-lidarr-work) for how RSS sync fits into Lidarr's overall search cycle. |
+
+
 # Download Clients
 
 {#download-clients}
@@ -372,6 +409,28 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scripts) page for the full list of environment variables available per event.
 
 
+# Metadata
+
+{#metadata}
+
+## Write Metadata to Audio Files
+
+{#write-metadata-to-audio-files}
+
+| Setting | Description |
+|---|---|
+| **Tag Audio Files with Metadata** | **All files, keep in sync with MusicBrainz**: writes tags on import and rewrites them whenever the MusicBrainz data changes. **All files, initial import only**: writes tags once, on import. **For new downloads only**: only files imported from now on get tags; files already in the library are left alone. **Never**: Lidarr never writes audio tags. |
+| **Embed Cover Art in Audio Files** | Embeds Lidarr's album art into the audio file itself when writing tags. Only shown when tag writing is enabled. |
+| **Scrub Existing Tags** | Removes existing tags from a file before writing, leaving only the tags Lidarr itself adds. |
+
+> Choosing **All files, keep in sync with MusicBrainz** or **All files, initial import only** alters existing files the first time they're imported or re-synced, not just new downloads.
+{.is-warning}
+
+## Metadata Consumers
+
+Below **Write Metadata to Audio Files**, the Metadata page lists external metadata formats Lidarr can write to disk alongside your music: NFO files for media-center software (Kodi/XBMC), and image sidecar formats for Roksbox and WD TV. Enable a consumer and choose which of Artist Metadata, Album Metadata, Artist Images, and Album Images it writes. See [Supported → Metadata](/lidarr/supported) for what each consumer generates and which media players read it.
+
+
 # Tags
 
 {#tags}
@@ -384,3 +443,20 @@ Tags are particularly useful for:
 - Assigning a non-default delay profile to a subset of artists.
 - Restricting a release profile to certain artists.
 - Tracking which import list added an artist.
+
+
+# Logging
+
+{#logging}
+
+Logging options live under **Settings → General → Logging**.
+
+| Setting | Default | Description |
+|---|---|---|
+| **Log Level** | Info | `Info`, `Debug`, or `Trace`. Debug and Trace produce substantially more output; use them for diagnosing a specific problem, not as a permanent setting. |
+| **(Advanced) Log Size Limit** | 1 MB | Maximum size of a single log file before Lidarr archives it and starts a new one, in MB (1 to 10). |
+
+> Trace logging should only be enabled temporarily. Leaving it on generates large log files and can itself affect performance on slower systems.
+{.is-warning}
+
+See [System → Log Files](/lidarr/system#log-files) for where log files live on disk and how log rotation works.
