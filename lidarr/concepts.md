@@ -2,7 +2,7 @@
 title: Lidarr Concepts
 description: How Lidarr models music, why MusicBrainz metadata matters, and when Lidarr is (and isn't) the right tool for your library
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-07-27T20:58:20.511Z
 tags: lidarr, releases, metadata, concepts, musicbrainz, artist
 editor: markdown
 dateCreated: 2026-04-18T16:48:08.649Z
@@ -33,11 +33,10 @@ Examples of `Releases`:
 - EP
 - Single
 - Broadcast
-- Other
 
 If something you want to manage doesn't exist as a `Release` in the metadata source, Lidarr can't handle it. Lidarr has no "add it locally only" escape hatch.
 
-Lidarr is audio-only. Releases that are recorded on video-only media formats (DVD, Blu-ray, VHS, etc.) are excluded: Lidarr filters out tracks on those media and will not import or search for a release that contains no audio tracks after that filtering.
+Lidarr is audio-only. MusicBrainz marks some recordings as video (music videos, live video streams, etc.). Lidarr skips those entirely and won't search for, grab, or import a release where all tracks carry the video flag.
 
 > You can only manage `Releases` in Lidarr if they exist in third-party services.
 {.is-info}
@@ -97,3 +96,58 @@ If you find that a `Release` or `Release Artist` is missing from MusicBrainz, yo
 Two questions that come up often enough to answer here:
 
 - *Why do I have the same file in my download folder and my library folder?*
+- *Why do files stay in the download folder after Lidarr imported them?*
+
+Both are expected with the default Lidarr workflow, and both are answered by understanding how the post-import handoff works.
+
+### The torrent download flow
+
+1. Lidarr sends a download request to the torrent client, tagged with a category (default: `lidarr-music` or similar, configurable per download client).
+2. Lidarr watches the download client's queue via its API for items in that category.
+3. When a download finishes, Lidarr imports the files into the library folder. Whether that import copies or hardlinks is determined by filesystem support. See below.
+4. The torrent client keeps the files in the download folder so it can seed. That's why the file "is left in downloads" after import.
+5. Optionally, if **Completed Download Handling → Remove Completed** is enabled, Lidarr tells the torrent client to remove the torrent and its files *after* seeding is complete. If you don't want the file to persist in the download folder at all, this is the setting to turn on.
+
+### Hardlinks
+
+If the download folder and the library folder are on the **same filesystem** (same mount, same partition), Lidarr uses a **hardlink** instead of a copy. A hardlink is a second directory entry pointing at the same underlying file. The file appears in both folders but only occupies disk space once. Lidarr can import by hardlink before the torrent finishes seeding, and seeding continues to work on the original file because they are literally the same bytes on disk.
+
+If the download folder and the library folder are on **different filesystems**, Lidarr can't hardlink across them and falls back to a copy. The copy doubles the disk space until the download client cleans up its side.
+
+**The requirement for hardlinks to work:**
+
+- Both folders must be on the same filesystem (same mount point, same volume).
+- In Docker, both folders must be mounted through the same volume or bind mount. Two separate volumes, even pointing at the same host filesystem, won't hardlink.
+- The TRaSH Guides [Hardlinks and Instant Moves](https://trash-guides.info/hardlinks) page has a detailed walkthrough of the common misconfigurations.
+
+> Hardlinks are enabled by default. If you are seeing double disk usage, the usual culprits are mismatched mounts (Docker), a download client writing to a different filesystem than the library, or a filesystem that doesn't support hardlinks (some network filesystems, FAT32).
+{.is-info}
+
+## Is Lidarr right for your library?
+
+Lidarr is built around the `Release` model. If your library doesn't fit that model, Lidarr will be a frustrating tool no matter how much you tune it. Lidarr **isn't** a good fit for the following situations.
+
+- **A loose collection of files.** Files from multiple artists (not compilations) or multiple `Releases` sharing a single folder. Low-to-no-curation libraries won't work with Lidarr. Don't try.
+- **Classical music libraries.** Classical releases typically have extensive tagging requirements, and `Release` metadata on MusicBrainz is often missing or incorrect. You can use Lidarr, but expect substantial manual work.
+- **Singles-heavy libraries.** Many singles aren't actual `Releases` in MusicBrainz. Third-party data sources return no metadata for them, so they can't be automated.
+- **Mixes, beats, and samples.** Libraries made of DJ mixes, beat packs, or producer samples (Beatport-style content). These aren't `Releases` in the metadata sources and Lidarr can't manage them. This does *not* apply to albums in the Electronic genre, which are fine.
+
+If most of your library falls into one of the above categories, Lidarr may not be the right tool. If only part of your library does, you can still use Lidarr for the rest. Just expect to manage the problematic portion by hand.
+
+## Alternatives and companion tools
+
+The tools below can be used instead of, or alongside, Lidarr.
+
+- [Beets](https://beets.io/): music library organizer and tagger, strong at bulk cleanup.
+- [MusicBrainz Picard](https://picard.musicbrainz.org/): the canonical MusicBrainz tagger.
+- [MusicBee](https://getmusicbee.com/): music player with strong library-management features.
+
+Using these in tandem with Lidarr is beyond the scope of this page, but they're common companions for preparing a library before import, or for managing the parts of a collection Lidarr can't.
+
+## See also
+
+- [Quick Start](/lidarr/quick-start-guide): install and reach your first download.
+- [Importing an Existing Library](/lidarr/importing-existing-library): migrating files you already have.
+- [Metadata Troubleshooting](/lidarr/metadata-troubleshooting): fixing missing or incorrect MusicBrainz data.
+- [FAQ](/lidarr/faq): common questions and troubleshooting.
+- [Settings](/lidarr/settings): detailed reference for every configuration option.
