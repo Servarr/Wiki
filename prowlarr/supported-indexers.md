@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-23T02:37:53.924897
+date: 2026-07-28T02:27:09.257381
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-23T02:37:53.924897
+dateCreated: 2026-07-28T02:27:09.257381
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.0.5494` / [Commit: bc65f177e364ad0e9bad3046f691b2e29e8dcfb0](https://github.com/Prowlarr/Prowlarr/commit/bc65f177e364ad0e9bad3046f691b2e29e8dcfb0)
-  - [Prowlarr Indexers Commit: 1b08d3e08fafb7c39f6de944ee2ab23b91b86f78](https://github.com/Prowlarr/Indexers/commit/1b08d3e08fafb7c39f6de944ee2ab23b91b86f78)
+  - Prowlarr Build `2.6.1.5496` / [Commit: dd09f6477feccbcc7e73acecd218b51731c50da5](https://github.com/Prowlarr/Prowlarr/commit/dd09f6477feccbcc7e73acecd218b51731c50da5)
+  - [Prowlarr Indexers Commit: 391b8769665a492d3e6639d210c2eb3fe70e6b43](https://github.com/Prowlarr/Indexers/commit/391b8769665a492d3e6639d210c2eb3fe70e6b43)
 
 ---
 
@@ -174,7 +174,6 @@ dateCreated: 2026-07-23T02:37:53.924897
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[TR4KER](https://tr4ker.net/){#tr4ker}|TR4KER is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
@@ -597,11 +596,11 @@ dateCreated: 2026-07-23T02:37:53.924897
 |[TorrentHR (API)](https://www.torrenthr.org/){#torrenthr-api}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|TorrentLeech (TL) is a Private Torrent Tracker for 0DAY / GENERAL\. not here _ not scene|English (United States)|
-|[Torrentleech\.pl](https://torrentleech.pl/){#torrentleech-pl}|Torrentleech\.pl is a POLISH Private Torrent Tracker for 0DAY / GENERAL|Polish (Poland)|
 |TorrentPotato{#torrentpotato}|A JSON based torrent provider previously developed for CouchPotato|English (United States)|
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory2FA](https://totheglory.im/){#totheglory2fa}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Chinese (China)|
+|[TR4KER](https://tr4ker.net/){#tr4ker}|TR4KER is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[TrackerMK](https://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
 |[TrackerZero](https://trackerzero.it/){#trackerzero}|TrackerZero is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / MUSIC / SOFTWARE|Italian (Italy)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private Torrent Tracker for MUSIC|English (United States)|
