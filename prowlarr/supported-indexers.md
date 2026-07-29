@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-28T02:27:09.257381
+date: 2026-07-29T02:31:21.396684
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-28T02:27:09.257381
+dateCreated: 2026-07-29T02:31:21.396684
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.1.5496` / [Commit: dd09f6477feccbcc7e73acecd218b51731c50da5](https://github.com/Prowlarr/Prowlarr/commit/dd09f6477feccbcc7e73acecd218b51731c50da5)
-  - [Prowlarr Indexers Commit: 391b8769665a492d3e6639d210c2eb3fe70e6b43](https://github.com/Prowlarr/Indexers/commit/391b8769665a492d3e6639d210c2eb3fe70e6b43)
+  - [Prowlarr Indexers Commit: b10cfba4a01e113207e43e8b8889f4b1de903a84](https://github.com/Prowlarr/Indexers/commit/b10cfba4a01e113207e43e8b8889f4b1de903a84)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-07-28T02:27:09.257381
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://www.529075.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
+|[52BT](https://www.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -174,6 +174,7 @@ dateCreated: 2026-07-28T02:27:09.257381
 |[themixingbowl](https://tmb.dj/){#themixingbowl}|themixingbowl (TMB) is a Semi-Private Torrent Tracker for DJ Music mixes|English (United States)|
 |[Toloka\.to](https://toloka.to/){#toloka.to}|Toloka\.to is a Semi-Private Ukrainian torrent site with a thriving file-sharing community|Ukrainian (Ukraine)|
 |[TorrentMasters](https://torrentmasters.org/){#torrentmasters}|TorrentMasters is a HUNGARIAN semi-private tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
+|[TR4KER](https://tr4ker.net/){#tr4ker}|TR4KER is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[TrahT](https://traht.org/){#traht}|TrahT is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[TribalMixes](https://www.tribalmixes.com/){#tribalmixes}|TribalMixes is a Semi-Private Torrent Tracker for DJ MIXES|English (United Kingdom)|
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
@@ -600,7 +601,6 @@ dateCreated: 2026-07-28T02:27:09.257381
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory2FA](https://totheglory.im/){#totheglory2fa}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Chinese (China)|
-|[TR4KER](https://tr4ker.net/){#tr4ker}|TR4KER is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[TrackerMK](https://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
 |[TrackerZero](https://trackerzero.it/){#trackerzero}|TrackerZero is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / MUSIC / SOFTWARE|Italian (Italy)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private Torrent Tracker for MUSIC|English (United States)|
