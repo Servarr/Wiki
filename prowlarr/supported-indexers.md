@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-07-29T02:31:21.396684
+date: 2026-08-01T02:41:23.879203
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-07-29T02:31:21.396684
+dateCreated: 2026-08-01T02:41:23.879203
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.1.5496` / [Commit: dd09f6477feccbcc7e73acecd218b51731c50da5](https://github.com/Prowlarr/Prowlarr/commit/dd09f6477feccbcc7e73acecd218b51731c50da5)
-  - [Prowlarr Indexers Commit: b10cfba4a01e113207e43e8b8889f4b1de903a84](https://github.com/Prowlarr/Indexers/commit/b10cfba4a01e113207e43e8b8889f4b1de903a84)
+  - Prowlarr Build `2.6.1.5509` / [Commit: c6034c86f0d6b5e7a04b7dd944c9e1067808b026](https://github.com/Prowlarr/Prowlarr/commit/c6034c86f0d6b5e7a04b7dd944c9e1067808b026)
+  - [Prowlarr Indexers Commit: 3a348b718500f3237060d4a780ea89cf7eb72275](https://github.com/Prowlarr/Indexers/commit/3a348b718500f3237060d4a780ea89cf7eb72275)
 
 ---
 
@@ -45,7 +45,6 @@ dateCreated: 2026-07-29T02:31:21.396684
 |[dmhy](https://share.dmhy.org/){#dmhy}|dmhy is a TAIWANESE Public magnet tracker for ANIME|Chinese (Taiwan)|
 |[E-Hentai](https://e-hentai.org/){#ehentai}|E-Hentai is a Public site for Hentai doujinshi, manga|English (United States)|
 |[EBookBay](https://ebb.la/){#ebookbay}|EBook Bay (EBB) is a Public Torrent Tracker for E-BOOKS|English (United States)|
-|[Elitetorrent-wf](https://www.elitetorrent.wf/){#elitetorrent-wf}|Elitetorrent-wf is a SPANISH Public tracker for MOVIES / TV|Spanish (Spain)|
 |[ExtraTorrent\.st](https://extratorrent.st/){#extratorrent-st}|ExtraTorrent\.st is a Public tracker for MOVIE / TV / GENERAL magnets|English (United States)|
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[FileMood](https://filemood.com/){#filemood}|FileMood is a Public BitTorrent DHT search engine|English (United States)|
@@ -100,8 +99,8 @@ dateCreated: 2026-07-29T02:31:21.396684
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome255.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip236.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome256.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip237.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -164,7 +163,6 @@ dateCreated: 2026-07-29T02:31:21.396684
 |[RGFootball](https://rgfootball.net/){#rgfootball}|RGFootball is a RUSSIAN Sports torrent tracker|Russian (Russia)|
 |[RinTor](https://rintor.org/){#rintor}|RinTor is a Semi-Private Tracker for 3X|Russian (Russia)|
 |[RiperAM](https://riperam.org/){#riperam}|RiperAM is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV|Russian (Russia)|
-|[RockBox](https://rawkbawx.rocks/){#rockbox}|RockBox Semi-Private Torrent Tracker dedicated to HEAVY METAL/ROCK MUSIC\. This definition is for the English site|English (United States)|
 |[RUDUB](https://r4.rudub.world/){#rudub}|RUDUB (ex-BaibaKoTV) is a RUSSIAN Semi-Private Torrent Tracker for TV|Russian (Russia)|
 |[Rustorka](https://rustorka.com/){#rustorka}|Rustorka is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[RuTracker\.org](https://rutracker.org/){#rutracker.org}|RuTracker\.org is a RUSSIAN Semi-Private site with a thriving file-sharing community|Russian (Russia)|
