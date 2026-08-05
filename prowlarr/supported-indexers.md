@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-02T02:40:05.099105
+date: 2026-08-05T02:25:01.908981
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-02T02:40:05.099105
+dateCreated: 2026-08-05T02:25:01.908981
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.1.5509` / [Commit: c6034c86f0d6b5e7a04b7dd944c9e1067808b026](https://github.com/Prowlarr/Prowlarr/commit/c6034c86f0d6b5e7a04b7dd944c9e1067808b026)
-  - [Prowlarr Indexers Commit: fb8569ece4196a1e1bf9ab92d35dbee739eba263](https://github.com/Prowlarr/Indexers/commit/fb8569ece4196a1e1bf9ab92d35dbee739eba263)
+  - Prowlarr Build `2.6.2.5517` / [Commit: 1efad4bbc390e1ee20818ea64748f7f9f24d2a13](https://github.com/Prowlarr/Prowlarr/commit/1efad4bbc390e1ee20818ea64748f7f9f24d2a13)
+  - [Prowlarr Indexers Commit: 24618ae498d1b1ab98de25d8ef1209b554a83233](https://github.com/Prowlarr/Indexers/commit/24618ae498d1b1ab98de25d8ef1209b554a83233)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-08-02T02:40:05.099105
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://xetmbveo.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://axququsw.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
