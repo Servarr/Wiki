@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-05T02:25:01.908981
+date: 2026-08-06T02:27:27.903824
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-05T02:25:01.908981
+dateCreated: 2026-08-06T02:27:27.903824
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5517` / [Commit: 1efad4bbc390e1ee20818ea64748f7f9f24d2a13](https://github.com/Prowlarr/Prowlarr/commit/1efad4bbc390e1ee20818ea64748f7f9f24d2a13)
-  - [Prowlarr Indexers Commit: 24618ae498d1b1ab98de25d8ef1209b554a83233](https://github.com/Prowlarr/Indexers/commit/24618ae498d1b1ab98de25d8ef1209b554a83233)
+  - [Prowlarr Indexers Commit: 86c22d40b1d639d03a9644f75973bfe13921afc4](https://github.com/Prowlarr/Indexers/commit/86c22d40b1d639d03a9644f75973bfe13921afc4)
 
 ---
 
@@ -582,13 +582,13 @@ dateCreated: 2026-08-05T02:25:01.908981
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL|Turkish (Turkey)|
-|[TorrentAvenue (API)](https://torrentavenue.online/){#torrentavenue-api}|TorrentAvenue is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentBD](https://www.torrentbd.net/){#torrentbd}|TorrentBD is a BANGLADESH Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentCCF](https://et8.org/){#torrentccf}|TorrentCCF (TCCF) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TorrentClaw](https://torrentclaw.com/){#torrentclaw}|TorrentClaw is a Private aggregate indexer of 10+ Public Torrent Trackers, with additional 'TrueSpec' metadata and quality score|English (United States)|
 |[TorrentDay](https://tday.love/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentDD](https://www.torrentdd.com/){#torrentdd}|TorrentDD (TodayBit) is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
+|[TorrentHaven (API)](https://torrenthaven.org/){#torrenthaven-api}|TorrentHaven is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentHR (API)](https://www.torrenthr.org/){#torrenthr-api}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|TorrentLeech (TL) is a Private Torrent Tracker for 0DAY / GENERAL\. not here _ not scene|English (United States)|
