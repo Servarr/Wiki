@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-06T02:27:27.903824
+date: 2026-08-07T02:35:42.090545
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-06T02:27:27.903824
+dateCreated: 2026-08-07T02:35:42.090545
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5517` / [Commit: 1efad4bbc390e1ee20818ea64748f7f9f24d2a13](https://github.com/Prowlarr/Prowlarr/commit/1efad4bbc390e1ee20818ea64748f7f9f24d2a13)
-  - [Prowlarr Indexers Commit: 86c22d40b1d639d03a9644f75973bfe13921afc4](https://github.com/Prowlarr/Indexers/commit/86c22d40b1d639d03a9644f75973bfe13921afc4)
+  - [Prowlarr Indexers Commit: 9ca2e1f6b34227a48131d75e3eaa44d6a028ed52](https://github.com/Prowlarr/Indexers/commit/9ca2e1f6b34227a48131d75e3eaa44d6a028ed52)
 
 ---
 
@@ -99,8 +99,8 @@ dateCreated: 2026-08-06T02:27:27.903824
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome256.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip237.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome257.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip238.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
