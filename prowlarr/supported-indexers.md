@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-08T01:25:55.835950
+date: 2026-08-10T01:41:43.637490
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-08T01:25:55.835950
+dateCreated: 2026-08-10T01:41:43.637490
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.2.5517` / [Commit: 1efad4bbc390e1ee20818ea64748f7f9f24d2a13](https://github.com/Prowlarr/Prowlarr/commit/1efad4bbc390e1ee20818ea64748f7f9f24d2a13)
-  - [Prowlarr Indexers Commit: 9cbe6b85bac6a1705a98f4581fdf0c9575b421e2](https://github.com/Prowlarr/Indexers/commit/9cbe6b85bac6a1705a98f4581fdf0c9575b421e2)
+  - Prowlarr Build `2.6.2.5534` / [Commit: 50f3e7d33068e362fcd4e51f78ea6990f92623c9](https://github.com/Prowlarr/Prowlarr/commit/50f3e7d33068e362fcd4e51f78ea6990f92623c9)
+  - [Prowlarr Indexers Commit: ba620c0cbf89bc391a79bc6642f6b33aee21dcb2](https://github.com/Prowlarr/Indexers/commit/ba620c0cbf89bc391a79bc6642f6b33aee21dcb2)
 
 ---
 
@@ -264,7 +264,6 @@ dateCreated: 2026-08-08T01:25:55.835950
 |[CeskeForum](https://t.ceskeforum.com/){#ceskeforum}|CeskeForum is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[CGPeers](https://cgpeers.to/){#cgpeers}|CGPeers is a Private Torrent Tracker for GRAPHICS SOFTWARE / TUTORIALS / ETC|English (United States)|
 |[CHDBits](https://ptchdbits.co/){#chdbits}|CHDBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[ChileBT (API)](https://chilebt.com/){#chilebt-api}|ChileBT is a CHILEAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Chile)|
 |[Cinemageddon](https://cinemageddon.net/){#cinemageddon}|Cinemageddon is a Private Torrent Tracker for B-movies|English (United States)|
 |[CinemaMovieS_ZT](https://cinemamovies.pl/){#cinemamovies}|CinemaMovieS_ZT is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Cinematik (API)](https://cinematik.net/){#cinematik}|Cinematik is a Private tracker for full BD and DVD discs of non-mainstream movies, niche cinema and arthouse|English (United States)|
