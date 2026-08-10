@@ -28,7 +28,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 ## Environment Variables Table
 
 | Config Option | Namespace | Variable Name | Full Environment Variable |
-|---------------|-----------|---------------|---------------------------|
+| --------------- | ----------- | --------------- | --------------------------- |
 | `InstanceName` | `APP` | `INSTANCENAME` | `READARR__APP__INSTANCENAME` |
 | `Theme` | `APP` | `THEME` | `READARR__APP__THEME` |
 | `LaunchBrowser` | `APP` | `LAUNCHBROWSER` | `READARR__APP__LAUNCHBROWSER` |
