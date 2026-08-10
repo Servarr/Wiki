@@ -229,7 +229,6 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 > FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 {.is-info}
 
-
 # Indexers
 
 {#indexer-settings}
@@ -265,7 +264,6 @@ Global settings that apply across all indexers, found under **Settings → Index
 | **Maximum Size** | Maximum release size in MB. Lidarr rejects releases larger than this. Set to `0` for unlimited. |
 | **Retention** | Usenet only. Set to `0` for unlimited retention. |
 | **(Advanced) RSS Sync Interval** | Interval in minutes between automatic RSS syncs. Set to `0` to disable all automatic release grabbing. This applies to every indexer; follow the usage rules each indexer sets for itself. See [FAQ → How does Lidarr work?](/lidarr/faq#how-does-lidarr-work) for how RSS sync fits into Lidarr's overall search cycle. |
-
 
 # Download Clients
 
@@ -403,7 +401,6 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 
 For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scripts) page for the full list of environment variables available per event.
 
-
 # Metadata
 
 {#metadata}
@@ -425,7 +422,6 @@ For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scrip
 
 Below **Write Metadata to Audio Files**, the Metadata page lists external metadata formats Lidarr can write to disk alongside your music: NFO files for media-center software (Kodi/XBMC), and image sidecar formats for Roksbox and WD TV. Enable a consumer and choose which of Artist Metadata, Album Metadata, Artist Images, and Album Images it writes. See [Supported → Metadata](/lidarr/supported) for what each consumer generates and which media players read it.
 
-
 # Tags
 
 {#tags}
@@ -438,7 +434,6 @@ Tags are particularly useful for:
 - Assigning a non-default delay profile to a subset of artists.
 - Restricting a release profile to certain artists.
 - Tracking which import list added an artist.
-
 
 # Logging
 
