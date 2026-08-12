@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-10T01:41:43.637490
+date: 2026-08-12T01:49:45.952185
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-10T01:41:43.637490
+dateCreated: 2026-08-12T01:49:45.952185
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5534` / [Commit: 50f3e7d33068e362fcd4e51f78ea6990f92623c9](https://github.com/Prowlarr/Prowlarr/commit/50f3e7d33068e362fcd4e51f78ea6990f92623c9)
-  - [Prowlarr Indexers Commit: ba620c0cbf89bc391a79bc6642f6b33aee21dcb2](https://github.com/Prowlarr/Indexers/commit/ba620c0cbf89bc391a79bc6642f6b33aee21dcb2)
+  - [Prowlarr Indexers Commit: 931e1551cb70b75c5a5a5d9e5b6020e1633f7588](https://github.com/Prowlarr/Indexers/commit/931e1551cb70b75c5a5a5d9e5b6020e1633f7588)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-08-10T01:41:43.637490
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://cwbuaguy.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://2esrozvx.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -94,6 +94,7 @@ dateCreated: 2026-08-10T01:41:43.637490
 |[torrent-pirat](http://www.torrent-pirat.com/){#torrent-pirat}|torrent-pirat is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |Torrent RSS Feed{#torrent-rss-feed}|Generic RSS Feed containing torrents|English (United States)|
 |[Torrent9](https://www6.torrent9.to/){#torrent9}|Torrent9 is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[TorrentByte](https://torrentbyte.cc/){#torrentbyte}|TorrentByte is a Public DHT Crawler|English (United States)|
 |[Torrent\[CORE\]](https://torrentcore.xyz/){#torrentcore}|Torrent\[CORE\] is a Public DHT Crawler|English (United States)|
 |[TorrentDownload](https://www.torrentdownload.info/){#torrentdownload}|TorrentDownload is a Public torrent meta-search engine|English (United States)|
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
@@ -230,7 +231,7 @@ dateCreated: 2026-08-10T01:41:43.637490
 |[BigBBS](https://bigbbs.eu/){#bigbbs}|BigBBS is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[BigCore](https://bigcore.eu/){#bigcore}|BigCore is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
-|[Bitded](https://www.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
+|[Bitded](http://dedbit-new.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[bitGAMER](https://bitgamer.ch/){#bitgamer}|bitGAMER is a Private Torrent Tracker for GAMES|English (United States)|
 |[BitHDTV](https://www.bit-hdtv.com/){#bithdtv}|BIT-HDTV - Home of High Definition|English (United States)|
 |[BitHUmen](https://bithumen.be/){#bithumen}|BitHUmen is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
