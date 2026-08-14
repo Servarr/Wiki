@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-13T01:51:54.751090
+date: 2026-08-14T01:49:16.392067
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-13T01:51:54.751090
+dateCreated: 2026-08-14T01:49:16.392067
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5548` / [Commit: 1f7db1e651249f1a3da0d8b55fbc0b2dd980b37a](https://github.com/Prowlarr/Prowlarr/commit/1f7db1e651249f1a3da0d8b55fbc0b2dd980b37a)
-  - [Prowlarr Indexers Commit: d7e6c1abe08baf169f22ccb69f1ba39836025869](https://github.com/Prowlarr/Indexers/commit/d7e6c1abe08baf169f22ccb69f1ba39836025869)
+  - [Prowlarr Indexers Commit: dbc9c82404f263e583d0b9acb027185562dc7167](https://github.com/Prowlarr/Indexers/commit/dbc9c82404f263e583d0b9acb027185562dc7167)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-08-13T01:51:54.751090
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://2esrozvx.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://gk8u60tw.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -100,8 +100,8 @@ dateCreated: 2026-08-13T01:51:54.751090
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome257.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip238.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome258.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip239.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -191,7 +191,6 @@ dateCreated: 2026-08-13T01:51:54.751090
 |[3D Torrents](http://www.3dtorrents.org/){#3dtorrents}|3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES|English (United States)|
 |[4thD](https://4thd.xyz/){#4thd}|4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
 |[Abnormal (API)](https://abn.lol/){#abnormal-api}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[ABtorrents](https://usefultrash.net/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a Private torrent site for Rugby and other sports played in Australia|English (Australia)|
@@ -338,7 +337,7 @@ dateCreated: 2026-08-13T01:51:54.751090
 |[HappyFappy](https://www.happyfappy.net/){#happyfappy}|HappyFappy (HF) is a Private Torrent Tracker for 3X|English (United States)|
 |[HappyFappy2FA](https://www.happyfappy.net/){#happyfappy2fa}|HappyFappy (HF) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
 |[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno (HUNO) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
-|[HD-CLUB](https://freecztorrent.eu/){#hd-club}|HD-CLUB is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
+|[HD-CLUB](https://hd-czech.eu/){#hd-club}|HD-CLUB is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[HD Dolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
 |[HD-Forever2FA](https://hdf.world/){#hdforever2fa}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES\. This indexer uses cookie login for 2FA|French (France)|
