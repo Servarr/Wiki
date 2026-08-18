@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-14T01:49:16.392067
+date: 2026-08-18T01:07:47.360854
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-14T01:49:16.392067
+dateCreated: 2026-08-18T01:07:47.360854
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5548` / [Commit: 1f7db1e651249f1a3da0d8b55fbc0b2dd980b37a](https://github.com/Prowlarr/Prowlarr/commit/1f7db1e651249f1a3da0d8b55fbc0b2dd980b37a)
-  - [Prowlarr Indexers Commit: dbc9c82404f263e583d0b9acb027185562dc7167](https://github.com/Prowlarr/Indexers/commit/dbc9c82404f263e583d0b9acb027185562dc7167)
+  - [Prowlarr Indexers Commit: 257beddc3fe6d37927a5fe6d990b752bc0910c1e](https://github.com/Prowlarr/Indexers/commit/257beddc3fe6d37927a5fe6d990b752bc0910c1e)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-08-14T01:49:16.392067
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://gk8u60tw.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://mbivngf9.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -76,6 +76,7 @@ dateCreated: 2026-08-14T01:49:16.392067
 |[plugintorrent](https://plugintorrent.com/){#plugintorrent}|plugintorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[PornoTorrent](https://pornotorrent.com.br/){#pornotorrent}|PornoTorrent is a BRAZILIAN Public Torrent Tracker for 3X|Portuguese (Brazil)|
 |[PornRips](https://pornrips.to/){#pornrips}|PornRips is a Public site for 3X|English (United States)|
+|[PornXLab](https://www.pornxlab.com/){#pornxlab}|PornXLab is a Public tracker for 3X|English (United States)|
 |[Postman](http://tracker2.postman.i2p/){#postman}|Postman is a Public I2P Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[RinTor\.NeT](https://www.rintor.net/){#rintornet}|RinTor\.NeT is a RUSSIAN Public tracker for 3X|Russian (Russia)|
 |[RuTor](https://rutor.info/){#rutor}|RuTor is a RUSSIAN Public site for MOVIES / TV / GENERAL|Russian (Russia)|
@@ -191,6 +192,7 @@ dateCreated: 2026-08-14T01:49:16.392067
 |[3D Torrents](http://www.3dtorrents.org/){#3dtorrents}|3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES|English (United States)|
 |[4thD](https://4thd.xyz/){#4thd}|4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
+|[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
 |[Abnormal (API)](https://abn.lol/){#abnormal-api}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[ABtorrents](https://usefultrash.net/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a Private torrent site for Rugby and other sports played in Australia|English (Australia)|
@@ -531,7 +533,6 @@ dateCreated: 2026-08-14T01:49:16.392067
 |[SBPT](https://sbpt.link/){#sbpt}|SBPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
-|[SceneTime](https://www.scenetime.com/){#scenetime}|SceneTime is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[SceneTime (API)](https://www.scenetime.com/){#scenetime-api}|SceneTime is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|Secret Cinema is a Private ratioless site for rare MOVIES|English (United States)|
 |[SeedCore (API)](https://seedcore.net/){#seedcore-api}|SeedCore (ROT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
