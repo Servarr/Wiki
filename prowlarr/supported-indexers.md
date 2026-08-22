@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-18T01:07:47.360854
+date: 2026-08-22T01:08:36.986860
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-18T01:07:47.360854
+dateCreated: 2026-08-22T01:08:36.986860
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.2.5548` / [Commit: 1f7db1e651249f1a3da0d8b55fbc0b2dd980b37a](https://github.com/Prowlarr/Prowlarr/commit/1f7db1e651249f1a3da0d8b55fbc0b2dd980b37a)
-  - [Prowlarr Indexers Commit: 257beddc3fe6d37927a5fe6d990b752bc0910c1e](https://github.com/Prowlarr/Indexers/commit/257beddc3fe6d37927a5fe6d990b752bc0910c1e)
+  - Prowlarr Build `2.6.2.5558` / [Commit: 30342639a89e76cfd2179e1346f967a4356d1121](https://github.com/Prowlarr/Prowlarr/commit/30342639a89e76cfd2179e1346f967a4356d1121)
+  - [Prowlarr Indexers Commit: 4b0a0325612a66bba95593744635b2135e97d573](https://github.com/Prowlarr/Indexers/commit/4b0a0325612a66bba95593744635b2135e97d573)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-08-18T01:07:47.360854
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://mbivngf9.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://nd8xavjv.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -101,8 +101,8 @@ dateCreated: 2026-08-18T01:07:47.360854
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome258.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip239.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome259.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip240.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -346,6 +346,7 @@ dateCreated: 2026-08-18T01:07:47.360854
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH Private Torrent Tracker for HD MOVIES / TV|Spanish (Spain)|
 |[HD-Only (API)](https://hd-only.org/){#hdonly-api}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HD-Space](https://hd-space.org/){#hdspace}|HD-Space (HDS) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
+|[HD-SpaceCookie](https://hd-space.org/){#hdspacecookie}|HD-Space (HDS) is a Private Torrent Tracker for HD MOVIES / TV\. This uses the cookie method for access|English (United States)|
 |[HD-Torrents](https://hdts.ru/){#hdtorrents}|HD-Torrents (HDT) is a Private Torrent Tracker for HD MOVIES / TV / MUSIC / 3X|English (United States)|
 |[HD-Torrents](https://hdts.ru/){#hd-torrents}|HD-Torrents is a private torrent website with HD torrents and strict rules on their content|English (United States)|
 |[HD-UNiT3D (API)](https://hd-united.vn/){#hd-unit3d-api}|HD-UNiT3D is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
