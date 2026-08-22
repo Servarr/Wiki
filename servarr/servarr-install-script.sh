@@ -368,8 +368,15 @@ echo ""
 echo "Checking if the service is up and running..."
 
 # Loop to wait until the service is active
+attempts=0
 while ! systemctl is-active --quiet "$app"; do
     sleep 1
+    attempts=$((attempts+1))
+    if [ "$attempts" -gt 15 ]; then
+        echo ""
+        echo -e "${brown}[${app^}]${reset} failed to start. Please check status of service."
+        exit 1
+    fi
 done
 
 echo ""
