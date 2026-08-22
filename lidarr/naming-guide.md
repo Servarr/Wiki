@@ -132,7 +132,7 @@ From Davo's [community guide](/lidarr/community-guide). Puts the album folder in
 
 ## B's convention
 
-Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows**: the truncated paths can become inaccessible after a Lidarr rename on that OS. See the [FAQ entry on Windows folder access after rename](/lidarr/faq#why-cant-i-access-a-folder-in-windows-after-lidarr-rename). Useful for libraries containing artists with notoriously long album titles.
+Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows**: the truncated paths can become inaccessible after a Lidarr rename on that OS. See [OS path limits and illegal characters](#os-path-limits-and-illegal-characters) above. Useful for libraries containing artists with notoriously long album titles.
 
 ### Standard Track Format
 

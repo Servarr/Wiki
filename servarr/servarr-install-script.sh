@@ -37,21 +37,21 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.17"
-scriptdate="2025-10-27"
+scriptversion="3.1.19"
+scriptdate="2026-06-30"
 
 set -euo pipefail
 
 ### Am I root?, need root! GROOT!
 
 if [ "$EUID" -ne 0 ]; then
-    echo -e ${red}"Please run as root!"
+    echo -e "${red}Please run as root!"
     echo -e "Exiting script!"
     exit
 fi
 
 ### Title Splash
-echo -e ${brown}
+echo -e "${brown}"
 echo -e "#############################################################"
 echo -e "#                                                           #"
 echo -e "#   Welcome to the Servarr Community Installation Script!   #"
@@ -62,49 +62,41 @@ echo -e "#  If you have not done so, exit the script and read the    #"
 echo -e "#  Boilerplate Warning just to CYA. Enjoy your new setup!   #"
 echo -e "#                                                           #"
 echo -e "#############################################################"
-echo -e ${reset}
+echo -e "${reset}"
 
 echo -e "Running Servarr Install Script - Version ${brown}[$scriptversion]${reset} as of ${brown}[$scriptdate]${reset}"
 echo ""
 echo "Select the application to install: "
 echo ""
-select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
+select app in lidarr prowlarr radarr whisparr quit; do
 
     case $app in
     lidarr)
         app_port="8686"                                                     # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev libchromaprint-tools mediainfo" # Required packages
         app_umask="0002"                                                    # UMask the Service will run as
         branch="master"                                                     # {Update me if needed} branch to install
         break
         ;;
     prowlarr)
         app_port="9696"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     radarr)
         app_port="7878"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
         break
         ;;
     whisparr)
         app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+        app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="nightly"                     # {Update me if needed} branch to install
-        break
-        ;;
-    whisparr-v3)
-        app=whisparr
-        app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
-        app_umask="0002"                     # UMask the Service will run as
-        branch="eros"                        # {Update me if needed} branch to install
         break
         ;;
     quit)
@@ -125,11 +117,11 @@ datadir="/var/lib/$app/"       # {Update me if needed} AppData directory to use
 app_bin=${app^}                # Binary Name of the app
 
 if [[ $app != 'prowlarr' ]]; then
-    echo -e ${red}"   WARNING! WARNING! WARNING!"${reset}
+    echo -e "${red}   WARNING! WARNING! WARNING!${reset}"
     echo ""
     echo -e "   It is ${red}CRITICAL${reset} that the ${brown}User${reset} and ${brown}Group${reset} you select"
     echo -e "   to run ${brown}[${app^}]${reset} will have both ${red}READ${reset} and ${red}WRITE${reset} access"
-    echo -e "   to your Media Library and Download Client directories!"${reset}
+    echo -e "   to your Media Library and Download Client directories!${reset}"
     sleep 5
 fi
 
@@ -219,7 +211,7 @@ echo -e "Directories ${yellow}$bindir${reset} and ${yellow}$datadir${reset} crea
 
 # Check if prerequisite packages are already installed and install them if needed
 echo ""
-echo -e ${yellow}"Checking Pre-Requisite Packages..."${reset}
+echo -e "${yellow}Checking Pre-Requisite Packages...${reset}"
 sleep 3
 
 missing_packages=()
@@ -231,7 +223,7 @@ done
 
 if [ ${#missing_packages[@]} -eq 0 ]; then
     echo ""
-    echo -e ${green}"All prerequisite packages are already installed!"${reset}
+    echo -e "${green}All prerequisite packages are already installed!${reset}"
 else
     echo ""
     echo -e "Installing missing prerequisite packages: ${brown}${missing_packages[*]}${reset}"
@@ -249,31 +241,31 @@ case "$ARCH" in
 "armhf") DLURL="${dlbase}&arch=arm" ;;
 "arm64") DLURL="${dlbase}&arch=arm64" ;;
 *)
-    echo -e ${red}"Your arch is not supported!"
-    echo -e "Exiting installer script!"${reset}
+    echo -e "${red}Your arch is not supported!"
+    echo -e "Exiting installer script!${reset}"
     exit 1
     ;;
 esac
 
-echo -e ${yellow}"Removing tarballs..."${reset}
+echo -e "${yellow}Removing tarballs...${reset}"
 sleep 3
 # -f to Force so we do not fail if it doesn't exist
 rm -f "${app^}".*.tar.gz
 echo ""
-echo -e ${yellow}"Downloading required files..."${reset}
+echo -e "${yellow}Downloading required files...${reset}"
 echo ""
 wget --content-disposition "$DLURL"
 echo ""
-echo -e ${yellow}"Download complete!"${reset}
+echo -e "${yellow}Download complete!${reset}"
 echo ""
-echo -e ${yellow}"Extracting tarball!"${reset}
+echo -e "${yellow}Extracting tarball!${reset}"
 tar -xvzf "${app^}".*.tar.gz >/dev/null 2>&1
 echo ""
-echo -e ${yellow}"Installation files downloaded and extracted!"${reset}
+echo -e "${yellow}Installation files downloaded and extracted!${reset}"
 
 # remove existing installs
 echo ""
-echo -e "Removing existing installation files from ${brown}[$bindir]"${reset}
+echo -e "Removing existing installation files from ${brown}[$bindir]${reset}"
 rm -rf "$bindir"
 sleep 2
 echo ""
@@ -292,7 +284,7 @@ sleep 2
 
 # Check GLIBC version and create symlink to system SQLite if needed
 echo ""
-echo -e ${yellow}"Checking GLIBC version for SQLite compatibility..."${reset}
+echo -e "${yellow}Checking GLIBC version for SQLite compatibility...${reset}"
 GLIBC_VERSION=$(ldd --version | awk '/ldd/{print $NF}')
 GLIBC_MAJOR=$(echo "$GLIBC_VERSION" | cut -d. -f1)
 GLIBC_MINOR=$(echo "$GLIBC_VERSION" | cut -d. -f2)
@@ -300,7 +292,7 @@ GLIBC_MINOR=$(echo "$GLIBC_VERSION" | cut -d. -f2)
 # Check if GLIBC is older than 2.38
 if [ "$GLIBC_MAJOR" -lt 2 ] || { [ "$GLIBC_MAJOR" -eq 2 ] && [ "$GLIBC_MINOR" -lt 38 ]; }; then
     echo ""
-    echo -e ${yellow}"Detected GLIBC ${GLIBC_VERSION} (older than 2.38)."${reset}
+    echo -e "${yellow}Detected GLIBC ${GLIBC_VERSION} (older than 2.38).${reset}"
     echo -e "Creating symlink to system SQLite library..."
 
     # Backup original and create symlink based on architecture
@@ -315,14 +307,14 @@ if [ "$GLIBC_MAJOR" -lt 2 ] || { [ "$GLIBC_MAJOR" -eq 2 ] && [ "$GLIBC_MINOR" -l
 
     if [ -f "$SYSTEM_SQLITE" ]; then
         ln -s "$SYSTEM_SQLITE" "$bindir/libe_sqlite3.so"
-        echo -e ${green}"Symlink created. ${app^} will use system SQLite at $SYSTEM_SQLITE"${reset}
+        echo -e "${green}Symlink created. ${app^} will use system SQLite at $SYSTEM_SQLITE${reset}"
     else
-        echo -e ${red}"System SQLite library not found at $SYSTEM_SQLITE"${reset}
-        echo -e ${red}"This should not happen as libsqlite3-0 is a prerequisite."${reset}
+        echo -e "${red}System SQLite library not found at $SYSTEM_SQLITE${reset}"
+        echo -e "${red}This should not happen as libsqlite3-0 is a prerequisite.${reset}"
     fi
     sleep 2
 else
-    echo -e ${green}"GLIBC ${GLIBC_VERSION} is compatible with bundled SQLite."${reset}
+    echo -e "${green}GLIBC ${GLIBC_VERSION} is compatible with bundled SQLite.${reset}"
 fi
 
 # Configure Autostart
@@ -392,7 +384,7 @@ if [ "${STATUS}" = "active" ]; then
     echo ""
 else
     echo ""
-    echo -e ${red}"${app^} failed to start."${reset}
+    echo -e "${red}${app^} failed to start.${reset}"
     echo ""
     echo "Please try again. Exiting script."
     echo

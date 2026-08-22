@@ -33,11 +33,11 @@ Platform notes:
 
 Both patterns require that Lidarr doesn't overwrite tags after beets has written them. Set this before configuring either pattern:
 
-**Settings → Metadata → Write Audio Tags → Write Tags: Never**
+**Settings → Metadata → Write Metadata to Audio Files → Tag Audio Files with Metadata: Never**
 
 With this set, Lidarr won't write or rewrite audio file tags at any point. Beets becomes the sole tag writer. Lidarr continues to manage file names and folder structure via its naming templates. Lidarr delegates only tag content to beets.
 
-> If you had **Write Tags** set to anything other than **Never**, consider running a beets pass over your existing library after changing this setting, since Lidarr tagged those files and they may have gaps that beets can fill.
+> If you had **Tag Audio Files with Metadata** set to anything other than **Never** (the other options are *For new downloads only*, *All files; initial import only*, and *All files; keep in sync with MusicBrainz*), consider running a beets pass over your existing library after changing this setting, since Lidarr tagged those files and they may have gaps that beets can fill.
 {.is-info}
 
 # Pattern 1: Import script (stateless, per-import)
@@ -138,7 +138,7 @@ foreach ($dir in $albumDirs) {
 | **Benefit** | beets runs once at import time with any plugins you want, writing a full tag set that Lidarr wouldn't produce on its own. |
 | **Benefit** | No persistent beets database to maintain or back up. |
 | **Drawback** | Tags written at import time are never updated. If MusicBrainz data improves, or a plugin source updates its data (for example, updated ReplayGain values), the library files won't reflect it until you re-import or run beets manually. |
-| **Drawback** | Lidarr's **Write Tags: Never** setting means files you imported before configuring beets won't have their tags updated automatically. Run a manual beets pass to backfill those. |
+| **Drawback** | Lidarr's **Tag Audio Files with Metadata: Never** setting means files you imported before configuring beets won't have their tags updated automatically. Run a manual beets pass to backfill those. |
 
 # Pattern 2: Side-by-side persistent beets
 
@@ -184,7 +184,7 @@ Two scenarios where the tools can conflict:
 
 **Lidarr renames files after beets has tagged them.** When Lidarr renames a file (for example, because you change a naming template), the file path changes but the tags beets wrote remain. beets' persistent database will have the old path and will treat the file as missing. Resolution: after a Lidarr rename, run `beet update` to resync the beets database to the new paths, then a `beet import` pass if you want to re-enrich the renamed files.
 
-**Metadata refresh.** Lidarr periodically refreshes artist metadata from MusicBrainz and can overwrite file tags if Write Tags isn't set to Never. With **Write Tags: Never** set as described above, this doesn't occur.
+**Metadata refresh.** Lidarr periodically refreshes artist metadata from MusicBrainz and can overwrite file tags if **Tag Audio Files with Metadata** isn't set to Never. With **Tag Audio Files with Metadata: Never** set as described above, this doesn't occur.
 
 ## Trade-offs
 
@@ -199,6 +199,6 @@ Two scenarios where the tools can conflict:
 # See also
 
 - [Custom Scripts](/lidarr/custom-scripts): environment variables available to scripts and how to register them
-- [Settings: Metadata](/lidarr/settings#metadata): Write Tags setting and metadata consumer options
+- [Settings](/lidarr/settings): the **Tag Audio Files with Metadata** option lives under Settings → Metadata
 - [beets documentation](https://beets.readthedocs.io/en/stable/)
 - [beets installation guide](https://beets.readthedocs.io/en/stable/guides/installation.html)
