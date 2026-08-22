@@ -19,8 +19,10 @@ whisparr = "whisparr"
 # Intentional names/terms that shouldn't be "corrected"
 aling = "aling" # tracker
 broadcas = "broadcas" # Part of tracker name BroadcasTheNet
+conjurr = "conjurr" # Recommendation companion app
 hda = "hda" # Tracker acronym
 nam = "nam" # Part of "Viet Nam"
+newsletterr = "newsletterr" # Newsletter companion app
 searchin = "searchin" # API field name
 tey = "tey" # Part of tracker name PTTey
 titel = "titel" # German word for "title" used in examples
