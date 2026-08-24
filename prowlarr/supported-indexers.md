@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-22T01:08:36.986860
+date: 2026-08-24T01:11:41.071209
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-22T01:08:36.986860
+dateCreated: 2026-08-24T01:11:41.071209
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.2.5558` / [Commit: 30342639a89e76cfd2179e1346f967a4356d1121](https://github.com/Prowlarr/Prowlarr/commit/30342639a89e76cfd2179e1346f967a4356d1121)
-  - [Prowlarr Indexers Commit: 4b0a0325612a66bba95593744635b2135e97d573](https://github.com/Prowlarr/Indexers/commit/4b0a0325612a66bba95593744635b2135e97d573)
+  - Prowlarr Build `2.6.2.5562` / [Commit: 17e12c074efb6a00e4a85312b557a77ac692da4e](https://github.com/Prowlarr/Prowlarr/commit/17e12c074efb6a00e4a85312b557a77ac692da4e)
+  - [Prowlarr Indexers Commit: dca9847c4b136d02e07c2a492615687f0eacc7d8](https://github.com/Prowlarr/Indexers/commit/dca9847c4b136d02e07c2a492615687f0eacc7d8)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-08-22T01:08:36.986860
 |:--|:--|:--|
 |[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://nd8xavjv.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://l3qi32fp.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -321,7 +321,7 @@ dateCreated: 2026-08-22T01:08:36.986860
 |[FinElite](https://finelite.org/){#finelite}|FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL|Finnish (Finland)|
 |[Flood](https://flood.st/){#flood}|Flood (FLD) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Free Farm (自由农场)](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[FunFile](https://www.funfile.org/){#funfile}|FunFile is a general tracker|English (United States)|
+|[FunFile](https://www.funfile.org/){#funfile}|FunFile is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[funZone (API)](https://myfunzone.org/){#funzone-api}|funZone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Fuzer](https://www.fuzer.xyz/){#fuzer}|Fuzer (FZ) is an ISRAELI Private Torrent Tracker for MOVIES / TV / GENERAL|Hebrew (Israel)|
@@ -578,6 +578,7 @@ dateCreated: 2026-08-22T01:08:36.986860
 |[Tormac](https://tormac.org/){#tormac}|Tormac is a RUSSIAN Private Torrent Tracker for MAC SOFTWARE|Russian (Russia)|
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
+|[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
 |[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
@@ -612,6 +613,7 @@ dateCreated: 2026-08-22T01:08:36.986860
 |[upload\.cx (API)](https://upload.cx/){#uploadcx}|upload\.cx (ULCX) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Upscale Vault (API)](https://upscalevault.com/){#upscalevault}|Upscale Vault is a Private Torrent Tracker for AI upscaled and remastered MOVIES / TV|English (United States)|
 |[UTOPIA (API)](https://utp.to/){#utopia}|UTOPIA is a UKRAINIAN Private Tracker for HD MOVIES and TV|Ukrainian (Ukraine)|
+|[V3X](https://v3x.club/){#v3x}|V3X is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[The Vault](https://thevault.click/){#thevault}|TheVault (TVBZ) is a Private Torrent Tracker for BUSINESS / MARKETING E-LEARNING|English (United States)|
 |[Vault network](https://vault-network.net/){#vault-network}|Vault network is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[VC-Lib](https://pt.vclib.online/){#vc-lib}|VC-Lib is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
