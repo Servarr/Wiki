@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-24T01:11:41.071209
+date: 2026-08-25T01:10:14.858786
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-24T01:11:41.071209
+dateCreated: 2026-08-25T01:10:14.858786
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5562` / [Commit: 17e12c074efb6a00e4a85312b557a77ac692da4e](https://github.com/Prowlarr/Prowlarr/commit/17e12c074efb6a00e4a85312b557a77ac692da4e)
-  - [Prowlarr Indexers Commit: dca9847c4b136d02e07c2a492615687f0eacc7d8](https://github.com/Prowlarr/Indexers/commit/dca9847c4b136d02e07c2a492615687f0eacc7d8)
+  - [Prowlarr Indexers Commit: a83e714e38ca1caa3bbc64d9455c772442822da2](https://github.com/Prowlarr/Indexers/commit/a83e714e38ca1caa3bbc64d9455c772442822da2)
 
 ---
 
@@ -218,7 +218,6 @@ dateCreated: 2026-08-24T01:11:41.071209
 |[AsianDVDClub](https://asiandvdclub.org/){#asiandvdclub}|AsianDVDClub (ADC) is a Private Torrent Tracker for ASIAN DVD and BluRay|English (United States)|
 |[Audiences](https://audiences.me/){#audiences}|Audiences is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[AudioNews](https://audionews.org/){#audionews}|AudioNews (AN) is a Private Torrent Tracker for AUDIO SOFTWARE / SAMPLES / ETC|English (United States)|
-|[AURA4K (API)](https://aura4k.net/){#aura4k-api}|AURA4K is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Aussierul\.es](https://aussierul.es/){#aussierules}|AussieRul\.es is a Private Torrent Tracker for AUSTRALIAN RULES FOOTBALL|English (Australia)|
 |[AvistaZ](https://avistaz.to/){#avistaz}|Aka AsiaTorrents|English (United States)|
 |[Azusa (梓喵)](https://azusa.wiki/){#azusa}|Azusa (梓喵) is a CHINESE Private Torrent Tracker focusing on COMICS|Chinese (China)|
@@ -297,6 +296,7 @@ dateCreated: 2026-08-24T01:11:41.071209
 |[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-LEARNING|English (United States)|
+|[DreadVault (API)](https://dreadvault.org/){#dreadvault-api}|DreadVault is a Private Torrent Tracker for HORROR MOVIES / TV|English (United States)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[DS-Reloaded](https://ds-reloaded.com/){#ds-reloaded}|DS-Reloaded (DS\.R) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[dubhe (天枢)](https://dubhe.site/){#dubhe}|dubhe (天枢) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -495,7 +495,6 @@ dateCreated: 2026-08-24T01:11:41.071209
 |[PT GTK](https://pt.gtkpw.xyz/){#ptgtk}|PT GTK is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCafe (咖啡)](https://ptcafe.club/){#ptcafe}|PTCafe (咖啡) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTCC (我的PT)](https://cc.mypt.cc/){#ptcc}|PTCC (我的PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[PTCDY (传道院)](https://pt.cdy.skin/){#ptcdy}|PTCDY (传道院) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTerClub (PT之友俱乐部)](https://pterclub.net/){#pterclub}|PTerClub (PT之友俱乐部) is a CHINESE Private Torrent Tracker for HD MUSIC VIDEOS / MOVIES / TV / ANIME|Chinese (China)|
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -569,7 +568,6 @@ dateCreated: 2026-08-24T01:11:41.071209
 |[TeamFlix](https://tracker.teamflix.cc/){#teamflix}|TeamFlix is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[TeamHD](https://teamhd.org/){#teamhd}|TeamHD is a RUSSIAN Private Torrent Tracker for HD MOVIES / TV|Russian (Russia)|
 |[TeamOS](https://www.teamos.xyz/){#teamos}|Team OS is a Private Torrent Tracker for SOFTWARE|English (United States)|
-|[TEKNO3D](https://tracker.tekno3d.com/){#tekno3d}|TEKNO3D is a Private Torrent Tracker for UHD MOVIES / TV|English (United States)|
 |[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
