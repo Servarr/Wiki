@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-26T01:12:28.991942
+date: 2026-08-27T07:26:36.650088
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-26T01:12:28.991942
+dateCreated: 2026-08-27T07:26:36.650088
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.2.5562` / [Commit: 17e12c074efb6a00e4a85312b557a77ac692da4e](https://github.com/Prowlarr/Prowlarr/commit/17e12c074efb6a00e4a85312b557a77ac692da4e)
-  - [Prowlarr Indexers Commit: 3a5205d7dc04aeaa706b125058388d88fb9c1e97](https://github.com/Prowlarr/Indexers/commit/3a5205d7dc04aeaa706b125058388d88fb9c1e97)
+  - [Prowlarr Indexers Commit: eb09e98fe11c721bfc76d681d2ac493a0b3f7f04](https://github.com/Prowlarr/Indexers/commit/eb09e98fe11c721bfc76d681d2ac493a0b3f7f04)
 
 ---
 
@@ -101,8 +101,8 @@ dateCreated: 2026-08-26T01:12:28.991942
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome259.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip240.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome260.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip241.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -558,7 +558,6 @@ dateCreated: 2026-08-26T01:12:28.991942
 |[SportsCora (API)](https://sportscora.com/){#sportscora}|SportsCora is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[SunnyPT](https://sunnypt.top/){#sunnypt}|SunnyPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Superbits](https://superbits.org/){#superbits}|SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
 |[Swarmazon (API)](https://swarmazon.club/){#swarmazon-api}|Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TangPT (躺平)](https://www.tangpt.top/){#tangpt}|TangPT (躺平) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
