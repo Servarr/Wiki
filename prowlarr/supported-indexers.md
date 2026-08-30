@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-29T05:45:11.219813
+date: 2026-08-30T03:47:56.722668
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-29T05:45:11.219813
+dateCreated: 2026-08-30T03:47:56.722668
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.2.5583` / [Commit: 647f0dcc8d86448409fc06db5fa071d99b7aaba0](https://github.com/Prowlarr/Prowlarr/commit/647f0dcc8d86448409fc06db5fa071d99b7aaba0)
-  - [Prowlarr Indexers Commit: 20fba068907a767944eacf990a347969c8257d45](https://github.com/Prowlarr/Indexers/commit/20fba068907a767944eacf990a347969c8257d45)
+  - Prowlarr Build `2.6.3.5590` / [Commit: a434ee05a27ebcf1d50b1c5c79175e0aeb54087c](https://github.com/Prowlarr/Prowlarr/commit/a434ee05a27ebcf1d50b1c5c79175e0aeb54087c)
+  - [Prowlarr Indexers Commit: f951e7cf577186c640432b73618cf331c367ad69](https://github.com/Prowlarr/Indexers/commit/f951e7cf577186c640432b73618cf331c367ad69)
 
 ---
 
@@ -144,7 +144,7 @@ dateCreated: 2026-08-29T05:45:11.219813
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kinorun](http://kinorun.top/){#kinorun}|Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[Kinozal](https://kinozal.me/){#kinozal}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses torrents|Russian (Russia)|
-|[Kinozal (M)](https://kinozal.tv/){#kinozal-magnet}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses magnet links|Russian (Russia)|
+|[Kinozal (M)](https://kinozal.me/){#kinozal-magnet}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses magnet links|Russian (Russia)|
 |[Marine Tracker](https://seatracker.org/){#marinetracker}|Marine Tracker is a RUSSIAN Semi-Private Torrent Tracker for MARITIME E-LEARNING|Russian (Russia)|
 |[Mazepa](https://mazepa.to/){#mazepa}|Mazepa is an UKRAINIAN Semi-Private Torrent Tracker for Videos with Ukrainian soundtracks|Ukrainian (Ukraine)|
 |[Metal Tracker](https://en.metal-tracker.com/){#metaltracker}|Metal Tracker is a Semi-Private Torrent Tracker dedicated to HEAVY METAL MUSIC\. This definition is for the English site|English (United States)|
