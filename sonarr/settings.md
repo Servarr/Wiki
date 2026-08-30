@@ -1000,9 +1000,17 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Security
 
 - Authentication - How would you like to authenticate to access your Sonarr instance
-  - None - You have no authentication to access your Sonarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Sonarr or your Sonarr is not exposed to the web
+  - None - No authentication is required to access Sonarr. No longer selectable in the UI for new configurations; existing installs still using it should switch to Basic or Forms
   - Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
+  - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Sonarr. Not selectable in the UI; set it via `config.xml` or the `SONARR__AUTH__METHOD` environment variable. Sonarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses below have no effect
+- Authentication Required - Controls when the Authentication setting above is enforced
+  - Enabled - Always require authentication (recommended)
+  - Disabled for Local Addresses - Skip authentication for requests Sonarr identifies as coming from localhost or the LAN
+
+> `Disabled for Local Addresses` without a properly configured reverse proxy caused [CVE-2026-30975 / GHSA-h5qx-5hjf-7c9r](https://github.com/Sonarr/Sonarr/security/advisories/GHSA-h5qx-5hjf-7c9r) (High severity, patched in v4.0.16.2942 nightly / v4.0.16.2944 stable). A caller could spoof the `X-Forwarded-For` header to appear local and skip authentication. "Properly configured" means the proxy's address is listed under Trusted Networks below. Sonarr only trusts `X-Forwarded-For` from addresses in that list and ignores it from anyone else. If you don't run a trusted reverse proxy, set Authentication Required to `Enabled` instead, or put Sonarr behind a VPN/Tailscale rather than exposing it directly.
+{.is-warning}
+
 - API Key - This is how other programs would communicate or have Sonarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
   - Enabled - Validate all HTTPS certificates (recommended)
@@ -1011,6 +1019,9 @@ If you download using a BitTorrent client, the process is slightly different:
 - Trusted Networks - Use to limit which IP Addresses/Networks Sonarr will trust for Reverse Proxies. You should only enter IP Addresses/Networks that you trust for reverse proxies that are properly configured to send the correct headers. Supported formats include:
   - IP Address: `192.168.50.1` or `fd12:3456:789a::1`
   - Subnet (CIDR format): `192.168.50.0/24` or `fc00::/7`
+
+> Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `SONARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`, see [Environment Variables](/sonarr/environment-variables#environment-variables-table)). When enabled, Sonarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check above. It has no effect with any other Authentication Required or Authentication setting.
+{.is-info}
 
 ## Proxy
 
