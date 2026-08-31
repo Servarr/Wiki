@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-08-30T03:47:56.722668
+date: 2026-08-31T03:49:49.905822
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-08-30T03:47:56.722668
+dateCreated: 2026-08-31T03:49:49.905822
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.3.5590` / [Commit: a434ee05a27ebcf1d50b1c5c79175e0aeb54087c](https://github.com/Prowlarr/Prowlarr/commit/a434ee05a27ebcf1d50b1c5c79175e0aeb54087c)
-  - [Prowlarr Indexers Commit: f951e7cf577186c640432b73618cf331c367ad69](https://github.com/Prowlarr/Indexers/commit/f951e7cf577186c640432b73618cf331c367ad69)
+  - Prowlarr Build `2.6.3.5592` / [Commit: 707f790d5814b4509bcb2f754dd871456ad85560](https://github.com/Prowlarr/Prowlarr/commit/707f790d5814b4509bcb2f754dd871456ad85560)
+  - [Prowlarr Indexers Commit: 3035b91877fbd289e7a3677ef36ed122b7bb72f8](https://github.com/Prowlarr/Indexers/commit/3035b91877fbd289e7a3677ef36ed122b7bb72f8)
 
 ---
 
@@ -190,6 +190,7 @@ dateCreated: 2026-08-30T03:47:56.722668
 |[13City](https://13city.org/){#13city}|13City is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[1ptbar](https://1ptba.com/){#1ptbar}|1ptbar is a CHINESE Private Torrent Tracker for MOVIES / TV / E-LEARNING|Chinese (China)|
 |[3D Torrents](http://www.3dtorrents.org/){#3dtorrents}|3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES|English (United States)|
+|[3D Vault (API)](https://3dvault.org/){#3dvault-api}|3D Vault is a Private Torrent Tracker for 3D MOVIES|English (United States)|
 |[4thD](https://4thd.xyz/){#4thd}|4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
@@ -292,6 +293,7 @@ dateCreated: 2026-08-30T03:47:56.722668
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|DesiTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[DICMusic](https://dicmusic.com/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
+|[Diginette (API)](https://diginette.org/){#diginette-api}|Diginette is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DigitalCore (API)](https://digitalcore.club/){#digitalcore-api}|DigitalCore (DC) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
