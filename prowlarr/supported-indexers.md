@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-01T03:42:32.162058
+date: 2026-09-03T03:02:45.552663
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-01T03:42:32.162058
+dateCreated: 2026-09-03T03:02:45.552663
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.3.5599` / [Commit: a4302a225209331fd94eb8b15ae8a8ee5ca9c2fa](https://github.com/Prowlarr/Prowlarr/commit/a4302a225209331fd94eb8b15ae8a8ee5ca9c2fa)
-  - [Prowlarr Indexers Commit: 5f2b3d9cfa27134691a585dbef8c85c13163efd5](https://github.com/Prowlarr/Indexers/commit/5f2b3d9cfa27134691a585dbef8c85c13163efd5)
+  - Prowlarr Build `2.6.3.5605` / [Commit: 6aaafa68d279b03c90e6acbc5092b982478c8571](https://github.com/Prowlarr/Prowlarr/commit/6aaafa68d279b03c90e6acbc5092b982478c8571)
+  - [Prowlarr Indexers Commit: 16f9e7c25eb1e827476f0e8abb6aae0a80f2d743](https://github.com/Prowlarr/Indexers/commit/16f9e7c25eb1e827476f0e8abb6aae0a80f2d743)
 
 ---
 
@@ -26,7 +26,7 @@ dateCreated: 2026-09-01T03:42:32.162058
 
 |Indexer|Description|Language|
 |:--|:--|:--|
-|[0Magnet](https://13mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
+|[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[52BT](https://8fvgrwkm.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
@@ -101,8 +101,8 @@ dateCreated: 2026-09-01T03:42:32.162058
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome260.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip241.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome261.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip242.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -129,6 +129,7 @@ dateCreated: 2026-09-01T03:42:32.162058
 |[comicat](https://www.comicat.org/){#comicat}|comicat is a CHINESE Semi-Private tracker for Anime / Hentai / Manga|Chinese (China)|
 |[Deildu](https://deildu.net/){#deildu}|Deildu is an ICELANDIC Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Icelandic (Iceland)|
 |[Devil-Torrents](https://devil-torrents.pl/){#devil-torrents}|Devil-Torrents is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
+|[Draupnirr](https://draupnirr.xyz/){#draupnirr}|Draupnirr (Yggrasil) is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[DreamingTree](https://dreamingtree.org/){#dreamingtree}|DreamingTree is a Semi-Private Torrent Tracker for DAVE MATHEWS MUSIC / BOOTLEGS|English (United States)|
 |[DXP](https://dxp.ru/){#dxp}|Deaf Experts (DXP) is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV with Russian Subtitles|Russian (Russia)|
 |[Electro-Torrent](https://electro-torrent.pl/){#electro-torrent}|Electro-Torrent is a POLISH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
@@ -180,7 +181,6 @@ dateCreated: 2026-09-01T03:42:32.162058
 |[Union Fansub](https://torrent.unionfansub.com/){#unionfansub}|Union Fansub is a SPANISH Semi-Private torrent site focused on ANIME|Spanish (Spain)|
 |[UniOtaku](https://tracker.uniotaku.com/){#uniotaku}|UniOtaku is a BRAZILIAN Semi-Private Torrent Tracker for ANIME|Portuguese (Brazil)|
 |[UzTracker](https://uztracker.me/){#uztracker}|UzTracker is an UZBEK Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
-|[Yggrasil](https://yggrasil.xyz/){#yggrasil}|Yggrasil is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Ztracker](https://ztracker.cc/){#ztracker}|Ztracker is a HUNGARIAN Semi-Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 
 ### Private Trackers
@@ -423,7 +423,6 @@ dateCreated: 2026-09-01T03:42:32.162058
 |[MaDs Revolution](https://madsrevolution.net/){#madsrevolution}|MaDs Revolution is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Magico](https://mpellas.me/){#magico}|Magico (Trellas) is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[Majomparádé](https://majomparade.eu/){#majomparade}|Majomparádé (TurkDepo) is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[Making Off](https://makingoff.org/){#makingoff}|Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[Malayabits (API)](https://malayabits.cc/){#malayabits-api}|Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[March](https://duckboobee.org/){#march}|March is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[Matrix](https://matrixworld.info/){#matrix}|M\.A\.T\.R\.I\.X is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
