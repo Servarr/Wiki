@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-03T03:02:45.552663
+date: 2026-09-04T03:02:31.285223
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-03T03:02:45.552663
+dateCreated: 2026-09-04T03:02:31.285223
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.3.5605` / [Commit: 6aaafa68d279b03c90e6acbc5092b982478c8571](https://github.com/Prowlarr/Prowlarr/commit/6aaafa68d279b03c90e6acbc5092b982478c8571)
-  - [Prowlarr Indexers Commit: 16f9e7c25eb1e827476f0e8abb6aae0a80f2d743](https://github.com/Prowlarr/Indexers/commit/16f9e7c25eb1e827476f0e8abb6aae0a80f2d743)
+  - Prowlarr Build `2.6.3.5608` / [Commit: 765e24e3b3d7684f0f4a93694391d3188d14a4a4](https://github.com/Prowlarr/Prowlarr/commit/765e24e3b3d7684f0f4a93694391d3188d14a4a4)
+  - [Prowlarr Indexers Commit: 95697ef8430e84a05701ca433146440cb67943d4](https://github.com/Prowlarr/Indexers/commit/95697ef8430e84a05701ca433146440cb67943d4)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-09-03T03:02:45.552663
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://8fvgrwkm.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://frsb31dm.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -569,6 +569,7 @@ dateCreated: 2026-09-03T03:02:45.552663
 |[TeamHD](https://teamhd.org/){#teamhd}|TeamHD is a RUSSIAN Private Torrent Tracker for HD MOVIES / TV|Russian (Russia)|
 |[TeamOS](https://www.teamos.xyz/){#teamos}|Team OS is a Private Torrent Tracker for SOFTWARE|English (United States)|
 |[TheLeachZone (API)](https://tlzdigital.com/){#theleachzone-api}|The Leach Zone (TLZ) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[Thor HUB (API)](https://thorhub.eu/){#thorhub-api}|Thor HUB is a Private Torrent Tracker for MOVIES / TV / MUSIC|English (United States)|
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TmGHuB](https://tmghub.org/){#tmghub}|TmGHuB (TH) is an INDIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
