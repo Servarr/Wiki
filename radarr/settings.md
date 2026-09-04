@@ -953,11 +953,23 @@ Kodi will be one of the most commonly used options here if that is the software 
   - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
   - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
+  - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Radarr. Not selectable in the UI; set it via `config.xml` or the `RADARR__AUTH__METHOD` environment variable. Radarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
+- Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.
+  - Enabled - Always require authentication (recommended)
+  - Disabled for Local Addresses - Skip authentication for requests Radarr identifies as coming from localhost or the LAN
+
+> With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Radarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Radarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Radarr behind a VPN or Tailscale rather than exposing it directly.
+{.is-warning}
+
 - API Key - This is how other programs would communicate or have Radarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
   - Enabled - Validate all HTTPS certificates (recommended)
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Radarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
+
+> Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `RADARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Radarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
+{.is-info}
 
 ## Proxy
 
