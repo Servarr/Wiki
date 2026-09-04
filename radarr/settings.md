@@ -951,7 +951,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 - Authentication - How would you like to authenticate to access your Radarr instance
   - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](/radarr/faq#forced-authentication)
   - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
-  - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
+  - Basic (Browser pop-up) - Removed in Radarr v6.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
   - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Radarr. Not selectable in the UI; set it via `config.xml` or the `RADARR__AUTH__METHOD` environment variable. Radarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
 - Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.

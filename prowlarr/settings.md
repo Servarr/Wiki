@@ -278,7 +278,7 @@ Click on `Settings` => `General`.
 
 - Authentication - How would you like to authenticate to access your Prowlarr instance
   - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Prowlarr or your Prowlarr is not exposed to the web
-  - Basic (Browser pop-up) - This option when accessing your Prowlarr will show a small pop-up allowing you to input a Username and Password
+  - Basic (Browser pop-up) - Removed in Prowlarr v2.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
   - External - External authentication is handled by a reverse proxy. Prowlarr will trust authentication headers passed by the proxy.
 - Authentication Required - Controls which requests require authentication

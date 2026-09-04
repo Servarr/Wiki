@@ -288,7 +288,7 @@ As of Lidarr v2, **authentication is mandatory.** The config file must include `
 
 #### Authentication Method
 
-- `Basic` — browser-native username/password pop-up. Deprecated; a future major version will drop it.
+- `Basic` - browser-native username/password pop-up. Removed in Lidarr v3.0.0; an existing `Basic` config is converted to `Forms` on load.
 - `Forms` — login page. Recommended for all UI-exposed installs.
 - `External` — disables app authentication entirely. Only use this for installs behind an external authentication layer (Authelia, Authentik, nginx auth). Configurable via the config file only. Don't use this unless the external auth is actually enforced on the request path.
 

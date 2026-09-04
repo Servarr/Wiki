@@ -466,7 +466,7 @@ General settings live under **Settings → General**.
 
 - Authentication - How would you like to authenticate to access your Lidarr instance
   - None - You have no authentication to access your Lidarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Lidarr or your Lidarr is not exposed to the web
-  - Basic (Browser pop-up) - This option when accessing your Lidarr will show a small pop-up allowing you to input a Username and Password
+  - Basic (Browser pop-up) - Removed in Lidarr v3.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr
   - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Lidarr. Not selectable in the UI; set it via `config.xml` or the `LIDARR__AUTH__METHOD` environment variable. Lidarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
 - Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.
