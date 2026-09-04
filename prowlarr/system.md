@@ -146,6 +146,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 - Review your proxy settings and ensure they are accurate
 - Ensure your proxy is up, running, and accessible
 
@@ -154,6 +156,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 - Your configured proxy failed to test successfully, review the HTTP error provided and/or check logs for more details.
 
 #### System Time is off by more than 1 day
+
+{#system-time-off}
 
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
@@ -231,6 +235,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 - Your VIP subscription or benefits to your indexer have expired based on the expiration date you configured into for indexer in Prowlarr.
 
 #### Indexers with invalid download clients
+
+{#invalid-indexer-download-client-setting}
 
 - One or more of your indexers is configured with a download client that is either disabled or no longer exists. Check Settings => Download Clients and update or remove the download client assignment on the affected indexer(s).
 

@@ -276,6 +276,8 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 - Review your proxy settings and ensure they are accurate
 - Ensure your proxy is up, running, and accessible
 
@@ -285,10 +287,14 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### System Time is off by more than 1 day
 
+{#system-time-off}
+
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
 #### PTP Indexer Settings Out of Date
+
+{#ptp-settings-old}
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
 
@@ -328,6 +334,8 @@ Note: you will also need to add the websocket directive to your radarr configura
   - Ensure a DNS server (e.g. pihole) is not rate limiting queries
 
 #### Download clients are unavailable due to failure
+
+{#download-clients-are-unavailable-due-to-failures}
 
 - One or more of your download clients is not responding to requests made by Radarr. Therefore Radarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Radarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 - You should inspect System=>Logs to see what the reason is for the failures.
@@ -389,9 +397,13 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Remote File was removed part way through processing
 
+{#remote-path-file-removed}
+
 - A file accessible via a remote path map appears to have been removed prior to processing completing.
 
 #### Remote Path is Used and Import Failed
+
+{#remote-path-import-failed}
 
 - Check your logs for more info; Refer to our Troubleshooting Guides
 
@@ -494,7 +506,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Movie Path Mount is Read Only
 
-{#movie-mount-ro}
+{#movies-mount-ro}
 
 A mount containing a movie path is read only and is not writable by the user Radarr is running as.
 
@@ -513,6 +525,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
   1. Click save and select the newly created filter from the filter dropdown menu
 
 #### Lists are unavailable due to failures
+
+{#import-lists-are-unavailable-due-to-failures}
 
 - Typically this simply means that Radarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.

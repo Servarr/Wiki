@@ -99,7 +99,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
 
 #### Cannot install update because startup folder and/or UI folder are not writable by the user
 
-{#cannot-install-update-because-UI-folder-is-not-writable-by-the-user}
+{#cannot-install-update-because-ui-folder-is-not-writable-by-the-user}
 
 {#cannot-install-update-because-startup-folder-is-not-writable-by-the-user}
 
@@ -281,9 +281,6 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically
 
-{#no-indexers-available-with-rss-sync-enabled,-sonarr-will-not-grab-new-releases-automatically}
-{#all-rss-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
-
 - Sonarr uses the RSS feed to pick up new releases as they come along. [See the FAQ for more information](/sonarr/faq#how-does-sonarr-find-episodes)
 - To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync.
 
@@ -298,8 +295,6 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 - None of the indexers you have enabled and available support searching. This means Sonarr will only be able to find new releases via the RSS feeds. But searching for series (either Automatic Search or Manual Search) will never return any results. The only way to remedy it is to add another indexer.
 
 #### No indexers available with Interactive Search Enabled
-
-{#no-indexers-available-with-interactive-search-enabled-sonarr-will-not-provide-any-interactive-search-results}
 
 - None of the indexers you have enabled and available support interactive searching. This means the application will only be able to find new releases via the RSS feeds or an automatic search.
 
