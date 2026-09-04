@@ -38,7 +38,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 > Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 {.is-info}
 
-- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L41s).
+- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
 - As of 2024-01-16 the logic is as follows:
 
@@ -496,7 +496,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-- If you're on non-Windows, most likely your mono's certificates are out of date and need to be synced. [See the section about mono ssl in the installation article for details](/sonarr/installation#mono-ssl-issues)
+- If you're on non-Windows and seeing certificate errors, make sure your operating system's CA certificate store is current (for example, run `update-ca-certificates` on Debian/Ubuntu). Sonarr v4 runs on .NET, so the old mono certificate-sync steps no longer apply.
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
   - Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
   - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.

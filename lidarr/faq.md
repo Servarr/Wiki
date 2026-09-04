@@ -284,7 +284,7 @@ See the dedicated [VPN Guide](/vpn). Short version: only your BitTorrent client 
 
 If Lidarr is reachable from outside your LAN, enable authentication. Trackers and indexers increasingly require it.
 
-As of Lidarr v2, **authentication is mandatory.** The config file must include `AuthenticationType` and `AuthenticationMethod`.
+As of Lidarr v2, **authentication is mandatory.** The config file must include `AuthenticationMethod` and `AuthenticationRequired`.
 
 #### Authentication Method
 

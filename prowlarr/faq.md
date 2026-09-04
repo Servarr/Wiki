@@ -65,7 +65,7 @@ As of Prowlarr v1, Authentication is Mandatory.
 
 ### Authentication Method
 
-- `Basic` (Browser pop-up) - Basic Auth is not supported as of Prowlarr v1
+- `Basic` (Browser pop-up) - Removed in Prowlarr v2.0.0; a `Basic` value left in the config is rewritten to `Forms` on load
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr. This is recommended.
 - `External` - Configurable via Config File Only
   - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/prowlarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
