@@ -987,6 +987,7 @@ If you download using a BitTorrent client, the process is slightly different:
   - Hostname: `sonarr`
   - FQDN: `sonarr.example.com`
   - Wildcard subdomain: `*.example.com` - For example `sonarr.example.com`, `tv.example.com` or any other subdomain would be accepted.
+  - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `sonarr.internal` when you name your containers with a `.internal` suffix.
 
 - Instance Name - Instance name in tab and for Syslog app name
 

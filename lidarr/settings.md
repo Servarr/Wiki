@@ -435,6 +435,31 @@ Tags are particularly useful for:
 - Restricting a release profile to certain artists.
 - Tracking which import list added an artist.
 
+# General
+
+{#general}
+
+General settings live under **Settings → General**.
+
+## Host
+
+{#host}
+
+- Bind Address - Valid IPv4 address or `*` for all interfaces.
+  - `0.0.0.0` or `*` - any address can connect.
+  - `127.0.0.1` or `localhost` - only localhost applications can connect.
+  - Any other IP (for example `1.2.3.4`) - only that IP can connect.
+- Port Number - The port used to access the Lidarr web UI.
+- URL Base - For reverse proxy support; default is empty.
+- Allowed Hosts - Which hostnames (including FQDN, Fully Qualified Domain Names) or IP Addresses Lidarr will accept as a valid host. This setting is required if Authentication Required is not set to `Enabled`. This is the host portion of the address you enter in your address bar of your browser to access Lidarr.
+  - IP Address: `192.168.50.1`
+  - Hostname: `lidarr`
+  - FQDN: `lidarr.example.com`
+  - Wildcard subdomain: `*.example.com` - For example `lidarr.example.com` or any other subdomain would be accepted.
+  - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `lidarr.internal` when you name your containers with a `.internal` suffix.
+  - A blank value is accepted only when Authentication Required is `Enabled`; otherwise at least one host is required and a blank value is rejected on save.
+- Enable SSL - If you have SSL credentials and would like to secure communication to and from Lidarr, enable this option.
+
 # Logging
 
 {#logging}

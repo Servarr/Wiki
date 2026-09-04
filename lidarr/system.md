@@ -40,6 +40,7 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [API Key is too short](#api-key-is-too-short)
       - [Package Maintainer Message](#package-maintainer-message)
       - [Plugins failed to load](#plugins-failed-to-load)
+      - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -333,6 +334,13 @@ chmod +x /opt/Lidarr/fpcalc
 
 > Plugins are only available on the develop (pre-release) branch and are not included in stable releases.
 {.is-info}
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Lidarr will accept requests for any hostname. Set [Allowed Hosts](/lidarr/settings#host) to a comma-separated list of the hostnames and IP addresses Lidarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Lidarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 

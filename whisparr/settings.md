@@ -868,6 +868,14 @@ Kodi will be one of the most commonly used options here if that is the software 
 > Note: If using a reverse proxy (example: mydomain.com/whisparr) you would enter '/whisparr' for URL Base.
 {.is-info}
 
+- Allowed Hosts - Which hostnames (including FQDN, Fully Qualified Domain Names) or IP Addresses Whisparr will accept as a valid host. This setting is required if Authentication Required is not set to `Enabled`. This is the host portion of the address you enter in your address bar of your browser to access Whisparr.
+  - IP Address: `192.168.50.1`
+  - Hostname: `whisparr`
+  - FQDN: `whisparr.example.com`
+  - Wildcard subdomain: `*.example.com` - For example `whisparr.example.com` or any other subdomain would be accepted.
+  - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `whisparr.internal` when you name your containers with a `.internal` suffix.
+  - A blank value is accepted only when Authentication Required is `Enabled`; otherwise at least one host is required and a blank value is rejected on save.
+
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Whisparr enable this option.
 
 > Note: Do not use this unless you know what you're doing.

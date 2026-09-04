@@ -32,6 +32,7 @@ dateCreated: 2022-04-03T03:49:55.636Z
       - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
       - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
       - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
+      - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -201,6 +202,13 @@ Note: you will also need to add the websocket directive to your whisparr configu
 #### Mono and x86 builds are ending
 
 - Mono and x86 builds will no longer be supported in the next build of the application. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Whisparr will accept requests for any hostname. Set [Allowed Hosts](/whisparr/settings#host) to a comma-separated list of the hostnames and IP addresses Whisparr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Whisparr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 

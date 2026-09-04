@@ -25,6 +25,7 @@ dateCreated: 2021-08-03T21:21:08.969Z
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
       - [Invalid API Key](#invalid-api-key)
+      - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [Download clients are unavailable due to failures](#download-clients-are-unavailable-due-to-failures)
     - [Indexers](#indexers)
@@ -160,6 +161,13 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 #### Invalid API Key
 
 - Your Prowlarr API key is shorter than the required minimum of 20 characters. Update your API key in Settings or the config file to be at least 20 characters long.
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Prowlarr will accept requests for any hostname. Set [Allowed Hosts](/prowlarr/settings#host) to a comma-separated list of the hostnames and IP addresses Prowlarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Prowlarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 

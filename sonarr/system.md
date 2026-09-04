@@ -23,6 +23,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+      - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -135,6 +136,13 @@ Your configured proxy failed to test successfully, review the HTTP error provide
 
 System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 Review your system time and ensure it is synced to an authoritative time server and accurate
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Sonarr will accept requests for any hostname. Set [Allowed Hosts](/sonarr/settings#host) to a comma-separated list of the hostnames and IP addresses Sonarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Sonarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 
