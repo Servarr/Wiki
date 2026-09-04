@@ -129,7 +129,6 @@ Click **Add (+)** to add a root folder. The path must exist and Lidarr must have
 > Don't point a root folder at a cloud storage mount (Dropbox, OneDrive, Google Drive). Lidarr writes audio tags and metadata frequently; cloud storage APIs have rate limits that will cause failures.
 {.is-warning}
 
-
 ## Metadata Profiles
 
 {#metadata-profiles}
@@ -158,7 +157,6 @@ You can include or exclude secondary types (Compilation, Soundtrack, Spokenword,
 > MusicBrainz determines release types. If a release you expect to see is missing, check its entry on MusicBrainz: the type may be `Unknown`, which Lidarr can't filter on, or the primary type may be one you have unchecked in your profile.
 {.is-info}
 
-
 ## Release Profiles
 
 {#release-profiles}
@@ -178,7 +176,6 @@ Release profiles filter and score releases based on their titles. Use them to re
 
 > Release profiles apply at **grab/download time**: they filter and score releases from indexers before Lidarr sends anything to a download client. They have no effect on which MusicBrainz release (pressing, edition, format) Lidarr matches your already-downloaded files to during import. See [FAQ → Can Lidarr prefer a specific pressing or format during import?](/lidarr/faq#can-lidarr-prefer-a-specific-pressing-or-format-during-import) for the import side of this.
 {.is-info}
-
 
 ## Custom Formats
 
@@ -214,7 +211,6 @@ Two ways to test how Lidarr will parse a release name before committing to a pro
 
 **Via the Servarr Discord bot:** In the `#bot-spam` channel, run `/parser lidarr <release title>` (for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`). The bot replies with the same parsed breakdown. Useful for quick spot-checks without opening the UI.
 
-
 # Quality
 
 {#quality}
@@ -232,7 +228,6 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 
 > FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 {.is-info}
-
 
 # Indexers
 
@@ -269,7 +264,6 @@ Global settings that apply across all indexers, found under **Settings → Index
 | **Maximum Size** | Maximum release size in MB. Lidarr rejects releases larger than this. Set to `0` for unlimited. |
 | **Retention** | Usenet only. Set to `0` for unlimited retention. |
 | **(Advanced) RSS Sync Interval** | Interval in minutes between automatic RSS syncs. Set to `0` to disable all automatic release grabbing. This applies to every indexer; follow the usage rules each indexer sets for itself. See [FAQ → How does Lidarr work?](/lidarr/faq#how-does-lidarr-work) for how RSS sync fits into Lidarr's overall search cycle. |
-
 
 # Download Clients
 
@@ -378,7 +372,6 @@ A mapping translates a remote path (as reported by the download client) to a loc
 > If both Lidarr and the download client are in Docker containers on the same host with matching volume mounts, a remote path mapping isn't needed. See [TRaSH's Remote Path Mapping guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for diagnosis and setup.
 {.is-info}
 
-
 # Connect
 
 {#connections}
@@ -408,7 +401,6 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 
 For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scripts) page for the full list of environment variables available per event.
 
-
 # Metadata
 
 {#metadata}
@@ -430,7 +422,6 @@ For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scrip
 
 Below **Write Metadata to Audio Files**, the Metadata page lists external metadata formats Lidarr can write to disk alongside your music: NFO files for media-center software (Kodi/XBMC), and image sidecar formats for Roksbox and WD TV. Enable a consumer and choose which of Artist Metadata, Album Metadata, Artist Images, and Album Images it writes. See [Supported → Metadata](/lidarr/supported) for what each consumer generates and which media players read it.
 
-
 # Tags
 
 {#tags}
@@ -443,7 +434,6 @@ Tags are particularly useful for:
 - Assigning a non-default delay profile to a subset of artists.
 - Restricting a release profile to certain artists.
 - Tracking which import list added an artist.
-
 
 # Logging
 
