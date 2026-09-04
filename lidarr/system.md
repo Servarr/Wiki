@@ -40,6 +40,7 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [API Key is too short](#api-key-is-too-short)
       - [Package Maintainer Message](#package-maintainer-message)
       - [Plugins failed to load](#plugins-failed-to-load)
+      - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -185,7 +186,7 @@ sudo systemctl start $app
 
 #### Can’t install update because startup folder is in an App Translocation folder (macOS)
 
-{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder.}
+{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
 
 - macOS has moved Lidarr’s startup folder into an App Translocation path. This prevents Lidarr from updating itself. Remove the quarantine attribute or move Lidarr out of the Translocation folder and re-launch it from its permanent location.
 
@@ -292,7 +293,7 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 {#fpcalc-upgrade}
 
-- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
+- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. The installed `fpcalc` is too old; Lidarr requires at least version 1.4.3. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
 - Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). Look for it in Lidarr's installation directory (for example `/opt/Lidarr/fpcalc`). If it isn't executable, correct its permissions with the command below and restart Lidarr.
   - Note that the fix may need `sudo`, and your path to Lidarr's binary folder may differ depending on your environment.
 
@@ -333,6 +334,13 @@ chmod +x /opt/Lidarr/fpcalc
 
 > Plugins are only available on the develop (pre-release) branch and are not included in stable releases.
 {.is-info}
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Lidarr will accept requests for any hostname. Set [Allowed Hosts](/lidarr/settings#host) to a comma-separated list of the hostnames and IP addresses Lidarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Lidarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 

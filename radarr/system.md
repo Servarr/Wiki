@@ -36,6 +36,7 @@ dateCreated: 2021-05-25T02:28:35.194Z
       - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
       - [Invalid API Key](#invalid-api-key)
       - [Package Maintainer Message](#package-maintainer-message)
+      - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
       - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
@@ -302,6 +303,13 @@ Note: you will also need to add the websocket directive to your radarr configura
 {#package-maintainer-message}
 
 - Your package maintainer has provided a message. This is typically used to communicate important information about your Radarr installation or package.
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Radarr will accept requests for any hostname. Set [Allowed Hosts](/radarr/settings#host) to a comma-separated list of the hostnames and IP addresses Radarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Radarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 

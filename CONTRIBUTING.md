@@ -83,7 +83,7 @@ Controls markdown linting rules. Key settings:
 
 - `MD013: false` - No line length limit
 - `MD033: {...}` - Allow specific HTML elements
-- `MD024: { "siblings_only": true }` - Allow duplicate headers only if not siblings
+- `MD024: false` - Allow duplicate headers
 - `MD046: { "style": "fenced" }` - Use fenced code blocks
 
 ### `.typos.toml`
@@ -102,9 +102,9 @@ Defines all the hooks and their configuration.
 
 The repository includes GitHub Actions workflows that run the same checks:
 
-- **quality-checks.yml**: Runs pre-commit hooks on pull requests
-- Separate jobs for markdown linting and spell checking
-- Caches dependencies for faster builds
+- **pre-commit.yml**: Runs all pre-commit hooks (markdown linting, spell checking, formatting) on pushes and pull requests to `master`/`main`
+- A single `documentation-quality` job runs the full hook suite via `pre-commit/action`
+- Caches pre-commit environments and pip dependencies for faster builds
 
 ## Contributing Guidelines
 

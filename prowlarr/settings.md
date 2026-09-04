@@ -21,6 +21,7 @@ dateCreated: 2021-06-06T15:04:48.057Z
 - [Applications](#applications)
   - [Application Settings](#application-settings)
   - [Testing the Application](#testing-the-application)
+  - [Sync Profiles](#sync-profiles)
 - [Download Clients (Prowlarr Searches)](#download-clients-prowlarr-searches)
   - [Usenet Client Settings](#usenet-client-settings)
   - [Torrent Client Settings](#torrent-client-settings)
@@ -265,6 +266,7 @@ Click on `Settings` => `General`.
   - Note that `*` is any/all addresses
 - Port Number - the port that Prowlarr runs on. It must be unique. (default: 9696)
 - BaseUrl - Enter a URL base here if you are using a reverse proxy. (restart required) (default: blank)
+- Allowed Hosts - Comma-separated list of the hostnames and IP addresses Prowlarr will accept requests for. Use `*.` as a wildcard for subdomains (for example `*.example.com`, or `*.internal` for Docker containers named with a `.internal` suffix such as `prowlarr.internal`). Required if Authentication Required is not set to `Enabled`, where a blank value is rejected on save; a blank value is accepted only when Authentication Required is `Enabled`. (default: blank)
 - (Advanced Option) Instance Name - Name to use for Browser Tab and SysLog (if enabled) (restart required) (default: Prowlarr)
 - (Advanced Option) Application URL - The external URL used to access Prowlarr, including http(s)://, port, and URL base. Leave blank if not needed.
 - (Advanced Option) Use SSL - Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked. (default: false)
@@ -294,7 +296,7 @@ Click on `Settings` => `General`.
 Proxy - This option allows you to run the information your Prowlarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable

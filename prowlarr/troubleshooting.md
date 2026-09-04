@@ -139,7 +139,7 @@ You can clear log files and the logs database directly from the UI, under `Syste
 
 # Multiple Log Files
 
-Prowlarr uses rolling log files limited to 1MB each. The current log file is always Prowlarr.txt, for the the other files Prowlarr.0.txt is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
+Prowlarr uses rolling log files limited to 1MB each. The current log file is always `prowlarr.txt`, for the the other files `prowlarr.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
 When Debug log level is enabled, additional `prowlarr.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
@@ -307,6 +307,7 @@ This is typically caused by:
 - local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
+- podman/containerized setups where the CNI/netavark bridge MTU defaults to `1500` while DNS and non-Cloudflare sites still work, but Cloudflare-protected indexers time out. Recreate the container network with a lower MTU, e.g. `podman network create --opt mtu=1460 servarr`, then attach Prowlarr to it
 
 ## Sonarr HTTP 404 Errors
 
