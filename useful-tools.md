@@ -29,6 +29,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Ombi](#ombi)
   - [Seerr](#seerr)
   - [Petio](#petio)
+  - [Nexview](#nexview)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
     - [LunaSea](#lunasea)
@@ -258,6 +259,10 @@ Highlights
 [Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
+
+## Nexview
+
+[Nexview](https://nexview.nexapps.dev/) is a media discovery and request dashboard for Radarr and Sonarr with per-user roles, approvals, quotas and an age restriction, so children can browse a view of their own. It works with Plex and Jellyfin side by side and is available in English and German.
 
 # Other Projects and Programs - \*Arr Related
 
