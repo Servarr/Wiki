@@ -54,6 +54,8 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Just A Bunch Of Plex Scripts](#just-a-bunch-of-plex-scripts)
   - [Kometa (Plex Meta Manager)](#kometa)
   - [Tautulli](#tautulli)
+  - [newsletterr](#newsletterr)
+  - [conjurr](#conjurr)
   - [Tdarr](#tdarr)
   - [tdarr\_inform](#tdarr_inform)
   - [Deleterr](#deleterr)
@@ -366,6 +368,14 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 ## Tautulli
 
 [Tautulli](https://tautulli.com/) is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
+
+## newsletterr
+
+[newsletterr](https://www.newsletterr.org) is a self-hosted Flask app that turns your server's activity into an email newsletter for your users. It pulls most of its numbers from [Tautulli](#tautulli). Think of it as the delivery half of bragging about your server to everyone: rather than screenshotting your graphs, you schedule them into their inbox. Most watched movies and shows, top viewers, active platforms, library counts, recently added items, and [conjurr](#conjurr) recommendations are composed as drag-and-drop "snap-ins". Five email layouts, a compact or expanded density setting, and a live WYSIWYG preview.
+
+## conjurr
+
+[conjurr](https://github.com/yungsnuzzy/conjurr) is an AI recommendation tool that uses [Tautulli](#tautulli) watch data to suggest what each of your users should watch next. It reads their history, passes it to an AI API of your choice for a candidate list of shows and movies, pulls artwork and metadata from TMDb, and checks Seerr so that what is already on your server is separated from what would have to be requested. Viewers can steer the results with decade, genre, and mood filters, and [newsletterr](#newsletterr) can pull a given user's recommendations over its API.
 
 ## Tdarr
 
