@@ -176,6 +176,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#import-lists)
 - IMDb Lists {#imdblistimport}
   - [Refer to the Settings Page](/sonarr/settings#import-lists)
+  - Sonarr only accepts an IMDb list of the form `ls12345678`. IMDb changed how those lists are served, so Sonarr can no longer read them; IMDb lists do not currently work.
 - MyAnimeList {#myanimelistimport}
   - [Refer to the Settings Page](/sonarr/settings#import-lists)
 - Plex Watchlist {#pleximport}
