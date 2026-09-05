@@ -1082,8 +1082,8 @@ If you download using a BitTorrent client, the process is slightly different:
 - The backup section allows you to tell Sonarr how you would like for it to handle backups
 
 - Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- Interval - How often would you like Sonarr to make a backup
-- Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- Interval - How often would you like Sonarr to make a backup (default: every 7 days)
+- Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 # UI
 

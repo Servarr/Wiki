@@ -352,8 +352,8 @@ The default log level is `Debug`. This is very basic logging. You can change it 
 ![general_backups.png](/assets/prowlarr/general_backups.png)
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- (Advanced Option) Interval - How often would you like Prowlarr to make a backup
-- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- (Advanced Option) Interval - How often would you like Prowlarr to make a backup (default: every 7 days)
+- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 > Manual backups are retained forever, stored in the same folder, and are named differently.
 {.is-info}

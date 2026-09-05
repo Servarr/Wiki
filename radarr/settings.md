@@ -1035,8 +1035,8 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 - The backup section allows you to tell Radarr how you would like for it to handle backups
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- (Advanced Option) Interval - How often would you like Radarr to make a backup
-- (Advanced Option) Retention - How long would you like Radarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- (Advanced Option) Interval - How often would you like Radarr to make a backup (default: every 7 days)
+- (Advanced Option) Retention - How long would you like Radarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 > Manual backups are retained forever, stored in the same folder, and are named differently.
 {.is-info}
