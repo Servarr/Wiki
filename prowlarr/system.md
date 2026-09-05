@@ -15,13 +15,11 @@ dateCreated: 2021-08-03T21:21:08.969Z
   - [Health](#health)
     - [System Warnings](#system-warnings)
       - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
       - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
       - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
       - [Cannot install update because UI folder is not writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
       - [Could not connect to signalR](#could-not-connect-to-signalr)
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
@@ -71,10 +69,6 @@ This page contains a list of health checks errors. These health checks are perio
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/prowlarr/faq#how-do-i-update-prowlarr).
 
-#### Currently installed SQLite version is not supported
-
-- Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
-
 #### New update is available
 
 - Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
@@ -104,10 +98,6 @@ This page contains a list of health checks errors. These health checks are perio
 - Please look at System => Info to see the current AppData & Startup directories.
 - This means Prowlarr will be unable to update itself without risking data-loss.
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
-
-#### Branch is for a previous version
-
-- The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
 #### Could not connect to signalR
 
@@ -388,3 +378,15 @@ On the top row there are several options to allow you to control your log files.
   - Prowlarr uses rolling log files limited to 1MB each. The current log file is always prowlarr.txt, for the the other files prowlarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - When Debug log level is enabled, additional prowlarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
   - When Trace log level is enabled, additional prowlarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Health checks not present in current releases
+
+These health checks were removed from current Prowlarr and only appear on older versions. If you see one of them, [update to a supported release](/prowlarr/faq#how-do-i-update-prowlarr).
+
+## Currently installed SQLite version is not supported
+
+Not present in current Prowlarr. [Update to a supported release](/prowlarr/faq#how-do-i-update-prowlarr).
+
+## Branch is for a previous version
+
+Not present in current Prowlarr. [Update to a supported release](/prowlarr/faq#how-do-i-update-prowlarr).
