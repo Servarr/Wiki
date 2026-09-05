@@ -390,6 +390,8 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 | **Name** | Label for this connection. |
 | **On Grab** | Trigger when Lidarr sends a release to a download client. |
 | **On Release Import** | Trigger when a downloaded release is successfully imported. |
+| **On Download Failure** | Trigger when a download fails. |
+| **On Import Failure** | Trigger when an import fails. |
 | **On Upgrade** | Trigger when Lidarr upgrades a file to better quality. |
 | **On Rename** | Trigger when Lidarr renames files. |
 | **On Artist Added** | Trigger when you add an artist to Lidarr. |
