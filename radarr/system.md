@@ -21,7 +21,6 @@ dateCreated: 2021-05-25T02:28:35.194Z
         - [Fixing Standalone installs](#fixing-standalone-installs)
       - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
-      - [Database Failed Integrity Check](#database-failed-integrity-check)
       - [New update is available](#new-update-is-available)
       - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
       - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
@@ -204,16 +203,6 @@ sudo systemctl start $app
 
 > Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 {.is-info}
-
-#### Database Failed Integrity Check
-
-> This warning applies to older Radarr versions and is not present in current releases.
-{.is-info}
-
-- Your database(s) failed a [SQLite Pragma Integrity Check](https://www.sqlite.org/pragma.html#pragma_integrity_check) and have some corruption.
-- If `Radarr.db` is corrupt [please see this FAQ Entry](/radarr/faq#i-am-getting-an-error-database-disk-image-is-malformed)
-- If `logs.db` is corrupt: Stop Radarr, delete `logs.db` and any `logs.wal` files.
-- If both are corrupt, review the respective processes above.
 
 #### New update is available
 

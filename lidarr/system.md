@@ -14,18 +14,15 @@ dateCreated: 2021-06-14T21:36:28.225Z
 - [Status](#status)
   - [Health](#health)
     - [System Warnings](#system-warnings)
-      - [Branch isn't a valid release branch](#branch-is-not-a-valid-release-branch)
       - [Update to .NET version](#update-to-net-version)
         - [Fixing Docker installs](#fixing-docker-installs)
         - [Fixing Standalone installs](#fixing-standalone-installs)
       - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
-      - [Currently installed SQLite version isn't supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
       - [Can't install update because startup folder is in an App Translocation folder (macOS)](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos)
       - [Can't install update because startup folder isn't writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
       - [Can't install update because UI folder isn't writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating won't be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
       - [Couldn't connect to signalR](#could-not-connect-to-signalr)
         - [NGINX](#nginx)
         - [Apache](#apache)
@@ -95,15 +92,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
 This page lists health check results. Lidarr runs these checks periodically and on certain events, and lists any warnings or errors here with advice on how to resolve them.
 
 ### System Warnings
-
-#### Branch isn't a valid release branch
-
-{#branch-is-not-a-valid-release-branch}
-
-The branch you have set isn't a valid release branch. You won't receive updates. Please change to one of the [current release branches](/lidarr/faq#how-do-i-update-lidarr).
-
-> This warning applies to older Lidarr versions and is not present in current releases.
-{.is-info}
 
 #### Update to .NET version
 
@@ -183,15 +171,6 @@ sudo systemctl start $app
 > This warning applies to v1 and earlier. Current releases no longer ship a mono build.
 {.is-info}
 
-#### Currently installed SQLite version isn't supported
-
-{#currently-installed-sqlite-version-is-not-supported}
-
-- Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so`, which may not come with a SQLite3 upgrade package.
-
-> This warning applies to older Lidarr versions and is not present in current releases.
-{.is-info}
-
 #### New update is available
 
 - A new version of Lidarr is available. If autoupdating is enabled, Lidarr will install it automatically. Otherwise, go to `System => Updates` and press Install.
@@ -226,13 +205,6 @@ sudo systemctl start $app
 - Please look at `System => Info` to see the current AppData & Startup directories.
 - This means Lidarr will be unable to update itself without risking data loss.
 - If you’re on linux, you’ll probably have to change the home directory for the user that's running Lidarr and copy the current contents of the `~/.config/Lidarr` directory to preserve your database.
-
-#### Branch is for a previous version
-
-- The update branch setup in `Settings => General` is for a previous version of Lidarr, so the instance won't see correct update information in the `System => Updates` feed and may not receive new updates when released.
-
-> This warning applies to older Lidarr versions and is not present in current releases.
-{.is-info}
 
 #### Couldn't connect to signalR
 
