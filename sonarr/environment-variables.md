@@ -57,11 +57,13 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `PostgresLogDb`          | `POSTGRES` | `LOGDB`              | `SONARR__POSTGRES__LOGDB`         |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `SONARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `SONARR__SERVER__BINDADDRESS`     |
+| `AllowedHosts`           | `SERVER`   | `ALLOWEDHOSTS`       | `SONARR__SERVER__ALLOWEDHOSTS`    |
 | `Port`                   | `SERVER`   | `PORT`               | `SONARR__SERVER__PORT`            |
 | `EnableSsl`              | `SERVER`   | `ENABLESSL`          | `SONARR__SERVER__ENABLESSL`       |
 | `SslPort`                | `SERVER`   | `SSLPORT`            | `SONARR__SERVER__SSLPORT`         |
 | `SslCertPath`            | `SERVER`   | `SSLCERTPATH`        | `SONARR__SERVER__SSLCERTPATH`     |
 | `SslCertPassword`        | `SERVER`   | `SSLCERTPASSWORD`    | `SONARR__SERVER__SSLCERTPASSWORD` |
+| `TrustedNetworks`        | `SERVER`   | `TRUSTEDNETWORKS`    | `SONARR__SERVER__TRUSTEDNETWORKS` |
 | `UpdateMechanism`        | `UPDATE`   | `MECHANISM`          | `SONARR__UPDATE__MECHANISM`       |
 | `UpdateAutomatically`    | `UPDATE`   | `AUTOMATICALLY`      | `SONARR__UPDATE__AUTOMATICALLY`   |
 | `UpdateScriptPath`       | `UPDATE`   | `SCRIPTPATH`         | `SONARR__UPDATE__SCRIPTPATH`      |

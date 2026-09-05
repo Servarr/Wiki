@@ -55,6 +55,8 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Artist CleanNameThe}` | Clean artist name with "The" moved to the end. |
 | `{Artist Disambiguation}` | Disambiguation string from MusicBrainz, for example, `UK band`. Empty for most artists. |
 | `{Artist Genre}` | First genre tag associated with the artist. |
+| `{Artist NameFirstCharacter}` | First character of the artist's name, with a leading "The" moved to the end before taking the character. Useful for A-Z folder sorting. |
+| `{Artist MbId}` | The artist's MusicBrainz identifier. |
 
 ## Album tokens
 
@@ -67,6 +69,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Album Disambiguation}` | Disambiguation string from MusicBrainz. Useful when an artist has two albums with the same name. |
 | `{Album Type}` | Release group type: Album, Single, EP, Compilation, Live, Remix, Soundtrack, etc. |
 | `{Album Genre}` | First genre tag for the album. |
+| `{Album MbId}` | The album's (release group's) MusicBrainz identifier. |
 | `{Release Year}` | Four-digit release year. |
 
 ## Track tokens
@@ -74,8 +77,12 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | Token | Description |
 |---|---|
 | `{Track Title}` | Track title. |
+| `{Track CleanTitle}` | Track title with illegal filesystem characters removed. |
 | `{Track ArtistName}` | Track-level artist name. Useful for Various Artists compilations where each track has a different credited artist. |
+| `{Track ArtistCleanName}` | Track-level artist name with illegal filesystem characters removed. |
 | `{Track ArtistNameThe}` | Track artist name with "The" moved to the end. |
+| `{Track ArtistCleanNameThe}` | Clean track-level artist name with "The" moved to the end. |
+| `{Track ArtistMbId}` | The track-level artist's MusicBrainz identifier. |
 | `{track:00}` | Track number zero-padded to 2 digits (01, 02 … 99). Use `{track:000}` for 3-digit padding on large releases. |
 
 ## Medium (disc) tokens
@@ -84,6 +91,7 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 |---|---|
 | `{medium:0}` | Disc number, single digit. |
 | `{medium:00}` | Disc number zero-padded to 2 digits. |
+| `{Medium Name}` | The disc's title as stored in MusicBrainz, distinct from `{Medium Format}` (the physical media type). |
 | `{Medium Format}` | Physical format of the disc: CD, Vinyl, Digital Media, etc. |
 
 ## Quality and technical tokens
@@ -92,7 +100,9 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 |---|---|
 | `{Quality Title}` | Quality profile name as defined in Lidarr (for example, FLAC, MP3-320). |
 | `{Quality Full}` | Full quality string including proper/repack designation. |
+| `{Quality Proper}` | Proper/repack designation for the track's quality, for example `Proper`. Empty when the release wasn't a proper. |
 | `{MediaInfo AudioBitRate}` | Audio bitrate (for example, 320kbps). Only available after import; blank on pre-import rename previews. |
+| `{MediaInfo AudioBitsPerSample}` | Audio bit depth (for example, 16bit). |
 | `{MediaInfo AudioChannels}` | Number of audio channels. |
 | `{MediaInfo AudioCodec}` | Audio codec (for example, FLAC, MP3). |
 | `{MediaInfo AudioSampleRate}` | Audio sample rate (for example, 44100Hz). |
@@ -101,8 +111,11 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 
 | Token | Description |
 |---|---|
+| `{Original Title}` | The original release title as parsed from the track file's release name. |
+| `{Original Filename}` | The literal original filename of the imported file, unmodified. |
 | `{Release Group}` | Ripping or encoding group tag from the file. |
-| `{Preferred Words}` | Matched preferred words from Release Profiles, joined by spaces. |
+| `{Custom Formats}` | Every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, joined by spaces. |
+| `{Custom Format:Name}` | A single named Custom Format. `Name` is a placeholder for the exact Custom Format name, for example `{Custom Format:FLAC}`. Produces no output unless a format with that name matched and has "Include Custom Format when Renaming" enabled. |
 
 # Community naming conventions
 

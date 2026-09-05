@@ -59,11 +59,13 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `PostgresLogDbConnectionString`  | `POSTGRES` | `LOGDBCONNECTIONSTRING`  | `PROWLARR__POSTGRES__LOGDBCONNECTIONSTRING`  |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `PROWLARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `PROWLARR__SERVER__BINDADDRESS`     |
+| `AllowedHosts`           | `SERVER`   | `ALLOWEDHOSTS`       | `PROWLARR__SERVER__ALLOWEDHOSTS`    |
 | `Port`                   | `SERVER`   | `PORT`               | `PROWLARR__SERVER__PORT`            |
 | `EnableSsl`              | `SERVER`   | `ENABLESSL`          | `PROWLARR__SERVER__ENABLESSL`       |
 | `SslPort`                | `SERVER`   | `SSLPORT`            | `PROWLARR__SERVER__SSLPORT`         |
 | `SslCertPath`            | `SERVER`   | `SSLCERTPATH`        | `PROWLARR__SERVER__SSLCERTPATH`     |
 | `SslCertPassword`        | `SERVER`   | `SSLCERTPASSWORD`    | `PROWLARR__SERVER__SSLCERTPASSWORD` |
+| `TrustedNetworks`        | `SERVER`   | `TRUSTEDNETWORKS`    | `PROWLARR__SERVER__TRUSTEDNETWORKS` |
 | `UpdateMechanism`        | `UPDATE`   | `MECHANISM`          | `PROWLARR__UPDATE__MECHANISM`       |
 | `UpdateAutomatically`    | `UPDATE`   | `AUTOMATICALLY`      | `PROWLARR__UPDATE__AUTOMATICALLY`   |
 | `UpdateScriptPath`       | `UPDATE`   | `SCRIPTPATH`         | `PROWLARR__UPDATE__SCRIPTPATH`      |

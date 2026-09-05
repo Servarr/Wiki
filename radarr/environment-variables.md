@@ -59,11 +59,13 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `PostgresLogDbConnectionString`  | `POSTGRES` | `LOGDBCONNECTIONSTRING`  | `RADARR__POSTGRES__LOGDBCONNECTIONSTRING`  |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `RADARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `RADARR__SERVER__BINDADDRESS`     |
+| `AllowedHosts`           | `SERVER`   | `ALLOWEDHOSTS`       | `RADARR__SERVER__ALLOWEDHOSTS`    |
 | `Port`                   | `SERVER`   | `PORT`               | `RADARR__SERVER__PORT`            |
 | `EnableSsl`              | `SERVER`   | `ENABLESSL`          | `RADARR__SERVER__ENABLESSL`       |
 | `SslPort`                | `SERVER`   | `SSLPORT`            | `RADARR__SERVER__SSLPORT`         |
 | `SslCertPath`            | `SERVER`   | `SSLCERTPATH`        | `RADARR__SERVER__SSLCERTPATH`     |
 | `SslCertPassword`        | `SERVER`   | `SSLCERTPASSWORD`    | `RADARR__SERVER__SSLCERTPASSWORD` |
+| `TrustedNetworks`        | `SERVER`   | `TRUSTEDNETWORKS`    | `RADARR__SERVER__TRUSTEDNETWORKS` |
 | `UpdateMechanism`        | `UPDATE`   | `MECHANISM`          | `RADARR__UPDATE__MECHANISM`       |
 | `UpdateAutomatically`    | `UPDATE`   | `AUTOMATICALLY`      | `RADARR__UPDATE__AUTOMATICALLY`   |
 | `UpdateScriptPath`       | `UPDATE`   | `SCRIPTPATH`         | `RADARR__UPDATE__SCRIPTPATH`      |
