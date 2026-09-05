@@ -571,6 +571,7 @@ Profiles is where Custom Format Scores are configured.
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
 - Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
 - Group - This is matched against the group that Radarr parses based on Radarr's group detection logic.
+- Year - This is matched against the release year. The release year is compared against the min and max values.
 
 ### Profiling Settings and Ranking
 
@@ -624,6 +625,7 @@ Profiles is where Custom Format Scores are configured.
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Radarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Fail Downloads - While processing completed downloads Radarr will treat these selected filetypes as failed downloads. Options are Executables and Potentially Dangerous.
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
@@ -739,7 +741,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Settings
 
@@ -758,8 +761,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
     - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the below table. Torrents must also stay in the same category.
+  - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -787,8 +791,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
 - (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues and refresh monitored downloads, minimum 1 minute
-- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- (Per Client Setting) Remove Completed - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Failed - Remove failed downloads from the download client's history.
 
 ### Remove Completed Downloads
 
@@ -820,7 +825,8 @@ If you download using a BitTorrent client, the process is slightly different:
   - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
 
-- Redownload - Controls whether or not Radarr will search for the same file after a failure
+- Redownload Failed - Controls whether or not Radarr will search for the same file after a failure
+- (Advanced Option) Redownload Failed from Interactive Search - Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search.
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ## Remote Path Mappings

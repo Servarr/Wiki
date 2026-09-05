@@ -350,7 +350,8 @@ Lidarr can set seed ratio and time goals via the torrent client's API when you a
 | Setting | Description |
 |---|---|
 | **Enable** (Advanced, global) | Automatically import completed downloads from the download client. Disabling this means Lidarr will never import anything, so leave it enabled unless you have a specific reason to disable it. |
-| **Remove** (per-client) | After import, ask the download client to remove the completed item. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
+| **Remove Completed** (per-client) | After import, ask the download client to remove the completed item from its history. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
+| **Remove Failed** (per-client) | Remove failed downloads from the download client's history. |
 
 ### Failed Download Handling
 
@@ -358,7 +359,8 @@ Failed download handling is available for SABnzbd and NZBGet only. It isn't supp
 
 | Setting | Description |
 |---|---|
-| **Redownload** | When a download fails, automatically search for a replacement. |
+| **Redownload Failed** | When a download fails, automatically search for a replacement. |
+| **(Advanced) Redownload Failed from Interactive Search** | Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search. |
 | **(Advanced) Remove** | Remove the failed download from the client when Lidarr detects the failure. |
 
 When Lidarr detects a failure, it logs it, optionally removes the failed item, searches for a replacement, and blocklists the failed release so it isn't grabbed again automatically.

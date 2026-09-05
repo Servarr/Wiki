@@ -713,6 +713,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
 - (Advanced Option) Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- (Advanced Option) Season-Pack Seed Time - If empty, use the Seed Time value above. Otherwise, the minimum seed time in minutes required for season-pack torrents from this indexer, applied instead of the regular Seed Time for those releases.
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 - (Advanced Option) Fail Downloads - Mark the download are failed if the specified file extensions are encountered.
@@ -791,7 +792,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Settings
 
@@ -810,8 +812,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
     - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the below table. Torrents must also stay in the same category.
+  - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -838,8 +841,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Completed Download Handling is how Sonarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
 - (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
-- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- (Per Client Setting) Remove Completed - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Failed - Remove failed downloads from the download client's history.
 
 ### Remove Completed Downloads
 
@@ -871,7 +875,8 @@ If you download using a BitTorrent client, the process is slightly different:
   - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
 
-- Redownload - Controls whether or not Sonarr will search for the same file after a failure
+- Redownload Failed - Controls whether or not Sonarr will search for the same file after a failure
+- (Advanced Option) Redownload Failed from Interactive Search - Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search.
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ## Remote Path Mappings
