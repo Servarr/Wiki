@@ -73,9 +73,6 @@ This page contains a list of health checks errors. These health checks are perio
 
 #### Currently installed SQLite version is not supported
 
-> This warning applies to older Prowlarr versions and is not present in current releases.
-{.is-info}
-
 - Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 #### New update is available
@@ -109,9 +106,6 @@ This page contains a list of health checks errors. These health checks are perio
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
 
 #### Branch is for a previous version
-
-> This warning applies to older Prowlarr versions and is not present in current releases.
-{.is-info}
 
 - The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 

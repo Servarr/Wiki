@@ -14,10 +14,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
 - [Status](#status)
   - [Health](#health)
     - [System Warnings](#system-warnings)
-      - [Update to .NET version](#update-to-net-version)
-        - [Fixing Docker installs](#fixing-docker-installs)
-        - [Fixing Standalone installs](#fixing-standalone-installs)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
       - [New update is available](#new-update-is-available)
       - [Can't install update because startup folder is in an App Translocation folder (macOS)](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos)
       - [Can't install update because startup folder isn't writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
@@ -30,8 +26,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
-      - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
       - [FPcalc is missing](#fpcalc-is-missing)
       - [FPcalc needs updating](#fpcalc-needs-updating)
       - [API Key is too short](#api-key-is-too-short)
@@ -92,84 +86,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
 This page lists health check results. Lidarr runs these checks periodically and on certain events, and lists any warnings or errors here with advice on how to resolve them.
 
 ### System Warnings
-
-#### Update to .NET version
-
-{#update-to-net-core-version}
-
-- Newer versions of Lidarr target .NET6 or newer. Legacy mono builds end after the 1.0 release. You are running one of these legacy builds but your platform supports .NET.
-
-> This warning applies to v1 and earlier. Current releases require .NET and no longer ship a mono build.
-{.is-info}
-
-##### Fixing Docker installs
-
-- Re-pull your container
-
-##### Fixing Standalone installs
-
-- Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Don't install .NET runtime or SDK from Microsoft.
-- To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
-
-> DON'T JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
-
-- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Lidarr branch update the variable if needed
-- This assumes that Lidarr runs as the user `lidarr` update the variables if needed
-- This assumes you installed Lidarr at `/opt/Lidarr`; update the variables if needed
-
-```bash
-#!/bin/bash
-## User Variables
-installdir="/opt/Lidarr"
-APPUSER="lidarr"
-branch="master"
-## /User Variables
-app="lidarr"
-ARCH=$(dpkg --print-architecture)
-# Stop \*arr
-sudo systemctl stop $app
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo_error "Arch not supported"
-    exit 1
-    ;;
-esac
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo "Installation files downloaded and extracted"
-echo "Moving existing installation"
-sudo mv "$installdir/" "$installdir.old/"
-echo "Installing..."
-sudo mv "${app^}" "$installdir"
-sudo chown $APPUSER:$APPUSER -R $installdir
-sudo sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo systemctl daemon-reload
-echo "App Installed"
-sudo rm -rf "$installdir.old/"
-rm -rf "${app^}.*.tar.gz"
-sudo systemctl start $app
-```
-
-#### Currently installed mono version is old and unsupported
-
-- Lidarr uses .NET and requires Mono to run on old ARM processors. Please note that Mono builds are no longer supported after v1.0
-- Lidarr requires at least Mono 5.20.
-- The upgrade procedure for Mono varies per platform.
-
-> This warning applies to v1 and earlier. Current releases no longer ship a mono build.
-{.is-info}
 
 #### New update is available
 
@@ -270,20 +186,6 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until you correct the time
 - Review your system time and ensure it's synced to an authoritative time server and accurate
-
-#### Mono Legacy TLS enabled
-
-- Mono 4.x tls workaround still enabled, consider removing `MONO_TLS_PROVIDER=legacy` environment option
-
-> This warning applies to v1 and earlier. Current releases no longer ship a mono build.
-{.is-info}
-
-#### Mono and x86 builds are ending
-
-- The next build of the application won't support Mono or x86. If you are receiving this error then you are running the mono version of the application or the x86 version. Due to increasing difficulty supporting these legacy versions, support and releases for them have ended. Upgrade to a supported operating system that doesn't require x86 or Mono. You may also be able to explore using Docker for your needs.
-
-> This warning applies to v1 and earlier. Current releases no longer ship mono or x86 builds.
-{.is-info}
 
 #### FPcalc is missing
 
@@ -667,3 +569,25 @@ The top row has options to control your log files.
   - Lidarr uses rolling log files limited to 1MB each. The current log file is always lidarr.txt, for the other files lidarr.0.txt is the next newest (higher numbers are older) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - With Debug log level enabled, lidarr.debug.txt rolling log files appear, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It covers a ~40-hour window.
   - With Trace log level enabled, lidarr.trace.txt rolling log files appear, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono or x86, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Update to .NET version
+
+{#update-to-net-core-version}
+
+Unsupported legacy mono build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Currently installed mono version is old and unsupported
+
+Unsupported legacy mono build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Mono Legacy TLS enabled
+
+Unsupported legacy mono build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Mono and x86 builds are ending
+
+Unsupported legacy mono or x86 build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).

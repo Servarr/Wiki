@@ -15,11 +15,6 @@ dateCreated: 2021-05-25T02:28:35.194Z
   - [Health](#health)
     - [System Warnings](#system-warnings)
       - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Update to .NET version](#update-to-net-version)
-        - [Fixing Docker installs](#fixing-docker-installs)
-        - [Fixing FreeBSD installs](#fixing-freebsd-installs)
-        - [Fixing Standalone installs](#fixing-standalone-installs)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
       - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
@@ -99,104 +94,6 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/radarr/faq#how-do-i-update-radarr).
 
-#### Update to .NET version
-
-{#update-to-net-core-version}
-
-> This warning applied to Radarr v3.2.2 and earlier running legacy mono builds and was removed from health checks after Mono support was dropped in Radarr v4.0.0.
-{.is-info}
-
-- Newer versions of Radarr are targeted for .NET6 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
-
-See the below entries for how to switch from unsupported, end-of-life mono versions to dotnet.
-
-- [Fixing Docker installs](#fixing-docker-installs)
-- [Fixing FreeBSD installs](#fixing-freebsd-installs)
-- [Fixing Standalone installs](#fixing-standalone-installs)
-{.links-list}
-
-##### Fixing Docker installs
-
-- Ensure your branch is correct for your docker maintainer and repull your container
-
-##### Fixing FreeBSD installs
-
-- Simply update the Radarr Port with `pkg update && pkg upgrade`
-- (Optional) Remove the mono package if you wish
-
-##### Fixing Standalone installs
-
-Errors such as:
-
-```none
-Cannot open assembly '/opt/Radarr/Radarr': File does not contain a valid CIL image
-```
-
-- Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
-- To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded and then update your service file to not use mono.
-
-> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
-
-- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Radarr branch, so update the variable if needed
-- This assumes that Radarr runs as the user `radarr`, so update the variables if needed
-- This assumes Radarr is installed at `/opt/Radarr`, so update the variables if needed
-
-```bash
-#!/bin/bash
-## User Variables
-installdir="/opt/Radarr"
-APPUSER="radarr"
-branch="master"
-## /User Variables
-app="radarr"
-ARCH=$(dpkg --print-architecture)
-# Stop \*arr
-sudo systemctl stop $app
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo_error "Arch not supported"
-    exit 1
-    ;;
-esac
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo "Installation files downloaded and extracted"
-echo "Moving existing installation"
-sudo mv "$installdir/" "$installdir.old/"
-echo "Installing..."
-sudo mv "${app^}" "$installdir"
-sudo chown $APPUSER:$APPUSER -R $installdir
-sudo sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo systemctl daemon-reload
-echo "App Installed"
-sudo rm -rf "$installdir.old/"
-rm -rf "${app^}.*.tar.gz"
-sudo systemctl start $app
-```
-
-#### Currently installed mono version is old and unsupported
-
-> This warning applied to Radarr v3.2.2 and earlier running legacy mono builds and was removed from health checks after Mono support was dropped in Radarr v4.0.0.
-{.is-info}
-
-- Radarr is written in .NET and required Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
-- The upgrade procedure for Mono varies per platform.
-
-> Mono is no longer supported starting in Radarr version 4.0
-{.is-warning}
-
 #### Currently installed SQLite version is not supported
 
 - Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
@@ -233,9 +130,6 @@ sudo systemctl start $app
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Radarr and copy the current contents of the ~/.config/Radarr directory to preserve your database.
 
 #### Branch is for a previous version
-
-> This warning applies to older Radarr versions and is not present in current releases.
-{.is-info}
 
 - The update branch setup in Settings/General is for a previous version of Radarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
@@ -690,3 +584,17 @@ A mount containing a movie path is read only and is not writable by the user Rad
   - Radarr uses rolling log files limited to 1MB each. The current log file is always radarr.txt, for the the other files radarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - When Debug log level is enabled, additional radarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
   - When Trace log level is enabled, additional radarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/radarr/faq#how-do-i-update-radarr).
+
+## Update to .NET version
+
+{#update-to-net-core-version}
+
+Unsupported legacy mono build. [Update to a supported release](/radarr/faq#how-do-i-update-radarr).
+
+## Currently installed mono version is old and unsupported
+
+Unsupported legacy mono build. [Update to a supported release](/radarr/faq#how-do-i-update-radarr).

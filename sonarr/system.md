@@ -288,9 +288,6 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 - Sonarr requires indexers to be able to discover new releases. All your indexers are disabled or you do not have any indexers added.
 
-> This warning applies to older Sonarr versions and is not present in current releases.
-{.is-info}
-
 #### All search-capable indexers are temporarily unavailable due to recent indexer errors
 
 {#all-search-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
