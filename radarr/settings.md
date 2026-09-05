@@ -217,23 +217,27 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{MediaInfo Simple}` = x264 DTS
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
+- `{MediaInfo Audio}` = DTS
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
 - `{MediaInfo AudioLanguages}` = \[EN+DE\]
 - `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
 - `{MediaInfo SubtitleLanguagesAll}` = \[EN\]
+- `{MediaInfo Video}` = x264
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
 - `{MediaInfo VideoDynamicRangeType}` = DV HDR10
 - `{MediaInfo 3D}` = 3D
 
-> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` do not currently support a `:EN+DE` suffix allowed in Sonarr to filter the languages included in the filename. There is an open [issue](https://github.com/Radarr/Radarr/issues/4710) regarding this.
-~~`MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.~~
+> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.
 {.is-info}
 
 > `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
+{.is-info}
+
+> `MediaInfo Video` and `MediaInfo Audio` are aliases of `MediaInfo VideoCodec` and `MediaInfo AudioCodec` respectively.
 {.is-info}
 
 ### Release Group
@@ -488,13 +492,22 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ## Qualities Defined
 
 - Unknown - Self Explanatory
+- WORKPRINT - A copy of a film before final color correction and visual effects are completed, sometimes missing shots or containing scene numbers/timecodes burned into the frame. The lowest quality pre-release source.
+- CAM - Captured in a movie theater with a camcorder, often at an angle, with audio picked up by the camera's built-in microphone. Both picture and sound quality are poor.
+- TELESYNC - Similar to a CAM but recorded with a direct external audio feed (e.g. from the theater's audio system), giving cleaner sound despite similar video quality to a CAM.
+- TELECINE - Copied from a film print using a telecine machine that transfers film to video. Better video quality than a CAM or TELESYNC, though colors can appear washed out.
+- REGIONAL - A retail disc release intended for a specific geographic region that differs from the version released elsewhere, such as an alternate cut or an earlier regional release date.
+- DVDSCR - A promotional screener DVD sent to reviewers and industry insiders ahead of retail release, often watermarked or containing an on-screen timer/counter to discourage piracy.
 - SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
 - WEBDL-480p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 480p (SD) quality.
 - WEBRip-480p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 480p (SD) quality.
 - DVD - A re-encode of the final released DVD9. If possible this is released PRE retail. It should be excellent quality (for the resolution). DVDrips are usually released in DivX/XviD or MP4.
+- DVD-R - A remux of a retail DVD, keeping the original DVD video and audio streams intact without re-encoding.
 - Bluray-480p - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
+- Bluray-576p - A re-encode of the final released Blu-ray, downscaled to 576p resolution (1024x576 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
 - HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
 - HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
+- WEBDL-720p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 720p quality.
 - WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
 - Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
 - WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
@@ -506,6 +519,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - WEBRip-2160p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
 - Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
+- BR-DISK - The complete, unmodified Blu-ray disc structure, including the full menu system and extras, rather than an extracted or re-encoded video file.
+- Raw-HD - A raw feed of an HD stream.
 
 # Custom Formats
 
@@ -556,6 +571,7 @@ Profiles is where Custom Format Scores are configured.
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
 - Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
 - Group - This is matched against the group that Radarr parses based on Radarr's group detection logic.
+- Year - This is matched against the release year. The release year is compared against the min and max values.
 
 ### Profiling Settings and Ranking
 
@@ -609,6 +625,7 @@ Profiles is where Custom Format Scores are configured.
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Radarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Fail Downloads - While processing completed downloads Radarr will treat these selected filetypes as failed downloads. Options are Executables and Potentially Dangerous.
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
@@ -724,7 +741,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Settings
 
@@ -743,8 +761,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+  - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
     - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the below table. Torrents must also stay in the same category.
+  - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -772,8 +791,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
 - (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues and refresh monitored downloads, minimum 1 minute
-- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
+- (Per Client Setting) Remove Completed - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents)
   - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Failed - Remove failed downloads from the download client's history.
 
 ### Remove Completed Downloads
 
@@ -805,7 +825,8 @@ If you download using a BitTorrent client, the process is slightly different:
   - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
   - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
 
-- Redownload - Controls whether or not Radarr will search for the same file after a failure
+- Redownload Failed - Controls whether or not Radarr will search for the same file after a failure
+- (Advanced Option) Redownload Failed from Interactive Search - Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search.
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ## Remote Path Mappings
@@ -951,13 +972,25 @@ Kodi will be one of the most commonly used options here if that is the software 
 - Authentication - How would you like to authenticate to access your Radarr instance
   - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](/radarr/faq#forced-authentication)
   - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
-  - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
+  - Basic (Browser pop-up) - Removed in Radarr v6.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
+  - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Radarr. Not selectable in the UI; set it via `config.xml` or the `RADARR__AUTH__METHOD` environment variable. Radarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
+- Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.
+  - Enabled - Always require authentication (recommended)
+  - Disabled for Local Addresses - Skip authentication for requests Radarr identifies as coming from localhost or the LAN
+
+> With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Radarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Radarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Radarr behind a VPN or Tailscale rather than exposing it directly.
+{.is-warning}
+
 - API Key - This is how other programs would communicate or have Radarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
   - Enabled - Validate all HTTPS certificates (recommended)
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Radarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
+
+> Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `RADARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Radarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
+{.is-info}
 
 ## Proxy
 
@@ -1002,8 +1035,8 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 - The backup section allows you to tell Radarr how you would like for it to handle backups
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- (Advanced Option) Interval - How often would you like Radarr to make a backup
-- (Advanced Option) Retention - How long would you like Radarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- (Advanced Option) Interval - How often would you like Radarr to make a backup (default: every 7 days)
+- (Advanced Option) Retention - How long would you like Radarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 > Manual backups are retained forever, stored in the same folder, and are named differently.
 {.is-info}

@@ -278,16 +278,25 @@ Click on `Settings` => `General`.
 
 - Authentication - How would you like to authenticate to access your Prowlarr instance
   - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Prowlarr or your Prowlarr is not exposed to the web
+  - Basic (Browser pop-up) - Removed in Prowlarr v2.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
   - External - External authentication is handled by a reverse proxy. Prowlarr will trust authentication headers passed by the proxy.
 - Authentication Required - Controls which requests require authentication
   - Enabled - All requests require authentication
   - Disabled for Local Addresses - Requests from local network addresses bypass authentication; all remote requests still require authentication
+
+> With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Prowlarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Prowlarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Prowlarr behind a VPN or Tailscale rather than exposing it directly.
+{.is-warning}
+
 - API Key - API key is used by outside apps accessing Prowlarr. This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
 - Certificate Validation - Change how strict HTTPS certification validation is
   - Enabled - Validate all HTTPS certificates (recommended)
   - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
   - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Prowlarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
+
+> Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `PROWLARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Prowlarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
+{.is-info}
 
 ## Proxy
 
@@ -343,8 +352,8 @@ The default log level is `Debug`. This is very basic logging. You can change it 
 ![general_backups.png](/assets/prowlarr/general_backups.png)
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- (Advanced Option) Interval - How often would you like Prowlarr to make a backup
-- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- (Advanced Option) Interval - How often would you like Prowlarr to make a backup (default: every 7 days)
+- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 > Manual backups are retained forever, stored in the same folder, and are named differently.
 {.is-info}

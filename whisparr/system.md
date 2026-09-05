@@ -30,8 +30,6 @@ dateCreated: 2022-04-03T03:49:55.636Z
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
       - [MediaInfo Library Could not be Loaded](#mediainfo-library-could-not-be-loaded)
       - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
-      - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
-      - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
       - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
     - [Download Clients](#download-clients)
       - [No download client is available](#no-download-client-is-available)
@@ -194,14 +192,6 @@ Note: you will also need to add the websocket directive to your whisparr configu
 #### PTP Indexer Settings Out of Date
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
-
-#### Mono Legacy TLS enabled
-
-- Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option
-
-#### Mono and x86 builds are ending
-
-- Mono and x86 builds will no longer be supported in the next build of the application. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
 
 #### Allowed Hosts Not Configured
 
@@ -491,3 +481,15 @@ Note: you will also need to add the websocket directive to your whisparr configu
   - Whisparr uses rolling log files limited to 1MB each. The current log file is always whisparr.txt, for the the other files whisparr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - When Debug log level is enabled, additional whisparr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
   - When Trace log level is enabled, additional whisparr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono or x86, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/whisparr/faq#how-do-i-update-whisparr).
+
+## Mono Legacy TLS enabled
+
+Unsupported legacy mono build. [Update to a supported release](/whisparr/faq#how-do-i-update-whisparr).
+
+## Mono and x86 builds are ending
+
+Unsupported legacy mono or x86 build. [Update to a supported release](/whisparr/faq#how-do-i-update-whisparr).

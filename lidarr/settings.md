@@ -350,7 +350,8 @@ Lidarr can set seed ratio and time goals via the torrent client's API when you a
 | Setting | Description |
 |---|---|
 | **Enable** (Advanced, global) | Automatically import completed downloads from the download client. Disabling this means Lidarr will never import anything, so leave it enabled unless you have a specific reason to disable it. |
-| **Remove** (per-client) | After import, ask the download client to remove the completed item. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
+| **Remove Completed** (per-client) | After import, ask the download client to remove the completed item from its history. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
+| **Remove Failed** (per-client) | Remove failed downloads from the download client's history. |
 
 ### Failed Download Handling
 
@@ -358,7 +359,8 @@ Failed download handling is available for SABnzbd and NZBGet only. It isn't supp
 
 | Setting | Description |
 |---|---|
-| **Redownload** | When a download fails, automatically search for a replacement. |
+| **Redownload Failed** | When a download fails, automatically search for a replacement. |
+| **(Advanced) Redownload Failed from Interactive Search** | Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search. |
 | **(Advanced) Remove** | Remove the failed download from the client when Lidarr detects the failure. |
 
 When Lidarr detects a failure, it logs it, optionally removes the failed item, searches for a replacement, and blocklists the failed release so it isn't grabbed again automatically.
@@ -388,6 +390,8 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 | **Name** | Label for this connection. |
 | **On Grab** | Trigger when Lidarr sends a release to a download client. |
 | **On Release Import** | Trigger when a downloaded release is successfully imported. |
+| **On Download Failure** | Trigger when a download fails. |
+| **On Import Failure** | Trigger when an import fails. |
 | **On Upgrade** | Trigger when Lidarr upgrades a file to better quality. |
 | **On Rename** | Trigger when Lidarr renames files. |
 | **On Artist Added** | Trigger when you add an artist to Lidarr. |
@@ -459,6 +463,32 @@ General settings live under **Settings → General**.
   - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `lidarr.internal` when you name your containers with a `.internal` suffix.
   - A blank value is accepted only when Authentication Required is `Enabled`; otherwise at least one host is required and a blank value is rejected on save.
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from Lidarr, enable this option.
+
+## Security
+
+{#security}
+
+- Authentication - How would you like to authenticate to access your Lidarr instance
+  - None - You have no authentication to access your Lidarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Lidarr or your Lidarr is not exposed to the web
+  - Basic (Browser pop-up) - Removed in Lidarr v3.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
+  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr
+  - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Lidarr. Not selectable in the UI; set it via `config.xml` or the `LIDARR__AUTH__METHOD` environment variable. Lidarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
+- Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.
+  - Enabled - Always require authentication (recommended)
+  - Disabled for Local Addresses - Skip authentication for requests Lidarr identifies as coming from localhost or the LAN
+
+> With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Lidarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Lidarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Lidarr behind a VPN or Tailscale rather than exposing it directly.
+{.is-warning}
+
+- API Key - This is how other programs would communicate or have Lidarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
+- Certificate Validation - Change how strict HTTPS certification validation is
+  - Enabled - Validate all HTTPS certificates (recommended)
+  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+  - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Lidarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
+
+> Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `LIDARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Lidarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
+{.is-info}
 
 # Logging
 

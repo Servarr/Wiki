@@ -15,18 +15,17 @@ dateCreated: 2021-05-25T02:28:35.194Z
   - [Health](#health)
     - [System Warnings](#system-warnings)
       - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Update to .NET version](#update-to-net-version)
-        - [Fixing Docker installs](#fixing-docker-installs)
-        - [Fixing FreeBSD installs](#fixing-freebsd-installs)
-        - [Fixing Standalone installs](#fixing-standalone-installs)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
-      - [Database Failed Integrity Check](#database-failed-integrity-check)
       - [New update is available](#new-update-is-available)
+      - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
       - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+      - [Cannot install update because UI folder is not writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
       - [Branch is for a previous version](#branch-is-for-a-previous-version)
+      - [Movie Folder Format uses deprecated tokens](#movie-folder-format-uses-deprecated-tokens)
+      - [Kometa metadata is deprecated](#kometa-metadata-is-deprecated)
       - [Could not connect to signalR](#could-not-connect-to-signalr)
+      - [Reverse Proxy Websocket Configuration](#reverse-proxy-websocket-configuration)
         - [Nginx](#nginx)
         - [Apache2](#apache2)
         - [Caddy](#caddy)
@@ -95,111 +94,12 @@ dateCreated: 2021-05-25T02:28:35.194Z
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/radarr/faq#how-do-i-update-radarr).
 
-#### Update to .NET version
-
-{#update-to-net-core-version}
-
-- Newer versions of Radarr are targeted for .NET6 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
-
-See the below entries for how to switch from unsupported, end-of-life mono versions to dotnet.
-
-- [Fixing Docker installs](#fixing-docker-installs)
-- [Fixing FreeBSD installs](#fixing-freebsd-installs)
-- [Fixing Standalone installs](#fixing-standalone-installs)
-{.links-list}
-
-##### Fixing Docker installs
-
-- Ensure your branch is correct for your docker maintainer and repull your container
-
-##### Fixing FreeBSD installs
-
-- Simply update the Radarr Port with `pkg update && pkg upgrade`
-- (Optional) Remove the mono package if you wish
-
-##### Fixing Standalone installs
-
-Errors such as:
-
-```none
-Cannot open assembly '/opt/Radarr/Radarr': File does not contain a valid CIL image
-```
-
-- Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
-- To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded and then update your service file to not use mono.
-
-> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
-
-- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Radarr branch, so update the variable if needed
-- This assumes that Radarr runs as the user `radarr`, so update the variables if needed
-- This assumes Radarr is installed at `/opt/Radarr`, so update the variables if needed
-
-```bash
-#!/bin/bash
-## User Variables
-installdir="/opt/Radarr"
-APPUSER="radarr"
-branch="master"
-## /User Variables
-app="radarr"
-ARCH=$(dpkg --print-architecture)
-# Stop \*arr
-sudo systemctl stop $app
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo_error "Arch not supported"
-    exit 1
-    ;;
-esac
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo "Installation files downloaded and extracted"
-echo "Moving existing installation"
-sudo mv "$installdir/" "$installdir.old/"
-echo "Installing..."
-sudo mv "${app^}" "$installdir"
-sudo chown $APPUSER:$APPUSER -R $installdir
-sudo sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo systemctl daemon-reload
-echo "App Installed"
-sudo rm -rf "$installdir.old/"
-rm -rf "${app^}.*.tar.gz"
-sudo systemctl start $app
-```
-
-#### Currently installed mono version is old and unsupported
-
-- Radarr is written in .NET and required Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
-- The upgrade procedure for Mono varies per platform.
-
-> Mono is no longer supported starting in Radarr version 4.0
-{.is-warning}
-
 #### Currently installed SQLite version is not supported
 
 - Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
 
 > Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 {.is-info}
-
-#### Database Failed Integrity Check
-
-- Your database(s) failed a [SQLite Pragma Integrity Check](https://www.sqlite.org/pragma.html#pragma_integrity_check) and have some corruption.
-- If `Radarr.db` is corrupt [please see this FAQ Entry](/radarr/faq#i-am-getting-an-error-database-disk-image-is-malformed)
-- If `logs.db` is corrupt: Stop Radarr, delete `logs.db` and any `logs.wal` files.
-- If both are corrupt, review the respective processes above.
 
 #### New update is available
 
@@ -208,9 +108,18 @@ sudo systemctl start $app
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
+#### Cannot install update because startup folder is in an App Translocation folder
+
+- macOS Gatekeeper can silently relocate an unopened, un-trusted copy of Radarr into a randomized, read-only App Translocation path. Radarr detects when it is running from that path and refuses to auto-update, since it cannot write to a translocated location.
+- Move Radarr to a normal folder (e.g. `/Applications`) and launch it from there so macOS stops translocating it, then retry the update.
+
 #### Cannot install update because startup folder is not writable by the user
 
 - This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s Startup directory (the installation directory) to allow Radarr to update itself.
+
+#### Cannot install update because UI folder is not writable by the user
+
+- This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s UI directory (inside the installation directory) to allow Radarr to update itself.
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
@@ -224,10 +133,23 @@ sudo systemctl start $app
 
 - The update branch setup in Settings/General is for a previous version of Radarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
-#### Could not connect to signalR
+#### Movie Folder Format uses deprecated tokens
 
-- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
-- The most common occurrence of this is use of a reverse proxy or cloudflare
+- Your [Movie Folder Format](/radarr/settings#movie-folder-format) includes one or more tokens that are deprecated for folder names, such as `{Original Title}`, `{Release Group}`, `{Edition Tags}`, `{Quality Full}`, or the `{MediaInfo ...}` tokens. These are file-naming tokens, not folder-naming tokens, and Radarr will not save the format until they are removed.
+- Edit your Movie Folder Format and remove the deprecated tokens, keeping only the tokens listed under [Movie Naming](/radarr/settings#movie-naming-2).
+
+#### Kometa metadata is deprecated
+
+- The [Kometa](/radarr/supported#kometametadata) metadata consumer is deprecated. Radarr will stop creating Kometa metadata files, and support will be removed completely in a future v6 release.
+- Disable the Kometa metadata consumer in Settings => Metadata to clear this warning.
+
+#### Reverse Proxy Websocket Configuration
+
+{#reverse-proxy-websocket-configuration}
+{#could-not-connect-to-signalr}
+
+- Radarr uses signalR to drive dynamic UI updates in the browser. If your reverse proxy does not pass websocket connections through, the UI will not receive real-time updates.
+- The most common occurrence of this is use of a reverse proxy or Cloudflare.
 - Cloudflare needs websockets enabled.
 
 ##### Nginx
@@ -276,6 +198,8 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 - Review your proxy settings and ensure they are accurate
 - Ensure your proxy is up, running, and accessible
 
@@ -285,10 +209,14 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### System Time is off by more than 1 day
 
+{#system-time-off}
+
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
 #### PTP Indexer Settings Out of Date
+
+{#ptp-settings-old}
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
 
@@ -328,6 +256,8 @@ Note: you will also need to add the websocket directive to your radarr configura
   - Ensure a DNS server (e.g. pihole) is not rate limiting queries
 
 #### Download clients are unavailable due to failure
+
+{#download-clients-are-unavailable-due-to-failures}
 
 - One or more of your download clients is not responding to requests made by Radarr. Therefore Radarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Radarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 - You should inspect System=>Logs to see what the reason is for the failures.
@@ -389,9 +319,13 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Remote File was removed part way through processing
 
+{#remote-path-file-removed}
+
 - A file accessible via a remote path map appears to have been removed prior to processing completing.
 
 #### Remote Path is Used and Import Failed
+
+{#remote-path-import-failed}
 
 - Check your logs for more info; Refer to our Troubleshooting Guides
 
@@ -494,7 +428,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Movie Path Mount is Read Only
 
-{#movie-mount-ro}
+{#movies-mount-ro}
 
 A mount containing a movie path is read only and is not writable by the user Radarr is running as.
 
@@ -513,6 +447,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
   1. Click save and select the newly created filter from the filter dropdown menu
 
 #### Lists are unavailable due to failures
+
+{#import-lists-are-unavailable-due-to-failures}
 
 - Typically this simply means that Radarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
@@ -648,3 +584,17 @@ A mount containing a movie path is read only and is not writable by the user Rad
   - Radarr uses rolling log files limited to 1MB each. The current log file is always radarr.txt, for the the other files radarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - When Debug log level is enabled, additional radarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
   - When Trace log level is enabled, additional radarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/radarr/faq#how-do-i-update-radarr).
+
+## Update to .NET version
+
+{#update-to-net-core-version}
+
+Unsupported legacy mono build. [Update to a supported release](/radarr/faq#how-do-i-update-radarr).
+
+## Currently installed mono version is old and unsupported
+
+Unsupported legacy mono build. [Update to a supported release](/radarr/faq#how-do-i-update-radarr).

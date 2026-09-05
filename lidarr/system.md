@@ -14,18 +14,11 @@ dateCreated: 2021-06-14T21:36:28.225Z
 - [Status](#status)
   - [Health](#health)
     - [System Warnings](#system-warnings)
-      - [Branch isn't a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Update to .NET version](#update-to-net-version)
-        - [Fixing Docker installs](#fixing-docker-installs)
-        - [Fixing Standalone installs](#fixing-standalone-installs)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
-      - [Currently installed SQLite version isn't supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
       - [Can't install update because startup folder is in an App Translocation folder (macOS)](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos)
       - [Can't install update because startup folder isn't writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
       - [Can't install update because UI folder isn't writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating won't be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
       - [Couldn't connect to signalR](#could-not-connect-to-signalr)
         - [NGINX](#nginx)
         - [Apache](#apache)
@@ -33,8 +26,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
       - [Proxy Failed Test](#proxy-failed-test)
       - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
-      - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
       - [FPcalc is missing](#fpcalc-is-missing)
       - [FPcalc needs updating](#fpcalc-needs-updating)
       - [API Key is too short](#api-key-is-too-short)
@@ -61,7 +52,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [No indexers available with automatic search enabled, Lidarr won't provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically)
       - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers don't support searching](#enabled-indexers-do-not-support-searching)
       - [No indexers Available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
@@ -97,86 +87,6 @@ This page lists health check results. Lidarr runs these checks periodically and 
 
 ### System Warnings
 
-#### Branch isn't a valid release branch
-
-The branch you have set isn't a valid release branch. You won't receive updates. Please change to one of the [current release branches](/lidarr/faq#how-do-i-update-lidarr).
-
-#### Update to .NET version
-
-{#update-to-net-core-version}
-
-- Newer versions of Lidarr target .NET6 or newer. Legacy mono builds end after the 1.0 release. You are running one of these legacy builds but your platform supports .NET.
-
-##### Fixing Docker installs
-
-- Re-pull your container
-
-##### Fixing Standalone installs
-
-- Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Don't install .NET runtime or SDK from Microsoft.
-- To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
-
-> DON'T JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
-
-- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Lidarr branch update the variable if needed
-- This assumes that Lidarr runs as the user `lidarr` update the variables if needed
-- This assumes you installed Lidarr at `/opt/Lidarr`; update the variables if needed
-
-```bash
-#!/bin/bash
-## User Variables
-installdir="/opt/Lidarr"
-APPUSER="lidarr"
-branch="master"
-## /User Variables
-app="lidarr"
-ARCH=$(dpkg --print-architecture)
-# Stop \*arr
-sudo systemctl stop $app
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo_error "Arch not supported"
-    exit 1
-    ;;
-esac
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo "Installation files downloaded and extracted"
-echo "Moving existing installation"
-sudo mv "$installdir/" "$installdir.old/"
-echo "Installing..."
-sudo mv "${app^}" "$installdir"
-sudo chown $APPUSER:$APPUSER -R $installdir
-sudo sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo systemctl daemon-reload
-echo "App Installed"
-sudo rm -rf "$installdir.old/"
-rm -rf "${app^}.*.tar.gz"
-sudo systemctl start $app
-```
-
-#### Currently installed mono version is old and unsupported
-
-- Lidarr uses .NET and requires Mono to run on old ARM processors. Please note that Mono builds are no longer supported after v1.0
-- Lidarr requires at least Mono 5.20.
-- The upgrade procedure for Mono varies per platform.
-
-#### Currently installed SQLite version isn't supported
-
-- Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so`, which may not come with a SQLite3 upgrade package.
-
 #### New update is available
 
 - A new version of Lidarr is available. If autoupdating is enabled, Lidarr will install it automatically. Otherwise, go to `System => Updates` and press Install.
@@ -192,13 +102,19 @@ sudo systemctl start $app
 
 #### Can’t install update because startup folder isn’t writable by the user
 
+{#cannot-install-update-because-startup-folder-is-not-writable-by-the-user}
+
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
 
 #### Can’t install update because UI folder isn’t writable by the user
 
+{#cannot-install-update-because-ui-folder-is-not-writable-by-the-user}
+
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s UI directory to allow Lidarr to update itself.
 
 #### Updating won’t be possible to prevent deleting AppData on Update
+
+{#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update}
 
 - Lidarr detected that the AppData folder sits inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and `~/.config` for Linux.
 
@@ -206,11 +122,9 @@ sudo systemctl start $app
 - This means Lidarr will be unable to update itself without risking data loss.
 - If you’re on linux, you’ll probably have to change the home directory for the user that's running Lidarr and copy the current contents of the `~/.config/Lidarr` directory to preserve your database.
 
-#### Branch is for a previous version
-
-- The update branch setup in `Settings => General` is for a previous version of Lidarr, so the instance won't see correct update information in the `System => Updates` feed and may not receive new updates when released.
-
 #### Couldn't connect to signalR
+
+{#could-not-connect-to-signalr}
 
 - signalR drives the dynamic UI updates, so if your browser can't connect to signalR on your server you won’t see any real time updates in the UI.
 
@@ -272,14 +186,6 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until you correct the time
 - Review your system time and ensure it's synced to an authoritative time server and accurate
-
-#### Mono Legacy TLS enabled
-
-- Mono 4.x tls workaround still enabled, consider removing `MONO_TLS_PROVIDER=legacy` environment option
-
-#### Mono and x86 builds are ending
-
-- The next build of the application won't support Mono or x86. If you are receiving this error then you are running the mono version of the application or the x86 version. Due to increasing difficulty supporting these legacy versions, support and releases for them have ended. Upgrade to a supported operating system that doesn't require x86 or Mono. You may also be able to explore using Docker for your needs.
 
 #### FPcalc is missing
 
@@ -358,6 +264,8 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Download clients are unavailable due to failure
 
+{#download-clients-are-unavailable-due-to-failures}
+
 - One or more of your download clients isn't responding to requests made by Lidarr. Lidarr has temporarily stopped querying the download client on its normal 1-minute cycle, which is normally used to track active downloads and import finished ones. Lidarr will still attempt to send downloads to the client, but will likely fail.
 - You should inspect `System=>Logs` to see what the reason is for the failures.
 - If you no longer use this download client, disable it in Lidarr to prevent the errors.
@@ -414,9 +322,13 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Remote File was removed part way through processing
 
+{#remote-path-file-removed}
+
 - A file accessible via a remote path map appears to have disappeared before processing completed.
 
 #### Remote Path is Used and Import Failed
+
+{#remote-path-import-failed}
 
 - Check your logs for more info. Refer to the [Troubleshooting Guides](/lidarr/troubleshooting).
 
@@ -424,7 +336,8 @@ chmod +x /opt/Lidarr/fpcalc
 
 {#download-folder-and-library-folder-not-different-folders}
 
-- Your download client is configured to sort completed downloads into a folder that is the same as (or is inside) your Lidarr library/root folder. Sorting completed downloads into your library folder can cause issues. Disable sorting in your download client or choose a download destination that is separate from your library folder.
+- This warning is triggered by the download client's own automatic sorting feature (for example TV, Movie, or Date sorting) being enabled for the category Lidarr uses, not by the download folder and library folder being the same path.
+- Disable the automatic sorting option in your download client for the category Lidarr uses, and let Lidarr handle organizing completed downloads into your library instead.
 
 ### Completed/Failed Download Handling
 
@@ -444,10 +357,14 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### No indexers available with automatic search enabled, Lidarr won't provide any automatic search results
 
+{#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results}
+
 - None of your indexers allow automatic searches.
 - Go into `Settings => Indexers`, select an indexer you'd like to allow Automatic Searches and then click save.
 
 #### No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically
+
+{#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically}
 
 - Lidarr uses the RSS feed to pick up new releases as they come along.
 - To correct this issue, go to `Settings => Indexers`, select an indexer, and enable RSS Sync.
@@ -455,10 +372,6 @@ chmod +x /opt/Lidarr/fpcalc
 #### No indexers are enabled
 
 - Lidarr requires indexers to discover new releases. See [Settings => Indexers](/lidarr/settings#indexers) for instructions on adding them.
-
-### Enabled indexers don't support searching
-
-- None of the indexers you have enabled support searching. This means Lidarr will only be able to find new releases via the RSS feeds. But searching for releases (either Automatic Search or Manual Search) will never return any results. The only way to fix this is to add another indexer.
 
 #### No indexers Available with Interactive Search Enabled
 
@@ -518,7 +431,7 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Artist Mount is Read Only
 
-{#artist-mount-ro}
+{#artist-mount-is-read-only}
 
 - A mount containing an artist folder is mounted as read-only. Lidarr cannot import files into a read-only mount. Check your mount configuration and ensure that Lidarr has write access to the artist folders listed in the health check message.
 
@@ -656,3 +569,25 @@ The top row has options to control your log files.
   - Lidarr uses rolling log files limited to 1MB each. The current log file is always lidarr.txt, for the other files lidarr.0.txt is the next newest (higher numbers are older) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
   - With Debug log level enabled, lidarr.debug.txt rolling log files appear, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It covers a ~40-hour window.
   - With Trace log level enabled, lidarr.trace.txt rolling log files appear, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono or x86, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Update to .NET version
+
+{#update-to-net-core-version}
+
+Unsupported legacy mono build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Currently installed mono version is old and unsupported
+
+Unsupported legacy mono build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Mono Legacy TLS enabled
+
+Unsupported legacy mono build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+
+## Mono and x86 builds are ending
+
+Unsupported legacy mono or x86 build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).

@@ -156,13 +156,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - CouchPotato {#couchpotatoimport}
 - Custom Lists {#radarrlistimport}
 - IMDb Lists {#imdblistimport}
-  - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Radarr
-
-    1. Go to your IMDB List Settings
-    1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
-    1. Use the `ls` number within the URL
-
-  ![imdb-list-ls.png](/assets/radarr/imdb-list-ls.png)
+  - The List/User ID field accepts `top250` (IMDb Top 250), `popular` (IMDb Most Popular), or an IMDb user ID of the form `ur12345678` (imports that user's public lists).
+  - Custom IMDb lists and watchlists (the `ls`-number lists) are no longer supported. IMDb changed how those lists are served, so Radarr can no longer read them.
 - Plex Watchlist {#plex}
   - Requires: v4.1.0.6176+
   - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.

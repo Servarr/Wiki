@@ -212,7 +212,7 @@ Sonarr talks to you download client via it's API and accesses it via the client'
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](/sonarr/faq#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](/sonarr/faq#invalid-certificate-and-other-https-or-ssl-issues) for more information.
 
 ### Can’t see share on Windows
 
