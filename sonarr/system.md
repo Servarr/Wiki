@@ -43,7 +43,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
       - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Sonarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-sonarr-will-not-grab-new-releases-automatically)
       - [No indexers are enabled](#no-indexers-are-enabled)
-      - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
+      - [All search-capable indexers are temporarily unavailable due to recent indexer errors](#all-search-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors)
       - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
@@ -92,7 +92,7 @@ dateCreated: 2021-09-08T17:58:43.288Z
 
 #### New update is available
 
-- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you do not have Auto-Updating enabled, so you will have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
+- A newer version of Sonarr is available. This warning fires once your installed build is more than 14 days old and a newer release exists, regardless of whether Auto-Updating is enabled. On a native install, go to System => Updates and press Install. On Docker, do not press Install inside the container; instead pull the new image tag and recreate the container.
 
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
@@ -288,11 +288,16 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 - Sonarr requires indexers to be able to discover new releases. All your indexers are disabled or you do not have any indexers added.
 
-#### Enabled indexers do not support searching
+> This warning applies to older Sonarr versions and is not present in current releases.
+{.is-info}
+
+#### All search-capable indexers are temporarily unavailable due to recent indexer errors
 
 {#all-search-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
 
-- None of the indexers you have enabled and available support searching. This means Sonarr will only be able to find new releases via the RSS feeds. But searching for series (either Automatic Search or Manual Search) will never return any results. The only way to remedy it is to add another indexer.
+{#enabled-indexers-do-not-support-searching}
+
+- Every indexer capable of searching has recently failed and is in Sonarr's failure backoff, so no indexer is currently available for a search. This is transient, not a sign that your enabled indexers lack search support. Resolve the underlying indexer errors (check System => Logs and the indexer's status) rather than adding another indexer; once an indexer passes its `Test` or the backoff period elapses, it becomes available again.
 
 #### No indexers available with Interactive Search Enabled
 
@@ -362,8 +367,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 {#missing-root-folder}
 
 - A root folder is added to Sonarr and does not exist or is not accessible.
-- This error is typically identified if a Series is looking for a root folder but that root folder is no longer available.
-- This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
+- This check only evaluates the root folders your existing series use, so it fires when a Series is looking for a root folder but that root folder is no longer available. An import list pointed at a missing root folder is a separate check; see [Import List Missing Root Folder](#import-list-missing-root-folder).
 - If you would like to remove this warning simply find the series that is still using the old root folder and edit it to the correct root folder.
 
 - Easiest way to find the problem series is to:

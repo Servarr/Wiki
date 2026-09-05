@@ -61,7 +61,6 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [No indexers available with automatic search enabled, Lidarr won't provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results)
       - [No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically)
       - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers don't support searching](#enabled-indexers-do-not-support-searching)
       - [No indexers Available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
@@ -99,13 +98,21 @@ This page lists health check results. Lidarr runs these checks periodically and 
 
 #### Branch isn't a valid release branch
 
+{#branch-is-not-a-valid-release-branch}
+
 The branch you have set isn't a valid release branch. You won't receive updates. Please change to one of the [current release branches](/lidarr/faq#how-do-i-update-lidarr).
+
+> This warning applies to older Lidarr versions and is not present in current releases.
+{.is-info}
 
 #### Update to .NET version
 
 {#update-to-net-core-version}
 
 - Newer versions of Lidarr target .NET6 or newer. Legacy mono builds end after the 1.0 release. You are running one of these legacy builds but your platform supports .NET.
+
+> This warning applies to v1 and earlier. Current releases require .NET and no longer ship a mono build.
+{.is-info}
 
 ##### Fixing Docker installs
 
@@ -173,9 +180,17 @@ sudo systemctl start $app
 - Lidarr requires at least Mono 5.20.
 - The upgrade procedure for Mono varies per platform.
 
+> This warning applies to v1 and earlier. Current releases no longer ship a mono build.
+{.is-info}
+
 #### Currently installed SQLite version isn't supported
 
+{#currently-installed-sqlite-version-is-not-supported}
+
 - Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so`, which may not come with a SQLite3 upgrade package.
+
+> This warning applies to older Lidarr versions and is not present in current releases.
+{.is-info}
 
 #### New update is available
 
@@ -216,7 +231,12 @@ sudo systemctl start $app
 
 - The update branch setup in `Settings => General` is for a previous version of Lidarr, so the instance won't see correct update information in the `System => Updates` feed and may not receive new updates when released.
 
+> This warning applies to older Lidarr versions and is not present in current releases.
+{.is-info}
+
 #### Couldn't connect to signalR
+
+{#could-not-connect-to-signalr}
 
 - signalR drives the dynamic UI updates, so if your browser can't connect to signalR on your server you won’t see any real time updates in the UI.
 
@@ -283,9 +303,15 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 - Mono 4.x tls workaround still enabled, consider removing `MONO_TLS_PROVIDER=legacy` environment option
 
+> This warning applies to v1 and earlier. Current releases no longer ship a mono build.
+{.is-info}
+
 #### Mono and x86 builds are ending
 
 - The next build of the application won't support Mono or x86. If you are receiving this error then you are running the mono version of the application or the x86 version. Due to increasing difficulty supporting these legacy versions, support and releases for them have ended. Upgrade to a supported operating system that doesn't require x86 or Mono. You may also be able to explore using Docker for your needs.
+
+> This warning applies to v1 and earlier. Current releases no longer ship mono or x86 builds.
+{.is-info}
 
 #### FPcalc is missing
 
@@ -436,7 +462,8 @@ chmod +x /opt/Lidarr/fpcalc
 
 {#download-folder-and-library-folder-not-different-folders}
 
-- Your download client is configured to sort completed downloads into a folder that is the same as (or is inside) your Lidarr library/root folder. Sorting completed downloads into your library folder can cause issues. Disable sorting in your download client or choose a download destination that is separate from your library folder.
+- This warning is triggered by the download client's own automatic sorting feature (for example TV, Movie, or Date sorting) being enabled for the category Lidarr uses, not by the download folder and library folder being the same path.
+- Disable the automatic sorting option in your download client for the category Lidarr uses, and let Lidarr handle organizing completed downloads into your library instead.
 
 ### Completed/Failed Download Handling
 
@@ -471,10 +498,6 @@ chmod +x /opt/Lidarr/fpcalc
 #### No indexers are enabled
 
 - Lidarr requires indexers to discover new releases. See [Settings => Indexers](/lidarr/settings#indexers) for instructions on adding them.
-
-### Enabled indexers don't support searching
-
-- None of the indexers you have enabled support searching. This means Lidarr will only be able to find new releases via the RSS feeds. But searching for releases (either Automatic Search or Manual Search) will never return any results. The only way to fix this is to add another indexer.
 
 #### No indexers Available with Interactive Search Enabled
 

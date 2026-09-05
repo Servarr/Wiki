@@ -17,7 +17,9 @@ dateCreated: 2021-08-03T21:21:08.969Z
       - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
+      - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
       - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+      - [Cannot install update because UI folder is not writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
       - [Branch is for a previous version](#branch-is-for-a-previous-version)
       - [Could not connect to signalR](#could-not-connect-to-signalr)
@@ -71,6 +73,9 @@ This page contains a list of health checks errors. These health checks are perio
 
 #### Currently installed SQLite version is not supported
 
+> This warning applies to older Prowlarr versions and is not present in current releases.
+{.is-info}
+
 - Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 #### New update is available
@@ -83,9 +88,17 @@ This page contains a list of health checks errors. These health checks are perio
 > If your installed version is more than 180 days old, this escalates from a Warning to an Error.
 {.is-warning}
 
+#### Cannot install update because startup folder is in an App Translocation folder
+
+- macOS Gatekeeper moved Prowlarr's app bundle into a randomized App Translocation folder because it was launched from an unapproved location. Prowlarr cannot write to its own Startup folder from there, so updates fail. Move the app to a stable location such as /Applications and relaunch it to resolve this.
+
 #### Cannot install update because startup folder is not writable by the user
 
 - This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s Startup directory (the installation directory) to allow Prowlarr to update itself.
+
+#### Cannot install update because UI folder is not writable by the user
+
+- This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s UI directory (inside the installation directory) to allow Prowlarr to update itself.
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
@@ -96,6 +109,9 @@ This page contains a list of health checks errors. These health checks are perio
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
 
 #### Branch is for a previous version
+
+> This warning applies to older Prowlarr versions and is not present in current releases.
+{.is-info}
 
 - The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 

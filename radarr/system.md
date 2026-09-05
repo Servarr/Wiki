@@ -23,10 +23,15 @@ dateCreated: 2021-05-25T02:28:35.194Z
       - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
       - [Database Failed Integrity Check](#database-failed-integrity-check)
       - [New update is available](#new-update-is-available)
+      - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
       - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+      - [Cannot install update because UI folder is not writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
       - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
       - [Branch is for a previous version](#branch-is-for-a-previous-version)
+      - [Movie Folder Format uses deprecated tokens](#movie-folder-format-uses-deprecated-tokens)
+      - [Kometa metadata is deprecated](#kometa-metadata-is-deprecated)
       - [Could not connect to signalR](#could-not-connect-to-signalr)
+      - [Reverse Proxy Websocket Configuration](#reverse-proxy-websocket-configuration)
         - [Nginx](#nginx)
         - [Apache2](#apache2)
         - [Caddy](#caddy)
@@ -98,6 +103,9 @@ dateCreated: 2021-05-25T02:28:35.194Z
 #### Update to .NET version
 
 {#update-to-net-core-version}
+
+> This warning applied to Radarr v3.2.2 and earlier running legacy mono builds and was removed from health checks after Mono support was dropped in Radarr v4.0.0.
+{.is-info}
 
 - Newer versions of Radarr are targeted for .NET6 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
 
@@ -181,6 +189,9 @@ sudo systemctl start $app
 
 #### Currently installed mono version is old and unsupported
 
+> This warning applied to Radarr v3.2.2 and earlier running legacy mono builds and was removed from health checks after Mono support was dropped in Radarr v4.0.0.
+{.is-info}
+
 - Radarr is written in .NET and required Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
 - The upgrade procedure for Mono varies per platform.
 
@@ -196,6 +207,9 @@ sudo systemctl start $app
 
 #### Database Failed Integrity Check
 
+> This warning applies to older Radarr versions and is not present in current releases.
+{.is-info}
+
 - Your database(s) failed a [SQLite Pragma Integrity Check](https://www.sqlite.org/pragma.html#pragma_integrity_check) and have some corruption.
 - If `Radarr.db` is corrupt [please see this FAQ Entry](/radarr/faq#i-am-getting-an-error-database-disk-image-is-malformed)
 - If `logs.db` is corrupt: Stop Radarr, delete `logs.db` and any `logs.wal` files.
@@ -208,9 +222,18 @@ sudo systemctl start $app
 > This warning will not appear if your current version is less than 14 days old
 {.is-info}
 
+#### Cannot install update because startup folder is in an App Translocation folder
+
+- macOS Gatekeeper can silently relocate an unopened, un-trusted copy of Radarr into a randomized, read-only App Translocation path. Radarr detects when it is running from that path and refuses to auto-update, since it cannot write to a translocated location.
+- Move Radarr to a normal folder (e.g. `/Applications`) and launch it from there so macOS stops translocating it, then retry the update.
+
 #### Cannot install update because startup folder is not writable by the user
 
 - This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s Startup directory (the installation directory) to allow Radarr to update itself.
+
+#### Cannot install update because UI folder is not writable by the user
+
+- This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s UI directory (inside the installation directory) to allow Radarr to update itself.
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
@@ -222,12 +245,28 @@ sudo systemctl start $app
 
 #### Branch is for a previous version
 
+> This warning applies to older Radarr versions and is not present in current releases.
+{.is-info}
+
 - The update branch setup in Settings/General is for a previous version of Radarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
-#### Could not connect to signalR
+#### Movie Folder Format uses deprecated tokens
 
-- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
-- The most common occurrence of this is use of a reverse proxy or cloudflare
+- Your [Movie Folder Format](/radarr/settings#movie-folder-format) includes one or more tokens that are deprecated for folder names, such as `{Original Title}`, `{Release Group}`, `{Edition Tags}`, `{Quality Full}`, or the `{MediaInfo ...}` tokens. These are file-naming tokens, not folder-naming tokens, and Radarr will not save the format until they are removed.
+- Edit your Movie Folder Format and remove the deprecated tokens, keeping only the tokens listed under [Movie Naming](/radarr/settings#movie-naming-2).
+
+#### Kometa metadata is deprecated
+
+- The [Kometa](/radarr/supported#kometametadata) metadata consumer is deprecated. Radarr will stop creating Kometa metadata files, and support will be removed completely in a future v6 release.
+- Disable the Kometa metadata consumer in Settings => Metadata to clear this warning.
+
+#### Reverse Proxy Websocket Configuration
+
+{#reverse-proxy-websocket-configuration}
+{#could-not-connect-to-signalr}
+
+- Radarr uses signalR to drive dynamic UI updates in the browser. If your reverse proxy does not pass websocket connections through, the UI will not receive real-time updates.
+- The most common occurrence of this is use of a reverse proxy or Cloudflare.
 - Cloudflare needs websockets enabled.
 
 ##### Nginx
