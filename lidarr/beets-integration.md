@@ -134,7 +134,7 @@ foreach ($dir in $albumDirs) {
 ## Trade-offs
 
 | | |
-|---|---|
+| --- | --- |
 | **Benefit** | beets runs once at import time with any plugins you want, writing a full tag set that Lidarr wouldn't produce on its own. |
 | **Benefit** | No persistent beets database to maintain or back up. |
 | **Drawback** | Tags written at import time are never updated. If MusicBrainz data improves, or a plugin source updates its data (for example, updated ReplayGain values), the library files won't reflect it until you re-import or run beets manually. |
@@ -189,7 +189,7 @@ Two scenarios where the tools can conflict:
 ## Trade-offs
 
 | | |
-|---|---|
+| --- | --- |
 | **Benefit** | beets maintains tags on an ongoing basis; as plugin data sources update, you can re-run beets to pull in new values. |
 | **Benefit** | beets' persistent library enables more sophisticated queries, playlist generation, and plugin behaviour. |
 | **Drawback** | Requires careful beets configuration to prevent file moves. One misconfiguration can disorganise a large library. |
