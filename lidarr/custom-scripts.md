@@ -19,7 +19,7 @@ A custom script can be any executable accessible by the user Lidarr is running a
 Lidarr writes script output to the log files:
 
 | Output | Log level | Log file |
-|---|---|---|
+| --- | --- | --- |
 | `stdout` | `Debug` | `config/logs/Lidarr.debug.txt` |
 | `stderr` | `Error` | `config/logs/Lidarr.txt` |
 | Script trigger | `Trace` | `config/logs/Lidarr.trace.txt` |
@@ -45,7 +45,7 @@ Lidarr passes data to your script through environment variables. The variables a
 These three variables are present in every event.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | The event name: `Grab`, `AlbumDownload`, `Rename`, `TrackRetag`, `ArtistAdd`, `ArtistDeleted`, `AlbumDeleted`, `HealthIssue`, `HealthRestored`, `ApplicationUpdate`, `Test` |
 | `lidarr_instancename` | The Lidarr instance name (set in Settings → General) |
 | `lidarr_applicationurl` | The configured application URL (set in Settings → General) |
@@ -55,7 +55,7 @@ These three variables are present in every event.
 Fired when Lidarr sends a release to a download client.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `Grab` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_name` | Artist name |
@@ -86,7 +86,7 @@ Fired when Lidarr sends a release to a download client.
 Fired after Lidarr has successfully imported a downloaded album into the library. `lidarr_eventtype` is `AlbumDownload` for both initial imports and upgrades.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `AlbumDownload` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_name` | Artist name |
@@ -113,7 +113,7 @@ Fired after Lidarr has successfully imported a downloaded album into the library
 Fired after Lidarr renames one or more track files for an artist.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `Rename` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_name` | Artist name |
@@ -131,7 +131,7 @@ Fired after Lidarr renames one or more track files for an artist.
 Fired after Lidarr rewrites tags on one or more track files.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `TrackRetag` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_name` | Artist name |
@@ -164,7 +164,7 @@ Fired after Lidarr rewrites tags on one or more track files.
 Fired when you add an artist to Lidarr.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `ArtistAdd` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_title` | Artist name |
@@ -179,7 +179,7 @@ Fired when you add an artist to Lidarr.
 Fired when you remove an artist from Lidarr.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `ArtistDeleted` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_title` | Artist name |
@@ -195,7 +195,7 @@ Fired when you remove an artist from Lidarr.
 Fired when you remove an album from Lidarr.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `AlbumDeleted` |
 | `lidarr_artist_id` | Internal Lidarr ID for the artist |
 | `lidarr_artist_name` | Artist name |
@@ -216,7 +216,7 @@ Fired when you remove an album from Lidarr.
 Fired when Lidarr detects a health check failure.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `HealthIssue` |
 | `lidarr_health_issue_level` | Severity level: `Ok`, `Notice`, `Warning`, or `Error` |
 | `lidarr_health_issue_message` | Human-readable description of the issue |
@@ -228,7 +228,7 @@ Fired when Lidarr detects a health check failure.
 Fired when a failing health check returns to a healthy state.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `HealthRestored` |
 | `lidarr_health_restored_level` | Previous severity level |
 | `lidarr_health_restored_message` | Description of the check that recovered |
@@ -240,7 +240,7 @@ Fired when a failing health check returns to a healthy state.
 Fired after Lidarr updates itself to a new version.
 
 | Environment Variable | Details |
-|---|---|
+| --- | --- |
 | `lidarr_eventtype` | `ApplicationUpdate` |
 | `lidarr_update_message` | Update changelog message |
 | `lidarr_update_newversion` | Version that was just installed |
