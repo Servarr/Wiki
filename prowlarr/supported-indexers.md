@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-07T03:02:17.512889
+date: 2026-09-08T03:11:46.540973
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-07T03:02:17.512889
+dateCreated: 2026-09-08T03:11:46.540973
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.4.5611` / [Commit: 693c7c3b0e8ec6e9dd792c01e5fa1091260b3be1](https://github.com/Prowlarr/Prowlarr/commit/693c7c3b0e8ec6e9dd792c01e5fa1091260b3be1)
-  - [Prowlarr Indexers Commit: f15249b5ac403cbc1f5eccc242a017c04325dcc0](https://github.com/Prowlarr/Indexers/commit/f15249b5ac403cbc1f5eccc242a017c04325dcc0)
+  - [Prowlarr Indexers Commit: 06b9886d209b947b7a4425269c1e67fbde626f28](https://github.com/Prowlarr/Indexers/commit/06b9886d209b947b7a4425269c1e67fbde626f28)
 
 ---
 
@@ -588,7 +588,7 @@ dateCreated: 2026-09-07T03:02:17.512889
 |[TorrentClaw](https://torrentclaw.com/){#torrentclaw}|TorrentClaw is a Private aggregate indexer of 10+ Public Torrent Trackers, with additional 'TrueSpec' metadata and quality score|English (United States)|
 |[TorrentDay](https://tday.love/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentDD](https://www.torrentdd.com/){#torrentdd}|TorrentDD (TodayBit) is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
-|[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
+|[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / MUSIC|Spanish (Spain)|
 |[TorrentHaven (API)](https://torrenthaven.org/){#torrenthaven-api}|TorrentHaven is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentHR (API)](https://www.torrenthr.org/){#torrenthr-api}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
