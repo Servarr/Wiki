@@ -2,7 +2,7 @@
 title: Lidarr Importing an Existing Library
 description: End-to-end guide for migrating an existing music library into Lidarr — preparation, pre-import checks, the import process itself, and post-import cleanup
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-09-09T13:04:49.592Z
 tags: lidarr, library, musicbrainz, importing, migration, tagging
 editor: markdown
 dateCreated: 2026-04-18T16:54:14.510Z
@@ -88,8 +88,8 @@ With files prepared and the pre-import checks done, add the library folder as a 
 2. Fill in the add-root-folder dialog:
    - **Name** — a friendly label for this root folder.
    - **Path** — the filesystem path to the library you prepared. The Lidarr user must have read and write access.
-   - **Monitor*** — the default monitoring option applied to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards.
-   - **Monitor New Items*** — controls whether future releases added to MusicBrainz for an imported artist are automatically monitored (All, None, New).
+   - **Monitor*** — the default monitoring option applied once to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards. See [Library → Monitor](/lidarr/library#monitor) for what each option does.
+   - **Monitor New Items*** — the ongoing rule for albums Lidarr discovers later for an imported artist (All, None, New). **New** monitors a newly discovered album only if its release date is on or after the most recent album already on file, not whether MusicBrainz just added it. See [Library → Monitor New Items](/lidarr/library#monitor-new-items).
    - **Quality Profile*** — the default quality profile assigned to each imported artist. Used later to decide which `Releases` are cutoff-met and what Lidarr will search for.
    - **Metadata Profile*** — the default metadata profile. Controls which `Release` types (studio albums, EPs, singles, etc.) are visible on each imported artist.
    - **Tags** — optional tags applied to every artist created by this import, useful for later filtering or automation rules.
