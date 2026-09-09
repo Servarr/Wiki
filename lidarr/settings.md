@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-07-27T22:18:04.365Z
+date: 2026-09-09T12:22:32.844Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -129,6 +129,7 @@ Click **Add (+)** to add a root folder. The path must exist and Lidarr must have
 > Don't point a root folder at a cloud storage mount (Dropbox, OneDrive, Google Drive). Lidarr writes audio tags and metadata frequently; cloud storage APIs have rate limits that will cause failures.
 {.is-warning}
 
+
 ## Metadata Profiles
 
 {#metadata-profiles}
@@ -157,6 +158,7 @@ You can include or exclude secondary types (Compilation, Soundtrack, Spokenword,
 > MusicBrainz determines release types. If a release you expect to see is missing, check its entry on MusicBrainz: the type may be `Unknown`, which Lidarr can't filter on, or the primary type may be one you have unchecked in your profile.
 {.is-info}
 
+
 ## Release Profiles
 
 {#release-profiles}
@@ -176,6 +178,7 @@ Release profiles filter and score releases based on their titles. Use them to re
 
 > Release profiles apply at **grab/download time**: they filter and score releases from indexers before Lidarr sends anything to a download client. They have no effect on which MusicBrainz release (pressing, edition, format) Lidarr matches your already-downloaded files to during import. See [FAQ → Can Lidarr prefer a specific pressing or format during import?](/lidarr/faq#can-lidarr-prefer-a-specific-pressing-or-format-during-import) for the import side of this.
 {.is-info}
+
 
 ## Custom Formats
 
@@ -199,7 +202,7 @@ Common specification types for music:
 | **Release Title** | The full release title string from the indexer. Supports regex. |
 | **Release Group** | The release group part of the title, if parseable. |
 | **Indexer Flag** | Indexer-specific flags (Freeleech, Halfleech, etc.) where the indexer supports them. |
-| **Size** | The reported release size. Matches when the size falls between the configured **Minimum Size** and **Maximum Size** (in GB). |
+| **Source** | Audio source tag (CD, WEB, Vinyl, etc.) if present in the title. |
 
 For worked examples and suggested scoring values for a FLAC-focused library, see [Tips and Tricks → Custom Formats](/lidarr/tips-and-tricks#custom-formats).
 
@@ -210,6 +213,7 @@ Two ways to test how Lidarr will parse a release name before committing to a pro
 **In Lidarr:** Use the **Test Parsing** button on the Settings → Custom Formats page. Enter a release title and Lidarr shows the parsed fields (source, quality, release group, etc.) alongside which custom formats match and their combined score. This is the fastest way to confirm a specification fires as expected.
 
 **Via the Servarr Discord bot:** In the `#bot-spam` channel, run `/parser lidarr <release title>` (for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`). The bot replies with the same parsed breakdown. Useful for quick spot-checks without opening the UI.
+
 
 # Quality
 
@@ -228,6 +232,7 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 
 > FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 {.is-info}
+
 
 # Indexers
 
@@ -264,6 +269,7 @@ Global settings that apply across all indexers, found under **Settings → Index
 | **Maximum Size** | Maximum release size in MB. Lidarr rejects releases larger than this. Set to `0` for unlimited. |
 | **Retention** | Usenet only. Set to `0` for unlimited retention. |
 | **(Advanced) RSS Sync Interval** | Interval in minutes between automatic RSS syncs. Set to `0` to disable all automatic release grabbing. This applies to every indexer; follow the usage rules each indexer sets for itself. See [FAQ → How does Lidarr work?](/lidarr/faq#how-does-lidarr-work) for how RSS sync fits into Lidarr's overall search cycle. |
+
 
 # Download Clients
 
@@ -350,8 +356,7 @@ Lidarr can set seed ratio and time goals via the torrent client's API when you a
 | Setting | Description |
 |---|---|
 | **Enable** (Advanced, global) | Automatically import completed downloads from the download client. Disabling this means Lidarr will never import anything, so leave it enabled unless you have a specific reason to disable it. |
-| **Remove Completed** (per-client) | After import, ask the download client to remove the completed item from its history. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
-| **Remove Failed** (per-client) | Remove failed downloads from the download client's history. |
+| **Remove** (per-client) | After import, ask the download client to remove the completed item. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
 
 ### Failed Download Handling
 
@@ -359,8 +364,7 @@ Failed download handling is available for SABnzbd and NZBGet only. It isn't supp
 
 | Setting | Description |
 |---|---|
-| **Redownload Failed** | When a download fails, automatically search for a replacement. |
-| **(Advanced) Redownload Failed from Interactive Search** | Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search. |
+| **Redownload** | When a download fails, automatically search for a replacement. |
 | **(Advanced) Remove** | Remove the failed download from the client when Lidarr detects the failure. |
 
 When Lidarr detects a failure, it logs it, optionally removes the failed item, searches for a replacement, and blocklists the failed release so it isn't grabbed again automatically.
@@ -373,6 +377,7 @@ A mapping translates a remote path (as reported by the download client) to a loc
 
 > If both Lidarr and the download client are in Docker containers on the same host with matching volume mounts, a remote path mapping isn't needed. See [TRaSH's Remote Path Mapping guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for diagnosis and setup.
 {.is-info}
+
 
 # Connect
 
@@ -390,8 +395,6 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 | **Name** | Label for this connection. |
 | **On Grab** | Trigger when Lidarr sends a release to a download client. |
 | **On Release Import** | Trigger when a downloaded release is successfully imported. |
-| **On Download Failure** | Trigger when a download fails. |
-| **On Import Failure** | Trigger when an import fails. |
 | **On Upgrade** | Trigger when Lidarr upgrades a file to better quality. |
 | **On Rename** | Trigger when Lidarr renames files. |
 | **On Artist Added** | Trigger when you add an artist to Lidarr. |
@@ -405,6 +408,7 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 
 For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scripts) page for the full list of environment variables available per event.
 
+
 # Metadata
 
 {#metadata}
@@ -415,16 +419,20 @@ For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scrip
 
 | Setting | Description |
 |---|---|
-| **Tag Audio Files with Metadata** | **All files, keep in sync with MusicBrainz**: writes tags on import and rewrites them whenever the MusicBrainz data changes. **All files, initial import only**: writes tags once, on import. **For new downloads only**: only files imported from now on get tags; files already in the library are left alone. **Never**: Lidarr never writes audio tags. |
+| **Tag Audio Files with Metadata** | **All files, keep in sync with MusicBrainz**: writes tags on import and rewrites them whenever the MusicBrainz data changes. **All files, initial import only**: writes tags once, on import. **For new downloads only**: tags are written when a file comes in through a download client import or the Manual Import screen; files picked up by Lidarr's library scan are left alone. **Never**: Lidarr never writes audio tags. |
 | **Embed Cover Art in Audio Files** | Embeds Lidarr's album art into the audio file itself when writing tags. Only shown when tag writing is enabled. |
 | **Scrub Existing Tags** | Removes existing tags from a file before writing, leaving only the tags Lidarr itself adds. |
 
 > Choosing **All files, keep in sync with MusicBrainz** or **All files, initial import only** alters existing files the first time they're imported or re-synced, not just new downloads.
 {.is-warning}
 
+> **For new downloads only** is keyed to how a file enters the library, not whether it is actually new. Pointing Lidarr at an existing collection and letting the library scan match it leaves those files untagged. Bringing the same collection in through Manual Import does not: Manual Import always counts as a new download, so those files get tagged even though nothing was downloaded.
+{.is-warning}
+
 ## Metadata Consumers
 
 Below **Write Metadata to Audio Files**, the Metadata page lists external metadata formats Lidarr can write to disk alongside your music: NFO files for media-center software (Kodi/XBMC), and image sidecar formats for Roksbox and WD TV. Enable a consumer and choose which of Artist Metadata, Album Metadata, Artist Images, and Album Images it writes. See [Supported → Metadata](/lidarr/supported) for what each consumer generates and which media players read it.
+
 
 # Tags
 
@@ -439,56 +447,6 @@ Tags are particularly useful for:
 - Restricting a release profile to certain artists.
 - Tracking which import list added an artist.
 
-# General
-
-{#general}
-
-General settings live under **Settings → General**.
-
-## Host
-
-{#host}
-
-- Bind Address - Valid IPv4 address or `*` for all interfaces.
-  - `0.0.0.0` or `*` - any address can connect.
-  - `127.0.0.1` or `localhost` - only localhost applications can connect.
-  - Any other IP (for example `1.2.3.4`) - only that IP can connect.
-- Port Number - The port used to access the Lidarr web UI.
-- URL Base - For reverse proxy support; default is empty.
-- Allowed Hosts - Which hostnames (including FQDN, Fully Qualified Domain Names) or IP Addresses Lidarr will accept as a valid host. This setting is required if Authentication Required is not set to `Enabled`. This is the host portion of the address you enter in your address bar of your browser to access Lidarr.
-  - IP Address: `192.168.50.1`
-  - Hostname: `lidarr`
-  - FQDN: `lidarr.example.com`
-  - Wildcard subdomain: `*.example.com` - For example `lidarr.example.com` or any other subdomain would be accepted.
-  - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `lidarr.internal` when you name your containers with a `.internal` suffix.
-  - A blank value is accepted only when Authentication Required is `Enabled`; otherwise at least one host is required and a blank value is rejected on save.
-- Enable SSL - If you have SSL credentials and would like to secure communication to and from Lidarr, enable this option.
-
-## Security
-
-{#security}
-
-- Authentication - How would you like to authenticate to access your Lidarr instance
-  - None - You have no authentication to access your Lidarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Lidarr or your Lidarr is not exposed to the web
-  - Basic (Browser pop-up) - Removed in Lidarr v3.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr
-  - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Lidarr. Not selectable in the UI; set it via `config.xml` or the `LIDARR__AUTH__METHOD` environment variable. Lidarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
-- Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.
-  - Enabled - Always require authentication (recommended)
-  - Disabled for Local Addresses - Skip authentication for requests Lidarr identifies as coming from localhost or the LAN
-
-> With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Lidarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Lidarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Lidarr behind a VPN or Tailscale rather than exposing it directly.
-{.is-warning}
-
-- API Key - This is how other programs would communicate or have Lidarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
-- Certificate Validation - Change how strict HTTPS certification validation is
-  - Enabled - Validate all HTTPS certificates (recommended)
-  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
-  - Disabled - Do not validate any HTTPS certificates
-- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Lidarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
-
-> Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `LIDARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Lidarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
-{.is-info}
 
 # Logging
 
