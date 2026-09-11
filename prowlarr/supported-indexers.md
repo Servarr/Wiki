@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-08T03:11:46.540973
+date: 2026-09-11T03:09:04.293530
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-08T03:11:46.540973
+dateCreated: 2026-09-11T03:09:04.293530
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.4.5611` / [Commit: 693c7c3b0e8ec6e9dd792c01e5fa1091260b3be1](https://github.com/Prowlarr/Prowlarr/commit/693c7c3b0e8ec6e9dd792c01e5fa1091260b3be1)
-  - [Prowlarr Indexers Commit: 06b9886d209b947b7a4425269c1e67fbde626f28](https://github.com/Prowlarr/Indexers/commit/06b9886d209b947b7a4425269c1e67fbde626f28)
+  - [Prowlarr Indexers Commit: fca743cb35583a304db8bd8d7b5bf61ec759ab88](https://github.com/Prowlarr/Indexers/commit/fca743cb35583a304db8bd8d7b5bf61ec759ab88)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-09-08T03:11:46.540973
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://7hhb4q86.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://3125r1xh.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -101,8 +101,8 @@ dateCreated: 2026-09-08T03:11:46.540973
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome261.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip242.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome262.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip243.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -188,6 +188,7 @@ dateCreated: 2026-09-08T03:11:46.540973
 |Indexer|Description|Language|
 |:--|:--|:--|
 |[0day\.kiev](https://tracker.0day.community/){#0daykiev}|0day\.kiev\.ua is a UKRAINIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Ukrainian (Ukraine)|
+|[0DayFiles (API)](https://0dayfiles.net/){#0dayfiles-api}|0DayFiles is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
 |[13City](https://13city.org/){#13city}|13City is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[1ptbar](https://1ptba.com/){#1ptbar}|1ptbar is a CHINESE Private Torrent Tracker for MOVIES / TV / E-LEARNING|Chinese (China)|
 |[3D Torrents](http://www.3dtorrents.org/){#3dtorrents}|3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES|English (United States)|
@@ -230,7 +231,6 @@ dateCreated: 2026-09-08T03:11:46.540973
 |[Best-Core](https://best-core.info/){#bestcore}|Best-Core is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a Private Torrent Tracker for EBOOKS and AUDIOBOOKS|English (United States)|
-|[BigBBS](https://bigbbs.eu/){#bigbbs}|BigBBS is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[BigCore](https://bigcore.eu/){#bigcore}|BigCore is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[Bitded](http://dedbit-new.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
