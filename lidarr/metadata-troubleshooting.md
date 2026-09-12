@@ -2,7 +2,7 @@
 title: Lidarr Metadata Troubleshooting
 description: Why can't I add or update this album? Diagnose MusicBrainz metadata problems in Lidarr — propagation, unknown release statuses, matching, cache-busts
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-09-12T11:35:52.471Z
 tags: lidarr, troubleshooting, releases, metadata, musicbrainz, cache-bust
 editor: markdown
 dateCreated: 2026-04-20T13:04:32.647Z
@@ -159,6 +159,8 @@ All edits go through a review window: allow a few days for the change to become 
 ### MusicBrainz Picard
 
 [Picard](https://picard.musicbrainz.org/) is a tagging application that reads files, identifies releases, and tags against MusicBrainz IDs. For users already tagging a library, Picard is the right tool to keep files in sync with MusicBrainz once the data there is correct. Clean tags also improve matching on import (see [Importing an Existing Library](/lidarr/importing-existing-library#tagging)).
+
+Lidarr can also write these fields itself once a file is in the library. See the [Audio Tags Reference](/lidarr/audio-tags-reference) for the full field list and the [Write Metadata to Audio Files](/lidarr/settings#write-metadata-to-audio-files) setting to enable it.
 
 Picard is a *tagging* tool. For adding or editing releases at MusicBrainz, reach for Harmony or the web editor instead.
 
