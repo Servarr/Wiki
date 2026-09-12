@@ -1,8 +1,8 @@
 ---
 title: Lidarr and beets Integration
-description:
+description: 
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-09-12T11:41:28.746Z
 tags: lidarr, beets
 editor: markdown
 dateCreated: 2026-04-26T15:17:29.688Z
@@ -14,6 +14,63 @@ This page describes how to run [beets](https://beets.io/) alongside Lidarr to wr
 
 > **This is an advanced configuration.** This page doesn't explain how to use beets; it assumes you are already familiar with beets and its configuration. See the [beets documentation](https://beets.readthedocs.io/en/stable/) if you are new to it.
 {.is-warning}
+
+# MusicBrainz fields beets writes that Lidarr doesn't
+
+Both Lidarr and beets pull from MusicBrainz, but beets exposes more of that data as tags. See the [Audio Tags Reference](/lidarr/audio-tags-reference) for the full list of what Lidarr already writes; this section covers only the MusicBrainz fields beets adds on top of that.
+
+## Release and catalog identifiers
+
+| Field | What it stores |
+|---|---|
+| `catalognum` | The release's catalog number |
+| `asin` | Amazon Standard Identification Number |
+| `barcode` | The release's barcode |
+
+## Locale and script
+
+| Field | What it stores |
+|---|---|
+| `script` | The writing system used for the release's titles |
+| `language` | Release language |
+
+## Artist naming
+
+| Field | What it stores |
+|---|---|
+| `artist_credit` | The artist name exactly as credited on this specific release |
+| `albumartist_credit` | The album artist name exactly as credited on this specific release |
+
+Lidarr always writes the canonical MusicBrainz artist name. beets can capture the release-specific credit instead, which matters for artists whose credited name varies by release (translations, "feat." credits, stylized spellings).
+
+## Disambiguation
+
+| Field | What it stores |
+|---|---|
+| `releasegroupdisambig` | Disambiguation string at the release-group (album) level |
+
+Lidarr writes only the release-level disambiguation, into MusicBrainz Album Comment. beets can additionally capture disambiguation at the release-group level, which is a separate MusicBrainz field.
+
+## Multi-disc sets
+
+| Field | What it stores |
+|---|---|
+| `disctitle` | Per-medium title, for box sets where each disc has its own subtitle |
+
+## Classical and work metadata
+
+Core beets fields since beets 1.5.0, not a plugin:
+
+| Field | What it stores |
+|---|---|
+| `work` | The MusicBrainz Work title (the composition, distinct from the recording) |
+| `mb_workid` | The Work's MBID |
+| `work_disambig` | Disambiguation string for the work |
+
+The separate [ParentWork plugin](https://beets.readthedocs.io/en/latest/plugins/parentwork.html) goes further, linking a recording back to a parent work, for example a symphony's third movement back to the symphony itself. Lidarr has no equivalent of any work-level metadata.
+
+> AcoustID fingerprints, ReplayGain values, and lyrics aren't MusicBrainz data. They come from separate beets plugins pulling from other sources, covered by the patterns below.
+{.is-info}
 
 Two patterns follow. They differ in how persistent the beets configuration is and how much ongoing involvement beets has in managing the library.
 
@@ -33,11 +90,11 @@ Platform notes:
 
 Both patterns require that Lidarr doesn't overwrite tags after beets has written them. Set this before configuring either pattern:
 
-**Settings → Metadata → Write Metadata to Audio Files → Tag Audio Files with Metadata: Never**
+**Settings → Metadata → Write Audio Tags → Write Tags: Never**
 
 With this set, Lidarr won't write or rewrite audio file tags at any point. Beets becomes the sole tag writer. Lidarr continues to manage file names and folder structure via its naming templates. Lidarr delegates only tag content to beets.
 
-> If you had **Tag Audio Files with Metadata** set to anything other than **Never** (the other options are *For new downloads only*, *All files; initial import only*, and *All files; keep in sync with MusicBrainz*), consider running a beets pass over your existing library after changing this setting, since Lidarr tagged those files and they may have gaps that beets can fill.
+> If you had **Write Tags** set to anything other than **Never**, consider running a beets pass over your existing library after changing this setting, since Lidarr tagged those files and they may have gaps that beets can fill.
 {.is-info}
 
 # Pattern 1: Import script (stateless, per-import)
@@ -138,7 +195,7 @@ foreach ($dir in $albumDirs) {
 | **Benefit** | beets runs once at import time with any plugins you want, writing a full tag set that Lidarr wouldn't produce on its own. |
 | **Benefit** | No persistent beets database to maintain or back up. |
 | **Drawback** | Tags written at import time are never updated. If MusicBrainz data improves, or a plugin source updates its data (for example, updated ReplayGain values), the library files won't reflect it until you re-import or run beets manually. |
-| **Drawback** | Lidarr's **Tag Audio Files with Metadata: Never** setting means files you imported before configuring beets won't have their tags updated automatically. Run a manual beets pass to backfill those. |
+| **Drawback** | Lidarr's **Write Tags: Never** setting means files you imported before configuring beets won't have their tags updated automatically. Run a manual beets pass to backfill those. |
 
 # Pattern 2: Side-by-side persistent beets
 
@@ -184,7 +241,7 @@ Two scenarios where the tools can conflict:
 
 **Lidarr renames files after beets has tagged them.** When Lidarr renames a file (for example, because you change a naming template), the file path changes but the tags beets wrote remain. beets' persistent database will have the old path and will treat the file as missing. Resolution: after a Lidarr rename, run `beet update` to resync the beets database to the new paths, then a `beet import` pass if you want to re-enrich the renamed files.
 
-**Metadata refresh.** Lidarr periodically refreshes artist metadata from MusicBrainz and can overwrite file tags if **Tag Audio Files with Metadata** isn't set to Never. With **Tag Audio Files with Metadata: Never** set as described above, this doesn't occur.
+**Metadata refresh.** Lidarr periodically refreshes artist metadata from MusicBrainz and can overwrite file tags if Write Tags isn't set to Never. With **Write Tags: Never** set as described above, this doesn't occur.
 
 ## Trade-offs
 
@@ -199,6 +256,6 @@ Two scenarios where the tools can conflict:
 # See also
 
 - [Custom Scripts](/lidarr/custom-scripts): environment variables available to scripts and how to register them
-- [Settings](/lidarr/settings): the **Tag Audio Files with Metadata** option lives under Settings → Metadata
+- [Settings: Metadata](/lidarr/settings#metadata): Write Tags setting and metadata consumer options
 - [beets documentation](https://beets.readthedocs.io/en/stable/)
 - [beets installation guide](https://beets.readthedocs.io/en/stable/guides/installation.html)
