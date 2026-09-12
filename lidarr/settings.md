@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-09-09T12:22:32.844Z
+date: 2026-09-12T11:35:15.591Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -428,6 +428,8 @@ For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scrip
 
 > **For new downloads only** is keyed to how a file enters the library, not whether it is actually new. Pointing Lidarr at an existing collection and letting the library scan match it leaves those files untagged. Bringing the same collection in through Manual Import does not: Manual Import always counts as a new download, so those files get tagged even though nothing was downloaded.
 {.is-warning}
+
+See [Audio Tags Reference](/lidarr/audio-tags-reference) for the complete list of fields Lidarr writes and where each one is stored per file format.
 
 ## Metadata Consumers
 
