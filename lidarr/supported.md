@@ -2,7 +2,7 @@
 title: Lidarr Supported
 description: List of supported music indexers, trackers, and download clients compatible with Lidarr
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-09-12T12:05:38.329Z
 tags: lidarr, indexers, music, supported, download-clients, compatibility, trackers
 editor: markdown
 dateCreated: 2021-06-23T07:55:13.803Z
@@ -66,7 +66,7 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
   - Watches a folder for `.nzb` files. Use this if your Usenet client doesn't have a direct API integration.
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - uTorrent {#utorrent}
-  - Avoid uTorrent. It's adware and has a history of including spyware. Most users choose qBittorrent.
+  - Long-standing BitTorrent client. Past versions bundled adware in the installer, which led many users toward alternatives such as qBittorrent.
   - [Refer to the Settings Page](/lidarr/settings#download-clients)
 - Vuze {#vuze}
   - Java-based BitTorrent client with an advanced feature set including swarm merging and built-in search.
@@ -88,7 +88,7 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
   - Private torrent tracker with a broad content library.
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Gazelle API {#gazelle}
-  - Used by Gazelle-based private trackers such as Redacted (formerly What.CD).
+  - Generic indexer for Gazelle-based private trackers. If your tracker has its own dedicated entry on this page, for example Redacted, use that entry instead; use Gazelle API only for Gazelle-based trackers without a specific Lidarr indexer type.
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Headphones VIP {#headphones}
   - Legacy music indexer aggregator from the Headphones era.
@@ -177,7 +177,7 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 
 {#importlist}
 
-- Custom List {#customlist}
+- Custom List {#customimport}
   - Import artists from a manually maintained list.
 - Headphones {#headphonesimport}
   - Import artists from a [Headphones](https://github.com/rembo10/headphones) instance.
@@ -202,9 +202,14 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 
 {#metadata}
 
+Each consumer below is configured separately under **Settings → Metadata**. Enabling a consumer expands its own settings block with **Artist Metadata**, **Album Metadata**, **Artist Images**, and **Album Images** toggles, distinct from the **Write Metadata to Audio Files** panel used for tagging audio files themselves.
+
 - Kodi (XBMC) / Emby {#xbmcmetadata}
-  - Generates `.nfo` sidecar files for artist and album folders, compatible with Kodi and Emby/Jellyfin.
+  - Writes `artist.nfo` and `album.nfo` sidecar files. Also writes images: for artists, the poster as `folder.jpg` alongside banner, fanart, and logo/clearlogo files; for albums, the cover as `folder.jpg` and disc art as `discart.jpg`. Compatible with Kodi and Emby/Jellyfin.
+  - [Refer to the Settings Page](/lidarr/settings#metadata)
 - Roksbox {#roksboxmetadata}
-  - Generates metadata files compatible with Roksbox media players.
+  - Writes `.xml` track metadata files. For artist images, writes a single image, the poster if one exists, otherwise the first available image, named after the artist folder itself. Doesn't write album images.
+  - [Refer to the Settings Page](/lidarr/settings#metadata)
 - WDTV {#wdtvmetadata}
-  - Generates metadata files compatible with WD TV media players.
+  - Writes `.xml` track metadata files only. The Artist Images and Album Images toggles appear in its settings but don't do anything; this consumer never writes image files.
+  - [Refer to the Settings Page](/lidarr/settings#metadata)
