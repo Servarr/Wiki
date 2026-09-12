@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
-date: 2026-09-12T12:14:44.057Z
+date: 2026-09-12T12:21:21.400Z
 tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -38,6 +38,9 @@ Enable **Debug** or **Trace** logging in **Settings → General → Logging** to
 Lidarr passes data to your script through environment variables. The variables available depend on the event type, indicated by `lidarr_eventtype`.
 
 > **Variable names are lowercase.** The Lidarr source code defines these variables in Title_Case (for example, `Lidarr_EventType`), but Lidarr builds the environment variable list with .NET's `StringDictionary`, which lowercases every key before passing it to your script. The actual names your script receives are all lowercase, as shown in the tables below. Environment variable names are case-sensitive on Linux and macOS, so scripts on those platforms must use the lowercase form. Windows treats environment variable names as case-insensitive, but using the lowercase form keeps scripts portable across platforms.
+{.is-warning}
+
+> **On Download Failure and On Import Failure never fire for Custom Script.** Both checkboxes appear in **Settings → Connect** for every notification type, including Custom Script, but they're permanently disabled there. Custom Script is one of the few notification types that doesn't implement these two events at all, unlike Discord, Slack, Webhook, and most others. If you need a script to run on a failed download or a failed import, there's no event hook for it today; route those through a notification type that does support it (for example, a Webhook or Discord connection) instead.
 {.is-warning}
 
 ### Common variables (all events)
