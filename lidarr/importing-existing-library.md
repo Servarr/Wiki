@@ -2,7 +2,7 @@
 title: Lidarr Importing an Existing Library
 description: End-to-end guide for migrating an existing music library into Lidarr — preparation, pre-import checks, the import process itself, and post-import cleanup
 published: true
-date: 2026-09-09T13:04:49.592Z
+date: 2026-09-12T11:36:24.476Z
 tags: lidarr, library, musicbrainz, importing, migration, tagging
 editor: markdown
 dateCreated: 2026-04-18T16:54:14.510Z
@@ -67,6 +67,8 @@ Most of these tools will rename folders and restructure files at the same time a
 
 > Detailed use of Picard, Beets, and similar tools is beyond the scope of this wiki. See those projects' own documentation.
 {.is-info}
+
+Once files are imported, Lidarr can take over rewriting these same fields going forward. See the [Audio Tags Reference](/lidarr/audio-tags-reference) for the fields it writes and [Write Metadata to Audio Files](/lidarr/settings#write-metadata-to-audio-files) to turn it on.
 
 ## Pre-import considerations
 
