@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
-date: 2026-09-12T12:21:21.400Z
+date: 2026-09-12T12:22:11.076Z
 tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
