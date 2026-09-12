@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
-date: 2026-08-04T12:48:03.595Z
+date: 2026-09-12T12:14:44.057Z
 tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -390,6 +390,26 @@ curl -s -X POST "$WEBHOOK_URL" \
     -d "{\"content\": \"$MESSAGE\"}"
 ```
 
+### Trigger beets tag enrichment on Track Retag (shell)
+
+Runs [beets](https://beets.io/) against a file's directory every time Lidarr rewrites its tags, whether from import, a manual retag, or the periodic **All files, keep in sync with MusicBrainz** check. This layers beets' extra MusicBrainz fields on top of whatever Lidarr just wrote, without a separate scheduler. See [Beets Integration: Pattern 3](/lidarr/beets-integration#pattern-3-trigger-beets-from-lidarrs-own-sync-schedule) for the full setup, required beets configuration, and trade-offs.
+
+```shell
+#!/bin/sh
+set -euo pipefail
+
+if [ "$lidarr_eventtype" = "Test" ]; then exit 0; fi
+if [ "$lidarr_eventtype" != "TrackRetag" ]; then exit 0; fi
+
+BEETS_CONFIG="/opt/scripts/beets-import-script.yaml"
+
+DIR=$(dirname "$lidarr_trackfile_path")
+beet --config="$BEETS_CONFIG" import --quiet "$DIR"
+```
+
+> This registers on **On Track Retag** only, which requires **Write Tags** to stay enabled in Settings → Metadata. That's the opposite of [Beets Integration](/lidarr/beets-integration)'s import-script pattern, which assumes Lidarr's own tag writing is disabled.
+{.is-warning}
+
 ## External resources
 
 - [Lidarr/Lidarr: CustomScript.cs](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs): the authoritative source for all environment variables, event types, and their values
@@ -397,4 +417,4 @@ curl -s -X POST "$WEBHOOK_URL" \
 ## See also
 
 - [Settings: Connect](/lidarr/settings#connections): where you register scripts in the Lidarr UI
-- [Beets Integration](/lidarr/beets-integration): using a custom script to invoke beets for tag enrichment after import
+- [Beets Integration](/lidarr/beets-integration): using a custom script to invoke beets for tag enrichment, on import or on Lidarr's own retag schedule
