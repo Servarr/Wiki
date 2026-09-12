@@ -2,7 +2,7 @@
 title: Lidarr Audio Tags Reference
 description: Complete list of the metadata fields Lidarr writes into audio files on import, where each one is stored per file format, and the rules that govern when writing happens
 published: true
-date: 2026-09-12T11:26:03.301Z
+date: 2026-09-12T11:42:03.216Z
 tags: lidarr, reference, metadata, musicbrainz, tagging
 editor: markdown
 dateCreated: 2026-09-12T11:26:03.301Z
@@ -93,6 +93,7 @@ Lidarr also handles APEv2 (Monkey's Audio, WavPack), ASF (WMA), and MP4/M4A cont
 
 # See also
 
+- [Lidarr and beets Integration](/lidarr/beets-integration#musicbrainz-fields-beets-writes-that-lidarr-doesnt): MusicBrainz fields beets can write that aren't in this list, for users who want richer tags than Lidarr provides
 - [Settings: Write Metadata to Audio Files](/lidarr/settings#write-metadata-to-audio-files): the setting that controls if and when these fields get written
 - [Importing an Existing Library: Tagging](/lidarr/importing-existing-library#tagging): how existing tags affect import matching, the reverse direction of what this page covers
 - [Metadata Troubleshooting](/lidarr/metadata-troubleshooting): diagnosing MusicBrainz data problems that show up in these fields
