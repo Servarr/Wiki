@@ -2,7 +2,7 @@
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes for Lidarr music organization including custom formats and multi-disc album handling
 published: true
-date: 2026-07-14T19:32:53.924Z
+date: 2026-09-13T12:53:48.092Z
 tags: lidarr, naming, configuration
 editor: markdown
 dateCreated: 2024-03-30T13:23:53.095Z
@@ -116,6 +116,9 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Release Group}` | Ripping or encoding group tag from the file. |
 | `{Custom Formats}` | Every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, joined by spaces. |
 | `{Custom Format:Name}` | A single named Custom Format. `Name` is a placeholder for the exact Custom Format name, for example `{Custom Format:FLAC}`. Produces no output unless a format with that name matched and has "Include Custom Format when Renaming" enabled. |
+
+> **A Custom Format that matched at grab time can stop matching at rename time.** Renaming re-evaluates Custom Format conditions against the track file's stored scene name (falling back to its current filename if there's no scene name), not the original release title Lidarr grabbed. If a format's conditions only matched something present in the release title but absent from the scene name or filename, `{Custom Formats}` and `{Custom Format:Name}` can render empty on a file that matched the same format when it was grabbed. This is a known limitation, not a bug in your naming template.
+{.is-warning}
 
 # Community naming conventions
 
