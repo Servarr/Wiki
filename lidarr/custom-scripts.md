@@ -2,7 +2,7 @@
 title: Lidarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Lidarr
 published: true
-date: 2026-09-12T12:22:11.076Z
+date: 2026-09-13T12:55:07.858Z
 tags: lidarr, scripts, automation, custom, integration, hooks, api
 editor: markdown
 dateCreated: 2021-11-24T19:22:09.331Z
@@ -110,6 +110,9 @@ Fired after Lidarr has successfully imported a downloaded album into the library
 | `lidarr_addedtrackpaths` | Pipe-separated list of imported track file paths |
 | `lidarr_deletedpaths` | Pipe-separated list of file paths deleted/replaced during upgrade |
 | `lidarr_deleteddateadded` | Pipe-separated list of date-added values for deleted files |
+
+> **Manual Import only fires this event when "Replace Existing Files" is checked.** The dialog's Replace Existing Files toggle is passed straight through as the flag that gates this event, so a Manual Import with that box unchecked (the common case for a first-time import with nothing to replace) completes successfully but never fires On Release Import or On Upgrade. If a script needs to react to every import including plain Manual Imports, use [On Track Retag](#track-retag) instead, provided **Write Tags** is enabled, since it fires for any tag write regardless of how the file arrived.
+{.is-warning}
 
 ### Rename
 
