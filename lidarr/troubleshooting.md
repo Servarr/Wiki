@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Lidarr installation, configuration, and operational problems
 published: true
-date: 2026-05-29T12:34:28.538Z
+date: 2026-09-13T12:53:15.106Z
 tags: lidarr, troubleshooting, support, issues, debugging, errors
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -482,6 +482,32 @@ You can still add the album to Lidarr and it will appear in your library, but no
 
 > If you can't edit MusicBrainz (for example, the release has a pending vote), the only workaround is **Manual Import**: download the files through other means and use Lidarr’s manual import flow to match and move them.
 {.is-info}
+
+### Release Rejected: Release year does not match album year
+
+Lidarr checks the release year parsed from a release's title/filename against the album's actual release year before grabbing it. Reject a release outright and you'll see:
+
+```none
+Release Rejected
+* Release year 2009 does not match album year 2001 8
+```
+
+The trailing number isn't a typo, it's the year difference (8 years, in this example) with no label attached. The rule itself:
+
+- **0-1 years off:** treated as an exact match, no penalty.
+- **2-3 years off:** accepted, small scoring penalty.
+- **4-5 years off:** accepted, larger scoring penalty (lower-confidence match).
+- **More than 5 years off:** rejected outright with the message above.
+
+Lidarr also checks other monitored releases under the same album (reissues, remasters) before rejecting. If one of those has a release date close enough to the parsed year, Lidarr uses that instead of the primary release's year, so a mismatch against the primary release date doesn't automatically fail the release.
+
+These thresholds aren't configurable. If a release is legitimately correct but the album's release date is wrong or missing on MusicBrainz, fix the date there ([Metadata Troubleshooting → Updating MusicBrainz](/lidarr/metadata-troubleshooting#updating-musicbrainz)) and let it propagate, or use **Manual Import** to bypass this check entirely, manual import doesn't run the automatic-grab specification pipeline at all.
+
+### Release silently rejected as "Unknown Artist"
+
+Some rejection reasons only appear in Debug or Trace-level logs, never in the visible **Release Rejected** panel or at Info level. "Unknown Artist" is one of them: if Lidarr can't match the release's parsed artist name against anything in your library or on MusicBrainz, the release is rejected before it reaches the specifications that populate the visible rejection list, so no on-screen reason ever shows for it. Turn logging up to Debug or Trace (see [Turn logging up to trace](#turn-logging-up-to-trace)) to see it as a log line: `Release rejected for the following reasons: [Permanent] Unknown Artist`.
+
+One confirmed cause: some indexers serve release titles with double-HTML-encoded punctuation, for example a literal `&amp;rsquo;` instead of an apostrophe. Lidarr's feed parser only unwraps one layer of HTML-entity encoding before matching, so a double-encoded title (`&amp;rsquo;`, `&amp;amp;`, `&amp;ndash;`) still has a literal entity string sitting where an apostrophe, ampersand, or dash should be, and matching fails silently as a result. There's no in-app fix; if you suspect this, check the raw indexer feed for double-encoded entities and report it to the indexer, or use **Manual Import** to bypass matching for that one release.
 
 ### Certificate validation
 
