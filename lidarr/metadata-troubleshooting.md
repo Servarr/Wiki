@@ -2,7 +2,7 @@
 title: Lidarr Metadata Troubleshooting
 description: Why can't I add or update this album? Diagnose MusicBrainz metadata problems in Lidarr — propagation, unknown release statuses, matching, cache-busts
 published: true
-date: 2026-09-12T11:35:52.471Z
+date: 2026-09-13T13:15:40.800Z
 tags: lidarr, troubleshooting, releases, metadata, musicbrainz, cache-bust
 editor: markdown
 dateCreated: 2026-04-20T13:04:32.647Z
@@ -91,6 +91,19 @@ Two fixes:
 - **Upstream / full fix.** Merge the release groups on MusicBrainz so there's only one album entity. The edit goes through the usual MusicBrainz review window — expect days. Once approved and propagated, Lidarr collapses the duplicate back into a single album on the next refresh.
 
 If you notice this pattern for a specific artist, spot-check their MusicBrainz discography for other duplicated release groups while you're already there. Merging them in one pass is cheaper than catching each duplicate one at a time.
+
+## An artist or album vanishes with "not found in metadata and is being deleted"
+
+This warning means exactly what it says, and it isn't limited to the database entry. When a scheduled or manual refresh asks the metadata server for an artist or album and gets nothing back, Lidarr deletes that entity from its library, including the track files on disk. Files go to the [Recycle Bin](/lidarr/settings#recycling-bin) if you have one configured; otherwise they're deleted permanently.
+
+The trigger is upstream, not a Lidarr bug: the artist or release group is no longer resolvable at the metadata server, most commonly because it was merged, split, or deleted on MusicBrainz itself. It can also fire on a transient metadata-server hiccup, which is why keeping the Recycle Bin enabled matters here specifically, it's the only safety net if a temporary lookup failure triggers this on something you didn't actually want removed.
+
+**If this fires unexpectedly:**
+
+1. Check the Recycle Bin first, files may still be recoverable there.
+2. Check the artist or release group on MusicBrainz directly to see whether it still exists, was merged into something else, or was deleted.
+3. If it still exists on MusicBrainz, this was likely a transient metadata-server issue. Re-add the artist or album and let Lidarr re-import the recovered files.
+4. If it was merged into a different MusicBrainz entity, add that entity to Lidarr instead.
 
 ## Refresh cadence
 
