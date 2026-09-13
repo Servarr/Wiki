@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-09-12T11:35:15.591Z
+date: 2026-09-13T12:54:36.986Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -100,7 +100,7 @@ Matching files are then filtered against the configured extension list. Files th
 | **Unmonitor Deleted Tracks** | Off | When something outside Lidarr deletes a track file from disk, automatically unmonitor that track. |
 | **Download Propers and Repacks** | Prefer and Upgrade | How to handle proper/repack releases. **Prefer and Upgrade** grabs and upgrades to propers when found. **Don't Upgrade Automatically** includes them in scores but won't autograb. **Don't Prefer** treats them as equal to the original release. |
 | **Analyse Audio Files** | On | Read audio file metadata (bitrate, sample rate, bit depth) to improve quality detection. Disabling this makes quality detection rely solely on filename parsing. |
-| **Rescan Artist Folder after Refresh** | Always | When to rescan an artist folder after a metadata refresh. **Always** rescans every time. **After Manual Refresh** only rescans when triggered manually. **Never** disables rescanning. |
+| **Rescan Artist Folder after Refresh** | Always | When to rescan after a metadata refresh. Despite the name, this doesn't scope the rescan to just that artist: refreshing an existing artist rescans every configured root folder, not only the refreshed artist's own folder (a newly-added artist is the one exception, whose first scan is scoped to its own folder). **Always** rescans every time. **After Manual Refresh** only rescans when triggered manually. **Never** disables rescanning. |
 | **Watch Library for File Changes** | On | Monitor the library folder for external file changes (additions, deletions, renames). Disabling this means Lidarr only discovers changes during scheduled rescans. |
 
 ## Permissions
@@ -428,6 +428,9 @@ For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scrip
 
 > **For new downloads only** is keyed to how a file enters the library, not whether it is actually new. Pointing Lidarr at an existing collection and letting the library scan match it leaves those files untagged. Bringing the same collection in through Manual Import does not: Manual Import always counts as a new download, so those files get tagged even though nothing was downloaded.
 {.is-warning}
+
+> **Writing tags has no hardlink protection.** Renaming a file that a torrent client is still seeding is safe with hardlinks (see the warning under [Track Naming](#track-naming) above), because renaming just relinks a path. Writing tags is different: it rewrites the file's actual content in place, which changes the data at every hardlink to that file, including the copy your torrent client is still seeding. If **Tag Audio Files with Metadata** is enabled and a download is still seeding, retagging it can corrupt the seeding copy the same way editing it directly would.
+{.is-danger}
 
 See [Audio Tags Reference](/lidarr/audio-tags-reference) for the complete list of fields Lidarr writes and where each one is stored per file format.
 
