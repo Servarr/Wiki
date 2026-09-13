@@ -2,7 +2,7 @@
 title: Lidarr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Lidarr installation, configuration, and operational problems
 published: true
-date: 2026-09-13T12:53:15.106Z
+date: 2026-09-13T13:16:20.603Z
 tags: lidarr, troubleshooting, support, issues, debugging, errors
 editor: markdown
 dateCreated: 2021-06-14T21:36:46.193Z
@@ -330,6 +330,12 @@ Lidarr only looks at the 60 most recent downloads in SABnzbd and NZBGet. If you 
 The download client shouldn’t be responsible for removing downloads. Configure usenet clients so they *don’t* remove downloads from history. Set up torrent clients so they *don’t* remove torrents when they’re finished seeding (pause or stop instead). Lidarr communicates with the download client to know what to import. If items are *removed*, Lidarr has nothing to import, even if a folder full of files exists.
 
 For SABnzbd, use the History Retention setting.
+
+### Removing a queue item fails with a 500 error
+
+If a queued download couldn't be matched to an artist at all (for example, a release parsed as "Unknown Artist" or one where multiple artists matched ambiguously), clicking the plain **Remove** button on that queue item throws an internal server error instead of removing it.
+
+**Workaround:** use **Remove and Blocklist** instead of plain Remove for these items. It takes a different code path that doesn't hit this crash, and removes the item just as effectively; blocklisting only prevents Lidarr from grabbing that exact same release again, which is rarely a downside for something you're removing anyway.
 
 ### Download doesn't match a library item
 
