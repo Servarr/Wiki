@@ -2,7 +2,7 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 published: true
-date: 2026-09-13T12:54:36.986Z
+date: 2026-09-13T13:08:53.732Z
 tags: lidarr, settings, configuration, quality, profiles, metadata, media
 editor: markdown
 dateCreated: 2021-06-14T21:36:07.513Z
@@ -453,11 +453,57 @@ Tags are particularly useful for:
 - Tracking which import list added an artist.
 
 
-# Logging
+# Host
 
-{#logging}
+{#host}
 
-Logging options live under **Settings → General → Logging**.
+Host settings live under **Settings → General → Host** and control how the Lidarr web server itself is reachable. Most of these require a restart to take effect.
+
+| Setting | Default | Description |
+|---|---|---|
+| **(Advanced) Bind Address** | `*` | Network interface to listen on: a specific IP address, `localhost`, or `*` for all interfaces. |
+| **Port** | 8686 | The port Lidarr's web server listens on. |
+| **URL Base** | (empty) | Path prefix for reverse proxy setups, for example `/lidarr`. Leave empty unless your reverse proxy needs one. |
+| **Allowed Hosts** | (empty) | Comma-separated list of hostnames and IP addresses Lidarr will answer to. `*.` works as a subdomain wildcard (for example `*.example.com`). Leave empty to accept any host. See [System → Allowed Hosts Not Configured](/lidarr/system#allowed-hosts-not-configured) for what the health check does and does not catch here, a bare `*` entry is not the same as `*.` and isn't flagged by the check. |
+| **(Advanced) Instance Name** | Lidarr | Shown in the browser tab and used as the Syslog application name. |
+| **(Advanced) Application URL** | (empty) | This instance's full external URL, including scheme, port, and URL base. Used to build links back to Lidarr (for example in notifications). |
+| **(Advanced) Enable SSL** | Off | Serve the UI over HTTPS. Requires restarting Lidarr as an administrator to take effect. |
+| **(Advanced) SSL Port** | 6868 | Only shown when Enable SSL is on. |
+| **(Advanced) SSL Cert Path** | (empty) | Path to a `.pfx` certificate file. Only shown when Enable SSL is on. |
+| **(Advanced) SSL Cert Password** | (empty) | Password for the `.pfx` file. Only shown when Enable SSL is on. |
+| **Open Browser on Start** | On | Windows only, and not shown when running as a service. Opens Lidarr's homepage in a browser on launch. |
+
+# Security
+
+{#security}
+
+Security settings live under **Settings → General → Security**.
+
+| Setting | Default | Description |
+|---|---|---|
+| **Authentication** | Forms | **Forms** shows a username/password login page. **External** hands authentication to a reverse proxy in front of Lidarr and isn't selectable directly from this dropdown. Lidarr requires authentication to be enabled by default; disabling it entirely isn't offered as a supported option from the UI. |
+| **Authentication Required** | Enabled | Only shown once Authentication is on. **Enabled** requires login for every request. **Disabled for Local Addresses** skips login for requests from local/private IP ranges. |
+| **Username** / **Password** / **Confirm Password** | | Only shown once Authentication is on. |
+| **API Key** | Randomly generated | Read-only. Copy it with the clipboard button, or generate a new one with the reset button, which immediately invalidates the old key everywhere it's used (custom scripts, other *arr apps, third-party tools). Resetting requires a restart to take effect. |
+| **Certificate Validation** | Enabled | How strictly Lidarr validates HTTPS certificates on outgoing connections (to indexers, download clients, notifications, etc.). **Disabled for Local Addresses** and **Disabled** exist for troubleshooting self-signed certificates; don't change this unless you understand the risk of doing so. |
+| **Trusted Networks** | (empty) | Comma-separated list of IP addresses or CIDR ranges (for example `172.17.0.1`, `10.0.0.0/8`, `fc00::/7`) for reverse proxies that are configured to forward the real client IP. Only add proxies you control and that send the correct headers; adding an untrusted network here lets it spoof the client IP Lidarr sees. Requires a restart to take effect. |
+
+# Proxy
+
+{#proxy}
+
+Proxy settings live under **Settings → General → Proxy** and route Lidarr's own outgoing connections (indexers, download clients, notifications, metadata server) through a proxy. This doesn't affect how clients reach Lidarr's own web UI.
+
+| Setting | Default | Description |
+|---|---|---|
+| **Use Proxy** | Off | Enables the rest of this section. |
+| **Proxy Type** | HTTP(S) | HTTP(S), Socks4, or Socks5 (Socks5 supports routing through Tor). |
+| **Hostname** / **Port** | / 8080 | Proxy server address. |
+| **Username** / **Password** | (empty) | Only needed if the proxy requires authentication. |
+| **Ignored Addresses** | (empty) | Comma-separated hosts that bypass the proxy. `*.` works as a subdomain wildcard. |
+| **Bypass Proxy for Local Addresses** | On | Skips the proxy for local/private network destinations. |
+
+
 
 | Setting | Default | Description |
 |---|---|---|
@@ -468,3 +514,38 @@ Logging options live under **Settings → General → Logging**.
 {.is-warning}
 
 See [System → Log Files](/lidarr/system#log-files) for where log files live on disk and how log rotation works.
+
+# Analytics
+
+{#analytics}
+
+Analytics settings live under **Settings → General → Analytics**.
+
+| Setting | Default | Description |
+|---|---|---|
+| **Send Anonymous Usage Data** | On | Sends anonymous usage and error information (browser type, which UI pages you use, error reports, OS and runtime version) to help prioritize features and bug fixes. Requires a restart to take effect. |
+
+# Updates
+
+{#updates}
+
+Update settings live under **Settings → General → Updates**. This entire section is Advanced-only. When Lidarr was installed through Docker or a package manager that manages its own updates, this section still shows, but Branch becomes read-only and Mechanism shows that external mechanism's name in place of Built-In.
+
+| Setting | Default | Description |
+|---|---|---|
+| **(Advanced) Branch** | master | `master`, `develop`, or `nightly`. Read-only when an external update mechanism (Docker, a package manager) manages updates instead of Lidarr's built-in updater; in that case this only controls which branch's Docker tag or package you should be pulling, not what Lidarr updates itself to. See [FAQ → How do I update Lidarr?](/lidarr/faq#how-do-i-update-lidarr). |
+| **(Advanced) Automatic** | On (Windows), Off (other platforms) | Automatically downloads and installs updates. Not functional under the Docker update mechanism, since the container image needs to be updated from outside Lidarr (or via a script); Lidarr warns about this on the setting itself rather than hiding it. You can still update manually from System → Updates regardless of this setting. |
+| **(Advanced) Mechanism** | Built-In | **Built-In** uses Lidarr's own updater. **Script** runs a custom script you provide instead. When an external update mechanism manages this install, this shows that mechanism's name in place of Built-In and isn't changeable. |
+| **(Advanced) Script Path** | (empty) | Path to a script that takes an extracted update package and completes the update. Only shown when Mechanism is Script. |
+
+# Backup
+
+{#backup}
+
+Backup settings live under **Settings → General → Backup**. This entire section is Advanced-only.
+
+| Setting | Default | Description |
+|---|---|---|
+| **(Advanced) Folder** | `Backups` | Where scheduled backups are written. A relative path resolves under Lidarr's AppData directory. |
+| **(Advanced) Interval** | 7 days | How often Lidarr backs up its database and settings automatically. |
+| **(Advanced) Retention** | 28 days | Automatic backups older than this are cleaned up automatically. Manually-triggered backups aren't affected. |
