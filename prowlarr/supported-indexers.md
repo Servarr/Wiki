@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-14T03:31:08.510078
+date: 2026-09-15T03:32:02.173506
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-14T03:31:08.510078
+dateCreated: 2026-09-15T03:32:02.173506
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5620` / [Commit: 12c327808314a7cae1b7301935ee10cabc19609f](https://github.com/Prowlarr/Prowlarr/commit/12c327808314a7cae1b7301935ee10cabc19609f)
-  - [Prowlarr Indexers Commit: 09e462d68db742f231135c5e13c6466514b8ad92](https://github.com/Prowlarr/Indexers/commit/09e462d68db742f231135c5e13c6466514b8ad92)
+  - [Prowlarr Indexers Commit: cd78bbe15e48c83da448ca64b50983c0748599ff](https://github.com/Prowlarr/Indexers/commit/cd78bbe15e48c83da448ca64b50983c0748599ff)
 
 ---
 
@@ -343,8 +343,7 @@ dateCreated: 2026-09-14T03:31:08.510078
 |[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno (HUNO) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HD-CLUB](https://hd-czech.eu/){#hd-club}|HD-CLUB is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[HD Dolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[HD-Forever](https://hdf.world/){#hdforever}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES|French (France)|
-|[HD-Forever2FA](https://hdf.world/){#hdforever2fa}|HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES\. This indexer uses cookie login for 2FA|French (France)|
+|[HD-Forever API](https://hdf.world/){#hdforever-api}|HD-Forever (HD-F) is a private French tracker for movies, TV series, animation, documentaries, concerts and shows|French (France)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH Private Torrent Tracker for HD MOVIES / TV|Spanish (Spain)|
 |[HD-Only (API)](https://hd-only.org/){#hdonly-api}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
 |[HD-Space](https://hd-space.org/){#hdspace}|HD-Space (HDS) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
