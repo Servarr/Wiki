@@ -118,6 +118,7 @@ For BitTorrent, you **must** use a VPN with port forwarding:
 - Private Internet Access (PIA)
 - Proton VPN
 - AirVPN
+- Windscribe (Pro plan only - ephemeral port forwarding, expires after 7 days and must be re-requested)
 
 **Avoid (no port forwarding)**:
 
