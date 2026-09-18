@@ -1,6 +1,6 @@
 ---
 title: Lidarr and beets Integration
-description: 
+description:
 published: true
 date: 2026-09-12T12:12:17.429Z
 tags: lidarr, beets
