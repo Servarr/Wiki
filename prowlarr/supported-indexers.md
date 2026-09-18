@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-16T03:28:06.464624
+date: 2026-09-18T03:19:47.738503
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-16T03:28:06.464624
+dateCreated: 2026-09-18T03:19:47.738503
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5620` / [Commit: 12c327808314a7cae1b7301935ee10cabc19609f](https://github.com/Prowlarr/Prowlarr/commit/12c327808314a7cae1b7301935ee10cabc19609f)
-  - [Prowlarr Indexers Commit: 749bcafccf4d2833dbe3ec698d59d6d3f9253cf5](https://github.com/Prowlarr/Indexers/commit/749bcafccf4d2833dbe3ec698d59d6d3f9253cf5)
+  - [Prowlarr Indexers Commit: 3c9a0c056172b0720cb4de6158e65ef1d321083e](https://github.com/Prowlarr/Indexers/commit/3c9a0c056172b0720cb4de6158e65ef1d321083e)
 
 ---
 
@@ -112,7 +112,7 @@ dateCreated: 2026-09-16T03:28:06.464624
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
-|[Zamunda RIP](https://zamunda.rip/){#zamundarip}|Zamunda RIP is a BULGARIAN Public Torrent Archive for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
+|[Zamunda LIFE](https://zamunda.life/){#zamundalife}|Zamunda LIFE is a BULGARIAN Public Torrent Archive for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
 
 ### Semi-Private Trackers
 
