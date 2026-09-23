@@ -523,7 +523,6 @@ If the tracker requires a login, you've to include a login block. First, you've 
 - get: Same as post but HTTP GET is used. The inputs are sent as the query string of `path`.
 - form: The input values are transmitted as a HTTP POST request. But instead of sending them directly, the specified path is retrieved first and the corresponding HTML form is extracted. This allows login to most trackers which require dynamic login information (e.g. CAPTCHAS or CSRF tokens). In case the tracker is using "simplecaptcha" (Messages like "click on the Bug" and "Click on the "X") it's automatically solved. Prowlarr has no automatic handling for Google reCAPTCHA. This is the default when `method` is omitted.
 - cookie: the cookies provided via the `cookie` setting will be used. Prowlarr reads the setting named `cookie` directly, so the setting must use that name. The `inputs` of the login block are not used by this method.
-- oneurl: legacy. It was added in Jackett for the beyond-hd-oneurl indexer, which was removed in 2022. No current definition uses it, so do not use it in new definitions.
 
 After sending the actual login request the resulting HTML document is checked for error messages (`error` section). If one of the specified selectors matches the login is considered as failed and the matching text is returned as error message. For all methods except `cookie`, a HTTP 401 response is always treated as a failed login.
 
@@ -1472,7 +1471,7 @@ The v11 schema does not allow `rid` for `tv-search` or `imdbtitle` and `imdbyear
 
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
-| `method` | string | `form` | `form`, `post`, `get` or `cookie` (`oneurl` is legacy). See [Login](#login). |
+| `method` | string | `form` | `form`, `post`, `get` or `cookie`. See [Login](#login). |
 | `path` | string | none | Login page (`form`) or login target (`post`, `get`). Templates are applied. |
 | `submitpath` | string | form `action` | `form` only. Target of the POST, if different from the form action. |
 | `form` | string | `form` | `form` only. CSS selector of the login form. |
