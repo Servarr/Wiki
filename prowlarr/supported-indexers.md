@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-23T03:27:50.170452
+date: 2026-09-27T03:49:26.406068
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-23T03:27:50.170452
+dateCreated: 2026-09-27T03:49:26.406068
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5620` / [Commit: 12c327808314a7cae1b7301935ee10cabc19609f](https://github.com/Prowlarr/Prowlarr/commit/12c327808314a7cae1b7301935ee10cabc19609f)
-  - [Prowlarr Indexers Commit: 0339aa920bb468cce384a2c4b5ed2932fcfe4b73](https://github.com/Prowlarr/Indexers/commit/0339aa920bb468cce384a2c4b5ed2932fcfe4b73)
+  - [Prowlarr Indexers Commit: 223d3b12ee8504ae5175746c6a2ce95a475e5951](https://github.com/Prowlarr/Indexers/commit/223d3b12ee8504ae5175746c6a2ce95a475e5951)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-09-23T03:27:50.170452
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://halawio6.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://ubebcsd6.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
