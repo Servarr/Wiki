@@ -62,3 +62,9 @@ To install and use these Docker images, keep the above in mind while following t
 - [hotio/lidarr](https://hotio.dev/containers/lidarr/)
 - [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
 {.links-list}
+
+## Easypanel
+
+[Easypanel](https://easypanel.io) is a self-hosted Docker deployment platform, and it has a one-click deployment template for Lidarr (built on the linuxserver/lidarr image):
+
+[![Deploy on Easypanel](https://easypanel.io/img/deploy-on-easypanel-40.svg)](https://easypanel.io/templates/lidarr)
