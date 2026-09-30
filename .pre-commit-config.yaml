@@ -21,7 +21,7 @@ repos:
       - id: check-case-conflict
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: check-added-large-files
-        args: ['--maxkb=1000']
+        args: ["--maxkb=1000"]
         exclude: \.(png|jpg|jpeg|gif|svg|webp)$
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
 
@@ -30,7 +30,7 @@ repos:
     rev: v0.37.0
     hooks:
       - id: markdownlint
-        args: ['--config', '.markdownlint.json', '--fix']
+        args: ["--config", ".markdownlint.json", "--fix"]
         files: \.md$
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
 
@@ -39,7 +39,7 @@ repos:
     rev: v1.24.6
     hooks:
       - id: typos
-        args: ['--config', '.typos.toml']
+        args: ["--config", ".typos.toml"]
         files: \.md$
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
 
@@ -49,5 +49,5 @@ repos:
     hooks:
       - id: prettier
         files: \.(yaml|yml)$
-        args: ['--tab-width', '2']
+        args: ["--tab-width", "2"]
         stages: [pre-commit, pre-merge-commit, pre-push, manual]
