@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-09-30T04:06:58.744843
+date: 2026-10-01T04:19:13.952322
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-09-30T04:06:58.744843
+dateCreated: 2026-10-01T04:19:13.952322
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5620` / [Commit: 12c327808314a7cae1b7301935ee10cabc19609f](https://github.com/Prowlarr/Prowlarr/commit/12c327808314a7cae1b7301935ee10cabc19609f)
-  - [Prowlarr Indexers Commit: cda6b85429f154c3bd378f30eda1f4ded58a564f](https://github.com/Prowlarr/Indexers/commit/cda6b85429f154c3bd378f30eda1f4ded58a564f)
+  - [Prowlarr Indexers Commit: df3471454181a43af87861bbeaad147a182a4ad3](https://github.com/Prowlarr/Indexers/commit/df3471454181a43af87861bbeaad147a182a4ad3)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-09-30T04:06:58.744843
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://rakwukic.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://opc0azhg.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -205,6 +205,7 @@ dateCreated: 2026-09-30T04:06:58.744843
 |[AGSVPT](https://www.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a JAPANESE Private Torrent Tracker for Female Japanese Idol related files|English (United States)|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
+|[AlaBala](https://alabala.net/){#alabala}|AlaBala is a BULGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
 |[alingPT](https://pt.aling.de/){#alingpt}|alingPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[alingPT (API)](https://pt.aling.de/){#alingpt-api}|alingPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[AlphaRatio](https://alpharatio.cc/){#alpharatio}|AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
@@ -493,7 +494,10 @@ dateCreated: 2026-09-30T04:06:58.744843
 |[Peeratiko](https://peeratiko.org/){#peeratiko}|Peeratiko is a GREEK Private Torrent Tracker for MOVIES / TV / GENERAL|Greek (Greece)|
 |[PeerGarden](https://peergarden.org/){#peergarden}|PeerGarden (PG) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Peers\.FM](https://peers.fm/){#peersfm}|Peers\.FM is a RUSSIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Russian (Russia)|
+|[Periodical](https://periodical.me/){#periodical}|Periodical (PER) is a Private Torrent Tracker for MAGAZINES|English (United States)|
 |[Phoenix Project](https://phoenixproject.app/){#phoenixproject}|Phoenix Project is a Private MacOS software tracker|English (United States)|
+|[PhoenixPT (凤凰PT)](https://pt.521.best/){#phoenixpt}|PhoenixPT (凤凰PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[PhoenixPT (凤凰PT) (API)](https://pt.521.best/){#phoenixpt-api}|PhoenixPT (凤凰PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PigNetwork (猪猪网)](https://piggo.me/){#pignetwork}|PigNetwork (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[PixelCove](https://www.pixelcove.me/){#pixelcove}|PixelCove (Ultimate Gamer) is a Private Torrent Tracker for GAMES|English (United States)|
 |[PixelCove2FA](https://www.pixelcove.me/){#pixelcove2fa}|PixelCove2FA (Ultimate Gamer) is a Private Torrent Tracker for GAMES\. Cookie Login for 2FA use|English (United States)|
