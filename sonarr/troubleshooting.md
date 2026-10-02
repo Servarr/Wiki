@@ -360,15 +360,14 @@ This can also occur if you have a release in your download client but that media
 
 #### Found matching series via grab history, but series was matched by series ID. Automatic import is not possible
 
-- This import error is similar to the above can't be matched error.
-- Sonarr grabbed the release due to your indexer or tracker reporting that the release had the TVDb Id (or IMDb Id) for a series you wanted.
-- The series of the downloaded file does not match the id reported, so Sonarr will not import the file.
-- Depending on the series title and release name - assuming the release is correct for the series id it is associated with - Sonarr will probably need an alias added, [this FAQ entry has some more info](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) on requesting one to be added.
-- Alternatively, the release is mislabeled and not for the series id that was reported. This should be reported to your indexer so they can take corrective action.
-- To handle this error:
-  1. Verify the series of the file
-  1. Request an alias (if applicable)
-  1. Manual Import the file (Human Icon to the right) from the Activity => Queue  OR click the `X` in queue to ignore the release in your client and optionally blocklist it / optionally remove it from the client
+Sonarr grabbed the release because the indexer or tracker reported a matching TVDb ID or IMDb ID, but could not match its series title. Automatic import is blocked to avoid importing a different series with the same name. The warning does not necessarily mean the file belongs to the wrong series.
+
+This can happen when a release omits the year from the series title: for example, `Example.Show.S01E01.1080p.WEB-DL-GROUP` for `Example Show (2025)`. Sonarr v4 supports scene-mapping aliases for these title differences. For ambiguous titles, the alias may need a release-group filter to distinguish series with the same name.
+
+1. Verify which series and episode the downloaded file actually contains. The indexer's ID alone is not sufficient.
+1. Check the [existing scene-mapping requests](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0). If the required alias has not been requested, use the [scene-mapping request form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform). Include the TVDb ID, the correct series title, and complete release names including the release groups. Describe the title mismatch and any other series with the same name.
+1. While waiting for the alias to be added, use Manual Import (the human icon) in Activity => Queue for files you have verified, selecting the correct series and episodes. See the [alias FAQ](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) for more details.
+1. If the file belongs to a different series, report the incorrect ID to the indexer or tracker. Use the `X` in Activity => Queue to ignore the release and optionally blocklist it or remove it from the download client.
 
 ### Episode Name is TBA
 
