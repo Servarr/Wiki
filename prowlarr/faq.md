@@ -18,7 +18,7 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Category Not Available or Missing](#category-not-available-or-missing)
   - [Can I add any (generic) Torrent RSS Feed?](#can-i-add-any-generic-torrent-rss-feed)
   - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
-  - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
+  - [Can I use FlareSolverr indexers?](#can-i-use-flaresolverr-indexers)
   - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
   - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
   - [Prowlarr will not sync X Indexer to App](#prowlarr-will-not-sync-x-indexer-to-app)
@@ -51,7 +51,6 @@ dateCreated: 2021-11-03T03:01:18.079Z
   - [Help I have locked myself out](#help-i-have-locked-myself-out)
   - [Weird UI Issues](#weird-ui-issues)
   - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-    - [Use of a VPN](#use-of-a-vpn)
   - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
   - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
 
@@ -113,18 +112,21 @@ The following attributes are optional, but recommended:
 - Yes.
 - Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
-## Can I use flaresolverr indexers
+## Can I use FlareSolverr indexers
 
 - Yes.
 
-1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexer-proxies)
-1. Add a tag to the created flaresolverr proxy
+1. Configure your FlareSolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexer-proxies)
+1. Add a tag to the created FlareSolverr proxy
 1. Add the same tag to your [Indexer](/prowlarr/indexers)
 
-> The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used.
+> The tags must match & Cloudflare must be detected for FlareSolverr to be used. A FlareSolverr proxy is disabled if no tags are used.
 {.is-warning}
 
-> [See TRaSH's Guides on "How to setup Flaresolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/) for more details
+> For FlareSolverr to return valid cookies to Prowlarr, the same IP address must be used by both. This includes use of a proxy or VPN, and the internet protocol (IPv6 may need to be disabled). See [FlareSolverr's Troubleshooting Wiki](https://github.com/FlareSolverr/FlareSolverr/wiki/Troubleshooting) for more details.
+{.is-warning}
+
+> See [TRaSH's Guides on "How to setup FlareSolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/) for more details
 {.is-info}
 
 ## How can I add an indexer that is down or not functional
