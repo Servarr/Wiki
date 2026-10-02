@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-01T04:19:13.952322
+date: 2026-10-02T04:11:57.551097
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-01T04:19:13.952322
+dateCreated: 2026-10-02T04:11:57.551097
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5620` / [Commit: 12c327808314a7cae1b7301935ee10cabc19609f](https://github.com/Prowlarr/Prowlarr/commit/12c327808314a7cae1b7301935ee10cabc19609f)
-  - [Prowlarr Indexers Commit: df3471454181a43af87861bbeaad147a182a4ad3](https://github.com/Prowlarr/Indexers/commit/df3471454181a43af87861bbeaad147a182a4ad3)
+  - [Prowlarr Indexers Commit: ecede5c247d8e31fa156ff49a8921c78327c5b5d](https://github.com/Prowlarr/Indexers/commit/ecede5c247d8e31fa156ff49a8921c78327c5b5d)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2026-10-01T04:19:13.952322
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[VSTHouse](https://vsthouse.org/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
+|[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[World-torrent](https://darkfox.proxy-site.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
