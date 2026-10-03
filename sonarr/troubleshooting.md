@@ -358,11 +358,13 @@ For various reasons, releases cannot be parsed once grabbed and sent to the down
 
 This can also occur if you have a release in your download client but that media item (movie/episode/book/song) does not exist in the application.
 
-#### Found matching series via grab history, but series was matched by series ID. Automatic import is not possible
+#### Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
 Sonarr grabbed the release because the indexer or tracker reported a matching TVDb ID or IMDb ID, but could not match its series title. Automatic import is blocked to avoid importing a different series with the same name. The warning does not necessarily mean the file belongs to the wrong series.
 
 This can happen when a release omits the year from the series title: for example, `Example.Show.S01E01.1080p.WEB-DL-GROUP` for `Example Show (2025)`. Sonarr v4 supports scene-mapping aliases for these title differences. For ambiguous titles, the alias may need a release-group filter to distinguish series with the same name.
+
+Releases grabbed through Interactive Search are exempt from this specific import block.
 
 1. Verify which series and episode the downloaded file actually contains. The indexer's ID alone is not sufficient.
 1. Check the [existing scene-mapping requests](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0). If the required alias has not been requested, use the [scene-mapping request form](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform). Include the TVDb ID, the correct series title, and complete release names including the release groups. Describe the title mismatch and any other series with the same name.
