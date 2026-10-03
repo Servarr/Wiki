@@ -20,11 +20,14 @@ dateCreated: 2023-07-03T20:13:25.657Z
 
 For the Debian / Ubuntu / Raspbian beginners there isn't an Apt Repository or Deb package.
 
-If you want an easy life, follow this community provided and maintained `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
+If you want an easy life, use Sonarr's official `Easy Install` script for a base Debian (Raspbian / Raspberry Pi OS) / Ubuntu install.
 
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
-[Please see the \*Arr Community Installation Script](/install-script)
+```shell
+curl -o install-sonarr.sh https://raw.githubusercontent.com/Sonarr/Sonarr/main/distribution/debian/install.sh
+sudo bash install-sonarr.sh
+```
 
 > Sonarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system. If Sonarr says ffprobe is not found this can typically be fixed with a reinstall.
 {.is-info}
