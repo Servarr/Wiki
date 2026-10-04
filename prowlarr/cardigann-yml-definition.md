@@ -62,6 +62,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [timeago](#timeago)
   - [reltime](#reltime)
   - [fuzzytime](#fuzzytime)
+  - [base64decode](#base64decode)
+  - [base64encode](#base64encode)
   - [htmldecode](#htmldecode)
   - [htmlencode](#htmlencode)
   - [urldecode](#urldecode)
@@ -1924,6 +1926,34 @@ filters:
   # input: Yesterday
   - name: fuzzytime
   # result: Sun, 17 Sep 2017 19:17:24 GMT
+```
+
+## base64decode
+
+Converts a *string* that has been base64-encoded for HTTP transmission into a decoded *string*.
+
+```yml
+# decode base64
+selector: button#magnet-button
+attribute: data-link
+filters:
+  # input: bWFnbmV0Oj94dD10b3RhbGx5cmVhbG1hZ25ldHVybA==
+  - name: base64decode
+  # result: magnet:?xt=totallyrealmagneturl
+```
+
+## base64encode
+
+Converts a *string* into an base64-encoded *string* for HTTP transmission.
+
+```yml
+# encode to base64 for transmission
+selector: button#magnet-button
+attribute: data-link
+filters:
+  # input: magnet:?xt=totallyrealmagneturl
+  - name: base64encode
+  # result: bWFnbmV0Oj94dD10b3RhbGx5cmVhbG1hZ25ldHVybA==
 ```
 
 ## htmldecode
