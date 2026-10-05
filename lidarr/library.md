@@ -72,7 +72,7 @@ When adding an artist you will set:
 **Monitor** is a one-time action, applied to whatever albums Lidarr already has on file at the moment it runs, whether that's when you first add the artist, or later via the **Update Monitoring** bulk action. It does not reach forward to catch albums added to MusicBrainz afterward; that's what [Monitor New Items](#monitor-new-items) is for.
 
 | Option | Sets monitored to true for |
-|---|---|
+| --- | --- |
 | **All Albums** | Every album. |
 | **Future Albums** | Albums with no file that have a release date in the future. Already-released albums, with or without a file, are unmonitored. |
 | **Missing Albums** | Albums with no file, whether already released or upcoming. |
@@ -91,7 +91,7 @@ When adding an artist you will set:
 **Monitor New Items** is an ongoing, artist-level setting. Unlike **Monitor** above, it doesn't run once — it fires every time a metadata refresh finds an album for this artist that isn't already in Lidarr's database.
 
 | Option | Behavior |
-|---|---|
+| --- | --- |
 | **All Albums** | Monitor every newly discovered album. |
 | **New Albums** | Monitor a newly discovered album only if its release date is on or after the most recent release date Lidarr already has on file for that artist. |
 | **None** | Leave newly discovered albums unmonitored. |
