@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-09T04:42:21.134786
+date: 2026-10-10T04:28:06.445313
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-09T04:42:21.134786
+dateCreated: 2026-10-10T04:28:06.445313
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5649` / [Commit: 3c6e1d97ac485a70cc9d4063dd5d17af7a77584d](https://github.com/Prowlarr/Prowlarr/commit/3c6e1d97ac485a70cc9d4063dd5d17af7a77584d)
-  - [Prowlarr Indexers Commit: 8df0764eec2d6d138a60cc461d7a850dda8dee5a](https://github.com/Prowlarr/Indexers/commit/8df0764eec2d6d138a60cc461d7a850dda8dee5a)
+  - Prowlarr Build `2.6.5.5659` / [Commit: adaf77308f2a89225c318f6130a990fe1b7048b4](https://github.com/Prowlarr/Prowlarr/commit/adaf77308f2a89225c318f6130a990fe1b7048b4)
+  - [Prowlarr Indexers Commit: 86f0afcff7ee2d304b86dacf37f48519d08217f8](https://github.com/Prowlarr/Indexers/commit/86f0afcff7ee2d304b86dacf37f48519d08217f8)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-10-09T04:42:21.134786
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://rav0mz0e.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://372fbohe.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -606,7 +606,7 @@ dateCreated: 2026-10-09T04:42:21.134786
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
 |[Torrent Heaven](https://www.torrentheaven.org/){#torrent-heaven}|Torrent Heaven is a DUTCH Private Torrent Tracker for MOVIES / TV / GENERAL|Dutch (Netherlands)|
-|[Torrent\.LT](https://torrent.lt/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
+|[Torrent\.LT](https://torrent.ai/){#torrentlt}|Torrent\.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL|Lithuanian (Lithuania)|
 |Torrent Network{#torznab}|Torrent Network (TN) is a GERMAN Private site for TV / MOVIES / GENERAL|German (Germany)|
 |[Torrent Trader](https://the-torrent-trader.com/){#torrenttrader}|Torrent Trader is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[TOrrent-tuRK](https://torrent-turk.de/){#torrent-turk}|TOrrent-tuRK (TORK) is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL|Turkish (Turkey)|
