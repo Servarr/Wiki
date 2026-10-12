@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-10T04:28:06.445313
+date: 2026-10-12T04:28:41.956741
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-10T04:28:06.445313
+dateCreated: 2026-10-12T04:28:41.956741
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5659` / [Commit: adaf77308f2a89225c318f6130a990fe1b7048b4](https://github.com/Prowlarr/Prowlarr/commit/adaf77308f2a89225c318f6130a990fe1b7048b4)
-  - [Prowlarr Indexers Commit: 86f0afcff7ee2d304b86dacf37f48519d08217f8](https://github.com/Prowlarr/Indexers/commit/86f0afcff7ee2d304b86dacf37f48519d08217f8)
+  - [Prowlarr Indexers Commit: d34bddc56cfd6a55f75a9f69dcc2df9eb591662c](https://github.com/Prowlarr/Indexers/commit/d34bddc56cfd6a55f75a9f69dcc2df9eb591662c)
 
 ---
 
@@ -574,7 +574,6 @@ dateCreated: 2026-10-10T04:28:06.445313
 |[SiamBIT](https://bearbit.org/){#siambit}|SiamBIT is a THAI PAY2DL Private Torrent Tracker for GENERAL|Thai (Thailand)|
 |[Siqi](https://si-qi.xyz/){#siqi}|Siqi is a CHINESE Private Tracker for HD image BOOKS and E-BOOKS|Chinese (China)|
 |[SkipTheCommercials (API)](https://skipthecommercials.xyz/){#skipthecommercials-api}|SkipTheCommercials (STC) is a Private Torrent Tracker for TV|English (United States)|
-|[Slobit Games](https://games.slo-bitcloud.eu/){#slobitgames}|Slobit Games is a Private Torrent Tracker for GAMES|English (United States)|
 |[SnowPT](https://skyeysnow.com/){#snowpt}|SnowPT (SSPT) is a CHINESE Private Torrent Tracker for ANIME|Chinese (China)|
 |[SoulVoice (聆音Club)](https://pt.soulvoice.club/){#soulvoice}|SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SoulVoice (聆音Club) (API)](https://pt.soulvoice.club/){#soulvoice-api}|SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
