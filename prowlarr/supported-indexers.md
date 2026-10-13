@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-12T04:28:41.956741
+date: 2026-10-13T05:35:56.900684
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-12T04:28:41.956741
+dateCreated: 2026-10-13T05:35:56.900684
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5659` / [Commit: adaf77308f2a89225c318f6130a990fe1b7048b4](https://github.com/Prowlarr/Prowlarr/commit/adaf77308f2a89225c318f6130a990fe1b7048b4)
-  - [Prowlarr Indexers Commit: d34bddc56cfd6a55f75a9f69dcc2df9eb591662c](https://github.com/Prowlarr/Indexers/commit/d34bddc56cfd6a55f75a9f69dcc2df9eb591662c)
+  - Prowlarr Build `2.6.5.5664` / [Commit: cbb30c69efa39d39d18f193124ad53c1c6fa1d26](https://github.com/Prowlarr/Prowlarr/commit/cbb30c69efa39d39d18f193124ad53c1c6fa1d26)
+  - [Prowlarr Indexers Commit: 617db82b26b3110ab10dc317f8be1777dcbb2ed0](https://github.com/Prowlarr/Indexers/commit/617db82b26b3110ab10dc317f8be1777dcbb2ed0)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-10-12T04:28:41.956741
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://372fbohe.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://fan73nwa.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -195,6 +195,7 @@ dateCreated: 2026-10-12T04:28:41.956741
 |[3D Torrents](http://www.3dtorrents.org/){#3dtorrents}|3D Torrents (3DT) is a Private Torrent Tracker for 3D HD / BLURAY MOVIES|English (United States)|
 |[3D Vault (API)](https://3dvault.org/){#3dvault-api}|3D Vault is a Private Torrent Tracker for 3D MOVIES|English (United States)|
 |[4thD](https://4thd.xyz/){#4thd}|4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[52movie](https://www.52movie.top/){#52movie}|52movie is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[52PT](https://52pt.site/){#52pt}|52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[720pier](https://720pier.ru/){#pier720}|720pier is a RUSSIAN Private Torrent Tracker for HD SPORTS|Russian (Russia)|
 |[Abnormal (API)](https://abn.lol/){#abnormal-api}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
@@ -542,6 +543,7 @@ dateCreated: 2026-10-12T04:28:41.956741
 |[Qingwa (青蛙)](https://www.qingwapt.com/){#qingwa}|Qingwa (青蛙) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Racing4Everyone (API)](https://racing4everyone.eu/){#racing4everyone-api}|Racing4Everyone (R4E) is a Private Torrent Tracker for RACING|English (United States)|
+|[Racing4us](https://racing4us.site/){#racing4us}|Racing4us is a Private Torrent Tracker for SPORTS|English (United States)|
 |[RacingForMe](https://www.racingfor.me/){#racingforme}|Racing For Me (RFM) is a Private Torrent Tracker for RACING|English (United States)|
 |[RailgunPT](https://bilibili.download/){#railgunpt}|RailgunPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rastastugan (API)](https://rastastugan.org/){#rastastugan-api}|Rastastugan is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
@@ -583,7 +585,6 @@ dateCreated: 2026-10-12T04:28:41.956741
 |[Spirit of Revolution](https://sor-next.org/){#spiritofrevolution}|Spirit of Revolution is a GERMAN Time based Torrent Tracker for 0DAY|German (Germany)|
 |[SportsCora (API)](https://sportscora.com/){#sportscora}|SportsCora is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SportsCult](https://sportscult.org/){#sportscult}|SportsCult is a Private Torrent Tracker for SPORTS|English (United States)|
-|[Sportz247](https://sportz247.bar/){#sportz247}|Sportz247 is a Private Torrent Tracker for SPORTS|English (United States)|
 |[SpringSunday](https://springsunday.net/){#springsunday}|SpringSunday (SSD) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[Stellarwinds](https://stellarwinds.me/){#stellarwinds}|Stellarwinds is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Superbits](https://superbits.org/){#superbits}|SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL|Swedish (Sweden)|
