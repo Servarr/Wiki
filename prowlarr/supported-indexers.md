@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-13T05:35:56.900684
+date: 2026-10-15T03:19:45.678212
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-13T05:35:56.900684
+dateCreated: 2026-10-15T03:19:45.678212
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5664` / [Commit: cbb30c69efa39d39d18f193124ad53c1c6fa1d26](https://github.com/Prowlarr/Prowlarr/commit/cbb30c69efa39d39d18f193124ad53c1c6fa1d26)
-  - [Prowlarr Indexers Commit: 617db82b26b3110ab10dc317f8be1777dcbb2ed0](https://github.com/Prowlarr/Indexers/commit/617db82b26b3110ab10dc317f8be1777dcbb2ed0)
+  - Prowlarr Build `2.6.5.5672` / [Commit: b8d04898207b16070c010c8d74b4cc218ff84b8f](https://github.com/Prowlarr/Prowlarr/commit/b8d04898207b16070c010c8d74b4cc218ff84b8f)
+  - [Prowlarr Indexers Commit: c5e8fc7ec7b660b6b76fdc1f70953083ac57d3e0](https://github.com/Prowlarr/Indexers/commit/c5e8fc7ec7b660b6b76fdc1f70953083ac57d3e0)
 
 ---
 
@@ -50,7 +50,6 @@ dateCreated: 2026-10-13T05:35:56.900684
 |[EZTV](https://eztvx.to/){#eztv}|EZTV is a Public torrent site for TV shows|English (United States)|
 |[FileMood](https://filemood.com/){#filemood}|FileMood is a Public BitTorrent DHT search engine|English (United States)|
 |[Free JAV Torrent](https://www.freejavtorrent.com/){#freejavtorrent}|Free JAV Torrent is a Public tracker for Asian 3X (JAV)|English (United States)|
-|[GamesTorrents](https://www.gamestorrents.app/){#gamestorrents}|GamesTorrents is a SPANISH Public tracker for GAMES|Spanish (Spain)|
 |[Internet Archive](https://archive.org/){#internetarchive}|Internet Archive is a non-profit digital library offering free universal access to books, movies & music, as well as 406 billion archived web pages|English (United States)|
 |[kickasstorrents\.to](https://kickass.torrentbay.st/){#kickasstorrents-to}|kickasstorrents\.to is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
 |[kickasstorrents\.ws](https://kickass.ws/){#kickasstorrents-ws}|kickasstorrents\.ws is a Public KickAssTorrent clone for MOVIES / TV / GENERAL|English (United States)|
@@ -205,7 +204,7 @@ dateCreated: 2026-10-13T05:35:56.900684
 |[AGSVPT](https://www.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a JAPANESE Private Torrent Tracker for Female Japanese Idol related files|English (United States)|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
-|[AlaBala](https://alabala.net/){#alabala}|AlaBala is a BULGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
+|[AlaBala (API)](https://alabala.net/){#alabala-api}|AlaBala is a BULGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
 |[alingPT](https://pt.aling.de/){#alingpt}|alingPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[alingPT (API)](https://pt.aling.de/){#alingpt-api}|alingPT is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[AlphaRatio](https://alpharatio.cc/){#alpharatio}|AlphaRatio(AR) is a Private Torrent Tracker for 0DAY / GENERAL|English (United States)|
@@ -307,11 +306,13 @@ dateCreated: 2026-10-13T05:35:56.900684
 |[DimeADozen](http://www.dimeadozen.org/){#dimeadozen}|DimeADozen (EzTorrent) is a Private Torrent Tracker for BOOTLEG MUSIC|English (United Kingdom)|
 |[DirtyBytes (API)](https://dirtybytes.net/){#dirtybytes-api}|DirtyBytes is a Private Torrent Tracker for 3X|English (United States)|
 |[DiscFan](https://discfan.net/){#discfan}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
+|[DiscFan (API)](https://discfan.net/){#discfan-api}|DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[DocsPedia](https://www.docspedia.world/){#docspedia}|DocsPedia is a Private Torrent Tracker for E-LEARNING|English (United States)|
 |[DreadVault (API)](https://dreadvault.org/){#dreadvault-api}|DreadVault is a Private Torrent Tracker for HORROR MOVIES / TV|English (United States)|
 |[Drugari](http://drugari.org/){#drugari}|Drugari is a CROATIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Croatian (Croatia)|
 |[DS-Reloaded](https://ds-reloaded.com/){#ds-reloaded}|DS-Reloaded (DS\.R) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[dubhe (天枢)](https://dubhe.site/){#dubhe}|dubhe (天枢) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[EchelonHD (API)](https://echelonhd.me/){#echelonhd-api}|EchelonHD is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[Empornium](https://www.empornium.sx/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://www.empornium.sx/){#empornium2fa}|Empornium (EMP) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
@@ -645,6 +646,7 @@ dateCreated: 2026-10-13T05:35:56.900684
 |[The Vault](https://thevault.click/){#thevault}|TheVault (TVBZ) is a Private Torrent Tracker for BUSINESS / MARKETING E-LEARNING|English (United States)|
 |[Vault network](https://vault-network.net/){#vault-network}|Vault network is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[VC-Lib](https://pt.vclib.online/){#vc-lib}|VC-Lib is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
+|[VC-Lib (API)](https://pt.vclib.online/){#vc-lib-api}|VC-Lib is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
 |[VietMediaF](https://tracker.vietmediaf.store/){#vietmediaf}|VietMediaF is a VIETNAMESE Private Torrent Tracker for MOVIES / TV|Vietnamese (Viet Nam)|
 |[White Angel](https://white-angel.hu/){#whiteangel}|White Angel is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
