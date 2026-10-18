@@ -25,7 +25,7 @@ If you want an easy life, use Sonarr's official `Easy Install` script for a base
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
 ```shell
-curl -o install-sonarr.sh https://raw.githubusercontent.com/Sonarr/Sonarr/main/distribution/debian/install.sh
+curl -o install-sonarr.sh https://raw.githubusercontent.com/Sonarr/Sonarr/develop/distribution/debian/install.sh
 sudo bash install-sonarr.sh
 ```
 
