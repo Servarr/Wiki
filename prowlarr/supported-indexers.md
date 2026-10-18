@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-17T03:06:33.294927
+date: 2026-10-18T03:09:10.958876
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-17T03:06:33.294927
+dateCreated: 2026-10-18T03:09:10.958876
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5672` / [Commit: b8d04898207b16070c010c8d74b4cc218ff84b8f](https://github.com/Prowlarr/Prowlarr/commit/b8d04898207b16070c010c8d74b4cc218ff84b8f)
-  - [Prowlarr Indexers Commit: 43359e0d7330606ec5aea76d5b9c5d274a73e7a8](https://github.com/Prowlarr/Indexers/commit/43359e0d7330606ec5aea76d5b9c5d274a73e7a8)
+  - [Prowlarr Indexers Commit: bd3cd29742aa597668c353feb9f7ed902e8b9863](https://github.com/Prowlarr/Indexers/commit/bd3cd29742aa597668c353feb9f7ed902e8b9863)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2026-10-17T03:06:33.294927
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://ww1.darkfox.run/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://ww1-darkfox.officiel.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
