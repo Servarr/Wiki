@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-18T03:09:10.958876
+date: 2026-10-19T03:23:07.972634
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-18T03:09:10.958876
+dateCreated: 2026-10-19T03:23:07.972634
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5672` / [Commit: b8d04898207b16070c010c8d74b4cc218ff84b8f](https://github.com/Prowlarr/Prowlarr/commit/b8d04898207b16070c010c8d74b4cc218ff84b8f)
-  - [Prowlarr Indexers Commit: bd3cd29742aa597668c353feb9f7ed902e8b9863](https://github.com/Prowlarr/Indexers/commit/bd3cd29742aa597668c353feb9f7ed902e8b9863)
+  - Prowlarr Build `2.6.5.5672` / [Commit: 26a605e41f6156b959bc8f3ae5db4bec252106c5](https://github.com/Prowlarr/Prowlarr/commit/26a605e41f6156b959bc8f3ae5db4bec252106c5)
+  - [Prowlarr Indexers Commit: c1581e87676813e01a9fcf0871305048a94f32e6](https://github.com/Prowlarr/Indexers/commit/c1581e87676813e01a9fcf0871305048a94f32e6)
 
 ---
 
@@ -199,7 +199,7 @@ dateCreated: 2026-10-18T03:09:10.958876
 |[Abnormal (API)](https://abn.lol/){#abnormal-api}|ABNormal (ABN) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[ABtorrents](https://usefultrash.net/){#abtorrents}|ABtorrents (ABT) is a Private Torrent Tracker for AUDIOBOOKS|English (United States)|
 |[Across The Tasman](https://acrossthetasman.com/){#acrossthetasman}|ATT is a Private torrent site for Rugby and other sports played in Australia|English (Australia)|
-|[Aftershock](https://aftershock-tracker.net/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
+|[Aftershock](https://aftershock.hu/){#aftershock}|Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL|Hungarian (Hungary)|
 |[AGSVPT](https://www.agsvpt.com/){#agsvpt}|AGSVPT (Arctic Global Seed Vault) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Aidoru!Online](https://aidoru-online.me/){#aidoruonline}|Aidoru!Online is a JAPANESE Private Torrent Tracker for Female Japanese Idol related files|English (United States)|
 |[Aither (API)](https://aither.cc/){#aither-api}|Aither is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
