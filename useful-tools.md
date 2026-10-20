@@ -266,6 +266,10 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ## Remote Control
 
+### Arrcade
+
+[Arrcade](https://arrcade.co.uk) is an app for Sonarr, Radarr, Lidarr, Prowlarr, Bazarr, Seerr, Tautulli, and the common download clients (qBittorrent, Deluge, Transmission, SABnzbd, NZBGet), with one account across iOS, Android, and the web. Free for two services; more need a one-off purchase. Available on the [App Store](https://apps.apple.com/app/arrcade/id6761440252) and [Google Play](https://play.google.com/store/apps/details?id=com.arrcade.app).
+
 ### Managarr
 
 [Managarr](https://github.com/Dark-Alex-17/managarr) is a TUI (Text-based User Interface) and CLI (Command Line Interface) for managing *arr servers from the terminal, built in Rust. It supports Radarr, Sonarr, and Lidarr with an interactive terminal UI and a scriptable CLI for automation. Available on Linux, macOS, and Windows.
