@@ -385,7 +385,7 @@ A mount containing a series path is read only and is not writable by the user So
 
 #### Metadata Consumer using deprecated Kometa integration
 
-- A metadata consumer is using the Kometa (formerly Plex Meta Manager) integration which has been deprecated. Please remove or reconfigure the Kometa metadata consumer in Settings => Metadata.
+- A metadata consumer is using the Kometa (formerly Plex Meta Manager) integration which has been deprecated (removed in Sonarr v5). Please remove or reconfigure the Kometa metadata consumer in Settings => Metadata.
 
 ### Other
 
