@@ -603,6 +603,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Must Contain - The release must contain at least one of these terms (case insensitive)
 - Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
 - Indexer - Specify what indexer the profile applies to.
+- Reject Unaired Releases - Sonarr v5 only. Rejects releases for episodes that have not aired yet. A release is rejected when its publish date is before the episode air date plus the grace period
+  - Air Date Grace Period - Sonarr v5 only. Shown when Reject Unaired Releases is on. Measured in hours, and negative values allow grabbing before the air date
+- Allow Season Pack Before All Episodes Have Aired - Sonarr v5 only. Allows season pack releases that match this profile even if not all episodes in the season have aired, or an episode has no air date. If another release profile for the series leaves this off, the more restrictive setting wins
 
 > This is useful if you only want specific releases from a given indexer/tracker
 {.is-info}
@@ -622,6 +625,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Size Limit - Self Explanatory
 - Min - The minimum Megabytes per Minute (MB/min) a quality can have.
 - Max - The maximum Megabytes per Minute (MB/min) a quality can have.
+
+> In Sonarr v5 the size limits (Minimum, Preferred, and Maximum, in MiB per minute) are set per quality inside each Quality Profile instead of on this page. Only the Title remains here.
+{.is-info}
 
 ## Qualities Defined
 
