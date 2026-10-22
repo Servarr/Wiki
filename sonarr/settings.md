@@ -1016,10 +1016,12 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Security
 
 - Authentication - How would you like to authenticate to access your Sonarr instance
-  - None - No authentication is required to access Sonarr. No longer selectable in the UI for new configurations; existing installs still using it should switch to Basic or Forms
-  - Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
+  - None - No authentication is required to access Sonarr. No longer selectable in the UI for new configurations; existing installs still using it should switch to Basic or Forms. In Sonarr v5, None is treated as Forms
+  - Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password. Sonarr v4 only: v5 treats Basic as Forms
+  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr. Default in Sonarr v5
+  - OpenID Connect (OIDC) - Sonarr v5 only. Sign in through an external OpenID Connect identity provider
   - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Sonarr. Not selectable in the UI; set it via `config.xml` or the `SONARR__AUTH__METHOD` environment variable. Sonarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses below have no effect
+- Sonarr v5 generates a 20-character password on first setup when the password is left blank
 - Authentication Required - Controls when the Authentication setting above is enforced
   - Enabled - Always require authentication (recommended)
   - Disabled for Local Addresses - Skip authentication for requests Sonarr identifies as coming from localhost or the LAN

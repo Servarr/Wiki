@@ -206,7 +206,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - Kometa {#kometametadata}
   - Enable - Enable metadata file creation for this metadata type
-  > Kometa metadata is deprecated. {.is-warning}
+  > Kometa metadata is deprecated in Sonarr v4 and removed in Sonarr v5. {.is-warning}
 - Kodi (XBMC) / Emby {#xbmcmetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Series Metadata - Create a `tvshow.nfo` with full series metadata

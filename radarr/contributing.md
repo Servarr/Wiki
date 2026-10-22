@@ -18,13 +18,13 @@ Setup guides, [FAQ](/radarr/faq), the more information we have on the [wiki](htt
 
 # Development
 
-Radarr is written in C# (backend) and JS (frontend). The backend is built on the .NET8 framework, while the frontend utilizes Reactjs.
+Radarr is written in C# (backend) and JS (frontend). The backend is built on the .NET8 framework (.NET10 for the unreleased Radarr v7), while the frontend utilizes Reactjs.
 
 ## Tools required
 
 - Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>). The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2022 V17.0 or higher is recommended as it includes the .NET8 SDK
+> VS 2022 V17.0 or higher is recommended as it includes the .NET8 SDK (Radarr v7 needs the .NET10 SDK)
 {.is-info}
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
