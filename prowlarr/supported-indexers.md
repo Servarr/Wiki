@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-21T03:25:42.461373
+date: 2026-10-23T03:29:51.413715
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-21T03:25:42.461373
+dateCreated: 2026-10-23T03:29:51.413715
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5672` / [Commit: 26a605e41f6156b959bc8f3ae5db4bec252106c5](https://github.com/Prowlarr/Prowlarr/commit/26a605e41f6156b959bc8f3ae5db4bec252106c5)
-  - [Prowlarr Indexers Commit: ddc329eeb46a88ad0b719eb74306d7e093b401cd](https://github.com/Prowlarr/Indexers/commit/ddc329eeb46a88ad0b719eb74306d7e093b401cd)
+  - Prowlarr Build `2.6.5.5672` / [Commit: 874e38b99e61c8c2da8f6e7c3d5128e002cc8b31](https://github.com/Prowlarr/Prowlarr/commit/874e38b99e61c8c2da8f6e7c3d5128e002cc8b31)
+  - [Prowlarr Indexers Commit: d3aa8db7701d8fca8eb059bb02d41eb0d2656209](https://github.com/Prowlarr/Indexers/commit/d3aa8db7701d8fca8eb059bb02d41eb0d2656209)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-10-21T03:25:42.461373
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://4rjdejjp.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://edoqsc3t.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -521,8 +521,6 @@ dateCreated: 2026-10-21T03:25:42.461373
 |[PTFans](https://ptfans.cc/){#ptfans}|PTFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTFiles](https://ptfiles.net/){#ptfiles}|PTFiles (PTF) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[PThome](https://www.pthome.net/){#pthome}|PTHome is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
-|[PTLAO](https://ptlao.top/){#ptlao}|PTLAO is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[PTLAO (API)](https://ptlao.top/){#ptlao-api}|PTLAO is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTLGS](https://ptlgs.org/){#ptlgs}|PTLGS is a CHINESE Private Torrent Tracker for MOVIES / TV|Chinese (China)|
 |[PTSBAO (烧包)](https://ptsbao.club/){#ptsbao}|PTSBAO (烧包) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[PTSKIT](https://www.ptskit.org/){#ptskit}|PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
