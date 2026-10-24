@@ -37,8 +37,8 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="3.1.19"
-scriptdate="2026-06-30"
+scriptversion="3.1.20"
+scriptdate="2026-10-03"
 
 set -euo pipefail
 
@@ -68,7 +68,7 @@ echo -e "Running Servarr Install Script - Version ${brown}[$scriptversion]${rese
 echo ""
 echo "Select the application to install: "
 echo ""
-select app in lidarr prowlarr radarr whisparr quit; do
+select app in lidarr prowlarr radarr sonarr whisparr quit; do
 
     case $app in
     lidarr)
@@ -90,6 +90,13 @@ select app in lidarr prowlarr radarr whisparr quit; do
         app_prereq="curl sqlite3 libsqlite3-0 libicu-dev" # Required packages
         app_umask="0002"                     # UMask the Service will run as
         branch="master"                      # {Update me if needed} branch to install
+        break
+        ;;
+    sonarr)
+        app_port="8989"                      # Default App Port; Modify config.xml after install if needed
+        app_prereq="curl wget sqlite3 libsqlite3-0 libicu-dev" # Required packages
+        app_umask="0002"                     # UMask the Service will run as
+        branch="main"                        # {Update me if needed} branch to install
         break
         ;;
     whisparr)
@@ -236,6 +243,9 @@ echo ""
 ARCH=$(dpkg --print-architecture)
 # get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
+if [[ $app == 'sonarr' ]]; then
+    dlbase="https://services.sonarr.tv/v1/download/$branch/latest?version=4&os=linux"
+fi
 case "$ARCH" in
 "amd64") DLURL="${dlbase}&arch=x64" ;;
 "armhf") DLURL="${dlbase}&arch=arm" ;;
