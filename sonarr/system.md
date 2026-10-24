@@ -343,7 +343,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 
 #### Series Removed from TheTVDB
 
-- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Series; hopefully TMDb does as well so [Radarr](/radarr) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
+- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Movie; hopefully TMDb does as well so [Radarr](/radarr) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
 
 #### Lists are unavailable due to failures
 
