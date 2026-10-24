@@ -2,7 +2,7 @@
 title: Prowlarr Cardigann YML Definition
 description: Complete reference guide for creating Cardigann YAML indexer definitions in Prowlarr
 published: true
-date: 2026-06-07T00:00:00.000Z
+date: 2026-09-23T00:00:00.000Z
 tags: prowlarr, cardigann, yml, yaml, indexers, development, reference, guide
 editor: markdown
 dateCreated: 2021-08-14T18:19:59.428Z
@@ -31,6 +31,17 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [Download](#download)
     - [Download Block Infohash Example](#download-block-infohash-example)
     - [Download Block "before" Pathselector Example](#download-block-before-pathselector-example)
+  - [Key Reference](#key-reference)
+    - [Top Level Keys](#top-level-keys)
+    - [Caps Keys](#caps-keys)
+    - [Settings Keys](#settings-keys)
+    - [Login Keys](#login-keys)
+    - [Search Keys](#search-keys)
+    - [Search Paths Keys](#search-paths-keys)
+    - [Search Rows Keys](#search-rows-keys)
+    - [Selector Keys](#selector-keys)
+    - [Search Fields Keys](#search-fields-keys)
+    - [Download Keys](#download-keys)
 - [Template Engine](#template-engine)
   - [re\_replace](#re_replace)
   - [if ... else ... end](#if-else-end)
@@ -236,6 +247,7 @@ id: thepiratebay
 # [OPTIONAL] This is an administrative function which should not be used by the end user.
 # It is used to maintain backward compatibility when renaming the id of an indexer
 # (the id is used in the torznab/download/search urls and in the indexer configuration file)
+# Prowlarr note: the v11 schema allows this key, but Prowlarr does not read it.
 replaces:
   - tpb-original
 
@@ -254,24 +266,31 @@ language: en-US
 # public (no registration required)
 # semi-private (registration required, but always open)
 # private (registration required. Invite/application needed)
+# Prowlarr treats any value other than public or private as semi-private.
 type: public
 
 # [REQUIRED] Website encoding used by the tracker
 # usually you get this from the sites html <meta charset=utf-8"> tag.
+# Prowlarr uses UTF-8 if this is omitted, but the v11 schema requires it.
 encoding: UTF-8
 
 # [OPTIONAL] Can be true or false (default is false)
-# Enable/Disable automatic update of the URL in case of a redirect to a different domain
+# In Prowlarr this only lets the login page request of the "form" login method follow redirects.
+# To follow redirects on search requests use followredirect in the search paths block.
 followredirect: false
 
 # [OPTIONAL] Can be true or false (default is true)
 # Enable/Disable the pre-testing of the .torrent files when attempting a download (indexers
 # that support fallback downloading need true). Some web sites do not allow performing two
 # GET requests for the same .torrent in sequence so setting this to false will avoid an error.
+# Prowlarr note: Prowlarr reads this key as testLinkTorrent (case-sensitive). The lowercase
+# spelling that the v11 schema allows is ignored, so the test stays enabled.
+# See the Top Level Keys table in the Key Reference.
 testlinktorrent: false
 
 # [OPTIONAL] The number of seconds in between requests to a site
 # Mainly used for sites that limit the number of requests per period with a temporary block.
+# Prowlarr already waits 2 seconds between requests, so only values above 2 have an effect.
 requestDelay: 2.5
 
 # [REQUIRED] List of known domains
@@ -289,6 +308,7 @@ legacylinks:
 # [OPTIONAL] If the tracker uses untrusted HTTPS certificates (self-signed, expired, etc)
 # you can specify a list of SHA-1 Fingerprint (thumbprint) hashes which should be accepted
 #  as valid anyway. This shouldn't be needed in most cases.
+# Prowlarr note: Prowlarr parses this list but does not use it.
 certificates:
   - D40789207A75EA36B02E255BF7162C8DF9637751 # Expired 24 June 2020
 ```
@@ -321,14 +341,15 @@ caps:
     - {id: 902, cat: XXX, desc: "Porn HD", default: false}
 
   # Specify one or more torznab search modes and attributes that are supported by the indexer.
-  # Implementation note: Jackett doesn't care very much about this, but you should still
-  # specify the correct modes, as most apps calling Jackett via the Torznab API depend on them.
+  # Prowlarr validates this block when it loads the definition:
+  # - the search mode is mandatory and must be exactly [q]
+  # - an unknown mode, an unknown parameter, or a duplicate parameter is an error
   # The q attribute is the absolute minimum default, and you should only add the others if the
-  # tracker supports searching with them, especially imdbid, tvdbid, tmdbid, rid (TVRage),
-  # tvmaze, traktid, doubanid, album, artist, label, track, author, title, publisher, year & genre.
+  # tracker supports searching with them, especially imdbid, tvdbid, tmdbid, tvmazeid,
+  # traktid, doubanid, album, artist, label, track, author, title, publisher, year & genre.
   modes:
     search: [q]
-    tv-search: [q, season, ep, imdbid, tvdbid, rid, tvmaze, traktid, doubanid, year, genre]
+    tv-search: [q, season, ep, imdbid, tvdbid, tmdbid, tvmazeid, traktid, doubanid, year, genre]
     movie-search: [q, imdbid, tmdbid, traktid, doubanid, year, genre]
     music-search: [q, album, artist, label, track, year, genre]
     book-search: [q, author, title, publisher, year, genre]
@@ -492,18 +513,20 @@ settings:
 
 If it's a public tracker and no config settings are needed then set `settings: []` to disable all options.
 
+Supported setting types in Prowlarr are `text`, `password`, `checkbox`, `select`, `info`, `info_cookie`, `info_flaresolverr`, `info_useragent` and `info_category_8000`. Any other type fails with a "not supported" error when the indexer is used. If the login block has a `captcha` section, Prowlarr adds a CAPTCHA input to the indexer settings by itself. See [Settings Keys](#settings-keys) for how each type maps to a `.Config` variable.
+
 ## Login
 
 If the tracker requires a login, you've to include a login block. First, you've to pick one of the following login methods:
 
 - post: The input values are transmitted as a HTTP POST request. This will work for many trackers which require only static login information (username, password, ...).
-- get: Same as post but HTTP GET is used
-- form: The input values are transmitted as a HTTP POST request. But instead of sending them directly, the specified path is retrieved first and the corresponding HTML form is extracted. This allows login to most trackers which require dynamic login information (e.g. CAPTCHAS or CSRF tokens). For google ReCaptchas no special configuration is required, they're detected automatically. In case the the tracker is using "simplecaptcha" (Messages like "click on the Bug" and "Click on the "X") it's automatically solved.
-- cookie: the cookies provided via the `cookie` setting will be used.
+- get: Same as post but HTTP GET is used. The inputs are sent as the query string of `path`.
+- form: The input values are transmitted as a HTTP POST request. But instead of sending them directly, the specified path is retrieved first and the corresponding HTML form is extracted. This allows login to most trackers which require dynamic login information (e.g. CAPTCHAS or CSRF tokens). In case the tracker is using "simplecaptcha" (Messages like "click on the Bug" and "Click on the "X") it's automatically solved. Prowlarr has no automatic handling for Google reCAPTCHA. This is the default when `method` is omitted.
+- cookie: the cookies provided via the `cookie` setting will be used. Prowlarr reads the setting named `cookie` directly, so the setting must use that name. The `inputs` of the login block are not used by this method.
 
-After sending the actual login request the resulting HTML document is checked for error messages (`error` section). If one of the specified selectors matches the login is considered as failed and the matching text is returned as error message.
+After sending the actual login request the resulting HTML document is checked for error messages (`error` section). If one of the specified selectors matches the login is considered as failed and the matching text is returned as error message. For all methods except `cookie`, a HTTP 401 response is always treated as a failed login.
 
-After checking for error messages, a login test is performed (`test` section). The specified path will be requested. If a redirect is returned the login is considered as failed. Optionally it's possible to specify a selector which must match for a successful login. Typically, the `path` is set to the same path as the torrent search path. Most trackers will redirect users to the login page if a login is required. If a tracker will just show the login form (no redirect) you'll have to specify a selector too.
+Prowlarr does not request the `test` path. Instead it checks every search response: a login is considered needed if the response is a redirect, a HTTP error, or (for HTML responses) if the `test` selector does not match. When that happens Prowlarr logs in again. Most trackers will redirect users to the login page if a login is required. If a tracker will just show the login form (no redirect) you'll have to specify a selector too.
 
 ### Simple POST Login
 
@@ -544,7 +567,7 @@ login:
   # Selector for the HTML form element (default: form)
   form: form[action="takelogin.php"]
   captcha:
-    # image based captcha (can be image or text)
+    # image based captcha. The schema also allows "text", but Prowlarr only implements "image".
     type: image
     # selector for the captcha HTML element
     selector: img[alt="Security code"]
@@ -564,6 +587,7 @@ login:
   # [OPTIONAL] Only needed in very limited cases.
   # Can be used to include values based on a result of a selector.
   # e.g. if a CSRF token is hidden in JavaScript).
+  # Each entry is a full selector block, so optional: true skips the input when nothing matches.
   selectorinputs:
     # name of the required key-name,  for example: securitytoken
     securitytoken:
@@ -623,6 +647,7 @@ settings:
 
 login:
   method: cookie
+  # the cookie method ignores inputs and reads the "cookie" setting directly
   inputs:
     cookie: "{{ .Config.cookie }}"
   test:
@@ -662,6 +687,7 @@ search:
       # If specified the path will be only used if at least one category from the list is included in
       # the search categories list. A "!" as first entry negates the matching logic (include the path
       # in any other than the specified categories is in the search categories list)
+      # When the path is used, .Categories only holds the categories that matched this path.
       categories: ["!", 901, 902]
       # [OPTIONAL] list of (extra) arguments which should be added for this path
       inputs:
@@ -679,7 +705,8 @@ search:
       # only use it if we're searching for porn
       categories: [901, 902]
   # [OPTIONAL] If a key resolves to a value that is empty then Cardigann will not use that key/value pair in its query to the site.
-    In the event that the site requires a key without a value then use this override. The default is false.
+  # In the event that the site requires a key without a value then use this override. The default is false.
+  # This does not apply to $raw, which always keeps empty values.
   allowEmptyInputs: true
   # list of HTTP arguments which are used by all paths
   inputs:
@@ -693,6 +720,8 @@ search:
     searchin: title
     incldead: 1
   # [OPTIONAL] extra headers which should be included in search requests
+  # Only the first value of each list is sent.
+  # Login and download requests also use these headers if login or download has no headers block.
   headers:
     x-requested-with: ["XMLHttpRequest"]
   # [OPTIONAL] list of filters which will be applied to the search string.
@@ -704,9 +733,11 @@ search:
       args: ["[^a-zA-Z0-9]+", "*"]
   # [OPTIONAL] list of selectors to check for errors on the search result page
   # (same syntax as in the login block)
+  # Prowlarr note: Prowlarr parses this list but does not check it on search responses.
   error:
     - selector: div.error
   # [OPTIONAL] list of filters to apply to the search result before doing further HTML parsing
+  # Applied to HTML and XML responses only, not to JSON responses.
   preprocessingfilters:
     - name: jsonjoinarray
       args: ["$.result", ""]
@@ -719,17 +750,19 @@ search:
     selector: table#sortabletable > tbody > tr:has(a[href*="/details.php?id="])
     # [OPTIONAL] list of row filters
     filters:
-      # The andmatch filter will make sure that only torrents which contain all words from the search string are
-      # returned. This is helpful if the tracker returns a lot of unrelated search results.
+      # The andmatch filter drops releases that do not match the search string.
+      # This is helpful if the tracker returns a lot of unrelated search results.
+      # Prowlarr splits the search term into words, ignoring words of one character and "and", "the", "an", "of".
+      # With one word the release must contain it; with two or more words the release must contain at least two.
+      # The title and description are checked, case-insensitive. ID and RSS searches are not filtered.
+      # Prowlarr ignores any args given to andmatch.
       - name: andmatch
-        # [OPTIONAL] argument, the maximum length of the search string which should be compared. Specify this if the
-        # trackers cuts of the torrent name after a certain amount of characters.
-        args: 66
       # [OPTIONAL] dump the HTML of each row to the log (for debugging purposes)
       - name: strdump
     # [OPTIONAL] selector for rows containing dates.
     # Use this if the torrent result rows don't contain a publish date but a previous row contains the date.
     # The indexer will go back and parse the first sibling element matching the selector as date for that torrent.
+    # If no header matches, the row fails unless dateheaders has optional: true.
     dateheaders:
       selector: ":has(td.colhead[title]:contains(\"Torrents from\") > b)"
       filters:
@@ -833,6 +866,7 @@ search:
       attribute: href
     # [REQUIRED] publish date (if the site does not provide a date for all results, then a default of "now" should be used)
     # if the site can only provide a rows: dateheaders: selector then you can omit the date field.
+    # The value is parsed with the same logic as the fuzzytime filter.
     # The relevant time zone abbreviation (e.g. CST, CET, GMT, MSK, etc.) should also be added as a comment,
     # or the comment "auto adjusted by site account profile" used if appropriate
     date:
@@ -843,7 +877,7 @@ search:
         - name: append
           args: " +08:00" # CST
         - name: dateparse
-          args: "yyyy-MM-ss HH:mm:ss zzz"
+          args: "yyyy-MM-dd HH:mm:ss zzz"
     # [REQUIRED] size of the torrent (units are handled automatically). if the site does not provide a size for all
     # results, then provide a default of "512 MB". If the site occasionally has a missing size then "0 B" is usual.
     # Side note: For Sites using European numbering schemes (1,024.4MB or 1.024,4MB etc.) there is no need to remove
@@ -917,6 +951,16 @@ If a fixed text value is not specified then the presence of the selector keyword
 After that the selector specified in the `remove` keyword is applied. With this, it's possible to remove unwanted elements (See the `description` example above). Any removed elements will be removed for good, they won't be available to following fields. Due to that you should put fields using the remove keyword at the end of the list.
 Now it's possible to set the value based on the existence of elements using the `case` keyword. If the corresponding selector matches the field value is set to the specified case value. Processing ends after the first case selector matches. This is commonly used for `downloadvolumefactor` and `uploadvolumefactor`.
 Finally, the resulting value will be processed by the template engine and filter engine (see below).
+
+Prowlarr specifics:
+
+- The parsed value of each field is stored as `.Result.<fieldname>` for the fields that follow. For typed fields this is the converted value, for example `.Result.size` holds the size in bytes.
+- A field name can carry a modifier after a `|`. `title|append` and `description|append` add to the previous value instead of replacing it. `|optional` makes any field optional. `category|noappend` is deprecated, see below.
+- These fields are always optional: `imdb`, `imdbid`, `tmdbid`, `rageid`, `tvdbid`, `tvmazeid`, `traktid`, `doubanid`, `poster`, `banner`, `description`, `genre`.
+- `default` is only used for optional fields, when the selector returns nothing. The v11 schema requires `optional: true` next to `default`.
+- If a non-optional field fails in an HTML or XML response, that field is skipped and parsing continues with the next field. In a JSON response the same failure stops parsing of the whole response.
+- A release whose `description` starts with `Internal` gets the Internal indexer flag.
+- See [Search Fields Keys](#search-fields-keys) for every field name Prowlarr reads.
 
 ### Providing the category field with a default value
 
@@ -1001,13 +1045,15 @@ search:
     # [REQUIRED] If the API has different paths for some queries, you can use conditionals to define them
     - path: "{{ if .Keywords }}api/v2/torrent/search{{ else }}api/torrent/latest{{ end }}"
       # [OPTIONAL] The default is to send the query as a http get, the other choice is http post
-      #            You can use conditionals to select the method for different path requirements
-      method: "{{ if .Keywords }}post{{ else }}get{{ end }}"
+      #            Prowlarr does not apply templates to method, so a conditional here is always
+      #            sent as get.
+      method: post
       # [REQUIRED] The response block is necessary to define parsing of a JSON response
       response:
         # [REQUIRED] "json" indicates that a JSON response is expected
         type: json
-        # [OPTIONAL] In the event that a server does not return an empty JSON object or a Count set to 0
+        # [OPTIONAL] Only checked for json responses.
+        # In the event that a server does not return an empty JSON object or a Count set to 0
         # in response to a query-no-found state, you can code the exception here.
         # If the string you provide is contained in the response, or the server returns an empty response
         # and you coded an empty string here, then this will return the traditional "Found 0 releases" instead
@@ -1025,6 +1071,7 @@ search:
     # You can use the $ symbol to refer to the root object.
     selector: data.movies
     # [OPTIONAL] If the torrents are in separate subset
+    # attribute, multiple, count and missingAttributeEqualsNoResults are only used for json responses.
     attribute: torrents
     # [OPTIONAL] When the attribute is missing, this option allows you to suppress the error and return a no-results-found
     missingAttributeEqualsNoResults: true
@@ -1085,14 +1132,14 @@ search:
     # If not available from the response then its usual to use the .Config.sitelink as a default.
     details:
       text: "{{ .Config.sitelink }}browse/{{ .Result._id }}"
-    apikey:
+    _apikey:
       text: "{{ .Config.apikey }}"
       filters:
         - name: urlencode
     # [REQUIRED] download link for the torrent file.
     # if a download link is not available you should provide a magnet URI, or if neither is available an infohash.
     download:
-      text: "{{ .Config.sitelink }}api/v1/torrents/{{ .Result._id }}/torrent?key={{ .Result.apikey }}"
+      text: "{{ .Config.sitelink }}api/v1/torrents/{{ .Result._id }}/torrent?key={{ .Result._apikey }}"
     # [ALTERNATIVE] magnet link
     magnet:
       selector: magnet_uri
@@ -1233,6 +1280,8 @@ This is similar to the JSON method except you code type xml:
         type: xml
 ```
 
+Prowlarr parses an XML response with an XML parser and then applies the rows and fields selectors as CSS selectors, the same way as for HTML. So `preprocessingfilters`, `after` and `dateheaders` work, and the JSON-only keys (`attribute`, `multiple`, `count`, `missingAttributeEqualsNoResults`, `noResultsMessage`) are not used.
+
 ## Download
 
 The download block is needed in the following cases:
@@ -1249,6 +1298,10 @@ Example of the download block explaining all options:
 download:
   # [OPTIONAL] use HTTP POST instead of GET to download the torrent file (default is get)
   method: post
+  # [OPTIONAL] headers for the download requests. If omitted, the search headers are used.
+  # Only the first value of each list is sent.
+  headers:
+    referer: ["{{ .Config.sitelink }}"]
   # [OPTIONAL] HTTP request which needs to be done before downloading the file
   before:
     # request target
@@ -1256,6 +1309,8 @@ download:
     # send via HTTP POST
     method: post
     # [OPTIONAL] if the before link requires a query separator other than the default "&" then use this
+    # Only used for GET requests. The schema also allows queryseparator in search paths, but Prowlarr
+    # ignores it there.
     queryseparator: ";"
     # list of HTTP arguments which will be included
     inputs:
@@ -1265,6 +1320,8 @@ download:
   selectors:
     # [OPTIONAL] If a list of selectors is defined, the search result download URL will be retrieved and parsed as HTML.
     # The first selector is then applied to get the actual download URL.
+    # If it does not match, or the link fails the torrent test (see testLinkTorrent), the next selector is tried.
+    # If no selector works the download fails.
     - selector: a[href^="download.php?id="]
       attribute: href
       # [OPTIONAL] Can be true of false (default is false)
@@ -1296,6 +1353,7 @@ download:
       id: "{{ .DownloadUri.Query.id }}"
   # [OPTIONAL] If you only have a magnet hash then this method will allow you to automatically generate a magnet URI
   # For use with Public or Semi-Private Indexers.
+  # If infohash is set, Prowlarr uses it and ignores the selectors list.
   # Note that this option is not suitable for Private sites which may require ONLY the use of their own tracker and
   # have DHT DISABLED and no other PUBLIC trackers on the magnet.
   infohash:
@@ -1338,9 +1396,196 @@ download:
       attribute: href
 ```
 
+## Key Reference
+
+These tables list every key that Prowlarr reads from a definition, with its type, default, and effect. They reflect the Prowlarr source (`src/NzbDrone.Core/Indexers/Definitions/Cardigann/`) and the v11 `schema.json` in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers). Keys are case-sensitive. Prowlarr ignores keys it does not know, but the schema rejects them, so a definition must pass both.
+
+### Top Level Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `id` | string | none | Unique internal name of the indexer. Required by the schema. |
+| `replaces` | list of strings | none | Old ids of this indexer. Allowed by the schema, not read by Prowlarr. |
+| `name` | string | none | Display name. Required by the schema. |
+| `description` | string | none | Description shown in the indexer list. Required by the schema. |
+| `language` | string | none | Language code of the site, shown as the indexer language. Required by the schema, which limits it to a fixed list of codes. |
+| `type` | string | none | `public`, `semi-private` or `private`. Any other value is treated as semi-private. For `private`, no magnet link is generated from an `infohash`. Required by the schema. |
+| `encoding` | string | `UTF-8` | Encoding used for requests and by the `urlencode` and `urldecode` filters. Required by the schema. |
+| `requestDelay` | number | none | Minimum seconds between requests. Only used if it is more than the 2 second default of Prowlarr. |
+| `links` | list of URLs | none | Known site URLs. The first one is the default base URL. Required by the schema. |
+| `legacylinks` | list of URLs | empty | Old URLs. If the configured base URL is in this list, Prowlarr uses the first entry of `links` instead. |
+| `followredirect` | boolean | `false` | Lets the login page request of the `form` login method follow redirects. No other request uses it. |
+| `testLinkTorrent` | boolean | `true` | Before a download selector result is used, request it and check that the response starts with `d` (a bencoded torrent). If not, try the next selector. Magnet links are not tested. See the note below. |
+| `certificates` | list of strings | none | Parsed, not used by Prowlarr. |
+| `caps` | block | none | Categories and search modes. Required by the schema. |
+| `settings` | list | `username` (text) and `password` (password) | Settings shown in the indexer configuration. `settings: []` gives no settings. |
+| `login` | block | none | How to log in. If omitted, no login is done. |
+| `search` | block | none | How to search and parse results. Required by the schema. |
+| `download` | block | none | Special handling for downloads. |
+
+Note on `testLinkTorrent`: Prowlarr reads YAML keys in camelCase and matches them case-sensitively, so the property `TestLinkTorrent` is read from `testLinkTorrent`. The v11 schema only allows the lowercase `testlinktorrent`, which Prowlarr ignores. As a result, `testlinktorrent: false` in a v11 definition has no effect and the link test stays on.
+
+### Caps Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `categorymappings` | list | none | Maps site categories to Newznab categories. Each entry has `id` (site category, required), `cat` (Newznab category name, required), `desc` (site category name, used by the `categorydesc` field) and `default` (boolean, default `false`). Categories with `default: true` are searched when the search has no category that maps to this site. An unknown `cat` is logged as an error and skipped. |
+| `categories` | map | none | Short form: site category id to Newznab category name, without `desc` or `default`. |
+| `modes` | map | none | Supported search modes: `search`, `tv-search`, `movie-search`, `music-search`, `book-search`. `search` is required and must be exactly `[q]`. Required by the schema. |
+| `allowrawsearch` | boolean | `false` | Adds `searchEngine="raw"` to the search modes in the Torznab caps of the indexer. |
+| `allowtvsearchimdb` | boolean | none | Allowed by the schema, not read by Prowlarr. |
+
+Search mode parameters that Prowlarr accepts:
+
+| Mode | Parameters |
+| --- | --- |
+| `tv-search` | `q`, `season`, `ep`, `imdbid`, `tvdbid`, `rid`, `tvmazeid`, `traktid`, `tmdbid`, `doubanid`, `genre`, `year` |
+| `movie-search` | `q`, `imdbid`, `tmdbid`, `imdbtitle`, `imdbyear`, `traktid`, `genre`, `doubanid`, `year` |
+| `music-search` | `q`, `album`, `artist`, `label`, `year`, `genre`, `track` |
+| `book-search` | `q`, `title`, `author`, `publisher`, `genre`, `year` |
+
+The v11 schema does not allow `rid` for `tv-search` or `imdbtitle` and `imdbyear` for `movie-search`.
+
+### Settings Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `name` | string | none | Variable name. The value is available as `.Config.<name>`. Required by the schema. |
+| `type` | string | none | Input type, see the next table. Required by the schema. |
+| `label` | string | none | Label shown in the UI. |
+| `default` | string, number or boolean | none | Default value. For `select` it must be one of the option keys. For `info` it is the text shown. |
+| `options` | map | none | For `select`: option key to display text. The options are shown sorted by key. |
+| `defaults` | list of strings | none | Only for `multi-select`, which Prowlarr does not support. |
+
+| Setting type | `.Config.<name>` value |
+| --- | --- |
+| `text`, `password` | The entered text. |
+| `checkbox` | Non-empty when checked, null when not checked. Use it with `if`. |
+| `select` | The key of the selected option. |
+| `info` | No variable. Shows `label` and the `default` text. |
+| `info_cookie`, `info_flaresolverr`, `info_useragent`, `info_category_8000` | No variable. Prowlarr supplies the label and text, so `label` and `default` are not used. |
+
+`.Config.sitelink` is always set to the configured base URL.
+
+### Login Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `method` | string | `form` | `form`, `post`, `get` or `cookie`. See [Login](#login). |
+| `path` | string | none | Login page (`form`) or login target (`post`, `get`). Templates are applied. |
+| `submitpath` | string | form `action` | `form` only. Target of the POST, if different from the form action. |
+| `form` | string | `form` | `form` only. CSS selector of the login form. |
+| `inputs` | map | none | Values to send. Templates are applied. For `form`, they override the values found in the form. Not used by `cookie`. |
+| `selectors` | boolean | `false` | `form` only. If true, the keys of `inputs` and the captcha `input` are CSS selectors, and the `name` attribute of the matched element is used as the input name. |
+| `selectorinputs` | map of selector blocks | none | `form` only. Values read from the login page and sent in the POST body. |
+| `getselectorinputs` | map of selector blocks | none | `form` only. Values read from the login page and added to the query string of the submit URL. |
+| `cookies` | list of strings | none | Cookies sent with the `post` login request and with the `form` login page request. |
+| `headers` | map of lists | `search.headers` | Headers for login requests. Only the first value of each list is sent. |
+| `captcha` | block | none | `form` only. `type` (only `image` is implemented), `selector` (the captcha `img`), `input` (name of the form input for the answer). Setting this adds a CAPTCHA field to the indexer settings. A captcha found during an automatic re-login stops the login. |
+| `error` | list | none | Error checks on the login response. Each entry has `selector` (required) and optional `message` (a selector block for the error text). `path` is allowed but not used. |
+| `test` | block | none | `selector` is checked on HTML search responses to detect an expired login. `path` is required by the schema but not used by Prowlarr. |
+
+### Search Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `path` | string | none | Single search path. Prowlarr adds it to `paths` with `inheritinputs: true`. |
+| `paths` | list | none | Search paths, see the next table. Each path is a separate request. GET requests with the same URL are only sent once. |
+| `inputs` | map | none | Inputs for all paths. Templates are applied. `$raw` is added as a pre-built query string. |
+| `allowEmptyInputs` | boolean | `false` | Send inputs whose value is empty. |
+| `headers` | map of lists | none | Headers for search requests. Only the first value of each list is sent. |
+| `keywordsfilters` | list of filters | none | Applied to `.Query.Keywords`. The result is `.Keywords`. |
+| `preprocessingfilters` | list of filters | none | Applied to the whole HTML or XML response before parsing. |
+| `error` | list | none | Parsed, not checked by Prowlarr. |
+| `rows` | block | none | How to find result rows. See below. Required by the schema. |
+| `fields` | map | none | How to read each release field. Required by the schema. |
+
+### Search Paths Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `path` | string | none | Request path. Templates are applied, and variable values inserted by the template are URL-encoded. Required by the schema. |
+| `method` | string | `get` | `get` or `post` (case-insensitive). With `post`, inputs are sent as form data. Templates are not applied to this key. |
+| `inputs` | map | none | Extra inputs for this path. |
+| `inheritinputs` | boolean | `true` | Include the search level `inputs`. |
+| `categories` | list | none | Site categories that select this path. A leading `"!"` inverts the match. |
+| `followredirect` | boolean | `false` | Follow redirects for this search request. |
+| `response` | block | HTML | `type`: `json` or `xml` (required if `response` is set). `noResultsMessage`: for `json`, return no results if the response contains this text, or if it is empty and the response is empty. |
+| `queryseparator` | string | `&` | Allowed by the schema, not used for search paths. |
+
+### Search Rows Keys
+
+| Key | Type | Default | Applies to | Description |
+| --- | --- | --- | --- | --- |
+| `selector` | string | none | all | CSS selector (HTML, XML) or JSONPath with optional `:has()`, `:not()`, `:contains()` (JSON). Templates are applied. |
+| `after` | integer | `0` | HTML, XML | Merge this many following rows into each row. |
+| `dateheaders` | selector block | none | HTML, XML | Date from a previous row when the row has no date. |
+| `filters` | list | none | all | Row filters: `andmatch` and `strdump` only. |
+| `attribute` | string | none | JSON | Path inside each row that holds the release object or list. |
+| `multiple` | boolean | `false` | JSON | The `attribute` holds a list of releases. |
+| `count` | selector block | none | JSON | If this value is below 1, return no results. |
+| `missingAttributeEqualsNoResults` | boolean | `false` | JSON | If the rows selector matches nothing, return no results instead of an error. Rows without the `attribute` are skipped. |
+
+The schema also allows `optional`, `case`, `remove` and `text` in `rows`, but Prowlarr does not use them there.
+
+### Selector Keys
+
+A selector block is used for each field, and for `dateheaders`, `count`, `selectorinputs`, `getselectorinputs` and the login error `message`.
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `selector` | string | the row | CSS selector (HTML, XML) or JSON path (JSON). Templates are applied. In HTML, a selector that starts with `:root` searches from the document root. In JSON, a leading `..` reads from the row instead of the `attribute` object. |
+| `attribute` | string | text content | HTML attribute to read. |
+| `text` | string or number | none | Fixed value. Templates are applied. If set, `selector` is ignored. |
+| `remove` | string | none | HTML only. CSS selector of child elements to remove before reading the text. |
+| `case` | map | none | HTML: the key is a CSS selector, the first match gives the value. JSON: the key is compared with the value, `"*"` matches anything. |
+| `filters` | list of filters | none | Filters applied to the value. |
+| `optional` | boolean | `false` | Do not fail if nothing matches. |
+| `default` | string or number | none | Value used when an optional selector returns nothing. Templates are applied. |
+
+### Search Fields Keys
+
+| Field | Effect in Prowlarr |
+| --- | --- |
+| `title` | Release title. Required by the schema. |
+| `download` | Download URL. A value that starts with `magnet:` is used as the magnet link. Also used as the release GUID. |
+| `magnet` | Magnet link. |
+| `infohash` | Info hash. For non-private indexers a magnet link is built from it if there is no magnet. |
+| `details` | Details page URL. |
+| `comments` | Comments page URL. |
+| `category` | Site category id, mapped through `caps`. Values from more than one `category` field are combined. |
+| `categorydesc` | Site category name, mapped through the `desc` of `categorymappings`. |
+| `size` | Size, units are parsed. Required by the schema. |
+| `seeders`, `leechers` | Peer counts. Values of 5000000 or more are set to 0. `seeders` is required by the schema. |
+| `date` | Publish date, parsed like `fuzzytime`. |
+| `files`, `grabs` | Integers. |
+| `downloadvolumefactor`, `uploadvolumefactor` | Numbers. |
+| `minimumratio` | Number. |
+| `minimumseedtime` | Seconds. |
+| `imdb`, `imdbid`, `tmdbid`, `rageid`, `tvdbid`, `tvmazeid`, `traktid`, `doubanid` | The first number in the value. |
+| `poster` | Poster URL. |
+| `genre` | Split into genres on spaces and on these characters: `,` `/` `(` `)` `.` `;` `[` `]` `"` `\|` `:`. An `_` in a genre becomes a space. |
+| `year` | Integer. |
+| `author`, `booktitle`, `publisher`, `artist`, `album`, `label`, `track` | Text. |
+| `description` | Release description. |
+
+Any other field name only sets `.Result.<name>`. The schema requires exactly one of `category` and `categorydesc`, and at least one of `download`, `magnet` and `infohash`.
+
+### Download Keys
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `method` | string | `get` | `post` (lowercase) sends the final download request as POST. |
+| `headers` | map of lists | `search.headers` | Headers for download requests. Only the first value of each list is sent. |
+| `before` | block | none | A request sent before the download. Keys: `path`, `method`, `inputs`, `queryseparator` (default `&`), `pathselector` (a download selector that reads `path` from the download page). The `.DownloadUri` variables are available. |
+| `selectors` | list | none | Download selectors, tried in order. Keys: `selector`, `attribute`, `filters`, `usebeforeresponse` (default `false`, read from the `before` response instead of the download page). |
+| `infohash` | block | none | Build a magnet link from the page. Keys: `hash` and `title` (download selectors), `usebeforeresponse` (default `false`). |
+
 # Template Engine
 
 The template engine is very basic, and supports the following statements.
+
+Prowlarr evaluates them in this order: `re_replace`, `join`, the logic functions (`and`, `or`, `eq`, `ne`), `if ... else ... end`, `range`, and then plain variables. Referencing a variable that does not exist is an error, it does not give an empty value.
 
 ## re_replace
 
@@ -1361,6 +1606,8 @@ A basic if/else condition. Only boolean true (non-empty)/false (empty) operation
 
 Syntax: `{{ if .Variable }}on true result{{ else }}on false result{{ end }}`
 
+The `{{ else }}` part is required, use `{{ else }}{{ end }}` for an empty result. The condition must be a single variable (or the result of a logic function). A string is true if it is not empty or white space, and a list is true if it has at least one item.
+
 Example:
 
 ```yaml
@@ -1377,6 +1624,10 @@ search:
 The implementation is based on: [go hdr functions](https://golang.org/pkg/text/template/#hdr-Functions)
 These are not true logical OR and AND operators in that they operate on variables that contain a value or are empty.
 Note that the use of round brackets is entirely optional.
+
+- `or` returns the first variable that is not empty, or else the last variable.
+- `and` returns the first variable that is empty, or else the last variable.
+- Both take two or more variables. Quoted string literals are ignored by `and` and `or`.
 
 Example of: if or ... else ... end
 
@@ -1409,7 +1660,7 @@ Example of: if and ... else ... end
 
 The implementation is based on: [go hdr functions](https://golang.org/pkg/text/template/#hdr-Functions)
 This is a string comparison only.
-Supports the use of both variables and strings.
+Supports the use of both variables and strings. Strings must be in double quotes. Only the first two values are compared. The result is `.True` or `.False`.
 
 Example of: if eq ... else ... end
 
@@ -1488,7 +1739,7 @@ Syntax: `{{ .Variable }}`
 
 ## Variables
 
-TODO: more explanation
+Variables start with a `.` and are replaced with their value. The sections below list the variables Prowlarr sets. Some are set only in some contexts: `.Query` and `.Keywords` only during a search, `.Result` only while fields are parsed, and `.DownloadUri` only during a download.
 
 ## Config Variables
 
@@ -1507,6 +1758,7 @@ Note that these are always available.
 .True contains "True" (which represents a non-empty variable)
 .False contains null (which represents an empty variable)
 .Today.Year contains "2024" (or whatever the current year is)
+.Config.sitelink contains the base URL configured for the indexer
 ```
 
 ## Search Query Variables
@@ -1523,9 +1775,9 @@ Note that these are only available during search queries.
 .Query.Year        # from t=tvsearch or t=movie or t=music or t=book
 .Query.Limit
 .Query.Offset
-.Query.Extended
-.Query.Categories
-.Query.APIKey
+.Query.Extended    # always null in Prowlarr
+.Query.Categories  # the requested Torznab category ids
+.Query.APIKey      # always null in Prowlarr
 .Query.TVDBID      # from t=tvsearch
 .Query.TVRageID    # from t=tvsearch
 .Query.IMDBID      # e.g. tt12345678 from t=tvsearch or t=movie
@@ -1548,10 +1800,14 @@ Note that these are only available during search queries.
 .Keywords          # keywords after applying the keywordsfilters
 ```
 
-The following boolean-like variables are documented in the upstream Jackett Cardigann specification. **These variables are NOT implemented as template variables in Prowlarr's Cardigann engine** — they exist as internal C# properties on the search criteria objects but are never populated into the template variable dictionary. Referencing them in a YAML definition will always yield null.
+`.Query.Keywords` is built from `.Query.Q`, `.Query.Series`, `.Query.Movie`, `.Query.Year` and `.Query.Episode`, joined with spaces, skipping empty values. So a TV search for season 1 episode 2 adds `S01E02` to the keywords.
+
+`.Categories` holds the site category ids that the requested Torznab categories map to. If none map, it holds the categories marked `default: true` in `categorymappings`. Inside a search path with `categories`, it only holds the categories that matched that path.
+
+The following boolean-like variables are documented in the upstream Jackett Cardigann specification. **These variables are NOT implemented as template variables in Prowlarr's Cardigann engine**. They exist as internal C# properties on the search criteria objects but are never added to the template variables. Referencing them in a YAML definition is an error, because the variable does not exist.
 
 ```yaml
-.Query.IsBookSearch   # t=book (Jackett only — not available in Prowlarr templates)
+.Query.IsBookSearch   # t=book (Jackett only, not available in Prowlarr templates)
 .Query.IsDoubanQuery  # from t=tvsearch or t=movie (Jackett only)
 .Query.IsGenreQuery   # from t=tvsearch or t=movie or t=music or t=book (Jackett only)
 .Query.IsIdSearch     # (Jackett only)
@@ -1568,7 +1824,7 @@ The following boolean-like variables are documented in the upstream Jackett Card
 .Query.IsTvmazeQuery  # from t=tvsearch (Jackett only)
 ```
 
-Note: There are several variables that are not supported and are provided by Cardigann for compatibility with the Torznab specifications. These variables will always return null.
+Note: There are several variables that are not supported and are provided by Cardigann for compatibility with the Torznab specifications (`.Query.Series`, `.Query.Movie`, `.Query.Extended`, `.Query.APIKey`). These variables will always return null.
 
 All field results are available to the following fields via the `.Result.$FieldName` variables too.
 For example:
@@ -1587,7 +1843,7 @@ For example:
       text: "{{ .Result._subcat }} {{ .Result.year }} {{ .Result._quality }}"
 ```
 
-Temporary variables used to help build release results should contain an underscore in their variable names, such as `title_phase1` or `_quality`.
+Temporary variables used to help build release results should contain an underscore in their variable names, such as `title_phase1` or `_quality`. The v11 schema enforces this: a field name must either start with `_`, or be a known field name optionally followed by `_` and a suffix.
 
 ## Download Variables
 
@@ -1600,7 +1856,7 @@ Based on the download search field result the following variables are available:
 .DownloadUri.Host               example: domain.to
 .DownloadUri.Port               example: 443
 .DownloadUri.PathAndQuery       example: /torrent/1234567/A-Torrent-Name-1080p/
-.DownloadUri.Query              example: see below
+.DownloadUri.Query              example: ?id=1234567 (the raw query string)
 ```
 
 For each query string argument of the URI a corresponding `.DownloadUri.Query.$Key` variable is generated.
@@ -1610,6 +1866,8 @@ would generate the following two variables:
 `.DownloadUri.Query.hit` with the value `yes`.
 
 # Filters
+
+Filters are applied in the order listed. Prowlarr supports the filters below. An unknown filter name is logged as an error and skipped. The only row filters (`rows: filters:`) are `andmatch` and `strdump`.
 
 ## querystring
 
@@ -1631,7 +1889,7 @@ filters:
 ## prepend
 
 Inserts a *string* by appending additional characters to the beginning of its current value.
-The single parameter in the argument is the *string* to be prefixed.
+The single parameter in the argument is the *string* to be prefixed. Templates in the argument are applied.
 
 Example:
 
@@ -1649,7 +1907,7 @@ filters:
 ## append
 
 Extends a *string* by appending additional characters to the end.
-The single parameter in the argument is the *string* to be appended.
+The single parameter in the argument is the *string* to be appended. Templates in the argument are applied.
 
 Example:
 
@@ -1699,7 +1957,7 @@ filters:
 ## replace
 
 If the *pattern string* is matched, then the *pattern* is replaced by a *replacement string*.
-The first parameter in the argument is the *pattern string*, and the second is the *replacement string*.
+The first parameter in the argument is the *pattern string*, and the second is the *replacement string*. Every match is replaced. Templates in the replacement string are applied.
 
 Example:
 
@@ -1716,7 +1974,7 @@ filters:
 ## split
 
 Divides a *string* into an array of *substrings*, and return the selected *substring*.
-The first parameter in the argument is the single character *pattern* used to split the *string*, and the second parameter is the array element *number* of the wanted *substring*, counting from zero for the first element.
+The first parameter in the argument is the single character *pattern* used to split the *string*, and the second parameter is the array element *number* of the wanted *substring*, counting from zero for the first element. A negative number counts from the end, so `-1` is the last element. Only the first character of the pattern is used.
 
 Example:
 
@@ -1733,9 +1991,9 @@ filters:
 
 ## trim
 
-Removes all leading and trailing occurrences of a set of specified *characters*.
+Removes all leading and trailing occurrences of a specified *character*.
 Used without an argument removes all leading and trailing *white-space characters*.
-If a set of *characters* are supplied in an argument, then those will be removed from all leading and trailing occurrences.
+If an argument is supplied, Prowlarr only uses its first character, and removes all leading and trailing occurrences of that character.
 
 Example:
 
@@ -1764,6 +2022,8 @@ filters:
 
 Perform pattern-matching and "search-and-replace" functions on a *string* using a [Regular Expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
+The result is the first capture group of the first match. If there is no match, or the pattern has no capture group, the result is an empty string.
+
 Example:
 
 ```yaml
@@ -1778,7 +2038,7 @@ filters:
 
 ## re_replace
 
-Similar to [replace](#replace), but the parameters in the argument are [Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
+Similar to [replace](#replace), but the parameters in the argument are [Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference). Templates in the replacement are applied, and `$1`, `$2` and so on insert capture groups.
 
 Example:
 
@@ -1817,8 +2077,13 @@ filters:
 ## dateparse
 
 Converts a date/time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
-Requires two parameters in its argument, the first is the *string* to be processed into the DateTime, and the second is the *format* to use for the conversion.
+Takes one argument, the *format* to use for the conversion. The *string* to convert is the current value.
 For a full breakdown of the format specifiers see <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
+
+Prowlarr specifics:
+
+- The format is tried as a .NET format if it contains `y`, `h` or `d` (any case). Otherwise, or if that fails, it is read as a Go reference layout (for example `2006-01-02 15:04:05`). The v11 schema rejects `dateparse` arguments that contain digits, so use .NET formats in definitions.
+- If the date cannot be parsed, the value is left unchanged and a debug message is logged.
 
 Here are the more common format specifiers used by Jackett
 
@@ -1858,7 +2123,7 @@ selector: td.torrent_table_dateAdded
 filters:
   # input: 2017-09-18 19:17:24 +00:00
   - name: dateparse
-    args: "yyyy-MMM-dd HH:mm:ss zzz"
+    args: "yyyy-MM-dd HH:mm:ss zzz"
   # result: Mon, 18 Sep 2017 19:17:24 GMT
 ```
 
@@ -1900,7 +2165,7 @@ Alias for [timeago](#timeago)
 ## fuzzytime
 
 Converts a fuzzy-time *string* into a DateTime object ("ddd, dd MMM yyyy HH:mm:ss z").
-By default fuzzytime renders a USA_Date. Note: the "UK" argument for UK date format is not implemented in Prowlarr's Cardigann engine — filter args are ignored and USA date format is always used.
+By default fuzzytime renders a USA_Date. Note: the "UK" argument for UK date format is not implemented in Prowlarr's Cardigann engine. Filter args are ignored and USA date format is always used.
 Fuzzytime can handle a fuzzy-time *string* such as:
 
 ```yaml
@@ -1995,6 +2260,7 @@ magfile:
 ## validfilename
 
 Ensures that a *string* comprises only characters that are valid for use in filenames.
+Prowlarr replaces each invalid character with `_`. The set of invalid characters comes from .NET and depends on the operating system. On Linux it is only `/` and the null character.
 
 Example:
 
@@ -2002,14 +2268,15 @@ Example:
 # get the filename
 text: "{{ .Result.title }}"
 filters:
-  # input: a file?Name>With<Invalid*Symbols
+  # input: a file/Name
   - name: validfilename
-  # result: aFileNameWithInvalidSymbols
+  # result: a file_Name
 ```
 
 ## diacritics
 
 Replace diacritics characters with their base character.
+The only supported argument is `replace`. Any other argument is an error.
 
 Example:
 
@@ -2039,8 +2306,8 @@ Example:
 
 ## hexdump
 
-Dump the HTML of each row to the log in HEX format (for debugging purposes).
-You will need to have *Enhanced Logging* enabled to view the results.
+Dump the current value to the log with the HEX code of each character (for debugging purposes).
+You will need to have *Enhanced Logging* enabled to view the results. The log line is labelled `strdump`.
 
 Example:
 
