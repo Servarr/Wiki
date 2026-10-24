@@ -62,6 +62,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [timeago](#timeago)
   - [reltime](#reltime)
   - [fuzzytime](#fuzzytime)
+  - [base64decode](#base64decode)
+  - [base64encode](#base64encode)
   - [htmldecode](#htmldecode)
   - [htmlencode](#htmlencode)
   - [urldecode](#urldecode)
@@ -130,13 +132,14 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
 
 ## Active Versions
 
+- [V12 Indexers](https://github.com/Prowlarr/Prowlarr/commit/adaf77308f2a89225c318f6130a990fe1b7048b4)
+  - Prowlarr Cardigann v12 adds support for:
+    - `base64decode` and `base64encode` added to FilterBlock
+
 - [V11 Indexers](https://github.com/Prowlarr/Prowlarr/commit/886054fdf8e17e27714a8c41911980fff3550e39) - [Dev 1.20.0.4590](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.20.0.4590)
   - Prowlarr Cardigann v11 includes several changes such as
     - Predefined setting type: `info_category_8000`
     - Optional `selectorinputs` and `getselectorinputs` for login section
-- [V10 Indexers](https://github.com/Prowlarr/Prowlarr/commit/f95f67a7ca3e274cd0b5abbac487eb914fccd0bb) - [Dev 1.18.0.4543](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.18.0.4543)
-  - Prowlarr Cardigann v10 includes several changes such as
-    - Predefined settings type: `info_cookie`, `info_flaresolverr` and `info_useragent`
 
 ## Depreciated Versions
 
@@ -201,6 +204,11 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
   - AllowEmptyInputs
   - default values
   - MissingAttributeEqualsNoResults
+
+### [V10 Indexers](https://github.com/Prowlarr/Prowlarr/commit/f95f67a7ca3e274cd0b5abbac487eb914fccd0bb) - [Dev 1.18.0.4543](https://github.com/Prowlarr/Prowlarr/releases/tag/v1.18.0.4543)
+
+- Prowlarr Cardigann v10 includes several changes such as
+  - Predefined settings type: `info_cookie`, `info_flaresolverr` and `info_useragent`
 
 # General
 
@@ -1924,6 +1932,34 @@ filters:
   # input: Yesterday
   - name: fuzzytime
   # result: Sun, 17 Sep 2017 19:17:24 GMT
+```
+
+## base64decode
+
+Converts a *string* that has been base64-encoded for HTTP transmission into a decoded *string*.
+
+```yml
+# decode base64
+selector: button#magnet-button
+attribute: data-link
+filters:
+  # input: bWFnbmV0Oj94dD10b3RhbGx5cmVhbG1hZ25ldHVybA==
+  - name: base64decode
+  # result: magnet:?xt=totallyrealmagneturl
+```
+
+## base64encode
+
+Converts a *string* into an base64-encoded *string* for HTTP transmission.
+
+```yml
+# encode to base64 for transmission
+selector: button#magnet-button
+attribute: data-link
+filters:
+  # input: magnet:?xt=totallyrealmagneturl
+  - name: base64encode
+  # result: bWFnbmV0Oj94dD10b3RhbGx5cmVhbG1hZ25ldHVybA==
 ```
 
 ## htmldecode
