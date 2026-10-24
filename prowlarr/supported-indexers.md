@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-23T03:29:51.413715
+date: 2026-10-24T03:24:19.641712
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-23T03:29:51.413715
+dateCreated: 2026-10-24T03:24:19.641712
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `2.6.5.5672` / [Commit: 874e38b99e61c8c2da8f6e7c3d5128e002cc8b31](https://github.com/Prowlarr/Prowlarr/commit/874e38b99e61c8c2da8f6e7c3d5128e002cc8b31)
-  - [Prowlarr Indexers Commit: d3aa8db7701d8fca8eb059bb02d41eb0d2656209](https://github.com/Prowlarr/Indexers/commit/d3aa8db7701d8fca8eb059bb02d41eb0d2656209)
+  - [Prowlarr Indexers Commit: 8414600b4ae0467a9a6ebe879d68605c775b0473](https://github.com/Prowlarr/Indexers/commit/8414600b4ae0467a9a6ebe879d68605c775b0473)
 
 ---
 
@@ -647,7 +647,7 @@ dateCreated: 2026-10-23T03:29:51.413715
 |[WinterSakura](https://wintersakura.net/){#wintersakura}|WinterSakura is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[The Word Music](https://thewordmusic.org/){#thewordmusic}|The Word Music is a Private GERMAN tracker for  MUSIC / MOVIES / TV / GENERAL|German (Germany)|
 |[World-In-HD](https://world-in-hd.net/){#wihd}|World-In-HD is a Private Torrent Tracker\. Your world in HD|French (France)|
-|[World-of-Tomorrow](https://w-o-t.pro/){#world-of-tomorrow}|World-of-Tomorrow is a GERMAN Private tracker|German (Germany)|
+|[World-of-Tomorrow (API)](https://w-o-t.pro/){#world-of-tomorrow-api}|World-of-Tomorrow is a GERMAN Private tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[XDY (修道院)](https://xdypt.vip/){#xdy}|XDY (修道院) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[XDY (修道院) (API)](https://xdypt.vip/){#xdy-api}|XDY (修道院) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Xingtan (杏坛)](https://xingtan.one/){#xingtan}|Xingtan (杏坛) is a CHINESE Torrent Tracker focusing on Medical Resources EBOOKS|Chinese (China)|
