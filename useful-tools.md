@@ -46,6 +46,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Cross-Seed](#cross-seed)
   - [Toolbarr](#toolbarr)
   - [Unpackerr](#unpackerr)
+  - [Verifyarr](#verifyarr)
   - [qBit Management](#qbit-management)
 - [Other Projects and Programs](#other-projects-and-programs)
   - [Filebot](#filebot)
@@ -319,6 +320,13 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 [Unpackerr](https://unpackerr.zip) This application runs as a daemon on your download host. It checks for completed downloads and extracts them so \*Arr may import them.
 
 - There are a handful of options out there for extracting and deleting files after your client downloads them. Captain just didn't care for any of them, so he wrote his own. He wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
+
+## Verifyarr
+
+[Verifyarr](https://github.com/camezaro-intc/Verifyarr) is an automated media integrity verification and mockbuster remediation companion for Radarr and Sonarr. While Radarr and Sonarr rely solely on release titles and tracker metadata to make grab and import decisions, Verifyarr inspects actual torrent manifests and media container internals at two critical stages:
+
+- **Pre-Download Inspection (On Grab)**: Intercepts grab webhooks and queries your download client (such as qBittorrent) to inspect internal torrent file manifests. It instantly purges fake releases, password-protected archives (`.zip`, `.7z`, `.rar`), executable malware (`.exe`, `.bat`), or releases with zero video files *before* downloading to disk, removing them from the download queue, blocklisting the release, and triggering an automatic replacement search.
+- **Post-Import Deep Verification (On Import / Upgrade)**: Inspects imported files with `ffprobe`/`ffmpeg` to catch corrupt streams, static freeze/loop traps, incorrect audio channel layouts (e.g. fake Atmos/7.1 tracks that are actually stereo), and container runtime mismatches (such as 80-minute "mockbuster" knock-offs mimicking 170-minute blockbusters). In live mode, bad files are automatically deleted, blocklisted in Radarr/Sonarr, and re-searched; in dry-run mode, warnings are logged and dispatched via Discord alerts without deleting media.
 
 ## qBit Management
 
