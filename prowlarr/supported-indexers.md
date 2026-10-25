@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-24T03:24:19.641712
+date: 2026-10-25T03:19:42.565530
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-24T03:24:19.641712
+dateCreated: 2026-10-25T03:19:42.565530
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5672` / [Commit: 874e38b99e61c8c2da8f6e7c3d5128e002cc8b31](https://github.com/Prowlarr/Prowlarr/commit/874e38b99e61c8c2da8f6e7c3d5128e002cc8b31)
-  - [Prowlarr Indexers Commit: 8414600b4ae0467a9a6ebe879d68605c775b0473](https://github.com/Prowlarr/Indexers/commit/8414600b4ae0467a9a6ebe879d68605c775b0473)
+  - Prowlarr Build `2.6.5.5715` / [Commit: 71c5435cf81b957c748080433ba3e4e4057cd779](https://github.com/Prowlarr/Prowlarr/commit/71c5435cf81b957c748080433ba3e4e4057cd779)
+  - [Prowlarr Indexers Commit: 5482e1129828d47f7b1d2e917f2a6739285fbae8](https://github.com/Prowlarr/Indexers/commit/5482e1129828d47f7b1d2e917f2a6739285fbae8)
 
 ---
 
@@ -107,7 +107,7 @@ dateCreated: 2026-10-24T03:24:19.641712
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://ww2-darkfox.officiel.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://ww3-darkfox.officiel.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
@@ -554,6 +554,7 @@ dateCreated: 2026-10-24T03:24:19.641712
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
 |[Rousi\.pro](https://rousi.pro/){#rousi-pro}|Rousi\.pro is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SAMARITANO (API)](https://samaritano.cc/){#samaritano}|SAMARITANO is a BRAZILIAN Private tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
+|[SAPIbr (API)](https://sapibr.com/){#sapibr}|SAPIbr (Toca Share) is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES|Portuguese (Portugal)|
 |[SBPT](https://sbpt.link/){#sbpt}|SBPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[SceneHD](https://scenehd.org/){#scenehd}|SceneHD is Private site for HD TV / MOVIES|English (United States)|
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
@@ -597,7 +598,6 @@ dateCreated: 2026-10-24T03:24:19.641712
 |[TJUPT (北洋园PT)](https://tjupt.org/){#tjupt}|TJUPT (北洋园PT) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[TLFBits](https://pt.eastgame.org/){#tlfbits}|TLFBits is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[TmGHuB](https://tmghub.org/){#tmghub}|TmGHuB (TH) is an INDIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
-|[Toca Share (API)](https://tocashare.biz/){#tocashare}|Toca Share is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES|Portuguese (Portugal)|
 |[Tormac](https://tormac.org/){#tormac}|Tormac is a RUSSIAN Private Torrent Tracker for MAC SOFTWARE|Russian (Russia)|
 |[Tornado](https://www.tornado.si/){#tornado}|Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
 |[Torrent Bytes](https://www.torrentbytes.net/){#torrent-bytes}|A decade of TorrentBytes|English (United States)|
