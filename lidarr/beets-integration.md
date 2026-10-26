@@ -22,7 +22,7 @@ Both Lidarr and beets pull from MusicBrainz, but beets exposes more of that data
 ## Release and catalog identifiers
 
 | Field | What it stores |
-|---|---|
+| --- | --- |
 | `catalognum` | The release's catalog number |
 | `asin` | Amazon Standard Identification Number |
 | `barcode` | The release's barcode |
@@ -30,14 +30,14 @@ Both Lidarr and beets pull from MusicBrainz, but beets exposes more of that data
 ## Locale and script
 
 | Field | What it stores |
-|---|---|
+| --- | --- |
 | `script` | The writing system used for the release's titles |
 | `language` | Release language |
 
 ## Artist naming
 
 | Field | What it stores |
-|---|---|
+| --- | --- |
 | `artist_credit` | The artist name exactly as credited on this specific release |
 | `albumartist_credit` | The album artist name exactly as credited on this specific release |
 
@@ -62,7 +62,7 @@ Lidarr writes only the release-level disambiguation, into MusicBrainz Album Comm
 Core beets fields since beets 1.5.0, not a plugin:
 
 | Field | What it stores |
-|---|---|
+| --- | --- |
 | `work` | The MusicBrainz Work title (the composition, distinct from the recording) |
 | `mb_workid` | The Work's MBID |
 | `work_disambig` | Disambiguation string for the work |
@@ -197,7 +197,7 @@ foreach ($dir in $albumDirs) {
 ## Trade-offs
 
 | | |
-|---|---|
+| --- | --- |
 | **Benefit** | beets runs once at import time with any plugins you want, writing a full tag set that Lidarr wouldn't produce on its own. |
 | **Benefit** | No persistent beets database to maintain or back up. |
 | **Drawback** | Tags written at import time are never updated. If MusicBrainz data improves, or a plugin source updates its data (for example, updated ReplayGain values), the library files won't reflect it until you re-import or run beets manually. |
@@ -252,7 +252,7 @@ Two scenarios where the tools can conflict:
 ## Trade-offs
 
 | | |
-|---|---|
+| --- | --- |
 | **Benefit** | beets maintains tags on an ongoing basis; as plugin data sources update, you can re-run beets to pull in new values. |
 | **Benefit** | beets' persistent library enables more sophisticated queries, playlist generation, and plugin behaviour. |
 | **Drawback** | Requires careful beets configuration to prevent file moves. One misconfiguration can disorganise a large library. |
@@ -313,7 +313,7 @@ $dir = Split-Path -Parent $env:lidarr_trackfile_path
 ## Trade-offs
 
 | | |
-|---|---|
+| --- | --- |
 | **Benefit** | No separate scheduler to maintain. Reuses Lidarr's own artist-refresh cadence as the trigger, and only runs beets against files that actually changed. |
 | **Benefit** | One hook covers import, manual retag, and periodic MusicBrainz sync. Pattern 1 only covers import. |
 | **Drawback** | Lidarr's write always happens first. If you want beets' choices (for example, its release-specific artist credit) to reliably win over Lidarr's canonical values, this ordering delivers that, but only after Lidarr has written its own value there first, every time. |
