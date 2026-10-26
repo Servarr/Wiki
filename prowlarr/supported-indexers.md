@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-25T03:19:42.565530
+date: 2026-10-26T03:21:33.470203
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-25T03:19:42.565530
+dateCreated: 2026-10-26T03:21:33.470203
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.5.5715` / [Commit: 71c5435cf81b957c748080433ba3e4e4057cd779](https://github.com/Prowlarr/Prowlarr/commit/71c5435cf81b957c748080433ba3e4e4057cd779)
-  - [Prowlarr Indexers Commit: 5482e1129828d47f7b1d2e917f2a6739285fbae8](https://github.com/Prowlarr/Indexers/commit/5482e1129828d47f7b1d2e917f2a6739285fbae8)
+  - Prowlarr Build `2.6.6.5717` / [Commit: 71c5435cf81b957c748080433ba3e4e4057cd779](https://github.com/Prowlarr/Prowlarr/commit/71c5435cf81b957c748080433ba3e4e4057cd779)
+  - [Prowlarr Indexers Commit: 2d5e8d33d7b8c4e719fb61d8c26373327c26878d](https://github.com/Prowlarr/Indexers/commit/2d5e8d33d7b8c4e719fb61d8c26373327c26878d)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-10-25T03:19:42.565530
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://edoqsc3t.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://zmtlvuf0.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -235,6 +235,7 @@ dateCreated: 2026-10-25T03:19:42.565530
 |[BeyondHD](https://beyond-hd.me/){#beyondhd}|BeyondHD (BHD) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[Bibliotik](https://bibliotik.me/){#bibliotik}|Bibliotik is a Private Torrent Tracker for EBOOKS and AUDIOBOOKS|English (United States)|
 |[BigCore](https://bigcore.eu/){#bigcore}|BigCore is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
+|[BinaryBay](https://binarybay.cc/){#binarybay}|BinaryBay is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Bit-Bázis](https://bitbazis.net/){#bitbazis}|Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV|Hungarian (Hungary)|
 |[BitAgent](https://bit-agent.org/){#bitagent}|BitAgent is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Bitded](http://dedbit-new.dedbit.com/){#bitded}|Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
@@ -245,7 +246,6 @@ dateCreated: 2026-10-25T03:19:42.565530
 |[Bittorrentfiles](https://bittorrentfiles.me/){#bittorrentfiles}|Bittorrentfiles is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[BiTTuRK](https://bitturk.net/){#bitturk}|BiTTuRK is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL\. This Indexer is for English only|English (United States)|
 |[BJ-Share](https://bj-share.info/){#bjshare}|BJ-Share is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
-|[BlueBird](https://bluebird-hd.org/){#bluebird}|BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES|Russian (Russia)|
 |[BlueTorrents](https://bluetorrents.com/){#bluetorrents}|BlueTorrents is a Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[BlurayTracker](https://bluraytracker.cz/){#bluraytracker}|BlurayTracker is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
 |[Blutopia (API)](https://blutopia.cc/){#blutopia-api}|Blutopia (BLU) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
@@ -350,7 +350,7 @@ dateCreated: 2026-10-25T03:19:42.565530
 |[HappyFappy2FA](https://www.happyfappy.net/){#happyfappy2fa}|HappyFappy (HF) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
 |[hawke-uno](https://hawke.uno/){#hawke-uno}|hawke-uno (HUNO) is a Private Torrent Tracker for HD MOVIES / TV|English (United States)|
 |[HD-CLUB](https://hd-czech.eu/){#hd-club}|HD-CLUB is a CZECH Private Torrent Tracker for MOVIES / TV / GENERAL|Czech (Czech Republic)|
-|[HD Dolby](https://www.hddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[HD Dolby](https://www.uhddolby.com/){#hddolby}|HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HD-Forever (API)](https://hdf.world/){#hdforever-api}|HD-Forever (HD-F) is a French private tracker dedicated to movies, TV shows, animation, documentaries, concerts, and live shows|French (France)|
 |[HD-Olimpo (API)](https://hd-olimpo.club/){#hdolimpo-api}|HD-Olimpo is a SPANISH Private Torrent Tracker for HD MOVIES / TV|Spanish (Spain)|
 |[HD-Only (API)](https://hd-only.org/){#hdonly-api}|HD-Only (HD-O) is a FRENCH Private Torrent Tracker for HD MOVIES / TV|French (France)|
@@ -527,7 +527,6 @@ dateCreated: 2026-10-25T03:19:42.565530
 |[PTSKIT (API)](https://www.ptskit.org/){#ptskit-api}|PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTTey](https://pt.tey.cc/){#pttey}|PTTey is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTTime](https://www.pttime.org/){#pttime}|PTTime is a ratioless CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[PTYING (樱花)](https://pt.ying.us.kg/){#ptying}|PTYING (樱花) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTzone](https://ptzone.xyz/){#ptzone}|PTzone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PTzone (API)](https://ptzone.xyz/){#ptzone-api}|PTzone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PT分享站 (itzmx)](https://pt.itzmx.com/){#ptitzmx}|PT分享站 (itzmx) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
