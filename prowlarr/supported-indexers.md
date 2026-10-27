@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-26T03:21:33.470203
+date: 2026-10-27T03:49:40.233543
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-26T03:21:33.470203
+dateCreated: 2026-10-27T03:49:40.233543
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.6.6.5717` / [Commit: 71c5435cf81b957c748080433ba3e4e4057cd779](https://github.com/Prowlarr/Prowlarr/commit/71c5435cf81b957c748080433ba3e4e4057cd779)
-  - [Prowlarr Indexers Commit: 2d5e8d33d7b8c4e719fb61d8c26373327c26878d](https://github.com/Prowlarr/Indexers/commit/2d5e8d33d7b8c4e719fb61d8c26373327c26878d)
+  - Prowlarr Build `2.7.0.5722` / [Commit: 0dc20d8495bad9951c3fafe53f32b6e1c70fcf3b](https://github.com/Prowlarr/Prowlarr/commit/0dc20d8495bad9951c3fafe53f32b6e1c70fcf3b)
+  - [Prowlarr Indexers Commit: d3900a7aaaaee50684e1553067a5382b20dc40eb](https://github.com/Prowlarr/Indexers/commit/d3900a7aaaaee50684e1553067a5382b20dc40eb)
 
 ---
 
@@ -313,7 +313,7 @@ dateCreated: 2026-10-26T03:21:33.470203
 |[The Empire](https://theempire.click/){#theempire}|TheEmpire (TE) is a Private Torrent Tracker for COMMONWEALTH TV / RADIO|English (United States)|
 |[Empornium](https://emparadise.rs/){#empornium}|Empornium (EMP) is a Private Torrent Tracker for 3X|English (United States)|
 |[Empornium2FA](https://emparadise.rs/){#empornium2fa}|Empornium (EMP) is a Private Torrent Tracker for 3X\. This indexer uses cookie login for 2FA|English (United States)|
-|[eMuwarez (API)](https://emuwarez.com/){#emuwarez}|eMuwarez is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
+|[eMuwarez (API)](https://emu-warez.com/){#emuwarez}|eMuwarez is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Spain)|
 |[eStone](https://estone.cc/){#estone}|eStone (BigTorrent) is a HUNGARIAN Private Torrent Tracker for 0DAY / GENERAL|Hungarian (Hungary)|
 |[exitorrent\.org](https://exitorrent.org/){#exitorrent-org}|exitorrent\.org is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[ExoticaZ](https://exoticaz.to/){#exoticaz}|ExoticaZ (YourExotic) is a Private Torrent Tracker for 3X|English (United States)|
@@ -508,6 +508,7 @@ dateCreated: 2026-10-26T03:21:33.470203
 |[Podzemlje](https://podzemlje.net/){#podzemlje}|Podzemlje is an EX-YU Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Polish Torrent (API)](https://polishtorrent.top/){#polishtorrent}|Polish Torrent (PTT) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private Torrent Tracker for 0DAY / MOVIES / GENERAL|Polish (Poland)|
+|[Pornorip](https://www.pornorip.si/){#pornorip}|Pornorip is a Private Torrent Tracker for 3X DVD|English (United States)|
 |[Portugas (API)](https://portugas.org/){#portugas-api}|Portugas is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker|English (United States)|
 |[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD (PHD) is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeZ|English (United States)|
