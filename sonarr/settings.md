@@ -372,10 +372,52 @@ Name for the `Specials` (Season) folder
 > Rarely - but possibly - file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
 {.is-warning}
 
-- Import Using Script - Execute a custom script to import rather than the native import functionality.
+- Import Using Script - Execute a custom script to import rather than the native import functionality (copy, hardlink or move). See [Import Using Script](#import-using-script) below.
   - Import Script Path - Path to executable script.
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file.
   If a subtitle filename contains additional tags such as `cc` or `forced`, they will be preserved as long as they are recognized (currently in develop version).
+
+### Import Using Script
+
+Sonarr runs the script once per imported episode file, for downloads and for manual imports, instead of copying, hardlinking or moving the file itself. The source paths of all the files of a download are worked out before the first call, so a script must not move the other files of a season pack (for example by renaming the download's folder).
+
+#### Arguments
+
+`$1` is the source path (the file being imported), `$2` the destination path Sonarr has chosen (series and season folder and file name from the naming settings).
+
+#### Environment variables
+
+The most useful ones (the names arrive in **lowercase**, see the warning below):
+
+| Variable | Content |
+| -------- | ------- |
+| `sonarr_sourcepath` | Same as `$1` |
+| `sonarr_destinationpath` | Same as `$2` |
+| `sonarr_transfermode` | What Sonarr would have done: `Move`, `Copy`, `HardLink`, `HardLinkOrCopy` |
+| `sonarr_series_id`, `sonarr_series_title`, `sonarr_series_path`, `sonarr_series_tvdbid`, `sonarr_series_tags` | The series |
+| `sonarr_episodefile_seasonnumber`, `sonarr_episodefile_episodenumbers`, `sonarr_episodefile_episodetitles`, `sonarr_episodefile_quality`, `sonarr_episodefile_releasegroup`, `sonarr_episodefile_scenename` | The file being imported |
+| `sonarr_download_client`, `sonarr_download_client_type`, `sonarr_download_id` | Download client name and type, and the download's id (the torrent hash for torrent clients); empty for imports that are not downloads |
+| `sonarr_deletedpaths`, `sonarr_deletedrelativepaths` | On upgrades, the replaced files, separated by `\|`; Sonarr has already deleted them when the script runs |
+
+Also available: `sonarr_instancename`, `sonarr_applicationurl`, `sonarr_series_titleslug`, `sonarr_series_tvmazeid`, `sonarr_series_tmdbid`, `sonarr_series_imdbid`, `sonarr_series_type`, `sonarr_series_originallanguage`, `sonarr_series_genres`, `sonarr_episodefile_episodecount`, `sonarr_episodefile_episodeids`, `sonarr_episodefile_episodeairdates`, `sonarr_episodefile_episodeairdatesutc`, `sonarr_episodefile_episodeoverviews`, `sonarr_episodefile_qualityversion`, `sonarr_episodefile_mediainfo_*` (`audiochannels`, `audiocodec`, `audiolanguages`, `languages`, `height`, `width`, `subtitles`, `videocodec`, `videodynamicrangetype`), `sonarr_episodefile_customformat`, `sonarr_episodefile_customformatscore`, `sonarr_deleteddateadded`, `sonarr_deletedrecyclebinpaths`.
+
+#### Output
+
+Sonarr reads these lines from the script's standard output (other lines are only logged):
+
+- `[MoveStatus] MoveComplete` - the script has put the file at the destination path. This is the default when the script prints no `[MoveStatus]` line.
+- `[MoveStatus] RenameRequested` - the script has put the file somewhere in the series folder; Sonarr reads its media info again and renames it according to the naming settings.
+- `[MoveStatus] DeferMove` - the script did nothing; Sonarr imports the file natively.
+- `[MediaFile] <path>` - where the media file is now, if not at the destination path. It must exist and have a video extension; only one is allowed.
+- `[ExtraFile] <path>` - a file Sonarr should consider for extra file import (subtitles, nfo...). May be repeated.
+- `[PreventExtraImport]` - do not import extra files for this file.
+
+#### Exit code
+
+Anything other than `0` fails the import (shown in Activity > Queue and in the logs).
+
+> The variable names are lowercase although the source code spells them `Sonarr_SourcePath` etc.: Sonarr passes them in a .NET `StringDictionary`, which lowercases keys. In a shell script use `$sonarr_sourcepath`.
+{.is-warning}
 
 ## File Management
 
