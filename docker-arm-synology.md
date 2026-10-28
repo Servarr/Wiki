@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-07-12T20:22:05.719Z
 ---
 
-> **This guide is outdated and deprecated.** It dates from 2021 and relies on an unmaintained third-party bootstrap that installs Docker 20.10.0 and Docker Compose v1 (`docker-compose`). It has not been validated against current DSM releases and may no longer work. Prefer Synology's official Container Manager on supported hardware; use this only if you understand the risks. {.is-warning}
+> **This guide is outdated and deprecated.** It dates from 2021 and relies on an unmaintained third-party bootstrap that installs Docker 20.10.0 and Docker Compose v1 (`docker-compose`). The steps below replace Compose v1. It has not been validated against current DSM releases and may no longer work. Prefer Synology's official Container Manager on supported hardware; use this only if you understand the risks. {.is-warning}
 
 # Introduction
 
@@ -50,7 +50,30 @@ Do as it says:
 1. Add your user to the new `docker` group using the Synology GUI
 1. **Reboot.**
 
-Hopefully you have functioning `docker` and `docker-compose` commands, which should work when logged in as your normal user.
+Hopefully you have a functioning `docker` command, which should work when logged in as your normal user.
+
+## Replace Docker Compose v1 with the Compose v2 plugin
+
+The script installs `docker-compose` as a wrapper that runs Compose v1.29.2 inside a container. That version is no longer maintained and has known problems on these devices. For example, `docker-compose -f /path/to/docker-compose.yml` can fail to find a file that exists, and secrets files referenced in a compose file can fail to load.
+
+Replace it with the official Compose v2 plugin. As `root`, run:
+
+```bash
+rm -f /usr/local/bin/docker-compose
+mkdir -p /usr/local/lib/docker/cli-plugins
+curl -SL --fail https://github.com/docker/compose/releases/latest/download/docker-compose-linux-aarch64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+```
+
+Then confirm it works as your normal user:
+
+```bash
+docker compose version
+```
+
+Compose v2 is a `docker` subcommand, so use `docker compose` (with a space) wherever older guides show `docker-compose`. To update Compose later, run the `curl` command again.
+
+For more detail, see Docker's [manual plugin installation instructions](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually).
 
 # Caveats
 
@@ -63,34 +86,18 @@ Hopefully you have functioning `docker` and `docker-compose` commands, which sho
 1. Obviously you can only run aarch64 images, but most hotio and
     linuxserver images offer an aarch64 version.
 
-# Setting up a Docker GUI
+# Monitoring containers
 
-If you want a GUI you can run Portainer using the following example
-compose:
+Manage your containers with `docker compose`. Avoid Portainer for creating or changing containers. The [Docker Guide](/docker-guide#portainer) explains why.
 
-```yml
-    version: '2'
+If you want a lightweight view of running containers, [ctop](https://github.com/bcicen/ctop) is a terminal tool that shows container status, resource usage, and logs. As `root`, run:
 
-    services:
-      portainer:
-        image: portainer/portainer
-        restart: unless-stopped
-        network_mode: host
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-          - portainer_data:/data
-
-    volumes:
-      portainer_data:
+```bash
+curl -SL --fail https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-arm64 -o /usr/local/bin/ctop
+chmod +x /usr/local/bin/ctop
 ```
 
-Place this in a file called `docker-compose.yml` in an otherwise empty directory. Run:
-
-```shell
-docker-compose up -d
-```
-
-Visit [`http://ip:9000`](http://ip:9000) to complete setup (where `ip` is the IP address of your synology).
+Then run `ctop` as your normal user.
 
 # Setting up Sonarr/Radarr/Lidarr/Readarr
 
