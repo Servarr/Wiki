@@ -59,6 +59,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [tdarr\_inform](#tdarr_inform)
   - [Deleterr](#deleterr)
   - [Prunerr](#prunerr)
+  - [self-host](#self-host)
   - [Twitter Connect](#twitter-connect)
 
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
@@ -389,6 +390,10 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 ## Prunerr
 
 [Prunerr](https://github.com/helliott20/prunerr) is a media library cleanup tool for [Plex](/plex)/[Sonarr](/sonarr)/[Radarr](/radarr) that reclaims disk space by flagging and removing unwanted content based on customisable rules covering watch status, age, file size and resolution. It features a review-and-approve deletion queue, configurable grace periods, a disk-pressure reactive mode that automatically reclaims space when free space drops below a target you set, and outbound webhooks with Home Assistant integration. All service connections are configured through the web UI.
+
+## self-host
+
+[self-host](https://github.com/ajnart/self-host) is a free, open source (Apache-2.0) command line tool that installs self-hosted apps with Docker Compose, including the \*Arr apps, download clients and media servers, and does their setup for you: admin accounts, API keys and connecting the apps to each other. It runs on Linux, macOS and WSL2, and has a terminal dashboard.
 
 ## Twitter Connect
 
