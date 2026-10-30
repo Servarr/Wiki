@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-29T04:30:42.179187
+date: 2026-10-30T04:30:39.192301
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-29T04:30:42.179187
+dateCreated: 2026-10-30T04:30:39.192301
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `3.0.0.5726` / [Commit: 23b38d77843c5430214a2808532995d4b30bd31a](https://github.com/Prowlarr/Prowlarr/commit/23b38d77843c5430214a2808532995d4b30bd31a)
-  - [Prowlarr Indexers Commit: 4b8f37421af065a8d31663dba7542fafc6122175](https://github.com/Prowlarr/Indexers/commit/4b8f37421af065a8d31663dba7542fafc6122175)
+  - [Prowlarr Indexers Commit: 5f5db4e58d06be18619c3a858b9a91ade6f341ca](https://github.com/Prowlarr/Indexers/commit/5f5db4e58d06be18619c3a858b9a91ade6f341ca)
 
 ---
 
@@ -478,7 +478,7 @@ dateCreated: 2026-10-29T04:30:42.179187
 |[NovaHD](https://pt.novahd.top/){#novahd}|NovaHD is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[The Occult](https://theoccult.click/){#theoccult}|TheOccult (TO) is a Private Torrent Tracker for CULT / MYTHOLOGY E-LEARNING|English (United States)|
 |[OKPT](https://www.okpt.net/){#okpt}|OKPT is a CHINESE Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
-|[Old Greek Tracker (OGT)](https://oldgreektracker.xyz/){#oldgreektracker}|Old Greek Tracker (OGT) is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
+|[Old Greek Tracker (OGT)](https://greekseeders.site/){#oldgreektracker}|Old Greek Tracker (OGT) is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL|Greek (Greece)|
 |[The Old School (API)](https://theoldschool.cc/){#theoldschool-api}|The Old School (TOS) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[OldToonsWorld (API)](https://oldtoons.world/){#oldtoonsworld}|Old Toons World (OTW) is a Private Torrent Tracker for ANIMATED MOVIES / TV|English (United States)|
 |[OnlyEncodes+ (API)](https://onlyencodes.cc/){#onlyencodes-api}|OnlyEncodes+ is a Private Tracker for MOVIES / TV|English (United States)|
@@ -554,6 +554,7 @@ dateCreated: 2026-10-29T04:30:42.179187
 |[RocketHD (API)](https://rocket-hd.cc/){#rockethd}|RocketHD is a GERMAN Private Torrent Tracker for MOVIES / TV|German (Germany)|
 |[Romanian Metal Torrents](https://metal.iplay.ro/){#romanianmetaltorrents}|Romanian Metal Torrents (RMT) is a Private Torrent Tracker dedicated to METAL MUSIC\. This definition is for the English site|English (United States)|
 |[Rousi\.pro](https://rousi.pro/){#rousi-pro}|Rousi\.pro is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Sagmire](https://sagmire.org/){#sagmire}|Sagmire is a Private Torrent Tracker for XXX|English (United States)|
 |[SAMARITANO (API)](https://samaritano.cc/){#samaritano}|SAMARITANO is a BRAZILIAN Private tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[SAPIbr (API)](https://sapibr.com/){#sapibr}|SAPIbr (Toca Share) is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES|Portuguese (Portugal)|
 |[SBPT](https://sbpt.link/){#sbpt}|SBPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
