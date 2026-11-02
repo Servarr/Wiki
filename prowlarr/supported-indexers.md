@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-10-30T04:30:39.192301
+date: 2026-11-02T04:35:06.092255
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-10-30T04:30:39.192301
+dateCreated: 2026-11-02T04:35:06.092255
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `3.0.0.5726` / [Commit: 23b38d77843c5430214a2808532995d4b30bd31a](https://github.com/Prowlarr/Prowlarr/commit/23b38d77843c5430214a2808532995d4b30bd31a)
-  - [Prowlarr Indexers Commit: 5f5db4e58d06be18619c3a858b9a91ade6f341ca](https://github.com/Prowlarr/Indexers/commit/5f5db4e58d06be18619c3a858b9a91ade6f341ca)
+  - Prowlarr Build `3.0.0.5736` / [Commit: 7ce929c63497ecf0f79c22ad462e5c470ab23f82](https://github.com/Prowlarr/Prowlarr/commit/7ce929c63497ecf0f79c22ad462e5c470ab23f82)
+  - [Prowlarr Indexers Commit: 9ecfe4f9833d3394b27fe911a9a6242b3a9da90d](https://github.com/Prowlarr/Indexers/commit/9ecfe4f9833d3394b27fe911a9a6242b3a9da90d)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-10-30T04:30:39.192301
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://q0nw83uf.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://0uymtmbw.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -107,7 +107,7 @@ dateCreated: 2026-10-30T04:30:39.192301
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
 |[VSTHouse](https://vsthouse.ru/){#vsthouse}|VSTHouse is a RUSSIAN Public site for AUDIO apps, plugins and samples|Russian (Russia)|
 |[VSTorrent](https://vstorrent.org/){#vstorrent}|VSTorrent is a Public site for AUDIO apps, plugins and samples|English (United States)|
-|[World-torrent](https://ww3-darkfox.officiel.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
+|[World-torrent](https://ww4-darkfox.officiel.cc/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
@@ -255,7 +255,6 @@ dateCreated: 2026-10-30T04:30:39.192301
 |[BrasilTracker](https://brasiltracker.org/){#brasiltracker}|BrasilTracker is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Portuguese (Brazil)|
 |[BroadcasTheNet](https://api.broadcasthe.net/){#broadcasthenet}|BroadcasTheNet (BTN) is an invite-only torrent tracker focused on TV shows|English (United States)|
 |[BrokenStones](https://brokenstones.is/){#brokenstones}|Broken Stones is a Private site for MacOS and iOS APPS / GAMES|English (United States)|
-|[The Brothers](https://leo-test.store/){#thebrothers}|The Brothers is a Private GERMAN tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[BTArg](https://www.btarg.com.ar/){#btarg}|BTArg is an ARGENTINIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Spanish (Argentina)|
 |[BTNext](https://tracker.btnext.com/){#btnext}|BTNext (BTNT) is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
@@ -295,6 +294,7 @@ dateCreated: 2026-10-30T04:30:39.192301
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[DaXiangJiao (大香蕉)](https://pt.daxiangjiao.org/){#daxiangjiao}|DaXiangJiao (大香蕉) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DaXiangJiao (大香蕉) (API)](https://pt.daxiangjiao.org/){#daxiangjiao-api}|DaXiangJiao (大香蕉) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[Deep-Water (API)](https://deep-water.info/){#deep-water-api}|Deep-Water is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Depth Studio](https://dstudio.me/){#depthstudio}|Depth Studio is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Depth Studio (API)](https://dstudio.me/){#depthstudio-api}|Depth Studio is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[DesiGaane](https://desigaane.rocks/){#desigaane}|DesiGaane is a Private Torrent Tracker for DESI MUSIC|English (United States)|
@@ -345,6 +345,7 @@ dateCreated: 2026-10-30T04:30:39.192301
 |[GGPT](https://www.gamegamept.com/){#ggpt}|GGPT is a CHINESE Private Torrent Tracker for GAMES|Chinese (China)|
 |[GigaTorrents](https://gigatorrents.ws/){#gigatorrents}|GigaTorrents is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Girotorrent](https://girotorrent.org/){#girotorrent}|Girotorrent is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
+|[Golden Gate (GG)](https://leo-test.store/){#goldengate}|Golden Gate (GG) is a Private GERMAN tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[GreatPosterWall](https://greatposterwall.com/){#greatposterwall}|GreatPosterWall (GPW) is a CHINESE Private site for MOVIES|English (United States)|
 |[HaiDan](https://www.haidan.cc/){#haidan}|HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HappyFappy](https://www.happyfappy.net/){#happyfappy}|HappyFappy (HF) is a Private Torrent Tracker for 3X|English (United States)|
