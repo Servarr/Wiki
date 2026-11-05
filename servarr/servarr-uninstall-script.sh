@@ -18,8 +18,8 @@ red='\033[0;31m'
 brown='\033[0;33m'
 reset='\033[0m' # No Color
 
-scriptversion="0.0.2"
-scriptdate="2024-04-10"
+scriptversion="0.0.3"
+scriptdate="2026-10-03"
 
 set -euo pipefail
 
@@ -56,7 +56,7 @@ service_is_running() {
 }
 
 # Array of services
-services=("lidarr" "prowlarr" "radarr" "readarr" "whisparr")
+services=("lidarr" "prowlarr" "radarr" "readarr" "sonarr" "whisparr")
 
 ### Fake echo to let the user think the computer is searching
 
