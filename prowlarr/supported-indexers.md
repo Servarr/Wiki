@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-08T04:36:46.184561
+date: 2026-11-11T04:50:12.567553
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-08T04:36:46.184561
+dateCreated: 2026-11-11T04:50:12.567553
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `3.0.1.5748` / [Commit: a01c7efcf8be603eed8dc76adfd425ea0172803d](https://github.com/Prowlarr/Prowlarr/commit/a01c7efcf8be603eed8dc76adfd425ea0172803d)
-  - [Prowlarr Indexers Commit: 7cb7f2659ca503b956ef154403960a81c395cf5a](https://github.com/Prowlarr/Indexers/commit/7cb7f2659ca503b956ef154403960a81c395cf5a)
+  - Prowlarr Build `3.0.2.5756` / [Commit: 61476876ec3cb4526c21782f468a205ce608e7a9](https://github.com/Prowlarr/Prowlarr/commit/61476876ec3cb4526c21782f468a205ce608e7a9)
+  - [Prowlarr Indexers Commit: d45f173d8b91c7965b70447c2eb5812483dfd730](https://github.com/Prowlarr/Indexers/commit/d45f173d8b91c7965b70447c2eb5812483dfd730)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-11-08T04:36:46.184561
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://efn74pwm.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://jsrtlgzx.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -100,8 +100,8 @@ dateCreated: 2026-11-08T04:36:46.184561
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject.cc/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome271.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip251.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome272.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip252.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -365,6 +365,7 @@ dateCreated: 2026-11-08T04:36:46.184561
 |[HDBao](https://hdbao.cc/){#hdbao}|HDBao is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDBao (API)](https://hdbao.cc/){#hdbao-api}|HDBao is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDBits](https://hdbits.org/){#hdbits}|Best HD Tracker|English (United States)|
+|[HDChina](https://hdwing.org/){#hdchina}|HDChina (HDWing) is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[HDCiTY](https://hdcity.city/){#hdc}|HDCiTY (HDC) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
 |[HDClone](https://pt.hdclone.top/){#hdclone}|HDClone is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[HDFans](https://hdfans.org/){#hdfans}|HDFans is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -389,7 +390,6 @@ dateCreated: 2026-11-08T04:36:46.184561
 |[House of Devil](https://h-o-d.org/){#houseofdevil}|House of Devil is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[HQMusic](https://tracker.hqmusic.info/){#hqmusic}|HQMusic is a VIETNAMESE Private Torrent Tracker for MUSIC|Vietnamese (Viet Nam)|
 |[HUDBT (蝴蝶)](https://hudbt.hust.edu.cn/){#hudbt}|HUDBT (蝴蝶) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
-|[HxPT (好学)](https://www.hxpt.org/){#hxpt}|HxPT (好学) is a CHINESE Private Torrent Tracker for E-LEARNING|Chinese (China)|
 |[Hǎitáng (海棠PT)](https://www.htpt.cc/){#haitang}|Hǎitáng (海棠PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK|Chinese (China)|
 |[ImmortalSeed](https://immortalseed.me/){#immortalseed}|ImmortalSeed (iS) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Immortuos](https://immortuos.life/){#immortuos}|Immortuos is a GERMAN Private Tracker for MOVIES / TV|German (Germany)|
