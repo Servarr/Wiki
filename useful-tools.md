@@ -29,6 +29,7 @@ dateCreated: 2021-06-05T20:51:53.183Z
   - [Ombi](#ombi)
   - [Seerr](#seerr)
   - [Petio](#petio)
+  - [Askarr](#askarr)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
   - [Remote Control](#remote-control)
     - [Managarr](#managarr)
@@ -261,6 +262,12 @@ Highlights
 [Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
 
 The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
+
+## Askarr
+
+[Askarr](https://askarr.com) is a hosted request page for Radarr and Sonarr. People request movies and shows from a phone, and Radarr and Sonarr at home pull the requests in as an import list, so no inbound ports are opened.
+
+Askarr is a hosted, closed-source service. The free tier allows 10 requests a month.
 
 # Other Projects and Programs - \*Arr Related
 
