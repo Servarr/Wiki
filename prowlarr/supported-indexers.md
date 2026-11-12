@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-11T04:50:12.567553
+date: 2026-11-12T05:52:02.621580
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-11T04:50:12.567553
+dateCreated: 2026-11-12T05:52:02.621580
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `3.0.2.5756` / [Commit: 61476876ec3cb4526c21782f468a205ce608e7a9](https://github.com/Prowlarr/Prowlarr/commit/61476876ec3cb4526c21782f468a205ce608e7a9)
-  - [Prowlarr Indexers Commit: d45f173d8b91c7965b70447c2eb5812483dfd730](https://github.com/Prowlarr/Indexers/commit/d45f173d8b91c7965b70447c2eb5812483dfd730)
+  - Prowlarr Build `3.0.2.5761` / [Commit: d2d1fc0e77664a94b8d3931b7f216eaafd234af4](https://github.com/Prowlarr/Prowlarr/commit/d2d1fc0e77664a94b8d3931b7f216eaafd234af4)
+  - [Prowlarr Indexers Commit: 456ff1ab8f32f2f04559e953d4b8e5232bd36972](https://github.com/Prowlarr/Indexers/commit/456ff1ab8f32f2f04559e953d4b8e5232bd36972)
 
 ---
 
@@ -285,6 +285,7 @@ dateCreated: 2026-11-11T04:50:12.567553
 |[CrnaBerza2FA](https://www.crnaberza.com/){#crnaberza2fa}|CrnaBerza is a BALKAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Serbian (Serbia and Montenegro)|
 |[CRT2FA](https://www.cathode-ray.tube/){#crt2fa}|Cathode-Ray\.Tube (CRT) is a Private Torrent Tracker for CLASSIC MOVIES / TV\. This indexer uses cookie login for 2FA|English (United Kingdom)|
 |[cyanbug (大青虫)](https://cyanbug.net/){#cyanbug}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[cyanbug (大青虫) (API)](https://cyanbug.net/){#cyanbug-api}|cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[CyclingArchiveClub](https://cyclingarchive.club/){#cyclingarchiveclub}|CyclingArchiveClub is a Private tracker for Professional road and Cyclocross racing VIDEOS|English (United States)|
 |[CZTeam (API)](https://czteam.me/){#czteam-api}|CZTeam (CZT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[DanishBits (API)](https://danishbits.me/){#danishbits-api}|DanishBits is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
