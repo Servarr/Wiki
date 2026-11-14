@@ -12,13 +12,13 @@ dateCreated: 2021-08-14T15:15:51.656Z
 
 Recipes and workarounds for things that come up often enough to be worth documenting, but don't fit the install / troubleshoot / FAQ shape. Most of this is library-management content: filling in gaps in metadata, bulk-editing the library, and backup/restore hygiene.
 
-For setup recipes (reverse proxy, VPN, Docker compose, hardlinks) see the [TRaSH Guides](https://trash-guides.info/) — they cover those topics in more depth than this wiki does.
+For setup recipes (reverse proxy, VPN, Docker compose, hardlinks) see the [TRaSH Guides](https://trash-guides.info/). They cover those topics in more depth than this wiki does.
 
 ## Folder structure
 
 ### Separating download folders from your library
 
-Your download folder and music library root folder can't be the same location. Mixing them causes imports to fail or loop — Lidarr can't tell a finished download from something already in the library.
+Your download folder and music library root folder can't be the same location. Mixing them causes imports to fail or loop, because Lidarr can't tell a finished download from something already in the library.
 
 Keep two locations separate:
 
@@ -30,12 +30,12 @@ Keep two locations separate:
 
 On import, Lidarr moves (or hardlinks) files from `downloads/` into `music/`. The copy in `downloads/` stays owned by the download client. The copy in `music/` is what Lidarr manages.
 
-> For hardlinks to work — which avoids any extra disk space during import — both paths must be on the same physical filesystem. If `downloads/` and `music/` are on different drives or volumes, Lidarr will copy instead of hardlink. See [Concepts → Hardlinks and completed downloads](/lidarr/concepts#hardlinks-and-completed-downloads).
+> For hardlinks to work, which avoids any extra disk space during import, both paths must be on the same physical filesystem. If `downloads/` and `music/` are on different drives or volumes, Lidarr will copy instead of hardlink. See [Concepts → Hardlinks and completed downloads](/lidarr/concepts#hardlinks-and-completed-downloads).
 {.is-info}
 
 ### Multiple download clients
 
-If you're running more than one download client — say, a Usenet client alongside a torrent client — give each its own subfolder under `downloads/` and set a matching category in Lidarr:
+If you're running more than one download client, such as a Usenet client alongside a torrent client, give each its own subfolder under `downloads/` and set a matching category in Lidarr:
 
 ```text
 /data/
@@ -45,12 +45,12 @@ If you're running more than one download client — say, a Usenet client alongsi
   music/
 ```
 
-In **Settings → Download Clients**, set each client's **Category** to a unique value (for example, `lidarr`) and make sure the download client itself uses the same category name. Lidarr only watches items in the configured category — anything outside it's invisible. This keeps clients from stepping on each other and prevents apps that share a client from grabbing each other's downloads.
+In **Settings → Download Clients**, set each client's **Category** to a unique value (for example, `lidarr`) and make sure the download client itself uses the same category name. Lidarr only watches items in the configured category. Anything outside it's invisible. This keeps clients from stepping on each other and prevents apps that share a client from grabbing each other's downloads.
 
-> Radarr, Sonarr, and Lidarr can share the same download client as long as each application uses a different category. Never point two applications at the same category — they will fight over each other's downloads.
+> Radarr, Sonarr, and Lidarr can share the same download client as long as each application uses a different category. Never point two applications at the same category. They will fight over each other's downloads.
 {.is-info}
 
-> **Why `downloads/` instead of TRaSH's flat layout?** TRaSH Guides places `torrents/` and `usenet/` as peer directories next to `media/` at the top level. This layout groups them under a single `downloads/` parent instead. The reason is that Lidarr's ecosystem tends to involve more download sources than just torrents and Usenet — slskd, deemix, manual imports, and others are all common additions. Grouping them keeps the top level clean as that list grows. The TRaSH principle that actually matters — keeping everything under one filesystem root so hardlinks work — hasn't changed. See [this r/Lidarr post](https://www.reddit.com/r/Lidarr/comments/1sm8jb8/path_structure_for_multiple_download_clients_in/) for a fuller breakdown.
+> **Why `downloads/` instead of TRaSH's flat layout?** TRaSH Guides places `torrents/` and `usenet/` as peer directories next to `media/` at the top level. This layout groups them under a single `downloads/` parent instead. The reason is that Lidarr's ecosystem tends to involve more download sources than just torrents and Usenet. slskd, deemix, manual imports, and others are all common additions. Grouping them keeps the top level clean as that list grows. The TRaSH principle that actually matters, keeping everything under one filesystem root so hardlinks work, hasn't changed. See [this r/Lidarr post](https://www.reddit.com/r/Lidarr/comments/1sm8jb8/path_structure_for_multiple_download_clients_in/) for a fuller breakdown.
 {.is-info}
 
 ### Remote path mapping
@@ -63,8 +63,8 @@ When Lidarr and your download client run in separate containers or machines, the
 
 Lidarr doesn't reach out to any image service directly. Artist images come through the Servarr metadata server, which looks each artist up by MusicBrainz ID against two providers, in order:
 
-1. **fanart.tv** — queried first, for all of banner, fanart (background), logo, and poster art.
-2. **TheAudioDB** — used only to fill in whichever of those four image types fanart.tv didn't have. It never overrides a fanart.tv result.
+1. **fanart.tv:** queried first, for all of banner, fanart (background), logo, and poster art.
+2. **TheAudioDB:** used only to fill in whichever of those four image types fanart.tv didn't have. It never overrides a fanart.tv result.
 
 MusicBrainz itself isn't in this path. An artist can have a complete MusicBrainz entry and still show no image in Lidarr if neither fanart.tv nor TheAudioDB has artwork for that MBID.
 
@@ -74,7 +74,7 @@ If an artist is showing no image or a wrong image:
 2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache of fanart.tv / TheAudioDB results has its own propagation window measured in hours, sometimes longer.
 3. Trigger an artist refresh in Lidarr once you believe upstream has updated (Artist page → Refresh button, or Library → Artist Editor → Update).
 
-> Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream at fanart.tv or TheAudioDB — uploading art to MusicBrainz's Cover Art Archive won't fix a missing artist image, since that only feeds album cover art (see [Missing album images](#missing-album-images) below).
+> Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream at fanart.tv or TheAudioDB. Uploading art to MusicBrainz's Cover Art Archive won't fix a missing artist image, since that only feeds album cover art (see [Missing album images](#missing-album-images) below).
 {.is-info}
 
 ### Missing album images
@@ -84,7 +84,7 @@ If an artist is showing no image or a wrong image:
 Lidarr pulls album cover art from MusicBrainz's [Cover Art Archive](https://coverartarchive.org/) via the Servarr metadata server.
 
 1. Open the release group on MusicBrainz and check whether cover art is present in the Cover Art Archive.
-2. If not, you can upload a cover yourself — MusicBrainz has a [Cover Art guideline](https://musicbrainz.org/doc/Cover_Art) covering acceptable sources and quality.
+2. If not, you can upload a cover yourself. MusicBrainz has a [Cover Art guideline](https://musicbrainz.org/doc/Cover_Art) covering acceptable sources and quality.
 3. After upload, allow an hour for the metadata server cache to pick it up, then refresh the album in Lidarr.
 
 Lidarr picks up covers uploaded directly to the Cover Art Archive faster than other metadata corrections. CAA has a more direct path into the metadata server than MusicBrainz entity data does.
@@ -99,15 +99,15 @@ Use **Library → Artist Editor** (formerly "Mass Editor"):
    - *Remove from Lidarr only* keeps your files; use this when you added the artist by mistake but want to keep the music.
    - *Remove from Lidarr and delete files* is destructive and irreversible. Make sure you have a backup first if in doubt.
 
-The same flow works for bulk changes that aren't deletion — root folder moves, quality profile swaps, monitoring toggles — via the other bulk-action buttons at the bottom of Artist Editor.
+The same flow works for bulk changes that aren't deletion (root folder moves, quality profile swaps, monitoring toggles) via the other bulk-action buttons at the bottom of Artist Editor.
 
 ### Renaming or moving files outside Lidarr
 
 {#renaming-moving-outside-lidarr}
 
-Lidarr tracks every managed file by its absolute path. That path is stored in the `TrackFile` table in `lidarr.db`. There is no content hash, inode, or fingerprint involved in ongoing tracking after import -- the path is the only handle Lidarr has on a file.
+Lidarr tracks every managed file by its absolute path. That path is stored in the `TrackFile` table in `lidarr.db`. Lidarr uses no content hash, inode, or fingerprint for ongoing tracking after import. The path is the only handle Lidarr has on a file.
 
-When you rename or move a file or folder at the OS level, Lidarr does not learn about it. The database still points to the old path. The next time Lidarr scans that folder -- whether triggered manually, by a refresh, or by the scheduled daily rescan -- `DiskScanService` walks the directory tree and passes the list of files on disk to `MediaFileTableCleanupService.Clean()`. That method compares the database records against the files it found:
+When you rename or move a file or folder at the OS level, Lidarr doesn't learn about it. The database still points to the old path. The next time Lidarr scans that folder, whether triggered manually, by a refresh, or by the scheduled daily rescan, `DiskScanService` walks the directory tree and passes the list of files on disk to `MediaFileTableCleanupService.Clean()`. That method compares the database records against the files it found:
 
 ```csharp
 // src/NzbDrone.Core/MediaFiles/MediaFileTableCleanupService.cs
@@ -120,7 +120,7 @@ orphanedTracks.ForEach(x => x.TrackFileId = 0);
 _trackService.SetFileIds(orphanedTracks);
 ```
 
-Anything at the old path is gone from the database. The tracks that referenced those files have their `TrackFileId` reset to zero, which means they are now unmatched. From Lidarr's perspective, those tracks are missing and unimported.
+Anything at the old path is gone from the database. The tracks that referenced those files have their `TrackFileId` reset to zero, which means they're now unmatched. From Lidarr's perspective, those tracks are missing and unimported.
 
 If the album is monitored and Lidarr finds a release for it during an RSS sync, `DeletedTrackFileSpecification` checks whether track files that exist in the database are present on disk. If **Unmonitor Deleted Tracks** is enabled in **Settings → Media Management**, Lidarr treats the absence as a deletion and skips the release until the next disk scan clears the stale records. After that scan, the tracks appear missing and Lidarr may queue a search for them:
 
@@ -163,7 +163,7 @@ To move a file to a different location on the same volume without a UI option: u
 
 #### Recovery if you already renamed outside Lidarr
 
-If the rename has already happened and the next disk scan has not yet run, you can sometimes recover by renaming back before the scan fires. If the scan has already run and the records are gone:
+If the rename has already happened and the next disk scan hasn't run yet, you can sometimes recover by renaming back before the scan fires. If the scan has already run and the records are gone:
 
 1. Make sure the files are in a location Lidarr can see (inside a configured root folder or accessible via the file browser).
 2. Go to **Activity → Manual Import** and point it at the folder containing the renamed files.
@@ -319,7 +319,7 @@ After creating the formats, assign scores in **Settings → Profiles → [your p
 | WEB | 5 |
 | Vinyl | -10000 |
 
-Set **Minimum Custom Format Score** to `1` in the profile. This means a release must match at least one of CD, Lossless, WEB, or Preferred Groups before Lidarr will grab it — Lidarr skips releases with no recognised source tag entirely.
+Set **Minimum Custom Format Score** to `1` in the profile. This means a release must match at least one of CD, Lossless, WEB, or Preferred Groups before Lidarr will grab it. Lidarr skips releases with no recognised source tag entirely.
 
 > Scoring is subjective and depends on your indexers and sources. Treat these values as a starting point, not a prescription.
 {.is-info}
@@ -332,7 +332,7 @@ Two ways to check how Lidarr will parse a release name before building profiles 
 
 **In Lidarr:** Go to **Settings → Custom Formats** and use the **Test Parsing** button. Enter a release title and Lidarr shows the parsed fields (source, quality, release group, etc.) alongside which custom formats match and their combined score.
 
-**Via the Servarr Discord bot:** In the `#bot-spam` channel on the [Servarr Discord](https://lidarr.audio/discord), run `/parser lidarr <release title>` — for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`. The bot replies with the same parsed breakdown. Any user who donates to Servarr becomes a Donatarr and can use the parser bot.
+**Via the Servarr Discord bot:** In the `#bot-spam` channel on the [Servarr Discord](https://lidarr.audio/discord), run `/parser lidarr <release title>`. For example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`. The bot replies with the same parsed breakdown. Any user who donates to Servarr becomes a Donatarr and can use the parser bot.
 
 Both tools give the same parser output. Use either when writing a custom format specification, debugging a release that isn't scoring as expected, or confirming a release group pattern matches before adding it to a profile.
 
@@ -340,7 +340,7 @@ Both tools give the same parser output. Use either when writing a custom format 
 
 {#backup-restore}
 
-Lidarr's entire state lives in its [AppData directory](/lidarr/appdata-directory). Backing up means capturing that directory at rest. Restoring means putting it back in place with matching permissions and paths. There's nothing in the database that's meaningful without the matching `config.xml` and vice-versa — back up the whole folder, not individual files.
+Lidarr's entire state lives in its [AppData directory](/lidarr/appdata-directory). Backing up means capturing that directory at rest. Restoring means putting it back in place with matching permissions and paths. There's nothing in the database that's meaningful without the matching `config.xml` and vice-versa. Back up the whole folder, not individual files.
 
 ### Backing up
 
@@ -356,11 +356,11 @@ This captures the database, config, and everything needed to restore. The backup
 
 **Filesystem copy:**
 
-1. Stop Lidarr. This is the only way to guarantee the database is in a consistent state — SQLite's WAL can leave a running database in a state that's safe for the running process but not safe to copy.
+1. Stop Lidarr. This is the only way to guarantee the database is in a consistent state. SQLite's WAL can leave a running database in a state that's safe for the running process but not safe to copy.
 2. Copy the entire AppData directory to a safe location. Include `.db-wal` and `.db-journal` siblings of `lidarr.db` if they exist.
 3. Start Lidarr.
 
-Filesystem backup is the right choice if you want to use existing backup tooling (Borg, restic, Duplicati, ZFS snapshots, etc.) — don't try to snapshot a live SQLite file.
+Filesystem backup is the right choice if you want to use existing backup tooling (Borg, restic, Duplicati, ZFS snapshots, etc.). Don't try to snapshot a live SQLite file.
 
 ### Restoring
 
@@ -391,7 +391,7 @@ As long as the root folder paths in the backup are still valid on the destinatio
 {.is-warning}
 
 1. Install Lidarr via the SPK package if it isn't installed.
-2. Find the AppData directory — `/usr/local/Lidarr/var/.config/Lidarr/` by default.
+2. Find the AppData directory: `/usr/local/Lidarr/var/.config/Lidarr/` by default.
 3. Stop Lidarr.
 4. SSH to the NAS as root.
 5. Replace the database and restore:
@@ -409,16 +409,16 @@ As long as the root folder paths in the backup are still valid on the destinatio
    chmod -R 0644 *
    ```
 
-   > On some SynoCommunity versions the user is `sc-Lidarr` rather than `Lidarr` — `chown -R sc-Lidarr:Lidarr *`. Check who owns the existing files before the restore if you aren't sure.
+   > On some SynoCommunity versions the user is `sc-Lidarr` rather than `Lidarr`: `chown -R sc-Lidarr:Lidarr *`. Check who owns the existing files before the restore if you aren't sure.
    {.is-info}
 
 7. Start Lidarr.
 
 ## See also
 
-- [FAQ](/lidarr/faq) — the questions that come up most often
-- [Concepts](/lidarr/concepts) — the model Lidarr uses to manage music
-- [Metadata Troubleshooting](/lidarr/metadata-troubleshooting) — when MusicBrainz data is missing or stale
-- [Import Troubleshooting](/lidarr/import-troubleshooting) — when downloads finish but don't import
-- [Troubleshooting](/lidarr/troubleshooting) — general runtime issues
-- [TRaSH Guides](https://trash-guides.info/) — community recipes for media server setups
+- [FAQ](/lidarr/faq): the questions that come up most often
+- [Concepts](/lidarr/concepts): the model Lidarr uses to manage music
+- [Metadata Troubleshooting](/lidarr/metadata-troubleshooting): when MusicBrainz data is missing or stale
+- [Import Troubleshooting](/lidarr/import-troubleshooting): when downloads finish but don't import
+- [Troubleshooting](/lidarr/troubleshooting): general runtime issues
+- [TRaSH Guides](https://trash-guides.info/): community recipes for media server setups

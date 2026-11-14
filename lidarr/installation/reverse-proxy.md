@@ -63,7 +63,7 @@ To use a subdomain instead, visit `lidarr.yourdomain.tld`. Configure an `A recor
 > Many free DNS providers don't support this.
 {.is-warning}
 
-Nginx includes the `sites-enabled` folder by default. Check `nginx.conf` and add it via the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include) if it's missing — it must be inside the `http` context. Create a config file in `sites-enabled` with the following:
+Nginx includes the `sites-enabled` folder by default. Check `nginx.conf` and add it via the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include) if it's missing. It must be inside the `http` context. Create a config file in `sites-enabled` with the following:
 
 > For subdomain configuration, set baseurl to `''` (empty). This assumes the default port `8686` and Lidarr on localhost (127.0.0.1). Line 5 sets the subdomain to `lidarr`.
 {.is-info}

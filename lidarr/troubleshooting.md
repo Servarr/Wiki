@@ -46,7 +46,7 @@ To provide good and useful logs for sharing:
 3. Reproduce the Issue (Redo what's breaking things)
 4. [Open the trace log file (Lidarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
-6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
+6. Use [Gist](https://gist.github.com/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://www.toptal.com/developers/hastebin), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
 **Warnings:**
 
@@ -57,10 +57,6 @@ To provide good and useful logs for sharing:
 - Don't upload and share your logs via Google Drive, Dropbox, or any other site not noted above.
 - Don't archive (zip, tar (tarball), 7zip, etc.) your logs.
 - Don't share console output, docker container output, or anything other than the application logs specified
-
-**Important Note:**
-
-- When using [0bin](https://0bin.net/), be sure to disable colorization and don't burn after reading.
 
 - To search across old log files in Windows, use the Notepad++ **Find in Files** function.
 - **Unix only:** To search across old log files, use `grep`. For example, to find entries for an artist or release named "Shooter": `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`. If your [Appdata Directory](/lidarr/appdata-directory) is in your home folder: `grep -inr -C 100 -e 'Shooter' /home/$USER/.config/Lidarr/logs/*.trace*.txt`
@@ -89,7 +85,7 @@ Lidarr stores update log files in the [Appdata Directory](/lidarr/appdata-direct
 
 ## Sharing Logs
 
-Logs are long and hard to read in forum posts, and too verbose to paste into Discord. Use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://hastebin.com/), [Gist](https://gist.github.com), [0bin](https://0bin.net), or a similar paste site. The full file isn't needed. Share context from before and after the issue. Wait for spammy tasks like an RSS sync or library refresh to finish before capturing logs.
+Logs are long and hard to read in forum posts, and too verbose to paste into Discord. Use [Pastebin](https://pastebin.ubuntu.com/), [Hastebin](https://www.toptal.com/developers/hastebin), [Gist](https://gist.github.com), or a similar paste site. The full file isn't needed. Share context from before and after the issue. Wait for spammy tasks like an RSS sync or library refresh to finish before capturing logs.
 
 ## Trace/Debug Logs
 
@@ -170,7 +166,7 @@ Install the update (.exe) or unpack (.zip) the contents over your existing insta
 
 Downloading and importing is where *most* people experience issues. From a high level perspective, Lidarr needs to be able to communicate with your download client and have access to the files it downloads. There's a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
-> **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that window to examine it.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
+> **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that window to examine it.** If someone is helping you, put context from before/after in a [PrivateBin](https://privatebin.net/), [Gist](https://gist.github.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 {.is-danger}
 
 When you reach out for help, be sure to read [asking for help](#asking-for-help) so you can provide the details needed.
@@ -423,9 +419,6 @@ Just like the indexer/tracker test above, when you trigger a search while at Deb
 
 In this test, look for obvious errors and run some simple checks. The trace log shows the URL Lidarr used for the query. For a music search, Lidarr uses `t=music` with category codes in the 3000 range and artist/album parameters. Copy that URL from the trace log, replace the key placeholder with your actual API key, and paste it into a browser. If the browser returns results, connectivity is fine. Look at the categories and parameters to see whether the results match what you expect. If the browser returns an error, that's where to start.
 
-![searches-indexers-and-trackers1.png](/assets/lidarr/searches-indexers-and-trackers1.png)
-![searches-indexers-and-trackers2.png](/assets/lidarr/searches-indexers-and-trackers2.png)
-
 ## Common Problems
 
 Below are some common problems.
@@ -465,7 +458,7 @@ Your indexer returned no results within the categories you configured.
 If you find results on the site that aren't showing in Lidarr, the cause is likely one of the following:
 
 - [Categories are incorrect - See Above](#wrong-categories)
-- Lidarr ran an ID-based search but the indexer hasn't mapped those releases to that ID correctly. Only your indexer can fix this -- they need to map the release to the correct IDs.
+- Lidarr ran an ID-based search but the indexer hasn't mapped those releases to that ID correctly. Only your indexer can fix this. They need to map the release to the correct IDs.
 - Not searching how Lidarr searches. The terms you enter on the indexer site may differ from how Lidarr queries it. Check the Trace Logs to see Lidarr's exact query. Text-based queries use the format `q=words%20and%20things%20here`. This string is HTTP-encoded. Any HTML encoding tool online can decode it.
 
 ### Release Rejected: Album duration is 0
