@@ -1,6 +1,6 @@
 ---
 title: Lidarr Importing an Existing Library
-description: End-to-end guide for migrating an existing music library into Lidarr — preparation, pre-import checks, the import process itself, and post-import cleanup
+description: End-to-end guide for migrating an existing music library into Lidarr, covering preparation, pre-import checks, the import process itself, and post-import cleanup
 published: true
 date: 2026-09-12T11:36:24.476Z
 tags: lidarr, library, musicbrainz, importing, migration, tagging
@@ -12,7 +12,7 @@ dateCreated: 2026-04-18T16:54:14.510Z
 
 This page walks you through migrating an existing music library into Lidarr. It's intended for users who already have audio files on disk and want Lidarr to take over management of that library, rather than for users starting with an empty root folder.
 
-If you are setting Lidarr up for the first time and don't already have files, use the [Quick Start](/lidarr/quick-start-guide) instead. If you aren't sure whether Lidarr is a good fit for the library you have, read [Concepts — Is Lidarr right for your library?](/lidarr/concepts#is-lidarr-right-for-your-library) first; importing a library Lidarr can't model will waste a lot of time.
+If you are setting Lidarr up for the first time and don't already have files, use the [Quick Start](/lidarr/quick-start-guide) instead. If you aren't sure whether Lidarr is a good fit for the library you have, read [Concepts → Is Lidarr right for your library?](/lidarr/concepts#is-lidarr-right-for-your-library) first; importing a library Lidarr can't model will waste a lot of time.
 
 > **The automated import runs as a background task with no cancel button, and can take hours on large libraries.** Don't add a `Root Folder` that contains existing files until you have read this page in full.
 {.is-danger}
@@ -27,7 +27,7 @@ Lidarr uses an automated process to scan a `Root Folder`, match the files it fin
 
 If one or more of these isn't true today, you have two options: fix it before import, or leave the problematic portion of your library outside Lidarr and import only the parts that conform. Both are legitimate choices; see [Concepts](/lidarr/concepts).
 
-> See the FAQ entries [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work) and [How does Lidarr find releases?](/lidarr/faq#how-does-lidarr-find-releases) for the scheduling model and how Lidarr triggers searches. Lidarr doesn't continuously crawl indexers.
+> See the FAQ entry [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work) for the scheduling model and how Lidarr triggers searches. Lidarr doesn't continuously crawl indexers.
 {.is-info}
 
 ## Preparing your existing files
@@ -51,35 +51,35 @@ For example:
 
 This layout, combined with proper tags, gives recognition rates of 95% or better in both Lidarr and most downstream media players. Flat layouts (one folder containing many releases) or grouped-by-year layouts will cause mismatches or import failures.
 
-Disc-subfolder layouts (`.../Release/CD1/...`, `.../Release/CD2/...`) are handled natively by Lidarr's grouping logic, which recognises `CD`, `Disc`, and `Disk` subfolder markers and groups them as a single release automatically. You do not need to flatten disc subfolders before importing.
+Disc-subfolder layouts (`.../Release/CD1/...`, `.../Release/CD2/...`) are handled natively by Lidarr's grouping logic, which recognises `CD`, `Disc`, and `Disk` subfolder markers and groups them as a single release automatically. You don't need to flatten disc subfolders before importing.
 
 ### Tagging
 
-Tagging is where most import failures come from. Lidarr leans on MusicBrainz identifiers where they exist, and falls back to text matching on artist, album, and track fields where they don't — so the quality and consistency of your tags directly determines the quality of the import.
+Tagging is where most import failures come from. Lidarr leans on MusicBrainz identifiers where they exist, and falls back to text matching on artist, album, and track fields where they don't, so the quality and consistency of your tags directly determines the quality of the import.
 
 Recommended tagging tools:
 
-- **[MusicBrainz Picard](https://picard.musicbrainz.org/)** — the canonical MusicBrainz tagger. Writes MusicBrainz Release, Recording, and Artist IDs directly into your tags. Strongly preferred if you want the cleanest match in Lidarr.
-- **[Beets](https://beets.io/)** — command-line, scriptable, strong at bulk cleanup and folder renaming in the same pass.
-- **MusicBee, MediaMonkey, JRiver** — GUI library managers that can batch-retag; less MusicBrainz-native than Picard but workable.
+- **[MusicBrainz Picard](https://picard.musicbrainz.org/):** the canonical MusicBrainz tagger. Writes MusicBrainz Release, Recording, and Artist IDs directly into your tags. Strongly preferred if you want the cleanest match in Lidarr.
+- **[Beets](https://beets.io/):** command-line, scriptable, strong at bulk cleanup and folder renaming in the same pass.
+- **MusicBee, MediaMonkey, JRiver:** GUI library managers that can batch-retag; less MusicBrainz-native than Picard but workable.
 
 Most of these tools will rename folders and restructure files at the same time as retagging, which means a single pass can fix both the structure and the tags. Associating MusicBrainz Release IDs with each file during this pass is the single biggest thing you can do to improve import accuracy.
 
 > Detailed use of Picard, Beets, and similar tools is beyond the scope of this wiki. See those projects' own documentation.
 {.is-info}
 
-Once files are imported, Lidarr can take over rewriting these same fields going forward. See the [Audio Tags Reference](/lidarr/audio-tags-reference) for the fields it writes and [Write Metadata to Audio Files](/lidarr/settings#write-metadata-to-audio-files) to turn it on.
+Once files are imported, Lidarr can take over rewriting these same fields going forward. See the [Audio Tags Reference](/lidarr/lidarr-tag-reference) for the fields it writes and [Write Metadata to Audio Files](/lidarr/settings#write-metadata-to-audio-files) to turn it on.
 
 ## Pre-import considerations
 
 Once you have structured and tagged your files, check the following before pointing Lidarr at them. A failed import of a large library is expensive to recover from.
 
-- **System architecture.** 64-bit's strongly recommended. Large-library imports are RAM- and compute-intensive. Lidarr supports 32-bit builds but they are noticeably slower.
+- **System architecture.** 64-bit's strongly recommended. Large-library imports are RAM- and compute-intensive. Lidarr supports 32-bit builds but they're noticeably slower.
 - **System memory.** 4 GB minimum, 8 GB recommended. The import process plus an open browser tab will comfortably use 2–4 GB on a mid-sized library.
 - **Release size.** `Releases` with very large track or disc counts dominate import time. As a rule of thumb, pull releases over ~25 discs or ~250 tracks out of the root folder and import them manually after the bulk pass.
 - **Artists with many releases.** A single `Release Artist` with thousands of `Releases` in MusicBrainz will slow the scan substantially, even if only a handful of them are on your disk. This is rarely a blocker but is worth knowing about if the scan seems stuck on a particular artist.
 - **Time budget.** A reasonable estimate is one hour per ~500 properly tagged `Releases`, heavily dependent on disk speed, network latency to the metadata service, and system performance. Plan for an overnight run on large libraries.
-- **Metadata propagation.** If you've recently edited or added records on MusicBrainz, those changes may not have reached Lidarr's metadata source yet — propagation typically takes hours to days. See [Concepts — Dependence on MusicBrainz](/lidarr/concepts#dependence-on-musicbrainz).
+- **Metadata propagation.** If you've recently edited or added records on MusicBrainz, those changes may not have reached Lidarr's metadata source yet. Propagation typically takes hours to days. See [Concepts → Dependence on MusicBrainz](/lidarr/concepts#dependence-on-musicbrainz).
 - **Back up first.** Take a snapshot of your library (or at least of the tag state) before running the import. Lidarr doesn't rewrite tags during the import scan itself, but if you have automatic file-renaming or tag-writing enabled in settings, behaviour diverges from a read-only scan.
 
 ## Begin import
@@ -88,16 +88,16 @@ With files prepared and the pre-import checks done, add the library folder as a 
 
 1. Go to **Settings → Media Management** and click **Add (+)** under **Root Folders**.
 2. Fill in the add-root-folder dialog:
-   - **Name** — a friendly label for this root folder.
-   - **Path** — the filesystem path to the library you prepared. The Lidarr user must have read and write access.
-   - **Monitor*** — the default monitoring option applied once to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards. See [Library → Monitor](/lidarr/library#monitor) for what each option does.
-   - **Monitor New Items*** — the ongoing rule for albums Lidarr discovers later for an imported artist (All, None, New). **New** monitors a newly discovered album only if its release date is on or after the most recent album already on file, not whether MusicBrainz just added it. See [Library → Monitor New Items](/lidarr/library#monitor-new-items).
-   - **Quality Profile*** — the default quality profile assigned to each imported artist. Used later to decide which `Releases` are cutoff-met and what Lidarr will search for.
-   - **Metadata Profile*** — the default metadata profile. Controls which `Release` types (studio albums, EPs, singles, etc.) are visible on each imported artist.
-   - **Tags** — optional tags applied to every artist created by this import, useful for later filtering or automation rules.
+   - **Name:** a friendly label for this root folder.
+   - **Path:** the filesystem path to the library you prepared. The Lidarr user must have read and write access.
+   - **Monitor***: the default monitoring option applied once to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards. See [Library → Monitor](/lidarr/library#monitor) for what each option does.
+   - **Monitor New Items***: the ongoing rule for albums Lidarr discovers later for an imported artist (All, None, New). **New** monitors a newly discovered album only if its release date is on or after the most recent album already on file, not whether MusicBrainz just added it. See [Library → Monitor New Items](/lidarr/library#monitor-new-items).
+   - **Quality Profile***: the default quality profile assigned to each imported artist. Used later to decide which `Releases` are cutoff-met and what Lidarr will search for.
+   - **Metadata Profile***: the default metadata profile. Controls which `Release` types (studio albums, EPs, singles, etc.) are visible on each imported artist.
+   - **Tags:** optional tags applied to every artist created by this import, useful for later filtering or automation rules.
 3. Save the root folder. Lidarr begins scanning the path immediately.
 
-The asterisked fields above become the defaults for every artist the import creates. You can change them on a per-artist basis later, but it's much less work to pick the right defaults up front than to batch-update hundreds of artists afterwards. In particular, `Metadata Profile` has the biggest downstream effect — a too-narrow profile will silently hide `Releases` that exist on disk.
+The asterisked fields above become the defaults for every artist the import creates. You can change them on a per-artist basis later, but it's much less work to pick the right defaults up front than to batch-update hundreds of artists afterwards. In particular, `Metadata Profile` has the biggest downstream effect. A too-narrow profile will silently hide `Releases` that exist on disk.
 
 ### What Lidarr does during the scan
 
@@ -107,7 +107,7 @@ The asterisked fields above become the defaults for every artist the import crea
 4. Adds the `Release Artist` to the library, then adds the matched `Releases`, then links the existing files to their `Release` tracks.
 5. Files that don't match anything remain on disk. Lidarr doesn't add them to the library and doesn't delete them.
 
-> **You cannot stop the scan partway through.** If you realise something is wrong (wrong path, wrong metadata profile, etc.) you can either let the scan finish and clean up afterwards, or stop Lidarr and remove the root folder before restarting — but there's no in-app cancel button.
+> **You can't stop the scan partway through.** If you realise something is wrong (wrong path, wrong metadata profile, etc.) you can either let the scan finish and clean up afterwards, or stop Lidarr and remove the root folder before restarting, but there's no in-app cancel button.
 {.is-warning}
 
 ### Watching progress
@@ -121,19 +121,19 @@ The asterisked fields above become the defaults for every artist the import crea
 Once the scan finishes, plan on a review pass. Even a well-prepared library will produce a small number of mismatches, and finding them early is cheaper than discovering them weeks later when Lidarr downloads the "missing" half of a mismatched `Release`.
 
 - **Check the library view** for artists with zero monitored `Releases`. Usually means the metadata profile filtered everything out; widen the profile or change it for that artist.
-- **Look for wrong-release matches.** Pick a few albums at random and verify the tracklist on the artist page matches what you have on disk. Mismatches most commonly appear with re-releases, remasters, and region-specific pressings — the text match picked a different `Release` than the one you own. Use the **Manual Import** or **Search for MusicBrainz ID** workflow to re-link.
+- **Look for wrong-release matches.** Pick a few albums at random and verify the tracklist on the artist page matches what you have on disk. Mismatches most commonly appear with re-releases, remasters, and region-specific pressings. The text match picked a different `Release` than the one you own. Use the **Manual Import** or **Search for MusicBrainz ID** workflow to re-link.
 - **Handle skipped files.** Files that weren't imported are still on disk. If you want them managed, fix their tags (usually a Picard pass) and run *Rescan Folders* from **System → Tasks**. If you don't want them managed, leave them or move them out of the root folder.
 - **Unmonitor or remove noise.** Rip-artifact files (`folder.jpg`, `*.nfo`, stray `.txt` files) are harmless. Duplicates and pre-import backup copies are worth cleaning up now so they don't confuse later searches.
 
 ## Troubleshooting
 
-Most import problems are MusicBrainz data problems or tag problems, not Lidarr bugs. See the [FAQ](/lidarr/faq) for specific failure modes — including artists Lidarr can't add, releases missing from MusicBrainz, and what to do when an import refuses to match a file you're sure you've tagged correctly.
+Most import problems are MusicBrainz data problems or tag problems, not Lidarr bugs. See the [FAQ](/lidarr/faq) for specific failure modes, including artists Lidarr can't add, releases missing from MusicBrainz, and what to do when an import refuses to match a file you're sure you've tagged correctly.
 
 If a `Release` or `Release Artist` you expect is genuinely missing from MusicBrainz, you can add or correct it upstream: see [How To Contribute](https://musicbrainz.org/doc/How_to_Contribute). Once upstream propagation completes (hours to days), refresh the affected artist inside Lidarr and rescan.
 
 ## See also
 
-- [Concepts](/lidarr/concepts) — the `Release` and `Artist` model that drives import behavior
-- [Quick Start](/lidarr/quick-start-guide) — install and first download, if you don't already have a library
-- [FAQ](/lidarr/faq) — common import and metadata issues
-- [Settings](/lidarr/settings) — detailed reference for every option referenced on this page
+- [Concepts](/lidarr/concepts): the `Release` and `Artist` model that drives import behavior
+- [Quick Start](/lidarr/quick-start-guide): install and first download, if you don't already have a library
+- [FAQ](/lidarr/faq): common import and metadata issues
+- [Settings](/lidarr/settings): detailed reference for every option referenced on this page

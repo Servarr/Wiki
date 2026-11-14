@@ -58,7 +58,7 @@ To install Lidarr:
 pkg install lidarr
 ```
 
-Don't close the shell yet — a few more steps remain.
+Don't close the shell yet. A few more steps remain.
 
 ## Configuring Lidarr
 

@@ -10,7 +10,7 @@ dateCreated: 2021-06-13T06:14:53.615Z
 
 # Lidarr Quick Start
 
-This guide walks you from a fresh Lidarr install to your first successful download in about fifteen minutes, using default settings everywhere. It assumes Lidarr is already installed — if it isn't, start with the [Installation](/lidarr/installation) page.
+This guide walks you from a fresh Lidarr install to your first successful download in about fifteen minutes, using default settings everywhere. It assumes Lidarr is already installed. If it isn't, start with the [Installation](/lidarr/installation) page.
 
 > The Lidarr UI shows advanced options in `orange`. Click **Show Advanced** at the top of the relevant page to reveal them.
 {.is-warning}
@@ -19,7 +19,7 @@ This guide walks you from a fresh Lidarr install to your first successful downlo
 
 This page is for users starting with an empty library who want to get to a first download quickly. The defaults used below are deliberately minimal and are safe to refine later.
 
-If any of the following describes you, read the linked page instead — the quick path here won't work for your setup:
+If any of the following describes you, read the linked page instead. The quick path here won't work for your setup:
 
 - You already have music files on disk and want Lidarr to manage them → [Importing an Existing Library](/lidarr/importing-existing-library).
 - You want to understand *why* Lidarr behaves the way it does, or whether it fits your library at all → [Concepts](/lidarr/concepts).
@@ -39,7 +39,7 @@ Four settings areas need input before Lidarr can find and import music: Media Ma
 
 ### Media Management
 
-Set a `Root Folder` — this is where imported music will live.
+Set a `Root Folder`. This is where imported music will live.
 
 Click **Settings → Media Management**, then under **Root Folders** click **Add (+)**.
 
@@ -49,8 +49,8 @@ Click **Settings → Media Management**, then under **Root Folders** click **Add
 
 Fill in:
 
-- **Name** — a friendly label.
-- **Path** — the directory on disk where Lidarr stores music files. The Lidarr user must have read and write access. **This must not be the same folder your download client writes to.**
+- **Name:** a friendly label.
+- **Path:** the directory on disk where Lidarr stores music files. The Lidarr user must have read and write access. **This must not be the same folder your download client writes to.**
 
 Leave everything else at defaults.
 
@@ -60,24 +60,24 @@ Leave everything else at defaults.
 > NFS mounts need `nolock`; SMB mounts need `nobrl`. Non-Windows only.
 {.is-warning}
 
-> The root folder must not overlap with your download client's output folder. Lidarr imports *from* downloads *to* the root folder — they need to be distinct locations on the same filesystem (for fast moves and hardlinks).
+> The root folder must not overlap with your download client's output folder. Lidarr imports *from* downloads *to* the root folder. They need to be distinct locations on the same filesystem (for fast moves and hardlinks).
 {.is-danger}
 
-If you already have music files here, stop — see [Importing an Existing Library](/lidarr/importing-existing-library) before saving this root folder.
+If you already have music files here, stop. See [Importing an Existing Library](/lidarr/importing-existing-library) before saving this root folder.
 
 ### Profiles & Quality
 
-`Settings → Profiles` and `Settings → Quality` — leave both at defaults. They're good enough to get to a first download. You can refine them later; see [Settings → Profiles](/lidarr/settings#profiles) and [Settings → Quality](/lidarr/settings#quality).
+`Settings → Profiles` and `Settings → Quality`: leave both at defaults. They're good enough to get to a first download. You can refine them later; see [Settings → Profiles](/lidarr/settings#metadata-profiles) and [Settings → Quality](/lidarr/settings#quality).
 
 ### Indexers
 
-`Settings → Indexers` — add at least one. Lidarr treats Usenet indexers and BitTorrent trackers both as `Indexers`.
+`Settings → Indexers`: add at least one. Lidarr treats Usenet indexers and BitTorrent trackers both as `Indexers`.
 
-Click **Add (+)** and pick one you have access to. Choosing and configuring an indexer is outside the scope of this page — see the [Supported Indexers](/lidarr/supported#indexers) list and [TRaSH's indexer guides](https://trash-guides.info/) for options and setup details.
+Click **Add (+)** and pick one you have access to. Choosing and configuring an indexer is outside the scope of this page. See the [Supported Indexers](/lidarr/supported#indexers) list and [TRaSH's indexer guides](https://trash-guides.info/) for options and setup details.
 
 ### Download Clients
 
-`Settings → Download Clients` — add at least one.
+`Settings → Download Clients`: add at least one.
 
 ![lidarr-settings-download-clients.png](./images/lidarr-settings-download-clients.png)
 
@@ -94,17 +94,17 @@ With settings done, add an artist. `Library → Add New`.
 
 ![lidarr_qs_addnew.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnew.png)
 
-Search for the artist you want — Lidarr looks them up in MusicBrainz. Select the result and the **Add new Artist** dialog opens.
+Search for the artist you want. Lidarr looks them up in MusicBrainz. Select the result and the **Add new Artist** dialog opens.
 
 ![lidarr_qs_addnewdylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnewdylan.png)
 
 Use these settings:
 
-- **Root Folder** — the one you just created.
-- **Monitor** — set to **None** (the UI default is "All Albums"; change it to None so Lidarr doesn't immediately queue everything).
-- **Quality Profile** — Any.
-- **Tags** — empty.
-- **Start search for missing albums** — unchecked.
+- **Root Folder:** the one you just created.
+- **Monitor:** set to **None** (the UI default is "All Albums"; change it to None so Lidarr doesn't immediately queue everything).
+- **Quality Profile:** Any.
+- **Tags:** empty.
+- **Start search for missing albums:** unchecked.
 
 Save. Lidarr fetches the artist's metadata from MusicBrainz; this takes a few seconds to a few minutes depending on the artist's catalog size.
 
@@ -127,10 +127,10 @@ Lidarr queries your indexers and shows available results.
 
 Each row shows:
 
-1. **Title** — the release name as returned by the indexer.
-2. **Quality** — Lidarr's parse of the title into a quality level.
-3. **Warning indicators** — if a result fails a check (wrong album, wrong quality, etc.) Lidarr shows the reason here.
-4. **Download icon** — click to send the release to your download client.
+1. **Title:** the release name as returned by the indexer.
+2. **Quality:** Lidarr's parse of the title into a quality level.
+3. **Warning indicators:** if a result fails a check (wrong album, wrong quality, etc.) Lidarr shows the reason here.
+4. **Download icon:** click to send the release to your download client.
 
 Pick a clean result and click the download icon. Lidarr hands the download off to your client, watches the queue, and imports the finished files into your root folder when the client reports completion.
 
@@ -140,11 +140,11 @@ Your imported files will be in the root folder, organized as `<Root Folder>/<Art
 
 ![lidarr_qs_dylanfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
 
-That's the full loop — settings, artist, release, download, import.
+That's the full loop: settings, artist, release, download, import.
 
 ## What to read next
 
-- [Concepts](/lidarr/concepts) — the `Release` and `Artist` model, and why Lidarr's behavior depends on MusicBrainz.
-- [Importing an Existing Library](/lidarr/importing-existing-library) — migrating files you already have into Lidarr.
-- [Settings](/lidarr/settings) — the detailed reference for every configuration option referenced on this page.
-- [FAQ](/lidarr/faq) — common questions and troubleshooting.
+- [Concepts](/lidarr/concepts): the `Release` and `Artist` model, and why Lidarr's behavior depends on MusicBrainz.
+- [Importing an Existing Library](/lidarr/importing-existing-library): migrating files you already have into Lidarr.
+- [Settings](/lidarr/settings): the detailed reference for every configuration option referenced on this page.
+- [FAQ](/lidarr/faq): common questions and troubleshooting.

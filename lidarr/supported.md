@@ -80,41 +80,41 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 
 - Newznab {#newznab}
   - Standardised API used by most Usenet indexing sites. Many presets are available, but all require an API key. Indexer aggregators like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can manage more than one Newznab indexer from a single interface.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 
 ### Torrents
 
 - FileList {#filelist}
   - Private torrent tracker with a broad content library.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - Gazelle API {#gazelle}
   - Generic indexer for Gazelle-based private trackers. If your tracker has its own dedicated entry on this page, for example Redacted, use that entry instead; use Gazelle API only for Gazelle-based trackers without a specific Lidarr indexer type.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - Headphones VIP {#headphones}
   - Legacy music indexer aggregator from the Headphones era.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - IP Torrents {#iptorrents}
   - Private tracker.
   > IP Torrents' native implementation doesn't support Search.
   {.is-info}
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - Nyaa {#nyaa}
   - Public Japanese torrent indexer. Covers anime, manga, and music.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - Redacted {#redacted}
   - Premier private music tracker. Requires an account with the Redacted community.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
   > The RSS feed must contain a `pubdate`. The release size is recommended as well.
   {.is-info}
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - TorrentLeech {#torrentleech}
   - Private tracker.
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 - Torznab {#torznab}
   - Standardised API for torrent indexers, based on the Newznab specification with torrent-specific extensions. Supports RSS feeds and backlog searching. Primarily provided by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett).
-  - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
+  - [Refer to the Settings Page](/lidarr/settings#indexers)
 
 ## Notifications
 
@@ -141,7 +141,7 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 - Mailgun {#mailgun}
   - Transactional email API service for sending notification emails.
 - Notifiarr {#notifiarr}
-  - See [Useful Tools — Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
+  - See [Useful Tools: Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
 - ntfy.sh {#ntfy}
   - Self-hostable push notification service with a simple HTTP API.
 - Plex Media Server {#plexserver}

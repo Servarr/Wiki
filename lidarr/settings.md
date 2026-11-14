@@ -418,13 +418,13 @@ For **Custom Script** connections, see the [Custom Scripts](/lidarr/custom-scrip
 > Choosing **All files, keep in sync with MusicBrainz** or **All files, initial import only** alters existing files the first time they're imported or re-synced, not just new downloads.
 {.is-warning}
 
-> **For new downloads only** is keyed to how a file enters the library, not whether it is actually new. Pointing Lidarr at an existing collection and letting the library scan match it leaves those files untagged. Bringing the same collection in through Manual Import does not: Manual Import always counts as a new download, so those files get tagged even though nothing was downloaded.
+> **For new downloads only** is keyed to how a file enters the library, not whether it's actually new. Pointing Lidarr at an existing collection and letting the library scan match it leaves those files untagged. Bringing the same collection in through Manual Import does not: Manual Import always counts as a new download, so those files get tagged even though nothing was downloaded.
 {.is-warning}
 
 > **Writing tags has no hardlink protection.** Renaming a file that a torrent client is still seeding is safe with hardlinks (see the warning under [Track Naming](#track-naming) above), because renaming just relinks a path. Writing tags is different: it rewrites the file's actual content in place, which changes the data at every hardlink to that file, including the copy your torrent client is still seeding. If **Tag Audio Files with Metadata** is enabled and a download is still seeding, retagging it can corrupt the seeding copy the same way editing it directly would.
 {.is-danger}
 
-See [Audio Tags Reference](/lidarr/audio-tags-reference) for the complete list of fields Lidarr writes and where each one is stored per file format.
+See [Audio Tags Reference](/lidarr/lidarr-tag-reference) for the complete list of fields Lidarr writes and where each one is stored per file format.
 
 ## Metadata Consumers
 

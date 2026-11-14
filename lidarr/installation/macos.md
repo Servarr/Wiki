@@ -12,7 +12,7 @@ dateCreated: 2023-07-03T20:10:53.957Z
 
 {#OSX}
 
-> Lidarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
+> Lidarr isn't compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 {.is-warning}
 
 1. Download the [MacOS App](https://lidarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://lidarr.servarr.com/v1/update/master/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system architecture.

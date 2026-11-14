@@ -15,11 +15,11 @@ dateCreated: 2021-06-14T21:36:28.225Z
   - [Health](#health)
     - [System Warnings](#system-warnings)
       - [New update is available](#new-update-is-available)
-      - [Can't install update because startup folder is in an App Translocation folder (macOS)](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos)
-      - [Can't install update because startup folder isn't writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
-      - [Can't install update because UI folder isn't writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
-      - [Updating won't be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Couldn't connect to signalR](#could-not-connect-to-signalr)
+      - [Can't install update because startup folder is in an App Translocation folder (macOS)](#cant-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos)
+      - [Can't install update because startup folder isn't writable by the user](#cant-install-update-because-startup-folder-isnt-writable-by-the-user)
+      - [Can't install update because UI folder isn't writable by the user](#cant-install-update-because-ui-folder-isnt-writable-by-the-user)
+      - [Updating won't be possible to prevent deleting AppData on Update](#updating-wont-be-possible-to-prevent-deleting-appdata-on-update)
+      - [Couldn't connect to signalR](#couldnt-connect-to-signalr)
         - [NGINX](#nginx)
         - [Apache](#apache)
         - [Caddy](#caddy)
@@ -49,8 +49,8 @@ dateCreated: 2021-06-14T21:36:28.225Z
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
       - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
     - [Indexers](#indexers)
-      - [No indexers available with automatic search enabled, Lidarr won't provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results)
-      - [No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically)
+      - [No indexers available with automatic search enabled, Lidarr won't provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-wont-provide-any-automatic-search-results)
+      - [No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-wont-grab-new-releases-automatically)
       - [No indexers are enabled](#no-indexers-are-enabled)
       - [No indexers Available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
@@ -96,25 +96,25 @@ This page lists health check results. Lidarr runs these checks periodically and 
 
 #### Can’t install update because startup folder is in an App Translocation folder (macOS)
 
-{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
+{#cant-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
 
 - macOS has moved Lidarr’s startup folder into an App Translocation path. This prevents Lidarr from updating itself. Remove the quarantine attribute or move Lidarr out of the Translocation folder and re-launch it from its permanent location.
 
 #### Can’t install update because startup folder isn’t writable by the user
 
-{#cannot-install-update-because-startup-folder-is-not-writable-by-the-user}
+{#cant-install-update-because-startup-folder-isnt-writable-by-the-user}
 
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
 
 #### Can’t install update because UI folder isn’t writable by the user
 
-{#cannot-install-update-because-ui-folder-is-not-writable-by-the-user}
+{#cant-install-update-because-ui-folder-isnt-writable-by-the-user}
 
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s UI directory to allow Lidarr to update itself.
 
 #### Updating won’t be possible to prevent deleting AppData on Update
 
-{#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update}
+{#updating-wont-be-possible-to-prevent-deleting-appdata-on-update}
 
 - Lidarr detected that the AppData folder sits inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and `~/.config` for Linux.
 
@@ -124,7 +124,7 @@ This page lists health check results. Lidarr runs these checks periodically and 
 
 #### Couldn't connect to signalR
 
-{#could-not-connect-to-signalr}
+{#couldnt-connect-to-signalr}
 
 - signalR drives the dynamic UI updates, so if your browser can't connect to signalR on your server you won’t see any real time updates in the UI.
 
@@ -238,15 +238,15 @@ chmod +x /opt/Lidarr/fpcalc
 
 - One or more Lidarr plugins failed to load. Check the Lidarr log for details on which plugins failed and why.
 
-> Plugins are only available on the develop (pre-release) branch and are not included in stable releases.
+> Plugins are only available on the develop (pre-release) branch and aren't included in stable releases.
 {.is-info}
 
 #### Allowed Hosts Not Configured
 
 {#allowed-hosts-not-configured}
 
-- Allowed Hosts is not configured, so Lidarr will accept requests for any hostname. Set [Allowed Hosts](/lidarr/settings#host) to a comma-separated list of the hostnames and IP addresses Lidarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Lidarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
-- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
+- Allowed Hosts isn't configured, so Lidarr will accept requests for any hostname. Set [Allowed Hosts](/lidarr/settings#host) to a comma-separated list of the hostnames and IP addresses Lidarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Lidarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required isn't set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 
@@ -291,7 +291,7 @@ chmod +x /opt/Lidarr/fpcalc
 
 - Within the download client, specify where in `/data` to place downloads. This varies by client, but you should be able to tell it "Yeah, download client, place my files into `/data/downloads/movies`" and since you used `/data` in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a `/data` and I also can see `/data/downloads/movies`, all is right in the world."
 - For more detail, see the [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/) guide.
-- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) and [Sonarr](https://trash-guides.info/Sonarr/sonarr-remote-path-mapping/) for more information.
+- If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) and [Sonarr](https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 
@@ -357,14 +357,14 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### No indexers available with automatic search enabled, Lidarr won't provide any automatic search results
 
-{#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results}
+{#no-indexers-available-with-automatic-search-enabled-lidarr-wont-provide-any-automatic-search-results}
 
 - None of your indexers allow automatic searches.
 - Go into `Settings => Indexers`, select an indexer you'd like to allow Automatic Searches and then click save.
 
 #### No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically
 
-{#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically}
+{#no-indexers-available-with-rss-sync-enabled-lidarr-wont-grab-new-releases-automatically}
 
 - Lidarr uses the RSS feed to pick up new releases as they come along.
 - To correct this issue, go to `Settings => Indexers`, select an indexer, and enable RSS Sync.
@@ -433,17 +433,17 @@ chmod +x /opt/Lidarr/fpcalc
 
 {#artist-mount-is-read-only}
 
-- A mount containing an artist folder is mounted as read-only. Lidarr cannot import files into a read-only mount. Check your mount configuration and ensure that Lidarr has write access to the artist folders listed in the health check message.
+- A mount containing an artist folder is mounted as read-only. Lidarr can't import files into a read-only mount. Check your mount configuration and ensure that Lidarr has write access to the artist folders listed in the health check message.
 
 #### Artist Removed from MusicBrainz
 
-- One or more artists in your library have been removed from MusicBrainz. Lidarr cannot update metadata for removed artists. Review the affected artists and either remove them from Lidarr or update them if the MusicBrainz data has moved to a different entry.
+- One or more artists in your library have been removed from MusicBrainz. Lidarr can't update metadata for removed artists. Review the affected artists and either remove them from Lidarr or update them if the MusicBrainz data has moved to a different entry.
 
 #### Import List Missing Root Folder
 
 {#import-list-missing-root-folder}
 
-- One or more of your import lists reference a root folder path that does not exist or is not configured in Lidarr. Go to `Settings => Import Lists` and update the affected list(s) to use a valid root folder.
+- One or more of your import lists reference a root folder path that doesn't exist or isn't configured in Lidarr. Go to `Settings => Import Lists` and update the affected lists to use a valid root folder.
 
 #### Lists are unavailable due to failures
 
@@ -466,7 +466,7 @@ chmod +x /opt/Lidarr/fpcalc
 
 {#cannot-write-recycle-bin}
 
-- Lidarr cannot write to the configured Recycle Bin path. Check that the path exists and that Lidarr (or the user it runs as) has write permission to the directory.
+- Lidarr can't write to the configured Recycle Bin path. Check that the path exists and that Lidarr (or the user it runs as) has write permission to the directory.
 
 ## Disk Space
 
@@ -572,7 +572,7 @@ The top row has options to control your log files.
 
 # Unsupported legacy build health checks
 
-These health checks only appear on unsupported, end-of-life builds (legacy Mono or x86, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
+These health checks only appear on unsupported, end-of-life builds (legacy Mono or x86, before the switch to .NET) and aren't present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](/lidarr/faq#how-do-i-update-lidarr).
 
 ## Update to .NET version
 
