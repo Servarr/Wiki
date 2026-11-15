@@ -96,25 +96,25 @@ This page lists health check results. Lidarr runs these checks periodically and 
 
 #### Can’t install update because startup folder is in an App Translocation folder (macOS)
 
-{#cant-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
+{#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder-macos}
 
 - macOS has moved Lidarr’s startup folder into an App Translocation path. This prevents Lidarr from updating itself. Remove the quarantine attribute or move Lidarr out of the Translocation folder and re-launch it from its permanent location.
 
 #### Can’t install update because startup folder isn’t writable by the user
 
-{#cant-install-update-because-startup-folder-isnt-writable-by-the-user}
+{#cannot-install-update-because-startup-folder-is-not-writable-by-the-user}
 
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
 
 #### Can’t install update because UI folder isn’t writable by the user
 
-{#cant-install-update-because-ui-folder-isnt-writable-by-the-user}
+{#cannot-install-update-because-ui-folder-is-not-writable-by-the-user}
 
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s UI directory to allow Lidarr to update itself.
 
 #### Updating won’t be possible to prevent deleting AppData on Update
 
-{#updating-wont-be-possible-to-prevent-deleting-appdata-on-update}
+{#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update}
 
 - Lidarr detected that the AppData folder sits inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and `~/.config` for Linux.
 
@@ -124,7 +124,7 @@ This page lists health check results. Lidarr runs these checks periodically and 
 
 #### Couldn't connect to signalR
 
-{#couldnt-connect-to-signalr}
+{#could-not-connect-to-signalr}
 
 - signalR drives the dynamic UI updates, so if your browser can't connect to signalR on your server you won’t see any real time updates in the UI.
 
@@ -357,14 +357,14 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### No indexers available with automatic search enabled, Lidarr won't provide any automatic search results
 
-{#no-indexers-available-with-automatic-search-enabled-lidarr-wont-provide-any-automatic-search-results}
+{#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results}
 
 - None of your indexers allow automatic searches.
 - Go into `Settings => Indexers`, select an indexer you'd like to allow Automatic Searches and then click save.
 
 #### No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically
 
-{#no-indexers-available-with-rss-sync-enabled-lidarr-wont-grab-new-releases-automatically}
+{#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically}
 
 - Lidarr uses the RSS feed to pick up new releases as they come along.
 - To correct this issue, go to `Settings => Indexers`, select an indexer, and enable RSS Sync.
