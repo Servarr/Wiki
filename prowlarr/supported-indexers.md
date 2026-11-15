@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-12T05:52:02.621580
+date: 2026-11-15T04:56:06.231565
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-12T05:52:02.621580
+dateCreated: 2026-11-15T04:56:06.231565
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `3.0.2.5761` / [Commit: d2d1fc0e77664a94b8d3931b7f216eaafd234af4](https://github.com/Prowlarr/Prowlarr/commit/d2d1fc0e77664a94b8d3931b7f216eaafd234af4)
-  - [Prowlarr Indexers Commit: 456ff1ab8f32f2f04559e953d4b8e5232bd36972](https://github.com/Prowlarr/Indexers/commit/456ff1ab8f32f2f04559e953d4b8e5232bd36972)
+  - Prowlarr Build `3.0.2.5775` / [Commit: 847d4876aabf6a31dce5ae40d44ec2ae73ba536b](https://github.com/Prowlarr/Prowlarr/commit/847d4876aabf6a31dce5ae40d44ec2ae73ba536b)
+  - [Prowlarr Indexers Commit: 9246a15ec746659c52890dfd814f5a85ea6f76da](https://github.com/Prowlarr/Indexers/commit/9246a15ec746659c52890dfd814f5a85ea6f76da)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-11-12T05:52:02.621580
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://jsrtlgzx.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://6yxm6rs4.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -213,6 +213,7 @@ dateCreated: 2026-11-12T05:52:02.621580
 |AnimeTosho{#torznab}|Anime NZB/DDL mirror|English (United States)|
 |[AnimeWorld (API)](https://animeworld.cx/){#animeworld-api}|AnimeWorld (AW) is a GERMAN Private Torrent Tracker for ANIME / MANGA / HENTAI|German (Germany)|
 |[AnimeZ](https://animez.to/){#animez}|AnimeZ (ex-AnimeTorrents) is a Private Torrent Tracker for ANIME / MANGA|English (United States)|
+|Anthelion{#torznab}|Anthelion (ANT) is a Private Torrent Tracker for MOVIES|English (United States)|
 |[Anthelion (API)](https://anthelion.me/){#anthelion-api}|Anthelion (ANT) is a Private Torrent Tracker for MOVIES|English (United States)|
 |[ArabaFenice](https://www.arabafenice.me/){#arabafenice}|Araba Fenice (Phoenix) is an ITALIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[ArabicSource (API)](https://arabicsource.net/){#arabicsource-api}|ArabicSource is an ARABIC Private Torrent Tracker for MOVIES / TV|Arabic (Saudi Arabia)|
@@ -260,6 +261,7 @@ dateCreated: 2026-11-12T05:52:02.621580
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[BwTorrents](https://bwtorrents.tv/){#bwtorrents}|BwTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[BYRBT](https://byr.pt/){#byrbt}|BYRBT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
+|[BytePeer](https://bytepeer.net/){#bytepeer}|BytePeer is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[C411](https://c411.org/){#c411}|C411 (Community 411) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Caishen (财神)](https://cspt.top/){#cspt}|Caishen (财神) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[cangbaoge (CBG)](https://cangbao.ge/){#cangbaoge}|cangbaoge (CBG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -470,6 +472,7 @@ dateCreated: 2026-11-12T05:52:02.621580
 |[The New Retro](https://new-retro.eu/){#newretro}|The New Retro is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[NicePT](https://www.nicept.net/){#nicept}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
 |[NicePT (API)](https://www.nicept.net/){#nicept-api}|NicePT is a CHINESE Private Torrent Tracker for 3X|Chinese (China)|
+|[NightBloom (API)](https://nightbloom.cx/){#nightbloom-api}|NightBloom is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Nirvana (API)](https://nirvana.li/){#nirvana}|Nirvana is a Private RUSSIAN Tracker for MOVIES / TV|Russian (Russia)|
 |[njtupt (浦园)](https://njtupt.top/){#njtupt}|njtupt (浦园) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[NOBS](https://nobs.rawsmoke.net/){#nobs}|NOBS (NUCLEAR ORDER BIT SYNDICATE) is a SPANISH Private Torrent Tracker for MOVIES / TV|Spanish (Spain)|
