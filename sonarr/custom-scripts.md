@@ -349,6 +349,6 @@ When adding the script to Sonarr and clicking 'Test,' the script will be invoked
 
 | Environment Variable | Details |
 | -------------------- | ------- |
-| `sonarr_eventtype`   | `Test`  |
+| `sonarr_eventtype` | `Test` |
 | `sonarr_instancename` | Instance name of the Sonarr installation |
 | `sonarr_applicationurl` | URL of the Sonarr application |
