@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-15T04:56:06.231565
+date: 2026-11-17T06:40:48.895412
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-15T04:56:06.231565
+dateCreated: 2026-11-17T06:40:48.895412
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `3.0.2.5775` / [Commit: 847d4876aabf6a31dce5ae40d44ec2ae73ba536b](https://github.com/Prowlarr/Prowlarr/commit/847d4876aabf6a31dce5ae40d44ec2ae73ba536b)
-  - [Prowlarr Indexers Commit: 9246a15ec746659c52890dfd814f5a85ea6f76da](https://github.com/Prowlarr/Indexers/commit/9246a15ec746659c52890dfd814f5a85ea6f76da)
+  - Prowlarr Build `3.1.0.5785` / [Commit: c7926e55033470e584434ffbb872bdbe05a4e56c](https://github.com/Prowlarr/Prowlarr/commit/c7926e55033470e584434ffbb872bdbe05a4e56c)
+  - [Prowlarr Indexers Commit: eecf643482a58fceafa2f39bf3c6e53859040f4e](https://github.com/Prowlarr/Indexers/commit/eecf643482a58fceafa2f39bf3c6e53859040f4e)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-11-15T04:56:06.231565
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://6yxm6rs4.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://b66htcsm.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -100,8 +100,8 @@ dateCreated: 2026-11-15T04:56:06.231565
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject.cc/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome272.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip252.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome273.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip253.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -547,6 +547,7 @@ dateCreated: 2026-11-15T04:56:06.231565
 |[Racing4us](https://racing4us.site/){#racing4us}|Racing4us is a Private Torrent Tracker for SPORTS|English (United States)|
 |[RacingForMe](https://www.racingfor.me/){#racingforme}|Racing For Me (RFM) is a Private Torrent Tracker for RACING|English (United States)|
 |[RailgunPT](https://bilibili.download/){#railgunpt}|RailgunPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[RailgunPT (API)](https://bilibili.download/){#railgunpt-api}|RailgunPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Rastastugan (API)](https://rastastugan.org/){#rastastugan-api}|Rastastugan is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Red Angel](https://red-angel.net/){#redangel}|Red Angel is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[Red Star Torrent](http://rstorrent.org.pl/){#redstartorrent}|Red Star Torrent (RST) is a POLISH Private Torrent Tracker for MOVIES / TV|Polish (Poland)|
