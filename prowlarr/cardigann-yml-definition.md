@@ -62,6 +62,8 @@ dateCreated: 2021-08-14T18:19:59.428Z
   - [append](#append)
   - [tolower](#tolower)
   - [toupper](#toupper)
+  - [base64decode](#base64decode)
+  - [base64encode](#base64encode)
   - [replace](#replace)
   - [split](#split)
   - [trim](#trim)
@@ -1553,8 +1555,8 @@ A selector block is used for each field, and for `dateheaders`, `count`, `select
 | `infohash` | Info hash. For non-private indexers a magnet link is built from it if there is no magnet. |
 | `details` | Details page URL. |
 | `comments` | Comments page URL. |
-| `category` | Site category id, mapped through `caps`. Values from more than one `category` field are combined. |
-| `categorydesc` | Site category name, mapped through the `desc` of `categorymappings`. |
+| `category` | Site category id, mapped through `caps`. Values from more than one `category` field are combined. A value can hold several comma-separated ids, each is mapped. |
+| `categorydesc` | Site category name, mapped through the `desc` of `categorymappings`. A value can hold several comma-separated names, each is mapped. |
 | `size` | Size, units are parsed. Required by the schema. |
 | `seeders`, `leechers` | Peer counts. Values of 5000000 or more are set to 0. `seeders` is required by the schema. |
 | `date` | Publish date, parsed like `fuzzytime`. |
@@ -1952,6 +1954,34 @@ filters:
   # input: my movie title 1080p
   - name: toupper
   # result: MY MOVIE TITLE 1080P
+```
+
+## base64decode
+
+Decodes a URL-safe Base64 *string* (`-` and `_` in place of `+` and `/`, no `=` padding) to UTF-8 text.
+
+Example:
+
+```yaml
+selector: a.download
+attribute: data-token
+filters:
+  # input: aHR0cHM6Ly9leGFtcGxlLmNvbS8
+  - name: base64decode
+  # result: https://example.com/
+```
+
+## base64encode
+
+Encodes a *string* as URL-safe Base64 (`-` and `_` in place of `+` and `/`, no `=` padding).
+
+Example:
+
+```yaml
+filters:
+  # input: https://example.com/
+  - name: base64encode
+  # result: aHR0cHM6Ly9leGFtcGxlLmNvbS8
 ```
 
 ## replace
