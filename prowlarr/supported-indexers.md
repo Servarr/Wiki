@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-17T06:40:48.895412
+date: 2026-11-18T05:59:32.389964
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-17T06:40:48.895412
+dateCreated: 2026-11-18T05:59:32.389964
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `3.1.0.5785` / [Commit: c7926e55033470e584434ffbb872bdbe05a4e56c](https://github.com/Prowlarr/Prowlarr/commit/c7926e55033470e584434ffbb872bdbe05a4e56c)
-  - [Prowlarr Indexers Commit: eecf643482a58fceafa2f39bf3c6e53859040f4e](https://github.com/Prowlarr/Indexers/commit/eecf643482a58fceafa2f39bf3c6e53859040f4e)
+  - [Prowlarr Indexers Commit: e085cb5ac2ae489f6e75c6a4e34cd8a96aa44794](https://github.com/Prowlarr/Indexers/commit/e085cb5ac2ae489f6e75c6a4e34cd8a96aa44794)
 
 ---
 
@@ -568,7 +568,7 @@ dateCreated: 2026-11-17T06:40:48.895412
 |[SceneRush](https://www.scene-rush.pt/){#scenerush}|SceneRush is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[SceneTime (API)](https://www.scenetime.com/){#scenetime-api}|SceneTime is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Secret Cinema](https://secret-cinema.pw/){#secret-cinema}|Secret Cinema is a Private ratioless site for rare MOVIES|English (United States)|
-|[SeedCore (API)](https://seedcore.net/){#seedcore-api}|SeedCore (ROT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
+|[SeedCore (API)](https://seedcore.net/){#seedcore-api}|SeedCore (SC) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[SeedFile](https://seedfile.io/){#seedfile}|SeedFile (SF) is a ROMANIAN Private Torrent Tracker for 0DAY / GENERAL|Romanian (Romania)|
 |[seedpool (API)](https://seedpool.org/){#seedpool-api}|seedpool is a Private Torrent Tracker for 0-DAY MOVIES / TV / GENERAL|English (United States)|
 |[SewerPT](https://sewerpt.com/){#sewerpt}|SewerPT (下水道) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
