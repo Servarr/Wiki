@@ -26,7 +26,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 ### Debian / Ubuntu Hands on Install
 
-*It is assumed you have a basic knowledge of linux or the ability to google / learn as necessary. Otherwise it is suggested to use an OS you know and understand*
+*This guide assumes you have a basic knowledge of Linux or can search and learn as necessary. Otherwise, use an OS you know and understand.*
 
 You'll need to install the binaries using the below commands.
 
@@ -76,7 +76,7 @@ tar -xvzf Lidarr*.linux*.tar.gz
 sudo mv Lidarr/ /opt
 ```
 
-> This assumes you have created the user and will run as the user `lidarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
+> This assumes you have created the user and will run as the user `lidarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download clients and Lidarr.
 {.is-danger}
 
 - Ensure ownership of the binary directory.
@@ -130,7 +130,7 @@ rm Lidarr*.linux*.tar.gz
 
 Typically to access the Lidarr web GUI browse to `http://{Your server IP Address}:8686`
 
-If Lidarr did not appear to start, then check the status of the service:
+If Lidarr didn't appear to start, then check the status of the service:
 
 ```shell
 sudo journalctl --since today -u lidarr
@@ -165,11 +165,9 @@ sudo systemctl -q daemon-reload
 
 # Troubleshooting
 
-## SQLite version workaround on older systems
+## SQLite version workaround on older systems {#sqlite-version-workaround}
 
-{#sqlite-version-workaround}
-
-> This workaround is only for older end-of-standard-support systems with outdated GLIBC / SQLite. It is **not** a fix for SQLite corruption errors — those have a completely different recovery path; see [FAQ → Database disk image is malformed](/lidarr/faq#i-am-getting-an-error-database-disk-image-is-malformed).
+> This workaround is only for older end-of-standard-support systems with outdated GLIBC / SQLite. It's **not** a fix for SQLite corruption errors. Those have a completely different recovery path. See [FAQ → Database disk image is malformed](/lidarr/faq#i-am-getting-an-error-database-disk-image-is-malformed).
 {.is-warning}
 
 Lidarr v3 and later uses a bundled SQLite build that requires newer GLIBC than ships with end-of-standard-support distributions. Affected systems include Debian 10, Debian 11, Ubuntu 18.04, Ubuntu 20.04, and some Synology DSM versions. If Lidarr fails to start with SQLite initialisation errors (as opposed to corruption errors), you can force it to link against the distribution's own SQLite library instead.
@@ -210,11 +208,11 @@ Restart Lidarr after creating the symlink.
 
 - You are running an older end-of-life distribution (Debian 10, Debian 11, Ubuntu 18.04, Ubuntu 20.04, older Synology DSM).
 - Lidarr fails to start with SQLite initialisation errors at startup.
-- The error is not related to an existing database file being corrupt.
+- The error isn't related to an existing database file being corrupt.
 - Your system SQLite is at least version 3.9.0.
 
 ### When NOT to use this workaround
 
-- You have database corruption — see [FAQ → Database disk image is malformed](/lidarr/faq#i-am-getting-an-error-database-disk-image-is-malformed).
-- You are on a modern, supported distribution. Upgrade the distribution instead; older distributions accumulate other issues beyond SQLite and this workaround does not address them.
+- You have database corruption. See [FAQ → Database disk image is malformed](/lidarr/faq#i-am-getting-an-error-database-disk-image-is-malformed).
+- You are on a modern, supported distribution. Upgrade the distribution instead; older distributions accumulate other issues beyond SQLite and this workaround doesn't address them.
 - Lidarr starts normally. The workaround replaces a working library with another working library; there is no benefit.

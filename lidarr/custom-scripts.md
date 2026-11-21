@@ -422,5 +422,5 @@ beet --config="$BEETS_CONFIG" import --quiet "$DIR"
 
 ## See also
 
-- [Settings: Connect](/lidarr/settings#connections): where you register scripts in the Lidarr UI
+- [Settings: Connect](/lidarr/settings#connect): where you register scripts in the Lidarr UI
 - [Beets Integration](/lidarr/beets-integration): using a custom script to invoke beets for tag enrichment, on import or on Lidarr's own retag schedule

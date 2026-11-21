@@ -110,7 +110,7 @@ Both are expected with the default Lidarr workflow, and both are answered by und
 
 ### Hardlinks
 
-If the download folder and the library folder are on the **same filesystem** (same mount, same partition), Lidarr uses a **hardlink** instead of a copy. A hardlink is a second directory entry pointing at the same underlying file. The file appears in both folders but only occupies disk space once. Lidarr can import by hardlink before the torrent finishes seeding, and seeding continues to work on the original file because they are literally the same bytes on disk.
+If the download folder and the library folder are on the **same filesystem** (same mount, same partition), Lidarr uses a **hardlink** instead of a copy. A hardlink is a second directory entry pointing at the same underlying file. The file appears in both folders but only occupies disk space once. Lidarr can import by hardlink before the torrent finishes seeding, and seeding continues to work on the original file because they're literally the same bytes on disk.
 
 If the download folder and the library folder are on **different filesystems**, Lidarr can't hardlink across them and falls back to a copy. The copy doubles the disk space until the download client cleans up its side.
 
@@ -130,7 +130,7 @@ Lidarr is built around the `Release` model. If your library doesn't fit that mod
 - **A loose collection of files.** Files from multiple artists (not compilations) or multiple `Releases` sharing a single folder. Low-to-no-curation libraries won't work with Lidarr. Don't try.
 - **Classical music libraries.** Classical releases typically have extensive tagging requirements, and `Release` metadata on MusicBrainz is often missing or incorrect. You can use Lidarr, but expect substantial manual work.
 - **Singles-heavy libraries.** Many singles aren't actual `Releases` in MusicBrainz. Third-party data sources return no metadata for them, so they can't be automated.
-- **Mixes, beats, and samples.** Libraries made of DJ mixes, beat packs, or producer samples (Beatport-style content). These aren't `Releases` in the metadata sources and Lidarr can't manage them. This does *not* apply to albums in the Electronic genre, which are fine.
+- **Mixes, beats, and samples.** Libraries made of DJ mixes, beat packs, or producer samples (Beatport-style content). These aren't `Releases` in the metadata sources and Lidarr can't manage them. This *doesn't* apply to albums in the Electronic genre, which are fine.
 
 If most of your library falls into one of the above categories, Lidarr may not be the right tool. If only part of your library does, you can still use Lidarr for the rest. Just expect to manage the problematic portion by hand.
 

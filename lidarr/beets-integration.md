@@ -17,7 +17,7 @@ This page describes how to run [beets](https://beets.io/) alongside Lidarr to wr
 
 # MusicBrainz fields beets writes that Lidarr doesn't
 
-Both Lidarr and beets pull from MusicBrainz, but beets exposes more of that data as tags. See the [Audio Tags Reference](/lidarr/audio-tags-reference) for the full list of what Lidarr already writes; this section covers only the MusicBrainz fields beets adds on top of that.
+Both Lidarr and beets pull from MusicBrainz, but beets exposes more of that data as tags. See the [Audio Tags Reference](/lidarr/lidarr-tag-reference) for the full list of what Lidarr already writes; this section covers only the MusicBrainz fields beets adds on top of that.
 
 ## Release and catalog identifiers
 

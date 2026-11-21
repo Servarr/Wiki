@@ -69,7 +69,7 @@ When adding an artist you will set:
 
 {#monitor}
 
-**Monitor** is a one-time action, applied to whatever albums Lidarr already has on file at the moment it runs, whether that's when you first add the artist, or later via the **Update Monitoring** bulk action. It does not reach forward to catch albums added to MusicBrainz afterward; that's what [Monitor New Items](#monitor-new-items) is for.
+**Monitor** is a one-time action, applied to whatever albums Lidarr already has on file at the moment it runs, whether that's when you first add the artist, or later via the **Update Monitoring** bulk action. It doesn't reach forward to catch albums added to MusicBrainz afterward; that's what [Monitor New Items](#monitor-new-items) is for.
 
 | Option | Sets monitored to true for |
 |---|---|
@@ -88,7 +88,7 @@ When adding an artist you will set:
 
 {#monitor-new-items}
 
-**Monitor New Items** is an ongoing, artist-level setting. Unlike **Monitor** above, it doesn't run once — it fires every time a metadata refresh finds an album for this artist that isn't already in Lidarr's database.
+**Monitor New Items** is an ongoing, artist-level setting. Unlike **Monitor** above, it doesn't run once. It fires every time a metadata refresh finds an album for this artist that isn't already in Lidarr's database.
 
 | Option | Behavior |
 |---|---|
@@ -98,7 +98,7 @@ When adding an artist you will set:
 
 **New Albums** is a release-date comparison against your existing catalog, not a check of when MusicBrainz added the album to its database. An album that has existed on MusicBrainz for years but is only now appearing in Lidarr (for example, after a merge or a metadata correction) is monitored or skipped based purely on its release date relative to what you already have, regardless of when it showed up in Lidarr.
 
-> **Monitor** and **Monitor New Items** are easy to conflate, and setting **Monitor = Future Albums** does not give you the same result as **Monitor New Items = New Albums**. **Monitor** only ever looks at albums Lidarr already knows about at the instant it runs. If MusicBrainz adds a new future release to an artist's discography afterward, **Monitor** won't touch it; only **Monitor New Items** decides what happens to it when Lidarr's next refresh picks it up.
+> **Monitor** and **Monitor New Items** are easy to conflate, and setting **Monitor = Future Albums** doesn't give you the same result as **Monitor New Items = New Albums**. **Monitor** only ever looks at albums Lidarr already knows about at the instant it runs. If MusicBrainz adds a new future release to an artist's discography afterward, **Monitor** won't touch it; only **Monitor New Items** decides what happens to it when Lidarr's next refresh picks it up.
 {.is-warning}
 
 # Library Import
