@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-19T06:00:06.645815
+date: 2026-11-21T05:44:29.606602
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-19T06:00:06.645815
+dateCreated: 2026-11-21T05:44:29.606602
 ---
 
 - Supported Trackers and Indexers as of
   - Prowlarr Build `3.1.0.5788` / [Commit: 46c468c443ff3ebb86fc99347d3a15885d41d1e1](https://github.com/Prowlarr/Prowlarr/commit/46c468c443ff3ebb86fc99347d3a15885d41d1e1)
-  - [Prowlarr Indexers Commit: 49e4c05c2a4d19a9d31f2cbc58cb351ffbd29602](https://github.com/Prowlarr/Indexers/commit/49e4c05c2a4d19a9d31f2cbc58cb351ffbd29602)
+  - [Prowlarr Indexers Commit: d2ef873932f05bed6d019926c918fee4de604880](https://github.com/Prowlarr/Indexers/commit/d2ef873932f05bed6d019926c918fee4de604880)
 
 ---
 
@@ -629,6 +629,7 @@ dateCreated: 2026-11-19T06:00:06.645815
 |[TorrentSyndikat](https://torrent-syndikat.org/){#torrentsyndikat}|A German general tracker|German (Germany)|
 |[ToTheGlory](https://totheglory.im/){#totheglory}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ToTheGlory2FA](https://totheglory.im/){#totheglory2fa}|ToTheGlory (TTG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL\. This indexer uses cookie login for 2FA|Chinese (China)|
+|[Trackerformers](https://trackerformers.org/){#trackerformers}|Trackerformers is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[TrackerMK](https://trackermk.com/){#trackermk}|TrackerMK is a MACEDONIAN Private Torrent Tracker for MOVIES / TV / GENERAL|FYRO Macedonian (Former Yugoslav Republic of Macedonia)|
 |[TrackerZero](https://trackerzero.it/){#trackerzero}|TrackerZero is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / MUSIC / SOFTWARE|Italian (Italy)|
 |[TranceTraffic](https://www.trancetraffic.com/){#trancetraffic}|TranceTraffic is a Private Torrent Tracker for MUSIC|English (United States)|
