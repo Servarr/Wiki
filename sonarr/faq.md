@@ -11,6 +11,9 @@ dateCreated: 2025-10-31T12:02:16.100Z
 > For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
 {.is-info}
 
+> For Sonarr v5 specific FAQ entries - Please see the [Sonarr v5 FAQ](/sonarr/faq-v5)
+{.is-info}
+
 # Sonarr Basics
 
 ## How does Sonarr find episodes
