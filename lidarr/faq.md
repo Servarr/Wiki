@@ -74,7 +74,7 @@ A few common causes:
 Lidarr supports three prefixes for direct MBID lookup. All three work the same way and are case-insensitive:
 
 | Prefix | Example |
-|---|---|
+| --- | --- |
 | `lidarr:` | `lidarr:9255f594-b912-4bdf-87a2-ada04502a459` |
 | `lidarrid:` | `lidarrid:9255f594-b912-4bdf-87a2-ada04502a459` |
 | `mbid:` | `mbid:9255f594-b912-4bdf-87a2-ada04502a459` |
