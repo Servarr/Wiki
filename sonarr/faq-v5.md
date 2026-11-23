@@ -24,9 +24,9 @@ Sonarr v5 improves how anime is searched.
 
 ### Season Search
 
-- Sonarr v4 searches for each episode one by one when it searches an anime season.
-- Sonarr v5 no longer does this for a season that has already aired.
-- If the season is still airing, Sonarr falls back to individual episode searches, so those episodes are still found.
+- Previously, an anime season search also ran one search for each episode.
+- Sonarr v5 only searches for individual episodes when the season has not fully aired (or will not within 24 hours).
+- This cuts the number of indexer requests for a season that has already aired.
 - Source: [Sonarr PR #8833](https://github.com/Sonarr/Sonarr/pull/8833)
 
 ### Season Aliases
