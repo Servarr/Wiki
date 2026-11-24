@@ -2,15 +2,15 @@
 title: Prowlarr Supported Indexers
 description: Indexers currently named as supported in the current nightly build of Prowlarr. Other indexers may be available via either Generic Newznab or Generic Torznab.
 published: true
-date: 2026-11-21T05:44:29.606602
+date: 2026-11-24T08:31:59.565317
 tags: prowlarr, indexers, reference
 editor: markdown
-dateCreated: 2026-11-21T05:44:29.606602
+dateCreated: 2026-11-24T08:31:59.565317
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `3.1.0.5788` / [Commit: 46c468c443ff3ebb86fc99347d3a15885d41d1e1](https://github.com/Prowlarr/Prowlarr/commit/46c468c443ff3ebb86fc99347d3a15885d41d1e1)
-  - [Prowlarr Indexers Commit: d2ef873932f05bed6d019926c918fee4de604880](https://github.com/Prowlarr/Indexers/commit/d2ef873932f05bed6d019926c918fee4de604880)
+  - Prowlarr Build `3.1.0.5797` / [Commit: b0b5774bf3bd594d0fb2dcd151495b5d034920ef](https://github.com/Prowlarr/Prowlarr/commit/b0b5774bf3bd594d0fb2dcd151495b5d034920ef)
+  - [Prowlarr Indexers Commit: a7fbc17abaea77fb3c8b94017c136eec289f2d70](https://github.com/Prowlarr/Indexers/commit/a7fbc17abaea77fb3c8b94017c136eec289f2d70)
 
 ---
 
@@ -28,7 +28,7 @@ dateCreated: 2026-11-21T05:44:29.606602
 |:--|:--|:--|
 |[0Magnet](https://16mag.net/){#0magnet}|ØMagnet is a CHINESE Public tracker for Asian 3X (JAV)|Chinese (China)|
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
-|[52BT](https://kniqgmy2.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
+|[52BT](https://wk98up47.529075.xyz/){#52bt}|52BT is a Public tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
 |[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
@@ -85,7 +85,7 @@ dateCreated: 2026-11-21T05:44:29.606602
 |[showRSS](https://showrss.info/){#showrss}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |showRSS{#torrent-rss-feed}|showRSS is a service that allows you to keep track of your favorite TV shows|English (United States)|
 |[SkidrowRepack](https://skidrowrepack.com/){#skidrowrepack}|SkidrowRepack is a Public Torrent Tracker for GAMES|English (United States)|
-|[sosulki](https://sosulki.bosk.cc/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
+|[sosulki](https://sosulka.bosk.cc/){#sosulki}|sosulki is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
 |[SubsPlease](https://subsplease.org/){#subsplease}|SubsPlease - A better HorribleSubs/Erai replacement|English (United States)|
 |[sukebei\.nyaa\.si](https://sukebei.nyaa.si/){#sukebeinyaasi}|sukebei\.nyaa is a Public torrent site focused on adult Eastern ASIAN media including anime, manga, games and JAV|English (United States)|
 |[Tokyo Toshokan](https://www.tokyotosho.info/){#tokyotosho}|Tokyo Toshokan is a Public BitTorrent Library for JAPANESE Media|English (United States)|
@@ -110,7 +110,7 @@ dateCreated: 2026-11-21T05:44:29.606602
 |[World-torrent](https://www.darkfox.ws/){#world-torrent}|World-torrent is a FRENCH Public site for MOVIES / TV / GENERAL|French (France)|
 |[XXXClub](https://xxxclub.to/){#xxxclub}|XXXClub is a Public torrent site for 3X|English (United States)|
 |[xxxtor](https://xxxtor.com/){#xxxtor}|xxxtor is a RUSSIAN Public Torrent Tracker for 3X|Russian (Russia)|
-|[YTS](https://yts.gg/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
+|[YTS](https://yts.pw/){#yts}|YTS is a Public torrent site specialising in HD movies of small size|English (United States)|
 |[Zamunda LIFE](https://zamunda.life/){#zamundalife}|Zamunda LIFE is a BULGARIAN Public Torrent Archive for MOVIES / TV / GENERAL|Bulgarian (Bulgaria)|
 
 ### Semi-Private Trackers
@@ -261,7 +261,6 @@ dateCreated: 2026-11-21T05:44:29.606602
 |[BTSCHOOL](https://pt.btschool.club/){#btschool}|BTSCHOOL is a CHINESE Private Torrent Tracker for HD MOVIES / TV|Chinese (China)|
 |[BwTorrents](https://bwtorrents.tv/){#bwtorrents}|BwTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[BYRBT](https://byr.pt/){#byrbt}|BYRBT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL|Chinese (China)|
-|[BytePeer](https://bytepeer.net/){#bytepeer}|BytePeer is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[C411](https://c411.org/){#c411}|C411 (Community 411) is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Caishen (财神)](https://cspt.top/){#cspt}|Caishen (财神) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[cangbaoge (CBG)](https://cangbao.ge/){#cangbaoge}|cangbaoge (CBG) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
@@ -455,7 +454,6 @@ dateCreated: 2026-11-21T05:44:29.606602
 |[MMA-torrents](https://mma-torrents.com/){#mma-torrents}|MMA-Torrents is a Private Torrent Tracker for MMA (Mixed Martial Arts)|English (United States)|
 |[MNV](https://mnvv2.info/){#mnv}|MNV (Max-New-Vision) is a Private GERMAN Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[MOJBLiNK](https://www.mojblink.si/){#mojblink}|MOJBLiNK is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Slovenian (Slovenia)|
-|[MomentPT](https://www.momentpt.top/){#momentpt}|MomentPT is a CHINESE Private Torrent Tracker for Photography|Chinese (China)|
 |[MonikaDesign (API)](https://monikadesign.uk/){#monikadesign-api}|MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME|Chinese (China)|
 |[MouseBits](https://mousebits.com/){#mousebits}|MouseBits is a Private Torrent Tracker for all things Disney|English (United States)|
 |[Musopia (音乐乌托邦)](https://www.musopia.vip/){#musopia}|Musopia (音乐乌托邦) is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
@@ -621,7 +619,6 @@ dateCreated: 2026-11-21T05:44:29.606602
 |[TorrentDay](https://tday.love/){#torrentday}|TorrentDay (TD) is a Private site for TV / MOVIES / GENERAL|English (United States)|
 |[TorrentDD](https://www.torrentdd.com/){#torrentdd}|TorrentDD (TodayBit) is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL|Thai (Thailand)|
 |[Torrenteros (API)](https://torrenteros.org/){#torrenteros-api}|Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / MUSIC|Spanish (Spain)|
-|[TorrentHaven (API)](https://torrenthaven.org/){#torrenthaven-api}|TorrentHaven is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentHR (API)](https://www.torrenthr.org/){#torrenthr-api}|TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL|Croatian (Croatia)|
 |[Torrenting](https://torrenting.com/){#torrenting}|Torrenting (TT) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[TorrentLeech](https://www.torrentleech.org/){#torrentleech}|TorrentLeech (TL) is a Private Torrent Tracker for 0DAY / GENERAL\. not here _ not scene|English (United States)|
@@ -679,6 +676,7 @@ dateCreated: 2026-11-21T05:44:29.606602
 |[ZmPT (织梦) (API)](https://zmpt.cc/){#zmpt-api}|ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[ZooToons](https://zootoons.org/){#zootoons}|ZooToons (ZT) is a Private Torrent Tracker for cartoons, animations and comics|English (United States)|
 |[ZRPT (自然)](https://naturept.top/){#zrpt}|ZRPT (自然) is a CHINESE Private Torrent Tracker for Documentaries|Chinese (China)|
+|[ZXX CLUB](https://zxxclub.com/){#zxxclub}|ZXX CLUB is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 
 ## Usenet
 
