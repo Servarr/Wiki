@@ -20,6 +20,7 @@ dateCreated: 2021-05-16T16:59:52.354Z
 - [<i class="fas fa-cog"></i>&emsp;Environment Variables](/sonarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
 - [<i class="far fa-question-circle"></i>&emsp;v4 FAQ *FAQ entries specific to v4 changes*](/sonarr/faq-v4)
+- [<i class="far fa-question-circle"></i>&emsp;v5 FAQ *FAQ entries specific to v5 changes*](/sonarr/faq-v5)
 {.links-list}
 
 # User Guide
