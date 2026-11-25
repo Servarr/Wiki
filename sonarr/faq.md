@@ -633,7 +633,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
-- See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
+- A release that omits the year from a series title, such as `Example Show (2025)`, can trigger this warning. A scene-mapping alias, sometimes restricted to a release group, can resolve the mismatch. See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-release-was-matched-to-series-by-id-automatic-import-is-not-possible) for checking the file and requesting an alias.
 
 ## TBA Episode Naming
 
