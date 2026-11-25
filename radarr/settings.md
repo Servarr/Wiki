@@ -313,7 +313,51 @@ Here you will set the naming convention for the folder that contains the season 
 > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.
 {.is-warning}
 
+- Import Using Script - Execute a custom script to import rather than the native import functionality (copy, hardlink or move). See [Import Using Script](#import-using-script) below.
+  - Import Script Path - Path to executable script.
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
+
+### Import Using Script
+
+Radarr runs the script once per imported movie file, for downloads and for manual imports, instead of copying, hardlinking or moving the file itself.
+
+#### Arguments
+
+`$1` is the source path (the file being imported), `$2` the destination path Radarr has chosen (movie folder and file name from the naming settings).
+
+#### Environment variables
+
+The most useful ones (the names arrive in **lowercase**, see the warning below):
+
+| Variable | Content |
+| -------- | ------- |
+| `radarr_sourcepath` | Same as `$1` |
+| `radarr_destinationpath` | Same as `$2` |
+| `radarr_transfermode` | What Radarr would have done: `Move`, `Copy`, `HardLink`, `HardLinkOrCopy` |
+| `radarr_movie_id`, `radarr_movie_title`, `radarr_movie_year`, `radarr_movie_path`, `radarr_movie_tmdbid`, `radarr_movie_imdbid`, `radarr_movie_tags` | The movie |
+| `radarr_moviefile_relativepath`, `radarr_moviefile_quality`, `radarr_moviefile_releasegroup`, `radarr_moviefile_scenename` | The file being imported |
+| `radarr_download_client`, `radarr_download_client_type`, `radarr_download_id` | Download client name and type, and the download's id (the torrent hash for torrent clients); empty for imports that are not downloads |
+| `radarr_deletedpaths`, `radarr_deletedrelativepaths` | On upgrades, the replaced files, separated by `\|`; Radarr has already deleted them when the script runs |
+
+Also available: `radarr_instancename`, `radarr_applicationurl`, `radarr_movie_originallanguage`, `radarr_movie_genres`, `radarr_movie_in_cinemas_date`, `radarr_movie_physical_release_date`, `radarr_movie_overview`, `radarr_moviefile_id`, `radarr_moviefile_path`, `radarr_moviefile_qualityversion`, `radarr_moviefile_mediainfo_*` (`audiochannels`, `audiocodec`, `audiolanguages`, `languages`, `height`, `width`, `subtitles`, `videocodec`, `videodynamicrangetype`), `radarr_moviefile_customformat`, `radarr_moviefile_customformatscore`, `radarr_deleteddateadded`.
+
+#### Output
+
+Radarr reads these lines from the script's standard output (other lines are only logged):
+
+- `[MoveStatus] MoveComplete` - the script has put the file at the destination path. This is the default when the script prints no `[MoveStatus]` line.
+- `[MoveStatus] RenameRequested` - the script has put the file somewhere in the movie folder; Radarr reads its media info again and renames it according to the naming settings.
+- `[MoveStatus] DeferMove` - the script did nothing; Radarr imports the file natively.
+- `[MediaFile] <path>` - where the media file is now, if not at the destination path. It must exist and have a video extension; only one is allowed.
+- `[ExtraFile] <path>` - a file Radarr should consider for extra file import (subtitles, nfo...). May be repeated.
+- `[PreventExtraImport]` - do not import extra files for this file.
+
+#### Exit code
+
+Anything other than `0` fails the import (shown in Activity > Queue and in the logs).
+
+> The variable names are lowercase although the source code spells them `Radarr_SourcePath` etc.: Radarr passes them in a .NET `StringDictionary`, which lowercases keys. In a shell script use `$radarr_sourcepath`.
+{.is-warning}
 
 ## File Management
 
